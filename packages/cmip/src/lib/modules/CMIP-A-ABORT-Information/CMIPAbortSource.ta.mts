@@ -97,45 +97,17 @@ export const cmiseServiceProvider: CMIPAbortSource =
 /* END_OF_SYMBOL_DEFINITION cmiseServiceProvider */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMIPAbortSource */
-let _cached_decoder_for_CMIPAbortSource: $.ASN1Decoder<CMIPAbortSource> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMIPAbortSource */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CMIPAbortSource */
-/**
- * @summary Decodes an ASN.1 element into a(n) CMIPAbortSource
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CMIPAbortSource} The decoded data structure.
- */
-export function _decode_CMIPAbortSource(el: _Element) {
-  if (!_cached_decoder_for_CMIPAbortSource) {
-    _cached_decoder_for_CMIPAbortSource = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_CMIPAbortSource(el);
-}
+export const _decode_CMIPAbortSource = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CMIPAbortSource */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMIPAbortSource */
-let _cached_encoder_for_CMIPAbortSource: $.ASN1Encoder<CMIPAbortSource> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMIPAbortSource */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CMIPAbortSource */
-/**
- * @summary Encodes a(n) CMIPAbortSource into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CMIPAbortSource, encoded as an ASN.1 Element.
- */
-export function _encode_CMIPAbortSource(
-  value: CMIPAbortSource,
-  elGetter: $.ASN1Encoder<CMIPAbortSource>
-) {
-  if (!_cached_encoder_for_CMIPAbortSource) {
-    _cached_encoder_for_CMIPAbortSource = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_CMIPAbortSource(value, elGetter);
-}
+export const _encode_CMIPAbortSource = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CMIPAbortSource */
 

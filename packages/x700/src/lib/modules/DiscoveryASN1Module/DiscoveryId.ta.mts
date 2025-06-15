@@ -27,45 +27,17 @@ export type DiscoveryId = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION DiscoveryId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscoveryId */
-let _cached_decoder_for_DiscoveryId: $.ASN1Decoder<DiscoveryId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscoveryId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DiscoveryId */
-/**
- * @summary Decodes an ASN.1 element into a(n) DiscoveryId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DiscoveryId} The decoded data structure.
- */
-export function _decode_DiscoveryId(el: _Element) {
-    if (!_cached_decoder_for_DiscoveryId) {
-        _cached_decoder_for_DiscoveryId = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_DiscoveryId(el);
-}
+export const _decode_DiscoveryId = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_DiscoveryId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscoveryId */
-let _cached_encoder_for_DiscoveryId: $.ASN1Encoder<DiscoveryId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscoveryId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DiscoveryId */
-/**
- * @summary Encodes a(n) DiscoveryId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiscoveryId, encoded as an ASN.1 Element.
- */
-export function _encode_DiscoveryId(
-    value: DiscoveryId,
-    elGetter: $.ASN1Encoder<DiscoveryId>
-) {
-    if (!_cached_encoder_for_DiscoveryId) {
-        _cached_encoder_for_DiscoveryId = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_DiscoveryId(value, elGetter);
-}
+export const _encode_DiscoveryId = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DiscoveryId */
 

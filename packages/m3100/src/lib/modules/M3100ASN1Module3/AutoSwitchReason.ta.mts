@@ -121,45 +121,17 @@ export const resourceFailed: AutoSwitchReason =
 /* END_OF_SYMBOL_DEFINITION resourceFailed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSwitchReason */
-let _cached_decoder_for_AutoSwitchReason: $.ASN1Decoder<AutoSwitchReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSwitchReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AutoSwitchReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) AutoSwitchReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AutoSwitchReason} The decoded data structure.
- */
-export function _decode_AutoSwitchReason(el: _Element) {
-    if (!_cached_decoder_for_AutoSwitchReason) {
-        _cached_decoder_for_AutoSwitchReason = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AutoSwitchReason(el);
-}
+export const _decode_AutoSwitchReason = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AutoSwitchReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSwitchReason */
-let _cached_encoder_for_AutoSwitchReason: $.ASN1Encoder<AutoSwitchReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSwitchReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AutoSwitchReason */
-/**
- * @summary Encodes a(n) AutoSwitchReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AutoSwitchReason, encoded as an ASN.1 Element.
- */
-export function _encode_AutoSwitchReason(
-    value: AutoSwitchReason,
-    elGetter: $.ASN1Encoder<AutoSwitchReason>
-) {
-    if (!_cached_encoder_for_AutoSwitchReason) {
-        _cached_encoder_for_AutoSwitchReason = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AutoSwitchReason(value, elGetter);
-}
+export const _encode_AutoSwitchReason = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AutoSwitchReason */
 

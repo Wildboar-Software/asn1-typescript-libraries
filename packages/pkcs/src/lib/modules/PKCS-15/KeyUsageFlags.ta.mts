@@ -177,45 +177,17 @@ export const nonRepudiation: number = KeyUsageFlags_nonRepudiation; /* SHORT_NAM
 /* END_OF_SYMBOL_DEFINITION nonRepudiation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyUsageFlags */
-let _cached_decoder_for_KeyUsageFlags: $.ASN1Decoder<KeyUsageFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyUsageFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_KeyUsageFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) KeyUsageFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {KeyUsageFlags} The decoded data structure.
- */
-export function _decode_KeyUsageFlags(el: _Element) {
-    if (!_cached_decoder_for_KeyUsageFlags) {
-        _cached_decoder_for_KeyUsageFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_KeyUsageFlags(el);
-}
+export const _decode_KeyUsageFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_KeyUsageFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyUsageFlags */
-let _cached_encoder_for_KeyUsageFlags: $.ASN1Encoder<KeyUsageFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyUsageFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_KeyUsageFlags */
-/**
- * @summary Encodes a(n) KeyUsageFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The KeyUsageFlags, encoded as an ASN.1 Element.
- */
-export function _encode_KeyUsageFlags(
-    value: KeyUsageFlags,
-    elGetter: $.ASN1Encoder<KeyUsageFlags>
-) {
-    if (!_cached_encoder_for_KeyUsageFlags) {
-        _cached_encoder_for_KeyUsageFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_KeyUsageFlags(value, elGetter);
-}
+export const _encode_KeyUsageFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_KeyUsageFlags */
 

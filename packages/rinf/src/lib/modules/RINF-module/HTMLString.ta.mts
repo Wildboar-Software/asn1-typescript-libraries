@@ -29,45 +29,17 @@ export type HTMLString = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION HTMLString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HTMLString */
-let _cached_decoder_for_HTMLString: $.ASN1Decoder<HTMLString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HTMLString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HTMLString */
-/**
- * @summary Decodes an ASN.1 element into a(n) HTMLString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HTMLString} The decoded data structure.
- */
-export function _decode_HTMLString(el: _Element) {
-  if (!_cached_decoder_for_HTMLString) {
-    _cached_decoder_for_HTMLString = $._decodeUTF8String;
-  }
-  return _cached_decoder_for_HTMLString(el);
-}
+export const _decode_HTMLString = $._decodeUTF8String;
 /* END_OF_SYMBOL_DEFINITION _decode_HTMLString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HTMLString */
-let _cached_encoder_for_HTMLString: $.ASN1Encoder<HTMLString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HTMLString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HTMLString */
-/**
- * @summary Encodes a(n) HTMLString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HTMLString, encoded as an ASN.1 Element.
- */
-export function _encode_HTMLString(
-  value: HTMLString,
-  elGetter: $.ASN1Encoder<HTMLString>
-) {
-  if (!_cached_encoder_for_HTMLString) {
-    _cached_encoder_for_HTMLString = $._encodeUTF8String;
-  }
-  return _cached_encoder_for_HTMLString(value, elGetter);
-}
+export const _encode_HTMLString = $._encodeUTF8String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HTMLString */
 

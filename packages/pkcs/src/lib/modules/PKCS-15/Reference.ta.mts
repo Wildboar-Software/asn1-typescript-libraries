@@ -17,45 +17,17 @@ export type Reference = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Reference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Reference */
-let _cached_decoder_for_Reference: $.ASN1Decoder<Reference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Reference */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Reference */
-/**
- * @summary Decodes an ASN.1 element into a(n) Reference
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Reference} The decoded data structure.
- */
-export function _decode_Reference(el: _Element) {
-    if (!_cached_decoder_for_Reference) {
-        _cached_decoder_for_Reference = $._decodeInteger;
-    }
-    return _cached_decoder_for_Reference(el);
-}
+export const _decode_Reference = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Reference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Reference */
-let _cached_encoder_for_Reference: $.ASN1Encoder<Reference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Reference */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Reference */
-/**
- * @summary Encodes a(n) Reference into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Reference, encoded as an ASN.1 Element.
- */
-export function _encode_Reference(
-    value: Reference,
-    elGetter: $.ASN1Encoder<Reference>
-) {
-    if (!_cached_encoder_for_Reference) {
-        _cached_encoder_for_Reference = $._encodeInteger;
-    }
-    return _cached_encoder_for_Reference(value, elGetter);
-}
+export const _encode_Reference = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Reference */
 

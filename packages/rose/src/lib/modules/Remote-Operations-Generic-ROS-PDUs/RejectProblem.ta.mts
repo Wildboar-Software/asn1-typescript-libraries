@@ -380,45 +380,17 @@ export const returnError_mistypedParameter: RejectProblem = RejectProblem_return
 /* END_OF_SYMBOL_DEFINITION returnError_mistypedParameter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RejectProblem */
-let _cached_decoder_for_RejectProblem: $.ASN1Decoder<RejectProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RejectProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RejectProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) RejectProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RejectProblem} The decoded data structure.
- */
-export function _decode_RejectProblem(el: _Element) {
-  if (!_cached_decoder_for_RejectProblem) {
-    _cached_decoder_for_RejectProblem = $._decodeInteger;
-  }
-  return _cached_decoder_for_RejectProblem(el);
-}
+export const _decode_RejectProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RejectProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RejectProblem */
-let _cached_encoder_for_RejectProblem: $.ASN1Encoder<RejectProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RejectProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RejectProblem */
-/**
- * @summary Encodes a(n) RejectProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RejectProblem, encoded as an ASN.1 Element.
- */
-export function _encode_RejectProblem(
-  value: RejectProblem,
-  elGetter: $.ASN1Encoder<RejectProblem>
-) {
-  if (!_cached_encoder_for_RejectProblem) {
-    _cached_encoder_for_RejectProblem = $._encodeInteger;
-  }
-  return _cached_encoder_for_RejectProblem(value, elGetter);
-}
+export const _encode_RejectProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RejectProblem */
 

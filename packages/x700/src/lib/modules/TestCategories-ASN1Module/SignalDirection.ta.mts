@@ -97,45 +97,17 @@ export const receive: SignalDirection =
 /* END_OF_SYMBOL_DEFINITION receive */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalDirection */
-let _cached_decoder_for_SignalDirection: $.ASN1Decoder<SignalDirection> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalDirection */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SignalDirection */
-/**
- * @summary Decodes an ASN.1 element into a(n) SignalDirection
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SignalDirection} The decoded data structure.
- */
-export function _decode_SignalDirection(el: _Element) {
-    if (!_cached_decoder_for_SignalDirection) {
-        _cached_decoder_for_SignalDirection = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SignalDirection(el);
-}
+export const _decode_SignalDirection = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SignalDirection */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalDirection */
-let _cached_encoder_for_SignalDirection: $.ASN1Encoder<SignalDirection> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalDirection */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SignalDirection */
-/**
- * @summary Encodes a(n) SignalDirection into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SignalDirection, encoded as an ASN.1 Element.
- */
-export function _encode_SignalDirection(
-    value: SignalDirection,
-    elGetter: $.ASN1Encoder<SignalDirection>
-) {
-    if (!_cached_encoder_for_SignalDirection) {
-        _cached_encoder_for_SignalDirection = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SignalDirection(value, elGetter);
-}
+export const _encode_SignalDirection = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SignalDirection */
 

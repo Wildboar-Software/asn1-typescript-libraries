@@ -27,45 +27,17 @@ export type NumberOfCircuits = INTEGER;
 /* END_OF_SYMBOL_DEFINITION NumberOfCircuits */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfCircuits */
-let _cached_decoder_for_NumberOfCircuits: $.ASN1Decoder<NumberOfCircuits> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfCircuits */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NumberOfCircuits */
-/**
- * @summary Decodes an ASN.1 element into a(n) NumberOfCircuits
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NumberOfCircuits} The decoded data structure.
- */
-export function _decode_NumberOfCircuits(el: _Element) {
-    if (!_cached_decoder_for_NumberOfCircuits) {
-        _cached_decoder_for_NumberOfCircuits = $._decodeInteger;
-    }
-    return _cached_decoder_for_NumberOfCircuits(el);
-}
+export const _decode_NumberOfCircuits = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NumberOfCircuits */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfCircuits */
-let _cached_encoder_for_NumberOfCircuits: $.ASN1Encoder<NumberOfCircuits> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfCircuits */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NumberOfCircuits */
-/**
- * @summary Encodes a(n) NumberOfCircuits into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NumberOfCircuits, encoded as an ASN.1 Element.
- */
-export function _encode_NumberOfCircuits(
-    value: NumberOfCircuits,
-    elGetter: $.ASN1Encoder<NumberOfCircuits>
-) {
-    if (!_cached_encoder_for_NumberOfCircuits) {
-        _cached_encoder_for_NumberOfCircuits = $._encodeInteger;
-    }
-    return _cached_encoder_for_NumberOfCircuits(value, elGetter);
-}
+export const _encode_NumberOfCircuits = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NumberOfCircuits */
 

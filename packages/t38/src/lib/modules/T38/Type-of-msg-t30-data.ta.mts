@@ -317,45 +317,17 @@ export const v33_14400: Type_of_msg_t30_data = Type_of_msg_t30_data_v33_14400; /
 /* END_OF_SYMBOL_DEFINITION v33_14400 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Type_of_msg_t30_data */
-let _cached_decoder_for_Type_of_msg_t30_data: $.ASN1Decoder<Type_of_msg_t30_data> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Type_of_msg_t30_data */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Type_of_msg_t30_data */
-/**
- * @summary Decodes an ASN.1 element into a(n) Type_of_msg_t30_data
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Type_of_msg_t30_data} The decoded data structure.
- */
-export function _decode_Type_of_msg_t30_data(el: _Element) {
-  if (!_cached_decoder_for_Type_of_msg_t30_data) {
-    _cached_decoder_for_Type_of_msg_t30_data = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_Type_of_msg_t30_data(el);
-}
+export const _decode_Type_of_msg_t30_data = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Type_of_msg_t30_data */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Type_of_msg_t30_data */
-let _cached_encoder_for_Type_of_msg_t30_data: $.ASN1Encoder<Type_of_msg_t30_data> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Type_of_msg_t30_data */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Type_of_msg_t30_data */
-/**
- * @summary Encodes a(n) Type_of_msg_t30_data into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Type_of_msg_t30_data, encoded as an ASN.1 Element.
- */
-export function _encode_Type_of_msg_t30_data(
-  value: Type_of_msg_t30_data,
-  elGetter: $.ASN1Encoder<Type_of_msg_t30_data>
-) {
-  if (!_cached_encoder_for_Type_of_msg_t30_data) {
-    _cached_encoder_for_Type_of_msg_t30_data = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_Type_of_msg_t30_data(value, elGetter);
-}
+export const _encode_Type_of_msg_t30_data = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Type_of_msg_t30_data */
 

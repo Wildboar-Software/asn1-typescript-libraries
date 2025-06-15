@@ -118,47 +118,17 @@ export const preliminary: InformationStatus =
 /* END_OF_SYMBOL_DEFINITION preliminary */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationStatus */
-let _cached_decoder_for_InformationStatus: $.ASN1Decoder<InformationStatus> | null =
-    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InformationStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) InformationStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InformationStatus} The decoded data structure.
- */
-export function _decode_InformationStatus(el: _Element) {
-    if (!_cached_decoder_for_InformationStatus) {
-        _cached_decoder_for_InformationStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_InformationStatus(el);
-}
+export const _decode_InformationStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_InformationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationStatus */
-let _cached_encoder_for_InformationStatus: $.ASN1Encoder<InformationStatus> | null =
-    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InformationStatus */
-/**
- * @summary Encodes a(n) InformationStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InformationStatus, encoded as an ASN.1 Element.
- */
-export function _encode_InformationStatus(
-    value: InformationStatus,
-    elGetter: $.ASN1Encoder<InformationStatus>
-) {
-    if (!_cached_encoder_for_InformationStatus) {
-        _cached_encoder_for_InformationStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_InformationStatus(value, elGetter);
-}
+export const _encode_InformationStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InformationStatus */
 

@@ -166,45 +166,17 @@ export const alternatingSequenceError: TransferProblem =
 /* END_OF_SYMBOL_DEFINITION alternatingSequenceError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferProblem */
-let _cached_decoder_for_TransferProblem: $.ASN1Decoder<TransferProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TransferProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) TransferProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TransferProblem} The decoded data structure.
- */
-export function _decode_TransferProblem(el: _Element) {
-  if (!_cached_decoder_for_TransferProblem) {
-    _cached_decoder_for_TransferProblem = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_TransferProblem(el);
-}
+export const _decode_TransferProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TransferProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferProblem */
-let _cached_encoder_for_TransferProblem: $.ASN1Encoder<TransferProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TransferProblem */
-/**
- * @summary Encodes a(n) TransferProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TransferProblem, encoded as an ASN.1 Element.
- */
-export function _encode_TransferProblem(
-  value: TransferProblem,
-  elGetter: $.ASN1Encoder<TransferProblem>
-) {
-  if (!_cached_encoder_for_TransferProblem) {
-    _cached_encoder_for_TransferProblem = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_TransferProblem(value, elGetter);
-}
+export const _encode_TransferProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TransferProblem */
 

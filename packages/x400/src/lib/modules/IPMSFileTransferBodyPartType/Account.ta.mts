@@ -27,45 +27,17 @@ export type Account = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION Account */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Account */
-let _cached_decoder_for_Account: $.ASN1Decoder<Account> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Account */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Account */
-/**
- * @summary Decodes an ASN.1 element into a(n) Account
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Account} The decoded data structure.
- */
-export function _decode_Account(el: _Element) {
-    if (!_cached_decoder_for_Account) {
-        _cached_decoder_for_Account = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_Account(el);
-}
+export const _decode_Account = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_Account */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Account */
-let _cached_encoder_for_Account: $.ASN1Encoder<Account> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Account */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Account */
-/**
- * @summary Encodes a(n) Account into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Account, encoded as an ASN.1 Element.
- */
-export function _encode_Account(
-    value: Account,
-    elGetter: $.ASN1Encoder<Account>
-) {
-    if (!_cached_encoder_for_Account) {
-        _cached_encoder_for_Account = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_Account(value, elGetter);
-}
+export const _encode_Account = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Account */
 

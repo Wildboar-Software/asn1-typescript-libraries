@@ -27,45 +27,17 @@ export type MaximumPathSplits = INTEGER;
 /* END_OF_SYMBOL_DEFINITION MaximumPathSplits */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaximumPathSplits */
-let _cached_decoder_for_MaximumPathSplits: $.ASN1Decoder<MaximumPathSplits> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaximumPathSplits */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MaximumPathSplits */
-/**
- * @summary Decodes an ASN.1 element into a(n) MaximumPathSplits
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MaximumPathSplits} The decoded data structure.
- */
-export function _decode_MaximumPathSplits(el: _Element) {
-  if (!_cached_decoder_for_MaximumPathSplits) {
-    _cached_decoder_for_MaximumPathSplits = $._decodeInteger;
-  }
-  return _cached_decoder_for_MaximumPathSplits(el);
-}
+export const _decode_MaximumPathSplits = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MaximumPathSplits */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaximumPathSplits */
-let _cached_encoder_for_MaximumPathSplits: $.ASN1Encoder<MaximumPathSplits> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaximumPathSplits */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MaximumPathSplits */
-/**
- * @summary Encodes a(n) MaximumPathSplits into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MaximumPathSplits, encoded as an ASN.1 Element.
- */
-export function _encode_MaximumPathSplits(
-  value: MaximumPathSplits,
-  elGetter: $.ASN1Encoder<MaximumPathSplits>
-) {
-  if (!_cached_encoder_for_MaximumPathSplits) {
-    _cached_encoder_for_MaximumPathSplits = $._encodeInteger;
-  }
-  return _cached_encoder_for_MaximumPathSplits(value, elGetter);
-}
+export const _encode_MaximumPathSplits = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MaximumPathSplits */
 

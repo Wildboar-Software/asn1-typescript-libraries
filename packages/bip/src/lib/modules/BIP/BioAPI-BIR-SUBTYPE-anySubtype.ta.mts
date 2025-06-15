@@ -139,45 +139,17 @@ export const littleFinger: number = BioAPI_BIR_SUBTYPE_anySubtype_littleFinger; 
 /* END_OF_SYMBOL_DEFINITION littleFinger */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_SUBTYPE_anySubtype */
-let _cached_decoder_for_BioAPI_BIR_SUBTYPE_anySubtype: $.ASN1Decoder<BioAPI_BIR_SUBTYPE_anySubtype> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_SUBTYPE_anySubtype */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_SUBTYPE_anySubtype */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_SUBTYPE_anySubtype
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_BIR_SUBTYPE_anySubtype} The decoded data structure.
- */
-export function _decode_BioAPI_BIR_SUBTYPE_anySubtype(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_BIR_SUBTYPE_anySubtype) {
-    _cached_decoder_for_BioAPI_BIR_SUBTYPE_anySubtype = $._decodeBitString;
-  }
-  return _cached_decoder_for_BioAPI_BIR_SUBTYPE_anySubtype(el);
-}
+export const _decode_BioAPI_BIR_SUBTYPE_anySubtype = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_SUBTYPE_anySubtype */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_SUBTYPE_anySubtype */
-let _cached_encoder_for_BioAPI_BIR_SUBTYPE_anySubtype: $.ASN1Encoder<BioAPI_BIR_SUBTYPE_anySubtype> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_SUBTYPE_anySubtype */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_SUBTYPE_anySubtype */
-/**
- * @summary Encodes a(n) BioAPI_BIR_SUBTYPE_anySubtype into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_BIR_SUBTYPE_anySubtype, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_BIR_SUBTYPE_anySubtype(
-  value: BioAPI_BIR_SUBTYPE_anySubtype,
-  elGetter: $.ASN1Encoder<BioAPI_BIR_SUBTYPE_anySubtype>
-) {
-  if (!_cached_encoder_for_BioAPI_BIR_SUBTYPE_anySubtype) {
-    _cached_encoder_for_BioAPI_BIR_SUBTYPE_anySubtype = $._encodeBitString;
-  }
-  return _cached_encoder_for_BioAPI_BIR_SUBTYPE_anySubtype(value, elGetter);
-}
+export const _encode_BioAPI_BIR_SUBTYPE_anySubtype = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_SUBTYPE_anySubtype */
 

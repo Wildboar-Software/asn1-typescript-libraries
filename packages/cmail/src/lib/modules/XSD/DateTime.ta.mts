@@ -32,45 +32,17 @@ export type DateTime = TIME; // TimeType
 /* END_OF_SYMBOL_DEFINITION DateTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DateTime */
-let _cached_decoder_for_DateTime: $.ASN1Decoder<DateTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DateTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DateTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) DateTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DateTime} The decoded data structure.
- */
-export function _decode_DateTime(el: _Element) {
-  if (!_cached_decoder_for_DateTime) {
-    _cached_decoder_for_DateTime = $._decodeTime;
-  }
-  return _cached_decoder_for_DateTime(el);
-}
+export const _decode_DateTime = $._decodeTime;
 /* END_OF_SYMBOL_DEFINITION _decode_DateTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DateTime */
-let _cached_encoder_for_DateTime: $.ASN1Encoder<DateTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DateTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DateTime */
-/**
- * @summary Encodes a(n) DateTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DateTime, encoded as an ASN.1 Element.
- */
-export function _encode_DateTime(
-  value: DateTime,
-  elGetter: $.ASN1Encoder<DateTime>
-) {
-  if (!_cached_encoder_for_DateTime) {
-    _cached_encoder_for_DateTime = $._encodeTime;
-  }
-  return _cached_encoder_for_DateTime(value, elGetter);
-}
+export const _encode_DateTime = $._encodeTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DateTime */
 

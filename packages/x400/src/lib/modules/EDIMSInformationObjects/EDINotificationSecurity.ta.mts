@@ -60,45 +60,17 @@ export const non_repudiation: number = EDINotificationSecurity_non_repudiation; 
 /* END_OF_SYMBOL_DEFINITION non_repudiation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationSecurity */
-let _cached_decoder_for_EDINotificationSecurity: $.ASN1Decoder<EDINotificationSecurity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDINotificationSecurity */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDINotificationSecurity
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDINotificationSecurity} The decoded data structure.
- */
-export function _decode_EDINotificationSecurity(el: _Element) {
-    if (!_cached_decoder_for_EDINotificationSecurity) {
-        _cached_decoder_for_EDINotificationSecurity = $._decodeBitString;
-    }
-    return _cached_decoder_for_EDINotificationSecurity(el);
-}
+export const _decode_EDINotificationSecurity = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_EDINotificationSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationSecurity */
-let _cached_encoder_for_EDINotificationSecurity: $.ASN1Encoder<EDINotificationSecurity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDINotificationSecurity */
-/**
- * @summary Encodes a(n) EDINotificationSecurity into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDINotificationSecurity, encoded as an ASN.1 Element.
- */
-export function _encode_EDINotificationSecurity(
-    value: EDINotificationSecurity,
-    elGetter: $.ASN1Encoder<EDINotificationSecurity>
-) {
-    if (!_cached_encoder_for_EDINotificationSecurity) {
-        _cached_encoder_for_EDINotificationSecurity = $._encodeBitString;
-    }
-    return _cached_encoder_for_EDINotificationSecurity(value, elGetter);
-}
+export const _encode_EDINotificationSecurity = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDINotificationSecurity */
 

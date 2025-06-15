@@ -27,45 +27,17 @@ export type TotalNumberOfORAddresses = INTEGER;
 /* END_OF_SYMBOL_DEFINITION TotalNumberOfORAddresses */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TotalNumberOfORAddresses */
-let _cached_decoder_for_TotalNumberOfORAddresses: $.ASN1Decoder<TotalNumberOfORAddresses> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TotalNumberOfORAddresses */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TotalNumberOfORAddresses */
-/**
- * @summary Decodes an ASN.1 element into a(n) TotalNumberOfORAddresses
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TotalNumberOfORAddresses} The decoded data structure.
- */
-export function _decode_TotalNumberOfORAddresses(el: _Element) {
-    if (!_cached_decoder_for_TotalNumberOfORAddresses) {
-        _cached_decoder_for_TotalNumberOfORAddresses = $._decodeInteger;
-    }
-    return _cached_decoder_for_TotalNumberOfORAddresses(el);
-}
+export const _decode_TotalNumberOfORAddresses = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TotalNumberOfORAddresses */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TotalNumberOfORAddresses */
-let _cached_encoder_for_TotalNumberOfORAddresses: $.ASN1Encoder<TotalNumberOfORAddresses> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TotalNumberOfORAddresses */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TotalNumberOfORAddresses */
-/**
- * @summary Encodes a(n) TotalNumberOfORAddresses into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TotalNumberOfORAddresses, encoded as an ASN.1 Element.
- */
-export function _encode_TotalNumberOfORAddresses(
-    value: TotalNumberOfORAddresses,
-    elGetter: $.ASN1Encoder<TotalNumberOfORAddresses>
-) {
-    if (!_cached_encoder_for_TotalNumberOfORAddresses) {
-        _cached_encoder_for_TotalNumberOfORAddresses = $._encodeInteger;
-    }
-    return _cached_encoder_for_TotalNumberOfORAddresses(value, elGetter);
-}
+export const _encode_TotalNumberOfORAddresses = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TotalNumberOfORAddresses */
 

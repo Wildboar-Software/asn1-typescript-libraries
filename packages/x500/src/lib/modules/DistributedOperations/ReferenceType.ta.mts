@@ -203,45 +203,17 @@ export const ditBridge: ReferenceType = ReferenceType_ditBridge; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION ditBridge */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReferenceType */
-let _cached_decoder_for_ReferenceType: $.ASN1Decoder<ReferenceType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReferenceType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReferenceType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReferenceType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReferenceType} The decoded data structure.
- */
-export function _decode_ReferenceType(el: _Element) {
-    if (!_cached_decoder_for_ReferenceType) {
-        _cached_decoder_for_ReferenceType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ReferenceType(el);
-}
+export const _decode_ReferenceType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ReferenceType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReferenceType */
-let _cached_encoder_for_ReferenceType: $.ASN1Encoder<ReferenceType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReferenceType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReferenceType */
-/**
- * @summary Encodes a(n) ReferenceType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReferenceType, encoded as an ASN.1 Element.
- */
-export function _encode_ReferenceType(
-    value: ReferenceType,
-    elGetter: $.ASN1Encoder<ReferenceType>
-) {
-    if (!_cached_encoder_for_ReferenceType) {
-        _cached_encoder_for_ReferenceType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ReferenceType(value, elGetter);
-}
+export const _encode_ReferenceType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReferenceType */
 

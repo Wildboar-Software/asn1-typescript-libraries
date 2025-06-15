@@ -27,45 +27,17 @@ export type FNUserDiagnosticField = INTEGER;
 /* END_OF_SYMBOL_DEFINITION FNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserDiagnosticField */
-let _cached_decoder_for_FNUserDiagnosticField: $.ASN1Decoder<FNUserDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FNUserDiagnosticField */
-/**
- * @summary Decodes an ASN.1 element into a(n) FNUserDiagnosticField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FNUserDiagnosticField} The decoded data structure.
- */
-export function _decode_FNUserDiagnosticField(el: _Element) {
-    if (!_cached_decoder_for_FNUserDiagnosticField) {
-        _cached_decoder_for_FNUserDiagnosticField = $._decodeInteger;
-    }
-    return _cached_decoder_for_FNUserDiagnosticField(el);
-}
+export const _decode_FNUserDiagnosticField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserDiagnosticField */
-let _cached_encoder_for_FNUserDiagnosticField: $.ASN1Encoder<FNUserDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FNUserDiagnosticField */
-/**
- * @summary Encodes a(n) FNUserDiagnosticField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FNUserDiagnosticField, encoded as an ASN.1 Element.
- */
-export function _encode_FNUserDiagnosticField(
-    value: FNUserDiagnosticField,
-    elGetter: $.ASN1Encoder<FNUserDiagnosticField>
-) {
-    if (!_cached_encoder_for_FNUserDiagnosticField) {
-        _cached_encoder_for_FNUserDiagnosticField = $._encodeInteger;
-    }
-    return _cached_encoder_for_FNUserDiagnosticField(value, elGetter);
-}
+export const _encode_FNUserDiagnosticField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FNUserDiagnosticField */
 

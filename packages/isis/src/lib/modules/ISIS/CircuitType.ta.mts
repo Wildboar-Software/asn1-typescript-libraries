@@ -163,45 +163,17 @@ export const dA: CircuitType =
 /* END_OF_SYMBOL_DEFINITION dA */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitType */
-let _cached_decoder_for_CircuitType: $.ASN1Decoder<CircuitType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CircuitType */
-/**
- * @summary Decodes an ASN.1 element into a(n) CircuitType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CircuitType} The decoded data structure.
- */
-export function _decode_CircuitType(el: _Element) {
-  if (!_cached_decoder_for_CircuitType) {
-    _cached_decoder_for_CircuitType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_CircuitType(el);
-}
+export const _decode_CircuitType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CircuitType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitType */
-let _cached_encoder_for_CircuitType: $.ASN1Encoder<CircuitType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CircuitType */
-/**
- * @summary Encodes a(n) CircuitType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CircuitType, encoded as an ASN.1 Element.
- */
-export function _encode_CircuitType(
-  value: CircuitType,
-  elGetter: $.ASN1Encoder<CircuitType>
-) {
-  if (!_cached_encoder_for_CircuitType) {
-    _cached_encoder_for_CircuitType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_CircuitType(value, elGetter);
-}
+export const _encode_CircuitType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CircuitType */
 

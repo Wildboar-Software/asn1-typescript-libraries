@@ -109,45 +109,17 @@ export const sourceRemoved: number = BioAPI_UNIT_EVENT_TYPE_MASK_sourceRemoved; 
 /* END_OF_SYMBOL_DEFINITION sourceRemoved */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_UNIT_EVENT_TYPE_MASK */
-let _cached_decoder_for_BioAPI_UNIT_EVENT_TYPE_MASK: $.ASN1Decoder<BioAPI_UNIT_EVENT_TYPE_MASK> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_UNIT_EVENT_TYPE_MASK */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_UNIT_EVENT_TYPE_MASK */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_UNIT_EVENT_TYPE_MASK
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_UNIT_EVENT_TYPE_MASK} The decoded data structure.
- */
-export function _decode_BioAPI_UNIT_EVENT_TYPE_MASK(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_UNIT_EVENT_TYPE_MASK) {
-    _cached_decoder_for_BioAPI_UNIT_EVENT_TYPE_MASK = $._decodeBitString;
-  }
-  return _cached_decoder_for_BioAPI_UNIT_EVENT_TYPE_MASK(el);
-}
+export const _decode_BioAPI_UNIT_EVENT_TYPE_MASK = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_UNIT_EVENT_TYPE_MASK */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_UNIT_EVENT_TYPE_MASK */
-let _cached_encoder_for_BioAPI_UNIT_EVENT_TYPE_MASK: $.ASN1Encoder<BioAPI_UNIT_EVENT_TYPE_MASK> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_UNIT_EVENT_TYPE_MASK */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_UNIT_EVENT_TYPE_MASK */
-/**
- * @summary Encodes a(n) BioAPI_UNIT_EVENT_TYPE_MASK into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_UNIT_EVENT_TYPE_MASK, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_UNIT_EVENT_TYPE_MASK(
-  value: BioAPI_UNIT_EVENT_TYPE_MASK,
-  elGetter: $.ASN1Encoder<BioAPI_UNIT_EVENT_TYPE_MASK>
-) {
-  if (!_cached_encoder_for_BioAPI_UNIT_EVENT_TYPE_MASK) {
-    _cached_encoder_for_BioAPI_UNIT_EVENT_TYPE_MASK = $._encodeBitString;
-  }
-  return _cached_encoder_for_BioAPI_UNIT_EVENT_TYPE_MASK(value, elGetter);
-}
+export const _encode_BioAPI_UNIT_EVENT_TYPE_MASK = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_UNIT_EVENT_TYPE_MASK */
 

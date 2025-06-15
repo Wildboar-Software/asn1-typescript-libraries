@@ -27,45 +27,17 @@ export type HopMetric = INTEGER;
 /* END_OF_SYMBOL_DEFINITION HopMetric */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HopMetric */
-let _cached_decoder_for_HopMetric: $.ASN1Decoder<HopMetric> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HopMetric */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HopMetric */
-/**
- * @summary Decodes an ASN.1 element into a(n) HopMetric
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HopMetric} The decoded data structure.
- */
-export function _decode_HopMetric(el: _Element) {
-  if (!_cached_decoder_for_HopMetric) {
-    _cached_decoder_for_HopMetric = $._decodeInteger;
-  }
-  return _cached_decoder_for_HopMetric(el);
-}
+export const _decode_HopMetric = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_HopMetric */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HopMetric */
-let _cached_encoder_for_HopMetric: $.ASN1Encoder<HopMetric> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HopMetric */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HopMetric */
-/**
- * @summary Encodes a(n) HopMetric into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HopMetric, encoded as an ASN.1 Element.
- */
-export function _encode_HopMetric(
-  value: HopMetric,
-  elGetter: $.ASN1Encoder<HopMetric>
-) {
-  if (!_cached_encoder_for_HopMetric) {
-    _cached_encoder_for_HopMetric = $._encodeInteger;
-  }
-  return _cached_encoder_for_HopMetric(value, elGetter);
-}
+export const _encode_HopMetric = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HopMetric */
 

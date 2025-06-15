@@ -143,45 +143,17 @@ export const sequenceProviderDefined: SequenceMatchType = SequenceMatchType_sequ
 /* END_OF_SYMBOL_DEFINITION sequenceProviderDefined */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceMatchType */
-let _cached_decoder_for_SequenceMatchType: $.ASN1Decoder<SequenceMatchType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceMatchType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SequenceMatchType */
-/**
- * @summary Decodes an ASN.1 element into a(n) SequenceMatchType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SequenceMatchType} The decoded data structure.
- */
-export function _decode_SequenceMatchType(el: _Element) {
-    if (!_cached_decoder_for_SequenceMatchType) {
-        _cached_decoder_for_SequenceMatchType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SequenceMatchType(el);
-}
+export const _decode_SequenceMatchType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SequenceMatchType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceMatchType */
-let _cached_encoder_for_SequenceMatchType: $.ASN1Encoder<SequenceMatchType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceMatchType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SequenceMatchType */
-/**
- * @summary Encodes a(n) SequenceMatchType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SequenceMatchType, encoded as an ASN.1 Element.
- */
-export function _encode_SequenceMatchType(
-    value: SequenceMatchType,
-    elGetter: $.ASN1Encoder<SequenceMatchType>
-) {
-    if (!_cached_encoder_for_SequenceMatchType) {
-        _cached_encoder_for_SequenceMatchType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SequenceMatchType(value, elGetter);
-}
+export const _encode_SequenceMatchType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SequenceMatchType */
 

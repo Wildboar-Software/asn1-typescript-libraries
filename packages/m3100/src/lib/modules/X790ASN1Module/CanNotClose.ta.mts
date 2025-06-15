@@ -45,45 +45,17 @@ export const alreadyCleared: CanNotClose = CanNotClose_alreadyCleared; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION alreadyCleared */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CanNotClose */
-let _cached_decoder_for_CanNotClose: $.ASN1Decoder<CanNotClose> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CanNotClose */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CanNotClose */
-/**
- * @summary Decodes an ASN.1 element into a(n) CanNotClose
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CanNotClose} The decoded data structure.
- */
-export function _decode_CanNotClose(el: _Element) {
-    if (!_cached_decoder_for_CanNotClose) {
-        _cached_decoder_for_CanNotClose = $._decodeInteger;
-    }
-    return _cached_decoder_for_CanNotClose(el);
-}
+export const _decode_CanNotClose = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CanNotClose */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CanNotClose */
-let _cached_encoder_for_CanNotClose: $.ASN1Encoder<CanNotClose> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CanNotClose */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CanNotClose */
-/**
- * @summary Encodes a(n) CanNotClose into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CanNotClose, encoded as an ASN.1 Element.
- */
-export function _encode_CanNotClose(
-    value: CanNotClose,
-    elGetter: $.ASN1Encoder<CanNotClose>
-) {
-    if (!_cached_encoder_for_CanNotClose) {
-        _cached_encoder_for_CanNotClose = $._encodeInteger;
-    }
-    return _cached_encoder_for_CanNotClose(value, elGetter);
-}
+export const _encode_CanNotClose = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CanNotClose */
 

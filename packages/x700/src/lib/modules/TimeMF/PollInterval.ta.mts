@@ -27,45 +27,17 @@ export type PollInterval = INTEGER;
 /* END_OF_SYMBOL_DEFINITION PollInterval */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PollInterval */
-let _cached_decoder_for_PollInterval: $.ASN1Decoder<PollInterval> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PollInterval */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PollInterval */
-/**
- * @summary Decodes an ASN.1 element into a(n) PollInterval
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PollInterval} The decoded data structure.
- */
-export function _decode_PollInterval(el: _Element) {
-    if (!_cached_decoder_for_PollInterval) {
-        _cached_decoder_for_PollInterval = $._decodeInteger;
-    }
-    return _cached_decoder_for_PollInterval(el);
-}
+export const _decode_PollInterval = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PollInterval */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PollInterval */
-let _cached_encoder_for_PollInterval: $.ASN1Encoder<PollInterval> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PollInterval */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PollInterval */
-/**
- * @summary Encodes a(n) PollInterval into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PollInterval, encoded as an ASN.1 Element.
- */
-export function _encode_PollInterval(
-    value: PollInterval,
-    elGetter: $.ASN1Encoder<PollInterval>
-) {
-    if (!_cached_encoder_for_PollInterval) {
-        _cached_encoder_for_PollInterval = $._encodeInteger;
-    }
-    return _cached_encoder_for_PollInterval(value, elGetter);
-}
+export const _encode_PollInterval = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PollInterval */
 

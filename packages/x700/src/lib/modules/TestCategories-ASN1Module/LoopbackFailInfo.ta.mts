@@ -64,45 +64,17 @@ export const loopbackTimeoutExceeded: LoopbackFailInfo = LoopbackFailInfo_loopba
 /* END_OF_SYMBOL_DEFINITION loopbackTimeoutExceeded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackFailInfo */
-let _cached_decoder_for_LoopbackFailInfo: $.ASN1Decoder<LoopbackFailInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackFailInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LoopbackFailInfo */
-/**
- * @summary Decodes an ASN.1 element into a(n) LoopbackFailInfo
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LoopbackFailInfo} The decoded data structure.
- */
-export function _decode_LoopbackFailInfo(el: _Element) {
-    if (!_cached_decoder_for_LoopbackFailInfo) {
-        _cached_decoder_for_LoopbackFailInfo = $._decodeInteger;
-    }
-    return _cached_decoder_for_LoopbackFailInfo(el);
-}
+export const _decode_LoopbackFailInfo = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_LoopbackFailInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackFailInfo */
-let _cached_encoder_for_LoopbackFailInfo: $.ASN1Encoder<LoopbackFailInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackFailInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LoopbackFailInfo */
-/**
- * @summary Encodes a(n) LoopbackFailInfo into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LoopbackFailInfo, encoded as an ASN.1 Element.
- */
-export function _encode_LoopbackFailInfo(
-    value: LoopbackFailInfo,
-    elGetter: $.ASN1Encoder<LoopbackFailInfo>
-) {
-    if (!_cached_encoder_for_LoopbackFailInfo) {
-        _cached_encoder_for_LoopbackFailInfo = $._encodeInteger;
-    }
-    return _cached_encoder_for_LoopbackFailInfo(value, elGetter);
-}
+export const _encode_LoopbackFailInfo = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LoopbackFailInfo */
 

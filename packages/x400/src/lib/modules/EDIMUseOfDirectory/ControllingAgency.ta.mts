@@ -27,45 +27,17 @@ export type ControllingAgency = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION ControllingAgency */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControllingAgency */
-let _cached_decoder_for_ControllingAgency: $.ASN1Decoder<ControllingAgency> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControllingAgency */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ControllingAgency */
-/**
- * @summary Decodes an ASN.1 element into a(n) ControllingAgency
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ControllingAgency} The decoded data structure.
- */
-export function _decode_ControllingAgency(el: _Element) {
-    if (!_cached_decoder_for_ControllingAgency) {
-        _cached_decoder_for_ControllingAgency = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_ControllingAgency(el);
-}
+export const _decode_ControllingAgency = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_ControllingAgency */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControllingAgency */
-let _cached_encoder_for_ControllingAgency: $.ASN1Encoder<ControllingAgency> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControllingAgency */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ControllingAgency */
-/**
- * @summary Encodes a(n) ControllingAgency into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControllingAgency, encoded as an ASN.1 Element.
- */
-export function _encode_ControllingAgency(
-    value: ControllingAgency,
-    elGetter: $.ASN1Encoder<ControllingAgency>
-) {
-    if (!_cached_encoder_for_ControllingAgency) {
-        _cached_encoder_for_ControllingAgency = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_ControllingAgency(value, elGetter);
-}
+export const _encode_ControllingAgency = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ControllingAgency */
 

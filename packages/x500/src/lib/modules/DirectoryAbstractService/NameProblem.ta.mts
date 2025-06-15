@@ -94,45 +94,17 @@ export const aliasDereferencingProblem: NameProblem = NameProblem_aliasDereferen
 /* END_OF_SYMBOL_DEFINITION aliasDereferencingProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameProblem */
-let _cached_decoder_for_NameProblem: $.ASN1Decoder<NameProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NameProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) NameProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NameProblem} The decoded data structure.
- */
-export function _decode_NameProblem(el: _Element) {
-    if (!_cached_decoder_for_NameProblem) {
-        _cached_decoder_for_NameProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_NameProblem(el);
-}
+export const _decode_NameProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NameProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameProblem */
-let _cached_encoder_for_NameProblem: $.ASN1Encoder<NameProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NameProblem */
-/**
- * @summary Encodes a(n) NameProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NameProblem, encoded as an ASN.1 Element.
- */
-export function _encode_NameProblem(
-    value: NameProblem,
-    elGetter: $.ASN1Encoder<NameProblem>
-) {
-    if (!_cached_encoder_for_NameProblem) {
-        _cached_encoder_for_NameProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_NameProblem(value, elGetter);
-}
+export const _encode_NameProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NameProblem */
 

@@ -109,45 +109,17 @@ export const overlapped_recovery: number = Ccr_requirements_overlapped_recovery;
 /* END_OF_SYMBOL_DEFINITION overlapped_recovery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Ccr_requirements */
-let _cached_decoder_for_Ccr_requirements: $.ASN1Decoder<Ccr_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Ccr_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Ccr_requirements */
-/**
- * @summary Decodes an ASN.1 element into a(n) Ccr_requirements
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Ccr_requirements} The decoded data structure.
- */
-export function _decode_Ccr_requirements(el: _Element) {
-  if (!_cached_decoder_for_Ccr_requirements) {
-    _cached_decoder_for_Ccr_requirements = $._decodeBitString;
-  }
-  return _cached_decoder_for_Ccr_requirements(el);
-}
+export const _decode_Ccr_requirements = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Ccr_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Ccr_requirements */
-let _cached_encoder_for_Ccr_requirements: $.ASN1Encoder<Ccr_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Ccr_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Ccr_requirements */
-/**
- * @summary Encodes a(n) Ccr_requirements into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Ccr_requirements, encoded as an ASN.1 Element.
- */
-export function _encode_Ccr_requirements(
-  value: Ccr_requirements,
-  elGetter: $.ASN1Encoder<Ccr_requirements>
-) {
-  if (!_cached_encoder_for_Ccr_requirements) {
-    _cached_encoder_for_Ccr_requirements = $._encodeBitString;
-  }
-  return _cached_encoder_for_Ccr_requirements(value, elGetter);
-}
+export const _encode_Ccr_requirements = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Ccr_requirements */
 

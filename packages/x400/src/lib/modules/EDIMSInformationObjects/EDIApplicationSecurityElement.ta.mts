@@ -28,45 +28,17 @@ export type EDIApplicationSecurityElement = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION EDIApplicationSecurityElement */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityElement */
-let _cached_decoder_for_EDIApplicationSecurityElement: $.ASN1Decoder<EDIApplicationSecurityElement> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityElement */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityElement */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDIApplicationSecurityElement
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDIApplicationSecurityElement} The decoded data structure.
- */
-export function _decode_EDIApplicationSecurityElement(el: _Element) {
-    if (!_cached_decoder_for_EDIApplicationSecurityElement) {
-        _cached_decoder_for_EDIApplicationSecurityElement = $._decodeBitString;
-    }
-    return _cached_decoder_for_EDIApplicationSecurityElement(el);
-}
+export const _decode_EDIApplicationSecurityElement = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityElement */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityElement */
-let _cached_encoder_for_EDIApplicationSecurityElement: $.ASN1Encoder<EDIApplicationSecurityElement> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityElement */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityElement */
-/**
- * @summary Encodes a(n) EDIApplicationSecurityElement into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDIApplicationSecurityElement, encoded as an ASN.1 Element.
- */
-export function _encode_EDIApplicationSecurityElement(
-    value: EDIApplicationSecurityElement,
-    elGetter: $.ASN1Encoder<EDIApplicationSecurityElement>
-) {
-    if (!_cached_encoder_for_EDIApplicationSecurityElement) {
-        _cached_encoder_for_EDIApplicationSecurityElement = $._encodeBitString;
-    }
-    return _cached_encoder_for_EDIApplicationSecurityElement(value, elGetter);
-}
+export const _encode_EDIApplicationSecurityElement = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityElement */
 

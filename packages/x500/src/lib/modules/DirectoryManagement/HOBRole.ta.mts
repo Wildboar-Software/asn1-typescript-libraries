@@ -53,45 +53,17 @@ export const subordinate: HOBRole = HOBRole_subordinate; /* SHORT_NAMED_INTEGER_
 /* END_OF_SYMBOL_DEFINITION subordinate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HOBRole */
-let _cached_decoder_for_HOBRole: $.ASN1Decoder<HOBRole> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HOBRole */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HOBRole */
-/**
- * @summary Decodes an ASN.1 element into a(n) HOBRole
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HOBRole} The decoded data structure.
- */
-export function _decode_HOBRole(el: _Element) {
-    if (!_cached_decoder_for_HOBRole) {
-        _cached_decoder_for_HOBRole = $._decodeInteger;
-    }
-    return _cached_decoder_for_HOBRole(el);
-}
+export const _decode_HOBRole = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_HOBRole */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HOBRole */
-let _cached_encoder_for_HOBRole: $.ASN1Encoder<HOBRole> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HOBRole */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HOBRole */
-/**
- * @summary Encodes a(n) HOBRole into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HOBRole, encoded as an ASN.1 Element.
- */
-export function _encode_HOBRole(
-    value: HOBRole,
-    elGetter: $.ASN1Encoder<HOBRole>
-) {
-    if (!_cached_encoder_for_HOBRole) {
-        _cached_encoder_for_HOBRole = $._encodeInteger;
-    }
-    return _cached_encoder_for_HOBRole(value, elGetter);
-}
+export const _encode_HOBRole = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HOBRole */
 

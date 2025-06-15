@@ -99,48 +99,17 @@ export const local_limit_on_DCS_exceeded: Result_list_Item_provider_reason = Res
 /* END_OF_SYMBOL_DEFINITION local_limit_on_DCS_exceeded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Result_list_Item_provider_reason */
-let _cached_decoder_for_Result_list_Item_provider_reason: $.ASN1Decoder<Result_list_Item_provider_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Result_list_Item_provider_reason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Result_list_Item_provider_reason */
-/**
- * @summary Decodes an ASN.1 element into a(n) Result_list_Item_provider_reason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Result_list_Item_provider_reason} The decoded data structure.
- */
-export function _decode_Result_list_Item_provider_reason(el: _Element) {
-    if (!_cached_decoder_for_Result_list_Item_provider_reason) {
-        _cached_decoder_for_Result_list_Item_provider_reason = $._decodeInteger;
-    }
-    return _cached_decoder_for_Result_list_Item_provider_reason(el);
-}
+export const _decode_Result_list_Item_provider_reason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Result_list_Item_provider_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Result_list_Item_provider_reason */
-let _cached_encoder_for_Result_list_Item_provider_reason: $.ASN1Encoder<Result_list_Item_provider_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Result_list_Item_provider_reason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Result_list_Item_provider_reason */
-/**
- * @summary Encodes a(n) Result_list_Item_provider_reason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Result_list_Item_provider_reason, encoded as an ASN.1 Element.
- */
-export function _encode_Result_list_Item_provider_reason(
-    value: Result_list_Item_provider_reason,
-    elGetter: $.ASN1Encoder<Result_list_Item_provider_reason>
-) {
-    if (!_cached_encoder_for_Result_list_Item_provider_reason) {
-        _cached_encoder_for_Result_list_Item_provider_reason = $._encodeInteger;
-    }
-    return _cached_encoder_for_Result_list_Item_provider_reason(
-        value,
-        elGetter
-    );
-}
+export const _encode_Result_list_Item_provider_reason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Result_list_Item_provider_reason */
 

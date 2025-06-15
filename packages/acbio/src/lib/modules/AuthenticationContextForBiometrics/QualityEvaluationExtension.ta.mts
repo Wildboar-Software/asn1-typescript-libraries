@@ -27,45 +27,17 @@ export type QualityEvaluationExtension = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION QualityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QualityEvaluationExtension */
-let _cached_decoder_for_QualityEvaluationExtension: $.ASN1Decoder<QualityEvaluationExtension> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QualityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _decode_QualityEvaluationExtension */
-/**
- * @summary Decodes an ASN.1 element into a(n) QualityEvaluationExtension
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {QualityEvaluationExtension} The decoded data structure.
- */
-export function _decode_QualityEvaluationExtension(el: _Element) {
-    if (!_cached_decoder_for_QualityEvaluationExtension) {
-        _cached_decoder_for_QualityEvaluationExtension = $._decodeOctetString;
-    }
-    return _cached_decoder_for_QualityEvaluationExtension(el);
-}
+export const _decode_QualityEvaluationExtension = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_QualityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QualityEvaluationExtension */
-let _cached_encoder_for_QualityEvaluationExtension: $.ASN1Encoder<QualityEvaluationExtension> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QualityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _encode_QualityEvaluationExtension */
-/**
- * @summary Encodes a(n) QualityEvaluationExtension into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The QualityEvaluationExtension, encoded as an ASN.1 Element.
- */
-export function _encode_QualityEvaluationExtension(
-    value: QualityEvaluationExtension,
-    elGetter: $.ASN1Encoder<QualityEvaluationExtension>
-) {
-    if (!_cached_encoder_for_QualityEvaluationExtension) {
-        _cached_encoder_for_QualityEvaluationExtension = $._encodeOctetString;
-    }
-    return _cached_encoder_for_QualityEvaluationExtension(value, elGetter);
-}
+export const _encode_QualityEvaluationExtension = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_QualityEvaluationExtension */
 

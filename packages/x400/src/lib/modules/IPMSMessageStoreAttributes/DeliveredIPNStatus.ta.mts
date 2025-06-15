@@ -174,45 +174,17 @@ export const rn_received: DeliveredIPNStatus = DeliveredIPNStatus_rn_received; /
 /* END_OF_SYMBOL_DEFINITION rn_received */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveredIPNStatus */
-let _cached_decoder_for_DeliveredIPNStatus: $.ASN1Decoder<DeliveredIPNStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveredIPNStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliveredIPNStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveredIPNStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliveredIPNStatus} The decoded data structure.
- */
-export function _decode_DeliveredIPNStatus(el: _Element) {
-    if (!_cached_decoder_for_DeliveredIPNStatus) {
-        _cached_decoder_for_DeliveredIPNStatus = $._decodeInteger;
-    }
-    return _cached_decoder_for_DeliveredIPNStatus(el);
-}
+export const _decode_DeliveredIPNStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliveredIPNStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveredIPNStatus */
-let _cached_encoder_for_DeliveredIPNStatus: $.ASN1Encoder<DeliveredIPNStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveredIPNStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliveredIPNStatus */
-/**
- * @summary Encodes a(n) DeliveredIPNStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveredIPNStatus, encoded as an ASN.1 Element.
- */
-export function _encode_DeliveredIPNStatus(
-    value: DeliveredIPNStatus,
-    elGetter: $.ASN1Encoder<DeliveredIPNStatus>
-) {
-    if (!_cached_encoder_for_DeliveredIPNStatus) {
-        _cached_encoder_for_DeliveredIPNStatus = $._encodeInteger;
-    }
-    return _cached_encoder_for_DeliveredIPNStatus(value, elGetter);
-}
+export const _encode_DeliveredIPNStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliveredIPNStatus */
 

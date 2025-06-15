@@ -17,45 +17,17 @@ export type DomainInfo = _Element; // ObjectClassFieldType
 /* END_OF_SYMBOL_DEFINITION DomainInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainInfo */
-let _cached_decoder_for_DomainInfo: $.ASN1Decoder<DomainInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DomainInfo */
-/**
- * @summary Decodes an ASN.1 element into a(n) DomainInfo
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DomainInfo} The decoded data structure.
- */
-export function _decode_DomainInfo(el: _Element) {
-    if (!_cached_decoder_for_DomainInfo) {
-        _cached_decoder_for_DomainInfo = $._decodeAny;
-    }
-    return _cached_decoder_for_DomainInfo(el);
-}
+export const _decode_DomainInfo = $._decodeAny;
 /* END_OF_SYMBOL_DEFINITION _decode_DomainInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainInfo */
-let _cached_encoder_for_DomainInfo: $.ASN1Encoder<DomainInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DomainInfo */
-/**
- * @summary Encodes a(n) DomainInfo into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DomainInfo, encoded as an ASN.1 Element.
- */
-export function _encode_DomainInfo(
-    value: DomainInfo,
-    elGetter: $.ASN1Encoder<DomainInfo>
-) {
-    if (!_cached_encoder_for_DomainInfo) {
-        _cached_encoder_for_DomainInfo = $._encodeAny;
-    }
-    return _cached_encoder_for_DomainInfo(value, elGetter);
-}
+export const _encode_DomainInfo = $._encodeAny;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DomainInfo */
 

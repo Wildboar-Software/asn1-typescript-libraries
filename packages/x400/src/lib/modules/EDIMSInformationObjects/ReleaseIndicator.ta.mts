@@ -27,45 +27,17 @@ export type ReleaseIndicator = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION ReleaseIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseIndicator */
-let _cached_decoder_for_ReleaseIndicator: $.ASN1Decoder<ReleaseIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReleaseIndicator */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReleaseIndicator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReleaseIndicator} The decoded data structure.
- */
-export function _decode_ReleaseIndicator(el: _Element) {
-    if (!_cached_decoder_for_ReleaseIndicator) {
-        _cached_decoder_for_ReleaseIndicator = $._decodeOctetString;
-    }
-    return _cached_decoder_for_ReleaseIndicator(el);
-}
+export const _decode_ReleaseIndicator = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_ReleaseIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseIndicator */
-let _cached_encoder_for_ReleaseIndicator: $.ASN1Encoder<ReleaseIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReleaseIndicator */
-/**
- * @summary Encodes a(n) ReleaseIndicator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReleaseIndicator, encoded as an ASN.1 Element.
- */
-export function _encode_ReleaseIndicator(
-    value: ReleaseIndicator,
-    elGetter: $.ASN1Encoder<ReleaseIndicator>
-) {
-    if (!_cached_encoder_for_ReleaseIndicator) {
-        _cached_encoder_for_ReleaseIndicator = $._encodeOctetString;
-    }
-    return _cached_encoder_for_ReleaseIndicator(value, elGetter);
-}
+export const _encode_ReleaseIndicator = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReleaseIndicator */
 

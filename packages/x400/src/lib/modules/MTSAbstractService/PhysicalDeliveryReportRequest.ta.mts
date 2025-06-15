@@ -102,45 +102,17 @@ export const return_of_notification_by_MHS_and_PDS: PhysicalDeliveryReportReques
 /* END_OF_SYMBOL_DEFINITION return_of_notification_by_MHS_and_PDS */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryReportRequest */
-let _cached_decoder_for_PhysicalDeliveryReportRequest: $.ASN1Decoder<PhysicalDeliveryReportRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryReportRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryReportRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryReportRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PhysicalDeliveryReportRequest} The decoded data structure.
- */
-export function _decode_PhysicalDeliveryReportRequest(el: _Element) {
-    if (!_cached_decoder_for_PhysicalDeliveryReportRequest) {
-        _cached_decoder_for_PhysicalDeliveryReportRequest = $._decodeInteger;
-    }
-    return _cached_decoder_for_PhysicalDeliveryReportRequest(el);
-}
+export const _decode_PhysicalDeliveryReportRequest = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryReportRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryReportRequest */
-let _cached_encoder_for_PhysicalDeliveryReportRequest: $.ASN1Encoder<PhysicalDeliveryReportRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryReportRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryReportRequest */
-/**
- * @summary Encodes a(n) PhysicalDeliveryReportRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PhysicalDeliveryReportRequest, encoded as an ASN.1 Element.
- */
-export function _encode_PhysicalDeliveryReportRequest(
-    value: PhysicalDeliveryReportRequest,
-    elGetter: $.ASN1Encoder<PhysicalDeliveryReportRequest>
-) {
-    if (!_cached_encoder_for_PhysicalDeliveryReportRequest) {
-        _cached_encoder_for_PhysicalDeliveryReportRequest = $._encodeInteger;
-    }
-    return _cached_encoder_for_PhysicalDeliveryReportRequest(value, elGetter);
-}
+export const _encode_PhysicalDeliveryReportRequest = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryReportRequest */
 

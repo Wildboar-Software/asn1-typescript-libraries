@@ -76,45 +76,17 @@ export const packed_encoding_rules: number = Protocol_options_packed_encoding_ru
 /* END_OF_SYMBOL_DEFINITION packed_encoding_rules */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Protocol_options */
-let _cached_decoder_for_Protocol_options: $.ASN1Decoder<Protocol_options> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Protocol_options */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Protocol_options */
-/**
- * @summary Decodes an ASN.1 element into a(n) Protocol_options
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Protocol_options} The decoded data structure.
- */
-export function _decode_Protocol_options(el: _Element) {
-    if (!_cached_decoder_for_Protocol_options) {
-        _cached_decoder_for_Protocol_options = $._decodeBitString;
-    }
-    return _cached_decoder_for_Protocol_options(el);
-}
+export const _decode_Protocol_options = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Protocol_options */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Protocol_options */
-let _cached_encoder_for_Protocol_options: $.ASN1Encoder<Protocol_options> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Protocol_options */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Protocol_options */
-/**
- * @summary Encodes a(n) Protocol_options into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Protocol_options, encoded as an ASN.1 Element.
- */
-export function _encode_Protocol_options(
-    value: Protocol_options,
-    elGetter: $.ASN1Encoder<Protocol_options>
-) {
-    if (!_cached_encoder_for_Protocol_options) {
-        _cached_encoder_for_Protocol_options = $._encodeBitString;
-    }
-    return _cached_encoder_for_Protocol_options(value, elGetter);
-}
+export const _encode_Protocol_options = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Protocol_options */
 

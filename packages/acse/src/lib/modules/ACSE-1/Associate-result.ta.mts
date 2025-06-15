@@ -82,45 +82,17 @@ export const rejected_transient: Associate_result = Associate_result_rejected_tr
 /* END_OF_SYMBOL_DEFINITION rejected_transient */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Associate_result */
-let _cached_decoder_for_Associate_result: $.ASN1Decoder<Associate_result> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Associate_result */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Associate_result */
-/**
- * @summary Decodes an ASN.1 element into a(n) Associate_result
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Associate_result} The decoded data structure.
- */
-export function _decode_Associate_result(el: _Element) {
-  if (!_cached_decoder_for_Associate_result) {
-    _cached_decoder_for_Associate_result = $._decodeInteger;
-  }
-  return _cached_decoder_for_Associate_result(el);
-}
+export const _decode_Associate_result = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Associate_result */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Associate_result */
-let _cached_encoder_for_Associate_result: $.ASN1Encoder<Associate_result> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Associate_result */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Associate_result */
-/**
- * @summary Encodes a(n) Associate_result into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Associate_result, encoded as an ASN.1 Element.
- */
-export function _encode_Associate_result(
-  value: Associate_result,
-  elGetter: $.ASN1Encoder<Associate_result>
-) {
-  if (!_cached_encoder_for_Associate_result) {
-    _cached_encoder_for_Associate_result = $._encodeInteger;
-  }
-  return _cached_encoder_for_Associate_result(value, elGetter);
-}
+export const _encode_Associate_result = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Associate_result */
 

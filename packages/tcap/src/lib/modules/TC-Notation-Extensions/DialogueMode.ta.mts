@@ -97,45 +97,17 @@ export const unstructured: DialogueMode =
 /* END_OF_SYMBOL_DEFINITION unstructured */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DialogueMode */
-let _cached_decoder_for_DialogueMode: $.ASN1Decoder<DialogueMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DialogueMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) DialogueMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DialogueMode} The decoded data structure.
- */
-export function _decode_DialogueMode(el: _Element) {
-    if (!_cached_decoder_for_DialogueMode) {
-        _cached_decoder_for_DialogueMode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DialogueMode(el);
-}
+export const _decode_DialogueMode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DialogueMode */
-let _cached_encoder_for_DialogueMode: $.ASN1Encoder<DialogueMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DialogueMode */
-/**
- * @summary Encodes a(n) DialogueMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DialogueMode, encoded as an ASN.1 Element.
- */
-export function _encode_DialogueMode(
-    value: DialogueMode,
-    elGetter: $.ASN1Encoder<DialogueMode>
-) {
-    if (!_cached_encoder_for_DialogueMode) {
-        _cached_encoder_for_DialogueMode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DialogueMode(value, elGetter);
-}
+export const _encode_DialogueMode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DialogueMode */
 

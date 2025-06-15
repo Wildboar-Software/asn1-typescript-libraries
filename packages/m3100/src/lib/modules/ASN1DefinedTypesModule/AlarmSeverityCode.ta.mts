@@ -163,45 +163,17 @@ export const warning: AlarmSeverityCode =
 /* END_OF_SYMBOL_DEFINITION warning */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmSeverityCode */
-let _cached_decoder_for_AlarmSeverityCode: $.ASN1Decoder<AlarmSeverityCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmSeverityCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AlarmSeverityCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) AlarmSeverityCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AlarmSeverityCode} The decoded data structure.
- */
-export function _decode_AlarmSeverityCode(el: _Element) {
-    if (!_cached_decoder_for_AlarmSeverityCode) {
-        _cached_decoder_for_AlarmSeverityCode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AlarmSeverityCode(el);
-}
+export const _decode_AlarmSeverityCode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AlarmSeverityCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmSeverityCode */
-let _cached_encoder_for_AlarmSeverityCode: $.ASN1Encoder<AlarmSeverityCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmSeverityCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AlarmSeverityCode */
-/**
- * @summary Encodes a(n) AlarmSeverityCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AlarmSeverityCode, encoded as an ASN.1 Element.
- */
-export function _encode_AlarmSeverityCode(
-    value: AlarmSeverityCode,
-    elGetter: $.ASN1Encoder<AlarmSeverityCode>
-) {
-    if (!_cached_encoder_for_AlarmSeverityCode) {
-        _cached_encoder_for_AlarmSeverityCode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AlarmSeverityCode(value, elGetter);
-}
+export const _encode_AlarmSeverityCode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AlarmSeverityCode */
 

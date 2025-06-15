@@ -27,45 +27,17 @@ export type Simply_encoded_data = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION Simply_encoded_data */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Simply_encoded_data */
-let _cached_decoder_for_Simply_encoded_data: $.ASN1Decoder<Simply_encoded_data> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Simply_encoded_data */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Simply_encoded_data */
-/**
- * @summary Decodes an ASN.1 element into a(n) Simply_encoded_data
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Simply_encoded_data} The decoded data structure.
- */
-export function _decode_Simply_encoded_data(el: _Element) {
-  if (!_cached_decoder_for_Simply_encoded_data) {
-    _cached_decoder_for_Simply_encoded_data = $._decodeOctetString;
-  }
-  return _cached_decoder_for_Simply_encoded_data(el);
-}
+export const _decode_Simply_encoded_data = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_Simply_encoded_data */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Simply_encoded_data */
-let _cached_encoder_for_Simply_encoded_data: $.ASN1Encoder<Simply_encoded_data> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Simply_encoded_data */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Simply_encoded_data */
-/**
- * @summary Encodes a(n) Simply_encoded_data into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Simply_encoded_data, encoded as an ASN.1 Element.
- */
-export function _encode_Simply_encoded_data(
-  value: Simply_encoded_data,
-  elGetter: $.ASN1Encoder<Simply_encoded_data>
-) {
-  if (!_cached_encoder_for_Simply_encoded_data) {
-    _cached_encoder_for_Simply_encoded_data = $._encodeOctetString;
-  }
-  return _cached_encoder_for_Simply_encoded_data(value, elGetter);
-}
+export const _encode_Simply_encoded_data = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Simply_encoded_data */
 

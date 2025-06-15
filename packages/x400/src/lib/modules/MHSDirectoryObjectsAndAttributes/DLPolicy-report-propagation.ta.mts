@@ -81,45 +81,17 @@ export const both_previous_and_owner: DLPolicy_report_propagation = DLPolicy_rep
 /* END_OF_SYMBOL_DEFINITION both_previous_and_owner */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_report_propagation */
-let _cached_decoder_for_DLPolicy_report_propagation: $.ASN1Decoder<DLPolicy_report_propagation> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_report_propagation */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_report_propagation */
-/**
- * @summary Decodes an ASN.1 element into a(n) DLPolicy_report_propagation
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DLPolicy_report_propagation} The decoded data structure.
- */
-export function _decode_DLPolicy_report_propagation(el: _Element) {
-    if (!_cached_decoder_for_DLPolicy_report_propagation) {
-        _cached_decoder_for_DLPolicy_report_propagation = $._decodeInteger;
-    }
-    return _cached_decoder_for_DLPolicy_report_propagation(el);
-}
+export const _decode_DLPolicy_report_propagation = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_report_propagation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_report_propagation */
-let _cached_encoder_for_DLPolicy_report_propagation: $.ASN1Encoder<DLPolicy_report_propagation> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_report_propagation */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_report_propagation */
-/**
- * @summary Encodes a(n) DLPolicy_report_propagation into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DLPolicy_report_propagation, encoded as an ASN.1 Element.
- */
-export function _encode_DLPolicy_report_propagation(
-    value: DLPolicy_report_propagation,
-    elGetter: $.ASN1Encoder<DLPolicy_report_propagation>
-) {
-    if (!_cached_encoder_for_DLPolicy_report_propagation) {
-        _cached_encoder_for_DLPolicy_report_propagation = $._encodeInteger;
-    }
-    return _cached_encoder_for_DLPolicy_report_propagation(value, elGetter);
-}
+export const _encode_DLPolicy_report_propagation = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_report_propagation */
 

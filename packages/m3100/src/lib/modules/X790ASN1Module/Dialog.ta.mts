@@ -27,42 +27,17 @@ export type Dialog = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION Dialog */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Dialog */
-let _cached_decoder_for_Dialog: $.ASN1Decoder<Dialog> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Dialog */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Dialog */
-/**
- * @summary Decodes an ASN.1 element into a(n) Dialog
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Dialog} The decoded data structure.
- */
-export function _decode_Dialog(el: _Element) {
-    if (!_cached_decoder_for_Dialog) {
-        _cached_decoder_for_Dialog = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_Dialog(el);
-}
+export const _decode_Dialog = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_Dialog */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Dialog */
-let _cached_encoder_for_Dialog: $.ASN1Encoder<Dialog> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Dialog */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Dialog */
-/**
- * @summary Encodes a(n) Dialog into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Dialog, encoded as an ASN.1 Element.
- */
-export function _encode_Dialog(value: Dialog, elGetter: $.ASN1Encoder<Dialog>) {
-    if (!_cached_encoder_for_Dialog) {
-        _cached_encoder_for_Dialog = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_Dialog(value, elGetter);
-}
+export const _encode_Dialog = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Dialog */
 

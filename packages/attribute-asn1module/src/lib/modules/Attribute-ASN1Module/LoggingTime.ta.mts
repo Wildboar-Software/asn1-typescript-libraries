@@ -30,40 +30,17 @@ type LoggingTime = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION LoggingTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoggingTime */
-let _cached_decoder_for_LoggingTime: $.ASN1Decoder<LoggingTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoggingTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LoggingTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) LoggingTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LoggingTime} The decoded data structure.
- */
-export
-function _decode_LoggingTime (el: _Element) {
-    if (!_cached_decoder_for_LoggingTime) { _cached_decoder_for_LoggingTime = $._decodeGeneralizedTime; }
-    return _cached_decoder_for_LoggingTime(el);
-}
+export const _decode_LoggingTime = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_LoggingTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoggingTime */
-let _cached_encoder_for_LoggingTime: $.ASN1Encoder<LoggingTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoggingTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LoggingTime */
-/**
- * @summary Encodes a(n) LoggingTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LoggingTime, encoded as an ASN.1 Element.
- */
-export
-function _encode_LoggingTime (value: LoggingTime, elGetter: $.ASN1Encoder<LoggingTime>) {
-    if (!_cached_encoder_for_LoggingTime) { _cached_encoder_for_LoggingTime = $._encodeGeneralizedTime; }
-    return _cached_encoder_for_LoggingTime(value, elGetter);
-}
+export const _encode_LoggingTime = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LoggingTime */
 

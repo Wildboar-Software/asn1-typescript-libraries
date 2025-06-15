@@ -110,40 +110,17 @@ const suspended: ControlStatus_Item = ControlStatus_Item_suspended; /* SHORT_NAM
 /* END_OF_SYMBOL_DEFINITION suspended */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlStatus_Item */
-let _cached_decoder_for_ControlStatus_Item: $.ASN1Decoder<ControlStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ControlStatus_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) ControlStatus_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ControlStatus_Item} The decoded data structure.
- */
-export
-function _decode_ControlStatus_Item (el: _Element) {
-    if (!_cached_decoder_for_ControlStatus_Item) { _cached_decoder_for_ControlStatus_Item = $._decodeInteger; }
-    return _cached_decoder_for_ControlStatus_Item(el);
-}
+export const _decode_ControlStatus_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ControlStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlStatus_Item */
-let _cached_encoder_for_ControlStatus_Item: $.ASN1Encoder<ControlStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ControlStatus_Item */
-/**
- * @summary Encodes a(n) ControlStatus_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControlStatus_Item, encoded as an ASN.1 Element.
- */
-export
-function _encode_ControlStatus_Item (value: ControlStatus_Item, elGetter: $.ASN1Encoder<ControlStatus_Item>) {
-    if (!_cached_encoder_for_ControlStatus_Item) { _cached_encoder_for_ControlStatus_Item = $._encodeInteger; }
-    return _cached_encoder_for_ControlStatus_Item(value, elGetter);
-}
+export const _encode_ControlStatus_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ControlStatus_Item */
 

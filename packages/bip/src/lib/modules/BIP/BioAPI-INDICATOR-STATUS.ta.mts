@@ -131,45 +131,17 @@ export const failure: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_failure;
 /* END_OF_SYMBOL_DEFINITION failure */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_INDICATOR_STATUS */
-let _cached_decoder_for_BioAPI_INDICATOR_STATUS: $.ASN1Decoder<BioAPI_INDICATOR_STATUS> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_INDICATOR_STATUS */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_INDICATOR_STATUS */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_INDICATOR_STATUS
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_INDICATOR_STATUS} The decoded data structure.
- */
-export function _decode_BioAPI_INDICATOR_STATUS(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_INDICATOR_STATUS) {
-    _cached_decoder_for_BioAPI_INDICATOR_STATUS = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_INDICATOR_STATUS(el);
-}
+export const _decode_BioAPI_INDICATOR_STATUS = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_INDICATOR_STATUS */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_INDICATOR_STATUS */
-let _cached_encoder_for_BioAPI_INDICATOR_STATUS: $.ASN1Encoder<BioAPI_INDICATOR_STATUS> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_INDICATOR_STATUS */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_INDICATOR_STATUS */
-/**
- * @summary Encodes a(n) BioAPI_INDICATOR_STATUS into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_INDICATOR_STATUS, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_INDICATOR_STATUS(
-  value: BioAPI_INDICATOR_STATUS,
-  elGetter: $.ASN1Encoder<BioAPI_INDICATOR_STATUS>
-) {
-  if (!_cached_encoder_for_BioAPI_INDICATOR_STATUS) {
-    _cached_encoder_for_BioAPI_INDICATOR_STATUS = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_INDICATOR_STATUS(value, elGetter);
-}
+export const _encode_BioAPI_INDICATOR_STATUS = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_INDICATOR_STATUS */
 

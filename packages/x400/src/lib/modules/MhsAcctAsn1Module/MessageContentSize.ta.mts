@@ -27,45 +27,17 @@ export type MessageContentSize = INTEGER;
 /* END_OF_SYMBOL_DEFINITION MessageContentSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageContentSize */
-let _cached_decoder_for_MessageContentSize: $.ASN1Decoder<MessageContentSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageContentSize */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MessageContentSize */
-/**
- * @summary Decodes an ASN.1 element into a(n) MessageContentSize
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MessageContentSize} The decoded data structure.
- */
-export function _decode_MessageContentSize(el: _Element) {
-    if (!_cached_decoder_for_MessageContentSize) {
-        _cached_decoder_for_MessageContentSize = $._decodeInteger;
-    }
-    return _cached_decoder_for_MessageContentSize(el);
-}
+export const _decode_MessageContentSize = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MessageContentSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageContentSize */
-let _cached_encoder_for_MessageContentSize: $.ASN1Encoder<MessageContentSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageContentSize */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MessageContentSize */
-/**
- * @summary Encodes a(n) MessageContentSize into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MessageContentSize, encoded as an ASN.1 Element.
- */
-export function _encode_MessageContentSize(
-    value: MessageContentSize,
-    elGetter: $.ASN1Encoder<MessageContentSize>
-) {
-    if (!_cached_encoder_for_MessageContentSize) {
-        _cached_encoder_for_MessageContentSize = $._encodeInteger;
-    }
-    return _cached_encoder_for_MessageContentSize(value, elGetter);
-}
+export const _encode_MessageContentSize = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MessageContentSize */
 

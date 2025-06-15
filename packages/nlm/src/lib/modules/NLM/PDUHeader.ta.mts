@@ -27,45 +27,17 @@ export type PDUHeader = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION PDUHeader */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUHeader */
-let _cached_decoder_for_PDUHeader: $.ASN1Decoder<PDUHeader> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUHeader */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PDUHeader */
-/**
- * @summary Decodes an ASN.1 element into a(n) PDUHeader
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PDUHeader} The decoded data structure.
- */
-export function _decode_PDUHeader(el: _Element) {
-    if (!_cached_decoder_for_PDUHeader) {
-        _cached_decoder_for_PDUHeader = $._decodeOctetString;
-    }
-    return _cached_decoder_for_PDUHeader(el);
-}
+export const _decode_PDUHeader = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_PDUHeader */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUHeader */
-let _cached_encoder_for_PDUHeader: $.ASN1Encoder<PDUHeader> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUHeader */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PDUHeader */
-/**
- * @summary Encodes a(n) PDUHeader into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PDUHeader, encoded as an ASN.1 Element.
- */
-export function _encode_PDUHeader(
-    value: PDUHeader,
-    elGetter: $.ASN1Encoder<PDUHeader>
-) {
-    if (!_cached_encoder_for_PDUHeader) {
-        _cached_encoder_for_PDUHeader = $._encodeOctetString;
-    }
-    return _cached_encoder_for_PDUHeader(value, elGetter);
-}
+export const _encode_PDUHeader = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PDUHeader */
 

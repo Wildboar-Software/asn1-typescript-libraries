@@ -107,45 +107,17 @@ export const f_erase: number = F_OPEN_request_processing_mode_f_erase; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION f_erase */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_F_OPEN_request_processing_mode */
-let _cached_decoder_for_F_OPEN_request_processing_mode: $.ASN1Decoder<F_OPEN_request_processing_mode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_F_OPEN_request_processing_mode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_F_OPEN_request_processing_mode */
-/**
- * @summary Decodes an ASN.1 element into a(n) F_OPEN_request_processing_mode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {F_OPEN_request_processing_mode} The decoded data structure.
- */
-export function _decode_F_OPEN_request_processing_mode(el: _Element) {
-  if (!_cached_decoder_for_F_OPEN_request_processing_mode) {
-    _cached_decoder_for_F_OPEN_request_processing_mode = $._decodeBitString;
-  }
-  return _cached_decoder_for_F_OPEN_request_processing_mode(el);
-}
+export const _decode_F_OPEN_request_processing_mode = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_F_OPEN_request_processing_mode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_F_OPEN_request_processing_mode */
-let _cached_encoder_for_F_OPEN_request_processing_mode: $.ASN1Encoder<F_OPEN_request_processing_mode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_F_OPEN_request_processing_mode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_F_OPEN_request_processing_mode */
-/**
- * @summary Encodes a(n) F_OPEN_request_processing_mode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The F_OPEN_request_processing_mode, encoded as an ASN.1 Element.
- */
-export function _encode_F_OPEN_request_processing_mode(
-  value: F_OPEN_request_processing_mode,
-  elGetter: $.ASN1Encoder<F_OPEN_request_processing_mode>
-) {
-  if (!_cached_encoder_for_F_OPEN_request_processing_mode) {
-    _cached_encoder_for_F_OPEN_request_processing_mode = $._encodeBitString;
-  }
-  return _cached_encoder_for_F_OPEN_request_processing_mode(value, elGetter);
-}
+export const _encode_F_OPEN_request_processing_mode = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_F_OPEN_request_processing_mode */
 

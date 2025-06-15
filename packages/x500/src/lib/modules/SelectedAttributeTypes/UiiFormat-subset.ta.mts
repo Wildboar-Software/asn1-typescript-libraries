@@ -109,45 +109,17 @@ export const wholeSubtree: UiiFormat_subset =
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UiiFormat_subset */
-let _cached_decoder_for_UiiFormat_subset: $.ASN1Decoder<UiiFormat_subset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UiiFormat_subset */
 
 /* START_OF_SYMBOL_DEFINITION _decode_UiiFormat_subset */
-/**
- * @summary Decodes an ASN.1 element into a(n) UiiFormat_subset
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UiiFormat_subset} The decoded data structure.
- */
-export function _decode_UiiFormat_subset(el: _Element) {
-    if (!_cached_decoder_for_UiiFormat_subset) {
-        _cached_decoder_for_UiiFormat_subset = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_UiiFormat_subset(el);
-}
+export const _decode_UiiFormat_subset = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_UiiFormat_subset */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UiiFormat_subset */
-let _cached_encoder_for_UiiFormat_subset: $.ASN1Encoder<UiiFormat_subset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UiiFormat_subset */
 
 /* START_OF_SYMBOL_DEFINITION _encode_UiiFormat_subset */
-/**
- * @summary Encodes a(n) UiiFormat_subset into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UiiFormat_subset, encoded as an ASN.1 Element.
- */
-export function _encode_UiiFormat_subset(
-    value: UiiFormat_subset,
-    elGetter: $.ASN1Encoder<UiiFormat_subset>
-) {
-    if (!_cached_encoder_for_UiiFormat_subset) {
-        _cached_encoder_for_UiiFormat_subset = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_UiiFormat_subset(value, elGetter);
-}
+export const _encode_UiiFormat_subset = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_UiiFormat_subset */
 

@@ -157,45 +157,17 @@ export const delete_object: number = Access_Request_delete_object; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION delete_object */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Request */
-let _cached_decoder_for_Access_Request: $.ASN1Decoder<Access_Request> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Request */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Access_Request */
-/**
- * @summary Decodes an ASN.1 element into a(n) Access_Request
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Access_Request} The decoded data structure.
- */
-export function _decode_Access_Request(el: _Element) {
-    if (!_cached_decoder_for_Access_Request) {
-        _cached_decoder_for_Access_Request = $._decodeBitString;
-    }
-    return _cached_decoder_for_Access_Request(el);
-}
+export const _decode_Access_Request = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Access_Request */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Request */
-let _cached_encoder_for_Access_Request: $.ASN1Encoder<Access_Request> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Request */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Access_Request */
-/**
- * @summary Encodes a(n) Access_Request into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Access_Request, encoded as an ASN.1 Element.
- */
-export function _encode_Access_Request(
-    value: Access_Request,
-    elGetter: $.ASN1Encoder<Access_Request>
-) {
-    if (!_cached_encoder_for_Access_Request) {
-        _cached_encoder_for_Access_Request = $._encodeBitString;
-    }
-    return _cached_encoder_for_Access_Request(value, elGetter);
-}
+export const _encode_Access_Request = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Access_Request */
 

@@ -244,45 +244,17 @@ export const non_delivery_report_from_intended_recipient: ReportSummary =
 /* END_OF_SYMBOL_DEFINITION non_delivery_report_from_intended_recipient */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportSummary */
-let _cached_decoder_for_ReportSummary: $.ASN1Decoder<ReportSummary> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportSummary */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReportSummary */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReportSummary
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReportSummary} The decoded data structure.
- */
-export function _decode_ReportSummary(el: _Element) {
-    if (!_cached_decoder_for_ReportSummary) {
-        _cached_decoder_for_ReportSummary = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ReportSummary(el);
-}
+export const _decode_ReportSummary = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ReportSummary */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportSummary */
-let _cached_encoder_for_ReportSummary: $.ASN1Encoder<ReportSummary> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportSummary */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReportSummary */
-/**
- * @summary Encodes a(n) ReportSummary into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReportSummary, encoded as an ASN.1 Element.
- */
-export function _encode_ReportSummary(
-    value: ReportSummary,
-    elGetter: $.ASN1Encoder<ReportSummary>
-) {
-    if (!_cached_encoder_for_ReportSummary) {
-        _cached_encoder_for_ReportSummary = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ReportSummary(value, elGetter);
-}
+export const _encode_ReportSummary = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReportSummary */
 

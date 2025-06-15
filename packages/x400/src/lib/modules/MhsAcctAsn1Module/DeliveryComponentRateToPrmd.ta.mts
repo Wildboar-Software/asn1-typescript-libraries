@@ -27,45 +27,17 @@ export type DeliveryComponentRateToPrmd = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION DeliveryComponentRateToPrmd */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryComponentRateToPrmd */
-let _cached_decoder_for_DeliveryComponentRateToPrmd: $.ASN1Decoder<DeliveryComponentRateToPrmd> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryComponentRateToPrmd */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliveryComponentRateToPrmd */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveryComponentRateToPrmd
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliveryComponentRateToPrmd} The decoded data structure.
- */
-export function _decode_DeliveryComponentRateToPrmd(el: _Element) {
-    if (!_cached_decoder_for_DeliveryComponentRateToPrmd) {
-        _cached_decoder_for_DeliveryComponentRateToPrmd = $._decodeReal;
-    }
-    return _cached_decoder_for_DeliveryComponentRateToPrmd(el);
-}
+export const _decode_DeliveryComponentRateToPrmd = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliveryComponentRateToPrmd */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryComponentRateToPrmd */
-let _cached_encoder_for_DeliveryComponentRateToPrmd: $.ASN1Encoder<DeliveryComponentRateToPrmd> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryComponentRateToPrmd */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliveryComponentRateToPrmd */
-/**
- * @summary Encodes a(n) DeliveryComponentRateToPrmd into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveryComponentRateToPrmd, encoded as an ASN.1 Element.
- */
-export function _encode_DeliveryComponentRateToPrmd(
-    value: DeliveryComponentRateToPrmd,
-    elGetter: $.ASN1Encoder<DeliveryComponentRateToPrmd>
-) {
-    if (!_cached_encoder_for_DeliveryComponentRateToPrmd) {
-        _cached_encoder_for_DeliveryComponentRateToPrmd = $._encodeReal;
-    }
-    return _cached_encoder_for_DeliveryComponentRateToPrmd(value, elGetter);
-}
+export const _encode_DeliveryComponentRateToPrmd = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliveryComponentRateToPrmd */
 

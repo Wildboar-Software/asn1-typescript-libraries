@@ -103,45 +103,17 @@ export const proof_of_submission_requested: ProofOfSubmissionRequest =
 /* END_OF_SYMBOL_DEFINITION proof_of_submission_requested */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfSubmissionRequest */
-let _cached_decoder_for_ProofOfSubmissionRequest: $.ASN1Decoder<ProofOfSubmissionRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfSubmissionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProofOfSubmissionRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProofOfSubmissionRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProofOfSubmissionRequest} The decoded data structure.
- */
-export function _decode_ProofOfSubmissionRequest(el: _Element) {
-    if (!_cached_decoder_for_ProofOfSubmissionRequest) {
-        _cached_decoder_for_ProofOfSubmissionRequest = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ProofOfSubmissionRequest(el);
-}
+export const _decode_ProofOfSubmissionRequest = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ProofOfSubmissionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfSubmissionRequest */
-let _cached_encoder_for_ProofOfSubmissionRequest: $.ASN1Encoder<ProofOfSubmissionRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfSubmissionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProofOfSubmissionRequest */
-/**
- * @summary Encodes a(n) ProofOfSubmissionRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProofOfSubmissionRequest, encoded as an ASN.1 Element.
- */
-export function _encode_ProofOfSubmissionRequest(
-    value: ProofOfSubmissionRequest,
-    elGetter: $.ASN1Encoder<ProofOfSubmissionRequest>
-) {
-    if (!_cached_encoder_for_ProofOfSubmissionRequest) {
-        _cached_encoder_for_ProofOfSubmissionRequest = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ProofOfSubmissionRequest(value, elGetter);
-}
+export const _encode_ProofOfSubmissionRequest = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProofOfSubmissionRequest */
 

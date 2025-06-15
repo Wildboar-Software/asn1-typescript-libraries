@@ -63,45 +63,17 @@ export const continue_: Error_Action = Error_Action_continue_; /* SHORT_NAMED_IN
 /* END_OF_SYMBOL_DEFINITION continue_ */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Error_Action */
-let _cached_decoder_for_Error_Action: $.ASN1Decoder<Error_Action> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Error_Action */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Error_Action */
-/**
- * @summary Decodes an ASN.1 element into a(n) Error_Action
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Error_Action} The decoded data structure.
- */
-export function _decode_Error_Action(el: _Element) {
-  if (!_cached_decoder_for_Error_Action) {
-    _cached_decoder_for_Error_Action = $._decodeInteger;
-  }
-  return _cached_decoder_for_Error_Action(el);
-}
+export const _decode_Error_Action = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Error_Action */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Error_Action */
-let _cached_encoder_for_Error_Action: $.ASN1Encoder<Error_Action> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Error_Action */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Error_Action */
-/**
- * @summary Encodes a(n) Error_Action into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Error_Action, encoded as an ASN.1 Element.
- */
-export function _encode_Error_Action(
-  value: Error_Action,
-  elGetter: $.ASN1Encoder<Error_Action>
-) {
-  if (!_cached_encoder_for_Error_Action) {
-    _cached_encoder_for_Error_Action = $._encodeInteger;
-  }
-  return _cached_encoder_for_Error_Action(value, elGetter);
-}
+export const _encode_Error_Action = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Error_Action */
 

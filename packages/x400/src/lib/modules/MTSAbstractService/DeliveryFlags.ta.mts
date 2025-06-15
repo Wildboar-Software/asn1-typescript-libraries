@@ -46,45 +46,17 @@ export const implicit_conversion_prohibited: number = DeliveryFlags_implicit_con
 /* END_OF_SYMBOL_DEFINITION implicit_conversion_prohibited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryFlags */
-let _cached_decoder_for_DeliveryFlags: $.ASN1Decoder<DeliveryFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliveryFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveryFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliveryFlags} The decoded data structure.
- */
-export function _decode_DeliveryFlags(el: _Element) {
-    if (!_cached_decoder_for_DeliveryFlags) {
-        _cached_decoder_for_DeliveryFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_DeliveryFlags(el);
-}
+export const _decode_DeliveryFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliveryFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryFlags */
-let _cached_encoder_for_DeliveryFlags: $.ASN1Encoder<DeliveryFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliveryFlags */
-/**
- * @summary Encodes a(n) DeliveryFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveryFlags, encoded as an ASN.1 Element.
- */
-export function _encode_DeliveryFlags(
-    value: DeliveryFlags,
-    elGetter: $.ASN1Encoder<DeliveryFlags>
-) {
-    if (!_cached_encoder_for_DeliveryFlags) {
-        _cached_encoder_for_DeliveryFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_DeliveryFlags(value, elGetter);
-}
+export const _encode_DeliveryFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliveryFlags */
 

@@ -17,45 +17,17 @@ export type BaseDistance = INTEGER;
 /* END_OF_SYMBOL_DEFINITION BaseDistance */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BaseDistance */
-let _cached_decoder_for_BaseDistance: $.ASN1Decoder<BaseDistance> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BaseDistance */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BaseDistance */
-/**
- * @summary Decodes an ASN.1 element into a(n) BaseDistance
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BaseDistance} The decoded data structure.
- */
-export function _decode_BaseDistance(el: _Element) {
-    if (!_cached_decoder_for_BaseDistance) {
-        _cached_decoder_for_BaseDistance = $._decodeInteger;
-    }
-    return _cached_decoder_for_BaseDistance(el);
-}
+export const _decode_BaseDistance = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_BaseDistance */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BaseDistance */
-let _cached_encoder_for_BaseDistance: $.ASN1Encoder<BaseDistance> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BaseDistance */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BaseDistance */
-/**
- * @summary Encodes a(n) BaseDistance into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BaseDistance, encoded as an ASN.1 Element.
- */
-export function _encode_BaseDistance(
-    value: BaseDistance,
-    elGetter: $.ASN1Encoder<BaseDistance>
-) {
-    if (!_cached_encoder_for_BaseDistance) {
-        _cached_encoder_for_BaseDistance = $._encodeInteger;
-    }
-    return _cached_encoder_for_BaseDistance(value, elGetter);
-}
+export const _encode_BaseDistance = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BaseDistance */
 

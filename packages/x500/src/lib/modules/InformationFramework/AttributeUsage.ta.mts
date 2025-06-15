@@ -103,45 +103,17 @@ export const dSAOperation: AttributeUsage = AttributeUsage_dSAOperation; /* SHOR
 /* END_OF_SYMBOL_DEFINITION dSAOperation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeUsage */
-let _cached_decoder_for_AttributeUsage: $.ASN1Decoder<AttributeUsage> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeUsage */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeUsage */
-/**
- * @summary Decodes an ASN.1 element into a(n) AttributeUsage
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AttributeUsage} The decoded data structure.
- */
-export function _decode_AttributeUsage(el: _Element) {
-    if (!_cached_decoder_for_AttributeUsage) {
-        _cached_decoder_for_AttributeUsage = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AttributeUsage(el);
-}
+export const _decode_AttributeUsage = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeUsage */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeUsage */
-let _cached_encoder_for_AttributeUsage: $.ASN1Encoder<AttributeUsage> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeUsage */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeUsage */
-/**
- * @summary Encodes a(n) AttributeUsage into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AttributeUsage, encoded as an ASN.1 Element.
- */
-export function _encode_AttributeUsage(
-    value: AttributeUsage,
-    elGetter: $.ASN1Encoder<AttributeUsage>
-) {
-    if (!_cached_encoder_for_AttributeUsage) {
-        _cached_encoder_for_AttributeUsage = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AttributeUsage(value, elGetter);
-}
+export const _encode_AttributeUsage = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeUsage */
 

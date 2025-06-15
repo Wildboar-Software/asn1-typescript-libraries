@@ -103,45 +103,17 @@ export const wordProviderDefined: WordMatchTypes = WordMatchTypes_wordProviderDe
 /* END_OF_SYMBOL_DEFINITION wordProviderDefined */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WordMatchTypes */
-let _cached_decoder_for_WordMatchTypes: $.ASN1Decoder<WordMatchTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WordMatchTypes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_WordMatchTypes */
-/**
- * @summary Decodes an ASN.1 element into a(n) WordMatchTypes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {WordMatchTypes} The decoded data structure.
- */
-export function _decode_WordMatchTypes(el: _Element) {
-    if (!_cached_decoder_for_WordMatchTypes) {
-        _cached_decoder_for_WordMatchTypes = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_WordMatchTypes(el);
-}
+export const _decode_WordMatchTypes = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_WordMatchTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WordMatchTypes */
-let _cached_encoder_for_WordMatchTypes: $.ASN1Encoder<WordMatchTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WordMatchTypes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_WordMatchTypes */
-/**
- * @summary Encodes a(n) WordMatchTypes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The WordMatchTypes, encoded as an ASN.1 Element.
- */
-export function _encode_WordMatchTypes(
-    value: WordMatchTypes,
-    elGetter: $.ASN1Encoder<WordMatchTypes>
-) {
-    if (!_cached_encoder_for_WordMatchTypes) {
-        _cached_encoder_for_WordMatchTypes = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_WordMatchTypes(value, elGetter);
-}
+export const _encode_WordMatchTypes = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_WordMatchTypes */
 

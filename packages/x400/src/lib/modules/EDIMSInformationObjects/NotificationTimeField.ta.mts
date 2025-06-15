@@ -27,45 +27,17 @@ export type NotificationTimeField = UTCTime; // UTCTime
 /* END_OF_SYMBOL_DEFINITION NotificationTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationTimeField */
-let _cached_decoder_for_NotificationTimeField: $.ASN1Decoder<NotificationTimeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NotificationTimeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NotificationTimeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NotificationTimeField} The decoded data structure.
- */
-export function _decode_NotificationTimeField(el: _Element) {
-    if (!_cached_decoder_for_NotificationTimeField) {
-        _cached_decoder_for_NotificationTimeField = $._decodeUTCTime;
-    }
-    return _cached_decoder_for_NotificationTimeField(el);
-}
+export const _decode_NotificationTimeField = $._decodeUTCTime;
 /* END_OF_SYMBOL_DEFINITION _decode_NotificationTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationTimeField */
-let _cached_encoder_for_NotificationTimeField: $.ASN1Encoder<NotificationTimeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NotificationTimeField */
-/**
- * @summary Encodes a(n) NotificationTimeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NotificationTimeField, encoded as an ASN.1 Element.
- */
-export function _encode_NotificationTimeField(
-    value: NotificationTimeField,
-    elGetter: $.ASN1Encoder<NotificationTimeField>
-) {
-    if (!_cached_encoder_for_NotificationTimeField) {
-        _cached_encoder_for_NotificationTimeField = $._encodeUTCTime;
-    }
-    return _cached_encoder_for_NotificationTimeField(value, elGetter);
-}
+export const _encode_NotificationTimeField = $._encodeUTCTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NotificationTimeField */
 

@@ -82,45 +82,17 @@ export const strong_authentication: AuthenticationMethod = AuthenticationMethod_
 /* END_OF_SYMBOL_DEFINITION strong_authentication */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationMethod */
-let _cached_decoder_for_AuthenticationMethod: $.ASN1Decoder<AuthenticationMethod> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationMethod */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AuthenticationMethod */
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticationMethod
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AuthenticationMethod} The decoded data structure.
- */
-export function _decode_AuthenticationMethod(el: _Element) {
-    if (!_cached_decoder_for_AuthenticationMethod) {
-        _cached_decoder_for_AuthenticationMethod = $._decodeInteger;
-    }
-    return _cached_decoder_for_AuthenticationMethod(el);
-}
+export const _decode_AuthenticationMethod = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AuthenticationMethod */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationMethod */
-let _cached_encoder_for_AuthenticationMethod: $.ASN1Encoder<AuthenticationMethod> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationMethod */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AuthenticationMethod */
-/**
- * @summary Encodes a(n) AuthenticationMethod into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticationMethod, encoded as an ASN.1 Element.
- */
-export function _encode_AuthenticationMethod(
-    value: AuthenticationMethod,
-    elGetter: $.ASN1Encoder<AuthenticationMethod>
-) {
-    if (!_cached_encoder_for_AuthenticationMethod) {
-        _cached_encoder_for_AuthenticationMethod = $._encodeInteger;
-    }
-    return _cached_encoder_for_AuthenticationMethod(value, elGetter);
-}
+export const _encode_AuthenticationMethod = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AuthenticationMethod */
 

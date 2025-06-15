@@ -169,45 +169,17 @@ export const noAcknowledgement: IntermediateResponse =
 /* END_OF_SYMBOL_DEFINITION noAcknowledgement */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResponse */
-let _cached_decoder_for_IntermediateResponse: $.ASN1Decoder<IntermediateResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResponse */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IntermediateResponse */
-/**
- * @summary Decodes an ASN.1 element into a(n) IntermediateResponse
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IntermediateResponse} The decoded data structure.
- */
-export function _decode_IntermediateResponse(el: _Element) {
-    if (!_cached_decoder_for_IntermediateResponse) {
-        _cached_decoder_for_IntermediateResponse = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_IntermediateResponse(el);
-}
+export const _decode_IntermediateResponse = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_IntermediateResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResponse */
-let _cached_encoder_for_IntermediateResponse: $.ASN1Encoder<IntermediateResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResponse */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IntermediateResponse */
-/**
- * @summary Encodes a(n) IntermediateResponse into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IntermediateResponse, encoded as an ASN.1 Element.
- */
-export function _encode_IntermediateResponse(
-    value: IntermediateResponse,
-    elGetter: $.ASN1Encoder<IntermediateResponse>
-) {
-    if (!_cached_encoder_for_IntermediateResponse) {
-        _cached_encoder_for_IntermediateResponse = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_IntermediateResponse(value, elGetter);
-}
+export const _encode_IntermediateResponse = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IntermediateResponse */
 

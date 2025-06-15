@@ -83,45 +83,17 @@ export const parameter_unacceptable: RefusalReason = RefusalReason_parameter_una
 /* END_OF_SYMBOL_DEFINITION parameter_unacceptable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusalReason */
-let _cached_decoder_for_RefusalReason: $.ASN1Decoder<RefusalReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusalReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RefusalReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) RefusalReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RefusalReason} The decoded data structure.
- */
-export function _decode_RefusalReason(el: _Element) {
-    if (!_cached_decoder_for_RefusalReason) {
-        _cached_decoder_for_RefusalReason = $._decodeInteger;
-    }
-    return _cached_decoder_for_RefusalReason(el);
-}
+export const _decode_RefusalReason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RefusalReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusalReason */
-let _cached_encoder_for_RefusalReason: $.ASN1Encoder<RefusalReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusalReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RefusalReason */
-/**
- * @summary Encodes a(n) RefusalReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RefusalReason, encoded as an ASN.1 Element.
- */
-export function _encode_RefusalReason(
-    value: RefusalReason,
-    elGetter: $.ASN1Encoder<RefusalReason>
-) {
-    if (!_cached_encoder_for_RefusalReason) {
-        _cached_encoder_for_RefusalReason = $._encodeInteger;
-    }
-    return _cached_encoder_for_RefusalReason(value, elGetter);
-}
+export const _encode_RefusalReason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RefusalReason */
 

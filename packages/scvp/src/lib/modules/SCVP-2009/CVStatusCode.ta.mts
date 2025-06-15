@@ -614,45 +614,17 @@ export const unrecognizedCritRequestExt: CVStatusCode = CVStatusCode_unrecognize
 /* END_OF_SYMBOL_DEFINITION unrecognizedCritRequestExt */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CVStatusCode */
-let _cached_decoder_for_CVStatusCode: $.ASN1Decoder<CVStatusCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CVStatusCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CVStatusCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) CVStatusCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CVStatusCode} The decoded data structure.
- */
-export function _decode_CVStatusCode(el: _Element) {
-  if (!_cached_decoder_for_CVStatusCode) {
-    _cached_decoder_for_CVStatusCode = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_CVStatusCode(el);
-}
+export const _decode_CVStatusCode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CVStatusCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CVStatusCode */
-let _cached_encoder_for_CVStatusCode: $.ASN1Encoder<CVStatusCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CVStatusCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CVStatusCode */
-/**
- * @summary Encodes a(n) CVStatusCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CVStatusCode, encoded as an ASN.1 Element.
- */
-export function _encode_CVStatusCode(
-  value: CVStatusCode,
-  elGetter: $.ASN1Encoder<CVStatusCode>
-) {
-  if (!_cached_encoder_for_CVStatusCode) {
-    _cached_encoder_for_CVStatusCode = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_CVStatusCode(value, elGetter);
-}
+export const _encode_CVStatusCode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CVStatusCode */
 

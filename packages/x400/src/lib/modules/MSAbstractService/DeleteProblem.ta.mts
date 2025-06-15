@@ -122,45 +122,17 @@ export const stored_message_exists: DeleteProblem = DeleteProblem_stored_message
 /* END_OF_SYMBOL_DEFINITION stored_message_exists */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteProblem */
-let _cached_decoder_for_DeleteProblem: $.ASN1Decoder<DeleteProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeleteProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeleteProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeleteProblem} The decoded data structure.
- */
-export function _decode_DeleteProblem(el: _Element) {
-    if (!_cached_decoder_for_DeleteProblem) {
-        _cached_decoder_for_DeleteProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_DeleteProblem(el);
-}
+export const _decode_DeleteProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DeleteProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteProblem */
-let _cached_encoder_for_DeleteProblem: $.ASN1Encoder<DeleteProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeleteProblem */
-/**
- * @summary Encodes a(n) DeleteProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeleteProblem, encoded as an ASN.1 Element.
- */
-export function _encode_DeleteProblem(
-    value: DeleteProblem,
-    elGetter: $.ASN1Encoder<DeleteProblem>
-) {
-    if (!_cached_encoder_for_DeleteProblem) {
-        _cached_encoder_for_DeleteProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_DeleteProblem(value, elGetter);
-}
+export const _encode_DeleteProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeleteProblem */
 

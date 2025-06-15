@@ -320,45 +320,17 @@ export const reserved15: ClockEventCode = ClockEventCode_reserved15; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION reserved15 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventCode */
-let _cached_decoder_for_ClockEventCode: $.ASN1Decoder<ClockEventCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ClockEventCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) ClockEventCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ClockEventCode} The decoded data structure.
- */
-export function _decode_ClockEventCode(el: _Element) {
-    if (!_cached_decoder_for_ClockEventCode) {
-        _cached_decoder_for_ClockEventCode = $._decodeInteger;
-    }
-    return _cached_decoder_for_ClockEventCode(el);
-}
+export const _decode_ClockEventCode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ClockEventCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventCode */
-let _cached_encoder_for_ClockEventCode: $.ASN1Encoder<ClockEventCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ClockEventCode */
-/**
- * @summary Encodes a(n) ClockEventCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ClockEventCode, encoded as an ASN.1 Element.
- */
-export function _encode_ClockEventCode(
-    value: ClockEventCode,
-    elGetter: $.ASN1Encoder<ClockEventCode>
-) {
-    if (!_cached_encoder_for_ClockEventCode) {
-        _cached_encoder_for_ClockEventCode = $._encodeInteger;
-    }
-    return _cached_encoder_for_ClockEventCode(value, elGetter);
-}
+export const _encode_ClockEventCode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ClockEventCode */
 

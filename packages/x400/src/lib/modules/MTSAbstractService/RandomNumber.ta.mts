@@ -27,45 +27,17 @@ export type RandomNumber = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION RandomNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RandomNumber */
-let _cached_decoder_for_RandomNumber: $.ASN1Decoder<RandomNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RandomNumber */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RandomNumber */
-/**
- * @summary Decodes an ASN.1 element into a(n) RandomNumber
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RandomNumber} The decoded data structure.
- */
-export function _decode_RandomNumber(el: _Element) {
-    if (!_cached_decoder_for_RandomNumber) {
-        _cached_decoder_for_RandomNumber = $._decodeBitString;
-    }
-    return _cached_decoder_for_RandomNumber(el);
-}
+export const _decode_RandomNumber = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_RandomNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RandomNumber */
-let _cached_encoder_for_RandomNumber: $.ASN1Encoder<RandomNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RandomNumber */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RandomNumber */
-/**
- * @summary Encodes a(n) RandomNumber into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RandomNumber, encoded as an ASN.1 Element.
- */
-export function _encode_RandomNumber(
-    value: RandomNumber,
-    elGetter: $.ASN1Encoder<RandomNumber>
-) {
-    if (!_cached_encoder_for_RandomNumber) {
-        _cached_encoder_for_RandomNumber = $._encodeBitString;
-    }
-    return _cached_encoder_for_RandomNumber(value, elGetter);
-}
+export const _encode_RandomNumber = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RandomNumber */
 

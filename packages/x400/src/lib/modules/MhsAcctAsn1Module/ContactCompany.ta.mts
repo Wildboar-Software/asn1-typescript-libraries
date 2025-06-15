@@ -27,45 +27,17 @@ export type ContactCompany = UniversalString; // UniversalString
 /* END_OF_SYMBOL_DEFINITION ContactCompany */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactCompany */
-let _cached_decoder_for_ContactCompany: $.ASN1Decoder<ContactCompany> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactCompany */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ContactCompany */
-/**
- * @summary Decodes an ASN.1 element into a(n) ContactCompany
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ContactCompany} The decoded data structure.
- */
-export function _decode_ContactCompany(el: _Element) {
-    if (!_cached_decoder_for_ContactCompany) {
-        _cached_decoder_for_ContactCompany = $._decodeUniversalString;
-    }
-    return _cached_decoder_for_ContactCompany(el);
-}
+export const _decode_ContactCompany = $._decodeUniversalString;
 /* END_OF_SYMBOL_DEFINITION _decode_ContactCompany */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactCompany */
-let _cached_encoder_for_ContactCompany: $.ASN1Encoder<ContactCompany> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactCompany */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ContactCompany */
-/**
- * @summary Encodes a(n) ContactCompany into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ContactCompany, encoded as an ASN.1 Element.
- */
-export function _encode_ContactCompany(
-    value: ContactCompany,
-    elGetter: $.ASN1Encoder<ContactCompany>
-) {
-    if (!_cached_encoder_for_ContactCompany) {
-        _cached_encoder_for_ContactCompany = $._encodeUniversalString;
-    }
-    return _cached_encoder_for_ContactCompany(value, elGetter);
-}
+export const _encode_ContactCompany = $._encodeUniversalString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ContactCompany */
 

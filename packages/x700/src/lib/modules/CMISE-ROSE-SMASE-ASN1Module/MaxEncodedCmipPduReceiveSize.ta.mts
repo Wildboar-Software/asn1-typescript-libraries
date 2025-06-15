@@ -27,45 +27,17 @@ export type MaxEncodedCmipPduReceiveSize = INTEGER;
 /* END_OF_SYMBOL_DEFINITION MaxEncodedCmipPduReceiveSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxEncodedCmipPduReceiveSize */
-let _cached_decoder_for_MaxEncodedCmipPduReceiveSize: $.ASN1Decoder<MaxEncodedCmipPduReceiveSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxEncodedCmipPduReceiveSize */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MaxEncodedCmipPduReceiveSize */
-/**
- * @summary Decodes an ASN.1 element into a(n) MaxEncodedCmipPduReceiveSize
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MaxEncodedCmipPduReceiveSize} The decoded data structure.
- */
-export function _decode_MaxEncodedCmipPduReceiveSize(el: _Element) {
-    if (!_cached_decoder_for_MaxEncodedCmipPduReceiveSize) {
-        _cached_decoder_for_MaxEncodedCmipPduReceiveSize = $._decodeInteger;
-    }
-    return _cached_decoder_for_MaxEncodedCmipPduReceiveSize(el);
-}
+export const _decode_MaxEncodedCmipPduReceiveSize = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MaxEncodedCmipPduReceiveSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxEncodedCmipPduReceiveSize */
-let _cached_encoder_for_MaxEncodedCmipPduReceiveSize: $.ASN1Encoder<MaxEncodedCmipPduReceiveSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxEncodedCmipPduReceiveSize */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MaxEncodedCmipPduReceiveSize */
-/**
- * @summary Encodes a(n) MaxEncodedCmipPduReceiveSize into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MaxEncodedCmipPduReceiveSize, encoded as an ASN.1 Element.
- */
-export function _encode_MaxEncodedCmipPduReceiveSize(
-    value: MaxEncodedCmipPduReceiveSize,
-    elGetter: $.ASN1Encoder<MaxEncodedCmipPduReceiveSize>
-) {
-    if (!_cached_encoder_for_MaxEncodedCmipPduReceiveSize) {
-        _cached_encoder_for_MaxEncodedCmipPduReceiveSize = $._encodeInteger;
-    }
-    return _cached_encoder_for_MaxEncodedCmipPduReceiveSize(value, elGetter);
-}
+export const _encode_MaxEncodedCmipPduReceiveSize = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MaxEncodedCmipPduReceiveSize */
 

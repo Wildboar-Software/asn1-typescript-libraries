@@ -197,45 +197,17 @@ export const telephone_delivery: PreferredDeliveryMethod_Item = PreferredDeliver
 /* END_OF_SYMBOL_DEFINITION telephone_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredDeliveryMethod_Item */
-let _cached_decoder_for_PreferredDeliveryMethod_Item: $.ASN1Decoder<PreferredDeliveryMethod_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredDeliveryMethod_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PreferredDeliveryMethod_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) PreferredDeliveryMethod_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PreferredDeliveryMethod_Item} The decoded data structure.
- */
-export function _decode_PreferredDeliveryMethod_Item(el: _Element) {
-    if (!_cached_decoder_for_PreferredDeliveryMethod_Item) {
-        _cached_decoder_for_PreferredDeliveryMethod_Item = $._decodeInteger;
-    }
-    return _cached_decoder_for_PreferredDeliveryMethod_Item(el);
-}
+export const _decode_PreferredDeliveryMethod_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PreferredDeliveryMethod_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredDeliveryMethod_Item */
-let _cached_encoder_for_PreferredDeliveryMethod_Item: $.ASN1Encoder<PreferredDeliveryMethod_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredDeliveryMethod_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PreferredDeliveryMethod_Item */
-/**
- * @summary Encodes a(n) PreferredDeliveryMethod_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PreferredDeliveryMethod_Item, encoded as an ASN.1 Element.
- */
-export function _encode_PreferredDeliveryMethod_Item(
-    value: PreferredDeliveryMethod_Item,
-    elGetter: $.ASN1Encoder<PreferredDeliveryMethod_Item>
-) {
-    if (!_cached_encoder_for_PreferredDeliveryMethod_Item) {
-        _cached_encoder_for_PreferredDeliveryMethod_Item = $._encodeInteger;
-    }
-    return _cached_encoder_for_PreferredDeliveryMethod_Item(value, elGetter);
-}
+export const _encode_PreferredDeliveryMethod_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PreferredDeliveryMethod_Item */
 

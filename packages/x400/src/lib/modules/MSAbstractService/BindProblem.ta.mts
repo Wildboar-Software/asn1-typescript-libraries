@@ -131,45 +131,17 @@ export const inadequate_association_confidentiality: BindProblem = BindProblem_i
 /* END_OF_SYMBOL_DEFINITION inadequate_association_confidentiality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindProblem */
-let _cached_decoder_for_BindProblem: $.ASN1Decoder<BindProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BindProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) BindProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BindProblem} The decoded data structure.
- */
-export function _decode_BindProblem(el: _Element) {
-    if (!_cached_decoder_for_BindProblem) {
-        _cached_decoder_for_BindProblem = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_BindProblem(el);
-}
+export const _decode_BindProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BindProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindProblem */
-let _cached_encoder_for_BindProblem: $.ASN1Encoder<BindProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BindProblem */
-/**
- * @summary Encodes a(n) BindProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BindProblem, encoded as an ASN.1 Element.
- */
-export function _encode_BindProblem(
-    value: BindProblem,
-    elGetter: $.ASN1Encoder<BindProblem>
-) {
-    if (!_cached_encoder_for_BindProblem) {
-        _cached_encoder_for_BindProblem = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_BindProblem(value, elGetter);
-}
+export const _encode_BindProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BindProblem */
 

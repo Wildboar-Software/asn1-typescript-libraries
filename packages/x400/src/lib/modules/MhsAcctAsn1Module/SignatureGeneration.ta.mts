@@ -63,45 +63,17 @@ export const non_generated: SignatureGeneration = SignatureGeneration_non_genera
 /* END_OF_SYMBOL_DEFINITION non_generated */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureGeneration */
-let _cached_decoder_for_SignatureGeneration: $.ASN1Decoder<SignatureGeneration> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureGeneration */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SignatureGeneration */
-/**
- * @summary Decodes an ASN.1 element into a(n) SignatureGeneration
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SignatureGeneration} The decoded data structure.
- */
-export function _decode_SignatureGeneration(el: _Element) {
-    if (!_cached_decoder_for_SignatureGeneration) {
-        _cached_decoder_for_SignatureGeneration = $._decodeInteger;
-    }
-    return _cached_decoder_for_SignatureGeneration(el);
-}
+export const _decode_SignatureGeneration = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SignatureGeneration */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureGeneration */
-let _cached_encoder_for_SignatureGeneration: $.ASN1Encoder<SignatureGeneration> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureGeneration */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SignatureGeneration */
-/**
- * @summary Encodes a(n) SignatureGeneration into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SignatureGeneration, encoded as an ASN.1 Element.
- */
-export function _encode_SignatureGeneration(
-    value: SignatureGeneration,
-    elGetter: $.ASN1Encoder<SignatureGeneration>
-) {
-    if (!_cached_encoder_for_SignatureGeneration) {
-        _cached_encoder_for_SignatureGeneration = $._encodeInteger;
-    }
-    return _cached_encoder_for_SignatureGeneration(value, elGetter);
-}
+export const _encode_SignatureGeneration = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SignatureGeneration */
 

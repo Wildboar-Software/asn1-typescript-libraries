@@ -27,45 +27,17 @@ export type BCDDatePeriod = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION BCDDatePeriod */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BCDDatePeriod */
-let _cached_decoder_for_BCDDatePeriod: $.ASN1Decoder<BCDDatePeriod> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BCDDatePeriod */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BCDDatePeriod */
-/**
- * @summary Decodes an ASN.1 element into a(n) BCDDatePeriod
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BCDDatePeriod} The decoded data structure.
- */
-export function _decode_BCDDatePeriod(el: _Element) {
-  if (!_cached_decoder_for_BCDDatePeriod) {
-    _cached_decoder_for_BCDDatePeriod = $._decodeOctetString;
-  }
-  return _cached_decoder_for_BCDDatePeriod(el);
-}
+export const _decode_BCDDatePeriod = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_BCDDatePeriod */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BCDDatePeriod */
-let _cached_encoder_for_BCDDatePeriod: $.ASN1Encoder<BCDDatePeriod> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BCDDatePeriod */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BCDDatePeriod */
-/**
- * @summary Encodes a(n) BCDDatePeriod into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BCDDatePeriod, encoded as an ASN.1 Element.
- */
-export function _encode_BCDDatePeriod(
-  value: BCDDatePeriod,
-  elGetter: $.ASN1Encoder<BCDDatePeriod>
-) {
-  if (!_cached_encoder_for_BCDDatePeriod) {
-    _cached_encoder_for_BCDDatePeriod = $._encodeOctetString;
-  }
-  return _cached_encoder_for_BCDDatePeriod(value, elGetter);
-}
+export const _encode_BCDDatePeriod = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BCDDatePeriod */
 

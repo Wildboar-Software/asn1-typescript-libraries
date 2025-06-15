@@ -83,45 +83,17 @@ export const quality_not_recorded: Quality = Quality_quality_not_recorded; /* SH
 /* END_OF_SYMBOL_DEFINITION quality_not_recorded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Quality */
-let _cached_decoder_for_Quality: $.ASN1Decoder<Quality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Quality */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Quality */
-/**
- * @summary Decodes an ASN.1 element into a(n) Quality
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Quality} The decoded data structure.
- */
-export function _decode_Quality(el: _Element) {
-  if (!_cached_decoder_for_Quality) {
-    _cached_decoder_for_Quality = $._decodeInteger;
-  }
-  return _cached_decoder_for_Quality(el);
-}
+export const _decode_Quality = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Quality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Quality */
-let _cached_encoder_for_Quality: $.ASN1Encoder<Quality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Quality */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Quality */
-/**
- * @summary Encodes a(n) Quality into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Quality, encoded as an ASN.1 Element.
- */
-export function _encode_Quality(
-  value: Quality,
-  elGetter: $.ASN1Encoder<Quality>
-) {
-  if (!_cached_encoder_for_Quality) {
-    _cached_encoder_for_Quality = $._encodeInteger;
-  }
-  return _cached_encoder_for_Quality(value, elGetter);
-}
+export const _encode_Quality = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Quality */
 

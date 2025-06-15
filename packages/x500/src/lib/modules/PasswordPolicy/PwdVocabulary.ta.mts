@@ -68,45 +68,17 @@ export const noGeographicalNames: number = PwdVocabulary_noGeographicalNames; /*
 /* END_OF_SYMBOL_DEFINITION noGeographicalNames */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdVocabulary */
-let _cached_decoder_for_PwdVocabulary: $.ASN1Decoder<PwdVocabulary> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdVocabulary */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PwdVocabulary */
-/**
- * @summary Decodes an ASN.1 element into a(n) PwdVocabulary
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PwdVocabulary} The decoded data structure.
- */
-export function _decode_PwdVocabulary(el: _Element) {
-    if (!_cached_decoder_for_PwdVocabulary) {
-        _cached_decoder_for_PwdVocabulary = $._decodeBitString;
-    }
-    return _cached_decoder_for_PwdVocabulary(el);
-}
+export const _decode_PwdVocabulary = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_PwdVocabulary */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdVocabulary */
-let _cached_encoder_for_PwdVocabulary: $.ASN1Encoder<PwdVocabulary> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdVocabulary */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PwdVocabulary */
-/**
- * @summary Encodes a(n) PwdVocabulary into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PwdVocabulary, encoded as an ASN.1 Element.
- */
-export function _encode_PwdVocabulary(
-    value: PwdVocabulary,
-    elGetter: $.ASN1Encoder<PwdVocabulary>
-) {
-    if (!_cached_encoder_for_PwdVocabulary) {
-        _cached_encoder_for_PwdVocabulary = $._encodeBitString;
-    }
-    return _cached_encoder_for_PwdVocabulary(value, elGetter);
-}
+export const _encode_PwdVocabulary = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PwdVocabulary */
 

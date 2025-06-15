@@ -81,45 +81,17 @@ export const au: MtsUserType = MtsUserType_au; /* SHORT_NAMED_INTEGER_VALUE */
 /* END_OF_SYMBOL_DEFINITION au */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MtsUserType */
-let _cached_decoder_for_MtsUserType: $.ASN1Decoder<MtsUserType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MtsUserType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MtsUserType */
-/**
- * @summary Decodes an ASN.1 element into a(n) MtsUserType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MtsUserType} The decoded data structure.
- */
-export function _decode_MtsUserType(el: _Element) {
-    if (!_cached_decoder_for_MtsUserType) {
-        _cached_decoder_for_MtsUserType = $._decodeInteger;
-    }
-    return _cached_decoder_for_MtsUserType(el);
-}
+export const _decode_MtsUserType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MtsUserType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MtsUserType */
-let _cached_encoder_for_MtsUserType: $.ASN1Encoder<MtsUserType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MtsUserType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MtsUserType */
-/**
- * @summary Encodes a(n) MtsUserType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MtsUserType, encoded as an ASN.1 Element.
- */
-export function _encode_MtsUserType(
-    value: MtsUserType,
-    elGetter: $.ASN1Encoder<MtsUserType>
-) {
-    if (!_cached_encoder_for_MtsUserType) {
-        _cached_encoder_for_MtsUserType = $._encodeInteger;
-    }
-    return _cached_encoder_for_MtsUserType(value, elGetter);
-}
+export const _encode_MtsUserType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MtsUserType */
 

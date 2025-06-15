@@ -27,45 +27,17 @@ export type SuspectIntervals = INTEGER;
 /* END_OF_SYMBOL_DEFINITION SuspectIntervals */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SuspectIntervals */
-let _cached_decoder_for_SuspectIntervals: $.ASN1Decoder<SuspectIntervals> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SuspectIntervals */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SuspectIntervals */
-/**
- * @summary Decodes an ASN.1 element into a(n) SuspectIntervals
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SuspectIntervals} The decoded data structure.
- */
-export function _decode_SuspectIntervals(el: _Element) {
-    if (!_cached_decoder_for_SuspectIntervals) {
-        _cached_decoder_for_SuspectIntervals = $._decodeInteger;
-    }
-    return _cached_decoder_for_SuspectIntervals(el);
-}
+export const _decode_SuspectIntervals = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SuspectIntervals */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SuspectIntervals */
-let _cached_encoder_for_SuspectIntervals: $.ASN1Encoder<SuspectIntervals> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SuspectIntervals */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SuspectIntervals */
-/**
- * @summary Encodes a(n) SuspectIntervals into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SuspectIntervals, encoded as an ASN.1 Element.
- */
-export function _encode_SuspectIntervals(
-    value: SuspectIntervals,
-    elGetter: $.ASN1Encoder<SuspectIntervals>
-) {
-    if (!_cached_encoder_for_SuspectIntervals) {
-        _cached_encoder_for_SuspectIntervals = $._encodeInteger;
-    }
-    return _cached_encoder_for_SuspectIntervals(value, elGetter);
-}
+export const _encode_SuspectIntervals = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SuspectIntervals */
 

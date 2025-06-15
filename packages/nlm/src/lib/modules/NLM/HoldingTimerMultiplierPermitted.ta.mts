@@ -27,45 +27,17 @@ export type HoldingTimerMultiplierPermitted = INTEGER;
 /* END_OF_SYMBOL_DEFINITION HoldingTimerMultiplierPermitted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HoldingTimerMultiplierPermitted */
-let _cached_decoder_for_HoldingTimerMultiplierPermitted: $.ASN1Decoder<HoldingTimerMultiplierPermitted> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HoldingTimerMultiplierPermitted */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HoldingTimerMultiplierPermitted */
-/**
- * @summary Decodes an ASN.1 element into a(n) HoldingTimerMultiplierPermitted
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HoldingTimerMultiplierPermitted} The decoded data structure.
- */
-export function _decode_HoldingTimerMultiplierPermitted(el: _Element) {
-    if (!_cached_decoder_for_HoldingTimerMultiplierPermitted) {
-        _cached_decoder_for_HoldingTimerMultiplierPermitted = $._decodeInteger;
-    }
-    return _cached_decoder_for_HoldingTimerMultiplierPermitted(el);
-}
+export const _decode_HoldingTimerMultiplierPermitted = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_HoldingTimerMultiplierPermitted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HoldingTimerMultiplierPermitted */
-let _cached_encoder_for_HoldingTimerMultiplierPermitted: $.ASN1Encoder<HoldingTimerMultiplierPermitted> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HoldingTimerMultiplierPermitted */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HoldingTimerMultiplierPermitted */
-/**
- * @summary Encodes a(n) HoldingTimerMultiplierPermitted into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HoldingTimerMultiplierPermitted, encoded as an ASN.1 Element.
- */
-export function _encode_HoldingTimerMultiplierPermitted(
-    value: HoldingTimerMultiplierPermitted,
-    elGetter: $.ASN1Encoder<HoldingTimerMultiplierPermitted>
-) {
-    if (!_cached_encoder_for_HoldingTimerMultiplierPermitted) {
-        _cached_encoder_for_HoldingTimerMultiplierPermitted = $._encodeInteger;
-    }
-    return _cached_encoder_for_HoldingTimerMultiplierPermitted(value, elGetter);
-}
+export const _encode_HoldingTimerMultiplierPermitted = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HoldingTimerMultiplierPermitted */
 

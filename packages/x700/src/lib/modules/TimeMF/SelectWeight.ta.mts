@@ -27,45 +27,17 @@ export type SelectWeight = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION SelectWeight */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SelectWeight */
-let _cached_decoder_for_SelectWeight: $.ASN1Decoder<SelectWeight> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SelectWeight */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SelectWeight */
-/**
- * @summary Decodes an ASN.1 element into a(n) SelectWeight
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SelectWeight} The decoded data structure.
- */
-export function _decode_SelectWeight(el: _Element) {
-    if (!_cached_decoder_for_SelectWeight) {
-        _cached_decoder_for_SelectWeight = $._decodeReal;
-    }
-    return _cached_decoder_for_SelectWeight(el);
-}
+export const _decode_SelectWeight = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_SelectWeight */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SelectWeight */
-let _cached_encoder_for_SelectWeight: $.ASN1Encoder<SelectWeight> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SelectWeight */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SelectWeight */
-/**
- * @summary Encodes a(n) SelectWeight into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SelectWeight, encoded as an ASN.1 Element.
- */
-export function _encode_SelectWeight(
-    value: SelectWeight,
-    elGetter: $.ASN1Encoder<SelectWeight>
-) {
-    if (!_cached_encoder_for_SelectWeight) {
-        _cached_encoder_for_SelectWeight = $._encodeReal;
-    }
-    return _cached_encoder_for_SelectWeight(value, elGetter);
-}
+export const _encode_SelectWeight = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SelectWeight */
 

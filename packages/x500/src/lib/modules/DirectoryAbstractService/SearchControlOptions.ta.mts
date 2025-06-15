@@ -221,45 +221,17 @@ export const searchFamily: number = SearchControlOptions_searchFamily; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION searchFamily */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchControlOptions */
-let _cached_decoder_for_SearchControlOptions: $.ASN1Decoder<SearchControlOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchControlOptions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SearchControlOptions */
-/**
- * @summary Decodes an ASN.1 element into a(n) SearchControlOptions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SearchControlOptions} The decoded data structure.
- */
-export function _decode_SearchControlOptions(el: _Element) {
-    if (!_cached_decoder_for_SearchControlOptions) {
-        _cached_decoder_for_SearchControlOptions = $._decodeBitString;
-    }
-    return _cached_decoder_for_SearchControlOptions(el);
-}
+export const _decode_SearchControlOptions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_SearchControlOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchControlOptions */
-let _cached_encoder_for_SearchControlOptions: $.ASN1Encoder<SearchControlOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchControlOptions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SearchControlOptions */
-/**
- * @summary Encodes a(n) SearchControlOptions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SearchControlOptions, encoded as an ASN.1 Element.
- */
-export function _encode_SearchControlOptions(
-    value: SearchControlOptions,
-    elGetter: $.ASN1Encoder<SearchControlOptions>
-) {
-    if (!_cached_encoder_for_SearchControlOptions) {
-        _cached_encoder_for_SearchControlOptions = $._encodeBitString;
-    }
-    return _cached_encoder_for_SearchControlOptions(value, elGetter);
-}
+export const _encode_SearchControlOptions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SearchControlOptions */
 

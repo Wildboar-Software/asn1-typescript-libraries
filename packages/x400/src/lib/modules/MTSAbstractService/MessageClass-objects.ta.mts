@@ -89,45 +89,17 @@ export const both: MessageClass_objects = MessageClass_objects_both; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION both */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageClass_objects */
-let _cached_decoder_for_MessageClass_objects: $.ASN1Decoder<MessageClass_objects> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageClass_objects */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MessageClass_objects */
-/**
- * @summary Decodes an ASN.1 element into a(n) MessageClass_objects
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MessageClass_objects} The decoded data structure.
- */
-export function _decode_MessageClass_objects(el: _Element) {
-    if (!_cached_decoder_for_MessageClass_objects) {
-        _cached_decoder_for_MessageClass_objects = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_MessageClass_objects(el);
-}
+export const _decode_MessageClass_objects = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_MessageClass_objects */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageClass_objects */
-let _cached_encoder_for_MessageClass_objects: $.ASN1Encoder<MessageClass_objects> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageClass_objects */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MessageClass_objects */
-/**
- * @summary Encodes a(n) MessageClass_objects into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MessageClass_objects, encoded as an ASN.1 Element.
- */
-export function _encode_MessageClass_objects(
-    value: MessageClass_objects,
-    elGetter: $.ASN1Encoder<MessageClass_objects>
-) {
-    if (!_cached_encoder_for_MessageClass_objects) {
-        _cached_encoder_for_MessageClass_objects = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_MessageClass_objects(value, elGetter);
-}
+export const _encode_MessageClass_objects = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MessageClass_objects */
 

@@ -73,45 +73,17 @@ export const async: ExchangeMode = ExchangeMode_async; /* SHORT_NAMED_ENUMERATED
 /* END_OF_SYMBOL_DEFINITION async */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExchangeMode */
-let _cached_decoder_for_ExchangeMode: $.ASN1Decoder<ExchangeMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExchangeMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExchangeMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExchangeMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExchangeMode} The decoded data structure.
- */
-export function _decode_ExchangeMode(el: _Element) {
-    if (!_cached_decoder_for_ExchangeMode) {
-        _cached_decoder_for_ExchangeMode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ExchangeMode(el);
-}
+export const _decode_ExchangeMode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ExchangeMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExchangeMode */
-let _cached_encoder_for_ExchangeMode: $.ASN1Encoder<ExchangeMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExchangeMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExchangeMode */
-/**
- * @summary Encodes a(n) ExchangeMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExchangeMode, encoded as an ASN.1 Element.
- */
-export function _encode_ExchangeMode(
-    value: ExchangeMode,
-    elGetter: $.ASN1Encoder<ExchangeMode>
-) {
-    if (!_cached_encoder_for_ExchangeMode) {
-        _cached_encoder_for_ExchangeMode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ExchangeMode(value, elGetter);
-}
+export const _encode_ExchangeMode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExchangeMode */
 

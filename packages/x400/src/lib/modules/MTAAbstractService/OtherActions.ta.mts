@@ -60,45 +60,17 @@ export const dl_operation: number = OtherActions_dl_operation; /* SHORT_NAMED_BI
 /* END_OF_SYMBOL_DEFINITION dl_operation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherActions */
-let _cached_decoder_for_OtherActions: $.ASN1Decoder<OtherActions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherActions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OtherActions */
-/**
- * @summary Decodes an ASN.1 element into a(n) OtherActions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OtherActions} The decoded data structure.
- */
-export function _decode_OtherActions(el: _Element) {
-    if (!_cached_decoder_for_OtherActions) {
-        _cached_decoder_for_OtherActions = $._decodeBitString;
-    }
-    return _cached_decoder_for_OtherActions(el);
-}
+export const _decode_OtherActions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_OtherActions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherActions */
-let _cached_encoder_for_OtherActions: $.ASN1Encoder<OtherActions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherActions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OtherActions */
-/**
- * @summary Encodes a(n) OtherActions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OtherActions, encoded as an ASN.1 Element.
- */
-export function _encode_OtherActions(
-    value: OtherActions,
-    elGetter: $.ASN1Encoder<OtherActions>
-) {
-    if (!_cached_encoder_for_OtherActions) {
-        _cached_encoder_for_OtherActions = $._encodeBitString;
-    }
-    return _cached_encoder_for_OtherActions(value, elGetter);
-}
+export const _encode_OtherActions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OtherActions */
 

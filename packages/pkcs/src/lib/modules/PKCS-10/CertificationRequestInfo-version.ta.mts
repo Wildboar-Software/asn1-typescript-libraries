@@ -35,48 +35,17 @@ export const v1: CertificationRequestInfo_version = CertificationRequestInfo_ver
 /* END_OF_SYMBOL_DEFINITION v1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationRequestInfo_version */
-let _cached_decoder_for_CertificationRequestInfo_version: $.ASN1Decoder<CertificationRequestInfo_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationRequestInfo_version */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CertificationRequestInfo_version */
-/**
- * @summary Decodes an ASN.1 element into a(n) CertificationRequestInfo_version
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CertificationRequestInfo_version} The decoded data structure.
- */
-export function _decode_CertificationRequestInfo_version(el: _Element) {
-    if (!_cached_decoder_for_CertificationRequestInfo_version) {
-        _cached_decoder_for_CertificationRequestInfo_version = $._decodeInteger;
-    }
-    return _cached_decoder_for_CertificationRequestInfo_version(el);
-}
+export const _decode_CertificationRequestInfo_version = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CertificationRequestInfo_version */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationRequestInfo_version */
-let _cached_encoder_for_CertificationRequestInfo_version: $.ASN1Encoder<CertificationRequestInfo_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationRequestInfo_version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CertificationRequestInfo_version */
-/**
- * @summary Encodes a(n) CertificationRequestInfo_version into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CertificationRequestInfo_version, encoded as an ASN.1 Element.
- */
-export function _encode_CertificationRequestInfo_version(
-    value: CertificationRequestInfo_version,
-    elGetter: $.ASN1Encoder<CertificationRequestInfo_version>
-) {
-    if (!_cached_encoder_for_CertificationRequestInfo_version) {
-        _cached_encoder_for_CertificationRequestInfo_version = $._encodeInteger;
-    }
-    return _cached_encoder_for_CertificationRequestInfo_version(
-        value,
-        elGetter
-    );
-}
+export const _encode_CertificationRequestInfo_version = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CertificationRequestInfo_version */
 

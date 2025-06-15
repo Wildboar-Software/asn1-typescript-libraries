@@ -81,45 +81,17 @@ export const wholeSubtree: Scope_namedNumbers = Scope_namedNumbers_wholeSubtree;
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope_namedNumbers */
-let _cached_decoder_for_Scope_namedNumbers: $.ASN1Decoder<Scope_namedNumbers> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope_namedNumbers */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Scope_namedNumbers */
-/**
- * @summary Decodes an ASN.1 element into a(n) Scope_namedNumbers
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Scope_namedNumbers} The decoded data structure.
- */
-export function _decode_Scope_namedNumbers(el: _Element) {
-  if (!_cached_decoder_for_Scope_namedNumbers) {
-    _cached_decoder_for_Scope_namedNumbers = $._decodeInteger;
-  }
-  return _cached_decoder_for_Scope_namedNumbers(el);
-}
+export const _decode_Scope_namedNumbers = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Scope_namedNumbers */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope_namedNumbers */
-let _cached_encoder_for_Scope_namedNumbers: $.ASN1Encoder<Scope_namedNumbers> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope_namedNumbers */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Scope_namedNumbers */
-/**
- * @summary Encodes a(n) Scope_namedNumbers into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Scope_namedNumbers, encoded as an ASN.1 Element.
- */
-export function _encode_Scope_namedNumbers(
-  value: Scope_namedNumbers,
-  elGetter: $.ASN1Encoder<Scope_namedNumbers>
-) {
-  if (!_cached_encoder_for_Scope_namedNumbers) {
-    _cached_encoder_for_Scope_namedNumbers = $._encodeInteger;
-  }
-  return _cached_encoder_for_Scope_namedNumbers(value, elGetter);
-}
+export const _encode_Scope_namedNumbers = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Scope_namedNumbers */
 

@@ -132,40 +132,17 @@ const removed: AttributeStatus = AttributeStatus.removed; /* SHORT_NAMED_ENUMERA
 /* END_OF_SYMBOL_DEFINITION removed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeStatus */
-let _cached_decoder_for_AttributeStatus: $.ASN1Decoder<AttributeStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) AttributeStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AttributeStatus} The decoded data structure.
- */
-export
-function _decode_AttributeStatus (el: _Element) {
-    if (!_cached_decoder_for_AttributeStatus) { _cached_decoder_for_AttributeStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_AttributeStatus(el);
-}
+export const _decode_AttributeStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeStatus */
-let _cached_encoder_for_AttributeStatus: $.ASN1Encoder<AttributeStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeStatus */
-/**
- * @summary Encodes a(n) AttributeStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AttributeStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_AttributeStatus (value: AttributeStatus, elGetter: $.ASN1Encoder<AttributeStatus>) {
-    if (!_cached_encoder_for_AttributeStatus) { _cached_encoder_for_AttributeStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_AttributeStatus(value, elGetter);
-}
+export const _encode_AttributeStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeStatus */
 

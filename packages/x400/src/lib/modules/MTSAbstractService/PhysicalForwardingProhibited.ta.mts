@@ -100,45 +100,17 @@ export const physical_forwarding_prohibited: PhysicalForwardingProhibited =
 /* END_OF_SYMBOL_DEFINITION physical_forwarding_prohibited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalForwardingProhibited */
-let _cached_decoder_for_PhysicalForwardingProhibited: $.ASN1Decoder<PhysicalForwardingProhibited> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalForwardingProhibited */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PhysicalForwardingProhibited */
-/**
- * @summary Decodes an ASN.1 element into a(n) PhysicalForwardingProhibited
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PhysicalForwardingProhibited} The decoded data structure.
- */
-export function _decode_PhysicalForwardingProhibited(el: _Element) {
-    if (!_cached_decoder_for_PhysicalForwardingProhibited) {
-        _cached_decoder_for_PhysicalForwardingProhibited = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PhysicalForwardingProhibited(el);
-}
+export const _decode_PhysicalForwardingProhibited = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PhysicalForwardingProhibited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalForwardingProhibited */
-let _cached_encoder_for_PhysicalForwardingProhibited: $.ASN1Encoder<PhysicalForwardingProhibited> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalForwardingProhibited */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PhysicalForwardingProhibited */
-/**
- * @summary Encodes a(n) PhysicalForwardingProhibited into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PhysicalForwardingProhibited, encoded as an ASN.1 Element.
- */
-export function _encode_PhysicalForwardingProhibited(
-    value: PhysicalForwardingProhibited,
-    elGetter: $.ASN1Encoder<PhysicalForwardingProhibited>
-) {
-    if (!_cached_encoder_for_PhysicalForwardingProhibited) {
-        _cached_encoder_for_PhysicalForwardingProhibited = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PhysicalForwardingProhibited(value, elGetter);
-}
+export const _encode_PhysicalForwardingProhibited = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PhysicalForwardingProhibited */
 

@@ -27,45 +27,17 @@ export type CircuitID = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION CircuitID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitID */
-let _cached_decoder_for_CircuitID: $.ASN1Decoder<CircuitID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitID */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CircuitID */
-/**
- * @summary Decodes an ASN.1 element into a(n) CircuitID
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CircuitID} The decoded data structure.
- */
-export function _decode_CircuitID(el: _Element) {
-  if (!_cached_decoder_for_CircuitID) {
-    _cached_decoder_for_CircuitID = $._decodeOctetString;
-  }
-  return _cached_decoder_for_CircuitID(el);
-}
+export const _decode_CircuitID = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_CircuitID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitID */
-let _cached_encoder_for_CircuitID: $.ASN1Encoder<CircuitID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CircuitID */
-/**
- * @summary Encodes a(n) CircuitID into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CircuitID, encoded as an ASN.1 Element.
- */
-export function _encode_CircuitID(
-  value: CircuitID,
-  elGetter: $.ASN1Encoder<CircuitID>
-) {
-  if (!_cached_encoder_for_CircuitID) {
-    _cached_encoder_for_CircuitID = $._encodeOctetString;
-  }
-  return _cached_encoder_for_CircuitID(value, elGetter);
-}
+export const _encode_CircuitID = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CircuitID */
 

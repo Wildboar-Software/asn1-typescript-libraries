@@ -27,45 +27,17 @@ export type IntermediateSystemPriority = INTEGER;
 /* END_OF_SYMBOL_DEFINITION IntermediateSystemPriority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateSystemPriority */
-let _cached_decoder_for_IntermediateSystemPriority: $.ASN1Decoder<IntermediateSystemPriority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateSystemPriority */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IntermediateSystemPriority */
-/**
- * @summary Decodes an ASN.1 element into a(n) IntermediateSystemPriority
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IntermediateSystemPriority} The decoded data structure.
- */
-export function _decode_IntermediateSystemPriority(el: _Element) {
-  if (!_cached_decoder_for_IntermediateSystemPriority) {
-    _cached_decoder_for_IntermediateSystemPriority = $._decodeInteger;
-  }
-  return _cached_decoder_for_IntermediateSystemPriority(el);
-}
+export const _decode_IntermediateSystemPriority = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_IntermediateSystemPriority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateSystemPriority */
-let _cached_encoder_for_IntermediateSystemPriority: $.ASN1Encoder<IntermediateSystemPriority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateSystemPriority */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IntermediateSystemPriority */
-/**
- * @summary Encodes a(n) IntermediateSystemPriority into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IntermediateSystemPriority, encoded as an ASN.1 Element.
- */
-export function _encode_IntermediateSystemPriority(
-  value: IntermediateSystemPriority,
-  elGetter: $.ASN1Encoder<IntermediateSystemPriority>
-) {
-  if (!_cached_encoder_for_IntermediateSystemPriority) {
-    _cached_encoder_for_IntermediateSystemPriority = $._encodeInteger;
-  }
-  return _cached_encoder_for_IntermediateSystemPriority(value, elGetter);
-}
+export const _encode_IntermediateSystemPriority = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IntermediateSystemPriority */
 

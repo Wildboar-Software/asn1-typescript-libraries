@@ -33,45 +33,17 @@ export const version1: number = AARE_apdu_protocol_version_version1; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION version1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AARE_apdu_protocol_version */
-let _cached_decoder_for_AARE_apdu_protocol_version: $.ASN1Decoder<AARE_apdu_protocol_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AARE_apdu_protocol_version */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AARE_apdu_protocol_version */
-/**
- * @summary Decodes an ASN.1 element into a(n) AARE_apdu_protocol_version
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AARE_apdu_protocol_version} The decoded data structure.
- */
-export function _decode_AARE_apdu_protocol_version(el: _Element) {
-    if (!_cached_decoder_for_AARE_apdu_protocol_version) {
-        _cached_decoder_for_AARE_apdu_protocol_version = $._decodeBitString;
-    }
-    return _cached_decoder_for_AARE_apdu_protocol_version(el);
-}
+export const _decode_AARE_apdu_protocol_version = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AARE_apdu_protocol_version */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AARE_apdu_protocol_version */
-let _cached_encoder_for_AARE_apdu_protocol_version: $.ASN1Encoder<AARE_apdu_protocol_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AARE_apdu_protocol_version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AARE_apdu_protocol_version */
-/**
- * @summary Encodes a(n) AARE_apdu_protocol_version into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AARE_apdu_protocol_version, encoded as an ASN.1 Element.
- */
-export function _encode_AARE_apdu_protocol_version(
-    value: AARE_apdu_protocol_version,
-    elGetter: $.ASN1Encoder<AARE_apdu_protocol_version>
-) {
-    if (!_cached_encoder_for_AARE_apdu_protocol_version) {
-        _cached_encoder_for_AARE_apdu_protocol_version = $._encodeBitString;
-    }
-    return _cached_encoder_for_AARE_apdu_protocol_version(value, elGetter);
-}
+export const _encode_AARE_apdu_protocol_version = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AARE_apdu_protocol_version */
 

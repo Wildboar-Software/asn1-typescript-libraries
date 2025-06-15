@@ -27,45 +27,17 @@ export type CancelDeferredDeliveryResult = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION CancelDeferredDeliveryResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliveryResult */
-let _cached_decoder_for_CancelDeferredDeliveryResult: $.ASN1Decoder<CancelDeferredDeliveryResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliveryResult */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliveryResult */
-/**
- * @summary Decodes an ASN.1 element into a(n) CancelDeferredDeliveryResult
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CancelDeferredDeliveryResult} The decoded data structure.
- */
-export function _decode_CancelDeferredDeliveryResult(el: _Element) {
-    if (!_cached_decoder_for_CancelDeferredDeliveryResult) {
-        _cached_decoder_for_CancelDeferredDeliveryResult = $._decodeNull;
-    }
-    return _cached_decoder_for_CancelDeferredDeliveryResult(el);
-}
+export const _decode_CancelDeferredDeliveryResult = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliveryResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliveryResult */
-let _cached_encoder_for_CancelDeferredDeliveryResult: $.ASN1Encoder<CancelDeferredDeliveryResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliveryResult */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliveryResult */
-/**
- * @summary Encodes a(n) CancelDeferredDeliveryResult into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CancelDeferredDeliveryResult, encoded as an ASN.1 Element.
- */
-export function _encode_CancelDeferredDeliveryResult(
-    value: CancelDeferredDeliveryResult,
-    elGetter: $.ASN1Encoder<CancelDeferredDeliveryResult>
-) {
-    if (!_cached_encoder_for_CancelDeferredDeliveryResult) {
-        _cached_encoder_for_CancelDeferredDeliveryResult = $._encodeNull;
-    }
-    return _cached_encoder_for_CancelDeferredDeliveryResult(value, elGetter);
-}
+export const _encode_CancelDeferredDeliveryResult = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliveryResult */
 

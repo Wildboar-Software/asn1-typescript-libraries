@@ -465,45 +465,17 @@ export const denyInvoke: number = GrantsAndDenials_denyInvoke; /* SHORT_NAMED_BI
 /* END_OF_SYMBOL_DEFINITION denyInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GrantsAndDenials */
-let _cached_decoder_for_GrantsAndDenials: $.ASN1Decoder<GrantsAndDenials> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GrantsAndDenials */
 
 /* START_OF_SYMBOL_DEFINITION _decode_GrantsAndDenials */
-/**
- * @summary Decodes an ASN.1 element into a(n) GrantsAndDenials
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {GrantsAndDenials} The decoded data structure.
- */
-export function _decode_GrantsAndDenials(el: _Element) {
-    if (!_cached_decoder_for_GrantsAndDenials) {
-        _cached_decoder_for_GrantsAndDenials = $._decodeBitString;
-    }
-    return _cached_decoder_for_GrantsAndDenials(el);
-}
+export const _decode_GrantsAndDenials = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_GrantsAndDenials */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GrantsAndDenials */
-let _cached_encoder_for_GrantsAndDenials: $.ASN1Encoder<GrantsAndDenials> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GrantsAndDenials */
 
 /* START_OF_SYMBOL_DEFINITION _encode_GrantsAndDenials */
-/**
- * @summary Encodes a(n) GrantsAndDenials into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GrantsAndDenials, encoded as an ASN.1 Element.
- */
-export function _encode_GrantsAndDenials(
-    value: GrantsAndDenials,
-    elGetter: $.ASN1Encoder<GrantsAndDenials>
-) {
-    if (!_cached_encoder_for_GrantsAndDenials) {
-        _cached_encoder_for_GrantsAndDenials = $._encodeBitString;
-    }
-    return _cached_encoder_for_GrantsAndDenials(value, elGetter);
-}
+export const _encode_GrantsAndDenials = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_GrantsAndDenials */
 

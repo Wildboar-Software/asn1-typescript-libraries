@@ -30,40 +30,17 @@ type MimeType = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION MimeType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MimeType */
-let _cached_decoder_for_MimeType: $.ASN1Decoder<MimeType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MimeType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MimeType */
-/**
- * @summary Decodes an ASN.1 element into a(n) MimeType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MimeType} The decoded data structure.
- */
-export
-function _decode_MimeType (el: _Element) {
-    if (!_cached_decoder_for_MimeType) { _cached_decoder_for_MimeType = $._decodeUTF8String; }
-    return _cached_decoder_for_MimeType(el);
-}
+export const _decode_MimeType = $._decodeUTF8String;
 /* END_OF_SYMBOL_DEFINITION _decode_MimeType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MimeType */
-let _cached_encoder_for_MimeType: $.ASN1Encoder<MimeType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MimeType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MimeType */
-/**
- * @summary Encodes a(n) MimeType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MimeType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MimeType (value: MimeType, elGetter: $.ASN1Encoder<MimeType>) {
-    if (!_cached_encoder_for_MimeType) { _cached_encoder_for_MimeType = $._encodeUTF8String; }
-    return _cached_encoder_for_MimeType(value, elGetter);
-}
+export const _encode_MimeType = $._encodeUTF8String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MimeType */
 

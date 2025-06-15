@@ -132,40 +132,17 @@ const high: StrengthOfFunction = StrengthOfFunction.high; /* SHORT_NAMED_ENUMERA
 /* END_OF_SYMBOL_DEFINITION high */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StrengthOfFunction */
-let _cached_decoder_for_StrengthOfFunction: $.ASN1Decoder<StrengthOfFunction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StrengthOfFunction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_StrengthOfFunction */
-/**
- * @summary Decodes an ASN.1 element into a(n) StrengthOfFunction
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {StrengthOfFunction} The decoded data structure.
- */
-export
-function _decode_StrengthOfFunction (el: _Element) {
-    if (!_cached_decoder_for_StrengthOfFunction) { _cached_decoder_for_StrengthOfFunction = $._decodeEnumerated; }
-    return _cached_decoder_for_StrengthOfFunction(el);
-}
+export const _decode_StrengthOfFunction = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_StrengthOfFunction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StrengthOfFunction */
-let _cached_encoder_for_StrengthOfFunction: $.ASN1Encoder<StrengthOfFunction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StrengthOfFunction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_StrengthOfFunction */
-/**
- * @summary Encodes a(n) StrengthOfFunction into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StrengthOfFunction, encoded as an ASN.1 Element.
- */
-export
-function _encode_StrengthOfFunction (value: StrengthOfFunction, elGetter: $.ASN1Encoder<StrengthOfFunction>) {
-    if (!_cached_encoder_for_StrengthOfFunction) { _cached_encoder_for_StrengthOfFunction = $._encodeEnumerated; }
-    return _cached_encoder_for_StrengthOfFunction(value, elGetter);
-}
+export const _encode_StrengthOfFunction = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_StrengthOfFunction */
 

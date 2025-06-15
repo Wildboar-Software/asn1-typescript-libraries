@@ -142,45 +142,17 @@ export const level1and2: AdjacencyUsage =
 /* END_OF_SYMBOL_DEFINITION level1and2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdjacencyUsage */
-let _cached_decoder_for_AdjacencyUsage: $.ASN1Decoder<AdjacencyUsage> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdjacencyUsage */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AdjacencyUsage */
-/**
- * @summary Decodes an ASN.1 element into a(n) AdjacencyUsage
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AdjacencyUsage} The decoded data structure.
- */
-export function _decode_AdjacencyUsage(el: _Element) {
-  if (!_cached_decoder_for_AdjacencyUsage) {
-    _cached_decoder_for_AdjacencyUsage = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_AdjacencyUsage(el);
-}
+export const _decode_AdjacencyUsage = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AdjacencyUsage */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdjacencyUsage */
-let _cached_encoder_for_AdjacencyUsage: $.ASN1Encoder<AdjacencyUsage> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdjacencyUsage */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AdjacencyUsage */
-/**
- * @summary Encodes a(n) AdjacencyUsage into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AdjacencyUsage, encoded as an ASN.1 Element.
- */
-export function _encode_AdjacencyUsage(
-  value: AdjacencyUsage,
-  elGetter: $.ASN1Encoder<AdjacencyUsage>
-) {
-  if (!_cached_encoder_for_AdjacencyUsage) {
-    _cached_encoder_for_AdjacencyUsage = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_AdjacencyUsage(value, elGetter);
-}
+export const _encode_AdjacencyUsage = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AdjacencyUsage */
 

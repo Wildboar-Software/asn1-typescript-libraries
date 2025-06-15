@@ -97,45 +97,17 @@ export const external: MetricType =
 /* END_OF_SYMBOL_DEFINITION external */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MetricType */
-let _cached_decoder_for_MetricType: $.ASN1Decoder<MetricType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MetricType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MetricType */
-/**
- * @summary Decodes an ASN.1 element into a(n) MetricType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MetricType} The decoded data structure.
- */
-export function _decode_MetricType(el: _Element) {
-  if (!_cached_decoder_for_MetricType) {
-    _cached_decoder_for_MetricType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_MetricType(el);
-}
+export const _decode_MetricType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_MetricType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MetricType */
-let _cached_encoder_for_MetricType: $.ASN1Encoder<MetricType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MetricType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MetricType */
-/**
- * @summary Encodes a(n) MetricType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MetricType, encoded as an ASN.1 Element.
- */
-export function _encode_MetricType(
-  value: MetricType,
-  elGetter: $.ASN1Encoder<MetricType>
-) {
-  if (!_cached_encoder_for_MetricType) {
-    _cached_encoder_for_MetricType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_MetricType(value, elGetter);
-}
+export const _encode_MetricType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MetricType */
 

@@ -27,45 +27,17 @@ export type TroubleReportStatusTime = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION TroubleReportStatusTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatusTime */
-let _cached_decoder_for_TroubleReportStatusTime: $.ASN1Decoder<TroubleReportStatusTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatusTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TroubleReportStatusTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) TroubleReportStatusTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TroubleReportStatusTime} The decoded data structure.
- */
-export function _decode_TroubleReportStatusTime(el: _Element) {
-    if (!_cached_decoder_for_TroubleReportStatusTime) {
-        _cached_decoder_for_TroubleReportStatusTime = $._decodeGeneralizedTime;
-    }
-    return _cached_decoder_for_TroubleReportStatusTime(el);
-}
+export const _decode_TroubleReportStatusTime = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_TroubleReportStatusTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatusTime */
-let _cached_encoder_for_TroubleReportStatusTime: $.ASN1Encoder<TroubleReportStatusTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatusTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TroubleReportStatusTime */
-/**
- * @summary Encodes a(n) TroubleReportStatusTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TroubleReportStatusTime, encoded as an ASN.1 Element.
- */
-export function _encode_TroubleReportStatusTime(
-    value: TroubleReportStatusTime,
-    elGetter: $.ASN1Encoder<TroubleReportStatusTime>
-) {
-    if (!_cached_encoder_for_TroubleReportStatusTime) {
-        _cached_encoder_for_TroubleReportStatusTime = $._encodeGeneralizedTime;
-    }
-    return _cached_encoder_for_TroubleReportStatusTime(value, elGetter);
-}
+export const _encode_TroubleReportStatusTime = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TroubleReportStatusTime */
 

@@ -83,45 +83,17 @@ export const characterMapped: CharacterMatchTypes = CharacterMatchTypes_characte
 /* END_OF_SYMBOL_DEFINITION characterMapped */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterMatchTypes */
-let _cached_decoder_for_CharacterMatchTypes: $.ASN1Decoder<CharacterMatchTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterMatchTypes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CharacterMatchTypes */
-/**
- * @summary Decodes an ASN.1 element into a(n) CharacterMatchTypes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CharacterMatchTypes} The decoded data structure.
- */
-export function _decode_CharacterMatchTypes(el: _Element) {
-    if (!_cached_decoder_for_CharacterMatchTypes) {
-        _cached_decoder_for_CharacterMatchTypes = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CharacterMatchTypes(el);
-}
+export const _decode_CharacterMatchTypes = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CharacterMatchTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterMatchTypes */
-let _cached_encoder_for_CharacterMatchTypes: $.ASN1Encoder<CharacterMatchTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterMatchTypes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CharacterMatchTypes */
-/**
- * @summary Encodes a(n) CharacterMatchTypes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CharacterMatchTypes, encoded as an ASN.1 Element.
- */
-export function _encode_CharacterMatchTypes(
-    value: CharacterMatchTypes,
-    elGetter: $.ASN1Encoder<CharacterMatchTypes>
-) {
-    if (!_cached_encoder_for_CharacterMatchTypes) {
-        _cached_encoder_for_CharacterMatchTypes = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CharacterMatchTypes(value, elGetter);
-}
+export const _encode_CharacterMatchTypes = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CharacterMatchTypes */
 

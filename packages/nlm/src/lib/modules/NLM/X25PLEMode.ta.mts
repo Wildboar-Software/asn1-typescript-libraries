@@ -118,45 +118,17 @@ export const dTEasDCE: X25PLEMode =
 /* END_OF_SYMBOL_DEFINITION dTEasDCE */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X25PLEMode */
-let _cached_decoder_for_X25PLEMode: $.ASN1Decoder<X25PLEMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X25PLEMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_X25PLEMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) X25PLEMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {X25PLEMode} The decoded data structure.
- */
-export function _decode_X25PLEMode(el: _Element) {
-    if (!_cached_decoder_for_X25PLEMode) {
-        _cached_decoder_for_X25PLEMode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_X25PLEMode(el);
-}
+export const _decode_X25PLEMode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_X25PLEMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X25PLEMode */
-let _cached_encoder_for_X25PLEMode: $.ASN1Encoder<X25PLEMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X25PLEMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_X25PLEMode */
-/**
- * @summary Encodes a(n) X25PLEMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The X25PLEMode, encoded as an ASN.1 Element.
- */
-export function _encode_X25PLEMode(
-    value: X25PLEMode,
-    elGetter: $.ASN1Encoder<X25PLEMode>
-) {
-    if (!_cached_encoder_for_X25PLEMode) {
-        _cached_encoder_for_X25PLEMode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_X25PLEMode(value, elGetter);
-}
+export const _encode_X25PLEMode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_X25PLEMode */
 

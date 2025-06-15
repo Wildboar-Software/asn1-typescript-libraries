@@ -27,45 +27,17 @@ export type TRFormatID = INTEGER;
 /* END_OF_SYMBOL_DEFINITION TRFormatID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TRFormatID */
-let _cached_decoder_for_TRFormatID: $.ASN1Decoder<TRFormatID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TRFormatID */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TRFormatID */
-/**
- * @summary Decodes an ASN.1 element into a(n) TRFormatID
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TRFormatID} The decoded data structure.
- */
-export function _decode_TRFormatID(el: _Element) {
-    if (!_cached_decoder_for_TRFormatID) {
-        _cached_decoder_for_TRFormatID = $._decodeInteger;
-    }
-    return _cached_decoder_for_TRFormatID(el);
-}
+export const _decode_TRFormatID = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TRFormatID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TRFormatID */
-let _cached_encoder_for_TRFormatID: $.ASN1Encoder<TRFormatID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TRFormatID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TRFormatID */
-/**
- * @summary Encodes a(n) TRFormatID into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TRFormatID, encoded as an ASN.1 Element.
- */
-export function _encode_TRFormatID(
-    value: TRFormatID,
-    elGetter: $.ASN1Encoder<TRFormatID>
-) {
-    if (!_cached_encoder_for_TRFormatID) {
-        _cached_encoder_for_TRFormatID = $._encodeInteger;
-    }
-    return _cached_encoder_for_TRFormatID(value, elGetter);
-}
+export const _encode_TRFormatID = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TRFormatID */
 

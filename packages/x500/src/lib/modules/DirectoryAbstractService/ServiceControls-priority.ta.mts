@@ -71,45 +71,17 @@ export const high: ServiceControls_priority = ServiceControls_priority_high; /* 
 /* END_OF_SYMBOL_DEFINITION high */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControls_priority */
-let _cached_decoder_for_ServiceControls_priority: $.ASN1Decoder<ServiceControls_priority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControls_priority */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ServiceControls_priority */
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceControls_priority
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ServiceControls_priority} The decoded data structure.
- */
-export function _decode_ServiceControls_priority(el: _Element) {
-    if (!_cached_decoder_for_ServiceControls_priority) {
-        _cached_decoder_for_ServiceControls_priority = $._decodeInteger;
-    }
-    return _cached_decoder_for_ServiceControls_priority(el);
-}
+export const _decode_ServiceControls_priority = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ServiceControls_priority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControls_priority */
-let _cached_encoder_for_ServiceControls_priority: $.ASN1Encoder<ServiceControls_priority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControls_priority */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ServiceControls_priority */
-/**
- * @summary Encodes a(n) ServiceControls_priority into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceControls_priority, encoded as an ASN.1 Element.
- */
-export function _encode_ServiceControls_priority(
-    value: ServiceControls_priority,
-    elGetter: $.ASN1Encoder<ServiceControls_priority>
-) {
-    if (!_cached_encoder_for_ServiceControls_priority) {
-        _cached_encoder_for_ServiceControls_priority = $._encodeInteger;
-    }
-    return _cached_encoder_for_ServiceControls_priority(value, elGetter);
-}
+export const _encode_ServiceControls_priority = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ServiceControls_priority */
 

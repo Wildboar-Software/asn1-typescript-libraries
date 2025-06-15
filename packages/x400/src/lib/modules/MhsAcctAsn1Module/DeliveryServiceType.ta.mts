@@ -192,45 +192,17 @@ export const other_delivery: DeliveryServiceType = DeliveryServiceType_other_del
 /* END_OF_SYMBOL_DEFINITION other_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryServiceType */
-let _cached_decoder_for_DeliveryServiceType: $.ASN1Decoder<DeliveryServiceType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryServiceType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliveryServiceType */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveryServiceType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliveryServiceType} The decoded data structure.
- */
-export function _decode_DeliveryServiceType(el: _Element) {
-    if (!_cached_decoder_for_DeliveryServiceType) {
-        _cached_decoder_for_DeliveryServiceType = $._decodeInteger;
-    }
-    return _cached_decoder_for_DeliveryServiceType(el);
-}
+export const _decode_DeliveryServiceType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliveryServiceType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryServiceType */
-let _cached_encoder_for_DeliveryServiceType: $.ASN1Encoder<DeliveryServiceType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryServiceType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliveryServiceType */
-/**
- * @summary Encodes a(n) DeliveryServiceType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveryServiceType, encoded as an ASN.1 Element.
- */
-export function _encode_DeliveryServiceType(
-    value: DeliveryServiceType,
-    elGetter: $.ASN1Encoder<DeliveryServiceType>
-) {
-    if (!_cached_encoder_for_DeliveryServiceType) {
-        _cached_encoder_for_DeliveryServiceType = $._encodeInteger;
-    }
-    return _cached_encoder_for_DeliveryServiceType(value, elGetter);
-}
+export const _encode_DeliveryServiceType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliveryServiceType */
 

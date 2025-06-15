@@ -27,45 +27,17 @@ export type ManagerSearchString = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION ManagerSearchString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerSearchString */
-let _cached_decoder_for_ManagerSearchString: $.ASN1Decoder<ManagerSearchString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerSearchString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ManagerSearchString */
-/**
- * @summary Decodes an ASN.1 element into a(n) ManagerSearchString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ManagerSearchString} The decoded data structure.
- */
-export function _decode_ManagerSearchString(el: _Element) {
-    if (!_cached_decoder_for_ManagerSearchString) {
-        _cached_decoder_for_ManagerSearchString = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_ManagerSearchString(el);
-}
+export const _decode_ManagerSearchString = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_ManagerSearchString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerSearchString */
-let _cached_encoder_for_ManagerSearchString: $.ASN1Encoder<ManagerSearchString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerSearchString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ManagerSearchString */
-/**
- * @summary Encodes a(n) ManagerSearchString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ManagerSearchString, encoded as an ASN.1 Element.
- */
-export function _encode_ManagerSearchString(
-    value: ManagerSearchString,
-    elGetter: $.ASN1Encoder<ManagerSearchString>
-) {
-    if (!_cached_encoder_for_ManagerSearchString) {
-        _cached_encoder_for_ManagerSearchString = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_ManagerSearchString(value, elGetter);
-}
+export const _encode_ManagerSearchString = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ManagerSearchString */
 

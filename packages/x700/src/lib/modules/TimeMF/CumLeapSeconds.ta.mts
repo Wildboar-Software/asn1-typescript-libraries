@@ -27,45 +27,17 @@ export type CumLeapSeconds = INTEGER;
 /* END_OF_SYMBOL_DEFINITION CumLeapSeconds */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CumLeapSeconds */
-let _cached_decoder_for_CumLeapSeconds: $.ASN1Decoder<CumLeapSeconds> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CumLeapSeconds */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CumLeapSeconds */
-/**
- * @summary Decodes an ASN.1 element into a(n) CumLeapSeconds
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CumLeapSeconds} The decoded data structure.
- */
-export function _decode_CumLeapSeconds(el: _Element) {
-    if (!_cached_decoder_for_CumLeapSeconds) {
-        _cached_decoder_for_CumLeapSeconds = $._decodeInteger;
-    }
-    return _cached_decoder_for_CumLeapSeconds(el);
-}
+export const _decode_CumLeapSeconds = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CumLeapSeconds */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CumLeapSeconds */
-let _cached_encoder_for_CumLeapSeconds: $.ASN1Encoder<CumLeapSeconds> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CumLeapSeconds */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CumLeapSeconds */
-/**
- * @summary Encodes a(n) CumLeapSeconds into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CumLeapSeconds, encoded as an ASN.1 Element.
- */
-export function _encode_CumLeapSeconds(
-    value: CumLeapSeconds,
-    elGetter: $.ASN1Encoder<CumLeapSeconds>
-) {
-    if (!_cached_encoder_for_CumLeapSeconds) {
-        _cached_encoder_for_CumLeapSeconds = $._encodeInteger;
-    }
-    return _cached_encoder_for_CumLeapSeconds(value, elGetter);
-}
+export const _encode_CumLeapSeconds = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CumLeapSeconds */
 

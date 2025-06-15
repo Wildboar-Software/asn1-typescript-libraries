@@ -27,45 +27,17 @@ export type FunctionalUnitPackageId = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION FunctionalUnitPackageId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FunctionalUnitPackageId */
-let _cached_decoder_for_FunctionalUnitPackageId: $.ASN1Decoder<FunctionalUnitPackageId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FunctionalUnitPackageId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FunctionalUnitPackageId */
-/**
- * @summary Decodes an ASN.1 element into a(n) FunctionalUnitPackageId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FunctionalUnitPackageId} The decoded data structure.
- */
-export function _decode_FunctionalUnitPackageId(el: _Element) {
-    if (!_cached_decoder_for_FunctionalUnitPackageId) {
-        _cached_decoder_for_FunctionalUnitPackageId = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_FunctionalUnitPackageId(el);
-}
+export const _decode_FunctionalUnitPackageId = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_FunctionalUnitPackageId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FunctionalUnitPackageId */
-let _cached_encoder_for_FunctionalUnitPackageId: $.ASN1Encoder<FunctionalUnitPackageId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FunctionalUnitPackageId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FunctionalUnitPackageId */
-/**
- * @summary Encodes a(n) FunctionalUnitPackageId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FunctionalUnitPackageId, encoded as an ASN.1 Element.
- */
-export function _encode_FunctionalUnitPackageId(
-    value: FunctionalUnitPackageId,
-    elGetter: $.ASN1Encoder<FunctionalUnitPackageId>
-) {
-    if (!_cached_encoder_for_FunctionalUnitPackageId) {
-        _cached_encoder_for_FunctionalUnitPackageId = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_FunctionalUnitPackageId(value, elGetter);
-}
+export const _encode_FunctionalUnitPackageId = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FunctionalUnitPackageId */
 

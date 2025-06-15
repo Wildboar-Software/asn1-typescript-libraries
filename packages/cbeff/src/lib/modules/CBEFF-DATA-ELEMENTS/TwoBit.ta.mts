@@ -27,42 +27,17 @@ export type TwoBit = INTEGER;
 /* END_OF_SYMBOL_DEFINITION TwoBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TwoBit */
-let _cached_decoder_for_TwoBit: $.ASN1Decoder<TwoBit> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TwoBit */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TwoBit */
-/**
- * @summary Decodes an ASN.1 element into a(n) TwoBit
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TwoBit} The decoded data structure.
- */
-export function _decode_TwoBit(el: _Element) {
-  if (!_cached_decoder_for_TwoBit) {
-    _cached_decoder_for_TwoBit = $._decodeInteger;
-  }
-  return _cached_decoder_for_TwoBit(el);
-}
+export const _decode_TwoBit = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TwoBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TwoBit */
-let _cached_encoder_for_TwoBit: $.ASN1Encoder<TwoBit> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TwoBit */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TwoBit */
-/**
- * @summary Encodes a(n) TwoBit into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TwoBit, encoded as an ASN.1 Element.
- */
-export function _encode_TwoBit(value: TwoBit, elGetter: $.ASN1Encoder<TwoBit>) {
-  if (!_cached_encoder_for_TwoBit) {
-    _cached_encoder_for_TwoBit = $._encodeInteger;
-  }
-  return _cached_encoder_for_TwoBit(value, elGetter);
-}
+export const _encode_TwoBit = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TwoBit */
 

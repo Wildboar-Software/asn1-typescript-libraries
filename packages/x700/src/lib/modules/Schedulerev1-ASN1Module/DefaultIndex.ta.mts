@@ -27,45 +27,17 @@ export type DefaultIndex = INTEGER;
 /* END_OF_SYMBOL_DEFINITION DefaultIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultIndex */
-let _cached_decoder_for_DefaultIndex: $.ASN1Decoder<DefaultIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultIndex */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DefaultIndex */
-/**
- * @summary Decodes an ASN.1 element into a(n) DefaultIndex
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DefaultIndex} The decoded data structure.
- */
-export function _decode_DefaultIndex(el: _Element) {
-    if (!_cached_decoder_for_DefaultIndex) {
-        _cached_decoder_for_DefaultIndex = $._decodeInteger;
-    }
-    return _cached_decoder_for_DefaultIndex(el);
-}
+export const _decode_DefaultIndex = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DefaultIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultIndex */
-let _cached_encoder_for_DefaultIndex: $.ASN1Encoder<DefaultIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultIndex */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DefaultIndex */
-/**
- * @summary Encodes a(n) DefaultIndex into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DefaultIndex, encoded as an ASN.1 Element.
- */
-export function _encode_DefaultIndex(
-    value: DefaultIndex,
-    elGetter: $.ASN1Encoder<DefaultIndex>
-) {
-    if (!_cached_encoder_for_DefaultIndex) {
-        _cached_encoder_for_DefaultIndex = $._encodeInteger;
-    }
-    return _cached_encoder_for_DefaultIndex(value, elGetter);
-}
+export const _encode_DefaultIndex = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DefaultIndex */
 

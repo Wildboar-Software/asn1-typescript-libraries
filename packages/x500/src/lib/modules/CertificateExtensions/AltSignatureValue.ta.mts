@@ -17,45 +17,17 @@ export type AltSignatureValue = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION AltSignatureValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AltSignatureValue */
-let _cached_decoder_for_AltSignatureValue: $.ASN1Decoder<AltSignatureValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AltSignatureValue */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AltSignatureValue */
-/**
- * @summary Decodes an ASN.1 element into a(n) AltSignatureValue
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AltSignatureValue} The decoded data structure.
- */
-export function _decode_AltSignatureValue(el: _Element) {
-    if (!_cached_decoder_for_AltSignatureValue) {
-        _cached_decoder_for_AltSignatureValue = $._decodeBitString;
-    }
-    return _cached_decoder_for_AltSignatureValue(el);
-}
+export const _decode_AltSignatureValue = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AltSignatureValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AltSignatureValue */
-let _cached_encoder_for_AltSignatureValue: $.ASN1Encoder<AltSignatureValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AltSignatureValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AltSignatureValue */
-/**
- * @summary Encodes a(n) AltSignatureValue into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AltSignatureValue, encoded as an ASN.1 Element.
- */
-export function _encode_AltSignatureValue(
-    value: AltSignatureValue,
-    elGetter: $.ASN1Encoder<AltSignatureValue>
-) {
-    if (!_cached_encoder_for_AltSignatureValue) {
-        _cached_encoder_for_AltSignatureValue = $._encodeBitString;
-    }
-    return _cached_encoder_for_AltSignatureValue(value, elGetter);
-}
+export const _encode_AltSignatureValue = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AltSignatureValue */
 

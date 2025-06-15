@@ -118,45 +118,17 @@ export const both: ValidControlType =
 /* END_OF_SYMBOL_DEFINITION both */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidControlType */
-let _cached_decoder_for_ValidControlType: $.ASN1Decoder<ValidControlType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidControlType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ValidControlType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ValidControlType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ValidControlType} The decoded data structure.
- */
-export function _decode_ValidControlType(el: _Element) {
-    if (!_cached_decoder_for_ValidControlType) {
-        _cached_decoder_for_ValidControlType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ValidControlType(el);
-}
+export const _decode_ValidControlType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ValidControlType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidControlType */
-let _cached_encoder_for_ValidControlType: $.ASN1Encoder<ValidControlType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidControlType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ValidControlType */
-/**
- * @summary Encodes a(n) ValidControlType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ValidControlType, encoded as an ASN.1 Element.
- */
-export function _encode_ValidControlType(
-    value: ValidControlType,
-    elGetter: $.ASN1Encoder<ValidControlType>
-) {
-    if (!_cached_encoder_for_ValidControlType) {
-        _cached_encoder_for_ValidControlType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ValidControlType(value, elGetter);
-}
+export const _encode_ValidControlType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ValidControlType */
 

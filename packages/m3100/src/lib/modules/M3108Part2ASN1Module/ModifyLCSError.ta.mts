@@ -227,45 +227,17 @@ export const scheduleConflicts: ModifyLCSError = ModifyLCSError_scheduleConflict
 /* END_OF_SYMBOL_DEFINITION scheduleConflicts */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyLCSError */
-let _cached_decoder_for_ModifyLCSError: $.ASN1Decoder<ModifyLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ModifyLCSError */
-/**
- * @summary Decodes an ASN.1 element into a(n) ModifyLCSError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ModifyLCSError} The decoded data structure.
- */
-export function _decode_ModifyLCSError(el: _Element) {
-    if (!_cached_decoder_for_ModifyLCSError) {
-        _cached_decoder_for_ModifyLCSError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ModifyLCSError(el);
-}
+export const _decode_ModifyLCSError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ModifyLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyLCSError */
-let _cached_encoder_for_ModifyLCSError: $.ASN1Encoder<ModifyLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModifyLCSError */
-/**
- * @summary Encodes a(n) ModifyLCSError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ModifyLCSError, encoded as an ASN.1 Element.
- */
-export function _encode_ModifyLCSError(
-    value: ModifyLCSError,
-    elGetter: $.ASN1Encoder<ModifyLCSError>
-) {
-    if (!_cached_encoder_for_ModifyLCSError) {
-        _cached_encoder_for_ModifyLCSError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ModifyLCSError(value, elGetter);
-}
+export const _encode_ModifyLCSError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModifyLCSError */
 

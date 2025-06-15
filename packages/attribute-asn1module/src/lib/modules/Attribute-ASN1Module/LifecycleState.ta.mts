@@ -123,40 +123,17 @@ const pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* SHORT_N
 /* END_OF_SYMBOL_DEFINITION pendingRemoval */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LifecycleState */
-let _cached_decoder_for_LifecycleState: $.ASN1Decoder<LifecycleState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LifecycleState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LifecycleState */
-/**
- * @summary Decodes an ASN.1 element into a(n) LifecycleState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LifecycleState} The decoded data structure.
- */
-export
-function _decode_LifecycleState (el: _Element) {
-    if (!_cached_decoder_for_LifecycleState) { _cached_decoder_for_LifecycleState = $._decodeEnumerated; }
-    return _cached_decoder_for_LifecycleState(el);
-}
+export const _decode_LifecycleState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_LifecycleState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LifecycleState */
-let _cached_encoder_for_LifecycleState: $.ASN1Encoder<LifecycleState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LifecycleState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LifecycleState */
-/**
- * @summary Encodes a(n) LifecycleState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LifecycleState, encoded as an ASN.1 Element.
- */
-export
-function _encode_LifecycleState (value: LifecycleState, elGetter: $.ASN1Encoder<LifecycleState>) {
-    if (!_cached_encoder_for_LifecycleState) { _cached_encoder_for_LifecycleState = $._encodeEnumerated; }
-    return _cached_encoder_for_LifecycleState(value, elGetter);
-}
+export const _encode_LifecycleState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LifecycleState */
 

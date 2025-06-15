@@ -27,45 +27,17 @@ export type PDUType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION PDUType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUType */
-let _cached_decoder_for_PDUType: $.ASN1Decoder<PDUType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PDUType */
-/**
- * @summary Decodes an ASN.1 element into a(n) PDUType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PDUType} The decoded data structure.
- */
-export function _decode_PDUType(el: _Element) {
-    if (!_cached_decoder_for_PDUType) {
-        _cached_decoder_for_PDUType = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_PDUType(el);
-}
+export const _decode_PDUType = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_PDUType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUType */
-let _cached_encoder_for_PDUType: $.ASN1Encoder<PDUType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PDUType */
-/**
- * @summary Encodes a(n) PDUType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PDUType, encoded as an ASN.1 Element.
- */
-export function _encode_PDUType(
-    value: PDUType,
-    elGetter: $.ASN1Encoder<PDUType>
-) {
-    if (!_cached_encoder_for_PDUType) {
-        _cached_encoder_for_PDUType = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_PDUType(value, elGetter);
-}
+export const _encode_PDUType = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PDUType */
 

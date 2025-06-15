@@ -32,63 +32,32 @@ export type EncodedCharacterString_encoding_format =
 /* END_OF_SYMBOL_DEFINITION EncodedCharacterString_encoding_format */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedCharacterString_encoding_format */
-let _cached_decoder_for_EncodedCharacterString_encoding_format: $.ASN1Decoder<EncodedCharacterString_encoding_format> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedCharacterString_encoding_format */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EncodedCharacterString_encoding_format */
-/**
- * @summary Decodes an ASN.1 element into a(n) EncodedCharacterString_encoding_format
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EncodedCharacterString_encoding_format} The decoded data structure.
- */
-export function _decode_EncodedCharacterString_encoding_format(el: _Element) {
-  if (!_cached_decoder_for_EncodedCharacterString_encoding_format) {
-    _cached_decoder_for_EncodedCharacterString_encoding_format = $._decode_inextensible_choice<EncodedCharacterString_encoding_format>(
-      {
-        'CONTEXT 0': ['utf_8', $._decodeNull],
-        'CONTEXT 1': ['utf_16', $._decodeNull],
-        'CONTEXT 2': ['restricted_alphabet', $._decodeInteger],
-        'CONTEXT 3': ['encoding_algorithm', $._decodeInteger],
-      }
-    );
+export const _decode_EncodedCharacterString_encoding_format = $._decode_inextensible_choice<EncodedCharacterString_encoding_format>(
+  {
+    'CONTEXT 0': ['utf_8', $._decodeNull],
+    'CONTEXT 1': ['utf_16', $._decodeNull],
+    'CONTEXT 2': ['restricted_alphabet', $._decodeInteger],
+    'CONTEXT 3': ['encoding_algorithm', $._decodeInteger],
   }
-  return _cached_decoder_for_EncodedCharacterString_encoding_format(el);
-}
+);
 /* END_OF_SYMBOL_DEFINITION _decode_EncodedCharacterString_encoding_format */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedCharacterString_encoding_format */
-let _cached_encoder_for_EncodedCharacterString_encoding_format: $.ASN1Encoder<EncodedCharacterString_encoding_format> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedCharacterString_encoding_format */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EncodedCharacterString_encoding_format */
-/**
- * @summary Encodes a(n) EncodedCharacterString_encoding_format into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EncodedCharacterString_encoding_format, encoded as an ASN.1 Element.
- */
-export function _encode_EncodedCharacterString_encoding_format(
-  value: EncodedCharacterString_encoding_format,
-  elGetter: $.ASN1Encoder<EncodedCharacterString_encoding_format>
-) {
-  if (!_cached_encoder_for_EncodedCharacterString_encoding_format) {
-    _cached_encoder_for_EncodedCharacterString_encoding_format = $._encode_choice<EncodedCharacterString_encoding_format>(
-      {
-        utf_8: $._encodeNull,
-        utf_16: $._encodeNull,
-        restricted_alphabet: $._encodeInteger,
-        encoding_algorithm: $._encodeInteger,
-      },
-      $.BER
-    );
-  }
-  return _cached_encoder_for_EncodedCharacterString_encoding_format(
-    value,
-    elGetter
-  );
-}
+export const _encode_EncodedCharacterString_encoding_format = $._encode_choice<EncodedCharacterString_encoding_format>(
+  {
+    utf_8: $._encodeNull,
+    utf_16: $._encodeNull,
+    restricted_alphabet: $._encodeInteger,
+    encoding_algorithm: $._encodeInteger,
+  },
+  $.BER
+);
 
 /* END_OF_SYMBOL_DEFINITION _encode_EncodedCharacterString_encoding_format */
 

@@ -118,45 +118,17 @@ export const twoway: CircuitDirectionality =
 /* END_OF_SYMBOL_DEFINITION twoway */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitDirectionality */
-let _cached_decoder_for_CircuitDirectionality: $.ASN1Decoder<CircuitDirectionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CircuitDirectionality */
-/**
- * @summary Decodes an ASN.1 element into a(n) CircuitDirectionality
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CircuitDirectionality} The decoded data structure.
- */
-export function _decode_CircuitDirectionality(el: _Element) {
-    if (!_cached_decoder_for_CircuitDirectionality) {
-        _cached_decoder_for_CircuitDirectionality = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CircuitDirectionality(el);
-}
+export const _decode_CircuitDirectionality = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CircuitDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitDirectionality */
-let _cached_encoder_for_CircuitDirectionality: $.ASN1Encoder<CircuitDirectionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CircuitDirectionality */
-/**
- * @summary Encodes a(n) CircuitDirectionality into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CircuitDirectionality, encoded as an ASN.1 Element.
- */
-export function _encode_CircuitDirectionality(
-    value: CircuitDirectionality,
-    elGetter: $.ASN1Encoder<CircuitDirectionality>
-) {
-    if (!_cached_encoder_for_CircuitDirectionality) {
-        _cached_encoder_for_CircuitDirectionality = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CircuitDirectionality(value, elGetter);
-}
+export const _encode_CircuitDirectionality = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CircuitDirectionality */
 

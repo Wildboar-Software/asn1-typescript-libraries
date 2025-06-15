@@ -145,45 +145,17 @@ export const noFastSelect: FastSelect =
 /* END_OF_SYMBOL_DEFINITION noFastSelect */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FastSelect */
-let _cached_decoder_for_FastSelect: $.ASN1Decoder<FastSelect> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FastSelect */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FastSelect */
-/**
- * @summary Decodes an ASN.1 element into a(n) FastSelect
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FastSelect} The decoded data structure.
- */
-export function _decode_FastSelect(el: _Element) {
-    if (!_cached_decoder_for_FastSelect) {
-        _cached_decoder_for_FastSelect = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_FastSelect(el);
-}
+export const _decode_FastSelect = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_FastSelect */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FastSelect */
-let _cached_encoder_for_FastSelect: $.ASN1Encoder<FastSelect> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FastSelect */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FastSelect */
-/**
- * @summary Encodes a(n) FastSelect into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FastSelect, encoded as an ASN.1 Element.
- */
-export function _encode_FastSelect(
-    value: FastSelect,
-    elGetter: $.ASN1Encoder<FastSelect>
-) {
-    if (!_cached_encoder_for_FastSelect) {
-        _cached_encoder_for_FastSelect = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_FastSelect(value, elGetter);
-}
+export const _encode_FastSelect = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FastSelect */
 

@@ -30,40 +30,17 @@ type NumberOfRecords = INTEGER;
 /* END_OF_SYMBOL_DEFINITION NumberOfRecords */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfRecords */
-let _cached_decoder_for_NumberOfRecords: $.ASN1Decoder<NumberOfRecords> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfRecords */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NumberOfRecords */
-/**
- * @summary Decodes an ASN.1 element into a(n) NumberOfRecords
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NumberOfRecords} The decoded data structure.
- */
-export
-function _decode_NumberOfRecords (el: _Element) {
-    if (!_cached_decoder_for_NumberOfRecords) { _cached_decoder_for_NumberOfRecords = $._decodeInteger; }
-    return _cached_decoder_for_NumberOfRecords(el);
-}
+export const _decode_NumberOfRecords = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NumberOfRecords */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfRecords */
-let _cached_encoder_for_NumberOfRecords: $.ASN1Encoder<NumberOfRecords> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfRecords */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NumberOfRecords */
-/**
- * @summary Encodes a(n) NumberOfRecords into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NumberOfRecords, encoded as an ASN.1 Element.
- */
-export
-function _encode_NumberOfRecords (value: NumberOfRecords, elGetter: $.ASN1Encoder<NumberOfRecords>) {
-    if (!_cached_encoder_for_NumberOfRecords) { _cached_encoder_for_NumberOfRecords = $._encodeInteger; }
-    return _cached_encoder_for_NumberOfRecords(value, elGetter);
-}
+export const _encode_NumberOfRecords = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NumberOfRecords */
 

@@ -97,45 +97,17 @@ export const created: VirtualLinkChange =
 /* END_OF_SYMBOL_DEFINITION created */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VirtualLinkChange */
-let _cached_decoder_for_VirtualLinkChange: $.ASN1Decoder<VirtualLinkChange> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VirtualLinkChange */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VirtualLinkChange */
-/**
- * @summary Decodes an ASN.1 element into a(n) VirtualLinkChange
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VirtualLinkChange} The decoded data structure.
- */
-export function _decode_VirtualLinkChange(el: _Element) {
-  if (!_cached_decoder_for_VirtualLinkChange) {
-    _cached_decoder_for_VirtualLinkChange = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_VirtualLinkChange(el);
-}
+export const _decode_VirtualLinkChange = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_VirtualLinkChange */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VirtualLinkChange */
-let _cached_encoder_for_VirtualLinkChange: $.ASN1Encoder<VirtualLinkChange> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VirtualLinkChange */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VirtualLinkChange */
-/**
- * @summary Encodes a(n) VirtualLinkChange into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VirtualLinkChange, encoded as an ASN.1 Element.
- */
-export function _encode_VirtualLinkChange(
-  value: VirtualLinkChange,
-  elGetter: $.ASN1Encoder<VirtualLinkChange>
-) {
-  if (!_cached_encoder_for_VirtualLinkChange) {
-    _cached_encoder_for_VirtualLinkChange = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_VirtualLinkChange(value, elGetter);
-}
+export const _encode_VirtualLinkChange = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VirtualLinkChange */
 

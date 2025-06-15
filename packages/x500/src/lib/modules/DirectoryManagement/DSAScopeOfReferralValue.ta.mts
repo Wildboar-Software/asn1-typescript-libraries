@@ -71,45 +71,17 @@ export const global: DSAScopeOfReferralValue = DSAScopeOfReferralValue_global; /
 /* END_OF_SYMBOL_DEFINITION global */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSAScopeOfReferralValue */
-let _cached_decoder_for_DSAScopeOfReferralValue: $.ASN1Decoder<DSAScopeOfReferralValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSAScopeOfReferralValue */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DSAScopeOfReferralValue */
-/**
- * @summary Decodes an ASN.1 element into a(n) DSAScopeOfReferralValue
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DSAScopeOfReferralValue} The decoded data structure.
- */
-export function _decode_DSAScopeOfReferralValue(el: _Element) {
-    if (!_cached_decoder_for_DSAScopeOfReferralValue) {
-        _cached_decoder_for_DSAScopeOfReferralValue = $._decodeInteger;
-    }
-    return _cached_decoder_for_DSAScopeOfReferralValue(el);
-}
+export const _decode_DSAScopeOfReferralValue = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DSAScopeOfReferralValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSAScopeOfReferralValue */
-let _cached_encoder_for_DSAScopeOfReferralValue: $.ASN1Encoder<DSAScopeOfReferralValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSAScopeOfReferralValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DSAScopeOfReferralValue */
-/**
- * @summary Encodes a(n) DSAScopeOfReferralValue into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DSAScopeOfReferralValue, encoded as an ASN.1 Element.
- */
-export function _encode_DSAScopeOfReferralValue(
-    value: DSAScopeOfReferralValue,
-    elGetter: $.ASN1Encoder<DSAScopeOfReferralValue>
-) {
-    if (!_cached_encoder_for_DSAScopeOfReferralValue) {
-        _cached_encoder_for_DSAScopeOfReferralValue = $._encodeInteger;
-    }
-    return _cached_encoder_for_DSAScopeOfReferralValue(value, elGetter);
-}
+export const _encode_DSAScopeOfReferralValue = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DSAScopeOfReferralValue */
 

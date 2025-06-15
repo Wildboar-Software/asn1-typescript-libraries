@@ -27,45 +27,17 @@ export type RawData = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION RawData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RawData */
-let _cached_decoder_for_RawData: $.ASN1Decoder<RawData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RawData */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RawData */
-/**
- * @summary Decodes an ASN.1 element into a(n) RawData
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RawData} The decoded data structure.
- */
-export function _decode_RawData(el: _Element) {
-    if (!_cached_decoder_for_RawData) {
-        _cached_decoder_for_RawData = $._decodeOctetString;
-    }
-    return _cached_decoder_for_RawData(el);
-}
+export const _decode_RawData = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_RawData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RawData */
-let _cached_encoder_for_RawData: $.ASN1Encoder<RawData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RawData */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RawData */
-/**
- * @summary Encodes a(n) RawData into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RawData, encoded as an ASN.1 Element.
- */
-export function _encode_RawData(
-    value: RawData,
-    elGetter: $.ASN1Encoder<RawData>
-) {
-    if (!_cached_encoder_for_RawData) {
-        _cached_encoder_for_RawData = $._encodeOctetString;
-    }
-    return _cached_encoder_for_RawData(value, elGetter);
-}
+export const _encode_RawData = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RawData */
 

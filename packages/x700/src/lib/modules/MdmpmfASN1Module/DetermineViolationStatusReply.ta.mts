@@ -142,45 +142,17 @@ export const non_member: DetermineViolationStatusReply =
 /* END_OF_SYMBOL_DEFINITION non_member */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DetermineViolationStatusReply */
-let _cached_decoder_for_DetermineViolationStatusReply: $.ASN1Decoder<DetermineViolationStatusReply> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DetermineViolationStatusReply */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DetermineViolationStatusReply */
-/**
- * @summary Decodes an ASN.1 element into a(n) DetermineViolationStatusReply
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DetermineViolationStatusReply} The decoded data structure.
- */
-export function _decode_DetermineViolationStatusReply(el: _Element) {
-    if (!_cached_decoder_for_DetermineViolationStatusReply) {
-        _cached_decoder_for_DetermineViolationStatusReply = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DetermineViolationStatusReply(el);
-}
+export const _decode_DetermineViolationStatusReply = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DetermineViolationStatusReply */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DetermineViolationStatusReply */
-let _cached_encoder_for_DetermineViolationStatusReply: $.ASN1Encoder<DetermineViolationStatusReply> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DetermineViolationStatusReply */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DetermineViolationStatusReply */
-/**
- * @summary Encodes a(n) DetermineViolationStatusReply into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DetermineViolationStatusReply, encoded as an ASN.1 Element.
- */
-export function _encode_DetermineViolationStatusReply(
-    value: DetermineViolationStatusReply,
-    elGetter: $.ASN1Encoder<DetermineViolationStatusReply>
-) {
-    if (!_cached_encoder_for_DetermineViolationStatusReply) {
-        _cached_encoder_for_DetermineViolationStatusReply = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DetermineViolationStatusReply(value, elGetter);
-}
+export const _encode_DetermineViolationStatusReply = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DetermineViolationStatusReply */
 

@@ -137,45 +137,17 @@ export const confidentiality_protected: number = BiometricFlags_confidentiality_
 /* END_OF_SYMBOL_DEFINITION confidentiality_protected */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricFlags */
-let _cached_decoder_for_BiometricFlags: $.ASN1Decoder<BiometricFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BiometricFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) BiometricFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BiometricFlags} The decoded data structure.
- */
-export function _decode_BiometricFlags(el: _Element) {
-    if (!_cached_decoder_for_BiometricFlags) {
-        _cached_decoder_for_BiometricFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_BiometricFlags(el);
-}
+export const _decode_BiometricFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_BiometricFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricFlags */
-let _cached_encoder_for_BiometricFlags: $.ASN1Encoder<BiometricFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BiometricFlags */
-/**
- * @summary Encodes a(n) BiometricFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BiometricFlags, encoded as an ASN.1 Element.
- */
-export function _encode_BiometricFlags(
-    value: BiometricFlags,
-    elGetter: $.ASN1Encoder<BiometricFlags>
-) {
-    if (!_cached_encoder_for_BiometricFlags) {
-        _cached_encoder_for_BiometricFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_BiometricFlags(value, elGetter);
-}
+export const _encode_BiometricFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BiometricFlags */
 

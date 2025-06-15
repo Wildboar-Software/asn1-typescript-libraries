@@ -27,45 +27,17 @@ export type PersonName = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION PersonName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonName */
-let _cached_decoder_for_PersonName: $.ASN1Decoder<PersonName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PersonName */
-/**
- * @summary Decodes an ASN.1 element into a(n) PersonName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PersonName} The decoded data structure.
- */
-export function _decode_PersonName(el: _Element) {
-    if (!_cached_decoder_for_PersonName) {
-        _cached_decoder_for_PersonName = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_PersonName(el);
-}
+export const _decode_PersonName = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_PersonName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonName */
-let _cached_encoder_for_PersonName: $.ASN1Encoder<PersonName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PersonName */
-/**
- * @summary Encodes a(n) PersonName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PersonName, encoded as an ASN.1 Element.
- */
-export function _encode_PersonName(
-    value: PersonName,
-    elGetter: $.ASN1Encoder<PersonName>
-) {
-    if (!_cached_encoder_for_PersonName) {
-        _cached_encoder_for_PersonName = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_PersonName(value, elGetter);
-}
+export const _encode_PersonName = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PersonName */
 

@@ -150,45 +150,17 @@ export const bothInstallationAndChronic: RepeatReport = RepeatReport_bothInstall
 /* END_OF_SYMBOL_DEFINITION bothInstallationAndChronic */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepeatReport */
-let _cached_decoder_for_RepeatReport: $.ASN1Decoder<RepeatReport> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepeatReport */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RepeatReport */
-/**
- * @summary Decodes an ASN.1 element into a(n) RepeatReport
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RepeatReport} The decoded data structure.
- */
-export function _decode_RepeatReport(el: _Element) {
-    if (!_cached_decoder_for_RepeatReport) {
-        _cached_decoder_for_RepeatReport = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_RepeatReport(el);
-}
+export const _decode_RepeatReport = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_RepeatReport */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepeatReport */
-let _cached_encoder_for_RepeatReport: $.ASN1Encoder<RepeatReport> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepeatReport */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RepeatReport */
-/**
- * @summary Encodes a(n) RepeatReport into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RepeatReport, encoded as an ASN.1 Element.
- */
-export function _encode_RepeatReport(
-    value: RepeatReport,
-    elGetter: $.ASN1Encoder<RepeatReport>
-) {
-    if (!_cached_encoder_for_RepeatReport) {
-        _cached_encoder_for_RepeatReport = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_RepeatReport(value, elGetter);
-}
+export const _encode_RepeatReport = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RepeatReport */
 

@@ -233,45 +233,17 @@ export const noInformation: PbactErr = PbactErr_noInformation; /* SHORT_NAMED_EN
 /* END_OF_SYMBOL_DEFINITION noInformation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PbactErr */
-let _cached_decoder_for_PbactErr: $.ASN1Decoder<PbactErr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PbactErr */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PbactErr */
-/**
- * @summary Decodes an ASN.1 element into a(n) PbactErr
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PbactErr} The decoded data structure.
- */
-export function _decode_PbactErr(el: _Element) {
-    if (!_cached_decoder_for_PbactErr) {
-        _cached_decoder_for_PbactErr = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PbactErr(el);
-}
+export const _decode_PbactErr = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PbactErr */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PbactErr */
-let _cached_encoder_for_PbactErr: $.ASN1Encoder<PbactErr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PbactErr */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PbactErr */
-/**
- * @summary Encodes a(n) PbactErr into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PbactErr, encoded as an ASN.1 Element.
- */
-export function _encode_PbactErr(
-    value: PbactErr,
-    elGetter: $.ASN1Encoder<PbactErr>
-) {
-    if (!_cached_encoder_for_PbactErr) {
-        _cached_encoder_for_PbactErr = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PbactErr(value, elGetter);
-}
+export const _encode_PbactErr = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PbactErr */
 

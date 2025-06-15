@@ -27,45 +27,17 @@ export type ExternalTime = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION ExternalTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalTime */
-let _cached_decoder_for_ExternalTime: $.ASN1Decoder<ExternalTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExternalTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExternalTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExternalTime} The decoded data structure.
- */
-export function _decode_ExternalTime(el: _Element) {
-    if (!_cached_decoder_for_ExternalTime) {
-        _cached_decoder_for_ExternalTime = $._decodeGeneralizedTime;
-    }
-    return _cached_decoder_for_ExternalTime(el);
-}
+export const _decode_ExternalTime = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_ExternalTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalTime */
-let _cached_encoder_for_ExternalTime: $.ASN1Encoder<ExternalTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExternalTime */
-/**
- * @summary Encodes a(n) ExternalTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExternalTime, encoded as an ASN.1 Element.
- */
-export function _encode_ExternalTime(
-    value: ExternalTime,
-    elGetter: $.ASN1Encoder<ExternalTime>
-) {
-    if (!_cached_encoder_for_ExternalTime) {
-        _cached_encoder_for_ExternalTime = $._encodeGeneralizedTime;
-    }
-    return _cached_encoder_for_ExternalTime(value, elGetter);
-}
+export const _encode_ExternalTime = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExternalTime */
 

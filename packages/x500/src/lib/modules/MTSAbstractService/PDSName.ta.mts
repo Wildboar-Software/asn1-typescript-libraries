@@ -17,45 +17,17 @@ export type PDSName = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION PDSName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDSName */
-let _cached_decoder_for_PDSName: $.ASN1Decoder<PDSName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDSName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PDSName */
-/**
- * @summary Decodes an ASN.1 element into a(n) PDSName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PDSName} The decoded data structure.
- */
-export function _decode_PDSName(el: _Element) {
-    if (!_cached_decoder_for_PDSName) {
-        _cached_decoder_for_PDSName = $._decodePrintableString;
-    }
-    return _cached_decoder_for_PDSName(el);
-}
+export const _decode_PDSName = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_PDSName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDSName */
-let _cached_encoder_for_PDSName: $.ASN1Encoder<PDSName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDSName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PDSName */
-/**
- * @summary Encodes a(n) PDSName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PDSName, encoded as an ASN.1 Element.
- */
-export function _encode_PDSName(
-    value: PDSName,
-    elGetter: $.ASN1Encoder<PDSName>
-) {
-    if (!_cached_encoder_for_PDSName) {
-        _cached_encoder_for_PDSName = $._encodePrintableString;
-    }
-    return _cached_encoder_for_PDSName(value, elGetter);
-}
+export const _encode_PDSName = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PDSName */
 

@@ -53,45 +53,17 @@ export const pleasePublish: PKIPublicationInfo_action = PKIPublicationInfo_actio
 /* END_OF_SYMBOL_DEFINITION pleasePublish */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIPublicationInfo_action */
-let _cached_decoder_for_PKIPublicationInfo_action: $.ASN1Decoder<PKIPublicationInfo_action> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIPublicationInfo_action */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PKIPublicationInfo_action */
-/**
- * @summary Decodes an ASN.1 element into a(n) PKIPublicationInfo_action
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PKIPublicationInfo_action} The decoded data structure.
- */
-export function _decode_PKIPublicationInfo_action(el: _Element) {
-    if (!_cached_decoder_for_PKIPublicationInfo_action) {
-        _cached_decoder_for_PKIPublicationInfo_action = $._decodeInteger;
-    }
-    return _cached_decoder_for_PKIPublicationInfo_action(el);
-}
+export const _decode_PKIPublicationInfo_action = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PKIPublicationInfo_action */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIPublicationInfo_action */
-let _cached_encoder_for_PKIPublicationInfo_action: $.ASN1Encoder<PKIPublicationInfo_action> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIPublicationInfo_action */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PKIPublicationInfo_action */
-/**
- * @summary Encodes a(n) PKIPublicationInfo_action into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PKIPublicationInfo_action, encoded as an ASN.1 Element.
- */
-export function _encode_PKIPublicationInfo_action(
-    value: PKIPublicationInfo_action,
-    elGetter: $.ASN1Encoder<PKIPublicationInfo_action>
-) {
-    if (!_cached_encoder_for_PKIPublicationInfo_action) {
-        _cached_encoder_for_PKIPublicationInfo_action = $._encodeInteger;
-    }
-    return _cached_encoder_for_PKIPublicationInfo_action(value, elGetter);
-}
+export const _encode_PKIPublicationInfo_action = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PKIPublicationInfo_action */
 

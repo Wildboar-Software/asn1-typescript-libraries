@@ -63,45 +63,17 @@ export const failed: SignatureCheck = SignatureCheck_failed; /* SHORT_NAMED_INTE
 /* END_OF_SYMBOL_DEFINITION failed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureCheck */
-let _cached_decoder_for_SignatureCheck: $.ASN1Decoder<SignatureCheck> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureCheck */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SignatureCheck */
-/**
- * @summary Decodes an ASN.1 element into a(n) SignatureCheck
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SignatureCheck} The decoded data structure.
- */
-export function _decode_SignatureCheck(el: _Element) {
-    if (!_cached_decoder_for_SignatureCheck) {
-        _cached_decoder_for_SignatureCheck = $._decodeInteger;
-    }
-    return _cached_decoder_for_SignatureCheck(el);
-}
+export const _decode_SignatureCheck = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SignatureCheck */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureCheck */
-let _cached_encoder_for_SignatureCheck: $.ASN1Encoder<SignatureCheck> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureCheck */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SignatureCheck */
-/**
- * @summary Encodes a(n) SignatureCheck into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SignatureCheck, encoded as an ASN.1 Element.
- */
-export function _encode_SignatureCheck(
-    value: SignatureCheck,
-    elGetter: $.ASN1Encoder<SignatureCheck>
-) {
-    if (!_cached_encoder_for_SignatureCheck) {
-        _cached_encoder_for_SignatureCheck = $._encodeInteger;
-    }
-    return _cached_encoder_for_SignatureCheck(value, elGetter);
-}
+export const _encode_SignatureCheck = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SignatureCheck */
 

@@ -207,45 +207,17 @@ export const telephone_delivery: RequestedDeliveryMethod_Item = RequestedDeliver
 /* END_OF_SYMBOL_DEFINITION telephone_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedDeliveryMethod_Item */
-let _cached_decoder_for_RequestedDeliveryMethod_Item: $.ASN1Decoder<RequestedDeliveryMethod_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedDeliveryMethod_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RequestedDeliveryMethod_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) RequestedDeliveryMethod_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RequestedDeliveryMethod_Item} The decoded data structure.
- */
-export function _decode_RequestedDeliveryMethod_Item(el: _Element) {
-    if (!_cached_decoder_for_RequestedDeliveryMethod_Item) {
-        _cached_decoder_for_RequestedDeliveryMethod_Item = $._decodeInteger;
-    }
-    return _cached_decoder_for_RequestedDeliveryMethod_Item(el);
-}
+export const _decode_RequestedDeliveryMethod_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RequestedDeliveryMethod_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedDeliveryMethod_Item */
-let _cached_encoder_for_RequestedDeliveryMethod_Item: $.ASN1Encoder<RequestedDeliveryMethod_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedDeliveryMethod_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RequestedDeliveryMethod_Item */
-/**
- * @summary Encodes a(n) RequestedDeliveryMethod_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RequestedDeliveryMethod_Item, encoded as an ASN.1 Element.
- */
-export function _encode_RequestedDeliveryMethod_Item(
-    value: RequestedDeliveryMethod_Item,
-    elGetter: $.ASN1Encoder<RequestedDeliveryMethod_Item>
-) {
-    if (!_cached_encoder_for_RequestedDeliveryMethod_Item) {
-        _cached_encoder_for_RequestedDeliveryMethod_Item = $._encodeInteger;
-    }
-    return _cached_encoder_for_RequestedDeliveryMethod_Item(value, elGetter);
-}
+export const _encode_RequestedDeliveryMethod_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RequestedDeliveryMethod_Item */
 

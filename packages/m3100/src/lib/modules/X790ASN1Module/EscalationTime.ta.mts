@@ -27,45 +27,17 @@ export type EscalationTime = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION EscalationTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EscalationTime */
-let _cached_decoder_for_EscalationTime: $.ASN1Decoder<EscalationTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EscalationTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EscalationTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) EscalationTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EscalationTime} The decoded data structure.
- */
-export function _decode_EscalationTime(el: _Element) {
-    if (!_cached_decoder_for_EscalationTime) {
-        _cached_decoder_for_EscalationTime = $._decodeGeneralizedTime;
-    }
-    return _cached_decoder_for_EscalationTime(el);
-}
+export const _decode_EscalationTime = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_EscalationTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EscalationTime */
-let _cached_encoder_for_EscalationTime: $.ASN1Encoder<EscalationTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EscalationTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EscalationTime */
-/**
- * @summary Encodes a(n) EscalationTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EscalationTime, encoded as an ASN.1 Element.
- */
-export function _encode_EscalationTime(
-    value: EscalationTime,
-    elGetter: $.ASN1Encoder<EscalationTime>
-) {
-    if (!_cached_encoder_for_EscalationTime) {
-        _cached_encoder_for_EscalationTime = $._encodeGeneralizedTime;
-    }
-    return _cached_encoder_for_EscalationTime(value, elGetter);
-}
+export const _encode_EscalationTime = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EscalationTime */
 

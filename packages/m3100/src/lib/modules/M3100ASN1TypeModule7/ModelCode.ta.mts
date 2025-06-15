@@ -27,45 +27,17 @@ export type ModelCode = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION ModelCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModelCode */
-let _cached_decoder_for_ModelCode: $.ASN1Decoder<ModelCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModelCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ModelCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) ModelCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ModelCode} The decoded data structure.
- */
-export function _decode_ModelCode(el: _Element) {
-    if (!_cached_decoder_for_ModelCode) {
-        _cached_decoder_for_ModelCode = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_ModelCode(el);
-}
+export const _decode_ModelCode = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_ModelCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModelCode */
-let _cached_encoder_for_ModelCode: $.ASN1Encoder<ModelCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModelCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModelCode */
-/**
- * @summary Encodes a(n) ModelCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ModelCode, encoded as an ASN.1 Element.
- */
-export function _encode_ModelCode(
-    value: ModelCode,
-    elGetter: $.ASN1Encoder<ModelCode>
-) {
-    if (!_cached_encoder_for_ModelCode) {
-        _cached_encoder_for_ModelCode = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_ModelCode(value, elGetter);
-}
+export const _encode_ModelCode = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModelCode */
 

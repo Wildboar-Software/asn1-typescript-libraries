@@ -155,45 +155,17 @@ export const other: TypeOfMTSUser = TypeOfMTSUser_other; /* SHORT_NAMED_INTEGER_
 /* END_OF_SYMBOL_DEFINITION other */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMTSUser */
-let _cached_decoder_for_TypeOfMTSUser: $.ASN1Decoder<TypeOfMTSUser> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMTSUser */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TypeOfMTSUser */
-/**
- * @summary Decodes an ASN.1 element into a(n) TypeOfMTSUser
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TypeOfMTSUser} The decoded data structure.
- */
-export function _decode_TypeOfMTSUser(el: _Element) {
-    if (!_cached_decoder_for_TypeOfMTSUser) {
-        _cached_decoder_for_TypeOfMTSUser = $._decodeInteger;
-    }
-    return _cached_decoder_for_TypeOfMTSUser(el);
-}
+export const _decode_TypeOfMTSUser = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TypeOfMTSUser */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMTSUser */
-let _cached_encoder_for_TypeOfMTSUser: $.ASN1Encoder<TypeOfMTSUser> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMTSUser */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TypeOfMTSUser */
-/**
- * @summary Encodes a(n) TypeOfMTSUser into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TypeOfMTSUser, encoded as an ASN.1 Element.
- */
-export function _encode_TypeOfMTSUser(
-    value: TypeOfMTSUser,
-    elGetter: $.ASN1Encoder<TypeOfMTSUser>
-) {
-    if (!_cached_encoder_for_TypeOfMTSUser) {
-        _cached_encoder_for_TypeOfMTSUser = $._encodeInteger;
-    }
-    return _cached_encoder_for_TypeOfMTSUser(value, elGetter);
-}
+export const _encode_TypeOfMTSUser = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TypeOfMTSUser */
 

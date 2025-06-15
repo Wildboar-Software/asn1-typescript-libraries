@@ -163,45 +163,17 @@ export const discloseOnError: number = AttributeOperations_discloseOnError; /* S
 /* END_OF_SYMBOL_DEFINITION discloseOnError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeOperations */
-let _cached_decoder_for_AttributeOperations: $.ASN1Decoder<AttributeOperations> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeOperations */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeOperations */
-/**
- * @summary Decodes an ASN.1 element into a(n) AttributeOperations
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AttributeOperations} The decoded data structure.
- */
-export function _decode_AttributeOperations(el: _Element) {
-    if (!_cached_decoder_for_AttributeOperations) {
-        _cached_decoder_for_AttributeOperations = $._decodeBitString;
-    }
-    return _cached_decoder_for_AttributeOperations(el);
-}
+export const _decode_AttributeOperations = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeOperations */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeOperations */
-let _cached_encoder_for_AttributeOperations: $.ASN1Encoder<AttributeOperations> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeOperations */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeOperations */
-/**
- * @summary Encodes a(n) AttributeOperations into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AttributeOperations, encoded as an ASN.1 Element.
- */
-export function _encode_AttributeOperations(
-    value: AttributeOperations,
-    elGetter: $.ASN1Encoder<AttributeOperations>
-) {
-    if (!_cached_encoder_for_AttributeOperations) {
-        _cached_encoder_for_AttributeOperations = $._encodeBitString;
-    }
-    return _cached_encoder_for_AttributeOperations(value, elGetter);
-}
+export const _encode_AttributeOperations = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeOperations */
 

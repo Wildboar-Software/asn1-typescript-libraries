@@ -97,45 +97,17 @@ export const automatic: AcknowledgmentModeField =
 /* END_OF_SYMBOL_DEFINITION automatic */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AcknowledgmentModeField */
-let _cached_decoder_for_AcknowledgmentModeField: $.ASN1Decoder<AcknowledgmentModeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AcknowledgmentModeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AcknowledgmentModeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) AcknowledgmentModeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AcknowledgmentModeField} The decoded data structure.
- */
-export function _decode_AcknowledgmentModeField(el: _Element) {
-    if (!_cached_decoder_for_AcknowledgmentModeField) {
-        _cached_decoder_for_AcknowledgmentModeField = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AcknowledgmentModeField(el);
-}
+export const _decode_AcknowledgmentModeField = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AcknowledgmentModeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AcknowledgmentModeField */
-let _cached_encoder_for_AcknowledgmentModeField: $.ASN1Encoder<AcknowledgmentModeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AcknowledgmentModeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AcknowledgmentModeField */
-/**
- * @summary Encodes a(n) AcknowledgmentModeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AcknowledgmentModeField, encoded as an ASN.1 Element.
- */
-export function _encode_AcknowledgmentModeField(
-    value: AcknowledgmentModeField,
-    elGetter: $.ASN1Encoder<AcknowledgmentModeField>
-) {
-    if (!_cached_encoder_for_AcknowledgmentModeField) {
-        _cached_encoder_for_AcknowledgmentModeField = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AcknowledgmentModeField(value, elGetter);
-}
+export const _encode_AcknowledgmentModeField = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AcknowledgmentModeField */
 

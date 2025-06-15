@@ -246,45 +246,17 @@ export const other: ReferenceClockType = ReferenceClockType_other; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION other */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReferenceClockType */
-let _cached_decoder_for_ReferenceClockType: $.ASN1Decoder<ReferenceClockType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReferenceClockType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReferenceClockType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReferenceClockType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReferenceClockType} The decoded data structure.
- */
-export function _decode_ReferenceClockType(el: _Element) {
-    if (!_cached_decoder_for_ReferenceClockType) {
-        _cached_decoder_for_ReferenceClockType = $._decodeInteger;
-    }
-    return _cached_decoder_for_ReferenceClockType(el);
-}
+export const _decode_ReferenceClockType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ReferenceClockType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReferenceClockType */
-let _cached_encoder_for_ReferenceClockType: $.ASN1Encoder<ReferenceClockType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReferenceClockType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReferenceClockType */
-/**
- * @summary Encodes a(n) ReferenceClockType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReferenceClockType, encoded as an ASN.1 Element.
- */
-export function _encode_ReferenceClockType(
-    value: ReferenceClockType,
-    elGetter: $.ASN1Encoder<ReferenceClockType>
-) {
-    if (!_cached_encoder_for_ReferenceClockType) {
-        _cached_encoder_for_ReferenceClockType = $._encodeInteger;
-    }
-    return _cached_encoder_for_ReferenceClockType(value, elGetter);
-}
+export const _encode_ReferenceClockType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReferenceClockType */
 

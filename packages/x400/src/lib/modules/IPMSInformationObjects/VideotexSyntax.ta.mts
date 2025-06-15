@@ -100,45 +100,17 @@ export const data_syntax3: VideotexSyntax = VideotexSyntax_data_syntax3; /* SHOR
 /* END_OF_SYMBOL_DEFINITION data_syntax3 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VideotexSyntax */
-let _cached_decoder_for_VideotexSyntax: $.ASN1Decoder<VideotexSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VideotexSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VideotexSyntax */
-/**
- * @summary Decodes an ASN.1 element into a(n) VideotexSyntax
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VideotexSyntax} The decoded data structure.
- */
-export function _decode_VideotexSyntax(el: _Element) {
-    if (!_cached_decoder_for_VideotexSyntax) {
-        _cached_decoder_for_VideotexSyntax = $._decodeInteger;
-    }
-    return _cached_decoder_for_VideotexSyntax(el);
-}
+export const _decode_VideotexSyntax = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_VideotexSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VideotexSyntax */
-let _cached_encoder_for_VideotexSyntax: $.ASN1Encoder<VideotexSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VideotexSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VideotexSyntax */
-/**
- * @summary Encodes a(n) VideotexSyntax into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VideotexSyntax, encoded as an ASN.1 Element.
- */
-export function _encode_VideotexSyntax(
-    value: VideotexSyntax,
-    elGetter: $.ASN1Encoder<VideotexSyntax>
-) {
-    if (!_cached_encoder_for_VideotexSyntax) {
-        _cached_encoder_for_VideotexSyntax = $._encodeInteger;
-    }
-    return _cached_encoder_for_VideotexSyntax(value, elGetter);
-}
+export const _encode_VideotexSyntax = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VideotexSyntax */
 

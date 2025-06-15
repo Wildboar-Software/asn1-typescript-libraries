@@ -166,45 +166,17 @@ export const mistypedErrorParameter: AbortProblem =
 /* END_OF_SYMBOL_DEFINITION mistypedErrorParameter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortProblem */
-let _cached_decoder_for_AbortProblem: $.ASN1Decoder<AbortProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AbortProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) AbortProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AbortProblem} The decoded data structure.
- */
-export function _decode_AbortProblem(el: _Element) {
-  if (!_cached_decoder_for_AbortProblem) {
-    _cached_decoder_for_AbortProblem = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_AbortProblem(el);
-}
+export const _decode_AbortProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AbortProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortProblem */
-let _cached_encoder_for_AbortProblem: $.ASN1Encoder<AbortProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AbortProblem */
-/**
- * @summary Encodes a(n) AbortProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AbortProblem, encoded as an ASN.1 Element.
- */
-export function _encode_AbortProblem(
-  value: AbortProblem,
-  elGetter: $.ASN1Encoder<AbortProblem>
-) {
-  if (!_cached_encoder_for_AbortProblem) {
-    _cached_encoder_for_AbortProblem = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_AbortProblem(value, elGetter);
-}
+export const _encode_AbortProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AbortProblem */
 

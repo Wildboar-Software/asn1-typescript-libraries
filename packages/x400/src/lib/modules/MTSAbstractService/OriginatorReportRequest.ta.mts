@@ -64,45 +64,17 @@ export const non_delivery_report: number = OriginatorReportRequest_non_delivery_
 /* END_OF_SYMBOL_DEFINITION non_delivery_report */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorReportRequest */
-let _cached_decoder_for_OriginatorReportRequest: $.ASN1Decoder<OriginatorReportRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorReportRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OriginatorReportRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) OriginatorReportRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OriginatorReportRequest} The decoded data structure.
- */
-export function _decode_OriginatorReportRequest(el: _Element) {
-    if (!_cached_decoder_for_OriginatorReportRequest) {
-        _cached_decoder_for_OriginatorReportRequest = $._decodeBitString;
-    }
-    return _cached_decoder_for_OriginatorReportRequest(el);
-}
+export const _decode_OriginatorReportRequest = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_OriginatorReportRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorReportRequest */
-let _cached_encoder_for_OriginatorReportRequest: $.ASN1Encoder<OriginatorReportRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorReportRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OriginatorReportRequest */
-/**
- * @summary Encodes a(n) OriginatorReportRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OriginatorReportRequest, encoded as an ASN.1 Element.
- */
-export function _encode_OriginatorReportRequest(
-    value: OriginatorReportRequest,
-    elGetter: $.ASN1Encoder<OriginatorReportRequest>
-) {
-    if (!_cached_encoder_for_OriginatorReportRequest) {
-        _cached_encoder_for_OriginatorReportRequest = $._encodeBitString;
-    }
-    return _cached_encoder_for_OriginatorReportRequest(value, elGetter);
-}
+export const _encode_OriginatorReportRequest = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OriginatorReportRequest */
 

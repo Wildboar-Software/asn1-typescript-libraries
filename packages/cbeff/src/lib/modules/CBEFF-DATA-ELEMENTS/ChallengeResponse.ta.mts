@@ -27,45 +27,17 @@ export type ChallengeResponse = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION ChallengeResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChallengeResponse */
-let _cached_decoder_for_ChallengeResponse: $.ASN1Decoder<ChallengeResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChallengeResponse */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ChallengeResponse */
-/**
- * @summary Decodes an ASN.1 element into a(n) ChallengeResponse
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ChallengeResponse} The decoded data structure.
- */
-export function _decode_ChallengeResponse(el: _Element) {
-  if (!_cached_decoder_for_ChallengeResponse) {
-    _cached_decoder_for_ChallengeResponse = $._decodeOctetString;
-  }
-  return _cached_decoder_for_ChallengeResponse(el);
-}
+export const _decode_ChallengeResponse = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_ChallengeResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChallengeResponse */
-let _cached_encoder_for_ChallengeResponse: $.ASN1Encoder<ChallengeResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChallengeResponse */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ChallengeResponse */
-/**
- * @summary Encodes a(n) ChallengeResponse into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ChallengeResponse, encoded as an ASN.1 Element.
- */
-export function _encode_ChallengeResponse(
-  value: ChallengeResponse,
-  elGetter: $.ASN1Encoder<ChallengeResponse>
-) {
-  if (!_cached_encoder_for_ChallengeResponse) {
-    _cached_encoder_for_ChallengeResponse = $._encodeOctetString;
-  }
-  return _cached_encoder_for_ChallengeResponse(value, elGetter);
-}
+export const _encode_ChallengeResponse = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ChallengeResponse */
 

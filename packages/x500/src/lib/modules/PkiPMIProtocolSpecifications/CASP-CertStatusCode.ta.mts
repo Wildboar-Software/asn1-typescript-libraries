@@ -63,45 +63,17 @@ export const unknownCert: CASP_CertStatusCode = CASP_CertStatusCode_unknownCert;
 /* END_OF_SYMBOL_DEFINITION unknownCert */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CASP_CertStatusCode */
-let _cached_decoder_for_CASP_CertStatusCode: $.ASN1Decoder<CASP_CertStatusCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CASP_CertStatusCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CASP_CertStatusCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) CASP_CertStatusCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CASP_CertStatusCode} The decoded data structure.
- */
-export function _decode_CASP_CertStatusCode(el: _Element) {
-    if (!_cached_decoder_for_CASP_CertStatusCode) {
-        _cached_decoder_for_CASP_CertStatusCode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CASP_CertStatusCode(el);
-}
+export const _decode_CASP_CertStatusCode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CASP_CertStatusCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CASP_CertStatusCode */
-let _cached_encoder_for_CASP_CertStatusCode: $.ASN1Encoder<CASP_CertStatusCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CASP_CertStatusCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CASP_CertStatusCode */
-/**
- * @summary Encodes a(n) CASP_CertStatusCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CASP_CertStatusCode, encoded as an ASN.1 Element.
- */
-export function _encode_CASP_CertStatusCode(
-    value: CASP_CertStatusCode,
-    elGetter: $.ASN1Encoder<CASP_CertStatusCode>
-) {
-    if (!_cached_encoder_for_CASP_CertStatusCode) {
-        _cached_encoder_for_CASP_CertStatusCode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CASP_CertStatusCode(value, elGetter);
-}
+export const _encode_CASP_CertStatusCode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CASP_CertStatusCode */
 

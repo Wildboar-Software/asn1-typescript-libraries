@@ -77,45 +77,17 @@ export const secure_dl_operation: number = Actions_secure_dl_operation; /* SHORT
 /* END_OF_SYMBOL_DEFINITION secure_dl_operation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Actions */
-let _cached_decoder_for_Actions: $.ASN1Decoder<Actions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Actions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Actions */
-/**
- * @summary Decodes an ASN.1 element into a(n) Actions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Actions} The decoded data structure.
- */
-export function _decode_Actions(el: _Element) {
-    if (!_cached_decoder_for_Actions) {
-        _cached_decoder_for_Actions = $._decodeBitString;
-    }
-    return _cached_decoder_for_Actions(el);
-}
+export const _decode_Actions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Actions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Actions */
-let _cached_encoder_for_Actions: $.ASN1Encoder<Actions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Actions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Actions */
-/**
- * @summary Encodes a(n) Actions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Actions, encoded as an ASN.1 Element.
- */
-export function _encode_Actions(
-    value: Actions,
-    elGetter: $.ASN1Encoder<Actions>
-) {
-    if (!_cached_encoder_for_Actions) {
-        _cached_encoder_for_Actions = $._encodeBitString;
-    }
-    return _cached_encoder_for_Actions(value, elGetter);
-}
+export const _encode_Actions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Actions */
 

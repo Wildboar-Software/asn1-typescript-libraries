@@ -59,45 +59,17 @@ export const betweenParenthesis: number = StringAttributes_betweenParenthesis; /
 /* END_OF_SYMBOL_DEFINITION betweenParenthesis */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StringAttributes */
-let _cached_decoder_for_StringAttributes: $.ASN1Decoder<StringAttributes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StringAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_StringAttributes */
-/**
- * @summary Decodes an ASN.1 element into a(n) StringAttributes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {StringAttributes} The decoded data structure.
- */
-export function _decode_StringAttributes(el: _Element) {
-    if (!_cached_decoder_for_StringAttributes) {
-        _cached_decoder_for_StringAttributes = $._decodeBitString;
-    }
-    return _cached_decoder_for_StringAttributes(el);
-}
+export const _decode_StringAttributes = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_StringAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StringAttributes */
-let _cached_encoder_for_StringAttributes: $.ASN1Encoder<StringAttributes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StringAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_StringAttributes */
-/**
- * @summary Encodes a(n) StringAttributes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StringAttributes, encoded as an ASN.1 Element.
- */
-export function _encode_StringAttributes(
-    value: StringAttributes,
-    elGetter: $.ASN1Encoder<StringAttributes>
-) {
-    if (!_cached_encoder_for_StringAttributes) {
-        _cached_encoder_for_StringAttributes = $._encodeBitString;
-    }
-    return _cached_encoder_for_StringAttributes(value, elGetter);
-}
+export const _encode_StringAttributes = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_StringAttributes */
 

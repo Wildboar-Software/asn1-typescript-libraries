@@ -17,45 +17,17 @@ export type AVMPsequence = INTEGER;
 /* END_OF_SYMBOL_DEFINITION AVMPsequence */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMPsequence */
-let _cached_decoder_for_AVMPsequence: $.ASN1Decoder<AVMPsequence> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMPsequence */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AVMPsequence */
-/**
- * @summary Decodes an ASN.1 element into a(n) AVMPsequence
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AVMPsequence} The decoded data structure.
- */
-export function _decode_AVMPsequence(el: _Element) {
-    if (!_cached_decoder_for_AVMPsequence) {
-        _cached_decoder_for_AVMPsequence = $._decodeInteger;
-    }
-    return _cached_decoder_for_AVMPsequence(el);
-}
+export const _decode_AVMPsequence = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AVMPsequence */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMPsequence */
-let _cached_encoder_for_AVMPsequence: $.ASN1Encoder<AVMPsequence> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMPsequence */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AVMPsequence */
-/**
- * @summary Encodes a(n) AVMPsequence into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AVMPsequence, encoded as an ASN.1 Element.
- */
-export function _encode_AVMPsequence(
-    value: AVMPsequence,
-    elGetter: $.ASN1Encoder<AVMPsequence>
-) {
-    if (!_cached_encoder_for_AVMPsequence) {
-        _cached_encoder_for_AVMPsequence = $._encodeInteger;
-    }
-    return _cached_encoder_for_AVMPsequence(value, elGetter);
-}
+export const _encode_AVMPsequence = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AVMPsequence */
 

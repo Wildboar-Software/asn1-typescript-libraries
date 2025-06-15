@@ -17,45 +17,17 @@ export type MgtPrintableString = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION MgtPrintableString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtPrintableString */
-let _cached_decoder_for_MgtPrintableString: $.ASN1Decoder<MgtPrintableString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtPrintableString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MgtPrintableString */
-/**
- * @summary Decodes an ASN.1 element into a(n) MgtPrintableString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MgtPrintableString} The decoded data structure.
- */
-export function _decode_MgtPrintableString(el: _Element) {
-    if (!_cached_decoder_for_MgtPrintableString) {
-        _cached_decoder_for_MgtPrintableString = $._decodePrintableString;
-    }
-    return _cached_decoder_for_MgtPrintableString(el);
-}
+export const _decode_MgtPrintableString = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_MgtPrintableString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtPrintableString */
-let _cached_encoder_for_MgtPrintableString: $.ASN1Encoder<MgtPrintableString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtPrintableString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MgtPrintableString */
-/**
- * @summary Encodes a(n) MgtPrintableString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MgtPrintableString, encoded as an ASN.1 Element.
- */
-export function _encode_MgtPrintableString(
-    value: MgtPrintableString,
-    elGetter: $.ASN1Encoder<MgtPrintableString>
-) {
-    if (!_cached_encoder_for_MgtPrintableString) {
-        _cached_encoder_for_MgtPrintableString = $._encodePrintableString;
-    }
-    return _cached_encoder_for_MgtPrintableString(value, elGetter);
-}
+export const _encode_MgtPrintableString = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MgtPrintableString */
 

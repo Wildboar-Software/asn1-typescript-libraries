@@ -109,45 +109,17 @@ export const unrecognizedUser: AuthenReasonSyntax = AuthenReasonSyntax_unrecogni
 /* END_OF_SYMBOL_DEFINITION unrecognizedUser */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenReasonSyntax */
-let _cached_decoder_for_AuthenReasonSyntax: $.ASN1Decoder<AuthenReasonSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenReasonSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AuthenReasonSyntax */
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenReasonSyntax
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AuthenReasonSyntax} The decoded data structure.
- */
-export function _decode_AuthenReasonSyntax(el: _Element) {
-    if (!_cached_decoder_for_AuthenReasonSyntax) {
-        _cached_decoder_for_AuthenReasonSyntax = $._decodeInteger;
-    }
-    return _cached_decoder_for_AuthenReasonSyntax(el);
-}
+export const _decode_AuthenReasonSyntax = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AuthenReasonSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenReasonSyntax */
-let _cached_encoder_for_AuthenReasonSyntax: $.ASN1Encoder<AuthenReasonSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenReasonSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AuthenReasonSyntax */
-/**
- * @summary Encodes a(n) AuthenReasonSyntax into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenReasonSyntax, encoded as an ASN.1 Element.
- */
-export function _encode_AuthenReasonSyntax(
-    value: AuthenReasonSyntax,
-    elGetter: $.ASN1Encoder<AuthenReasonSyntax>
-) {
-    if (!_cached_encoder_for_AuthenReasonSyntax) {
-        _cached_encoder_for_AuthenReasonSyntax = $._encodeInteger;
-    }
-    return _cached_encoder_for_AuthenReasonSyntax(value, elGetter);
-}
+export const _encode_AuthenReasonSyntax = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AuthenReasonSyntax */
 

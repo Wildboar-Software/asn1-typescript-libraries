@@ -657,45 +657,17 @@ export const techLeftSite: TroubleReportStatus_number = TroubleReportStatus_numb
 /* END_OF_SYMBOL_DEFINITION techLeftSite */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatus_number */
-let _cached_decoder_for_TroubleReportStatus_number: $.ASN1Decoder<TroubleReportStatus_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatus_number */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TroubleReportStatus_number */
-/**
- * @summary Decodes an ASN.1 element into a(n) TroubleReportStatus_number
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TroubleReportStatus_number} The decoded data structure.
- */
-export function _decode_TroubleReportStatus_number(el: _Element) {
-    if (!_cached_decoder_for_TroubleReportStatus_number) {
-        _cached_decoder_for_TroubleReportStatus_number = $._decodeInteger;
-    }
-    return _cached_decoder_for_TroubleReportStatus_number(el);
-}
+export const _decode_TroubleReportStatus_number = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TroubleReportStatus_number */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatus_number */
-let _cached_encoder_for_TroubleReportStatus_number: $.ASN1Encoder<TroubleReportStatus_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatus_number */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TroubleReportStatus_number */
-/**
- * @summary Encodes a(n) TroubleReportStatus_number into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TroubleReportStatus_number, encoded as an ASN.1 Element.
- */
-export function _encode_TroubleReportStatus_number(
-    value: TroubleReportStatus_number,
-    elGetter: $.ASN1Encoder<TroubleReportStatus_number>
-) {
-    if (!_cached_encoder_for_TroubleReportStatus_number) {
-        _cached_encoder_for_TroubleReportStatus_number = $._encodeInteger;
-    }
-    return _cached_encoder_for_TroubleReportStatus_number(value, elGetter);
-}
+export const _encode_TroubleReportStatus_number = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TroubleReportStatus_number */
 

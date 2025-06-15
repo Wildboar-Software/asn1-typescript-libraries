@@ -27,45 +27,17 @@ export type VideotexData = VideotexString; // VideotexString
 /* END_OF_SYMBOL_DEFINITION VideotexData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VideotexData */
-let _cached_decoder_for_VideotexData: $.ASN1Decoder<VideotexData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VideotexData */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VideotexData */
-/**
- * @summary Decodes an ASN.1 element into a(n) VideotexData
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VideotexData} The decoded data structure.
- */
-export function _decode_VideotexData(el: _Element) {
-    if (!_cached_decoder_for_VideotexData) {
-        _cached_decoder_for_VideotexData = $._decodeVideotexString;
-    }
-    return _cached_decoder_for_VideotexData(el);
-}
+export const _decode_VideotexData = $._decodeVideotexString;
 /* END_OF_SYMBOL_DEFINITION _decode_VideotexData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VideotexData */
-let _cached_encoder_for_VideotexData: $.ASN1Encoder<VideotexData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VideotexData */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VideotexData */
-/**
- * @summary Encodes a(n) VideotexData into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VideotexData, encoded as an ASN.1 Element.
- */
-export function _encode_VideotexData(
-    value: VideotexData,
-    elGetter: $.ASN1Encoder<VideotexData>
-) {
-    if (!_cached_encoder_for_VideotexData) {
-        _cached_encoder_for_VideotexData = $._encodeVideotexString;
-    }
-    return _cached_encoder_for_VideotexData(value, elGetter);
-}
+export const _encode_VideotexData = $._encodeVideotexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VideotexData */
 

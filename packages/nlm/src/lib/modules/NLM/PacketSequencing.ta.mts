@@ -27,45 +27,17 @@ export type PacketSequencing = INTEGER;
 /* END_OF_SYMBOL_DEFINITION PacketSequencing */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PacketSequencing */
-let _cached_decoder_for_PacketSequencing: $.ASN1Decoder<PacketSequencing> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PacketSequencing */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PacketSequencing */
-/**
- * @summary Decodes an ASN.1 element into a(n) PacketSequencing
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PacketSequencing} The decoded data structure.
- */
-export function _decode_PacketSequencing(el: _Element) {
-    if (!_cached_decoder_for_PacketSequencing) {
-        _cached_decoder_for_PacketSequencing = $._decodeInteger;
-    }
-    return _cached_decoder_for_PacketSequencing(el);
-}
+export const _decode_PacketSequencing = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PacketSequencing */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PacketSequencing */
-let _cached_encoder_for_PacketSequencing: $.ASN1Encoder<PacketSequencing> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PacketSequencing */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PacketSequencing */
-/**
- * @summary Encodes a(n) PacketSequencing into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PacketSequencing, encoded as an ASN.1 Element.
- */
-export function _encode_PacketSequencing(
-    value: PacketSequencing,
-    elGetter: $.ASN1Encoder<PacketSequencing>
-) {
-    if (!_cached_encoder_for_PacketSequencing) {
-        _cached_encoder_for_PacketSequencing = $._encodeInteger;
-    }
-    return _cached_encoder_for_PacketSequencing(value, elGetter);
-}
+export const _encode_PacketSequencing = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PacketSequencing */
 

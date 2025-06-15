@@ -27,45 +27,17 @@ export type RegisteredAs = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION RegisteredAs */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisteredAs */
-let _cached_decoder_for_RegisteredAs: $.ASN1Decoder<RegisteredAs> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisteredAs */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RegisteredAs */
-/**
- * @summary Decodes an ASN.1 element into a(n) RegisteredAs
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RegisteredAs} The decoded data structure.
- */
-export function _decode_RegisteredAs(el: _Element) {
-    if (!_cached_decoder_for_RegisteredAs) {
-        _cached_decoder_for_RegisteredAs = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_RegisteredAs(el);
-}
+export const _decode_RegisteredAs = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_RegisteredAs */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisteredAs */
-let _cached_encoder_for_RegisteredAs: $.ASN1Encoder<RegisteredAs> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisteredAs */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RegisteredAs */
-/**
- * @summary Encodes a(n) RegisteredAs into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RegisteredAs, encoded as an ASN.1 Element.
- */
-export function _encode_RegisteredAs(
-    value: RegisteredAs,
-    elGetter: $.ASN1Encoder<RegisteredAs>
-) {
-    if (!_cached_encoder_for_RegisteredAs) {
-        _cached_encoder_for_RegisteredAs = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_RegisteredAs(value, elGetter);
-}
+export const _encode_RegisteredAs = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RegisteredAs */
 

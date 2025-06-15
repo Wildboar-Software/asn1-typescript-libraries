@@ -53,45 +53,17 @@ export const signed: ProtectionRequest = ProtectionRequest_signed; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION signed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionRequest */
-let _cached_decoder_for_ProtectionRequest: $.ASN1Decoder<ProtectionRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProtectionRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProtectionRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProtectionRequest} The decoded data structure.
- */
-export function _decode_ProtectionRequest(el: _Element) {
-    if (!_cached_decoder_for_ProtectionRequest) {
-        _cached_decoder_for_ProtectionRequest = $._decodeInteger;
-    }
-    return _cached_decoder_for_ProtectionRequest(el);
-}
+export const _decode_ProtectionRequest = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ProtectionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionRequest */
-let _cached_encoder_for_ProtectionRequest: $.ASN1Encoder<ProtectionRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProtectionRequest */
-/**
- * @summary Encodes a(n) ProtectionRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProtectionRequest, encoded as an ASN.1 Element.
- */
-export function _encode_ProtectionRequest(
-    value: ProtectionRequest,
-    elGetter: $.ASN1Encoder<ProtectionRequest>
-) {
-    if (!_cached_encoder_for_ProtectionRequest) {
-        _cached_encoder_for_ProtectionRequest = $._encodeInteger;
-    }
-    return _cached_encoder_for_ProtectionRequest(value, elGetter);
-}
+export const _encode_ProtectionRequest = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProtectionRequest */
 

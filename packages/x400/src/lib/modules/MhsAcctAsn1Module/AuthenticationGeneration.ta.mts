@@ -63,45 +63,17 @@ export const non_generated: AuthenticationGeneration = AuthenticationGeneration_
 /* END_OF_SYMBOL_DEFINITION non_generated */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationGeneration */
-let _cached_decoder_for_AuthenticationGeneration: $.ASN1Decoder<AuthenticationGeneration> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationGeneration */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AuthenticationGeneration */
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticationGeneration
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AuthenticationGeneration} The decoded data structure.
- */
-export function _decode_AuthenticationGeneration(el: _Element) {
-    if (!_cached_decoder_for_AuthenticationGeneration) {
-        _cached_decoder_for_AuthenticationGeneration = $._decodeInteger;
-    }
-    return _cached_decoder_for_AuthenticationGeneration(el);
-}
+export const _decode_AuthenticationGeneration = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AuthenticationGeneration */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationGeneration */
-let _cached_encoder_for_AuthenticationGeneration: $.ASN1Encoder<AuthenticationGeneration> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationGeneration */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AuthenticationGeneration */
-/**
- * @summary Encodes a(n) AuthenticationGeneration into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticationGeneration, encoded as an ASN.1 Element.
- */
-export function _encode_AuthenticationGeneration(
-    value: AuthenticationGeneration,
-    elGetter: $.ASN1Encoder<AuthenticationGeneration>
-) {
-    if (!_cached_encoder_for_AuthenticationGeneration) {
-        _cached_encoder_for_AuthenticationGeneration = $._encodeInteger;
-    }
-    return _cached_encoder_for_AuthenticationGeneration(value, elGetter);
-}
+export const _encode_AuthenticationGeneration = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AuthenticationGeneration */
 

@@ -101,45 +101,17 @@ export const unacceptableDialogueMode: RefuseReason = RefuseReason_unacceptableD
 /* END_OF_SYMBOL_DEFINITION unacceptableDialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RefuseReason */
-let _cached_decoder_for_RefuseReason: $.ASN1Decoder<RefuseReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RefuseReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RefuseReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) RefuseReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RefuseReason} The decoded data structure.
- */
-export function _decode_RefuseReason(el: _Element) {
-  if (!_cached_decoder_for_RefuseReason) {
-    _cached_decoder_for_RefuseReason = $._decodeInteger;
-  }
-  return _cached_decoder_for_RefuseReason(el);
-}
+export const _decode_RefuseReason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RefuseReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RefuseReason */
-let _cached_encoder_for_RefuseReason: $.ASN1Encoder<RefuseReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RefuseReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RefuseReason */
-/**
- * @summary Encodes a(n) RefuseReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RefuseReason, encoded as an ASN.1 Element.
- */
-export function _encode_RefuseReason(
-  value: RefuseReason,
-  elGetter: $.ASN1Encoder<RefuseReason>
-) {
-  if (!_cached_encoder_for_RefuseReason) {
-    _cached_encoder_for_RefuseReason = $._encodeInteger;
-  }
-  return _cached_encoder_for_RefuseReason(value, elGetter);
-}
+export const _encode_RefuseReason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RefuseReason */
 

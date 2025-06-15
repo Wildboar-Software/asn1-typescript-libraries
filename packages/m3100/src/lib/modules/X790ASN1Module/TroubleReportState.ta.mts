@@ -137,45 +137,17 @@ export const disabled: TroubleReportState = TroubleReportState_disabled; /* SHOR
 /* END_OF_SYMBOL_DEFINITION disabled */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportState */
-let _cached_decoder_for_TroubleReportState: $.ASN1Decoder<TroubleReportState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TroubleReportState */
-/**
- * @summary Decodes an ASN.1 element into a(n) TroubleReportState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TroubleReportState} The decoded data structure.
- */
-export function _decode_TroubleReportState(el: _Element) {
-    if (!_cached_decoder_for_TroubleReportState) {
-        _cached_decoder_for_TroubleReportState = $._decodeInteger;
-    }
-    return _cached_decoder_for_TroubleReportState(el);
-}
+export const _decode_TroubleReportState = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TroubleReportState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportState */
-let _cached_encoder_for_TroubleReportState: $.ASN1Encoder<TroubleReportState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TroubleReportState */
-/**
- * @summary Encodes a(n) TroubleReportState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TroubleReportState, encoded as an ASN.1 Element.
- */
-export function _encode_TroubleReportState(
-    value: TroubleReportState,
-    elGetter: $.ASN1Encoder<TroubleReportState>
-) {
-    if (!_cached_encoder_for_TroubleReportState) {
-        _cached_encoder_for_TroubleReportState = $._encodeInteger;
-    }
-    return _cached_encoder_for_TroubleReportState(value, elGetter);
-}
+export const _encode_TroubleReportState = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TroubleReportState */
 

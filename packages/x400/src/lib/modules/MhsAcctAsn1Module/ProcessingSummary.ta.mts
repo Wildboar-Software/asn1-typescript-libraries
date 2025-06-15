@@ -174,45 +174,17 @@ export const securityContextCheck: number = ProcessingSummary_securityContextChe
 /* END_OF_SYMBOL_DEFINITION securityContextCheck */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingSummary */
-let _cached_decoder_for_ProcessingSummary: $.ASN1Decoder<ProcessingSummary> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingSummary */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProcessingSummary */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProcessingSummary
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProcessingSummary} The decoded data structure.
- */
-export function _decode_ProcessingSummary(el: _Element) {
-    if (!_cached_decoder_for_ProcessingSummary) {
-        _cached_decoder_for_ProcessingSummary = $._decodeBitString;
-    }
-    return _cached_decoder_for_ProcessingSummary(el);
-}
+export const _decode_ProcessingSummary = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ProcessingSummary */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingSummary */
-let _cached_encoder_for_ProcessingSummary: $.ASN1Encoder<ProcessingSummary> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingSummary */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProcessingSummary */
-/**
- * @summary Encodes a(n) ProcessingSummary into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProcessingSummary, encoded as an ASN.1 Element.
- */
-export function _encode_ProcessingSummary(
-    value: ProcessingSummary,
-    elGetter: $.ASN1Encoder<ProcessingSummary>
-) {
-    if (!_cached_encoder_for_ProcessingSummary) {
-        _cached_encoder_for_ProcessingSummary = $._encodeBitString;
-    }
-    return _cached_encoder_for_ProcessingSummary(value, elGetter);
-}
+export const _encode_ProcessingSummary = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProcessingSummary */
 

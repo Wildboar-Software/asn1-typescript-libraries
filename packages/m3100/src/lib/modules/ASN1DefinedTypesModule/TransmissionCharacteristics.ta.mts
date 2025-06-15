@@ -76,45 +76,17 @@ export const echoControl: number = TransmissionCharacteristics_echoControl; /* S
 /* END_OF_SYMBOL_DEFINITION echoControl */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransmissionCharacteristics */
-let _cached_decoder_for_TransmissionCharacteristics: $.ASN1Decoder<TransmissionCharacteristics> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransmissionCharacteristics */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TransmissionCharacteristics */
-/**
- * @summary Decodes an ASN.1 element into a(n) TransmissionCharacteristics
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TransmissionCharacteristics} The decoded data structure.
- */
-export function _decode_TransmissionCharacteristics(el: _Element) {
-    if (!_cached_decoder_for_TransmissionCharacteristics) {
-        _cached_decoder_for_TransmissionCharacteristics = $._decodeBitString;
-    }
-    return _cached_decoder_for_TransmissionCharacteristics(el);
-}
+export const _decode_TransmissionCharacteristics = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_TransmissionCharacteristics */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransmissionCharacteristics */
-let _cached_encoder_for_TransmissionCharacteristics: $.ASN1Encoder<TransmissionCharacteristics> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransmissionCharacteristics */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TransmissionCharacteristics */
-/**
- * @summary Encodes a(n) TransmissionCharacteristics into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TransmissionCharacteristics, encoded as an ASN.1 Element.
- */
-export function _encode_TransmissionCharacteristics(
-    value: TransmissionCharacteristics,
-    elGetter: $.ASN1Encoder<TransmissionCharacteristics>
-) {
-    if (!_cached_encoder_for_TransmissionCharacteristics) {
-        _cached_encoder_for_TransmissionCharacteristics = $._encodeBitString;
-    }
-    return _cached_encoder_for_TransmissionCharacteristics(value, elGetter);
-}
+export const _encode_TransmissionCharacteristics = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TransmissionCharacteristics */
 

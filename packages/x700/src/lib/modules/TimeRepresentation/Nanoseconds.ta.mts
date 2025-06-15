@@ -27,45 +27,17 @@ export type Nanoseconds = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Nanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Nanoseconds */
-let _cached_decoder_for_Nanoseconds: $.ASN1Decoder<Nanoseconds> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Nanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Nanoseconds */
-/**
- * @summary Decodes an ASN.1 element into a(n) Nanoseconds
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Nanoseconds} The decoded data structure.
- */
-export function _decode_Nanoseconds(el: _Element) {
-    if (!_cached_decoder_for_Nanoseconds) {
-        _cached_decoder_for_Nanoseconds = $._decodeInteger;
-    }
-    return _cached_decoder_for_Nanoseconds(el);
-}
+export const _decode_Nanoseconds = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Nanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Nanoseconds */
-let _cached_encoder_for_Nanoseconds: $.ASN1Encoder<Nanoseconds> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Nanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Nanoseconds */
-/**
- * @summary Encodes a(n) Nanoseconds into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Nanoseconds, encoded as an ASN.1 Element.
- */
-export function _encode_Nanoseconds(
-    value: Nanoseconds,
-    elGetter: $.ASN1Encoder<Nanoseconds>
-) {
-    if (!_cached_encoder_for_Nanoseconds) {
-        _cached_encoder_for_Nanoseconds = $._encodeInteger;
-    }
-    return _cached_encoder_for_Nanoseconds(value, elGetter);
-}
+export const _encode_Nanoseconds = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Nanoseconds */
 

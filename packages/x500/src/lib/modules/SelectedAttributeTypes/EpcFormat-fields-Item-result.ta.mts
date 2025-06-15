@@ -109,45 +109,17 @@ export const alpha7bits: EpcFormat_fields_Item_result =
 /* END_OF_SYMBOL_DEFINITION alpha7bits */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EpcFormat_fields_Item_result */
-let _cached_decoder_for_EpcFormat_fields_Item_result: $.ASN1Decoder<EpcFormat_fields_Item_result> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EpcFormat_fields_Item_result */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EpcFormat_fields_Item_result */
-/**
- * @summary Decodes an ASN.1 element into a(n) EpcFormat_fields_Item_result
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EpcFormat_fields_Item_result} The decoded data structure.
- */
-export function _decode_EpcFormat_fields_Item_result(el: _Element) {
-    if (!_cached_decoder_for_EpcFormat_fields_Item_result) {
-        _cached_decoder_for_EpcFormat_fields_Item_result = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_EpcFormat_fields_Item_result(el);
-}
+export const _decode_EpcFormat_fields_Item_result = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EpcFormat_fields_Item_result */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EpcFormat_fields_Item_result */
-let _cached_encoder_for_EpcFormat_fields_Item_result: $.ASN1Encoder<EpcFormat_fields_Item_result> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EpcFormat_fields_Item_result */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EpcFormat_fields_Item_result */
-/**
- * @summary Encodes a(n) EpcFormat_fields_Item_result into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EpcFormat_fields_Item_result, encoded as an ASN.1 Element.
- */
-export function _encode_EpcFormat_fields_Item_result(
-    value: EpcFormat_fields_Item_result,
-    elGetter: $.ASN1Encoder<EpcFormat_fields_Item_result>
-) {
-    if (!_cached_encoder_for_EpcFormat_fields_Item_result) {
-        _cached_encoder_for_EpcFormat_fields_Item_result = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_EpcFormat_fields_Item_result(value, elGetter);
-}
+export const _encode_EpcFormat_fields_Item_result = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EpcFormat_fields_Item_result */
 

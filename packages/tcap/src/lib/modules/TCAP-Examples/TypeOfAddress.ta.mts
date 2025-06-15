@@ -118,45 +118,17 @@ export const private_: TypeOfAddress =
 /* END_OF_SYMBOL_DEFINITION private_ */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfAddress */
-let _cached_decoder_for_TypeOfAddress: $.ASN1Decoder<TypeOfAddress> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfAddress */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TypeOfAddress */
-/**
- * @summary Decodes an ASN.1 element into a(n) TypeOfAddress
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TypeOfAddress} The decoded data structure.
- */
-export function _decode_TypeOfAddress(el: _Element) {
-    if (!_cached_decoder_for_TypeOfAddress) {
-        _cached_decoder_for_TypeOfAddress = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TypeOfAddress(el);
-}
+export const _decode_TypeOfAddress = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TypeOfAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfAddress */
-let _cached_encoder_for_TypeOfAddress: $.ASN1Encoder<TypeOfAddress> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TypeOfAddress */
-/**
- * @summary Encodes a(n) TypeOfAddress into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TypeOfAddress, encoded as an ASN.1 Element.
- */
-export function _encode_TypeOfAddress(
-    value: TypeOfAddress,
-    elGetter: $.ASN1Encoder<TypeOfAddress>
-) {
-    if (!_cached_encoder_for_TypeOfAddress) {
-        _cached_encoder_for_TypeOfAddress = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TypeOfAddress(value, elGetter);
-}
+export const _encode_TypeOfAddress = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TypeOfAddress */
 

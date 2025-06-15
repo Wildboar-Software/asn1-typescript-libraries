@@ -125,45 +125,17 @@ export const pn_issued: number = EDINStatus_pn_issued; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION pn_issued */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINStatus */
-let _cached_decoder_for_EDINStatus: $.ASN1Decoder<EDINStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDINStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDINStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDINStatus} The decoded data structure.
- */
-export function _decode_EDINStatus(el: _Element) {
-    if (!_cached_decoder_for_EDINStatus) {
-        _cached_decoder_for_EDINStatus = $._decodeBitString;
-    }
-    return _cached_decoder_for_EDINStatus(el);
-}
+export const _decode_EDINStatus = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_EDINStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINStatus */
-let _cached_encoder_for_EDINStatus: $.ASN1Encoder<EDINStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDINStatus */
-/**
- * @summary Encodes a(n) EDINStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDINStatus, encoded as an ASN.1 Element.
- */
-export function _encode_EDINStatus(
-    value: EDINStatus,
-    elGetter: $.ASN1Encoder<EDINStatus>
-) {
-    if (!_cached_encoder_for_EDINStatus) {
-        _cached_encoder_for_EDINStatus = $._encodeBitString;
-    }
-    return _cached_encoder_for_EDINStatus(value, elGetter);
-}
+export const _encode_EDINStatus = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDINStatus */
 

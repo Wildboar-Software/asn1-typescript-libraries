@@ -103,45 +103,17 @@ export const noResultReportForPassedSequences: ResultReportIndicator =
 /* END_OF_SYMBOL_DEFINITION noResultReportForPassedSequences */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultReportIndicator */
-let _cached_decoder_for_ResultReportIndicator: $.ASN1Decoder<ResultReportIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultReportIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ResultReportIndicator */
-/**
- * @summary Decodes an ASN.1 element into a(n) ResultReportIndicator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ResultReportIndicator} The decoded data structure.
- */
-export function _decode_ResultReportIndicator(el: _Element) {
-    if (!_cached_decoder_for_ResultReportIndicator) {
-        _cached_decoder_for_ResultReportIndicator = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ResultReportIndicator(el);
-}
+export const _decode_ResultReportIndicator = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ResultReportIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultReportIndicator */
-let _cached_encoder_for_ResultReportIndicator: $.ASN1Encoder<ResultReportIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultReportIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ResultReportIndicator */
-/**
- * @summary Encodes a(n) ResultReportIndicator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResultReportIndicator, encoded as an ASN.1 Element.
- */
-export function _encode_ResultReportIndicator(
-    value: ResultReportIndicator,
-    elGetter: $.ASN1Encoder<ResultReportIndicator>
-) {
-    if (!_cached_encoder_for_ResultReportIndicator) {
-        _cached_encoder_for_ResultReportIndicator = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ResultReportIndicator(value, elGetter);
-}
+export const _encode_ResultReportIndicator = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ResultReportIndicator */
 

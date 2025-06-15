@@ -163,45 +163,17 @@ export const unsupportedHashAlgorithm: SignedData_error = SignedData_error_unsup
 /* END_OF_SYMBOL_DEFINITION unsupportedHashAlgorithm */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedData_error */
-let _cached_decoder_for_SignedData_error: $.ASN1Decoder<SignedData_error> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedData_error */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SignedData_error */
-/**
- * @summary Decodes an ASN.1 element into a(n) SignedData_error
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SignedData_error} The decoded data structure.
- */
-export function _decode_SignedData_error(el: _Element) {
-    if (!_cached_decoder_for_SignedData_error) {
-        _cached_decoder_for_SignedData_error = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SignedData_error(el);
-}
+export const _decode_SignedData_error = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SignedData_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedData_error */
-let _cached_encoder_for_SignedData_error: $.ASN1Encoder<SignedData_error> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedData_error */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SignedData_error */
-/**
- * @summary Encodes a(n) SignedData_error into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SignedData_error, encoded as an ASN.1 Element.
- */
-export function _encode_SignedData_error(
-    value: SignedData_error,
-    elGetter: $.ASN1Encoder<SignedData_error>
-) {
-    if (!_cached_encoder_for_SignedData_error) {
-        _cached_encoder_for_SignedData_error = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SignedData_error(value, elGetter);
-}
+export const _encode_SignedData_error = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SignedData_error */
 

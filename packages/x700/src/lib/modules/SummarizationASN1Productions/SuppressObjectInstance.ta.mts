@@ -27,45 +27,17 @@ export type SuppressObjectInstance = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION SuppressObjectInstance */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SuppressObjectInstance */
-let _cached_decoder_for_SuppressObjectInstance: $.ASN1Decoder<SuppressObjectInstance> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SuppressObjectInstance */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SuppressObjectInstance */
-/**
- * @summary Decodes an ASN.1 element into a(n) SuppressObjectInstance
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SuppressObjectInstance} The decoded data structure.
- */
-export function _decode_SuppressObjectInstance(el: _Element) {
-    if (!_cached_decoder_for_SuppressObjectInstance) {
-        _cached_decoder_for_SuppressObjectInstance = $._decodeBoolean;
-    }
-    return _cached_decoder_for_SuppressObjectInstance(el);
-}
+export const _decode_SuppressObjectInstance = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_SuppressObjectInstance */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SuppressObjectInstance */
-let _cached_encoder_for_SuppressObjectInstance: $.ASN1Encoder<SuppressObjectInstance> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SuppressObjectInstance */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SuppressObjectInstance */
-/**
- * @summary Encodes a(n) SuppressObjectInstance into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SuppressObjectInstance, encoded as an ASN.1 Element.
- */
-export function _encode_SuppressObjectInstance(
-    value: SuppressObjectInstance,
-    elGetter: $.ASN1Encoder<SuppressObjectInstance>
-) {
-    if (!_cached_encoder_for_SuppressObjectInstance) {
-        _cached_encoder_for_SuppressObjectInstance = $._encodeBoolean;
-    }
-    return _cached_encoder_for_SuppressObjectInstance(value, elGetter);
-}
+export const _encode_SuppressObjectInstance = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SuppressObjectInstance */
 

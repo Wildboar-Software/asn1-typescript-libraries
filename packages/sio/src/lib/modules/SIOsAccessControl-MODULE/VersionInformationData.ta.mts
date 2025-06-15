@@ -35,45 +35,17 @@ export const v1: VersionInformationData = VersionInformationData_v1; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION v1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VersionInformationData */
-let _cached_decoder_for_VersionInformationData: $.ASN1Decoder<VersionInformationData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VersionInformationData */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VersionInformationData */
-/**
- * @summary Decodes an ASN.1 element into a(n) VersionInformationData
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VersionInformationData} The decoded data structure.
- */
-export function _decode_VersionInformationData(el: _Element) {
-    if (!_cached_decoder_for_VersionInformationData) {
-        _cached_decoder_for_VersionInformationData = $._decodeInteger;
-    }
-    return _cached_decoder_for_VersionInformationData(el);
-}
+export const _decode_VersionInformationData = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_VersionInformationData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VersionInformationData */
-let _cached_encoder_for_VersionInformationData: $.ASN1Encoder<VersionInformationData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VersionInformationData */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VersionInformationData */
-/**
- * @summary Encodes a(n) VersionInformationData into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VersionInformationData, encoded as an ASN.1 Element.
- */
-export function _encode_VersionInformationData(
-    value: VersionInformationData,
-    elGetter: $.ASN1Encoder<VersionInformationData>
-) {
-    if (!_cached_encoder_for_VersionInformationData) {
-        _cached_encoder_for_VersionInformationData = $._encodeInteger;
-    }
-    return _cached_encoder_for_VersionInformationData(value, elGetter);
-}
+export const _encode_VersionInformationData = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VersionInformationData */
 

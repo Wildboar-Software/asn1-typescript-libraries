@@ -27,45 +27,17 @@ export type IntegrityOptions = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION IntegrityOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntegrityOptions */
-let _cached_decoder_for_IntegrityOptions: $.ASN1Decoder<IntegrityOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntegrityOptions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IntegrityOptions */
-/**
- * @summary Decodes an ASN.1 element into a(n) IntegrityOptions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IntegrityOptions} The decoded data structure.
- */
-export function _decode_IntegrityOptions(el: _Element) {
-    if (!_cached_decoder_for_IntegrityOptions) {
-        _cached_decoder_for_IntegrityOptions = $._decodeBoolean;
-    }
-    return _cached_decoder_for_IntegrityOptions(el);
-}
+export const _decode_IntegrityOptions = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_IntegrityOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntegrityOptions */
-let _cached_encoder_for_IntegrityOptions: $.ASN1Encoder<IntegrityOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntegrityOptions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IntegrityOptions */
-/**
- * @summary Encodes a(n) IntegrityOptions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IntegrityOptions, encoded as an ASN.1 Element.
- */
-export function _encode_IntegrityOptions(
-    value: IntegrityOptions,
-    elGetter: $.ASN1Encoder<IntegrityOptions>
-) {
-    if (!_cached_encoder_for_IntegrityOptions) {
-        _cached_encoder_for_IntegrityOptions = $._encodeBoolean;
-    }
-    return _cached_encoder_for_IntegrityOptions(value, elGetter);
-}
+export const _encode_IntegrityOptions = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IntegrityOptions */
 

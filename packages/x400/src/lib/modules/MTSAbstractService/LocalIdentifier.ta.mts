@@ -27,45 +27,17 @@ export type LocalIdentifier = IA5String; // IA5String
 /* END_OF_SYMBOL_DEFINITION LocalIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalIdentifier */
-let _cached_decoder_for_LocalIdentifier: $.ASN1Decoder<LocalIdentifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LocalIdentifier */
-/**
- * @summary Decodes an ASN.1 element into a(n) LocalIdentifier
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LocalIdentifier} The decoded data structure.
- */
-export function _decode_LocalIdentifier(el: _Element) {
-    if (!_cached_decoder_for_LocalIdentifier) {
-        _cached_decoder_for_LocalIdentifier = $._decodeIA5String;
-    }
-    return _cached_decoder_for_LocalIdentifier(el);
-}
+export const _decode_LocalIdentifier = $._decodeIA5String;
 /* END_OF_SYMBOL_DEFINITION _decode_LocalIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalIdentifier */
-let _cached_encoder_for_LocalIdentifier: $.ASN1Encoder<LocalIdentifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LocalIdentifier */
-/**
- * @summary Encodes a(n) LocalIdentifier into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LocalIdentifier, encoded as an ASN.1 Element.
- */
-export function _encode_LocalIdentifier(
-    value: LocalIdentifier,
-    elGetter: $.ASN1Encoder<LocalIdentifier>
-) {
-    if (!_cached_encoder_for_LocalIdentifier) {
-        _cached_encoder_for_LocalIdentifier = $._encodeIA5String;
-    }
-    return _cached_encoder_for_LocalIdentifier(value, elGetter);
-}
+export const _encode_LocalIdentifier = $._encodeIA5String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LocalIdentifier */
 

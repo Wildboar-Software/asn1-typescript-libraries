@@ -27,45 +27,17 @@ export type SyntaxIdentifier = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION SyntaxIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxIdentifier */
-let _cached_decoder_for_SyntaxIdentifier: $.ASN1Decoder<SyntaxIdentifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SyntaxIdentifier */
-/**
- * @summary Decodes an ASN.1 element into a(n) SyntaxIdentifier
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SyntaxIdentifier} The decoded data structure.
- */
-export function _decode_SyntaxIdentifier(el: _Element) {
-    if (!_cached_decoder_for_SyntaxIdentifier) {
-        _cached_decoder_for_SyntaxIdentifier = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_SyntaxIdentifier(el);
-}
+export const _decode_SyntaxIdentifier = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_SyntaxIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxIdentifier */
-let _cached_encoder_for_SyntaxIdentifier: $.ASN1Encoder<SyntaxIdentifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SyntaxIdentifier */
-/**
- * @summary Encodes a(n) SyntaxIdentifier into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SyntaxIdentifier, encoded as an ASN.1 Element.
- */
-export function _encode_SyntaxIdentifier(
-    value: SyntaxIdentifier,
-    elGetter: $.ASN1Encoder<SyntaxIdentifier>
-) {
-    if (!_cached_encoder_for_SyntaxIdentifier) {
-        _cached_encoder_for_SyntaxIdentifier = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_SyntaxIdentifier(value, elGetter);
-}
+export const _encode_SyntaxIdentifier = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SyntaxIdentifier */
 

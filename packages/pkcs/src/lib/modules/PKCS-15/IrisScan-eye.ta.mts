@@ -88,45 +88,17 @@ export const right: IrisScan_eye =
 /* END_OF_SYMBOL_DEFINITION right */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IrisScan_eye */
-let _cached_decoder_for_IrisScan_eye: $.ASN1Decoder<IrisScan_eye> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IrisScan_eye */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IrisScan_eye */
-/**
- * @summary Decodes an ASN.1 element into a(n) IrisScan_eye
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IrisScan_eye} The decoded data structure.
- */
-export function _decode_IrisScan_eye(el: _Element) {
-    if (!_cached_decoder_for_IrisScan_eye) {
-        _cached_decoder_for_IrisScan_eye = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_IrisScan_eye(el);
-}
+export const _decode_IrisScan_eye = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_IrisScan_eye */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IrisScan_eye */
-let _cached_encoder_for_IrisScan_eye: $.ASN1Encoder<IrisScan_eye> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IrisScan_eye */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IrisScan_eye */
-/**
- * @summary Encodes a(n) IrisScan_eye into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IrisScan_eye, encoded as an ASN.1 Element.
- */
-export function _encode_IrisScan_eye(
-    value: IrisScan_eye,
-    elGetter: $.ASN1Encoder<IrisScan_eye>
-) {
-    if (!_cached_encoder_for_IrisScan_eye) {
-        _cached_encoder_for_IrisScan_eye = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_IrisScan_eye(value, elGetter);
-}
+export const _encode_IrisScan_eye = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IrisScan_eye */
 

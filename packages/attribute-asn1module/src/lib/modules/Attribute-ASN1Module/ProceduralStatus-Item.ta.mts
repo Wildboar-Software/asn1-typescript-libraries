@@ -130,40 +130,17 @@ const terminating: ProceduralStatus_Item = ProceduralStatus_Item_terminating; /*
 /* END_OF_SYMBOL_DEFINITION terminating */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProceduralStatus_Item */
-let _cached_decoder_for_ProceduralStatus_Item: $.ASN1Decoder<ProceduralStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProceduralStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProceduralStatus_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProceduralStatus_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProceduralStatus_Item} The decoded data structure.
- */
-export
-function _decode_ProceduralStatus_Item (el: _Element) {
-    if (!_cached_decoder_for_ProceduralStatus_Item) { _cached_decoder_for_ProceduralStatus_Item = $._decodeInteger; }
-    return _cached_decoder_for_ProceduralStatus_Item(el);
-}
+export const _decode_ProceduralStatus_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ProceduralStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProceduralStatus_Item */
-let _cached_encoder_for_ProceduralStatus_Item: $.ASN1Encoder<ProceduralStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProceduralStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProceduralStatus_Item */
-/**
- * @summary Encodes a(n) ProceduralStatus_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProceduralStatus_Item, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProceduralStatus_Item (value: ProceduralStatus_Item, elGetter: $.ASN1Encoder<ProceduralStatus_Item>) {
-    if (!_cached_encoder_for_ProceduralStatus_Item) { _cached_encoder_for_ProceduralStatus_Item = $._encodeInteger; }
-    return _cached_encoder_for_ProceduralStatus_Item(value, elGetter);
-}
+export const _encode_ProceduralStatus_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProceduralStatus_Item */
 

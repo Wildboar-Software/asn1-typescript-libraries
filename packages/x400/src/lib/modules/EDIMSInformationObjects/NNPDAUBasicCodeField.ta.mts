@@ -89,45 +89,17 @@ export const physical_rendition_not_performed: NNPDAUBasicCodeField = NNPDAUBasi
 /* END_OF_SYMBOL_DEFINITION physical_rendition_not_performed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNPDAUBasicCodeField */
-let _cached_decoder_for_NNPDAUBasicCodeField: $.ASN1Decoder<NNPDAUBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNPDAUBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NNPDAUBasicCodeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NNPDAUBasicCodeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NNPDAUBasicCodeField} The decoded data structure.
- */
-export function _decode_NNPDAUBasicCodeField(el: _Element) {
-    if (!_cached_decoder_for_NNPDAUBasicCodeField) {
-        _cached_decoder_for_NNPDAUBasicCodeField = $._decodeInteger;
-    }
-    return _cached_decoder_for_NNPDAUBasicCodeField(el);
-}
+export const _decode_NNPDAUBasicCodeField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NNPDAUBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNPDAUBasicCodeField */
-let _cached_encoder_for_NNPDAUBasicCodeField: $.ASN1Encoder<NNPDAUBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNPDAUBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NNPDAUBasicCodeField */
-/**
- * @summary Encodes a(n) NNPDAUBasicCodeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NNPDAUBasicCodeField, encoded as an ASN.1 Element.
- */
-export function _encode_NNPDAUBasicCodeField(
-    value: NNPDAUBasicCodeField,
-    elGetter: $.ASN1Encoder<NNPDAUBasicCodeField>
-) {
-    if (!_cached_encoder_for_NNPDAUBasicCodeField) {
-        _cached_encoder_for_NNPDAUBasicCodeField = $._encodeInteger;
-    }
-    return _cached_encoder_for_NNPDAUBasicCodeField(value, elGetter);
-}
+export const _encode_NNPDAUBasicCodeField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NNPDAUBasicCodeField */
 

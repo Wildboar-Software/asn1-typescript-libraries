@@ -140,45 +140,17 @@ export const nalmTimedInhibit: ArcState =
 /* END_OF_SYMBOL_DEFINITION nalmTimedInhibit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcState */
-let _cached_decoder_for_ArcState: $.ASN1Decoder<ArcState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ArcState */
-/**
- * @summary Decodes an ASN.1 element into a(n) ArcState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ArcState} The decoded data structure.
- */
-export function _decode_ArcState(el: _Element) {
-    if (!_cached_decoder_for_ArcState) {
-        _cached_decoder_for_ArcState = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ArcState(el);
-}
+export const _decode_ArcState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ArcState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcState */
-let _cached_encoder_for_ArcState: $.ASN1Encoder<ArcState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ArcState */
-/**
- * @summary Encodes a(n) ArcState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ArcState, encoded as an ASN.1 Element.
- */
-export function _encode_ArcState(
-    value: ArcState,
-    elGetter: $.ASN1Encoder<ArcState>
-) {
-    if (!_cached_encoder_for_ArcState) {
-        _cached_encoder_for_ArcState = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ArcState(value, elGetter);
-}
+export const _encode_ArcState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ArcState */
 

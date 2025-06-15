@@ -27,45 +27,17 @@ export type FilterSize = INTEGER;
 /* END_OF_SYMBOL_DEFINITION FilterSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterSize */
-let _cached_decoder_for_FilterSize: $.ASN1Decoder<FilterSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterSize */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FilterSize */
-/**
- * @summary Decodes an ASN.1 element into a(n) FilterSize
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FilterSize} The decoded data structure.
- */
-export function _decode_FilterSize(el: _Element) {
-    if (!_cached_decoder_for_FilterSize) {
-        _cached_decoder_for_FilterSize = $._decodeInteger;
-    }
-    return _cached_decoder_for_FilterSize(el);
-}
+export const _decode_FilterSize = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FilterSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterSize */
-let _cached_encoder_for_FilterSize: $.ASN1Encoder<FilterSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterSize */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FilterSize */
-/**
- * @summary Encodes a(n) FilterSize into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FilterSize, encoded as an ASN.1 Element.
- */
-export function _encode_FilterSize(
-    value: FilterSize,
-    elGetter: $.ASN1Encoder<FilterSize>
-) {
-    if (!_cached_encoder_for_FilterSize) {
-        _cached_encoder_for_FilterSize = $._encodeInteger;
-    }
-    return _cached_encoder_for_FilterSize(value, elGetter);
-}
+export const _encode_FilterSize = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FilterSize */
 

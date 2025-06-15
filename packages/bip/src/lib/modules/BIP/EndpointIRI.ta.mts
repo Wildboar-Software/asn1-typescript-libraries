@@ -32,45 +32,17 @@ export type EndpointIRI = VisibleString; // VisibleString
 /* END_OF_SYMBOL_DEFINITION EndpointIRI */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EndpointIRI */
-let _cached_decoder_for_EndpointIRI: $.ASN1Decoder<EndpointIRI> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EndpointIRI */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EndpointIRI */
-/**
- * @summary Decodes an ASN.1 element into a(n) EndpointIRI
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EndpointIRI} The decoded data structure.
- */
-export function _decode_EndpointIRI(el: _Element) {
-  if (!_cached_decoder_for_EndpointIRI) {
-    _cached_decoder_for_EndpointIRI = $._decodeVisibleString;
-  }
-  return _cached_decoder_for_EndpointIRI(el);
-}
+export const _decode_EndpointIRI = $._decodeVisibleString;
 /* END_OF_SYMBOL_DEFINITION _decode_EndpointIRI */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EndpointIRI */
-let _cached_encoder_for_EndpointIRI: $.ASN1Encoder<EndpointIRI> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EndpointIRI */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EndpointIRI */
-/**
- * @summary Encodes a(n) EndpointIRI into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EndpointIRI, encoded as an ASN.1 Element.
- */
-export function _encode_EndpointIRI(
-  value: EndpointIRI,
-  elGetter: $.ASN1Encoder<EndpointIRI>
-) {
-  if (!_cached_encoder_for_EndpointIRI) {
-    _cached_encoder_for_EndpointIRI = $._encodeVisibleString;
-  }
-  return _cached_encoder_for_EndpointIRI(value, elGetter);
-}
+export const _encode_EndpointIRI = $._encodeVisibleString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EndpointIRI */
 

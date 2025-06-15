@@ -225,45 +225,17 @@ export const recapture: BioAPI_GUI_RESPONSE = BioAPI_GUI_RESPONSE_recapture; /* 
 /* END_OF_SYMBOL_DEFINITION recapture */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_RESPONSE */
-let _cached_decoder_for_BioAPI_GUI_RESPONSE: $.ASN1Decoder<BioAPI_GUI_RESPONSE> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_RESPONSE */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_RESPONSE */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_GUI_RESPONSE
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_GUI_RESPONSE} The decoded data structure.
- */
-export function _decode_BioAPI_GUI_RESPONSE(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_GUI_RESPONSE) {
-    _cached_decoder_for_BioAPI_GUI_RESPONSE = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_GUI_RESPONSE(el);
-}
+export const _decode_BioAPI_GUI_RESPONSE = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_RESPONSE */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_RESPONSE */
-let _cached_encoder_for_BioAPI_GUI_RESPONSE: $.ASN1Encoder<BioAPI_GUI_RESPONSE> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_RESPONSE */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_RESPONSE */
-/**
- * @summary Encodes a(n) BioAPI_GUI_RESPONSE into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_GUI_RESPONSE, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_GUI_RESPONSE(
-  value: BioAPI_GUI_RESPONSE,
-  elGetter: $.ASN1Encoder<BioAPI_GUI_RESPONSE>
-) {
-  if (!_cached_encoder_for_BioAPI_GUI_RESPONSE) {
-    _cached_encoder_for_BioAPI_GUI_RESPONSE = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_GUI_RESPONSE(value, elGetter);
-}
+export const _encode_BioAPI_GUI_RESPONSE = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_RESPONSE */
 

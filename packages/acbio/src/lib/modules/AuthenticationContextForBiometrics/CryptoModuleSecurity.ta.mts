@@ -27,45 +27,17 @@ export type CryptoModuleSecurity = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION CryptoModuleSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoModuleSecurity */
-let _cached_decoder_for_CryptoModuleSecurity: $.ASN1Decoder<CryptoModuleSecurity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoModuleSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CryptoModuleSecurity */
-/**
- * @summary Decodes an ASN.1 element into a(n) CryptoModuleSecurity
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CryptoModuleSecurity} The decoded data structure.
- */
-export function _decode_CryptoModuleSecurity(el: _Element) {
-    if (!_cached_decoder_for_CryptoModuleSecurity) {
-        _cached_decoder_for_CryptoModuleSecurity = $._decodeOctetString;
-    }
-    return _cached_decoder_for_CryptoModuleSecurity(el);
-}
+export const _decode_CryptoModuleSecurity = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_CryptoModuleSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoModuleSecurity */
-let _cached_encoder_for_CryptoModuleSecurity: $.ASN1Encoder<CryptoModuleSecurity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoModuleSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CryptoModuleSecurity */
-/**
- * @summary Encodes a(n) CryptoModuleSecurity into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CryptoModuleSecurity, encoded as an ASN.1 Element.
- */
-export function _encode_CryptoModuleSecurity(
-    value: CryptoModuleSecurity,
-    elGetter: $.ASN1Encoder<CryptoModuleSecurity>
-) {
-    if (!_cached_encoder_for_CryptoModuleSecurity) {
-        _cached_encoder_for_CryptoModuleSecurity = $._encodeOctetString;
-    }
-    return _cached_encoder_for_CryptoModuleSecurity(value, elGetter);
-}
+export const _encode_CryptoModuleSecurity = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CryptoModuleSecurity */
 

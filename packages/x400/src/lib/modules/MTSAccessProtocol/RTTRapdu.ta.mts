@@ -27,45 +27,17 @@ export type RTTRapdu = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION RTTRapdu */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RTTRapdu */
-let _cached_decoder_for_RTTRapdu: $.ASN1Decoder<RTTRapdu> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RTTRapdu */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RTTRapdu */
-/**
- * @summary Decodes an ASN.1 element into a(n) RTTRapdu
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RTTRapdu} The decoded data structure.
- */
-export function _decode_RTTRapdu(el: _Element) {
-    if (!_cached_decoder_for_RTTRapdu) {
-        _cached_decoder_for_RTTRapdu = $._decodeOctetString;
-    }
-    return _cached_decoder_for_RTTRapdu(el);
-}
+export const _decode_RTTRapdu = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_RTTRapdu */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RTTRapdu */
-let _cached_encoder_for_RTTRapdu: $.ASN1Encoder<RTTRapdu> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RTTRapdu */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RTTRapdu */
-/**
- * @summary Encodes a(n) RTTRapdu into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RTTRapdu, encoded as an ASN.1 Element.
- */
-export function _encode_RTTRapdu(
-    value: RTTRapdu,
-    elGetter: $.ASN1Encoder<RTTRapdu>
-) {
-    if (!_cached_encoder_for_RTTRapdu) {
-        _cached_encoder_for_RTTRapdu = $._encodeOctetString;
-    }
-    return _cached_encoder_for_RTTRapdu(value, elGetter);
-}
+export const _encode_RTTRapdu = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RTTRapdu */
 

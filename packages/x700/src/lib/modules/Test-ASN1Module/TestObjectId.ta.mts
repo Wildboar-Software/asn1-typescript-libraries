@@ -27,45 +27,17 @@ export type TestObjectId = INTEGER;
 /* END_OF_SYMBOL_DEFINITION TestObjectId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestObjectId */
-let _cached_decoder_for_TestObjectId: $.ASN1Decoder<TestObjectId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestObjectId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestObjectId */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestObjectId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestObjectId} The decoded data structure.
- */
-export function _decode_TestObjectId(el: _Element) {
-    if (!_cached_decoder_for_TestObjectId) {
-        _cached_decoder_for_TestObjectId = $._decodeInteger;
-    }
-    return _cached_decoder_for_TestObjectId(el);
-}
+export const _decode_TestObjectId = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TestObjectId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestObjectId */
-let _cached_encoder_for_TestObjectId: $.ASN1Encoder<TestObjectId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestObjectId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestObjectId */
-/**
- * @summary Encodes a(n) TestObjectId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestObjectId, encoded as an ASN.1 Element.
- */
-export function _encode_TestObjectId(
-    value: TestObjectId,
-    elGetter: $.ASN1Encoder<TestObjectId>
-) {
-    if (!_cached_encoder_for_TestObjectId) {
-        _cached_encoder_for_TestObjectId = $._encodeInteger;
-    }
-    return _cached_encoder_for_TestObjectId(value, elGetter);
-}
+export const _encode_TestObjectId = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestObjectId */
 

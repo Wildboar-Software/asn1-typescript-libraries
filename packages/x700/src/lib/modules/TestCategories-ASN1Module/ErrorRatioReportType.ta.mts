@@ -97,45 +97,17 @@ export const percentErrorSecond: ErrorRatioReportType =
 /* END_OF_SYMBOL_DEFINITION percentErrorSecond */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorRatioReportType */
-let _cached_decoder_for_ErrorRatioReportType: $.ASN1Decoder<ErrorRatioReportType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorRatioReportType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ErrorRatioReportType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ErrorRatioReportType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ErrorRatioReportType} The decoded data structure.
- */
-export function _decode_ErrorRatioReportType(el: _Element) {
-    if (!_cached_decoder_for_ErrorRatioReportType) {
-        _cached_decoder_for_ErrorRatioReportType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ErrorRatioReportType(el);
-}
+export const _decode_ErrorRatioReportType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ErrorRatioReportType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorRatioReportType */
-let _cached_encoder_for_ErrorRatioReportType: $.ASN1Encoder<ErrorRatioReportType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorRatioReportType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ErrorRatioReportType */
-/**
- * @summary Encodes a(n) ErrorRatioReportType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ErrorRatioReportType, encoded as an ASN.1 Element.
- */
-export function _encode_ErrorRatioReportType(
-    value: ErrorRatioReportType,
-    elGetter: $.ASN1Encoder<ErrorRatioReportType>
-) {
-    if (!_cached_encoder_for_ErrorRatioReportType) {
-        _cached_encoder_for_ErrorRatioReportType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ErrorRatioReportType(value, elGetter);
-}
+export const _encode_ErrorRatioReportType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ErrorRatioReportType */
 

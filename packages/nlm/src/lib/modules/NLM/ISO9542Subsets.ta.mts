@@ -59,45 +59,17 @@ export const redirection: number = ISO9542Subsets_redirection; /* SHORT_NAMED_BI
 /* END_OF_SYMBOL_DEFINITION redirection */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ISO9542Subsets */
-let _cached_decoder_for_ISO9542Subsets: $.ASN1Decoder<ISO9542Subsets> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ISO9542Subsets */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ISO9542Subsets */
-/**
- * @summary Decodes an ASN.1 element into a(n) ISO9542Subsets
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ISO9542Subsets} The decoded data structure.
- */
-export function _decode_ISO9542Subsets(el: _Element) {
-    if (!_cached_decoder_for_ISO9542Subsets) {
-        _cached_decoder_for_ISO9542Subsets = $._decodeBitString;
-    }
-    return _cached_decoder_for_ISO9542Subsets(el);
-}
+export const _decode_ISO9542Subsets = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ISO9542Subsets */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ISO9542Subsets */
-let _cached_encoder_for_ISO9542Subsets: $.ASN1Encoder<ISO9542Subsets> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ISO9542Subsets */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ISO9542Subsets */
-/**
- * @summary Encodes a(n) ISO9542Subsets into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ISO9542Subsets, encoded as an ASN.1 Element.
- */
-export function _encode_ISO9542Subsets(
-    value: ISO9542Subsets,
-    elGetter: $.ASN1Encoder<ISO9542Subsets>
-) {
-    if (!_cached_encoder_for_ISO9542Subsets) {
-        _cached_encoder_for_ISO9542Subsets = $._encodeBitString;
-    }
-    return _cached_encoder_for_ISO9542Subsets(value, elGetter);
-}
+export const _encode_ISO9542Subsets = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ISO9542Subsets */
 

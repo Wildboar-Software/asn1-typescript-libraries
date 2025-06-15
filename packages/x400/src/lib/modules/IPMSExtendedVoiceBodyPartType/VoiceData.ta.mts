@@ -27,45 +27,17 @@ export type VoiceData = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION VoiceData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceData */
-let _cached_decoder_for_VoiceData: $.ASN1Decoder<VoiceData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceData */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VoiceData */
-/**
- * @summary Decodes an ASN.1 element into a(n) VoiceData
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VoiceData} The decoded data structure.
- */
-export function _decode_VoiceData(el: _Element) {
-    if (!_cached_decoder_for_VoiceData) {
-        _cached_decoder_for_VoiceData = $._decodeOctetString;
-    }
-    return _cached_decoder_for_VoiceData(el);
-}
+export const _decode_VoiceData = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_VoiceData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceData */
-let _cached_encoder_for_VoiceData: $.ASN1Encoder<VoiceData> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceData */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VoiceData */
-/**
- * @summary Encodes a(n) VoiceData into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VoiceData, encoded as an ASN.1 Element.
- */
-export function _encode_VoiceData(
-    value: VoiceData,
-    elGetter: $.ASN1Encoder<VoiceData>
-) {
-    if (!_cached_encoder_for_VoiceData) {
-        _cached_encoder_for_VoiceData = $._encodeOctetString;
-    }
-    return _cached_encoder_for_VoiceData(value, elGetter);
-}
+export const _encode_VoiceData = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VoiceData */
 

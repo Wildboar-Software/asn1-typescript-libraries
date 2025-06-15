@@ -215,45 +215,17 @@ export const videotex_to_teletex: ExplicitConversion = ExplicitConversion_videot
 /* END_OF_SYMBOL_DEFINITION videotex_to_teletex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitConversion */
-let _cached_decoder_for_ExplicitConversion: $.ASN1Decoder<ExplicitConversion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitConversion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExplicitConversion */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExplicitConversion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExplicitConversion} The decoded data structure.
- */
-export function _decode_ExplicitConversion(el: _Element) {
-    if (!_cached_decoder_for_ExplicitConversion) {
-        _cached_decoder_for_ExplicitConversion = $._decodeInteger;
-    }
-    return _cached_decoder_for_ExplicitConversion(el);
-}
+export const _decode_ExplicitConversion = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ExplicitConversion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitConversion */
-let _cached_encoder_for_ExplicitConversion: $.ASN1Encoder<ExplicitConversion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitConversion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExplicitConversion */
-/**
- * @summary Encodes a(n) ExplicitConversion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExplicitConversion, encoded as an ASN.1 Element.
- */
-export function _encode_ExplicitConversion(
-    value: ExplicitConversion,
-    elGetter: $.ASN1Encoder<ExplicitConversion>
-) {
-    if (!_cached_encoder_for_ExplicitConversion) {
-        _cached_encoder_for_ExplicitConversion = $._encodeInteger;
-    }
-    return _cached_encoder_for_ExplicitConversion(value, elGetter);
-}
+export const _encode_ExplicitConversion = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExplicitConversion */
 

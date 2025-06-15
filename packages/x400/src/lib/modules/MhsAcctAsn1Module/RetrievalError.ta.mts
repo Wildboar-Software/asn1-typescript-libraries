@@ -193,45 +193,17 @@ export const service_error: RetrievalError = RetrievalError_service_error; /* SH
 /* END_OF_SYMBOL_DEFINITION service_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RetrievalError */
-let _cached_decoder_for_RetrievalError: $.ASN1Decoder<RetrievalError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RetrievalError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RetrievalError */
-/**
- * @summary Decodes an ASN.1 element into a(n) RetrievalError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RetrievalError} The decoded data structure.
- */
-export function _decode_RetrievalError(el: _Element) {
-    if (!_cached_decoder_for_RetrievalError) {
-        _cached_decoder_for_RetrievalError = $._decodeInteger;
-    }
-    return _cached_decoder_for_RetrievalError(el);
-}
+export const _decode_RetrievalError = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RetrievalError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RetrievalError */
-let _cached_encoder_for_RetrievalError: $.ASN1Encoder<RetrievalError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RetrievalError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RetrievalError */
-/**
- * @summary Encodes a(n) RetrievalError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RetrievalError, encoded as an ASN.1 Element.
- */
-export function _encode_RetrievalError(
-    value: RetrievalError,
-    elGetter: $.ASN1Encoder<RetrievalError>
-) {
-    if (!_cached_encoder_for_RetrievalError) {
-        _cached_encoder_for_RetrievalError = $._encodeInteger;
-    }
-    return _cached_encoder_for_RetrievalError(value, elGetter);
-}
+export const _encode_RetrievalError = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RetrievalError */
 

@@ -60,45 +60,17 @@ export const restoration: number = Presentation_requirements_restoration; /* SHO
 /* END_OF_SYMBOL_DEFINITION restoration */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_requirements */
-let _cached_decoder_for_Presentation_requirements: $.ASN1Decoder<Presentation_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Presentation_requirements */
-/**
- * @summary Decodes an ASN.1 element into a(n) Presentation_requirements
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Presentation_requirements} The decoded data structure.
- */
-export function _decode_Presentation_requirements(el: _Element) {
-    if (!_cached_decoder_for_Presentation_requirements) {
-        _cached_decoder_for_Presentation_requirements = $._decodeBitString;
-    }
-    return _cached_decoder_for_Presentation_requirements(el);
-}
+export const _decode_Presentation_requirements = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Presentation_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_requirements */
-let _cached_encoder_for_Presentation_requirements: $.ASN1Encoder<Presentation_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Presentation_requirements */
-/**
- * @summary Encodes a(n) Presentation_requirements into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Presentation_requirements, encoded as an ASN.1 Element.
- */
-export function _encode_Presentation_requirements(
-    value: Presentation_requirements,
-    elGetter: $.ASN1Encoder<Presentation_requirements>
-) {
-    if (!_cached_encoder_for_Presentation_requirements) {
-        _cached_encoder_for_Presentation_requirements = $._encodeBitString;
-    }
-    return _cached_encoder_for_Presentation_requirements(value, elGetter);
-}
+export const _encode_Presentation_requirements = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Presentation_requirements */
 

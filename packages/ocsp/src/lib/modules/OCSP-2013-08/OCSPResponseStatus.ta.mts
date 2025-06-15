@@ -196,45 +196,17 @@ export const unauthorized: OCSPResponseStatus =
 /* END_OF_SYMBOL_DEFINITION unauthorized */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OCSPResponseStatus */
-let _cached_decoder_for_OCSPResponseStatus: $.ASN1Decoder<OCSPResponseStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OCSPResponseStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OCSPResponseStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) OCSPResponseStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OCSPResponseStatus} The decoded data structure.
- */
-export function _decode_OCSPResponseStatus(el: _Element) {
-    if (!_cached_decoder_for_OCSPResponseStatus) {
-        _cached_decoder_for_OCSPResponseStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_OCSPResponseStatus(el);
-}
+export const _decode_OCSPResponseStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_OCSPResponseStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OCSPResponseStatus */
-let _cached_encoder_for_OCSPResponseStatus: $.ASN1Encoder<OCSPResponseStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OCSPResponseStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OCSPResponseStatus */
-/**
- * @summary Encodes a(n) OCSPResponseStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OCSPResponseStatus, encoded as an ASN.1 Element.
- */
-export function _encode_OCSPResponseStatus(
-    value: OCSPResponseStatus,
-    elGetter: $.ASN1Encoder<OCSPResponseStatus>
-) {
-    if (!_cached_encoder_for_OCSPResponseStatus) {
-        _cached_encoder_for_OCSPResponseStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_OCSPResponseStatus(value, elGetter);
-}
+export const _encode_OCSPResponseStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OCSPResponseStatus */
 

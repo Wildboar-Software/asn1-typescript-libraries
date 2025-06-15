@@ -27,45 +27,17 @@ export type BSPLoad_ResponseParams = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION BSPLoad_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPLoad_ResponseParams */
-let _cached_decoder_for_BSPLoad_ResponseParams: $.ASN1Decoder<BSPLoad_ResponseParams> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPLoad_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BSPLoad_ResponseParams */
-/**
- * @summary Decodes an ASN.1 element into a(n) BSPLoad_ResponseParams
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BSPLoad_ResponseParams} The decoded data structure.
- */
-export function _decode_BSPLoad_ResponseParams(el: _Element) {
-  if (!_cached_decoder_for_BSPLoad_ResponseParams) {
-    _cached_decoder_for_BSPLoad_ResponseParams = $._decodeNull;
-  }
-  return _cached_decoder_for_BSPLoad_ResponseParams(el);
-}
+export const _decode_BSPLoad_ResponseParams = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_BSPLoad_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPLoad_ResponseParams */
-let _cached_encoder_for_BSPLoad_ResponseParams: $.ASN1Encoder<BSPLoad_ResponseParams> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPLoad_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BSPLoad_ResponseParams */
-/**
- * @summary Encodes a(n) BSPLoad_ResponseParams into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BSPLoad_ResponseParams, encoded as an ASN.1 Element.
- */
-export function _encode_BSPLoad_ResponseParams(
-  value: BSPLoad_ResponseParams,
-  elGetter: $.ASN1Encoder<BSPLoad_ResponseParams>
-) {
-  if (!_cached_encoder_for_BSPLoad_ResponseParams) {
-    _cached_encoder_for_BSPLoad_ResponseParams = $._encodeNull;
-  }
-  return _cached_encoder_for_BSPLoad_ResponseParams(value, elGetter);
-}
+export const _encode_BSPLoad_ResponseParams = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BSPLoad_ResponseParams */
 

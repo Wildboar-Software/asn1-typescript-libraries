@@ -150,45 +150,17 @@ export const invalid_ppdu_parameter_value: Abort_reason = Abort_reason_invalid_p
 /* END_OF_SYMBOL_DEFINITION invalid_ppdu_parameter_value */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort_reason */
-let _cached_decoder_for_Abort_reason: $.ASN1Decoder<Abort_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort_reason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Abort_reason */
-/**
- * @summary Decodes an ASN.1 element into a(n) Abort_reason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Abort_reason} The decoded data structure.
- */
-export function _decode_Abort_reason(el: _Element) {
-    if (!_cached_decoder_for_Abort_reason) {
-        _cached_decoder_for_Abort_reason = $._decodeInteger;
-    }
-    return _cached_decoder_for_Abort_reason(el);
-}
+export const _decode_Abort_reason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Abort_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort_reason */
-let _cached_encoder_for_Abort_reason: $.ASN1Encoder<Abort_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort_reason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Abort_reason */
-/**
- * @summary Encodes a(n) Abort_reason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Abort_reason, encoded as an ASN.1 Element.
- */
-export function _encode_Abort_reason(
-    value: Abort_reason,
-    elGetter: $.ASN1Encoder<Abort_reason>
-) {
-    if (!_cached_encoder_for_Abort_reason) {
-        _cached_encoder_for_Abort_reason = $._encodeInteger;
-    }
-    return _cached_encoder_for_Abort_reason(value, elGetter);
-}
+export const _encode_Abort_reason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Abort_reason */
 

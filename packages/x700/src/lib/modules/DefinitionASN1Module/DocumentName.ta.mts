@@ -27,45 +27,17 @@ export type DocumentName = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION DocumentName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentName */
-let _cached_decoder_for_DocumentName: $.ASN1Decoder<DocumentName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DocumentName */
-/**
- * @summary Decodes an ASN.1 element into a(n) DocumentName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DocumentName} The decoded data structure.
- */
-export function _decode_DocumentName(el: _Element) {
-    if (!_cached_decoder_for_DocumentName) {
-        _cached_decoder_for_DocumentName = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_DocumentName(el);
-}
+export const _decode_DocumentName = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_DocumentName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentName */
-let _cached_encoder_for_DocumentName: $.ASN1Encoder<DocumentName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DocumentName */
-/**
- * @summary Encodes a(n) DocumentName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DocumentName, encoded as an ASN.1 Element.
- */
-export function _encode_DocumentName(
-    value: DocumentName,
-    elGetter: $.ASN1Encoder<DocumentName>
-) {
-    if (!_cached_encoder_for_DocumentName) {
-        _cached_encoder_for_DocumentName = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_DocumentName(value, elGetter);
-}
+export const _encode_DocumentName = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DocumentName */
 

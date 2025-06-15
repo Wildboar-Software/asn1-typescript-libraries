@@ -130,40 +130,17 @@ const alarmOutstanding: AlarmStatus_Item = AlarmStatus_Item_alarmOutstanding; /*
 /* END_OF_SYMBOL_DEFINITION alarmOutstanding */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmStatus_Item */
-let _cached_decoder_for_AlarmStatus_Item: $.ASN1Decoder<AlarmStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AlarmStatus_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) AlarmStatus_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AlarmStatus_Item} The decoded data structure.
- */
-export
-function _decode_AlarmStatus_Item (el: _Element) {
-    if (!_cached_decoder_for_AlarmStatus_Item) { _cached_decoder_for_AlarmStatus_Item = $._decodeInteger; }
-    return _cached_decoder_for_AlarmStatus_Item(el);
-}
+export const _decode_AlarmStatus_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AlarmStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmStatus_Item */
-let _cached_encoder_for_AlarmStatus_Item: $.ASN1Encoder<AlarmStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AlarmStatus_Item */
-/**
- * @summary Encodes a(n) AlarmStatus_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AlarmStatus_Item, encoded as an ASN.1 Element.
- */
-export
-function _encode_AlarmStatus_Item (value: AlarmStatus_Item, elGetter: $.ASN1Encoder<AlarmStatus_Item>) {
-    if (!_cached_encoder_for_AlarmStatus_Item) { _cached_encoder_for_AlarmStatus_Item = $._encodeInteger; }
-    return _cached_encoder_for_AlarmStatus_Item(value, elGetter);
-}
+export const _encode_AlarmStatus_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AlarmStatus_Item */
 

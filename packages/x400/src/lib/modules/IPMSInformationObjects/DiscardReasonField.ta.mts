@@ -145,45 +145,17 @@ export const not_used: DiscardReasonField =
 /* END_OF_SYMBOL_DEFINITION not_used */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardReasonField */
-let _cached_decoder_for_DiscardReasonField: $.ASN1Decoder<DiscardReasonField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardReasonField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DiscardReasonField */
-/**
- * @summary Decodes an ASN.1 element into a(n) DiscardReasonField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DiscardReasonField} The decoded data structure.
- */
-export function _decode_DiscardReasonField(el: _Element) {
-    if (!_cached_decoder_for_DiscardReasonField) {
-        _cached_decoder_for_DiscardReasonField = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DiscardReasonField(el);
-}
+export const _decode_DiscardReasonField = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DiscardReasonField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardReasonField */
-let _cached_encoder_for_DiscardReasonField: $.ASN1Encoder<DiscardReasonField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardReasonField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DiscardReasonField */
-/**
- * @summary Encodes a(n) DiscardReasonField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiscardReasonField, encoded as an ASN.1 Element.
- */
-export function _encode_DiscardReasonField(
-    value: DiscardReasonField,
-    elGetter: $.ASN1Encoder<DiscardReasonField>
-) {
-    if (!_cached_encoder_for_DiscardReasonField) {
-        _cached_encoder_for_DiscardReasonField = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DiscardReasonField(value, elGetter);
-}
+export const _encode_DiscardReasonField = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DiscardReasonField */
 

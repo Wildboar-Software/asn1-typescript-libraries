@@ -110,45 +110,17 @@ export const serious: PreferredPriority = PreferredPriority_serious; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION serious */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredPriority */
-let _cached_decoder_for_PreferredPriority: $.ASN1Decoder<PreferredPriority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredPriority */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PreferredPriority */
-/**
- * @summary Decodes an ASN.1 element into a(n) PreferredPriority
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PreferredPriority} The decoded data structure.
- */
-export function _decode_PreferredPriority(el: _Element) {
-    if (!_cached_decoder_for_PreferredPriority) {
-        _cached_decoder_for_PreferredPriority = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PreferredPriority(el);
-}
+export const _decode_PreferredPriority = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PreferredPriority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredPriority */
-let _cached_encoder_for_PreferredPriority: $.ASN1Encoder<PreferredPriority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredPriority */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PreferredPriority */
-/**
- * @summary Encodes a(n) PreferredPriority into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PreferredPriority, encoded as an ASN.1 Element.
- */
-export function _encode_PreferredPriority(
-    value: PreferredPriority,
-    elGetter: $.ASN1Encoder<PreferredPriority>
-) {
-    if (!_cached_encoder_for_PreferredPriority) {
-        _cached_encoder_for_PreferredPriority = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PreferredPriority(value, elGetter);
-}
+export const _encode_PreferredPriority = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PreferredPriority */
 

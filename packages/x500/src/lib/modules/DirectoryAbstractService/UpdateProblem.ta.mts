@@ -302,45 +302,17 @@ export const noPasswordSlot: UpdateProblem = UpdateProblem_noPasswordSlot; /* SH
 /* END_OF_SYMBOL_DEFINITION noPasswordSlot */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateProblem */
-let _cached_decoder_for_UpdateProblem: $.ASN1Decoder<UpdateProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_UpdateProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) UpdateProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UpdateProblem} The decoded data structure.
- */
-export function _decode_UpdateProblem(el: _Element) {
-    if (!_cached_decoder_for_UpdateProblem) {
-        _cached_decoder_for_UpdateProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_UpdateProblem(el);
-}
+export const _decode_UpdateProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_UpdateProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateProblem */
-let _cached_encoder_for_UpdateProblem: $.ASN1Encoder<UpdateProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_UpdateProblem */
-/**
- * @summary Encodes a(n) UpdateProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UpdateProblem, encoded as an ASN.1 Element.
- */
-export function _encode_UpdateProblem(
-    value: UpdateProblem,
-    elGetter: $.ASN1Encoder<UpdateProblem>
-) {
-    if (!_cached_encoder_for_UpdateProblem) {
-        _cached_encoder_for_UpdateProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_UpdateProblem(value, elGetter);
-}
+export const _encode_UpdateProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_UpdateProblem */
 

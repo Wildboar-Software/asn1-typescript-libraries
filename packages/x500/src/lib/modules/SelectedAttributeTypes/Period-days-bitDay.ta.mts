@@ -129,45 +129,17 @@ export const saturday: number = Period_days_bitDay_saturday; /* SHORT_NAMED_BIT 
 /* END_OF_SYMBOL_DEFINITION saturday */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_days_bitDay */
-let _cached_decoder_for_Period_days_bitDay: $.ASN1Decoder<Period_days_bitDay> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_days_bitDay */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Period_days_bitDay */
-/**
- * @summary Decodes an ASN.1 element into a(n) Period_days_bitDay
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Period_days_bitDay} The decoded data structure.
- */
-export function _decode_Period_days_bitDay(el: _Element) {
-    if (!_cached_decoder_for_Period_days_bitDay) {
-        _cached_decoder_for_Period_days_bitDay = $._decodeBitString;
-    }
-    return _cached_decoder_for_Period_days_bitDay(el);
-}
+export const _decode_Period_days_bitDay = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Period_days_bitDay */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_days_bitDay */
-let _cached_encoder_for_Period_days_bitDay: $.ASN1Encoder<Period_days_bitDay> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_days_bitDay */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Period_days_bitDay */
-/**
- * @summary Encodes a(n) Period_days_bitDay into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Period_days_bitDay, encoded as an ASN.1 Element.
- */
-export function _encode_Period_days_bitDay(
-    value: Period_days_bitDay,
-    elGetter: $.ASN1Encoder<Period_days_bitDay>
-) {
-    if (!_cached_encoder_for_Period_days_bitDay) {
-        _cached_encoder_for_Period_days_bitDay = $._encodeBitString;
-    }
-    return _cached_encoder_for_Period_days_bitDay(value, elGetter);
-}
+export const _encode_Period_days_bitDay = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Period_days_bitDay */
 

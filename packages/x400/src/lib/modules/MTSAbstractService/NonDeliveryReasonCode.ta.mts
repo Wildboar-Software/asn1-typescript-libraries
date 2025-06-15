@@ -194,45 +194,17 @@ export const transfer_failure_for_security_reason: NonDeliveryReasonCode = NonDe
 /* END_OF_SYMBOL_DEFINITION transfer_failure_for_security_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonDeliveryReasonCode */
-let _cached_decoder_for_NonDeliveryReasonCode: $.ASN1Decoder<NonDeliveryReasonCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonDeliveryReasonCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NonDeliveryReasonCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) NonDeliveryReasonCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NonDeliveryReasonCode} The decoded data structure.
- */
-export function _decode_NonDeliveryReasonCode(el: _Element) {
-    if (!_cached_decoder_for_NonDeliveryReasonCode) {
-        _cached_decoder_for_NonDeliveryReasonCode = $._decodeInteger;
-    }
-    return _cached_decoder_for_NonDeliveryReasonCode(el);
-}
+export const _decode_NonDeliveryReasonCode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NonDeliveryReasonCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonDeliveryReasonCode */
-let _cached_encoder_for_NonDeliveryReasonCode: $.ASN1Encoder<NonDeliveryReasonCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonDeliveryReasonCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NonDeliveryReasonCode */
-/**
- * @summary Encodes a(n) NonDeliveryReasonCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NonDeliveryReasonCode, encoded as an ASN.1 Element.
- */
-export function _encode_NonDeliveryReasonCode(
-    value: NonDeliveryReasonCode,
-    elGetter: $.ASN1Encoder<NonDeliveryReasonCode>
-) {
-    if (!_cached_encoder_for_NonDeliveryReasonCode) {
-        _cached_encoder_for_NonDeliveryReasonCode = $._encodeInteger;
-    }
-    return _cached_encoder_for_NonDeliveryReasonCode(value, elGetter);
-}
+export const _encode_NonDeliveryReasonCode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NonDeliveryReasonCode */
 

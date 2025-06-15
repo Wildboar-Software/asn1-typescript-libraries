@@ -103,45 +103,17 @@ export const unavailable: TLSResponse = TLSResponse_unavailable; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION unavailable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TLSResponse */
-let _cached_decoder_for_TLSResponse: $.ASN1Decoder<TLSResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TLSResponse */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TLSResponse */
-/**
- * @summary Decodes an ASN.1 element into a(n) TLSResponse
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TLSResponse} The decoded data structure.
- */
-export function _decode_TLSResponse(el: _Element) {
-    if (!_cached_decoder_for_TLSResponse) {
-        _cached_decoder_for_TLSResponse = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TLSResponse(el);
-}
+export const _decode_TLSResponse = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TLSResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TLSResponse */
-let _cached_encoder_for_TLSResponse: $.ASN1Encoder<TLSResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TLSResponse */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TLSResponse */
-/**
- * @summary Encodes a(n) TLSResponse into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TLSResponse, encoded as an ASN.1 Element.
- */
-export function _encode_TLSResponse(
-    value: TLSResponse,
-    elGetter: $.ASN1Encoder<TLSResponse>
-) {
-    if (!_cached_encoder_for_TLSResponse) {
-        _cached_encoder_for_TLSResponse = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TLSResponse(value, elGetter);
-}
+export const _encode_TLSResponse = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TLSResponse */
 

@@ -27,45 +27,17 @@ export type SystemId = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION SystemId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemId */
-let _cached_decoder_for_SystemId: $.ASN1Decoder<SystemId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SystemId */
-/**
- * @summary Decodes an ASN.1 element into a(n) SystemId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SystemId} The decoded data structure.
- */
-export function _decode_SystemId(el: _Element) {
-  if (!_cached_decoder_for_SystemId) {
-    _cached_decoder_for_SystemId = $._decodeOctetString;
-  }
-  return _cached_decoder_for_SystemId(el);
-}
+export const _decode_SystemId = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_SystemId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemId */
-let _cached_encoder_for_SystemId: $.ASN1Encoder<SystemId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SystemId */
-/**
- * @summary Encodes a(n) SystemId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SystemId, encoded as an ASN.1 Element.
- */
-export function _encode_SystemId(
-  value: SystemId,
-  elGetter: $.ASN1Encoder<SystemId>
-) {
-  if (!_cached_encoder_for_SystemId) {
-    _cached_encoder_for_SystemId = $._encodeOctetString;
-  }
-  return _cached_encoder_for_SystemId(value, elGetter);
-}
+export const _encode_SystemId = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SystemId */
 

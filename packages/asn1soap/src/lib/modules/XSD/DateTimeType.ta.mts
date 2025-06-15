@@ -28,45 +28,17 @@ export type DateTimeType = VisibleString; // VisibleString
 /* END_OF_SYMBOL_DEFINITION DateTimeType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DateTimeType */
-let _cached_decoder_for_DateTimeType: $.ASN1Decoder<DateTimeType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DateTimeType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DateTimeType */
-/**
- * @summary Decodes an ASN.1 element into a(n) DateTimeType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DateTimeType} The decoded data structure.
- */
-export function _decode_DateTimeType(el: _Element) {
-  if (!_cached_decoder_for_DateTimeType) {
-    _cached_decoder_for_DateTimeType = $._decodeVisibleString;
-  }
-  return _cached_decoder_for_DateTimeType(el);
-}
+export const _decode_DateTimeType = $._decodeVisibleString;
 /* END_OF_SYMBOL_DEFINITION _decode_DateTimeType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DateTimeType */
-let _cached_encoder_for_DateTimeType: $.ASN1Encoder<DateTimeType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DateTimeType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DateTimeType */
-/**
- * @summary Encodes a(n) DateTimeType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DateTimeType, encoded as an ASN.1 Element.
- */
-export function _encode_DateTimeType(
-  value: DateTimeType,
-  elGetter: $.ASN1Encoder<DateTimeType>
-) {
-  if (!_cached_encoder_for_DateTimeType) {
-    _cached_encoder_for_DateTimeType = $._encodeVisibleString;
-  }
-  return _cached_encoder_for_DateTimeType(value, elGetter);
-}
+export const _encode_DateTimeType = $._encodeVisibleString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DateTimeType */
 

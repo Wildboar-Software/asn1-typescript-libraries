@@ -133,45 +133,17 @@ export const alias: RedirectionReason = RedirectionReason_alias; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION alias */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionReason */
-let _cached_decoder_for_RedirectionReason: $.ASN1Decoder<RedirectionReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RedirectionReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) RedirectionReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RedirectionReason} The decoded data structure.
- */
-export function _decode_RedirectionReason(el: _Element) {
-    if (!_cached_decoder_for_RedirectionReason) {
-        _cached_decoder_for_RedirectionReason = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_RedirectionReason(el);
-}
+export const _decode_RedirectionReason = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_RedirectionReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionReason */
-let _cached_encoder_for_RedirectionReason: $.ASN1Encoder<RedirectionReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RedirectionReason */
-/**
- * @summary Encodes a(n) RedirectionReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RedirectionReason, encoded as an ASN.1 Element.
- */
-export function _encode_RedirectionReason(
-    value: RedirectionReason,
-    elGetter: $.ASN1Encoder<RedirectionReason>
-) {
-    if (!_cached_encoder_for_RedirectionReason) {
-        _cached_encoder_for_RedirectionReason = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_RedirectionReason(value, elGetter);
-}
+export const _encode_RedirectionReason = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RedirectionReason */
 

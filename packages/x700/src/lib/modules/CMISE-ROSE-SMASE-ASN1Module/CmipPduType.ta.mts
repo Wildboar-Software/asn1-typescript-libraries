@@ -781,45 +781,17 @@ export const rosReject: number = CmipPduType_rosReject; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION rosReject */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CmipPduType */
-let _cached_decoder_for_CmipPduType: $.ASN1Decoder<CmipPduType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CmipPduType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CmipPduType */
-/**
- * @summary Decodes an ASN.1 element into a(n) CmipPduType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CmipPduType} The decoded data structure.
- */
-export function _decode_CmipPduType(el: _Element) {
-    if (!_cached_decoder_for_CmipPduType) {
-        _cached_decoder_for_CmipPduType = $._decodeBitString;
-    }
-    return _cached_decoder_for_CmipPduType(el);
-}
+export const _decode_CmipPduType = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_CmipPduType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CmipPduType */
-let _cached_encoder_for_CmipPduType: $.ASN1Encoder<CmipPduType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CmipPduType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CmipPduType */
-/**
- * @summary Encodes a(n) CmipPduType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CmipPduType, encoded as an ASN.1 Element.
- */
-export function _encode_CmipPduType(
-    value: CmipPduType,
-    elGetter: $.ASN1Encoder<CmipPduType>
-) {
-    if (!_cached_encoder_for_CmipPduType) {
-        _cached_encoder_for_CmipPduType = $._encodeBitString;
-    }
-    return _cached_encoder_for_CmipPduType(value, elGetter);
-}
+export const _encode_CmipPduType = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CmipPduType */
 

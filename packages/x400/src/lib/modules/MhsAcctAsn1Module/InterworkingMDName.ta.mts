@@ -27,45 +27,17 @@ export type InterworkingMDName = UniversalString; // UniversalString
 /* END_OF_SYMBOL_DEFINITION InterworkingMDName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InterworkingMDName */
-let _cached_decoder_for_InterworkingMDName: $.ASN1Decoder<InterworkingMDName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InterworkingMDName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InterworkingMDName */
-/**
- * @summary Decodes an ASN.1 element into a(n) InterworkingMDName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InterworkingMDName} The decoded data structure.
- */
-export function _decode_InterworkingMDName(el: _Element) {
-    if (!_cached_decoder_for_InterworkingMDName) {
-        _cached_decoder_for_InterworkingMDName = $._decodeUniversalString;
-    }
-    return _cached_decoder_for_InterworkingMDName(el);
-}
+export const _decode_InterworkingMDName = $._decodeUniversalString;
 /* END_OF_SYMBOL_DEFINITION _decode_InterworkingMDName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InterworkingMDName */
-let _cached_encoder_for_InterworkingMDName: $.ASN1Encoder<InterworkingMDName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InterworkingMDName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InterworkingMDName */
-/**
- * @summary Encodes a(n) InterworkingMDName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InterworkingMDName, encoded as an ASN.1 Element.
- */
-export function _encode_InterworkingMDName(
-    value: InterworkingMDName,
-    elGetter: $.ASN1Encoder<InterworkingMDName>
-) {
-    if (!_cached_encoder_for_InterworkingMDName) {
-        _cached_encoder_for_InterworkingMDName = $._encodeUniversalString;
-    }
-    return _cached_encoder_for_InterworkingMDName(value, elGetter);
-}
+export const _encode_InterworkingMDName = $._encodeUniversalString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InterworkingMDName */
 

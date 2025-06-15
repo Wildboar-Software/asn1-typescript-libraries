@@ -210,40 +210,17 @@ const logFull: AvailabilityStatus_Item = AvailabilityStatus_Item_logFull; /* SHO
 /* END_OF_SYMBOL_DEFINITION logFull */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailabilityStatus_Item */
-let _cached_decoder_for_AvailabilityStatus_Item: $.ASN1Decoder<AvailabilityStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailabilityStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AvailabilityStatus_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) AvailabilityStatus_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AvailabilityStatus_Item} The decoded data structure.
- */
-export
-function _decode_AvailabilityStatus_Item (el: _Element) {
-    if (!_cached_decoder_for_AvailabilityStatus_Item) { _cached_decoder_for_AvailabilityStatus_Item = $._decodeInteger; }
-    return _cached_decoder_for_AvailabilityStatus_Item(el);
-}
+export const _decode_AvailabilityStatus_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AvailabilityStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailabilityStatus_Item */
-let _cached_encoder_for_AvailabilityStatus_Item: $.ASN1Encoder<AvailabilityStatus_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailabilityStatus_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AvailabilityStatus_Item */
-/**
- * @summary Encodes a(n) AvailabilityStatus_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AvailabilityStatus_Item, encoded as an ASN.1 Element.
- */
-export
-function _encode_AvailabilityStatus_Item (value: AvailabilityStatus_Item, elGetter: $.ASN1Encoder<AvailabilityStatus_Item>) {
-    if (!_cached_encoder_for_AvailabilityStatus_Item) { _cached_encoder_for_AvailabilityStatus_Item = $._encodeInteger; }
-    return _cached_encoder_for_AvailabilityStatus_Item(value, elGetter);
-}
+export const _encode_AvailabilityStatus_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AvailabilityStatus_Item */
 

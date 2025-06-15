@@ -193,45 +193,17 @@ export const saturday: NamedDay_intNamedDays =
 /* END_OF_SYMBOL_DEFINITION saturday */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedDay_intNamedDays */
-let _cached_decoder_for_NamedDay_intNamedDays: $.ASN1Decoder<NamedDay_intNamedDays> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedDay_intNamedDays */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NamedDay_intNamedDays */
-/**
- * @summary Decodes an ASN.1 element into a(n) NamedDay_intNamedDays
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NamedDay_intNamedDays} The decoded data structure.
- */
-export function _decode_NamedDay_intNamedDays(el: _Element) {
-    if (!_cached_decoder_for_NamedDay_intNamedDays) {
-        _cached_decoder_for_NamedDay_intNamedDays = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_NamedDay_intNamedDays(el);
-}
+export const _decode_NamedDay_intNamedDays = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_NamedDay_intNamedDays */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedDay_intNamedDays */
-let _cached_encoder_for_NamedDay_intNamedDays: $.ASN1Encoder<NamedDay_intNamedDays> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedDay_intNamedDays */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NamedDay_intNamedDays */
-/**
- * @summary Encodes a(n) NamedDay_intNamedDays into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NamedDay_intNamedDays, encoded as an ASN.1 Element.
- */
-export function _encode_NamedDay_intNamedDays(
-    value: NamedDay_intNamedDays,
-    elGetter: $.ASN1Encoder<NamedDay_intNamedDays>
-) {
-    if (!_cached_encoder_for_NamedDay_intNamedDays) {
-        _cached_encoder_for_NamedDay_intNamedDays = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_NamedDay_intNamedDays(value, elGetter);
-}
+export const _encode_NamedDay_intNamedDays = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NamedDay_intNamedDays */
 

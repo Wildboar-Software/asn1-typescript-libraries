@@ -27,45 +27,17 @@ export type InterchangeLength = INTEGER;
 /* END_OF_SYMBOL_DEFINITION InterchangeLength */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InterchangeLength */
-let _cached_decoder_for_InterchangeLength: $.ASN1Decoder<InterchangeLength> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InterchangeLength */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InterchangeLength */
-/**
- * @summary Decodes an ASN.1 element into a(n) InterchangeLength
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InterchangeLength} The decoded data structure.
- */
-export function _decode_InterchangeLength(el: _Element) {
-    if (!_cached_decoder_for_InterchangeLength) {
-        _cached_decoder_for_InterchangeLength = $._decodeInteger;
-    }
-    return _cached_decoder_for_InterchangeLength(el);
-}
+export const _decode_InterchangeLength = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_InterchangeLength */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InterchangeLength */
-let _cached_encoder_for_InterchangeLength: $.ASN1Encoder<InterchangeLength> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InterchangeLength */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InterchangeLength */
-/**
- * @summary Encodes a(n) InterchangeLength into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InterchangeLength, encoded as an ASN.1 Element.
- */
-export function _encode_InterchangeLength(
-    value: InterchangeLength,
-    elGetter: $.ASN1Encoder<InterchangeLength>
-) {
-    if (!_cached_encoder_for_InterchangeLength) {
-        _cached_encoder_for_InterchangeLength = $._encodeInteger;
-    }
-    return _cached_encoder_for_InterchangeLength(value, elGetter);
-}
+export const _encode_InterchangeLength = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InterchangeLength */
 

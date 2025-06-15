@@ -187,45 +187,17 @@ export const all: number = HierarchySelections_all; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION all */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HierarchySelections */
-let _cached_decoder_for_HierarchySelections: $.ASN1Decoder<HierarchySelections> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HierarchySelections */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HierarchySelections */
-/**
- * @summary Decodes an ASN.1 element into a(n) HierarchySelections
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HierarchySelections} The decoded data structure.
- */
-export function _decode_HierarchySelections(el: _Element) {
-    if (!_cached_decoder_for_HierarchySelections) {
-        _cached_decoder_for_HierarchySelections = $._decodeBitString;
-    }
-    return _cached_decoder_for_HierarchySelections(el);
-}
+export const _decode_HierarchySelections = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_HierarchySelections */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HierarchySelections */
-let _cached_encoder_for_HierarchySelections: $.ASN1Encoder<HierarchySelections> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HierarchySelections */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HierarchySelections */
-/**
- * @summary Encodes a(n) HierarchySelections into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HierarchySelections, encoded as an ASN.1 Element.
- */
-export function _encode_HierarchySelections(
-    value: HierarchySelections,
-    elGetter: $.ASN1Encoder<HierarchySelections>
-) {
-    if (!_cached_encoder_for_HierarchySelections) {
-        _cached_encoder_for_HierarchySelections = $._encodeBitString;
-    }
-    return _cached_encoder_for_HierarchySelections(value, elGetter);
-}
+export const _encode_HierarchySelections = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HierarchySelections */
 

@@ -96,45 +96,17 @@ export const oCSPResponses: number = RevocationInfoTypes_oCSPResponses; /* SHORT
 /* END_OF_SYMBOL_DEFINITION oCSPResponses */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfoTypes */
-let _cached_decoder_for_RevocationInfoTypes: $.ASN1Decoder<RevocationInfoTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfoTypes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RevocationInfoTypes */
-/**
- * @summary Decodes an ASN.1 element into a(n) RevocationInfoTypes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RevocationInfoTypes} The decoded data structure.
- */
-export function _decode_RevocationInfoTypes(el: _Element) {
-  if (!_cached_decoder_for_RevocationInfoTypes) {
-    _cached_decoder_for_RevocationInfoTypes = $._decodeBitString;
-  }
-  return _cached_decoder_for_RevocationInfoTypes(el);
-}
+export const _decode_RevocationInfoTypes = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_RevocationInfoTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfoTypes */
-let _cached_encoder_for_RevocationInfoTypes: $.ASN1Encoder<RevocationInfoTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfoTypes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RevocationInfoTypes */
-/**
- * @summary Encodes a(n) RevocationInfoTypes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RevocationInfoTypes, encoded as an ASN.1 Element.
- */
-export function _encode_RevocationInfoTypes(
-  value: RevocationInfoTypes,
-  elGetter: $.ASN1Encoder<RevocationInfoTypes>
-) {
-  if (!_cached_encoder_for_RevocationInfoTypes) {
-    _cached_encoder_for_RevocationInfoTypes = $._encodeBitString;
-  }
-  return _cached_encoder_for_RevocationInfoTypes(value, elGetter);
-}
+export const _encode_RevocationInfoTypes = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RevocationInfoTypes */
 

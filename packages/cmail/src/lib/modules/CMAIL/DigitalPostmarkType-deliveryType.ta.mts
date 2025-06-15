@@ -53,45 +53,17 @@ export const certifiedMail: DigitalPostmarkType_deliveryType = DigitalPostmarkTy
 /* END_OF_SYMBOL_DEFINITION certifiedMail */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DigitalPostmarkType_deliveryType */
-let _cached_decoder_for_DigitalPostmarkType_deliveryType: $.ASN1Decoder<DigitalPostmarkType_deliveryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DigitalPostmarkType_deliveryType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DigitalPostmarkType_deliveryType */
-/**
- * @summary Decodes an ASN.1 element into a(n) DigitalPostmarkType_deliveryType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DigitalPostmarkType_deliveryType} The decoded data structure.
- */
-export function _decode_DigitalPostmarkType_deliveryType(el: _Element) {
-  if (!_cached_decoder_for_DigitalPostmarkType_deliveryType) {
-    _cached_decoder_for_DigitalPostmarkType_deliveryType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_DigitalPostmarkType_deliveryType(el);
-}
+export const _decode_DigitalPostmarkType_deliveryType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DigitalPostmarkType_deliveryType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DigitalPostmarkType_deliveryType */
-let _cached_encoder_for_DigitalPostmarkType_deliveryType: $.ASN1Encoder<DigitalPostmarkType_deliveryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DigitalPostmarkType_deliveryType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DigitalPostmarkType_deliveryType */
-/**
- * @summary Encodes a(n) DigitalPostmarkType_deliveryType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DigitalPostmarkType_deliveryType, encoded as an ASN.1 Element.
- */
-export function _encode_DigitalPostmarkType_deliveryType(
-  value: DigitalPostmarkType_deliveryType,
-  elGetter: $.ASN1Encoder<DigitalPostmarkType_deliveryType>
-) {
-  if (!_cached_encoder_for_DigitalPostmarkType_deliveryType) {
-    _cached_encoder_for_DigitalPostmarkType_deliveryType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_DigitalPostmarkType_deliveryType(value, elGetter);
-}
+export const _encode_DigitalPostmarkType_deliveryType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DigitalPostmarkType_deliveryType */
 

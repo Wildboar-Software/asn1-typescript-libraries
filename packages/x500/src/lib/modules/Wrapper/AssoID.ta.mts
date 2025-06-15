@@ -17,42 +17,17 @@ export type AssoID = INTEGER;
 /* END_OF_SYMBOL_DEFINITION AssoID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssoID */
-let _cached_decoder_for_AssoID: $.ASN1Decoder<AssoID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssoID */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AssoID */
-/**
- * @summary Decodes an ASN.1 element into a(n) AssoID
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AssoID} The decoded data structure.
- */
-export function _decode_AssoID(el: _Element) {
-    if (!_cached_decoder_for_AssoID) {
-        _cached_decoder_for_AssoID = $._decodeInteger;
-    }
-    return _cached_decoder_for_AssoID(el);
-}
+export const _decode_AssoID = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AssoID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssoID */
-let _cached_encoder_for_AssoID: $.ASN1Encoder<AssoID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssoID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AssoID */
-/**
- * @summary Encodes a(n) AssoID into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AssoID, encoded as an ASN.1 Element.
- */
-export function _encode_AssoID(value: AssoID, elGetter: $.ASN1Encoder<AssoID>) {
-    if (!_cached_encoder_for_AssoID) {
-        _cached_encoder_for_AssoID = $._encodeInteger;
-    }
-    return _cached_encoder_for_AssoID(value, elGetter);
-}
+export const _encode_AssoID = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AssoID */
 

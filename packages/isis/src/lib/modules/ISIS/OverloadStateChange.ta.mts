@@ -97,45 +97,17 @@ export const waiting: OverloadStateChange =
 /* END_OF_SYMBOL_DEFINITION waiting */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OverloadStateChange */
-let _cached_decoder_for_OverloadStateChange: $.ASN1Decoder<OverloadStateChange> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OverloadStateChange */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OverloadStateChange */
-/**
- * @summary Decodes an ASN.1 element into a(n) OverloadStateChange
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OverloadStateChange} The decoded data structure.
- */
-export function _decode_OverloadStateChange(el: _Element) {
-  if (!_cached_decoder_for_OverloadStateChange) {
-    _cached_decoder_for_OverloadStateChange = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_OverloadStateChange(el);
-}
+export const _decode_OverloadStateChange = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_OverloadStateChange */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OverloadStateChange */
-let _cached_encoder_for_OverloadStateChange: $.ASN1Encoder<OverloadStateChange> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OverloadStateChange */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OverloadStateChange */
-/**
- * @summary Encodes a(n) OverloadStateChange into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OverloadStateChange, encoded as an ASN.1 Element.
- */
-export function _encode_OverloadStateChange(
-  value: OverloadStateChange,
-  elGetter: $.ASN1Encoder<OverloadStateChange>
-) {
-  if (!_cached_encoder_for_OverloadStateChange) {
-    _cached_encoder_for_OverloadStateChange = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_OverloadStateChange(value, elGetter);
-}
+export const _encode_OverloadStateChange = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OverloadStateChange */
 

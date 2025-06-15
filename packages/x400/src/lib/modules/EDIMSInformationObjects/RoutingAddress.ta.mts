@@ -27,45 +27,17 @@ export type RoutingAddress = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION RoutingAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAddress */
-let _cached_decoder_for_RoutingAddress: $.ASN1Decoder<RoutingAddress> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAddress */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RoutingAddress */
-/**
- * @summary Decodes an ASN.1 element into a(n) RoutingAddress
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RoutingAddress} The decoded data structure.
- */
-export function _decode_RoutingAddress(el: _Element) {
-    if (!_cached_decoder_for_RoutingAddress) {
-        _cached_decoder_for_RoutingAddress = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_RoutingAddress(el);
-}
+export const _decode_RoutingAddress = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_RoutingAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAddress */
-let _cached_encoder_for_RoutingAddress: $.ASN1Encoder<RoutingAddress> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RoutingAddress */
-/**
- * @summary Encodes a(n) RoutingAddress into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RoutingAddress, encoded as an ASN.1 Element.
- */
-export function _encode_RoutingAddress(
-    value: RoutingAddress,
-    elGetter: $.ASN1Encoder<RoutingAddress>
-) {
-    if (!_cached_encoder_for_RoutingAddress) {
-        _cached_encoder_for_RoutingAddress = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_RoutingAddress(value, elGetter);
-}
+export const _encode_RoutingAddress = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RoutingAddress */
 

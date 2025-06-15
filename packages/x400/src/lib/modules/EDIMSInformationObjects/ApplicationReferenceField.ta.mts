@@ -27,45 +27,17 @@ export type ApplicationReferenceField = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION ApplicationReferenceField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationReferenceField */
-let _cached_decoder_for_ApplicationReferenceField: $.ASN1Decoder<ApplicationReferenceField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationReferenceField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ApplicationReferenceField */
-/**
- * @summary Decodes an ASN.1 element into a(n) ApplicationReferenceField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ApplicationReferenceField} The decoded data structure.
- */
-export function _decode_ApplicationReferenceField(el: _Element) {
-    if (!_cached_decoder_for_ApplicationReferenceField) {
-        _cached_decoder_for_ApplicationReferenceField = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_ApplicationReferenceField(el);
-}
+export const _decode_ApplicationReferenceField = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_ApplicationReferenceField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationReferenceField */
-let _cached_encoder_for_ApplicationReferenceField: $.ASN1Encoder<ApplicationReferenceField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationReferenceField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ApplicationReferenceField */
-/**
- * @summary Encodes a(n) ApplicationReferenceField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ApplicationReferenceField, encoded as an ASN.1 Element.
- */
-export function _encode_ApplicationReferenceField(
-    value: ApplicationReferenceField,
-    elGetter: $.ASN1Encoder<ApplicationReferenceField>
-) {
-    if (!_cached_encoder_for_ApplicationReferenceField) {
-        _cached_encoder_for_ApplicationReferenceField = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_ApplicationReferenceField(value, elGetter);
-}
+export const _encode_ApplicationReferenceField = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ApplicationReferenceField */
 

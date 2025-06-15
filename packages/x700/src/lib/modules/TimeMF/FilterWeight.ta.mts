@@ -27,45 +27,17 @@ export type FilterWeight = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION FilterWeight */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterWeight */
-let _cached_decoder_for_FilterWeight: $.ASN1Decoder<FilterWeight> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterWeight */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FilterWeight */
-/**
- * @summary Decodes an ASN.1 element into a(n) FilterWeight
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FilterWeight} The decoded data structure.
- */
-export function _decode_FilterWeight(el: _Element) {
-    if (!_cached_decoder_for_FilterWeight) {
-        _cached_decoder_for_FilterWeight = $._decodeReal;
-    }
-    return _cached_decoder_for_FilterWeight(el);
-}
+export const _decode_FilterWeight = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_FilterWeight */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterWeight */
-let _cached_encoder_for_FilterWeight: $.ASN1Encoder<FilterWeight> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterWeight */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FilterWeight */
-/**
- * @summary Encodes a(n) FilterWeight into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FilterWeight, encoded as an ASN.1 Element.
- */
-export function _encode_FilterWeight(
-    value: FilterWeight,
-    elGetter: $.ASN1Encoder<FilterWeight>
-) {
-    if (!_cached_encoder_for_FilterWeight) {
-        _cached_encoder_for_FilterWeight = $._encodeReal;
-    }
-    return _cached_encoder_for_FilterWeight(value, elGetter);
-}
+export const _encode_FilterWeight = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FilterWeight */
 

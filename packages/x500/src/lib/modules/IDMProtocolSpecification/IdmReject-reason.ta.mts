@@ -288,45 +288,17 @@ export const invalidIdmVersion: IdmReject_reason = IdmReject_reason_invalidIdmVe
 /* END_OF_SYMBOL_DEFINITION invalidIdmVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmReject_reason */
-let _cached_decoder_for_IdmReject_reason: $.ASN1Decoder<IdmReject_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmReject_reason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IdmReject_reason */
-/**
- * @summary Decodes an ASN.1 element into a(n) IdmReject_reason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IdmReject_reason} The decoded data structure.
- */
-export function _decode_IdmReject_reason(el: _Element) {
-    if (!_cached_decoder_for_IdmReject_reason) {
-        _cached_decoder_for_IdmReject_reason = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_IdmReject_reason(el);
-}
+export const _decode_IdmReject_reason = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_IdmReject_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmReject_reason */
-let _cached_encoder_for_IdmReject_reason: $.ASN1Encoder<IdmReject_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmReject_reason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IdmReject_reason */
-/**
- * @summary Encodes a(n) IdmReject_reason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IdmReject_reason, encoded as an ASN.1 Element.
- */
-export function _encode_IdmReject_reason(
-    value: IdmReject_reason,
-    elGetter: $.ASN1Encoder<IdmReject_reason>
-) {
-    if (!_cached_encoder_for_IdmReject_reason) {
-        _cached_encoder_for_IdmReject_reason = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_IdmReject_reason(value, elGetter);
-}
+export const _encode_IdmReject_reason = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IdmReject_reason */
 

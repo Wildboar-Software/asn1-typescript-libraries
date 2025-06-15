@@ -130,45 +130,17 @@ export const delete_delivered_object: number = IPMAutoForwardOptions_delete_deli
 /* END_OF_SYMBOL_DEFINITION delete_delivered_object */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMAutoForwardOptions */
-let _cached_decoder_for_IPMAutoForwardOptions: $.ASN1Decoder<IPMAutoForwardOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMAutoForwardOptions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IPMAutoForwardOptions */
-/**
- * @summary Decodes an ASN.1 element into a(n) IPMAutoForwardOptions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IPMAutoForwardOptions} The decoded data structure.
- */
-export function _decode_IPMAutoForwardOptions(el: _Element) {
-    if (!_cached_decoder_for_IPMAutoForwardOptions) {
-        _cached_decoder_for_IPMAutoForwardOptions = $._decodeBitString;
-    }
-    return _cached_decoder_for_IPMAutoForwardOptions(el);
-}
+export const _decode_IPMAutoForwardOptions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_IPMAutoForwardOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMAutoForwardOptions */
-let _cached_encoder_for_IPMAutoForwardOptions: $.ASN1Encoder<IPMAutoForwardOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMAutoForwardOptions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IPMAutoForwardOptions */
-/**
- * @summary Encodes a(n) IPMAutoForwardOptions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IPMAutoForwardOptions, encoded as an ASN.1 Element.
- */
-export function _encode_IPMAutoForwardOptions(
-    value: IPMAutoForwardOptions,
-    elGetter: $.ASN1Encoder<IPMAutoForwardOptions>
-) {
-    if (!_cached_encoder_for_IPMAutoForwardOptions) {
-        _cached_encoder_for_IPMAutoForwardOptions = $._encodeBitString;
-    }
-    return _cached_encoder_for_IPMAutoForwardOptions(value, elGetter);
-}
+export const _encode_IPMAutoForwardOptions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IPMAutoForwardOptions */
 

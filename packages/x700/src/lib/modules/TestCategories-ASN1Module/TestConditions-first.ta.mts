@@ -81,45 +81,17 @@ export const waitIfBusy: TestConditions_first = TestConditions_first_waitIfBusy;
 /* END_OF_SYMBOL_DEFINITION waitIfBusy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestConditions_first */
-let _cached_decoder_for_TestConditions_first: $.ASN1Decoder<TestConditions_first> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestConditions_first */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestConditions_first */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestConditions_first
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestConditions_first} The decoded data structure.
- */
-export function _decode_TestConditions_first(el: _Element) {
-    if (!_cached_decoder_for_TestConditions_first) {
-        _cached_decoder_for_TestConditions_first = $._decodeInteger;
-    }
-    return _cached_decoder_for_TestConditions_first(el);
-}
+export const _decode_TestConditions_first = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TestConditions_first */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestConditions_first */
-let _cached_encoder_for_TestConditions_first: $.ASN1Encoder<TestConditions_first> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestConditions_first */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestConditions_first */
-/**
- * @summary Encodes a(n) TestConditions_first into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestConditions_first, encoded as an ASN.1 Element.
- */
-export function _encode_TestConditions_first(
-    value: TestConditions_first,
-    elGetter: $.ASN1Encoder<TestConditions_first>
-) {
-    if (!_cached_encoder_for_TestConditions_first) {
-        _cached_encoder_for_TestConditions_first = $._encodeInteger;
-    }
-    return _cached_encoder_for_TestConditions_first(value, elGetter);
-}
+export const _encode_TestConditions_first = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestConditions_first */
 

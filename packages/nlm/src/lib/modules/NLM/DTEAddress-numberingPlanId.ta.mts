@@ -118,45 +118,17 @@ export const e164: DTEAddress_numberingPlanId =
 /* END_OF_SYMBOL_DEFINITION e164 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DTEAddress_numberingPlanId */
-let _cached_decoder_for_DTEAddress_numberingPlanId: $.ASN1Decoder<DTEAddress_numberingPlanId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DTEAddress_numberingPlanId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DTEAddress_numberingPlanId */
-/**
- * @summary Decodes an ASN.1 element into a(n) DTEAddress_numberingPlanId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DTEAddress_numberingPlanId} The decoded data structure.
- */
-export function _decode_DTEAddress_numberingPlanId(el: _Element) {
-    if (!_cached_decoder_for_DTEAddress_numberingPlanId) {
-        _cached_decoder_for_DTEAddress_numberingPlanId = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DTEAddress_numberingPlanId(el);
-}
+export const _decode_DTEAddress_numberingPlanId = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DTEAddress_numberingPlanId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DTEAddress_numberingPlanId */
-let _cached_encoder_for_DTEAddress_numberingPlanId: $.ASN1Encoder<DTEAddress_numberingPlanId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DTEAddress_numberingPlanId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DTEAddress_numberingPlanId */
-/**
- * @summary Encodes a(n) DTEAddress_numberingPlanId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DTEAddress_numberingPlanId, encoded as an ASN.1 Element.
- */
-export function _encode_DTEAddress_numberingPlanId(
-    value: DTEAddress_numberingPlanId,
-    elGetter: $.ASN1Encoder<DTEAddress_numberingPlanId>
-) {
-    if (!_cached_encoder_for_DTEAddress_numberingPlanId) {
-        _cached_encoder_for_DTEAddress_numberingPlanId = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DTEAddress_numberingPlanId(value, elGetter);
-}
+export const _encode_DTEAddress_numberingPlanId = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DTEAddress_numberingPlanId */
 

@@ -27,45 +27,17 @@ export type ClockEventCounter = INTEGER;
 /* END_OF_SYMBOL_DEFINITION ClockEventCounter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventCounter */
-let _cached_decoder_for_ClockEventCounter: $.ASN1Decoder<ClockEventCounter> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventCounter */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ClockEventCounter */
-/**
- * @summary Decodes an ASN.1 element into a(n) ClockEventCounter
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ClockEventCounter} The decoded data structure.
- */
-export function _decode_ClockEventCounter(el: _Element) {
-    if (!_cached_decoder_for_ClockEventCounter) {
-        _cached_decoder_for_ClockEventCounter = $._decodeInteger;
-    }
-    return _cached_decoder_for_ClockEventCounter(el);
-}
+export const _decode_ClockEventCounter = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ClockEventCounter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventCounter */
-let _cached_encoder_for_ClockEventCounter: $.ASN1Encoder<ClockEventCounter> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventCounter */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ClockEventCounter */
-/**
- * @summary Encodes a(n) ClockEventCounter into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ClockEventCounter, encoded as an ASN.1 Element.
- */
-export function _encode_ClockEventCounter(
-    value: ClockEventCounter,
-    elGetter: $.ASN1Encoder<ClockEventCounter>
-) {
-    if (!_cached_encoder_for_ClockEventCounter) {
-        _cached_encoder_for_ClockEventCounter = $._encodeInteger;
-    }
-    return _cached_encoder_for_ClockEventCounter(value, elGetter);
-}
+export const _encode_ClockEventCounter = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ClockEventCounter */
 

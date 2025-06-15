@@ -142,45 +142,17 @@ export const fn_sent: EDINotificationIndicator =
 /* END_OF_SYMBOL_DEFINITION fn_sent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationIndicator */
-let _cached_decoder_for_EDINotificationIndicator: $.ASN1Decoder<EDINotificationIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDINotificationIndicator */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDINotificationIndicator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDINotificationIndicator} The decoded data structure.
- */
-export function _decode_EDINotificationIndicator(el: _Element) {
-    if (!_cached_decoder_for_EDINotificationIndicator) {
-        _cached_decoder_for_EDINotificationIndicator = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_EDINotificationIndicator(el);
-}
+export const _decode_EDINotificationIndicator = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EDINotificationIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationIndicator */
-let _cached_encoder_for_EDINotificationIndicator: $.ASN1Encoder<EDINotificationIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDINotificationIndicator */
-/**
- * @summary Encodes a(n) EDINotificationIndicator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDINotificationIndicator, encoded as an ASN.1 Element.
- */
-export function _encode_EDINotificationIndicator(
-    value: EDINotificationIndicator,
-    elGetter: $.ASN1Encoder<EDINotificationIndicator>
-) {
-    if (!_cached_encoder_for_EDINotificationIndicator) {
-        _cached_encoder_for_EDINotificationIndicator = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_EDINotificationIndicator(value, elGetter);
-}
+export const _encode_EDINotificationIndicator = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDINotificationIndicator */
 

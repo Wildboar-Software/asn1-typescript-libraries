@@ -27,45 +27,17 @@ export type DiscardReason = INTEGER;
 /* END_OF_SYMBOL_DEFINITION DiscardReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardReason */
-let _cached_decoder_for_DiscardReason: $.ASN1Decoder<DiscardReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DiscardReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) DiscardReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DiscardReason} The decoded data structure.
- */
-export function _decode_DiscardReason(el: _Element) {
-    if (!_cached_decoder_for_DiscardReason) {
-        _cached_decoder_for_DiscardReason = $._decodeInteger;
-    }
-    return _cached_decoder_for_DiscardReason(el);
-}
+export const _decode_DiscardReason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DiscardReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardReason */
-let _cached_encoder_for_DiscardReason: $.ASN1Encoder<DiscardReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DiscardReason */
-/**
- * @summary Encodes a(n) DiscardReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiscardReason, encoded as an ASN.1 Element.
- */
-export function _encode_DiscardReason(
-    value: DiscardReason,
-    elGetter: $.ASN1Encoder<DiscardReason>
-) {
-    if (!_cached_encoder_for_DiscardReason) {
-        _cached_encoder_for_DiscardReason = $._encodeInteger;
-    }
-    return _cached_encoder_for_DiscardReason(value, elGetter);
-}
+export const _encode_DiscardReason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DiscardReason */
 

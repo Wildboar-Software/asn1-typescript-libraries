@@ -261,45 +261,17 @@ export const transfer: ActivityCode_number = ActivityCode_number_transfer; /* SH
 /* END_OF_SYMBOL_DEFINITION transfer */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityCode_number */
-let _cached_decoder_for_ActivityCode_number: $.ASN1Decoder<ActivityCode_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityCode_number */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ActivityCode_number */
-/**
- * @summary Decodes an ASN.1 element into a(n) ActivityCode_number
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ActivityCode_number} The decoded data structure.
- */
-export function _decode_ActivityCode_number(el: _Element) {
-    if (!_cached_decoder_for_ActivityCode_number) {
-        _cached_decoder_for_ActivityCode_number = $._decodeInteger;
-    }
-    return _cached_decoder_for_ActivityCode_number(el);
-}
+export const _decode_ActivityCode_number = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ActivityCode_number */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityCode_number */
-let _cached_encoder_for_ActivityCode_number: $.ASN1Encoder<ActivityCode_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityCode_number */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ActivityCode_number */
-/**
- * @summary Encodes a(n) ActivityCode_number into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActivityCode_number, encoded as an ASN.1 Element.
- */
-export function _encode_ActivityCode_number(
-    value: ActivityCode_number,
-    elGetter: $.ASN1Encoder<ActivityCode_number>
-) {
-    if (!_cached_encoder_for_ActivityCode_number) {
-        _cached_encoder_for_ActivityCode_number = $._encodeInteger;
-    }
-    return _cached_encoder_for_ActivityCode_number(value, elGetter);
-}
+export const _encode_ActivityCode_number = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ActivityCode_number */
 

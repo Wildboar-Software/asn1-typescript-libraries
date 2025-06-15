@@ -323,45 +323,17 @@ export const ditBridge: number = DSEType_ditBridge; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION ditBridge */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSEType */
-let _cached_decoder_for_DSEType: $.ASN1Decoder<DSEType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSEType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DSEType */
-/**
- * @summary Decodes an ASN.1 element into a(n) DSEType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DSEType} The decoded data structure.
- */
-export function _decode_DSEType(el: _Element) {
-    if (!_cached_decoder_for_DSEType) {
-        _cached_decoder_for_DSEType = $._decodeBitString;
-    }
-    return _cached_decoder_for_DSEType(el);
-}
+export const _decode_DSEType = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_DSEType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSEType */
-let _cached_encoder_for_DSEType: $.ASN1Encoder<DSEType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSEType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DSEType */
-/**
- * @summary Encodes a(n) DSEType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DSEType, encoded as an ASN.1 Element.
- */
-export function _encode_DSEType(
-    value: DSEType,
-    elGetter: $.ASN1Encoder<DSEType>
-) {
-    if (!_cached_encoder_for_DSEType) {
-        _cached_encoder_for_DSEType = $._encodeBitString;
-    }
-    return _cached_encoder_for_DSEType(value, elGetter);
-}
+export const _encode_DSEType = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DSEType */
 

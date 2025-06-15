@@ -27,45 +27,17 @@ export type TSelect = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION TSelect */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TSelect */
-let _cached_decoder_for_TSelect: $.ASN1Decoder<TSelect> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TSelect */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TSelect */
-/**
- * @summary Decodes an ASN.1 element into a(n) TSelect
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TSelect} The decoded data structure.
- */
-export function _decode_TSelect(el: _Element) {
-    if (!_cached_decoder_for_TSelect) {
-        _cached_decoder_for_TSelect = $._decodeOctetString;
-    }
-    return _cached_decoder_for_TSelect(el);
-}
+export const _decode_TSelect = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_TSelect */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TSelect */
-let _cached_encoder_for_TSelect: $.ASN1Encoder<TSelect> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TSelect */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TSelect */
-/**
- * @summary Encodes a(n) TSelect into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TSelect, encoded as an ASN.1 Element.
- */
-export function _encode_TSelect(
-    value: TSelect,
-    elGetter: $.ASN1Encoder<TSelect>
-) {
-    if (!_cached_encoder_for_TSelect) {
-        _cached_encoder_for_TSelect = $._encodeOctetString;
-    }
-    return _cached_encoder_for_TSelect(value, elGetter);
-}
+export const _encode_TSelect = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TSelect */
 

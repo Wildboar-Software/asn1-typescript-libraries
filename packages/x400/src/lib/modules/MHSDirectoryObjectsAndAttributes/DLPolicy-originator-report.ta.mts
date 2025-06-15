@@ -99,45 +99,17 @@ export const non_delivery_report: DLPolicy_originator_report = DLPolicy_originat
 /* END_OF_SYMBOL_DEFINITION non_delivery_report */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_originator_report */
-let _cached_decoder_for_DLPolicy_originator_report: $.ASN1Decoder<DLPolicy_originator_report> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_originator_report */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_originator_report */
-/**
- * @summary Decodes an ASN.1 element into a(n) DLPolicy_originator_report
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DLPolicy_originator_report} The decoded data structure.
- */
-export function _decode_DLPolicy_originator_report(el: _Element) {
-    if (!_cached_decoder_for_DLPolicy_originator_report) {
-        _cached_decoder_for_DLPolicy_originator_report = $._decodeInteger;
-    }
-    return _cached_decoder_for_DLPolicy_originator_report(el);
-}
+export const _decode_DLPolicy_originator_report = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_originator_report */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_originator_report */
-let _cached_encoder_for_DLPolicy_originator_report: $.ASN1Encoder<DLPolicy_originator_report> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_originator_report */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_originator_report */
-/**
- * @summary Encodes a(n) DLPolicy_originator_report into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DLPolicy_originator_report, encoded as an ASN.1 Element.
- */
-export function _encode_DLPolicy_originator_report(
-    value: DLPolicy_originator_report,
-    elGetter: $.ASN1Encoder<DLPolicy_originator_report>
-) {
-    if (!_cached_encoder_for_DLPolicy_originator_report) {
-        _cached_encoder_for_DLPolicy_originator_report = $._encodeInteger;
-    }
-    return _cached_encoder_for_DLPolicy_originator_report(value, elGetter);
-}
+export const _encode_DLPolicy_originator_report = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_originator_report */
 

@@ -100,45 +100,17 @@ export const responseTimePerBit: ResponseTimeSummarizationMode =
 /* END_OF_SYMBOL_DEFINITION responseTimePerBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTimeSummarizationMode */
-let _cached_decoder_for_ResponseTimeSummarizationMode: $.ASN1Decoder<ResponseTimeSummarizationMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTimeSummarizationMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ResponseTimeSummarizationMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) ResponseTimeSummarizationMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ResponseTimeSummarizationMode} The decoded data structure.
- */
-export function _decode_ResponseTimeSummarizationMode(el: _Element) {
-    if (!_cached_decoder_for_ResponseTimeSummarizationMode) {
-        _cached_decoder_for_ResponseTimeSummarizationMode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ResponseTimeSummarizationMode(el);
-}
+export const _decode_ResponseTimeSummarizationMode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ResponseTimeSummarizationMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTimeSummarizationMode */
-let _cached_encoder_for_ResponseTimeSummarizationMode: $.ASN1Encoder<ResponseTimeSummarizationMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTimeSummarizationMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ResponseTimeSummarizationMode */
-/**
- * @summary Encodes a(n) ResponseTimeSummarizationMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResponseTimeSummarizationMode, encoded as an ASN.1 Element.
- */
-export function _encode_ResponseTimeSummarizationMode(
-    value: ResponseTimeSummarizationMode,
-    elGetter: $.ASN1Encoder<ResponseTimeSummarizationMode>
-) {
-    if (!_cached_encoder_for_ResponseTimeSummarizationMode) {
-        _cached_encoder_for_ResponseTimeSummarizationMode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ResponseTimeSummarizationMode(value, elGetter);
-}
+export const _encode_ResponseTimeSummarizationMode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ResponseTimeSummarizationMode */
 

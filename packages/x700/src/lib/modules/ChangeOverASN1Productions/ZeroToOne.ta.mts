@@ -27,45 +27,17 @@ export type ZeroToOne = INTEGER;
 /* END_OF_SYMBOL_DEFINITION ZeroToOne */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ZeroToOne */
-let _cached_decoder_for_ZeroToOne: $.ASN1Decoder<ZeroToOne> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ZeroToOne */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ZeroToOne */
-/**
- * @summary Decodes an ASN.1 element into a(n) ZeroToOne
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ZeroToOne} The decoded data structure.
- */
-export function _decode_ZeroToOne(el: _Element) {
-    if (!_cached_decoder_for_ZeroToOne) {
-        _cached_decoder_for_ZeroToOne = $._decodeInteger;
-    }
-    return _cached_decoder_for_ZeroToOne(el);
-}
+export const _decode_ZeroToOne = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ZeroToOne */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ZeroToOne */
-let _cached_encoder_for_ZeroToOne: $.ASN1Encoder<ZeroToOne> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ZeroToOne */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ZeroToOne */
-/**
- * @summary Encodes a(n) ZeroToOne into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ZeroToOne, encoded as an ASN.1 Element.
- */
-export function _encode_ZeroToOne(
-    value: ZeroToOne,
-    elGetter: $.ASN1Encoder<ZeroToOne>
-) {
-    if (!_cached_encoder_for_ZeroToOne) {
-        _cached_encoder_for_ZeroToOne = $._encodeInteger;
-    }
-    return _cached_encoder_for_ZeroToOne(value, elGetter);
-}
+export const _encode_ZeroToOne = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ZeroToOne */
 

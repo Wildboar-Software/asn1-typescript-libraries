@@ -99,45 +99,17 @@ export const neither: DLPolicy_proof_of_delivery = DLPolicy_proof_of_delivery_ne
 /* END_OF_SYMBOL_DEFINITION neither */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_proof_of_delivery */
-let _cached_decoder_for_DLPolicy_proof_of_delivery: $.ASN1Decoder<DLPolicy_proof_of_delivery> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_proof_of_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_proof_of_delivery */
-/**
- * @summary Decodes an ASN.1 element into a(n) DLPolicy_proof_of_delivery
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DLPolicy_proof_of_delivery} The decoded data structure.
- */
-export function _decode_DLPolicy_proof_of_delivery(el: _Element) {
-    if (!_cached_decoder_for_DLPolicy_proof_of_delivery) {
-        _cached_decoder_for_DLPolicy_proof_of_delivery = $._decodeInteger;
-    }
-    return _cached_decoder_for_DLPolicy_proof_of_delivery(el);
-}
+export const _decode_DLPolicy_proof_of_delivery = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_proof_of_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_proof_of_delivery */
-let _cached_encoder_for_DLPolicy_proof_of_delivery: $.ASN1Encoder<DLPolicy_proof_of_delivery> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_proof_of_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_proof_of_delivery */
-/**
- * @summary Encodes a(n) DLPolicy_proof_of_delivery into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DLPolicy_proof_of_delivery, encoded as an ASN.1 Element.
- */
-export function _encode_DLPolicy_proof_of_delivery(
-    value: DLPolicy_proof_of_delivery,
-    elGetter: $.ASN1Encoder<DLPolicy_proof_of_delivery>
-) {
-    if (!_cached_encoder_for_DLPolicy_proof_of_delivery) {
-        _cached_encoder_for_DLPolicy_proof_of_delivery = $._encodeInteger;
-    }
-    return _cached_encoder_for_DLPolicy_proof_of_delivery(value, elGetter);
-}
+export const _encode_DLPolicy_proof_of_delivery = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_proof_of_delivery */
 

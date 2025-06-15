@@ -640,45 +640,17 @@ export const security_policy_violation: SecurityDiagnosticCode = SecurityDiagnos
 /* END_OF_SYMBOL_DEFINITION security_policy_violation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityDiagnosticCode */
-let _cached_decoder_for_SecurityDiagnosticCode: $.ASN1Decoder<SecurityDiagnosticCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityDiagnosticCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SecurityDiagnosticCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) SecurityDiagnosticCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SecurityDiagnosticCode} The decoded data structure.
- */
-export function _decode_SecurityDiagnosticCode(el: _Element) {
-    if (!_cached_decoder_for_SecurityDiagnosticCode) {
-        _cached_decoder_for_SecurityDiagnosticCode = $._decodeInteger;
-    }
-    return _cached_decoder_for_SecurityDiagnosticCode(el);
-}
+export const _decode_SecurityDiagnosticCode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SecurityDiagnosticCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityDiagnosticCode */
-let _cached_encoder_for_SecurityDiagnosticCode: $.ASN1Encoder<SecurityDiagnosticCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityDiagnosticCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SecurityDiagnosticCode */
-/**
- * @summary Encodes a(n) SecurityDiagnosticCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SecurityDiagnosticCode, encoded as an ASN.1 Element.
- */
-export function _encode_SecurityDiagnosticCode(
-    value: SecurityDiagnosticCode,
-    elGetter: $.ASN1Encoder<SecurityDiagnosticCode>
-) {
-    if (!_cached_encoder_for_SecurityDiagnosticCode) {
-        _cached_encoder_for_SecurityDiagnosticCode = $._encodeInteger;
-    }
-    return _cached_encoder_for_SecurityDiagnosticCode(value, elGetter);
-}
+export const _encode_SecurityDiagnosticCode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SecurityDiagnosticCode */
 

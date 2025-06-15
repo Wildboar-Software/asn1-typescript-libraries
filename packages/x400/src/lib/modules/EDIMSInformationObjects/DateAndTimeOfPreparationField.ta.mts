@@ -27,45 +27,17 @@ export type DateAndTimeOfPreparationField = UTCTime; // UTCTime
 /* END_OF_SYMBOL_DEFINITION DateAndTimeOfPreparationField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DateAndTimeOfPreparationField */
-let _cached_decoder_for_DateAndTimeOfPreparationField: $.ASN1Decoder<DateAndTimeOfPreparationField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DateAndTimeOfPreparationField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DateAndTimeOfPreparationField */
-/**
- * @summary Decodes an ASN.1 element into a(n) DateAndTimeOfPreparationField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DateAndTimeOfPreparationField} The decoded data structure.
- */
-export function _decode_DateAndTimeOfPreparationField(el: _Element) {
-    if (!_cached_decoder_for_DateAndTimeOfPreparationField) {
-        _cached_decoder_for_DateAndTimeOfPreparationField = $._decodeUTCTime;
-    }
-    return _cached_decoder_for_DateAndTimeOfPreparationField(el);
-}
+export const _decode_DateAndTimeOfPreparationField = $._decodeUTCTime;
 /* END_OF_SYMBOL_DEFINITION _decode_DateAndTimeOfPreparationField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DateAndTimeOfPreparationField */
-let _cached_encoder_for_DateAndTimeOfPreparationField: $.ASN1Encoder<DateAndTimeOfPreparationField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DateAndTimeOfPreparationField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DateAndTimeOfPreparationField */
-/**
- * @summary Encodes a(n) DateAndTimeOfPreparationField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DateAndTimeOfPreparationField, encoded as an ASN.1 Element.
- */
-export function _encode_DateAndTimeOfPreparationField(
-    value: DateAndTimeOfPreparationField,
-    elGetter: $.ASN1Encoder<DateAndTimeOfPreparationField>
-) {
-    if (!_cached_encoder_for_DateAndTimeOfPreparationField) {
-        _cached_encoder_for_DateAndTimeOfPreparationField = $._encodeUTCTime;
-    }
-    return _cached_encoder_for_DateAndTimeOfPreparationField(value, elGetter);
-}
+export const _encode_DateAndTimeOfPreparationField = $._encodeUTCTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DateAndTimeOfPreparationField */
 

@@ -72,45 +72,17 @@ export const noSuchAttribute: AttributeIdError_errorStatus = AttributeIdError_er
 /* END_OF_SYMBOL_DEFINITION noSuchAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIdError_errorStatus */
-let _cached_decoder_for_AttributeIdError_errorStatus: $.ASN1Decoder<AttributeIdError_errorStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIdError_errorStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeIdError_errorStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) AttributeIdError_errorStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AttributeIdError_errorStatus} The decoded data structure.
- */
-export function _decode_AttributeIdError_errorStatus(el: _Element) {
-  if (!_cached_decoder_for_AttributeIdError_errorStatus) {
-    _cached_decoder_for_AttributeIdError_errorStatus = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_AttributeIdError_errorStatus(el);
-}
+export const _decode_AttributeIdError_errorStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeIdError_errorStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIdError_errorStatus */
-let _cached_encoder_for_AttributeIdError_errorStatus: $.ASN1Encoder<AttributeIdError_errorStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIdError_errorStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeIdError_errorStatus */
-/**
- * @summary Encodes a(n) AttributeIdError_errorStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AttributeIdError_errorStatus, encoded as an ASN.1 Element.
- */
-export function _encode_AttributeIdError_errorStatus(
-  value: AttributeIdError_errorStatus,
-  elGetter: $.ASN1Encoder<AttributeIdError_errorStatus>
-) {
-  if (!_cached_encoder_for_AttributeIdError_errorStatus) {
-    _cached_encoder_for_AttributeIdError_errorStatus = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_AttributeIdError_errorStatus(value, elGetter);
-}
+export const _encode_AttributeIdError_errorStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeIdError_errorStatus */
 

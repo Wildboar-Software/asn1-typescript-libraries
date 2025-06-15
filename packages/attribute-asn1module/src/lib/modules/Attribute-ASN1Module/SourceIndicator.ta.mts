@@ -126,40 +126,17 @@ const unknown: SourceIndicator = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERA
 /* END_OF_SYMBOL_DEFINITION unknown */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SourceIndicator */
-let _cached_decoder_for_SourceIndicator: $.ASN1Decoder<SourceIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SourceIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SourceIndicator */
-/**
- * @summary Decodes an ASN.1 element into a(n) SourceIndicator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SourceIndicator} The decoded data structure.
- */
-export
-function _decode_SourceIndicator (el: _Element) {
-    if (!_cached_decoder_for_SourceIndicator) { _cached_decoder_for_SourceIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_SourceIndicator(el);
-}
+export const _decode_SourceIndicator = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SourceIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SourceIndicator */
-let _cached_encoder_for_SourceIndicator: $.ASN1Encoder<SourceIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SourceIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SourceIndicator */
-/**
- * @summary Encodes a(n) SourceIndicator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SourceIndicator, encoded as an ASN.1 Element.
- */
-export
-function _encode_SourceIndicator (value: SourceIndicator, elGetter: $.ASN1Encoder<SourceIndicator>) {
-    if (!_cached_encoder_for_SourceIndicator) { _cached_encoder_for_SourceIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_SourceIndicator(value, elGetter);
-}
+export const _encode_SourceIndicator = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SourceIndicator */
 

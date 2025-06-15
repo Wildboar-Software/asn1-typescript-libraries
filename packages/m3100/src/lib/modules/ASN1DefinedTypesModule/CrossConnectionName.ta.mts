@@ -27,45 +27,17 @@ export type CrossConnectionName = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION CrossConnectionName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossConnectionName */
-let _cached_decoder_for_CrossConnectionName: $.ASN1Decoder<CrossConnectionName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossConnectionName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CrossConnectionName */
-/**
- * @summary Decodes an ASN.1 element into a(n) CrossConnectionName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CrossConnectionName} The decoded data structure.
- */
-export function _decode_CrossConnectionName(el: _Element) {
-    if (!_cached_decoder_for_CrossConnectionName) {
-        _cached_decoder_for_CrossConnectionName = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_CrossConnectionName(el);
-}
+export const _decode_CrossConnectionName = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_CrossConnectionName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossConnectionName */
-let _cached_encoder_for_CrossConnectionName: $.ASN1Encoder<CrossConnectionName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossConnectionName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CrossConnectionName */
-/**
- * @summary Encodes a(n) CrossConnectionName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CrossConnectionName, encoded as an ASN.1 Element.
- */
-export function _encode_CrossConnectionName(
-    value: CrossConnectionName,
-    elGetter: $.ASN1Encoder<CrossConnectionName>
-) {
-    if (!_cached_encoder_for_CrossConnectionName) {
-        _cached_encoder_for_CrossConnectionName = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_CrossConnectionName(value, elGetter);
-}
+export const _encode_CrossConnectionName = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CrossConnectionName */
 

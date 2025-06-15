@@ -35,45 +35,17 @@ export const trailerFieldBC: TrailerField = TrailerField_trailerFieldBC; /* SHOR
 /* END_OF_SYMBOL_DEFINITION trailerFieldBC */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrailerField */
-let _cached_decoder_for_TrailerField: $.ASN1Decoder<TrailerField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrailerField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TrailerField */
-/**
- * @summary Decodes an ASN.1 element into a(n) TrailerField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TrailerField} The decoded data structure.
- */
-export function _decode_TrailerField(el: _Element) {
-    if (!_cached_decoder_for_TrailerField) {
-        _cached_decoder_for_TrailerField = $._decodeInteger;
-    }
-    return _cached_decoder_for_TrailerField(el);
-}
+export const _decode_TrailerField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TrailerField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrailerField */
-let _cached_encoder_for_TrailerField: $.ASN1Encoder<TrailerField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrailerField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TrailerField */
-/**
- * @summary Encodes a(n) TrailerField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TrailerField, encoded as an ASN.1 Element.
- */
-export function _encode_TrailerField(
-    value: TrailerField,
-    elGetter: $.ASN1Encoder<TrailerField>
-) {
-    if (!_cached_encoder_for_TrailerField) {
-        _cached_encoder_for_TrailerField = $._encodeInteger;
-    }
-    return _cached_encoder_for_TrailerField(value, elGetter);
-}
+export const _encode_TrailerField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TrailerField */
 

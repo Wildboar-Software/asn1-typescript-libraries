@@ -97,45 +97,17 @@ export const week5: number = Period_weeks_bitWeek_week5; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION week5 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_weeks_bitWeek */
-let _cached_decoder_for_Period_weeks_bitWeek: $.ASN1Decoder<Period_weeks_bitWeek> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_weeks_bitWeek */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Period_weeks_bitWeek */
-/**
- * @summary Decodes an ASN.1 element into a(n) Period_weeks_bitWeek
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Period_weeks_bitWeek} The decoded data structure.
- */
-export function _decode_Period_weeks_bitWeek(el: _Element) {
-    if (!_cached_decoder_for_Period_weeks_bitWeek) {
-        _cached_decoder_for_Period_weeks_bitWeek = $._decodeBitString;
-    }
-    return _cached_decoder_for_Period_weeks_bitWeek(el);
-}
+export const _decode_Period_weeks_bitWeek = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Period_weeks_bitWeek */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_weeks_bitWeek */
-let _cached_encoder_for_Period_weeks_bitWeek: $.ASN1Encoder<Period_weeks_bitWeek> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_weeks_bitWeek */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Period_weeks_bitWeek */
-/**
- * @summary Encodes a(n) Period_weeks_bitWeek into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Period_weeks_bitWeek, encoded as an ASN.1 Element.
- */
-export function _encode_Period_weeks_bitWeek(
-    value: Period_weeks_bitWeek,
-    elGetter: $.ASN1Encoder<Period_weeks_bitWeek>
-) {
-    if (!_cached_encoder_for_Period_weeks_bitWeek) {
-        _cached_encoder_for_Period_weeks_bitWeek = $._encodeBitString;
-    }
-    return _cached_encoder_for_Period_weeks_bitWeek(value, elGetter);
-}
+export const _encode_Period_weeks_bitWeek = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Period_weeks_bitWeek */
 

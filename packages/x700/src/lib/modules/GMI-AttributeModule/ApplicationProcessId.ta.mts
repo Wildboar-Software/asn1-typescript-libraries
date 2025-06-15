@@ -27,45 +27,17 @@ export type ApplicationProcessId = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION ApplicationProcessId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationProcessId */
-let _cached_decoder_for_ApplicationProcessId: $.ASN1Decoder<ApplicationProcessId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationProcessId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ApplicationProcessId */
-/**
- * @summary Decodes an ASN.1 element into a(n) ApplicationProcessId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ApplicationProcessId} The decoded data structure.
- */
-export function _decode_ApplicationProcessId(el: _Element) {
-    if (!_cached_decoder_for_ApplicationProcessId) {
-        _cached_decoder_for_ApplicationProcessId = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_ApplicationProcessId(el);
-}
+export const _decode_ApplicationProcessId = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_ApplicationProcessId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationProcessId */
-let _cached_encoder_for_ApplicationProcessId: $.ASN1Encoder<ApplicationProcessId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationProcessId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ApplicationProcessId */
-/**
- * @summary Encodes a(n) ApplicationProcessId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ApplicationProcessId, encoded as an ASN.1 Element.
- */
-export function _encode_ApplicationProcessId(
-    value: ApplicationProcessId,
-    elGetter: $.ASN1Encoder<ApplicationProcessId>
-) {
-    if (!_cached_encoder_for_ApplicationProcessId) {
-        _cached_encoder_for_ApplicationProcessId = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_ApplicationProcessId(value, elGetter);
-}
+export const _encode_ApplicationProcessId = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ApplicationProcessId */
 

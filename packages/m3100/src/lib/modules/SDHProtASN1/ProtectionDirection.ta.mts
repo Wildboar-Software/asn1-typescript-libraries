@@ -118,45 +118,17 @@ export const bidirectional: ProtectionDirection =
 /* END_OF_SYMBOL_DEFINITION bidirectional */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionDirection */
-let _cached_decoder_for_ProtectionDirection: $.ASN1Decoder<ProtectionDirection> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionDirection */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProtectionDirection */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProtectionDirection
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProtectionDirection} The decoded data structure.
- */
-export function _decode_ProtectionDirection(el: _Element) {
-    if (!_cached_decoder_for_ProtectionDirection) {
-        _cached_decoder_for_ProtectionDirection = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ProtectionDirection(el);
-}
+export const _decode_ProtectionDirection = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ProtectionDirection */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionDirection */
-let _cached_encoder_for_ProtectionDirection: $.ASN1Encoder<ProtectionDirection> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionDirection */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProtectionDirection */
-/**
- * @summary Encodes a(n) ProtectionDirection into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProtectionDirection, encoded as an ASN.1 Element.
- */
-export function _encode_ProtectionDirection(
-    value: ProtectionDirection,
-    elGetter: $.ASN1Encoder<ProtectionDirection>
-) {
-    if (!_cached_encoder_for_ProtectionDirection) {
-        _cached_encoder_for_ProtectionDirection = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ProtectionDirection(value, elGetter);
-}
+export const _encode_ProtectionDirection = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProtectionDirection */
 

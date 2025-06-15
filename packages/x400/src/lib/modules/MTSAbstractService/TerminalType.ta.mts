@@ -137,45 +137,17 @@ export const videotex: TerminalType = TerminalType_videotex; /* SHORT_NAMED_INTE
 /* END_OF_SYMBOL_DEFINITION videotex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminalType */
-let _cached_decoder_for_TerminalType: $.ASN1Decoder<TerminalType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminalType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TerminalType */
-/**
- * @summary Decodes an ASN.1 element into a(n) TerminalType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TerminalType} The decoded data structure.
- */
-export function _decode_TerminalType(el: _Element) {
-    if (!_cached_decoder_for_TerminalType) {
-        _cached_decoder_for_TerminalType = $._decodeInteger;
-    }
-    return _cached_decoder_for_TerminalType(el);
-}
+export const _decode_TerminalType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TerminalType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminalType */
-let _cached_encoder_for_TerminalType: $.ASN1Encoder<TerminalType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminalType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TerminalType */
-/**
- * @summary Encodes a(n) TerminalType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TerminalType, encoded as an ASN.1 Element.
- */
-export function _encode_TerminalType(
-    value: TerminalType,
-    elGetter: $.ASN1Encoder<TerminalType>
-) {
-    if (!_cached_encoder_for_TerminalType) {
-        _cached_encoder_for_TerminalType = $._encodeInteger;
-    }
-    return _cached_encoder_for_TerminalType(value, elGetter);
-}
+export const _encode_TerminalType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TerminalType */
 

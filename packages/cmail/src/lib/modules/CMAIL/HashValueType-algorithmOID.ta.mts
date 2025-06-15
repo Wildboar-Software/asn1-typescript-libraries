@@ -97,45 +97,17 @@ export const sha_256: HashValueType_algorithmOID =
 /* END_OF_SYMBOL_DEFINITION sha_256 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HashValueType_algorithmOID */
-let _cached_decoder_for_HashValueType_algorithmOID: $.ASN1Decoder<HashValueType_algorithmOID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HashValueType_algorithmOID */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HashValueType_algorithmOID */
-/**
- * @summary Decodes an ASN.1 element into a(n) HashValueType_algorithmOID
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HashValueType_algorithmOID} The decoded data structure.
- */
-export function _decode_HashValueType_algorithmOID(el: _Element) {
-  if (!_cached_decoder_for_HashValueType_algorithmOID) {
-    _cached_decoder_for_HashValueType_algorithmOID = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_HashValueType_algorithmOID(el);
-}
+export const _decode_HashValueType_algorithmOID = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_HashValueType_algorithmOID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HashValueType_algorithmOID */
-let _cached_encoder_for_HashValueType_algorithmOID: $.ASN1Encoder<HashValueType_algorithmOID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HashValueType_algorithmOID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HashValueType_algorithmOID */
-/**
- * @summary Encodes a(n) HashValueType_algorithmOID into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HashValueType_algorithmOID, encoded as an ASN.1 Element.
- */
-export function _encode_HashValueType_algorithmOID(
-  value: HashValueType_algorithmOID,
-  elGetter: $.ASN1Encoder<HashValueType_algorithmOID>
-) {
-  if (!_cached_encoder_for_HashValueType_algorithmOID) {
-    _cached_encoder_for_HashValueType_algorithmOID = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_HashValueType_algorithmOID(value, elGetter);
-}
+export const _encode_HashValueType_algorithmOID = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HashValueType_algorithmOID */
 

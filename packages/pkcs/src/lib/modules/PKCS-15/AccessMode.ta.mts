@@ -65,45 +65,17 @@ export const execute: number = AccessMode_execute; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION execute */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessMode */
-let _cached_decoder_for_AccessMode: $.ASN1Decoder<AccessMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AccessMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AccessMode} The decoded data structure.
- */
-export function _decode_AccessMode(el: _Element) {
-    if (!_cached_decoder_for_AccessMode) {
-        _cached_decoder_for_AccessMode = $._decodeBitString;
-    }
-    return _cached_decoder_for_AccessMode(el);
-}
+export const _decode_AccessMode = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AccessMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessMode */
-let _cached_encoder_for_AccessMode: $.ASN1Encoder<AccessMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AccessMode */
-/**
- * @summary Encodes a(n) AccessMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessMode, encoded as an ASN.1 Element.
- */
-export function _encode_AccessMode(
-    value: AccessMode,
-    elGetter: $.ASN1Encoder<AccessMode>
-) {
-    if (!_cached_encoder_for_AccessMode) {
-        _cached_encoder_for_AccessMode = $._encodeBitString;
-    }
-    return _cached_encoder_for_AccessMode(value, elGetter);
-}
+export const _encode_AccessMode = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AccessMode */
 

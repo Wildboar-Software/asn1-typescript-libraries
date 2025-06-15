@@ -97,45 +97,17 @@ export const timeout: ReleaseProtectionError =
 /* END_OF_SYMBOL_DEFINITION timeout */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseProtectionError */
-let _cached_decoder_for_ReleaseProtectionError: $.ASN1Decoder<ReleaseProtectionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseProtectionError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReleaseProtectionError */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReleaseProtectionError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReleaseProtectionError} The decoded data structure.
- */
-export function _decode_ReleaseProtectionError(el: _Element) {
-    if (!_cached_decoder_for_ReleaseProtectionError) {
-        _cached_decoder_for_ReleaseProtectionError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ReleaseProtectionError(el);
-}
+export const _decode_ReleaseProtectionError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ReleaseProtectionError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseProtectionError */
-let _cached_encoder_for_ReleaseProtectionError: $.ASN1Encoder<ReleaseProtectionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseProtectionError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReleaseProtectionError */
-/**
- * @summary Encodes a(n) ReleaseProtectionError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReleaseProtectionError, encoded as an ASN.1 Element.
- */
-export function _encode_ReleaseProtectionError(
-    value: ReleaseProtectionError,
-    elGetter: $.ASN1Encoder<ReleaseProtectionError>
-) {
-    if (!_cached_encoder_for_ReleaseProtectionError) {
-        _cached_encoder_for_ReleaseProtectionError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ReleaseProtectionError(value, elGetter);
-}
+export const _encode_ReleaseProtectionError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReleaseProtectionError */
 

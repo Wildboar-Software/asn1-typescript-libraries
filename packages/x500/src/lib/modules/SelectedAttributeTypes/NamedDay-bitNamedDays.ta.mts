@@ -129,45 +129,17 @@ export const saturday: number = NamedDay_bitNamedDays_saturday; /* SHORT_NAMED_B
 /* END_OF_SYMBOL_DEFINITION saturday */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedDay_bitNamedDays */
-let _cached_decoder_for_NamedDay_bitNamedDays: $.ASN1Decoder<NamedDay_bitNamedDays> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedDay_bitNamedDays */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NamedDay_bitNamedDays */
-/**
- * @summary Decodes an ASN.1 element into a(n) NamedDay_bitNamedDays
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NamedDay_bitNamedDays} The decoded data structure.
- */
-export function _decode_NamedDay_bitNamedDays(el: _Element) {
-    if (!_cached_decoder_for_NamedDay_bitNamedDays) {
-        _cached_decoder_for_NamedDay_bitNamedDays = $._decodeBitString;
-    }
-    return _cached_decoder_for_NamedDay_bitNamedDays(el);
-}
+export const _decode_NamedDay_bitNamedDays = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_NamedDay_bitNamedDays */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedDay_bitNamedDays */
-let _cached_encoder_for_NamedDay_bitNamedDays: $.ASN1Encoder<NamedDay_bitNamedDays> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedDay_bitNamedDays */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NamedDay_bitNamedDays */
-/**
- * @summary Encodes a(n) NamedDay_bitNamedDays into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NamedDay_bitNamedDays, encoded as an ASN.1 Element.
- */
-export function _encode_NamedDay_bitNamedDays(
-    value: NamedDay_bitNamedDays,
-    elGetter: $.ASN1Encoder<NamedDay_bitNamedDays>
-) {
-    if (!_cached_encoder_for_NamedDay_bitNamedDays) {
-        _cached_encoder_for_NamedDay_bitNamedDays = $._encodeBitString;
-    }
-    return _cached_encoder_for_NamedDay_bitNamedDays(value, elGetter);
-}
+export const _encode_NamedDay_bitNamedDays = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NamedDay_bitNamedDays */
 

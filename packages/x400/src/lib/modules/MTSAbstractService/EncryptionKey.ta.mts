@@ -27,45 +27,17 @@ export type EncryptionKey = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION EncryptionKey */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionKey */
-let _cached_decoder_for_EncryptionKey: $.ASN1Decoder<EncryptionKey> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionKey */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EncryptionKey */
-/**
- * @summary Decodes an ASN.1 element into a(n) EncryptionKey
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EncryptionKey} The decoded data structure.
- */
-export function _decode_EncryptionKey(el: _Element) {
-    if (!_cached_decoder_for_EncryptionKey) {
-        _cached_decoder_for_EncryptionKey = $._decodeBitString;
-    }
-    return _cached_decoder_for_EncryptionKey(el);
-}
+export const _decode_EncryptionKey = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_EncryptionKey */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionKey */
-let _cached_encoder_for_EncryptionKey: $.ASN1Encoder<EncryptionKey> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionKey */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EncryptionKey */
-/**
- * @summary Encodes a(n) EncryptionKey into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EncryptionKey, encoded as an ASN.1 Element.
- */
-export function _encode_EncryptionKey(
-    value: EncryptionKey,
-    elGetter: $.ASN1Encoder<EncryptionKey>
-) {
-    if (!_cached_encoder_for_EncryptionKey) {
-        _cached_encoder_for_EncryptionKey = $._encodeBitString;
-    }
-    return _cached_encoder_for_EncryptionKey(value, elGetter);
-}
+export const _encode_EncryptionKey = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EncryptionKey */
 

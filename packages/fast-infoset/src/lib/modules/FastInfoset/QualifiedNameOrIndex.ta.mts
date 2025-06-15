@@ -41,59 +41,31 @@ export type QualifiedNameOrIndex =
 /* END_OF_SYMBOL_DEFINITION QualifiedNameOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QualifiedNameOrIndex */
-let _cached_decoder_for_QualifiedNameOrIndex: $.ASN1Decoder<QualifiedNameOrIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QualifiedNameOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _decode_QualifiedNameOrIndex */
-/**
- * @summary Decodes an ASN.1 element into a(n) QualifiedNameOrIndex
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {QualifiedNameOrIndex} The decoded data structure.
- */
-export function _decode_QualifiedNameOrIndex(el: _Element) {
-  if (!_cached_decoder_for_QualifiedNameOrIndex) {
-    _cached_decoder_for_QualifiedNameOrIndex = $._decode_inextensible_choice<QualifiedNameOrIndex>(
-      {
-        'CONTEXT 0': [
-          'literal_qualified_name',
-          _decode_QualifiedNameOrIndex_literal_qualified_name,
-        ],
-        'CONTEXT 1': ['name_surrogate_index', $._decodeInteger],
-      }
-    );
+export const _decode_QualifiedNameOrIndex = $._decode_inextensible_choice<QualifiedNameOrIndex>(
+  {
+    'CONTEXT 0': [
+      'literal_qualified_name',
+      _decode_QualifiedNameOrIndex_literal_qualified_name,
+    ],
+    'CONTEXT 1': ['name_surrogate_index', $._decodeInteger],
   }
-  return _cached_decoder_for_QualifiedNameOrIndex(el);
-}
+);
 /* END_OF_SYMBOL_DEFINITION _decode_QualifiedNameOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QualifiedNameOrIndex */
-let _cached_encoder_for_QualifiedNameOrIndex: $.ASN1Encoder<QualifiedNameOrIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QualifiedNameOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _encode_QualifiedNameOrIndex */
-/**
- * @summary Encodes a(n) QualifiedNameOrIndex into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The QualifiedNameOrIndex, encoded as an ASN.1 Element.
- */
-export function _encode_QualifiedNameOrIndex(
-  value: QualifiedNameOrIndex,
-  elGetter: $.ASN1Encoder<QualifiedNameOrIndex>
-) {
-  if (!_cached_encoder_for_QualifiedNameOrIndex) {
-    _cached_encoder_for_QualifiedNameOrIndex = $._encode_choice<QualifiedNameOrIndex>(
-      {
-        literal_qualified_name: _encode_QualifiedNameOrIndex_literal_qualified_name,
-        name_surrogate_index: $._encodeInteger,
-      },
-      $.BER
-    );
-  }
-  return _cached_encoder_for_QualifiedNameOrIndex(value, elGetter);
-}
+export const _encode_QualifiedNameOrIndex = $._encode_choice<QualifiedNameOrIndex>(
+  {
+    literal_qualified_name: _encode_QualifiedNameOrIndex_literal_qualified_name,
+    name_surrogate_index: $._encodeInteger,
+  },
+  $.BER
+);
 
 /* END_OF_SYMBOL_DEFINITION _encode_QualifiedNameOrIndex */
 

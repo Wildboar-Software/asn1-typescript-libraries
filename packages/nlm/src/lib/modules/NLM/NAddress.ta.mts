@@ -27,45 +27,17 @@ export type NAddress = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION NAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NAddress */
-let _cached_decoder_for_NAddress: $.ASN1Decoder<NAddress> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NAddress */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NAddress */
-/**
- * @summary Decodes an ASN.1 element into a(n) NAddress
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NAddress} The decoded data structure.
- */
-export function _decode_NAddress(el: _Element) {
-    if (!_cached_decoder_for_NAddress) {
-        _cached_decoder_for_NAddress = $._decodeOctetString;
-    }
-    return _cached_decoder_for_NAddress(el);
-}
+export const _decode_NAddress = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_NAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NAddress */
-let _cached_encoder_for_NAddress: $.ASN1Encoder<NAddress> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NAddress */
-/**
- * @summary Encodes a(n) NAddress into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NAddress, encoded as an ASN.1 Element.
- */
-export function _encode_NAddress(
-    value: NAddress,
-    elGetter: $.ASN1Encoder<NAddress>
-) {
-    if (!_cached_encoder_for_NAddress) {
-        _cached_encoder_for_NAddress = $._encodeOctetString;
-    }
-    return _cached_encoder_for_NAddress(value, elGetter);
-}
+export const _encode_NAddress = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NAddress */
 

@@ -118,45 +118,17 @@ export const auxiliary: ObjectClassKind =
 /* END_OF_SYMBOL_DEFINITION auxiliary */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClassKind */
-let _cached_decoder_for_ObjectClassKind: $.ASN1Decoder<ObjectClassKind> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClassKind */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ObjectClassKind */
-/**
- * @summary Decodes an ASN.1 element into a(n) ObjectClassKind
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ObjectClassKind} The decoded data structure.
- */
-export function _decode_ObjectClassKind(el: _Element) {
-    if (!_cached_decoder_for_ObjectClassKind) {
-        _cached_decoder_for_ObjectClassKind = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ObjectClassKind(el);
-}
+export const _decode_ObjectClassKind = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ObjectClassKind */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClassKind */
-let _cached_encoder_for_ObjectClassKind: $.ASN1Encoder<ObjectClassKind> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClassKind */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ObjectClassKind */
-/**
- * @summary Encodes a(n) ObjectClassKind into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ObjectClassKind, encoded as an ASN.1 Element.
- */
-export function _encode_ObjectClassKind(
-    value: ObjectClassKind,
-    elGetter: $.ASN1Encoder<ObjectClassKind>
-) {
-    if (!_cached_encoder_for_ObjectClassKind) {
-        _cached_encoder_for_ObjectClassKind = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ObjectClassKind(value, elGetter);
-}
+export const _encode_ObjectClassKind = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ObjectClassKind */
 

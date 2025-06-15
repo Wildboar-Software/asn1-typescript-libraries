@@ -122,45 +122,17 @@ export const forwarded_by_edi_ms: FNUAMSBasicCodeField = FNUAMSBasicCodeField_fo
 /* END_OF_SYMBOL_DEFINITION forwarded_by_edi_ms */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSBasicCodeField */
-let _cached_decoder_for_FNUAMSBasicCodeField: $.ASN1Decoder<FNUAMSBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FNUAMSBasicCodeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) FNUAMSBasicCodeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FNUAMSBasicCodeField} The decoded data structure.
- */
-export function _decode_FNUAMSBasicCodeField(el: _Element) {
-    if (!_cached_decoder_for_FNUAMSBasicCodeField) {
-        _cached_decoder_for_FNUAMSBasicCodeField = $._decodeInteger;
-    }
-    return _cached_decoder_for_FNUAMSBasicCodeField(el);
-}
+export const _decode_FNUAMSBasicCodeField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FNUAMSBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSBasicCodeField */
-let _cached_encoder_for_FNUAMSBasicCodeField: $.ASN1Encoder<FNUAMSBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FNUAMSBasicCodeField */
-/**
- * @summary Encodes a(n) FNUAMSBasicCodeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FNUAMSBasicCodeField, encoded as an ASN.1 Element.
- */
-export function _encode_FNUAMSBasicCodeField(
-    value: FNUAMSBasicCodeField,
-    elGetter: $.ASN1Encoder<FNUAMSBasicCodeField>
-) {
-    if (!_cached_encoder_for_FNUAMSBasicCodeField) {
-        _cached_encoder_for_FNUAMSBasicCodeField = $._encodeInteger;
-    }
-    return _cached_encoder_for_FNUAMSBasicCodeField(value, elGetter);
-}
+export const _encode_FNUAMSBasicCodeField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FNUAMSBasicCodeField */
 

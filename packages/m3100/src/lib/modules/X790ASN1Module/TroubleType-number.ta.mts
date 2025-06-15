@@ -3519,45 +3519,17 @@ export const testAssist: TroubleType_number = TroubleType_number_testAssist; /* 
 /* END_OF_SYMBOL_DEFINITION testAssist */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleType_number */
-let _cached_decoder_for_TroubleType_number: $.ASN1Decoder<TroubleType_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleType_number */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TroubleType_number */
-/**
- * @summary Decodes an ASN.1 element into a(n) TroubleType_number
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TroubleType_number} The decoded data structure.
- */
-export function _decode_TroubleType_number(el: _Element) {
-    if (!_cached_decoder_for_TroubleType_number) {
-        _cached_decoder_for_TroubleType_number = $._decodeInteger;
-    }
-    return _cached_decoder_for_TroubleType_number(el);
-}
+export const _decode_TroubleType_number = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TroubleType_number */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleType_number */
-let _cached_encoder_for_TroubleType_number: $.ASN1Encoder<TroubleType_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleType_number */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TroubleType_number */
-/**
- * @summary Encodes a(n) TroubleType_number into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TroubleType_number, encoded as an ASN.1 Element.
- */
-export function _encode_TroubleType_number(
-    value: TroubleType_number,
-    elGetter: $.ASN1Encoder<TroubleType_number>
-) {
-    if (!_cached_encoder_for_TroubleType_number) {
-        _cached_encoder_for_TroubleType_number = $._encodeInteger;
-    }
-    return _cached_encoder_for_TroubleType_number(value, elGetter);
-}
+export const _encode_TroubleType_number = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TroubleType_number */
 

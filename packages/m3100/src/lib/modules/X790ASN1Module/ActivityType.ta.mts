@@ -174,45 +174,17 @@ export const release: number = ActivityType_release; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION release */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityType */
-let _cached_decoder_for_ActivityType: $.ASN1Decoder<ActivityType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ActivityType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ActivityType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ActivityType} The decoded data structure.
- */
-export function _decode_ActivityType(el: _Element) {
-    if (!_cached_decoder_for_ActivityType) {
-        _cached_decoder_for_ActivityType = $._decodeBitString;
-    }
-    return _cached_decoder_for_ActivityType(el);
-}
+export const _decode_ActivityType = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ActivityType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityType */
-let _cached_encoder_for_ActivityType: $.ASN1Encoder<ActivityType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ActivityType */
-/**
- * @summary Encodes a(n) ActivityType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActivityType, encoded as an ASN.1 Element.
- */
-export function _encode_ActivityType(
-    value: ActivityType,
-    elGetter: $.ASN1Encoder<ActivityType>
-) {
-    if (!_cached_encoder_for_ActivityType) {
-        _cached_encoder_for_ActivityType = $._encodeBitString;
-    }
-    return _cached_encoder_for_ActivityType(value, elGetter);
-}
+export const _encode_ActivityType = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ActivityType */
 

@@ -103,45 +103,17 @@ export const colon: ProtectionGroupType =
 /* END_OF_SYMBOL_DEFINITION colon */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionGroupType */
-let _cached_decoder_for_ProtectionGroupType: $.ASN1Decoder<ProtectionGroupType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionGroupType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProtectionGroupType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProtectionGroupType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProtectionGroupType} The decoded data structure.
- */
-export function _decode_ProtectionGroupType(el: _Element) {
-    if (!_cached_decoder_for_ProtectionGroupType) {
-        _cached_decoder_for_ProtectionGroupType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ProtectionGroupType(el);
-}
+export const _decode_ProtectionGroupType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ProtectionGroupType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionGroupType */
-let _cached_encoder_for_ProtectionGroupType: $.ASN1Encoder<ProtectionGroupType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionGroupType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProtectionGroupType */
-/**
- * @summary Encodes a(n) ProtectionGroupType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProtectionGroupType, encoded as an ASN.1 Element.
- */
-export function _encode_ProtectionGroupType(
-    value: ProtectionGroupType,
-    elGetter: $.ASN1Encoder<ProtectionGroupType>
-) {
-    if (!_cached_encoder_for_ProtectionGroupType) {
-        _cached_encoder_for_ProtectionGroupType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ProtectionGroupType(value, elGetter);
-}
+export const _encode_ProtectionGroupType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProtectionGroupType */
 

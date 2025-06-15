@@ -50,40 +50,17 @@ const ecPrivkeyVer1: ECPrivateKey_version = ECPrivateKey_version_ecPrivkeyVer1; 
 /* END_OF_SYMBOL_DEFINITION ecPrivkeyVer1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPrivateKey_version */
-let _cached_decoder_for_ECPrivateKey_version: $.ASN1Decoder<ECPrivateKey_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPrivateKey_version */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ECPrivateKey_version */
-/**
- * @summary Decodes an ASN.1 element into a(n) ECPrivateKey_version
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ECPrivateKey_version} The decoded data structure.
- */
-export
-function _decode_ECPrivateKey_version (el: _Element) {
-    if (!_cached_decoder_for_ECPrivateKey_version) { _cached_decoder_for_ECPrivateKey_version = $._decodeInteger; }
-    return _cached_decoder_for_ECPrivateKey_version(el);
-}
+export const _decode_ECPrivateKey_version = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ECPrivateKey_version */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPrivateKey_version */
-let _cached_encoder_for_ECPrivateKey_version: $.ASN1Encoder<ECPrivateKey_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPrivateKey_version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ECPrivateKey_version */
-/**
- * @summary Encodes a(n) ECPrivateKey_version into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ECPrivateKey_version, encoded as an ASN.1 Element.
- */
-export
-function _encode_ECPrivateKey_version (value: ECPrivateKey_version, elGetter: $.ASN1Encoder<ECPrivateKey_version>) {
-    if (!_cached_encoder_for_ECPrivateKey_version) { _cached_encoder_for_ECPrivateKey_version = $._encodeInteger; }
-    return _cached_encoder_for_ECPrivateKey_version(value, elGetter);
-}
+export const _encode_ECPrivateKey_version = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ECPrivateKey_version */
 

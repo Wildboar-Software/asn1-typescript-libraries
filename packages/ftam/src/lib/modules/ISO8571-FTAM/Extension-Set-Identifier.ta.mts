@@ -27,45 +27,17 @@ export type Extension_Set_Identifier = OBJECT_IDENTIFIER; // ObjectIdentifierTyp
 /* END_OF_SYMBOL_DEFINITION Extension_Set_Identifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension_Set_Identifier */
-let _cached_decoder_for_Extension_Set_Identifier: $.ASN1Decoder<Extension_Set_Identifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension_Set_Identifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Extension_Set_Identifier */
-/**
- * @summary Decodes an ASN.1 element into a(n) Extension_Set_Identifier
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Extension_Set_Identifier} The decoded data structure.
- */
-export function _decode_Extension_Set_Identifier(el: _Element) {
-  if (!_cached_decoder_for_Extension_Set_Identifier) {
-    _cached_decoder_for_Extension_Set_Identifier = $._decodeObjectIdentifier;
-  }
-  return _cached_decoder_for_Extension_Set_Identifier(el);
-}
+export const _decode_Extension_Set_Identifier = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_Extension_Set_Identifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Extension_Set_Identifier */
-let _cached_encoder_for_Extension_Set_Identifier: $.ASN1Encoder<Extension_Set_Identifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Extension_Set_Identifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Extension_Set_Identifier */
-/**
- * @summary Encodes a(n) Extension_Set_Identifier into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Extension_Set_Identifier, encoded as an ASN.1 Element.
- */
-export function _encode_Extension_Set_Identifier(
-  value: Extension_Set_Identifier,
-  elGetter: $.ASN1Encoder<Extension_Set_Identifier>
-) {
-  if (!_cached_encoder_for_Extension_Set_Identifier) {
-    _cached_encoder_for_Extension_Set_Identifier = $._encodeObjectIdentifier;
-  }
-  return _cached_encoder_for_Extension_Set_Identifier(value, elGetter);
-}
+export const _encode_Extension_Set_Identifier = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Extension_Set_Identifier */
 

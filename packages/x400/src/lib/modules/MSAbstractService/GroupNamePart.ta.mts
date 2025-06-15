@@ -27,45 +27,17 @@ export type GroupNamePart = GeneralString; // GeneralString
 /* END_OF_SYMBOL_DEFINITION GroupNamePart */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupNamePart */
-let _cached_decoder_for_GroupNamePart: $.ASN1Decoder<GroupNamePart> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupNamePart */
 
 /* START_OF_SYMBOL_DEFINITION _decode_GroupNamePart */
-/**
- * @summary Decodes an ASN.1 element into a(n) GroupNamePart
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {GroupNamePart} The decoded data structure.
- */
-export function _decode_GroupNamePart(el: _Element) {
-    if (!_cached_decoder_for_GroupNamePart) {
-        _cached_decoder_for_GroupNamePart = $._decodeGeneralString;
-    }
-    return _cached_decoder_for_GroupNamePart(el);
-}
+export const _decode_GroupNamePart = $._decodeGeneralString;
 /* END_OF_SYMBOL_DEFINITION _decode_GroupNamePart */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupNamePart */
-let _cached_encoder_for_GroupNamePart: $.ASN1Encoder<GroupNamePart> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupNamePart */
 
 /* START_OF_SYMBOL_DEFINITION _encode_GroupNamePart */
-/**
- * @summary Encodes a(n) GroupNamePart into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GroupNamePart, encoded as an ASN.1 Element.
- */
-export function _encode_GroupNamePart(
-    value: GroupNamePart,
-    elGetter: $.ASN1Encoder<GroupNamePart>
-) {
-    if (!_cached_encoder_for_GroupNamePart) {
-        _cached_encoder_for_GroupNamePart = $._encodeGeneralString;
-    }
-    return _cached_encoder_for_GroupNamePart(value, elGetter);
-}
+export const _encode_GroupNamePart = $._encodeGeneralString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_GroupNamePart */
 

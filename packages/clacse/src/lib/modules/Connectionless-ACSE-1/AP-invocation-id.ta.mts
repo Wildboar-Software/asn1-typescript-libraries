@@ -27,45 +27,17 @@ export type AP_invocation_id = INTEGER;
 /* END_OF_SYMBOL_DEFINITION AP_invocation_id */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_invocation_id */
-let _cached_decoder_for_AP_invocation_id: $.ASN1Decoder<AP_invocation_id> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_invocation_id */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AP_invocation_id */
-/**
- * @summary Decodes an ASN.1 element into a(n) AP_invocation_id
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AP_invocation_id} The decoded data structure.
- */
-export function _decode_AP_invocation_id(el: _Element) {
-    if (!_cached_decoder_for_AP_invocation_id) {
-        _cached_decoder_for_AP_invocation_id = $._decodeInteger;
-    }
-    return _cached_decoder_for_AP_invocation_id(el);
-}
+export const _decode_AP_invocation_id = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AP_invocation_id */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_invocation_id */
-let _cached_encoder_for_AP_invocation_id: $.ASN1Encoder<AP_invocation_id> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_invocation_id */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AP_invocation_id */
-/**
- * @summary Encodes a(n) AP_invocation_id into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AP_invocation_id, encoded as an ASN.1 Element.
- */
-export function _encode_AP_invocation_id(
-    value: AP_invocation_id,
-    elGetter: $.ASN1Encoder<AP_invocation_id>
-) {
-    if (!_cached_encoder_for_AP_invocation_id) {
-        _cached_encoder_for_AP_invocation_id = $._encodeInteger;
-    }
-    return _cached_encoder_for_AP_invocation_id(value, elGetter);
-}
+export const _encode_AP_invocation_id = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AP_invocation_id */
 

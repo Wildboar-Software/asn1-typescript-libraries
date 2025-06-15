@@ -27,45 +27,17 @@ export type HoldingTimerMultiplierRequired = INTEGER;
 /* END_OF_SYMBOL_DEFINITION HoldingTimerMultiplierRequired */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HoldingTimerMultiplierRequired */
-let _cached_decoder_for_HoldingTimerMultiplierRequired: $.ASN1Decoder<HoldingTimerMultiplierRequired> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HoldingTimerMultiplierRequired */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HoldingTimerMultiplierRequired */
-/**
- * @summary Decodes an ASN.1 element into a(n) HoldingTimerMultiplierRequired
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HoldingTimerMultiplierRequired} The decoded data structure.
- */
-export function _decode_HoldingTimerMultiplierRequired(el: _Element) {
-    if (!_cached_decoder_for_HoldingTimerMultiplierRequired) {
-        _cached_decoder_for_HoldingTimerMultiplierRequired = $._decodeInteger;
-    }
-    return _cached_decoder_for_HoldingTimerMultiplierRequired(el);
-}
+export const _decode_HoldingTimerMultiplierRequired = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_HoldingTimerMultiplierRequired */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HoldingTimerMultiplierRequired */
-let _cached_encoder_for_HoldingTimerMultiplierRequired: $.ASN1Encoder<HoldingTimerMultiplierRequired> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HoldingTimerMultiplierRequired */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HoldingTimerMultiplierRequired */
-/**
- * @summary Encodes a(n) HoldingTimerMultiplierRequired into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HoldingTimerMultiplierRequired, encoded as an ASN.1 Element.
- */
-export function _encode_HoldingTimerMultiplierRequired(
-    value: HoldingTimerMultiplierRequired,
-    elGetter: $.ASN1Encoder<HoldingTimerMultiplierRequired>
-) {
-    if (!_cached_encoder_for_HoldingTimerMultiplierRequired) {
-        _cached_encoder_for_HoldingTimerMultiplierRequired = $._encodeInteger;
-    }
-    return _cached_encoder_for_HoldingTimerMultiplierRequired(value, elGetter);
-}
+export const _encode_HoldingTimerMultiplierRequired = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HoldingTimerMultiplierRequired */
 

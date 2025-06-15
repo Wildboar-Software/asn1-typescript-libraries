@@ -62,45 +62,17 @@ export const calledAETitleNotRecognized: IdmBindError_aETitleError = IdmBindErro
 /* END_OF_SYMBOL_DEFINITION calledAETitleNotRecognized */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBindError_aETitleError */
-let _cached_decoder_for_IdmBindError_aETitleError: $.ASN1Decoder<IdmBindError_aETitleError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBindError_aETitleError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IdmBindError_aETitleError */
-/**
- * @summary Decodes an ASN.1 element into a(n) IdmBindError_aETitleError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IdmBindError_aETitleError} The decoded data structure.
- */
-export function _decode_IdmBindError_aETitleError(el: _Element) {
-    if (!_cached_decoder_for_IdmBindError_aETitleError) {
-        _cached_decoder_for_IdmBindError_aETitleError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_IdmBindError_aETitleError(el);
-}
+export const _decode_IdmBindError_aETitleError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_IdmBindError_aETitleError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBindError_aETitleError */
-let _cached_encoder_for_IdmBindError_aETitleError: $.ASN1Encoder<IdmBindError_aETitleError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBindError_aETitleError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IdmBindError_aETitleError */
-/**
- * @summary Encodes a(n) IdmBindError_aETitleError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IdmBindError_aETitleError, encoded as an ASN.1 Element.
- */
-export function _encode_IdmBindError_aETitleError(
-    value: IdmBindError_aETitleError,
-    elGetter: $.ASN1Encoder<IdmBindError_aETitleError>
-) {
-    if (!_cached_encoder_for_IdmBindError_aETitleError) {
-        _cached_encoder_for_IdmBindError_aETitleError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_IdmBindError_aETitleError(value, elGetter);
-}
+export const _encode_IdmBindError_aETitleError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IdmBindError_aETitleError */
 

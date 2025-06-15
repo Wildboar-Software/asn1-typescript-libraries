@@ -189,45 +189,17 @@ export const unauthorizedAccessError: ErrorCode_Item = ErrorCode_Item_unauthoriz
 /* END_OF_SYMBOL_DEFINITION unauthorizedAccessError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorCode_Item */
-let _cached_decoder_for_ErrorCode_Item: $.ASN1Decoder<ErrorCode_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorCode_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ErrorCode_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) ErrorCode_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ErrorCode_Item} The decoded data structure.
- */
-export function _decode_ErrorCode_Item(el: _Element) {
-    if (!_cached_decoder_for_ErrorCode_Item) {
-        _cached_decoder_for_ErrorCode_Item = $._decodeInteger;
-    }
-    return _cached_decoder_for_ErrorCode_Item(el);
-}
+export const _decode_ErrorCode_Item = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ErrorCode_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorCode_Item */
-let _cached_encoder_for_ErrorCode_Item: $.ASN1Encoder<ErrorCode_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorCode_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ErrorCode_Item */
-/**
- * @summary Encodes a(n) ErrorCode_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ErrorCode_Item, encoded as an ASN.1 Element.
- */
-export function _encode_ErrorCode_Item(
-    value: ErrorCode_Item,
-    elGetter: $.ASN1Encoder<ErrorCode_Item>
-) {
-    if (!_cached_encoder_for_ErrorCode_Item) {
-        _cached_encoder_for_ErrorCode_Item = $._encodeInteger;
-    }
-    return _cached_encoder_for_ErrorCode_Item(value, elGetter);
-}
+export const _encode_ErrorCode_Item = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ErrorCode_Item */
 

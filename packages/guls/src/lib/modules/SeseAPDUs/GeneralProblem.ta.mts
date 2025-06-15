@@ -76,45 +76,17 @@ export const invalidAPDU: GeneralProblem =
 /* END_OF_SYMBOL_DEFINITION invalidAPDU */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralProblem */
-let _cached_decoder_for_GeneralProblem: $.ASN1Decoder<GeneralProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_GeneralProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) GeneralProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {GeneralProblem} The decoded data structure.
- */
-export function _decode_GeneralProblem(el: _Element) {
-  if (!_cached_decoder_for_GeneralProblem) {
-    _cached_decoder_for_GeneralProblem = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_GeneralProblem(el);
-}
+export const _decode_GeneralProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_GeneralProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralProblem */
-let _cached_encoder_for_GeneralProblem: $.ASN1Encoder<GeneralProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_GeneralProblem */
-/**
- * @summary Encodes a(n) GeneralProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GeneralProblem, encoded as an ASN.1 Element.
- */
-export function _encode_GeneralProblem(
-  value: GeneralProblem,
-  elGetter: $.ASN1Encoder<GeneralProblem>
-) {
-  if (!_cached_encoder_for_GeneralProblem) {
-    _cached_encoder_for_GeneralProblem = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_GeneralProblem(value, elGetter);
-}
+export const _encode_GeneralProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_GeneralProblem */
 

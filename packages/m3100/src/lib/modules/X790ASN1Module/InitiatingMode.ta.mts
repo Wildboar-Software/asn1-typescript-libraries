@@ -157,45 +157,17 @@ export const managerIndirectPhone: InitiatingMode = InitiatingMode_managerIndire
 /* END_OF_SYMBOL_DEFINITION managerIndirectPhone */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitiatingMode */
-let _cached_decoder_for_InitiatingMode: $.ASN1Decoder<InitiatingMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitiatingMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InitiatingMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) InitiatingMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InitiatingMode} The decoded data structure.
- */
-export function _decode_InitiatingMode(el: _Element) {
-    if (!_cached_decoder_for_InitiatingMode) {
-        _cached_decoder_for_InitiatingMode = $._decodeInteger;
-    }
-    return _cached_decoder_for_InitiatingMode(el);
-}
+export const _decode_InitiatingMode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_InitiatingMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitiatingMode */
-let _cached_encoder_for_InitiatingMode: $.ASN1Encoder<InitiatingMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitiatingMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InitiatingMode */
-/**
- * @summary Encodes a(n) InitiatingMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitiatingMode, encoded as an ASN.1 Element.
- */
-export function _encode_InitiatingMode(
-    value: InitiatingMode,
-    elGetter: $.ASN1Encoder<InitiatingMode>
-) {
-    if (!_cached_encoder_for_InitiatingMode) {
-        _cached_encoder_for_InitiatingMode = $._encodeInteger;
-    }
-    return _cached_encoder_for_InitiatingMode(value, elGetter);
-}
+export const _encode_InitiatingMode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InitiatingMode */
 

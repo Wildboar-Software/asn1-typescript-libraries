@@ -27,45 +27,17 @@ export type AuthorizationTime = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION AuthorizationTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationTime */
-let _cached_decoder_for_AuthorizationTime: $.ASN1Decoder<AuthorizationTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AuthorizationTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthorizationTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AuthorizationTime} The decoded data structure.
- */
-export function _decode_AuthorizationTime(el: _Element) {
-    if (!_cached_decoder_for_AuthorizationTime) {
-        _cached_decoder_for_AuthorizationTime = $._decodeGeneralizedTime;
-    }
-    return _cached_decoder_for_AuthorizationTime(el);
-}
+export const _decode_AuthorizationTime = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_AuthorizationTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationTime */
-let _cached_encoder_for_AuthorizationTime: $.ASN1Encoder<AuthorizationTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AuthorizationTime */
-/**
- * @summary Encodes a(n) AuthorizationTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthorizationTime, encoded as an ASN.1 Element.
- */
-export function _encode_AuthorizationTime(
-    value: AuthorizationTime,
-    elGetter: $.ASN1Encoder<AuthorizationTime>
-) {
-    if (!_cached_encoder_for_AuthorizationTime) {
-        _cached_encoder_for_AuthorizationTime = $._encodeGeneralizedTime;
-    }
-    return _cached_encoder_for_AuthorizationTime(value, elGetter);
-}
+export const _encode_AuthorizationTime = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AuthorizationTime */
 

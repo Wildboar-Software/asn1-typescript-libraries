@@ -157,45 +157,17 @@ export const report_transfer_envelope: EnvelopeType = EnvelopeType_report_transf
 /* END_OF_SYMBOL_DEFINITION report_transfer_envelope */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnvelopeType */
-let _cached_decoder_for_EnvelopeType: $.ASN1Decoder<EnvelopeType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnvelopeType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EnvelopeType */
-/**
- * @summary Decodes an ASN.1 element into a(n) EnvelopeType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EnvelopeType} The decoded data structure.
- */
-export function _decode_EnvelopeType(el: _Element) {
-    if (!_cached_decoder_for_EnvelopeType) {
-        _cached_decoder_for_EnvelopeType = $._decodeInteger;
-    }
-    return _cached_decoder_for_EnvelopeType(el);
-}
+export const _decode_EnvelopeType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_EnvelopeType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnvelopeType */
-let _cached_encoder_for_EnvelopeType: $.ASN1Encoder<EnvelopeType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnvelopeType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EnvelopeType */
-/**
- * @summary Encodes a(n) EnvelopeType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EnvelopeType, encoded as an ASN.1 Element.
- */
-export function _encode_EnvelopeType(
-    value: EnvelopeType,
-    elGetter: $.ASN1Encoder<EnvelopeType>
-) {
-    if (!_cached_encoder_for_EnvelopeType) {
-        _cached_encoder_for_EnvelopeType = $._encodeInteger;
-    }
-    return _cached_encoder_for_EnvelopeType(value, elGetter);
-}
+export const _encode_EnvelopeType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EnvelopeType */
 

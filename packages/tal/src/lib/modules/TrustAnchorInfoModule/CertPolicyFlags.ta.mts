@@ -87,40 +87,17 @@ const inhibitAnyPolicy: number = CertPolicyFlags_inhibitAnyPolicy; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION inhibitAnyPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertPolicyFlags */
-let _cached_decoder_for_CertPolicyFlags: $.ASN1Decoder<CertPolicyFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertPolicyFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CertPolicyFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) CertPolicyFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CertPolicyFlags} The decoded data structure.
- */
-export
-function _decode_CertPolicyFlags (el: _Element) {
-    if (!_cached_decoder_for_CertPolicyFlags) { _cached_decoder_for_CertPolicyFlags = $._decodeBitString; }
-    return _cached_decoder_for_CertPolicyFlags(el);
-}
+export const _decode_CertPolicyFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_CertPolicyFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertPolicyFlags */
-let _cached_encoder_for_CertPolicyFlags: $.ASN1Encoder<CertPolicyFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertPolicyFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CertPolicyFlags */
-/**
- * @summary Encodes a(n) CertPolicyFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CertPolicyFlags, encoded as an ASN.1 Element.
- */
-export
-function _encode_CertPolicyFlags (value: CertPolicyFlags, elGetter: $.ASN1Encoder<CertPolicyFlags>) {
-    if (!_cached_encoder_for_CertPolicyFlags) { _cached_encoder_for_CertPolicyFlags = $._encodeBitString; }
-    return _cached_encoder_for_CertPolicyFlags(value, elGetter);
-}
+export const _encode_CertPolicyFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CertPolicyFlags */
 

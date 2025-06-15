@@ -27,45 +27,17 @@ export type BodyPartNumber = INTEGER;
 /* END_OF_SYMBOL_DEFINITION BodyPartNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartNumber */
-let _cached_decoder_for_BodyPartNumber: $.ASN1Decoder<BodyPartNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartNumber */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BodyPartNumber */
-/**
- * @summary Decodes an ASN.1 element into a(n) BodyPartNumber
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BodyPartNumber} The decoded data structure.
- */
-export function _decode_BodyPartNumber(el: _Element) {
-    if (!_cached_decoder_for_BodyPartNumber) {
-        _cached_decoder_for_BodyPartNumber = $._decodeInteger;
-    }
-    return _cached_decoder_for_BodyPartNumber(el);
-}
+export const _decode_BodyPartNumber = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_BodyPartNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartNumber */
-let _cached_encoder_for_BodyPartNumber: $.ASN1Encoder<BodyPartNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartNumber */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BodyPartNumber */
-/**
- * @summary Encodes a(n) BodyPartNumber into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BodyPartNumber, encoded as an ASN.1 Element.
- */
-export function _encode_BodyPartNumber(
-    value: BodyPartNumber,
-    elGetter: $.ASN1Encoder<BodyPartNumber>
-) {
-    if (!_cached_encoder_for_BodyPartNumber) {
-        _cached_encoder_for_BodyPartNumber = $._encodeInteger;
-    }
-    return _cached_encoder_for_BodyPartNumber(value, elGetter);
-}
+export const _encode_BodyPartNumber = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BodyPartNumber */
 

@@ -27,45 +27,17 @@ export type CannotVerifyOrDenyAtThisTime = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION CannotVerifyOrDenyAtThisTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CannotVerifyOrDenyAtThisTime */
-let _cached_decoder_for_CannotVerifyOrDenyAtThisTime: $.ASN1Decoder<CannotVerifyOrDenyAtThisTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CannotVerifyOrDenyAtThisTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CannotVerifyOrDenyAtThisTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) CannotVerifyOrDenyAtThisTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CannotVerifyOrDenyAtThisTime} The decoded data structure.
- */
-export function _decode_CannotVerifyOrDenyAtThisTime(el: _Element) {
-    if (!_cached_decoder_for_CannotVerifyOrDenyAtThisTime) {
-        _cached_decoder_for_CannotVerifyOrDenyAtThisTime = $._decodeNull;
-    }
-    return _cached_decoder_for_CannotVerifyOrDenyAtThisTime(el);
-}
+export const _decode_CannotVerifyOrDenyAtThisTime = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_CannotVerifyOrDenyAtThisTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CannotVerifyOrDenyAtThisTime */
-let _cached_encoder_for_CannotVerifyOrDenyAtThisTime: $.ASN1Encoder<CannotVerifyOrDenyAtThisTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CannotVerifyOrDenyAtThisTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CannotVerifyOrDenyAtThisTime */
-/**
- * @summary Encodes a(n) CannotVerifyOrDenyAtThisTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CannotVerifyOrDenyAtThisTime, encoded as an ASN.1 Element.
- */
-export function _encode_CannotVerifyOrDenyAtThisTime(
-    value: CannotVerifyOrDenyAtThisTime,
-    elGetter: $.ASN1Encoder<CannotVerifyOrDenyAtThisTime>
-) {
-    if (!_cached_encoder_for_CannotVerifyOrDenyAtThisTime) {
-        _cached_encoder_for_CannotVerifyOrDenyAtThisTime = $._encodeNull;
-    }
-    return _cached_encoder_for_CannotVerifyOrDenyAtThisTime(value, elGetter);
-}
+export const _encode_CannotVerifyOrDenyAtThisTime = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CannotVerifyOrDenyAtThisTime */
 

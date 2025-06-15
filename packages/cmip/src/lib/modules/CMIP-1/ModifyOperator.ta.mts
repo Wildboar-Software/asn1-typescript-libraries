@@ -100,45 +100,17 @@ export const setToDefault: ModifyOperator = ModifyOperator_setToDefault; /* SHOR
 /* END_OF_SYMBOL_DEFINITION setToDefault */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyOperator */
-let _cached_decoder_for_ModifyOperator: $.ASN1Decoder<ModifyOperator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyOperator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ModifyOperator */
-/**
- * @summary Decodes an ASN.1 element into a(n) ModifyOperator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ModifyOperator} The decoded data structure.
- */
-export function _decode_ModifyOperator(el: _Element) {
-  if (!_cached_decoder_for_ModifyOperator) {
-    _cached_decoder_for_ModifyOperator = $._decodeInteger;
-  }
-  return _cached_decoder_for_ModifyOperator(el);
-}
+export const _decode_ModifyOperator = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ModifyOperator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyOperator */
-let _cached_encoder_for_ModifyOperator: $.ASN1Encoder<ModifyOperator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyOperator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModifyOperator */
-/**
- * @summary Encodes a(n) ModifyOperator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ModifyOperator, encoded as an ASN.1 Element.
- */
-export function _encode_ModifyOperator(
-  value: ModifyOperator,
-  elGetter: $.ASN1Encoder<ModifyOperator>
-) {
-  if (!_cached_encoder_for_ModifyOperator) {
-    _cached_encoder_for_ModifyOperator = $._encodeInteger;
-  }
-  return _cached_encoder_for_ModifyOperator(value, elGetter);
-}
+export const _encode_ModifyOperator = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModifyOperator */
 

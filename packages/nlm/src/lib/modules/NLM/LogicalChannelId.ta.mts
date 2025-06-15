@@ -27,45 +27,17 @@ export type LogicalChannelId = INTEGER;
 /* END_OF_SYMBOL_DEFINITION LogicalChannelId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LogicalChannelId */
-let _cached_decoder_for_LogicalChannelId: $.ASN1Decoder<LogicalChannelId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LogicalChannelId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LogicalChannelId */
-/**
- * @summary Decodes an ASN.1 element into a(n) LogicalChannelId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LogicalChannelId} The decoded data structure.
- */
-export function _decode_LogicalChannelId(el: _Element) {
-    if (!_cached_decoder_for_LogicalChannelId) {
-        _cached_decoder_for_LogicalChannelId = $._decodeInteger;
-    }
-    return _cached_decoder_for_LogicalChannelId(el);
-}
+export const _decode_LogicalChannelId = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_LogicalChannelId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LogicalChannelId */
-let _cached_encoder_for_LogicalChannelId: $.ASN1Encoder<LogicalChannelId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LogicalChannelId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LogicalChannelId */
-/**
- * @summary Encodes a(n) LogicalChannelId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LogicalChannelId, encoded as an ASN.1 Element.
- */
-export function _encode_LogicalChannelId(
-    value: LogicalChannelId,
-    elGetter: $.ASN1Encoder<LogicalChannelId>
-) {
-    if (!_cached_encoder_for_LogicalChannelId) {
-        _cached_encoder_for_LogicalChannelId = $._encodeInteger;
-    }
-    return _cached_encoder_for_LogicalChannelId(value, elGetter);
-}
+export const _encode_LogicalChannelId = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LogicalChannelId */
 

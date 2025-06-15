@@ -121,45 +121,17 @@ export const undefined: LinkDirectionality =
 /* END_OF_SYMBOL_DEFINITION undefined */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkDirectionality */
-let _cached_decoder_for_LinkDirectionality: $.ASN1Decoder<LinkDirectionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LinkDirectionality */
-/**
- * @summary Decodes an ASN.1 element into a(n) LinkDirectionality
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LinkDirectionality} The decoded data structure.
- */
-export function _decode_LinkDirectionality(el: _Element) {
-    if (!_cached_decoder_for_LinkDirectionality) {
-        _cached_decoder_for_LinkDirectionality = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_LinkDirectionality(el);
-}
+export const _decode_LinkDirectionality = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_LinkDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkDirectionality */
-let _cached_encoder_for_LinkDirectionality: $.ASN1Encoder<LinkDirectionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LinkDirectionality */
-/**
- * @summary Encodes a(n) LinkDirectionality into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LinkDirectionality, encoded as an ASN.1 Element.
- */
-export function _encode_LinkDirectionality(
-    value: LinkDirectionality,
-    elGetter: $.ASN1Encoder<LinkDirectionality>
-) {
-    if (!_cached_encoder_for_LinkDirectionality) {
-        _cached_encoder_for_LinkDirectionality = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_LinkDirectionality(value, elGetter);
-}
+export const _encode_LinkDirectionality = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LinkDirectionality */
 

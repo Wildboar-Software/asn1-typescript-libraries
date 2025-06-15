@@ -83,45 +83,17 @@ export const registered_mail_to_addressee_in_person: RegisteredMailType = Regist
 /* END_OF_SYMBOL_DEFINITION registered_mail_to_addressee_in_person */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisteredMailType */
-let _cached_decoder_for_RegisteredMailType: $.ASN1Decoder<RegisteredMailType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisteredMailType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RegisteredMailType */
-/**
- * @summary Decodes an ASN.1 element into a(n) RegisteredMailType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RegisteredMailType} The decoded data structure.
- */
-export function _decode_RegisteredMailType(el: _Element) {
-    if (!_cached_decoder_for_RegisteredMailType) {
-        _cached_decoder_for_RegisteredMailType = $._decodeInteger;
-    }
-    return _cached_decoder_for_RegisteredMailType(el);
-}
+export const _decode_RegisteredMailType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RegisteredMailType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisteredMailType */
-let _cached_encoder_for_RegisteredMailType: $.ASN1Encoder<RegisteredMailType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisteredMailType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RegisteredMailType */
-/**
- * @summary Encodes a(n) RegisteredMailType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RegisteredMailType, encoded as an ASN.1 Element.
- */
-export function _encode_RegisteredMailType(
-    value: RegisteredMailType,
-    elGetter: $.ASN1Encoder<RegisteredMailType>
-) {
-    if (!_cached_encoder_for_RegisteredMailType) {
-        _cached_encoder_for_RegisteredMailType = $._encodeInteger;
-    }
-    return _cached_encoder_for_RegisteredMailType(value, elGetter);
-}
+export const _encode_RegisteredMailType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RegisteredMailType */
 

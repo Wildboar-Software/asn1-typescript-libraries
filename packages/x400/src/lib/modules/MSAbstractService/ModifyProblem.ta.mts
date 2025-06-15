@@ -120,45 +120,17 @@ export const modify_restriction_problem: ModifyProblem = ModifyProblem_modify_re
 /* END_OF_SYMBOL_DEFINITION modify_restriction_problem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyProblem */
-let _cached_decoder_for_ModifyProblem: $.ASN1Decoder<ModifyProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ModifyProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) ModifyProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ModifyProblem} The decoded data structure.
- */
-export function _decode_ModifyProblem(el: _Element) {
-    if (!_cached_decoder_for_ModifyProblem) {
-        _cached_decoder_for_ModifyProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_ModifyProblem(el);
-}
+export const _decode_ModifyProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ModifyProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyProblem */
-let _cached_encoder_for_ModifyProblem: $.ASN1Encoder<ModifyProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModifyProblem */
-/**
- * @summary Encodes a(n) ModifyProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ModifyProblem, encoded as an ASN.1 Element.
- */
-export function _encode_ModifyProblem(
-    value: ModifyProblem,
-    elGetter: $.ASN1Encoder<ModifyProblem>
-) {
-    if (!_cached_encoder_for_ModifyProblem) {
-        _cached_encoder_for_ModifyProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_ModifyProblem(value, elGetter);
-}
+export const _encode_ModifyProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModifyProblem */
 

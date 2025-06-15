@@ -27,45 +27,17 @@ export type ArcInterval = INTEGER;
 /* END_OF_SYMBOL_DEFINITION ArcInterval */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcInterval */
-let _cached_decoder_for_ArcInterval: $.ASN1Decoder<ArcInterval> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcInterval */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ArcInterval */
-/**
- * @summary Decodes an ASN.1 element into a(n) ArcInterval
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ArcInterval} The decoded data structure.
- */
-export function _decode_ArcInterval(el: _Element) {
-    if (!_cached_decoder_for_ArcInterval) {
-        _cached_decoder_for_ArcInterval = $._decodeInteger;
-    }
-    return _cached_decoder_for_ArcInterval(el);
-}
+export const _decode_ArcInterval = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ArcInterval */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcInterval */
-let _cached_encoder_for_ArcInterval: $.ASN1Encoder<ArcInterval> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcInterval */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ArcInterval */
-/**
- * @summary Encodes a(n) ArcInterval into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ArcInterval, encoded as an ASN.1 Element.
- */
-export function _encode_ArcInterval(
-    value: ArcInterval,
-    elGetter: $.ASN1Encoder<ArcInterval>
-) {
-    if (!_cached_encoder_for_ArcInterval) {
-        _cached_encoder_for_ArcInterval = $._encodeInteger;
-    }
-    return _cached_encoder_for_ArcInterval(value, elGetter);
-}
+export const _encode_ArcInterval = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ArcInterval */
 

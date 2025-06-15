@@ -30,40 +30,17 @@ type AdditionalText = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION AdditionalText */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalText */
-let _cached_decoder_for_AdditionalText: $.ASN1Decoder<AdditionalText> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalText */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AdditionalText */
-/**
- * @summary Decodes an ASN.1 element into a(n) AdditionalText
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AdditionalText} The decoded data structure.
- */
-export
-function _decode_AdditionalText (el: _Element) {
-    if (!_cached_decoder_for_AdditionalText) { _cached_decoder_for_AdditionalText = $._decodeGraphicString; }
-    return _cached_decoder_for_AdditionalText(el);
-}
+export const _decode_AdditionalText = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_AdditionalText */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalText */
-let _cached_encoder_for_AdditionalText: $.ASN1Encoder<AdditionalText> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalText */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AdditionalText */
-/**
- * @summary Encodes a(n) AdditionalText into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AdditionalText, encoded as an ASN.1 Element.
- */
-export
-function _encode_AdditionalText (value: AdditionalText, elGetter: $.ASN1Encoder<AdditionalText>) {
-    if (!_cached_encoder_for_AdditionalText) { _cached_encoder_for_AdditionalText = $._encodeGraphicString; }
-    return _cached_encoder_for_AdditionalText(value, elGetter);
-}
+export const _encode_AdditionalText = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AdditionalText */
 

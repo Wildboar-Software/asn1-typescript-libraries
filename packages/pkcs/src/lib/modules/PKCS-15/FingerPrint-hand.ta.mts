@@ -88,45 +88,17 @@ export const right: FingerPrint_hand =
 /* END_OF_SYMBOL_DEFINITION right */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FingerPrint_hand */
-let _cached_decoder_for_FingerPrint_hand: $.ASN1Decoder<FingerPrint_hand> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FingerPrint_hand */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FingerPrint_hand */
-/**
- * @summary Decodes an ASN.1 element into a(n) FingerPrint_hand
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FingerPrint_hand} The decoded data structure.
- */
-export function _decode_FingerPrint_hand(el: _Element) {
-    if (!_cached_decoder_for_FingerPrint_hand) {
-        _cached_decoder_for_FingerPrint_hand = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_FingerPrint_hand(el);
-}
+export const _decode_FingerPrint_hand = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_FingerPrint_hand */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FingerPrint_hand */
-let _cached_encoder_for_FingerPrint_hand: $.ASN1Encoder<FingerPrint_hand> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FingerPrint_hand */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FingerPrint_hand */
-/**
- * @summary Encodes a(n) FingerPrint_hand into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FingerPrint_hand, encoded as an ASN.1 Element.
- */
-export function _encode_FingerPrint_hand(
-    value: FingerPrint_hand,
-    elGetter: $.ASN1Encoder<FingerPrint_hand>
-) {
-    if (!_cached_encoder_for_FingerPrint_hand) {
-        _cached_encoder_for_FingerPrint_hand = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_FingerPrint_hand(value, elGetter);
-}
+export const _encode_FingerPrint_hand = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FingerPrint_hand */
 

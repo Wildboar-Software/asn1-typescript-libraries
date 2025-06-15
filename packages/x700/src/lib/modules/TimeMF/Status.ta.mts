@@ -156,42 +156,17 @@ export const badTimeFormatOrValue: Status = Status_badTimeFormatOrValue; /* SHOR
 /* END_OF_SYMBOL_DEFINITION badTimeFormatOrValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Status */
-let _cached_decoder_for_Status: $.ASN1Decoder<Status> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Status */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Status */
-/**
- * @summary Decodes an ASN.1 element into a(n) Status
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Status} The decoded data structure.
- */
-export function _decode_Status(el: _Element) {
-    if (!_cached_decoder_for_Status) {
-        _cached_decoder_for_Status = $._decodeInteger;
-    }
-    return _cached_decoder_for_Status(el);
-}
+export const _decode_Status = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Status */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Status */
-let _cached_encoder_for_Status: $.ASN1Encoder<Status> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Status */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Status */
-/**
- * @summary Encodes a(n) Status into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Status, encoded as an ASN.1 Element.
- */
-export function _encode_Status(value: Status, elGetter: $.ASN1Encoder<Status>) {
-    if (!_cached_encoder_for_Status) {
-        _cached_encoder_for_Status = $._encodeInteger;
-    }
-    return _cached_encoder_for_Status(value, elGetter);
-}
+export const _encode_Status = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Status */
 

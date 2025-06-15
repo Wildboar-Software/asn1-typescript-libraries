@@ -83,45 +83,17 @@ export const multiple_mappings: ZonalResult = ZonalResult_multiple_mappings; /* 
 /* END_OF_SYMBOL_DEFINITION multiple_mappings */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ZonalResult */
-let _cached_decoder_for_ZonalResult: $.ASN1Decoder<ZonalResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ZonalResult */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ZonalResult */
-/**
- * @summary Decodes an ASN.1 element into a(n) ZonalResult
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ZonalResult} The decoded data structure.
- */
-export function _decode_ZonalResult(el: _Element) {
-    if (!_cached_decoder_for_ZonalResult) {
-        _cached_decoder_for_ZonalResult = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ZonalResult(el);
-}
+export const _decode_ZonalResult = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ZonalResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ZonalResult */
-let _cached_encoder_for_ZonalResult: $.ASN1Encoder<ZonalResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ZonalResult */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ZonalResult */
-/**
- * @summary Encodes a(n) ZonalResult into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ZonalResult, encoded as an ASN.1 Element.
- */
-export function _encode_ZonalResult(
-    value: ZonalResult,
-    elGetter: $.ASN1Encoder<ZonalResult>
-) {
-    if (!_cached_encoder_for_ZonalResult) {
-        _cached_encoder_for_ZonalResult = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ZonalResult(value, elGetter);
-}
+export const _encode_ZonalResult = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ZonalResult */
 

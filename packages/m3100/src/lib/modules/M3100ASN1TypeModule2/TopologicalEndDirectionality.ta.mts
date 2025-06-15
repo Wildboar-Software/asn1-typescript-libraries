@@ -142,45 +142,17 @@ export const bidirectional: TopologicalEndDirectionality =
 /* END_OF_SYMBOL_DEFINITION bidirectional */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TopologicalEndDirectionality */
-let _cached_decoder_for_TopologicalEndDirectionality: $.ASN1Decoder<TopologicalEndDirectionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TopologicalEndDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TopologicalEndDirectionality */
-/**
- * @summary Decodes an ASN.1 element into a(n) TopologicalEndDirectionality
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TopologicalEndDirectionality} The decoded data structure.
- */
-export function _decode_TopologicalEndDirectionality(el: _Element) {
-    if (!_cached_decoder_for_TopologicalEndDirectionality) {
-        _cached_decoder_for_TopologicalEndDirectionality = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TopologicalEndDirectionality(el);
-}
+export const _decode_TopologicalEndDirectionality = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TopologicalEndDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TopologicalEndDirectionality */
-let _cached_encoder_for_TopologicalEndDirectionality: $.ASN1Encoder<TopologicalEndDirectionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TopologicalEndDirectionality */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TopologicalEndDirectionality */
-/**
- * @summary Encodes a(n) TopologicalEndDirectionality into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TopologicalEndDirectionality, encoded as an ASN.1 Element.
- */
-export function _encode_TopologicalEndDirectionality(
-    value: TopologicalEndDirectionality,
-    elGetter: $.ASN1Encoder<TopologicalEndDirectionality>
-) {
-    if (!_cached_encoder_for_TopologicalEndDirectionality) {
-        _cached_encoder_for_TopologicalEndDirectionality = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TopologicalEndDirectionality(value, elGetter);
-}
+export const _encode_TopologicalEndDirectionality = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TopologicalEndDirectionality */
 

@@ -17,45 +17,17 @@ export type MgtOctetString = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION MgtOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtOctetString */
-let _cached_decoder_for_MgtOctetString: $.ASN1Decoder<MgtOctetString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MgtOctetString */
-/**
- * @summary Decodes an ASN.1 element into a(n) MgtOctetString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MgtOctetString} The decoded data structure.
- */
-export function _decode_MgtOctetString(el: _Element) {
-    if (!_cached_decoder_for_MgtOctetString) {
-        _cached_decoder_for_MgtOctetString = $._decodeOctetString;
-    }
-    return _cached_decoder_for_MgtOctetString(el);
-}
+export const _decode_MgtOctetString = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_MgtOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtOctetString */
-let _cached_encoder_for_MgtOctetString: $.ASN1Encoder<MgtOctetString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MgtOctetString */
-/**
- * @summary Encodes a(n) MgtOctetString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MgtOctetString, encoded as an ASN.1 Element.
- */
-export function _encode_MgtOctetString(
-    value: MgtOctetString,
-    elGetter: $.ASN1Encoder<MgtOctetString>
-) {
-    if (!_cached_encoder_for_MgtOctetString) {
-        _cached_encoder_for_MgtOctetString = $._encodeOctetString;
-    }
-    return _cached_encoder_for_MgtOctetString(value, elGetter);
-}
+export const _encode_MgtOctetString = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MgtOctetString */
 

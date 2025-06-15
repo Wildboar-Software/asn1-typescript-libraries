@@ -27,42 +27,17 @@ export type SapId = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION SapId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SapId */
-let _cached_decoder_for_SapId: $.ASN1Decoder<SapId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SapId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SapId */
-/**
- * @summary Decodes an ASN.1 element into a(n) SapId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SapId} The decoded data structure.
- */
-export function _decode_SapId(el: _Element) {
-  if (!_cached_decoder_for_SapId) {
-    _cached_decoder_for_SapId = $._decodeGraphicString;
-  }
-  return _cached_decoder_for_SapId(el);
-}
+export const _decode_SapId = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_SapId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SapId */
-let _cached_encoder_for_SapId: $.ASN1Encoder<SapId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SapId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SapId */
-/**
- * @summary Encodes a(n) SapId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SapId, encoded as an ASN.1 Element.
- */
-export function _encode_SapId(value: SapId, elGetter: $.ASN1Encoder<SapId>) {
-  if (!_cached_encoder_for_SapId) {
-    _cached_encoder_for_SapId = $._encodeGraphicString;
-  }
-  return _cached_encoder_for_SapId(value, elGetter);
-}
+export const _encode_SapId = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SapId */
 

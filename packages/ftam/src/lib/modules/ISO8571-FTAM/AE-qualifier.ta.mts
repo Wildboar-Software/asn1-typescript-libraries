@@ -26,45 +26,17 @@ export type AE_qualifier = _Element; // ObjectClassFieldType
 /* END_OF_SYMBOL_DEFINITION AE_qualifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_qualifier */
-let _cached_decoder_for_AE_qualifier: $.ASN1Decoder<AE_qualifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_qualifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AE_qualifier */
-/**
- * @summary Decodes an ASN.1 element into a(n) AE_qualifier
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AE_qualifier} The decoded data structure.
- */
-export function _decode_AE_qualifier(el: _Element) {
-  if (!_cached_decoder_for_AE_qualifier) {
-    _cached_decoder_for_AE_qualifier = $._decodeAny;
-  }
-  return _cached_decoder_for_AE_qualifier(el);
-}
+export const _decode_AE_qualifier = $._decodeAny;
 /* END_OF_SYMBOL_DEFINITION _decode_AE_qualifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_qualifier */
-let _cached_encoder_for_AE_qualifier: $.ASN1Encoder<AE_qualifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_qualifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AE_qualifier */
-/**
- * @summary Encodes a(n) AE_qualifier into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AE_qualifier, encoded as an ASN.1 Element.
- */
-export function _encode_AE_qualifier(
-  value: AE_qualifier,
-  elGetter: $.ASN1Encoder<AE_qualifier>
-) {
-  if (!_cached_encoder_for_AE_qualifier) {
-    _cached_encoder_for_AE_qualifier = $._encodeAny;
-  }
-  return _cached_encoder_for_AE_qualifier(value, elGetter);
-}
+export const _encode_AE_qualifier = $._encodeAny;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AE_qualifier */
 

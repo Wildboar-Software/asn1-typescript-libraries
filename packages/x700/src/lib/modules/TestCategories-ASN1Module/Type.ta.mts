@@ -63,42 +63,17 @@ export const connectionless: Type = Type_connectionless; /* SHORT_NAMED_INTEGER_
 /* END_OF_SYMBOL_DEFINITION connectionless */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Type */
-let _cached_decoder_for_Type: $.ASN1Decoder<Type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Type */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Type */
-/**
- * @summary Decodes an ASN.1 element into a(n) Type
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Type} The decoded data structure.
- */
-export function _decode_Type(el: _Element) {
-    if (!_cached_decoder_for_Type) {
-        _cached_decoder_for_Type = $._decodeInteger;
-    }
-    return _cached_decoder_for_Type(el);
-}
+export const _decode_Type = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Type */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Type */
-let _cached_encoder_for_Type: $.ASN1Encoder<Type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Type */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Type */
-/**
- * @summary Encodes a(n) Type into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Type, encoded as an ASN.1 Element.
- */
-export function _encode_Type(value: Type, elGetter: $.ASN1Encoder<Type>) {
-    if (!_cached_encoder_for_Type) {
-        _cached_encoder_for_Type = $._encodeInteger;
-    }
-    return _cached_encoder_for_Type(value, elGetter);
-}
+export const _encode_Type = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Type */
 

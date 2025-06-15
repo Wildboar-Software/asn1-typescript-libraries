@@ -167,45 +167,17 @@ export const any_: BioAPI_BIR_PURPOSE = BioAPI_BIR_PURPOSE_any_; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION any_ */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_PURPOSE */
-let _cached_decoder_for_BioAPI_BIR_PURPOSE: $.ASN1Decoder<BioAPI_BIR_PURPOSE> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_PURPOSE */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_PURPOSE */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_PURPOSE
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_BIR_PURPOSE} The decoded data structure.
- */
-export function _decode_BioAPI_BIR_PURPOSE(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_BIR_PURPOSE) {
-    _cached_decoder_for_BioAPI_BIR_PURPOSE = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_BIR_PURPOSE(el);
-}
+export const _decode_BioAPI_BIR_PURPOSE = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_PURPOSE */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_PURPOSE */
-let _cached_encoder_for_BioAPI_BIR_PURPOSE: $.ASN1Encoder<BioAPI_BIR_PURPOSE> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_PURPOSE */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_PURPOSE */
-/**
- * @summary Encodes a(n) BioAPI_BIR_PURPOSE into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_BIR_PURPOSE, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_BIR_PURPOSE(
-  value: BioAPI_BIR_PURPOSE,
-  elGetter: $.ASN1Encoder<BioAPI_BIR_PURPOSE>
-) {
-  if (!_cached_encoder_for_BioAPI_BIR_PURPOSE) {
-    _cached_encoder_for_BioAPI_BIR_PURPOSE = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_BIR_PURPOSE(value, elGetter);
-}
+export const _encode_BioAPI_BIR_PURPOSE = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_PURPOSE */
 

@@ -81,45 +81,17 @@ export const compoundEntry: FamilyReturn_memberSelect = FamilyReturn_memberSelec
 /* END_OF_SYMBOL_DEFINITION compoundEntry */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FamilyReturn_memberSelect */
-let _cached_decoder_for_FamilyReturn_memberSelect: $.ASN1Decoder<FamilyReturn_memberSelect> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FamilyReturn_memberSelect */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FamilyReturn_memberSelect */
-/**
- * @summary Decodes an ASN.1 element into a(n) FamilyReturn_memberSelect
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FamilyReturn_memberSelect} The decoded data structure.
- */
-export function _decode_FamilyReturn_memberSelect(el: _Element) {
-    if (!_cached_decoder_for_FamilyReturn_memberSelect) {
-        _cached_decoder_for_FamilyReturn_memberSelect = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_FamilyReturn_memberSelect(el);
-}
+export const _decode_FamilyReturn_memberSelect = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_FamilyReturn_memberSelect */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FamilyReturn_memberSelect */
-let _cached_encoder_for_FamilyReturn_memberSelect: $.ASN1Encoder<FamilyReturn_memberSelect> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FamilyReturn_memberSelect */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FamilyReturn_memberSelect */
-/**
- * @summary Encodes a(n) FamilyReturn_memberSelect into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FamilyReturn_memberSelect, encoded as an ASN.1 Element.
- */
-export function _encode_FamilyReturn_memberSelect(
-    value: FamilyReturn_memberSelect,
-    elGetter: $.ASN1Encoder<FamilyReturn_memberSelect>
-) {
-    if (!_cached_encoder_for_FamilyReturn_memberSelect) {
-        _cached_encoder_for_FamilyReturn_memberSelect = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_FamilyReturn_memberSelect(value, elGetter);
-}
+export const _encode_FamilyReturn_memberSelect = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FamilyReturn_memberSelect */
 

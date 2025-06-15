@@ -27,45 +27,17 @@ export type FNPDAUDiagnosticField = INTEGER;
 /* END_OF_SYMBOL_DEFINITION FNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNPDAUDiagnosticField */
-let _cached_decoder_for_FNPDAUDiagnosticField: $.ASN1Decoder<FNPDAUDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FNPDAUDiagnosticField */
-/**
- * @summary Decodes an ASN.1 element into a(n) FNPDAUDiagnosticField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FNPDAUDiagnosticField} The decoded data structure.
- */
-export function _decode_FNPDAUDiagnosticField(el: _Element) {
-    if (!_cached_decoder_for_FNPDAUDiagnosticField) {
-        _cached_decoder_for_FNPDAUDiagnosticField = $._decodeInteger;
-    }
-    return _cached_decoder_for_FNPDAUDiagnosticField(el);
-}
+export const _decode_FNPDAUDiagnosticField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNPDAUDiagnosticField */
-let _cached_encoder_for_FNPDAUDiagnosticField: $.ASN1Encoder<FNPDAUDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FNPDAUDiagnosticField */
-/**
- * @summary Encodes a(n) FNPDAUDiagnosticField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FNPDAUDiagnosticField, encoded as an ASN.1 Element.
- */
-export function _encode_FNPDAUDiagnosticField(
-    value: FNPDAUDiagnosticField,
-    elGetter: $.ASN1Encoder<FNPDAUDiagnosticField>
-) {
-    if (!_cached_encoder_for_FNPDAUDiagnosticField) {
-        _cached_encoder_for_FNPDAUDiagnosticField = $._encodeInteger;
-    }
-    return _cached_encoder_for_FNPDAUDiagnosticField(value, elGetter);
-}
+export const _encode_FNPDAUDiagnosticField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FNPDAUDiagnosticField */
 

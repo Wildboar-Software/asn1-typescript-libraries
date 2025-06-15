@@ -89,45 +89,17 @@ export const ldap: SinglePubInfo_pubMethod = SinglePubInfo_pubMethod_ldap; /* SH
 /* END_OF_SYMBOL_DEFINITION ldap */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SinglePubInfo_pubMethod */
-let _cached_decoder_for_SinglePubInfo_pubMethod: $.ASN1Decoder<SinglePubInfo_pubMethod> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SinglePubInfo_pubMethod */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SinglePubInfo_pubMethod */
-/**
- * @summary Decodes an ASN.1 element into a(n) SinglePubInfo_pubMethod
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SinglePubInfo_pubMethod} The decoded data structure.
- */
-export function _decode_SinglePubInfo_pubMethod(el: _Element) {
-    if (!_cached_decoder_for_SinglePubInfo_pubMethod) {
-        _cached_decoder_for_SinglePubInfo_pubMethod = $._decodeInteger;
-    }
-    return _cached_decoder_for_SinglePubInfo_pubMethod(el);
-}
+export const _decode_SinglePubInfo_pubMethod = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SinglePubInfo_pubMethod */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SinglePubInfo_pubMethod */
-let _cached_encoder_for_SinglePubInfo_pubMethod: $.ASN1Encoder<SinglePubInfo_pubMethod> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SinglePubInfo_pubMethod */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SinglePubInfo_pubMethod */
-/**
- * @summary Encodes a(n) SinglePubInfo_pubMethod into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SinglePubInfo_pubMethod, encoded as an ASN.1 Element.
- */
-export function _encode_SinglePubInfo_pubMethod(
-    value: SinglePubInfo_pubMethod,
-    elGetter: $.ASN1Encoder<SinglePubInfo_pubMethod>
-) {
-    if (!_cached_encoder_for_SinglePubInfo_pubMethod) {
-        _cached_encoder_for_SinglePubInfo_pubMethod = $._encodeInteger;
-    }
-    return _cached_encoder_for_SinglePubInfo_pubMethod(value, elGetter);
-}
+export const _encode_SinglePubInfo_pubMethod = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SinglePubInfo_pubMethod */
 

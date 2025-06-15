@@ -62,45 +62,17 @@ export const onlySingleVersionAllowed: InitializationAbort_diag = Initialization
 /* END_OF_SYMBOL_DEFINITION onlySingleVersionAllowed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationAbort_diag */
-let _cached_decoder_for_InitializationAbort_diag: $.ASN1Decoder<InitializationAbort_diag> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationAbort_diag */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InitializationAbort_diag */
-/**
- * @summary Decodes an ASN.1 element into a(n) InitializationAbort_diag
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InitializationAbort_diag} The decoded data structure.
- */
-export function _decode_InitializationAbort_diag(el: _Element) {
-    if (!_cached_decoder_for_InitializationAbort_diag) {
-        _cached_decoder_for_InitializationAbort_diag = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_InitializationAbort_diag(el);
-}
+export const _decode_InitializationAbort_diag = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_InitializationAbort_diag */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationAbort_diag */
-let _cached_encoder_for_InitializationAbort_diag: $.ASN1Encoder<InitializationAbort_diag> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationAbort_diag */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InitializationAbort_diag */
-/**
- * @summary Encodes a(n) InitializationAbort_diag into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitializationAbort_diag, encoded as an ASN.1 Element.
- */
-export function _encode_InitializationAbort_diag(
-    value: InitializationAbort_diag,
-    elGetter: $.ASN1Encoder<InitializationAbort_diag>
-) {
-    if (!_cached_encoder_for_InitializationAbort_diag) {
-        _cached_encoder_for_InitializationAbort_diag = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_InitializationAbort_diag(value, elGetter);
-}
+export const _encode_InitializationAbort_diag = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InitializationAbort_diag */
 

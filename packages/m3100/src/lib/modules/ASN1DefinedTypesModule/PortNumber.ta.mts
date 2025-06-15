@@ -27,45 +27,17 @@ export type PortNumber = INTEGER;
 /* END_OF_SYMBOL_DEFINITION PortNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PortNumber */
-let _cached_decoder_for_PortNumber: $.ASN1Decoder<PortNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PortNumber */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PortNumber */
-/**
- * @summary Decodes an ASN.1 element into a(n) PortNumber
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PortNumber} The decoded data structure.
- */
-export function _decode_PortNumber(el: _Element) {
-    if (!_cached_decoder_for_PortNumber) {
-        _cached_decoder_for_PortNumber = $._decodeInteger;
-    }
-    return _cached_decoder_for_PortNumber(el);
-}
+export const _decode_PortNumber = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PortNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PortNumber */
-let _cached_encoder_for_PortNumber: $.ASN1Encoder<PortNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PortNumber */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PortNumber */
-/**
- * @summary Encodes a(n) PortNumber into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PortNumber, encoded as an ASN.1 Element.
- */
-export function _encode_PortNumber(
-    value: PortNumber,
-    elGetter: $.ASN1Encoder<PortNumber>
-) {
-    if (!_cached_encoder_for_PortNumber) {
-        _cached_encoder_for_PortNumber = $._encodeInteger;
-    }
-    return _cached_encoder_for_PortNumber(value, elGetter);
-}
+export const _encode_PortNumber = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PortNumber */
 

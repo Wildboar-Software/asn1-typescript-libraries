@@ -92,45 +92,17 @@ export const no_access: number = Concurrency_Key_no_access; /* SHORT_NAMED_BIT *
 /* END_OF_SYMBOL_DEFINITION no_access */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Concurrency_Key */
-let _cached_decoder_for_Concurrency_Key: $.ASN1Decoder<Concurrency_Key> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Concurrency_Key */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Concurrency_Key */
-/**
- * @summary Decodes an ASN.1 element into a(n) Concurrency_Key
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Concurrency_Key} The decoded data structure.
- */
-export function _decode_Concurrency_Key(el: _Element) {
-  if (!_cached_decoder_for_Concurrency_Key) {
-    _cached_decoder_for_Concurrency_Key = $._decodeBitString;
-  }
-  return _cached_decoder_for_Concurrency_Key(el);
-}
+export const _decode_Concurrency_Key = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Concurrency_Key */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Concurrency_Key */
-let _cached_encoder_for_Concurrency_Key: $.ASN1Encoder<Concurrency_Key> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Concurrency_Key */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Concurrency_Key */
-/**
- * @summary Encodes a(n) Concurrency_Key into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Concurrency_Key, encoded as an ASN.1 Element.
- */
-export function _encode_Concurrency_Key(
-  value: Concurrency_Key,
-  elGetter: $.ASN1Encoder<Concurrency_Key>
-) {
-  if (!_cached_encoder_for_Concurrency_Key) {
-    _cached_encoder_for_Concurrency_Key = $._encodeBitString;
-  }
-  return _cached_encoder_for_Concurrency_Key(value, elGetter);
-}
+export const _encode_Concurrency_Key = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Concurrency_Key */
 

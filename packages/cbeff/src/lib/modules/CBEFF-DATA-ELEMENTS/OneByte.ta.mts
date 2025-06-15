@@ -27,45 +27,17 @@ export type OneByte = INTEGER;
 /* END_OF_SYMBOL_DEFINITION OneByte */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OneByte */
-let _cached_decoder_for_OneByte: $.ASN1Decoder<OneByte> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OneByte */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OneByte */
-/**
- * @summary Decodes an ASN.1 element into a(n) OneByte
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OneByte} The decoded data structure.
- */
-export function _decode_OneByte(el: _Element) {
-  if (!_cached_decoder_for_OneByte) {
-    _cached_decoder_for_OneByte = $._decodeInteger;
-  }
-  return _cached_decoder_for_OneByte(el);
-}
+export const _decode_OneByte = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_OneByte */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OneByte */
-let _cached_encoder_for_OneByte: $.ASN1Encoder<OneByte> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OneByte */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OneByte */
-/**
- * @summary Encodes a(n) OneByte into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OneByte, encoded as an ASN.1 Element.
- */
-export function _encode_OneByte(
-  value: OneByte,
-  elGetter: $.ASN1Encoder<OneByte>
-) {
-  if (!_cached_encoder_for_OneByte) {
-    _cached_encoder_for_OneByte = $._encodeInteger;
-  }
-  return _cached_encoder_for_OneByte(value, elGetter);
-}
+export const _encode_OneByte = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OneByte */
 

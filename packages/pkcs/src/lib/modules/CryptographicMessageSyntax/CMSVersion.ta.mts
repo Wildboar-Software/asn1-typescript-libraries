@@ -107,45 +107,17 @@ export const v4: CMSVersion = CMSVersion_v4; /* SHORT_NAMED_INTEGER_VALUE */
 /* END_OF_SYMBOL_DEFINITION v4 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMSVersion */
-let _cached_decoder_for_CMSVersion: $.ASN1Decoder<CMSVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMSVersion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CMSVersion */
-/**
- * @summary Decodes an ASN.1 element into a(n) CMSVersion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CMSVersion} The decoded data structure.
- */
-export function _decode_CMSVersion(el: _Element) {
-    if (!_cached_decoder_for_CMSVersion) {
-        _cached_decoder_for_CMSVersion = $._decodeInteger;
-    }
-    return _cached_decoder_for_CMSVersion(el);
-}
+export const _decode_CMSVersion = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CMSVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMSVersion */
-let _cached_encoder_for_CMSVersion: $.ASN1Encoder<CMSVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMSVersion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CMSVersion */
-/**
- * @summary Encodes a(n) CMSVersion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CMSVersion, encoded as an ASN.1 Element.
- */
-export function _encode_CMSVersion(
-    value: CMSVersion,
-    elGetter: $.ASN1Encoder<CMSVersion>
-) {
-    if (!_cached_encoder_for_CMSVersion) {
-        _cached_encoder_for_CMSVersion = $._encodeInteger;
-    }
-    return _cached_encoder_for_CMSVersion(value, elGetter);
-}
+export const _encode_CMSVersion = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CMSVersion */
 

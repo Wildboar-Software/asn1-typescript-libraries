@@ -17,45 +17,17 @@ export type ApplicationContext = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION ApplicationContext */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationContext */
-let _cached_decoder_for_ApplicationContext: $.ASN1Decoder<ApplicationContext> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationContext */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ApplicationContext */
-/**
- * @summary Decodes an ASN.1 element into a(n) ApplicationContext
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ApplicationContext} The decoded data structure.
- */
-export function _decode_ApplicationContext(el: _Element) {
-    if (!_cached_decoder_for_ApplicationContext) {
-        _cached_decoder_for_ApplicationContext = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_ApplicationContext(el);
-}
+export const _decode_ApplicationContext = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_ApplicationContext */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationContext */
-let _cached_encoder_for_ApplicationContext: $.ASN1Encoder<ApplicationContext> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationContext */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ApplicationContext */
-/**
- * @summary Encodes a(n) ApplicationContext into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ApplicationContext, encoded as an ASN.1 Element.
- */
-export function _encode_ApplicationContext(
-    value: ApplicationContext,
-    elGetter: $.ASN1Encoder<ApplicationContext>
-) {
-    if (!_cached_encoder_for_ApplicationContext) {
-        _cached_encoder_for_ApplicationContext = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_ApplicationContext(value, elGetter);
-}
+export const _encode_ApplicationContext = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ApplicationContext */
 

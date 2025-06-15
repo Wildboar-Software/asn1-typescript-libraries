@@ -109,45 +109,17 @@ export const cancelGet: number = FunctionalUnits_cancelGet; /* SHORT_NAMED_BIT *
 /* END_OF_SYMBOL_DEFINITION cancelGet */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FunctionalUnits */
-let _cached_decoder_for_FunctionalUnits: $.ASN1Decoder<FunctionalUnits> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FunctionalUnits */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FunctionalUnits */
-/**
- * @summary Decodes an ASN.1 element into a(n) FunctionalUnits
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FunctionalUnits} The decoded data structure.
- */
-export function _decode_FunctionalUnits(el: _Element) {
-  if (!_cached_decoder_for_FunctionalUnits) {
-    _cached_decoder_for_FunctionalUnits = $._decodeBitString;
-  }
-  return _cached_decoder_for_FunctionalUnits(el);
-}
+export const _decode_FunctionalUnits = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_FunctionalUnits */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FunctionalUnits */
-let _cached_encoder_for_FunctionalUnits: $.ASN1Encoder<FunctionalUnits> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FunctionalUnits */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FunctionalUnits */
-/**
- * @summary Encodes a(n) FunctionalUnits into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FunctionalUnits, encoded as an ASN.1 Element.
- */
-export function _encode_FunctionalUnits(
-  value: FunctionalUnits,
-  elGetter: $.ASN1Encoder<FunctionalUnits>
-) {
-  if (!_cached_encoder_for_FunctionalUnits) {
-    _cached_encoder_for_FunctionalUnits = $._encodeBitString;
-  }
-  return _cached_encoder_for_FunctionalUnits(value, elGetter);
-}
+export const _encode_FunctionalUnits = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FunctionalUnits */
 

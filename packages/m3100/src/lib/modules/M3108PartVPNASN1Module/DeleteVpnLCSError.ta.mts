@@ -169,45 +169,17 @@ export const invalidVPNIdentifier: DeleteVpnLCSError = DeleteVpnLCSError_invalid
 /* END_OF_SYMBOL_DEFINITION invalidVPNIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteVpnLCSError */
-let _cached_decoder_for_DeleteVpnLCSError: $.ASN1Decoder<DeleteVpnLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteVpnLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeleteVpnLCSError */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeleteVpnLCSError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeleteVpnLCSError} The decoded data structure.
- */
-export function _decode_DeleteVpnLCSError(el: _Element) {
-    if (!_cached_decoder_for_DeleteVpnLCSError) {
-        _cached_decoder_for_DeleteVpnLCSError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DeleteVpnLCSError(el);
-}
+export const _decode_DeleteVpnLCSError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DeleteVpnLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteVpnLCSError */
-let _cached_encoder_for_DeleteVpnLCSError: $.ASN1Encoder<DeleteVpnLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteVpnLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeleteVpnLCSError */
-/**
- * @summary Encodes a(n) DeleteVpnLCSError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeleteVpnLCSError, encoded as an ASN.1 Element.
- */
-export function _encode_DeleteVpnLCSError(
-    value: DeleteVpnLCSError,
-    elGetter: $.ASN1Encoder<DeleteVpnLCSError>
-) {
-    if (!_cached_encoder_for_DeleteVpnLCSError) {
-        _cached_encoder_for_DeleteVpnLCSError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DeleteVpnLCSError(value, elGetter);
-}
+export const _encode_DeleteVpnLCSError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeleteVpnLCSError */
 

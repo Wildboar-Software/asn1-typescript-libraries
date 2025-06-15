@@ -27,45 +27,17 @@ export type BiometricProcessQuality = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION BiometricProcessQuality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessQuality */
-let _cached_decoder_for_BiometricProcessQuality: $.ASN1Decoder<BiometricProcessQuality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessQuality */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BiometricProcessQuality */
-/**
- * @summary Decodes an ASN.1 element into a(n) BiometricProcessQuality
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BiometricProcessQuality} The decoded data structure.
- */
-export function _decode_BiometricProcessQuality(el: _Element) {
-    if (!_cached_decoder_for_BiometricProcessQuality) {
-        _cached_decoder_for_BiometricProcessQuality = $._decodeOctetString;
-    }
-    return _cached_decoder_for_BiometricProcessQuality(el);
-}
+export const _decode_BiometricProcessQuality = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_BiometricProcessQuality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessQuality */
-let _cached_encoder_for_BiometricProcessQuality: $.ASN1Encoder<BiometricProcessQuality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessQuality */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BiometricProcessQuality */
-/**
- * @summary Encodes a(n) BiometricProcessQuality into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BiometricProcessQuality, encoded as an ASN.1 Element.
- */
-export function _encode_BiometricProcessQuality(
-    value: BiometricProcessQuality,
-    elGetter: $.ASN1Encoder<BiometricProcessQuality>
-) {
-    if (!_cached_encoder_for_BiometricProcessQuality) {
-        _cached_encoder_for_BiometricProcessQuality = $._encodeOctetString;
-    }
-    return _cached_encoder_for_BiometricProcessQuality(value, elGetter);
-}
+export const _encode_BiometricProcessQuality = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BiometricProcessQuality */
 

@@ -118,45 +118,17 @@ export const timeout: InvokeProtectionError =
 /* END_OF_SYMBOL_DEFINITION timeout */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeProtectionError */
-let _cached_decoder_for_InvokeProtectionError: $.ASN1Decoder<InvokeProtectionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeProtectionError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InvokeProtectionError */
-/**
- * @summary Decodes an ASN.1 element into a(n) InvokeProtectionError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InvokeProtectionError} The decoded data structure.
- */
-export function _decode_InvokeProtectionError(el: _Element) {
-    if (!_cached_decoder_for_InvokeProtectionError) {
-        _cached_decoder_for_InvokeProtectionError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_InvokeProtectionError(el);
-}
+export const _decode_InvokeProtectionError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_InvokeProtectionError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeProtectionError */
-let _cached_encoder_for_InvokeProtectionError: $.ASN1Encoder<InvokeProtectionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeProtectionError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InvokeProtectionError */
-/**
- * @summary Encodes a(n) InvokeProtectionError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InvokeProtectionError, encoded as an ASN.1 Element.
- */
-export function _encode_InvokeProtectionError(
-    value: InvokeProtectionError,
-    elGetter: $.ASN1Encoder<InvokeProtectionError>
-) {
-    if (!_cached_encoder_for_InvokeProtectionError) {
-        _cached_encoder_for_InvokeProtectionError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_InvokeProtectionError(value, elGetter);
-}
+export const _encode_InvokeProtectionError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InvokeProtectionError */
 

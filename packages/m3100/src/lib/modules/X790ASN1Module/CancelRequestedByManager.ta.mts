@@ -27,45 +27,17 @@ export type CancelRequestedByManager = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION CancelRequestedByManager */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelRequestedByManager */
-let _cached_decoder_for_CancelRequestedByManager: $.ASN1Decoder<CancelRequestedByManager> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelRequestedByManager */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CancelRequestedByManager */
-/**
- * @summary Decodes an ASN.1 element into a(n) CancelRequestedByManager
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CancelRequestedByManager} The decoded data structure.
- */
-export function _decode_CancelRequestedByManager(el: _Element) {
-    if (!_cached_decoder_for_CancelRequestedByManager) {
-        _cached_decoder_for_CancelRequestedByManager = $._decodeBoolean;
-    }
-    return _cached_decoder_for_CancelRequestedByManager(el);
-}
+export const _decode_CancelRequestedByManager = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_CancelRequestedByManager */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelRequestedByManager */
-let _cached_encoder_for_CancelRequestedByManager: $.ASN1Encoder<CancelRequestedByManager> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelRequestedByManager */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CancelRequestedByManager */
-/**
- * @summary Encodes a(n) CancelRequestedByManager into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CancelRequestedByManager, encoded as an ASN.1 Element.
- */
-export function _encode_CancelRequestedByManager(
-    value: CancelRequestedByManager,
-    elGetter: $.ASN1Encoder<CancelRequestedByManager>
-) {
-    if (!_cached_encoder_for_CancelRequestedByManager) {
-        _cached_encoder_for_CancelRequestedByManager = $._encodeBoolean;
-    }
-    return _cached_encoder_for_CancelRequestedByManager(value, elGetter);
-}
+export const _encode_CancelRequestedByManager = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CancelRequestedByManager */
 

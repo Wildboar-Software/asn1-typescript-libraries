@@ -65,45 +65,17 @@ export const wholeSubtree: number = AllowedSubset_wholeSubtree; /* SHORT_NAMED_B
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AllowedSubset */
-let _cached_decoder_for_AllowedSubset: $.ASN1Decoder<AllowedSubset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AllowedSubset */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AllowedSubset */
-/**
- * @summary Decodes an ASN.1 element into a(n) AllowedSubset
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AllowedSubset} The decoded data structure.
- */
-export function _decode_AllowedSubset(el: _Element) {
-    if (!_cached_decoder_for_AllowedSubset) {
-        _cached_decoder_for_AllowedSubset = $._decodeBitString;
-    }
-    return _cached_decoder_for_AllowedSubset(el);
-}
+export const _decode_AllowedSubset = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AllowedSubset */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AllowedSubset */
-let _cached_encoder_for_AllowedSubset: $.ASN1Encoder<AllowedSubset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AllowedSubset */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AllowedSubset */
-/**
- * @summary Encodes a(n) AllowedSubset into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AllowedSubset, encoded as an ASN.1 Element.
- */
-export function _encode_AllowedSubset(
-    value: AllowedSubset,
-    elGetter: $.ASN1Encoder<AllowedSubset>
-) {
-    if (!_cached_encoder_for_AllowedSubset) {
-        _cached_encoder_for_AllowedSubset = $._encodeBitString;
-    }
-    return _cached_encoder_for_AllowedSubset(value, elGetter);
-}
+export const _encode_AllowedSubset = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AllowedSubset */
 

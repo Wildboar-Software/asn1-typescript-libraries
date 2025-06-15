@@ -274,45 +274,17 @@ export const wantBackUnsatisfied: ReplyStatus =
 /* END_OF_SYMBOL_DEFINITION wantBackUnsatisfied */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyStatus */
-let _cached_decoder_for_ReplyStatus: $.ASN1Decoder<ReplyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReplyStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReplyStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReplyStatus} The decoded data structure.
- */
-export function _decode_ReplyStatus(el: _Element) {
-  if (!_cached_decoder_for_ReplyStatus) {
-    _cached_decoder_for_ReplyStatus = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_ReplyStatus(el);
-}
+export const _decode_ReplyStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyStatus */
-let _cached_encoder_for_ReplyStatus: $.ASN1Encoder<ReplyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReplyStatus */
-/**
- * @summary Encodes a(n) ReplyStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReplyStatus, encoded as an ASN.1 Element.
- */
-export function _encode_ReplyStatus(
-  value: ReplyStatus,
-  elGetter: $.ASN1Encoder<ReplyStatus>
-) {
-  if (!_cached_encoder_for_ReplyStatus) {
-    _cached_encoder_for_ReplyStatus = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_ReplyStatus(value, elGetter);
-}
+export const _encode_ReplyStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReplyStatus */
 

@@ -27,42 +27,17 @@ export type Int32 = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Int32 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Int32 */
-let _cached_decoder_for_Int32: $.ASN1Decoder<Int32> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Int32 */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Int32 */
-/**
- * @summary Decodes an ASN.1 element into a(n) Int32
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Int32} The decoded data structure.
- */
-export function _decode_Int32(el: _Element) {
-  if (!_cached_decoder_for_Int32) {
-    _cached_decoder_for_Int32 = $._decodeInteger;
-  }
-  return _cached_decoder_for_Int32(el);
-}
+export const _decode_Int32 = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Int32 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Int32 */
-let _cached_encoder_for_Int32: $.ASN1Encoder<Int32> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Int32 */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Int32 */
-/**
- * @summary Encodes a(n) Int32 into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Int32, encoded as an ASN.1 Element.
- */
-export function _encode_Int32(value: Int32, elGetter: $.ASN1Encoder<Int32>) {
-  if (!_cached_encoder_for_Int32) {
-    _cached_encoder_for_Int32 = $._encodeInteger;
-  }
-  return _cached_encoder_for_Int32(value, elGetter);
-}
+export const _encode_Int32 = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Int32 */
 

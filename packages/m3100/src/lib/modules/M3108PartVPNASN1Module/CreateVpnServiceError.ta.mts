@@ -93,45 +93,17 @@ export const invalidSAG: CreateVpnServiceError = CreateVpnServiceError_invalidSA
 /* END_OF_SYMBOL_DEFINITION invalidSAG */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateVpnServiceError */
-let _cached_decoder_for_CreateVpnServiceError: $.ASN1Decoder<CreateVpnServiceError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateVpnServiceError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CreateVpnServiceError */
-/**
- * @summary Decodes an ASN.1 element into a(n) CreateVpnServiceError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CreateVpnServiceError} The decoded data structure.
- */
-export function _decode_CreateVpnServiceError(el: _Element) {
-    if (!_cached_decoder_for_CreateVpnServiceError) {
-        _cached_decoder_for_CreateVpnServiceError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CreateVpnServiceError(el);
-}
+export const _decode_CreateVpnServiceError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CreateVpnServiceError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateVpnServiceError */
-let _cached_encoder_for_CreateVpnServiceError: $.ASN1Encoder<CreateVpnServiceError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateVpnServiceError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CreateVpnServiceError */
-/**
- * @summary Encodes a(n) CreateVpnServiceError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CreateVpnServiceError, encoded as an ASN.1 Element.
- */
-export function _encode_CreateVpnServiceError(
-    value: CreateVpnServiceError,
-    elGetter: $.ASN1Encoder<CreateVpnServiceError>
-) {
-    if (!_cached_encoder_for_CreateVpnServiceError) {
-        _cached_encoder_for_CreateVpnServiceError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CreateVpnServiceError(value, elGetter);
-}
+export const _encode_CreateVpnServiceError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CreateVpnServiceError */
 

@@ -45,45 +45,17 @@ export const reversed: RangeProblem = RangeProblem_reversed; /* SHORT_NAMED_INTE
 /* END_OF_SYMBOL_DEFINITION reversed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RangeProblem */
-let _cached_decoder_for_RangeProblem: $.ASN1Decoder<RangeProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RangeProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RangeProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) RangeProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RangeProblem} The decoded data structure.
- */
-export function _decode_RangeProblem(el: _Element) {
-    if (!_cached_decoder_for_RangeProblem) {
-        _cached_decoder_for_RangeProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_RangeProblem(el);
-}
+export const _decode_RangeProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RangeProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RangeProblem */
-let _cached_encoder_for_RangeProblem: $.ASN1Encoder<RangeProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RangeProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RangeProblem */
-/**
- * @summary Encodes a(n) RangeProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RangeProblem, encoded as an ASN.1 Element.
- */
-export function _encode_RangeProblem(
-    value: RangeProblem,
-    elGetter: $.ASN1Encoder<RangeProblem>
-) {
-    if (!_cached_encoder_for_RangeProblem) {
-        _cached_encoder_for_RangeProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_RangeProblem(value, elGetter);
-}
+export const _encode_RangeProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RangeProblem */
 

@@ -175,45 +175,17 @@ export const auto_action_log: EntryClass = EntryClass_auto_action_log; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION auto_action_log */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryClass */
-let _cached_decoder_for_EntryClass: $.ASN1Decoder<EntryClass> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryClass */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EntryClass */
-/**
- * @summary Decodes an ASN.1 element into a(n) EntryClass
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EntryClass} The decoded data structure.
- */
-export function _decode_EntryClass(el: _Element) {
-    if (!_cached_decoder_for_EntryClass) {
-        _cached_decoder_for_EntryClass = $._decodeInteger;
-    }
-    return _cached_decoder_for_EntryClass(el);
-}
+export const _decode_EntryClass = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_EntryClass */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryClass */
-let _cached_encoder_for_EntryClass: $.ASN1Encoder<EntryClass> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryClass */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EntryClass */
-/**
- * @summary Encodes a(n) EntryClass into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EntryClass, encoded as an ASN.1 Element.
- */
-export function _encode_EntryClass(
-    value: EntryClass,
-    elGetter: $.ASN1Encoder<EntryClass>
-) {
-    if (!_cached_encoder_for_EntryClass) {
-        _cached_encoder_for_EntryClass = $._encodeInteger;
-    }
-    return _cached_encoder_for_EntryClass(value, elGetter);
-}
+export const _encode_EntryClass = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EntryClass */
 

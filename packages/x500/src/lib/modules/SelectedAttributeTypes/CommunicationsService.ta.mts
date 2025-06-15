@@ -17,45 +17,17 @@ export type CommunicationsService = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION CommunicationsService */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsService */
-let _cached_decoder_for_CommunicationsService: $.ASN1Decoder<CommunicationsService> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsService */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CommunicationsService */
-/**
- * @summary Decodes an ASN.1 element into a(n) CommunicationsService
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CommunicationsService} The decoded data structure.
- */
-export function _decode_CommunicationsService(el: _Element) {
-    if (!_cached_decoder_for_CommunicationsService) {
-        _cached_decoder_for_CommunicationsService = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_CommunicationsService(el);
-}
+export const _decode_CommunicationsService = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_CommunicationsService */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsService */
-let _cached_encoder_for_CommunicationsService: $.ASN1Encoder<CommunicationsService> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsService */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CommunicationsService */
-/**
- * @summary Encodes a(n) CommunicationsService into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CommunicationsService, encoded as an ASN.1 Element.
- */
-export function _encode_CommunicationsService(
-    value: CommunicationsService,
-    elGetter: $.ASN1Encoder<CommunicationsService>
-) {
-    if (!_cached_encoder_for_CommunicationsService) {
-        _cached_encoder_for_CommunicationsService = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_CommunicationsService(value, elGetter);
-}
+export const _encode_CommunicationsService = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CommunicationsService */
 

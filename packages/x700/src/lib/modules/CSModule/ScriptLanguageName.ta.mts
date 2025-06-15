@@ -27,45 +27,17 @@ export type ScriptLanguageName = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION ScriptLanguageName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptLanguageName */
-let _cached_decoder_for_ScriptLanguageName: $.ASN1Decoder<ScriptLanguageName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptLanguageName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ScriptLanguageName */
-/**
- * @summary Decodes an ASN.1 element into a(n) ScriptLanguageName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ScriptLanguageName} The decoded data structure.
- */
-export function _decode_ScriptLanguageName(el: _Element) {
-    if (!_cached_decoder_for_ScriptLanguageName) {
-        _cached_decoder_for_ScriptLanguageName = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_ScriptLanguageName(el);
-}
+export const _decode_ScriptLanguageName = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_ScriptLanguageName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptLanguageName */
-let _cached_encoder_for_ScriptLanguageName: $.ASN1Encoder<ScriptLanguageName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptLanguageName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ScriptLanguageName */
-/**
- * @summary Encodes a(n) ScriptLanguageName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ScriptLanguageName, encoded as an ASN.1 Element.
- */
-export function _encode_ScriptLanguageName(
-    value: ScriptLanguageName,
-    elGetter: $.ASN1Encoder<ScriptLanguageName>
-) {
-    if (!_cached_encoder_for_ScriptLanguageName) {
-        _cached_encoder_for_ScriptLanguageName = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_ScriptLanguageName(value, elGetter);
-}
+export const _encode_ScriptLanguageName = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ScriptLanguageName */
 

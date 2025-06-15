@@ -17,45 +17,17 @@ export type DHPrivateKey = INTEGER;
 /* END_OF_SYMBOL_DEFINITION DHPrivateKey */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DHPrivateKey */
-let _cached_decoder_for_DHPrivateKey: $.ASN1Decoder<DHPrivateKey> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DHPrivateKey */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DHPrivateKey */
-/**
- * @summary Decodes an ASN.1 element into a(n) DHPrivateKey
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DHPrivateKey} The decoded data structure.
- */
-export function _decode_DHPrivateKey(el: _Element) {
-    if (!_cached_decoder_for_DHPrivateKey) {
-        _cached_decoder_for_DHPrivateKey = $._decodeInteger;
-    }
-    return _cached_decoder_for_DHPrivateKey(el);
-}
+export const _decode_DHPrivateKey = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DHPrivateKey */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DHPrivateKey */
-let _cached_encoder_for_DHPrivateKey: $.ASN1Encoder<DHPrivateKey> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DHPrivateKey */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DHPrivateKey */
-/**
- * @summary Encodes a(n) DHPrivateKey into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DHPrivateKey, encoded as an ASN.1 Element.
- */
-export function _encode_DHPrivateKey(
-    value: DHPrivateKey,
-    elGetter: $.ASN1Encoder<DHPrivateKey>
-) {
-    if (!_cached_encoder_for_DHPrivateKey) {
-        _cached_encoder_for_DHPrivateKey = $._encodeInteger;
-    }
-    return _cached_encoder_for_DHPrivateKey(value, elGetter);
-}
+export const _encode_DHPrivateKey = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DHPrivateKey */
 

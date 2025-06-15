@@ -79,45 +79,17 @@ export const v3: AVMPversion = AVMPversion_v3; /* SHORT_NAMED_ENUMERATED_VALUE *
 /* END_OF_SYMBOL_DEFINITION v3 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMPversion */
-let _cached_decoder_for_AVMPversion: $.ASN1Decoder<AVMPversion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMPversion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AVMPversion */
-/**
- * @summary Decodes an ASN.1 element into a(n) AVMPversion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AVMPversion} The decoded data structure.
- */
-export function _decode_AVMPversion(el: _Element) {
-    if (!_cached_decoder_for_AVMPversion) {
-        _cached_decoder_for_AVMPversion = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AVMPversion(el);
-}
+export const _decode_AVMPversion = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AVMPversion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMPversion */
-let _cached_encoder_for_AVMPversion: $.ASN1Encoder<AVMPversion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMPversion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AVMPversion */
-/**
- * @summary Encodes a(n) AVMPversion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AVMPversion, encoded as an ASN.1 Element.
- */
-export function _encode_AVMPversion(
-    value: AVMPversion,
-    elGetter: $.ASN1Encoder<AVMPversion>
-) {
-    if (!_cached_encoder_for_AVMPversion) {
-        _cached_encoder_for_AVMPversion = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AVMPversion(value, elGetter);
-}
+export const _encode_AVMPversion = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AVMPversion */
 

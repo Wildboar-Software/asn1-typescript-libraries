@@ -139,45 +139,17 @@ export const pn20: IntegerDataType = IntegerDataType_pn20; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION pn20 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntegerDataType */
-let _cached_decoder_for_IntegerDataType: $.ASN1Decoder<IntegerDataType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntegerDataType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IntegerDataType */
-/**
- * @summary Decodes an ASN.1 element into a(n) IntegerDataType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IntegerDataType} The decoded data structure.
- */
-export function _decode_IntegerDataType(el: _Element) {
-    if (!_cached_decoder_for_IntegerDataType) {
-        _cached_decoder_for_IntegerDataType = $._decodeInteger;
-    }
-    return _cached_decoder_for_IntegerDataType(el);
-}
+export const _decode_IntegerDataType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_IntegerDataType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntegerDataType */
-let _cached_encoder_for_IntegerDataType: $.ASN1Encoder<IntegerDataType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntegerDataType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IntegerDataType */
-/**
- * @summary Encodes a(n) IntegerDataType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IntegerDataType, encoded as an ASN.1 Element.
- */
-export function _encode_IntegerDataType(
-    value: IntegerDataType,
-    elGetter: $.ASN1Encoder<IntegerDataType>
-) {
-    if (!_cached_encoder_for_IntegerDataType) {
-        _cached_encoder_for_IntegerDataType = $._encodeInteger;
-    }
-    return _cached_encoder_for_IntegerDataType(value, elGetter);
-}
+export const _encode_IntegerDataType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IntegerDataType */
 

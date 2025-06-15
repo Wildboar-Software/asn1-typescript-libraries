@@ -72,45 +72,17 @@ export const unknown: acknowledge_ResultType = acknowledge_ResultType_unknown; /
 /* END_OF_SYMBOL_DEFINITION unknown */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_acknowledge_ResultType */
-let _cached_decoder_for_acknowledge_ResultType: $.ASN1Decoder<acknowledge_ResultType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_acknowledge_ResultType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_acknowledge_ResultType */
-/**
- * @summary Decodes an ASN.1 element into a(n) acknowledge_ResultType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {acknowledge_ResultType} The decoded data structure.
- */
-export function _decode_acknowledge_ResultType(el: _Element) {
-  if (!_cached_decoder_for_acknowledge_ResultType) {
-    _cached_decoder_for_acknowledge_ResultType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_acknowledge_ResultType(el);
-}
+export const _decode_acknowledge_ResultType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_acknowledge_ResultType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_acknowledge_ResultType */
-let _cached_encoder_for_acknowledge_ResultType: $.ASN1Encoder<acknowledge_ResultType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_acknowledge_ResultType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_acknowledge_ResultType */
-/**
- * @summary Encodes a(n) acknowledge_ResultType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The acknowledge_ResultType, encoded as an ASN.1 Element.
- */
-export function _encode_acknowledge_ResultType(
-  value: acknowledge_ResultType,
-  elGetter: $.ASN1Encoder<acknowledge_ResultType>
-) {
-  if (!_cached_encoder_for_acknowledge_ResultType) {
-    _cached_encoder_for_acknowledge_ResultType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_acknowledge_ResultType(value, elGetter);
-}
+export const _encode_acknowledge_ResultType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_acknowledge_ResultType */
 

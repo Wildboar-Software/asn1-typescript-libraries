@@ -239,45 +239,17 @@ export const data_separation: number = User_session_requirements_data_separation
 /* END_OF_SYMBOL_DEFINITION data_separation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_session_requirements */
-let _cached_decoder_for_User_session_requirements: $.ASN1Decoder<User_session_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_session_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _decode_User_session_requirements */
-/**
- * @summary Decodes an ASN.1 element into a(n) User_session_requirements
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {User_session_requirements} The decoded data structure.
- */
-export function _decode_User_session_requirements(el: _Element) {
-    if (!_cached_decoder_for_User_session_requirements) {
-        _cached_decoder_for_User_session_requirements = $._decodeBitString;
-    }
-    return _cached_decoder_for_User_session_requirements(el);
-}
+export const _decode_User_session_requirements = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_User_session_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_session_requirements */
-let _cached_encoder_for_User_session_requirements: $.ASN1Encoder<User_session_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_session_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _encode_User_session_requirements */
-/**
- * @summary Encodes a(n) User_session_requirements into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The User_session_requirements, encoded as an ASN.1 Element.
- */
-export function _encode_User_session_requirements(
-    value: User_session_requirements,
-    elGetter: $.ASN1Encoder<User_session_requirements>
-) {
-    if (!_cached_encoder_for_User_session_requirements) {
-        _cached_encoder_for_User_session_requirements = $._encodeBitString;
-    }
-    return _cached_encoder_for_User_session_requirements(value, elGetter);
-}
+export const _encode_User_session_requirements = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_User_session_requirements */
 

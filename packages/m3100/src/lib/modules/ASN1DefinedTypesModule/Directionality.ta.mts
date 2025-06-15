@@ -97,45 +97,17 @@ export const bidirectional: Directionality =
 /* END_OF_SYMBOL_DEFINITION bidirectional */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Directionality */
-let _cached_decoder_for_Directionality: $.ASN1Decoder<Directionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Directionality */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Directionality */
-/**
- * @summary Decodes an ASN.1 element into a(n) Directionality
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Directionality} The decoded data structure.
- */
-export function _decode_Directionality(el: _Element) {
-    if (!_cached_decoder_for_Directionality) {
-        _cached_decoder_for_Directionality = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Directionality(el);
-}
+export const _decode_Directionality = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Directionality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Directionality */
-let _cached_encoder_for_Directionality: $.ASN1Encoder<Directionality> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Directionality */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Directionality */
-/**
- * @summary Encodes a(n) Directionality into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Directionality, encoded as an ASN.1 Element.
- */
-export function _encode_Directionality(
-    value: Directionality,
-    elGetter: $.ASN1Encoder<Directionality>
-) {
-    if (!_cached_encoder_for_Directionality) {
-        _cached_encoder_for_Directionality = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Directionality(value, elGetter);
-}
+export const _encode_Directionality = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Directionality */
 

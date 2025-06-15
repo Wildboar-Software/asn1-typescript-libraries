@@ -49,45 +49,17 @@ export const v2: number = Versions_v2; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION v2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Versions */
-let _cached_decoder_for_Versions: $.ASN1Decoder<Versions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Versions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Versions */
-/**
- * @summary Decodes an ASN.1 element into a(n) Versions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Versions} The decoded data structure.
- */
-export function _decode_Versions(el: _Element) {
-    if (!_cached_decoder_for_Versions) {
-        _cached_decoder_for_Versions = $._decodeBitString;
-    }
-    return _cached_decoder_for_Versions(el);
-}
+export const _decode_Versions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Versions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Versions */
-let _cached_encoder_for_Versions: $.ASN1Encoder<Versions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Versions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Versions */
-/**
- * @summary Encodes a(n) Versions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Versions, encoded as an ASN.1 Element.
- */
-export function _encode_Versions(
-    value: Versions,
-    elGetter: $.ASN1Encoder<Versions>
-) {
-    if (!_cached_encoder_for_Versions) {
-        _cached_encoder_for_Versions = $._encodeBitString;
-    }
-    return _cached_encoder_for_Versions(value, elGetter);
-}
+export const _encode_Versions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Versions */
 

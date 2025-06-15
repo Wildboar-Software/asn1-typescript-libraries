@@ -36,56 +36,28 @@ export type IdentifyingStringOrIndex =
 /* END_OF_SYMBOL_DEFINITION IdentifyingStringOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdentifyingStringOrIndex */
-let _cached_decoder_for_IdentifyingStringOrIndex: $.ASN1Decoder<IdentifyingStringOrIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdentifyingStringOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IdentifyingStringOrIndex */
-/**
- * @summary Decodes an ASN.1 element into a(n) IdentifyingStringOrIndex
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IdentifyingStringOrIndex} The decoded data structure.
- */
-export function _decode_IdentifyingStringOrIndex(el: _Element) {
-  if (!_cached_decoder_for_IdentifyingStringOrIndex) {
-    _cached_decoder_for_IdentifyingStringOrIndex = $._decode_inextensible_choice<IdentifyingStringOrIndex>(
-      {
-        'CONTEXT 0': ['literal_character_string', _decode_NonEmptyOctetString],
-        'CONTEXT 1': ['string_index', $._decodeInteger],
-      }
-    );
+export const _decode_IdentifyingStringOrIndex = $._decode_inextensible_choice<IdentifyingStringOrIndex>(
+  {
+    'CONTEXT 0': ['literal_character_string', _decode_NonEmptyOctetString],
+    'CONTEXT 1': ['string_index', $._decodeInteger],
   }
-  return _cached_decoder_for_IdentifyingStringOrIndex(el);
-}
+);
 /* END_OF_SYMBOL_DEFINITION _decode_IdentifyingStringOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdentifyingStringOrIndex */
-let _cached_encoder_for_IdentifyingStringOrIndex: $.ASN1Encoder<IdentifyingStringOrIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdentifyingStringOrIndex */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IdentifyingStringOrIndex */
-/**
- * @summary Encodes a(n) IdentifyingStringOrIndex into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IdentifyingStringOrIndex, encoded as an ASN.1 Element.
- */
-export function _encode_IdentifyingStringOrIndex(
-  value: IdentifyingStringOrIndex,
-  elGetter: $.ASN1Encoder<IdentifyingStringOrIndex>
-) {
-  if (!_cached_encoder_for_IdentifyingStringOrIndex) {
-    _cached_encoder_for_IdentifyingStringOrIndex = $._encode_choice<IdentifyingStringOrIndex>(
-      {
-        literal_character_string: _encode_NonEmptyOctetString,
-        string_index: $._encodeInteger,
-      },
-      $.BER
-    );
-  }
-  return _cached_encoder_for_IdentifyingStringOrIndex(value, elGetter);
-}
+export const _encode_IdentifyingStringOrIndex = $._encode_choice<IdentifyingStringOrIndex>(
+  {
+    literal_character_string: _encode_NonEmptyOctetString,
+    string_index: $._encodeInteger,
+  },
+  $.BER
+);
 
 /* END_OF_SYMBOL_DEFINITION _encode_IdentifyingStringOrIndex */
 

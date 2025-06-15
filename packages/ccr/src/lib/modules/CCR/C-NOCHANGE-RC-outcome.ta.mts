@@ -110,45 +110,17 @@ export const no_change: C_NOCHANGE_RC_outcome = C_NOCHANGE_RC_outcome_no_change;
 /* END_OF_SYMBOL_DEFINITION no_change */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_C_NOCHANGE_RC_outcome */
-let _cached_decoder_for_C_NOCHANGE_RC_outcome: $.ASN1Decoder<C_NOCHANGE_RC_outcome> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_C_NOCHANGE_RC_outcome */
 
 /* START_OF_SYMBOL_DEFINITION _decode_C_NOCHANGE_RC_outcome */
-/**
- * @summary Decodes an ASN.1 element into a(n) C_NOCHANGE_RC_outcome
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {C_NOCHANGE_RC_outcome} The decoded data structure.
- */
-export function _decode_C_NOCHANGE_RC_outcome(el: _Element) {
-  if (!_cached_decoder_for_C_NOCHANGE_RC_outcome) {
-    _cached_decoder_for_C_NOCHANGE_RC_outcome = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_C_NOCHANGE_RC_outcome(el);
-}
+export const _decode_C_NOCHANGE_RC_outcome = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_C_NOCHANGE_RC_outcome */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_C_NOCHANGE_RC_outcome */
-let _cached_encoder_for_C_NOCHANGE_RC_outcome: $.ASN1Encoder<C_NOCHANGE_RC_outcome> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_C_NOCHANGE_RC_outcome */
 
 /* START_OF_SYMBOL_DEFINITION _encode_C_NOCHANGE_RC_outcome */
-/**
- * @summary Encodes a(n) C_NOCHANGE_RC_outcome into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The C_NOCHANGE_RC_outcome, encoded as an ASN.1 Element.
- */
-export function _encode_C_NOCHANGE_RC_outcome(
-  value: C_NOCHANGE_RC_outcome,
-  elGetter: $.ASN1Encoder<C_NOCHANGE_RC_outcome>
-) {
-  if (!_cached_encoder_for_C_NOCHANGE_RC_outcome) {
-    _cached_encoder_for_C_NOCHANGE_RC_outcome = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_C_NOCHANGE_RC_outcome(value, elGetter);
-}
+export const _encode_C_NOCHANGE_RC_outcome = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_C_NOCHANGE_RC_outcome */
 

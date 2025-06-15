@@ -118,45 +118,17 @@ export const attribute: DenialGranularity =
 /* END_OF_SYMBOL_DEFINITION attribute */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialGranularity */
-let _cached_decoder_for_DenialGranularity: $.ASN1Decoder<DenialGranularity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialGranularity */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DenialGranularity */
-/**
- * @summary Decodes an ASN.1 element into a(n) DenialGranularity
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DenialGranularity} The decoded data structure.
- */
-export function _decode_DenialGranularity(el: _Element) {
-    if (!_cached_decoder_for_DenialGranularity) {
-        _cached_decoder_for_DenialGranularity = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DenialGranularity(el);
-}
+export const _decode_DenialGranularity = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DenialGranularity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialGranularity */
-let _cached_encoder_for_DenialGranularity: $.ASN1Encoder<DenialGranularity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialGranularity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DenialGranularity */
-/**
- * @summary Encodes a(n) DenialGranularity into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DenialGranularity, encoded as an ASN.1 Element.
- */
-export function _encode_DenialGranularity(
-    value: DenialGranularity,
-    elGetter: $.ASN1Encoder<DenialGranularity>
-) {
-    if (!_cached_encoder_for_DenialGranularity) {
-        _cached_encoder_for_DenialGranularity = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DenialGranularity(value, elGetter);
-}
+export const _encode_DenialGranularity = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DenialGranularity */
 

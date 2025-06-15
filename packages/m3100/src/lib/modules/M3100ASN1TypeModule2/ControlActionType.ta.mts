@@ -145,45 +145,17 @@ export const openMomentarily: ControlActionType =
 /* END_OF_SYMBOL_DEFINITION openMomentarily */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlActionType */
-let _cached_decoder_for_ControlActionType: $.ASN1Decoder<ControlActionType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlActionType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ControlActionType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ControlActionType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ControlActionType} The decoded data structure.
- */
-export function _decode_ControlActionType(el: _Element) {
-    if (!_cached_decoder_for_ControlActionType) {
-        _cached_decoder_for_ControlActionType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ControlActionType(el);
-}
+export const _decode_ControlActionType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ControlActionType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlActionType */
-let _cached_encoder_for_ControlActionType: $.ASN1Encoder<ControlActionType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlActionType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ControlActionType */
-/**
- * @summary Encodes a(n) ControlActionType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControlActionType, encoded as an ASN.1 Element.
- */
-export function _encode_ControlActionType(
-    value: ControlActionType,
-    elGetter: $.ASN1Encoder<ControlActionType>
-) {
-    if (!_cached_encoder_for_ControlActionType) {
-        _cached_encoder_for_ControlActionType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ControlActionType(value, elGetter);
-}
+export const _encode_ControlActionType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ControlActionType */
 

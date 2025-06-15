@@ -315,45 +315,17 @@ export const physical_rendition_attributes_not_supported: NNPDAUDiagnosticField 
 /* END_OF_SYMBOL_DEFINITION physical_rendition_attributes_not_supported */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNPDAUDiagnosticField */
-let _cached_decoder_for_NNPDAUDiagnosticField: $.ASN1Decoder<NNPDAUDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NNPDAUDiagnosticField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NNPDAUDiagnosticField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NNPDAUDiagnosticField} The decoded data structure.
- */
-export function _decode_NNPDAUDiagnosticField(el: _Element) {
-    if (!_cached_decoder_for_NNPDAUDiagnosticField) {
-        _cached_decoder_for_NNPDAUDiagnosticField = $._decodeInteger;
-    }
-    return _cached_decoder_for_NNPDAUDiagnosticField(el);
-}
+export const _decode_NNPDAUDiagnosticField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNPDAUDiagnosticField */
-let _cached_encoder_for_NNPDAUDiagnosticField: $.ASN1Encoder<NNPDAUDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNPDAUDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NNPDAUDiagnosticField */
-/**
- * @summary Encodes a(n) NNPDAUDiagnosticField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NNPDAUDiagnosticField, encoded as an ASN.1 Element.
- */
-export function _encode_NNPDAUDiagnosticField(
-    value: NNPDAUDiagnosticField,
-    elGetter: $.ASN1Encoder<NNPDAUDiagnosticField>
-) {
-    if (!_cached_encoder_for_NNPDAUDiagnosticField) {
-        _cached_encoder_for_NNPDAUDiagnosticField = $._encodeInteger;
-    }
-    return _cached_encoder_for_NNPDAUDiagnosticField(value, elGetter);
-}
+export const _encode_NNPDAUDiagnosticField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NNPDAUDiagnosticField */
 

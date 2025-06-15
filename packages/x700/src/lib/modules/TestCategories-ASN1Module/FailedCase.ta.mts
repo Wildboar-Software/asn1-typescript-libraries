@@ -100,45 +100,17 @@ export const counterOverflow: FailedCase =
 /* END_OF_SYMBOL_DEFINITION counterOverflow */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FailedCase */
-let _cached_decoder_for_FailedCase: $.ASN1Decoder<FailedCase> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FailedCase */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FailedCase */
-/**
- * @summary Decodes an ASN.1 element into a(n) FailedCase
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FailedCase} The decoded data structure.
- */
-export function _decode_FailedCase(el: _Element) {
-    if (!_cached_decoder_for_FailedCase) {
-        _cached_decoder_for_FailedCase = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_FailedCase(el);
-}
+export const _decode_FailedCase = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_FailedCase */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FailedCase */
-let _cached_encoder_for_FailedCase: $.ASN1Encoder<FailedCase> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FailedCase */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FailedCase */
-/**
- * @summary Encodes a(n) FailedCase into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FailedCase, encoded as an ASN.1 Element.
- */
-export function _encode_FailedCase(
-    value: FailedCase,
-    elGetter: $.ASN1Encoder<FailedCase>
-) {
-    if (!_cached_encoder_for_FailedCase) {
-        _cached_encoder_for_FailedCase = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_FailedCase(value, elGetter);
-}
+export const _encode_FailedCase = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FailedCase */
 

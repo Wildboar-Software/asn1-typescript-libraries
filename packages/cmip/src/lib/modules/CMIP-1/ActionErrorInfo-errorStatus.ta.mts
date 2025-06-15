@@ -110,45 +110,17 @@ export const invalidArgumentValue: ActionErrorInfo_errorStatus = ActionErrorInfo
 /* END_OF_SYMBOL_DEFINITION invalidArgumentValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionErrorInfo_errorStatus */
-let _cached_decoder_for_ActionErrorInfo_errorStatus: $.ASN1Decoder<ActionErrorInfo_errorStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionErrorInfo_errorStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ActionErrorInfo_errorStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) ActionErrorInfo_errorStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ActionErrorInfo_errorStatus} The decoded data structure.
- */
-export function _decode_ActionErrorInfo_errorStatus(el: _Element) {
-  if (!_cached_decoder_for_ActionErrorInfo_errorStatus) {
-    _cached_decoder_for_ActionErrorInfo_errorStatus = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_ActionErrorInfo_errorStatus(el);
-}
+export const _decode_ActionErrorInfo_errorStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ActionErrorInfo_errorStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionErrorInfo_errorStatus */
-let _cached_encoder_for_ActionErrorInfo_errorStatus: $.ASN1Encoder<ActionErrorInfo_errorStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionErrorInfo_errorStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ActionErrorInfo_errorStatus */
-/**
- * @summary Encodes a(n) ActionErrorInfo_errorStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActionErrorInfo_errorStatus, encoded as an ASN.1 Element.
- */
-export function _encode_ActionErrorInfo_errorStatus(
-  value: ActionErrorInfo_errorStatus,
-  elGetter: $.ASN1Encoder<ActionErrorInfo_errorStatus>
-) {
-  if (!_cached_encoder_for_ActionErrorInfo_errorStatus) {
-    _cached_encoder_for_ActionErrorInfo_errorStatus = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_ActionErrorInfo_errorStatus(value, elGetter);
-}
+export const _encode_ActionErrorInfo_errorStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ActionErrorInfo_errorStatus */
 

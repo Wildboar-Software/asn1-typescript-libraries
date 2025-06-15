@@ -45,45 +45,17 @@ export const unlimited: MaxCounterSize = MaxCounterSize_unlimited; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION unlimited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxCounterSize */
-let _cached_decoder_for_MaxCounterSize: $.ASN1Decoder<MaxCounterSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxCounterSize */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MaxCounterSize */
-/**
- * @summary Decodes an ASN.1 element into a(n) MaxCounterSize
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MaxCounterSize} The decoded data structure.
- */
-export function _decode_MaxCounterSize(el: _Element) {
-    if (!_cached_decoder_for_MaxCounterSize) {
-        _cached_decoder_for_MaxCounterSize = $._decodeInteger;
-    }
-    return _cached_decoder_for_MaxCounterSize(el);
-}
+export const _decode_MaxCounterSize = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MaxCounterSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxCounterSize */
-let _cached_encoder_for_MaxCounterSize: $.ASN1Encoder<MaxCounterSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxCounterSize */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MaxCounterSize */
-/**
- * @summary Encodes a(n) MaxCounterSize into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MaxCounterSize, encoded as an ASN.1 Element.
- */
-export function _encode_MaxCounterSize(
-    value: MaxCounterSize,
-    elGetter: $.ASN1Encoder<MaxCounterSize>
-) {
-    if (!_cached_encoder_for_MaxCounterSize) {
-        _cached_encoder_for_MaxCounterSize = $._encodeInteger;
-    }
-    return _cached_encoder_for_MaxCounterSize(value, elGetter);
-}
+export const _encode_MaxCounterSize = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MaxCounterSize */
 

@@ -139,45 +139,17 @@ export const extractDSP: MappingType =
 /* END_OF_SYMBOL_DEFINITION extractDSP */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MappingType */
-let _cached_decoder_for_MappingType: $.ASN1Decoder<MappingType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MappingType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MappingType */
-/**
- * @summary Decodes an ASN.1 element into a(n) MappingType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MappingType} The decoded data structure.
- */
-export function _decode_MappingType(el: _Element) {
-  if (!_cached_decoder_for_MappingType) {
-    _cached_decoder_for_MappingType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_MappingType(el);
-}
+export const _decode_MappingType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_MappingType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MappingType */
-let _cached_encoder_for_MappingType: $.ASN1Encoder<MappingType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MappingType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MappingType */
-/**
- * @summary Encodes a(n) MappingType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MappingType, encoded as an ASN.1 Element.
- */
-export function _encode_MappingType(
-  value: MappingType,
-  elGetter: $.ASN1Encoder<MappingType>
-) {
-  if (!_cached_encoder_for_MappingType) {
-    _cached_encoder_for_MappingType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_MappingType(value, elGetter);
-}
+export const _encode_MappingType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MappingType */
 

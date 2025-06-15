@@ -63,45 +63,17 @@ export const failed: AuthenticationCheck = AuthenticationCheck_failed; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION failed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationCheck */
-let _cached_decoder_for_AuthenticationCheck: $.ASN1Decoder<AuthenticationCheck> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationCheck */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AuthenticationCheck */
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticationCheck
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AuthenticationCheck} The decoded data structure.
- */
-export function _decode_AuthenticationCheck(el: _Element) {
-    if (!_cached_decoder_for_AuthenticationCheck) {
-        _cached_decoder_for_AuthenticationCheck = $._decodeInteger;
-    }
-    return _cached_decoder_for_AuthenticationCheck(el);
-}
+export const _decode_AuthenticationCheck = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AuthenticationCheck */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationCheck */
-let _cached_encoder_for_AuthenticationCheck: $.ASN1Encoder<AuthenticationCheck> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationCheck */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AuthenticationCheck */
-/**
- * @summary Encodes a(n) AuthenticationCheck into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticationCheck, encoded as an ASN.1 Element.
- */
-export function _encode_AuthenticationCheck(
-    value: AuthenticationCheck,
-    elGetter: $.ASN1Encoder<AuthenticationCheck>
-) {
-    if (!_cached_encoder_for_AuthenticationCheck) {
-        _cached_encoder_for_AuthenticationCheck = $._encodeInteger;
-    }
-    return _cached_encoder_for_AuthenticationCheck(value, elGetter);
-}
+export const _encode_AuthenticationCheck = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AuthenticationCheck */
 

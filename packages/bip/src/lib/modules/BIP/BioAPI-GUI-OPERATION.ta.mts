@@ -187,45 +187,17 @@ export const enroll: BioAPI_GUI_OPERATION = BioAPI_GUI_OPERATION_enroll; /* SHOR
 /* END_OF_SYMBOL_DEFINITION enroll */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_OPERATION */
-let _cached_decoder_for_BioAPI_GUI_OPERATION: $.ASN1Decoder<BioAPI_GUI_OPERATION> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_OPERATION */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_OPERATION */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_GUI_OPERATION
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_GUI_OPERATION} The decoded data structure.
- */
-export function _decode_BioAPI_GUI_OPERATION(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_GUI_OPERATION) {
-    _cached_decoder_for_BioAPI_GUI_OPERATION = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_GUI_OPERATION(el);
-}
+export const _decode_BioAPI_GUI_OPERATION = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_OPERATION */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_OPERATION */
-let _cached_encoder_for_BioAPI_GUI_OPERATION: $.ASN1Encoder<BioAPI_GUI_OPERATION> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_OPERATION */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_OPERATION */
-/**
- * @summary Encodes a(n) BioAPI_GUI_OPERATION into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_GUI_OPERATION, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_GUI_OPERATION(
-  value: BioAPI_GUI_OPERATION,
-  elGetter: $.ASN1Encoder<BioAPI_GUI_OPERATION>
-) {
-  if (!_cached_encoder_for_BioAPI_GUI_OPERATION) {
-    _cached_encoder_for_BioAPI_GUI_OPERATION = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_GUI_OPERATION(value, elGetter);
-}
+export const _encode_BioAPI_GUI_OPERATION = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_OPERATION */
 

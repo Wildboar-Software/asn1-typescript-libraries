@@ -103,45 +103,17 @@ export const expired: CertStatus = CertStatus_expired; /* SHORT_NAMED_ENUMERATED
 /* END_OF_SYMBOL_DEFINITION expired */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertStatus */
-let _cached_decoder_for_CertStatus: $.ASN1Decoder<CertStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CertStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) CertStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CertStatus} The decoded data structure.
- */
-export function _decode_CertStatus(el: _Element) {
-    if (!_cached_decoder_for_CertStatus) {
-        _cached_decoder_for_CertStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CertStatus(el);
-}
+export const _decode_CertStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CertStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertStatus */
-let _cached_encoder_for_CertStatus: $.ASN1Encoder<CertStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CertStatus */
-/**
- * @summary Encodes a(n) CertStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CertStatus, encoded as an ASN.1 Element.
- */
-export function _encode_CertStatus(
-    value: CertStatus,
-    elGetter: $.ASN1Encoder<CertStatus>
-) {
-    if (!_cached_encoder_for_CertStatus) {
-        _cached_encoder_for_CertStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CertStatus(value, elGetter);
-}
+export const _encode_CertStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CertStatus */
 

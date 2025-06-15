@@ -139,45 +139,17 @@ export const saturday: number = WeekMask_daysOfWeek_saturday; /* SHORT_NAMED_BIT
 /* END_OF_SYMBOL_DEFINITION saturday */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask_daysOfWeek */
-let _cached_decoder_for_WeekMask_daysOfWeek: $.ASN1Decoder<WeekMask_daysOfWeek> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask_daysOfWeek */
 
 /* START_OF_SYMBOL_DEFINITION _decode_WeekMask_daysOfWeek */
-/**
- * @summary Decodes an ASN.1 element into a(n) WeekMask_daysOfWeek
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {WeekMask_daysOfWeek} The decoded data structure.
- */
-export function _decode_WeekMask_daysOfWeek(el: _Element) {
-    if (!_cached_decoder_for_WeekMask_daysOfWeek) {
-        _cached_decoder_for_WeekMask_daysOfWeek = $._decodeBitString;
-    }
-    return _cached_decoder_for_WeekMask_daysOfWeek(el);
-}
+export const _decode_WeekMask_daysOfWeek = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_WeekMask_daysOfWeek */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask_daysOfWeek */
-let _cached_encoder_for_WeekMask_daysOfWeek: $.ASN1Encoder<WeekMask_daysOfWeek> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask_daysOfWeek */
 
 /* START_OF_SYMBOL_DEFINITION _encode_WeekMask_daysOfWeek */
-/**
- * @summary Encodes a(n) WeekMask_daysOfWeek into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The WeekMask_daysOfWeek, encoded as an ASN.1 Element.
- */
-export function _encode_WeekMask_daysOfWeek(
-    value: WeekMask_daysOfWeek,
-    elGetter: $.ASN1Encoder<WeekMask_daysOfWeek>
-) {
-    if (!_cached_encoder_for_WeekMask_daysOfWeek) {
-        _cached_encoder_for_WeekMask_daysOfWeek = $._encodeBitString;
-    }
-    return _cached_encoder_for_WeekMask_daysOfWeek(value, elGetter);
-}
+export const _encode_WeekMask_daysOfWeek = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_WeekMask_daysOfWeek */
 

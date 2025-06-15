@@ -723,45 +723,17 @@ export const compression_unsupported: NNUAMSDiagnosticField = NNUAMSDiagnosticFi
 /* END_OF_SYMBOL_DEFINITION compression_unsupported */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUAMSDiagnosticField */
-let _cached_decoder_for_NNUAMSDiagnosticField: $.ASN1Decoder<NNUAMSDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUAMSDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NNUAMSDiagnosticField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NNUAMSDiagnosticField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NNUAMSDiagnosticField} The decoded data structure.
- */
-export function _decode_NNUAMSDiagnosticField(el: _Element) {
-    if (!_cached_decoder_for_NNUAMSDiagnosticField) {
-        _cached_decoder_for_NNUAMSDiagnosticField = $._decodeInteger;
-    }
-    return _cached_decoder_for_NNUAMSDiagnosticField(el);
-}
+export const _decode_NNUAMSDiagnosticField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NNUAMSDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUAMSDiagnosticField */
-let _cached_encoder_for_NNUAMSDiagnosticField: $.ASN1Encoder<NNUAMSDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUAMSDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NNUAMSDiagnosticField */
-/**
- * @summary Encodes a(n) NNUAMSDiagnosticField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NNUAMSDiagnosticField, encoded as an ASN.1 Element.
- */
-export function _encode_NNUAMSDiagnosticField(
-    value: NNUAMSDiagnosticField,
-    elGetter: $.ASN1Encoder<NNUAMSDiagnosticField>
-) {
-    if (!_cached_encoder_for_NNUAMSDiagnosticField) {
-        _cached_encoder_for_NNUAMSDiagnosticField = $._encodeInteger;
-    }
-    return _cached_encoder_for_NNUAMSDiagnosticField(value, elGetter);
-}
+export const _encode_NNUAMSDiagnosticField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NNUAMSDiagnosticField */
 

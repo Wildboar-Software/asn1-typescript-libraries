@@ -63,45 +63,17 @@ export const twa: RTORQapdu_dialogueMode = RTORQapdu_dialogueMode_twa; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION twa */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RTORQapdu_dialogueMode */
-let _cached_decoder_for_RTORQapdu_dialogueMode: $.ASN1Decoder<RTORQapdu_dialogueMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RTORQapdu_dialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RTORQapdu_dialogueMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) RTORQapdu_dialogueMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RTORQapdu_dialogueMode} The decoded data structure.
- */
-export function _decode_RTORQapdu_dialogueMode(el: _Element) {
-  if (!_cached_decoder_for_RTORQapdu_dialogueMode) {
-    _cached_decoder_for_RTORQapdu_dialogueMode = $._decodeInteger;
-  }
-  return _cached_decoder_for_RTORQapdu_dialogueMode(el);
-}
+export const _decode_RTORQapdu_dialogueMode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RTORQapdu_dialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RTORQapdu_dialogueMode */
-let _cached_encoder_for_RTORQapdu_dialogueMode: $.ASN1Encoder<RTORQapdu_dialogueMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RTORQapdu_dialogueMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RTORQapdu_dialogueMode */
-/**
- * @summary Encodes a(n) RTORQapdu_dialogueMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RTORQapdu_dialogueMode, encoded as an ASN.1 Element.
- */
-export function _encode_RTORQapdu_dialogueMode(
-  value: RTORQapdu_dialogueMode,
-  elGetter: $.ASN1Encoder<RTORQapdu_dialogueMode>
-) {
-  if (!_cached_encoder_for_RTORQapdu_dialogueMode) {
-    _cached_encoder_for_RTORQapdu_dialogueMode = $._encodeInteger;
-  }
-  return _cached_encoder_for_RTORQapdu_dialogueMode(value, elGetter);
-}
+export const _encode_RTORQapdu_dialogueMode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RTORQapdu_dialogueMode */
 

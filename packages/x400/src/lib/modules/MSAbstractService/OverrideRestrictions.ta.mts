@@ -77,45 +77,17 @@ export const override_attribute_length_restriction: number = OverrideRestriction
 /* END_OF_SYMBOL_DEFINITION override_attribute_length_restriction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OverrideRestrictions */
-let _cached_decoder_for_OverrideRestrictions: $.ASN1Decoder<OverrideRestrictions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OverrideRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OverrideRestrictions */
-/**
- * @summary Decodes an ASN.1 element into a(n) OverrideRestrictions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OverrideRestrictions} The decoded data structure.
- */
-export function _decode_OverrideRestrictions(el: _Element) {
-    if (!_cached_decoder_for_OverrideRestrictions) {
-        _cached_decoder_for_OverrideRestrictions = $._decodeBitString;
-    }
-    return _cached_decoder_for_OverrideRestrictions(el);
-}
+export const _decode_OverrideRestrictions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_OverrideRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OverrideRestrictions */
-let _cached_encoder_for_OverrideRestrictions: $.ASN1Encoder<OverrideRestrictions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OverrideRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OverrideRestrictions */
-/**
- * @summary Encodes a(n) OverrideRestrictions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OverrideRestrictions, encoded as an ASN.1 Element.
- */
-export function _encode_OverrideRestrictions(
-    value: OverrideRestrictions,
-    elGetter: $.ASN1Encoder<OverrideRestrictions>
-) {
-    if (!_cached_encoder_for_OverrideRestrictions) {
-        _cached_encoder_for_OverrideRestrictions = $._encodeBitString;
-    }
-    return _cached_encoder_for_OverrideRestrictions(value, elGetter);
-}
+export const _encode_OverrideRestrictions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OverrideRestrictions */
 

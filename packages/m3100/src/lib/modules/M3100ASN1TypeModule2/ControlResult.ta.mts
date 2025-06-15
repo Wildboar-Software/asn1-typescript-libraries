@@ -145,45 +145,17 @@ export const fail_ReasonUnknown: ControlResult =
 /* END_OF_SYMBOL_DEFINITION fail_ReasonUnknown */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlResult */
-let _cached_decoder_for_ControlResult: $.ASN1Decoder<ControlResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlResult */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ControlResult */
-/**
- * @summary Decodes an ASN.1 element into a(n) ControlResult
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ControlResult} The decoded data structure.
- */
-export function _decode_ControlResult(el: _Element) {
-    if (!_cached_decoder_for_ControlResult) {
-        _cached_decoder_for_ControlResult = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ControlResult(el);
-}
+export const _decode_ControlResult = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ControlResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlResult */
-let _cached_encoder_for_ControlResult: $.ASN1Encoder<ControlResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlResult */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ControlResult */
-/**
- * @summary Encodes a(n) ControlResult into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControlResult, encoded as an ASN.1 Element.
- */
-export function _encode_ControlResult(
-    value: ControlResult,
-    elGetter: $.ASN1Encoder<ControlResult>
-) {
-    if (!_cached_encoder_for_ControlResult) {
-        _cached_encoder_for_ControlResult = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ControlResult(value, elGetter);
-}
+export const _encode_ControlResult = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ControlResult */
 

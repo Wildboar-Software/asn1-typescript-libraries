@@ -27,45 +27,17 @@ export type CustomerWorkCenter = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION CustomerWorkCenter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerWorkCenter */
-let _cached_decoder_for_CustomerWorkCenter: $.ASN1Decoder<CustomerWorkCenter> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerWorkCenter */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CustomerWorkCenter */
-/**
- * @summary Decodes an ASN.1 element into a(n) CustomerWorkCenter
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CustomerWorkCenter} The decoded data structure.
- */
-export function _decode_CustomerWorkCenter(el: _Element) {
-    if (!_cached_decoder_for_CustomerWorkCenter) {
-        _cached_decoder_for_CustomerWorkCenter = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_CustomerWorkCenter(el);
-}
+export const _decode_CustomerWorkCenter = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_CustomerWorkCenter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerWorkCenter */
-let _cached_encoder_for_CustomerWorkCenter: $.ASN1Encoder<CustomerWorkCenter> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerWorkCenter */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CustomerWorkCenter */
-/**
- * @summary Encodes a(n) CustomerWorkCenter into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CustomerWorkCenter, encoded as an ASN.1 Element.
- */
-export function _encode_CustomerWorkCenter(
-    value: CustomerWorkCenter,
-    elGetter: $.ASN1Encoder<CustomerWorkCenter>
-) {
-    if (!_cached_encoder_for_CustomerWorkCenter) {
-        _cached_encoder_for_CustomerWorkCenter = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_CustomerWorkCenter(value, elGetter);
-}
+export const _encode_CustomerWorkCenter = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CustomerWorkCenter */
 

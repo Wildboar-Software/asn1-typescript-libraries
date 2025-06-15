@@ -139,45 +139,17 @@ export const fn: EDIMSEntryType =
 /* END_OF_SYMBOL_DEFINITION fn */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMSEntryType */
-let _cached_decoder_for_EDIMSEntryType: $.ASN1Decoder<EDIMSEntryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMSEntryType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDIMSEntryType */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDIMSEntryType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDIMSEntryType} The decoded data structure.
- */
-export function _decode_EDIMSEntryType(el: _Element) {
-    if (!_cached_decoder_for_EDIMSEntryType) {
-        _cached_decoder_for_EDIMSEntryType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_EDIMSEntryType(el);
-}
+export const _decode_EDIMSEntryType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EDIMSEntryType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMSEntryType */
-let _cached_encoder_for_EDIMSEntryType: $.ASN1Encoder<EDIMSEntryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMSEntryType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDIMSEntryType */
-/**
- * @summary Encodes a(n) EDIMSEntryType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDIMSEntryType, encoded as an ASN.1 Element.
- */
-export function _encode_EDIMSEntryType(
-    value: EDIMSEntryType,
-    elGetter: $.ASN1Encoder<EDIMSEntryType>
-) {
-    if (!_cached_encoder_for_EDIMSEntryType) {
-        _cached_encoder_for_EDIMSEntryType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_EDIMSEntryType(value, elGetter);
-}
+export const _encode_EDIMSEntryType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDIMSEntryType */
 

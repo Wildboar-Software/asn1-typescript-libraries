@@ -27,45 +27,17 @@ export type BIRIndex = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION BIRIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIRIndex */
-let _cached_decoder_for_BIRIndex: $.ASN1Decoder<BIRIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIRIndex */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BIRIndex */
-/**
- * @summary Decodes an ASN.1 element into a(n) BIRIndex
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BIRIndex} The decoded data structure.
- */
-export function _decode_BIRIndex(el: _Element) {
-  if (!_cached_decoder_for_BIRIndex) {
-    _cached_decoder_for_BIRIndex = $._decodeOctetString;
-  }
-  return _cached_decoder_for_BIRIndex(el);
-}
+export const _decode_BIRIndex = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_BIRIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIRIndex */
-let _cached_encoder_for_BIRIndex: $.ASN1Encoder<BIRIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIRIndex */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BIRIndex */
-/**
- * @summary Encodes a(n) BIRIndex into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BIRIndex, encoded as an ASN.1 Element.
- */
-export function _encode_BIRIndex(
-  value: BIRIndex,
-  elGetter: $.ASN1Encoder<BIRIndex>
-) {
-  if (!_cached_encoder_for_BIRIndex) {
-    _cached_encoder_for_BIRIndex = $._encodeOctetString;
-  }
-  return _cached_encoder_for_BIRIndex(value, elGetter);
-}
+export const _encode_BIRIndex = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BIRIndex */
 

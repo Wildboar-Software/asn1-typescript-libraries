@@ -174,45 +174,17 @@ export const mixed_mode: number = BuiltInEncodedInformationTypes_mixed_mode; /* 
 /* END_OF_SYMBOL_DEFINITION mixed_mode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInEncodedInformationTypes */
-let _cached_decoder_for_BuiltInEncodedInformationTypes: $.ASN1Decoder<BuiltInEncodedInformationTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInEncodedInformationTypes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BuiltInEncodedInformationTypes */
-/**
- * @summary Decodes an ASN.1 element into a(n) BuiltInEncodedInformationTypes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BuiltInEncodedInformationTypes} The decoded data structure.
- */
-export function _decode_BuiltInEncodedInformationTypes(el: _Element) {
-    if (!_cached_decoder_for_BuiltInEncodedInformationTypes) {
-        _cached_decoder_for_BuiltInEncodedInformationTypes = $._decodeBitString;
-    }
-    return _cached_decoder_for_BuiltInEncodedInformationTypes(el);
-}
+export const _decode_BuiltInEncodedInformationTypes = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_BuiltInEncodedInformationTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInEncodedInformationTypes */
-let _cached_encoder_for_BuiltInEncodedInformationTypes: $.ASN1Encoder<BuiltInEncodedInformationTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInEncodedInformationTypes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BuiltInEncodedInformationTypes */
-/**
- * @summary Encodes a(n) BuiltInEncodedInformationTypes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BuiltInEncodedInformationTypes, encoded as an ASN.1 Element.
- */
-export function _encode_BuiltInEncodedInformationTypes(
-    value: BuiltInEncodedInformationTypes,
-    elGetter: $.ASN1Encoder<BuiltInEncodedInformationTypes>
-) {
-    if (!_cached_encoder_for_BuiltInEncodedInformationTypes) {
-        _cached_encoder_for_BuiltInEncodedInformationTypes = $._encodeBitString;
-    }
-    return _cached_encoder_for_BuiltInEncodedInformationTypes(value, elGetter);
-}
+export const _encode_BuiltInEncodedInformationTypes = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BuiltInEncodedInformationTypes */
 

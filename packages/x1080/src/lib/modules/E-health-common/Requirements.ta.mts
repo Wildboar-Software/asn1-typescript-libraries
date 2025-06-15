@@ -113,45 +113,17 @@ export const with_2_way_video_and_voice: Requirements = Requirements_with_2_way_
 /* END_OF_SYMBOL_DEFINITION with_2_way_video_and_voice */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Requirements */
-let _cached_decoder_for_Requirements: $.ASN1Decoder<Requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Requirements */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Requirements */
-/**
- * @summary Decodes an ASN.1 element into a(n) Requirements
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Requirements} The decoded data structure.
- */
-export function _decode_Requirements(el: _Element) {
-    if (!_cached_decoder_for_Requirements) {
-        _cached_decoder_for_Requirements = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Requirements(el);
-}
+export const _decode_Requirements = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Requirements */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Requirements */
-let _cached_encoder_for_Requirements: $.ASN1Encoder<Requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Requirements */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Requirements */
-/**
- * @summary Encodes a(n) Requirements into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Requirements, encoded as an ASN.1 Element.
- */
-export function _encode_Requirements(
-    value: Requirements,
-    elGetter: $.ASN1Encoder<Requirements>
-) {
-    if (!_cached_encoder_for_Requirements) {
-        _cached_encoder_for_Requirements = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Requirements(value, elGetter);
-}
+export const _encode_Requirements = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Requirements */
 

@@ -115,45 +115,17 @@ export const external: number = PeerEntityAuthenticationPolicy_external; /* SHOR
 /* END_OF_SYMBOL_DEFINITION external */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PeerEntityAuthenticationPolicy */
-let _cached_decoder_for_PeerEntityAuthenticationPolicy: $.ASN1Decoder<PeerEntityAuthenticationPolicy> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PeerEntityAuthenticationPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PeerEntityAuthenticationPolicy */
-/**
- * @summary Decodes an ASN.1 element into a(n) PeerEntityAuthenticationPolicy
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PeerEntityAuthenticationPolicy} The decoded data structure.
- */
-export function _decode_PeerEntityAuthenticationPolicy(el: _Element) {
-    if (!_cached_decoder_for_PeerEntityAuthenticationPolicy) {
-        _cached_decoder_for_PeerEntityAuthenticationPolicy = $._decodeBitString;
-    }
-    return _cached_decoder_for_PeerEntityAuthenticationPolicy(el);
-}
+export const _decode_PeerEntityAuthenticationPolicy = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_PeerEntityAuthenticationPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PeerEntityAuthenticationPolicy */
-let _cached_encoder_for_PeerEntityAuthenticationPolicy: $.ASN1Encoder<PeerEntityAuthenticationPolicy> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PeerEntityAuthenticationPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PeerEntityAuthenticationPolicy */
-/**
- * @summary Encodes a(n) PeerEntityAuthenticationPolicy into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PeerEntityAuthenticationPolicy, encoded as an ASN.1 Element.
- */
-export function _encode_PeerEntityAuthenticationPolicy(
-    value: PeerEntityAuthenticationPolicy,
-    elGetter: $.ASN1Encoder<PeerEntityAuthenticationPolicy>
-) {
-    if (!_cached_encoder_for_PeerEntityAuthenticationPolicy) {
-        _cached_encoder_for_PeerEntityAuthenticationPolicy = $._encodeBitString;
-    }
-    return _cached_encoder_for_PeerEntityAuthenticationPolicy(value, elGetter);
-}
+export const _encode_PeerEntityAuthenticationPolicy = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PeerEntityAuthenticationPolicy */
 

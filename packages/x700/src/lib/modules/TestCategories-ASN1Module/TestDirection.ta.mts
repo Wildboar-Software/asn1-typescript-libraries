@@ -119,45 +119,17 @@ export const receiveFromNearEnd: TestDirection = TestDirection_receiveFromNearEn
 /* END_OF_SYMBOL_DEFINITION receiveFromNearEnd */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestDirection */
-let _cached_decoder_for_TestDirection: $.ASN1Decoder<TestDirection> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestDirection */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestDirection */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestDirection
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestDirection} The decoded data structure.
- */
-export function _decode_TestDirection(el: _Element) {
-    if (!_cached_decoder_for_TestDirection) {
-        _cached_decoder_for_TestDirection = $._decodeInteger;
-    }
-    return _cached_decoder_for_TestDirection(el);
-}
+export const _decode_TestDirection = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TestDirection */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestDirection */
-let _cached_encoder_for_TestDirection: $.ASN1Encoder<TestDirection> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestDirection */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestDirection */
-/**
- * @summary Encodes a(n) TestDirection into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestDirection, encoded as an ASN.1 Element.
- */
-export function _encode_TestDirection(
-    value: TestDirection,
-    elGetter: $.ASN1Encoder<TestDirection>
-) {
-    if (!_cached_encoder_for_TestDirection) {
-        _cached_encoder_for_TestDirection = $._encodeInteger;
-    }
-    return _cached_encoder_for_TestDirection(value, elGetter);
-}
+export const _encode_TestDirection = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestDirection */
 

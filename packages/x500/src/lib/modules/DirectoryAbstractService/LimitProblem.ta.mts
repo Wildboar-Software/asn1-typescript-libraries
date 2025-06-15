@@ -74,45 +74,17 @@ export const administrativeLimitExceeded: LimitProblem = LimitProblem_administra
 /* END_OF_SYMBOL_DEFINITION administrativeLimitExceeded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LimitProblem */
-let _cached_decoder_for_LimitProblem: $.ASN1Decoder<LimitProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LimitProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LimitProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) LimitProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LimitProblem} The decoded data structure.
- */
-export function _decode_LimitProblem(el: _Element) {
-    if (!_cached_decoder_for_LimitProblem) {
-        _cached_decoder_for_LimitProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_LimitProblem(el);
-}
+export const _decode_LimitProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_LimitProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LimitProblem */
-let _cached_encoder_for_LimitProblem: $.ASN1Encoder<LimitProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LimitProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LimitProblem */
-/**
- * @summary Encodes a(n) LimitProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LimitProblem, encoded as an ASN.1 Element.
- */
-export function _encode_LimitProblem(
-    value: LimitProblem,
-    elGetter: $.ASN1Encoder<LimitProblem>
-) {
-    if (!_cached_encoder_for_LimitProblem) {
-        _cached_encoder_for_LimitProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_LimitProblem(value, elGetter);
-}
+export const _encode_LimitProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LimitProblem */
 

@@ -34,45 +34,17 @@ export type TemplateName = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION TemplateName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateName */
-let _cached_decoder_for_TemplateName: $.ASN1Decoder<TemplateName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TemplateName */
-/**
- * @summary Decodes an ASN.1 element into a(n) TemplateName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TemplateName} The decoded data structure.
- */
-export function _decode_TemplateName(el: _Element) {
-    if (!_cached_decoder_for_TemplateName) {
-        _cached_decoder_for_TemplateName = $._decodePrintableString;
-    }
-    return _cached_decoder_for_TemplateName(el);
-}
+export const _decode_TemplateName = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_TemplateName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateName */
-let _cached_encoder_for_TemplateName: $.ASN1Encoder<TemplateName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TemplateName */
-/**
- * @summary Encodes a(n) TemplateName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TemplateName, encoded as an ASN.1 Element.
- */
-export function _encode_TemplateName(
-    value: TemplateName,
-    elGetter: $.ASN1Encoder<TemplateName>
-) {
-    if (!_cached_encoder_for_TemplateName) {
-        _cached_encoder_for_TemplateName = $._encodePrintableString;
-    }
-    return _cached_encoder_for_TemplateName(value, elGetter);
-}
+export const _encode_TemplateName = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TemplateName */
 

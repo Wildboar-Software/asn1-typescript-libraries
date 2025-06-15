@@ -74,45 +74,17 @@ export const ipm_auto_forwarded: NonReceiptReasonField = NonReceiptReasonField_i
 /* END_OF_SYMBOL_DEFINITION ipm_auto_forwarded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonReceiptReasonField */
-let _cached_decoder_for_NonReceiptReasonField: $.ASN1Decoder<NonReceiptReasonField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonReceiptReasonField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NonReceiptReasonField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NonReceiptReasonField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NonReceiptReasonField} The decoded data structure.
- */
-export function _decode_NonReceiptReasonField(el: _Element) {
-    if (!_cached_decoder_for_NonReceiptReasonField) {
-        _cached_decoder_for_NonReceiptReasonField = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_NonReceiptReasonField(el);
-}
+export const _decode_NonReceiptReasonField = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_NonReceiptReasonField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonReceiptReasonField */
-let _cached_encoder_for_NonReceiptReasonField: $.ASN1Encoder<NonReceiptReasonField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonReceiptReasonField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NonReceiptReasonField */
-/**
- * @summary Encodes a(n) NonReceiptReasonField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NonReceiptReasonField, encoded as an ASN.1 Element.
- */
-export function _encode_NonReceiptReasonField(
-    value: NonReceiptReasonField,
-    elGetter: $.ASN1Encoder<NonReceiptReasonField>
-) {
-    if (!_cached_encoder_for_NonReceiptReasonField) {
-        _cached_encoder_for_NonReceiptReasonField = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_NonReceiptReasonField(value, elGetter);
-}
+export const _encode_NonReceiptReasonField = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NonReceiptReasonField */
 

@@ -129,45 +129,17 @@ export const retry_later: C_RECOVER_RC_recovery_state = C_RECOVER_RC_recovery_st
 /* END_OF_SYMBOL_DEFINITION retry_later */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_C_RECOVER_RC_recovery_state */
-let _cached_decoder_for_C_RECOVER_RC_recovery_state: $.ASN1Decoder<C_RECOVER_RC_recovery_state> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_C_RECOVER_RC_recovery_state */
 
 /* START_OF_SYMBOL_DEFINITION _decode_C_RECOVER_RC_recovery_state */
-/**
- * @summary Decodes an ASN.1 element into a(n) C_RECOVER_RC_recovery_state
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {C_RECOVER_RC_recovery_state} The decoded data structure.
- */
-export function _decode_C_RECOVER_RC_recovery_state(el: _Element) {
-  if (!_cached_decoder_for_C_RECOVER_RC_recovery_state) {
-    _cached_decoder_for_C_RECOVER_RC_recovery_state = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_C_RECOVER_RC_recovery_state(el);
-}
+export const _decode_C_RECOVER_RC_recovery_state = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_C_RECOVER_RC_recovery_state */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_C_RECOVER_RC_recovery_state */
-let _cached_encoder_for_C_RECOVER_RC_recovery_state: $.ASN1Encoder<C_RECOVER_RC_recovery_state> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_C_RECOVER_RC_recovery_state */
 
 /* START_OF_SYMBOL_DEFINITION _encode_C_RECOVER_RC_recovery_state */
-/**
- * @summary Encodes a(n) C_RECOVER_RC_recovery_state into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The C_RECOVER_RC_recovery_state, encoded as an ASN.1 Element.
- */
-export function _encode_C_RECOVER_RC_recovery_state(
-  value: C_RECOVER_RC_recovery_state,
-  elGetter: $.ASN1Encoder<C_RECOVER_RC_recovery_state>
-) {
-  if (!_cached_encoder_for_C_RECOVER_RC_recovery_state) {
-    _cached_encoder_for_C_RECOVER_RC_recovery_state = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_C_RECOVER_RC_recovery_state(value, elGetter);
-}
+export const _encode_C_RECOVER_RC_recovery_state = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_C_RECOVER_RC_recovery_state */
 

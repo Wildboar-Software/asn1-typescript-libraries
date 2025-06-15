@@ -81,45 +81,17 @@ export const eidCompliant: number = TokenFlags_eidCompliant; /* SHORT_NAMED_BIT 
 /* END_OF_SYMBOL_DEFINITION eidCompliant */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenFlags */
-let _cached_decoder_for_TokenFlags: $.ASN1Decoder<TokenFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TokenFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) TokenFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TokenFlags} The decoded data structure.
- */
-export function _decode_TokenFlags(el: _Element) {
-    if (!_cached_decoder_for_TokenFlags) {
-        _cached_decoder_for_TokenFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_TokenFlags(el);
-}
+export const _decode_TokenFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_TokenFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenFlags */
-let _cached_encoder_for_TokenFlags: $.ASN1Encoder<TokenFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TokenFlags */
-/**
- * @summary Encodes a(n) TokenFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TokenFlags, encoded as an ASN.1 Element.
- */
-export function _encode_TokenFlags(
-    value: TokenFlags,
-    elGetter: $.ASN1Encoder<TokenFlags>
-) {
-    if (!_cached_encoder_for_TokenFlags) {
-        _cached_encoder_for_TokenFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_TokenFlags(value, elGetter);
-}
+export const _encode_TokenFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TokenFlags */
 

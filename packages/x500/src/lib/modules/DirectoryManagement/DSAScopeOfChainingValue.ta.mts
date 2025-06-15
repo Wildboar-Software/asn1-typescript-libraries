@@ -71,45 +71,17 @@ export const global: DSAScopeOfChainingValue = DSAScopeOfChainingValue_global; /
 /* END_OF_SYMBOL_DEFINITION global */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSAScopeOfChainingValue */
-let _cached_decoder_for_DSAScopeOfChainingValue: $.ASN1Decoder<DSAScopeOfChainingValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSAScopeOfChainingValue */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DSAScopeOfChainingValue */
-/**
- * @summary Decodes an ASN.1 element into a(n) DSAScopeOfChainingValue
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DSAScopeOfChainingValue} The decoded data structure.
- */
-export function _decode_DSAScopeOfChainingValue(el: _Element) {
-    if (!_cached_decoder_for_DSAScopeOfChainingValue) {
-        _cached_decoder_for_DSAScopeOfChainingValue = $._decodeInteger;
-    }
-    return _cached_decoder_for_DSAScopeOfChainingValue(el);
-}
+export const _decode_DSAScopeOfChainingValue = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DSAScopeOfChainingValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSAScopeOfChainingValue */
-let _cached_encoder_for_DSAScopeOfChainingValue: $.ASN1Encoder<DSAScopeOfChainingValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSAScopeOfChainingValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DSAScopeOfChainingValue */
-/**
- * @summary Encodes a(n) DSAScopeOfChainingValue into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DSAScopeOfChainingValue, encoded as an ASN.1 Element.
- */
-export function _encode_DSAScopeOfChainingValue(
-    value: DSAScopeOfChainingValue,
-    elGetter: $.ASN1Encoder<DSAScopeOfChainingValue>
-) {
-    if (!_cached_encoder_for_DSAScopeOfChainingValue) {
-        _cached_encoder_for_DSAScopeOfChainingValue = $._encodeInteger;
-    }
-    return _cached_encoder_for_DSAScopeOfChainingValue(value, elGetter);
-}
+export const _encode_DSAScopeOfChainingValue = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DSAScopeOfChainingValue */
 

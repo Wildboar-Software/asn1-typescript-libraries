@@ -63,45 +63,17 @@ export const last: FADU_Identity_first_last = FADU_Identity_first_last_last; /* 
 /* END_OF_SYMBOL_DEFINITION last */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FADU_Identity_first_last */
-let _cached_decoder_for_FADU_Identity_first_last: $.ASN1Decoder<FADU_Identity_first_last> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FADU_Identity_first_last */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FADU_Identity_first_last */
-/**
- * @summary Decodes an ASN.1 element into a(n) FADU_Identity_first_last
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FADU_Identity_first_last} The decoded data structure.
- */
-export function _decode_FADU_Identity_first_last(el: _Element) {
-  if (!_cached_decoder_for_FADU_Identity_first_last) {
-    _cached_decoder_for_FADU_Identity_first_last = $._decodeInteger;
-  }
-  return _cached_decoder_for_FADU_Identity_first_last(el);
-}
+export const _decode_FADU_Identity_first_last = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FADU_Identity_first_last */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FADU_Identity_first_last */
-let _cached_encoder_for_FADU_Identity_first_last: $.ASN1Encoder<FADU_Identity_first_last> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FADU_Identity_first_last */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FADU_Identity_first_last */
-/**
- * @summary Encodes a(n) FADU_Identity_first_last into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FADU_Identity_first_last, encoded as an ASN.1 Element.
- */
-export function _encode_FADU_Identity_first_last(
-  value: FADU_Identity_first_last,
-  elGetter: $.ASN1Encoder<FADU_Identity_first_last>
-) {
-  if (!_cached_encoder_for_FADU_Identity_first_last) {
-    _cached_encoder_for_FADU_Identity_first_last = $._encodeInteger;
-  }
-  return _cached_encoder_for_FADU_Identity_first_last(value, elGetter);
-}
+export const _encode_FADU_Identity_first_last = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FADU_Identity_first_last */
 

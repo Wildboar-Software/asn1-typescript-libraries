@@ -118,45 +118,17 @@ export const lockout: SwitchType =
 /* END_OF_SYMBOL_DEFINITION lockout */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SwitchType */
-let _cached_decoder_for_SwitchType: $.ASN1Decoder<SwitchType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SwitchType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SwitchType */
-/**
- * @summary Decodes an ASN.1 element into a(n) SwitchType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SwitchType} The decoded data structure.
- */
-export function _decode_SwitchType(el: _Element) {
-    if (!_cached_decoder_for_SwitchType) {
-        _cached_decoder_for_SwitchType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SwitchType(el);
-}
+export const _decode_SwitchType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SwitchType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SwitchType */
-let _cached_encoder_for_SwitchType: $.ASN1Encoder<SwitchType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SwitchType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SwitchType */
-/**
- * @summary Encodes a(n) SwitchType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SwitchType, encoded as an ASN.1 Element.
- */
-export function _encode_SwitchType(
-    value: SwitchType,
-    elGetter: $.ASN1Encoder<SwitchType>
-) {
-    if (!_cached_encoder_for_SwitchType) {
-        _cached_encoder_for_SwitchType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SwitchType(value, elGetter);
-}
+export const _encode_SwitchType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SwitchType */
 

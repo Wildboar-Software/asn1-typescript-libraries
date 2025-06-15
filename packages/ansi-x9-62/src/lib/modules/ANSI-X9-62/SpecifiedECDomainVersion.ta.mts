@@ -71,45 +71,17 @@ export const ecdpVer3: SpecifiedECDomainVersion = SpecifiedECDomainVersion_ecdpV
 /* END_OF_SYMBOL_DEFINITION ecdpVer3 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecifiedECDomainVersion */
-let _cached_decoder_for_SpecifiedECDomainVersion: $.ASN1Decoder<SpecifiedECDomainVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecifiedECDomainVersion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SpecifiedECDomainVersion */
-/**
- * @summary Decodes an ASN.1 element into a(n) SpecifiedECDomainVersion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SpecifiedECDomainVersion} The decoded data structure.
- */
-export function _decode_SpecifiedECDomainVersion(el: _Element) {
-    if (!_cached_decoder_for_SpecifiedECDomainVersion) {
-        _cached_decoder_for_SpecifiedECDomainVersion = $._decodeInteger;
-    }
-    return _cached_decoder_for_SpecifiedECDomainVersion(el);
-}
+export const _decode_SpecifiedECDomainVersion = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SpecifiedECDomainVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecifiedECDomainVersion */
-let _cached_encoder_for_SpecifiedECDomainVersion: $.ASN1Encoder<SpecifiedECDomainVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecifiedECDomainVersion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SpecifiedECDomainVersion */
-/**
- * @summary Encodes a(n) SpecifiedECDomainVersion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SpecifiedECDomainVersion, encoded as an ASN.1 Element.
- */
-export function _encode_SpecifiedECDomainVersion(
-    value: SpecifiedECDomainVersion,
-    elGetter: $.ASN1Encoder<SpecifiedECDomainVersion>
-) {
-    if (!_cached_encoder_for_SpecifiedECDomainVersion) {
-        _cached_encoder_for_SpecifiedECDomainVersion = $._encodeInteger;
-    }
-    return _cached_encoder_for_SpecifiedECDomainVersion(value, elGetter);
-}
+export const _encode_SpecifiedECDomainVersion = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SpecifiedECDomainVersion */
 

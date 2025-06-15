@@ -67,45 +67,17 @@ export const equals_matches: number = Equality_Comparision_equals_matches; /* SH
 /* END_OF_SYMBOL_DEFINITION equals_matches */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Equality_Comparision */
-let _cached_decoder_for_Equality_Comparision: $.ASN1Decoder<Equality_Comparision> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Equality_Comparision */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Equality_Comparision */
-/**
- * @summary Decodes an ASN.1 element into a(n) Equality_Comparision
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Equality_Comparision} The decoded data structure.
- */
-export function _decode_Equality_Comparision(el: _Element) {
-  if (!_cached_decoder_for_Equality_Comparision) {
-    _cached_decoder_for_Equality_Comparision = $._decodeBitString;
-  }
-  return _cached_decoder_for_Equality_Comparision(el);
-}
+export const _decode_Equality_Comparision = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Equality_Comparision */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Equality_Comparision */
-let _cached_encoder_for_Equality_Comparision: $.ASN1Encoder<Equality_Comparision> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Equality_Comparision */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Equality_Comparision */
-/**
- * @summary Encodes a(n) Equality_Comparision into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Equality_Comparision, encoded as an ASN.1 Element.
- */
-export function _encode_Equality_Comparision(
-  value: Equality_Comparision,
-  elGetter: $.ASN1Encoder<Equality_Comparision>
-) {
-  if (!_cached_encoder_for_Equality_Comparision) {
-    _cached_encoder_for_Equality_Comparision = $._encodeBitString;
-  }
-  return _cached_encoder_for_Equality_Comparision(value, elGetter);
-}
+export const _encode_Equality_Comparision = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Equality_Comparision */
 

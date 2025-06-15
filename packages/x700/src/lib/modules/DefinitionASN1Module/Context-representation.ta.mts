@@ -160,45 +160,17 @@ export const sPECIFIC_ERROR: Context_representation =
 /* END_OF_SYMBOL_DEFINITION sPECIFIC_ERROR */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_representation */
-let _cached_decoder_for_Context_representation: $.ASN1Decoder<Context_representation> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_representation */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Context_representation */
-/**
- * @summary Decodes an ASN.1 element into a(n) Context_representation
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Context_representation} The decoded data structure.
- */
-export function _decode_Context_representation(el: _Element) {
-    if (!_cached_decoder_for_Context_representation) {
-        _cached_decoder_for_Context_representation = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Context_representation(el);
-}
+export const _decode_Context_representation = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Context_representation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_representation */
-let _cached_encoder_for_Context_representation: $.ASN1Encoder<Context_representation> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_representation */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Context_representation */
-/**
- * @summary Encodes a(n) Context_representation into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Context_representation, encoded as an ASN.1 Element.
- */
-export function _encode_Context_representation(
-    value: Context_representation,
-    elGetter: $.ASN1Encoder<Context_representation>
-) {
-    if (!_cached_encoder_for_Context_representation) {
-        _cached_encoder_for_Context_representation = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Context_representation(value, elGetter);
-}
+export const _encode_Context_representation = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Context_representation */
 

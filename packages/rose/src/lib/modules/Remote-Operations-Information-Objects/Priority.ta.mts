@@ -27,45 +27,17 @@ export type Priority = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Priority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Priority */
-let _cached_decoder_for_Priority: $.ASN1Decoder<Priority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Priority */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Priority */
-/**
- * @summary Decodes an ASN.1 element into a(n) Priority
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Priority} The decoded data structure.
- */
-export function _decode_Priority(el: _Element) {
-  if (!_cached_decoder_for_Priority) {
-    _cached_decoder_for_Priority = $._decodeInteger;
-  }
-  return _cached_decoder_for_Priority(el);
-}
+export const _decode_Priority = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Priority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Priority */
-let _cached_encoder_for_Priority: $.ASN1Encoder<Priority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Priority */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Priority */
-/**
- * @summary Encodes a(n) Priority into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Priority, encoded as an ASN.1 Element.
- */
-export function _encode_Priority(
-  value: Priority,
-  elGetter: $.ASN1Encoder<Priority>
-) {
-  if (!_cached_encoder_for_Priority) {
-    _cached_encoder_for_Priority = $._encodeInteger;
-  }
-  return _cached_encoder_for_Priority(value, elGetter);
-}
+export const _encode_Priority = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Priority */
 

@@ -176,45 +176,17 @@ export const registeredId: AltNameType_builtinNameForm = AltNameType_builtinName
 /* END_OF_SYMBOL_DEFINITION registeredId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AltNameType_builtinNameForm */
-let _cached_decoder_for_AltNameType_builtinNameForm: $.ASN1Decoder<AltNameType_builtinNameForm> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AltNameType_builtinNameForm */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AltNameType_builtinNameForm */
-/**
- * @summary Decodes an ASN.1 element into a(n) AltNameType_builtinNameForm
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AltNameType_builtinNameForm} The decoded data structure.
- */
-export function _decode_AltNameType_builtinNameForm(el: _Element) {
-    if (!_cached_decoder_for_AltNameType_builtinNameForm) {
-        _cached_decoder_for_AltNameType_builtinNameForm = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AltNameType_builtinNameForm(el);
-}
+export const _decode_AltNameType_builtinNameForm = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AltNameType_builtinNameForm */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AltNameType_builtinNameForm */
-let _cached_encoder_for_AltNameType_builtinNameForm: $.ASN1Encoder<AltNameType_builtinNameForm> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AltNameType_builtinNameForm */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AltNameType_builtinNameForm */
-/**
- * @summary Encodes a(n) AltNameType_builtinNameForm into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AltNameType_builtinNameForm, encoded as an ASN.1 Element.
- */
-export function _encode_AltNameType_builtinNameForm(
-    value: AltNameType_builtinNameForm,
-    elGetter: $.ASN1Encoder<AltNameType_builtinNameForm>
-) {
-    if (!_cached_encoder_for_AltNameType_builtinNameForm) {
-        _cached_encoder_for_AltNameType_builtinNameForm = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AltNameType_builtinNameForm(value, elGetter);
-}
+export const _encode_AltNameType_builtinNameForm = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AltNameType_builtinNameForm */
 

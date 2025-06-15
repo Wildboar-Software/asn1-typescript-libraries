@@ -83,45 +83,17 @@ export const maximum_length_problem: FetchRestrictionProblem = FetchRestrictionP
 /* END_OF_SYMBOL_DEFINITION maximum_length_problem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchRestrictionProblem */
-let _cached_decoder_for_FetchRestrictionProblem: $.ASN1Decoder<FetchRestrictionProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchRestrictionProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FetchRestrictionProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) FetchRestrictionProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FetchRestrictionProblem} The decoded data structure.
- */
-export function _decode_FetchRestrictionProblem(el: _Element) {
-    if (!_cached_decoder_for_FetchRestrictionProblem) {
-        _cached_decoder_for_FetchRestrictionProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_FetchRestrictionProblem(el);
-}
+export const _decode_FetchRestrictionProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FetchRestrictionProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchRestrictionProblem */
-let _cached_encoder_for_FetchRestrictionProblem: $.ASN1Encoder<FetchRestrictionProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchRestrictionProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FetchRestrictionProblem */
-/**
- * @summary Encodes a(n) FetchRestrictionProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FetchRestrictionProblem, encoded as an ASN.1 Element.
- */
-export function _encode_FetchRestrictionProblem(
-    value: FetchRestrictionProblem,
-    elGetter: $.ASN1Encoder<FetchRestrictionProblem>
-) {
-    if (!_cached_encoder_for_FetchRestrictionProblem) {
-        _cached_encoder_for_FetchRestrictionProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_FetchRestrictionProblem(value, elGetter);
-}
+export const _encode_FetchRestrictionProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FetchRestrictionProblem */
 

@@ -110,45 +110,17 @@ export const sensor: BioAPI_CATEGORY = BioAPI_CATEGORY_sensor; /* SHORT_NAMED_EN
 /* END_OF_SYMBOL_DEFINITION sensor */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_CATEGORY */
-let _cached_decoder_for_BioAPI_CATEGORY: $.ASN1Decoder<BioAPI_CATEGORY> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_CATEGORY */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_CATEGORY */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_CATEGORY
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_CATEGORY} The decoded data structure.
- */
-export function _decode_BioAPI_CATEGORY(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_CATEGORY) {
-    _cached_decoder_for_BioAPI_CATEGORY = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_CATEGORY(el);
-}
+export const _decode_BioAPI_CATEGORY = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_CATEGORY */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_CATEGORY */
-let _cached_encoder_for_BioAPI_CATEGORY: $.ASN1Encoder<BioAPI_CATEGORY> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_CATEGORY */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_CATEGORY */
-/**
- * @summary Encodes a(n) BioAPI_CATEGORY into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_CATEGORY, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_CATEGORY(
-  value: BioAPI_CATEGORY,
-  elGetter: $.ASN1Encoder<BioAPI_CATEGORY>
-) {
-  if (!_cached_encoder_for_BioAPI_CATEGORY) {
-    _cached_encoder_for_BioAPI_CATEGORY = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_CATEGORY(value, elGetter);
-}
+export const _encode_BioAPI_CATEGORY = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_CATEGORY */
 

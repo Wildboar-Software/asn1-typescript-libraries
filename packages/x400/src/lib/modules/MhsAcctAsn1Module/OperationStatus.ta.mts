@@ -81,45 +81,17 @@ export const error: OperationStatus = OperationStatus_error; /* SHORT_NAMED_INTE
 /* END_OF_SYMBOL_DEFINITION error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationStatus */
-let _cached_decoder_for_OperationStatus: $.ASN1Decoder<OperationStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OperationStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) OperationStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OperationStatus} The decoded data structure.
- */
-export function _decode_OperationStatus(el: _Element) {
-    if (!_cached_decoder_for_OperationStatus) {
-        _cached_decoder_for_OperationStatus = $._decodeInteger;
-    }
-    return _cached_decoder_for_OperationStatus(el);
-}
+export const _decode_OperationStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_OperationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationStatus */
-let _cached_encoder_for_OperationStatus: $.ASN1Encoder<OperationStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OperationStatus */
-/**
- * @summary Encodes a(n) OperationStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OperationStatus, encoded as an ASN.1 Element.
- */
-export function _encode_OperationStatus(
-    value: OperationStatus,
-    elGetter: $.ASN1Encoder<OperationStatus>
-) {
-    if (!_cached_encoder_for_OperationStatus) {
-        _cached_encoder_for_OperationStatus = $._encodeInteger;
-    }
-    return _cached_encoder_for_OperationStatus(value, elGetter);
-}
+export const _encode_OperationStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OperationStatus */
 

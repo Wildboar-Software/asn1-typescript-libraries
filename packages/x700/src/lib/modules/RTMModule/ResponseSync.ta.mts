@@ -118,45 +118,17 @@ export const atomic: ResponseSync =
 /* END_OF_SYMBOL_DEFINITION atomic */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseSync */
-let _cached_decoder_for_ResponseSync: $.ASN1Decoder<ResponseSync> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseSync */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ResponseSync */
-/**
- * @summary Decodes an ASN.1 element into a(n) ResponseSync
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ResponseSync} The decoded data structure.
- */
-export function _decode_ResponseSync(el: _Element) {
-    if (!_cached_decoder_for_ResponseSync) {
-        _cached_decoder_for_ResponseSync = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ResponseSync(el);
-}
+export const _decode_ResponseSync = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ResponseSync */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseSync */
-let _cached_encoder_for_ResponseSync: $.ASN1Encoder<ResponseSync> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseSync */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ResponseSync */
-/**
- * @summary Encodes a(n) ResponseSync into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResponseSync, encoded as an ASN.1 Element.
- */
-export function _encode_ResponseSync(
-    value: ResponseSync,
-    elGetter: $.ASN1Encoder<ResponseSync>
-) {
-    if (!_cached_encoder_for_ResponseSync) {
-        _cached_encoder_for_ResponseSync = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ResponseSync(value, elGetter);
-}
+export const _encode_ResponseSync = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ResponseSync */
 

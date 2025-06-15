@@ -53,45 +53,17 @@ export const consumer: ShadowingRole = ShadowingRole_consumer; /* SHORT_NAMED_IN
 /* END_OF_SYMBOL_DEFINITION consumer */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowingRole */
-let _cached_decoder_for_ShadowingRole: $.ASN1Decoder<ShadowingRole> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowingRole */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ShadowingRole */
-/**
- * @summary Decodes an ASN.1 element into a(n) ShadowingRole
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ShadowingRole} The decoded data structure.
- */
-export function _decode_ShadowingRole(el: _Element) {
-    if (!_cached_decoder_for_ShadowingRole) {
-        _cached_decoder_for_ShadowingRole = $._decodeInteger;
-    }
-    return _cached_decoder_for_ShadowingRole(el);
-}
+export const _decode_ShadowingRole = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ShadowingRole */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowingRole */
-let _cached_encoder_for_ShadowingRole: $.ASN1Encoder<ShadowingRole> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowingRole */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ShadowingRole */
-/**
- * @summary Encodes a(n) ShadowingRole into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ShadowingRole, encoded as an ASN.1 Element.
- */
-export function _encode_ShadowingRole(
-    value: ShadowingRole,
-    elGetter: $.ASN1Encoder<ShadowingRole>
-) {
-    if (!_cached_encoder_for_ShadowingRole) {
-        _cached_encoder_for_ShadowingRole = $._encodeInteger;
-    }
-    return _cached_encoder_for_ShadowingRole(value, elGetter);
-}
+export const _encode_ShadowingRole = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ShadowingRole */
 

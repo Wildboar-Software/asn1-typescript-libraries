@@ -415,45 +415,17 @@ export const read_private_use: number = Attribute_Names_read_private_use; /* SHO
 /* END_OF_SYMBOL_DEFINITION read_private_use */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Names */
-let _cached_decoder_for_Attribute_Names: $.ASN1Decoder<Attribute_Names> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Names */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Attribute_Names */
-/**
- * @summary Decodes an ASN.1 element into a(n) Attribute_Names
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Attribute_Names} The decoded data structure.
- */
-export function _decode_Attribute_Names(el: _Element) {
-  if (!_cached_decoder_for_Attribute_Names) {
-    _cached_decoder_for_Attribute_Names = $._decodeBitString;
-  }
-  return _cached_decoder_for_Attribute_Names(el);
-}
+export const _decode_Attribute_Names = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Attribute_Names */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Names */
-let _cached_encoder_for_Attribute_Names: $.ASN1Encoder<Attribute_Names> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Names */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Attribute_Names */
-/**
- * @summary Encodes a(n) Attribute_Names into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Attribute_Names, encoded as an ASN.1 Element.
- */
-export function _encode_Attribute_Names(
-  value: Attribute_Names,
-  elGetter: $.ASN1Encoder<Attribute_Names>
-) {
-  if (!_cached_encoder_for_Attribute_Names) {
-    _cached_encoder_for_Attribute_Names = $._encodeBitString;
-  }
-  return _cached_encoder_for_Attribute_Names(value, elGetter);
-}
+export const _encode_Attribute_Names = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Attribute_Names */
 

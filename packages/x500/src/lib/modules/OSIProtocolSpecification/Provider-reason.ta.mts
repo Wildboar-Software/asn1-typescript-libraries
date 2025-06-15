@@ -169,45 +169,17 @@ export const no_PSAP_available: Provider_reason = Provider_reason_no_PSAP_availa
 /* END_OF_SYMBOL_DEFINITION no_PSAP_available */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Provider_reason */
-let _cached_decoder_for_Provider_reason: $.ASN1Decoder<Provider_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Provider_reason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Provider_reason */
-/**
- * @summary Decodes an ASN.1 element into a(n) Provider_reason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Provider_reason} The decoded data structure.
- */
-export function _decode_Provider_reason(el: _Element) {
-    if (!_cached_decoder_for_Provider_reason) {
-        _cached_decoder_for_Provider_reason = $._decodeInteger;
-    }
-    return _cached_decoder_for_Provider_reason(el);
-}
+export const _decode_Provider_reason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Provider_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Provider_reason */
-let _cached_encoder_for_Provider_reason: $.ASN1Encoder<Provider_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Provider_reason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Provider_reason */
-/**
- * @summary Encodes a(n) Provider_reason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Provider_reason, encoded as an ASN.1 Element.
- */
-export function _encode_Provider_reason(
-    value: Provider_reason,
-    elGetter: $.ASN1Encoder<Provider_reason>
-) {
-    if (!_cached_encoder_for_Provider_reason) {
-        _cached_encoder_for_Provider_reason = $._encodeInteger;
-    }
-    return _cached_encoder_for_Provider_reason(value, elGetter);
-}
+export const _encode_Provider_reason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Provider_reason */
 

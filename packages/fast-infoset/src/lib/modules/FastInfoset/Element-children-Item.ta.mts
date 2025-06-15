@@ -57,65 +57,37 @@ export type Element_children_Item =
 /* END_OF_SYMBOL_DEFINITION Element_children_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Element_children_Item */
-let _cached_decoder_for_Element_children_Item: $.ASN1Decoder<Element_children_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Element_children_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Element_children_Item */
-/**
- * @summary Decodes an ASN.1 element into a(n) Element_children_Item
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Element_children_Item} The decoded data structure.
- */
-export function _decode_Element_children_Item(el: _Element) {
-  if (!_cached_decoder_for_Element_children_Item) {
-    _cached_decoder_for_Element_children_Item = $._decode_inextensible_choice<Element_children_Item>(
-      {
-        'CONTEXT 0': ['element', _decode_Element],
-        'CONTEXT 1': ['processing_instruction', _decode_ProcessingInstruction],
-        'CONTEXT 2': [
-          'unexpanded_entity_reference',
-          _decode_UnexpandedEntityReference,
-        ],
-        'CONTEXT 3': ['character_chunk', _decode_CharacterChunk],
-        'CONTEXT 4': ['comment', _decode_Comment],
-      }
-    );
+export const _decode_Element_children_Item = $._decode_inextensible_choice<Element_children_Item>(
+  {
+    'CONTEXT 0': ['element', _decode_Element],
+    'CONTEXT 1': ['processing_instruction', _decode_ProcessingInstruction],
+    'CONTEXT 2': [
+      'unexpanded_entity_reference',
+      _decode_UnexpandedEntityReference,
+    ],
+    'CONTEXT 3': ['character_chunk', _decode_CharacterChunk],
+    'CONTEXT 4': ['comment', _decode_Comment],
   }
-  return _cached_decoder_for_Element_children_Item(el);
-}
+);
 /* END_OF_SYMBOL_DEFINITION _decode_Element_children_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Element_children_Item */
-let _cached_encoder_for_Element_children_Item: $.ASN1Encoder<Element_children_Item> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Element_children_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Element_children_Item */
-/**
- * @summary Encodes a(n) Element_children_Item into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Element_children_Item, encoded as an ASN.1 Element.
- */
-export function _encode_Element_children_Item(
-  value: Element_children_Item,
-  elGetter: $.ASN1Encoder<Element_children_Item>
-) {
-  if (!_cached_encoder_for_Element_children_Item) {
-    _cached_encoder_for_Element_children_Item = $._encode_choice<Element_children_Item>(
-      {
-        element: _encode_Element,
-        processing_instruction: _encode_ProcessingInstruction,
-        unexpanded_entity_reference: _encode_UnexpandedEntityReference,
-        character_chunk: _encode_CharacterChunk,
-        comment: _encode_Comment,
-      },
-      $.BER
-    );
-  }
-  return _cached_encoder_for_Element_children_Item(value, elGetter);
-}
+export const _encode_Element_children_Item = $._encode_choice<Element_children_Item>(
+  {
+    element: _encode_Element,
+    processing_instruction: _encode_ProcessingInstruction,
+    unexpanded_entity_reference: _encode_UnexpandedEntityReference,
+    character_chunk: _encode_CharacterChunk,
+    comment: _encode_Comment,
+  },
+  $.BER
+);
 
 /* END_OF_SYMBOL_DEFINITION _encode_Element_children_Item */
 

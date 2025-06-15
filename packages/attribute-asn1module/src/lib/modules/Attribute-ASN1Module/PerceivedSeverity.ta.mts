@@ -195,40 +195,17 @@ const cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* SHORT_NAMED_ENU
 /* END_OF_SYMBOL_DEFINITION cleared */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedSeverity */
-let _cached_decoder_for_PerceivedSeverity: $.ASN1Decoder<PerceivedSeverity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedSeverity */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PerceivedSeverity */
-/**
- * @summary Decodes an ASN.1 element into a(n) PerceivedSeverity
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PerceivedSeverity} The decoded data structure.
- */
-export
-function _decode_PerceivedSeverity (el: _Element) {
-    if (!_cached_decoder_for_PerceivedSeverity) { _cached_decoder_for_PerceivedSeverity = $._decodeEnumerated; }
-    return _cached_decoder_for_PerceivedSeverity(el);
-}
+export const _decode_PerceivedSeverity = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PerceivedSeverity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedSeverity */
-let _cached_encoder_for_PerceivedSeverity: $.ASN1Encoder<PerceivedSeverity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedSeverity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PerceivedSeverity */
-/**
- * @summary Encodes a(n) PerceivedSeverity into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PerceivedSeverity, encoded as an ASN.1 Element.
- */
-export
-function _encode_PerceivedSeverity (value: PerceivedSeverity, elGetter: $.ASN1Encoder<PerceivedSeverity>) {
-    if (!_cached_encoder_for_PerceivedSeverity) { _cached_encoder_for_PerceivedSeverity = $._encodeEnumerated; }
-    return _cached_encoder_for_PerceivedSeverity(value, elGetter);
-}
+export const _encode_PerceivedSeverity = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PerceivedSeverity */
 

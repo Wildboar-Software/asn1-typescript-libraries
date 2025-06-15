@@ -63,45 +63,17 @@ export const failure: Decipherment = Decipherment_failure; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION failure */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Decipherment */
-let _cached_decoder_for_Decipherment: $.ASN1Decoder<Decipherment> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Decipherment */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Decipherment */
-/**
- * @summary Decodes an ASN.1 element into a(n) Decipherment
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Decipherment} The decoded data structure.
- */
-export function _decode_Decipherment(el: _Element) {
-    if (!_cached_decoder_for_Decipherment) {
-        _cached_decoder_for_Decipherment = $._decodeInteger;
-    }
-    return _cached_decoder_for_Decipherment(el);
-}
+export const _decode_Decipherment = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Decipherment */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Decipherment */
-let _cached_encoder_for_Decipherment: $.ASN1Encoder<Decipherment> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Decipherment */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Decipherment */
-/**
- * @summary Encodes a(n) Decipherment into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Decipherment, encoded as an ASN.1 Element.
- */
-export function _encode_Decipherment(
-    value: Decipherment,
-    elGetter: $.ASN1Encoder<Decipherment>
-) {
-    if (!_cached_encoder_for_Decipherment) {
-        _cached_encoder_for_Decipherment = $._encodeInteger;
-    }
-    return _cached_encoder_for_Decipherment(value, elGetter);
-}
+export const _encode_Decipherment = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Decipherment */
 

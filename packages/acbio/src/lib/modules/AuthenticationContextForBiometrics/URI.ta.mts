@@ -27,42 +27,17 @@ export type URI = VisibleString; // VisibleString
 /* END_OF_SYMBOL_DEFINITION URI */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_URI */
-let _cached_decoder_for_URI: $.ASN1Decoder<URI> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_URI */
 
 /* START_OF_SYMBOL_DEFINITION _decode_URI */
-/**
- * @summary Decodes an ASN.1 element into a(n) URI
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {URI} The decoded data structure.
- */
-export function _decode_URI(el: _Element) {
-    if (!_cached_decoder_for_URI) {
-        _cached_decoder_for_URI = $._decodeVisibleString;
-    }
-    return _cached_decoder_for_URI(el);
-}
+export const _decode_URI = $._decodeVisibleString;
 /* END_OF_SYMBOL_DEFINITION _decode_URI */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_URI */
-let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_URI */
 
 /* START_OF_SYMBOL_DEFINITION _encode_URI */
-/**
- * @summary Encodes a(n) URI into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The URI, encoded as an ASN.1 Element.
- */
-export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>) {
-    if (!_cached_encoder_for_URI) {
-        _cached_encoder_for_URI = $._encodeVisibleString;
-    }
-    return _cached_encoder_for_URI(value, elGetter);
-}
+export const _encode_URI = $._encodeVisibleString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_URI */
 

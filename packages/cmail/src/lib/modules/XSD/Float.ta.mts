@@ -30,42 +30,17 @@ export type Float = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION Float */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Float */
-let _cached_decoder_for_Float: $.ASN1Decoder<Float> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Float */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Float */
-/**
- * @summary Decodes an ASN.1 element into a(n) Float
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Float} The decoded data structure.
- */
-export function _decode_Float(el: _Element) {
-  if (!_cached_decoder_for_Float) {
-    _cached_decoder_for_Float = $._decodeReal;
-  }
-  return _cached_decoder_for_Float(el);
-}
+export const _decode_Float = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_Float */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Float */
-let _cached_encoder_for_Float: $.ASN1Encoder<Float> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Float */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Float */
-/**
- * @summary Encodes a(n) Float into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Float, encoded as an ASN.1 Element.
- */
-export function _encode_Float(value: Float, elGetter: $.ASN1Encoder<Float>) {
-  if (!_cached_encoder_for_Float) {
-    _cached_encoder_for_Float = $._encodeReal;
-  }
-  return _cached_encoder_for_Float(value, elGetter);
-}
+export const _encode_Float = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Float */
 

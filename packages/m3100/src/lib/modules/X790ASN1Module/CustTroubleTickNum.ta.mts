@@ -27,45 +27,17 @@ export type CustTroubleTickNum = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION CustTroubleTickNum */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CustTroubleTickNum */
-let _cached_decoder_for_CustTroubleTickNum: $.ASN1Decoder<CustTroubleTickNum> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CustTroubleTickNum */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CustTroubleTickNum */
-/**
- * @summary Decodes an ASN.1 element into a(n) CustTroubleTickNum
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CustTroubleTickNum} The decoded data structure.
- */
-export function _decode_CustTroubleTickNum(el: _Element) {
-    if (!_cached_decoder_for_CustTroubleTickNum) {
-        _cached_decoder_for_CustTroubleTickNum = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_CustTroubleTickNum(el);
-}
+export const _decode_CustTroubleTickNum = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_CustTroubleTickNum */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CustTroubleTickNum */
-let _cached_encoder_for_CustTroubleTickNum: $.ASN1Encoder<CustTroubleTickNum> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CustTroubleTickNum */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CustTroubleTickNum */
-/**
- * @summary Encodes a(n) CustTroubleTickNum into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CustTroubleTickNum, encoded as an ASN.1 Element.
- */
-export function _encode_CustTroubleTickNum(
-    value: CustTroubleTickNum,
-    elGetter: $.ASN1Encoder<CustTroubleTickNum>
-) {
-    if (!_cached_encoder_for_CustTroubleTickNum) {
-        _cached_encoder_for_CustTroubleTickNum = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_CustTroubleTickNum(value, elGetter);
-}
+export const _encode_CustTroubleTickNum = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CustTroubleTickNum */
 

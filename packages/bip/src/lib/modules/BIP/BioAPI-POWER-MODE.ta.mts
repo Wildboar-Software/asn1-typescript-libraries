@@ -90,45 +90,17 @@ export const sleep: BioAPI_POWER_MODE = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION sleep */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_POWER_MODE */
-let _cached_decoder_for_BioAPI_POWER_MODE: $.ASN1Decoder<BioAPI_POWER_MODE> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_POWER_MODE */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_POWER_MODE */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_POWER_MODE
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_POWER_MODE} The decoded data structure.
- */
-export function _decode_BioAPI_POWER_MODE(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_POWER_MODE) {
-    _cached_decoder_for_BioAPI_POWER_MODE = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_POWER_MODE(el);
-}
+export const _decode_BioAPI_POWER_MODE = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_POWER_MODE */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_POWER_MODE */
-let _cached_encoder_for_BioAPI_POWER_MODE: $.ASN1Encoder<BioAPI_POWER_MODE> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_POWER_MODE */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_POWER_MODE */
-/**
- * @summary Encodes a(n) BioAPI_POWER_MODE into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_POWER_MODE, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_POWER_MODE(
-  value: BioAPI_POWER_MODE,
-  elGetter: $.ASN1Encoder<BioAPI_POWER_MODE>
-) {
-  if (!_cached_encoder_for_BioAPI_POWER_MODE) {
-    _cached_encoder_for_BioAPI_POWER_MODE = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_POWER_MODE(value, elGetter);
-}
+export const _encode_BioAPI_POWER_MODE = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_POWER_MODE */
 

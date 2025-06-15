@@ -17,45 +17,17 @@ export type DomainName = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION DomainName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainName */
-let _cached_decoder_for_DomainName: $.ASN1Decoder<DomainName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DomainName */
-/**
- * @summary Decodes an ASN.1 element into a(n) DomainName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DomainName} The decoded data structure.
- */
-export function _decode_DomainName(el: _Element) {
-    if (!_cached_decoder_for_DomainName) {
-        _cached_decoder_for_DomainName = $._decodePrintableString;
-    }
-    return _cached_decoder_for_DomainName(el);
-}
+export const _decode_DomainName = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_DomainName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainName */
-let _cached_encoder_for_DomainName: $.ASN1Encoder<DomainName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DomainName */
-/**
- * @summary Encodes a(n) DomainName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DomainName, encoded as an ASN.1 Element.
- */
-export function _encode_DomainName(
-    value: DomainName,
-    elGetter: $.ASN1Encoder<DomainName>
-) {
-    if (!_cached_encoder_for_DomainName) {
-        _cached_encoder_for_DomainName = $._encodePrintableString;
-    }
-    return _cached_encoder_for_DomainName(value, elGetter);
-}
+export const _encode_DomainName = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DomainName */
 

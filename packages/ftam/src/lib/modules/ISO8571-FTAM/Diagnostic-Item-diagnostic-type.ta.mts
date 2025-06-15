@@ -81,45 +81,17 @@ export const permanent: Diagnostic_Item_diagnostic_type = Diagnostic_Item_diagno
 /* END_OF_SYMBOL_DEFINITION permanent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Diagnostic_Item_diagnostic_type */
-let _cached_decoder_for_Diagnostic_Item_diagnostic_type: $.ASN1Decoder<Diagnostic_Item_diagnostic_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Diagnostic_Item_diagnostic_type */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Diagnostic_Item_diagnostic_type */
-/**
- * @summary Decodes an ASN.1 element into a(n) Diagnostic_Item_diagnostic_type
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Diagnostic_Item_diagnostic_type} The decoded data structure.
- */
-export function _decode_Diagnostic_Item_diagnostic_type(el: _Element) {
-  if (!_cached_decoder_for_Diagnostic_Item_diagnostic_type) {
-    _cached_decoder_for_Diagnostic_Item_diagnostic_type = $._decodeInteger;
-  }
-  return _cached_decoder_for_Diagnostic_Item_diagnostic_type(el);
-}
+export const _decode_Diagnostic_Item_diagnostic_type = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Diagnostic_Item_diagnostic_type */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Diagnostic_Item_diagnostic_type */
-let _cached_encoder_for_Diagnostic_Item_diagnostic_type: $.ASN1Encoder<Diagnostic_Item_diagnostic_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Diagnostic_Item_diagnostic_type */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Diagnostic_Item_diagnostic_type */
-/**
- * @summary Encodes a(n) Diagnostic_Item_diagnostic_type into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Diagnostic_Item_diagnostic_type, encoded as an ASN.1 Element.
- */
-export function _encode_Diagnostic_Item_diagnostic_type(
-  value: Diagnostic_Item_diagnostic_type,
-  elGetter: $.ASN1Encoder<Diagnostic_Item_diagnostic_type>
-) {
-  if (!_cached_encoder_for_Diagnostic_Item_diagnostic_type) {
-    _cached_encoder_for_Diagnostic_Item_diagnostic_type = $._encodeInteger;
-  }
-  return _cached_encoder_for_Diagnostic_Item_diagnostic_type(value, elGetter);
-}
+export const _encode_Diagnostic_Item_diagnostic_type = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Diagnostic_Item_diagnostic_type */
 

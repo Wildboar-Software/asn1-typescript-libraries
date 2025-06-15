@@ -27,45 +27,17 @@ export type NoteField = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION NoteField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoteField */
-let _cached_decoder_for_NoteField: $.ASN1Decoder<NoteField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoteField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NoteField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NoteField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NoteField} The decoded data structure.
- */
-export function _decode_NoteField(el: _Element) {
-    if (!_cached_decoder_for_NoteField) {
-        _cached_decoder_for_NoteField = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_NoteField(el);
-}
+export const _decode_NoteField = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_NoteField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoteField */
-let _cached_encoder_for_NoteField: $.ASN1Encoder<NoteField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoteField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NoteField */
-/**
- * @summary Encodes a(n) NoteField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NoteField, encoded as an ASN.1 Element.
- */
-export function _encode_NoteField(
-    value: NoteField,
-    elGetter: $.ASN1Encoder<NoteField>
-) {
-    if (!_cached_encoder_for_NoteField) {
-        _cached_encoder_for_NoteField = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_NoteField(value, elGetter);
-}
+export const _encode_NoteField = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NoteField */
 

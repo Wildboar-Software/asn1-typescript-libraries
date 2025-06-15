@@ -1125,45 +1125,17 @@ export const network: TroubleFound_number = TroubleFound_number_network; /* SHOR
 /* END_OF_SYMBOL_DEFINITION network */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleFound_number */
-let _cached_decoder_for_TroubleFound_number: $.ASN1Decoder<TroubleFound_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleFound_number */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TroubleFound_number */
-/**
- * @summary Decodes an ASN.1 element into a(n) TroubleFound_number
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TroubleFound_number} The decoded data structure.
- */
-export function _decode_TroubleFound_number(el: _Element) {
-    if (!_cached_decoder_for_TroubleFound_number) {
-        _cached_decoder_for_TroubleFound_number = $._decodeInteger;
-    }
-    return _cached_decoder_for_TroubleFound_number(el);
-}
+export const _decode_TroubleFound_number = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TroubleFound_number */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleFound_number */
-let _cached_encoder_for_TroubleFound_number: $.ASN1Encoder<TroubleFound_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleFound_number */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TroubleFound_number */
-/**
- * @summary Encodes a(n) TroubleFound_number into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TroubleFound_number, encoded as an ASN.1 Element.
- */
-export function _encode_TroubleFound_number(
-    value: TroubleFound_number,
-    elGetter: $.ASN1Encoder<TroubleFound_number>
-) {
-    if (!_cached_encoder_for_TroubleFound_number) {
-        _cached_encoder_for_TroubleFound_number = $._encodeInteger;
-    }
-    return _cached_encoder_for_TroubleFound_number(value, elGetter);
-}
+export const _encode_TroubleFound_number = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TroubleFound_number */
 

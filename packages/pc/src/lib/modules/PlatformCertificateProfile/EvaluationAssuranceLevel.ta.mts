@@ -228,40 +228,17 @@ const level7: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level7; /* SHO
 /* END_OF_SYMBOL_DEFINITION level7 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EvaluationAssuranceLevel */
-let _cached_decoder_for_EvaluationAssuranceLevel: $.ASN1Decoder<EvaluationAssuranceLevel> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EvaluationAssuranceLevel */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EvaluationAssuranceLevel */
-/**
- * @summary Decodes an ASN.1 element into a(n) EvaluationAssuranceLevel
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EvaluationAssuranceLevel} The decoded data structure.
- */
-export
-function _decode_EvaluationAssuranceLevel (el: _Element) {
-    if (!_cached_decoder_for_EvaluationAssuranceLevel) { _cached_decoder_for_EvaluationAssuranceLevel = $._decodeEnumerated; }
-    return _cached_decoder_for_EvaluationAssuranceLevel(el);
-}
+export const _decode_EvaluationAssuranceLevel = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EvaluationAssuranceLevel */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EvaluationAssuranceLevel */
-let _cached_encoder_for_EvaluationAssuranceLevel: $.ASN1Encoder<EvaluationAssuranceLevel> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EvaluationAssuranceLevel */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EvaluationAssuranceLevel */
-/**
- * @summary Encodes a(n) EvaluationAssuranceLevel into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EvaluationAssuranceLevel, encoded as an ASN.1 Element.
- */
-export
-function _encode_EvaluationAssuranceLevel (value: EvaluationAssuranceLevel, elGetter: $.ASN1Encoder<EvaluationAssuranceLevel>) {
-    if (!_cached_encoder_for_EvaluationAssuranceLevel) { _cached_encoder_for_EvaluationAssuranceLevel = $._encodeEnumerated; }
-    return _cached_encoder_for_EvaluationAssuranceLevel(value, elGetter);
-}
+export const _encode_EvaluationAssuranceLevel = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EvaluationAssuranceLevel */
 

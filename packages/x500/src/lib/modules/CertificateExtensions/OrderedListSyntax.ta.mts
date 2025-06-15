@@ -63,45 +63,17 @@ export const ascRevDate: OrderedListSyntax = OrderedListSyntax_ascRevDate; /* SH
 /* END_OF_SYMBOL_DEFINITION ascRevDate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OrderedListSyntax */
-let _cached_decoder_for_OrderedListSyntax: $.ASN1Decoder<OrderedListSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OrderedListSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OrderedListSyntax */
-/**
- * @summary Decodes an ASN.1 element into a(n) OrderedListSyntax
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OrderedListSyntax} The decoded data structure.
- */
-export function _decode_OrderedListSyntax(el: _Element) {
-    if (!_cached_decoder_for_OrderedListSyntax) {
-        _cached_decoder_for_OrderedListSyntax = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_OrderedListSyntax(el);
-}
+export const _decode_OrderedListSyntax = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_OrderedListSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OrderedListSyntax */
-let _cached_encoder_for_OrderedListSyntax: $.ASN1Encoder<OrderedListSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OrderedListSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OrderedListSyntax */
-/**
- * @summary Encodes a(n) OrderedListSyntax into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OrderedListSyntax, encoded as an ASN.1 Element.
- */
-export function _encode_OrderedListSyntax(
-    value: OrderedListSyntax,
-    elGetter: $.ASN1Encoder<OrderedListSyntax>
-) {
-    if (!_cached_encoder_for_OrderedListSyntax) {
-        _cached_encoder_for_OrderedListSyntax = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_OrderedListSyntax(value, elGetter);
-}
+export const _encode_OrderedListSyntax = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OrderedListSyntax */
 

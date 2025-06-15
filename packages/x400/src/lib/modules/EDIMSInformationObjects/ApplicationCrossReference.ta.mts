@@ -27,45 +27,17 @@ export type ApplicationCrossReference = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION ApplicationCrossReference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationCrossReference */
-let _cached_decoder_for_ApplicationCrossReference: $.ASN1Decoder<ApplicationCrossReference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationCrossReference */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ApplicationCrossReference */
-/**
- * @summary Decodes an ASN.1 element into a(n) ApplicationCrossReference
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ApplicationCrossReference} The decoded data structure.
- */
-export function _decode_ApplicationCrossReference(el: _Element) {
-    if (!_cached_decoder_for_ApplicationCrossReference) {
-        _cached_decoder_for_ApplicationCrossReference = $._decodeOctetString;
-    }
-    return _cached_decoder_for_ApplicationCrossReference(el);
-}
+export const _decode_ApplicationCrossReference = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_ApplicationCrossReference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationCrossReference */
-let _cached_encoder_for_ApplicationCrossReference: $.ASN1Encoder<ApplicationCrossReference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationCrossReference */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ApplicationCrossReference */
-/**
- * @summary Encodes a(n) ApplicationCrossReference into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ApplicationCrossReference, encoded as an ASN.1 Element.
- */
-export function _encode_ApplicationCrossReference(
-    value: ApplicationCrossReference,
-    elGetter: $.ASN1Encoder<ApplicationCrossReference>
-) {
-    if (!_cached_encoder_for_ApplicationCrossReference) {
-        _cached_encoder_for_ApplicationCrossReference = $._encodeOctetString;
-    }
-    return _cached_encoder_for_ApplicationCrossReference(value, elGetter);
-}
+export const _encode_ApplicationCrossReference = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ApplicationCrossReference */
 

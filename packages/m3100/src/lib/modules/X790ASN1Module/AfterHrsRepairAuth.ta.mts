@@ -27,45 +27,17 @@ export type AfterHrsRepairAuth = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION AfterHrsRepairAuth */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AfterHrsRepairAuth */
-let _cached_decoder_for_AfterHrsRepairAuth: $.ASN1Decoder<AfterHrsRepairAuth> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AfterHrsRepairAuth */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AfterHrsRepairAuth */
-/**
- * @summary Decodes an ASN.1 element into a(n) AfterHrsRepairAuth
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AfterHrsRepairAuth} The decoded data structure.
- */
-export function _decode_AfterHrsRepairAuth(el: _Element) {
-    if (!_cached_decoder_for_AfterHrsRepairAuth) {
-        _cached_decoder_for_AfterHrsRepairAuth = $._decodeBoolean;
-    }
-    return _cached_decoder_for_AfterHrsRepairAuth(el);
-}
+export const _decode_AfterHrsRepairAuth = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_AfterHrsRepairAuth */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AfterHrsRepairAuth */
-let _cached_encoder_for_AfterHrsRepairAuth: $.ASN1Encoder<AfterHrsRepairAuth> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AfterHrsRepairAuth */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AfterHrsRepairAuth */
-/**
- * @summary Encodes a(n) AfterHrsRepairAuth into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AfterHrsRepairAuth, encoded as an ASN.1 Element.
- */
-export function _encode_AfterHrsRepairAuth(
-    value: AfterHrsRepairAuth,
-    elGetter: $.ASN1Encoder<AfterHrsRepairAuth>
-) {
-    if (!_cached_encoder_for_AfterHrsRepairAuth) {
-        _cached_encoder_for_AfterHrsRepairAuth = $._encodeBoolean;
-    }
-    return _cached_encoder_for_AfterHrsRepairAuth(value, elGetter);
-}
+export const _encode_AfterHrsRepairAuth = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AfterHrsRepairAuth */
 

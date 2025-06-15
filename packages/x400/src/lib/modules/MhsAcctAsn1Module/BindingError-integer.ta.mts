@@ -99,45 +99,17 @@ export const unacceptable_security_context: BindingError_integer = BindingError_
 /* END_OF_SYMBOL_DEFINITION unacceptable_security_context */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindingError_integer */
-let _cached_decoder_for_BindingError_integer: $.ASN1Decoder<BindingError_integer> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindingError_integer */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BindingError_integer */
-/**
- * @summary Decodes an ASN.1 element into a(n) BindingError_integer
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BindingError_integer} The decoded data structure.
- */
-export function _decode_BindingError_integer(el: _Element) {
-    if (!_cached_decoder_for_BindingError_integer) {
-        _cached_decoder_for_BindingError_integer = $._decodeInteger;
-    }
-    return _cached_decoder_for_BindingError_integer(el);
-}
+export const _decode_BindingError_integer = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_BindingError_integer */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindingError_integer */
-let _cached_encoder_for_BindingError_integer: $.ASN1Encoder<BindingError_integer> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindingError_integer */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BindingError_integer */
-/**
- * @summary Encodes a(n) BindingError_integer into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BindingError_integer, encoded as an ASN.1 Element.
- */
-export function _encode_BindingError_integer(
-    value: BindingError_integer,
-    elGetter: $.ASN1Encoder<BindingError_integer>
-) {
-    if (!_cached_encoder_for_BindingError_integer) {
-        _cached_encoder_for_BindingError_integer = $._encodeInteger;
-    }
-    return _cached_encoder_for_BindingError_integer(value, elGetter);
-}
+export const _encode_BindingError_integer = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BindingError_integer */
 

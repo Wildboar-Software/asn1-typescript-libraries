@@ -130,45 +130,17 @@ export const deniedCloseOutNarrDisputed: CloseOutVerification = CloseOutVerifica
 /* END_OF_SYMBOL_DEFINITION deniedCloseOutNarrDisputed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CloseOutVerification */
-let _cached_decoder_for_CloseOutVerification: $.ASN1Decoder<CloseOutVerification> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CloseOutVerification */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CloseOutVerification */
-/**
- * @summary Decodes an ASN.1 element into a(n) CloseOutVerification
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CloseOutVerification} The decoded data structure.
- */
-export function _decode_CloseOutVerification(el: _Element) {
-    if (!_cached_decoder_for_CloseOutVerification) {
-        _cached_decoder_for_CloseOutVerification = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CloseOutVerification(el);
-}
+export const _decode_CloseOutVerification = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CloseOutVerification */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CloseOutVerification */
-let _cached_encoder_for_CloseOutVerification: $.ASN1Encoder<CloseOutVerification> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CloseOutVerification */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CloseOutVerification */
-/**
- * @summary Encodes a(n) CloseOutVerification into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CloseOutVerification, encoded as an ASN.1 Element.
- */
-export function _encode_CloseOutVerification(
-    value: CloseOutVerification,
-    elGetter: $.ASN1Encoder<CloseOutVerification>
-) {
-    if (!_cached_encoder_for_CloseOutVerification) {
-        _cached_encoder_for_CloseOutVerification = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CloseOutVerification(value, elGetter);
-}
+export const _encode_CloseOutVerification = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CloseOutVerification */
 

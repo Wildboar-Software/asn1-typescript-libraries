@@ -174,45 +174,17 @@ export const reserved_7: number = PerRecipientIndicators_reserved_7; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION reserved_7 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientIndicators */
-let _cached_decoder_for_PerRecipientIndicators: $.ASN1Decoder<PerRecipientIndicators> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientIndicators */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PerRecipientIndicators */
-/**
- * @summary Decodes an ASN.1 element into a(n) PerRecipientIndicators
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PerRecipientIndicators} The decoded data structure.
- */
-export function _decode_PerRecipientIndicators(el: _Element) {
-    if (!_cached_decoder_for_PerRecipientIndicators) {
-        _cached_decoder_for_PerRecipientIndicators = $._decodeBitString;
-    }
-    return _cached_decoder_for_PerRecipientIndicators(el);
-}
+export const _decode_PerRecipientIndicators = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_PerRecipientIndicators */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientIndicators */
-let _cached_encoder_for_PerRecipientIndicators: $.ASN1Encoder<PerRecipientIndicators> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientIndicators */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PerRecipientIndicators */
-/**
- * @summary Encodes a(n) PerRecipientIndicators into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PerRecipientIndicators, encoded as an ASN.1 Element.
- */
-export function _encode_PerRecipientIndicators(
-    value: PerRecipientIndicators,
-    elGetter: $.ASN1Encoder<PerRecipientIndicators>
-) {
-    if (!_cached_encoder_for_PerRecipientIndicators) {
-        _cached_encoder_for_PerRecipientIndicators = $._encodeBitString;
-    }
-    return _cached_encoder_for_PerRecipientIndicators(value, elGetter);
-}
+export const _encode_PerRecipientIndicators = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PerRecipientIndicators */
 

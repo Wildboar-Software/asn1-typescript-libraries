@@ -30,40 +30,17 @@ type SignaturePolicyImplied = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION SignaturePolicyImplied */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignaturePolicyImplied */
-let _cached_decoder_for_SignaturePolicyImplied: $.ASN1Decoder<SignaturePolicyImplied> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignaturePolicyImplied */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SignaturePolicyImplied */
-/**
- * @summary Decodes an ASN.1 element into a(n) SignaturePolicyImplied
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SignaturePolicyImplied} The decoded data structure.
- */
-export
-function _decode_SignaturePolicyImplied (el: _Element) {
-    if (!_cached_decoder_for_SignaturePolicyImplied) { _cached_decoder_for_SignaturePolicyImplied = $._decodeNull; }
-    return _cached_decoder_for_SignaturePolicyImplied(el);
-}
+export const _decode_SignaturePolicyImplied = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_SignaturePolicyImplied */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignaturePolicyImplied */
-let _cached_encoder_for_SignaturePolicyImplied: $.ASN1Encoder<SignaturePolicyImplied> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignaturePolicyImplied */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SignaturePolicyImplied */
-/**
- * @summary Encodes a(n) SignaturePolicyImplied into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SignaturePolicyImplied, encoded as an ASN.1 Element.
- */
-export
-function _encode_SignaturePolicyImplied (value: SignaturePolicyImplied, elGetter: $.ASN1Encoder<SignaturePolicyImplied>) {
-    if (!_cached_encoder_for_SignaturePolicyImplied) { _cached_encoder_for_SignaturePolicyImplied = $._encodeNull; }
-    return _cached_encoder_for_SignaturePolicyImplied(value, elGetter);
-}
+export const _encode_SignaturePolicyImplied = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SignaturePolicyImplied */
 

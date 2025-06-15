@@ -58,45 +58,17 @@ export const challengeResp: SubsequentMessage = SubsequentMessage_challengeResp;
 /* END_OF_SYMBOL_DEFINITION challengeResp */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubsequentMessage */
-let _cached_decoder_for_SubsequentMessage: $.ASN1Decoder<SubsequentMessage> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubsequentMessage */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubsequentMessage */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubsequentMessage
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubsequentMessage} The decoded data structure.
- */
-export function _decode_SubsequentMessage(el: _Element) {
-    if (!_cached_decoder_for_SubsequentMessage) {
-        _cached_decoder_for_SubsequentMessage = $._decodeInteger;
-    }
-    return _cached_decoder_for_SubsequentMessage(el);
-}
+export const _decode_SubsequentMessage = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SubsequentMessage */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubsequentMessage */
-let _cached_encoder_for_SubsequentMessage: $.ASN1Encoder<SubsequentMessage> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubsequentMessage */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubsequentMessage */
-/**
- * @summary Encodes a(n) SubsequentMessage into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubsequentMessage, encoded as an ASN.1 Element.
- */
-export function _encode_SubsequentMessage(
-    value: SubsequentMessage,
-    elGetter: $.ASN1Encoder<SubsequentMessage>
-) {
-    if (!_cached_encoder_for_SubsequentMessage) {
-        _cached_encoder_for_SubsequentMessage = $._encodeInteger;
-    }
-    return _cached_encoder_for_SubsequentMessage(value, elGetter);
-}
+export const _encode_SubsequentMessage = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubsequentMessage */
 

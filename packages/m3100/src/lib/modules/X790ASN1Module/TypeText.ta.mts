@@ -27,45 +27,17 @@ export type TypeText = IA5String; // IA5String
 /* END_OF_SYMBOL_DEFINITION TypeText */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeText */
-let _cached_decoder_for_TypeText: $.ASN1Decoder<TypeText> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeText */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TypeText */
-/**
- * @summary Decodes an ASN.1 element into a(n) TypeText
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TypeText} The decoded data structure.
- */
-export function _decode_TypeText(el: _Element) {
-    if (!_cached_decoder_for_TypeText) {
-        _cached_decoder_for_TypeText = $._decodeIA5String;
-    }
-    return _cached_decoder_for_TypeText(el);
-}
+export const _decode_TypeText = $._decodeIA5String;
 /* END_OF_SYMBOL_DEFINITION _decode_TypeText */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeText */
-let _cached_encoder_for_TypeText: $.ASN1Encoder<TypeText> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeText */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TypeText */
-/**
- * @summary Encodes a(n) TypeText into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TypeText, encoded as an ASN.1 Element.
- */
-export function _encode_TypeText(
-    value: TypeText,
-    elGetter: $.ASN1Encoder<TypeText>
-) {
-    if (!_cached_encoder_for_TypeText) {
-        _cached_encoder_for_TypeText = $._encodeIA5String;
-    }
-    return _cached_encoder_for_TypeText(value, elGetter);
-}
+export const _encode_TypeText = $._encodeIA5String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TypeText */
 

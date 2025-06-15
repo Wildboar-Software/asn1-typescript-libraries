@@ -272,45 +272,17 @@ export const allowWriteableCopy: number = ServiceControlOptions_allowWriteableCo
 /* END_OF_SYMBOL_DEFINITION allowWriteableCopy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControlOptions */
-let _cached_decoder_for_ServiceControlOptions: $.ASN1Decoder<ServiceControlOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControlOptions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ServiceControlOptions */
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceControlOptions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ServiceControlOptions} The decoded data structure.
- */
-export function _decode_ServiceControlOptions(el: _Element) {
-    if (!_cached_decoder_for_ServiceControlOptions) {
-        _cached_decoder_for_ServiceControlOptions = $._decodeBitString;
-    }
-    return _cached_decoder_for_ServiceControlOptions(el);
-}
+export const _decode_ServiceControlOptions = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ServiceControlOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControlOptions */
-let _cached_encoder_for_ServiceControlOptions: $.ASN1Encoder<ServiceControlOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControlOptions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ServiceControlOptions */
-/**
- * @summary Encodes a(n) ServiceControlOptions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceControlOptions, encoded as an ASN.1 Element.
- */
-export function _encode_ServiceControlOptions(
-    value: ServiceControlOptions,
-    elGetter: $.ASN1Encoder<ServiceControlOptions>
-) {
-    if (!_cached_encoder_for_ServiceControlOptions) {
-        _cached_encoder_for_ServiceControlOptions = $._encodeBitString;
-    }
-    return _cached_encoder_for_ServiceControlOptions(value, elGetter);
-}
+export const _encode_ServiceControlOptions = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ServiceControlOptions */
 

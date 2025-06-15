@@ -27,42 +27,17 @@ export type Epochs = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Epochs */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Epochs */
-let _cached_decoder_for_Epochs: $.ASN1Decoder<Epochs> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Epochs */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Epochs */
-/**
- * @summary Decodes an ASN.1 element into a(n) Epochs
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Epochs} The decoded data structure.
- */
-export function _decode_Epochs(el: _Element) {
-    if (!_cached_decoder_for_Epochs) {
-        _cached_decoder_for_Epochs = $._decodeInteger;
-    }
-    return _cached_decoder_for_Epochs(el);
-}
+export const _decode_Epochs = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Epochs */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Epochs */
-let _cached_encoder_for_Epochs: $.ASN1Encoder<Epochs> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Epochs */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Epochs */
-/**
- * @summary Encodes a(n) Epochs into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Epochs, encoded as an ASN.1 Element.
- */
-export function _encode_Epochs(value: Epochs, elGetter: $.ASN1Encoder<Epochs>) {
-    if (!_cached_encoder_for_Epochs) {
-        _cached_encoder_for_Epochs = $._encodeInteger;
-    }
-    return _cached_encoder_for_Epochs(value, elGetter);
-}
+export const _encode_Epochs = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Epochs */
 

@@ -76,45 +76,17 @@ export const security_label_check: number = SecurityAction_security_label_check;
 /* END_OF_SYMBOL_DEFINITION security_label_check */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityAction */
-let _cached_decoder_for_SecurityAction: $.ASN1Decoder<SecurityAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityAction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SecurityAction */
-/**
- * @summary Decodes an ASN.1 element into a(n) SecurityAction
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SecurityAction} The decoded data structure.
- */
-export function _decode_SecurityAction(el: _Element) {
-    if (!_cached_decoder_for_SecurityAction) {
-        _cached_decoder_for_SecurityAction = $._decodeBitString;
-    }
-    return _cached_decoder_for_SecurityAction(el);
-}
+export const _decode_SecurityAction = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_SecurityAction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityAction */
-let _cached_encoder_for_SecurityAction: $.ASN1Encoder<SecurityAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityAction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SecurityAction */
-/**
- * @summary Encodes a(n) SecurityAction into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SecurityAction, encoded as an ASN.1 Element.
- */
-export function _encode_SecurityAction(
-    value: SecurityAction,
-    elGetter: $.ASN1Encoder<SecurityAction>
-) {
-    if (!_cached_encoder_for_SecurityAction) {
-        _cached_encoder_for_SecurityAction = $._encodeBitString;
-    }
-    return _cached_encoder_for_SecurityAction(value, elGetter);
-}
+export const _encode_SecurityAction = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SecurityAction */
 

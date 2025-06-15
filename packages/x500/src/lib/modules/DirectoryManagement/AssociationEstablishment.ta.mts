@@ -49,45 +49,17 @@ export const outward: number = AssociationEstablishment_outward; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION outward */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociationEstablishment */
-let _cached_decoder_for_AssociationEstablishment: $.ASN1Decoder<AssociationEstablishment> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociationEstablishment */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AssociationEstablishment */
-/**
- * @summary Decodes an ASN.1 element into a(n) AssociationEstablishment
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AssociationEstablishment} The decoded data structure.
- */
-export function _decode_AssociationEstablishment(el: _Element) {
-    if (!_cached_decoder_for_AssociationEstablishment) {
-        _cached_decoder_for_AssociationEstablishment = $._decodeBitString;
-    }
-    return _cached_decoder_for_AssociationEstablishment(el);
-}
+export const _decode_AssociationEstablishment = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AssociationEstablishment */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociationEstablishment */
-let _cached_encoder_for_AssociationEstablishment: $.ASN1Encoder<AssociationEstablishment> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociationEstablishment */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AssociationEstablishment */
-/**
- * @summary Encodes a(n) AssociationEstablishment into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AssociationEstablishment, encoded as an ASN.1 Element.
- */
-export function _encode_AssociationEstablishment(
-    value: AssociationEstablishment,
-    elGetter: $.ASN1Encoder<AssociationEstablishment>
-) {
-    if (!_cached_encoder_for_AssociationEstablishment) {
-        _cached_encoder_for_AssociationEstablishment = $._encodeBitString;
-    }
-    return _cached_encoder_for_AssociationEstablishment(value, elGetter);
-}
+export const _encode_AssociationEstablishment = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AssociationEstablishment */
 

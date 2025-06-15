@@ -27,45 +27,17 @@ export type Text128 = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION Text128 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Text128 */
-let _cached_decoder_for_Text128: $.ASN1Decoder<Text128> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Text128 */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Text128 */
-/**
- * @summary Decodes an ASN.1 element into a(n) Text128
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Text128} The decoded data structure.
- */
-export function _decode_Text128(el: _Element) {
-    if (!_cached_decoder_for_Text128) {
-        _cached_decoder_for_Text128 = $._decodePrintableString;
-    }
-    return _cached_decoder_for_Text128(el);
-}
+export const _decode_Text128 = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_Text128 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Text128 */
-let _cached_encoder_for_Text128: $.ASN1Encoder<Text128> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Text128 */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Text128 */
-/**
- * @summary Encodes a(n) Text128 into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Text128, encoded as an ASN.1 Element.
- */
-export function _encode_Text128(
-    value: Text128,
-    elGetter: $.ASN1Encoder<Text128>
-) {
-    if (!_cached_encoder_for_Text128) {
-        _cached_encoder_for_Text128 = $._encodePrintableString;
-    }
-    return _cached_encoder_for_Text128(value, elGetter);
-}
+export const _encode_Text128 = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Text128 */
 

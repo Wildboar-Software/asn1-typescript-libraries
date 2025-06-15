@@ -77,45 +77,17 @@ export const other_security_labels: number = WaitingMessages_other_security_labe
 /* END_OF_SYMBOL_DEFINITION other_security_labels */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WaitingMessages */
-let _cached_decoder_for_WaitingMessages: $.ASN1Decoder<WaitingMessages> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WaitingMessages */
 
 /* START_OF_SYMBOL_DEFINITION _decode_WaitingMessages */
-/**
- * @summary Decodes an ASN.1 element into a(n) WaitingMessages
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {WaitingMessages} The decoded data structure.
- */
-export function _decode_WaitingMessages(el: _Element) {
-    if (!_cached_decoder_for_WaitingMessages) {
-        _cached_decoder_for_WaitingMessages = $._decodeBitString;
-    }
-    return _cached_decoder_for_WaitingMessages(el);
-}
+export const _decode_WaitingMessages = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_WaitingMessages */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WaitingMessages */
-let _cached_encoder_for_WaitingMessages: $.ASN1Encoder<WaitingMessages> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WaitingMessages */
 
 /* START_OF_SYMBOL_DEFINITION _encode_WaitingMessages */
-/**
- * @summary Encodes a(n) WaitingMessages into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The WaitingMessages, encoded as an ASN.1 Element.
- */
-export function _encode_WaitingMessages(
-    value: WaitingMessages,
-    elGetter: $.ASN1Encoder<WaitingMessages>
-) {
-    if (!_cached_encoder_for_WaitingMessages) {
-        _cached_encoder_for_WaitingMessages = $._encodeBitString;
-    }
-    return _cached_encoder_for_WaitingMessages(value, elGetter);
-}
+export const _encode_WaitingMessages = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_WaitingMessages */
 

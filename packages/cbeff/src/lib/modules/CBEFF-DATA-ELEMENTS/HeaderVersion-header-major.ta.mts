@@ -45,45 +45,17 @@ export const version1: HeaderVersion_header_major = HeaderVersion_header_major_v
 /* END_OF_SYMBOL_DEFINITION version1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HeaderVersion_header_major */
-let _cached_decoder_for_HeaderVersion_header_major: $.ASN1Decoder<HeaderVersion_header_major> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HeaderVersion_header_major */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HeaderVersion_header_major */
-/**
- * @summary Decodes an ASN.1 element into a(n) HeaderVersion_header_major
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HeaderVersion_header_major} The decoded data structure.
- */
-export function _decode_HeaderVersion_header_major(el: _Element) {
-  if (!_cached_decoder_for_HeaderVersion_header_major) {
-    _cached_decoder_for_HeaderVersion_header_major = $._decodeInteger;
-  }
-  return _cached_decoder_for_HeaderVersion_header_major(el);
-}
+export const _decode_HeaderVersion_header_major = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_HeaderVersion_header_major */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HeaderVersion_header_major */
-let _cached_encoder_for_HeaderVersion_header_major: $.ASN1Encoder<HeaderVersion_header_major> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HeaderVersion_header_major */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HeaderVersion_header_major */
-/**
- * @summary Encodes a(n) HeaderVersion_header_major into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HeaderVersion_header_major, encoded as an ASN.1 Element.
- */
-export function _encode_HeaderVersion_header_major(
-  value: HeaderVersion_header_major,
-  elGetter: $.ASN1Encoder<HeaderVersion_header_major>
-) {
-  if (!_cached_encoder_for_HeaderVersion_header_major) {
-    _cached_encoder_for_HeaderVersion_header_major = $._encodeInteger;
-  }
-  return _cached_encoder_for_HeaderVersion_header_major(value, elGetter);
-}
+export const _encode_HeaderVersion_header_major = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HeaderVersion_header_major */
 

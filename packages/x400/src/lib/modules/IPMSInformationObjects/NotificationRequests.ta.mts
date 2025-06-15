@@ -108,45 +108,17 @@ export const suppress_an: number = NotificationRequests_suppress_an; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION suppress_an */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationRequests */
-let _cached_decoder_for_NotificationRequests: $.ASN1Decoder<NotificationRequests> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationRequests */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NotificationRequests */
-/**
- * @summary Decodes an ASN.1 element into a(n) NotificationRequests
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NotificationRequests} The decoded data structure.
- */
-export function _decode_NotificationRequests(el: _Element) {
-    if (!_cached_decoder_for_NotificationRequests) {
-        _cached_decoder_for_NotificationRequests = $._decodeBitString;
-    }
-    return _cached_decoder_for_NotificationRequests(el);
-}
+export const _decode_NotificationRequests = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_NotificationRequests */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationRequests */
-let _cached_encoder_for_NotificationRequests: $.ASN1Encoder<NotificationRequests> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationRequests */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NotificationRequests */
-/**
- * @summary Encodes a(n) NotificationRequests into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NotificationRequests, encoded as an ASN.1 Element.
- */
-export function _encode_NotificationRequests(
-    value: NotificationRequests,
-    elGetter: $.ASN1Encoder<NotificationRequests>
-) {
-    if (!_cached_encoder_for_NotificationRequests) {
-        _cached_encoder_for_NotificationRequests = $._encodeBitString;
-    }
-    return _cached_encoder_for_NotificationRequests(value, elGetter);
-}
+export const _encode_NotificationRequests = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NotificationRequests */
 

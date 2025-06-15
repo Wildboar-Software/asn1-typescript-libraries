@@ -141,45 +141,17 @@ export const reserved2: number = Vein_only_reserved2; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION reserved2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Vein_only */
-let _cached_decoder_for_Vein_only: $.ASN1Decoder<Vein_only> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Vein_only */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Vein_only */
-/**
- * @summary Decodes an ASN.1 element into a(n) Vein_only
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Vein_only} The decoded data structure.
- */
-export function _decode_Vein_only(el: _Element) {
-  if (!_cached_decoder_for_Vein_only) {
-    _cached_decoder_for_Vein_only = $._decodeBitString;
-  }
-  return _cached_decoder_for_Vein_only(el);
-}
+export const _decode_Vein_only = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Vein_only */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Vein_only */
-let _cached_encoder_for_Vein_only: $.ASN1Encoder<Vein_only> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Vein_only */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Vein_only */
-/**
- * @summary Encodes a(n) Vein_only into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Vein_only, encoded as an ASN.1 Element.
- */
-export function _encode_Vein_only(
-  value: Vein_only,
-  elGetter: $.ASN1Encoder<Vein_only>
-) {
-  if (!_cached_encoder_for_Vein_only) {
-    _cached_encoder_for_Vein_only = $._encodeBitString;
-  }
-  return _cached_encoder_for_Vein_only(value, elGetter);
-}
+export const _encode_Vein_only = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Vein_only */
 

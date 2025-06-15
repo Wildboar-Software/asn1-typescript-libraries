@@ -59,45 +59,17 @@ export const v1994: number = ASN1Version_v1994; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION v1994 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASN1Version */
-let _cached_decoder_for_ASN1Version: $.ASN1Decoder<ASN1Version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASN1Version */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ASN1Version */
-/**
- * @summary Decodes an ASN.1 element into a(n) ASN1Version
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ASN1Version} The decoded data structure.
- */
-export function _decode_ASN1Version(el: _Element) {
-    if (!_cached_decoder_for_ASN1Version) {
-        _cached_decoder_for_ASN1Version = $._decodeBitString;
-    }
-    return _cached_decoder_for_ASN1Version(el);
-}
+export const _decode_ASN1Version = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ASN1Version */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASN1Version */
-let _cached_encoder_for_ASN1Version: $.ASN1Encoder<ASN1Version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASN1Version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ASN1Version */
-/**
- * @summary Encodes a(n) ASN1Version into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ASN1Version, encoded as an ASN.1 Element.
- */
-export function _encode_ASN1Version(
-    value: ASN1Version,
-    elGetter: $.ASN1Encoder<ASN1Version>
-) {
-    if (!_cached_encoder_for_ASN1Version) {
-        _cached_encoder_for_ASN1Version = $._encodeBitString;
-    }
-    return _cached_encoder_for_ASN1Version(value, elGetter);
-}
+export const _encode_ASN1Version = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ASN1Version */
 

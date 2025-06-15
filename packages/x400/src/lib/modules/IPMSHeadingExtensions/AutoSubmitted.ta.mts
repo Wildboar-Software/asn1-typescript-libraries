@@ -121,45 +121,17 @@ export const auto_replied: AutoSubmitted =
 /* END_OF_SYMBOL_DEFINITION auto_replied */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSubmitted */
-let _cached_decoder_for_AutoSubmitted: $.ASN1Decoder<AutoSubmitted> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSubmitted */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AutoSubmitted */
-/**
- * @summary Decodes an ASN.1 element into a(n) AutoSubmitted
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AutoSubmitted} The decoded data structure.
- */
-export function _decode_AutoSubmitted(el: _Element) {
-    if (!_cached_decoder_for_AutoSubmitted) {
-        _cached_decoder_for_AutoSubmitted = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AutoSubmitted(el);
-}
+export const _decode_AutoSubmitted = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AutoSubmitted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSubmitted */
-let _cached_encoder_for_AutoSubmitted: $.ASN1Encoder<AutoSubmitted> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSubmitted */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AutoSubmitted */
-/**
- * @summary Encodes a(n) AutoSubmitted into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AutoSubmitted, encoded as an ASN.1 Element.
- */
-export function _encode_AutoSubmitted(
-    value: AutoSubmitted,
-    elGetter: $.ASN1Encoder<AutoSubmitted>
-) {
-    if (!_cached_encoder_for_AutoSubmitted) {
-        _cached_encoder_for_AutoSubmitted = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AutoSubmitted(value, elGetter);
-}
+export const _encode_AutoSubmitted = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AutoSubmitted */
 

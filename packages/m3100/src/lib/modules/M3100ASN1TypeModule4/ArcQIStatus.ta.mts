@@ -121,45 +121,17 @@ export const nalmCountDown: ArcQIStatus =
 /* END_OF_SYMBOL_DEFINITION nalmCountDown */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcQIStatus */
-let _cached_decoder_for_ArcQIStatus: $.ASN1Decoder<ArcQIStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcQIStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ArcQIStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) ArcQIStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ArcQIStatus} The decoded data structure.
- */
-export function _decode_ArcQIStatus(el: _Element) {
-    if (!_cached_decoder_for_ArcQIStatus) {
-        _cached_decoder_for_ArcQIStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ArcQIStatus(el);
-}
+export const _decode_ArcQIStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ArcQIStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcQIStatus */
-let _cached_encoder_for_ArcQIStatus: $.ASN1Encoder<ArcQIStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcQIStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ArcQIStatus */
-/**
- * @summary Encodes a(n) ArcQIStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ArcQIStatus, encoded as an ASN.1 Element.
- */
-export function _encode_ArcQIStatus(
-    value: ArcQIStatus,
-    elGetter: $.ASN1Encoder<ArcQIStatus>
-) {
-    if (!_cached_encoder_for_ArcQIStatus) {
-        _cached_encoder_for_ArcQIStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ArcQIStatus(value, elGetter);
-}
+export const _encode_ArcQIStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ArcQIStatus */
 

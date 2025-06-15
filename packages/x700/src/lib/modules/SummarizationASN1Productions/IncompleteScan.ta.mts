@@ -81,45 +81,17 @@ export const other: IncompleteScan = IncompleteScan_other; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION other */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IncompleteScan */
-let _cached_decoder_for_IncompleteScan: $.ASN1Decoder<IncompleteScan> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IncompleteScan */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IncompleteScan */
-/**
- * @summary Decodes an ASN.1 element into a(n) IncompleteScan
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IncompleteScan} The decoded data structure.
- */
-export function _decode_IncompleteScan(el: _Element) {
-    if (!_cached_decoder_for_IncompleteScan) {
-        _cached_decoder_for_IncompleteScan = $._decodeInteger;
-    }
-    return _cached_decoder_for_IncompleteScan(el);
-}
+export const _decode_IncompleteScan = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_IncompleteScan */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IncompleteScan */
-let _cached_encoder_for_IncompleteScan: $.ASN1Encoder<IncompleteScan> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IncompleteScan */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IncompleteScan */
-/**
- * @summary Encodes a(n) IncompleteScan into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IncompleteScan, encoded as an ASN.1 Element.
- */
-export function _encode_IncompleteScan(
-    value: IncompleteScan,
-    elGetter: $.ASN1Encoder<IncompleteScan>
-) {
-    if (!_cached_encoder_for_IncompleteScan) {
-        _cached_encoder_for_IncompleteScan = $._encodeInteger;
-    }
-    return _cached_encoder_for_IncompleteScan(value, elGetter);
-}
+export const _encode_IncompleteScan = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IncompleteScan */
 

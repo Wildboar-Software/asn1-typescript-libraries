@@ -102,45 +102,17 @@ export const delete_and_create_with_new_attributes: Override = Override_delete_a
 /* END_OF_SYMBOL_DEFINITION delete_and_create_with_new_attributes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Override */
-let _cached_decoder_for_Override: $.ASN1Decoder<Override> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Override */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Override */
-/**
- * @summary Decodes an ASN.1 element into a(n) Override
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Override} The decoded data structure.
- */
-export function _decode_Override(el: _Element) {
-  if (!_cached_decoder_for_Override) {
-    _cached_decoder_for_Override = $._decodeInteger;
-  }
-  return _cached_decoder_for_Override(el);
-}
+export const _decode_Override = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Override */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Override */
-let _cached_encoder_for_Override: $.ASN1Encoder<Override> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Override */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Override */
-/**
- * @summary Encodes a(n) Override into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Override, encoded as an ASN.1 Element.
- */
-export function _encode_Override(
-  value: Override,
-  elGetter: $.ASN1Encoder<Override>
-) {
-  if (!_cached_encoder_for_Override) {
-    _cached_encoder_for_Override = $._encodeInteger;
-  }
-  return _cached_encoder_for_Override(value, elGetter);
-}
+export const _encode_Override = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Override */
 

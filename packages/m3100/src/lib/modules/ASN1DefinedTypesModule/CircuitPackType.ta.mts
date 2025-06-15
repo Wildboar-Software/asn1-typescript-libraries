@@ -27,45 +27,17 @@ export type CircuitPackType = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION CircuitPackType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitPackType */
-let _cached_decoder_for_CircuitPackType: $.ASN1Decoder<CircuitPackType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitPackType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CircuitPackType */
-/**
- * @summary Decodes an ASN.1 element into a(n) CircuitPackType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CircuitPackType} The decoded data structure.
- */
-export function _decode_CircuitPackType(el: _Element) {
-    if (!_cached_decoder_for_CircuitPackType) {
-        _cached_decoder_for_CircuitPackType = $._decodePrintableString;
-    }
-    return _cached_decoder_for_CircuitPackType(el);
-}
+export const _decode_CircuitPackType = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_CircuitPackType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitPackType */
-let _cached_encoder_for_CircuitPackType: $.ASN1Encoder<CircuitPackType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitPackType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CircuitPackType */
-/**
- * @summary Encodes a(n) CircuitPackType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CircuitPackType, encoded as an ASN.1 Element.
- */
-export function _encode_CircuitPackType(
-    value: CircuitPackType,
-    elGetter: $.ASN1Encoder<CircuitPackType>
-) {
-    if (!_cached_encoder_for_CircuitPackType) {
-        _cached_encoder_for_CircuitPackType = $._encodePrintableString;
-    }
-    return _cached_encoder_for_CircuitPackType(value, elGetter);
-}
+export const _encode_CircuitPackType = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CircuitPackType */
 

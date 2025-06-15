@@ -132,40 +132,17 @@ const evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationComplet
 /* END_OF_SYMBOL_DEFINITION evaluationCompleted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EvaluationStatus */
-let _cached_decoder_for_EvaluationStatus: $.ASN1Decoder<EvaluationStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EvaluationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EvaluationStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) EvaluationStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EvaluationStatus} The decoded data structure.
- */
-export
-function _decode_EvaluationStatus (el: _Element) {
-    if (!_cached_decoder_for_EvaluationStatus) { _cached_decoder_for_EvaluationStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_EvaluationStatus(el);
-}
+export const _decode_EvaluationStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EvaluationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EvaluationStatus */
-let _cached_encoder_for_EvaluationStatus: $.ASN1Encoder<EvaluationStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EvaluationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EvaluationStatus */
-/**
- * @summary Encodes a(n) EvaluationStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EvaluationStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_EvaluationStatus (value: EvaluationStatus, elGetter: $.ASN1Encoder<EvaluationStatus>) {
-    if (!_cached_encoder_for_EvaluationStatus) { _cached_encoder_for_EvaluationStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_EvaluationStatus(value, elGetter);
-}
+export const _encode_EvaluationStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EvaluationStatus */
 

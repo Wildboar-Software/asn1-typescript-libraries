@@ -155,45 +155,17 @@ export const sixth_level: OrgLevel = OrgLevel_sixth_level; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION sixth_level */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OrgLevel */
-let _cached_decoder_for_OrgLevel: $.ASN1Decoder<OrgLevel> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OrgLevel */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OrgLevel */
-/**
- * @summary Decodes an ASN.1 element into a(n) OrgLevel
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OrgLevel} The decoded data structure.
- */
-export function _decode_OrgLevel(el: _Element) {
-    if (!_cached_decoder_for_OrgLevel) {
-        _cached_decoder_for_OrgLevel = $._decodeInteger;
-    }
-    return _cached_decoder_for_OrgLevel(el);
-}
+export const _decode_OrgLevel = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_OrgLevel */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OrgLevel */
-let _cached_encoder_for_OrgLevel: $.ASN1Encoder<OrgLevel> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OrgLevel */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OrgLevel */
-/**
- * @summary Encodes a(n) OrgLevel into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OrgLevel, encoded as an ASN.1 Element.
- */
-export function _encode_OrgLevel(
-    value: OrgLevel,
-    elGetter: $.ASN1Encoder<OrgLevel>
-) {
-    if (!_cached_encoder_for_OrgLevel) {
-        _cached_encoder_for_OrgLevel = $._encodeInteger;
-    }
-    return _cached_encoder_for_OrgLevel(value, elGetter);
-}
+export const _encode_OrgLevel = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OrgLevel */
 

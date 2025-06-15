@@ -27,45 +27,17 @@ export type TestIndicatorField = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION TestIndicatorField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestIndicatorField */
-let _cached_decoder_for_TestIndicatorField: $.ASN1Decoder<TestIndicatorField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestIndicatorField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestIndicatorField */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestIndicatorField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestIndicatorField} The decoded data structure.
- */
-export function _decode_TestIndicatorField(el: _Element) {
-    if (!_cached_decoder_for_TestIndicatorField) {
-        _cached_decoder_for_TestIndicatorField = $._decodeBoolean;
-    }
-    return _cached_decoder_for_TestIndicatorField(el);
-}
+export const _decode_TestIndicatorField = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_TestIndicatorField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestIndicatorField */
-let _cached_encoder_for_TestIndicatorField: $.ASN1Encoder<TestIndicatorField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestIndicatorField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestIndicatorField */
-/**
- * @summary Encodes a(n) TestIndicatorField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestIndicatorField, encoded as an ASN.1 Element.
- */
-export function _encode_TestIndicatorField(
-    value: TestIndicatorField,
-    elGetter: $.ASN1Encoder<TestIndicatorField>
-) {
-    if (!_cached_encoder_for_TestIndicatorField) {
-        _cached_encoder_for_TestIndicatorField = $._encodeBoolean;
-    }
-    return _cached_encoder_for_TestIndicatorField(value, elGetter);
-}
+export const _encode_TestIndicatorField = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestIndicatorField */
 

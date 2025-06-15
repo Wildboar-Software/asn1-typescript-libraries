@@ -210,45 +210,17 @@ export const unknownFunction: ProcessingState = ProcessingState_unknownFunction;
 /* END_OF_SYMBOL_DEFINITION unknownFunction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingState */
-let _cached_decoder_for_ProcessingState: $.ASN1Decoder<ProcessingState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProcessingState */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProcessingState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProcessingState} The decoded data structure.
- */
-export function _decode_ProcessingState(el: _Element) {
-    if (!_cached_decoder_for_ProcessingState) {
-        _cached_decoder_for_ProcessingState = $._decodeInteger;
-    }
-    return _cached_decoder_for_ProcessingState(el);
-}
+export const _decode_ProcessingState = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ProcessingState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingState */
-let _cached_encoder_for_ProcessingState: $.ASN1Encoder<ProcessingState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProcessingState */
-/**
- * @summary Encodes a(n) ProcessingState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProcessingState, encoded as an ASN.1 Element.
- */
-export function _encode_ProcessingState(
-    value: ProcessingState,
-    elGetter: $.ASN1Encoder<ProcessingState>
-) {
-    if (!_cached_encoder_for_ProcessingState) {
-        _cached_encoder_for_ProcessingState = $._encodeInteger;
-    }
-    return _cached_encoder_for_ProcessingState(value, elGetter);
-}
+export const _encode_ProcessingState = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProcessingState */
 

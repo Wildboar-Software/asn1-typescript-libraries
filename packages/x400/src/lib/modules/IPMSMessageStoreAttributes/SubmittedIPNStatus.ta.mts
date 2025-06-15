@@ -174,45 +174,17 @@ export const rn_sent: SubmittedIPNStatus = SubmittedIPNStatus_rn_sent; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION rn_sent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmittedIPNStatus */
-let _cached_decoder_for_SubmittedIPNStatus: $.ASN1Decoder<SubmittedIPNStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmittedIPNStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubmittedIPNStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubmittedIPNStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubmittedIPNStatus} The decoded data structure.
- */
-export function _decode_SubmittedIPNStatus(el: _Element) {
-    if (!_cached_decoder_for_SubmittedIPNStatus) {
-        _cached_decoder_for_SubmittedIPNStatus = $._decodeInteger;
-    }
-    return _cached_decoder_for_SubmittedIPNStatus(el);
-}
+export const _decode_SubmittedIPNStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SubmittedIPNStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmittedIPNStatus */
-let _cached_encoder_for_SubmittedIPNStatus: $.ASN1Encoder<SubmittedIPNStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmittedIPNStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubmittedIPNStatus */
-/**
- * @summary Encodes a(n) SubmittedIPNStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubmittedIPNStatus, encoded as an ASN.1 Element.
- */
-export function _encode_SubmittedIPNStatus(
-    value: SubmittedIPNStatus,
-    elGetter: $.ASN1Encoder<SubmittedIPNStatus>
-) {
-    if (!_cached_encoder_for_SubmittedIPNStatus) {
-        _cached_encoder_for_SubmittedIPNStatus = $._encodeInteger;
-    }
-    return _cached_encoder_for_SubmittedIPNStatus(value, elGetter);
-}
+export const _encode_SubmittedIPNStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubmittedIPNStatus */
 

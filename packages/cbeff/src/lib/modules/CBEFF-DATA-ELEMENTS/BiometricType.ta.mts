@@ -303,45 +303,17 @@ export const signature_sign: number = BiometricType_signature_sign; /* SHORT_NAM
 /* END_OF_SYMBOL_DEFINITION signature_sign */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricType */
-let _cached_decoder_for_BiometricType: $.ASN1Decoder<BiometricType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BiometricType */
-/**
- * @summary Decodes an ASN.1 element into a(n) BiometricType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BiometricType} The decoded data structure.
- */
-export function _decode_BiometricType(el: _Element) {
-  if (!_cached_decoder_for_BiometricType) {
-    _cached_decoder_for_BiometricType = $._decodeBitString;
-  }
-  return _cached_decoder_for_BiometricType(el);
-}
+export const _decode_BiometricType = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_BiometricType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricType */
-let _cached_encoder_for_BiometricType: $.ASN1Encoder<BiometricType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BiometricType */
-/**
- * @summary Encodes a(n) BiometricType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BiometricType, encoded as an ASN.1 Element.
- */
-export function _encode_BiometricType(
-  value: BiometricType,
-  elGetter: $.ASN1Encoder<BiometricType>
-) {
-  if (!_cached_encoder_for_BiometricType) {
-    _cached_encoder_for_BiometricType = $._encodeBitString;
-  }
-  return _cached_encoder_for_BiometricType(value, elGetter);
-}
+export const _encode_BiometricType = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BiometricType */
 

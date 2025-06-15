@@ -165,42 +165,17 @@ export const receiver: Value =
 /* END_OF_SYMBOL_DEFINITION receiver */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Value */
-let _cached_decoder_for_Value: $.ASN1Decoder<Value> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Value */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Value */
-/**
- * @summary Decodes an ASN.1 element into a(n) Value
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Value} The decoded data structure.
- */
-export function _decode_Value(el: _Element) {
-  if (!_cached_decoder_for_Value) {
-    _cached_decoder_for_Value = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_Value(el);
-}
+export const _decode_Value = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Value */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Value */
-let _cached_encoder_for_Value: $.ASN1Encoder<Value> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Value */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Value */
-/**
- * @summary Encodes a(n) Value into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Value, encoded as an ASN.1 Element.
- */
-export function _encode_Value(value: Value, elGetter: $.ASN1Encoder<Value>) {
-  if (!_cached_encoder_for_Value) {
-    _cached_encoder_for_Value = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_Value(value, elGetter);
-}
+export const _encode_Value = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Value */
 

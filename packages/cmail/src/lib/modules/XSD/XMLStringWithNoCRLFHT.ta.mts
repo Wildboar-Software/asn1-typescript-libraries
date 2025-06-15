@@ -30,45 +30,17 @@ export type XMLStringWithNoCRLFHT = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION XMLStringWithNoCRLFHT */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoCRLFHT */
-let _cached_decoder_for_XMLStringWithNoCRLFHT: $.ASN1Decoder<XMLStringWithNoCRLFHT> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoCRLFHT */
 
 /* START_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoCRLFHT */
-/**
- * @summary Decodes an ASN.1 element into a(n) XMLStringWithNoCRLFHT
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {XMLStringWithNoCRLFHT} The decoded data structure.
- */
-export function _decode_XMLStringWithNoCRLFHT(el: _Element) {
-  if (!_cached_decoder_for_XMLStringWithNoCRLFHT) {
-    _cached_decoder_for_XMLStringWithNoCRLFHT = $._decodeUTF8String;
-  }
-  return _cached_decoder_for_XMLStringWithNoCRLFHT(el);
-}
+export const _decode_XMLStringWithNoCRLFHT = $._decodeUTF8String;
 /* END_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoCRLFHT */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoCRLFHT */
-let _cached_encoder_for_XMLStringWithNoCRLFHT: $.ASN1Encoder<XMLStringWithNoCRLFHT> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoCRLFHT */
 
 /* START_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoCRLFHT */
-/**
- * @summary Encodes a(n) XMLStringWithNoCRLFHT into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The XMLStringWithNoCRLFHT, encoded as an ASN.1 Element.
- */
-export function _encode_XMLStringWithNoCRLFHT(
-  value: XMLStringWithNoCRLFHT,
-  elGetter: $.ASN1Encoder<XMLStringWithNoCRLFHT>
-) {
-  if (!_cached_encoder_for_XMLStringWithNoCRLFHT) {
-    _cached_encoder_for_XMLStringWithNoCRLFHT = $._encodeUTF8String;
-  }
-  return _cached_encoder_for_XMLStringWithNoCRLFHT(value, elGetter);
-}
+export const _encode_XMLStringWithNoCRLFHT = $._encodeUTF8String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoCRLFHT */
 

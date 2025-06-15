@@ -55,45 +55,17 @@ export const handwritten_signature: PredefinedBiometricType = PredefinedBiometri
 /* END_OF_SYMBOL_DEFINITION handwritten_signature */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PredefinedBiometricType */
-let _cached_decoder_for_PredefinedBiometricType: $.ASN1Decoder<PredefinedBiometricType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PredefinedBiometricType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PredefinedBiometricType */
-/**
- * @summary Decodes an ASN.1 element into a(n) PredefinedBiometricType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PredefinedBiometricType} The decoded data structure.
- */
-export function _decode_PredefinedBiometricType(el: _Element) {
-    if (!_cached_decoder_for_PredefinedBiometricType) {
-        _cached_decoder_for_PredefinedBiometricType = $._decodeInteger;
-    }
-    return _cached_decoder_for_PredefinedBiometricType(el);
-}
+export const _decode_PredefinedBiometricType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PredefinedBiometricType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PredefinedBiometricType */
-let _cached_encoder_for_PredefinedBiometricType: $.ASN1Encoder<PredefinedBiometricType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PredefinedBiometricType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PredefinedBiometricType */
-/**
- * @summary Encodes a(n) PredefinedBiometricType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PredefinedBiometricType, encoded as an ASN.1 Element.
- */
-export function _encode_PredefinedBiometricType(
-    value: PredefinedBiometricType,
-    elGetter: $.ASN1Encoder<PredefinedBiometricType>
-) {
-    if (!_cached_encoder_for_PredefinedBiometricType) {
-        _cached_encoder_for_PredefinedBiometricType = $._encodeInteger;
-    }
-    return _cached_encoder_for_PredefinedBiometricType(value, elGetter);
-}
+export const _encode_PredefinedBiometricType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PredefinedBiometricType */
 

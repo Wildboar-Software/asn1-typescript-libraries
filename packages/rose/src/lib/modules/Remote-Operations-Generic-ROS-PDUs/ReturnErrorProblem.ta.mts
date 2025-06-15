@@ -119,45 +119,17 @@ export const mistypedParameter: ReturnErrorProblem = ReturnErrorProblem_mistyped
 /* END_OF_SYMBOL_DEFINITION mistypedParameter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnErrorProblem */
-let _cached_decoder_for_ReturnErrorProblem: $.ASN1Decoder<ReturnErrorProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnErrorProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReturnErrorProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReturnErrorProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReturnErrorProblem} The decoded data structure.
- */
-export function _decode_ReturnErrorProblem(el: _Element) {
-  if (!_cached_decoder_for_ReturnErrorProblem) {
-    _cached_decoder_for_ReturnErrorProblem = $._decodeInteger;
-  }
-  return _cached_decoder_for_ReturnErrorProblem(el);
-}
+export const _decode_ReturnErrorProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ReturnErrorProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnErrorProblem */
-let _cached_encoder_for_ReturnErrorProblem: $.ASN1Encoder<ReturnErrorProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnErrorProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReturnErrorProblem */
-/**
- * @summary Encodes a(n) ReturnErrorProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReturnErrorProblem, encoded as an ASN.1 Element.
- */
-export function _encode_ReturnErrorProblem(
-  value: ReturnErrorProblem,
-  elGetter: $.ASN1Encoder<ReturnErrorProblem>
-) {
-  if (!_cached_encoder_for_ReturnErrorProblem) {
-    _cached_encoder_for_ReturnErrorProblem = $._encodeInteger;
-  }
-  return _cached_encoder_for_ReturnErrorProblem(value, elGetter);
-}
+export const _encode_ReturnErrorProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReturnErrorProblem */
 

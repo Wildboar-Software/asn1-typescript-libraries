@@ -27,45 +27,17 @@ export type IncompleteCopy = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION IncompleteCopy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IncompleteCopy */
-let _cached_decoder_for_IncompleteCopy: $.ASN1Decoder<IncompleteCopy> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IncompleteCopy */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IncompleteCopy */
-/**
- * @summary Decodes an ASN.1 element into a(n) IncompleteCopy
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IncompleteCopy} The decoded data structure.
- */
-export function _decode_IncompleteCopy(el: _Element) {
-    if (!_cached_decoder_for_IncompleteCopy) {
-        _cached_decoder_for_IncompleteCopy = $._decodeNull;
-    }
-    return _cached_decoder_for_IncompleteCopy(el);
-}
+export const _decode_IncompleteCopy = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_IncompleteCopy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IncompleteCopy */
-let _cached_encoder_for_IncompleteCopy: $.ASN1Encoder<IncompleteCopy> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IncompleteCopy */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IncompleteCopy */
-/**
- * @summary Encodes a(n) IncompleteCopy into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IncompleteCopy, encoded as an ASN.1 Element.
- */
-export function _encode_IncompleteCopy(
-    value: IncompleteCopy,
-    elGetter: $.ASN1Encoder<IncompleteCopy>
-) {
-    if (!_cached_encoder_for_IncompleteCopy) {
-        _cached_encoder_for_IncompleteCopy = $._encodeNull;
-    }
-    return _cached_encoder_for_IncompleteCopy(value, elGetter);
-}
+export const _encode_IncompleteCopy = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IncompleteCopy */
 

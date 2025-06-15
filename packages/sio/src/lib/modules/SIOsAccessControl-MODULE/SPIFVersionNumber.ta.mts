@@ -17,45 +17,17 @@ export type SPIFVersionNumber = INTEGER;
 /* END_OF_SYMBOL_DEFINITION SPIFVersionNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPIFVersionNumber */
-let _cached_decoder_for_SPIFVersionNumber: $.ASN1Decoder<SPIFVersionNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPIFVersionNumber */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SPIFVersionNumber */
-/**
- * @summary Decodes an ASN.1 element into a(n) SPIFVersionNumber
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SPIFVersionNumber} The decoded data structure.
- */
-export function _decode_SPIFVersionNumber(el: _Element) {
-    if (!_cached_decoder_for_SPIFVersionNumber) {
-        _cached_decoder_for_SPIFVersionNumber = $._decodeInteger;
-    }
-    return _cached_decoder_for_SPIFVersionNumber(el);
-}
+export const _decode_SPIFVersionNumber = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SPIFVersionNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPIFVersionNumber */
-let _cached_encoder_for_SPIFVersionNumber: $.ASN1Encoder<SPIFVersionNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPIFVersionNumber */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SPIFVersionNumber */
-/**
- * @summary Encodes a(n) SPIFVersionNumber into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SPIFVersionNumber, encoded as an ASN.1 Element.
- */
-export function _encode_SPIFVersionNumber(
-    value: SPIFVersionNumber,
-    elGetter: $.ASN1Encoder<SPIFVersionNumber>
-) {
-    if (!_cached_encoder_for_SPIFVersionNumber) {
-        _cached_encoder_for_SPIFVersionNumber = $._encodeInteger;
-    }
-    return _cached_encoder_for_SPIFVersionNumber(value, elGetter);
-}
+export const _encode_SPIFVersionNumber = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SPIFVersionNumber */
 

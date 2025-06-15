@@ -213,45 +213,17 @@ export const sensorPermanentlyUnavailable: SetupError = SetupError_sensorPermane
 /* END_OF_SYMBOL_DEFINITION sensorPermanentlyUnavailable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SetupError */
-let _cached_decoder_for_SetupError: $.ASN1Decoder<SetupError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SetupError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SetupError */
-/**
- * @summary Decodes an ASN.1 element into a(n) SetupError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SetupError} The decoded data structure.
- */
-export function _decode_SetupError(el: _Element) {
-    if (!_cached_decoder_for_SetupError) {
-        _cached_decoder_for_SetupError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SetupError(el);
-}
+export const _decode_SetupError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SetupError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SetupError */
-let _cached_encoder_for_SetupError: $.ASN1Encoder<SetupError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SetupError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SetupError */
-/**
- * @summary Encodes a(n) SetupError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SetupError, encoded as an ASN.1 Element.
- */
-export function _encode_SetupError(
-    value: SetupError,
-    elGetter: $.ASN1Encoder<SetupError>
-) {
-    if (!_cached_encoder_for_SetupError) {
-        _cached_encoder_for_SetupError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SetupError(value, elGetter);
-}
+export const _encode_SetupError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SetupError */
 

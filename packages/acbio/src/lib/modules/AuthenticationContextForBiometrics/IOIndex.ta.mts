@@ -27,45 +27,17 @@ export type IOIndex = INTEGER;
 /* END_OF_SYMBOL_DEFINITION IOIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IOIndex */
-let _cached_decoder_for_IOIndex: $.ASN1Decoder<IOIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IOIndex */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IOIndex */
-/**
- * @summary Decodes an ASN.1 element into a(n) IOIndex
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IOIndex} The decoded data structure.
- */
-export function _decode_IOIndex(el: _Element) {
-    if (!_cached_decoder_for_IOIndex) {
-        _cached_decoder_for_IOIndex = $._decodeInteger;
-    }
-    return _cached_decoder_for_IOIndex(el);
-}
+export const _decode_IOIndex = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_IOIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IOIndex */
-let _cached_encoder_for_IOIndex: $.ASN1Encoder<IOIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IOIndex */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IOIndex */
-/**
- * @summary Encodes a(n) IOIndex into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IOIndex, encoded as an ASN.1 Element.
- */
-export function _encode_IOIndex(
-    value: IOIndex,
-    elGetter: $.ASN1Encoder<IOIndex>
-) {
-    if (!_cached_encoder_for_IOIndex) {
-        _cached_encoder_for_IOIndex = $._encodeInteger;
-    }
-    return _cached_encoder_for_IOIndex(value, elGetter);
-}
+export const _encode_IOIndex = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IOIndex */
 

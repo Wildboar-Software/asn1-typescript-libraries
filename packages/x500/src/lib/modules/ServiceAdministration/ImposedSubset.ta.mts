@@ -79,45 +79,17 @@ export const wholeSubtree: ImposedSubset = ImposedSubset_wholeSubtree; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ImposedSubset */
-let _cached_decoder_for_ImposedSubset: $.ASN1Decoder<ImposedSubset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ImposedSubset */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ImposedSubset */
-/**
- * @summary Decodes an ASN.1 element into a(n) ImposedSubset
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ImposedSubset} The decoded data structure.
- */
-export function _decode_ImposedSubset(el: _Element) {
-    if (!_cached_decoder_for_ImposedSubset) {
-        _cached_decoder_for_ImposedSubset = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ImposedSubset(el);
-}
+export const _decode_ImposedSubset = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ImposedSubset */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ImposedSubset */
-let _cached_encoder_for_ImposedSubset: $.ASN1Encoder<ImposedSubset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ImposedSubset */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ImposedSubset */
-/**
- * @summary Encodes a(n) ImposedSubset into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ImposedSubset, encoded as an ASN.1 Element.
- */
-export function _encode_ImposedSubset(
-    value: ImposedSubset,
-    elGetter: $.ASN1Encoder<ImposedSubset>
-) {
-    if (!_cached_encoder_for_ImposedSubset) {
-        _cached_encoder_for_ImposedSubset = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ImposedSubset(value, elGetter);
-}
+export const _encode_ImposedSubset = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ImposedSubset */
 

@@ -30,45 +30,17 @@ export type XMLStringWithNoWhitespace = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION XMLStringWithNoWhitespace */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoWhitespace */
-let _cached_decoder_for_XMLStringWithNoWhitespace: $.ASN1Decoder<XMLStringWithNoWhitespace> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoWhitespace */
 
 /* START_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoWhitespace */
-/**
- * @summary Decodes an ASN.1 element into a(n) XMLStringWithNoWhitespace
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {XMLStringWithNoWhitespace} The decoded data structure.
- */
-export function _decode_XMLStringWithNoWhitespace(el: _Element) {
-  if (!_cached_decoder_for_XMLStringWithNoWhitespace) {
-    _cached_decoder_for_XMLStringWithNoWhitespace = $._decodeUTF8String;
-  }
-  return _cached_decoder_for_XMLStringWithNoWhitespace(el);
-}
+export const _decode_XMLStringWithNoWhitespace = $._decodeUTF8String;
 /* END_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoWhitespace */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoWhitespace */
-let _cached_encoder_for_XMLStringWithNoWhitespace: $.ASN1Encoder<XMLStringWithNoWhitespace> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoWhitespace */
 
 /* START_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoWhitespace */
-/**
- * @summary Encodes a(n) XMLStringWithNoWhitespace into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The XMLStringWithNoWhitespace, encoded as an ASN.1 Element.
- */
-export function _encode_XMLStringWithNoWhitespace(
-  value: XMLStringWithNoWhitespace,
-  elGetter: $.ASN1Encoder<XMLStringWithNoWhitespace>
-) {
-  if (!_cached_encoder_for_XMLStringWithNoWhitespace) {
-    _cached_encoder_for_XMLStringWithNoWhitespace = $._encodeUTF8String;
-  }
-  return _cached_encoder_for_XMLStringWithNoWhitespace(value, elGetter);
-}
+export const _encode_XMLStringWithNoWhitespace = $._encodeUTF8String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoWhitespace */
 

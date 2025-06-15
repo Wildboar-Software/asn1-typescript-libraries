@@ -27,45 +27,17 @@ export type CEKReference = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION CEKReference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CEKReference */
-let _cached_decoder_for_CEKReference: $.ASN1Decoder<CEKReference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CEKReference */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CEKReference */
-/**
- * @summary Decodes an ASN.1 element into a(n) CEKReference
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CEKReference} The decoded data structure.
- */
-export function _decode_CEKReference(el: _Element) {
-    if (!_cached_decoder_for_CEKReference) {
-        _cached_decoder_for_CEKReference = $._decodeOctetString;
-    }
-    return _cached_decoder_for_CEKReference(el);
-}
+export const _decode_CEKReference = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_CEKReference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CEKReference */
-let _cached_encoder_for_CEKReference: $.ASN1Encoder<CEKReference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CEKReference */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CEKReference */
-/**
- * @summary Encodes a(n) CEKReference into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CEKReference, encoded as an ASN.1 Element.
- */
-export function _encode_CEKReference(
-    value: CEKReference,
-    elGetter: $.ASN1Encoder<CEKReference>
-) {
-    if (!_cached_encoder_for_CEKReference) {
-        _cached_encoder_for_CEKReference = $._encodeOctetString;
-    }
-    return _cached_encoder_for_CEKReference(value, elGetter);
-}
+export const _encode_CEKReference = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CEKReference */
 

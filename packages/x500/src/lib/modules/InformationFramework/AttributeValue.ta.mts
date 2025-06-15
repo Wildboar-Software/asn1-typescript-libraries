@@ -16,45 +16,17 @@ export type AttributeValue = _Element; // ObjectClassFieldType
 /* END_OF_SYMBOL_DEFINITION AttributeValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValue */
-let _cached_decoder_for_AttributeValue: $.ASN1Decoder<AttributeValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValue */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeValue */
-/**
- * @summary Decodes an ASN.1 element into a(n) AttributeValue
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AttributeValue} The decoded data structure.
- */
-export function _decode_AttributeValue(el: _Element) {
-    if (!_cached_decoder_for_AttributeValue) {
-        _cached_decoder_for_AttributeValue = $._decodeAny;
-    }
-    return _cached_decoder_for_AttributeValue(el);
-}
+export const _decode_AttributeValue = $._decodeAny;
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValue */
-let _cached_encoder_for_AttributeValue: $.ASN1Encoder<AttributeValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeValue */
-/**
- * @summary Encodes a(n) AttributeValue into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AttributeValue, encoded as an ASN.1 Element.
- */
-export function _encode_AttributeValue(
-    value: AttributeValue,
-    elGetter: $.ASN1Encoder<AttributeValue>
-) {
-    if (!_cached_encoder_for_AttributeValue) {
-        _cached_encoder_for_AttributeValue = $._encodeAny;
-    }
-    return _cached_encoder_for_AttributeValue(value, elGetter);
-}
+export const _encode_AttributeValue = $._encodeAny;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeValue */
 

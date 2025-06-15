@@ -121,45 +121,17 @@ export const knownNotComplete: Completeness =
 /* END_OF_SYMBOL_DEFINITION knownNotComplete */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Completeness */
-let _cached_decoder_for_Completeness: $.ASN1Decoder<Completeness> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Completeness */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Completeness */
-/**
- * @summary Decodes an ASN.1 element into a(n) Completeness
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Completeness} The decoded data structure.
- */
-export function _decode_Completeness(el: _Element) {
-    if (!_cached_decoder_for_Completeness) {
-        _cached_decoder_for_Completeness = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Completeness(el);
-}
+export const _decode_Completeness = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Completeness */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Completeness */
-let _cached_encoder_for_Completeness: $.ASN1Encoder<Completeness> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Completeness */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Completeness */
-/**
- * @summary Encodes a(n) Completeness into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Completeness, encoded as an ASN.1 Element.
- */
-export function _encode_Completeness(
-    value: Completeness,
-    elGetter: $.ASN1Encoder<Completeness>
-) {
-    if (!_cached_encoder_for_Completeness) {
-        _cached_encoder_for_Completeness = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Completeness(value, elGetter);
-}
+export const _encode_Completeness = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Completeness */
 

@@ -118,45 +118,17 @@ export const non_member: MembershipStatus =
 /* END_OF_SYMBOL_DEFINITION non_member */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MembershipStatus */
-let _cached_decoder_for_MembershipStatus: $.ASN1Decoder<MembershipStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MembershipStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MembershipStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) MembershipStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MembershipStatus} The decoded data structure.
- */
-export function _decode_MembershipStatus(el: _Element) {
-    if (!_cached_decoder_for_MembershipStatus) {
-        _cached_decoder_for_MembershipStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_MembershipStatus(el);
-}
+export const _decode_MembershipStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_MembershipStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MembershipStatus */
-let _cached_encoder_for_MembershipStatus: $.ASN1Encoder<MembershipStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MembershipStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MembershipStatus */
-/**
- * @summary Encodes a(n) MembershipStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MembershipStatus, encoded as an ASN.1 Element.
- */
-export function _encode_MembershipStatus(
-    value: MembershipStatus,
-    elGetter: $.ASN1Encoder<MembershipStatus>
-) {
-    if (!_cached_encoder_for_MembershipStatus) {
-        _cached_encoder_for_MembershipStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_MembershipStatus(value, elGetter);
-}
+export const _encode_MembershipStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MembershipStatus */
 

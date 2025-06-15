@@ -64,45 +64,17 @@ export const pDUResponseNotReceived: ProtocolIntegrityTestResults = ProtocolInte
 /* END_OF_SYMBOL_DEFINITION pDUResponseNotReceived */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolIntegrityTestResults */
-let _cached_decoder_for_ProtocolIntegrityTestResults: $.ASN1Decoder<ProtocolIntegrityTestResults> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolIntegrityTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProtocolIntegrityTestResults */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProtocolIntegrityTestResults
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProtocolIntegrityTestResults} The decoded data structure.
- */
-export function _decode_ProtocolIntegrityTestResults(el: _Element) {
-    if (!_cached_decoder_for_ProtocolIntegrityTestResults) {
-        _cached_decoder_for_ProtocolIntegrityTestResults = $._decodeInteger;
-    }
-    return _cached_decoder_for_ProtocolIntegrityTestResults(el);
-}
+export const _decode_ProtocolIntegrityTestResults = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ProtocolIntegrityTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolIntegrityTestResults */
-let _cached_encoder_for_ProtocolIntegrityTestResults: $.ASN1Encoder<ProtocolIntegrityTestResults> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolIntegrityTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProtocolIntegrityTestResults */
-/**
- * @summary Encodes a(n) ProtocolIntegrityTestResults into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProtocolIntegrityTestResults, encoded as an ASN.1 Element.
- */
-export function _encode_ProtocolIntegrityTestResults(
-    value: ProtocolIntegrityTestResults,
-    elGetter: $.ASN1Encoder<ProtocolIntegrityTestResults>
-) {
-    if (!_cached_encoder_for_ProtocolIntegrityTestResults) {
-        _cached_encoder_for_ProtocolIntegrityTestResults = $._encodeInteger;
-    }
-    return _cached_encoder_for_ProtocolIntegrityTestResults(value, elGetter);
-}
+export const _encode_ProtocolIntegrityTestResults = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProtocolIntegrityTestResults */
 

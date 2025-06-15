@@ -30,40 +30,17 @@ type BackedUpStatus = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION BackedUpStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackedUpStatus */
-let _cached_decoder_for_BackedUpStatus: $.ASN1Decoder<BackedUpStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackedUpStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BackedUpStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) BackedUpStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BackedUpStatus} The decoded data structure.
- */
-export
-function _decode_BackedUpStatus (el: _Element) {
-    if (!_cached_decoder_for_BackedUpStatus) { _cached_decoder_for_BackedUpStatus = $._decodeBoolean; }
-    return _cached_decoder_for_BackedUpStatus(el);
-}
+export const _decode_BackedUpStatus = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_BackedUpStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackedUpStatus */
-let _cached_encoder_for_BackedUpStatus: $.ASN1Encoder<BackedUpStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackedUpStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BackedUpStatus */
-/**
- * @summary Encodes a(n) BackedUpStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BackedUpStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_BackedUpStatus (value: BackedUpStatus, elGetter: $.ASN1Encoder<BackedUpStatus>) {
-    if (!_cached_encoder_for_BackedUpStatus) { _cached_encoder_for_BackedUpStatus = $._encodeBoolean; }
-    return _cached_encoder_for_BackedUpStatus(value, elGetter);
-}
+export const _encode_BackedUpStatus = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BackedUpStatus */
 

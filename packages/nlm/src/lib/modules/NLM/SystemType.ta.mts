@@ -95,45 +95,17 @@ export const iS: SystemType = SystemType.iS; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION iS */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemType */
-let _cached_decoder_for_SystemType: $.ASN1Decoder<SystemType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SystemType */
-/**
- * @summary Decodes an ASN.1 element into a(n) SystemType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SystemType} The decoded data structure.
- */
-export function _decode_SystemType(el: _Element) {
-    if (!_cached_decoder_for_SystemType) {
-        _cached_decoder_for_SystemType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SystemType(el);
-}
+export const _decode_SystemType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SystemType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemType */
-let _cached_encoder_for_SystemType: $.ASN1Encoder<SystemType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SystemType */
-/**
- * @summary Encodes a(n) SystemType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SystemType, encoded as an ASN.1 Element.
- */
-export function _encode_SystemType(
-    value: SystemType,
-    elGetter: $.ASN1Encoder<SystemType>
-) {
-    if (!_cached_encoder_for_SystemType) {
-        _cached_encoder_for_SystemType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SystemType(value, elGetter);
-}
+export const _encode_SystemType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SystemType */
 

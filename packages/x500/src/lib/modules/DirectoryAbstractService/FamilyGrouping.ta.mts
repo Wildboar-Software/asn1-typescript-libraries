@@ -103,45 +103,17 @@ export const multiStrand: FamilyGrouping = FamilyGrouping_multiStrand; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION multiStrand */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FamilyGrouping */
-let _cached_decoder_for_FamilyGrouping: $.ASN1Decoder<FamilyGrouping> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FamilyGrouping */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FamilyGrouping */
-/**
- * @summary Decodes an ASN.1 element into a(n) FamilyGrouping
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FamilyGrouping} The decoded data structure.
- */
-export function _decode_FamilyGrouping(el: _Element) {
-    if (!_cached_decoder_for_FamilyGrouping) {
-        _cached_decoder_for_FamilyGrouping = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_FamilyGrouping(el);
-}
+export const _decode_FamilyGrouping = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_FamilyGrouping */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FamilyGrouping */
-let _cached_encoder_for_FamilyGrouping: $.ASN1Encoder<FamilyGrouping> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FamilyGrouping */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FamilyGrouping */
-/**
- * @summary Encodes a(n) FamilyGrouping into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FamilyGrouping, encoded as an ASN.1 Element.
- */
-export function _encode_FamilyGrouping(
-    value: FamilyGrouping,
-    elGetter: $.ASN1Encoder<FamilyGrouping>
-) {
-    if (!_cached_encoder_for_FamilyGrouping) {
-        _cached_encoder_for_FamilyGrouping = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_FamilyGrouping(value, elGetter);
-}
+export const _encode_FamilyGrouping = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FamilyGrouping */
 

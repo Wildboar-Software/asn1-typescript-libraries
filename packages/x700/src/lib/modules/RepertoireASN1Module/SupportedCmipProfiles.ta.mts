@@ -78,45 +78,17 @@ export const aom12: number = SupportedCmipProfiles_aom12; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION aom12 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedCmipProfiles */
-let _cached_decoder_for_SupportedCmipProfiles: $.ASN1Decoder<SupportedCmipProfiles> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedCmipProfiles */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SupportedCmipProfiles */
-/**
- * @summary Decodes an ASN.1 element into a(n) SupportedCmipProfiles
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SupportedCmipProfiles} The decoded data structure.
- */
-export function _decode_SupportedCmipProfiles(el: _Element) {
-    if (!_cached_decoder_for_SupportedCmipProfiles) {
-        _cached_decoder_for_SupportedCmipProfiles = $._decodeBitString;
-    }
-    return _cached_decoder_for_SupportedCmipProfiles(el);
-}
+export const _decode_SupportedCmipProfiles = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_SupportedCmipProfiles */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedCmipProfiles */
-let _cached_encoder_for_SupportedCmipProfiles: $.ASN1Encoder<SupportedCmipProfiles> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedCmipProfiles */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SupportedCmipProfiles */
-/**
- * @summary Encodes a(n) SupportedCmipProfiles into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SupportedCmipProfiles, encoded as an ASN.1 Element.
- */
-export function _encode_SupportedCmipProfiles(
-    value: SupportedCmipProfiles,
-    elGetter: $.ASN1Encoder<SupportedCmipProfiles>
-) {
-    if (!_cached_encoder_for_SupportedCmipProfiles) {
-        _cached_encoder_for_SupportedCmipProfiles = $._encodeBitString;
-    }
-    return _cached_encoder_for_SupportedCmipProfiles(value, elGetter);
-}
+export const _encode_SupportedCmipProfiles = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SupportedCmipProfiles */
 

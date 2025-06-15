@@ -97,45 +97,17 @@ export const outgoing: Direction =
 /* END_OF_SYMBOL_DEFINITION outgoing */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Direction */
-let _cached_decoder_for_Direction: $.ASN1Decoder<Direction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Direction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Direction */
-/**
- * @summary Decodes an ASN.1 element into a(n) Direction
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Direction} The decoded data structure.
- */
-export function _decode_Direction(el: _Element) {
-    if (!_cached_decoder_for_Direction) {
-        _cached_decoder_for_Direction = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Direction(el);
-}
+export const _decode_Direction = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Direction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Direction */
-let _cached_encoder_for_Direction: $.ASN1Encoder<Direction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Direction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Direction */
-/**
- * @summary Encodes a(n) Direction into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Direction, encoded as an ASN.1 Element.
- */
-export function _encode_Direction(
-    value: Direction,
-    elGetter: $.ASN1Encoder<Direction>
-) {
-    if (!_cached_encoder_for_Direction) {
-        _cached_encoder_for_Direction = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Direction(value, elGetter);
-}
+export const _encode_Direction = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Direction */
 

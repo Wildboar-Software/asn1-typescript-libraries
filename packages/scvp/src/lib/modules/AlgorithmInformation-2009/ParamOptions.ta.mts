@@ -144,45 +144,17 @@ export const optional: ParamOptions = ParamOptions_optional; /* SHORT_NAMED_ENUM
 /* END_OF_SYMBOL_DEFINITION optional */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ParamOptions */
-let _cached_decoder_for_ParamOptions: $.ASN1Decoder<ParamOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ParamOptions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ParamOptions */
-/**
- * @summary Decodes an ASN.1 element into a(n) ParamOptions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ParamOptions} The decoded data structure.
- */
-export function _decode_ParamOptions(el: _Element) {
-    if (!_cached_decoder_for_ParamOptions) {
-        _cached_decoder_for_ParamOptions = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ParamOptions(el);
-}
+export const _decode_ParamOptions = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ParamOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ParamOptions */
-let _cached_encoder_for_ParamOptions: $.ASN1Encoder<ParamOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ParamOptions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ParamOptions */
-/**
- * @summary Encodes a(n) ParamOptions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParamOptions, encoded as an ASN.1 Element.
- */
-export function _encode_ParamOptions(
-    value: ParamOptions,
-    elGetter: $.ASN1Encoder<ParamOptions>
-) {
-    if (!_cached_encoder_for_ParamOptions) {
-        _cached_encoder_for_ParamOptions = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ParamOptions(value, elGetter);
-}
+export const _encode_ParamOptions = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ParamOptions */
 

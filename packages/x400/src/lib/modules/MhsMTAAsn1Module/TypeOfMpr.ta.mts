@@ -81,45 +81,17 @@ export const report: TypeOfMpr = TypeOfMpr_report; /* SHORT_NAMED_INTEGER_VALUE 
 /* END_OF_SYMBOL_DEFINITION report */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMpr */
-let _cached_decoder_for_TypeOfMpr: $.ASN1Decoder<TypeOfMpr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMpr */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TypeOfMpr */
-/**
- * @summary Decodes an ASN.1 element into a(n) TypeOfMpr
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TypeOfMpr} The decoded data structure.
- */
-export function _decode_TypeOfMpr(el: _Element) {
-    if (!_cached_decoder_for_TypeOfMpr) {
-        _cached_decoder_for_TypeOfMpr = $._decodeInteger;
-    }
-    return _cached_decoder_for_TypeOfMpr(el);
-}
+export const _decode_TypeOfMpr = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TypeOfMpr */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMpr */
-let _cached_encoder_for_TypeOfMpr: $.ASN1Encoder<TypeOfMpr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMpr */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TypeOfMpr */
-/**
- * @summary Encodes a(n) TypeOfMpr into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TypeOfMpr, encoded as an ASN.1 Element.
- */
-export function _encode_TypeOfMpr(
-    value: TypeOfMpr,
-    elGetter: $.ASN1Encoder<TypeOfMpr>
-) {
-    if (!_cached_encoder_for_TypeOfMpr) {
-        _cached_encoder_for_TypeOfMpr = $._encodeInteger;
-    }
-    return _cached_encoder_for_TypeOfMpr(value, elGetter);
-}
+export const _encode_TypeOfMpr = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TypeOfMpr */
 

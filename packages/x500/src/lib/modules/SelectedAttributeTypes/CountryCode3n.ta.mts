@@ -17,45 +17,17 @@ export type CountryCode3n = NumericString; // NumericString
 /* END_OF_SYMBOL_DEFINITION CountryCode3n */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CountryCode3n */
-let _cached_decoder_for_CountryCode3n: $.ASN1Decoder<CountryCode3n> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CountryCode3n */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CountryCode3n */
-/**
- * @summary Decodes an ASN.1 element into a(n) CountryCode3n
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CountryCode3n} The decoded data structure.
- */
-export function _decode_CountryCode3n(el: _Element) {
-    if (!_cached_decoder_for_CountryCode3n) {
-        _cached_decoder_for_CountryCode3n = $._decodeNumericString;
-    }
-    return _cached_decoder_for_CountryCode3n(el);
-}
+export const _decode_CountryCode3n = $._decodeNumericString;
 /* END_OF_SYMBOL_DEFINITION _decode_CountryCode3n */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CountryCode3n */
-let _cached_encoder_for_CountryCode3n: $.ASN1Encoder<CountryCode3n> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CountryCode3n */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CountryCode3n */
-/**
- * @summary Encodes a(n) CountryCode3n into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CountryCode3n, encoded as an ASN.1 Element.
- */
-export function _encode_CountryCode3n(
-    value: CountryCode3n,
-    elGetter: $.ASN1Encoder<CountryCode3n>
-) {
-    if (!_cached_encoder_for_CountryCode3n) {
-        _cached_encoder_for_CountryCode3n = $._encodeNumericString;
-    }
-    return _cached_encoder_for_CountryCode3n(value, elGetter);
-}
+export const _encode_CountryCode3n = $._encodeNumericString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CountryCode3n */
 

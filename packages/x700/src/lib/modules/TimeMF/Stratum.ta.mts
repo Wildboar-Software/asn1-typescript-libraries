@@ -27,45 +27,17 @@ export type Stratum = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Stratum */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Stratum */
-let _cached_decoder_for_Stratum: $.ASN1Decoder<Stratum> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Stratum */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Stratum */
-/**
- * @summary Decodes an ASN.1 element into a(n) Stratum
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Stratum} The decoded data structure.
- */
-export function _decode_Stratum(el: _Element) {
-    if (!_cached_decoder_for_Stratum) {
-        _cached_decoder_for_Stratum = $._decodeInteger;
-    }
-    return _cached_decoder_for_Stratum(el);
-}
+export const _decode_Stratum = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Stratum */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Stratum */
-let _cached_encoder_for_Stratum: $.ASN1Encoder<Stratum> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Stratum */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Stratum */
-/**
- * @summary Encodes a(n) Stratum into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Stratum, encoded as an ASN.1 Element.
- */
-export function _encode_Stratum(
-    value: Stratum,
-    elGetter: $.ASN1Encoder<Stratum>
-) {
-    if (!_cached_encoder_for_Stratum) {
-        _cached_encoder_for_Stratum = $._encodeInteger;
-    }
-    return _cached_encoder_for_Stratum(value, elGetter);
-}
+export const _encode_Stratum = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Stratum */
 

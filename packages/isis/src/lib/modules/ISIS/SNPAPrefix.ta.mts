@@ -27,45 +27,17 @@ export type SNPAPrefix = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION SNPAPrefix */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SNPAPrefix */
-let _cached_decoder_for_SNPAPrefix: $.ASN1Decoder<SNPAPrefix> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SNPAPrefix */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SNPAPrefix */
-/**
- * @summary Decodes an ASN.1 element into a(n) SNPAPrefix
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SNPAPrefix} The decoded data structure.
- */
-export function _decode_SNPAPrefix(el: _Element) {
-  if (!_cached_decoder_for_SNPAPrefix) {
-    _cached_decoder_for_SNPAPrefix = $._decodeBitString;
-  }
-  return _cached_decoder_for_SNPAPrefix(el);
-}
+export const _decode_SNPAPrefix = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_SNPAPrefix */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SNPAPrefix */
-let _cached_encoder_for_SNPAPrefix: $.ASN1Encoder<SNPAPrefix> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SNPAPrefix */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SNPAPrefix */
-/**
- * @summary Encodes a(n) SNPAPrefix into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SNPAPrefix, encoded as an ASN.1 Element.
- */
-export function _encode_SNPAPrefix(
-  value: SNPAPrefix,
-  elGetter: $.ASN1Encoder<SNPAPrefix>
-) {
-  if (!_cached_encoder_for_SNPAPrefix) {
-    _cached_encoder_for_SNPAPrefix = $._encodeBitString;
-  }
-  return _cached_encoder_for_SNPAPrefix(value, elGetter);
-}
+export const _encode_SNPAPrefix = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SNPAPrefix */
 

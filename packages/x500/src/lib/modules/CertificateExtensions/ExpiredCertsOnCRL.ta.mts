@@ -17,45 +17,17 @@ export type ExpiredCertsOnCRL = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION ExpiredCertsOnCRL */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiredCertsOnCRL */
-let _cached_decoder_for_ExpiredCertsOnCRL: $.ASN1Decoder<ExpiredCertsOnCRL> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiredCertsOnCRL */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExpiredCertsOnCRL */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExpiredCertsOnCRL
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExpiredCertsOnCRL} The decoded data structure.
- */
-export function _decode_ExpiredCertsOnCRL(el: _Element) {
-    if (!_cached_decoder_for_ExpiredCertsOnCRL) {
-        _cached_decoder_for_ExpiredCertsOnCRL = $._decodeGeneralizedTime;
-    }
-    return _cached_decoder_for_ExpiredCertsOnCRL(el);
-}
+export const _decode_ExpiredCertsOnCRL = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_ExpiredCertsOnCRL */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiredCertsOnCRL */
-let _cached_encoder_for_ExpiredCertsOnCRL: $.ASN1Encoder<ExpiredCertsOnCRL> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiredCertsOnCRL */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExpiredCertsOnCRL */
-/**
- * @summary Encodes a(n) ExpiredCertsOnCRL into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExpiredCertsOnCRL, encoded as an ASN.1 Element.
- */
-export function _encode_ExpiredCertsOnCRL(
-    value: ExpiredCertsOnCRL,
-    elGetter: $.ASN1Encoder<ExpiredCertsOnCRL>
-) {
-    if (!_cached_encoder_for_ExpiredCertsOnCRL) {
-        _cached_encoder_for_ExpiredCertsOnCRL = $._encodeGeneralizedTime;
-    }
-    return _cached_encoder_for_ExpiredCertsOnCRL(value, elGetter);
-}
+export const _encode_ExpiredCertsOnCRL = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExpiredCertsOnCRL */
 

@@ -99,45 +99,17 @@ export const packets: DataCategory = DataCategory_packets; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION packets */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataCategory */
-let _cached_decoder_for_DataCategory: $.ASN1Decoder<DataCategory> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataCategory */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DataCategory */
-/**
- * @summary Decodes an ASN.1 element into a(n) DataCategory
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DataCategory} The decoded data structure.
- */
-export function _decode_DataCategory(el: _Element) {
-    if (!_cached_decoder_for_DataCategory) {
-        _cached_decoder_for_DataCategory = $._decodeInteger;
-    }
-    return _cached_decoder_for_DataCategory(el);
-}
+export const _decode_DataCategory = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DataCategory */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataCategory */
-let _cached_encoder_for_DataCategory: $.ASN1Encoder<DataCategory> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataCategory */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DataCategory */
-/**
- * @summary Encodes a(n) DataCategory into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DataCategory, encoded as an ASN.1 Element.
- */
-export function _encode_DataCategory(
-    value: DataCategory,
-    elGetter: $.ASN1Encoder<DataCategory>
-) {
-    if (!_cached_encoder_for_DataCategory) {
-        _cached_encoder_for_DataCategory = $._encodeInteger;
-    }
-    return _cached_encoder_for_DataCategory(value, elGetter);
-}
+export const _encode_DataCategory = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DataCategory */
 

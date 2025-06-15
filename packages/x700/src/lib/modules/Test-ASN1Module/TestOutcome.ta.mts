@@ -119,45 +119,17 @@ export const premature_termination: TestOutcome = TestOutcome_premature_terminat
 /* END_OF_SYMBOL_DEFINITION premature_termination */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestOutcome */
-let _cached_decoder_for_TestOutcome: $.ASN1Decoder<TestOutcome> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestOutcome */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestOutcome */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestOutcome
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestOutcome} The decoded data structure.
- */
-export function _decode_TestOutcome(el: _Element) {
-    if (!_cached_decoder_for_TestOutcome) {
-        _cached_decoder_for_TestOutcome = $._decodeInteger;
-    }
-    return _cached_decoder_for_TestOutcome(el);
-}
+export const _decode_TestOutcome = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TestOutcome */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestOutcome */
-let _cached_encoder_for_TestOutcome: $.ASN1Encoder<TestOutcome> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestOutcome */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestOutcome */
-/**
- * @summary Encodes a(n) TestOutcome into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestOutcome, encoded as an ASN.1 Element.
- */
-export function _encode_TestOutcome(
-    value: TestOutcome,
-    elGetter: $.ASN1Encoder<TestOutcome>
-) {
-    if (!_cached_encoder_for_TestOutcome) {
-        _cached_encoder_for_TestOutcome = $._encodeInteger;
-    }
-    return _cached_encoder_for_TestOutcome(value, elGetter);
-}
+export const _encode_TestOutcome = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestOutcome */
 

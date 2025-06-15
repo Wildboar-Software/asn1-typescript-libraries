@@ -92,45 +92,17 @@ export const registration_limit_exceeded: RegistrationProblem = RegistrationProb
 /* END_OF_SYMBOL_DEFINITION registration_limit_exceeded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationProblem */
-let _cached_decoder_for_RegistrationProblem: $.ASN1Decoder<RegistrationProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RegistrationProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) RegistrationProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RegistrationProblem} The decoded data structure.
- */
-export function _decode_RegistrationProblem(el: _Element) {
-    if (!_cached_decoder_for_RegistrationProblem) {
-        _cached_decoder_for_RegistrationProblem = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_RegistrationProblem(el);
-}
+export const _decode_RegistrationProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_RegistrationProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationProblem */
-let _cached_encoder_for_RegistrationProblem: $.ASN1Encoder<RegistrationProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RegistrationProblem */
-/**
- * @summary Encodes a(n) RegistrationProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RegistrationProblem, encoded as an ASN.1 Element.
- */
-export function _encode_RegistrationProblem(
-    value: RegistrationProblem,
-    elGetter: $.ASN1Encoder<RegistrationProblem>
-) {
-    if (!_cached_encoder_for_RegistrationProblem) {
-        _cached_encoder_for_RegistrationProblem = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_RegistrationProblem(value, elGetter);
-}
+export const _encode_RegistrationProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RegistrationProblem */
 

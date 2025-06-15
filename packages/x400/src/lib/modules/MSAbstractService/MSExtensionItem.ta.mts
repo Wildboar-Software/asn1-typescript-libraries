@@ -26,45 +26,17 @@ export type MSExtensionItem = INSTANCE_OF; // InstanceOfType
 /* END_OF_SYMBOL_DEFINITION MSExtensionItem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSExtensionItem */
-let _cached_decoder_for_MSExtensionItem: $.ASN1Decoder<MSExtensionItem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSExtensionItem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MSExtensionItem */
-/**
- * @summary Decodes an ASN.1 element into a(n) MSExtensionItem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MSExtensionItem} The decoded data structure.
- */
-export function _decode_MSExtensionItem(el: _Element) {
-    if (!_cached_decoder_for_MSExtensionItem) {
-        _cached_decoder_for_MSExtensionItem = $._decodeInstanceOf;
-    }
-    return _cached_decoder_for_MSExtensionItem(el);
-}
+export const _decode_MSExtensionItem = $._decodeInstanceOf;
 /* END_OF_SYMBOL_DEFINITION _decode_MSExtensionItem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSExtensionItem */
-let _cached_encoder_for_MSExtensionItem: $.ASN1Encoder<MSExtensionItem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSExtensionItem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MSExtensionItem */
-/**
- * @summary Encodes a(n) MSExtensionItem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MSExtensionItem, encoded as an ASN.1 Element.
- */
-export function _encode_MSExtensionItem(
-    value: MSExtensionItem,
-    elGetter: $.ASN1Encoder<MSExtensionItem>
-) {
-    if (!_cached_encoder_for_MSExtensionItem) {
-        _cached_encoder_for_MSExtensionItem = $._encodeInstanceOf;
-    }
-    return _cached_encoder_for_MSExtensionItem(value, elGetter);
-}
+export const _encode_MSExtensionItem = $._encodeInstanceOf;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MSExtensionItem */
 

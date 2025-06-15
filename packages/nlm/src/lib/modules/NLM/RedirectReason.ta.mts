@@ -27,45 +27,17 @@ export type RedirectReason = INTEGER;
 /* END_OF_SYMBOL_DEFINITION RedirectReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectReason */
-let _cached_decoder_for_RedirectReason: $.ASN1Decoder<RedirectReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RedirectReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) RedirectReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RedirectReason} The decoded data structure.
- */
-export function _decode_RedirectReason(el: _Element) {
-    if (!_cached_decoder_for_RedirectReason) {
-        _cached_decoder_for_RedirectReason = $._decodeInteger;
-    }
-    return _cached_decoder_for_RedirectReason(el);
-}
+export const _decode_RedirectReason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RedirectReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectReason */
-let _cached_encoder_for_RedirectReason: $.ASN1Encoder<RedirectReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RedirectReason */
-/**
- * @summary Encodes a(n) RedirectReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RedirectReason, encoded as an ASN.1 Element.
- */
-export function _encode_RedirectReason(
-    value: RedirectReason,
-    elGetter: $.ASN1Encoder<RedirectReason>
-) {
-    if (!_cached_encoder_for_RedirectReason) {
-        _cached_encoder_for_RedirectReason = $._encodeInteger;
-    }
-    return _cached_encoder_for_RedirectReason(value, elGetter);
-}
+export const _encode_RedirectReason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RedirectReason */
 

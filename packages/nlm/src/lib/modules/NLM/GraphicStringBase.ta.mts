@@ -27,45 +27,17 @@ export type GraphicStringBase = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION GraphicStringBase */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicStringBase */
-let _cached_decoder_for_GraphicStringBase: $.ASN1Decoder<GraphicStringBase> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicStringBase */
 
 /* START_OF_SYMBOL_DEFINITION _decode_GraphicStringBase */
-/**
- * @summary Decodes an ASN.1 element into a(n) GraphicStringBase
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {GraphicStringBase} The decoded data structure.
- */
-export function _decode_GraphicStringBase(el: _Element) {
-    if (!_cached_decoder_for_GraphicStringBase) {
-        _cached_decoder_for_GraphicStringBase = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_GraphicStringBase(el);
-}
+export const _decode_GraphicStringBase = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_GraphicStringBase */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicStringBase */
-let _cached_encoder_for_GraphicStringBase: $.ASN1Encoder<GraphicStringBase> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicStringBase */
 
 /* START_OF_SYMBOL_DEFINITION _encode_GraphicStringBase */
-/**
- * @summary Encodes a(n) GraphicStringBase into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GraphicStringBase, encoded as an ASN.1 Element.
- */
-export function _encode_GraphicStringBase(
-    value: GraphicStringBase,
-    elGetter: $.ASN1Encoder<GraphicStringBase>
-) {
-    if (!_cached_encoder_for_GraphicStringBase) {
-        _cached_encoder_for_GraphicStringBase = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_GraphicStringBase(value, elGetter);
-}
+export const _encode_GraphicStringBase = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_GraphicStringBase */
 

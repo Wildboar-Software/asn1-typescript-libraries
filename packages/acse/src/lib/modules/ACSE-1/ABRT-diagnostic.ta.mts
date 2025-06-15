@@ -151,45 +151,17 @@ export const authentication_required: ABRT_diagnostic = ABRT_diagnostic_authenti
 /* END_OF_SYMBOL_DEFINITION authentication_required */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ABRT_diagnostic */
-let _cached_decoder_for_ABRT_diagnostic: $.ASN1Decoder<ABRT_diagnostic> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ABRT_diagnostic */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ABRT_diagnostic */
-/**
- * @summary Decodes an ASN.1 element into a(n) ABRT_diagnostic
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ABRT_diagnostic} The decoded data structure.
- */
-export function _decode_ABRT_diagnostic(el: _Element) {
-  if (!_cached_decoder_for_ABRT_diagnostic) {
-    _cached_decoder_for_ABRT_diagnostic = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_ABRT_diagnostic(el);
-}
+export const _decode_ABRT_diagnostic = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ABRT_diagnostic */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ABRT_diagnostic */
-let _cached_encoder_for_ABRT_diagnostic: $.ASN1Encoder<ABRT_diagnostic> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ABRT_diagnostic */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ABRT_diagnostic */
-/**
- * @summary Encodes a(n) ABRT_diagnostic into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ABRT_diagnostic, encoded as an ASN.1 Element.
- */
-export function _encode_ABRT_diagnostic(
-  value: ABRT_diagnostic,
-  elGetter: $.ASN1Encoder<ABRT_diagnostic>
-) {
-  if (!_cached_encoder_for_ABRT_diagnostic) {
-    _cached_encoder_for_ABRT_diagnostic = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_ABRT_diagnostic(value, elGetter);
-}
+export const _encode_ABRT_diagnostic = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ABRT_diagnostic */
 

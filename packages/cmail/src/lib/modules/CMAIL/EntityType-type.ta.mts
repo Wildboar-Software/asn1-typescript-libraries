@@ -139,45 +139,17 @@ export const transit: EntityType_type =
 /* END_OF_SYMBOL_DEFINITION transit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityType_type */
-let _cached_decoder_for_EntityType_type: $.ASN1Decoder<EntityType_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityType_type */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EntityType_type */
-/**
- * @summary Decodes an ASN.1 element into a(n) EntityType_type
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EntityType_type} The decoded data structure.
- */
-export function _decode_EntityType_type(el: _Element) {
-  if (!_cached_decoder_for_EntityType_type) {
-    _cached_decoder_for_EntityType_type = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_EntityType_type(el);
-}
+export const _decode_EntityType_type = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EntityType_type */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityType_type */
-let _cached_encoder_for_EntityType_type: $.ASN1Encoder<EntityType_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityType_type */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EntityType_type */
-/**
- * @summary Encodes a(n) EntityType_type into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EntityType_type, encoded as an ASN.1 Element.
- */
-export function _encode_EntityType_type(
-  value: EntityType_type,
-  elGetter: $.ASN1Encoder<EntityType_type>
-) {
-  if (!_cached_encoder_for_EntityType_type) {
-    _cached_encoder_for_EntityType_type = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_EntityType_type(value, elGetter);
-}
+export const _encode_EntityType_type = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EntityType_type */
 

@@ -30,40 +30,17 @@ type StartTime = GeneralizedTime; // GeneralizedTime
 /* END_OF_SYMBOL_DEFINITION StartTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StartTime */
-let _cached_decoder_for_StartTime: $.ASN1Decoder<StartTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StartTime */
 
 /* START_OF_SYMBOL_DEFINITION _decode_StartTime */
-/**
- * @summary Decodes an ASN.1 element into a(n) StartTime
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {StartTime} The decoded data structure.
- */
-export
-function _decode_StartTime (el: _Element) {
-    if (!_cached_decoder_for_StartTime) { _cached_decoder_for_StartTime = $._decodeGeneralizedTime; }
-    return _cached_decoder_for_StartTime(el);
-}
+export const _decode_StartTime = $._decodeGeneralizedTime;
 /* END_OF_SYMBOL_DEFINITION _decode_StartTime */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StartTime */
-let _cached_encoder_for_StartTime: $.ASN1Encoder<StartTime> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StartTime */
 
 /* START_OF_SYMBOL_DEFINITION _encode_StartTime */
-/**
- * @summary Encodes a(n) StartTime into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StartTime, encoded as an ASN.1 Element.
- */
-export
-function _encode_StartTime (value: StartTime, elGetter: $.ASN1Encoder<StartTime>) {
-    if (!_cached_encoder_for_StartTime) { _cached_encoder_for_StartTime = $._encodeGeneralizedTime; }
-    return _cached_encoder_for_StartTime(value, elGetter);
-}
+export const _encode_StartTime = $._encodeGeneralizedTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_StartTime */
 

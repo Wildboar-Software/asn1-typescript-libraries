@@ -145,45 +145,17 @@ export const alarmCondition: LeapIndication =
 /* END_OF_SYMBOL_DEFINITION alarmCondition */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LeapIndication */
-let _cached_decoder_for_LeapIndication: $.ASN1Decoder<LeapIndication> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LeapIndication */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LeapIndication */
-/**
- * @summary Decodes an ASN.1 element into a(n) LeapIndication
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LeapIndication} The decoded data structure.
- */
-export function _decode_LeapIndication(el: _Element) {
-    if (!_cached_decoder_for_LeapIndication) {
-        _cached_decoder_for_LeapIndication = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_LeapIndication(el);
-}
+export const _decode_LeapIndication = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_LeapIndication */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LeapIndication */
-let _cached_encoder_for_LeapIndication: $.ASN1Encoder<LeapIndication> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LeapIndication */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LeapIndication */
-/**
- * @summary Encodes a(n) LeapIndication into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LeapIndication, encoded as an ASN.1 Element.
- */
-export function _encode_LeapIndication(
-    value: LeapIndication,
-    elGetter: $.ASN1Encoder<LeapIndication>
-) {
-    if (!_cached_encoder_for_LeapIndication) {
-        _cached_encoder_for_LeapIndication = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_LeapIndication(value, elGetter);
-}
+export const _encode_LeapIndication = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LeapIndication */
 

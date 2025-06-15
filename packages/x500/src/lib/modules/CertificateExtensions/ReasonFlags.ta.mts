@@ -187,45 +187,17 @@ export const weakAlgorithmOrKey: number = ReasonFlags_weakAlgorithmOrKey; /* SHO
 /* END_OF_SYMBOL_DEFINITION weakAlgorithmOrKey */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReasonFlags */
-let _cached_decoder_for_ReasonFlags: $.ASN1Decoder<ReasonFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReasonFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReasonFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReasonFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReasonFlags} The decoded data structure.
- */
-export function _decode_ReasonFlags(el: _Element) {
-    if (!_cached_decoder_for_ReasonFlags) {
-        _cached_decoder_for_ReasonFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_ReasonFlags(el);
-}
+export const _decode_ReasonFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ReasonFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReasonFlags */
-let _cached_encoder_for_ReasonFlags: $.ASN1Encoder<ReasonFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReasonFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReasonFlags */
-/**
- * @summary Encodes a(n) ReasonFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReasonFlags, encoded as an ASN.1 Element.
- */
-export function _encode_ReasonFlags(
-    value: ReasonFlags,
-    elGetter: $.ASN1Encoder<ReasonFlags>
-) {
-    if (!_cached_encoder_for_ReasonFlags) {
-        _cached_encoder_for_ReasonFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_ReasonFlags(value, elGetter);
-}
+export const _encode_ReasonFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReasonFlags */
 

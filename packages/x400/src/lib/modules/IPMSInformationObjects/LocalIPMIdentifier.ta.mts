@@ -27,45 +27,17 @@ export type LocalIPMIdentifier = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION LocalIPMIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalIPMIdentifier */
-let _cached_decoder_for_LocalIPMIdentifier: $.ASN1Decoder<LocalIPMIdentifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalIPMIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LocalIPMIdentifier */
-/**
- * @summary Decodes an ASN.1 element into a(n) LocalIPMIdentifier
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LocalIPMIdentifier} The decoded data structure.
- */
-export function _decode_LocalIPMIdentifier(el: _Element) {
-    if (!_cached_decoder_for_LocalIPMIdentifier) {
-        _cached_decoder_for_LocalIPMIdentifier = $._decodePrintableString;
-    }
-    return _cached_decoder_for_LocalIPMIdentifier(el);
-}
+export const _decode_LocalIPMIdentifier = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_LocalIPMIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalIPMIdentifier */
-let _cached_encoder_for_LocalIPMIdentifier: $.ASN1Encoder<LocalIPMIdentifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalIPMIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LocalIPMIdentifier */
-/**
- * @summary Encodes a(n) LocalIPMIdentifier into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LocalIPMIdentifier, encoded as an ASN.1 Element.
- */
-export function _encode_LocalIPMIdentifier(
-    value: LocalIPMIdentifier,
-    elGetter: $.ASN1Encoder<LocalIPMIdentifier>
-) {
-    if (!_cached_encoder_for_LocalIPMIdentifier) {
-        _cached_encoder_for_LocalIPMIdentifier = $._encodePrintableString;
-    }
-    return _cached_encoder_for_LocalIPMIdentifier(value, elGetter);
-}
+export const _encode_LocalIPMIdentifier = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LocalIPMIdentifier */
 

@@ -129,45 +129,17 @@ export const discloseOnError: number = ObjectOperations_discloseOnError; /* SHOR
 /* END_OF_SYMBOL_DEFINITION discloseOnError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectOperations */
-let _cached_decoder_for_ObjectOperations: $.ASN1Decoder<ObjectOperations> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectOperations */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ObjectOperations */
-/**
- * @summary Decodes an ASN.1 element into a(n) ObjectOperations
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ObjectOperations} The decoded data structure.
- */
-export function _decode_ObjectOperations(el: _Element) {
-    if (!_cached_decoder_for_ObjectOperations) {
-        _cached_decoder_for_ObjectOperations = $._decodeBitString;
-    }
-    return _cached_decoder_for_ObjectOperations(el);
-}
+export const _decode_ObjectOperations = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ObjectOperations */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectOperations */
-let _cached_encoder_for_ObjectOperations: $.ASN1Encoder<ObjectOperations> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectOperations */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ObjectOperations */
-/**
- * @summary Encodes a(n) ObjectOperations into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ObjectOperations, encoded as an ASN.1 Element.
- */
-export function _encode_ObjectOperations(
-    value: ObjectOperations,
-    elGetter: $.ASN1Encoder<ObjectOperations>
-) {
-    if (!_cached_encoder_for_ObjectOperations) {
-        _cached_encoder_for_ObjectOperations = $._encodeBitString;
-    }
-    return _cached_encoder_for_ObjectOperations(value, elGetter);
-}
+export const _encode_ObjectOperations = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ObjectOperations */
 

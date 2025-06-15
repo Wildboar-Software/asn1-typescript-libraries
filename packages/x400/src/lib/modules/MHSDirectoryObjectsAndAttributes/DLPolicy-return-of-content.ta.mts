@@ -118,45 +118,17 @@ export const content_return_requested: DLPolicy_return_of_content =
 /* END_OF_SYMBOL_DEFINITION content_return_requested */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_return_of_content */
-let _cached_decoder_for_DLPolicy_return_of_content: $.ASN1Decoder<DLPolicy_return_of_content> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_return_of_content */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_return_of_content */
-/**
- * @summary Decodes an ASN.1 element into a(n) DLPolicy_return_of_content
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DLPolicy_return_of_content} The decoded data structure.
- */
-export function _decode_DLPolicy_return_of_content(el: _Element) {
-    if (!_cached_decoder_for_DLPolicy_return_of_content) {
-        _cached_decoder_for_DLPolicy_return_of_content = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DLPolicy_return_of_content(el);
-}
+export const _decode_DLPolicy_return_of_content = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_return_of_content */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_return_of_content */
-let _cached_encoder_for_DLPolicy_return_of_content: $.ASN1Encoder<DLPolicy_return_of_content> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_return_of_content */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_return_of_content */
-/**
- * @summary Encodes a(n) DLPolicy_return_of_content into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DLPolicy_return_of_content, encoded as an ASN.1 Element.
- */
-export function _encode_DLPolicy_return_of_content(
-    value: DLPolicy_return_of_content,
-    elGetter: $.ASN1Encoder<DLPolicy_return_of_content>
-) {
-    if (!_cached_encoder_for_DLPolicy_return_of_content) {
-        _cached_encoder_for_DLPolicy_return_of_content = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DLPolicy_return_of_content(value, elGetter);
-}
+export const _encode_DLPolicy_return_of_content = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_return_of_content */
 

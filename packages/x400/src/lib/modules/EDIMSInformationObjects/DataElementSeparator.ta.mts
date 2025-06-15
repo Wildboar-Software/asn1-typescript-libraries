@@ -27,45 +27,17 @@ export type DataElementSeparator = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION DataElementSeparator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataElementSeparator */
-let _cached_decoder_for_DataElementSeparator: $.ASN1Decoder<DataElementSeparator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataElementSeparator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DataElementSeparator */
-/**
- * @summary Decodes an ASN.1 element into a(n) DataElementSeparator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DataElementSeparator} The decoded data structure.
- */
-export function _decode_DataElementSeparator(el: _Element) {
-    if (!_cached_decoder_for_DataElementSeparator) {
-        _cached_decoder_for_DataElementSeparator = $._decodeOctetString;
-    }
-    return _cached_decoder_for_DataElementSeparator(el);
-}
+export const _decode_DataElementSeparator = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_DataElementSeparator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataElementSeparator */
-let _cached_encoder_for_DataElementSeparator: $.ASN1Encoder<DataElementSeparator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataElementSeparator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DataElementSeparator */
-/**
- * @summary Encodes a(n) DataElementSeparator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DataElementSeparator, encoded as an ASN.1 Element.
- */
-export function _encode_DataElementSeparator(
-    value: DataElementSeparator,
-    elGetter: $.ASN1Encoder<DataElementSeparator>
-) {
-    if (!_cached_encoder_for_DataElementSeparator) {
-        _cached_encoder_for_DataElementSeparator = $._encodeOctetString;
-    }
-    return _cached_encoder_for_DataElementSeparator(value, elGetter);
-}
+export const _encode_DataElementSeparator = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DataElementSeparator */
 

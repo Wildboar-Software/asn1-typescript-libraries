@@ -356,45 +356,17 @@ export const specialDay16: TypeOfDay = TypeOfDay_specialDay16; /* SHORT_NAMED_IN
 /* END_OF_SYMBOL_DEFINITION specialDay16 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfDay */
-let _cached_decoder_for_TypeOfDay: $.ASN1Decoder<TypeOfDay> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfDay */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TypeOfDay */
-/**
- * @summary Decodes an ASN.1 element into a(n) TypeOfDay
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TypeOfDay} The decoded data structure.
- */
-export function _decode_TypeOfDay(el: _Element) {
-    if (!_cached_decoder_for_TypeOfDay) {
-        _cached_decoder_for_TypeOfDay = $._decodeInteger;
-    }
-    return _cached_decoder_for_TypeOfDay(el);
-}
+export const _decode_TypeOfDay = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TypeOfDay */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfDay */
-let _cached_encoder_for_TypeOfDay: $.ASN1Encoder<TypeOfDay> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfDay */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TypeOfDay */
-/**
- * @summary Encodes a(n) TypeOfDay into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TypeOfDay, encoded as an ASN.1 Element.
- */
-export function _encode_TypeOfDay(
-    value: TypeOfDay,
-    elGetter: $.ASN1Encoder<TypeOfDay>
-) {
-    if (!_cached_encoder_for_TypeOfDay) {
-        _cached_encoder_for_TypeOfDay = $._encodeInteger;
-    }
-    return _cached_encoder_for_TypeOfDay(value, elGetter);
-}
+export const _encode_TypeOfDay = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TypeOfDay */
 

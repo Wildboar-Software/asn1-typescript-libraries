@@ -27,45 +27,17 @@ export type DefaultMetric_Permitted = INTEGER;
 /* END_OF_SYMBOL_DEFINITION DefaultMetric_Permitted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultMetric_Permitted */
-let _cached_decoder_for_DefaultMetric_Permitted: $.ASN1Decoder<DefaultMetric_Permitted> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultMetric_Permitted */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DefaultMetric_Permitted */
-/**
- * @summary Decodes an ASN.1 element into a(n) DefaultMetric_Permitted
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DefaultMetric_Permitted} The decoded data structure.
- */
-export function _decode_DefaultMetric_Permitted(el: _Element) {
-  if (!_cached_decoder_for_DefaultMetric_Permitted) {
-    _cached_decoder_for_DefaultMetric_Permitted = $._decodeInteger;
-  }
-  return _cached_decoder_for_DefaultMetric_Permitted(el);
-}
+export const _decode_DefaultMetric_Permitted = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DefaultMetric_Permitted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultMetric_Permitted */
-let _cached_encoder_for_DefaultMetric_Permitted: $.ASN1Encoder<DefaultMetric_Permitted> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultMetric_Permitted */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DefaultMetric_Permitted */
-/**
- * @summary Encodes a(n) DefaultMetric_Permitted into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DefaultMetric_Permitted, encoded as an ASN.1 Element.
- */
-export function _encode_DefaultMetric_Permitted(
-  value: DefaultMetric_Permitted,
-  elGetter: $.ASN1Encoder<DefaultMetric_Permitted>
-) {
-  if (!_cached_encoder_for_DefaultMetric_Permitted) {
-    _cached_encoder_for_DefaultMetric_Permitted = $._encodeInteger;
-  }
-  return _cached_encoder_for_DefaultMetric_Permitted(value, elGetter);
-}
+export const _encode_DefaultMetric_Permitted = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DefaultMetric_Permitted */
 

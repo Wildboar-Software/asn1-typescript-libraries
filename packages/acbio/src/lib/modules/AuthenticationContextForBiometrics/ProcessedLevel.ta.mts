@@ -133,45 +133,17 @@ export const comparison_decision: ProcessedLevel = ProcessedLevel_comparison_dec
 /* END_OF_SYMBOL_DEFINITION comparison_decision */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessedLevel */
-let _cached_decoder_for_ProcessedLevel: $.ASN1Decoder<ProcessedLevel> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessedLevel */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProcessedLevel */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProcessedLevel
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProcessedLevel} The decoded data structure.
- */
-export function _decode_ProcessedLevel(el: _Element) {
-    if (!_cached_decoder_for_ProcessedLevel) {
-        _cached_decoder_for_ProcessedLevel = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ProcessedLevel(el);
-}
+export const _decode_ProcessedLevel = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ProcessedLevel */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessedLevel */
-let _cached_encoder_for_ProcessedLevel: $.ASN1Encoder<ProcessedLevel> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessedLevel */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProcessedLevel */
-/**
- * @summary Encodes a(n) ProcessedLevel into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProcessedLevel, encoded as an ASN.1 Element.
- */
-export function _encode_ProcessedLevel(
-    value: ProcessedLevel,
-    elGetter: $.ASN1Encoder<ProcessedLevel>
-) {
-    if (!_cached_encoder_for_ProcessedLevel) {
-        _cached_encoder_for_ProcessedLevel = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ProcessedLevel(value, elGetter);
-}
+export const _encode_ProcessedLevel = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProcessedLevel */
 

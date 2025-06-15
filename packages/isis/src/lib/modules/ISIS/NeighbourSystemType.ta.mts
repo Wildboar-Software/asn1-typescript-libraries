@@ -166,45 +166,17 @@ export const l2IntermediateSystem: NeighbourSystemType =
 /* END_OF_SYMBOL_DEFINITION l2IntermediateSystem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NeighbourSystemType */
-let _cached_decoder_for_NeighbourSystemType: $.ASN1Decoder<NeighbourSystemType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NeighbourSystemType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NeighbourSystemType */
-/**
- * @summary Decodes an ASN.1 element into a(n) NeighbourSystemType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NeighbourSystemType} The decoded data structure.
- */
-export function _decode_NeighbourSystemType(el: _Element) {
-  if (!_cached_decoder_for_NeighbourSystemType) {
-    _cached_decoder_for_NeighbourSystemType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_NeighbourSystemType(el);
-}
+export const _decode_NeighbourSystemType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_NeighbourSystemType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NeighbourSystemType */
-let _cached_encoder_for_NeighbourSystemType: $.ASN1Encoder<NeighbourSystemType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NeighbourSystemType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NeighbourSystemType */
-/**
- * @summary Encodes a(n) NeighbourSystemType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NeighbourSystemType, encoded as an ASN.1 Element.
- */
-export function _encode_NeighbourSystemType(
-  value: NeighbourSystemType,
-  elGetter: $.ASN1Encoder<NeighbourSystemType>
-) {
-  if (!_cached_encoder_for_NeighbourSystemType) {
-    _cached_encoder_for_NeighbourSystemType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_NeighbourSystemType(value, elGetter);
-}
+export const _encode_NeighbourSystemType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NeighbourSystemType */
 

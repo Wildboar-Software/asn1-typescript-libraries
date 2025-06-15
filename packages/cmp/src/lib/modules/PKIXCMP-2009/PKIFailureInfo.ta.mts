@@ -525,45 +525,17 @@ export const duplicateCertReq: number = PKIFailureInfo_duplicateCertReq; /* SHOR
 /* END_OF_SYMBOL_DEFINITION duplicateCertReq */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIFailureInfo */
-let _cached_decoder_for_PKIFailureInfo: $.ASN1Decoder<PKIFailureInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIFailureInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PKIFailureInfo */
-/**
- * @summary Decodes an ASN.1 element into a(n) PKIFailureInfo
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PKIFailureInfo} The decoded data structure.
- */
-export function _decode_PKIFailureInfo(el: _Element) {
-  if (!_cached_decoder_for_PKIFailureInfo) {
-    _cached_decoder_for_PKIFailureInfo = $._decodeBitString;
-  }
-  return _cached_decoder_for_PKIFailureInfo(el);
-}
+export const _decode_PKIFailureInfo = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_PKIFailureInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIFailureInfo */
-let _cached_encoder_for_PKIFailureInfo: $.ASN1Encoder<PKIFailureInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIFailureInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PKIFailureInfo */
-/**
- * @summary Encodes a(n) PKIFailureInfo into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PKIFailureInfo, encoded as an ASN.1 Element.
- */
-export function _encode_PKIFailureInfo(
-  value: PKIFailureInfo,
-  elGetter: $.ASN1Encoder<PKIFailureInfo>
-) {
-  if (!_cached_encoder_for_PKIFailureInfo) {
-    _cached_encoder_for_PKIFailureInfo = $._encodeBitString;
-  }
-  return _cached_encoder_for_PKIFailureInfo(value, elGetter);
-}
+export const _encode_PKIFailureInfo = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PKIFailureInfo */
 

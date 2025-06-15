@@ -172,45 +172,17 @@ export const security_error: NNUAMSBasicCodeField = NNUAMSBasicCodeField_securit
 /* END_OF_SYMBOL_DEFINITION security_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUAMSBasicCodeField */
-let _cached_decoder_for_NNUAMSBasicCodeField: $.ASN1Decoder<NNUAMSBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUAMSBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NNUAMSBasicCodeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NNUAMSBasicCodeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NNUAMSBasicCodeField} The decoded data structure.
- */
-export function _decode_NNUAMSBasicCodeField(el: _Element) {
-    if (!_cached_decoder_for_NNUAMSBasicCodeField) {
-        _cached_decoder_for_NNUAMSBasicCodeField = $._decodeInteger;
-    }
-    return _cached_decoder_for_NNUAMSBasicCodeField(el);
-}
+export const _decode_NNUAMSBasicCodeField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NNUAMSBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUAMSBasicCodeField */
-let _cached_encoder_for_NNUAMSBasicCodeField: $.ASN1Encoder<NNUAMSBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUAMSBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NNUAMSBasicCodeField */
-/**
- * @summary Encodes a(n) NNUAMSBasicCodeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NNUAMSBasicCodeField, encoded as an ASN.1 Element.
- */
-export function _encode_NNUAMSBasicCodeField(
-    value: NNUAMSBasicCodeField,
-    elGetter: $.ASN1Encoder<NNUAMSBasicCodeField>
-) {
-    if (!_cached_encoder_for_NNUAMSBasicCodeField) {
-        _cached_encoder_for_NNUAMSBasicCodeField = $._encodeInteger;
-    }
-    return _cached_encoder_for_NNUAMSBasicCodeField(value, elGetter);
-}
+export const _encode_NNUAMSBasicCodeField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NNUAMSBasicCodeField */
 

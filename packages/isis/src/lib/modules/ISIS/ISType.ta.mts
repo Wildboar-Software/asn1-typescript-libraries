@@ -97,42 +97,17 @@ export const level2IS: ISType =
 /* END_OF_SYMBOL_DEFINITION level2IS */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ISType */
-let _cached_decoder_for_ISType: $.ASN1Decoder<ISType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ISType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ISType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ISType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ISType} The decoded data structure.
- */
-export function _decode_ISType(el: _Element) {
-  if (!_cached_decoder_for_ISType) {
-    _cached_decoder_for_ISType = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_ISType(el);
-}
+export const _decode_ISType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ISType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ISType */
-let _cached_encoder_for_ISType: $.ASN1Encoder<ISType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ISType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ISType */
-/**
- * @summary Encodes a(n) ISType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ISType, encoded as an ASN.1 Element.
- */
-export function _encode_ISType(value: ISType, elGetter: $.ASN1Encoder<ISType>) {
-  if (!_cached_encoder_for_ISType) {
-    _cached_encoder_for_ISType = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_ISType(value, elGetter);
-}
+export const _encode_ISType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ISType */
 

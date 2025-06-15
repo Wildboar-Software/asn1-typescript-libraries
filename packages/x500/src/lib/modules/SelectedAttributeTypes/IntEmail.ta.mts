@@ -17,45 +17,17 @@ export type IntEmail = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION IntEmail */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntEmail */
-let _cached_decoder_for_IntEmail: $.ASN1Decoder<IntEmail> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntEmail */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IntEmail */
-/**
- * @summary Decodes an ASN.1 element into a(n) IntEmail
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IntEmail} The decoded data structure.
- */
-export function _decode_IntEmail(el: _Element) {
-    if (!_cached_decoder_for_IntEmail) {
-        _cached_decoder_for_IntEmail = $._decodeUTF8String;
-    }
-    return _cached_decoder_for_IntEmail(el);
-}
+export const _decode_IntEmail = $._decodeUTF8String;
 /* END_OF_SYMBOL_DEFINITION _decode_IntEmail */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntEmail */
-let _cached_encoder_for_IntEmail: $.ASN1Encoder<IntEmail> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntEmail */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IntEmail */
-/**
- * @summary Encodes a(n) IntEmail into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IntEmail, encoded as an ASN.1 Element.
- */
-export function _encode_IntEmail(
-    value: IntEmail,
-    elGetter: $.ASN1Encoder<IntEmail>
-) {
-    if (!_cached_encoder_for_IntEmail) {
-        _cached_encoder_for_IntEmail = $._encodeUTF8String;
-    }
-    return _cached_encoder_for_IntEmail(value, elGetter);
-}
+export const _encode_IntEmail = $._encodeUTF8String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IntEmail */
 

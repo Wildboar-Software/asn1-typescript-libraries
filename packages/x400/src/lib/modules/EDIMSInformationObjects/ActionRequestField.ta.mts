@@ -27,45 +27,17 @@ export type ActionRequestField = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION ActionRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionRequestField */
-let _cached_decoder_for_ActionRequestField: $.ASN1Decoder<ActionRequestField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ActionRequestField */
-/**
- * @summary Decodes an ASN.1 element into a(n) ActionRequestField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ActionRequestField} The decoded data structure.
- */
-export function _decode_ActionRequestField(el: _Element) {
-    if (!_cached_decoder_for_ActionRequestField) {
-        _cached_decoder_for_ActionRequestField = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_ActionRequestField(el);
-}
+export const _decode_ActionRequestField = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_ActionRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionRequestField */
-let _cached_encoder_for_ActionRequestField: $.ASN1Encoder<ActionRequestField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ActionRequestField */
-/**
- * @summary Encodes a(n) ActionRequestField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActionRequestField, encoded as an ASN.1 Element.
- */
-export function _encode_ActionRequestField(
-    value: ActionRequestField,
-    elGetter: $.ASN1Encoder<ActionRequestField>
-) {
-    if (!_cached_encoder_for_ActionRequestField) {
-        _cached_encoder_for_ActionRequestField = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_ActionRequestField(value, elGetter);
-}
+export const _encode_ActionRequestField = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ActionRequestField */
 

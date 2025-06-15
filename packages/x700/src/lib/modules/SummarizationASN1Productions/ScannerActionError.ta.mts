@@ -145,45 +145,17 @@ export const scanTerminated: ScannerActionError =
 /* END_OF_SYMBOL_DEFINITION scanTerminated */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScannerActionError */
-let _cached_decoder_for_ScannerActionError: $.ASN1Decoder<ScannerActionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScannerActionError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ScannerActionError */
-/**
- * @summary Decodes an ASN.1 element into a(n) ScannerActionError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ScannerActionError} The decoded data structure.
- */
-export function _decode_ScannerActionError(el: _Element) {
-    if (!_cached_decoder_for_ScannerActionError) {
-        _cached_decoder_for_ScannerActionError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ScannerActionError(el);
-}
+export const _decode_ScannerActionError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ScannerActionError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScannerActionError */
-let _cached_encoder_for_ScannerActionError: $.ASN1Encoder<ScannerActionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScannerActionError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ScannerActionError */
-/**
- * @summary Encodes a(n) ScannerActionError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ScannerActionError, encoded as an ASN.1 Element.
- */
-export function _encode_ScannerActionError(
-    value: ScannerActionError,
-    elGetter: $.ASN1Encoder<ScannerActionError>
-) {
-    if (!_cached_encoder_for_ScannerActionError) {
-        _cached_encoder_for_ScannerActionError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ScannerActionError(value, elGetter);
-}
+export const _encode_ScannerActionError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ScannerActionError */
 

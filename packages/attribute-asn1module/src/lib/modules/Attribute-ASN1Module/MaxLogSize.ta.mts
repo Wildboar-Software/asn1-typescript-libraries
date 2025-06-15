@@ -50,40 +50,17 @@ const unlimited: MaxLogSize = MaxLogSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE
 /* END_OF_SYMBOL_DEFINITION unlimited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxLogSize */
-let _cached_decoder_for_MaxLogSize: $.ASN1Decoder<MaxLogSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxLogSize */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MaxLogSize */
-/**
- * @summary Decodes an ASN.1 element into a(n) MaxLogSize
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MaxLogSize} The decoded data structure.
- */
-export
-function _decode_MaxLogSize (el: _Element) {
-    if (!_cached_decoder_for_MaxLogSize) { _cached_decoder_for_MaxLogSize = $._decodeInteger; }
-    return _cached_decoder_for_MaxLogSize(el);
-}
+export const _decode_MaxLogSize = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MaxLogSize */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxLogSize */
-let _cached_encoder_for_MaxLogSize: $.ASN1Encoder<MaxLogSize> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxLogSize */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MaxLogSize */
-/**
- * @summary Encodes a(n) MaxLogSize into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MaxLogSize, encoded as an ASN.1 Element.
- */
-export
-function _encode_MaxLogSize (value: MaxLogSize, elGetter: $.ASN1Encoder<MaxLogSize>) {
-    if (!_cached_encoder_for_MaxLogSize) { _cached_encoder_for_MaxLogSize = $._encodeInteger; }
-    return _cached_encoder_for_MaxLogSize(value, elGetter);
-}
+export const _encode_MaxLogSize = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MaxLogSize */
 

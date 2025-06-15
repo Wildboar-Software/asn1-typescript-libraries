@@ -27,45 +27,17 @@ export type MSBindError = INTEGER;
 /* END_OF_SYMBOL_DEFINITION MSBindError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindError */
-let _cached_decoder_for_MSBindError: $.ASN1Decoder<MSBindError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MSBindError */
-/**
- * @summary Decodes an ASN.1 element into a(n) MSBindError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MSBindError} The decoded data structure.
- */
-export function _decode_MSBindError(el: _Element) {
-    if (!_cached_decoder_for_MSBindError) {
-        _cached_decoder_for_MSBindError = $._decodeInteger;
-    }
-    return _cached_decoder_for_MSBindError(el);
-}
+export const _decode_MSBindError = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MSBindError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindError */
-let _cached_encoder_for_MSBindError: $.ASN1Encoder<MSBindError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MSBindError */
-/**
- * @summary Encodes a(n) MSBindError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MSBindError, encoded as an ASN.1 Element.
- */
-export function _encode_MSBindError(
-    value: MSBindError,
-    elGetter: $.ASN1Encoder<MSBindError>
-) {
-    if (!_cached_encoder_for_MSBindError) {
-        _cached_encoder_for_MSBindError = $._encodeInteger;
-    }
-    return _cached_encoder_for_MSBindError(value, elGetter);
-}
+export const _encode_MSBindError = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MSBindError */
 

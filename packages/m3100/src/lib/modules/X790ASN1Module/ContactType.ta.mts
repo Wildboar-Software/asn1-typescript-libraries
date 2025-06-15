@@ -230,45 +230,17 @@ export const contacts_for_function_related_activities: number = ContactType_cont
 /* END_OF_SYMBOL_DEFINITION contacts_for_function_related_activities */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactType */
-let _cached_decoder_for_ContactType: $.ASN1Decoder<ContactType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ContactType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ContactType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ContactType} The decoded data structure.
- */
-export function _decode_ContactType(el: _Element) {
-    if (!_cached_decoder_for_ContactType) {
-        _cached_decoder_for_ContactType = $._decodeBitString;
-    }
-    return _cached_decoder_for_ContactType(el);
-}
+export const _decode_ContactType = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ContactType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactType */
-let _cached_encoder_for_ContactType: $.ASN1Encoder<ContactType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ContactType */
-/**
- * @summary Encodes a(n) ContactType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ContactType, encoded as an ASN.1 Element.
- */
-export function _encode_ContactType(
-    value: ContactType,
-    elGetter: $.ASN1Encoder<ContactType>
-) {
-    if (!_cached_encoder_for_ContactType) {
-        _cached_encoder_for_ContactType = $._encodeBitString;
-    }
-    return _cached_encoder_for_ContactType(value, elGetter);
-}
+export const _encode_ContactType = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ContactType */
 

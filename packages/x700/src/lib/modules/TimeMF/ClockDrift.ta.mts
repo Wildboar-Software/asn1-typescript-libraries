@@ -27,45 +27,17 @@ export type ClockDrift = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION ClockDrift */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockDrift */
-let _cached_decoder_for_ClockDrift: $.ASN1Decoder<ClockDrift> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockDrift */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ClockDrift */
-/**
- * @summary Decodes an ASN.1 element into a(n) ClockDrift
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ClockDrift} The decoded data structure.
- */
-export function _decode_ClockDrift(el: _Element) {
-    if (!_cached_decoder_for_ClockDrift) {
-        _cached_decoder_for_ClockDrift = $._decodeReal;
-    }
-    return _cached_decoder_for_ClockDrift(el);
-}
+export const _decode_ClockDrift = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_ClockDrift */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockDrift */
-let _cached_encoder_for_ClockDrift: $.ASN1Encoder<ClockDrift> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockDrift */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ClockDrift */
-/**
- * @summary Encodes a(n) ClockDrift into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ClockDrift, encoded as an ASN.1 Element.
- */
-export function _encode_ClockDrift(
-    value: ClockDrift,
-    elGetter: $.ASN1Encoder<ClockDrift>
-) {
-    if (!_cached_encoder_for_ClockDrift) {
-        _cached_encoder_for_ClockDrift = $._encodeReal;
-    }
-    return _cached_encoder_for_ClockDrift(value, elGetter);
-}
+export const _encode_ClockDrift = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ClockDrift */
 

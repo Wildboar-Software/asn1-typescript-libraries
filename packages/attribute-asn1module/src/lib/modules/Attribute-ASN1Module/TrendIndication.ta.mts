@@ -123,40 +123,17 @@ const moreSevere: TrendIndication = TrendIndication.moreSevere; /* SHORT_NAMED_E
 /* END_OF_SYMBOL_DEFINITION moreSevere */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrendIndication */
-let _cached_decoder_for_TrendIndication: $.ASN1Decoder<TrendIndication> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrendIndication */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TrendIndication */
-/**
- * @summary Decodes an ASN.1 element into a(n) TrendIndication
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TrendIndication} The decoded data structure.
- */
-export
-function _decode_TrendIndication (el: _Element) {
-    if (!_cached_decoder_for_TrendIndication) { _cached_decoder_for_TrendIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_TrendIndication(el);
-}
+export const _decode_TrendIndication = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TrendIndication */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrendIndication */
-let _cached_encoder_for_TrendIndication: $.ASN1Encoder<TrendIndication> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrendIndication */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TrendIndication */
-/**
- * @summary Encodes a(n) TrendIndication into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TrendIndication, encoded as an ASN.1 Element.
- */
-export
-function _encode_TrendIndication (value: TrendIndication, elGetter: $.ASN1Encoder<TrendIndication>) {
-    if (!_cached_encoder_for_TrendIndication) { _cached_encoder_for_TrendIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_TrendIndication(value, elGetter);
-}
+export const _encode_TrendIndication = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TrendIndication */
 

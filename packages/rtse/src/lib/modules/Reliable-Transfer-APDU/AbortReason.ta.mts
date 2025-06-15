@@ -180,45 +180,17 @@ export const transferCompleted: AbortReason = AbortReason_transferCompleted; /* 
 /* END_OF_SYMBOL_DEFINITION transferCompleted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortReason */
-let _cached_decoder_for_AbortReason: $.ASN1Decoder<AbortReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AbortReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) AbortReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AbortReason} The decoded data structure.
- */
-export function _decode_AbortReason(el: _Element) {
-  if (!_cached_decoder_for_AbortReason) {
-    _cached_decoder_for_AbortReason = $._decodeInteger;
-  }
-  return _cached_decoder_for_AbortReason(el);
-}
+export const _decode_AbortReason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AbortReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortReason */
-let _cached_encoder_for_AbortReason: $.ASN1Encoder<AbortReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AbortReason */
-/**
- * @summary Encodes a(n) AbortReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AbortReason, encoded as an ASN.1 Element.
- */
-export function _encode_AbortReason(
-  value: AbortReason,
-  elGetter: $.ASN1Encoder<AbortReason>
-) {
-  if (!_cached_encoder_for_AbortReason) {
-    _cached_encoder_for_AbortReason = $._encodeInteger;
-  }
-  return _cached_encoder_for_AbortReason(value, elGetter);
-}
+export const _encode_AbortReason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AbortReason */
 

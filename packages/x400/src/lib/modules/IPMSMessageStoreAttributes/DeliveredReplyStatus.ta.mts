@@ -83,45 +83,17 @@ export const reply_received: DeliveredReplyStatus = DeliveredReplyStatus_reply_r
 /* END_OF_SYMBOL_DEFINITION reply_received */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveredReplyStatus */
-let _cached_decoder_for_DeliveredReplyStatus: $.ASN1Decoder<DeliveredReplyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveredReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliveredReplyStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveredReplyStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliveredReplyStatus} The decoded data structure.
- */
-export function _decode_DeliveredReplyStatus(el: _Element) {
-    if (!_cached_decoder_for_DeliveredReplyStatus) {
-        _cached_decoder_for_DeliveredReplyStatus = $._decodeInteger;
-    }
-    return _cached_decoder_for_DeliveredReplyStatus(el);
-}
+export const _decode_DeliveredReplyStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliveredReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveredReplyStatus */
-let _cached_encoder_for_DeliveredReplyStatus: $.ASN1Encoder<DeliveredReplyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveredReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliveredReplyStatus */
-/**
- * @summary Encodes a(n) DeliveredReplyStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveredReplyStatus, encoded as an ASN.1 Element.
- */
-export function _encode_DeliveredReplyStatus(
-    value: DeliveredReplyStatus,
-    elGetter: $.ASN1Encoder<DeliveredReplyStatus>
-) {
-    if (!_cached_encoder_for_DeliveredReplyStatus) {
-        _cached_encoder_for_DeliveredReplyStatus = $._encodeInteger;
-    }
-    return _cached_encoder_for_DeliveredReplyStatus(value, elGetter);
-}
+export const _encode_DeliveredReplyStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliveredReplyStatus */
 

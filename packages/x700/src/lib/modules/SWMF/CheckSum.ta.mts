@@ -27,45 +27,17 @@ export type CheckSum = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION CheckSum */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CheckSum */
-let _cached_decoder_for_CheckSum: $.ASN1Decoder<CheckSum> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CheckSum */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CheckSum */
-/**
- * @summary Decodes an ASN.1 element into a(n) CheckSum
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CheckSum} The decoded data structure.
- */
-export function _decode_CheckSum(el: _Element) {
-    if (!_cached_decoder_for_CheckSum) {
-        _cached_decoder_for_CheckSum = $._decodeBitString;
-    }
-    return _cached_decoder_for_CheckSum(el);
-}
+export const _decode_CheckSum = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_CheckSum */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CheckSum */
-let _cached_encoder_for_CheckSum: $.ASN1Encoder<CheckSum> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CheckSum */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CheckSum */
-/**
- * @summary Encodes a(n) CheckSum into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CheckSum, encoded as an ASN.1 Element.
- */
-export function _encode_CheckSum(
-    value: CheckSum,
-    elGetter: $.ASN1Encoder<CheckSum>
-) {
-    if (!_cached_encoder_for_CheckSum) {
-        _cached_encoder_for_CheckSum = $._encodeBitString;
-    }
-    return _cached_encoder_for_CheckSum(value, elGetter);
-}
+export const _encode_CheckSum = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CheckSum */
 

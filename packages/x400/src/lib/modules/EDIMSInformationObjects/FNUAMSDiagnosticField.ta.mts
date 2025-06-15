@@ -67,45 +67,17 @@ export const recipient_name_deleted: FNUAMSDiagnosticField = FNUAMSDiagnosticFie
 /* END_OF_SYMBOL_DEFINITION recipient_name_deleted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSDiagnosticField */
-let _cached_decoder_for_FNUAMSDiagnosticField: $.ASN1Decoder<FNUAMSDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FNUAMSDiagnosticField */
-/**
- * @summary Decodes an ASN.1 element into a(n) FNUAMSDiagnosticField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FNUAMSDiagnosticField} The decoded data structure.
- */
-export function _decode_FNUAMSDiagnosticField(el: _Element) {
-    if (!_cached_decoder_for_FNUAMSDiagnosticField) {
-        _cached_decoder_for_FNUAMSDiagnosticField = $._decodeInteger;
-    }
-    return _cached_decoder_for_FNUAMSDiagnosticField(el);
-}
+export const _decode_FNUAMSDiagnosticField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FNUAMSDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSDiagnosticField */
-let _cached_encoder_for_FNUAMSDiagnosticField: $.ASN1Encoder<FNUAMSDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FNUAMSDiagnosticField */
-/**
- * @summary Encodes a(n) FNUAMSDiagnosticField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FNUAMSDiagnosticField, encoded as an ASN.1 Element.
- */
-export function _encode_FNUAMSDiagnosticField(
-    value: FNUAMSDiagnosticField,
-    elGetter: $.ASN1Encoder<FNUAMSDiagnosticField>
-) {
-    if (!_cached_encoder_for_FNUAMSDiagnosticField) {
-        _cached_encoder_for_FNUAMSDiagnosticField = $._encodeInteger;
-    }
-    return _cached_encoder_for_FNUAMSDiagnosticField(value, elGetter);
-}
+export const _encode_FNUAMSDiagnosticField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FNUAMSDiagnosticField */
 

@@ -59,45 +59,17 @@ export const version2: number = C_INITIALIZE_RI_version_number_version2; /* SHOR
 /* END_OF_SYMBOL_DEFINITION version2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_C_INITIALIZE_RI_version_number */
-let _cached_decoder_for_C_INITIALIZE_RI_version_number: $.ASN1Decoder<C_INITIALIZE_RI_version_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_C_INITIALIZE_RI_version_number */
 
 /* START_OF_SYMBOL_DEFINITION _decode_C_INITIALIZE_RI_version_number */
-/**
- * @summary Decodes an ASN.1 element into a(n) C_INITIALIZE_RI_version_number
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {C_INITIALIZE_RI_version_number} The decoded data structure.
- */
-export function _decode_C_INITIALIZE_RI_version_number(el: _Element) {
-  if (!_cached_decoder_for_C_INITIALIZE_RI_version_number) {
-    _cached_decoder_for_C_INITIALIZE_RI_version_number = $._decodeBitString;
-  }
-  return _cached_decoder_for_C_INITIALIZE_RI_version_number(el);
-}
+export const _decode_C_INITIALIZE_RI_version_number = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_C_INITIALIZE_RI_version_number */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_C_INITIALIZE_RI_version_number */
-let _cached_encoder_for_C_INITIALIZE_RI_version_number: $.ASN1Encoder<C_INITIALIZE_RI_version_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_C_INITIALIZE_RI_version_number */
 
 /* START_OF_SYMBOL_DEFINITION _encode_C_INITIALIZE_RI_version_number */
-/**
- * @summary Encodes a(n) C_INITIALIZE_RI_version_number into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The C_INITIALIZE_RI_version_number, encoded as an ASN.1 Element.
- */
-export function _encode_C_INITIALIZE_RI_version_number(
-  value: C_INITIALIZE_RI_version_number,
-  elGetter: $.ASN1Encoder<C_INITIALIZE_RI_version_number>
-) {
-  if (!_cached_encoder_for_C_INITIALIZE_RI_version_number) {
-    _cached_encoder_for_C_INITIALIZE_RI_version_number = $._encodeBitString;
-  }
-  return _cached_encoder_for_C_INITIALIZE_RI_version_number(value, elGetter);
-}
+export const _encode_C_INITIALIZE_RI_version_number = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_C_INITIALIZE_RI_version_number */
 

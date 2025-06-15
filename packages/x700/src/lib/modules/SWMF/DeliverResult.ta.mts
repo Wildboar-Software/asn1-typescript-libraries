@@ -210,45 +210,17 @@ export const unknown: DeliverResult = DeliverResult_unknown; /* SHORT_NAMED_INTE
 /* END_OF_SYMBOL_DEFINITION unknown */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverResult */
-let _cached_decoder_for_DeliverResult: $.ASN1Decoder<DeliverResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverResult */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliverResult */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliverResult
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliverResult} The decoded data structure.
- */
-export function _decode_DeliverResult(el: _Element) {
-    if (!_cached_decoder_for_DeliverResult) {
-        _cached_decoder_for_DeliverResult = $._decodeInteger;
-    }
-    return _cached_decoder_for_DeliverResult(el);
-}
+export const _decode_DeliverResult = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliverResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverResult */
-let _cached_encoder_for_DeliverResult: $.ASN1Encoder<DeliverResult> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverResult */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliverResult */
-/**
- * @summary Encodes a(n) DeliverResult into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliverResult, encoded as an ASN.1 Element.
- */
-export function _encode_DeliverResult(
-    value: DeliverResult,
-    elGetter: $.ASN1Encoder<DeliverResult>
-) {
-    if (!_cached_encoder_for_DeliverResult) {
-        _cached_encoder_for_DeliverResult = $._encodeInteger;
-    }
-    return _cached_encoder_for_DeliverResult(value, elGetter);
-}
+export const _encode_DeliverResult = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliverResult */
 

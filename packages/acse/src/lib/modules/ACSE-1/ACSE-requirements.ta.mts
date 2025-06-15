@@ -93,45 +93,17 @@ export const nested_association: number = ACSE_requirements_nested_association; 
 /* END_OF_SYMBOL_DEFINITION nested_association */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACSE_requirements */
-let _cached_decoder_for_ACSE_requirements: $.ASN1Decoder<ACSE_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACSE_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ACSE_requirements */
-/**
- * @summary Decodes an ASN.1 element into a(n) ACSE_requirements
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ACSE_requirements} The decoded data structure.
- */
-export function _decode_ACSE_requirements(el: _Element) {
-  if (!_cached_decoder_for_ACSE_requirements) {
-    _cached_decoder_for_ACSE_requirements = $._decodeBitString;
-  }
-  return _cached_decoder_for_ACSE_requirements(el);
-}
+export const _decode_ACSE_requirements = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ACSE_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACSE_requirements */
-let _cached_encoder_for_ACSE_requirements: $.ASN1Encoder<ACSE_requirements> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACSE_requirements */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ACSE_requirements */
-/**
- * @summary Encodes a(n) ACSE_requirements into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ACSE_requirements, encoded as an ASN.1 Element.
- */
-export function _encode_ACSE_requirements(
-  value: ACSE_requirements,
-  elGetter: $.ASN1Encoder<ACSE_requirements>
-) {
-  if (!_cached_encoder_for_ACSE_requirements) {
-    _cached_encoder_for_ACSE_requirements = $._encodeBitString;
-  }
-  return _cached_encoder_for_ACSE_requirements(value, elGetter);
-}
+export const _encode_ACSE_requirements = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ACSE_requirements */
 

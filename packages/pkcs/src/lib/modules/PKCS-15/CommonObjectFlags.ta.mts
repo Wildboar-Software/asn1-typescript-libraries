@@ -49,45 +49,17 @@ export const modifiable: number = CommonObjectFlags_modifiable; /* SHORT_NAMED_B
 /* END_OF_SYMBOL_DEFINITION modifiable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonObjectFlags */
-let _cached_decoder_for_CommonObjectFlags: $.ASN1Decoder<CommonObjectFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonObjectFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CommonObjectFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) CommonObjectFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CommonObjectFlags} The decoded data structure.
- */
-export function _decode_CommonObjectFlags(el: _Element) {
-    if (!_cached_decoder_for_CommonObjectFlags) {
-        _cached_decoder_for_CommonObjectFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_CommonObjectFlags(el);
-}
+export const _decode_CommonObjectFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_CommonObjectFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonObjectFlags */
-let _cached_encoder_for_CommonObjectFlags: $.ASN1Encoder<CommonObjectFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonObjectFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CommonObjectFlags */
-/**
- * @summary Encodes a(n) CommonObjectFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CommonObjectFlags, encoded as an ASN.1 Element.
- */
-export function _encode_CommonObjectFlags(
-    value: CommonObjectFlags,
-    elGetter: $.ASN1Encoder<CommonObjectFlags>
-) {
-    if (!_cached_encoder_for_CommonObjectFlags) {
-        _cached_encoder_for_CommonObjectFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_CommonObjectFlags(value, elGetter);
-}
+export const _encode_CommonObjectFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CommonObjectFlags */
 

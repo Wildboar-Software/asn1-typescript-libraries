@@ -118,45 +118,17 @@ export const aDD_REMOVE: PropertyList_addRemove =
 /* END_OF_SYMBOL_DEFINITION aDD_REMOVE */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PropertyList_addRemove */
-let _cached_decoder_for_PropertyList_addRemove: $.ASN1Decoder<PropertyList_addRemove> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PropertyList_addRemove */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PropertyList_addRemove */
-/**
- * @summary Decodes an ASN.1 element into a(n) PropertyList_addRemove
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PropertyList_addRemove} The decoded data structure.
- */
-export function _decode_PropertyList_addRemove(el: _Element) {
-    if (!_cached_decoder_for_PropertyList_addRemove) {
-        _cached_decoder_for_PropertyList_addRemove = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PropertyList_addRemove(el);
-}
+export const _decode_PropertyList_addRemove = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PropertyList_addRemove */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PropertyList_addRemove */
-let _cached_encoder_for_PropertyList_addRemove: $.ASN1Encoder<PropertyList_addRemove> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PropertyList_addRemove */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PropertyList_addRemove */
-/**
- * @summary Encodes a(n) PropertyList_addRemove into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PropertyList_addRemove, encoded as an ASN.1 Element.
- */
-export function _encode_PropertyList_addRemove(
-    value: PropertyList_addRemove,
-    elGetter: $.ASN1Encoder<PropertyList_addRemove>
-) {
-    if (!_cached_encoder_for_PropertyList_addRemove) {
-        _cached_encoder_for_PropertyList_addRemove = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PropertyList_addRemove(value, elGetter);
-}
+export const _encode_PropertyList_addRemove = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PropertyList_addRemove */
 

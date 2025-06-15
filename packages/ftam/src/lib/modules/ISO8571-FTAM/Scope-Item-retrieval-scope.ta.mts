@@ -63,45 +63,17 @@ export const all: Scope_Item_retrieval_scope = Scope_Item_retrieval_scope_all; /
 /* END_OF_SYMBOL_DEFINITION all */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope_Item_retrieval_scope */
-let _cached_decoder_for_Scope_Item_retrieval_scope: $.ASN1Decoder<Scope_Item_retrieval_scope> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope_Item_retrieval_scope */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Scope_Item_retrieval_scope */
-/**
- * @summary Decodes an ASN.1 element into a(n) Scope_Item_retrieval_scope
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Scope_Item_retrieval_scope} The decoded data structure.
- */
-export function _decode_Scope_Item_retrieval_scope(el: _Element) {
-  if (!_cached_decoder_for_Scope_Item_retrieval_scope) {
-    _cached_decoder_for_Scope_Item_retrieval_scope = $._decodeInteger;
-  }
-  return _cached_decoder_for_Scope_Item_retrieval_scope(el);
-}
+export const _decode_Scope_Item_retrieval_scope = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Scope_Item_retrieval_scope */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope_Item_retrieval_scope */
-let _cached_encoder_for_Scope_Item_retrieval_scope: $.ASN1Encoder<Scope_Item_retrieval_scope> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope_Item_retrieval_scope */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Scope_Item_retrieval_scope */
-/**
- * @summary Encodes a(n) Scope_Item_retrieval_scope into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Scope_Item_retrieval_scope, encoded as an ASN.1 Element.
- */
-export function _encode_Scope_Item_retrieval_scope(
-  value: Scope_Item_retrieval_scope,
-  elGetter: $.ASN1Encoder<Scope_Item_retrieval_scope>
-) {
-  if (!_cached_encoder_for_Scope_Item_retrieval_scope) {
-    _cached_encoder_for_Scope_Item_retrieval_scope = $._encodeInteger;
-  }
-  return _cached_encoder_for_Scope_Item_retrieval_scope(value, elGetter);
-}
+export const _encode_Scope_Item_retrieval_scope = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Scope_Item_retrieval_scope */
 

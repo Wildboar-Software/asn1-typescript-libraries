@@ -27,45 +27,17 @@ export type ASO_qualifier_form3 = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION ASO_qualifier_form3 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_qualifier_form3 */
-let _cached_decoder_for_ASO_qualifier_form3: $.ASN1Decoder<ASO_qualifier_form3> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_qualifier_form3 */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ASO_qualifier_form3 */
-/**
- * @summary Decodes an ASN.1 element into a(n) ASO_qualifier_form3
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ASO_qualifier_form3} The decoded data structure.
- */
-export function _decode_ASO_qualifier_form3(el: _Element) {
-  if (!_cached_decoder_for_ASO_qualifier_form3) {
-    _cached_decoder_for_ASO_qualifier_form3 = $._decodePrintableString;
-  }
-  return _cached_decoder_for_ASO_qualifier_form3(el);
-}
+export const _decode_ASO_qualifier_form3 = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_ASO_qualifier_form3 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_qualifier_form3 */
-let _cached_encoder_for_ASO_qualifier_form3: $.ASN1Encoder<ASO_qualifier_form3> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_qualifier_form3 */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ASO_qualifier_form3 */
-/**
- * @summary Encodes a(n) ASO_qualifier_form3 into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ASO_qualifier_form3, encoded as an ASN.1 Element.
- */
-export function _encode_ASO_qualifier_form3(
-  value: ASO_qualifier_form3,
-  elGetter: $.ASN1Encoder<ASO_qualifier_form3>
-) {
-  if (!_cached_encoder_for_ASO_qualifier_form3) {
-    _cached_encoder_for_ASO_qualifier_form3 = $._encodePrintableString;
-  }
-  return _cached_encoder_for_ASO_qualifier_form3(value, elGetter);
-}
+export const _encode_ASO_qualifier_form3 = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ASO_qualifier_form3 */
 

@@ -210,45 +210,17 @@ export const filter: OperationType = OperationType_filter; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION filter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationType */
-let _cached_decoder_for_OperationType: $.ASN1Decoder<OperationType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OperationType */
-/**
- * @summary Decodes an ASN.1 element into a(n) OperationType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OperationType} The decoded data structure.
- */
-export function _decode_OperationType(el: _Element) {
-    if (!_cached_decoder_for_OperationType) {
-        _cached_decoder_for_OperationType = $._decodeInteger;
-    }
-    return _cached_decoder_for_OperationType(el);
-}
+export const _decode_OperationType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_OperationType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationType */
-let _cached_encoder_for_OperationType: $.ASN1Encoder<OperationType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OperationType */
-/**
- * @summary Encodes a(n) OperationType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OperationType, encoded as an ASN.1 Element.
- */
-export function _encode_OperationType(
-    value: OperationType,
-    elGetter: $.ASN1Encoder<OperationType>
-) {
-    if (!_cached_encoder_for_OperationType) {
-        _cached_encoder_for_OperationType = $._encodeInteger;
-    }
-    return _cached_encoder_for_OperationType(value, elGetter);
-}
+export const _encode_OperationType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OperationType */
 

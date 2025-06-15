@@ -27,45 +27,17 @@ export type ASO_context_name = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION ASO_context_name */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_context_name */
-let _cached_decoder_for_ASO_context_name: $.ASN1Decoder<ASO_context_name> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_context_name */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ASO_context_name */
-/**
- * @summary Decodes an ASN.1 element into a(n) ASO_context_name
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ASO_context_name} The decoded data structure.
- */
-export function _decode_ASO_context_name(el: _Element) {
-  if (!_cached_decoder_for_ASO_context_name) {
-    _cached_decoder_for_ASO_context_name = $._decodeObjectIdentifier;
-  }
-  return _cached_decoder_for_ASO_context_name(el);
-}
+export const _decode_ASO_context_name = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_ASO_context_name */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_context_name */
-let _cached_encoder_for_ASO_context_name: $.ASN1Encoder<ASO_context_name> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_context_name */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ASO_context_name */
-/**
- * @summary Encodes a(n) ASO_context_name into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ASO_context_name, encoded as an ASN.1 Element.
- */
-export function _encode_ASO_context_name(
-  value: ASO_context_name,
-  elGetter: $.ASN1Encoder<ASO_context_name>
-) {
-  if (!_cached_encoder_for_ASO_context_name) {
-    _cached_encoder_for_ASO_context_name = $._encodeObjectIdentifier;
-  }
-  return _cached_encoder_for_ASO_context_name(value, elGetter);
-}
+export const _encode_ASO_context_name = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ASO_context_name */
 

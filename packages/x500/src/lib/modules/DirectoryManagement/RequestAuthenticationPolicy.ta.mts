@@ -65,45 +65,17 @@ export const strong: number = RequestAuthenticationPolicy_strong; /* SHORT_NAMED
 /* END_OF_SYMBOL_DEFINITION strong */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestAuthenticationPolicy */
-let _cached_decoder_for_RequestAuthenticationPolicy: $.ASN1Decoder<RequestAuthenticationPolicy> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestAuthenticationPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RequestAuthenticationPolicy */
-/**
- * @summary Decodes an ASN.1 element into a(n) RequestAuthenticationPolicy
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RequestAuthenticationPolicy} The decoded data structure.
- */
-export function _decode_RequestAuthenticationPolicy(el: _Element) {
-    if (!_cached_decoder_for_RequestAuthenticationPolicy) {
-        _cached_decoder_for_RequestAuthenticationPolicy = $._decodeBitString;
-    }
-    return _cached_decoder_for_RequestAuthenticationPolicy(el);
-}
+export const _decode_RequestAuthenticationPolicy = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_RequestAuthenticationPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestAuthenticationPolicy */
-let _cached_encoder_for_RequestAuthenticationPolicy: $.ASN1Encoder<RequestAuthenticationPolicy> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestAuthenticationPolicy */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RequestAuthenticationPolicy */
-/**
- * @summary Encodes a(n) RequestAuthenticationPolicy into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RequestAuthenticationPolicy, encoded as an ASN.1 Element.
- */
-export function _encode_RequestAuthenticationPolicy(
-    value: RequestAuthenticationPolicy,
-    elGetter: $.ASN1Encoder<RequestAuthenticationPolicy>
-) {
-    if (!_cached_encoder_for_RequestAuthenticationPolicy) {
-        _cached_encoder_for_RequestAuthenticationPolicy = $._encodeBitString;
-    }
-    return _cached_encoder_for_RequestAuthenticationPolicy(value, elGetter);
-}
+export const _encode_RequestAuthenticationPolicy = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RequestAuthenticationPolicy */
 

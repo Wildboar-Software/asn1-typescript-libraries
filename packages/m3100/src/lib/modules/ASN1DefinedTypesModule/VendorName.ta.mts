@@ -27,45 +27,17 @@ export type VendorName = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION VendorName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VendorName */
-let _cached_decoder_for_VendorName: $.ASN1Decoder<VendorName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VendorName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VendorName */
-/**
- * @summary Decodes an ASN.1 element into a(n) VendorName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VendorName} The decoded data structure.
- */
-export function _decode_VendorName(el: _Element) {
-    if (!_cached_decoder_for_VendorName) {
-        _cached_decoder_for_VendorName = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_VendorName(el);
-}
+export const _decode_VendorName = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_VendorName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VendorName */
-let _cached_encoder_for_VendorName: $.ASN1Encoder<VendorName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VendorName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VendorName */
-/**
- * @summary Encodes a(n) VendorName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VendorName, encoded as an ASN.1 Element.
- */
-export function _encode_VendorName(
-    value: VendorName,
-    elGetter: $.ASN1Encoder<VendorName>
-) {
-    if (!_cached_encoder_for_VendorName) {
-        _cached_encoder_for_VendorName = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_VendorName(value, elGetter);
-}
+export const _encode_VendorName = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VendorName */
 

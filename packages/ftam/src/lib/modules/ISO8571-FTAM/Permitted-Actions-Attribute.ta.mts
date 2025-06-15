@@ -241,45 +241,17 @@ export const random_Order: number = Permitted_Actions_Attribute_random_Order; /*
 /* END_OF_SYMBOL_DEFINITION random_Order */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Permitted_Actions_Attribute */
-let _cached_decoder_for_Permitted_Actions_Attribute: $.ASN1Decoder<Permitted_Actions_Attribute> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Permitted_Actions_Attribute */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Permitted_Actions_Attribute */
-/**
- * @summary Decodes an ASN.1 element into a(n) Permitted_Actions_Attribute
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Permitted_Actions_Attribute} The decoded data structure.
- */
-export function _decode_Permitted_Actions_Attribute(el: _Element) {
-  if (!_cached_decoder_for_Permitted_Actions_Attribute) {
-    _cached_decoder_for_Permitted_Actions_Attribute = $._decodeBitString;
-  }
-  return _cached_decoder_for_Permitted_Actions_Attribute(el);
-}
+export const _decode_Permitted_Actions_Attribute = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Permitted_Actions_Attribute */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Permitted_Actions_Attribute */
-let _cached_encoder_for_Permitted_Actions_Attribute: $.ASN1Encoder<Permitted_Actions_Attribute> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Permitted_Actions_Attribute */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Permitted_Actions_Attribute */
-/**
- * @summary Encodes a(n) Permitted_Actions_Attribute into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Permitted_Actions_Attribute, encoded as an ASN.1 Element.
- */
-export function _encode_Permitted_Actions_Attribute(
-  value: Permitted_Actions_Attribute,
-  elGetter: $.ASN1Encoder<Permitted_Actions_Attribute>
-) {
-  if (!_cached_encoder_for_Permitted_Actions_Attribute) {
-    _cached_encoder_for_Permitted_Actions_Attribute = $._encodeBitString;
-  }
-  return _cached_encoder_for_Permitted_Actions_Attribute(value, elGetter);
-}
+export const _encode_Permitted_Actions_Attribute = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Permitted_Actions_Attribute */
 

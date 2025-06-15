@@ -33,45 +33,17 @@ export type XMLCompatibleString = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION XMLCompatibleString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLCompatibleString */
-let _cached_decoder_for_XMLCompatibleString: $.ASN1Decoder<XMLCompatibleString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLCompatibleString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_XMLCompatibleString */
-/**
- * @summary Decodes an ASN.1 element into a(n) XMLCompatibleString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {XMLCompatibleString} The decoded data structure.
- */
-export function _decode_XMLCompatibleString(el: _Element) {
-  if (!_cached_decoder_for_XMLCompatibleString) {
-    _cached_decoder_for_XMLCompatibleString = $._decodeUTF8String;
-  }
-  return _cached_decoder_for_XMLCompatibleString(el);
-}
+export const _decode_XMLCompatibleString = $._decodeUTF8String;
 /* END_OF_SYMBOL_DEFINITION _decode_XMLCompatibleString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLCompatibleString */
-let _cached_encoder_for_XMLCompatibleString: $.ASN1Encoder<XMLCompatibleString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLCompatibleString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_XMLCompatibleString */
-/**
- * @summary Encodes a(n) XMLCompatibleString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The XMLCompatibleString, encoded as an ASN.1 Element.
- */
-export function _encode_XMLCompatibleString(
-  value: XMLCompatibleString,
-  elGetter: $.ASN1Encoder<XMLCompatibleString>
-) {
-  if (!_cached_encoder_for_XMLCompatibleString) {
-    _cached_encoder_for_XMLCompatibleString = $._encodeUTF8String;
-  }
-  return _cached_encoder_for_XMLCompatibleString(value, elGetter);
-}
+export const _encode_XMLCompatibleString = $._encodeUTF8String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_XMLCompatibleString */
 

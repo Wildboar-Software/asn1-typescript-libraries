@@ -153,45 +153,17 @@ export const unstructured_Single_data_unit: Access_Context_access_context = Acce
 /* END_OF_SYMBOL_DEFINITION unstructured_Single_data_unit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Context_access_context */
-let _cached_decoder_for_Access_Context_access_context: $.ASN1Decoder<Access_Context_access_context> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Context_access_context */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Access_Context_access_context */
-/**
- * @summary Decodes an ASN.1 element into a(n) Access_Context_access_context
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Access_Context_access_context} The decoded data structure.
- */
-export function _decode_Access_Context_access_context(el: _Element) {
-  if (!_cached_decoder_for_Access_Context_access_context) {
-    _cached_decoder_for_Access_Context_access_context = $._decodeInteger;
-  }
-  return _cached_decoder_for_Access_Context_access_context(el);
-}
+export const _decode_Access_Context_access_context = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Access_Context_access_context */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Context_access_context */
-let _cached_encoder_for_Access_Context_access_context: $.ASN1Encoder<Access_Context_access_context> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Context_access_context */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Access_Context_access_context */
-/**
- * @summary Encodes a(n) Access_Context_access_context into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Access_Context_access_context, encoded as an ASN.1 Element.
- */
-export function _encode_Access_Context_access_context(
-  value: Access_Context_access_context,
-  elGetter: $.ASN1Encoder<Access_Context_access_context>
-) {
-  if (!_cached_encoder_for_Access_Context_access_context) {
-    _cached_encoder_for_Access_Context_access_context = $._encodeInteger;
-  }
-  return _cached_encoder_for_Access_Context_access_context(value, elGetter);
-}
+export const _encode_Access_Context_access_context = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Access_Context_access_context */
 

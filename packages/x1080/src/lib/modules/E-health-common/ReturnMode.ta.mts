@@ -73,45 +73,17 @@ export const batch: ReturnMode = ReturnMode_batch; /* SHORT_NAMED_ENUMERATED_VAL
 /* END_OF_SYMBOL_DEFINITION batch */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnMode */
-let _cached_decoder_for_ReturnMode: $.ASN1Decoder<ReturnMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReturnMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReturnMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReturnMode} The decoded data structure.
- */
-export function _decode_ReturnMode(el: _Element) {
-    if (!_cached_decoder_for_ReturnMode) {
-        _cached_decoder_for_ReturnMode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ReturnMode(el);
-}
+export const _decode_ReturnMode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ReturnMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnMode */
-let _cached_encoder_for_ReturnMode: $.ASN1Encoder<ReturnMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReturnMode */
-/**
- * @summary Encodes a(n) ReturnMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReturnMode, encoded as an ASN.1 Element.
- */
-export function _encode_ReturnMode(
-    value: ReturnMode,
-    elGetter: $.ASN1Encoder<ReturnMode>
-) {
-    if (!_cached_encoder_for_ReturnMode) {
-        _cached_encoder_for_ReturnMode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ReturnMode(value, elGetter);
-}
+export const _encode_ReturnMode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReturnMode */
 

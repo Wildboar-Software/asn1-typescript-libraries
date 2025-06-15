@@ -27,45 +27,17 @@ export type BDBIndex = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION BDBIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBIndex */
-let _cached_decoder_for_BDBIndex: $.ASN1Decoder<BDBIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBIndex */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BDBIndex */
-/**
- * @summary Decodes an ASN.1 element into a(n) BDBIndex
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BDBIndex} The decoded data structure.
- */
-export function _decode_BDBIndex(el: _Element) {
-  if (!_cached_decoder_for_BDBIndex) {
-    _cached_decoder_for_BDBIndex = $._decodeOctetString;
-  }
-  return _cached_decoder_for_BDBIndex(el);
-}
+export const _decode_BDBIndex = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_BDBIndex */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBIndex */
-let _cached_encoder_for_BDBIndex: $.ASN1Encoder<BDBIndex> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBIndex */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BDBIndex */
-/**
- * @summary Encodes a(n) BDBIndex into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BDBIndex, encoded as an ASN.1 Element.
- */
-export function _encode_BDBIndex(
-  value: BDBIndex,
-  elGetter: $.ASN1Encoder<BDBIndex>
-) {
-  if (!_cached_encoder_for_BDBIndex) {
-    _cached_encoder_for_BDBIndex = $._encodeOctetString;
-  }
-  return _cached_encoder_for_BDBIndex(value, elGetter);
-}
+export const _encode_BDBIndex = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BDBIndex */
 

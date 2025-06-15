@@ -93,45 +93,17 @@ export const unknownServiceType: IdentifyLockedLCSError = IdentifyLockedLCSError
 /* END_OF_SYMBOL_DEFINITION unknownServiceType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdentifyLockedLCSError */
-let _cached_decoder_for_IdentifyLockedLCSError: $.ASN1Decoder<IdentifyLockedLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdentifyLockedLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IdentifyLockedLCSError */
-/**
- * @summary Decodes an ASN.1 element into a(n) IdentifyLockedLCSError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IdentifyLockedLCSError} The decoded data structure.
- */
-export function _decode_IdentifyLockedLCSError(el: _Element) {
-    if (!_cached_decoder_for_IdentifyLockedLCSError) {
-        _cached_decoder_for_IdentifyLockedLCSError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_IdentifyLockedLCSError(el);
-}
+export const _decode_IdentifyLockedLCSError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_IdentifyLockedLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdentifyLockedLCSError */
-let _cached_encoder_for_IdentifyLockedLCSError: $.ASN1Encoder<IdentifyLockedLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdentifyLockedLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IdentifyLockedLCSError */
-/**
- * @summary Encodes a(n) IdentifyLockedLCSError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IdentifyLockedLCSError, encoded as an ASN.1 Element.
- */
-export function _encode_IdentifyLockedLCSError(
-    value: IdentifyLockedLCSError,
-    elGetter: $.ASN1Encoder<IdentifyLockedLCSError>
-) {
-    if (!_cached_encoder_for_IdentifyLockedLCSError) {
-        _cached_encoder_for_IdentifyLockedLCSError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_IdentifyLockedLCSError(value, elGetter);
-}
+export const _encode_IdentifyLockedLCSError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IdentifyLockedLCSError */
 

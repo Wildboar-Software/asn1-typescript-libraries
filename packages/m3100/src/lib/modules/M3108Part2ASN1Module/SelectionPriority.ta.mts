@@ -27,45 +27,17 @@ export type SelectionPriority = INTEGER;
 /* END_OF_SYMBOL_DEFINITION SelectionPriority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SelectionPriority */
-let _cached_decoder_for_SelectionPriority: $.ASN1Decoder<SelectionPriority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SelectionPriority */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SelectionPriority */
-/**
- * @summary Decodes an ASN.1 element into a(n) SelectionPriority
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SelectionPriority} The decoded data structure.
- */
-export function _decode_SelectionPriority(el: _Element) {
-    if (!_cached_decoder_for_SelectionPriority) {
-        _cached_decoder_for_SelectionPriority = $._decodeInteger;
-    }
-    return _cached_decoder_for_SelectionPriority(el);
-}
+export const _decode_SelectionPriority = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SelectionPriority */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SelectionPriority */
-let _cached_encoder_for_SelectionPriority: $.ASN1Encoder<SelectionPriority> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SelectionPriority */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SelectionPriority */
-/**
- * @summary Encodes a(n) SelectionPriority into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SelectionPriority, encoded as an ASN.1 Element.
- */
-export function _encode_SelectionPriority(
-    value: SelectionPriority,
-    elGetter: $.ASN1Encoder<SelectionPriority>
-) {
-    if (!_cached_encoder_for_SelectionPriority) {
-        _cached_encoder_for_SelectionPriority = $._encodeInteger;
-    }
-    return _cached_encoder_for_SelectionPriority(value, elGetter);
-}
+export const _encode_SelectionPriority = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SelectionPriority */
 

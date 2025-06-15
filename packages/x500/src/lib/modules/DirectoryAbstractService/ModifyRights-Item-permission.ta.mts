@@ -81,45 +81,17 @@ export const move: number = ModifyRights_Item_permission_move; /* SHORT_NAMED_BI
 /* END_OF_SYMBOL_DEFINITION move */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights_Item_permission */
-let _cached_decoder_for_ModifyRights_Item_permission: $.ASN1Decoder<ModifyRights_Item_permission> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights_Item_permission */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ModifyRights_Item_permission */
-/**
- * @summary Decodes an ASN.1 element into a(n) ModifyRights_Item_permission
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ModifyRights_Item_permission} The decoded data structure.
- */
-export function _decode_ModifyRights_Item_permission(el: _Element) {
-    if (!_cached_decoder_for_ModifyRights_Item_permission) {
-        _cached_decoder_for_ModifyRights_Item_permission = $._decodeBitString;
-    }
-    return _cached_decoder_for_ModifyRights_Item_permission(el);
-}
+export const _decode_ModifyRights_Item_permission = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ModifyRights_Item_permission */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights_Item_permission */
-let _cached_encoder_for_ModifyRights_Item_permission: $.ASN1Encoder<ModifyRights_Item_permission> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights_Item_permission */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModifyRights_Item_permission */
-/**
- * @summary Encodes a(n) ModifyRights_Item_permission into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ModifyRights_Item_permission, encoded as an ASN.1 Element.
- */
-export function _encode_ModifyRights_Item_permission(
-    value: ModifyRights_Item_permission,
-    elGetter: $.ASN1Encoder<ModifyRights_Item_permission>
-) {
-    if (!_cached_encoder_for_ModifyRights_Item_permission) {
-        _cached_encoder_for_ModifyRights_Item_permission = $._encodeBitString;
-    }
-    return _cached_encoder_for_ModifyRights_Item_permission(value, elGetter);
-}
+export const _encode_ModifyRights_Item_permission = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModifyRights_Item_permission */
 

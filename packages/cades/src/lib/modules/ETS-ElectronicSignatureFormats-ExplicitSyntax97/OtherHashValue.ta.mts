@@ -30,40 +30,17 @@ type OtherHashValue = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION OtherHashValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherHashValue */
-let _cached_decoder_for_OtherHashValue: $.ASN1Decoder<OtherHashValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherHashValue */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OtherHashValue */
-/**
- * @summary Decodes an ASN.1 element into a(n) OtherHashValue
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OtherHashValue} The decoded data structure.
- */
-export
-function _decode_OtherHashValue (el: _Element) {
-    if (!_cached_decoder_for_OtherHashValue) { _cached_decoder_for_OtherHashValue = $._decodeOctetString; }
-    return _cached_decoder_for_OtherHashValue(el);
-}
+export const _decode_OtherHashValue = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_OtherHashValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherHashValue */
-let _cached_encoder_for_OtherHashValue: $.ASN1Encoder<OtherHashValue> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherHashValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OtherHashValue */
-/**
- * @summary Encodes a(n) OtherHashValue into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OtherHashValue, encoded as an ASN.1 Element.
- */
-export
-function _encode_OtherHashValue (value: OtherHashValue, elGetter: $.ASN1Encoder<OtherHashValue>) {
-    if (!_cached_encoder_for_OtherHashValue) { _cached_encoder_for_OtherHashValue = $._encodeOctetString; }
-    return _cached_encoder_for_OtherHashValue(value, elGetter);
-}
+export const _encode_OtherHashValue = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OtherHashValue */
 

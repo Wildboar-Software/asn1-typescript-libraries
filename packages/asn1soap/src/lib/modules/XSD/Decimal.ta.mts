@@ -27,45 +27,17 @@ export type Decimal = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION Decimal */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Decimal */
-let _cached_decoder_for_Decimal: $.ASN1Decoder<Decimal> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Decimal */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Decimal */
-/**
- * @summary Decodes an ASN.1 element into a(n) Decimal
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Decimal} The decoded data structure.
- */
-export function _decode_Decimal(el: _Element) {
-  if (!_cached_decoder_for_Decimal) {
-    _cached_decoder_for_Decimal = $._decodeReal;
-  }
-  return _cached_decoder_for_Decimal(el);
-}
+export const _decode_Decimal = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_Decimal */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Decimal */
-let _cached_encoder_for_Decimal: $.ASN1Encoder<Decimal> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Decimal */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Decimal */
-/**
- * @summary Encodes a(n) Decimal into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Decimal, encoded as an ASN.1 Element.
- */
-export function _encode_Decimal(
-  value: Decimal,
-  elGetter: $.ASN1Encoder<Decimal>
-) {
-  if (!_cached_encoder_for_Decimal) {
-    _cached_encoder_for_Decimal = $._encodeReal;
-  }
-  return _cached_encoder_for_Decimal(value, elGetter);
-}
+export const _encode_Decimal = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Decimal */
 

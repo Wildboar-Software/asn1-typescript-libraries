@@ -27,45 +27,17 @@ export type ChannelNumber = INTEGER;
 /* END_OF_SYMBOL_DEFINITION ChannelNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChannelNumber */
-let _cached_decoder_for_ChannelNumber: $.ASN1Decoder<ChannelNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChannelNumber */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ChannelNumber */
-/**
- * @summary Decodes an ASN.1 element into a(n) ChannelNumber
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ChannelNumber} The decoded data structure.
- */
-export function _decode_ChannelNumber(el: _Element) {
-    if (!_cached_decoder_for_ChannelNumber) {
-        _cached_decoder_for_ChannelNumber = $._decodeInteger;
-    }
-    return _cached_decoder_for_ChannelNumber(el);
-}
+export const _decode_ChannelNumber = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ChannelNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChannelNumber */
-let _cached_encoder_for_ChannelNumber: $.ASN1Encoder<ChannelNumber> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChannelNumber */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ChannelNumber */
-/**
- * @summary Encodes a(n) ChannelNumber into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ChannelNumber, encoded as an ASN.1 Element.
- */
-export function _encode_ChannelNumber(
-    value: ChannelNumber,
-    elGetter: $.ASN1Encoder<ChannelNumber>
-) {
-    if (!_cached_encoder_for_ChannelNumber) {
-        _cached_encoder_for_ChannelNumber = $._encodeInteger;
-    }
-    return _cached_encoder_for_ChannelNumber(value, elGetter);
-}
+export const _encode_ChannelNumber = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ChannelNumber */
 

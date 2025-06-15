@@ -27,45 +27,17 @@ export type AE_title_form2 = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION AE_title_form2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_title_form2 */
-let _cached_decoder_for_AE_title_form2: $.ASN1Decoder<AE_title_form2> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_title_form2 */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AE_title_form2 */
-/**
- * @summary Decodes an ASN.1 element into a(n) AE_title_form2
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AE_title_form2} The decoded data structure.
- */
-export function _decode_AE_title_form2(el: _Element) {
-  if (!_cached_decoder_for_AE_title_form2) {
-    _cached_decoder_for_AE_title_form2 = $._decodeObjectIdentifier;
-  }
-  return _cached_decoder_for_AE_title_form2(el);
-}
+export const _decode_AE_title_form2 = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_AE_title_form2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_title_form2 */
-let _cached_encoder_for_AE_title_form2: $.ASN1Encoder<AE_title_form2> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_title_form2 */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AE_title_form2 */
-/**
- * @summary Encodes a(n) AE_title_form2 into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AE_title_form2, encoded as an ASN.1 Element.
- */
-export function _encode_AE_title_form2(
-  value: AE_title_form2,
-  elGetter: $.ASN1Encoder<AE_title_form2>
-) {
-  if (!_cached_encoder_for_AE_title_form2) {
-    _cached_encoder_for_AE_title_form2 = $._encodeObjectIdentifier;
-  }
-  return _cached_encoder_for_AE_title_form2(value, elGetter);
-}
+export const _encode_AE_title_form2 = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AE_title_form2 */
 

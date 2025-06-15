@@ -471,45 +471,17 @@ export const v33_14400_training: Type_of_msg_t30_indicator = Type_of_msg_t30_ind
 /* END_OF_SYMBOL_DEFINITION v33_14400_training */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Type_of_msg_t30_indicator */
-let _cached_decoder_for_Type_of_msg_t30_indicator: $.ASN1Decoder<Type_of_msg_t30_indicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Type_of_msg_t30_indicator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Type_of_msg_t30_indicator */
-/**
- * @summary Decodes an ASN.1 element into a(n) Type_of_msg_t30_indicator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Type_of_msg_t30_indicator} The decoded data structure.
- */
-export function _decode_Type_of_msg_t30_indicator(el: _Element) {
-  if (!_cached_decoder_for_Type_of_msg_t30_indicator) {
-    _cached_decoder_for_Type_of_msg_t30_indicator = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_Type_of_msg_t30_indicator(el);
-}
+export const _decode_Type_of_msg_t30_indicator = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Type_of_msg_t30_indicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Type_of_msg_t30_indicator */
-let _cached_encoder_for_Type_of_msg_t30_indicator: $.ASN1Encoder<Type_of_msg_t30_indicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Type_of_msg_t30_indicator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Type_of_msg_t30_indicator */
-/**
- * @summary Encodes a(n) Type_of_msg_t30_indicator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Type_of_msg_t30_indicator, encoded as an ASN.1 Element.
- */
-export function _encode_Type_of_msg_t30_indicator(
-  value: Type_of_msg_t30_indicator,
-  elGetter: $.ASN1Encoder<Type_of_msg_t30_indicator>
-) {
-  if (!_cached_encoder_for_Type_of_msg_t30_indicator) {
-    _cached_encoder_for_Type_of_msg_t30_indicator = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_Type_of_msg_t30_indicator(value, elGetter);
-}
+export const _encode_Type_of_msg_t30_indicator = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Type_of_msg_t30_indicator */
 

@@ -63,45 +63,17 @@ export const no_agreement: BilateralDeferral = BilateralDeferral_no_agreement; /
 /* END_OF_SYMBOL_DEFINITION no_agreement */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BilateralDeferral */
-let _cached_decoder_for_BilateralDeferral: $.ASN1Decoder<BilateralDeferral> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BilateralDeferral */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BilateralDeferral */
-/**
- * @summary Decodes an ASN.1 element into a(n) BilateralDeferral
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BilateralDeferral} The decoded data structure.
- */
-export function _decode_BilateralDeferral(el: _Element) {
-    if (!_cached_decoder_for_BilateralDeferral) {
-        _cached_decoder_for_BilateralDeferral = $._decodeInteger;
-    }
-    return _cached_decoder_for_BilateralDeferral(el);
-}
+export const _decode_BilateralDeferral = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_BilateralDeferral */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BilateralDeferral */
-let _cached_encoder_for_BilateralDeferral: $.ASN1Encoder<BilateralDeferral> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BilateralDeferral */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BilateralDeferral */
-/**
- * @summary Encodes a(n) BilateralDeferral into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BilateralDeferral, encoded as an ASN.1 Element.
- */
-export function _encode_BilateralDeferral(
-    value: BilateralDeferral,
-    elGetter: $.ASN1Encoder<BilateralDeferral>
-) {
-    if (!_cached_encoder_for_BilateralDeferral) {
-        _cached_encoder_for_BilateralDeferral = $._encodeInteger;
-    }
-    return _cached_encoder_for_BilateralDeferral(value, elGetter);
-}
+export const _encode_BilateralDeferral = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BilateralDeferral */
 

@@ -79,45 +79,17 @@ export const v3: CASPversion = CASPversion_v3; /* SHORT_NAMED_ENUMERATED_VALUE *
 /* END_OF_SYMBOL_DEFINITION v3 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CASPversion */
-let _cached_decoder_for_CASPversion: $.ASN1Decoder<CASPversion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CASPversion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CASPversion */
-/**
- * @summary Decodes an ASN.1 element into a(n) CASPversion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CASPversion} The decoded data structure.
- */
-export function _decode_CASPversion(el: _Element) {
-    if (!_cached_decoder_for_CASPversion) {
-        _cached_decoder_for_CASPversion = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CASPversion(el);
-}
+export const _decode_CASPversion = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CASPversion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CASPversion */
-let _cached_encoder_for_CASPversion: $.ASN1Encoder<CASPversion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CASPversion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CASPversion */
-/**
- * @summary Encodes a(n) CASPversion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CASPversion, encoded as an ASN.1 Element.
- */
-export function _encode_CASPversion(
-    value: CASPversion,
-    elGetter: $.ASN1Encoder<CASPversion>
-) {
-    if (!_cached_encoder_for_CASPversion) {
-        _cached_encoder_for_CASPversion = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CASPversion(value, elGetter);
-}
+export const _encode_CASPversion = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CASPversion */
 

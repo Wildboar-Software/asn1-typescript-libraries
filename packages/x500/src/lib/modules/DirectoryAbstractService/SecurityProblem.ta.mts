@@ -227,45 +227,17 @@ export const inappropriateAlgorithms: SecurityProblem = SecurityProblem_inapprop
 /* END_OF_SYMBOL_DEFINITION inappropriateAlgorithms */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityProblem */
-let _cached_decoder_for_SecurityProblem: $.ASN1Decoder<SecurityProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SecurityProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) SecurityProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SecurityProblem} The decoded data structure.
- */
-export function _decode_SecurityProblem(el: _Element) {
-    if (!_cached_decoder_for_SecurityProblem) {
-        _cached_decoder_for_SecurityProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_SecurityProblem(el);
-}
+export const _decode_SecurityProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SecurityProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityProblem */
-let _cached_encoder_for_SecurityProblem: $.ASN1Encoder<SecurityProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SecurityProblem */
-/**
- * @summary Encodes a(n) SecurityProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SecurityProblem, encoded as an ASN.1 Element.
- */
-export function _encode_SecurityProblem(
-    value: SecurityProblem,
-    elGetter: $.ASN1Encoder<SecurityProblem>
-) {
-    if (!_cached_encoder_for_SecurityProblem) {
-        _cached_encoder_for_SecurityProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_SecurityProblem(value, elGetter);
-}
+export const _encode_SecurityProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SecurityProblem */
 

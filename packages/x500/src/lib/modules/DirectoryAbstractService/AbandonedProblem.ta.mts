@@ -70,45 +70,17 @@ export const pagingAbandoned: AbandonedProblem =
 /* END_OF_SYMBOL_DEFINITION pagingAbandoned */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonedProblem */
-let _cached_decoder_for_AbandonedProblem: $.ASN1Decoder<AbandonedProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonedProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AbandonedProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) AbandonedProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AbandonedProblem} The decoded data structure.
- */
-export function _decode_AbandonedProblem(el: _Element) {
-    if (!_cached_decoder_for_AbandonedProblem) {
-        _cached_decoder_for_AbandonedProblem = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AbandonedProblem(el);
-}
+export const _decode_AbandonedProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AbandonedProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonedProblem */
-let _cached_encoder_for_AbandonedProblem: $.ASN1Encoder<AbandonedProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonedProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AbandonedProblem */
-/**
- * @summary Encodes a(n) AbandonedProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AbandonedProblem, encoded as an ASN.1 Element.
- */
-export function _encode_AbandonedProblem(
-    value: AbandonedProblem,
-    elGetter: $.ASN1Encoder<AbandonedProblem>
-) {
-    if (!_cached_encoder_for_AbandonedProblem) {
-        _cached_encoder_for_AbandonedProblem = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AbandonedProblem(value, elGetter);
-}
+export const _encode_AbandonedProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AbandonedProblem */
 

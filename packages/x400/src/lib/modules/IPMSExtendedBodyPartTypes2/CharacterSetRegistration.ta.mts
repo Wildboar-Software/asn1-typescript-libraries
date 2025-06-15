@@ -27,45 +27,17 @@ export type CharacterSetRegistration = INTEGER;
 /* END_OF_SYMBOL_DEFINITION CharacterSetRegistration */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterSetRegistration */
-let _cached_decoder_for_CharacterSetRegistration: $.ASN1Decoder<CharacterSetRegistration> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterSetRegistration */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CharacterSetRegistration */
-/**
- * @summary Decodes an ASN.1 element into a(n) CharacterSetRegistration
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CharacterSetRegistration} The decoded data structure.
- */
-export function _decode_CharacterSetRegistration(el: _Element) {
-    if (!_cached_decoder_for_CharacterSetRegistration) {
-        _cached_decoder_for_CharacterSetRegistration = $._decodeInteger;
-    }
-    return _cached_decoder_for_CharacterSetRegistration(el);
-}
+export const _decode_CharacterSetRegistration = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CharacterSetRegistration */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterSetRegistration */
-let _cached_encoder_for_CharacterSetRegistration: $.ASN1Encoder<CharacterSetRegistration> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterSetRegistration */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CharacterSetRegistration */
-/**
- * @summary Encodes a(n) CharacterSetRegistration into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CharacterSetRegistration, encoded as an ASN.1 Element.
- */
-export function _encode_CharacterSetRegistration(
-    value: CharacterSetRegistration,
-    elGetter: $.ASN1Encoder<CharacterSetRegistration>
-) {
-    if (!_cached_encoder_for_CharacterSetRegistration) {
-        _cached_encoder_for_CharacterSetRegistration = $._encodeInteger;
-    }
-    return _cached_encoder_for_CharacterSetRegistration(value, elGetter);
-}
+export const _encode_CharacterSetRegistration = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CharacterSetRegistration */
 

@@ -27,45 +27,17 @@ export type PDUString = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION PDUString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUString */
-let _cached_decoder_for_PDUString: $.ASN1Decoder<PDUString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PDUString */
-/**
- * @summary Decodes an ASN.1 element into a(n) PDUString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PDUString} The decoded data structure.
- */
-export function _decode_PDUString(el: _Element) {
-    if (!_cached_decoder_for_PDUString) {
-        _cached_decoder_for_PDUString = $._decodeOctetString;
-    }
-    return _cached_decoder_for_PDUString(el);
-}
+export const _decode_PDUString = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_PDUString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUString */
-let _cached_encoder_for_PDUString: $.ASN1Encoder<PDUString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PDUString */
-/**
- * @summary Encodes a(n) PDUString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PDUString, encoded as an ASN.1 Element.
- */
-export function _encode_PDUString(
-    value: PDUString,
-    elGetter: $.ASN1Encoder<PDUString>
-) {
-    if (!_cached_encoder_for_PDUString) {
-        _cached_encoder_for_PDUString = $._encodeOctetString;
-    }
-    return _cached_encoder_for_PDUString(value, elGetter);
-}
+export const _encode_PDUString = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PDUString */
 

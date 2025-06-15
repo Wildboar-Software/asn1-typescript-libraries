@@ -45,45 +45,17 @@ export const version0: CBEFFVersion_cbeff_minor = CBEFFVersion_cbeff_minor_versi
 /* END_OF_SYMBOL_DEFINITION version0 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CBEFFVersion_cbeff_minor */
-let _cached_decoder_for_CBEFFVersion_cbeff_minor: $.ASN1Decoder<CBEFFVersion_cbeff_minor> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CBEFFVersion_cbeff_minor */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CBEFFVersion_cbeff_minor */
-/**
- * @summary Decodes an ASN.1 element into a(n) CBEFFVersion_cbeff_minor
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CBEFFVersion_cbeff_minor} The decoded data structure.
- */
-export function _decode_CBEFFVersion_cbeff_minor(el: _Element) {
-  if (!_cached_decoder_for_CBEFFVersion_cbeff_minor) {
-    _cached_decoder_for_CBEFFVersion_cbeff_minor = $._decodeInteger;
-  }
-  return _cached_decoder_for_CBEFFVersion_cbeff_minor(el);
-}
+export const _decode_CBEFFVersion_cbeff_minor = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CBEFFVersion_cbeff_minor */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CBEFFVersion_cbeff_minor */
-let _cached_encoder_for_CBEFFVersion_cbeff_minor: $.ASN1Encoder<CBEFFVersion_cbeff_minor> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CBEFFVersion_cbeff_minor */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CBEFFVersion_cbeff_minor */
-/**
- * @summary Encodes a(n) CBEFFVersion_cbeff_minor into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CBEFFVersion_cbeff_minor, encoded as an ASN.1 Element.
- */
-export function _encode_CBEFFVersion_cbeff_minor(
-  value: CBEFFVersion_cbeff_minor,
-  elGetter: $.ASN1Encoder<CBEFFVersion_cbeff_minor>
-) {
-  if (!_cached_encoder_for_CBEFFVersion_cbeff_minor) {
-    _cached_encoder_for_CBEFFVersion_cbeff_minor = $._encodeInteger;
-  }
-  return _cached_encoder_for_CBEFFVersion_cbeff_minor(value, elGetter);
-}
+export const _encode_CBEFFVersion_cbeff_minor = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CBEFFVersion_cbeff_minor */
 

@@ -71,45 +71,17 @@ export const wholeSubtree: SearchArgumentData_subset = SearchArgumentData_subset
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData_subset */
-let _cached_decoder_for_SearchArgumentData_subset: $.ASN1Decoder<SearchArgumentData_subset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData_subset */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SearchArgumentData_subset */
-/**
- * @summary Decodes an ASN.1 element into a(n) SearchArgumentData_subset
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SearchArgumentData_subset} The decoded data structure.
- */
-export function _decode_SearchArgumentData_subset(el: _Element) {
-    if (!_cached_decoder_for_SearchArgumentData_subset) {
-        _cached_decoder_for_SearchArgumentData_subset = $._decodeInteger;
-    }
-    return _cached_decoder_for_SearchArgumentData_subset(el);
-}
+export const _decode_SearchArgumentData_subset = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SearchArgumentData_subset */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData_subset */
-let _cached_encoder_for_SearchArgumentData_subset: $.ASN1Encoder<SearchArgumentData_subset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData_subset */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SearchArgumentData_subset */
-/**
- * @summary Encodes a(n) SearchArgumentData_subset into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SearchArgumentData_subset, encoded as an ASN.1 Element.
- */
-export function _encode_SearchArgumentData_subset(
-    value: SearchArgumentData_subset,
-    elGetter: $.ASN1Encoder<SearchArgumentData_subset>
-) {
-    if (!_cached_encoder_for_SearchArgumentData_subset) {
-        _cached_encoder_for_SearchArgumentData_subset = $._encodeInteger;
-    }
-    return _cached_encoder_for_SearchArgumentData_subset(value, elGetter);
-}
+export const _encode_SearchArgumentData_subset = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SearchArgumentData_subset */
 

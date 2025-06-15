@@ -97,45 +97,17 @@ export const open: ControlState =
 /* END_OF_SYMBOL_DEFINITION open */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlState */
-let _cached_decoder_for_ControlState: $.ASN1Decoder<ControlState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ControlState */
-/**
- * @summary Decodes an ASN.1 element into a(n) ControlState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ControlState} The decoded data structure.
- */
-export function _decode_ControlState(el: _Element) {
-    if (!_cached_decoder_for_ControlState) {
-        _cached_decoder_for_ControlState = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ControlState(el);
-}
+export const _decode_ControlState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ControlState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlState */
-let _cached_encoder_for_ControlState: $.ASN1Encoder<ControlState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ControlState */
-/**
- * @summary Encodes a(n) ControlState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControlState, encoded as an ASN.1 Element.
- */
-export function _encode_ControlState(
-    value: ControlState,
-    elGetter: $.ASN1Encoder<ControlState>
-) {
-    if (!_cached_encoder_for_ControlState) {
-        _cached_encoder_for_ControlState = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ControlState(value, elGetter);
-}
+export const _encode_ControlState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ControlState */
 

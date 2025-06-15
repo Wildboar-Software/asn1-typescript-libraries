@@ -118,45 +118,17 @@ export const notapplicable: Replaceable =
 /* END_OF_SYMBOL_DEFINITION notapplicable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Replaceable */
-let _cached_decoder_for_Replaceable: $.ASN1Decoder<Replaceable> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Replaceable */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Replaceable */
-/**
- * @summary Decodes an ASN.1 element into a(n) Replaceable
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Replaceable} The decoded data structure.
- */
-export function _decode_Replaceable(el: _Element) {
-    if (!_cached_decoder_for_Replaceable) {
-        _cached_decoder_for_Replaceable = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Replaceable(el);
-}
+export const _decode_Replaceable = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Replaceable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Replaceable */
-let _cached_encoder_for_Replaceable: $.ASN1Encoder<Replaceable> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Replaceable */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Replaceable */
-/**
- * @summary Encodes a(n) Replaceable into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Replaceable, encoded as an ASN.1 Element.
- */
-export function _encode_Replaceable(
-    value: Replaceable,
-    elGetter: $.ASN1Encoder<Replaceable>
-) {
-    if (!_cached_encoder_for_Replaceable) {
-        _cached_encoder_for_Replaceable = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Replaceable(value, elGetter);
-}
+export const _encode_Replaceable = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Replaceable */
 

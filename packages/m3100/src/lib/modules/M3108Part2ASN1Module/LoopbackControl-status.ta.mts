@@ -118,45 +118,17 @@ export const endBLoopedBack: LoopbackControl_status =
 /* END_OF_SYMBOL_DEFINITION endBLoopedBack */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackControl_status */
-let _cached_decoder_for_LoopbackControl_status: $.ASN1Decoder<LoopbackControl_status> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackControl_status */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LoopbackControl_status */
-/**
- * @summary Decodes an ASN.1 element into a(n) LoopbackControl_status
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LoopbackControl_status} The decoded data structure.
- */
-export function _decode_LoopbackControl_status(el: _Element) {
-    if (!_cached_decoder_for_LoopbackControl_status) {
-        _cached_decoder_for_LoopbackControl_status = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_LoopbackControl_status(el);
-}
+export const _decode_LoopbackControl_status = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_LoopbackControl_status */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackControl_status */
-let _cached_encoder_for_LoopbackControl_status: $.ASN1Encoder<LoopbackControl_status> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackControl_status */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LoopbackControl_status */
-/**
- * @summary Encodes a(n) LoopbackControl_status into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LoopbackControl_status, encoded as an ASN.1 Element.
- */
-export function _encode_LoopbackControl_status(
-    value: LoopbackControl_status,
-    elGetter: $.ASN1Encoder<LoopbackControl_status>
-) {
-    if (!_cached_encoder_for_LoopbackControl_status) {
-        _cached_encoder_for_LoopbackControl_status = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_LoopbackControl_status(value, elGetter);
-}
+export const _encode_LoopbackControl_status = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LoopbackControl_status */
 

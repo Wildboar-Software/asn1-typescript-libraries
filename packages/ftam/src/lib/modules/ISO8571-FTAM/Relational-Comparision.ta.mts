@@ -105,45 +105,17 @@ export const greater_than_matches: number = Relational_Comparision_greater_than_
 /* END_OF_SYMBOL_DEFINITION greater_than_matches */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Relational_Comparision */
-let _cached_decoder_for_Relational_Comparision: $.ASN1Decoder<Relational_Comparision> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Relational_Comparision */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Relational_Comparision */
-/**
- * @summary Decodes an ASN.1 element into a(n) Relational_Comparision
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Relational_Comparision} The decoded data structure.
- */
-export function _decode_Relational_Comparision(el: _Element) {
-  if (!_cached_decoder_for_Relational_Comparision) {
-    _cached_decoder_for_Relational_Comparision = $._decodeBitString;
-  }
-  return _cached_decoder_for_Relational_Comparision(el);
-}
+export const _decode_Relational_Comparision = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Relational_Comparision */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Relational_Comparision */
-let _cached_encoder_for_Relational_Comparision: $.ASN1Encoder<Relational_Comparision> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Relational_Comparision */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Relational_Comparision */
-/**
- * @summary Encodes a(n) Relational_Comparision into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Relational_Comparision, encoded as an ASN.1 Element.
- */
-export function _encode_Relational_Comparision(
-  value: Relational_Comparision,
-  elGetter: $.ASN1Encoder<Relational_Comparision>
-) {
-  if (!_cached_encoder_for_Relational_Comparision) {
-    _cached_encoder_for_Relational_Comparision = $._encodeBitString;
-  }
-  return _cached_encoder_for_Relational_Comparision(value, elGetter);
-}
+export const _encode_Relational_Comparision = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Relational_Comparision */
 

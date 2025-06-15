@@ -163,45 +163,17 @@ export const bureau_fax_delivery: number = PhysicalDeliveryModes_bureau_fax_deli
 /* END_OF_SYMBOL_DEFINITION bureau_fax_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryModes */
-let _cached_decoder_for_PhysicalDeliveryModes: $.ASN1Decoder<PhysicalDeliveryModes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryModes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryModes */
-/**
- * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryModes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PhysicalDeliveryModes} The decoded data structure.
- */
-export function _decode_PhysicalDeliveryModes(el: _Element) {
-    if (!_cached_decoder_for_PhysicalDeliveryModes) {
-        _cached_decoder_for_PhysicalDeliveryModes = $._decodeBitString;
-    }
-    return _cached_decoder_for_PhysicalDeliveryModes(el);
-}
+export const _decode_PhysicalDeliveryModes = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryModes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryModes */
-let _cached_encoder_for_PhysicalDeliveryModes: $.ASN1Encoder<PhysicalDeliveryModes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryModes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryModes */
-/**
- * @summary Encodes a(n) PhysicalDeliveryModes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PhysicalDeliveryModes, encoded as an ASN.1 Element.
- */
-export function _encode_PhysicalDeliveryModes(
-    value: PhysicalDeliveryModes,
-    elGetter: $.ASN1Encoder<PhysicalDeliveryModes>
-) {
-    if (!_cached_encoder_for_PhysicalDeliveryModes) {
-        _cached_encoder_for_PhysicalDeliveryModes = $._encodeBitString;
-    }
-    return _cached_encoder_for_PhysicalDeliveryModes(value, elGetter);
-}
+export const _encode_PhysicalDeliveryModes = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryModes */
 

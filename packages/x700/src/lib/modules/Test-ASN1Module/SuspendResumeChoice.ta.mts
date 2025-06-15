@@ -97,45 +97,17 @@ export const resume: SuspendResumeChoice =
 /* END_OF_SYMBOL_DEFINITION resume */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SuspendResumeChoice */
-let _cached_decoder_for_SuspendResumeChoice: $.ASN1Decoder<SuspendResumeChoice> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SuspendResumeChoice */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SuspendResumeChoice */
-/**
- * @summary Decodes an ASN.1 element into a(n) SuspendResumeChoice
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SuspendResumeChoice} The decoded data structure.
- */
-export function _decode_SuspendResumeChoice(el: _Element) {
-    if (!_cached_decoder_for_SuspendResumeChoice) {
-        _cached_decoder_for_SuspendResumeChoice = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SuspendResumeChoice(el);
-}
+export const _decode_SuspendResumeChoice = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SuspendResumeChoice */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SuspendResumeChoice */
-let _cached_encoder_for_SuspendResumeChoice: $.ASN1Encoder<SuspendResumeChoice> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SuspendResumeChoice */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SuspendResumeChoice */
-/**
- * @summary Encodes a(n) SuspendResumeChoice into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SuspendResumeChoice, encoded as an ASN.1 Element.
- */
-export function _encode_SuspendResumeChoice(
-    value: SuspendResumeChoice,
-    elGetter: $.ASN1Encoder<SuspendResumeChoice>
-) {
-    if (!_cached_encoder_for_SuspendResumeChoice) {
-        _cached_encoder_for_SuspendResumeChoice = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SuspendResumeChoice(value, elGetter);
-}
+export const _encode_SuspendResumeChoice = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SuspendResumeChoice */
 

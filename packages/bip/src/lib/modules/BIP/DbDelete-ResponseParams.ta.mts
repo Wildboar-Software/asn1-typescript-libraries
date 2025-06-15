@@ -27,45 +27,17 @@ export type DbDelete_ResponseParams = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION DbDelete_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbDelete_ResponseParams */
-let _cached_decoder_for_DbDelete_ResponseParams: $.ASN1Decoder<DbDelete_ResponseParams> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbDelete_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DbDelete_ResponseParams */
-/**
- * @summary Decodes an ASN.1 element into a(n) DbDelete_ResponseParams
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DbDelete_ResponseParams} The decoded data structure.
- */
-export function _decode_DbDelete_ResponseParams(el: _Element) {
-  if (!_cached_decoder_for_DbDelete_ResponseParams) {
-    _cached_decoder_for_DbDelete_ResponseParams = $._decodeNull;
-  }
-  return _cached_decoder_for_DbDelete_ResponseParams(el);
-}
+export const _decode_DbDelete_ResponseParams = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_DbDelete_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbDelete_ResponseParams */
-let _cached_encoder_for_DbDelete_ResponseParams: $.ASN1Encoder<DbDelete_ResponseParams> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbDelete_ResponseParams */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DbDelete_ResponseParams */
-/**
- * @summary Encodes a(n) DbDelete_ResponseParams into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DbDelete_ResponseParams, encoded as an ASN.1 Element.
- */
-export function _encode_DbDelete_ResponseParams(
-  value: DbDelete_ResponseParams,
-  elGetter: $.ASN1Encoder<DbDelete_ResponseParams>
-) {
-  if (!_cached_encoder_for_DbDelete_ResponseParams) {
-    _cached_encoder_for_DbDelete_ResponseParams = $._encodeNull;
-  }
-  return _cached_encoder_for_DbDelete_ResponseParams(value, elGetter);
-}
+export const _encode_DbDelete_ResponseParams = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DbDelete_ResponseParams */
 

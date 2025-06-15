@@ -181,45 +181,17 @@ export const associatedObjectNotAvailable: TONotCreated_reason =
 /* END_OF_SYMBOL_DEFINITION associatedObjectNotAvailable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TONotCreated_reason */
-let _cached_decoder_for_TONotCreated_reason: $.ASN1Decoder<TONotCreated_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TONotCreated_reason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TONotCreated_reason */
-/**
- * @summary Decodes an ASN.1 element into a(n) TONotCreated_reason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TONotCreated_reason} The decoded data structure.
- */
-export function _decode_TONotCreated_reason(el: _Element) {
-    if (!_cached_decoder_for_TONotCreated_reason) {
-        _cached_decoder_for_TONotCreated_reason = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TONotCreated_reason(el);
-}
+export const _decode_TONotCreated_reason = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TONotCreated_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TONotCreated_reason */
-let _cached_encoder_for_TONotCreated_reason: $.ASN1Encoder<TONotCreated_reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TONotCreated_reason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TONotCreated_reason */
-/**
- * @summary Encodes a(n) TONotCreated_reason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TONotCreated_reason, encoded as an ASN.1 Element.
- */
-export function _encode_TONotCreated_reason(
-    value: TONotCreated_reason,
-    elGetter: $.ASN1Encoder<TONotCreated_reason>
-) {
-    if (!_cached_encoder_for_TONotCreated_reason) {
-        _cached_encoder_for_TONotCreated_reason = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TONotCreated_reason(value, elGetter);
-}
+export const _encode_TONotCreated_reason = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TONotCreated_reason */
 

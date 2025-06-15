@@ -208,45 +208,17 @@ export const interruption: ReportingEvent =
 /* END_OF_SYMBOL_DEFINITION interruption */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingEvent */
-let _cached_decoder_for_ReportingEvent: $.ASN1Decoder<ReportingEvent> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingEvent */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReportingEvent */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReportingEvent
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReportingEvent} The decoded data structure.
- */
-export function _decode_ReportingEvent(el: _Element) {
-    if (!_cached_decoder_for_ReportingEvent) {
-        _cached_decoder_for_ReportingEvent = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ReportingEvent(el);
-}
+export const _decode_ReportingEvent = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ReportingEvent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingEvent */
-let _cached_encoder_for_ReportingEvent: $.ASN1Encoder<ReportingEvent> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingEvent */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReportingEvent */
-/**
- * @summary Encodes a(n) ReportingEvent into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReportingEvent, encoded as an ASN.1 Element.
- */
-export function _encode_ReportingEvent(
-    value: ReportingEvent,
-    elGetter: $.ASN1Encoder<ReportingEvent>
-) {
-    if (!_cached_encoder_for_ReportingEvent) {
-        _cached_encoder_for_ReportingEvent = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ReportingEvent(value, elGetter);
-}
+export const _encode_ReportingEvent = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReportingEvent */
 

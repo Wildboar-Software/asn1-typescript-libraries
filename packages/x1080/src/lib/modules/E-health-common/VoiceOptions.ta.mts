@@ -27,45 +27,17 @@ export type VoiceOptions = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION VoiceOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceOptions */
-let _cached_decoder_for_VoiceOptions: $.ASN1Decoder<VoiceOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceOptions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_VoiceOptions */
-/**
- * @summary Decodes an ASN.1 element into a(n) VoiceOptions
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {VoiceOptions} The decoded data structure.
- */
-export function _decode_VoiceOptions(el: _Element) {
-    if (!_cached_decoder_for_VoiceOptions) {
-        _cached_decoder_for_VoiceOptions = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_VoiceOptions(el);
-}
+export const _decode_VoiceOptions = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_VoiceOptions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceOptions */
-let _cached_encoder_for_VoiceOptions: $.ASN1Encoder<VoiceOptions> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceOptions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_VoiceOptions */
-/**
- * @summary Encodes a(n) VoiceOptions into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VoiceOptions, encoded as an ASN.1 Element.
- */
-export function _encode_VoiceOptions(
-    value: VoiceOptions,
-    elGetter: $.ASN1Encoder<VoiceOptions>
-) {
-    if (!_cached_encoder_for_VoiceOptions) {
-        _cached_encoder_for_VoiceOptions = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_VoiceOptions(value, elGetter);
-}
+export const _encode_VoiceOptions = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_VoiceOptions */
 

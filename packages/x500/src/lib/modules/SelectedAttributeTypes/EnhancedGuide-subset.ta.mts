@@ -71,45 +71,17 @@ export const wholeSubtree: EnhancedGuide_subset = EnhancedGuide_subset_wholeSubt
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnhancedGuide_subset */
-let _cached_decoder_for_EnhancedGuide_subset: $.ASN1Decoder<EnhancedGuide_subset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnhancedGuide_subset */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EnhancedGuide_subset */
-/**
- * @summary Decodes an ASN.1 element into a(n) EnhancedGuide_subset
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EnhancedGuide_subset} The decoded data structure.
- */
-export function _decode_EnhancedGuide_subset(el: _Element) {
-    if (!_cached_decoder_for_EnhancedGuide_subset) {
-        _cached_decoder_for_EnhancedGuide_subset = $._decodeInteger;
-    }
-    return _cached_decoder_for_EnhancedGuide_subset(el);
-}
+export const _decode_EnhancedGuide_subset = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_EnhancedGuide_subset */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnhancedGuide_subset */
-let _cached_encoder_for_EnhancedGuide_subset: $.ASN1Encoder<EnhancedGuide_subset> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnhancedGuide_subset */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EnhancedGuide_subset */
-/**
- * @summary Encodes a(n) EnhancedGuide_subset into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EnhancedGuide_subset, encoded as an ASN.1 Element.
- */
-export function _encode_EnhancedGuide_subset(
-    value: EnhancedGuide_subset,
-    elGetter: $.ASN1Encoder<EnhancedGuide_subset>
-) {
-    if (!_cached_encoder_for_EnhancedGuide_subset) {
-        _cached_encoder_for_EnhancedGuide_subset = $._encodeInteger;
-    }
-    return _cached_encoder_for_EnhancedGuide_subset(value, elGetter);
-}
+export const _encode_EnhancedGuide_subset = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EnhancedGuide_subset */
 

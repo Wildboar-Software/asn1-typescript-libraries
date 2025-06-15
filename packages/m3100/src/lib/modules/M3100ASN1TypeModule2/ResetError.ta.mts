@@ -71,45 +71,17 @@ export const entityInService: ResetError = ResetError_entityInService; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION entityInService */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResetError */
-let _cached_decoder_for_ResetError: $.ASN1Decoder<ResetError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResetError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ResetError */
-/**
- * @summary Decodes an ASN.1 element into a(n) ResetError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ResetError} The decoded data structure.
- */
-export function _decode_ResetError(el: _Element) {
-    if (!_cached_decoder_for_ResetError) {
-        _cached_decoder_for_ResetError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ResetError(el);
-}
+export const _decode_ResetError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ResetError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResetError */
-let _cached_encoder_for_ResetError: $.ASN1Encoder<ResetError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResetError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ResetError */
-/**
- * @summary Encodes a(n) ResetError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResetError, encoded as an ASN.1 Element.
- */
-export function _encode_ResetError(
-    value: ResetError,
-    elGetter: $.ASN1Encoder<ResetError>
-) {
-    if (!_cached_encoder_for_ResetError) {
-        _cached_encoder_for_ResetError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ResetError(value, elGetter);
-}
+export const _encode_ResetError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ResetError */
 

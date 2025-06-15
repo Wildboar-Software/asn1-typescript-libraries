@@ -209,45 +209,17 @@ export const december: number = Period_months_bitMonth_december; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION december */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_months_bitMonth */
-let _cached_decoder_for_Period_months_bitMonth: $.ASN1Decoder<Period_months_bitMonth> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_months_bitMonth */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Period_months_bitMonth */
-/**
- * @summary Decodes an ASN.1 element into a(n) Period_months_bitMonth
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Period_months_bitMonth} The decoded data structure.
- */
-export function _decode_Period_months_bitMonth(el: _Element) {
-    if (!_cached_decoder_for_Period_months_bitMonth) {
-        _cached_decoder_for_Period_months_bitMonth = $._decodeBitString;
-    }
-    return _cached_decoder_for_Period_months_bitMonth(el);
-}
+export const _decode_Period_months_bitMonth = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Period_months_bitMonth */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_months_bitMonth */
-let _cached_encoder_for_Period_months_bitMonth: $.ASN1Encoder<Period_months_bitMonth> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_months_bitMonth */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Period_months_bitMonth */
-/**
- * @summary Encodes a(n) Period_months_bitMonth into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Period_months_bitMonth, encoded as an ASN.1 Element.
- */
-export function _encode_Period_months_bitMonth(
-    value: Period_months_bitMonth,
-    elGetter: $.ASN1Encoder<Period_months_bitMonth>
-) {
-    if (!_cached_encoder_for_Period_months_bitMonth) {
-        _cached_encoder_for_Period_months_bitMonth = $._encodeBitString;
-    }
-    return _cached_encoder_for_Period_months_bitMonth(value, elGetter);
-}
+export const _encode_Period_months_bitMonth = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Period_months_bitMonth */
 

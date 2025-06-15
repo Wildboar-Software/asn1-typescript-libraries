@@ -27,45 +27,17 @@ export type IncompleteCopyField = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION IncompleteCopyField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IncompleteCopyField */
-let _cached_decoder_for_IncompleteCopyField: $.ASN1Decoder<IncompleteCopyField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IncompleteCopyField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IncompleteCopyField */
-/**
- * @summary Decodes an ASN.1 element into a(n) IncompleteCopyField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IncompleteCopyField} The decoded data structure.
- */
-export function _decode_IncompleteCopyField(el: _Element) {
-    if (!_cached_decoder_for_IncompleteCopyField) {
-        _cached_decoder_for_IncompleteCopyField = $._decodeBoolean;
-    }
-    return _cached_decoder_for_IncompleteCopyField(el);
-}
+export const _decode_IncompleteCopyField = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_IncompleteCopyField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IncompleteCopyField */
-let _cached_encoder_for_IncompleteCopyField: $.ASN1Encoder<IncompleteCopyField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IncompleteCopyField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IncompleteCopyField */
-/**
- * @summary Encodes a(n) IncompleteCopyField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IncompleteCopyField, encoded as an ASN.1 Element.
- */
-export function _encode_IncompleteCopyField(
-    value: IncompleteCopyField,
-    elGetter: $.ASN1Encoder<IncompleteCopyField>
-) {
-    if (!_cached_encoder_for_IncompleteCopyField) {
-        _cached_encoder_for_IncompleteCopyField = $._encodeBoolean;
-    }
-    return _cached_encoder_for_IncompleteCopyField(value, elGetter);
-}
+export const _encode_IncompleteCopyField = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IncompleteCopyField */
 

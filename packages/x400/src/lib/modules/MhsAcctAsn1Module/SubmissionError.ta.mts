@@ -213,45 +213,17 @@ export const remote_bind_error: SubmissionError = SubmissionError_remote_bind_er
 /* END_OF_SYMBOL_DEFINITION remote_bind_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionError */
-let _cached_decoder_for_SubmissionError: $.ASN1Decoder<SubmissionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubmissionError */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubmissionError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubmissionError} The decoded data structure.
- */
-export function _decode_SubmissionError(el: _Element) {
-    if (!_cached_decoder_for_SubmissionError) {
-        _cached_decoder_for_SubmissionError = $._decodeInteger;
-    }
-    return _cached_decoder_for_SubmissionError(el);
-}
+export const _decode_SubmissionError = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SubmissionError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionError */
-let _cached_encoder_for_SubmissionError: $.ASN1Encoder<SubmissionError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubmissionError */
-/**
- * @summary Encodes a(n) SubmissionError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubmissionError, encoded as an ASN.1 Element.
- */
-export function _encode_SubmissionError(
-    value: SubmissionError,
-    elGetter: $.ASN1Encoder<SubmissionError>
-) {
-    if (!_cached_encoder_for_SubmissionError) {
-        _cached_encoder_for_SubmissionError = $._encodeInteger;
-    }
-    return _cached_encoder_for_SubmissionError(value, elGetter);
-}
+export const _encode_SubmissionError = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubmissionError */
 

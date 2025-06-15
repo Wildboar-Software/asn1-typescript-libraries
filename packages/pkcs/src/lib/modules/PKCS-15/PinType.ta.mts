@@ -117,45 +117,17 @@ export const iso9564_1: PinType = PinType_iso9564_1; /* SHORT_NAMED_ENUMERATED_V
 /* END_OF_SYMBOL_DEFINITION iso9564_1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PinType */
-let _cached_decoder_for_PinType: $.ASN1Decoder<PinType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PinType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PinType */
-/**
- * @summary Decodes an ASN.1 element into a(n) PinType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PinType} The decoded data structure.
- */
-export function _decode_PinType(el: _Element) {
-    if (!_cached_decoder_for_PinType) {
-        _cached_decoder_for_PinType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PinType(el);
-}
+export const _decode_PinType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PinType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PinType */
-let _cached_encoder_for_PinType: $.ASN1Encoder<PinType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PinType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PinType */
-/**
- * @summary Encodes a(n) PinType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PinType, encoded as an ASN.1 Element.
- */
-export function _encode_PinType(
-    value: PinType,
-    elGetter: $.ASN1Encoder<PinType>
-) {
-    if (!_cached_encoder_for_PinType) {
-        _cached_encoder_for_PinType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PinType(value, elGetter);
-}
+export const _encode_PinType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PinType */
 

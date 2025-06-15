@@ -158,45 +158,17 @@ export const auto_action_event: EntryType = EntryType_auto_action_event; /* SHOR
 /* END_OF_SYMBOL_DEFINITION auto_action_event */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryType */
-let _cached_decoder_for_EntryType: $.ASN1Decoder<EntryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EntryType */
-/**
- * @summary Decodes an ASN.1 element into a(n) EntryType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EntryType} The decoded data structure.
- */
-export function _decode_EntryType(el: _Element) {
-    if (!_cached_decoder_for_EntryType) {
-        _cached_decoder_for_EntryType = $._decodeInteger;
-    }
-    return _cached_decoder_for_EntryType(el);
-}
+export const _decode_EntryType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_EntryType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryType */
-let _cached_encoder_for_EntryType: $.ASN1Encoder<EntryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EntryType */
-/**
- * @summary Encodes a(n) EntryType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EntryType, encoded as an ASN.1 Element.
- */
-export function _encode_EntryType(
-    value: EntryType,
-    elGetter: $.ASN1Encoder<EntryType>
-) {
-    if (!_cached_encoder_for_EntryType) {
-        _cached_encoder_for_EntryType = $._encodeInteger;
-    }
-    return _cached_encoder_for_EntryType(value, elGetter);
-}
+export const _encode_EntryType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EntryType */
 

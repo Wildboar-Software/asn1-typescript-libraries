@@ -186,45 +186,17 @@ export const enabled: Induced =
 /* END_OF_SYMBOL_DEFINITION enabled */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Induced */
-let _cached_decoder_for_Induced: $.ASN1Decoder<Induced> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Induced */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Induced */
-/**
- * @summary Decodes an ASN.1 element into a(n) Induced
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Induced} The decoded data structure.
- */
-export function _decode_Induced(el: _Element) {
-    if (!_cached_decoder_for_Induced) {
-        _cached_decoder_for_Induced = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Induced(el);
-}
+export const _decode_Induced = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Induced */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Induced */
-let _cached_encoder_for_Induced: $.ASN1Encoder<Induced> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Induced */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Induced */
-/**
- * @summary Encodes a(n) Induced into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Induced, encoded as an ASN.1 Element.
- */
-export function _encode_Induced(
-    value: Induced,
-    elGetter: $.ASN1Encoder<Induced>
-) {
-    if (!_cached_encoder_for_Induced) {
-        _cached_encoder_for_Induced = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Induced(value, elGetter);
-}
+export const _encode_Induced = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Induced */
 

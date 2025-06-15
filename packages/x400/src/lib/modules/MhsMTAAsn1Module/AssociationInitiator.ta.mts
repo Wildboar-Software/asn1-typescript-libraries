@@ -63,45 +63,17 @@ export const remote: AssociationInitiator = AssociationInitiator_remote; /* SHOR
 /* END_OF_SYMBOL_DEFINITION remote */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociationInitiator */
-let _cached_decoder_for_AssociationInitiator: $.ASN1Decoder<AssociationInitiator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociationInitiator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AssociationInitiator */
-/**
- * @summary Decodes an ASN.1 element into a(n) AssociationInitiator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AssociationInitiator} The decoded data structure.
- */
-export function _decode_AssociationInitiator(el: _Element) {
-    if (!_cached_decoder_for_AssociationInitiator) {
-        _cached_decoder_for_AssociationInitiator = $._decodeInteger;
-    }
-    return _cached_decoder_for_AssociationInitiator(el);
-}
+export const _decode_AssociationInitiator = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AssociationInitiator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociationInitiator */
-let _cached_encoder_for_AssociationInitiator: $.ASN1Encoder<AssociationInitiator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociationInitiator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AssociationInitiator */
-/**
- * @summary Encodes a(n) AssociationInitiator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AssociationInitiator, encoded as an ASN.1 Element.
- */
-export function _encode_AssociationInitiator(
-    value: AssociationInitiator,
-    elGetter: $.ASN1Encoder<AssociationInitiator>
-) {
-    if (!_cached_encoder_for_AssociationInitiator) {
-        _cached_encoder_for_AssociationInitiator = $._encodeInteger;
-    }
-    return _cached_encoder_for_AssociationInitiator(value, elGetter);
-}
+export const _encode_AssociationInitiator = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AssociationInitiator */
 

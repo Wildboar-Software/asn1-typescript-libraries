@@ -64,45 +64,17 @@ export const acse_service_provider: ABRT_source = ABRT_source_acse_service_provi
 /* END_OF_SYMBOL_DEFINITION acse_service_provider */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ABRT_source */
-let _cached_decoder_for_ABRT_source: $.ASN1Decoder<ABRT_source> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ABRT_source */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ABRT_source */
-/**
- * @summary Decodes an ASN.1 element into a(n) ABRT_source
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ABRT_source} The decoded data structure.
- */
-export function _decode_ABRT_source(el: _Element) {
-  if (!_cached_decoder_for_ABRT_source) {
-    _cached_decoder_for_ABRT_source = $._decodeInteger;
-  }
-  return _cached_decoder_for_ABRT_source(el);
-}
+export const _decode_ABRT_source = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ABRT_source */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ABRT_source */
-let _cached_encoder_for_ABRT_source: $.ASN1Encoder<ABRT_source> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ABRT_source */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ABRT_source */
-/**
- * @summary Encodes a(n) ABRT_source into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ABRT_source, encoded as an ASN.1 Element.
- */
-export function _encode_ABRT_source(
-  value: ABRT_source,
-  elGetter: $.ASN1Encoder<ABRT_source>
-) {
-  if (!_cached_encoder_for_ABRT_source) {
-    _cached_encoder_for_ABRT_source = $._encodeInteger;
-  }
-  return _cached_encoder_for_ABRT_source(value, elGetter);
-}
+export const _encode_ABRT_source = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ABRT_source */
 

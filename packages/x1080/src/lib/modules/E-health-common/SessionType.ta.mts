@@ -27,45 +27,17 @@ export type SessionType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION SessionType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SessionType */
-let _cached_decoder_for_SessionType: $.ASN1Decoder<SessionType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SessionType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SessionType */
-/**
- * @summary Decodes an ASN.1 element into a(n) SessionType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SessionType} The decoded data structure.
- */
-export function _decode_SessionType(el: _Element) {
-    if (!_cached_decoder_for_SessionType) {
-        _cached_decoder_for_SessionType = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_SessionType(el);
-}
+export const _decode_SessionType = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_SessionType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SessionType */
-let _cached_encoder_for_SessionType: $.ASN1Encoder<SessionType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SessionType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SessionType */
-/**
- * @summary Encodes a(n) SessionType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SessionType, encoded as an ASN.1 Element.
- */
-export function _encode_SessionType(
-    value: SessionType,
-    elGetter: $.ASN1Encoder<SessionType>
-) {
-    if (!_cached_encoder_for_SessionType) {
-        _cached_encoder_for_SessionType = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_SessionType(value, elGetter);
-}
+export const _encode_SessionType = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SessionType */
 

@@ -61,45 +61,17 @@ export const message_submission_or_message_delivery: number = Operations_message
 /* END_OF_SYMBOL_DEFINITION message_submission_or_message_delivery */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Operations */
-let _cached_decoder_for_Operations: $.ASN1Decoder<Operations> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Operations */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Operations */
-/**
- * @summary Decodes an ASN.1 element into a(n) Operations
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Operations} The decoded data structure.
- */
-export function _decode_Operations(el: _Element) {
-    if (!_cached_decoder_for_Operations) {
-        _cached_decoder_for_Operations = $._decodeBitString;
-    }
-    return _cached_decoder_for_Operations(el);
-}
+export const _decode_Operations = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Operations */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Operations */
-let _cached_encoder_for_Operations: $.ASN1Encoder<Operations> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Operations */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Operations */
-/**
- * @summary Encodes a(n) Operations into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Operations, encoded as an ASN.1 Element.
- */
-export function _encode_Operations(
-    value: Operations,
-    elGetter: $.ASN1Encoder<Operations>
-) {
-    if (!_cached_encoder_for_Operations) {
-        _cached_encoder_for_Operations = $._encodeBitString;
-    }
-    return _cached_encoder_for_Operations(value, elGetter);
-}
+export const _encode_Operations = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Operations */
 

@@ -27,45 +27,17 @@ export type CloseOutNarr = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION CloseOutNarr */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CloseOutNarr */
-let _cached_decoder_for_CloseOutNarr: $.ASN1Decoder<CloseOutNarr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CloseOutNarr */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CloseOutNarr */
-/**
- * @summary Decodes an ASN.1 element into a(n) CloseOutNarr
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CloseOutNarr} The decoded data structure.
- */
-export function _decode_CloseOutNarr(el: _Element) {
-    if (!_cached_decoder_for_CloseOutNarr) {
-        _cached_decoder_for_CloseOutNarr = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_CloseOutNarr(el);
-}
+export const _decode_CloseOutNarr = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_CloseOutNarr */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CloseOutNarr */
-let _cached_encoder_for_CloseOutNarr: $.ASN1Encoder<CloseOutNarr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CloseOutNarr */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CloseOutNarr */
-/**
- * @summary Encodes a(n) CloseOutNarr into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CloseOutNarr, encoded as an ASN.1 Element.
- */
-export function _encode_CloseOutNarr(
-    value: CloseOutNarr,
-    elGetter: $.ASN1Encoder<CloseOutNarr>
-) {
-    if (!_cached_encoder_for_CloseOutNarr) {
-        _cached_encoder_for_CloseOutNarr = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_CloseOutNarr(value, elGetter);
-}
+export const _encode_CloseOutNarr = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CloseOutNarr */
 

@@ -27,45 +27,17 @@ export type SubjectField = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION SubjectField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectField */
-let _cached_decoder_for_SubjectField: $.ASN1Decoder<SubjectField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubjectField */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubjectField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubjectField} The decoded data structure.
- */
-export function _decode_SubjectField(el: _Element) {
-    if (!_cached_decoder_for_SubjectField) {
-        _cached_decoder_for_SubjectField = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_SubjectField(el);
-}
+export const _decode_SubjectField = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_SubjectField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectField */
-let _cached_encoder_for_SubjectField: $.ASN1Encoder<SubjectField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubjectField */
-/**
- * @summary Encodes a(n) SubjectField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubjectField, encoded as an ASN.1 Element.
- */
-export function _encode_SubjectField(
-    value: SubjectField,
-    elGetter: $.ASN1Encoder<SubjectField>
-) {
-    if (!_cached_encoder_for_SubjectField) {
-        _cached_encoder_for_SubjectField = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_SubjectField(value, elGetter);
-}
+export const _encode_SubjectField = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubjectField */
 

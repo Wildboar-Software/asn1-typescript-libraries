@@ -60,45 +60,17 @@ export const non_repudiation: number = EDIReceptionSecurity_non_repudiation; /* 
 /* END_OF_SYMBOL_DEFINITION non_repudiation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIReceptionSecurity */
-let _cached_decoder_for_EDIReceptionSecurity: $.ASN1Decoder<EDIReceptionSecurity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIReceptionSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDIReceptionSecurity */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDIReceptionSecurity
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDIReceptionSecurity} The decoded data structure.
- */
-export function _decode_EDIReceptionSecurity(el: _Element) {
-    if (!_cached_decoder_for_EDIReceptionSecurity) {
-        _cached_decoder_for_EDIReceptionSecurity = $._decodeBitString;
-    }
-    return _cached_decoder_for_EDIReceptionSecurity(el);
-}
+export const _decode_EDIReceptionSecurity = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_EDIReceptionSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIReceptionSecurity */
-let _cached_encoder_for_EDIReceptionSecurity: $.ASN1Encoder<EDIReceptionSecurity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIReceptionSecurity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDIReceptionSecurity */
-/**
- * @summary Encodes a(n) EDIReceptionSecurity into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDIReceptionSecurity, encoded as an ASN.1 Element.
- */
-export function _encode_EDIReceptionSecurity(
-    value: EDIReceptionSecurity,
-    elGetter: $.ASN1Encoder<EDIReceptionSecurity>
-) {
-    if (!_cached_encoder_for_EDIReceptionSecurity) {
-        _cached_encoder_for_EDIReceptionSecurity = $._encodeBitString;
-    }
-    return _cached_encoder_for_EDIReceptionSecurity(value, elGetter);
-}
+export const _encode_EDIReceptionSecurity = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDIReceptionSecurity */
 

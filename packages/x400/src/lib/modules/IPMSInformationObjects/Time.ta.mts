@@ -27,42 +27,17 @@ export type Time = UTCTime; // UTCTime
 /* END_OF_SYMBOL_DEFINITION Time */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Time */
-let _cached_decoder_for_Time: $.ASN1Decoder<Time> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Time */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Time */
-/**
- * @summary Decodes an ASN.1 element into a(n) Time
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Time} The decoded data structure.
- */
-export function _decode_Time(el: _Element) {
-    if (!_cached_decoder_for_Time) {
-        _cached_decoder_for_Time = $._decodeUTCTime;
-    }
-    return _cached_decoder_for_Time(el);
-}
+export const _decode_Time = $._decodeUTCTime;
 /* END_OF_SYMBOL_DEFINITION _decode_Time */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Time */
-let _cached_encoder_for_Time: $.ASN1Encoder<Time> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Time */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Time */
-/**
- * @summary Encodes a(n) Time into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Time, encoded as an ASN.1 Element.
- */
-export function _encode_Time(value: Time, elGetter: $.ASN1Encoder<Time>) {
-    if (!_cached_encoder_for_Time) {
-        _cached_encoder_for_Time = $._encodeUTCTime;
-    }
-    return _cached_encoder_for_Time(value, elGetter);
-}
+export const _encode_Time = $._encodeUTCTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Time */
 

@@ -97,45 +97,17 @@ export const remote: RequestSource =
 /* END_OF_SYMBOL_DEFINITION remote */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestSource */
-let _cached_decoder_for_RequestSource: $.ASN1Decoder<RequestSource> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestSource */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RequestSource */
-/**
- * @summary Decodes an ASN.1 element into a(n) RequestSource
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RequestSource} The decoded data structure.
- */
-export function _decode_RequestSource(el: _Element) {
-    if (!_cached_decoder_for_RequestSource) {
-        _cached_decoder_for_RequestSource = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_RequestSource(el);
-}
+export const _decode_RequestSource = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_RequestSource */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestSource */
-let _cached_encoder_for_RequestSource: $.ASN1Encoder<RequestSource> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestSource */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RequestSource */
-/**
- * @summary Encodes a(n) RequestSource into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RequestSource, encoded as an ASN.1 Element.
- */
-export function _encode_RequestSource(
-    value: RequestSource,
-    elGetter: $.ASN1Encoder<RequestSource>
-) {
-    if (!_cached_encoder_for_RequestSource) {
-        _cached_encoder_for_RequestSource = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_RequestSource(value, elGetter);
-}
+export const _encode_RequestSource = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RequestSource */
 

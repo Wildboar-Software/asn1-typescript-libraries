@@ -27,45 +27,17 @@ export type GdmoObjectClass = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION GdmoObjectClass */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GdmoObjectClass */
-let _cached_decoder_for_GdmoObjectClass: $.ASN1Decoder<GdmoObjectClass> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GdmoObjectClass */
 
 /* START_OF_SYMBOL_DEFINITION _decode_GdmoObjectClass */
-/**
- * @summary Decodes an ASN.1 element into a(n) GdmoObjectClass
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {GdmoObjectClass} The decoded data structure.
- */
-export function _decode_GdmoObjectClass(el: _Element) {
-    if (!_cached_decoder_for_GdmoObjectClass) {
-        _cached_decoder_for_GdmoObjectClass = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_GdmoObjectClass(el);
-}
+export const _decode_GdmoObjectClass = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_GdmoObjectClass */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GdmoObjectClass */
-let _cached_encoder_for_GdmoObjectClass: $.ASN1Encoder<GdmoObjectClass> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GdmoObjectClass */
 
 /* START_OF_SYMBOL_DEFINITION _encode_GdmoObjectClass */
-/**
- * @summary Encodes a(n) GdmoObjectClass into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GdmoObjectClass, encoded as an ASN.1 Element.
- */
-export function _encode_GdmoObjectClass(
-    value: GdmoObjectClass,
-    elGetter: $.ASN1Encoder<GdmoObjectClass>
-) {
-    if (!_cached_encoder_for_GdmoObjectClass) {
-        _cached_encoder_for_GdmoObjectClass = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_GdmoObjectClass(value, elGetter);
-}
+export const _encode_GdmoObjectClass = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_GdmoObjectClass */
 

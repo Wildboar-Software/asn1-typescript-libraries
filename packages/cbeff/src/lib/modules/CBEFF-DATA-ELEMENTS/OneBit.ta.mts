@@ -27,42 +27,17 @@ export type OneBit = INTEGER;
 /* END_OF_SYMBOL_DEFINITION OneBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OneBit */
-let _cached_decoder_for_OneBit: $.ASN1Decoder<OneBit> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OneBit */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OneBit */
-/**
- * @summary Decodes an ASN.1 element into a(n) OneBit
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OneBit} The decoded data structure.
- */
-export function _decode_OneBit(el: _Element) {
-  if (!_cached_decoder_for_OneBit) {
-    _cached_decoder_for_OneBit = $._decodeInteger;
-  }
-  return _cached_decoder_for_OneBit(el);
-}
+export const _decode_OneBit = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_OneBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OneBit */
-let _cached_encoder_for_OneBit: $.ASN1Encoder<OneBit> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OneBit */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OneBit */
-/**
- * @summary Encodes a(n) OneBit into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OneBit, encoded as an ASN.1 Element.
- */
-export function _encode_OneBit(value: OneBit, elGetter: $.ASN1Encoder<OneBit>) {
-  if (!_cached_encoder_for_OneBit) {
-    _cached_encoder_for_OneBit = $._encodeInteger;
-  }
-  return _cached_encoder_for_OneBit(value, elGetter);
-}
+export const _encode_OneBit = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OneBit */
 

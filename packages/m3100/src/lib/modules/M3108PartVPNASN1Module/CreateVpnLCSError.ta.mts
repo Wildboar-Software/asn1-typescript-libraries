@@ -247,45 +247,17 @@ export const invalidTerminationDate: CreateVpnLCSError = CreateVpnLCSError_inval
 /* END_OF_SYMBOL_DEFINITION invalidTerminationDate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateVpnLCSError */
-let _cached_decoder_for_CreateVpnLCSError: $.ASN1Decoder<CreateVpnLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateVpnLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CreateVpnLCSError */
-/**
- * @summary Decodes an ASN.1 element into a(n) CreateVpnLCSError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CreateVpnLCSError} The decoded data structure.
- */
-export function _decode_CreateVpnLCSError(el: _Element) {
-    if (!_cached_decoder_for_CreateVpnLCSError) {
-        _cached_decoder_for_CreateVpnLCSError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CreateVpnLCSError(el);
-}
+export const _decode_CreateVpnLCSError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CreateVpnLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateVpnLCSError */
-let _cached_encoder_for_CreateVpnLCSError: $.ASN1Encoder<CreateVpnLCSError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateVpnLCSError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CreateVpnLCSError */
-/**
- * @summary Encodes a(n) CreateVpnLCSError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CreateVpnLCSError, encoded as an ASN.1 Element.
- */
-export function _encode_CreateVpnLCSError(
-    value: CreateVpnLCSError,
-    elGetter: $.ASN1Encoder<CreateVpnLCSError>
-) {
-    if (!_cached_encoder_for_CreateVpnLCSError) {
-        _cached_encoder_for_CreateVpnLCSError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CreateVpnLCSError(value, elGetter);
-}
+export const _encode_CreateVpnLCSError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CreateVpnLCSError */
 

@@ -72,45 +72,17 @@ export const result_requested: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confir
 /* END_OF_SYMBOL_DEFINITION result_requested */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_C_NOCHANGE_RI_confirmation */
-let _cached_decoder_for_C_NOCHANGE_RI_confirmation: $.ASN1Decoder<C_NOCHANGE_RI_confirmation> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_C_NOCHANGE_RI_confirmation */
 
 /* START_OF_SYMBOL_DEFINITION _decode_C_NOCHANGE_RI_confirmation */
-/**
- * @summary Decodes an ASN.1 element into a(n) C_NOCHANGE_RI_confirmation
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {C_NOCHANGE_RI_confirmation} The decoded data structure.
- */
-export function _decode_C_NOCHANGE_RI_confirmation(el: _Element) {
-  if (!_cached_decoder_for_C_NOCHANGE_RI_confirmation) {
-    _cached_decoder_for_C_NOCHANGE_RI_confirmation = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_C_NOCHANGE_RI_confirmation(el);
-}
+export const _decode_C_NOCHANGE_RI_confirmation = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_C_NOCHANGE_RI_confirmation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_C_NOCHANGE_RI_confirmation */
-let _cached_encoder_for_C_NOCHANGE_RI_confirmation: $.ASN1Encoder<C_NOCHANGE_RI_confirmation> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_C_NOCHANGE_RI_confirmation */
 
 /* START_OF_SYMBOL_DEFINITION _encode_C_NOCHANGE_RI_confirmation */
-/**
- * @summary Encodes a(n) C_NOCHANGE_RI_confirmation into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The C_NOCHANGE_RI_confirmation, encoded as an ASN.1 Element.
- */
-export function _encode_C_NOCHANGE_RI_confirmation(
-  value: C_NOCHANGE_RI_confirmation,
-  elGetter: $.ASN1Encoder<C_NOCHANGE_RI_confirmation>
-) {
-  if (!_cached_encoder_for_C_NOCHANGE_RI_confirmation) {
-    _cached_encoder_for_C_NOCHANGE_RI_confirmation = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_C_NOCHANGE_RI_confirmation(value, elGetter);
-}
+export const _encode_C_NOCHANGE_RI_confirmation = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_C_NOCHANGE_RI_confirmation */
 

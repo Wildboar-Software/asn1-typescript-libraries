@@ -145,45 +145,17 @@ export const noConnect: ConfiguredConnectivity =
 /* END_OF_SYMBOL_DEFINITION noConnect */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConfiguredConnectivity */
-let _cached_decoder_for_ConfiguredConnectivity: $.ASN1Decoder<ConfiguredConnectivity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConfiguredConnectivity */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ConfiguredConnectivity */
-/**
- * @summary Decodes an ASN.1 element into a(n) ConfiguredConnectivity
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ConfiguredConnectivity} The decoded data structure.
- */
-export function _decode_ConfiguredConnectivity(el: _Element) {
-    if (!_cached_decoder_for_ConfiguredConnectivity) {
-        _cached_decoder_for_ConfiguredConnectivity = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ConfiguredConnectivity(el);
-}
+export const _decode_ConfiguredConnectivity = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ConfiguredConnectivity */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConfiguredConnectivity */
-let _cached_encoder_for_ConfiguredConnectivity: $.ASN1Encoder<ConfiguredConnectivity> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConfiguredConnectivity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ConfiguredConnectivity */
-/**
- * @summary Encodes a(n) ConfiguredConnectivity into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ConfiguredConnectivity, encoded as an ASN.1 Element.
- */
-export function _encode_ConfiguredConnectivity(
-    value: ConfiguredConnectivity,
-    elGetter: $.ASN1Encoder<ConfiguredConnectivity>
-) {
-    if (!_cached_encoder_for_ConfiguredConnectivity) {
-        _cached_encoder_for_ConfiguredConnectivity = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ConfiguredConnectivity(value, elGetter);
-}
+export const _encode_ConfiguredConnectivity = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ConfiguredConnectivity */
 

@@ -27,45 +27,17 @@ export type EDIBodyPart = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION EDIBodyPart */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIBodyPart */
-let _cached_decoder_for_EDIBodyPart: $.ASN1Decoder<EDIBodyPart> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIBodyPart */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDIBodyPart */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDIBodyPart
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDIBodyPart} The decoded data structure.
- */
-export function _decode_EDIBodyPart(el: _Element) {
-    if (!_cached_decoder_for_EDIBodyPart) {
-        _cached_decoder_for_EDIBodyPart = $._decodeOctetString;
-    }
-    return _cached_decoder_for_EDIBodyPart(el);
-}
+export const _decode_EDIBodyPart = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_EDIBodyPart */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIBodyPart */
-let _cached_encoder_for_EDIBodyPart: $.ASN1Encoder<EDIBodyPart> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIBodyPart */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDIBodyPart */
-/**
- * @summary Encodes a(n) EDIBodyPart into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDIBodyPart, encoded as an ASN.1 Element.
- */
-export function _encode_EDIBodyPart(
-    value: EDIBodyPart,
-    elGetter: $.ASN1Encoder<EDIBodyPart>
-) {
-    if (!_cached_encoder_for_EDIBodyPart) {
-        _cached_encoder_for_EDIBodyPart = $._encodeOctetString;
-    }
-    return _cached_encoder_for_EDIBodyPart(value, elGetter);
-}
+export const _encode_EDIBodyPart = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDIBodyPart */
 

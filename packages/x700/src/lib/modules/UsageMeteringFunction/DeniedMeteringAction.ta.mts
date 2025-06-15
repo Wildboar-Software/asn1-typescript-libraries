@@ -121,45 +121,17 @@ export const canNotResume: DeniedMeteringAction =
 /* END_OF_SYMBOL_DEFINITION canNotResume */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeniedMeteringAction */
-let _cached_decoder_for_DeniedMeteringAction: $.ASN1Decoder<DeniedMeteringAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeniedMeteringAction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeniedMeteringAction */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeniedMeteringAction
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeniedMeteringAction} The decoded data structure.
- */
-export function _decode_DeniedMeteringAction(el: _Element) {
-    if (!_cached_decoder_for_DeniedMeteringAction) {
-        _cached_decoder_for_DeniedMeteringAction = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DeniedMeteringAction(el);
-}
+export const _decode_DeniedMeteringAction = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DeniedMeteringAction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeniedMeteringAction */
-let _cached_encoder_for_DeniedMeteringAction: $.ASN1Encoder<DeniedMeteringAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeniedMeteringAction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeniedMeteringAction */
-/**
- * @summary Encodes a(n) DeniedMeteringAction into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeniedMeteringAction, encoded as an ASN.1 Element.
- */
-export function _encode_DeniedMeteringAction(
-    value: DeniedMeteringAction,
-    elGetter: $.ASN1Encoder<DeniedMeteringAction>
-) {
-    if (!_cached_encoder_for_DeniedMeteringAction) {
-        _cached_encoder_for_DeniedMeteringAction = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DeniedMeteringAction(value, elGetter);
-}
+export const _encode_DeniedMeteringAction = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeniedMeteringAction */
 

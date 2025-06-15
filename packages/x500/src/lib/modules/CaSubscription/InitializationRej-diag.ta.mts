@@ -43,45 +43,17 @@ export const unsupportedVersion: InitializationRej_diag = InitializationRej_diag
 /* END_OF_SYMBOL_DEFINITION unsupportedVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationRej_diag */
-let _cached_decoder_for_InitializationRej_diag: $.ASN1Decoder<InitializationRej_diag> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationRej_diag */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InitializationRej_diag */
-/**
- * @summary Decodes an ASN.1 element into a(n) InitializationRej_diag
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InitializationRej_diag} The decoded data structure.
- */
-export function _decode_InitializationRej_diag(el: _Element) {
-    if (!_cached_decoder_for_InitializationRej_diag) {
-        _cached_decoder_for_InitializationRej_diag = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_InitializationRej_diag(el);
-}
+export const _decode_InitializationRej_diag = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_InitializationRej_diag */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationRej_diag */
-let _cached_encoder_for_InitializationRej_diag: $.ASN1Encoder<InitializationRej_diag> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationRej_diag */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InitializationRej_diag */
-/**
- * @summary Encodes a(n) InitializationRej_diag into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitializationRej_diag, encoded as an ASN.1 Element.
- */
-export function _encode_InitializationRej_diag(
-    value: InitializationRej_diag,
-    elGetter: $.ASN1Encoder<InitializationRej_diag>
-) {
-    if (!_cached_encoder_for_InitializationRej_diag) {
-        _cached_encoder_for_InitializationRej_diag = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_InitializationRej_diag(value, elGetter);
-}
+export const _encode_InitializationRej_diag = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InitializationRej_diag */
 

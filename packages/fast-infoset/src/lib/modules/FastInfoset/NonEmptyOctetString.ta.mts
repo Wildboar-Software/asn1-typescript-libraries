@@ -27,45 +27,17 @@ export type NonEmptyOctetString = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION NonEmptyOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonEmptyOctetString */
-let _cached_decoder_for_NonEmptyOctetString: $.ASN1Decoder<NonEmptyOctetString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonEmptyOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NonEmptyOctetString */
-/**
- * @summary Decodes an ASN.1 element into a(n) NonEmptyOctetString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NonEmptyOctetString} The decoded data structure.
- */
-export function _decode_NonEmptyOctetString(el: _Element) {
-  if (!_cached_decoder_for_NonEmptyOctetString) {
-    _cached_decoder_for_NonEmptyOctetString = $._decodeOctetString;
-  }
-  return _cached_decoder_for_NonEmptyOctetString(el);
-}
+export const _decode_NonEmptyOctetString = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_NonEmptyOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonEmptyOctetString */
-let _cached_encoder_for_NonEmptyOctetString: $.ASN1Encoder<NonEmptyOctetString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonEmptyOctetString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NonEmptyOctetString */
-/**
- * @summary Encodes a(n) NonEmptyOctetString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NonEmptyOctetString, encoded as an ASN.1 Element.
- */
-export function _encode_NonEmptyOctetString(
-  value: NonEmptyOctetString,
-  elGetter: $.ASN1Encoder<NonEmptyOctetString>
-) {
-  if (!_cached_encoder_for_NonEmptyOctetString) {
-    _cached_encoder_for_NonEmptyOctetString = $._encodeOctetString;
-  }
-  return _cached_encoder_for_NonEmptyOctetString(value, elGetter);
-}
+export const _encode_NonEmptyOctetString = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NonEmptyOctetString */
 

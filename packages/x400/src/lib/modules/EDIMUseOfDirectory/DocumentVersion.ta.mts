@@ -27,45 +27,17 @@ export type DocumentVersion = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION DocumentVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentVersion */
-let _cached_decoder_for_DocumentVersion: $.ASN1Decoder<DocumentVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentVersion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DocumentVersion */
-/**
- * @summary Decodes an ASN.1 element into a(n) DocumentVersion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DocumentVersion} The decoded data structure.
- */
-export function _decode_DocumentVersion(el: _Element) {
-    if (!_cached_decoder_for_DocumentVersion) {
-        _cached_decoder_for_DocumentVersion = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_DocumentVersion(el);
-}
+export const _decode_DocumentVersion = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_DocumentVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentVersion */
-let _cached_encoder_for_DocumentVersion: $.ASN1Encoder<DocumentVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentVersion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DocumentVersion */
-/**
- * @summary Encodes a(n) DocumentVersion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DocumentVersion, encoded as an ASN.1 Element.
- */
-export function _encode_DocumentVersion(
-    value: DocumentVersion,
-    elGetter: $.ASN1Encoder<DocumentVersion>
-) {
-    if (!_cached_encoder_for_DocumentVersion) {
-        _cached_encoder_for_DocumentVersion = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_DocumentVersion(value, elGetter);
-}
+export const _encode_DocumentVersion = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DocumentVersion */
 

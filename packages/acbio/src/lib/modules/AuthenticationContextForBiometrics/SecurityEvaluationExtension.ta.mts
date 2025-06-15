@@ -27,45 +27,17 @@ export type SecurityEvaluationExtension = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION SecurityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEvaluationExtension */
-let _cached_decoder_for_SecurityEvaluationExtension: $.ASN1Decoder<SecurityEvaluationExtension> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SecurityEvaluationExtension */
-/**
- * @summary Decodes an ASN.1 element into a(n) SecurityEvaluationExtension
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SecurityEvaluationExtension} The decoded data structure.
- */
-export function _decode_SecurityEvaluationExtension(el: _Element) {
-    if (!_cached_decoder_for_SecurityEvaluationExtension) {
-        _cached_decoder_for_SecurityEvaluationExtension = $._decodeOctetString;
-    }
-    return _cached_decoder_for_SecurityEvaluationExtension(el);
-}
+export const _decode_SecurityEvaluationExtension = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_SecurityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEvaluationExtension */
-let _cached_encoder_for_SecurityEvaluationExtension: $.ASN1Encoder<SecurityEvaluationExtension> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEvaluationExtension */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SecurityEvaluationExtension */
-/**
- * @summary Encodes a(n) SecurityEvaluationExtension into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SecurityEvaluationExtension, encoded as an ASN.1 Element.
- */
-export function _encode_SecurityEvaluationExtension(
-    value: SecurityEvaluationExtension,
-    elGetter: $.ASN1Encoder<SecurityEvaluationExtension>
-) {
-    if (!_cached_encoder_for_SecurityEvaluationExtension) {
-        _cached_encoder_for_SecurityEvaluationExtension = $._encodeOctetString;
-    }
-    return _cached_encoder_for_SecurityEvaluationExtension(value, elGetter);
-}
+export const _encode_SecurityEvaluationExtension = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SecurityEvaluationExtension */
 

@@ -121,45 +121,17 @@ export const violation_detected: ViolationStatus =
 /* END_OF_SYMBOL_DEFINITION violation_detected */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ViolationStatus */
-let _cached_decoder_for_ViolationStatus: $.ASN1Decoder<ViolationStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ViolationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ViolationStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) ViolationStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ViolationStatus} The decoded data structure.
- */
-export function _decode_ViolationStatus(el: _Element) {
-    if (!_cached_decoder_for_ViolationStatus) {
-        _cached_decoder_for_ViolationStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ViolationStatus(el);
-}
+export const _decode_ViolationStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ViolationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ViolationStatus */
-let _cached_encoder_for_ViolationStatus: $.ASN1Encoder<ViolationStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ViolationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ViolationStatus */
-/**
- * @summary Encodes a(n) ViolationStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ViolationStatus, encoded as an ASN.1 Element.
- */
-export function _encode_ViolationStatus(
-    value: ViolationStatus,
-    elGetter: $.ASN1Encoder<ViolationStatus>
-) {
-    if (!_cached_encoder_for_ViolationStatus) {
-        _cached_encoder_for_ViolationStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ViolationStatus(value, elGetter);
-}
+export const _encode_ViolationStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ViolationStatus */
 

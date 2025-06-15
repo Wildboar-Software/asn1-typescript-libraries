@@ -100,45 +100,17 @@ export const extension: ExplicitRelationship = ExplicitRelationship_extension; /
 /* END_OF_SYMBOL_DEFINITION extension */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitRelationship */
-let _cached_decoder_for_ExplicitRelationship: $.ASN1Decoder<ExplicitRelationship> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitRelationship */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExplicitRelationship */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExplicitRelationship
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExplicitRelationship} The decoded data structure.
- */
-export function _decode_ExplicitRelationship(el: _Element) {
-    if (!_cached_decoder_for_ExplicitRelationship) {
-        _cached_decoder_for_ExplicitRelationship = $._decodeInteger;
-    }
-    return _cached_decoder_for_ExplicitRelationship(el);
-}
+export const _decode_ExplicitRelationship = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ExplicitRelationship */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitRelationship */
-let _cached_encoder_for_ExplicitRelationship: $.ASN1Encoder<ExplicitRelationship> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitRelationship */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExplicitRelationship */
-/**
- * @summary Encodes a(n) ExplicitRelationship into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExplicitRelationship, encoded as an ASN.1 Element.
- */
-export function _encode_ExplicitRelationship(
-    value: ExplicitRelationship,
-    elGetter: $.ASN1Encoder<ExplicitRelationship>
-) {
-    if (!_cached_encoder_for_ExplicitRelationship) {
-        _cached_encoder_for_ExplicitRelationship = $._encodeInteger;
-    }
-    return _cached_encoder_for_ExplicitRelationship(value, elGetter);
-}
+export const _encode_ExplicitRelationship = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExplicitRelationship */
 

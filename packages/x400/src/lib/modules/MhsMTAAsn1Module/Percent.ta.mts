@@ -27,45 +27,17 @@ export type Percent = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Percent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Percent */
-let _cached_decoder_for_Percent: $.ASN1Decoder<Percent> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Percent */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Percent */
-/**
- * @summary Decodes an ASN.1 element into a(n) Percent
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Percent} The decoded data structure.
- */
-export function _decode_Percent(el: _Element) {
-    if (!_cached_decoder_for_Percent) {
-        _cached_decoder_for_Percent = $._decodeInteger;
-    }
-    return _cached_decoder_for_Percent(el);
-}
+export const _decode_Percent = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Percent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Percent */
-let _cached_encoder_for_Percent: $.ASN1Encoder<Percent> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Percent */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Percent */
-/**
- * @summary Encodes a(n) Percent into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Percent, encoded as an ASN.1 Element.
- */
-export function _encode_Percent(
-    value: Percent,
-    elGetter: $.ASN1Encoder<Percent>
-) {
-    if (!_cached_encoder_for_Percent) {
-        _cached_encoder_for_Percent = $._encodeInteger;
-    }
-    return _cached_encoder_for_Percent(value, elGetter);
-}
+export const _encode_Percent = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Percent */
 

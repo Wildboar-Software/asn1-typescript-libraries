@@ -27,45 +27,17 @@ export type RepairActivityID = INTEGER;
 /* END_OF_SYMBOL_DEFINITION RepairActivityID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepairActivityID */
-let _cached_decoder_for_RepairActivityID: $.ASN1Decoder<RepairActivityID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepairActivityID */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RepairActivityID */
-/**
- * @summary Decodes an ASN.1 element into a(n) RepairActivityID
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RepairActivityID} The decoded data structure.
- */
-export function _decode_RepairActivityID(el: _Element) {
-    if (!_cached_decoder_for_RepairActivityID) {
-        _cached_decoder_for_RepairActivityID = $._decodeInteger;
-    }
-    return _cached_decoder_for_RepairActivityID(el);
-}
+export const _decode_RepairActivityID = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RepairActivityID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepairActivityID */
-let _cached_encoder_for_RepairActivityID: $.ASN1Encoder<RepairActivityID> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepairActivityID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RepairActivityID */
-/**
- * @summary Encodes a(n) RepairActivityID into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RepairActivityID, encoded as an ASN.1 Element.
- */
-export function _encode_RepairActivityID(
-    value: RepairActivityID,
-    elGetter: $.ASN1Encoder<RepairActivityID>
-) {
-    if (!_cached_encoder_for_RepairActivityID) {
-        _cached_encoder_for_RepairActivityID = $._encodeInteger;
-    }
-    return _cached_encoder_for_RepairActivityID(value, elGetter);
-}
+export const _encode_RepairActivityID = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RepairActivityID */
 

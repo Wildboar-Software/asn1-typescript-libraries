@@ -211,45 +211,17 @@ export const activePending: AlarmStatus =
 /* END_OF_SYMBOL_DEFINITION activePending */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmStatus */
-let _cached_decoder_for_AlarmStatus: $.ASN1Decoder<AlarmStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AlarmStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) AlarmStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AlarmStatus} The decoded data structure.
- */
-export function _decode_AlarmStatus(el: _Element) {
-    if (!_cached_decoder_for_AlarmStatus) {
-        _cached_decoder_for_AlarmStatus = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AlarmStatus(el);
-}
+export const _decode_AlarmStatus = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AlarmStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmStatus */
-let _cached_encoder_for_AlarmStatus: $.ASN1Encoder<AlarmStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AlarmStatus */
-/**
- * @summary Encodes a(n) AlarmStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AlarmStatus, encoded as an ASN.1 Element.
- */
-export function _encode_AlarmStatus(
-    value: AlarmStatus,
-    elGetter: $.ASN1Encoder<AlarmStatus>
-) {
-    if (!_cached_encoder_for_AlarmStatus) {
-        _cached_encoder_for_AlarmStatus = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AlarmStatus(value, elGetter);
-}
+export const _encode_AlarmStatus = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AlarmStatus */
 

@@ -63,45 +63,17 @@ export const serviceProviderErrorResponse: ActivateReply_responseCode = Activate
 /* END_OF_SYMBOL_DEFINITION serviceProviderErrorResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivateReply_responseCode */
-let _cached_decoder_for_ActivateReply_responseCode: $.ASN1Decoder<ActivateReply_responseCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivateReply_responseCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ActivateReply_responseCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) ActivateReply_responseCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ActivateReply_responseCode} The decoded data structure.
- */
-export function _decode_ActivateReply_responseCode(el: _Element) {
-    if (!_cached_decoder_for_ActivateReply_responseCode) {
-        _cached_decoder_for_ActivateReply_responseCode = $._decodeInteger;
-    }
-    return _cached_decoder_for_ActivateReply_responseCode(el);
-}
+export const _decode_ActivateReply_responseCode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ActivateReply_responseCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivateReply_responseCode */
-let _cached_encoder_for_ActivateReply_responseCode: $.ASN1Encoder<ActivateReply_responseCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivateReply_responseCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ActivateReply_responseCode */
-/**
- * @summary Encodes a(n) ActivateReply_responseCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActivateReply_responseCode, encoded as an ASN.1 Element.
- */
-export function _encode_ActivateReply_responseCode(
-    value: ActivateReply_responseCode,
-    elGetter: $.ASN1Encoder<ActivateReply_responseCode>
-) {
-    if (!_cached_encoder_for_ActivateReply_responseCode) {
-        _cached_encoder_for_ActivateReply_responseCode = $._encodeInteger;
-    }
-    return _cached_encoder_for_ActivateReply_responseCode(value, elGetter);
-}
+export const _encode_ActivateReply_responseCode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ActivateReply_responseCode */
 

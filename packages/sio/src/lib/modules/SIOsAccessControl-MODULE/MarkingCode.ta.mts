@@ -182,45 +182,17 @@ export const suppressClassName: MarkingCode = MarkingCode_suppressClassName; /* 
 /* END_OF_SYMBOL_DEFINITION suppressClassName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MarkingCode */
-let _cached_decoder_for_MarkingCode: $.ASN1Decoder<MarkingCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MarkingCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MarkingCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) MarkingCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MarkingCode} The decoded data structure.
- */
-export function _decode_MarkingCode(el: _Element) {
-    if (!_cached_decoder_for_MarkingCode) {
-        _cached_decoder_for_MarkingCode = $._decodeInteger;
-    }
-    return _cached_decoder_for_MarkingCode(el);
-}
+export const _decode_MarkingCode = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MarkingCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MarkingCode */
-let _cached_encoder_for_MarkingCode: $.ASN1Encoder<MarkingCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MarkingCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MarkingCode */
-/**
- * @summary Encodes a(n) MarkingCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MarkingCode, encoded as an ASN.1 Element.
- */
-export function _encode_MarkingCode(
-    value: MarkingCode,
-    elGetter: $.ASN1Encoder<MarkingCode>
-) {
-    if (!_cached_encoder_for_MarkingCode) {
-        _cached_encoder_for_MarkingCode = $._encodeInteger;
-    }
-    return _cached_encoder_for_MarkingCode(value, elGetter);
-}
+export const _encode_MarkingCode = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MarkingCode */
 

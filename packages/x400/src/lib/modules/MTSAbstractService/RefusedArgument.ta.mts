@@ -325,45 +325,17 @@ export const permissible_security_context: RefusedArgument = RefusedArgument_per
 /* END_OF_SYMBOL_DEFINITION permissible_security_context */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusedArgument */
-let _cached_decoder_for_RefusedArgument: $.ASN1Decoder<RefusedArgument> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusedArgument */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RefusedArgument */
-/**
- * @summary Decodes an ASN.1 element into a(n) RefusedArgument
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RefusedArgument} The decoded data structure.
- */
-export function _decode_RefusedArgument(el: _Element) {
-    if (!_cached_decoder_for_RefusedArgument) {
-        _cached_decoder_for_RefusedArgument = $._decodeInteger;
-    }
-    return _cached_decoder_for_RefusedArgument(el);
-}
+export const _decode_RefusedArgument = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RefusedArgument */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusedArgument */
-let _cached_encoder_for_RefusedArgument: $.ASN1Encoder<RefusedArgument> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusedArgument */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RefusedArgument */
-/**
- * @summary Encodes a(n) RefusedArgument into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RefusedArgument, encoded as an ASN.1 Element.
- */
-export function _encode_RefusedArgument(
-    value: RefusedArgument,
-    elGetter: $.ASN1Encoder<RefusedArgument>
-) {
-    if (!_cached_encoder_for_RefusedArgument) {
-        _cached_encoder_for_RefusedArgument = $._encodeInteger;
-    }
-    return _cached_encoder_for_RefusedArgument(value, elGetter);
-}
+export const _encode_RefusedArgument = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RefusedArgument */
 

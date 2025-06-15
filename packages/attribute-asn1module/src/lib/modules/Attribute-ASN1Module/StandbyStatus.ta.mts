@@ -90,40 +90,17 @@ const providingService: StandbyStatus = StandbyStatus_providingService; /* SHORT
 /* END_OF_SYMBOL_DEFINITION providingService */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StandbyStatus */
-let _cached_decoder_for_StandbyStatus: $.ASN1Decoder<StandbyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StandbyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_StandbyStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) StandbyStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {StandbyStatus} The decoded data structure.
- */
-export
-function _decode_StandbyStatus (el: _Element) {
-    if (!_cached_decoder_for_StandbyStatus) { _cached_decoder_for_StandbyStatus = $._decodeInteger; }
-    return _cached_decoder_for_StandbyStatus(el);
-}
+export const _decode_StandbyStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_StandbyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StandbyStatus */
-let _cached_encoder_for_StandbyStatus: $.ASN1Encoder<StandbyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StandbyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_StandbyStatus */
-/**
- * @summary Encodes a(n) StandbyStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StandbyStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_StandbyStatus (value: StandbyStatus, elGetter: $.ASN1Encoder<StandbyStatus>) {
-    if (!_cached_encoder_for_StandbyStatus) { _cached_encoder_for_StandbyStatus = $._encodeInteger; }
-    return _cached_encoder_for_StandbyStatus(value, elGetter);
-}
+export const _encode_StandbyStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_StandbyStatus */
 

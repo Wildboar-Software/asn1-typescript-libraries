@@ -27,45 +27,17 @@ export type FourBit = INTEGER;
 /* END_OF_SYMBOL_DEFINITION FourBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FourBit */
-let _cached_decoder_for_FourBit: $.ASN1Decoder<FourBit> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FourBit */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FourBit */
-/**
- * @summary Decodes an ASN.1 element into a(n) FourBit
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FourBit} The decoded data structure.
- */
-export function _decode_FourBit(el: _Element) {
-  if (!_cached_decoder_for_FourBit) {
-    _cached_decoder_for_FourBit = $._decodeInteger;
-  }
-  return _cached_decoder_for_FourBit(el);
-}
+export const _decode_FourBit = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FourBit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FourBit */
-let _cached_encoder_for_FourBit: $.ASN1Encoder<FourBit> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FourBit */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FourBit */
-/**
- * @summary Encodes a(n) FourBit into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FourBit, encoded as an ASN.1 Element.
- */
-export function _encode_FourBit(
-  value: FourBit,
-  elGetter: $.ASN1Encoder<FourBit>
-) {
-  if (!_cached_encoder_for_FourBit) {
-    _cached_encoder_for_FourBit = $._encodeInteger;
-  }
-  return _cached_encoder_for_FourBit(value, elGetter);
-}
+export const _encode_FourBit = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FourBit */
 

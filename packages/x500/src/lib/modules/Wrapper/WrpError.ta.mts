@@ -743,45 +743,17 @@ export const changedKey_out_of_sequence: WrpError = WrpError_changedKey_out_of_s
 /* END_OF_SYMBOL_DEFINITION changedKey_out_of_sequence */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WrpError */
-let _cached_decoder_for_WrpError: $.ASN1Decoder<WrpError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WrpError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_WrpError */
-/**
- * @summary Decodes an ASN.1 element into a(n) WrpError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {WrpError} The decoded data structure.
- */
-export function _decode_WrpError(el: _Element) {
-    if (!_cached_decoder_for_WrpError) {
-        _cached_decoder_for_WrpError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_WrpError(el);
-}
+export const _decode_WrpError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_WrpError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WrpError */
-let _cached_encoder_for_WrpError: $.ASN1Encoder<WrpError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WrpError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_WrpError */
-/**
- * @summary Encodes a(n) WrpError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The WrpError, encoded as an ASN.1 Element.
- */
-export function _encode_WrpError(
-    value: WrpError,
-    elGetter: $.ASN1Encoder<WrpError>
-) {
-    if (!_cached_encoder_for_WrpError) {
-        _cached_encoder_for_WrpError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_WrpError(value, elGetter);
-}
+export const _encode_WrpError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_WrpError */
 

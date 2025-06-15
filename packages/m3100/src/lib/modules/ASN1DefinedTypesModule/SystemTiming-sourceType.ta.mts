@@ -118,45 +118,17 @@ export const slavedTimingTerminationSignal: SystemTiming_sourceType =
 /* END_OF_SYMBOL_DEFINITION slavedTimingTerminationSignal */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemTiming_sourceType */
-let _cached_decoder_for_SystemTiming_sourceType: $.ASN1Decoder<SystemTiming_sourceType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemTiming_sourceType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SystemTiming_sourceType */
-/**
- * @summary Decodes an ASN.1 element into a(n) SystemTiming_sourceType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SystemTiming_sourceType} The decoded data structure.
- */
-export function _decode_SystemTiming_sourceType(el: _Element) {
-    if (!_cached_decoder_for_SystemTiming_sourceType) {
-        _cached_decoder_for_SystemTiming_sourceType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SystemTiming_sourceType(el);
-}
+export const _decode_SystemTiming_sourceType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SystemTiming_sourceType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemTiming_sourceType */
-let _cached_encoder_for_SystemTiming_sourceType: $.ASN1Encoder<SystemTiming_sourceType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemTiming_sourceType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SystemTiming_sourceType */
-/**
- * @summary Encodes a(n) SystemTiming_sourceType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SystemTiming_sourceType, encoded as an ASN.1 Element.
- */
-export function _encode_SystemTiming_sourceType(
-    value: SystemTiming_sourceType,
-    elGetter: $.ASN1Encoder<SystemTiming_sourceType>
-) {
-    if (!_cached_encoder_for_SystemTiming_sourceType) {
-        _cached_encoder_for_SystemTiming_sourceType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SystemTiming_sourceType(value, elGetter);
-}
+export const _encode_SystemTiming_sourceType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SystemTiming_sourceType */
 

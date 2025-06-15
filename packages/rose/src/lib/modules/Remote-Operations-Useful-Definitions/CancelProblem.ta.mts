@@ -91,45 +91,17 @@ export const operationNotCancellable: CancelProblem = CancelProblem_operationNot
 /* END_OF_SYMBOL_DEFINITION operationNotCancellable */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelProblem */
-let _cached_decoder_for_CancelProblem: $.ASN1Decoder<CancelProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CancelProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) CancelProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CancelProblem} The decoded data structure.
- */
-export function _decode_CancelProblem(el: _Element) {
-  if (!_cached_decoder_for_CancelProblem) {
-    _cached_decoder_for_CancelProblem = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_CancelProblem(el);
-}
+export const _decode_CancelProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CancelProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelProblem */
-let _cached_encoder_for_CancelProblem: $.ASN1Encoder<CancelProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CancelProblem */
-/**
- * @summary Encodes a(n) CancelProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CancelProblem, encoded as an ASN.1 Element.
- */
-export function _encode_CancelProblem(
-  value: CancelProblem,
-  elGetter: $.ASN1Encoder<CancelProblem>
-) {
-  if (!_cached_encoder_for_CancelProblem) {
-    _cached_encoder_for_CancelProblem = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_CancelProblem(value, elGetter);
-}
+export const _encode_CancelProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CancelProblem */
 

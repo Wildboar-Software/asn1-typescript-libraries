@@ -110,42 +110,17 @@ export const smfuNegotiationRefused: Reason = Reason_smfuNegotiationRefused; /* 
 /* END_OF_SYMBOL_DEFINITION smfuNegotiationRefused */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Reason */
-let _cached_decoder_for_Reason: $.ASN1Decoder<Reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Reason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Reason */
-/**
- * @summary Decodes an ASN.1 element into a(n) Reason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Reason} The decoded data structure.
- */
-export function _decode_Reason(el: _Element) {
-    if (!_cached_decoder_for_Reason) {
-        _cached_decoder_for_Reason = $._decodeInteger;
-    }
-    return _cached_decoder_for_Reason(el);
-}
+export const _decode_Reason = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Reason */
-let _cached_encoder_for_Reason: $.ASN1Encoder<Reason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Reason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Reason */
-/**
- * @summary Encodes a(n) Reason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Reason, encoded as an ASN.1 Element.
- */
-export function _encode_Reason(value: Reason, elGetter: $.ASN1Encoder<Reason>) {
-    if (!_cached_encoder_for_Reason) {
-        _cached_encoder_for_Reason = $._encodeInteger;
-    }
-    return _cached_encoder_for_Reason(value, elGetter);
-}
+export const _encode_Reason = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Reason */
 

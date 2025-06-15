@@ -76,45 +76,17 @@ export const fn: number = EDINotificationRequests_fn; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION fn */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationRequests */
-let _cached_decoder_for_EDINotificationRequests: $.ASN1Decoder<EDINotificationRequests> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationRequests */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDINotificationRequests */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDINotificationRequests
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDINotificationRequests} The decoded data structure.
- */
-export function _decode_EDINotificationRequests(el: _Element) {
-    if (!_cached_decoder_for_EDINotificationRequests) {
-        _cached_decoder_for_EDINotificationRequests = $._decodeBitString;
-    }
-    return _cached_decoder_for_EDINotificationRequests(el);
-}
+export const _decode_EDINotificationRequests = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_EDINotificationRequests */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationRequests */
-let _cached_encoder_for_EDINotificationRequests: $.ASN1Encoder<EDINotificationRequests> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationRequests */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDINotificationRequests */
-/**
- * @summary Encodes a(n) EDINotificationRequests into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDINotificationRequests, encoded as an ASN.1 Element.
- */
-export function _encode_EDINotificationRequests(
-    value: EDINotificationRequests,
-    elGetter: $.ASN1Encoder<EDINotificationRequests>
-) {
-    if (!_cached_encoder_for_EDINotificationRequests) {
-        _cached_encoder_for_EDINotificationRequests = $._encodeBitString;
-    }
-    return _cached_encoder_for_EDINotificationRequests(value, elGetter);
-}
+export const _encode_EDINotificationRequests = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDINotificationRequests */
 

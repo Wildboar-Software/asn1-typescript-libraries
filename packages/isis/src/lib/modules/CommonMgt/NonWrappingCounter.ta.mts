@@ -27,45 +27,17 @@ export type NonWrappingCounter = INTEGER;
 /* END_OF_SYMBOL_DEFINITION NonWrappingCounter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonWrappingCounter */
-let _cached_decoder_for_NonWrappingCounter: $.ASN1Decoder<NonWrappingCounter> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonWrappingCounter */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NonWrappingCounter */
-/**
- * @summary Decodes an ASN.1 element into a(n) NonWrappingCounter
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NonWrappingCounter} The decoded data structure.
- */
-export function _decode_NonWrappingCounter(el: _Element) {
-  if (!_cached_decoder_for_NonWrappingCounter) {
-    _cached_decoder_for_NonWrappingCounter = $._decodeInteger;
-  }
-  return _cached_decoder_for_NonWrappingCounter(el);
-}
+export const _decode_NonWrappingCounter = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NonWrappingCounter */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonWrappingCounter */
-let _cached_encoder_for_NonWrappingCounter: $.ASN1Encoder<NonWrappingCounter> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonWrappingCounter */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NonWrappingCounter */
-/**
- * @summary Encodes a(n) NonWrappingCounter into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NonWrappingCounter, encoded as an ASN.1 Element.
- */
-export function _encode_NonWrappingCounter(
-  value: NonWrappingCounter,
-  elGetter: $.ASN1Encoder<NonWrappingCounter>
-) {
-  if (!_cached_encoder_for_NonWrappingCounter) {
-    _cached_encoder_for_NonWrappingCounter = $._encodeInteger;
-  }
-  return _cached_encoder_for_NonWrappingCounter(value, elGetter);
-}
+export const _encode_NonWrappingCounter = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NonWrappingCounter */
 

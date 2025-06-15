@@ -102,40 +102,17 @@ const halt: LogFullAction = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE 
 /* END_OF_SYMBOL_DEFINITION halt */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LogFullAction */
-let _cached_decoder_for_LogFullAction: $.ASN1Decoder<LogFullAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LogFullAction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_LogFullAction */
-/**
- * @summary Decodes an ASN.1 element into a(n) LogFullAction
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {LogFullAction} The decoded data structure.
- */
-export
-function _decode_LogFullAction (el: _Element) {
-    if (!_cached_decoder_for_LogFullAction) { _cached_decoder_for_LogFullAction = $._decodeEnumerated; }
-    return _cached_decoder_for_LogFullAction(el);
-}
+export const _decode_LogFullAction = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_LogFullAction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LogFullAction */
-let _cached_encoder_for_LogFullAction: $.ASN1Encoder<LogFullAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LogFullAction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LogFullAction */
-/**
- * @summary Encodes a(n) LogFullAction into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LogFullAction, encoded as an ASN.1 Element.
- */
-export
-function _encode_LogFullAction (value: LogFullAction, elGetter: $.ASN1Encoder<LogFullAction>) {
-    if (!_cached_encoder_for_LogFullAction) { _cached_encoder_for_LogFullAction = $._encodeEnumerated; }
-    return _cached_encoder_for_LogFullAction(value, elGetter);
-}
+export const _encode_LogFullAction = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_LogFullAction */
 

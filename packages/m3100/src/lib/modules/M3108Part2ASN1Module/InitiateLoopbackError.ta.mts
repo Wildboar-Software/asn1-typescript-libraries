@@ -93,45 +93,17 @@ export const loopbackNotSupported: InitiateLoopbackError = InitiateLoopbackError
 /* END_OF_SYMBOL_DEFINITION loopbackNotSupported */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitiateLoopbackError */
-let _cached_decoder_for_InitiateLoopbackError: $.ASN1Decoder<InitiateLoopbackError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitiateLoopbackError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InitiateLoopbackError */
-/**
- * @summary Decodes an ASN.1 element into a(n) InitiateLoopbackError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InitiateLoopbackError} The decoded data structure.
- */
-export function _decode_InitiateLoopbackError(el: _Element) {
-    if (!_cached_decoder_for_InitiateLoopbackError) {
-        _cached_decoder_for_InitiateLoopbackError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_InitiateLoopbackError(el);
-}
+export const _decode_InitiateLoopbackError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_InitiateLoopbackError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitiateLoopbackError */
-let _cached_encoder_for_InitiateLoopbackError: $.ASN1Encoder<InitiateLoopbackError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitiateLoopbackError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InitiateLoopbackError */
-/**
- * @summary Encodes a(n) InitiateLoopbackError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitiateLoopbackError, encoded as an ASN.1 Element.
- */
-export function _encode_InitiateLoopbackError(
-    value: InitiateLoopbackError,
-    elGetter: $.ASN1Encoder<InitiateLoopbackError>
-) {
-    if (!_cached_encoder_for_InitiateLoopbackError) {
-        _cached_encoder_for_InitiateLoopbackError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_InitiateLoopbackError(value, elGetter);
-}
+export const _encode_InitiateLoopbackError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InitiateLoopbackError */
 

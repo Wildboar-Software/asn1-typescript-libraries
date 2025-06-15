@@ -385,45 +385,17 @@ export const controlUnit: number = BioAPI_OPERATIONS_MASK_controlUnit; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION controlUnit */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_OPERATIONS_MASK */
-let _cached_decoder_for_BioAPI_OPERATIONS_MASK: $.ASN1Decoder<BioAPI_OPERATIONS_MASK> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_OPERATIONS_MASK */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_OPERATIONS_MASK */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_OPERATIONS_MASK
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_OPERATIONS_MASK} The decoded data structure.
- */
-export function _decode_BioAPI_OPERATIONS_MASK(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_OPERATIONS_MASK) {
-    _cached_decoder_for_BioAPI_OPERATIONS_MASK = $._decodeBitString;
-  }
-  return _cached_decoder_for_BioAPI_OPERATIONS_MASK(el);
-}
+export const _decode_BioAPI_OPERATIONS_MASK = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_OPERATIONS_MASK */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_OPERATIONS_MASK */
-let _cached_encoder_for_BioAPI_OPERATIONS_MASK: $.ASN1Encoder<BioAPI_OPERATIONS_MASK> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_OPERATIONS_MASK */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_OPERATIONS_MASK */
-/**
- * @summary Encodes a(n) BioAPI_OPERATIONS_MASK into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_OPERATIONS_MASK, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_OPERATIONS_MASK(
-  value: BioAPI_OPERATIONS_MASK,
-  elGetter: $.ASN1Encoder<BioAPI_OPERATIONS_MASK>
-) {
-  if (!_cached_encoder_for_BioAPI_OPERATIONS_MASK) {
-    _cached_encoder_for_BioAPI_OPERATIONS_MASK = $._encodeBitString;
-  }
-  return _cached_encoder_for_BioAPI_OPERATIONS_MASK(value, elGetter);
-}
+export const _encode_BioAPI_OPERATIONS_MASK = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_OPERATIONS_MASK */
 

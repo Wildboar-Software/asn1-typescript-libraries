@@ -59,45 +59,17 @@ export const version2: number = ProtocolVersion_version2; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION version2 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersion */
-let _cached_decoder_for_ProtocolVersion: $.ASN1Decoder<ProtocolVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersion */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProtocolVersion */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProtocolVersion
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProtocolVersion} The decoded data structure.
- */
-export function _decode_ProtocolVersion(el: _Element) {
-  if (!_cached_decoder_for_ProtocolVersion) {
-    _cached_decoder_for_ProtocolVersion = $._decodeBitString;
-  }
-  return _cached_decoder_for_ProtocolVersion(el);
-}
+export const _decode_ProtocolVersion = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ProtocolVersion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersion */
-let _cached_encoder_for_ProtocolVersion: $.ASN1Encoder<ProtocolVersion> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProtocolVersion */
-/**
- * @summary Encodes a(n) ProtocolVersion into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProtocolVersion, encoded as an ASN.1 Element.
- */
-export function _encode_ProtocolVersion(
-  value: ProtocolVersion,
-  elGetter: $.ASN1Encoder<ProtocolVersion>
-) {
-  if (!_cached_encoder_for_ProtocolVersion) {
-    _cached_encoder_for_ProtocolVersion = $._encodeBitString;
-  }
-  return _cached_encoder_for_ProtocolVersion(value, elGetter);
-}
+export const _encode_ProtocolVersion = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProtocolVersion */
 

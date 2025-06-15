@@ -124,45 +124,17 @@ export const individualTimeStamping: TimeStampReportMode =
 /* END_OF_SYMBOL_DEFINITION individualTimeStamping */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeStampReportMode */
-let _cached_decoder_for_TimeStampReportMode: $.ASN1Decoder<TimeStampReportMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeStampReportMode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TimeStampReportMode */
-/**
- * @summary Decodes an ASN.1 element into a(n) TimeStampReportMode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TimeStampReportMode} The decoded data structure.
- */
-export function _decode_TimeStampReportMode(el: _Element) {
-    if (!_cached_decoder_for_TimeStampReportMode) {
-        _cached_decoder_for_TimeStampReportMode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TimeStampReportMode(el);
-}
+export const _decode_TimeStampReportMode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TimeStampReportMode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeStampReportMode */
-let _cached_encoder_for_TimeStampReportMode: $.ASN1Encoder<TimeStampReportMode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeStampReportMode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TimeStampReportMode */
-/**
- * @summary Encodes a(n) TimeStampReportMode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TimeStampReportMode, encoded as an ASN.1 Element.
- */
-export function _encode_TimeStampReportMode(
-    value: TimeStampReportMode,
-    elGetter: $.ASN1Encoder<TimeStampReportMode>
-) {
-    if (!_cached_encoder_for_TimeStampReportMode) {
-        _cached_encoder_for_TimeStampReportMode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TimeStampReportMode(value, elGetter);
-}
+export const _encode_TimeStampReportMode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TimeStampReportMode */
 

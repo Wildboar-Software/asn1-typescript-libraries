@@ -117,45 +117,17 @@ export const inadequate_association_confidentiality: mta_bind_error_ParameterTyp
 /* END_OF_SYMBOL_DEFINITION inadequate_association_confidentiality */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_mta_bind_error_ParameterType */
-let _cached_decoder_for_mta_bind_error_ParameterType: $.ASN1Decoder<mta_bind_error_ParameterType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_mta_bind_error_ParameterType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_mta_bind_error_ParameterType */
-/**
- * @summary Decodes an ASN.1 element into a(n) mta_bind_error_ParameterType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {mta_bind_error_ParameterType} The decoded data structure.
- */
-export function _decode_mta_bind_error_ParameterType(el: _Element) {
-    if (!_cached_decoder_for_mta_bind_error_ParameterType) {
-        _cached_decoder_for_mta_bind_error_ParameterType = $._decodeInteger;
-    }
-    return _cached_decoder_for_mta_bind_error_ParameterType(el);
-}
+export const _decode_mta_bind_error_ParameterType = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_mta_bind_error_ParameterType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_mta_bind_error_ParameterType */
-let _cached_encoder_for_mta_bind_error_ParameterType: $.ASN1Encoder<mta_bind_error_ParameterType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_mta_bind_error_ParameterType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_mta_bind_error_ParameterType */
-/**
- * @summary Encodes a(n) mta_bind_error_ParameterType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The mta_bind_error_ParameterType, encoded as an ASN.1 Element.
- */
-export function _encode_mta_bind_error_ParameterType(
-    value: mta_bind_error_ParameterType,
-    elGetter: $.ASN1Encoder<mta_bind_error_ParameterType>
-) {
-    if (!_cached_encoder_for_mta_bind_error_ParameterType) {
-        _cached_encoder_for_mta_bind_error_ParameterType = $._encodeInteger;
-    }
-    return _cached_encoder_for_mta_bind_error_ParameterType(value, elGetter);
-}
+export const _encode_mta_bind_error_ParameterType = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_mta_bind_error_ParameterType */
 

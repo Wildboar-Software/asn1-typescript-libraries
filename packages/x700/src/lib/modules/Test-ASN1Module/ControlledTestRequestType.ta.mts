@@ -97,45 +97,17 @@ export const related: ControlledTestRequestType =
 /* END_OF_SYMBOL_DEFINITION related */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlledTestRequestType */
-let _cached_decoder_for_ControlledTestRequestType: $.ASN1Decoder<ControlledTestRequestType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlledTestRequestType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ControlledTestRequestType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ControlledTestRequestType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ControlledTestRequestType} The decoded data structure.
- */
-export function _decode_ControlledTestRequestType(el: _Element) {
-    if (!_cached_decoder_for_ControlledTestRequestType) {
-        _cached_decoder_for_ControlledTestRequestType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ControlledTestRequestType(el);
-}
+export const _decode_ControlledTestRequestType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ControlledTestRequestType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlledTestRequestType */
-let _cached_encoder_for_ControlledTestRequestType: $.ASN1Encoder<ControlledTestRequestType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlledTestRequestType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ControlledTestRequestType */
-/**
- * @summary Encodes a(n) ControlledTestRequestType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ControlledTestRequestType, encoded as an ASN.1 Element.
- */
-export function _encode_ControlledTestRequestType(
-    value: ControlledTestRequestType,
-    elGetter: $.ASN1Encoder<ControlledTestRequestType>
-) {
-    if (!_cached_encoder_for_ControlledTestRequestType) {
-        _cached_encoder_for_ControlledTestRequestType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ControlledTestRequestType(value, elGetter);
-}
+export const _encode_ControlledTestRequestType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ControlledTestRequestType */
 

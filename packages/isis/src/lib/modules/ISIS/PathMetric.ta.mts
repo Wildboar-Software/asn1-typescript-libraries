@@ -27,45 +27,17 @@ export type PathMetric = INTEGER;
 /* END_OF_SYMBOL_DEFINITION PathMetric */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PathMetric */
-let _cached_decoder_for_PathMetric: $.ASN1Decoder<PathMetric> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PathMetric */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PathMetric */
-/**
- * @summary Decodes an ASN.1 element into a(n) PathMetric
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PathMetric} The decoded data structure.
- */
-export function _decode_PathMetric(el: _Element) {
-  if (!_cached_decoder_for_PathMetric) {
-    _cached_decoder_for_PathMetric = $._decodeInteger;
-  }
-  return _cached_decoder_for_PathMetric(el);
-}
+export const _decode_PathMetric = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PathMetric */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PathMetric */
-let _cached_encoder_for_PathMetric: $.ASN1Encoder<PathMetric> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PathMetric */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PathMetric */
-/**
- * @summary Encodes a(n) PathMetric into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PathMetric, encoded as an ASN.1 Element.
- */
-export function _encode_PathMetric(
-  value: PathMetric,
-  elGetter: $.ASN1Encoder<PathMetric>
-) {
-  if (!_cached_encoder_for_PathMetric) {
-    _cached_encoder_for_PathMetric = $._encodeInteger;
-  }
-  return _cached_encoder_for_PathMetric(value, elGetter);
-}
+export const _encode_PathMetric = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PathMetric */
 

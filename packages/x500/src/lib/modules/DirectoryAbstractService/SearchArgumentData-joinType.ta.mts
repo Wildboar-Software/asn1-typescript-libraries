@@ -109,45 +109,17 @@ export const fullOuterJoin: SearchArgumentData_joinType =
 /* END_OF_SYMBOL_DEFINITION fullOuterJoin */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData_joinType */
-let _cached_decoder_for_SearchArgumentData_joinType: $.ASN1Decoder<SearchArgumentData_joinType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData_joinType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SearchArgumentData_joinType */
-/**
- * @summary Decodes an ASN.1 element into a(n) SearchArgumentData_joinType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SearchArgumentData_joinType} The decoded data structure.
- */
-export function _decode_SearchArgumentData_joinType(el: _Element) {
-    if (!_cached_decoder_for_SearchArgumentData_joinType) {
-        _cached_decoder_for_SearchArgumentData_joinType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SearchArgumentData_joinType(el);
-}
+export const _decode_SearchArgumentData_joinType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SearchArgumentData_joinType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData_joinType */
-let _cached_encoder_for_SearchArgumentData_joinType: $.ASN1Encoder<SearchArgumentData_joinType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData_joinType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SearchArgumentData_joinType */
-/**
- * @summary Encodes a(n) SearchArgumentData_joinType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SearchArgumentData_joinType, encoded as an ASN.1 Element.
- */
-export function _encode_SearchArgumentData_joinType(
-    value: SearchArgumentData_joinType,
-    elGetter: $.ASN1Encoder<SearchArgumentData_joinType>
-) {
-    if (!_cached_encoder_for_SearchArgumentData_joinType) {
-        _cached_encoder_for_SearchArgumentData_joinType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SearchArgumentData_joinType(value, elGetter);
-}
+export const _encode_SearchArgumentData_joinType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SearchArgumentData_joinType */
 

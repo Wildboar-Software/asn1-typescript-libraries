@@ -1087,45 +1087,17 @@ export const other: CmsErrorCode =
 /* END_OF_SYMBOL_DEFINITION other */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CmsErrorCode */
-let _cached_decoder_for_CmsErrorCode: $.ASN1Decoder<CmsErrorCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CmsErrorCode */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CmsErrorCode */
-/**
- * @summary Decodes an ASN.1 element into a(n) CmsErrorCode
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CmsErrorCode} The decoded data structure.
- */
-export function _decode_CmsErrorCode(el: _Element) {
-    if (!_cached_decoder_for_CmsErrorCode) {
-        _cached_decoder_for_CmsErrorCode = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CmsErrorCode(el);
-}
+export const _decode_CmsErrorCode = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CmsErrorCode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CmsErrorCode */
-let _cached_encoder_for_CmsErrorCode: $.ASN1Encoder<CmsErrorCode> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CmsErrorCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CmsErrorCode */
-/**
- * @summary Encodes a(n) CmsErrorCode into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CmsErrorCode, encoded as an ASN.1 Element.
- */
-export function _encode_CmsErrorCode(
-    value: CmsErrorCode,
-    elGetter: $.ASN1Encoder<CmsErrorCode>
-) {
-    if (!_cached_encoder_for_CmsErrorCode) {
-        _cached_encoder_for_CmsErrorCode = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CmsErrorCode(value, elGetter);
-}
+export const _encode_CmsErrorCode = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CmsErrorCode */
 

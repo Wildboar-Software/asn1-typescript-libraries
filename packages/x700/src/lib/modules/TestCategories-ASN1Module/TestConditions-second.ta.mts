@@ -63,45 +63,17 @@ export const noCustomerOverrideTest: TestConditions_second = TestConditions_seco
 /* END_OF_SYMBOL_DEFINITION noCustomerOverrideTest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestConditions_second */
-let _cached_decoder_for_TestConditions_second: $.ASN1Decoder<TestConditions_second> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestConditions_second */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestConditions_second */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestConditions_second
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestConditions_second} The decoded data structure.
- */
-export function _decode_TestConditions_second(el: _Element) {
-    if (!_cached_decoder_for_TestConditions_second) {
-        _cached_decoder_for_TestConditions_second = $._decodeInteger;
-    }
-    return _cached_decoder_for_TestConditions_second(el);
-}
+export const _decode_TestConditions_second = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TestConditions_second */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestConditions_second */
-let _cached_encoder_for_TestConditions_second: $.ASN1Encoder<TestConditions_second> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestConditions_second */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestConditions_second */
-/**
- * @summary Encodes a(n) TestConditions_second into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestConditions_second, encoded as an ASN.1 Element.
- */
-export function _encode_TestConditions_second(
-    value: TestConditions_second,
-    elGetter: $.ASN1Encoder<TestConditions_second>
-) {
-    if (!_cached_encoder_for_TestConditions_second) {
-        _cached_encoder_for_TestConditions_second = $._encodeInteger;
-    }
-    return _cached_encoder_for_TestConditions_second(value, elGetter);
-}
+export const _encode_TestConditions_second = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestConditions_second */
 

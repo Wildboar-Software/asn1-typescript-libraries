@@ -118,45 +118,17 @@ export const waiting: DatabaseState =
 /* END_OF_SYMBOL_DEFINITION waiting */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DatabaseState */
-let _cached_decoder_for_DatabaseState: $.ASN1Decoder<DatabaseState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DatabaseState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DatabaseState */
-/**
- * @summary Decodes an ASN.1 element into a(n) DatabaseState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DatabaseState} The decoded data structure.
- */
-export function _decode_DatabaseState(el: _Element) {
-  if (!_cached_decoder_for_DatabaseState) {
-    _cached_decoder_for_DatabaseState = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_DatabaseState(el);
-}
+export const _decode_DatabaseState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DatabaseState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DatabaseState */
-let _cached_encoder_for_DatabaseState: $.ASN1Encoder<DatabaseState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DatabaseState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DatabaseState */
-/**
- * @summary Encodes a(n) DatabaseState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DatabaseState, encoded as an ASN.1 Element.
- */
-export function _encode_DatabaseState(
-  value: DatabaseState,
-  elGetter: $.ASN1Encoder<DatabaseState>
-) {
-  if (!_cached_encoder_for_DatabaseState) {
-    _cached_encoder_for_DatabaseState = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_DatabaseState(value, elGetter);
-}
+export const _encode_DatabaseState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DatabaseState */
 

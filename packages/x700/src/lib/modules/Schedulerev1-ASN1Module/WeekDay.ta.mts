@@ -208,45 +208,17 @@ export const saturday: WeekDay =
 /* END_OF_SYMBOL_DEFINITION saturday */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekDay */
-let _cached_decoder_for_WeekDay: $.ASN1Decoder<WeekDay> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekDay */
 
 /* START_OF_SYMBOL_DEFINITION _decode_WeekDay */
-/**
- * @summary Decodes an ASN.1 element into a(n) WeekDay
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {WeekDay} The decoded data structure.
- */
-export function _decode_WeekDay(el: _Element) {
-    if (!_cached_decoder_for_WeekDay) {
-        _cached_decoder_for_WeekDay = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_WeekDay(el);
-}
+export const _decode_WeekDay = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_WeekDay */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekDay */
-let _cached_encoder_for_WeekDay: $.ASN1Encoder<WeekDay> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekDay */
 
 /* START_OF_SYMBOL_DEFINITION _encode_WeekDay */
-/**
- * @summary Encodes a(n) WeekDay into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The WeekDay, encoded as an ASN.1 Element.
- */
-export function _encode_WeekDay(
-    value: WeekDay,
-    elGetter: $.ASN1Encoder<WeekDay>
-) {
-    if (!_cached_encoder_for_WeekDay) {
-        _cached_encoder_for_WeekDay = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_WeekDay(value, elGetter);
-}
+export const _encode_WeekDay = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_WeekDay */
 

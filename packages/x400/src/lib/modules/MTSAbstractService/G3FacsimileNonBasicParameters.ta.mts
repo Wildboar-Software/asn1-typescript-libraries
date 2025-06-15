@@ -426,45 +426,17 @@ export const processable_mode_26: number = G3FacsimileNonBasicParameters_process
 /* END_OF_SYMBOL_DEFINITION processable_mode_26 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_G3FacsimileNonBasicParameters */
-let _cached_decoder_for_G3FacsimileNonBasicParameters: $.ASN1Decoder<G3FacsimileNonBasicParameters> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_G3FacsimileNonBasicParameters */
 
 /* START_OF_SYMBOL_DEFINITION _decode_G3FacsimileNonBasicParameters */
-/**
- * @summary Decodes an ASN.1 element into a(n) G3FacsimileNonBasicParameters
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {G3FacsimileNonBasicParameters} The decoded data structure.
- */
-export function _decode_G3FacsimileNonBasicParameters(el: _Element) {
-    if (!_cached_decoder_for_G3FacsimileNonBasicParameters) {
-        _cached_decoder_for_G3FacsimileNonBasicParameters = $._decodeBitString;
-    }
-    return _cached_decoder_for_G3FacsimileNonBasicParameters(el);
-}
+export const _decode_G3FacsimileNonBasicParameters = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_G3FacsimileNonBasicParameters */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_G3FacsimileNonBasicParameters */
-let _cached_encoder_for_G3FacsimileNonBasicParameters: $.ASN1Encoder<G3FacsimileNonBasicParameters> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_G3FacsimileNonBasicParameters */
 
 /* START_OF_SYMBOL_DEFINITION _encode_G3FacsimileNonBasicParameters */
-/**
- * @summary Encodes a(n) G3FacsimileNonBasicParameters into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The G3FacsimileNonBasicParameters, encoded as an ASN.1 Element.
- */
-export function _encode_G3FacsimileNonBasicParameters(
-    value: G3FacsimileNonBasicParameters,
-    elGetter: $.ASN1Encoder<G3FacsimileNonBasicParameters>
-) {
-    if (!_cached_encoder_for_G3FacsimileNonBasicParameters) {
-        _cached_encoder_for_G3FacsimileNonBasicParameters = $._encodeBitString;
-    }
-    return _cached_encoder_for_G3FacsimileNonBasicParameters(value, elGetter);
-}
+export const _encode_G3FacsimileNonBasicParameters = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_G3FacsimileNonBasicParameters */
 

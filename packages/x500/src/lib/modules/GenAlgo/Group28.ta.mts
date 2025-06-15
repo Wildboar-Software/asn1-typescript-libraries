@@ -17,45 +17,17 @@ export type Group28 = INTEGER;
 /* END_OF_SYMBOL_DEFINITION Group28 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Group28 */
-let _cached_decoder_for_Group28: $.ASN1Decoder<Group28> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Group28 */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Group28 */
-/**
- * @summary Decodes an ASN.1 element into a(n) Group28
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Group28} The decoded data structure.
- */
-export function _decode_Group28(el: _Element) {
-    if (!_cached_decoder_for_Group28) {
-        _cached_decoder_for_Group28 = $._decodeInteger;
-    }
-    return _cached_decoder_for_Group28(el);
-}
+export const _decode_Group28 = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Group28 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Group28 */
-let _cached_encoder_for_Group28: $.ASN1Encoder<Group28> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Group28 */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Group28 */
-/**
- * @summary Encodes a(n) Group28 into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Group28, encoded as an ASN.1 Element.
- */
-export function _encode_Group28(
-    value: Group28,
-    elGetter: $.ASN1Encoder<Group28>
-) {
-    if (!_cached_encoder_for_Group28) {
-        _cached_encoder_for_Group28 = $._encodeInteger;
-    }
-    return _cached_encoder_for_Group28(value, elGetter);
-}
+export const _encode_Group28 = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Group28 */
 

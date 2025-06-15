@@ -92,45 +92,17 @@ export const activityAuthorizationPending: ChangeDeniedReason = ChangeDeniedReas
 /* END_OF_SYMBOL_DEFINITION activityAuthorizationPending */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeDeniedReason */
-let _cached_decoder_for_ChangeDeniedReason: $.ASN1Decoder<ChangeDeniedReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeDeniedReason */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ChangeDeniedReason */
-/**
- * @summary Decodes an ASN.1 element into a(n) ChangeDeniedReason
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ChangeDeniedReason} The decoded data structure.
- */
-export function _decode_ChangeDeniedReason(el: _Element) {
-    if (!_cached_decoder_for_ChangeDeniedReason) {
-        _cached_decoder_for_ChangeDeniedReason = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ChangeDeniedReason(el);
-}
+export const _decode_ChangeDeniedReason = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ChangeDeniedReason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeDeniedReason */
-let _cached_encoder_for_ChangeDeniedReason: $.ASN1Encoder<ChangeDeniedReason> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeDeniedReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ChangeDeniedReason */
-/**
- * @summary Encodes a(n) ChangeDeniedReason into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ChangeDeniedReason, encoded as an ASN.1 Element.
- */
-export function _encode_ChangeDeniedReason(
-    value: ChangeDeniedReason,
-    elGetter: $.ASN1Encoder<ChangeDeniedReason>
-) {
-    if (!_cached_encoder_for_ChangeDeniedReason) {
-        _cached_encoder_for_ChangeDeniedReason = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ChangeDeniedReason(value, elGetter);
-}
+export const _encode_ChangeDeniedReason = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ChangeDeniedReason */
 

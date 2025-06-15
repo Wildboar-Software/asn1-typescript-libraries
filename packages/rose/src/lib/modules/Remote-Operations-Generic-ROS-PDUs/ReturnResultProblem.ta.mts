@@ -83,45 +83,17 @@ export const mistypedResult: ReturnResultProblem = ReturnResultProblem_mistypedR
 /* END_OF_SYMBOL_DEFINITION mistypedResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnResultProblem */
-let _cached_decoder_for_ReturnResultProblem: $.ASN1Decoder<ReturnResultProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnResultProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ReturnResultProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) ReturnResultProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ReturnResultProblem} The decoded data structure.
- */
-export function _decode_ReturnResultProblem(el: _Element) {
-  if (!_cached_decoder_for_ReturnResultProblem) {
-    _cached_decoder_for_ReturnResultProblem = $._decodeInteger;
-  }
-  return _cached_decoder_for_ReturnResultProblem(el);
-}
+export const _decode_ReturnResultProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ReturnResultProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnResultProblem */
-let _cached_encoder_for_ReturnResultProblem: $.ASN1Encoder<ReturnResultProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnResultProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ReturnResultProblem */
-/**
- * @summary Encodes a(n) ReturnResultProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReturnResultProblem, encoded as an ASN.1 Element.
- */
-export function _encode_ReturnResultProblem(
-  value: ReturnResultProblem,
-  elGetter: $.ASN1Encoder<ReturnResultProblem>
-) {
-  if (!_cached_encoder_for_ReturnResultProblem) {
-    _cached_encoder_for_ReturnResultProblem = $._encodeInteger;
-  }
-  return _cached_encoder_for_ReturnResultProblem(value, elGetter);
-}
+export const _encode_ReturnResultProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ReturnResultProblem */
 

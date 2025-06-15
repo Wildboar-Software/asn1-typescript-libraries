@@ -27,45 +27,17 @@ export type ExpiryTimeField = UTCTime; // UTCTime
 /* END_OF_SYMBOL_DEFINITION ExpiryTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiryTimeField */
-let _cached_decoder_for_ExpiryTimeField: $.ASN1Decoder<ExpiryTimeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiryTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExpiryTimeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExpiryTimeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExpiryTimeField} The decoded data structure.
- */
-export function _decode_ExpiryTimeField(el: _Element) {
-    if (!_cached_decoder_for_ExpiryTimeField) {
-        _cached_decoder_for_ExpiryTimeField = $._decodeUTCTime;
-    }
-    return _cached_decoder_for_ExpiryTimeField(el);
-}
+export const _decode_ExpiryTimeField = $._decodeUTCTime;
 /* END_OF_SYMBOL_DEFINITION _decode_ExpiryTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiryTimeField */
-let _cached_encoder_for_ExpiryTimeField: $.ASN1Encoder<ExpiryTimeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiryTimeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExpiryTimeField */
-/**
- * @summary Encodes a(n) ExpiryTimeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExpiryTimeField, encoded as an ASN.1 Element.
- */
-export function _encode_ExpiryTimeField(
-    value: ExpiryTimeField,
-    elGetter: $.ASN1Encoder<ExpiryTimeField>
-) {
-    if (!_cached_encoder_for_ExpiryTimeField) {
-        _cached_encoder_for_ExpiryTimeField = $._encodeUTCTime;
-    }
-    return _cached_encoder_for_ExpiryTimeField(value, elGetter);
-}
+export const _encode_ExpiryTimeField = $._encodeUTCTime;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExpiryTimeField */
 

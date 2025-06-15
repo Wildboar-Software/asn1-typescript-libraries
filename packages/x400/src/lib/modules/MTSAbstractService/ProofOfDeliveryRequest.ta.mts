@@ -100,45 +100,17 @@ export const proof_of_delivery_requested: ProofOfDeliveryRequest =
 /* END_OF_SYMBOL_DEFINITION proof_of_delivery_requested */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfDeliveryRequest */
-let _cached_decoder_for_ProofOfDeliveryRequest: $.ASN1Decoder<ProofOfDeliveryRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfDeliveryRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ProofOfDeliveryRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) ProofOfDeliveryRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ProofOfDeliveryRequest} The decoded data structure.
- */
-export function _decode_ProofOfDeliveryRequest(el: _Element) {
-    if (!_cached_decoder_for_ProofOfDeliveryRequest) {
-        _cached_decoder_for_ProofOfDeliveryRequest = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ProofOfDeliveryRequest(el);
-}
+export const _decode_ProofOfDeliveryRequest = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ProofOfDeliveryRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfDeliveryRequest */
-let _cached_encoder_for_ProofOfDeliveryRequest: $.ASN1Encoder<ProofOfDeliveryRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfDeliveryRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ProofOfDeliveryRequest */
-/**
- * @summary Encodes a(n) ProofOfDeliveryRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProofOfDeliveryRequest, encoded as an ASN.1 Element.
- */
-export function _encode_ProofOfDeliveryRequest(
-    value: ProofOfDeliveryRequest,
-    elGetter: $.ASN1Encoder<ProofOfDeliveryRequest>
-) {
-    if (!_cached_encoder_for_ProofOfDeliveryRequest) {
-        _cached_encoder_for_ProofOfDeliveryRequest = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ProofOfDeliveryRequest(value, elGetter);
-}
+export const _encode_ProofOfDeliveryRequest = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ProofOfDeliveryRequest */
 

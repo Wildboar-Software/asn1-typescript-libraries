@@ -137,45 +137,17 @@ export const top_secret: SecurityClassification = SecurityClassification_top_sec
 /* END_OF_SYMBOL_DEFINITION top_secret */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityClassification */
-let _cached_decoder_for_SecurityClassification: $.ASN1Decoder<SecurityClassification> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityClassification */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SecurityClassification */
-/**
- * @summary Decodes an ASN.1 element into a(n) SecurityClassification
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SecurityClassification} The decoded data structure.
- */
-export function _decode_SecurityClassification(el: _Element) {
-    if (!_cached_decoder_for_SecurityClassification) {
-        _cached_decoder_for_SecurityClassification = $._decodeInteger;
-    }
-    return _cached_decoder_for_SecurityClassification(el);
-}
+export const _decode_SecurityClassification = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SecurityClassification */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityClassification */
-let _cached_encoder_for_SecurityClassification: $.ASN1Encoder<SecurityClassification> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityClassification */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SecurityClassification */
-/**
- * @summary Encodes a(n) SecurityClassification into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SecurityClassification, encoded as an ASN.1 Element.
- */
-export function _encode_SecurityClassification(
-    value: SecurityClassification,
-    elGetter: $.ASN1Encoder<SecurityClassification>
-) {
-    if (!_cached_encoder_for_SecurityClassification) {
-        _cached_encoder_for_SecurityClassification = $._encodeInteger;
-    }
-    return _cached_encoder_for_SecurityClassification(value, elGetter);
-}
+export const _encode_SecurityClassification = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SecurityClassification */
 

@@ -119,45 +119,17 @@ export const circulation_list: RecipientCategory = RecipientCategory_circulation
 /* END_OF_SYMBOL_DEFINITION circulation_list */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientCategory */
-let _cached_decoder_for_RecipientCategory: $.ASN1Decoder<RecipientCategory> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientCategory */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RecipientCategory */
-/**
- * @summary Decodes an ASN.1 element into a(n) RecipientCategory
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RecipientCategory} The decoded data structure.
- */
-export function _decode_RecipientCategory(el: _Element) {
-    if (!_cached_decoder_for_RecipientCategory) {
-        _cached_decoder_for_RecipientCategory = $._decodeInteger;
-    }
-    return _cached_decoder_for_RecipientCategory(el);
-}
+export const _decode_RecipientCategory = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_RecipientCategory */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientCategory */
-let _cached_encoder_for_RecipientCategory: $.ASN1Encoder<RecipientCategory> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientCategory */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RecipientCategory */
-/**
- * @summary Encodes a(n) RecipientCategory into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RecipientCategory, encoded as an ASN.1 Element.
- */
-export function _encode_RecipientCategory(
-    value: RecipientCategory,
-    elGetter: $.ASN1Encoder<RecipientCategory>
-) {
-    if (!_cached_encoder_for_RecipientCategory) {
-        _cached_encoder_for_RecipientCategory = $._encodeInteger;
-    }
-    return _cached_encoder_for_RecipientCategory(value, elGetter);
-}
+export const _encode_RecipientCategory = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RecipientCategory */
 

@@ -30,45 +30,17 @@ export type TelephonyString = IA5String; // IA5String
 /* END_OF_SYMBOL_DEFINITION TelephonyString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TelephonyString */
-let _cached_decoder_for_TelephonyString: $.ASN1Decoder<TelephonyString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TelephonyString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TelephonyString */
-/**
- * @summary Decodes an ASN.1 element into a(n) TelephonyString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TelephonyString} The decoded data structure.
- */
-export function _decode_TelephonyString(el: _Element) {
-    if (!_cached_decoder_for_TelephonyString) {
-        _cached_decoder_for_TelephonyString = $._decodeIA5String;
-    }
-    return _cached_decoder_for_TelephonyString(el);
-}
+export const _decode_TelephonyString = $._decodeIA5String;
 /* END_OF_SYMBOL_DEFINITION _decode_TelephonyString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TelephonyString */
-let _cached_encoder_for_TelephonyString: $.ASN1Encoder<TelephonyString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TelephonyString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TelephonyString */
-/**
- * @summary Encodes a(n) TelephonyString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TelephonyString, encoded as an ASN.1 Element.
- */
-export function _encode_TelephonyString(
-    value: TelephonyString,
-    elGetter: $.ASN1Encoder<TelephonyString>
-) {
-    if (!_cached_encoder_for_TelephonyString) {
-        _cached_encoder_for_TelephonyString = $._encodeIA5String;
-    }
-    return _cached_encoder_for_TelephonyString(value, elGetter);
-}
+export const _encode_TelephonyString = $._encodeIA5String;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TelephonyString */
 

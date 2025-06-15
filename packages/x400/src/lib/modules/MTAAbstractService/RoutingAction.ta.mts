@@ -97,45 +97,17 @@ export const rerouted: RoutingAction =
 /* END_OF_SYMBOL_DEFINITION rerouted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAction */
-let _cached_decoder_for_RoutingAction: $.ASN1Decoder<RoutingAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RoutingAction */
-/**
- * @summary Decodes an ASN.1 element into a(n) RoutingAction
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RoutingAction} The decoded data structure.
- */
-export function _decode_RoutingAction(el: _Element) {
-    if (!_cached_decoder_for_RoutingAction) {
-        _cached_decoder_for_RoutingAction = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_RoutingAction(el);
-}
+export const _decode_RoutingAction = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_RoutingAction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAction */
-let _cached_encoder_for_RoutingAction: $.ASN1Encoder<RoutingAction> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RoutingAction */
-/**
- * @summary Encodes a(n) RoutingAction into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RoutingAction, encoded as an ASN.1 Element.
- */
-export function _encode_RoutingAction(
-    value: RoutingAction,
-    elGetter: $.ASN1Encoder<RoutingAction>
-) {
-    if (!_cached_encoder_for_RoutingAction) {
-        _cached_encoder_for_RoutingAction = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_RoutingAction(value, elGetter);
-}
+export const _encode_RoutingAction = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RoutingAction */
 

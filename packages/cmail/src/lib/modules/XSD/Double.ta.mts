@@ -30,42 +30,17 @@ export type Double = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION Double */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Double */
-let _cached_decoder_for_Double: $.ASN1Decoder<Double> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Double */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Double */
-/**
- * @summary Decodes an ASN.1 element into a(n) Double
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Double} The decoded data structure.
- */
-export function _decode_Double(el: _Element) {
-  if (!_cached_decoder_for_Double) {
-    _cached_decoder_for_Double = $._decodeReal;
-  }
-  return _cached_decoder_for_Double(el);
-}
+export const _decode_Double = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_Double */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Double */
-let _cached_encoder_for_Double: $.ASN1Encoder<Double> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Double */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Double */
-/**
- * @summary Encodes a(n) Double into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Double, encoded as an ASN.1 Element.
- */
-export function _encode_Double(value: Double, elGetter: $.ASN1Encoder<Double>) {
-  if (!_cached_encoder_for_Double) {
-    _cached_encoder_for_Double = $._encodeReal;
-  }
-  return _cached_encoder_for_Double(value, elGetter);
-}
+export const _encode_Double = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Double */
 

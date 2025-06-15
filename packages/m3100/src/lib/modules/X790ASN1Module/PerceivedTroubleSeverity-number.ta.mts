@@ -99,45 +99,17 @@ export const nonServiceAffectingTrouble: PerceivedTroubleSeverity_number = Perce
 /* END_OF_SYMBOL_DEFINITION nonServiceAffectingTrouble */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedTroubleSeverity_number */
-let _cached_decoder_for_PerceivedTroubleSeverity_number: $.ASN1Decoder<PerceivedTroubleSeverity_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedTroubleSeverity_number */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PerceivedTroubleSeverity_number */
-/**
- * @summary Decodes an ASN.1 element into a(n) PerceivedTroubleSeverity_number
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PerceivedTroubleSeverity_number} The decoded data structure.
- */
-export function _decode_PerceivedTroubleSeverity_number(el: _Element) {
-    if (!_cached_decoder_for_PerceivedTroubleSeverity_number) {
-        _cached_decoder_for_PerceivedTroubleSeverity_number = $._decodeInteger;
-    }
-    return _cached_decoder_for_PerceivedTroubleSeverity_number(el);
-}
+export const _decode_PerceivedTroubleSeverity_number = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PerceivedTroubleSeverity_number */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedTroubleSeverity_number */
-let _cached_encoder_for_PerceivedTroubleSeverity_number: $.ASN1Encoder<PerceivedTroubleSeverity_number> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedTroubleSeverity_number */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PerceivedTroubleSeverity_number */
-/**
- * @summary Encodes a(n) PerceivedTroubleSeverity_number into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PerceivedTroubleSeverity_number, encoded as an ASN.1 Element.
- */
-export function _encode_PerceivedTroubleSeverity_number(
-    value: PerceivedTroubleSeverity_number,
-    elGetter: $.ASN1Encoder<PerceivedTroubleSeverity_number>
-) {
-    if (!_cached_encoder_for_PerceivedTroubleSeverity_number) {
-        _cached_encoder_for_PerceivedTroubleSeverity_number = $._encodeInteger;
-    }
-    return _cached_encoder_for_PerceivedTroubleSeverity_number(value, elGetter);
-}
+export const _encode_PerceivedTroubleSeverity_number = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PerceivedTroubleSeverity_number */
 

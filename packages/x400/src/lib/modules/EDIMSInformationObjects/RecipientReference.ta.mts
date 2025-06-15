@@ -27,45 +27,17 @@ export type RecipientReference = TeletexString; // TeletexString
 /* END_OF_SYMBOL_DEFINITION RecipientReference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReference */
-let _cached_decoder_for_RecipientReference: $.ASN1Decoder<RecipientReference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReference */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RecipientReference */
-/**
- * @summary Decodes an ASN.1 element into a(n) RecipientReference
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RecipientReference} The decoded data structure.
- */
-export function _decode_RecipientReference(el: _Element) {
-    if (!_cached_decoder_for_RecipientReference) {
-        _cached_decoder_for_RecipientReference = $._decodeTeletexString;
-    }
-    return _cached_decoder_for_RecipientReference(el);
-}
+export const _decode_RecipientReference = $._decodeTeletexString;
 /* END_OF_SYMBOL_DEFINITION _decode_RecipientReference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReference */
-let _cached_encoder_for_RecipientReference: $.ASN1Encoder<RecipientReference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReference */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RecipientReference */
-/**
- * @summary Encodes a(n) RecipientReference into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RecipientReference, encoded as an ASN.1 Element.
- */
-export function _encode_RecipientReference(
-    value: RecipientReference,
-    elGetter: $.ASN1Encoder<RecipientReference>
-) {
-    if (!_cached_encoder_for_RecipientReference) {
-        _cached_encoder_for_RecipientReference = $._encodeTeletexString;
-    }
-    return _cached_encoder_for_RecipientReference(value, elGetter);
-}
+export const _encode_RecipientReference = $._encodeTeletexString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RecipientReference */
 

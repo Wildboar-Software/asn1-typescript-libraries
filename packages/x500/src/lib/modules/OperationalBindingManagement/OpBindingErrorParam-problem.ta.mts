@@ -271,45 +271,17 @@ export const invalidNewID: OpBindingErrorParam_problem = OpBindingErrorParam_pro
 /* END_OF_SYMBOL_DEFINITION invalidNewID */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OpBindingErrorParam_problem */
-let _cached_decoder_for_OpBindingErrorParam_problem: $.ASN1Decoder<OpBindingErrorParam_problem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OpBindingErrorParam_problem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OpBindingErrorParam_problem */
-/**
- * @summary Decodes an ASN.1 element into a(n) OpBindingErrorParam_problem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OpBindingErrorParam_problem} The decoded data structure.
- */
-export function _decode_OpBindingErrorParam_problem(el: _Element) {
-    if (!_cached_decoder_for_OpBindingErrorParam_problem) {
-        _cached_decoder_for_OpBindingErrorParam_problem = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_OpBindingErrorParam_problem(el);
-}
+export const _decode_OpBindingErrorParam_problem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_OpBindingErrorParam_problem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OpBindingErrorParam_problem */
-let _cached_encoder_for_OpBindingErrorParam_problem: $.ASN1Encoder<OpBindingErrorParam_problem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OpBindingErrorParam_problem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OpBindingErrorParam_problem */
-/**
- * @summary Encodes a(n) OpBindingErrorParam_problem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OpBindingErrorParam_problem, encoded as an ASN.1 Element.
- */
-export function _encode_OpBindingErrorParam_problem(
-    value: OpBindingErrorParam_problem,
-    elGetter: $.ASN1Encoder<OpBindingErrorParam_problem>
-) {
-    if (!_cached_encoder_for_OpBindingErrorParam_problem) {
-        _cached_encoder_for_OpBindingErrorParam_problem = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_OpBindingErrorParam_problem(value, elGetter);
-}
+export const _encode_OpBindingErrorParam_problem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OpBindingErrorParam_problem */
 

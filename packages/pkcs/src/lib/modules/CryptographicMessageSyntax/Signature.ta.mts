@@ -17,45 +17,17 @@ export type Signature = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION Signature */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Signature */
-let _cached_decoder_for_Signature: $.ASN1Decoder<Signature> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Signature */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Signature */
-/**
- * @summary Decodes an ASN.1 element into a(n) Signature
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Signature} The decoded data structure.
- */
-export function _decode_Signature(el: _Element) {
-    if (!_cached_decoder_for_Signature) {
-        _cached_decoder_for_Signature = $._decodeBitString;
-    }
-    return _cached_decoder_for_Signature(el);
-}
+export const _decode_Signature = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Signature */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Signature */
-let _cached_encoder_for_Signature: $.ASN1Encoder<Signature> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Signature */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Signature */
-/**
- * @summary Encodes a(n) Signature into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Signature, encoded as an ASN.1 Element.
- */
-export function _encode_Signature(
-    value: Signature,
-    elGetter: $.ASN1Encoder<Signature>
-) {
-    if (!_cached_encoder_for_Signature) {
-        _cached_encoder_for_Signature = $._encodeBitString;
-    }
-    return _cached_encoder_for_Signature(value, elGetter);
-}
+export const _encode_Signature = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Signature */
 

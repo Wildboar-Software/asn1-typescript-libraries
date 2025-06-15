@@ -27,45 +27,17 @@ export type AccessControlObjectName = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION AccessControlObjectName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlObjectName */
-let _cached_decoder_for_AccessControlObjectName: $.ASN1Decoder<AccessControlObjectName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlObjectName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AccessControlObjectName */
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessControlObjectName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AccessControlObjectName} The decoded data structure.
- */
-export function _decode_AccessControlObjectName(el: _Element) {
-    if (!_cached_decoder_for_AccessControlObjectName) {
-        _cached_decoder_for_AccessControlObjectName = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_AccessControlObjectName(el);
-}
+export const _decode_AccessControlObjectName = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_AccessControlObjectName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlObjectName */
-let _cached_encoder_for_AccessControlObjectName: $.ASN1Encoder<AccessControlObjectName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlObjectName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AccessControlObjectName */
-/**
- * @summary Encodes a(n) AccessControlObjectName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessControlObjectName, encoded as an ASN.1 Element.
- */
-export function _encode_AccessControlObjectName(
-    value: AccessControlObjectName,
-    elGetter: $.ASN1Encoder<AccessControlObjectName>
-) {
-    if (!_cached_encoder_for_AccessControlObjectName) {
-        _cached_encoder_for_AccessControlObjectName = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_AccessControlObjectName(value, elGetter);
-}
+export const _encode_AccessControlObjectName = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AccessControlObjectName */
 

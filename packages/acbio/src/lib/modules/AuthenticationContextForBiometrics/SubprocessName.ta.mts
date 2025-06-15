@@ -233,45 +233,17 @@ export const decision_fusion: SubprocessName = SubprocessName_decision_fusion; /
 /* END_OF_SYMBOL_DEFINITION decision_fusion */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubprocessName */
-let _cached_decoder_for_SubprocessName: $.ASN1Decoder<SubprocessName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubprocessName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubprocessName */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubprocessName
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubprocessName} The decoded data structure.
- */
-export function _decode_SubprocessName(el: _Element) {
-    if (!_cached_decoder_for_SubprocessName) {
-        _cached_decoder_for_SubprocessName = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SubprocessName(el);
-}
+export const _decode_SubprocessName = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SubprocessName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubprocessName */
-let _cached_encoder_for_SubprocessName: $.ASN1Encoder<SubprocessName> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubprocessName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubprocessName */
-/**
- * @summary Encodes a(n) SubprocessName into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubprocessName, encoded as an ASN.1 Element.
- */
-export function _encode_SubprocessName(
-    value: SubprocessName,
-    elGetter: $.ASN1Encoder<SubprocessName>
-) {
-    if (!_cached_encoder_for_SubprocessName) {
-        _cached_encoder_for_SubprocessName = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SubprocessName(value, elGetter);
-}
+export const _encode_SubprocessName = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubprocessName */
 

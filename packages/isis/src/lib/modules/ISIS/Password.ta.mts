@@ -27,45 +27,17 @@ export type Password = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION Password */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Password */
-let _cached_decoder_for_Password: $.ASN1Decoder<Password> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Password */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Password */
-/**
- * @summary Decodes an ASN.1 element into a(n) Password
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Password} The decoded data structure.
- */
-export function _decode_Password(el: _Element) {
-  if (!_cached_decoder_for_Password) {
-    _cached_decoder_for_Password = $._decodeOctetString;
-  }
-  return _cached_decoder_for_Password(el);
-}
+export const _decode_Password = $._decodeOctetString;
 /* END_OF_SYMBOL_DEFINITION _decode_Password */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Password */
-let _cached_encoder_for_Password: $.ASN1Encoder<Password> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Password */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Password */
-/**
- * @summary Encodes a(n) Password into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Password, encoded as an ASN.1 Element.
- */
-export function _encode_Password(
-  value: Password,
-  elGetter: $.ASN1Encoder<Password>
-) {
-  if (!_cached_encoder_for_Password) {
-    _cached_encoder_for_Password = $._encodeOctetString;
-  }
-  return _cached_encoder_for_Password(value, elGetter);
-}
+export const _encode_Password = $._encodeOctetString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Password */
 

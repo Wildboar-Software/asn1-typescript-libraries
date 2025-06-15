@@ -141,45 +141,17 @@ export const saturday: number = DaysOfWeek_saturday; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION saturday */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DaysOfWeek */
-let _cached_decoder_for_DaysOfWeek: $.ASN1Decoder<DaysOfWeek> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DaysOfWeek */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DaysOfWeek */
-/**
- * @summary Decodes an ASN.1 element into a(n) DaysOfWeek
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DaysOfWeek} The decoded data structure.
- */
-export function _decode_DaysOfWeek(el: _Element) {
-    if (!_cached_decoder_for_DaysOfWeek) {
-        _cached_decoder_for_DaysOfWeek = $._decodeBitString;
-    }
-    return _cached_decoder_for_DaysOfWeek(el);
-}
+export const _decode_DaysOfWeek = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_DaysOfWeek */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DaysOfWeek */
-let _cached_encoder_for_DaysOfWeek: $.ASN1Encoder<DaysOfWeek> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DaysOfWeek */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DaysOfWeek */
-/**
- * @summary Encodes a(n) DaysOfWeek into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DaysOfWeek, encoded as an ASN.1 Element.
- */
-export function _encode_DaysOfWeek(
-    value: DaysOfWeek,
-    elGetter: $.ASN1Encoder<DaysOfWeek>
-) {
-    if (!_cached_encoder_for_DaysOfWeek) {
-        _cached_encoder_for_DaysOfWeek = $._encodeBitString;
-    }
-    return _cached_encoder_for_DaysOfWeek(value, elGetter);
-}
+export const _encode_DaysOfWeek = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DaysOfWeek */
 

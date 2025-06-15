@@ -100,45 +100,17 @@ export const mts_eos_not_subscribed: SubscriptionProblem =
 /* END_OF_SYMBOL_DEFINITION mts_eos_not_subscribed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscriptionProblem */
-let _cached_decoder_for_SubscriptionProblem: $.ASN1Decoder<SubscriptionProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscriptionProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubscriptionProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubscriptionProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubscriptionProblem} The decoded data structure.
- */
-export function _decode_SubscriptionProblem(el: _Element) {
-    if (!_cached_decoder_for_SubscriptionProblem) {
-        _cached_decoder_for_SubscriptionProblem = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_SubscriptionProblem(el);
-}
+export const _decode_SubscriptionProblem = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_SubscriptionProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscriptionProblem */
-let _cached_encoder_for_SubscriptionProblem: $.ASN1Encoder<SubscriptionProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscriptionProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubscriptionProblem */
-/**
- * @summary Encodes a(n) SubscriptionProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubscriptionProblem, encoded as an ASN.1 Element.
- */
-export function _encode_SubscriptionProblem(
-    value: SubscriptionProblem,
-    elGetter: $.ASN1Encoder<SubscriptionProblem>
-) {
-    if (!_cached_encoder_for_SubscriptionProblem) {
-        _cached_encoder_for_SubscriptionProblem = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_SubscriptionProblem(value, elGetter);
-}
+export const _encode_SubscriptionProblem = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubscriptionProblem */
 

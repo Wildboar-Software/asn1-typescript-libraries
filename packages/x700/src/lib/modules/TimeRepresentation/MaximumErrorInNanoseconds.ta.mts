@@ -46,45 +46,17 @@ export const noEstimate: MaximumErrorInNanoseconds = MaximumErrorInNanoseconds_n
 /* END_OF_SYMBOL_DEFINITION noEstimate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaximumErrorInNanoseconds */
-let _cached_decoder_for_MaximumErrorInNanoseconds: $.ASN1Decoder<MaximumErrorInNanoseconds> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaximumErrorInNanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MaximumErrorInNanoseconds */
-/**
- * @summary Decodes an ASN.1 element into a(n) MaximumErrorInNanoseconds
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MaximumErrorInNanoseconds} The decoded data structure.
- */
-export function _decode_MaximumErrorInNanoseconds(el: _Element) {
-    if (!_cached_decoder_for_MaximumErrorInNanoseconds) {
-        _cached_decoder_for_MaximumErrorInNanoseconds = $._decodeInteger;
-    }
-    return _cached_decoder_for_MaximumErrorInNanoseconds(el);
-}
+export const _decode_MaximumErrorInNanoseconds = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MaximumErrorInNanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaximumErrorInNanoseconds */
-let _cached_encoder_for_MaximumErrorInNanoseconds: $.ASN1Encoder<MaximumErrorInNanoseconds> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaximumErrorInNanoseconds */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MaximumErrorInNanoseconds */
-/**
- * @summary Encodes a(n) MaximumErrorInNanoseconds into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MaximumErrorInNanoseconds, encoded as an ASN.1 Element.
- */
-export function _encode_MaximumErrorInNanoseconds(
-    value: MaximumErrorInNanoseconds,
-    elGetter: $.ASN1Encoder<MaximumErrorInNanoseconds>
-) {
-    if (!_cached_encoder_for_MaximumErrorInNanoseconds) {
-        _cached_encoder_for_MaximumErrorInNanoseconds = $._encodeInteger;
-    }
-    return _cached_encoder_for_MaximumErrorInNanoseconds(value, elGetter);
-}
+export const _encode_MaximumErrorInNanoseconds = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MaximumErrorInNanoseconds */
 

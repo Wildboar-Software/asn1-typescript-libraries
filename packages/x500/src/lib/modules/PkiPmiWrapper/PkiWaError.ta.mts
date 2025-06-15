@@ -403,45 +403,17 @@ export const decryptionFailed: PkiWaError = PkiWaError_decryptionFailed; /* SHOR
 /* END_OF_SYMBOL_DEFINITION decryptionFailed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PkiWaError */
-let _cached_decoder_for_PkiWaError: $.ASN1Decoder<PkiWaError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PkiWaError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PkiWaError */
-/**
- * @summary Decodes an ASN.1 element into a(n) PkiWaError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PkiWaError} The decoded data structure.
- */
-export function _decode_PkiWaError(el: _Element) {
-    if (!_cached_decoder_for_PkiWaError) {
-        _cached_decoder_for_PkiWaError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PkiWaError(el);
-}
+export const _decode_PkiWaError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PkiWaError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PkiWaError */
-let _cached_encoder_for_PkiWaError: $.ASN1Encoder<PkiWaError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PkiWaError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PkiWaError */
-/**
- * @summary Encodes a(n) PkiWaError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PkiWaError, encoded as an ASN.1 Element.
- */
-export function _encode_PkiWaError(
-    value: PkiWaError,
-    elGetter: $.ASN1Encoder<PkiWaError>
-) {
-    if (!_cached_encoder_for_PkiWaError) {
-        _cached_encoder_for_PkiWaError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PkiWaError(value, elGetter);
-}
+export const _encode_PkiWaError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PkiWaError */
 

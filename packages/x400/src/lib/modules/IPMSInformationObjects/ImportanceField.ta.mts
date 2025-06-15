@@ -118,45 +118,17 @@ export const high: ImportanceField =
 /* END_OF_SYMBOL_DEFINITION high */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ImportanceField */
-let _cached_decoder_for_ImportanceField: $.ASN1Decoder<ImportanceField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ImportanceField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ImportanceField */
-/**
- * @summary Decodes an ASN.1 element into a(n) ImportanceField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ImportanceField} The decoded data structure.
- */
-export function _decode_ImportanceField(el: _Element) {
-    if (!_cached_decoder_for_ImportanceField) {
-        _cached_decoder_for_ImportanceField = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_ImportanceField(el);
-}
+export const _decode_ImportanceField = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ImportanceField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ImportanceField */
-let _cached_encoder_for_ImportanceField: $.ASN1Encoder<ImportanceField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ImportanceField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ImportanceField */
-/**
- * @summary Encodes a(n) ImportanceField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ImportanceField, encoded as an ASN.1 Element.
- */
-export function _encode_ImportanceField(
-    value: ImportanceField,
-    elGetter: $.ASN1Encoder<ImportanceField>
-) {
-    if (!_cached_encoder_for_ImportanceField) {
-        _cached_encoder_for_ImportanceField = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_ImportanceField(value, elGetter);
-}
+export const _encode_ImportanceField = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ImportanceField */
 

@@ -90,45 +90,17 @@ export const afterEnd: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_afterEnd; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION afterEnd */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_MOMENT */
-let _cached_decoder_for_BioAPI_GUI_MOMENT: $.ASN1Decoder<BioAPI_GUI_MOMENT> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_MOMENT */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_MOMENT */
-/**
- * @summary Decodes an ASN.1 element into a(n) BioAPI_GUI_MOMENT
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BioAPI_GUI_MOMENT} The decoded data structure.
- */
-export function _decode_BioAPI_GUI_MOMENT(el: _Element) {
-  if (!_cached_decoder_for_BioAPI_GUI_MOMENT) {
-    _cached_decoder_for_BioAPI_GUI_MOMENT = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_BioAPI_GUI_MOMENT(el);
-}
+export const _decode_BioAPI_GUI_MOMENT = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_MOMENT */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_MOMENT */
-let _cached_encoder_for_BioAPI_GUI_MOMENT: $.ASN1Encoder<BioAPI_GUI_MOMENT> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_MOMENT */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_MOMENT */
-/**
- * @summary Encodes a(n) BioAPI_GUI_MOMENT into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BioAPI_GUI_MOMENT, encoded as an ASN.1 Element.
- */
-export function _encode_BioAPI_GUI_MOMENT(
-  value: BioAPI_GUI_MOMENT,
-  elGetter: $.ASN1Encoder<BioAPI_GUI_MOMENT>
-) {
-  if (!_cached_encoder_for_BioAPI_GUI_MOMENT) {
-    _cached_encoder_for_BioAPI_GUI_MOMENT = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_BioAPI_GUI_MOMENT(value, elGetter);
-}
+export const _encode_BioAPI_GUI_MOMENT = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_MOMENT */
 

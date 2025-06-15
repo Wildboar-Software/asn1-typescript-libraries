@@ -97,45 +97,17 @@ export const prearranged: Termination =
 /* END_OF_SYMBOL_DEFINITION prearranged */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Termination */
-let _cached_decoder_for_Termination: $.ASN1Decoder<Termination> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Termination */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Termination */
-/**
- * @summary Decodes an ASN.1 element into a(n) Termination
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Termination} The decoded data structure.
- */
-export function _decode_Termination(el: _Element) {
-    if (!_cached_decoder_for_Termination) {
-        _cached_decoder_for_Termination = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Termination(el);
-}
+export const _decode_Termination = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Termination */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Termination */
-let _cached_encoder_for_Termination: $.ASN1Encoder<Termination> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Termination */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Termination */
-/**
- * @summary Encodes a(n) Termination into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Termination, encoded as an ASN.1 Element.
- */
-export function _encode_Termination(
-    value: Termination,
-    elGetter: $.ASN1Encoder<Termination>
-) {
-    if (!_cached_encoder_for_Termination) {
-        _cached_encoder_for_Termination = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Termination(value, elGetter);
-}
+export const _encode_Termination = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Termination */
 

@@ -633,45 +633,17 @@ export const s_activity_end_confirm: Event_identifier = Event_identifier_s_activ
 /* END_OF_SYMBOL_DEFINITION s_activity_end_confirm */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Event_identifier */
-let _cached_decoder_for_Event_identifier: $.ASN1Decoder<Event_identifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Event_identifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Event_identifier */
-/**
- * @summary Decodes an ASN.1 element into a(n) Event_identifier
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Event_identifier} The decoded data structure.
- */
-export function _decode_Event_identifier(el: _Element) {
-    if (!_cached_decoder_for_Event_identifier) {
-        _cached_decoder_for_Event_identifier = $._decodeInteger;
-    }
-    return _cached_decoder_for_Event_identifier(el);
-}
+export const _decode_Event_identifier = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Event_identifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Event_identifier */
-let _cached_encoder_for_Event_identifier: $.ASN1Encoder<Event_identifier> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Event_identifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Event_identifier */
-/**
- * @summary Encodes a(n) Event_identifier into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Event_identifier, encoded as an ASN.1 Element.
- */
-export function _encode_Event_identifier(
-    value: Event_identifier,
-    elGetter: $.ASN1Encoder<Event_identifier>
-) {
-    if (!_cached_encoder_for_Event_identifier) {
-        _cached_encoder_for_Event_identifier = $._encodeInteger;
-    }
-    return _cached_encoder_for_Event_identifier(value, elGetter);
-}
+export const _encode_Event_identifier = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Event_identifier */
 

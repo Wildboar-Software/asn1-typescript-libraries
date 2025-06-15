@@ -163,42 +163,17 @@ export const reasonNotSpecified: Abort = Abort_reasonNotSpecified; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION reasonNotSpecified */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort */
-let _cached_decoder_for_Abort: $.ASN1Decoder<Abort> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Abort */
-/**
- * @summary Decodes an ASN.1 element into a(n) Abort
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Abort} The decoded data structure.
- */
-export function _decode_Abort(el: _Element) {
-    if (!_cached_decoder_for_Abort) {
-        _cached_decoder_for_Abort = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Abort(el);
-}
+export const _decode_Abort = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Abort */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort */
-let _cached_encoder_for_Abort: $.ASN1Encoder<Abort> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Abort */
-/**
- * @summary Encodes a(n) Abort into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Abort, encoded as an ASN.1 Element.
- */
-export function _encode_Abort(value: Abort, elGetter: $.ASN1Encoder<Abort>) {
-    if (!_cached_encoder_for_Abort) {
-        _cached_encoder_for_Abort = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Abort(value, elGetter);
-}
+export const _encode_Abort = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Abort */
 

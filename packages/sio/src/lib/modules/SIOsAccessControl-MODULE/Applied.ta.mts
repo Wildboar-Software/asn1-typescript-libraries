@@ -71,45 +71,17 @@ export const both: Applied = Applied_both; /* SHORT_NAMED_INTEGER_VALUE */
 /* END_OF_SYMBOL_DEFINITION both */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Applied */
-let _cached_decoder_for_Applied: $.ASN1Decoder<Applied> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Applied */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Applied */
-/**
- * @summary Decodes an ASN.1 element into a(n) Applied
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Applied} The decoded data structure.
- */
-export function _decode_Applied(el: _Element) {
-    if (!_cached_decoder_for_Applied) {
-        _cached_decoder_for_Applied = $._decodeInteger;
-    }
-    return _cached_decoder_for_Applied(el);
-}
+export const _decode_Applied = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Applied */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Applied */
-let _cached_encoder_for_Applied: $.ASN1Encoder<Applied> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Applied */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Applied */
-/**
- * @summary Encodes a(n) Applied into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Applied, encoded as an ASN.1 Element.
- */
-export function _encode_Applied(
-    value: Applied,
-    elGetter: $.ASN1Encoder<Applied>
-) {
-    if (!_cached_encoder_for_Applied) {
-        _cached_encoder_for_Applied = $._encodeInteger;
-    }
-    return _cached_encoder_for_Applied(value, elGetter);
-}
+export const _encode_Applied = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Applied */
 

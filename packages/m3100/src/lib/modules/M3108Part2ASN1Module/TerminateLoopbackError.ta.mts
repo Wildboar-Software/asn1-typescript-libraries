@@ -74,45 +74,17 @@ export const loopbackNotSupported: TerminateLoopbackError = TerminateLoopbackErr
 /* END_OF_SYMBOL_DEFINITION loopbackNotSupported */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateLoopbackError */
-let _cached_decoder_for_TerminateLoopbackError: $.ASN1Decoder<TerminateLoopbackError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateLoopbackError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TerminateLoopbackError */
-/**
- * @summary Decodes an ASN.1 element into a(n) TerminateLoopbackError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TerminateLoopbackError} The decoded data structure.
- */
-export function _decode_TerminateLoopbackError(el: _Element) {
-    if (!_cached_decoder_for_TerminateLoopbackError) {
-        _cached_decoder_for_TerminateLoopbackError = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TerminateLoopbackError(el);
-}
+export const _decode_TerminateLoopbackError = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TerminateLoopbackError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateLoopbackError */
-let _cached_encoder_for_TerminateLoopbackError: $.ASN1Encoder<TerminateLoopbackError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateLoopbackError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TerminateLoopbackError */
-/**
- * @summary Encodes a(n) TerminateLoopbackError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TerminateLoopbackError, encoded as an ASN.1 Element.
- */
-export function _encode_TerminateLoopbackError(
-    value: TerminateLoopbackError,
-    elGetter: $.ASN1Encoder<TerminateLoopbackError>
-) {
-    if (!_cached_encoder_for_TerminateLoopbackError) {
-        _cached_encoder_for_TerminateLoopbackError = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TerminateLoopbackError(value, elGetter);
-}
+export const _encode_TerminateLoopbackError = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TerminateLoopbackError */
 

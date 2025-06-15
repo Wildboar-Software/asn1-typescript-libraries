@@ -103,45 +103,17 @@ export const sample: Purpose =
 /* END_OF_SYMBOL_DEFINITION sample */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Purpose */
-let _cached_decoder_for_Purpose: $.ASN1Decoder<Purpose> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Purpose */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Purpose */
-/**
- * @summary Decodes an ASN.1 element into a(n) Purpose
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Purpose} The decoded data structure.
- */
-export function _decode_Purpose(el: _Element) {
-    if (!_cached_decoder_for_Purpose) {
-        _cached_decoder_for_Purpose = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Purpose(el);
-}
+export const _decode_Purpose = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Purpose */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Purpose */
-let _cached_encoder_for_Purpose: $.ASN1Encoder<Purpose> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Purpose */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Purpose */
-/**
- * @summary Encodes a(n) Purpose into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Purpose, encoded as an ASN.1 Element.
- */
-export function _encode_Purpose(
-    value: Purpose,
-    elGetter: $.ASN1Encoder<Purpose>
-) {
-    if (!_cached_encoder_for_Purpose) {
-        _cached_encoder_for_Purpose = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Purpose(value, elGetter);
-}
+export const _encode_Purpose = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Purpose */
 

@@ -226,45 +226,17 @@ export const insufficientResources: ShadowProblem = ShadowProblem_insufficientRe
 /* END_OF_SYMBOL_DEFINITION insufficientResources */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowProblem */
-let _cached_decoder_for_ShadowProblem: $.ASN1Decoder<ShadowProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ShadowProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) ShadowProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ShadowProblem} The decoded data structure.
- */
-export function _decode_ShadowProblem(el: _Element) {
-    if (!_cached_decoder_for_ShadowProblem) {
-        _cached_decoder_for_ShadowProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_ShadowProblem(el);
-}
+export const _decode_ShadowProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ShadowProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowProblem */
-let _cached_encoder_for_ShadowProblem: $.ASN1Encoder<ShadowProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ShadowProblem */
-/**
- * @summary Encodes a(n) ShadowProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ShadowProblem, encoded as an ASN.1 Element.
- */
-export function _encode_ShadowProblem(
-    value: ShadowProblem,
-    elGetter: $.ASN1Encoder<ShadowProblem>
-) {
-    if (!_cached_encoder_for_ShadowProblem) {
-        _cached_encoder_for_ShadowProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_ShadowProblem(value, elGetter);
-}
+export const _encode_ShadowProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ShadowProblem */
 

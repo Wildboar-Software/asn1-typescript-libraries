@@ -62,45 +62,17 @@ export const changeAfterReset: PwdResponseValue_error = PwdResponseValue_error_c
 /* END_OF_SYMBOL_DEFINITION changeAfterReset */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponseValue_error */
-let _cached_decoder_for_PwdResponseValue_error: $.ASN1Decoder<PwdResponseValue_error> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponseValue_error */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PwdResponseValue_error */
-/**
- * @summary Decodes an ASN.1 element into a(n) PwdResponseValue_error
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PwdResponseValue_error} The decoded data structure.
- */
-export function _decode_PwdResponseValue_error(el: _Element) {
-    if (!_cached_decoder_for_PwdResponseValue_error) {
-        _cached_decoder_for_PwdResponseValue_error = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_PwdResponseValue_error(el);
-}
+export const _decode_PwdResponseValue_error = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_PwdResponseValue_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponseValue_error */
-let _cached_encoder_for_PwdResponseValue_error: $.ASN1Encoder<PwdResponseValue_error> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponseValue_error */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PwdResponseValue_error */
-/**
- * @summary Encodes a(n) PwdResponseValue_error into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PwdResponseValue_error, encoded as an ASN.1 Element.
- */
-export function _encode_PwdResponseValue_error(
-    value: PwdResponseValue_error,
-    elGetter: $.ASN1Encoder<PwdResponseValue_error>
-) {
-    if (!_cached_encoder_for_PwdResponseValue_error) {
-        _cached_encoder_for_PwdResponseValue_error = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_PwdResponseValue_error(value, elGetter);
-}
+export const _encode_PwdResponseValue_error = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PwdResponseValue_error */
 

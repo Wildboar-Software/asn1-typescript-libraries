@@ -27,45 +27,17 @@ export type DeliveryComponentRateToUa = REAL; // RealType
 /* END_OF_SYMBOL_DEFINITION DeliveryComponentRateToUa */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryComponentRateToUa */
-let _cached_decoder_for_DeliveryComponentRateToUa: $.ASN1Decoder<DeliveryComponentRateToUa> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryComponentRateToUa */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DeliveryComponentRateToUa */
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveryComponentRateToUa
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DeliveryComponentRateToUa} The decoded data structure.
- */
-export function _decode_DeliveryComponentRateToUa(el: _Element) {
-    if (!_cached_decoder_for_DeliveryComponentRateToUa) {
-        _cached_decoder_for_DeliveryComponentRateToUa = $._decodeReal;
-    }
-    return _cached_decoder_for_DeliveryComponentRateToUa(el);
-}
+export const _decode_DeliveryComponentRateToUa = $._decodeReal;
 /* END_OF_SYMBOL_DEFINITION _decode_DeliveryComponentRateToUa */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryComponentRateToUa */
-let _cached_encoder_for_DeliveryComponentRateToUa: $.ASN1Encoder<DeliveryComponentRateToUa> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryComponentRateToUa */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DeliveryComponentRateToUa */
-/**
- * @summary Encodes a(n) DeliveryComponentRateToUa into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveryComponentRateToUa, encoded as an ASN.1 Element.
- */
-export function _encode_DeliveryComponentRateToUa(
-    value: DeliveryComponentRateToUa,
-    elGetter: $.ASN1Encoder<DeliveryComponentRateToUa>
-) {
-    if (!_cached_encoder_for_DeliveryComponentRateToUa) {
-        _cached_encoder_for_DeliveryComponentRateToUa = $._encodeReal;
-    }
-    return _cached_encoder_for_DeliveryComponentRateToUa(value, elGetter);
-}
+export const _encode_DeliveryComponentRateToUa = $._encodeReal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DeliveryComponentRateToUa */
 

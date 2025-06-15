@@ -101,45 +101,17 @@ export const remote_bind_error: AdministrationError = AdministrationError_remote
 /* END_OF_SYMBOL_DEFINITION remote_bind_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationError */
-let _cached_decoder_for_AdministrationError: $.ASN1Decoder<AdministrationError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationError */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AdministrationError */
-/**
- * @summary Decodes an ASN.1 element into a(n) AdministrationError
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AdministrationError} The decoded data structure.
- */
-export function _decode_AdministrationError(el: _Element) {
-    if (!_cached_decoder_for_AdministrationError) {
-        _cached_decoder_for_AdministrationError = $._decodeInteger;
-    }
-    return _cached_decoder_for_AdministrationError(el);
-}
+export const _decode_AdministrationError = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AdministrationError */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationError */
-let _cached_encoder_for_AdministrationError: $.ASN1Encoder<AdministrationError> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationError */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AdministrationError */
-/**
- * @summary Encodes a(n) AdministrationError into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AdministrationError, encoded as an ASN.1 Element.
- */
-export function _encode_AdministrationError(
-    value: AdministrationError,
-    elGetter: $.ASN1Encoder<AdministrationError>
-) {
-    if (!_cached_encoder_for_AdministrationError) {
-        _cached_encoder_for_AdministrationError = $._encodeInteger;
-    }
-    return _cached_encoder_for_AdministrationError(value, elGetter);
-}
+export const _encode_AdministrationError = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AdministrationError */
 

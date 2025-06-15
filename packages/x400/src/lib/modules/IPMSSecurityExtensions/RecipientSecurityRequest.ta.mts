@@ -93,45 +93,17 @@ export const ipn_proof: number = RecipientSecurityRequest_ipn_proof; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION ipn_proof */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientSecurityRequest */
-let _cached_decoder_for_RecipientSecurityRequest: $.ASN1Decoder<RecipientSecurityRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientSecurityRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RecipientSecurityRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) RecipientSecurityRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RecipientSecurityRequest} The decoded data structure.
- */
-export function _decode_RecipientSecurityRequest(el: _Element) {
-    if (!_cached_decoder_for_RecipientSecurityRequest) {
-        _cached_decoder_for_RecipientSecurityRequest = $._decodeBitString;
-    }
-    return _cached_decoder_for_RecipientSecurityRequest(el);
-}
+export const _decode_RecipientSecurityRequest = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_RecipientSecurityRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientSecurityRequest */
-let _cached_encoder_for_RecipientSecurityRequest: $.ASN1Encoder<RecipientSecurityRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientSecurityRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RecipientSecurityRequest */
-/**
- * @summary Encodes a(n) RecipientSecurityRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RecipientSecurityRequest, encoded as an ASN.1 Element.
- */
-export function _encode_RecipientSecurityRequest(
-    value: RecipientSecurityRequest,
-    elGetter: $.ASN1Encoder<RecipientSecurityRequest>
-) {
-    if (!_cached_encoder_for_RecipientSecurityRequest) {
-        _cached_encoder_for_RecipientSecurityRequest = $._encodeBitString;
-    }
-    return _cached_encoder_for_RecipientSecurityRequest(value, elGetter);
-}
+export const _encode_RecipientSecurityRequest = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RecipientSecurityRequest */
 

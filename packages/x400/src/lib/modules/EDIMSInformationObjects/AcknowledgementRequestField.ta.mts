@@ -27,45 +27,17 @@ export type AcknowledgementRequestField = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION AcknowledgementRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AcknowledgementRequestField */
-let _cached_decoder_for_AcknowledgementRequestField: $.ASN1Decoder<AcknowledgementRequestField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AcknowledgementRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AcknowledgementRequestField */
-/**
- * @summary Decodes an ASN.1 element into a(n) AcknowledgementRequestField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AcknowledgementRequestField} The decoded data structure.
- */
-export function _decode_AcknowledgementRequestField(el: _Element) {
-    if (!_cached_decoder_for_AcknowledgementRequestField) {
-        _cached_decoder_for_AcknowledgementRequestField = $._decodeBoolean;
-    }
-    return _cached_decoder_for_AcknowledgementRequestField(el);
-}
+export const _decode_AcknowledgementRequestField = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_AcknowledgementRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AcknowledgementRequestField */
-let _cached_encoder_for_AcknowledgementRequestField: $.ASN1Encoder<AcknowledgementRequestField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AcknowledgementRequestField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AcknowledgementRequestField */
-/**
- * @summary Encodes a(n) AcknowledgementRequestField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AcknowledgementRequestField, encoded as an ASN.1 Element.
- */
-export function _encode_AcknowledgementRequestField(
-    value: AcknowledgementRequestField,
-    elGetter: $.ASN1Encoder<AcknowledgementRequestField>
-) {
-    if (!_cached_encoder_for_AcknowledgementRequestField) {
-        _cached_encoder_for_AcknowledgementRequestField = $._encodeBoolean;
-    }
-    return _cached_encoder_for_AcknowledgementRequestField(value, elGetter);
-}
+export const _encode_AcknowledgementRequestField = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AcknowledgementRequestField */
 

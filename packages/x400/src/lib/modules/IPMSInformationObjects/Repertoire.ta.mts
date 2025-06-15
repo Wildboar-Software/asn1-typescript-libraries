@@ -97,45 +97,17 @@ export const ia5: Repertoire =
 /* END_OF_SYMBOL_DEFINITION ia5 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Repertoire */
-let _cached_decoder_for_Repertoire: $.ASN1Decoder<Repertoire> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Repertoire */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Repertoire */
-/**
- * @summary Decodes an ASN.1 element into a(n) Repertoire
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Repertoire} The decoded data structure.
- */
-export function _decode_Repertoire(el: _Element) {
-    if (!_cached_decoder_for_Repertoire) {
-        _cached_decoder_for_Repertoire = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_Repertoire(el);
-}
+export const _decode_Repertoire = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_Repertoire */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Repertoire */
-let _cached_encoder_for_Repertoire: $.ASN1Encoder<Repertoire> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Repertoire */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Repertoire */
-/**
- * @summary Encodes a(n) Repertoire into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Repertoire, encoded as an ASN.1 Element.
- */
-export function _encode_Repertoire(
-    value: Repertoire,
-    elGetter: $.ASN1Encoder<Repertoire>
-) {
-    if (!_cached_encoder_for_Repertoire) {
-        _cached_encoder_for_Repertoire = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_Repertoire(value, elGetter);
-}
+export const _encode_Repertoire = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Repertoire */
 

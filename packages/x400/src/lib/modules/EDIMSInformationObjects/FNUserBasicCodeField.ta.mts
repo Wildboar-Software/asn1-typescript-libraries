@@ -230,45 +230,17 @@ export const user_defined_reason: FNUserBasicCodeField = FNUserBasicCodeField_us
 /* END_OF_SYMBOL_DEFINITION user_defined_reason */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserBasicCodeField */
-let _cached_decoder_for_FNUserBasicCodeField: $.ASN1Decoder<FNUserBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_FNUserBasicCodeField */
-/**
- * @summary Decodes an ASN.1 element into a(n) FNUserBasicCodeField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {FNUserBasicCodeField} The decoded data structure.
- */
-export function _decode_FNUserBasicCodeField(el: _Element) {
-    if (!_cached_decoder_for_FNUserBasicCodeField) {
-        _cached_decoder_for_FNUserBasicCodeField = $._decodeInteger;
-    }
-    return _cached_decoder_for_FNUserBasicCodeField(el);
-}
+export const _decode_FNUserBasicCodeField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_FNUserBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserBasicCodeField */
-let _cached_encoder_for_FNUserBasicCodeField: $.ASN1Encoder<FNUserBasicCodeField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserBasicCodeField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_FNUserBasicCodeField */
-/**
- * @summary Encodes a(n) FNUserBasicCodeField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FNUserBasicCodeField, encoded as an ASN.1 Element.
- */
-export function _encode_FNUserBasicCodeField(
-    value: FNUserBasicCodeField,
-    elGetter: $.ASN1Encoder<FNUserBasicCodeField>
-) {
-    if (!_cached_encoder_for_FNUserBasicCodeField) {
-        _cached_encoder_for_FNUserBasicCodeField = $._encodeInteger;
-    }
-    return _cached_encoder_for_FNUserBasicCodeField(value, elGetter);
-}
+export const _encode_FNUserBasicCodeField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_FNUserBasicCodeField */
 

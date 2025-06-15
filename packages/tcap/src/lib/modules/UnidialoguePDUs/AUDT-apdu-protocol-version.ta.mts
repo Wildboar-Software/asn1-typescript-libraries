@@ -43,45 +43,17 @@ export const version1: number = AUDT_apdu_protocol_version_version1; /* SHORT_NA
 /* END_OF_SYMBOL_DEFINITION version1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AUDT_apdu_protocol_version */
-let _cached_decoder_for_AUDT_apdu_protocol_version: $.ASN1Decoder<AUDT_apdu_protocol_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AUDT_apdu_protocol_version */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AUDT_apdu_protocol_version */
-/**
- * @summary Decodes an ASN.1 element into a(n) AUDT_apdu_protocol_version
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AUDT_apdu_protocol_version} The decoded data structure.
- */
-export function _decode_AUDT_apdu_protocol_version(el: _Element) {
-    if (!_cached_decoder_for_AUDT_apdu_protocol_version) {
-        _cached_decoder_for_AUDT_apdu_protocol_version = $._decodeBitString;
-    }
-    return _cached_decoder_for_AUDT_apdu_protocol_version(el);
-}
+export const _decode_AUDT_apdu_protocol_version = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_AUDT_apdu_protocol_version */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AUDT_apdu_protocol_version */
-let _cached_encoder_for_AUDT_apdu_protocol_version: $.ASN1Encoder<AUDT_apdu_protocol_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AUDT_apdu_protocol_version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AUDT_apdu_protocol_version */
-/**
- * @summary Encodes a(n) AUDT_apdu_protocol_version into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AUDT_apdu_protocol_version, encoded as an ASN.1 Element.
- */
-export function _encode_AUDT_apdu_protocol_version(
-    value: AUDT_apdu_protocol_version,
-    elGetter: $.ASN1Encoder<AUDT_apdu_protocol_version>
-) {
-    if (!_cached_encoder_for_AUDT_apdu_protocol_version) {
-        _cached_encoder_for_AUDT_apdu_protocol_version = $._encodeBitString;
-    }
-    return _cached_encoder_for_AUDT_apdu_protocol_version(value, elGetter);
-}
+export const _encode_AUDT_apdu_protocol_version = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AUDT_apdu_protocol_version */
 

@@ -27,45 +27,17 @@ export type TestInfrastructureTestResults = NULL; // NullType
 /* END_OF_SYMBOL_DEFINITION TestInfrastructureTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestInfrastructureTestResults */
-let _cached_decoder_for_TestInfrastructureTestResults: $.ASN1Decoder<TestInfrastructureTestResults> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestInfrastructureTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TestInfrastructureTestResults */
-/**
- * @summary Decodes an ASN.1 element into a(n) TestInfrastructureTestResults
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TestInfrastructureTestResults} The decoded data structure.
- */
-export function _decode_TestInfrastructureTestResults(el: _Element) {
-    if (!_cached_decoder_for_TestInfrastructureTestResults) {
-        _cached_decoder_for_TestInfrastructureTestResults = $._decodeNull;
-    }
-    return _cached_decoder_for_TestInfrastructureTestResults(el);
-}
+export const _decode_TestInfrastructureTestResults = $._decodeNull;
 /* END_OF_SYMBOL_DEFINITION _decode_TestInfrastructureTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestInfrastructureTestResults */
-let _cached_encoder_for_TestInfrastructureTestResults: $.ASN1Encoder<TestInfrastructureTestResults> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestInfrastructureTestResults */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TestInfrastructureTestResults */
-/**
- * @summary Encodes a(n) TestInfrastructureTestResults into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TestInfrastructureTestResults, encoded as an ASN.1 Element.
- */
-export function _encode_TestInfrastructureTestResults(
-    value: TestInfrastructureTestResults,
-    elGetter: $.ASN1Encoder<TestInfrastructureTestResults>
-) {
-    if (!_cached_encoder_for_TestInfrastructureTestResults) {
-        _cached_encoder_for_TestInfrastructureTestResults = $._encodeNull;
-    }
-    return _cached_encoder_for_TestInfrastructureTestResults(value, elGetter);
-}
+export const _encode_TestInfrastructureTestResults = $._encodeNull;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TestInfrastructureTestResults */
 

@@ -27,45 +27,17 @@ export type RepertoireId = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION RepertoireId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepertoireId */
-let _cached_decoder_for_RepertoireId: $.ASN1Decoder<RepertoireId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepertoireId */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RepertoireId */
-/**
- * @summary Decodes an ASN.1 element into a(n) RepertoireId
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RepertoireId} The decoded data structure.
- */
-export function _decode_RepertoireId(el: _Element) {
-    if (!_cached_decoder_for_RepertoireId) {
-        _cached_decoder_for_RepertoireId = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_RepertoireId(el);
-}
+export const _decode_RepertoireId = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_RepertoireId */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepertoireId */
-let _cached_encoder_for_RepertoireId: $.ASN1Encoder<RepertoireId> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepertoireId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RepertoireId */
-/**
- * @summary Encodes a(n) RepertoireId into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RepertoireId, encoded as an ASN.1 Element.
- */
-export function _encode_RepertoireId(
-    value: RepertoireId,
-    elGetter: $.ASN1Encoder<RepertoireId>
-) {
-    if (!_cached_encoder_for_RepertoireId) {
-        _cached_encoder_for_RepertoireId = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_RepertoireId(value, elGetter);
-}
+export const _encode_RepertoireId = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RepertoireId */
 

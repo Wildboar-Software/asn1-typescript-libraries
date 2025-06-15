@@ -63,45 +63,17 @@ export const normal_mode: Mode_selector_mode_value = Mode_selector_mode_value_no
 /* END_OF_SYMBOL_DEFINITION normal_mode */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Mode_selector_mode_value */
-let _cached_decoder_for_Mode_selector_mode_value: $.ASN1Decoder<Mode_selector_mode_value> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Mode_selector_mode_value */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Mode_selector_mode_value */
-/**
- * @summary Decodes an ASN.1 element into a(n) Mode_selector_mode_value
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Mode_selector_mode_value} The decoded data structure.
- */
-export function _decode_Mode_selector_mode_value(el: _Element) {
-    if (!_cached_decoder_for_Mode_selector_mode_value) {
-        _cached_decoder_for_Mode_selector_mode_value = $._decodeInteger;
-    }
-    return _cached_decoder_for_Mode_selector_mode_value(el);
-}
+export const _decode_Mode_selector_mode_value = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Mode_selector_mode_value */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Mode_selector_mode_value */
-let _cached_encoder_for_Mode_selector_mode_value: $.ASN1Encoder<Mode_selector_mode_value> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Mode_selector_mode_value */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Mode_selector_mode_value */
-/**
- * @summary Encodes a(n) Mode_selector_mode_value into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Mode_selector_mode_value, encoded as an ASN.1 Element.
- */
-export function _encode_Mode_selector_mode_value(
-    value: Mode_selector_mode_value,
-    elGetter: $.ASN1Encoder<Mode_selector_mode_value>
-) {
-    if (!_cached_encoder_for_Mode_selector_mode_value) {
-        _cached_encoder_for_Mode_selector_mode_value = $._encodeInteger;
-    }
-    return _cached_encoder_for_Mode_selector_mode_value(value, elGetter);
-}
+export const _encode_Mode_selector_mode_value = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Mode_selector_mode_value */
 

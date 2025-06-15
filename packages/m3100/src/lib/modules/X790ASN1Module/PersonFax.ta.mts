@@ -27,45 +27,17 @@ export type PersonFax = GraphicString; // GraphicString
 /* END_OF_SYMBOL_DEFINITION PersonFax */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonFax */
-let _cached_decoder_for_PersonFax: $.ASN1Decoder<PersonFax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonFax */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PersonFax */
-/**
- * @summary Decodes an ASN.1 element into a(n) PersonFax
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PersonFax} The decoded data structure.
- */
-export function _decode_PersonFax(el: _Element) {
-    if (!_cached_decoder_for_PersonFax) {
-        _cached_decoder_for_PersonFax = $._decodeGraphicString;
-    }
-    return _cached_decoder_for_PersonFax(el);
-}
+export const _decode_PersonFax = $._decodeGraphicString;
 /* END_OF_SYMBOL_DEFINITION _decode_PersonFax */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonFax */
-let _cached_encoder_for_PersonFax: $.ASN1Encoder<PersonFax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonFax */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PersonFax */
-/**
- * @summary Encodes a(n) PersonFax into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PersonFax, encoded as an ASN.1 Element.
- */
-export function _encode_PersonFax(
-    value: PersonFax,
-    elGetter: $.ASN1Encoder<PersonFax>
-) {
-    if (!_cached_encoder_for_PersonFax) {
-        _cached_encoder_for_PersonFax = $._encodeGraphicString;
-    }
-    return _cached_encoder_for_PersonFax(value, elGetter);
-}
+export const _encode_PersonFax = $._encodeGraphicString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PersonFax */
 

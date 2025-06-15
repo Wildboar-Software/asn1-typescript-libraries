@@ -123,40 +123,17 @@ const shuttingDown: AdministrativeState = AdministrativeState.shuttingDown; /* S
 /* END_OF_SYMBOL_DEFINITION shuttingDown */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrativeState */
-let _cached_decoder_for_AdministrativeState: $.ASN1Decoder<AdministrativeState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrativeState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AdministrativeState */
-/**
- * @summary Decodes an ASN.1 element into a(n) AdministrativeState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AdministrativeState} The decoded data structure.
- */
-export
-function _decode_AdministrativeState (el: _Element) {
-    if (!_cached_decoder_for_AdministrativeState) { _cached_decoder_for_AdministrativeState = $._decodeEnumerated; }
-    return _cached_decoder_for_AdministrativeState(el);
-}
+export const _decode_AdministrativeState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AdministrativeState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrativeState */
-let _cached_encoder_for_AdministrativeState: $.ASN1Encoder<AdministrativeState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrativeState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AdministrativeState */
-/**
- * @summary Encodes a(n) AdministrativeState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AdministrativeState, encoded as an ASN.1 Element.
- */
-export
-function _encode_AdministrativeState (value: AdministrativeState, elGetter: $.ASN1Encoder<AdministrativeState>) {
-    if (!_cached_encoder_for_AdministrativeState) { _cached_encoder_for_AdministrativeState = $._encodeEnumerated; }
-    return _cached_encoder_for_AdministrativeState(value, elGetter);
-}
+export const _encode_AdministrativeState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AdministrativeState */
 

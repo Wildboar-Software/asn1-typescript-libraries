@@ -47,45 +47,17 @@ export const compression_unsupported: NNUserDiagnosticField = NNUserDiagnosticFi
 /* END_OF_SYMBOL_DEFINITION compression_unsupported */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUserDiagnosticField */
-let _cached_decoder_for_NNUserDiagnosticField: $.ASN1Decoder<NNUserDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NNUserDiagnosticField */
-/**
- * @summary Decodes an ASN.1 element into a(n) NNUserDiagnosticField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {NNUserDiagnosticField} The decoded data structure.
- */
-export function _decode_NNUserDiagnosticField(el: _Element) {
-    if (!_cached_decoder_for_NNUserDiagnosticField) {
-        _cached_decoder_for_NNUserDiagnosticField = $._decodeInteger;
-    }
-    return _cached_decoder_for_NNUserDiagnosticField(el);
-}
+export const _decode_NNUserDiagnosticField = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_NNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUserDiagnosticField */
-let _cached_encoder_for_NNUserDiagnosticField: $.ASN1Encoder<NNUserDiagnosticField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUserDiagnosticField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NNUserDiagnosticField */
-/**
- * @summary Encodes a(n) NNUserDiagnosticField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NNUserDiagnosticField, encoded as an ASN.1 Element.
- */
-export function _encode_NNUserDiagnosticField(
-    value: NNUserDiagnosticField,
-    elGetter: $.ASN1Encoder<NNUserDiagnosticField>
-) {
-    if (!_cached_encoder_for_NNUserDiagnosticField) {
-        _cached_encoder_for_NNUserDiagnosticField = $._encodeInteger;
-    }
-    return _cached_encoder_for_NNUserDiagnosticField(value, elGetter);
-}
+export const _encode_NNUserDiagnosticField = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_NNUserDiagnosticField */
 

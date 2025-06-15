@@ -119,45 +119,17 @@ export const topSecret: number = ClassList_topSecret; /* SHORT_NAMED_BIT */
 /* END_OF_SYMBOL_DEFINITION topSecret */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassList */
-let _cached_decoder_for_ClassList: $.ASN1Decoder<ClassList> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassList */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ClassList */
-/**
- * @summary Decodes an ASN.1 element into a(n) ClassList
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ClassList} The decoded data structure.
- */
-export function _decode_ClassList(el: _Element) {
-    if (!_cached_decoder_for_ClassList) {
-        _cached_decoder_for_ClassList = $._decodeBitString;
-    }
-    return _cached_decoder_for_ClassList(el);
-}
+export const _decode_ClassList = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_ClassList */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassList */
-let _cached_encoder_for_ClassList: $.ASN1Encoder<ClassList> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassList */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ClassList */
-/**
- * @summary Encodes a(n) ClassList into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ClassList, encoded as an ASN.1 Element.
- */
-export function _encode_ClassList(
-    value: ClassList,
-    elGetter: $.ASN1Encoder<ClassList>
-) {
-    if (!_cached_encoder_for_ClassList) {
-        _cached_encoder_for_ClassList = $._encodeBitString;
-    }
-    return _cached_encoder_for_ClassList(value, elGetter);
-}
+export const _encode_ClassList = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ClassList */
 

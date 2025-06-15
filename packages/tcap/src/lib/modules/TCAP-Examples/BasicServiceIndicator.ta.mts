@@ -97,45 +97,17 @@ export const unrestrictedDigital: BasicServiceIndicator =
 /* END_OF_SYMBOL_DEFINITION unrestrictedDigital */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicServiceIndicator */
-let _cached_decoder_for_BasicServiceIndicator: $.ASN1Decoder<BasicServiceIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicServiceIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BasicServiceIndicator */
-/**
- * @summary Decodes an ASN.1 element into a(n) BasicServiceIndicator
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BasicServiceIndicator} The decoded data structure.
- */
-export function _decode_BasicServiceIndicator(el: _Element) {
-    if (!_cached_decoder_for_BasicServiceIndicator) {
-        _cached_decoder_for_BasicServiceIndicator = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_BasicServiceIndicator(el);
-}
+export const _decode_BasicServiceIndicator = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_BasicServiceIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicServiceIndicator */
-let _cached_encoder_for_BasicServiceIndicator: $.ASN1Encoder<BasicServiceIndicator> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicServiceIndicator */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BasicServiceIndicator */
-/**
- * @summary Encodes a(n) BasicServiceIndicator into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BasicServiceIndicator, encoded as an ASN.1 Element.
- */
-export function _encode_BasicServiceIndicator(
-    value: BasicServiceIndicator,
-    elGetter: $.ASN1Encoder<BasicServiceIndicator>
-) {
-    if (!_cached_encoder_for_BasicServiceIndicator) {
-        _cached_encoder_for_BasicServiceIndicator = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_BasicServiceIndicator(value, elGetter);
-}
+export const _encode_BasicServiceIndicator = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_BasicServiceIndicator */
 

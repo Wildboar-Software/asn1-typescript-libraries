@@ -141,45 +141,17 @@ export const little_finger: number = Any_sub_type_little_finger; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION little_finger */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Any_sub_type */
-let _cached_decoder_for_Any_sub_type: $.ASN1Decoder<Any_sub_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Any_sub_type */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Any_sub_type */
-/**
- * @summary Decodes an ASN.1 element into a(n) Any_sub_type
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Any_sub_type} The decoded data structure.
- */
-export function _decode_Any_sub_type(el: _Element) {
-  if (!_cached_decoder_for_Any_sub_type) {
-    _cached_decoder_for_Any_sub_type = $._decodeBitString;
-  }
-  return _cached_decoder_for_Any_sub_type(el);
-}
+export const _decode_Any_sub_type = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Any_sub_type */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Any_sub_type */
-let _cached_encoder_for_Any_sub_type: $.ASN1Encoder<Any_sub_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Any_sub_type */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Any_sub_type */
-/**
- * @summary Encodes a(n) Any_sub_type into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Any_sub_type, encoded as an ASN.1 Element.
- */
-export function _encode_Any_sub_type(
-  value: Any_sub_type,
-  elGetter: $.ASN1Encoder<Any_sub_type>
-) {
-  if (!_cached_encoder_for_Any_sub_type) {
-    _cached_encoder_for_Any_sub_type = $._encodeBitString;
-  }
-  return _cached_encoder_for_Any_sub_type(value, elGetter);
-}
+export const _encode_Any_sub_type = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Any_sub_type */
 

@@ -82,45 +82,17 @@ export const managementOperation: CommonCreationAndDeletionInfo = CommonCreation
 /* END_OF_SYMBOL_DEFINITION managementOperation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonCreationAndDeletionInfo */
-let _cached_decoder_for_CommonCreationAndDeletionInfo: $.ASN1Decoder<CommonCreationAndDeletionInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonCreationAndDeletionInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CommonCreationAndDeletionInfo */
-/**
- * @summary Decodes an ASN.1 element into a(n) CommonCreationAndDeletionInfo
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CommonCreationAndDeletionInfo} The decoded data structure.
- */
-export function _decode_CommonCreationAndDeletionInfo(el: _Element) {
-    if (!_cached_decoder_for_CommonCreationAndDeletionInfo) {
-        _cached_decoder_for_CommonCreationAndDeletionInfo = $._decodeInteger;
-    }
-    return _cached_decoder_for_CommonCreationAndDeletionInfo(el);
-}
+export const _decode_CommonCreationAndDeletionInfo = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_CommonCreationAndDeletionInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonCreationAndDeletionInfo */
-let _cached_encoder_for_CommonCreationAndDeletionInfo: $.ASN1Encoder<CommonCreationAndDeletionInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonCreationAndDeletionInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CommonCreationAndDeletionInfo */
-/**
- * @summary Encodes a(n) CommonCreationAndDeletionInfo into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CommonCreationAndDeletionInfo, encoded as an ASN.1 Element.
- */
-export function _encode_CommonCreationAndDeletionInfo(
-    value: CommonCreationAndDeletionInfo,
-    elGetter: $.ASN1Encoder<CommonCreationAndDeletionInfo>
-) {
-    if (!_cached_encoder_for_CommonCreationAndDeletionInfo) {
-        _cached_encoder_for_CommonCreationAndDeletionInfo = $._encodeInteger;
-    }
-    return _cached_encoder_for_CommonCreationAndDeletionInfo(value, elGetter);
-}
+export const _encode_CommonCreationAndDeletionInfo = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CommonCreationAndDeletionInfo */
 

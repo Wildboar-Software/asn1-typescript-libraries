@@ -35,45 +35,17 @@ export const v1: TokenInfo_version = TokenInfo_version_v1; /* SHORT_NAMED_INTEGE
 /* END_OF_SYMBOL_DEFINITION v1 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenInfo_version */
-let _cached_decoder_for_TokenInfo_version: $.ASN1Decoder<TokenInfo_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenInfo_version */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TokenInfo_version */
-/**
- * @summary Decodes an ASN.1 element into a(n) TokenInfo_version
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TokenInfo_version} The decoded data structure.
- */
-export function _decode_TokenInfo_version(el: _Element) {
-    if (!_cached_decoder_for_TokenInfo_version) {
-        _cached_decoder_for_TokenInfo_version = $._decodeInteger;
-    }
-    return _cached_decoder_for_TokenInfo_version(el);
-}
+export const _decode_TokenInfo_version = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_TokenInfo_version */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenInfo_version */
-let _cached_encoder_for_TokenInfo_version: $.ASN1Encoder<TokenInfo_version> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenInfo_version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TokenInfo_version */
-/**
- * @summary Encodes a(n) TokenInfo_version into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TokenInfo_version, encoded as an ASN.1 Element.
- */
-export function _encode_TokenInfo_version(
-    value: TokenInfo_version,
-    elGetter: $.ASN1Encoder<TokenInfo_version>
-) {
-    if (!_cached_encoder_for_TokenInfo_version) {
-        _cached_encoder_for_TokenInfo_version = $._encodeInteger;
-    }
-    return _cached_encoder_for_TokenInfo_version(value, elGetter);
-}
+export const _encode_TokenInfo_version = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TokenInfo_version */
 

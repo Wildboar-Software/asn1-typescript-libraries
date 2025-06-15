@@ -39,56 +39,28 @@ export type BiometricSubtype =
 /* END_OF_SYMBOL_DEFINITION BiometricSubtype */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricSubtype */
-let _cached_decoder_for_BiometricSubtype: $.ASN1Decoder<BiometricSubtype> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricSubtype */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BiometricSubtype */
-/**
- * @summary Decodes an ASN.1 element into a(n) BiometricSubtype
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {BiometricSubtype} The decoded data structure.
- */
-export function _decode_BiometricSubtype(el: _Element) {
-  if (!_cached_decoder_for_BiometricSubtype) {
-    _cached_decoder_for_BiometricSubtype = $._decode_inextensible_choice<BiometricSubtype>(
-      {
-        'CONTEXT 0': ['any_', _decode_Any_sub_type],
-        'CONTEXT 1': ['vein_only', _decode_Vein_only],
-      }
-    );
+export const _decode_BiometricSubtype = $._decode_inextensible_choice<BiometricSubtype>(
+  {
+    'CONTEXT 0': ['any_', _decode_Any_sub_type],
+    'CONTEXT 1': ['vein_only', _decode_Vein_only],
   }
-  return _cached_decoder_for_BiometricSubtype(el);
-}
+);
 /* END_OF_SYMBOL_DEFINITION _decode_BiometricSubtype */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricSubtype */
-let _cached_encoder_for_BiometricSubtype: $.ASN1Encoder<BiometricSubtype> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricSubtype */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BiometricSubtype */
-/**
- * @summary Encodes a(n) BiometricSubtype into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BiometricSubtype, encoded as an ASN.1 Element.
- */
-export function _encode_BiometricSubtype(
-  value: BiometricSubtype,
-  elGetter: $.ASN1Encoder<BiometricSubtype>
-) {
-  if (!_cached_encoder_for_BiometricSubtype) {
-    _cached_encoder_for_BiometricSubtype = $._encode_choice<BiometricSubtype>(
-      {
-        any_: _encode_Any_sub_type,
-        vein_only: _encode_Vein_only,
-      },
-      $.BER
-    );
-  }
-  return _cached_encoder_for_BiometricSubtype(value, elGetter);
-}
+export const _encode_BiometricSubtype = $._encode_choice<BiometricSubtype>(
+  {
+    any_: _encode_Any_sub_type,
+    vein_only: _encode_Vein_only,
+  },
+  $.BER
+);
 
 /* END_OF_SYMBOL_DEFINITION _encode_BiometricSubtype */
 

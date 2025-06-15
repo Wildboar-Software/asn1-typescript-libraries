@@ -101,45 +101,17 @@ export const reply_sent: SubmittedReplyStatus = SubmittedReplyStatus_reply_sent;
 /* END_OF_SYMBOL_DEFINITION reply_sent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmittedReplyStatus */
-let _cached_decoder_for_SubmittedReplyStatus: $.ASN1Decoder<SubmittedReplyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmittedReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubmittedReplyStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) SubmittedReplyStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SubmittedReplyStatus} The decoded data structure.
- */
-export function _decode_SubmittedReplyStatus(el: _Element) {
-    if (!_cached_decoder_for_SubmittedReplyStatus) {
-        _cached_decoder_for_SubmittedReplyStatus = $._decodeInteger;
-    }
-    return _cached_decoder_for_SubmittedReplyStatus(el);
-}
+export const _decode_SubmittedReplyStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SubmittedReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmittedReplyStatus */
-let _cached_encoder_for_SubmittedReplyStatus: $.ASN1Encoder<SubmittedReplyStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmittedReplyStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubmittedReplyStatus */
-/**
- * @summary Encodes a(n) SubmittedReplyStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SubmittedReplyStatus, encoded as an ASN.1 Element.
- */
-export function _encode_SubmittedReplyStatus(
-    value: SubmittedReplyStatus,
-    elGetter: $.ASN1Encoder<SubmittedReplyStatus>
-) {
-    if (!_cached_encoder_for_SubmittedReplyStatus) {
-        _cached_encoder_for_SubmittedReplyStatus = $._encodeInteger;
-    }
-    return _cached_encoder_for_SubmittedReplyStatus(value, elGetter);
-}
+export const _encode_SubmittedReplyStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubmittedReplyStatus */
 

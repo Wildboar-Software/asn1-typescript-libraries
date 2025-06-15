@@ -53,45 +53,17 @@ export const signed: ErrorProtectionRequest = ErrorProtectionRequest_signed; /* 
 /* END_OF_SYMBOL_DEFINITION signed */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorProtectionRequest */
-let _cached_decoder_for_ErrorProtectionRequest: $.ASN1Decoder<ErrorProtectionRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorProtectionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ErrorProtectionRequest */
-/**
- * @summary Decodes an ASN.1 element into a(n) ErrorProtectionRequest
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ErrorProtectionRequest} The decoded data structure.
- */
-export function _decode_ErrorProtectionRequest(el: _Element) {
-    if (!_cached_decoder_for_ErrorProtectionRequest) {
-        _cached_decoder_for_ErrorProtectionRequest = $._decodeInteger;
-    }
-    return _cached_decoder_for_ErrorProtectionRequest(el);
-}
+export const _decode_ErrorProtectionRequest = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ErrorProtectionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorProtectionRequest */
-let _cached_encoder_for_ErrorProtectionRequest: $.ASN1Encoder<ErrorProtectionRequest> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorProtectionRequest */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ErrorProtectionRequest */
-/**
- * @summary Encodes a(n) ErrorProtectionRequest into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ErrorProtectionRequest, encoded as an ASN.1 Element.
- */
-export function _encode_ErrorProtectionRequest(
-    value: ErrorProtectionRequest,
-    elGetter: $.ASN1Encoder<ErrorProtectionRequest>
-) {
-    if (!_cached_encoder_for_ErrorProtectionRequest) {
-        _cached_encoder_for_ErrorProtectionRequest = $._encodeInteger;
-    }
-    return _cached_encoder_for_ErrorProtectionRequest(value, elGetter);
-}
+export const _encode_ErrorProtectionRequest = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ErrorProtectionRequest */
 

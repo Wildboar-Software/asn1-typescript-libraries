@@ -91,45 +91,17 @@ export const miscellaneousResourceExhausted: ResourceSyntax = ResourceSyntax_mis
 /* END_OF_SYMBOL_DEFINITION miscellaneousResourceExhausted */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSyntax */
-let _cached_decoder_for_ResourceSyntax: $.ASN1Decoder<ResourceSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ResourceSyntax */
-/**
- * @summary Decodes an ASN.1 element into a(n) ResourceSyntax
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ResourceSyntax} The decoded data structure.
- */
-export function _decode_ResourceSyntax(el: _Element) {
-    if (!_cached_decoder_for_ResourceSyntax) {
-        _cached_decoder_for_ResourceSyntax = $._decodeInteger;
-    }
-    return _cached_decoder_for_ResourceSyntax(el);
-}
+export const _decode_ResourceSyntax = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_ResourceSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSyntax */
-let _cached_encoder_for_ResourceSyntax: $.ASN1Encoder<ResourceSyntax> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSyntax */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ResourceSyntax */
-/**
- * @summary Encodes a(n) ResourceSyntax into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResourceSyntax, encoded as an ASN.1 Element.
- */
-export function _encode_ResourceSyntax(
-    value: ResourceSyntax,
-    elGetter: $.ASN1Encoder<ResourceSyntax>
-) {
-    if (!_cached_encoder_for_ResourceSyntax) {
-        _cached_encoder_for_ResourceSyntax = $._encodeInteger;
-    }
-    return _cached_encoder_for_ResourceSyntax(value, elGetter);
-}
+export const _encode_ResourceSyntax = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ResourceSyntax */
 

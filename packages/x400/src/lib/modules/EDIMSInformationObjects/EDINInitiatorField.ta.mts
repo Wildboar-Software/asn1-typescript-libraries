@@ -121,45 +121,17 @@ export const internal_ms: EDINInitiatorField =
 /* END_OF_SYMBOL_DEFINITION internal_ms */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINInitiatorField */
-let _cached_decoder_for_EDINInitiatorField: $.ASN1Decoder<EDINInitiatorField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINInitiatorField */
 
 /* START_OF_SYMBOL_DEFINITION _decode_EDINInitiatorField */
-/**
- * @summary Decodes an ASN.1 element into a(n) EDINInitiatorField
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {EDINInitiatorField} The decoded data structure.
- */
-export function _decode_EDINInitiatorField(el: _Element) {
-    if (!_cached_decoder_for_EDINInitiatorField) {
-        _cached_decoder_for_EDINInitiatorField = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_EDINInitiatorField(el);
-}
+export const _decode_EDINInitiatorField = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_EDINInitiatorField */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINInitiatorField */
-let _cached_encoder_for_EDINInitiatorField: $.ASN1Encoder<EDINInitiatorField> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINInitiatorField */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDINInitiatorField */
-/**
- * @summary Encodes a(n) EDINInitiatorField into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EDINInitiatorField, encoded as an ASN.1 Element.
- */
-export function _encode_EDINInitiatorField(
-    value: EDINInitiatorField,
-    elGetter: $.ASN1Encoder<EDINInitiatorField>
-) {
-    if (!_cached_encoder_for_EDINInitiatorField) {
-        _cached_encoder_for_EDINInitiatorField = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_EDINInitiatorField(value, elGetter);
-}
+export const _encode_EDINInitiatorField = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDINInitiatorField */
 

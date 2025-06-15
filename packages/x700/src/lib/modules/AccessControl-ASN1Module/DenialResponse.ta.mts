@@ -145,45 +145,17 @@ export const denyWithFalseResponse: DenialResponse =
 /* END_OF_SYMBOL_DEFINITION denyWithFalseResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialResponse */
-let _cached_decoder_for_DenialResponse: $.ASN1Decoder<DenialResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialResponse */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DenialResponse */
-/**
- * @summary Decodes an ASN.1 element into a(n) DenialResponse
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DenialResponse} The decoded data structure.
- */
-export function _decode_DenialResponse(el: _Element) {
-    if (!_cached_decoder_for_DenialResponse) {
-        _cached_decoder_for_DenialResponse = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DenialResponse(el);
-}
+export const _decode_DenialResponse = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DenialResponse */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialResponse */
-let _cached_encoder_for_DenialResponse: $.ASN1Encoder<DenialResponse> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialResponse */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DenialResponse */
-/**
- * @summary Encodes a(n) DenialResponse into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DenialResponse, encoded as an ASN.1 Element.
- */
-export function _encode_DenialResponse(
-    value: DenialResponse,
-    elGetter: $.ASN1Encoder<DenialResponse>
-) {
-    if (!_cached_encoder_for_DenialResponse) {
-        _cached_encoder_for_DenialResponse = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DenialResponse(value, elGetter);
-}
+export const _encode_DenialResponse = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DenialResponse */
 

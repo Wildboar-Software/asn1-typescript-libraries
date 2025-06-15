@@ -263,45 +263,17 @@ export const unknownAVL: AVMP_error = AVMP_error_unknownAVL; /* SHORT_NAMED_ENUM
 /* END_OF_SYMBOL_DEFINITION unknownAVL */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMP_error */
-let _cached_decoder_for_AVMP_error: $.ASN1Decoder<AVMP_error> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMP_error */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AVMP_error */
-/**
- * @summary Decodes an ASN.1 element into a(n) AVMP_error
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AVMP_error} The decoded data structure.
- */
-export function _decode_AVMP_error(el: _Element) {
-    if (!_cached_decoder_for_AVMP_error) {
-        _cached_decoder_for_AVMP_error = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AVMP_error(el);
-}
+export const _decode_AVMP_error = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AVMP_error */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMP_error */
-let _cached_encoder_for_AVMP_error: $.ASN1Encoder<AVMP_error> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMP_error */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AVMP_error */
-/**
- * @summary Encodes a(n) AVMP_error into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AVMP_error, encoded as an ASN.1 Element.
- */
-export function _encode_AVMP_error(
-    value: AVMP_error,
-    elGetter: $.ASN1Encoder<AVMP_error>
-) {
-    if (!_cached_encoder_for_AVMP_error) {
-        _cached_encoder_for_AVMP_error = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AVMP_error(value, elGetter);
-}
+export const _encode_AVMP_error = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AVMP_error */
 

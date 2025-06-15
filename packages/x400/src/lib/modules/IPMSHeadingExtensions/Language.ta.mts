@@ -27,45 +27,17 @@ export type Language = PrintableString; // PrintableString
 /* END_OF_SYMBOL_DEFINITION Language */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Language */
-let _cached_decoder_for_Language: $.ASN1Decoder<Language> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Language */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Language */
-/**
- * @summary Decodes an ASN.1 element into a(n) Language
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Language} The decoded data structure.
- */
-export function _decode_Language(el: _Element) {
-    if (!_cached_decoder_for_Language) {
-        _cached_decoder_for_Language = $._decodePrintableString;
-    }
-    return _cached_decoder_for_Language(el);
-}
+export const _decode_Language = $._decodePrintableString;
 /* END_OF_SYMBOL_DEFINITION _decode_Language */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Language */
-let _cached_encoder_for_Language: $.ASN1Encoder<Language> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Language */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Language */
-/**
- * @summary Encodes a(n) Language into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Language, encoded as an ASN.1 Element.
- */
-export function _encode_Language(
-    value: Language,
-    elGetter: $.ASN1Encoder<Language>
-) {
-    if (!_cached_encoder_for_Language) {
-        _cached_encoder_for_Language = $._encodePrintableString;
-    }
-    return _cached_encoder_for_Language(value, elGetter);
-}
+export const _encode_Language = $._encodePrintableString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Language */
 

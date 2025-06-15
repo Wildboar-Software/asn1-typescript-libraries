@@ -27,45 +27,17 @@ export type RelationshipMapping = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION RelationshipMapping */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelationshipMapping */
-let _cached_decoder_for_RelationshipMapping: $.ASN1Decoder<RelationshipMapping> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelationshipMapping */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RelationshipMapping */
-/**
- * @summary Decodes an ASN.1 element into a(n) RelationshipMapping
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RelationshipMapping} The decoded data structure.
- */
-export function _decode_RelationshipMapping(el: _Element) {
-    if (!_cached_decoder_for_RelationshipMapping) {
-        _cached_decoder_for_RelationshipMapping = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_RelationshipMapping(el);
-}
+export const _decode_RelationshipMapping = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_RelationshipMapping */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelationshipMapping */
-let _cached_encoder_for_RelationshipMapping: $.ASN1Encoder<RelationshipMapping> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelationshipMapping */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RelationshipMapping */
-/**
- * @summary Encodes a(n) RelationshipMapping into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RelationshipMapping, encoded as an ASN.1 Element.
- */
-export function _encode_RelationshipMapping(
-    value: RelationshipMapping,
-    elGetter: $.ASN1Encoder<RelationshipMapping>
-) {
-    if (!_cached_encoder_for_RelationshipMapping) {
-        _cached_encoder_for_RelationshipMapping = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_RelationshipMapping(value, elGetter);
-}
+export const _encode_RelationshipMapping = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RelationshipMapping */
 

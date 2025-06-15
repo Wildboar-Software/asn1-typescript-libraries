@@ -27,45 +27,17 @@ export type ServiceReportCause = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION ServiceReportCause */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceReportCause */
-let _cached_decoder_for_ServiceReportCause: $.ASN1Decoder<ServiceReportCause> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceReportCause */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ServiceReportCause */
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceReportCause
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ServiceReportCause} The decoded data structure.
- */
-export function _decode_ServiceReportCause(el: _Element) {
-    if (!_cached_decoder_for_ServiceReportCause) {
-        _cached_decoder_for_ServiceReportCause = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_ServiceReportCause(el);
-}
+export const _decode_ServiceReportCause = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_ServiceReportCause */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceReportCause */
-let _cached_encoder_for_ServiceReportCause: $.ASN1Encoder<ServiceReportCause> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceReportCause */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ServiceReportCause */
-/**
- * @summary Encodes a(n) ServiceReportCause into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceReportCause, encoded as an ASN.1 Element.
- */
-export function _encode_ServiceReportCause(
-    value: ServiceReportCause,
-    elGetter: $.ASN1Encoder<ServiceReportCause>
-) {
-    if (!_cached_encoder_for_ServiceReportCause) {
-        _cached_encoder_for_ServiceReportCause = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_ServiceReportCause(value, elGetter);
-}
+export const _encode_ServiceReportCause = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ServiceReportCause */
 

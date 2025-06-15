@@ -45,45 +45,17 @@ export const no_such_entry: SequenceNumberProblem = SequenceNumberProblem_no_suc
 /* END_OF_SYMBOL_DEFINITION no_such_entry */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceNumberProblem */
-let _cached_decoder_for_SequenceNumberProblem: $.ASN1Decoder<SequenceNumberProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceNumberProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SequenceNumberProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) SequenceNumberProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {SequenceNumberProblem} The decoded data structure.
- */
-export function _decode_SequenceNumberProblem(el: _Element) {
-    if (!_cached_decoder_for_SequenceNumberProblem) {
-        _cached_decoder_for_SequenceNumberProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_SequenceNumberProblem(el);
-}
+export const _decode_SequenceNumberProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_SequenceNumberProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceNumberProblem */
-let _cached_encoder_for_SequenceNumberProblem: $.ASN1Encoder<SequenceNumberProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceNumberProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SequenceNumberProblem */
-/**
- * @summary Encodes a(n) SequenceNumberProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SequenceNumberProblem, encoded as an ASN.1 Element.
- */
-export function _encode_SequenceNumberProblem(
-    value: SequenceNumberProblem,
-    elGetter: $.ASN1Encoder<SequenceNumberProblem>
-) {
-    if (!_cached_encoder_for_SequenceNumberProblem) {
-        _cached_encoder_for_SequenceNumberProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_SequenceNumberProblem(value, elGetter);
-}
+export const _encode_SequenceNumberProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_SequenceNumberProblem */
 

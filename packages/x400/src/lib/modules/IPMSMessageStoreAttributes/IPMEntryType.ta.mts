@@ -139,45 +139,17 @@ export const on: IPMEntryType =
 /* END_OF_SYMBOL_DEFINITION on */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMEntryType */
-let _cached_decoder_for_IPMEntryType: $.ASN1Decoder<IPMEntryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMEntryType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IPMEntryType */
-/**
- * @summary Decodes an ASN.1 element into a(n) IPMEntryType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {IPMEntryType} The decoded data structure.
- */
-export function _decode_IPMEntryType(el: _Element) {
-    if (!_cached_decoder_for_IPMEntryType) {
-        _cached_decoder_for_IPMEntryType = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_IPMEntryType(el);
-}
+export const _decode_IPMEntryType = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_IPMEntryType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMEntryType */
-let _cached_encoder_for_IPMEntryType: $.ASN1Encoder<IPMEntryType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMEntryType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IPMEntryType */
-/**
- * @summary Encodes a(n) IPMEntryType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IPMEntryType, encoded as an ASN.1 Element.
- */
-export function _encode_IPMEntryType(
-    value: IPMEntryType,
-    elGetter: $.ASN1Encoder<IPMEntryType>
-) {
-    if (!_cached_encoder_for_IPMEntryType) {
-        _cached_encoder_for_IPMEntryType = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_IPMEntryType(value, elGetter);
-}
+export const _encode_IPMEntryType = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_IPMEntryType */
 

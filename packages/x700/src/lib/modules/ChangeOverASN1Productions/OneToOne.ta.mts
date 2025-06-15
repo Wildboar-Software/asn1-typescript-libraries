@@ -27,45 +27,17 @@ export type OneToOne = INTEGER;
 /* END_OF_SYMBOL_DEFINITION OneToOne */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OneToOne */
-let _cached_decoder_for_OneToOne: $.ASN1Decoder<OneToOne> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OneToOne */
 
 /* START_OF_SYMBOL_DEFINITION _decode_OneToOne */
-/**
- * @summary Decodes an ASN.1 element into a(n) OneToOne
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {OneToOne} The decoded data structure.
- */
-export function _decode_OneToOne(el: _Element) {
-    if (!_cached_decoder_for_OneToOne) {
-        _cached_decoder_for_OneToOne = $._decodeInteger;
-    }
-    return _cached_decoder_for_OneToOne(el);
-}
+export const _decode_OneToOne = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_OneToOne */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OneToOne */
-let _cached_encoder_for_OneToOne: $.ASN1Encoder<OneToOne> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OneToOne */
 
 /* START_OF_SYMBOL_DEFINITION _encode_OneToOne */
-/**
- * @summary Encodes a(n) OneToOne into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OneToOne, encoded as an ASN.1 Element.
- */
-export function _encode_OneToOne(
-    value: OneToOne,
-    elGetter: $.ASN1Encoder<OneToOne>
-) {
-    if (!_cached_encoder_for_OneToOne) {
-        _cached_encoder_for_OneToOne = $._encodeInteger;
-    }
-    return _cached_encoder_for_OneToOne(value, elGetter);
-}
+export const _encode_OneToOne = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_OneToOne */
 

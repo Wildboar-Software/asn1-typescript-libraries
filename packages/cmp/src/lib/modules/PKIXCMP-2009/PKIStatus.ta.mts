@@ -175,45 +175,17 @@ export const keyUpdateWarning: PKIStatus = PKIStatus_keyUpdateWarning; /* SHORT_
 /* END_OF_SYMBOL_DEFINITION keyUpdateWarning */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIStatus */
-let _cached_decoder_for_PKIStatus: $.ASN1Decoder<PKIStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PKIStatus */
-/**
- * @summary Decodes an ASN.1 element into a(n) PKIStatus
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PKIStatus} The decoded data structure.
- */
-export function _decode_PKIStatus(el: _Element) {
-  if (!_cached_decoder_for_PKIStatus) {
-    _cached_decoder_for_PKIStatus = $._decodeInteger;
-  }
-  return _cached_decoder_for_PKIStatus(el);
-}
+export const _decode_PKIStatus = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PKIStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIStatus */
-let _cached_encoder_for_PKIStatus: $.ASN1Encoder<PKIStatus> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PKIStatus */
-/**
- * @summary Encodes a(n) PKIStatus into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PKIStatus, encoded as an ASN.1 Element.
- */
-export function _encode_PKIStatus(
-  value: PKIStatus,
-  elGetter: $.ASN1Encoder<PKIStatus>
-) {
-  if (!_cached_encoder_for_PKIStatus) {
-    _cached_encoder_for_PKIStatus = $._encodeInteger;
-  }
-  return _cached_encoder_for_PKIStatus(value, elGetter);
-}
+export const _encode_PKIStatus = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PKIStatus */
 

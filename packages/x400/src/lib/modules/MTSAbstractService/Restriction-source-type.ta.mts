@@ -75,45 +75,17 @@ export const dl_expanded_by: number = Restriction_source_type_dl_expanded_by; /*
 /* END_OF_SYMBOL_DEFINITION dl_expanded_by */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Restriction_source_type */
-let _cached_decoder_for_Restriction_source_type: $.ASN1Decoder<Restriction_source_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Restriction_source_type */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Restriction_source_type */
-/**
- * @summary Decodes an ASN.1 element into a(n) Restriction_source_type
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Restriction_source_type} The decoded data structure.
- */
-export function _decode_Restriction_source_type(el: _Element) {
-    if (!_cached_decoder_for_Restriction_source_type) {
-        _cached_decoder_for_Restriction_source_type = $._decodeBitString;
-    }
-    return _cached_decoder_for_Restriction_source_type(el);
-}
+export const _decode_Restriction_source_type = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Restriction_source_type */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Restriction_source_type */
-let _cached_encoder_for_Restriction_source_type: $.ASN1Encoder<Restriction_source_type> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Restriction_source_type */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Restriction_source_type */
-/**
- * @summary Encodes a(n) Restriction_source_type into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Restriction_source_type, encoded as an ASN.1 Element.
- */
-export function _encode_Restriction_source_type(
-    value: Restriction_source_type,
-    elGetter: $.ASN1Encoder<Restriction_source_type>
-) {
-    if (!_cached_encoder_for_Restriction_source_type) {
-        _cached_encoder_for_Restriction_source_type = $._encodeBitString;
-    }
-    return _cached_encoder_for_Restriction_source_type(value, elGetter);
-}
+export const _encode_Restriction_source_type = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Restriction_source_type */
 

@@ -27,45 +27,17 @@ export type KerberosFlags = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION KerberosFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KerberosFlags */
-let _cached_decoder_for_KerberosFlags: $.ASN1Decoder<KerberosFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KerberosFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_KerberosFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) KerberosFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {KerberosFlags} The decoded data structure.
- */
-export function _decode_KerberosFlags(el: _Element) {
-  if (!_cached_decoder_for_KerberosFlags) {
-    _cached_decoder_for_KerberosFlags = $._decodeBitString;
-  }
-  return _cached_decoder_for_KerberosFlags(el);
-}
+export const _decode_KerberosFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_KerberosFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KerberosFlags */
-let _cached_encoder_for_KerberosFlags: $.ASN1Encoder<KerberosFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KerberosFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_KerberosFlags */
-/**
- * @summary Encodes a(n) KerberosFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The KerberosFlags, encoded as an ASN.1 Element.
- */
-export function _encode_KerberosFlags(
-  value: KerberosFlags,
-  elGetter: $.ASN1Encoder<KerberosFlags>
-) {
-  if (!_cached_encoder_for_KerberosFlags) {
-    _cached_encoder_for_KerberosFlags = $._encodeBitString;
-  }
-  return _cached_encoder_for_KerberosFlags(value, elGetter);
-}
+export const _encode_KerberosFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_KerberosFlags */
 

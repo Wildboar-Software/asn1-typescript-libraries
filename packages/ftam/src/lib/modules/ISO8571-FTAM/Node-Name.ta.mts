@@ -27,45 +27,17 @@ export type Node_Name = EXTERNAL; // ExternalType
 /* END_OF_SYMBOL_DEFINITION Node_Name */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Node_Name */
-let _cached_decoder_for_Node_Name: $.ASN1Decoder<Node_Name> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Node_Name */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Node_Name */
-/**
- * @summary Decodes an ASN.1 element into a(n) Node_Name
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Node_Name} The decoded data structure.
- */
-export function _decode_Node_Name(el: _Element) {
-  if (!_cached_decoder_for_Node_Name) {
-    _cached_decoder_for_Node_Name = $._decodeExternal;
-  }
-  return _cached_decoder_for_Node_Name(el);
-}
+export const _decode_Node_Name = $._decodeExternal;
 /* END_OF_SYMBOL_DEFINITION _decode_Node_Name */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Node_Name */
-let _cached_encoder_for_Node_Name: $.ASN1Encoder<Node_Name> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Node_Name */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Node_Name */
-/**
- * @summary Encodes a(n) Node_Name into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Node_Name, encoded as an ASN.1 Element.
- */
-export function _encode_Node_Name(
-  value: Node_Name,
-  elGetter: $.ASN1Encoder<Node_Name>
-) {
-  if (!_cached_encoder_for_Node_Name) {
-    _cached_encoder_for_Node_Name = $._encodeExternal;
-  }
-  return _cached_encoder_for_Node_Name(value, elGetter);
-}
+export const _encode_Node_Name = $._encodeExternal;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Node_Name */
 

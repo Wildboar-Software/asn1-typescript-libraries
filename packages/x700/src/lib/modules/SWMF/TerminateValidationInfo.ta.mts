@@ -103,45 +103,17 @@ export const truncate: TerminateValidationInfo =
 /* END_OF_SYMBOL_DEFINITION truncate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateValidationInfo */
-let _cached_decoder_for_TerminateValidationInfo: $.ASN1Decoder<TerminateValidationInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateValidationInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TerminateValidationInfo */
-/**
- * @summary Decodes an ASN.1 element into a(n) TerminateValidationInfo
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {TerminateValidationInfo} The decoded data structure.
- */
-export function _decode_TerminateValidationInfo(el: _Element) {
-    if (!_cached_decoder_for_TerminateValidationInfo) {
-        _cached_decoder_for_TerminateValidationInfo = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_TerminateValidationInfo(el);
-}
+export const _decode_TerminateValidationInfo = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_TerminateValidationInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateValidationInfo */
-let _cached_encoder_for_TerminateValidationInfo: $.ASN1Encoder<TerminateValidationInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateValidationInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TerminateValidationInfo */
-/**
- * @summary Encodes a(n) TerminateValidationInfo into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TerminateValidationInfo, encoded as an ASN.1 Element.
- */
-export function _encode_TerminateValidationInfo(
-    value: TerminateValidationInfo,
-    elGetter: $.ASN1Encoder<TerminateValidationInfo>
-) {
-    if (!_cached_encoder_for_TerminateValidationInfo) {
-        _cached_encoder_for_TerminateValidationInfo = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_TerminateValidationInfo(value, elGetter);
-}
+export const _encode_TerminateValidationInfo = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_TerminateValidationInfo */
 

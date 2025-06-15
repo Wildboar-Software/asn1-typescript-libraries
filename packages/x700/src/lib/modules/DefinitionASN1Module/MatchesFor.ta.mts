@@ -109,45 +109,17 @@ export const setIntersection: number = MatchesFor_setIntersection; /* SHORT_NAME
 /* END_OF_SYMBOL_DEFINITION setIntersection */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchesFor */
-let _cached_decoder_for_MatchesFor: $.ASN1Decoder<MatchesFor> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchesFor */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MatchesFor */
-/**
- * @summary Decodes an ASN.1 element into a(n) MatchesFor
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MatchesFor} The decoded data structure.
- */
-export function _decode_MatchesFor(el: _Element) {
-    if (!_cached_decoder_for_MatchesFor) {
-        _cached_decoder_for_MatchesFor = $._decodeBitString;
-    }
-    return _cached_decoder_for_MatchesFor(el);
-}
+export const _decode_MatchesFor = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_MatchesFor */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchesFor */
-let _cached_encoder_for_MatchesFor: $.ASN1Encoder<MatchesFor> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchesFor */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MatchesFor */
-/**
- * @summary Encodes a(n) MatchesFor into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MatchesFor, encoded as an ASN.1 Element.
- */
-export function _encode_MatchesFor(
-    value: MatchesFor,
-    elGetter: $.ASN1Encoder<MatchesFor>
-) {
-    if (!_cached_encoder_for_MatchesFor) {
-        _cached_encoder_for_MatchesFor = $._encodeBitString;
-    }
-    return _cached_encoder_for_MatchesFor(value, elGetter);
-}
+export const _encode_MatchesFor = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MatchesFor */
 

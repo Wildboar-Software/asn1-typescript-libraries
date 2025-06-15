@@ -123,40 +123,17 @@ const busy: UsageState = UsageState.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION busy */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageState */
-let _cached_decoder_for_UsageState: $.ASN1Decoder<UsageState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_UsageState */
-/**
- * @summary Decodes an ASN.1 element into a(n) UsageState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UsageState} The decoded data structure.
- */
-export
-function _decode_UsageState (el: _Element) {
-    if (!_cached_decoder_for_UsageState) { _cached_decoder_for_UsageState = $._decodeEnumerated; }
-    return _cached_decoder_for_UsageState(el);
-}
+export const _decode_UsageState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_UsageState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageState */
-let _cached_encoder_for_UsageState: $.ASN1Encoder<UsageState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_UsageState */
-/**
- * @summary Encodes a(n) UsageState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UsageState, encoded as an ASN.1 Element.
- */
-export
-function _encode_UsageState (value: UsageState, elGetter: $.ASN1Encoder<UsageState>) {
-    if (!_cached_encoder_for_UsageState) { _cached_encoder_for_UsageState = $._encodeEnumerated; }
-    return _cached_encoder_for_UsageState(value, elGetter);
-}
+export const _encode_UsageState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_UsageState */
 

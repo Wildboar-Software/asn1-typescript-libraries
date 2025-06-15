@@ -130,45 +130,17 @@ export const cached_and_non_cached: ResponseTypes =
 /* END_OF_SYMBOL_DEFINITION cached_and_non_cached */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTypes */
-let _cached_decoder_for_ResponseTypes: $.ASN1Decoder<ResponseTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTypes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ResponseTypes */
-/**
- * @summary Decodes an ASN.1 element into a(n) ResponseTypes
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ResponseTypes} The decoded data structure.
- */
-export function _decode_ResponseTypes(el: _Element) {
-  if (!_cached_decoder_for_ResponseTypes) {
-    _cached_decoder_for_ResponseTypes = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_ResponseTypes(el);
-}
+export const _decode_ResponseTypes = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_ResponseTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTypes */
-let _cached_encoder_for_ResponseTypes: $.ASN1Encoder<ResponseTypes> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTypes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ResponseTypes */
-/**
- * @summary Encodes a(n) ResponseTypes into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResponseTypes, encoded as an ASN.1 Element.
- */
-export function _encode_ResponseTypes(
-  value: ResponseTypes,
-  elGetter: $.ASN1Encoder<ResponseTypes>
-) {
-  if (!_cached_encoder_for_ResponseTypes) {
-    _cached_encoder_for_ResponseTypes = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_ResponseTypes(value, elGetter);
-}
+export const _encode_ResponseTypes = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ResponseTypes */
 

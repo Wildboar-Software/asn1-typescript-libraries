@@ -27,45 +27,17 @@ export type ExtendedContentType = RELATIVE_OID; // RelativeOIDType
 /* END_OF_SYMBOL_DEFINITION ExtendedContentType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedContentType */
-let _cached_decoder_for_ExtendedContentType: $.ASN1Decoder<ExtendedContentType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedContentType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExtendedContentType */
-/**
- * @summary Decodes an ASN.1 element into a(n) ExtendedContentType
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {ExtendedContentType} The decoded data structure.
- */
-export function _decode_ExtendedContentType(el: _Element) {
-    if (!_cached_decoder_for_ExtendedContentType) {
-        _cached_decoder_for_ExtendedContentType = $._decodeRelativeOID;
-    }
-    return _cached_decoder_for_ExtendedContentType(el);
-}
+export const _decode_ExtendedContentType = $._decodeRelativeOID;
 /* END_OF_SYMBOL_DEFINITION _decode_ExtendedContentType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedContentType */
-let _cached_encoder_for_ExtendedContentType: $.ASN1Encoder<ExtendedContentType> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedContentType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExtendedContentType */
-/**
- * @summary Encodes a(n) ExtendedContentType into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ExtendedContentType, encoded as an ASN.1 Element.
- */
-export function _encode_ExtendedContentType(
-    value: ExtendedContentType,
-    elGetter: $.ASN1Encoder<ExtendedContentType>
-) {
-    if (!_cached_encoder_for_ExtendedContentType) {
-        _cached_encoder_for_ExtendedContentType = $._encodeRelativeOID;
-    }
-    return _cached_encoder_for_ExtendedContentType(value, elGetter);
-}
+export const _encode_ExtendedContentType = $._encodeRelativeOID;
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExtendedContentType */
 

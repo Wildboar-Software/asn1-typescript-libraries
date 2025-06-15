@@ -53,45 +53,17 @@ export const invalidAttributeCertificate: AssignErr = AssignErr_invalidAttribute
 /* END_OF_SYMBOL_DEFINITION invalidAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignErr */
-let _cached_decoder_for_AssignErr: $.ASN1Decoder<AssignErr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignErr */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AssignErr */
-/**
- * @summary Decodes an ASN.1 element into a(n) AssignErr
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AssignErr} The decoded data structure.
- */
-export function _decode_AssignErr(el: _Element) {
-    if (!_cached_decoder_for_AssignErr) {
-        _cached_decoder_for_AssignErr = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_AssignErr(el);
-}
+export const _decode_AssignErr = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_AssignErr */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignErr */
-let _cached_encoder_for_AssignErr: $.ASN1Encoder<AssignErr> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignErr */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AssignErr */
-/**
- * @summary Encodes a(n) AssignErr into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AssignErr, encoded as an ASN.1 Element.
- */
-export function _encode_AssignErr(
-    value: AssignErr,
-    elGetter: $.ASN1Encoder<AssignErr>
-) {
-    if (!_cached_encoder_for_AssignErr) {
-        _cached_encoder_for_AssignErr = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_AssignErr(value, elGetter);
-}
+export const _encode_AssignErr = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AssignErr */
 

@@ -27,45 +27,17 @@ export type UnsignedShort = INTEGER;
 /* END_OF_SYMBOL_DEFINITION UnsignedShort */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnsignedShort */
-let _cached_decoder_for_UnsignedShort: $.ASN1Decoder<UnsignedShort> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnsignedShort */
 
 /* START_OF_SYMBOL_DEFINITION _decode_UnsignedShort */
-/**
- * @summary Decodes an ASN.1 element into a(n) UnsignedShort
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {UnsignedShort} The decoded data structure.
- */
-export function _decode_UnsignedShort(el: _Element) {
-  if (!_cached_decoder_for_UnsignedShort) {
-    _cached_decoder_for_UnsignedShort = $._decodeInteger;
-  }
-  return _cached_decoder_for_UnsignedShort(el);
-}
+export const _decode_UnsignedShort = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_UnsignedShort */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnsignedShort */
-let _cached_encoder_for_UnsignedShort: $.ASN1Encoder<UnsignedShort> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnsignedShort */
 
 /* START_OF_SYMBOL_DEFINITION _encode_UnsignedShort */
-/**
- * @summary Encodes a(n) UnsignedShort into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UnsignedShort, encoded as an ASN.1 Element.
- */
-export function _encode_UnsignedShort(
-  value: UnsignedShort,
-  elGetter: $.ASN1Encoder<UnsignedShort>
-) {
-  if (!_cached_encoder_for_UnsignedShort) {
-    _cached_encoder_for_UnsignedShort = $._encodeInteger;
-  }
-  return _cached_encoder_for_UnsignedShort(value, elGetter);
-}
+export const _encode_UnsignedShort = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_UnsignedShort */
 

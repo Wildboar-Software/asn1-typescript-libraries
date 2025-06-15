@@ -90,45 +90,17 @@ export const denied: RequestState = RequestState_denied; /* SHORT_NAMED_ENUMERAT
 /* END_OF_SYMBOL_DEFINITION denied */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestState */
-let _cached_decoder_for_RequestState: $.ASN1Decoder<RequestState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestState */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RequestState */
-/**
- * @summary Decodes an ASN.1 element into a(n) RequestState
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {RequestState} The decoded data structure.
- */
-export function _decode_RequestState(el: _Element) {
-    if (!_cached_decoder_for_RequestState) {
-        _cached_decoder_for_RequestState = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_RequestState(el);
-}
+export const _decode_RequestState = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_RequestState */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestState */
-let _cached_encoder_for_RequestState: $.ASN1Encoder<RequestState> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestState */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RequestState */
-/**
- * @summary Encodes a(n) RequestState into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RequestState, encoded as an ASN.1 Element.
- */
-export function _encode_RequestState(
-    value: RequestState,
-    elGetter: $.ASN1Encoder<RequestState>
-) {
-    if (!_cached_encoder_for_RequestState) {
-        _cached_encoder_for_RequestState = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_RequestState(value, elGetter);
-}
+export const _encode_RequestState = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_RequestState */
 

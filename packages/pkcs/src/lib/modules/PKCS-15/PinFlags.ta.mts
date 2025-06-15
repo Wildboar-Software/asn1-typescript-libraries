@@ -222,45 +222,17 @@ export const exchangeRefData: number = PinFlags_exchangeRefData; /* SHORT_NAMED_
 /* END_OF_SYMBOL_DEFINITION exchangeRefData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PinFlags */
-let _cached_decoder_for_PinFlags: $.ASN1Decoder<PinFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PinFlags */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PinFlags */
-/**
- * @summary Decodes an ASN.1 element into a(n) PinFlags
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PinFlags} The decoded data structure.
- */
-export function _decode_PinFlags(el: _Element) {
-    if (!_cached_decoder_for_PinFlags) {
-        _cached_decoder_for_PinFlags = $._decodeBitString;
-    }
-    return _cached_decoder_for_PinFlags(el);
-}
+export const _decode_PinFlags = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_PinFlags */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PinFlags */
-let _cached_encoder_for_PinFlags: $.ASN1Encoder<PinFlags> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PinFlags */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PinFlags */
-/**
- * @summary Encodes a(n) PinFlags into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PinFlags, encoded as an ASN.1 Element.
- */
-export function _encode_PinFlags(
-    value: PinFlags,
-    elGetter: $.ASN1Encoder<PinFlags>
-) {
-    if (!_cached_encoder_for_PinFlags) {
-        _cached_encoder_for_PinFlags = $._encodeBitString;
-    }
-    return _cached_encoder_for_PinFlags(value, elGetter);
-}
+export const _encode_PinFlags = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PinFlags */
 

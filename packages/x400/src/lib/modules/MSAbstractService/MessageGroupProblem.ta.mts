@@ -156,45 +156,17 @@ export const group_depth_exceeded: MessageGroupProblem = MessageGroupProblem_gro
 /* END_OF_SYMBOL_DEFINITION group_depth_exceeded */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupProblem */
-let _cached_decoder_for_MessageGroupProblem: $.ASN1Decoder<MessageGroupProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_MessageGroupProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) MessageGroupProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {MessageGroupProblem} The decoded data structure.
- */
-export function _decode_MessageGroupProblem(el: _Element) {
-    if (!_cached_decoder_for_MessageGroupProblem) {
-        _cached_decoder_for_MessageGroupProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_MessageGroupProblem(el);
-}
+export const _decode_MessageGroupProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_MessageGroupProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupProblem */
-let _cached_encoder_for_MessageGroupProblem: $.ASN1Encoder<MessageGroupProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MessageGroupProblem */
-/**
- * @summary Encodes a(n) MessageGroupProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MessageGroupProblem, encoded as an ASN.1 Element.
- */
-export function _encode_MessageGroupProblem(
-    value: MessageGroupProblem,
-    elGetter: $.ASN1Encoder<MessageGroupProblem>
-) {
-    if (!_cached_encoder_for_MessageGroupProblem) {
-        _cached_encoder_for_MessageGroupProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_MessageGroupProblem(value, elGetter);
-}
+export const _encode_MessageGroupProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_MessageGroupProblem */
 

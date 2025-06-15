@@ -140,45 +140,17 @@ export const responding_file_service_user: Entity_Reference = Entity_Reference_r
 /* END_OF_SYMBOL_DEFINITION responding_file_service_user */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Entity_Reference */
-let _cached_decoder_for_Entity_Reference: $.ASN1Decoder<Entity_Reference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Entity_Reference */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Entity_Reference */
-/**
- * @summary Decodes an ASN.1 element into a(n) Entity_Reference
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Entity_Reference} The decoded data structure.
- */
-export function _decode_Entity_Reference(el: _Element) {
-  if (!_cached_decoder_for_Entity_Reference) {
-    _cached_decoder_for_Entity_Reference = $._decodeInteger;
-  }
-  return _cached_decoder_for_Entity_Reference(el);
-}
+export const _decode_Entity_Reference = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_Entity_Reference */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Entity_Reference */
-let _cached_encoder_for_Entity_Reference: $.ASN1Encoder<Entity_Reference> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Entity_Reference */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Entity_Reference */
-/**
- * @summary Encodes a(n) Entity_Reference into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Entity_Reference, encoded as an ASN.1 Element.
- */
-export function _encode_Entity_Reference(
-  value: Entity_Reference,
-  elGetter: $.ASN1Encoder<Entity_Reference>
-) {
-  if (!_cached_encoder_for_Entity_Reference) {
-    _cached_encoder_for_Entity_Reference = $._encodeInteger;
-  }
-  return _cached_encoder_for_Entity_Reference(value, elGetter);
-}
+export const _encode_Entity_Reference = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Entity_Reference */
 

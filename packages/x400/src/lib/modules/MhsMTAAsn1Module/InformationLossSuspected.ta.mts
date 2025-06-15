@@ -27,45 +27,17 @@ export type InformationLossSuspected = BOOLEAN; // BooleanType
 /* END_OF_SYMBOL_DEFINITION InformationLossSuspected */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationLossSuspected */
-let _cached_decoder_for_InformationLossSuspected: $.ASN1Decoder<InformationLossSuspected> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationLossSuspected */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InformationLossSuspected */
-/**
- * @summary Decodes an ASN.1 element into a(n) InformationLossSuspected
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InformationLossSuspected} The decoded data structure.
- */
-export function _decode_InformationLossSuspected(el: _Element) {
-    if (!_cached_decoder_for_InformationLossSuspected) {
-        _cached_decoder_for_InformationLossSuspected = $._decodeBoolean;
-    }
-    return _cached_decoder_for_InformationLossSuspected(el);
-}
+export const _decode_InformationLossSuspected = $._decodeBoolean;
 /* END_OF_SYMBOL_DEFINITION _decode_InformationLossSuspected */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationLossSuspected */
-let _cached_encoder_for_InformationLossSuspected: $.ASN1Encoder<InformationLossSuspected> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationLossSuspected */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InformationLossSuspected */
-/**
- * @summary Encodes a(n) InformationLossSuspected into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InformationLossSuspected, encoded as an ASN.1 Element.
- */
-export function _encode_InformationLossSuspected(
-    value: InformationLossSuspected,
-    elGetter: $.ASN1Encoder<InformationLossSuspected>
-) {
-    if (!_cached_encoder_for_InformationLossSuspected) {
-        _cached_encoder_for_InformationLossSuspected = $._encodeBoolean;
-    }
-    return _cached_encoder_for_InformationLossSuspected(value, elGetter);
-}
+export const _encode_InformationLossSuspected = $._encodeBoolean;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InformationLossSuspected */
 

@@ -131,45 +131,17 @@ export const target_certif_data_required: number = Options_target_certif_data_re
 /* END_OF_SYMBOL_DEFINITION target_certif_data_required */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Options */
-let _cached_decoder_for_Options: $.ASN1Decoder<Options> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Options */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Options */
-/**
- * @summary Decodes an ASN.1 element into a(n) Options
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Options} The decoded data structure.
- */
-export function _decode_Options(el: _Element) {
-    if (!_cached_decoder_for_Options) {
-        _cached_decoder_for_Options = $._decodeBitString;
-    }
-    return _cached_decoder_for_Options(el);
-}
+export const _decode_Options = $._decodeBitString;
 /* END_OF_SYMBOL_DEFINITION _decode_Options */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Options */
-let _cached_encoder_for_Options: $.ASN1Encoder<Options> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Options */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Options */
-/**
- * @summary Encodes a(n) Options into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Options, encoded as an ASN.1 Element.
- */
-export function _encode_Options(
-    value: Options,
-    elGetter: $.ASN1Encoder<Options>
-) {
-    if (!_cached_encoder_for_Options) {
-        _cached_encoder_for_Options = $._encodeBitString;
-    }
-    return _cached_encoder_for_Options(value, elGetter);
-}
+export const _encode_Options = $._encodeBitString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Options */
 

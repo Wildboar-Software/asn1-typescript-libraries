@@ -27,45 +27,17 @@ export type InformationString = GeneralString; // GeneralString
 /* END_OF_SYMBOL_DEFINITION InformationString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationString */
-let _cached_decoder_for_InformationString: $.ASN1Decoder<InformationString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationString */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InformationString */
-/**
- * @summary Decodes an ASN.1 element into a(n) InformationString
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {InformationString} The decoded data structure.
- */
-export function _decode_InformationString(el: _Element) {
-    if (!_cached_decoder_for_InformationString) {
-        _cached_decoder_for_InformationString = $._decodeGeneralString;
-    }
-    return _cached_decoder_for_InformationString(el);
-}
+export const _decode_InformationString = $._decodeGeneralString;
 /* END_OF_SYMBOL_DEFINITION _decode_InformationString */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationString */
-let _cached_encoder_for_InformationString: $.ASN1Encoder<InformationString> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationString */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InformationString */
-/**
- * @summary Encodes a(n) InformationString into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InformationString, encoded as an ASN.1 Element.
- */
-export function _encode_InformationString(
-    value: InformationString,
-    elGetter: $.ASN1Encoder<InformationString>
-) {
-    if (!_cached_encoder_for_InformationString) {
-        _cached_encoder_for_InformationString = $._encodeGeneralString;
-    }
-    return _cached_encoder_for_InformationString(value, elGetter);
-}
+export const _encode_InformationString = $._encodeGeneralString;
 
 /* END_OF_SYMBOL_DEFINITION _encode_InformationString */
 

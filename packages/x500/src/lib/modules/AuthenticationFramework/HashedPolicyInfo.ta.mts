@@ -16,45 +16,17 @@ export type HashedPolicyInfo = _Element; // ObjectClassFieldType
 /* END_OF_SYMBOL_DEFINITION HashedPolicyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HashedPolicyInfo */
-let _cached_decoder_for_HashedPolicyInfo: $.ASN1Decoder<HashedPolicyInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HashedPolicyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_HashedPolicyInfo */
-/**
- * @summary Decodes an ASN.1 element into a(n) HashedPolicyInfo
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {HashedPolicyInfo} The decoded data structure.
- */
-export function _decode_HashedPolicyInfo(el: _Element) {
-    if (!_cached_decoder_for_HashedPolicyInfo) {
-        _cached_decoder_for_HashedPolicyInfo = $._decodeAny;
-    }
-    return _cached_decoder_for_HashedPolicyInfo(el);
-}
+export const _decode_HashedPolicyInfo = $._decodeAny;
 /* END_OF_SYMBOL_DEFINITION _decode_HashedPolicyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HashedPolicyInfo */
-let _cached_encoder_for_HashedPolicyInfo: $.ASN1Encoder<HashedPolicyInfo> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HashedPolicyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_HashedPolicyInfo */
-/**
- * @summary Encodes a(n) HashedPolicyInfo into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HashedPolicyInfo, encoded as an ASN.1 Element.
- */
-export function _encode_HashedPolicyInfo(
-    value: HashedPolicyInfo,
-    elGetter: $.ASN1Encoder<HashedPolicyInfo>
-) {
-    if (!_cached_encoder_for_HashedPolicyInfo) {
-        _cached_encoder_for_HashedPolicyInfo = $._encodeAny;
-    }
-    return _cached_encoder_for_HashedPolicyInfo(value, elGetter);
-}
+export const _encode_HashedPolicyInfo = $._encodeAny;
 
 /* END_OF_SYMBOL_DEFINITION _encode_HashedPolicyInfo */
 

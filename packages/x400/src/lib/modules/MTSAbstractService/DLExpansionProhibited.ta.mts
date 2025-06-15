@@ -100,45 +100,17 @@ export const dl_expansion_prohibited: DLExpansionProhibited =
 /* END_OF_SYMBOL_DEFINITION dl_expansion_prohibited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExpansionProhibited */
-let _cached_decoder_for_DLExpansionProhibited: $.ASN1Decoder<DLExpansionProhibited> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExpansionProhibited */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DLExpansionProhibited */
-/**
- * @summary Decodes an ASN.1 element into a(n) DLExpansionProhibited
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {DLExpansionProhibited} The decoded data structure.
- */
-export function _decode_DLExpansionProhibited(el: _Element) {
-    if (!_cached_decoder_for_DLExpansionProhibited) {
-        _cached_decoder_for_DLExpansionProhibited = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_DLExpansionProhibited(el);
-}
+export const _decode_DLExpansionProhibited = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_DLExpansionProhibited */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExpansionProhibited */
-let _cached_encoder_for_DLExpansionProhibited: $.ASN1Encoder<DLExpansionProhibited> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExpansionProhibited */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DLExpansionProhibited */
-/**
- * @summary Encodes a(n) DLExpansionProhibited into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DLExpansionProhibited, encoded as an ASN.1 Element.
- */
-export function _encode_DLExpansionProhibited(
-    value: DLExpansionProhibited,
-    elGetter: $.ASN1Encoder<DLExpansionProhibited>
-) {
-    if (!_cached_encoder_for_DLExpansionProhibited) {
-        _cached_encoder_for_DLExpansionProhibited = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_DLExpansionProhibited(value, elGetter);
-}
+export const _encode_DLExpansionProhibited = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_DLExpansionProhibited */
 

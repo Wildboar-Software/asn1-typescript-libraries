@@ -27,45 +27,17 @@ export type Abstract_Syntax_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
 /* END_OF_SYMBOL_DEFINITION Abstract_Syntax_Name */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abstract_Syntax_Name */
-let _cached_decoder_for_Abstract_Syntax_Name: $.ASN1Decoder<Abstract_Syntax_Name> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abstract_Syntax_Name */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Abstract_Syntax_Name */
-/**
- * @summary Decodes an ASN.1 element into a(n) Abstract_Syntax_Name
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {Abstract_Syntax_Name} The decoded data structure.
- */
-export function _decode_Abstract_Syntax_Name(el: _Element) {
-    if (!_cached_decoder_for_Abstract_Syntax_Name) {
-        _cached_decoder_for_Abstract_Syntax_Name = $._decodeObjectIdentifier;
-    }
-    return _cached_decoder_for_Abstract_Syntax_Name(el);
-}
+export const _decode_Abstract_Syntax_Name = $._decodeObjectIdentifier;
 /* END_OF_SYMBOL_DEFINITION _decode_Abstract_Syntax_Name */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abstract_Syntax_Name */
-let _cached_encoder_for_Abstract_Syntax_Name: $.ASN1Encoder<Abstract_Syntax_Name> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abstract_Syntax_Name */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Abstract_Syntax_Name */
-/**
- * @summary Encodes a(n) Abstract_Syntax_Name into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Abstract_Syntax_Name, encoded as an ASN.1 Element.
- */
-export function _encode_Abstract_Syntax_Name(
-    value: Abstract_Syntax_Name,
-    elGetter: $.ASN1Encoder<Abstract_Syntax_Name>
-) {
-    if (!_cached_encoder_for_Abstract_Syntax_Name) {
-        _cached_encoder_for_Abstract_Syntax_Name = $._encodeObjectIdentifier;
-    }
-    return _cached_encoder_for_Abstract_Syntax_Name(value, elGetter);
-}
+export const _encode_Abstract_Syntax_Name = $._encodeObjectIdentifier;
 
 /* END_OF_SYMBOL_DEFINITION _encode_Abstract_Syntax_Name */
 

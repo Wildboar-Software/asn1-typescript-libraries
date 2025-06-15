@@ -63,45 +63,17 @@ export const cmp2000: PKIHeader_pvno = PKIHeader_pvno_cmp2000; /* SHORT_NAMED_IN
 /* END_OF_SYMBOL_DEFINITION cmp2000 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIHeader_pvno */
-let _cached_decoder_for_PKIHeader_pvno: $.ASN1Decoder<PKIHeader_pvno> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIHeader_pvno */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PKIHeader_pvno */
-/**
- * @summary Decodes an ASN.1 element into a(n) PKIHeader_pvno
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {PKIHeader_pvno} The decoded data structure.
- */
-export function _decode_PKIHeader_pvno(el: _Element) {
-  if (!_cached_decoder_for_PKIHeader_pvno) {
-    _cached_decoder_for_PKIHeader_pvno = $._decodeInteger;
-  }
-  return _cached_decoder_for_PKIHeader_pvno(el);
-}
+export const _decode_PKIHeader_pvno = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_PKIHeader_pvno */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIHeader_pvno */
-let _cached_encoder_for_PKIHeader_pvno: $.ASN1Encoder<PKIHeader_pvno> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIHeader_pvno */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PKIHeader_pvno */
-/**
- * @summary Encodes a(n) PKIHeader_pvno into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PKIHeader_pvno, encoded as an ASN.1 Element.
- */
-export function _encode_PKIHeader_pvno(
-  value: PKIHeader_pvno,
-  elGetter: $.ASN1Encoder<PKIHeader_pvno>
-) {
-  if (!_cached_encoder_for_PKIHeader_pvno) {
-    _cached_encoder_for_PKIHeader_pvno = $._encodeInteger;
-  }
-  return _cached_encoder_for_PKIHeader_pvno(value, elGetter);
-}
+export const _encode_PKIHeader_pvno = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_PKIHeader_pvno */
 

@@ -97,45 +97,17 @@ export const atomic: CMISSync =
 /* END_OF_SYMBOL_DEFINITION atomic */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMISSync */
-let _cached_decoder_for_CMISSync: $.ASN1Decoder<CMISSync> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMISSync */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CMISSync */
-/**
- * @summary Decodes an ASN.1 element into a(n) CMISSync
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {CMISSync} The decoded data structure.
- */
-export function _decode_CMISSync(el: _Element) {
-  if (!_cached_decoder_for_CMISSync) {
-    _cached_decoder_for_CMISSync = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_CMISSync(el);
-}
+export const _decode_CMISSync = $._decodeEnumerated;
 /* END_OF_SYMBOL_DEFINITION _decode_CMISSync */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMISSync */
-let _cached_encoder_for_CMISSync: $.ASN1Encoder<CMISSync> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMISSync */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CMISSync */
-/**
- * @summary Encodes a(n) CMISSync into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CMISSync, encoded as an ASN.1 Element.
- */
-export function _encode_CMISSync(
-  value: CMISSync,
-  elGetter: $.ASN1Encoder<CMISSync>
-) {
-  if (!_cached_encoder_for_CMISSync) {
-    _cached_encoder_for_CMISSync = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_CMISSync(value, elGetter);
-}
+export const _encode_CMISSync = $._encodeEnumerated;
 
 /* END_OF_SYMBOL_DEFINITION _encode_CMISSync */
 

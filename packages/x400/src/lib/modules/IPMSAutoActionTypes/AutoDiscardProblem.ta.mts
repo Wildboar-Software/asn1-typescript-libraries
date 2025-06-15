@@ -45,45 +45,17 @@ export const not_obsoleted_by_originator: AutoDiscardProblem = AutoDiscardProble
 /* END_OF_SYMBOL_DEFINITION not_obsoleted_by_originator */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoDiscardProblem */
-let _cached_decoder_for_AutoDiscardProblem: $.ASN1Decoder<AutoDiscardProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoDiscardProblem */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AutoDiscardProblem */
-/**
- * @summary Decodes an ASN.1 element into a(n) AutoDiscardProblem
- * @function
- * @param {_Element} el The element being decoded.
- * @returns {AutoDiscardProblem} The decoded data structure.
- */
-export function _decode_AutoDiscardProblem(el: _Element) {
-    if (!_cached_decoder_for_AutoDiscardProblem) {
-        _cached_decoder_for_AutoDiscardProblem = $._decodeInteger;
-    }
-    return _cached_decoder_for_AutoDiscardProblem(el);
-}
+export const _decode_AutoDiscardProblem = $._decodeInteger;
 /* END_OF_SYMBOL_DEFINITION _decode_AutoDiscardProblem */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoDiscardProblem */
-let _cached_encoder_for_AutoDiscardProblem: $.ASN1Encoder<AutoDiscardProblem> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoDiscardProblem */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AutoDiscardProblem */
-/**
- * @summary Encodes a(n) AutoDiscardProblem into an ASN.1 Element.
- * @function
- * @param value The element being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AutoDiscardProblem, encoded as an ASN.1 Element.
- */
-export function _encode_AutoDiscardProblem(
-    value: AutoDiscardProblem,
-    elGetter: $.ASN1Encoder<AutoDiscardProblem>
-) {
-    if (!_cached_encoder_for_AutoDiscardProblem) {
-        _cached_encoder_for_AutoDiscardProblem = $._encodeInteger;
-    }
-    return _cached_encoder_for_AutoDiscardProblem(value, elGetter);
-}
+export const _encode_AutoDiscardProblem = $._encodeInteger;
 
 /* END_OF_SYMBOL_DEFINITION _encode_AutoDiscardProblem */
 
