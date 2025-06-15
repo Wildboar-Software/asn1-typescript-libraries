@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +18,7 @@ import {
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
-export {
-    SessionType,
-    _decode_SessionType,
-    _encode_SessionType,
-} from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
-    _decode_SessionId,
-    _encode_SessionId,
-} from '../E-health-common/SessionId.ta.mjs';
-export {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
@@ -90,36 +27,10 @@ import {
     Requirements,
     _enum_for_Requirements,
     Requirements_none /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    none /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Requirements_with_2_way_voice /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    with_2_way_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Requirements_with_reverse_video_and_2_way_voice /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    with_reverse_video_and_2_way_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Requirements_with_2_way_video_and_voice /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    with_2_way_video_and_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_Requirements,
-    _encode_Requirements,
-} from '../E-health-common/Requirements.ta.mjs';
-export {
-    Requirements,
-    _enum_for_Requirements,
-    Requirements_none /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    none /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Requirements_with_2_way_voice /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    with_2_way_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Requirements_with_reverse_video_and_2_way_voice /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    with_reverse_video_and_2_way_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Requirements_with_2_way_video_and_voice /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    with_2_way_video_and_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Requirements,
     _encode_Requirements,
 } from '../E-health-common/Requirements.ta.mjs';
 import {
-    VoiceOptions,
-    _decode_VoiceOptions,
-    _encode_VoiceOptions,
-} from '../E-health-common/VoiceOptions.ta.mjs';
-export {
     VoiceOptions,
     _decode_VoiceOptions,
     _encode_VoiceOptions,
@@ -129,36 +40,12 @@ import {
     _decode_VideoOptions,
     _encode_VideoOptions,
 } from '../E-health-common/VideoOptions.ta.mjs';
-export {
-    VideoOptions,
-    _decode_VideoOptions,
-    _encode_VideoOptions,
-} from '../E-health-common/VideoOptions.ta.mjs';
 import {
     ReturnMode,
     _enum_for_ReturnMode,
-    ReturnMode_continuous /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    continuous /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReturnMode_batch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    batch /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReturnMode,
     _encode_ReturnMode,
 } from '../E-health-common/ReturnMode.ta.mjs';
-export {
-    ReturnMode,
-    _enum_for_ReturnMode,
-    ReturnMode_continuous /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    continuous /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReturnMode_batch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    batch /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReturnMode,
-    _encode_ReturnMode,
-} from '../E-health-common/ReturnMode.ta.mjs';
-import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.mjs';
-export { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.mjs';
-import { SupportedOperationTypes } from '../E-health-common/SupportedOperationTypes.osa.mjs';
-export { SupportedOperationTypes } from '../E-health-common/SupportedOperationTypes.osa.mjs';
-
 /* START_OF_SYMBOL_DEFINITION E_setupRequest */
 /**
  * @summary E_setupRequest
@@ -517,9 +404,7 @@ export function _encode_E_setupRequest(
 ) {
     if (!_cached_encoder_for_E_setupRequest) {
         _cached_encoder_for_E_setupRequest = function (
-            value: E_setupRequest,
-            elGetter: $.ASN1Encoder<E_setupRequest>
-        ): _Element {
+            value: E_setupRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

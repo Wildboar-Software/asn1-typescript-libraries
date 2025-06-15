@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
-export {
-    SessionType,
-    _decode_SessionType,
-    _encode_SessionType,
-} from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
-    _decode_SessionId,
-    _encode_SessionId,
-} from '../E-health-common/SessionId.ta.mjs';
-export {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
@@ -89,28 +23,9 @@ export {
 import {
     TerminateError,
     _enum_for_TerminateError,
-    TerminateError_terminationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    terminationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TerminateError_invalidSessionType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidSessionType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TerminateError_invalidSessionId /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidSessionId /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TerminateError,
     _encode_TerminateError,
 } from '../E-health-common/TerminateError.ta.mjs';
-export {
-    TerminateError,
-    _enum_for_TerminateError,
-    TerminateError_terminationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    terminationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TerminateError_invalidSessionType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidSessionType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TerminateError_invalidSessionId /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidSessionId /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_TerminateError,
-    _encode_TerminateError,
-} from '../E-health-common/TerminateError.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION E_terminateError */
 /**
  * @summary E_terminateError
@@ -310,9 +225,7 @@ export function _encode_E_terminateError(
 ) {
     if (!_cached_encoder_for_E_terminateError) {
         _cached_encoder_for_E_terminateError = function (
-            value: E_terminateError,
-            elGetter: $.ASN1Encoder<E_terminateError>
-        ): _Element {
+            value: E_terminateError        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

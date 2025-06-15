@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,16 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-import { EncryptedContentSet } from '../CmsTelebiometric/EncryptedContentSet.osa.mjs';
-export { EncryptedContentSet } from '../CmsTelebiometric/EncryptedContentSet.osa.mjs';
 import {
-    EncryptedContentInfo_contentEncryptionAlgorithm,
-    _decode_EncryptedContentInfo_contentEncryptionAlgorithm,
-    _encode_EncryptedContentInfo_contentEncryptionAlgorithm,
-} from '../CmsTelebiometric/EncryptedContentInfo-contentEncryptionAlgorithm.ta.mjs';
-export {
     EncryptedContentInfo_contentEncryptionAlgorithm,
     _decode_EncryptedContentInfo_contentEncryptionAlgorithm,
     _encode_EncryptedContentInfo_contentEncryptionAlgorithm,
@@ -85,12 +22,6 @@ import {
     _decode_EncryptedContent,
     _encode_EncryptedContent,
 } from '../CmsTelebiometric/EncryptedContent.ta.mjs';
-export {
-    EncryptedContent,
-    _decode_EncryptedContent,
-    _encode_EncryptedContent,
-} from '../CmsTelebiometric/EncryptedContent.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**
  * @summary EncryptedContentInfo
@@ -301,9 +232,7 @@ export function _encode_EncryptedContentInfo(
 ) {
     if (!_cached_encoder_for_EncryptedContentInfo) {
         _cached_encoder_for_EncryptedContentInfo = function (
-            value: EncryptedContentInfo,
-            elGetter: $.ASN1Encoder<EncryptedContentInfo>
-        ): _Element {
+            value: EncryptedContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

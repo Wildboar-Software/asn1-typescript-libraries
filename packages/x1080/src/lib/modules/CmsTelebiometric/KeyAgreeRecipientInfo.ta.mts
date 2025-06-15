@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,44 +13,10 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta.mjs';
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
 import {
-    OriginatorIdentifierOrKey,
-    _decode_OriginatorIdentifierOrKey,
-    _encode_OriginatorIdentifierOrKey,
-} from '../CmsTelebiometric/OriginatorIdentifierOrKey.ta.mjs';
-export {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
@@ -115,17 +26,7 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from '../CmsTelebiometric/UserKeyingMaterial.ta.mjs';
-export {
-    UserKeyingMaterial,
-    _decode_UserKeyingMaterial,
-    _encode_UserKeyingMaterial,
-} from '../CmsTelebiometric/UserKeyingMaterial.ta.mjs';
 import {
-    KeyEncryptionAlgorithmIdentifier,
-    _decode_KeyEncryptionAlgorithmIdentifier,
-    _encode_KeyEncryptionAlgorithmIdentifier,
-} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.mjs';
-export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
@@ -135,12 +36,6 @@ import {
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
 } from '../CmsTelebiometric/RecipientEncryptedKeys.ta.mjs';
-export {
-    RecipientEncryptedKeys,
-    _decode_RecipientEncryptedKeys,
-    _encode_RecipientEncryptedKeys,
-} from '../CmsTelebiometric/RecipientEncryptedKeys.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreeRecipientInfo */
 /**
  * @summary KeyAgreeRecipientInfo
@@ -392,9 +287,7 @@ export function _encode_KeyAgreeRecipientInfo(
 ) {
     if (!_cached_encoder_for_KeyAgreeRecipientInfo) {
         _cached_encoder_for_KeyAgreeRecipientInfo = function (
-            value: KeyAgreeRecipientInfo,
-            elGetter: $.ASN1Encoder<KeyAgreeRecipientInfo>
-        ): _Element {
+            value: KeyAgreeRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

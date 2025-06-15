@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,35 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectOperations,
-    ObjectOperations_read /* IMPORTED_LONG_NAMED_BIT */,
-    read /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_add /* IMPORTED_LONG_NAMED_BIT */,
-    add /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_modify /* IMPORTED_LONG_NAMED_BIT */,
-    modify /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_delete_ /* IMPORTED_LONG_NAMED_BIT */,
-    delete_ /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_rename /* IMPORTED_LONG_NAMED_BIT */,
-    rename /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_discloseOnError /* IMPORTED_LONG_NAMED_BIT */,
-    discloseOnError /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_ObjectOperations,
-    _encode_ObjectOperations,
-} from '../Pbact-access/ObjectOperations.ta.mjs';
-export {
-    ObjectOperations,
-    ObjectOperations_read /* IMPORTED_LONG_NAMED_BIT */,
-    read /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_add /* IMPORTED_LONG_NAMED_BIT */,
-    add /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_modify /* IMPORTED_LONG_NAMED_BIT */,
-    modify /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_delete_ /* IMPORTED_LONG_NAMED_BIT */,
-    delete_ /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_rename /* IMPORTED_LONG_NAMED_BIT */,
-    rename /* IMPORTED_SHORT_NAMED_BIT */,
-    ObjectOperations_discloseOnError /* IMPORTED_LONG_NAMED_BIT */,
-    discloseOnError /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ObjectOperations,
     _encode_ObjectOperations,
 } from '../Pbact-access/ObjectOperations.ta.mjs';
@@ -105,12 +21,6 @@ import {
     _decode_AttributeSel,
     _encode_AttributeSel,
 } from '../Pbact-access/AttributeSel.ta.mjs';
-export {
-    AttributeSel,
-    _decode_AttributeSel,
-    _encode_AttributeSel,
-} from '../Pbact-access/AttributeSel.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TargetSelect */
 /**
  * @summary TargetSelect
@@ -296,9 +206,7 @@ export function _encode_TargetSelect(
 ) {
     if (!_cached_encoder_for_TargetSelect) {
         _cached_encoder_for_TargetSelect = function (
-            value: TargetSelect,
-            elGetter: $.ASN1Encoder<TargetSelect>
-        ): _Element {
+            value: TargetSelect        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

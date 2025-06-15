@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
-export {
-    SessionType,
-    _decode_SessionType,
-    _encode_SessionType,
-} from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
-    _decode_SessionId,
-    _encode_SessionId,
-} from '../E-health-common/SessionId.ta.mjs';
-export {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
@@ -89,52 +23,9 @@ export {
 import {
     SetupError,
     _enum_for_SetupError,
-    SetupError_setupNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    setupNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_facilityTemporarilyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    facilityTemporarilyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_facilityPermanentlyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    facilityPermanentlyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_unknownSessionType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unknownSessionType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_sessionTypeNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sessionTypeNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_batchModeNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    batchModeNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_continuousReturnNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    continuousReturnNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_sensorTemporarilyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sensorTemporarilyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_sensorPermanentlyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sensorPermanentlyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SetupError,
     _encode_SetupError,
 } from '../E-health-common/SetupError.ta.mjs';
-export {
-    SetupError,
-    _enum_for_SetupError,
-    SetupError_setupNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    setupNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_facilityTemporarilyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    facilityTemporarilyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_facilityPermanentlyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    facilityPermanentlyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_unknownSessionType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unknownSessionType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_sessionTypeNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sessionTypeNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_batchModeNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    batchModeNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_continuousReturnNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    continuousReturnNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_sensorTemporarilyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sensorTemporarilyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SetupError_sensorPermanentlyUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sensorPermanentlyUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_SetupError,
-    _encode_SetupError,
-} from '../E-health-common/SetupError.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION E_setupError */
 /**
  * @summary E_setupError
@@ -334,9 +225,7 @@ export function _encode_E_setupError(
 ) {
     if (!_cached_encoder_for_E_setupError) {
         _cached_encoder_for_E_setupError = function (
-            value: E_setupError,
-            elGetter: $.ASN1Encoder<E_setupError>
-        ): _Element {
+            value: E_setupError        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

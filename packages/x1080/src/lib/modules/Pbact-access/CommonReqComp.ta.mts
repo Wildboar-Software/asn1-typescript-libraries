@@ -18,12 +18,6 @@ import {
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';
-export {
-    AttributeCertificates,
-    _decode_AttributeCertificates,
-    _encode_AttributeCertificates,
-} from '../Pbact-access/AttributeCertificates.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CommonReqComp */
 /**
  * @summary CommonReqComp
@@ -233,9 +227,7 @@ export function _encode_CommonReqComp(
 ) {
     if (!_cached_encoder_for_CommonReqComp) {
         _cached_encoder_for_CommonReqComp = function (
-            value: CommonReqComp,
-            elGetter: $.ASN1Encoder<CommonReqComp>
-        ): _Element {
+            value: CommonReqComp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

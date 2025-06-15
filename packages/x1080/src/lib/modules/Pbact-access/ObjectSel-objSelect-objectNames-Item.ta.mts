@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_ObjectSel_objSelect_objectNames_Item_object,
     _encode_ObjectSel_objSelect_objectNames_Item_object,
 } from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta.mjs';
-export {
-    ObjectSel_objSelect_objectNames_Item_object,
-    _decode_ObjectSel_objSelect_objectNames_Item_object,
-    _encode_ObjectSel_objSelect_objectNames_Item_object,
-} from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta.mjs';
 import {
     TargetSelect,
     _decode_TargetSelect,
     _encode_TargetSelect,
 } from '../Pbact-access/TargetSelect.ta.mjs';
-export {
-    TargetSelect,
-    _decode_TargetSelect,
-    _encode_TargetSelect,
-} from '../Pbact-access/TargetSelect.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ObjectSel_objSelect_objectNames_Item */
 /**
  * @summary ObjectSel_objSelect_objectNames_Item
@@ -254,9 +187,7 @@ export function _encode_ObjectSel_objSelect_objectNames_Item(
 ) {
     if (!_cached_encoder_for_ObjectSel_objSelect_objectNames_Item) {
         _cached_encoder_for_ObjectSel_objSelect_objectNames_Item = function (
-            value: ObjectSel_objSelect_objectNames_Item,
-            elGetter: $.ASN1Encoder<ObjectSel_objSelect_objectNames_Item>
-        ): _Element {
+            value: ObjectSel_objSelect_objectNames_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(
