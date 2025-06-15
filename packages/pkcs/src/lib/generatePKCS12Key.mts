@@ -1,5 +1,6 @@
 import * as asn1 from "asn1-ts";
-import * as crypto from "crypto";
+import * as crypto from "node:crypto";
+import { Buffer } from "node:buffer";
 
 /**
  * Generate a PKCS12 key from a password, based on the algorithm defined in
