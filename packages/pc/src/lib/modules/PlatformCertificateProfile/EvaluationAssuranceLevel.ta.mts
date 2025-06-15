@@ -22,7 +22,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * EvaluationAssuranceLevel  ::=  ENUMERATED {
- *     levell (1),
+ *     level1 (1),
  *     level2 (2),
  *     level3 (3),
  *     level4 (4),
@@ -33,7 +33,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 enum _enum_for_EvaluationAssuranceLevel {
-    levell = 1,
+    level1 = 1,
     level2 = 2,
     level3 = 3,
     level4 = 4,
@@ -52,7 +52,7 @@ enum _enum_for_EvaluationAssuranceLevel {
  * 
  * ```asn1
  * EvaluationAssuranceLevel  ::=  ENUMERATED {
- *     levell (1),
+ *     level1 (1),
  *     level2 (2),
  *     level3 (3),
  *     level4 (4),
@@ -74,7 +74,7 @@ type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
  * 
  * ```asn1
  * EvaluationAssuranceLevel  ::=  ENUMERATED {
- *     levell (1),
+ *     level1 (1),
  *     level2 (2),
  *     level3 (3),
  *     level4 (4),
@@ -87,25 +87,25 @@ export
 const EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
 /* END_OF_SYMBOL_DEFINITION EvaluationAssuranceLevel */
 
-/* START_OF_SYMBOL_DEFINITION EvaluationAssuranceLevel_levell */
+/* START_OF_SYMBOL_DEFINITION EvaluationAssuranceLevel_level1 */
 /**
- * @summary EvaluationAssuranceLevel_levell
+ * @summary EvaluationAssuranceLevel_level1
  * @constant
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_levell: EvaluationAssuranceLevel = EvaluationAssuranceLevel.levell; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EvaluationAssuranceLevel_levell */
+const EvaluationAssuranceLevel_level1: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level1; /* LONG_NAMED_ENUMERATED_VALUE */
+/* END_OF_SYMBOL_DEFINITION EvaluationAssuranceLevel_level1 */
 
-/* START_OF_SYMBOL_DEFINITION levell */
+/* START_OF_SYMBOL_DEFINITION level1 */
 /**
- * @summary levell
+ * @summary level1
  * @constant
  * @type {number}
  */
 export
-const levell: EvaluationAssuranceLevel = EvaluationAssuranceLevel.levell; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION levell */
+const level1: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
+/* END_OF_SYMBOL_DEFINITION level1 */
 
 /* START_OF_SYMBOL_DEFINITION EvaluationAssuranceLevel_level2 */
 /**

@@ -207,7 +207,7 @@ CommonCriteriaMeasures ::= SEQUENCE {
     targetUri           [4] IMPLICIT URIReference OPTIONAL }
 
 EvaluationAssuranceLevel ::= ENUMERATED {
-    levell (1),
+    level1 (1),
     level2 (2),
     level3 (3),
     level4 (4),
