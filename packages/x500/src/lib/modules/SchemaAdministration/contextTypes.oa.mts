@@ -10,7 +10,6 @@ import {
 } from "../SchemaAdministration/ContextDescription.ta.mjs";
 import { id_soa_contextTypes } from "../SchemaAdministration/id-soa-contextTypes.va.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION contextTypes */
 /**
  * @summary contextTypes
  * @description
@@ -47,6 +46,5 @@ export const contextTypes: ATTRIBUTE<ContextDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contextTypes */
 
 /* eslint-enable */

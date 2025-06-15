@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityCategoriesTable */
 /**
  * @summary SecurityCategoriesTable
  * @description
@@ -16,6 +15,5 @@ import { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.mjs
  *
  */
 export const SecurityCategoriesTable: SECURITY_CATEGORY[] = [];
-/* END_OF_SYMBOL_DEFINITION SecurityCategoriesTable */
 
 /* eslint-enable */

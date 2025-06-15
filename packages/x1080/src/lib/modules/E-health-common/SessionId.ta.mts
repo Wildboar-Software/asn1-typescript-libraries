@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SessionId */
+
 /**
  * @summary SessionId
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SessionId = INTEGER;
-/* END_OF_SYMBOL_DEFINITION SessionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SessionId */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SessionId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SessionId */
+
+
 export const _decode_SessionId = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_SessionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SessionId */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SessionId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SessionId */
+
+
 export const _encode_SessionId = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SessionId */
 
 /* eslint-enable */

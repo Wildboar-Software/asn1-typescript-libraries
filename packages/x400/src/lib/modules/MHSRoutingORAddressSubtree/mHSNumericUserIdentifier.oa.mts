@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa.mjs';
 import { id_oc_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-numeric-user-identifier.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSNumericUserIdentifier */
 /**
  * @summary mHSNumericUserIdentifier
  * @description
@@ -50,6 +49,5 @@ export const mHSNumericUserIdentifier: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_numeric_user_identifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSNumericUserIdentifier */
 
 /* eslint-enable */

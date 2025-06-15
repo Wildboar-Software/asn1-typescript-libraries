@@ -15,7 +15,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DerivedFrom */
 /**
  * @summary DerivedFrom
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DerivedFrom = TemplateList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DerivedFrom */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DerivedFrom */
 let _cached_decoder_for_DerivedFrom: $.ASN1Decoder<DerivedFrom> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DerivedFrom */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DerivedFrom */
 /**
  * @summary Decodes an ASN.1 element into a(n) DerivedFrom
  * @function
@@ -46,13 +41,9 @@ export function _decode_DerivedFrom(el: _Element) {
     }
     return _cached_decoder_for_DerivedFrom(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DerivedFrom */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DerivedFrom */
 let _cached_encoder_for_DerivedFrom: $.ASN1Encoder<DerivedFrom> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DerivedFrom */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DerivedFrom */
 /**
  * @summary Encodes a(n) DerivedFrom into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DerivedFrom(
     return _cached_encoder_for_DerivedFrom(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DerivedFrom */
 
 /* eslint-enable */

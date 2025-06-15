@@ -16,7 +16,7 @@ import {
     _decode_CloseOutVerification,
     _encode_CloseOutVerification,
 } from '../X790ASN1Module/CloseOutVerification.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION closeOutVerificationCloseOutVerificationInitial */
+
 /**
  * @summary closeOutVerificationCloseOutVerificationInitial
  * @description
@@ -30,6 +30,5 @@ import {
  * @constant
  */
 export const closeOutVerificationCloseOutVerificationInitial: CloseOutVerification = CloseOutVerification_noAction;
-/* END_OF_SYMBOL_DEFINITION closeOutVerificationCloseOutVerificationInitial */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_LinkEndCharacteristics,
     _encode_LinkEndCharacteristics,
 } from '../M3108Part2ASN1Module/LinkEndCharacteristics.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SlcEnds */
+
 /**
  * @summary SlcEnds
  * @description
@@ -65,9 +65,8 @@ export class SlcEnds {
         return new SlcEnds(_o.endA, _o.endB);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SlcEnds */
+
 /**
  * @summary The Leading Root Component Types of SlcEnds
  * @description
@@ -92,9 +91,8 @@ export const _root_component_type_list_1_spec_for_SlcEnds: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SlcEnds */
+
 /**
  * @summary The Trailing Root Component Types of SlcEnds
  * @description
@@ -104,9 +102,8 @@ export const _root_component_type_list_1_spec_for_SlcEnds: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SlcEnds: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SlcEnds */
+
 /**
  * @summary The Extension Addition Component Types of SlcEnds
  * @description
@@ -116,13 +113,11 @@ export const _root_component_type_list_2_spec_for_SlcEnds: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_SlcEnds: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SlcEnds */
+
 let _cached_decoder_for_SlcEnds: $.ASN1Decoder<SlcEnds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SlcEnds */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SlcEnds
  * @function
@@ -155,13 +150,11 @@ export function _decode_SlcEnds(el: _Element) {
     }
     return _cached_decoder_for_SlcEnds(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SlcEnds */
+
 let _cached_encoder_for_SlcEnds: $.ASN1Encoder<SlcEnds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SlcEnds */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SlcEnds */
+
 /**
  * @summary Encodes a(n) SlcEnds into an ASN.1 Element.
  * @function
@@ -200,6 +193,5 @@ export function _encode_SlcEnds(
     return _cached_encoder_for_SlcEnds(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SlcEnds */
 
 /* eslint-enable */

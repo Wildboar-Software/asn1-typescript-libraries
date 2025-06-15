@@ -9,7 +9,6 @@ import {
     _decode_ContextCombination,
     _encode_ContextCombination,
 } from "../ServiceAdministration/ContextCombination.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION contextCombinations */
 /**
  * @summary contextCombinations
  * @description
@@ -43,6 +42,5 @@ export const contextCombinations: ATTRIBUTE<ContextCombination> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contextCombinations */
 
 /* eslint-enable */

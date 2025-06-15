@@ -16,7 +16,6 @@ import {
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import { id_mr_ipm_location } from '../IPMSObjectIdentifiers/id-mr-ipm-location.va.mjs';
-/* START_OF_SYMBOL_DEFINITION iPMLocationMatch */
 /**
  * @summary iPMLocationMatch
  * @description
@@ -45,6 +44,5 @@ export const iPMLocationMatch: MATCHING_RULE<SequenceNumber> = {
     '&id': id_mr_ipm_location /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION iPMLocationMatch */
 
 /* eslint-enable */

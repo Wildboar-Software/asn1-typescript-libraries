@@ -22,7 +22,6 @@ import { id_att_originating_MTA_certificate } from '../MSObjectIdentifiers/id-at
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_originating_MTA_certificate */
 /**
  * @summary mt_originating_MTA_certificate
  * @description
@@ -53,6 +52,5 @@ export const mt_originating_MTA_certificate: X413ATTRIBUTE<OriginatingMTACertifi
     '&id': id_att_originating_MTA_certificate /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_originating_MTA_certificate */
 
 /* eslint-enable */

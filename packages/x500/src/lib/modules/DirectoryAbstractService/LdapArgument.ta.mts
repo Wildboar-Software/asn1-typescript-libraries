@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LdapArgument */
 /**
  * @summary LdapArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type LdapArgument = OPTIONALLY_PROTECTED_SEQ<LdapArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LdapArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LdapArgument */
 let _cached_decoder_for_LdapArgument: $.ASN1Decoder<LdapArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LdapArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LdapArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) LdapArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_LdapArgument(el: _Element) {
     }
     return _cached_decoder_for_LdapArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LdapArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LdapArgument */
 let _cached_encoder_for_LdapArgument: $.ASN1Encoder<LdapArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LdapArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LdapArgument */
 /**
  * @summary Encodes a(n) LdapArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_LdapArgument(
     return _cached_encoder_for_LdapArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LdapArgument */
 
 /* eslint-enable */

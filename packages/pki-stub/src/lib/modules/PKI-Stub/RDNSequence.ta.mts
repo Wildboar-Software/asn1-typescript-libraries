@@ -7,7 +7,6 @@ import {
     _encode_RelativeDistinguishedName,
 } from "../PKI-Stub/RelativeDistinguishedName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RDNSequence */
 /**
  * @summary RDNSequence
  * @description
@@ -22,13 +21,9 @@ import {
  * ```
  */
 export type RDNSequence = RelativeDistinguishedName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RDNSequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RDNSequence */
 let _cached_decoder_for_RDNSequence: $.ASN1Decoder<RDNSequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RDNSequence */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RDNSequence */
 /**
  * @summary Decodes an ASN.1 element into a(n) RDNSequence
  * @function
@@ -44,13 +39,9 @@ export function _decode_RDNSequence(el: _Element) {
     }
     return _cached_decoder_for_RDNSequence(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RDNSequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RDNSequence */
 let _cached_encoder_for_RDNSequence: $.ASN1Encoder<RDNSequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RDNSequence */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RDNSequence */
 /**
  * @summary Encodes a(n) RDNSequence into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_RDNSequence(
     return _cached_encoder_for_RDNSequence(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RDNSequence */
 
 /* eslint-enable */

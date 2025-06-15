@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ContactName */
 /**
  * @summary ContactName
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ContactName = UniversalString; // UniversalString
-/* END_OF_SYMBOL_DEFINITION ContactName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContactName */
 export const _decode_ContactName = $._decodeUniversalString;
-/* END_OF_SYMBOL_DEFINITION _decode_ContactName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContactName */
 export const _encode_ContactName = $._encodeUniversalString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContactName */
 
 /* eslint-enable */

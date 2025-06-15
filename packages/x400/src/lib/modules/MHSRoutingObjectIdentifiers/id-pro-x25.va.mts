@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_pro } from '../MHSRoutingObjectIdentifiers/id-pro.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_pro_x25 */
 /**
  * @summary id_pro_x25
  * @description
@@ -29,6 +28,5 @@ import { id_pro } from '../MHSRoutingObjectIdentifiers/id-pro.va.mjs';
  * @constant
  */
 export const id_pro_x25: ID = new _OID([0], id_pro);
-/* END_OF_SYMBOL_DEFINITION id_pro_x25 */
 
 /* eslint-enable */

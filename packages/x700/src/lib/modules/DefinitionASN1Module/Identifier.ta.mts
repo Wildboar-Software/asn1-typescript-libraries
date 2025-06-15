@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Identifier */
 /**
  * @summary Identifier
  * @description
@@ -31,21 +30,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Identifier = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Identifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Identifier */
 export const _decode_Identifier = $._decodePrintableString;
-/* END_OF_SYMBOL_DEFINITION _decode_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Identifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Identifier */
 export const _encode_Identifier = $._encodePrintableString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Identifier */
 
 /* eslint-enable */

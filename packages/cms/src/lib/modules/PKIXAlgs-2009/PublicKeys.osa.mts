@@ -7,7 +7,7 @@ import { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa.mjs";
 import { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa.mjs";
 import { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION PublicKeys */
+
 /**
  * @summary PublicKeys
  * @description
@@ -40,6 +40,5 @@ export const PublicKeys: PUBLIC_KEY[] = [
     pk_ecDH,
     pk_ecMQV,
 ];
-/* END_OF_SYMBOL_DEFINITION PublicKeys */
 
 /* eslint-enable */

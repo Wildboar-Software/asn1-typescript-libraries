@@ -17,7 +17,7 @@ import {
   _get_decoder_for_GenericTimeTypeChoice,
   _get_encoder_for_GenericTimeTypeChoice,
 } from '../XSD/GenericTimeTypeChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Duration */
+
 /**
  * @summary Duration
  * @description
@@ -39,13 +39,11 @@ import {
  * ```
  */
 export type Duration = GenericTimeTypeChoice<DURATION, VisibleString>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Duration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Duration */
+
 let _cached_decoder_for_Duration: $.ASN1Decoder<Duration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Duration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Duration */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Duration
  * @function
@@ -61,13 +59,11 @@ export function _decode_Duration(el: _Element) {
   }
   return _cached_decoder_for_Duration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Duration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Duration */
+
 let _cached_encoder_for_Duration: $.ASN1Encoder<Duration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Duration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Duration */
+
 /**
  * @summary Encodes a(n) Duration into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_Duration(
   return _cached_encoder_for_Duration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Duration */
 
 /* eslint-enable */

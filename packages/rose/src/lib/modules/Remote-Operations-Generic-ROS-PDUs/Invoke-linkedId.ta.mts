@@ -20,7 +20,7 @@ import {
   _decode_RejectProblem,
   _encode_RejectProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Invoke_linkedId */
+
 /**
  * @summary Invoke_linkedId
  * @description
@@ -34,13 +34,11 @@ import {
 export type Invoke_linkedId =
   | { present: $.Selection<InvokeId, 'present'> } /* CHOICE_ALT_ROOT */
   | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Invoke_linkedId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Invoke_linkedId */
+
 let _cached_decoder_for_Invoke_linkedId: $.ASN1Decoder<Invoke_linkedId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Invoke_linkedId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Invoke_linkedId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Invoke_linkedId
  * @function
@@ -63,13 +61,11 @@ export function _decode_Invoke_linkedId(el: _Element) {
   }
   return _cached_decoder_for_Invoke_linkedId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Invoke_linkedId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Invoke_linkedId */
+
 let _cached_encoder_for_Invoke_linkedId: $.ASN1Encoder<Invoke_linkedId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Invoke_linkedId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Invoke_linkedId */
+
 /**
  * @summary Encodes a(n) Invoke_linkedId into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_Invoke_linkedId(
   return _cached_encoder_for_Invoke_linkedId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Invoke_linkedId */
 
 /* eslint-enable */

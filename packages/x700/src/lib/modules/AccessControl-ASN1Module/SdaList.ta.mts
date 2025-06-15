@@ -15,7 +15,6 @@ import {
     _decode_SdaList_Item,
     _encode_SdaList_Item,
 } from '../AccessControl-ASN1Module/SdaList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SdaList */
 /**
  * @summary SdaList
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type SdaList = SdaList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SdaList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SdaList */
 let _cached_decoder_for_SdaList: $.ASN1Decoder<SdaList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SdaList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SdaList */
 /**
  * @summary Decodes an ASN.1 element into a(n) SdaList
  * @function
@@ -51,13 +46,9 @@ export function _decode_SdaList(el: _Element) {
     }
     return _cached_decoder_for_SdaList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SdaList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SdaList */
 let _cached_encoder_for_SdaList: $.ASN1Encoder<SdaList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SdaList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SdaList */
 /**
  * @summary Encodes a(n) SdaList into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_SdaList(
     return _cached_encoder_for_SdaList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SdaList */
 
 /* eslint-enable */

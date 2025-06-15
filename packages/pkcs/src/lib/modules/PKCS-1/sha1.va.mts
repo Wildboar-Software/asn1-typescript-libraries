@@ -4,7 +4,7 @@ import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/Authenticati
 import { HashAlgorithm } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import { id_sha1 } from "../PKCS-1/id-sha1.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION sha1 */
+
 /**
  * @summary sha1
  * @description
@@ -31,6 +31,5 @@ export const sha1: HashAlgorithm = AlgorithmIdentifier._from_object({
     ),
     _unrecognizedExtensionsList: undefined,
 });
-/* END_OF_SYMBOL_DEFINITION sha1 */
 
 /* eslint-enable */

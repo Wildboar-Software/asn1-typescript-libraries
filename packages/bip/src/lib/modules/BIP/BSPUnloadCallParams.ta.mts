@@ -20,7 +20,7 @@ import {
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BSPUnloadCallParams */
+
 /**
  * @summary BSPUnloadCallParams
  * @description
@@ -81,9 +81,8 @@ export class BSPUnloadCallParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPUnloadCallParams */
+
 /**
  * @summary The Leading Root Component Types of BSPUnloadCallParams
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_BSPUnloadCallParams: $.Compone
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPUnloadCallParams */
+
 /**
  * @summary The Trailing Root Component Types of BSPUnloadCallParams
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_BSPUnloadCallParams: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BSPUnloadCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPUnloadCallParams */
+
 /**
  * @summary The Extension Addition Component Types of BSPUnloadCallParams
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_BSPUnloadCallParams: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_BSPUnloadCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPUnloadCallParams */
+
 let _cached_decoder_for_BSPUnloadCallParams: $.ASN1Decoder<BSPUnloadCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BSPUnloadCallParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BSPUnloadCallParams
  * @function
@@ -183,13 +178,11 @@ export function _decode_BSPUnloadCallParams(el: _Element) {
   }
   return _cached_decoder_for_BSPUnloadCallParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPUnloadCallParams */
+
 let _cached_encoder_for_BSPUnloadCallParams: $.ASN1Encoder<BSPUnloadCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPUnloadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BSPUnloadCallParams */
+
 /**
  * @summary Encodes a(n) BSPUnloadCallParams into an ASN.1 Element.
  * @function
@@ -225,6 +218,5 @@ export function _encode_BSPUnloadCallParams(
   return _cached_encoder_for_BSPUnloadCallParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BSPUnloadCallParams */
 
 /* eslint-enable */

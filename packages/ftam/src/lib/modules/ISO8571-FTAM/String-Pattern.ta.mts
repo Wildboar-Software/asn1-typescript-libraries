@@ -20,7 +20,7 @@ import {
   _decode_String_Pattern_string_value_Item,
   _encode_String_Pattern_string_value_Item,
 } from '../ISO8571-FTAM/String-Pattern-string-value-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION String_Pattern */
+
 /**
  * @summary String_Pattern
  * @description
@@ -76,9 +76,8 @@ export class String_Pattern {
     return new String_Pattern(_o.equality_comparision, _o.string_value);
   }
 }
-/* END_OF_SYMBOL_DEFINITION String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_String_Pattern */
+
 /**
  * @summary The Leading Root Component Types of String_Pattern
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_String_Pattern: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_String_Pattern */
+
 /**
  * @summary The Trailing Root Component Types of String_Pattern
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_String_Pattern: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_String_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_String_Pattern */
+
 /**
  * @summary The Extension Addition Component Types of String_Pattern
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_String_Pattern: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_String_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_String_Pattern */
+
 let _cached_decoder_for_String_Pattern: $.ASN1Decoder<String_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_String_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) String_Pattern
  * @function
@@ -171,13 +166,11 @@ export function _decode_String_Pattern(el: _Element) {
   }
   return _cached_decoder_for_String_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_String_Pattern */
+
 let _cached_encoder_for_String_Pattern: $.ASN1Encoder<String_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_String_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_String_Pattern */
+
 /**
  * @summary Encodes a(n) String_Pattern into an ASN.1 Element.
  * @function
@@ -220,6 +213,5 @@ export function _encode_String_Pattern(
   return _cached_encoder_for_String_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_String_Pattern */
 
 /* eslint-enable */

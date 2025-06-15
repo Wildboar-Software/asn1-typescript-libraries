@@ -16,7 +16,7 @@ import {
   _decode_SaslCredentials,
   _encode_SaslCredentials,
 } from '../Lightweight-Directory-Access-Protocol-V3/SaslCredentials.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AuthenticationChoice */
+
 /**
  * @summary AuthenticationChoice
  * @description
@@ -36,13 +36,11 @@ export type AuthenticationChoice =
   | { simple: OCTET_STRING } /* CHOICE_ALT_ROOT */
   | { sasl: SaslCredentials } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AuthenticationChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationChoice */
+
 let _cached_decoder_for_AuthenticationChoice: $.ASN1Decoder<AuthenticationChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthenticationChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticationChoice
  * @function
@@ -66,13 +64,11 @@ export function _decode_AuthenticationChoice(el: _Element) {
   }
   return _cached_decoder_for_AuthenticationChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthenticationChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationChoice */
+
 let _cached_encoder_for_AuthenticationChoice: $.ASN1Encoder<AuthenticationChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthenticationChoice */
+
 /**
  * @summary Encodes a(n) AuthenticationChoice into an ASN.1 Element.
  * @function
@@ -106,6 +102,5 @@ export function _encode_AuthenticationChoice(
   return _cached_encoder_for_AuthenticationChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthenticationChoice */
 
 /* eslint-enable */

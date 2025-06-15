@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Prime_p */
 /**
  * @summary Prime_p
  * @description
@@ -14,21 +13,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type Prime_p = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Prime_p */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Prime_p */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Prime_p */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Prime_p */
 export const _decode_Prime_p = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Prime_p */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Prime_p */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Prime_p */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Prime_p */
 export const _encode_Prime_p = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Prime_p */
 
 /* eslint-enable */

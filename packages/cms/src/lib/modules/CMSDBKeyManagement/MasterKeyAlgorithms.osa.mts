@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION MasterKeyAlgorithms */
+
 /**
  * @summary MasterKeyAlgorithms
  * @description
@@ -18,6 +18,5 @@ import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramewor
  *
  */
 export const MasterKeyAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION MasterKeyAlgorithms */
 
 /* eslint-enable */

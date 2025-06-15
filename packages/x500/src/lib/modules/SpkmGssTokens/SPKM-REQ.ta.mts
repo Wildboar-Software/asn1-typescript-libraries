@@ -20,7 +20,6 @@ import {
     _decode_REQ_TOKEN,
     _encode_REQ_TOKEN,
 } from "../SpkmGssTokens/REQ-TOKEN.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPKM_REQ */
 /**
  * @summary SPKM_REQ
  * @description
@@ -77,9 +76,7 @@ export class SPKM_REQ {
         return new SPKM_REQ(_o.requestToken, _o.certif_data, _o.auth_data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKM_REQ */
 /**
  * @summary The Leading Root Component Types of SPKM_REQ
  * @description
@@ -111,9 +108,7 @@ export const _root_component_type_list_1_spec_for_SPKM_REQ: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKM_REQ */
 /**
  * @summary The Trailing Root Component Types of SPKM_REQ
  * @description
@@ -123,9 +118,7 @@ export const _root_component_type_list_1_spec_for_SPKM_REQ: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SPKM_REQ: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKM_REQ */
 /**
  * @summary The Extension Addition Component Types of SPKM_REQ
  * @description
@@ -135,13 +128,9 @@ export const _root_component_type_list_2_spec_for_SPKM_REQ: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_SPKM_REQ: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKM_REQ */
 let _cached_decoder_for_SPKM_REQ: $.ASN1Decoder<SPKM_REQ> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPKM_REQ */
 /**
  * @summary Decodes an ASN.1 element into a(n) SPKM_REQ
  * @function
@@ -190,13 +179,9 @@ export function _decode_SPKM_REQ(el: _Element) {
     }
     return _cached_decoder_for_SPKM_REQ(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKM_REQ */
 let _cached_encoder_for_SPKM_REQ: $.ASN1Encoder<SPKM_REQ> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKM_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPKM_REQ */
 /**
  * @summary Encodes a(n) SPKM_REQ into an ASN.1 Element.
  * @function
@@ -243,6 +228,5 @@ export function _encode_SPKM_REQ(
     return _cached_encoder_for_SPKM_REQ(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPKM_REQ */
 
 /* eslint-enable */

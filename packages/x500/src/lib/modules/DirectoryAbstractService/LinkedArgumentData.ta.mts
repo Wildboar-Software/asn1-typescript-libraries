@@ -66,7 +66,6 @@ import {
     _root_component_type_list_1_spec_for_CommonArgumentsSeq,
 } from "../DirectoryAbstractService/CommonArgumentsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION LinkedArgumentData */
 /**
  * @summary LinkedArgumentData
  * @description
@@ -300,9 +299,7 @@ export class LinkedArgumentData implements CommonArgumentsSeq {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LinkedArgumentData */
 /**
  * @summary The Leading Root Component Types of LinkedArgumentData
  * @description
@@ -341,9 +338,7 @@ export const _root_component_type_list_1_spec_for_LinkedArgumentData: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LinkedArgumentData */
 /**
  * @summary The Trailing Root Component Types of LinkedArgumentData
  * @description
@@ -355,9 +350,7 @@ export const _root_component_type_list_1_spec_for_LinkedArgumentData: $.Componen
 export const _root_component_type_list_2_spec_for_LinkedArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonArgumentsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LinkedArgumentData */
 /**
  * @summary The Extension Addition Component Types of LinkedArgumentData
  * @description
@@ -367,13 +360,9 @@ export const _root_component_type_list_2_spec_for_LinkedArgumentData: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_LinkedArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkedArgumentData */
 let _cached_decoder_for_LinkedArgumentData: $.ASN1Decoder<LinkedArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkedArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) LinkedArgumentData
  * @function
@@ -519,13 +508,9 @@ export function _decode_LinkedArgumentData(el: _Element) {
     }
     return _cached_decoder_for_LinkedArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkedArgumentData */
 let _cached_encoder_for_LinkedArgumentData: $.ASN1Encoder<LinkedArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkedArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkedArgumentData */
 /**
  * @summary Encodes a(n) LinkedArgumentData into an ASN.1 Element.
  * @function
@@ -702,6 +687,5 @@ export function _encode_LinkedArgumentData(
     return _cached_encoder_for_LinkedArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkedArgumentData */
 
 /* eslint-enable */

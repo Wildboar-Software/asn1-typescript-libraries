@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Port */
+
 /**
  * @summary Port
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Port = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Port */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Port */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Port */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Port */
+
+
 export const _decode_Port = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Port */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Port */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Port */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Port */
+
+
 export const _encode_Port = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Port */
 
 /* eslint-enable */

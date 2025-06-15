@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_control_violates_registration */
 /**
  * @summary err_control_violates_registration
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_control_violates_registration: Code = { local: 14 };
-/* END_OF_SYMBOL_DEFINITION err_control_violates_registration */
 
 /* eslint-enable */

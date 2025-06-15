@@ -20,7 +20,6 @@ import {
     _decode_TimeRange,
     _encode_TimeRange,
 } from '../MSAbstractService/TimeRange.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Range */
 /**
  * @summary Range
  * @description
@@ -37,13 +36,9 @@ import {
 export type Range =
     | { sequence_number_range: NumberRange } /* CHOICE_ALT_ROOT */
     | { creation_time_range: TimeRange } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Range */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Range */
 let _cached_decoder_for_Range: $.ASN1Decoder<Range> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Range */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Range */
 /**
  * @summary Decodes an ASN.1 element into a(n) Range
  * @function
@@ -65,13 +60,9 @@ export function _decode_Range(el: _Element) {
     }
     return _cached_decoder_for_Range(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Range */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Range */
 let _cached_encoder_for_Range: $.ASN1Encoder<Range> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Range */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Range */
 /**
  * @summary Encodes a(n) Range into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_Range(value: Range, elGetter: $.ASN1Encoder<Range>) {
     return _cached_encoder_for_Range(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Range */
 
 /* eslint-enable */

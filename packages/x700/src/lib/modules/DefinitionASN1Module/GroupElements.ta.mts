@@ -15,7 +15,7 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GroupElements */
+
 /**
  * @summary GroupElements
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GroupElements = TemplateList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GroupElements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupElements */
+
 let _cached_decoder_for_GroupElements: $.ASN1Decoder<GroupElements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupElements */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GroupElements */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GroupElements
  * @function
@@ -46,13 +44,11 @@ export function _decode_GroupElements(el: _Element) {
     }
     return _cached_decoder_for_GroupElements(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GroupElements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupElements */
+
 let _cached_encoder_for_GroupElements: $.ASN1Encoder<GroupElements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupElements */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GroupElements */
+
 /**
  * @summary Encodes a(n) GroupElements into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_GroupElements(
     return _cached_encoder_for_GroupElements(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GroupElements */
 
 /* eslint-enable */

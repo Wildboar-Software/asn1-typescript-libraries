@@ -15,7 +15,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NumericAttributeIdList */
 /**
  * @summary NumericAttributeIdList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NumericAttributeIdList = AttributeId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NumericAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericAttributeIdList */
 let _cached_decoder_for_NumericAttributeIdList: $.ASN1Decoder<NumericAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NumericAttributeIdList */
 /**
  * @summary Decodes an ASN.1 element into a(n) NumericAttributeIdList
  * @function
@@ -48,13 +43,9 @@ export function _decode_NumericAttributeIdList(el: _Element) {
     }
     return _cached_decoder_for_NumericAttributeIdList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NumericAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericAttributeIdList */
 let _cached_encoder_for_NumericAttributeIdList: $.ASN1Encoder<NumericAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NumericAttributeIdList */
 /**
  * @summary Encodes a(n) NumericAttributeIdList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_NumericAttributeIdList(
     return _cached_encoder_for_NumericAttributeIdList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NumericAttributeIdList */
 
 /* eslint-enable */

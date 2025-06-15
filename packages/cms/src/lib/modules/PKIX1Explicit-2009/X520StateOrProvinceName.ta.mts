@@ -6,7 +6,7 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION X520StateOrProvinceName */
+
 /**
  * @summary X520StateOrProvinceName
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type X520StateOrProvinceName = DirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION X520StateOrProvinceName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X520StateOrProvinceName */
+
 let _cached_decoder_for_X520StateOrProvinceName: $.ASN1Decoder<X520StateOrProvinceName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X520StateOrProvinceName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_X520StateOrProvinceName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) X520StateOrProvinceName
  * @function
@@ -37,13 +35,11 @@ export function _decode_X520StateOrProvinceName(el: _Element) {
     }
     return _cached_decoder_for_X520StateOrProvinceName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_X520StateOrProvinceName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X520StateOrProvinceName */
+
 let _cached_encoder_for_X520StateOrProvinceName: $.ASN1Encoder<X520StateOrProvinceName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X520StateOrProvinceName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_X520StateOrProvinceName */
+
 /**
  * @summary Encodes a(n) X520StateOrProvinceName into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_X520StateOrProvinceName(
     return _cached_encoder_for_X520StateOrProvinceName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_X520StateOrProvinceName */
 
 /* eslint-enable */

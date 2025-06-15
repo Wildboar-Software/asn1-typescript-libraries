@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { g4_class1_body_part_data } from '../IPMSExtendedBodyPartTypes/g4-class1-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION g4_class1_body_part */
 /**
  * @summary g4_class1_body_part
  * @description
@@ -35,6 +34,5 @@ export const g4_class1_body_part: EXTENDED_BODY_PART_TYPE = {
     encoderFor: {},
     '&data': g4_class1_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION g4_class1_body_part */
 
 /* eslint-enable */

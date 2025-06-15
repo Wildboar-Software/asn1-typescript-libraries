@@ -15,7 +15,6 @@ import {
     _decode_InformationCategory,
     _encode_InformationCategory,
 } from '../IPMSHeadingExtensions/InformationCategory.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InformationCategories */
 /**
  * @summary InformationCategories
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type InformationCategories = InformationCategory[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION InformationCategories */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationCategories */
 let _cached_decoder_for_InformationCategories: $.ASN1Decoder<InformationCategories> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationCategories */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationCategories */
 /**
  * @summary Decodes an ASN.1 element into a(n) InformationCategories
  * @function
@@ -49,13 +44,9 @@ export function _decode_InformationCategories(el: _Element) {
     }
     return _cached_decoder_for_InformationCategories(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InformationCategories */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationCategories */
 let _cached_encoder_for_InformationCategories: $.ASN1Encoder<InformationCategories> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationCategories */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationCategories */
 /**
  * @summary Encodes a(n) InformationCategories into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_InformationCategories(
     return _cached_encoder_for_InformationCategories(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationCategories */
 
 /* eslint-enable */

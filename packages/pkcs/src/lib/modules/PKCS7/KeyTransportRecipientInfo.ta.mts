@@ -21,7 +21,7 @@ import {
     _encode_RecipientIdentifier,
 } from "../PKCS7/RecipientIdentifier.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyTransportRecipientInfo */
+
 /**
  * @summary KeyTransportRecipientInfo
  * @description
@@ -92,9 +92,8 @@ export class KeyTransportRecipientInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyTransportRecipientInfo */
+
 /**
  * @summary The Leading Root Component Types of KeyTransportRecipientInfo
  * @description
@@ -133,9 +132,8 @@ export const _root_component_type_list_1_spec_for_KeyTransportRecipientInfo: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyTransportRecipientInfo */
+
 /**
  * @summary The Trailing Root Component Types of KeyTransportRecipientInfo
  * @description
@@ -145,9 +143,8 @@ export const _root_component_type_list_1_spec_for_KeyTransportRecipientInfo: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyTransportRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyTransportRecipientInfo */
+
 /**
  * @summary The Extension Addition Component Types of KeyTransportRecipientInfo
  * @description
@@ -157,13 +154,11 @@ export const _root_component_type_list_2_spec_for_KeyTransportRecipientInfo: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyTransportRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyTransportRecipientInfo */
+
 let _cached_decoder_for_KeyTransportRecipientInfo: $.ASN1Decoder<KeyTransportRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyTransportRecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyTransportRecipientInfo
  * @function
@@ -207,13 +202,11 @@ export function _decode_KeyTransportRecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_KeyTransportRecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyTransportRecipientInfo */
+
 let _cached_encoder_for_KeyTransportRecipientInfo: $.ASN1Encoder<KeyTransportRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyTransportRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyTransportRecipientInfo */
+
 /**
  * @summary Encodes a(n) KeyTransportRecipientInfo into an ASN.1 Element.
  * @function
@@ -253,6 +246,5 @@ export function _encode_KeyTransportRecipientInfo(
     return _cached_encoder_for_KeyTransportRecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyTransportRecipientInfo */
 
 /* eslint-enable */

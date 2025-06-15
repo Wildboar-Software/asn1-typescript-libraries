@@ -6,7 +6,7 @@ import {
     _decode_PBES2_params,
     _encode_PBES2_params,
 } from "../PKCS5v2-1/PBES2-params.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PBES2Algorithms_Union0_Intersection0_Element */
+
 /**
  * @summary PBES2Algorithms_Union0_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PBES2Algorithms_Union0_Intersection0_Element: ALGORITHM_IDENTIFIER<
     "&id": id_PBES2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PBES2Algorithms_Union0_Intersection0_Element */
 
 /* eslint-enable */

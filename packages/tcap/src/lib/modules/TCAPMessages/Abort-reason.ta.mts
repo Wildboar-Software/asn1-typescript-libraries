@@ -20,7 +20,6 @@ import {
   _decode_DialoguePortion,
   _encode_DialoguePortion,
 } from '../TCAPMessages/DialoguePortion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Abort_reason */
 /**
  * @summary Abort_reason
  * @description
@@ -34,13 +33,9 @@ import {
 export type Abort_reason =
   | { p_abortCause: P_AbortCause } /* CHOICE_ALT_ROOT */
   | { u_abortCause: DialoguePortion } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Abort_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort_reason */
 let _cached_decoder_for_Abort_reason: $.ASN1Decoder<Abort_reason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort_reason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Abort_reason */
 /**
  * @summary Decodes an ASN.1 element into a(n) Abort_reason
  * @function
@@ -58,13 +53,9 @@ export function _decode_Abort_reason(el: _Element) {
   }
   return _cached_decoder_for_Abort_reason(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Abort_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort_reason */
 let _cached_encoder_for_Abort_reason: $.ASN1Encoder<Abort_reason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort_reason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Abort_reason */
 /**
  * @summary Encodes a(n) Abort_reason into an ASN.1 Element.
  * @function
@@ -88,6 +79,5 @@ export function _encode_Abort_reason(
   return _cached_encoder_for_Abort_reason(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Abort_reason */
 
 /* eslint-enable */

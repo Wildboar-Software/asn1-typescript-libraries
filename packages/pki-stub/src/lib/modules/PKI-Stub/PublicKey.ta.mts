@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PublicKey */
 /**
  * @summary PublicKey
  * @description
@@ -24,9 +23,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type PublicKey = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION PublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicKey */
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKey
  * @function
@@ -36,9 +33,7 @@ export type PublicKey = BIT_STRING;
 export function _decode_PublicKey(el: _Element) {
     return $._decodeBitString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicKey */
 /**
  * @summary Encodes a(n) PublicKey into an ASN.1 Element.
  * @function
@@ -53,6 +48,5 @@ export function _encode_PublicKey(
     return $._encodeBitString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicKey */
 
 /* eslint-enable */

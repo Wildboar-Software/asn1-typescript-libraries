@@ -17,7 +17,6 @@ import {
     _decode_DataRate,
     _encode_DataRate,
 } from '../TestCategories-ASN1Module/DataRate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestDuration_signalLength */
 /**
  * @summary TestDuration_signalLength
  * @description
@@ -66,9 +65,7 @@ export class TestDuration_signalLength {
         return new TestDuration_signalLength(_o.size, _o.dataRate);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestDuration_signalLength */
 /**
  * @summary The Leading Root Component Types of TestDuration_signalLength
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_TestDuration_signalLength: $.C
     ),
     new $.ComponentSpec('dataRate', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestDuration_signalLength */
 /**
  * @summary The Trailing Root Component Types of TestDuration_signalLength
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_TestDuration_signalLength: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestDuration_signalLength: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestDuration_signalLength */
 /**
  * @summary The Extension Addition Component Types of TestDuration_signalLength
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_TestDuration_signalLength: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_TestDuration_signalLength: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestDuration_signalLength */
 let _cached_decoder_for_TestDuration_signalLength: $.ASN1Decoder<TestDuration_signalLength> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestDuration_signalLength */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestDuration_signalLength
  * @function
@@ -159,13 +148,9 @@ export function _decode_TestDuration_signalLength(el: _Element) {
     }
     return _cached_decoder_for_TestDuration_signalLength(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestDuration_signalLength */
 let _cached_encoder_for_TestDuration_signalLength: $.ASN1Encoder<TestDuration_signalLength> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestDuration_signalLength */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestDuration_signalLength */
 /**
  * @summary Encodes a(n) TestDuration_signalLength into an ASN.1 Element.
  * @function
@@ -196,6 +181,5 @@ export function _encode_TestDuration_signalLength(
     return _cached_encoder_for_TestDuration_signalLength(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestDuration_signalLength */
 
 /* eslint-enable */

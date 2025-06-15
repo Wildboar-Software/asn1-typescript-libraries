@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION KEY_INFORMATION */
+
 /**
  * @summary KEY_INFORMATION
  * @description
@@ -79,6 +79,5 @@ export interface KEY_INFORMATION<
    */
   readonly '&KiType': KiType;
 }
-/* END_OF_SYMBOL_DEFINITION KEY_INFORMATION */
 
 /* eslint-enable */

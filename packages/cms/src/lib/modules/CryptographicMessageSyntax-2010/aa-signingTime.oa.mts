@@ -6,7 +6,7 @@ import {
     _encode_SigningTime,
 } from "../CryptographicMessageSyntax-2010/SigningTime.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION aa_signingTime */
+
 /**
  * @summary aa_signingTime
  * @description
@@ -32,6 +32,5 @@ export const aa_signingTime: ATTRIBUTE<SigningTime> = {
     "&id": id_signingTime /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_signingTime */
 
 /* eslint-enable */

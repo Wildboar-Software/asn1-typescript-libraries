@@ -30,7 +30,6 @@ import {
     _decode_UpdateWindow,
     _encode_UpdateWindow,
 } from "../DirectoryShadowAbstractService/UpdateWindow.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UpdateShadowArgumentData */
 /**
  * @summary UpdateShadowArgumentData
  * @description
@@ -118,9 +117,7 @@ export class UpdateShadowArgumentData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UpdateShadowArgumentData */
 /**
  * @summary The Leading Root Component Types of UpdateShadowArgumentData
  * @description
@@ -166,9 +163,7 @@ export const _root_component_type_list_1_spec_for_UpdateShadowArgumentData: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UpdateShadowArgumentData */
 /**
  * @summary The Trailing Root Component Types of UpdateShadowArgumentData
  * @description
@@ -178,9 +173,7 @@ export const _root_component_type_list_1_spec_for_UpdateShadowArgumentData: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UpdateShadowArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UpdateShadowArgumentData */
 /**
  * @summary The Extension Addition Component Types of UpdateShadowArgumentData
  * @description
@@ -190,13 +183,9 @@ export const _root_component_type_list_2_spec_for_UpdateShadowArgumentData: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_UpdateShadowArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateShadowArgumentData */
 let _cached_decoder_for_UpdateShadowArgumentData: $.ASN1Decoder<UpdateShadowArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UpdateShadowArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) UpdateShadowArgumentData
  * @function
@@ -260,13 +249,9 @@ export function _decode_UpdateShadowArgumentData(el: _Element) {
     }
     return _cached_decoder_for_UpdateShadowArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateShadowArgumentData */
 let _cached_encoder_for_UpdateShadowArgumentData: $.ASN1Encoder<UpdateShadowArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateShadowArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UpdateShadowArgumentData */
 /**
  * @summary Encodes a(n) UpdateShadowArgumentData into an ASN.1 Element.
  * @function
@@ -332,6 +317,5 @@ export function _encode_UpdateShadowArgumentData(
     return _cached_encoder_for_UpdateShadowArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UpdateShadowArgumentData */
 
 /* eslint-enable */

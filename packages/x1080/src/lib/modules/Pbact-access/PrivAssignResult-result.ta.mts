@@ -16,7 +16,7 @@ import {
     _decode_PrivAssignErr,
     _encode_PrivAssignErr,
 } from '../Pbact-access/PrivAssignErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrivAssignResult_result */
+
 /**
  * @summary PrivAssignResult_result
  * @description
@@ -30,13 +30,11 @@ import {
 export type PrivAssignResult_result =
     | { success: NULL } /* CHOICE_ALT_ROOT */
     | { failure: PrivAssignErr } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PrivAssignResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivAssignResult_result */
+
 let _cached_decoder_for_PrivAssignResult_result: $.ASN1Decoder<PrivAssignResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivAssignResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivAssignResult_result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivAssignResult_result
  * @function
@@ -55,13 +53,11 @@ export function _decode_PrivAssignResult_result(el: _Element) {
     }
     return _cached_decoder_for_PrivAssignResult_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivAssignResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivAssignResult_result */
+
 let _cached_encoder_for_PrivAssignResult_result: $.ASN1Encoder<PrivAssignResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivAssignResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivAssignResult_result */
+
 /**
  * @summary Encodes a(n) PrivAssignResult_result into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_PrivAssignResult_result(
     return _cached_encoder_for_PrivAssignResult_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivAssignResult_result */
 
 /* eslint-enable */

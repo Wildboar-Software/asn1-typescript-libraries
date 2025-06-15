@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DestTransactionID */
 /**
  * @summary DestTransactionID
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DestTransactionID = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION DestTransactionID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DestTransactionID */
 let _cached_decoder_for_DestTransactionID: $.ASN1Decoder<DestTransactionID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DestTransactionID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DestTransactionID */
 /**
  * @summary Decodes an ASN.1 element into a(n) DestTransactionID
  * @function
@@ -45,13 +40,9 @@ export function _decode_DestTransactionID(el: _Element) {
   }
   return _cached_decoder_for_DestTransactionID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DestTransactionID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DestTransactionID */
 let _cached_encoder_for_DestTransactionID: $.ASN1Encoder<DestTransactionID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DestTransactionID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DestTransactionID */
 /**
  * @summary Encodes a(n) DestTransactionID into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_DestTransactionID(
   return _cached_encoder_for_DestTransactionID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DestTransactionID */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPER
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { Forward } from './Forward.osa.mjs';
 import { Reverse } from './Reverse.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION ConsumerPerforms */
+
 /**
  * @summary ConsumerPerforms
  * @description
@@ -36,6 +36,5 @@ function ConsumerPerforms (package_: OPERATION_PACKAGE): OPERATION[] {
         ...Reverse(package_['&Both'] ?? []),
     ];
 }
-/* END_OF_SYMBOL_DEFINITION ConsumerPerforms */
 
 /* eslint-enable */

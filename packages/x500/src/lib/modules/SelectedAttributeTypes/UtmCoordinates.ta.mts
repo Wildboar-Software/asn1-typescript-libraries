@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION UtmCoordinates */
 /**
  * @summary UtmCoordinates
  * @description
@@ -64,9 +63,7 @@ export class UtmCoordinates {
         return new UtmCoordinates(_o.zone, _o.easting, _o.northing);
     }
 }
-/* END_OF_SYMBOL_DEFINITION UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UtmCoordinates */
 /**
  * @summary The Leading Root Component Types of UtmCoordinates
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_UtmCoordinates: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UtmCoordinates */
 /**
  * @summary The Trailing Root Component Types of UtmCoordinates
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_UtmCoordinates: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UtmCoordinates: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UtmCoordinates */
 /**
  * @summary The Extension Addition Component Types of UtmCoordinates
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_UtmCoordinates: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_UtmCoordinates: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UtmCoordinates */
 let _cached_decoder_for_UtmCoordinates: $.ASN1Decoder<UtmCoordinates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UtmCoordinates */
 /**
  * @summary Decodes an ASN.1 element into a(n) UtmCoordinates
  * @function
@@ -162,13 +151,9 @@ export function _decode_UtmCoordinates(el: _Element) {
     }
     return _cached_decoder_for_UtmCoordinates(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UtmCoordinates */
 let _cached_encoder_for_UtmCoordinates: $.ASN1Encoder<UtmCoordinates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UtmCoordinates */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UtmCoordinates */
 /**
  * @summary Encodes a(n) UtmCoordinates into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_UtmCoordinates(
     return _cached_encoder_for_UtmCoordinates(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UtmCoordinates */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_Purpose */
 /**
  * @summary Purpose
  * @description
@@ -33,9 +32,7 @@ export enum _enum_for_Purpose {
   enroll_identify = 5,
   audit = 6,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION Purpose */
 /**
  * @summary Purpose
  * @description
@@ -49,9 +46,7 @@ export enum _enum_for_Purpose {
  * ```@enum {number}
  */
 export type Purpose = _enum_for_Purpose;
-/* END_OF_SYMBOL_DEFINITION Purpose */
 
-/* START_OF_SYMBOL_DEFINITION Purpose */
 /**
  * @summary Purpose
  * @description
@@ -65,9 +60,7 @@ export type Purpose = _enum_for_Purpose;
  * ```@enum {number}
  */
 export const Purpose = _enum_for_Purpose;
-/* END_OF_SYMBOL_DEFINITION Purpose */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_no_value_available */
 /**
  * @summary Purpose_no_value_available
  * @constant
@@ -75,9 +68,7 @@ export const Purpose = _enum_for_Purpose;
  */
 export const Purpose_no_value_available: Purpose =
   Purpose.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_no_value_available */
 
-/* START_OF_SYMBOL_DEFINITION no_value_available */
 /**
  * @summary no_value_available
  * @constant
@@ -85,9 +76,7 @@ export const Purpose_no_value_available: Purpose =
  */
 export const no_value_available: Purpose =
   Purpose.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_value_available */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_verify */
 /**
  * @summary Purpose_verify
  * @constant
@@ -95,9 +84,7 @@ export const no_value_available: Purpose =
  */
 export const Purpose_verify: Purpose =
   Purpose.verify; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_verify */
 
-/* START_OF_SYMBOL_DEFINITION verify */
 /**
  * @summary verify
  * @constant
@@ -105,9 +92,7 @@ export const Purpose_verify: Purpose =
  */
 export const verify: Purpose =
   Purpose.verify; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION verify */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_identify */
 /**
  * @summary Purpose_identify
  * @constant
@@ -115,9 +100,7 @@ export const verify: Purpose =
  */
 export const Purpose_identify: Purpose =
   Purpose.identify; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_identify */
 
-/* START_OF_SYMBOL_DEFINITION identify */
 /**
  * @summary identify
  * @constant
@@ -125,9 +108,7 @@ export const Purpose_identify: Purpose =
  */
 export const identify: Purpose =
   Purpose.identify; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION identify */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_enroll */
 /**
  * @summary Purpose_enroll
  * @constant
@@ -135,9 +116,7 @@ export const identify: Purpose =
  */
 export const Purpose_enroll: Purpose =
   Purpose.enroll; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_enroll */
 
-/* START_OF_SYMBOL_DEFINITION enroll */
 /**
  * @summary enroll
  * @constant
@@ -145,9 +124,7 @@ export const Purpose_enroll: Purpose =
  */
 export const enroll: Purpose =
   Purpose.enroll; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION enroll */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_enroll_verify */
 /**
  * @summary Purpose_enroll_verify
  * @constant
@@ -155,9 +132,7 @@ export const enroll: Purpose =
  */
 export const Purpose_enroll_verify: Purpose =
   Purpose.enroll_verify; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_enroll_verify */
 
-/* START_OF_SYMBOL_DEFINITION enroll_verify */
 /**
  * @summary enroll_verify
  * @constant
@@ -165,9 +140,7 @@ export const Purpose_enroll_verify: Purpose =
  */
 export const enroll_verify: Purpose =
   Purpose.enroll_verify; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION enroll_verify */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_enroll_identify */
 /**
  * @summary Purpose_enroll_identify
  * @constant
@@ -175,9 +148,7 @@ export const enroll_verify: Purpose =
  */
 export const Purpose_enroll_identify: Purpose =
   Purpose.enroll_identify; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_enroll_identify */
 
-/* START_OF_SYMBOL_DEFINITION enroll_identify */
 /**
  * @summary enroll_identify
  * @constant
@@ -185,9 +156,7 @@ export const Purpose_enroll_identify: Purpose =
  */
 export const enroll_identify: Purpose =
   Purpose.enroll_identify; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION enroll_identify */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_audit */
 /**
  * @summary Purpose_audit
  * @constant
@@ -195,30 +164,19 @@ export const enroll_identify: Purpose =
  */
 export const Purpose_audit: Purpose =
   Purpose.audit; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_audit */
 
-/* START_OF_SYMBOL_DEFINITION audit */
 /**
  * @summary audit
  * @constant
  * @type {number}
  */
 export const audit: Purpose = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION audit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Purpose */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Purpose */
 export const _decode_Purpose = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Purpose */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Purpose */
 export const _encode_Purpose = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Purpose */
 
 /* eslint-enable */

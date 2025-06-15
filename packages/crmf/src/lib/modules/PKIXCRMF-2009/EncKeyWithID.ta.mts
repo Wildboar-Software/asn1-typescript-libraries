@@ -15,7 +15,7 @@ import {
     _decode_PrivateKeyInfo,
     _encode_PrivateKeyInfo,
 } from "../PKIXCRMF-2009/PrivateKeyInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncKeyWithID */
+
 /**
  * @summary EncKeyWithID
  * @description
@@ -68,9 +68,8 @@ export class EncKeyWithID {
         return new EncKeyWithID(_o.privateKey, _o.identifier);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncKeyWithID */
+
 /**
  * @summary The Leading Root Component Types of EncKeyWithID
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_EncKeyWithID: $.ComponentSpec[
     ),
     new $.ComponentSpec("identifier", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncKeyWithID */
+
 /**
  * @summary The Trailing Root Component Types of EncKeyWithID
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_EncKeyWithID: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncKeyWithID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncKeyWithID */
+
 /**
  * @summary The Extension Addition Component Types of EncKeyWithID
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_EncKeyWithID: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_EncKeyWithID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncKeyWithID */
+
 let _cached_decoder_for_EncKeyWithID: $.ASN1Decoder<EncKeyWithID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncKeyWithID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncKeyWithID
  * @function
@@ -161,13 +156,11 @@ export function _decode_EncKeyWithID(el: _Element) {
     }
     return _cached_decoder_for_EncKeyWithID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncKeyWithID */
+
 let _cached_encoder_for_EncKeyWithID: $.ASN1Encoder<EncKeyWithID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncKeyWithID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncKeyWithID */
+
 /**
  * @summary Encodes a(n) EncKeyWithID into an ASN.1 Element.
  * @function
@@ -204,6 +197,5 @@ export function _encode_EncKeyWithID(
     return _cached_encoder_for_EncKeyWithID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncKeyWithID */
 
 /* eslint-enable */

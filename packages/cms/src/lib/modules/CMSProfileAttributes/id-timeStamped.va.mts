@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_timeStamped */
+
 /**
  * @summary id_timeStamped
  * @description
@@ -25,6 +25,5 @@ export const id_timeStamped: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_timeStamped */
 
 /* eslint-enable */

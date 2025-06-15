@@ -13,7 +13,6 @@ import { mHSPDSName } from '../MHSRoutingORAddressSubtree/mHSPDSName.oa.mjs';
 import { mHSPDSNameAttribute } from '../MHSRoutingORAddressSubtree/mHSPDSNameAttribute.oa.mjs';
 import { id_nf_mhs_pds_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-pds-name.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSPDSNameNameForm */
 /**
  * @summary mHSPDSNameNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSPDSNameNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSPDSNameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_pds_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSPDSNameNameForm */
 
 /* eslint-enable */

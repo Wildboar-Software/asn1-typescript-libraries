@@ -20,7 +20,6 @@ import {
     _decode_BodyOrRemoved,
     _encode_BodyOrRemoved,
 } from '../EDIMSInformationObjects/BodyOrRemoved.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageData */
 /**
  * @summary MessageData
  * @description
@@ -69,9 +68,7 @@ export class MessageData {
         return new MessageData(_o.heading, _o.body);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageData */
 /**
  * @summary The Leading Root Component Types of MessageData
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_MessageData: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageData */
 /**
  * @summary The Trailing Root Component Types of MessageData
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_MessageData: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageData */
 /**
  * @summary The Extension Addition Component Types of MessageData
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_MessageData: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageData */
 let _cached_decoder_for_MessageData: $.ASN1Decoder<MessageData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageData */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageData
  * @function
@@ -155,13 +144,9 @@ export function _decode_MessageData(el: _Element) {
     }
     return _cached_decoder_for_MessageData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageData */
 let _cached_encoder_for_MessageData: $.ASN1Encoder<MessageData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageData */
 /**
  * @summary Encodes a(n) MessageData into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_MessageData(
     return _cached_encoder_for_MessageData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageData */
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import { m_Delete } from '../CMIP-1/m-Delete.oa.mjs';
 import { m_EventReport_Confirmed } from '../CMIP-1/m-EventReport-Confirmed.oa.mjs';
 import { m_Get } from '../CMIP-1/m-Get.oa.mjs';
 import { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIP_Confirmed_Operations */
+
 /**
  * @summary CMIP_Confirmed_Operations
  * @description
@@ -42,6 +42,5 @@ export const CMIP_Confirmed_Operations: OPERATION[] = [
   m_Get,
   m_Set_Confirmed,
 ];
-/* END_OF_SYMBOL_DEFINITION CMIP_Confirmed_Operations */
 
 /* eslint-enable */

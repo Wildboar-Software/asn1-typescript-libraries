@@ -26,7 +26,7 @@ import {
     _decode_SetupError,
     _encode_SetupError,
 } from '../E-health-common/SetupError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION E_setupError */
+
 /**
  * @summary E_setupError
  * @description
@@ -102,9 +102,8 @@ export class E_setupError {
 
     public static _enum_for_error = _enum_for_SetupError;
 }
-/* END_OF_SYMBOL_DEFINITION E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_setupError */
+
 /**
  * @summary The Leading Root Component Types of E_setupError
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_E_setupError: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_setupError */
+
 /**
  * @summary The Trailing Root Component Types of E_setupError
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_E_setupError: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_E_setupError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_setupError */
+
 /**
  * @summary The Extension Addition Component Types of E_setupError
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_E_setupError: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_E_setupError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_setupError */
+
 let _cached_decoder_for_E_setupError: $.ASN1Decoder<E_setupError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_setupError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_setupError
  * @function
@@ -205,13 +200,11 @@ export function _decode_E_setupError(el: _Element) {
     }
     return _cached_decoder_for_E_setupError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_setupError */
+
 let _cached_encoder_for_E_setupError: $.ASN1Encoder<E_setupError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_setupError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_setupError */
+
 /**
  * @summary Encodes a(n) E_setupError into an ASN.1 Element.
  * @function
@@ -255,6 +248,5 @@ export function _encode_E_setupError(
     return _cached_encoder_for_E_setupError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_setupError */
 
 /* eslint-enable */

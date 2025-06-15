@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/EntryClassErrorParameter.ta.mjs';
 import { err_entry_class_error } from '../MSAccessProtocol/err-entry-class-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION entry_class_error */
 /**
  * @summary entry_class_error
  * @description
@@ -54,6 +53,5 @@ export const entry_class_error: ABSTRACT_ERROR<EntryClassErrorParameter> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION entry_class_error */
 
 /* eslint-enable */

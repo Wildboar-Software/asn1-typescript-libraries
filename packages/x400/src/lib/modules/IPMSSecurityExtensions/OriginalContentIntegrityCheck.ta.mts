@@ -15,7 +15,6 @@ import {
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginalContentIntegrityCheck */
 /**
  * @summary OriginalContentIntegrityCheck
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginalContentIntegrityCheck = ContentIntegrityCheck; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginalContentIntegrityCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalContentIntegrityCheck */
 let _cached_decoder_for_OriginalContentIntegrityCheck: $.ASN1Decoder<OriginalContentIntegrityCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalContentIntegrityCheck */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginalContentIntegrityCheck */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalContentIntegrityCheck
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginalContentIntegrityCheck(el: _Element) {
     }
     return _cached_decoder_for_OriginalContentIntegrityCheck(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginalContentIntegrityCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalContentIntegrityCheck */
 let _cached_encoder_for_OriginalContentIntegrityCheck: $.ASN1Encoder<OriginalContentIntegrityCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalContentIntegrityCheck */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginalContentIntegrityCheck */
 /**
  * @summary Encodes a(n) OriginalContentIntegrityCheck into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginalContentIntegrityCheck(
     return _cached_encoder_for_OriginalContentIntegrityCheck(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginalContentIntegrityCheck */
 
 /* eslint-enable */

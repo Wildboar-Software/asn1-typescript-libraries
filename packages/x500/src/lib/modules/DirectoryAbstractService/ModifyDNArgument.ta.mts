@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyDNArgument */
 /**
  * @summary ModifyDNArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ModifyDNArgument = OPTIONALLY_PROTECTED<ModifyDNArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ModifyDNArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNArgument */
 let _cached_decoder_for_ModifyDNArgument: $.ASN1Decoder<ModifyDNArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyDNArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyDNArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_ModifyDNArgument(el: _Element) {
     }
     return _cached_decoder_for_ModifyDNArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyDNArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNArgument */
 let _cached_encoder_for_ModifyDNArgument: $.ASN1Encoder<ModifyDNArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyDNArgument */
 /**
  * @summary Encodes a(n) ModifyDNArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ModifyDNArgument(
     return _cached_encoder_for_ModifyDNArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyDNArgument */
 
 /* eslint-enable */

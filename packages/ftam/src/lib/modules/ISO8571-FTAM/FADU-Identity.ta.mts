@@ -31,7 +31,7 @@ import {
   _decode_Node_Name,
   _encode_Node_Name,
 } from '../ISO8571-FTAM/Node-Name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FADU_Identity */
+
 /**
  * @summary FADU_Identity
  * @description
@@ -56,13 +56,11 @@ export type FADU_Identity =
   | { single_name: Node_Name } /* CHOICE_ALT_ROOT */
   | { name_list: Node_Name[] } /* CHOICE_ALT_ROOT */
   | { fadu_number: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FADU_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FADU_Identity */
+
 let _cached_decoder_for_FADU_Identity: $.ASN1Decoder<FADU_Identity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FADU_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FADU_Identity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FADU_Identity
  * @function
@@ -110,13 +108,11 @@ export function _decode_FADU_Identity(el: _Element) {
   }
   return _cached_decoder_for_FADU_Identity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FADU_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FADU_Identity */
+
 let _cached_encoder_for_FADU_Identity: $.ASN1Encoder<FADU_Identity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FADU_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FADU_Identity */
+
 /**
  * @summary Encodes a(n) FADU_Identity into an ASN.1 Element.
  * @function
@@ -181,6 +177,5 @@ export function _encode_FADU_Identity(
   return _cached_encoder_for_FADU_Identity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FADU_Identity */
 
 /* eslint-enable */

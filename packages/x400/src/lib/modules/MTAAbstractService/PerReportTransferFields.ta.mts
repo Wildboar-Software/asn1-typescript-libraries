@@ -51,7 +51,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerReportTransferFields */
 /**
  * @summary PerReportTransferFields
  * @description
@@ -167,9 +166,7 @@ export class PerReportTransferFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerReportTransferFields */
 /**
  * @summary The Leading Root Component Types of PerReportTransferFields
  * @description
@@ -236,9 +233,7 @@ export const _root_component_type_list_1_spec_for_PerReportTransferFields: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerReportTransferFields */
 /**
  * @summary The Trailing Root Component Types of PerReportTransferFields
  * @description
@@ -248,9 +243,7 @@ export const _root_component_type_list_1_spec_for_PerReportTransferFields: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerReportTransferFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerReportTransferFields */
 /**
  * @summary The Extension Addition Component Types of PerReportTransferFields
  * @description
@@ -260,13 +253,9 @@ export const _root_component_type_list_2_spec_for_PerReportTransferFields: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_PerReportTransferFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerReportTransferFields */
 let _cached_decoder_for_PerReportTransferFields: $.ASN1Decoder<PerReportTransferFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerReportTransferFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerReportTransferFields
  * @function
@@ -353,13 +342,9 @@ export function _decode_PerReportTransferFields(el: _Element) {
     }
     return _cached_decoder_for_PerReportTransferFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerReportTransferFields */
 let _cached_encoder_for_PerReportTransferFields: $.ASN1Encoder<PerReportTransferFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerReportTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerReportTransferFields */
 /**
  * @summary Encodes a(n) PerReportTransferFields into an ASN.1 Element.
  * @function
@@ -446,6 +431,5 @@ export function _encode_PerReportTransferFields(
     return _cached_encoder_for_PerReportTransferFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerReportTransferFields */
 
 /* eslint-enable */

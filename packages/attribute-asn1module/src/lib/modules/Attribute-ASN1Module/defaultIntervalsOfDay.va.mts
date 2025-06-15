@@ -13,7 +13,6 @@ import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "
 import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/Time24.ta.mjs";
 import { IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION defaultIntervalsOfDay */
 /**
  * @summary defaultIntervalsOfDay
  * @description
@@ -36,6 +35,5 @@ const defaultIntervalsOfDay: IntervalsOfDay = [
         new Time24(23, 59),
     ), 
 ];
-/* END_OF_SYMBOL_DEFINITION defaultIntervalsOfDay */
 
 /* eslint-enable */

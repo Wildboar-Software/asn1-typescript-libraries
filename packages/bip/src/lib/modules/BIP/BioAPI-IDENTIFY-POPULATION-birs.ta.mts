@@ -21,7 +21,7 @@ import {
   _decode_BioAPI_BIR_ARRAY_POPULATION,
   _encode_BioAPI_BIR_ARRAY_POPULATION,
 } from '../BIP/BioAPI-BIR-ARRAY-POPULATION.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_IDENTIFY_POPULATION_birs */
+
 /**
  * @summary BioAPI_IDENTIFY_POPULATION_birs
  * @description
@@ -36,13 +36,11 @@ export type BioAPI_IDENTIFY_POPULATION_birs =
   | { birDataBase: BioAPI_DB_HANDLE } /* CHOICE_ALT_ROOT */
   | { birArray: BioAPI_BIR_ARRAY_POPULATION } /* CHOICE_ALT_ROOT */
   | { birPresetArray: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BioAPI_IDENTIFY_POPULATION_birs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs */
+
 let _cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs: $.ASN1Decoder<BioAPI_IDENTIFY_POPULATION_birs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_IDENTIFY_POPULATION_birs */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_IDENTIFY_POPULATION_birs
  * @function
@@ -61,13 +59,11 @@ export function _decode_BioAPI_IDENTIFY_POPULATION_birs(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_IDENTIFY_POPULATION_birs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_IDENTIFY_POPULATION_birs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs */
+
 let _cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs: $.ASN1Encoder<BioAPI_IDENTIFY_POPULATION_birs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_IDENTIFY_POPULATION_birs */
+
 /**
  * @summary Encodes a(n) BioAPI_IDENTIFY_POPULATION_birs into an ASN.1 Element.
  * @function
@@ -92,6 +88,5 @@ export function _encode_BioAPI_IDENTIFY_POPULATION_birs(
   return _cached_encoder_for_BioAPI_IDENTIFY_POPULATION_birs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_IDENTIFY_POPULATION_birs */
 
 /* eslint-enable */

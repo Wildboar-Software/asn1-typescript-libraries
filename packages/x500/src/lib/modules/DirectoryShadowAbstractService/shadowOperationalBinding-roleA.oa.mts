@@ -2,7 +2,6 @@
 import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleA */
 /**
  * @summary shadowOperationalBinding_roleA
  * @description
@@ -36,6 +35,5 @@ export const shadowOperationalBinding_roleA: OP_BIND_ROLE<NULL> = {
     "&ModifyParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&TerminateParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleA */
 
 /* eslint-enable */

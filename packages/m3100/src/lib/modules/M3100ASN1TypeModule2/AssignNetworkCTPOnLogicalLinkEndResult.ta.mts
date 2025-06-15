@@ -15,7 +15,7 @@ import {
     _decode_CTPList,
     _encode_CTPList,
 } from '../M3100ASN1TypeModule2/CTPList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AssignNetworkCTPOnLogicalLinkEndResult */
+
 /**
  * @summary AssignNetworkCTPOnLogicalLinkEndResult
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AssignNetworkCTPOnLogicalLinkEndResult = CTPList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AssignNetworkCTPOnLogicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult */
+
 let _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Decoder<AssignNetworkCTPOnLogicalLinkEndResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssignNetworkCTPOnLogicalLinkEndResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AssignNetworkCTPOnLogicalLinkEndResult
  * @function
@@ -46,13 +44,11 @@ export function _decode_AssignNetworkCTPOnLogicalLinkEndResult(el: _Element) {
     }
     return _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssignNetworkCTPOnLogicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult */
+
 let _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssignNetworkCTPOnLogicalLinkEndResult */
+
 /**
  * @summary Encodes a(n) AssignNetworkCTPOnLogicalLinkEndResult into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_AssignNetworkCTPOnLogicalLinkEndResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssignNetworkCTPOnLogicalLinkEndResult */
 
 /* eslint-enable */

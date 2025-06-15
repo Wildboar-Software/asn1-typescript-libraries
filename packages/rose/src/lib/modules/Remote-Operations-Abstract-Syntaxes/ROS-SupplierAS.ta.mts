@@ -19,7 +19,7 @@ import {
   _decode_ROS,
   _encode_ROS,
 } from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ROS_SupplierAS */
+
 /**
  * @summary ROS_SupplierAS
  * @description
@@ -34,13 +34,11 @@ import {
  * ```
  */
 export type ROS_SupplierAS = ROS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ROS_SupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ROS_SupplierAS */
+
 let _cached_decoder_for_ROS_SupplierAS: $.ASN1Decoder<ROS_SupplierAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ROS_SupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ROS_SupplierAS */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROS_SupplierAS
  * @function
@@ -53,13 +51,11 @@ export function _decode_ROS_SupplierAS(el: _Element) {
   }
   return _cached_decoder_for_ROS_SupplierAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ROS_SupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ROS_SupplierAS */
+
 let _cached_encoder_for_ROS_SupplierAS: $.ASN1Encoder<ROS_SupplierAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ROS_SupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ROS_SupplierAS */
+
 /**
  * @summary Encodes a(n) ROS_SupplierAS into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_ROS_SupplierAS(
   return _cached_encoder_for_ROS_SupplierAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ROS_SupplierAS */
 
 /* eslint-enable */

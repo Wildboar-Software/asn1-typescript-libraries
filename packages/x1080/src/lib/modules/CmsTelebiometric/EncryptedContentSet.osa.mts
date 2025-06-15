@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION EncryptedContentSet */
+
 /**
  * @summary EncryptedContentSet
  * @description
@@ -26,6 +26,5 @@ import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
  *
  */
 export const EncryptedContentSet: CONTENT_TYPE[] = [];
-/* END_OF_SYMBOL_DEFINITION EncryptedContentSet */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, PrintableString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TerminalIdentifier */
 /**
  * @summary TerminalIdentifier
  * @description
@@ -14,9 +13,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type TerminalIdentifier = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION TerminalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminalIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminalIdentifier
  * @function
@@ -26,9 +23,7 @@ export type TerminalIdentifier = PrintableString; // PrintableString
 export function _decode_TerminalIdentifier(el: _Element) {
     return $._decodePrintableString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminalIdentifier */
 /**
  * @summary Encodes a(n) TerminalIdentifier into an ASN.1 Element.
  * @function
@@ -43,6 +38,5 @@ export function _encode_TerminalIdentifier(
     return $._encodePrintableString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminalIdentifier */
 
 /* eslint-enable */

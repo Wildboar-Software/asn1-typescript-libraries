@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EDIBodyPartType */
 /**
  * @summary EDIBodyPartType
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EDIBodyPartType = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION EDIBodyPartType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIBodyPartType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIBodyPartType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIBodyPartType */
 export const _decode_EDIBodyPartType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_EDIBodyPartType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIBodyPartType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIBodyPartType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIBodyPartType */
 export const _encode_EDIBodyPartType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIBodyPartType */
 
 /* eslint-enable */

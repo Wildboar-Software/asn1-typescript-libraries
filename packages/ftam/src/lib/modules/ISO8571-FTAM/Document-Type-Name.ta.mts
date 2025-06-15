@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Document_Type_Name */
+
 /**
  * @summary Document_Type_Name
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Document_Type_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION Document_Type_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_Type_Name */
+
 let _cached_decoder_for_Document_Type_Name: $.ASN1Decoder<Document_Type_Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_Type_Name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Document_Type_Name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Document_Type_Name
  * @function
@@ -45,13 +43,11 @@ export function _decode_Document_Type_Name(el: _Element) {
   }
   return _cached_decoder_for_Document_Type_Name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Document_Type_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_Type_Name */
+
 let _cached_encoder_for_Document_Type_Name: $.ASN1Encoder<Document_Type_Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_Type_Name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Document_Type_Name */
+
 /**
  * @summary Encodes a(n) Document_Type_Name into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Document_Type_Name(
   return _cached_encoder_for_Document_Type_Name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Document_Type_Name */
 
 /* eslint-enable */

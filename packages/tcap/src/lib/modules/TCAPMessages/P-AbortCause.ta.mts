@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION P_AbortCause */
 /**
  * @summary P_AbortCause
  * @description
@@ -27,103 +26,79 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type P_AbortCause = INTEGER;
-/* END_OF_SYMBOL_DEFINITION P_AbortCause */
 
-/* START_OF_SYMBOL_DEFINITION P_AbortCause_unrecognizedMessageType */
 /**
  * @summary P_AbortCause_unrecognizedMessageType
  * @constant
  * @type {number}
  */
 export const P_AbortCause_unrecognizedMessageType: P_AbortCause = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_AbortCause_unrecognizedMessageType */
 
-/* START_OF_SYMBOL_DEFINITION unrecognizedMessageType */
 /**
  * @summary P_AbortCause_unrecognizedMessageType
  * @constant
  * @type {number}
  */
 export const unrecognizedMessageType: P_AbortCause = P_AbortCause_unrecognizedMessageType; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION unrecognizedMessageType */
 
-/* START_OF_SYMBOL_DEFINITION P_AbortCause_unrecognizedTransactionID */
 /**
  * @summary P_AbortCause_unrecognizedTransactionID
  * @constant
  * @type {number}
  */
 export const P_AbortCause_unrecognizedTransactionID: P_AbortCause = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_AbortCause_unrecognizedTransactionID */
 
-/* START_OF_SYMBOL_DEFINITION unrecognizedTransactionID */
 /**
  * @summary P_AbortCause_unrecognizedTransactionID
  * @constant
  * @type {number}
  */
 export const unrecognizedTransactionID: P_AbortCause = P_AbortCause_unrecognizedTransactionID; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION unrecognizedTransactionID */
 
-/* START_OF_SYMBOL_DEFINITION P_AbortCause_badlyFormattedTransactionPortion */
 /**
  * @summary P_AbortCause_badlyFormattedTransactionPortion
  * @constant
  * @type {number}
  */
 export const P_AbortCause_badlyFormattedTransactionPortion: P_AbortCause = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_AbortCause_badlyFormattedTransactionPortion */
 
-/* START_OF_SYMBOL_DEFINITION badlyFormattedTransactionPortion */
 /**
  * @summary P_AbortCause_badlyFormattedTransactionPortion
  * @constant
  * @type {number}
  */
 export const badlyFormattedTransactionPortion: P_AbortCause = P_AbortCause_badlyFormattedTransactionPortion; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION badlyFormattedTransactionPortion */
 
-/* START_OF_SYMBOL_DEFINITION P_AbortCause_incorrectTransactionPortion */
 /**
  * @summary P_AbortCause_incorrectTransactionPortion
  * @constant
  * @type {number}
  */
 export const P_AbortCause_incorrectTransactionPortion: P_AbortCause = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_AbortCause_incorrectTransactionPortion */
 
-/* START_OF_SYMBOL_DEFINITION incorrectTransactionPortion */
 /**
  * @summary P_AbortCause_incorrectTransactionPortion
  * @constant
  * @type {number}
  */
 export const incorrectTransactionPortion: P_AbortCause = P_AbortCause_incorrectTransactionPortion; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION incorrectTransactionPortion */
 
-/* START_OF_SYMBOL_DEFINITION P_AbortCause_resourceLimitation */
 /**
  * @summary P_AbortCause_resourceLimitation
  * @constant
  * @type {number}
  */
 export const P_AbortCause_resourceLimitation: P_AbortCause = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_AbortCause_resourceLimitation */
 
-/* START_OF_SYMBOL_DEFINITION resourceLimitation */
 /**
  * @summary P_AbortCause_resourceLimitation
  * @constant
  * @type {number}
  */
 export const resourceLimitation: P_AbortCause = P_AbortCause_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION resourceLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_P_AbortCause */
 let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_P_AbortCause */
 
-/* START_OF_SYMBOL_DEFINITION _decode_P_AbortCause */
 /**
  * @summary Decodes an ASN.1 element into a(n) P_AbortCause
  * @function
@@ -138,13 +113,9 @@ export function _decode_P_AbortCause(el: _Element) {
   }
   return _cached_decoder_for_P_AbortCause(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_P_AbortCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_P_AbortCause */
 let _cached_encoder_for_P_AbortCause: $.ASN1Encoder<P_AbortCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_P_AbortCause */
 
-/* START_OF_SYMBOL_DEFINITION _encode_P_AbortCause */
 /**
  * @summary Encodes a(n) P_AbortCause into an ASN.1 Element.
  * @function
@@ -167,6 +138,5 @@ export function _encode_P_AbortCause(
   return _cached_encoder_for_P_AbortCause(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_P_AbortCause */
 
 /* eslint-enable */

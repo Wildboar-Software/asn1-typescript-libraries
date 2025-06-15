@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { signcrypted_content } from "../CMSObjectIdentifiers/signcrypted-content.va.mjs";
 import { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION signcryptedContent */
+
 /**
  * @summary signcryptedContent
  * @description
@@ -27,6 +27,5 @@ export const signcryptedContent: MODE = {
     "&id": signcrypted_content /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signcryptedContent */
 
 /* eslint-enable */

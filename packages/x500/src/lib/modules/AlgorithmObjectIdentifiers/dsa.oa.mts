@@ -6,7 +6,6 @@ import {
 } from "../AlgorithmObjectIdentifiers/DSS-Parms.ta.mjs";
 import { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dsa */
 /**
  * @summary dsa
  * @description
@@ -34,6 +33,5 @@ export const dsa: ALGORITHM<DSS_Parms> = {
     "&id": id_dsa /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dsa */
 
 /* eslint-enable */

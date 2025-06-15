@@ -21,7 +21,6 @@ import { asn1ModuleContents } from '../DefinitionDirectoryASN1Module/asn1ModuleC
 import { asn1Version } from '../DefinitionDirectoryASN1Module/asn1Version.oa.mjs';
 import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION asn1Module */
 /**
  * @summary asn1Module
  * @description
@@ -58,6 +57,5 @@ export const asn1Module: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION asn1Module */
 
 /* eslint-enable */

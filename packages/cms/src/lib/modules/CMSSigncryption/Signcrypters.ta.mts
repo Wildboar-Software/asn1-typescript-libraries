@@ -6,7 +6,7 @@ import {
     _decode_Signcrypter,
     _encode_Signcrypter,
 } from "../CMSSigncryption/Signcrypter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Signcrypters */
+
 /**
  * @summary Signcrypters
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Signcrypters = Signcrypter[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Signcrypters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Signcrypters */
+
 let _cached_decoder_for_Signcrypters: $.ASN1Decoder<Signcrypters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Signcrypters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Signcrypters */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Signcrypters
  * @function
@@ -39,13 +37,11 @@ export function _decode_Signcrypters(el: _Element) {
     }
     return _cached_decoder_for_Signcrypters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Signcrypters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Signcrypters */
+
 let _cached_encoder_for_Signcrypters: $.ASN1Encoder<Signcrypters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Signcrypters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Signcrypters */
+
 /**
  * @summary Encodes a(n) Signcrypters into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_Signcrypters(
     return _cached_encoder_for_Signcrypters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Signcrypters */
 
 /* eslint-enable */

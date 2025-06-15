@@ -22,7 +22,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/AlgorithmObjectIdentifiers/id-sha256.va.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION ATSHashIndex */
 /**
  * @summary ATSHashIndex
  * @description
@@ -96,9 +95,7 @@ class ATSHashIndex {
         _unrecognizedExtensionsList: [],
     }); }
 }
-/* END_OF_SYMBOL_DEFINITION ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ATSHashIndex */
 /**
  * @summary The Leading Root Component Types of ATSHashIndex
  * @description
@@ -114,9 +111,7 @@ const _root_component_type_list_1_spec_for_ATSHashIndex: $.ComponentSpec[] = [
     new $.ComponentSpec("crlsHashIndex", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("unsignedAttrsHashIndex", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ATSHashIndex */
 /**
  * @summary The Trailing Root Component Types of ATSHashIndex
  * @description
@@ -129,9 +124,7 @@ export
 const _root_component_type_list_2_spec_for_ATSHashIndex: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ATSHashIndex */
 /**
  * @summary The Extension Addition Component Types of ATSHashIndex
  * @description
@@ -144,13 +137,9 @@ export
 const _extension_additions_list_spec_for_ATSHashIndex: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ATSHashIndex */
 let _cached_decoder_for_ATSHashIndex: $.ASN1Decoder<ATSHashIndex> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ATSHashIndex */
 /**
  * @summary Decodes an ASN.1 element into a(n) ATSHashIndex
  * @function
@@ -189,13 +178,9 @@ function _decode_ATSHashIndex (el: _Element) {
 }; }
     return _cached_decoder_for_ATSHashIndex(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ATSHashIndex */
 let _cached_encoder_for_ATSHashIndex: $.ASN1Encoder<ATSHashIndex> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ATSHashIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ATSHashIndex */
 /**
  * @summary Encodes a(n) ATSHashIndex into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ function _encode_ATSHashIndex (value: ATSHashIndex, elGetter: $.ASN1Encoder<ATSH
     return _cached_encoder_for_ATSHashIndex(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ATSHashIndex */
 
 /* eslint-enable */

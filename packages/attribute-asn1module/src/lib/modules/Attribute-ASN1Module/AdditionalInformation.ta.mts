@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../Attribute-ASN1Module/ManagementExtension.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AdditionalInformation */
 /**
  * @summary AdditionalInformation
  * @description
@@ -24,13 +23,9 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
  */
 export
 type AdditionalInformation = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
 let _cached_decoder_for_AdditionalInformation: $.ASN1Decoder<AdditionalInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalInformation
  * @function
@@ -42,13 +37,9 @@ function _decode_AdditionalInformation (el: _Element) {
     if (!_cached_decoder_for_AdditionalInformation) { _cached_decoder_for_AdditionalInformation = $._decodeSetOf<ManagementExtension>(() => _decode_ManagementExtension); }
     return _cached_decoder_for_AdditionalInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
 let _cached_encoder_for_AdditionalInformation: $.ASN1Encoder<AdditionalInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */
 /**
  * @summary Encodes a(n) AdditionalInformation into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_AdditionalInformation (value: AdditionalInformation, elGetter: 
     return _cached_encoder_for_AdditionalInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */
 
 /* eslint-enable */

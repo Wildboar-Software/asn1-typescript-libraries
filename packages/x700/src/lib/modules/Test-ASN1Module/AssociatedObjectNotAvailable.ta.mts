@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AssociatedObjectNotAvailable */
 /**
  * @summary AssociatedObjectNotAvailable
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AssociatedObjectNotAvailable = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AssociatedObjectNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociatedObjectNotAvailable */
 let _cached_decoder_for_AssociatedObjectNotAvailable: $.ASN1Decoder<AssociatedObjectNotAvailable> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociatedObjectNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssociatedObjectNotAvailable */
 /**
  * @summary Decodes an ASN.1 element into a(n) AssociatedObjectNotAvailable
  * @function
@@ -48,13 +43,9 @@ export function _decode_AssociatedObjectNotAvailable(el: _Element) {
     }
     return _cached_decoder_for_AssociatedObjectNotAvailable(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssociatedObjectNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociatedObjectNotAvailable */
 let _cached_encoder_for_AssociatedObjectNotAvailable: $.ASN1Encoder<AssociatedObjectNotAvailable> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociatedObjectNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssociatedObjectNotAvailable */
 /**
  * @summary Encodes a(n) AssociatedObjectNotAvailable into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AssociatedObjectNotAvailable(
     return _cached_encoder_for_AssociatedObjectNotAvailable(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssociatedObjectNotAvailable */
 
 /* eslint-enable */

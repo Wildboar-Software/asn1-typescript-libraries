@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FourBit */
 /**
  * @summary FourBit
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FourBit = INTEGER;
-/* END_OF_SYMBOL_DEFINITION FourBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FourBit */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FourBit */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FourBit */
 export const _decode_FourBit = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_FourBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FourBit */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FourBit */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FourBit */
 export const _encode_FourBit = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FourBit */
 
 /* eslint-enable */

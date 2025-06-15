@@ -6,7 +6,7 @@ import { SMimeCaps as PKIXAlgs_SMimeCaps } from "../PKIXAlgs-2009/SMimeCaps.osa.
 import { SMimeCaps as CryptographicMessageSyntaxAlgorithms_SMimeCaps } from "../CryptographicMessageSyntaxAlgorithms-2009/SMimeCaps.osa.mjs";
 import { SMimeCaps as PKIX1_PSS_OAEP_Algorithms_SMimeCaps } from "../PKIX1-PSS-OAEP-Algorithms-2009/SMimeCaps.osa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SMimeCapsSet */
+
 /**
  * @summary SMimeCapsSet
  * @description
@@ -33,6 +33,5 @@ export const SMimeCapsSet: SMIME_CAPS[] = [
     ...CryptographicMessageSyntaxAlgorithms_SMimeCaps,
     ...PKIX1_PSS_OAEP_Algorithms_SMimeCaps,
 ];
-/* END_OF_SYMBOL_DEFINITION SMimeCapsSet */
 
 /* eslint-enable */

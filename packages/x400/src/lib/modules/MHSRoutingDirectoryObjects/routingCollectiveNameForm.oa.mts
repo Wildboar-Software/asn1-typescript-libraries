@@ -13,7 +13,6 @@ import { routingCollective } from '../MHSRoutingDirectoryObjects/routingCollecti
 import { routingCollectiveName } from '../MHSRoutingDirectoryObjects/routingCollectiveName.oa.mjs';
 import { id_nf_routing_collective } from '../MHSRoutingObjectIdentifiers/id-nf-routing-collective.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION routingCollectiveNameForm */
 /**
  * @summary routingCollectiveNameForm
  * @description
@@ -40,6 +39,5 @@ export const routingCollectiveNameForm: NAME_FORM = {
     '&MandatoryAttributes': [routingCollectiveName] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_routing_collective /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION routingCollectiveNameForm */
 
 /* eslint-enable */

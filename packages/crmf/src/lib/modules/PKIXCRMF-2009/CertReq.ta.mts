@@ -6,7 +6,7 @@ import {
     _decode_CertRequest,
     _encode_CertRequest,
 } from "../PKIXCRMF-2009/CertRequest.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertReq */
+
 /**
  * @summary CertReq
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type CertReq = CertRequest; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReq */
+
 let _cached_decoder_for_CertReq: $.ASN1Decoder<CertReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReq */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReq
  * @function
@@ -37,13 +35,11 @@ export function _decode_CertReq(el: _Element) {
     }
     return _cached_decoder_for_CertReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReq */
+
 let _cached_encoder_for_CertReq: $.ASN1Encoder<CertReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReq */
+
 /**
  * @summary Encodes a(n) CertReq into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_CertReq(
     return _cached_encoder_for_CertReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReq */
 
 /* eslint-enable */

@@ -39,7 +39,6 @@ import {
     _encode_TSTInfo_version,
 } from "../PKIXTSP/TSTInfo-version.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TSTInfo */
 /**
  * @summary TSTInfo
  * @description
@@ -171,9 +170,7 @@ export class TSTInfo {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TSTInfo */
 /**
  * @summary The Leading Root Component Types of TSTInfo
  * @description
@@ -254,9 +251,7 @@ export const _root_component_type_list_1_spec_for_TSTInfo: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TSTInfo */
 /**
  * @summary The Trailing Root Component Types of TSTInfo
  * @description
@@ -266,9 +261,7 @@ export const _root_component_type_list_1_spec_for_TSTInfo: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TSTInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TSTInfo */
 /**
  * @summary The Extension Addition Component Types of TSTInfo
  * @description
@@ -278,13 +271,9 @@ export const _root_component_type_list_2_spec_for_TSTInfo: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_TSTInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TSTInfo */
 let _cached_decoder_for_TSTInfo: $.ASN1Decoder<TSTInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TSTInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TSTInfo
  * @function
@@ -369,13 +358,9 @@ export function _decode_TSTInfo(el: _Element) {
     }
     return _cached_decoder_for_TSTInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TSTInfo */
 let _cached_encoder_for_TSTInfo: $.ASN1Encoder<TSTInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TSTInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TSTInfo */
 /**
  * @summary Encodes a(n) TSTInfo into an ASN.1 Element.
  * @function
@@ -451,6 +436,5 @@ export function _encode_TSTInfo(
     return _cached_encoder_for_TSTInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TSTInfo */
 
 /* eslint-enable */

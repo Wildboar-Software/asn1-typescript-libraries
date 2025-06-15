@@ -6,7 +6,7 @@ import {
     _decode_MarkingData,
     _encode_MarkingData,
 } from "../SIOsAccessControl-MODULE/MarkingData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MarkingDataInfo */
+
 /**
  * @summary MarkingDataInfo
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type MarkingDataInfo = MarkingData[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MarkingDataInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MarkingDataInfo */
+
 let _cached_decoder_for_MarkingDataInfo: $.ASN1Decoder<MarkingDataInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MarkingDataInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MarkingDataInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MarkingDataInfo
  * @function
@@ -39,13 +37,11 @@ export function _decode_MarkingDataInfo(el: _Element) {
     }
     return _cached_decoder_for_MarkingDataInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MarkingDataInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MarkingDataInfo */
+
 let _cached_encoder_for_MarkingDataInfo: $.ASN1Encoder<MarkingDataInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MarkingDataInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MarkingDataInfo */
+
 /**
  * @summary Encodes a(n) MarkingDataInfo into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_MarkingDataInfo(
     return _cached_encoder_for_MarkingDataInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MarkingDataInfo */
 
 /* eslint-enable */

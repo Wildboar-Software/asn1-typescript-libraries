@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers2/ID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION id_iso_ipms */
 /**
  * @summary id_iso_ipms
  * @description
@@ -28,6 +27,5 @@ export const id_iso_ipms: ID = new _OID(
     [0 /* standard */, /* mhs */ 10021, /* ipms */ 7],
     iso
 );
-/* END_OF_SYMBOL_DEFINITION id_iso_ipms */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import { register_88 } from '../MTSAbstractService88/register-88.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION administration_88 */
 /**
  * @summary administration_88
  * @description
@@ -52,6 +51,5 @@ export const administration_88: PORT = {
         id_pt_administration
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION administration_88 */
 
 /* eslint-enable */

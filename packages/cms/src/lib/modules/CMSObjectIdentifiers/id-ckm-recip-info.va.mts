@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { iso, ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ckm_recip_info */
+
 /**
  * @summary id_ckm_recip_info
  * @description
@@ -18,6 +18,5 @@ export const id_ckm_recip_info: OID = new _OID(
     [/* member-body */ 2, /* us */ 840, /* x973 */ 10060, /* km */ 2, 1],
     iso
 );
-/* END_OF_SYMBOL_DEFINITION id_ckm_recip_info */
 
 /* eslint-enable */

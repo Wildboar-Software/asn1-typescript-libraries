@@ -23,7 +23,6 @@ import {
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import { directoryStringFirstComponentMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/directoryStringFirstComponentMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION behaviour */
 /**
  * @summary behaviour
  * @description
@@ -68,6 +67,5 @@ export const behaviour: ATTRIBUTE<TemplateLabel> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION behaviour */
 
 /* eslint-enable */

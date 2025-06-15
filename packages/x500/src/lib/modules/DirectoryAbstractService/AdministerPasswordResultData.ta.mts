@@ -26,7 +26,6 @@ import {
     _root_component_type_list_1_spec_for_CommonResultsSeq,
 } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AdministerPasswordResultData */
 /**
  * @summary AdministerPasswordResultData
  * @description
@@ -114,9 +113,7 @@ export class AdministerPasswordResultData implements CommonResultsSeq {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdministerPasswordResultData */
 /**
  * @summary The Leading Root Component Types of AdministerPasswordResultData
  * @description
@@ -126,9 +123,7 @@ export class AdministerPasswordResultData implements CommonResultsSeq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AdministerPasswordResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdministerPasswordResultData */
 /**
  * @summary The Trailing Root Component Types of AdministerPasswordResultData
  * @description
@@ -140,9 +135,7 @@ export const _root_component_type_list_1_spec_for_AdministerPasswordResultData: 
 export const _root_component_type_list_2_spec_for_AdministerPasswordResultData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdministerPasswordResultData */
 /**
  * @summary The Extension Addition Component Types of AdministerPasswordResultData
  * @description
@@ -152,13 +145,9 @@ export const _root_component_type_list_2_spec_for_AdministerPasswordResultData: 
  * @constant
  */
 export const _extension_additions_list_spec_for_AdministerPasswordResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministerPasswordResultData */
 let _cached_decoder_for_AdministerPasswordResultData: $.ASN1Decoder<AdministerPasswordResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdministerPasswordResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdministerPasswordResultData
  * @function
@@ -223,13 +212,9 @@ export function _decode_AdministerPasswordResultData(el: _Element) {
     }
     return _cached_decoder_for_AdministerPasswordResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministerPasswordResultData */
 let _cached_encoder_for_AdministerPasswordResultData: $.ASN1Encoder<AdministerPasswordResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministerPasswordResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdministerPasswordResultData */
 /**
  * @summary Encodes a(n) AdministerPasswordResultData into an ASN.1 Element.
  * @function
@@ -303,6 +288,5 @@ export function _encode_AdministerPasswordResultData(
     return _cached_encoder_for_AdministerPasswordResultData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdministerPasswordResultData */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Validity_validUntil */
 /**
  * @summary Validity_validUntil
  * @description
@@ -25,13 +24,9 @@ export type Validity_validUntil =
     | { explicitTermination: NULL } /* CHOICE_ALT_ROOT */
     | { time: Time } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Validity_validUntil */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Validity_validUntil */
 let _cached_decoder_for_Validity_validUntil: $.ASN1Decoder<Validity_validUntil> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Validity_validUntil */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Validity_validUntil */
 /**
  * @summary Decodes an ASN.1 element into a(n) Validity_validUntil
  * @function
@@ -55,13 +50,9 @@ export function _decode_Validity_validUntil(el: _Element) {
     }
     return _cached_decoder_for_Validity_validUntil(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Validity_validUntil */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Validity_validUntil */
 let _cached_encoder_for_Validity_validUntil: $.ASN1Encoder<Validity_validUntil> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Validity_validUntil */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Validity_validUntil */
 /**
  * @summary Encodes a(n) Validity_validUntil into an ASN.1 Element.
  * @function
@@ -95,6 +86,5 @@ export function _encode_Validity_validUntil(
     return _cached_encoder_for_Validity_validUntil(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Validity_validUntil */
 
 /* eslint-enable */

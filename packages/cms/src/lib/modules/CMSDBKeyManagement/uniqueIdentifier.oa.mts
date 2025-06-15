@@ -6,7 +6,7 @@ import {
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
 import { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION uniqueIdentifier */
+
 /**
  * @summary uniqueIdentifier
  * @description
@@ -34,6 +34,5 @@ export const uniqueIdentifier: ATTRIBUTE<UniqueIdentifier> = {
     "&id": id_UniqueIdentifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uniqueIdentifier */
 
 /* eslint-enable */

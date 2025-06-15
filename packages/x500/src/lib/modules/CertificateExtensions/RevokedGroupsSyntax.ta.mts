@@ -6,7 +6,6 @@ import {
     _decode_RevokedGroup,
     _encode_RevokedGroup,
 } from "../CertificateExtensions/RevokedGroup.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RevokedGroupsSyntax */
 /**
  * @summary RevokedGroupsSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type RevokedGroupsSyntax = RevokedGroup[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RevokedGroupsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevokedGroupsSyntax */
 let _cached_decoder_for_RevokedGroupsSyntax: $.ASN1Decoder<RevokedGroupsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevokedGroupsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevokedGroupsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevokedGroupsSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_RevokedGroupsSyntax(el: _Element) {
     }
     return _cached_decoder_for_RevokedGroupsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevokedGroupsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevokedGroupsSyntax */
 let _cached_encoder_for_RevokedGroupsSyntax: $.ASN1Encoder<RevokedGroupsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevokedGroupsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevokedGroupsSyntax */
 /**
  * @summary Encodes a(n) RevokedGroupsSyntax into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_RevokedGroupsSyntax(
     return _cached_encoder_for_RevokedGroupsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevokedGroupsSyntax */
 
 /* eslint-enable */

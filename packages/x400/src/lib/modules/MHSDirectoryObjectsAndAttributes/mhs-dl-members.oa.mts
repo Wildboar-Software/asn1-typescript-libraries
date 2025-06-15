@@ -23,7 +23,6 @@ import {
 } from '../MTSAbstractService/ORName.ta.mjs';
 import { oRNameExactMatch } from '../MHSDirectoryObjectsAndAttributes/oRNameExactMatch.oa.mjs';
 import { id_at_mhs_dl_members } from '../MHSObjectIdentifiers/id-at-mhs-dl-members.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_dl_members */
 /**
  * @summary mhs_dl_members
  * @description
@@ -62,6 +61,5 @@ export const mhs_dl_members: ATTRIBUTE<ORName> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_dl_members */
 
 /* eslint-enable */

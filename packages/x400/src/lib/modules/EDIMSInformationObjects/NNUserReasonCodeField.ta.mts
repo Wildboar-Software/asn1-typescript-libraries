@@ -21,7 +21,6 @@ import {
     _decode_NNUserDiagnosticField,
     _encode_NNUserDiagnosticField,
 } from '../EDIMSInformationObjects/NNUserDiagnosticField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NNUserReasonCodeField */
 /**
  * @summary NNUserReasonCodeField
  * @description
@@ -74,9 +73,7 @@ export class NNUserReasonCodeField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NNUserReasonCodeField */
 /**
  * @summary The Leading Root Component Types of NNUserReasonCodeField
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_NNUserReasonCodeField: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NNUserReasonCodeField */
 /**
  * @summary The Trailing Root Component Types of NNUserReasonCodeField
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_NNUserReasonCodeField: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NNUserReasonCodeField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NNUserReasonCodeField */
 /**
  * @summary The Extension Addition Component Types of NNUserReasonCodeField
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_NNUserReasonCodeField: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_NNUserReasonCodeField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUserReasonCodeField */
 let _cached_decoder_for_NNUserReasonCodeField: $.ASN1Decoder<NNUserReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NNUserReasonCodeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) NNUserReasonCodeField
  * @function
@@ -177,13 +166,9 @@ export function _decode_NNUserReasonCodeField(el: _Element) {
     }
     return _cached_decoder_for_NNUserReasonCodeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUserReasonCodeField */
 let _cached_encoder_for_NNUserReasonCodeField: $.ASN1Encoder<NNUserReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUserReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NNUserReasonCodeField */
 /**
  * @summary Encodes a(n) NNUserReasonCodeField into an ASN.1 Element.
  * @function
@@ -224,6 +209,5 @@ export function _encode_NNUserReasonCodeField(
     return _cached_encoder_for_NNUserReasonCodeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NNUserReasonCodeField */
 
 /* eslint-enable */

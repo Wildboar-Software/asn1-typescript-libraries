@@ -16,7 +16,6 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConditionalPackages_Item */
 /**
  * @summary ConditionalPackages_Item
  * @description
@@ -65,9 +64,7 @@ export class ConditionalPackages_Item {
         return new ConditionalPackages_Item(_o.label, _o.condition);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConditionalPackages_Item */
 /**
  * @summary The Leading Root Component Types of ConditionalPackages_Item
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_ConditionalPackages_Item: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConditionalPackages_Item */
 /**
  * @summary The Trailing Root Component Types of ConditionalPackages_Item
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_ConditionalPackages_Item: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ConditionalPackages_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConditionalPackages_Item */
 /**
  * @summary The Extension Addition Component Types of ConditionalPackages_Item
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_ConditionalPackages_Item: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_ConditionalPackages_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConditionalPackages_Item */
 let _cached_decoder_for_ConditionalPackages_Item: $.ASN1Decoder<ConditionalPackages_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConditionalPackages_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConditionalPackages_Item
  * @function
@@ -153,13 +142,9 @@ export function _decode_ConditionalPackages_Item(el: _Element) {
     }
     return _cached_decoder_for_ConditionalPackages_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConditionalPackages_Item */
 let _cached_encoder_for_ConditionalPackages_Item: $.ASN1Encoder<ConditionalPackages_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConditionalPackages_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConditionalPackages_Item */
 /**
  * @summary Encodes a(n) ConditionalPackages_Item into an ASN.1 Element.
  * @function
@@ -194,6 +179,5 @@ export function _encode_ConditionalPackages_Item(
     return _cached_encoder_for_ConditionalPackages_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConditionalPackages_Item */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
 } from "../CryptographicMessageSyntax-2010/Countersignature.ta.mjs";
 import { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION aa_countersignature */
+
 /**
  * @summary aa_countersignature
  * @description
@@ -32,6 +32,5 @@ export const aa_countersignature: ATTRIBUTE<Countersignature> = {
     "&id": id_countersignature /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_countersignature */
 
 /* eslint-enable */

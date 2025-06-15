@@ -6,7 +6,6 @@ import {
 } from "../AuthenticationFramework/PolicyID.ta.mjs";
 import { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION policyMatch */
 /**
  * @summary policyMatch
  * @description
@@ -34,6 +33,5 @@ export const policyMatch: MATCHING_RULE<PolicyID> = {
     "&id": id_mr_policyMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION policyMatch */
 
 /* eslint-enable */

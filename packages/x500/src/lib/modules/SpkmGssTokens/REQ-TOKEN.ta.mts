@@ -20,7 +20,6 @@ import {
     _decode_Req_contents,
     _encode_Req_contents,
 } from "../SpkmGssTokens/Req-contents.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION REQ_TOKEN */
 /**
  * @summary REQ_TOKEN
  * @description
@@ -77,9 +76,7 @@ export class REQ_TOKEN {
         return new REQ_TOKEN(_o.req_contents, _o.algId, _o.req_integrity);
     }
 }
-/* END_OF_SYMBOL_DEFINITION REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_REQ_TOKEN */
 /**
  * @summary The Leading Root Component Types of REQ_TOKEN
  * @description
@@ -111,9 +108,7 @@ export const _root_component_type_list_1_spec_for_REQ_TOKEN: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_REQ_TOKEN */
 /**
  * @summary The Trailing Root Component Types of REQ_TOKEN
  * @description
@@ -123,9 +118,7 @@ export const _root_component_type_list_1_spec_for_REQ_TOKEN: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_REQ_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_REQ_TOKEN */
 /**
  * @summary The Extension Addition Component Types of REQ_TOKEN
  * @description
@@ -135,13 +128,9 @@ export const _root_component_type_list_2_spec_for_REQ_TOKEN: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_REQ_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_REQ_TOKEN */
 let _cached_decoder_for_REQ_TOKEN: $.ASN1Decoder<REQ_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_REQ_TOKEN */
 /**
  * @summary Decodes an ASN.1 element into a(n) REQ_TOKEN
  * @function
@@ -173,13 +162,9 @@ export function _decode_REQ_TOKEN(el: _Element) {
     }
     return _cached_decoder_for_REQ_TOKEN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_REQ_TOKEN */
 let _cached_encoder_for_REQ_TOKEN: $.ASN1Encoder<REQ_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_REQ_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_REQ_TOKEN */
 /**
  * @summary Encodes a(n) REQ_TOKEN into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ export function _encode_REQ_TOKEN(
     return _cached_encoder_for_REQ_TOKEN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_REQ_TOKEN */
 
 /* eslint-enable */

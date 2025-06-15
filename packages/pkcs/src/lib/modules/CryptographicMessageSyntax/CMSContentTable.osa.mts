@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION CMSContentTable */
+
 /**
  * @summary CMSContentTable
  * @description
@@ -16,6 +16,5 @@ import { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE
  *
  */
 export const CMSContentTable: CMS_CONTENT_TYPE[] = [];
-/* END_OF_SYMBOL_DEFINITION CMSContentTable */
 
 /* eslint-enable */

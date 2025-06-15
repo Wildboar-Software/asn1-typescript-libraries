@@ -6,7 +6,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION OtherRecipientInfo */
+
 /**
  * @summary OtherRecipientInfo
  * @description
@@ -55,9 +55,8 @@ export class OtherRecipientInfo {
         return new OtherRecipientInfo(_o.oriType, _o.oriValue);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherRecipientInfo */
+
 /**
  * @summary The Leading Root Component Types of OtherRecipientInfo
  * @description
@@ -76,9 +75,8 @@ export const _root_component_type_list_1_spec_for_OtherRecipientInfo: $.Componen
     ),
     new $.ComponentSpec("oriValue", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherRecipientInfo */
+
 /**
  * @summary The Trailing Root Component Types of OtherRecipientInfo
  * @description
@@ -88,9 +86,8 @@ export const _root_component_type_list_1_spec_for_OtherRecipientInfo: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OtherRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherRecipientInfo */
+
 /**
  * @summary The Extension Addition Component Types of OtherRecipientInfo
  * @description
@@ -100,13 +97,11 @@ export const _root_component_type_list_2_spec_for_OtherRecipientInfo: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_OtherRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherRecipientInfo */
+
 let _cached_decoder_for_OtherRecipientInfo: $.ASN1Decoder<OtherRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherRecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherRecipientInfo
  * @function
@@ -137,13 +132,11 @@ export function _decode_OtherRecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_OtherRecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherRecipientInfo */
+
 let _cached_encoder_for_OtherRecipientInfo: $.ASN1Encoder<OtherRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherRecipientInfo */
+
 /**
  * @summary Encodes a(n) OtherRecipientInfo into an ASN.1 Element.
  * @function
@@ -175,6 +168,5 @@ export function _encode_OtherRecipientInfo(
     return _cached_encoder_for_OtherRecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherRecipientInfo */
 
 /* eslint-enable */

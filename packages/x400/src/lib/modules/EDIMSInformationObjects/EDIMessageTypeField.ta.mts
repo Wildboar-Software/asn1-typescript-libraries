@@ -15,7 +15,6 @@ import {
     _decode_EDIMessageTypeFieldSubField,
     _encode_EDIMessageTypeFieldSubField,
 } from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIMessageTypeField */
 /**
  * @summary EDIMessageTypeField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EDIMessageTypeField = EDIMessageTypeFieldSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION EDIMessageTypeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMessageTypeField */
 let _cached_decoder_for_EDIMessageTypeField: $.ASN1Decoder<EDIMessageTypeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMessageTypeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIMessageTypeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIMessageTypeField
  * @function
@@ -48,13 +43,9 @@ export function _decode_EDIMessageTypeField(el: _Element) {
     }
     return _cached_decoder_for_EDIMessageTypeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIMessageTypeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMessageTypeField */
 let _cached_encoder_for_EDIMessageTypeField: $.ASN1Encoder<EDIMessageTypeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMessageTypeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIMessageTypeField */
 /**
  * @summary Encodes a(n) EDIMessageTypeField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_EDIMessageTypeField(
     return _cached_encoder_for_EDIMessageTypeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIMessageTypeField */
 
 /* eslint-enable */

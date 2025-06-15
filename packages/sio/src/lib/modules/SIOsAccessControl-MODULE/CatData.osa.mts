@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION CatData */
+
 /**
  * @summary CatData
  * @description
@@ -16,6 +16,5 @@ import { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
  *
  */
 export const CatData: OC_DATA[] = [];
-/* END_OF_SYMBOL_DEFINITION CatData */
 
 /* eslint-enable */

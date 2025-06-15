@@ -11,7 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SenderDhPublicKey */
 /**
  * @summary SenderDhPublicKey
  * @description
@@ -71,9 +70,7 @@ export class SenderDhPublicKey {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SenderDhPublicKey */
 /**
  * @summary The Leading Root Component Types of SenderDhPublicKey
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_SenderDhPublicKey: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SenderDhPublicKey */
 /**
  * @summary The Trailing Root Component Types of SenderDhPublicKey
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_SenderDhPublicKey: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SenderDhPublicKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SenderDhPublicKey */
 /**
  * @summary The Extension Addition Component Types of SenderDhPublicKey
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_SenderDhPublicKey: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_SenderDhPublicKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SenderDhPublicKey */
 let _cached_decoder_for_SenderDhPublicKey: $.ASN1Decoder<SenderDhPublicKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SenderDhPublicKey */
 /**
  * @summary Decodes an ASN.1 element into a(n) SenderDhPublicKey
  * @function
@@ -163,13 +152,9 @@ export function _decode_SenderDhPublicKey(el: _Element) {
     }
     return _cached_decoder_for_SenderDhPublicKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SenderDhPublicKey */
 let _cached_encoder_for_SenderDhPublicKey: $.ASN1Encoder<SenderDhPublicKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SenderDhPublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SenderDhPublicKey */
 /**
  * @summary Encodes a(n) SenderDhPublicKey into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_SenderDhPublicKey(
     return _cached_encoder_for_SenderDhPublicKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SenderDhPublicKey */
 
 /* eslint-enable */

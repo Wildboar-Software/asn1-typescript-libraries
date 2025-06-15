@@ -7,7 +7,6 @@ import {
     _encode_AttributeTypeAndValue,
 } from "../PKI-Stub/AttributeTypeAndValue.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RelativeDistinguishedName */
 /**
  * @summary RelativeDistinguishedName
  * @description
@@ -19,14 +18,10 @@ import {
  * ```
  */
 export type RelativeDistinguishedName = AttributeTypeAndValue[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RelativeDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelativeDistinguishedName */
 let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDistinguishedName> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelativeDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelativeDistinguishedName */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelativeDistinguishedName
  * @function
@@ -42,14 +37,10 @@ export function _decode_RelativeDistinguishedName(el: _Element) {
     }
     return _cached_decoder_for_RelativeDistinguishedName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelativeDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelativeDistinguishedName */
 let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDistinguishedName> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelativeDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelativeDistinguishedName */
 /**
  * @summary Encodes a(n) RelativeDistinguishedName into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_RelativeDistinguishedName(
     return _cached_encoder_for_RelativeDistinguishedName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelativeDistinguishedName */
 
 /* eslint-enable */

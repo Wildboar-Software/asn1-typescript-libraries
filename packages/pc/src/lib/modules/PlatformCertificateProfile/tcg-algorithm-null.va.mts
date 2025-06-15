@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_algorithm } from "../PlatformCertificateProfile/tcg-algorithm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_algorithm_null */
 /**
  * @summary tcg_algorithm_null
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_algorithm_null: OBJECT_IDENTIFIER = new _OID([
     1,
 ], tcg_algorithm);
-/* END_OF_SYMBOL_DEFINITION tcg_algorithm_null */
 
 /* eslint-enable */

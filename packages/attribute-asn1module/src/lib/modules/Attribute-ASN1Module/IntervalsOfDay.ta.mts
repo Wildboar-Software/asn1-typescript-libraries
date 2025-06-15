@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IntervalsOfDay */
 /**
  * @summary IntervalsOfDay
  * @description
@@ -27,13 +26,9 @@ import { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDa
  */
 export
 type IntervalsOfDay = IntervalsOfDay_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION IntervalsOfDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntervalsOfDay */
 let _cached_decoder_for_IntervalsOfDay: $.ASN1Decoder<IntervalsOfDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntervalsOfDay */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntervalsOfDay */
 /**
  * @summary Decodes an ASN.1 element into a(n) IntervalsOfDay
  * @function
@@ -45,13 +40,9 @@ function _decode_IntervalsOfDay (el: _Element) {
     if (!_cached_decoder_for_IntervalsOfDay) { _cached_decoder_for_IntervalsOfDay = $._decodeSetOf<IntervalsOfDay_Item>(() => _decode_IntervalsOfDay_Item); }
     return _cached_decoder_for_IntervalsOfDay(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IntervalsOfDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntervalsOfDay */
 let _cached_encoder_for_IntervalsOfDay: $.ASN1Encoder<IntervalsOfDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntervalsOfDay */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntervalsOfDay */
 /**
  * @summary Encodes a(n) IntervalsOfDay into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_IntervalsOfDay (value: IntervalsOfDay, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_IntervalsOfDay(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntervalsOfDay */
 
 /* eslint-enable */

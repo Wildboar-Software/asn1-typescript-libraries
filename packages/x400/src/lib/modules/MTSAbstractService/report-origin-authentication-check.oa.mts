@@ -25,7 +25,6 @@ import {
     _encode_ReportOriginAuthenticationCheck,
 } from '../MTSAbstractService/ReportOriginAuthenticationCheck.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION report_origin_authentication_check */
 /**
  * @summary report_origin_authentication_check
  * @description
@@ -62,6 +61,5 @@ export const report_origin_authentication_check: EXTENSION<ReportOriginAuthentic
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION report_origin_authentication_check */
 
 /* eslint-enable */

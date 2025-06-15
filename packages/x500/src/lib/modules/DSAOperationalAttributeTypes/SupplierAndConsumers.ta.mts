@@ -31,7 +31,6 @@ import {
     _extension_additions_list_spec_for_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SupplierAndConsumers */
 /**
  * @summary SupplierAndConsumers
  * @description
@@ -107,9 +106,7 @@ export class SupplierAndConsumers implements AccessPoint {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupplierAndConsumers */
 /**
  * @summary The Leading Root Component Types of SupplierAndConsumers
  * @description
@@ -128,9 +125,7 @@ export const _root_component_type_list_1_spec_for_SupplierAndConsumers: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierAndConsumers */
 /**
  * @summary The Trailing Root Component Types of SupplierAndConsumers
  * @description
@@ -142,9 +137,7 @@ export const _root_component_type_list_1_spec_for_SupplierAndConsumers: $.Compon
 export const _root_component_type_list_2_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_AccessPoint,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierAndConsumers */
 /**
  * @summary The Extension Addition Component Types of SupplierAndConsumers
  * @description
@@ -156,13 +149,9 @@ export const _root_component_type_list_2_spec_for_SupplierAndConsumers: $.Compon
 export const _extension_additions_list_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_AccessPoint,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierAndConsumers */
 let _cached_decoder_for_SupplierAndConsumers: $.ASN1Decoder<SupplierAndConsumers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupplierAndConsumers */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupplierAndConsumers
  * @function
@@ -230,13 +219,9 @@ export function _decode_SupplierAndConsumers(el: _Element) {
     }
     return _cached_decoder_for_SupplierAndConsumers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplierAndConsumers */
 let _cached_encoder_for_SupplierAndConsumers: $.ASN1Encoder<SupplierAndConsumers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplierAndConsumers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupplierAndConsumers */
 /**
  * @summary Encodes a(n) SupplierAndConsumers into an ASN.1 Element.
  * @function
@@ -303,6 +288,5 @@ export function _encode_SupplierAndConsumers(
     return _cached_encoder_for_SupplierAndConsumers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupplierAndConsumers */
 
 /* eslint-enable */

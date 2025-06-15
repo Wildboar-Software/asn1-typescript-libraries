@@ -92,7 +92,6 @@ import { ms_signature_verification_status } from '../MSGeneralAttributeTypes/ms-
 import { ms_storage_period } from '../MSGeneralAttributeTypes/ms-storage-period.oa.mjs';
 import { ms_storage_time } from '../MSGeneralAttributeTypes/ms-storage-time.oa.mjs';
 import { mt_trace_information } from '../MSGeneralAttributeTypes/mt-trace-information.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION GeneralAttributes */
 /**
  * @summary GeneralAttributes
  * @description
@@ -226,6 +225,5 @@ export const GeneralAttributes: X413ATTRIBUTE[] = [
     ms_storage_time,
     mt_trace_information,
 ];
-/* END_OF_SYMBOL_DEFINITION GeneralAttributes */
 
 /* eslint-enable */

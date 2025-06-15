@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maxPathMetric */
 /**
  * @summary maxPathMetric
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const maxPathMetric: INTEGER = 1023;
-/* END_OF_SYMBOL_DEFINITION maxPathMetric */
 
 /* eslint-enable */

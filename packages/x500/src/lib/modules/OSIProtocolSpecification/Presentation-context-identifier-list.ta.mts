@@ -6,7 +6,6 @@ import {
     _decode_Presentation_context_identifier_list_Item,
     _encode_Presentation_context_identifier_list_Item,
 } from "../OSIProtocolSpecification/Presentation-context-identifier-list-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Presentation_context_identifier_list */
 /**
  * @summary Presentation_context_identifier_list
  * @description
@@ -20,13 +19,9 @@ import {
  * ```
  */
 export type Presentation_context_identifier_list = Presentation_context_identifier_list_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Presentation_context_identifier_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_context_identifier_list */
 let _cached_decoder_for_Presentation_context_identifier_list: $.ASN1Decoder<Presentation_context_identifier_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_context_identifier_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Presentation_context_identifier_list */
 /**
  * @summary Decodes an ASN.1 element into a(n) Presentation_context_identifier_list
  * @function
@@ -41,13 +36,9 @@ export function _decode_Presentation_context_identifier_list(el: _Element) {
     }
     return _cached_decoder_for_Presentation_context_identifier_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Presentation_context_identifier_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_context_identifier_list */
 let _cached_encoder_for_Presentation_context_identifier_list: $.ASN1Encoder<Presentation_context_identifier_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_context_identifier_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Presentation_context_identifier_list */
 /**
  * @summary Encodes a(n) Presentation_context_identifier_list into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_Presentation_context_identifier_list(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Presentation_context_identifier_list */
 
 /* eslint-enable */

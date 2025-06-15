@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_RecipientReassignmentProhibited */
 /**
  * @summary RecipientReassignmentProhibited
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_RecipientReassignmentProhibited {
     recipient_reassignment_allowed = 0,
     recipient_reassignment_prohibited = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_RecipientReassignmentProhibited */
 
-/* START_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited */
 /**
  * @summary RecipientReassignmentProhibited
  * @description
@@ -44,9 +41,7 @@ export enum _enum_for_RecipientReassignmentProhibited {
  * ```@enum {number}
  */
 export type RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
-/* END_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited */
 
-/* START_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited */
 /**
  * @summary RecipientReassignmentProhibited
  * @description
@@ -60,9 +55,7 @@ export type RecipientReassignmentProhibited = _enum_for_RecipientReassignmentPro
  * ```@enum {number}
  */
 export const RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
-/* END_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited */
 
-/* START_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited_recipient_reassignment_allowed */
 /**
  * @summary RecipientReassignmentProhibited_recipient_reassignment_allowed
  * @constant
@@ -70,9 +63,7 @@ export const RecipientReassignmentProhibited = _enum_for_RecipientReassignmentPr
  */
 export const RecipientReassignmentProhibited_recipient_reassignment_allowed: RecipientReassignmentProhibited =
     RecipientReassignmentProhibited.recipient_reassignment_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited_recipient_reassignment_allowed */
 
-/* START_OF_SYMBOL_DEFINITION recipient_reassignment_allowed */
 /**
  * @summary recipient_reassignment_allowed
  * @constant
@@ -80,9 +71,7 @@ export const RecipientReassignmentProhibited_recipient_reassignment_allowed: Rec
  */
 export const recipient_reassignment_allowed: RecipientReassignmentProhibited =
     RecipientReassignmentProhibited.recipient_reassignment_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION recipient_reassignment_allowed */
 
-/* START_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited_recipient_reassignment_prohibited */
 /**
  * @summary RecipientReassignmentProhibited_recipient_reassignment_prohibited
  * @constant
@@ -90,9 +79,7 @@ export const recipient_reassignment_allowed: RecipientReassignmentProhibited =
  */
 export const RecipientReassignmentProhibited_recipient_reassignment_prohibited: RecipientReassignmentProhibited =
     RecipientReassignmentProhibited.recipient_reassignment_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RecipientReassignmentProhibited_recipient_reassignment_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION recipient_reassignment_prohibited */
 /**
  * @summary recipient_reassignment_prohibited
  * @constant
@@ -100,13 +87,9 @@ export const RecipientReassignmentProhibited_recipient_reassignment_prohibited: 
  */
 export const recipient_reassignment_prohibited: RecipientReassignmentProhibited =
     RecipientReassignmentProhibited.recipient_reassignment_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION recipient_reassignment_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReassignmentProhibited */
 let _cached_decoder_for_RecipientReassignmentProhibited: $.ASN1Decoder<RecipientReassignmentProhibited> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReassignmentProhibited */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientReassignmentProhibited */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientReassignmentProhibited
  * @function
@@ -120,13 +103,9 @@ export function _decode_RecipientReassignmentProhibited(el: _Element) {
     }
     return _cached_decoder_for_RecipientReassignmentProhibited(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientReassignmentProhibited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReassignmentProhibited */
 let _cached_encoder_for_RecipientReassignmentProhibited: $.ASN1Encoder<RecipientReassignmentProhibited> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReassignmentProhibited */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientReassignmentProhibited */
 /**
  * @summary Encodes a(n) RecipientReassignmentProhibited into an ASN.1 Element.
  * @function
@@ -145,6 +124,5 @@ export function _encode_RecipientReassignmentProhibited(
     return _cached_encoder_for_RecipientReassignmentProhibited(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientReassignmentProhibited */
 
 /* eslint-enable */

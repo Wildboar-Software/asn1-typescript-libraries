@@ -15,7 +15,6 @@ import {
     _decode_ForwardCertificationPath,
     _encode_ForwardCertificationPath,
 } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Certificates */
 /**
  * @summary Certificates
  * @description
@@ -75,9 +74,7 @@ export class Certificates {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Certificates */
 /**
  * @summary The Leading Root Component Types of Certificates
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_Certificates: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Certificates */
 /**
  * @summary The Trailing Root Component Types of Certificates
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_Certificates: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Certificates: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Certificates */
 /**
  * @summary The Extension Addition Component Types of Certificates
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_Certificates: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_Certificates: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Certificates */
 let _cached_decoder_for_Certificates: $.ASN1Decoder<Certificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Certificates */
 /**
  * @summary Decodes an ASN.1 element into a(n) Certificates
  * @function
@@ -178,13 +167,9 @@ export function _decode_Certificates(el: _Element) {
     }
     return _cached_decoder_for_Certificates(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Certificates */
 let _cached_encoder_for_Certificates: $.ASN1Encoder<Certificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Certificates */
 /**
  * @summary Encodes a(n) Certificates into an ASN.1 Element.
  * @function
@@ -227,6 +212,5 @@ export function _encode_Certificates(
     return _cached_encoder_for_Certificates(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Certificates */
 
 /* eslint-enable */

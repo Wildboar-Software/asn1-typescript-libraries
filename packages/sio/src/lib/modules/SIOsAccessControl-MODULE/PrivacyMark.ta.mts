@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, PrintableString, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivacyMark */
+
 /**
  * @summary PrivacyMark
  * @description
@@ -19,13 +19,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type PrivacyMark =
     | { pString: PrintableString } /* CHOICE_ALT_ROOT */
     | { utf8String: UTF8String } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivacyMark */
+
 let _cached_decoder_for_PrivacyMark: $.ASN1Decoder<PrivacyMark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivacyMark */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivacyMark
  * @function
@@ -43,13 +41,11 @@ export function _decode_PrivacyMark(el: _Element) {
     }
     return _cached_decoder_for_PrivacyMark(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivacyMark */
+
 let _cached_encoder_for_PrivacyMark: $.ASN1Encoder<PrivacyMark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivacyMark */
+
 /**
  * @summary Encodes a(n) PrivacyMark into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_PrivacyMark(
     return _cached_encoder_for_PrivacyMark(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivacyMark */
 
 /* eslint-enable */

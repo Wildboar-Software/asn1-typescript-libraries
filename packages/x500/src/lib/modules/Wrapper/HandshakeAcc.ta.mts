@@ -11,7 +11,6 @@ import {
     _decode_TbsHandshakeAcc,
     _encode_TbsHandshakeAcc,
 } from "../Wrapper/TbsHandshakeAcc.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HandshakeAcc */
 /**
  * @summary HandshakeAcc
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type HandshakeAcc = Signed<TbsHandshakeAcc>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION HandshakeAcc */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HandshakeAcc */
 let _cached_decoder_for_HandshakeAcc: $.ASN1Decoder<HandshakeAcc> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HandshakeAcc */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HandshakeAcc */
 /**
  * @summary Decodes an ASN.1 element into a(n) HandshakeAcc
  * @function
@@ -44,13 +39,9 @@ export function _decode_HandshakeAcc(el: _Element) {
     }
     return _cached_decoder_for_HandshakeAcc(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HandshakeAcc */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HandshakeAcc */
 let _cached_encoder_for_HandshakeAcc: $.ASN1Encoder<HandshakeAcc> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HandshakeAcc */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HandshakeAcc */
 /**
  * @summary Encodes a(n) HandshakeAcc into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_HandshakeAcc(
     return _cached_encoder_for_HandshakeAcc(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HandshakeAcc */
 
 /* eslint-enable */

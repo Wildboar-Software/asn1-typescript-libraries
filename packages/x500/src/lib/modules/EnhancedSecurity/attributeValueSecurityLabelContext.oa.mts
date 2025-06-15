@@ -7,7 +7,6 @@ import {
     _encode_SignedSecurityLabel,
 } from "../EnhancedSecurity/SignedSecurityLabel.ta.mjs";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeValueSecurityLabelContext */
 /**
  * @summary attributeValueSecurityLabelContext
  * @description
@@ -40,6 +39,5 @@ export const attributeValueSecurityLabelContext: CONTEXT<SignedSecurityLabel> = 
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&absentMatch": TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeValueSecurityLabelContext */
 
 /* eslint-enable */

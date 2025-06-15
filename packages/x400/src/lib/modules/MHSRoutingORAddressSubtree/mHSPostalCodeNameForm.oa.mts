@@ -13,7 +13,6 @@ import { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa.mj
 import { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa.mjs';
 import { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSPostalCodeNameForm */
 /**
  * @summary mHSPostalCodeNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSPostalCodeNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSPostalCodeAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_postal_code /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSPostalCodeNameForm */
 
 /* eslint-enable */

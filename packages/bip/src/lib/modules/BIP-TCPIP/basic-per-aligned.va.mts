@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION basic_per_aligned */
+
 /**
  * @summary basic_per_aligned
  * @description
@@ -29,6 +29,5 @@ export const basic_per_aligned: OBJECT_IDENTIFIER = new _OID(
   [/* asn1 */ 1, /* packed-encoding */ 3, /* basic */ 0, /* aligned */ 0],
   joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION basic_per_aligned */
 
 /* eslint-enable */

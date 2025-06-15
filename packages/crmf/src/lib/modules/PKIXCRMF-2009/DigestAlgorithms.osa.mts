@@ -2,7 +2,7 @@
 import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
 import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DigestAlgorithms */
+
 /**
  * @summary DigestAlgorithms
  * @description
@@ -20,6 +20,5 @@ import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
  *
  */
 export const DigestAlgorithms: DIGEST_ALGORITHM[] = [mda_sha1];
-/* END_OF_SYMBOL_DEFINITION DigestAlgorithms */
 
 /* eslint-enable */

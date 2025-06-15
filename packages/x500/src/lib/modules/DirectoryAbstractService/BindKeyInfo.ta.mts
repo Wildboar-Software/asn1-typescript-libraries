@@ -6,7 +6,6 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../AuthenticationFramework/ENCRYPTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BindKeyInfo */
 /**
  * @summary BindKeyInfo
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type BindKeyInfo = ENCRYPTED<BIT_STRING>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BindKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindKeyInfo */
 let _cached_decoder_for_BindKeyInfo: $.ASN1Decoder<BindKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindKeyInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) BindKeyInfo
  * @function
@@ -39,13 +34,9 @@ export function _decode_BindKeyInfo(el: _Element) {
     }
     return _cached_decoder_for_BindKeyInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindKeyInfo */
 let _cached_encoder_for_BindKeyInfo: $.ASN1Encoder<BindKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindKeyInfo */
 /**
  * @summary Encodes a(n) BindKeyInfo into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ export function _encode_BindKeyInfo(
     return _cached_encoder_for_BindKeyInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindKeyInfo */
 
 /* eslint-enable */

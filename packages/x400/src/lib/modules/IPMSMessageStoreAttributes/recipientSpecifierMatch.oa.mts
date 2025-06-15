@@ -16,7 +16,6 @@ import {
     _encode_RecipientSpecifier,
 } from '../IPMSInformationObjects/RecipientSpecifier.ta.mjs';
 import { id_mr_recipient_specifier } from '../IPMSObjectIdentifiers/id-mr-recipient-specifier.va.mjs';
-/* START_OF_SYMBOL_DEFINITION recipientSpecifierMatch */
 /**
  * @summary recipientSpecifierMatch
  * @description
@@ -45,6 +44,5 @@ export const recipientSpecifierMatch: MATCHING_RULE<RecipientSpecifier> = {
     '&id': id_mr_recipient_specifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipientSpecifierMatch */
 
 /* eslint-enable */

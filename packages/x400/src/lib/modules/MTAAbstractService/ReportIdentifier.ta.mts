@@ -15,7 +15,6 @@ import {
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportIdentifier */
 /**
  * @summary ReportIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportIdentifier = MTSIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportIdentifier */
 let _cached_decoder_for_ReportIdentifier: $.ASN1Decoder<ReportIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReportIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ReportIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportIdentifier */
 let _cached_encoder_for_ReportIdentifier: $.ASN1Encoder<ReportIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportIdentifier */
 /**
  * @summary Encodes a(n) ReportIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReportIdentifier(
     return _cached_encoder_for_ReportIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportIdentifier */
 
 /* eslint-enable */

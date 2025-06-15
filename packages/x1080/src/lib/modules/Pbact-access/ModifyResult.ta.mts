@@ -15,7 +15,7 @@ import {
     _decode_ModifyResult_result,
     _encode_ModifyResult_result,
 } from '../Pbact-access/ModifyResult-result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModifyResult */
+
 /**
  * @summary ModifyResult
  * @description
@@ -67,9 +67,8 @@ export class ModifyResult {
         return new ModifyResult(_o.result, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyResult */
+
 /**
  * @summary The Leading Root Component Types of ModifyResult
  * @description
@@ -81,9 +80,8 @@ export class ModifyResult {
 export const _root_component_type_list_1_spec_for_ModifyResult: $.ComponentSpec[] = [
     new $.ComponentSpec('result', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyResult */
+
 /**
  * @summary The Trailing Root Component Types of ModifyResult
  * @description
@@ -93,9 +91,8 @@ export const _root_component_type_list_1_spec_for_ModifyResult: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyResult */
+
 /**
  * @summary The Extension Addition Component Types of ModifyResult
  * @description
@@ -105,13 +102,11 @@ export const _root_component_type_list_2_spec_for_ModifyResult: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyResult */
+
 let _cached_decoder_for_ModifyResult: $.ASN1Decoder<ModifyResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyResult
  * @function
@@ -139,13 +134,11 @@ export function _decode_ModifyResult(el: _Element) {
     }
     return _cached_decoder_for_ModifyResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyResult */
+
 let _cached_encoder_for_ModifyResult: $.ASN1Encoder<ModifyResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyResult */
+
 /**
  * @summary Encodes a(n) ModifyResult into an ASN.1 Element.
  * @function
@@ -181,6 +174,5 @@ export function _encode_ModifyResult(
     return _cached_encoder_for_ModifyResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyResult */
 
 /* eslint-enable */

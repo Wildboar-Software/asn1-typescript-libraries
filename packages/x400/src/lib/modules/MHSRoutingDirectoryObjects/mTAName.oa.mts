@@ -22,7 +22,6 @@ import {
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
 import { id_at_mta_name } from '../MHSRoutingObjectIdentifiers/id-at-mta-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mTAName */
 /**
  * @summary mTAName
  * @description
@@ -58,6 +57,5 @@ export const mTAName: ATTRIBUTE<MTAName> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mTAName */
 
 /* eslint-enable */

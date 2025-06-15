@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/sequence-number-error-ParameterType.ta.mjs';
 import { err_sequence_number_error } from '../MSAccessProtocol/err-sequence-number-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION sequence_number_error */
 /**
  * @summary sequence_number_error
  * @description
@@ -58,6 +57,5 @@ export const sequence_number_error: ABSTRACT_ERROR<sequence_number_error_Paramet
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sequence_number_error */
 
 /* eslint-enable */

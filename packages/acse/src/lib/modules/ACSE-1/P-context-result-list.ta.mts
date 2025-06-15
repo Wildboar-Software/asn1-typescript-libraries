@@ -15,7 +15,6 @@ import {
   _decode_P_context_result_list_Item,
   _encode_P_context_result_list_Item,
 } from '../ACSE-1/P-context-result-list-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION P_context_result_list */
 /**
  * @summary P_context_result_list
  * @description
@@ -36,13 +35,9 @@ import {
  * ```
  */
 export type P_context_result_list = P_context_result_list_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION P_context_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_P_context_result_list */
 let _cached_decoder_for_P_context_result_list: $.ASN1Decoder<P_context_result_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_P_context_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_P_context_result_list */
 /**
  * @summary Decodes an ASN.1 element into a(n) P_context_result_list
  * @function
@@ -57,13 +52,9 @@ export function _decode_P_context_result_list(el: _Element) {
   }
   return _cached_decoder_for_P_context_result_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_P_context_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_P_context_result_list */
 let _cached_encoder_for_P_context_result_list: $.ASN1Encoder<P_context_result_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_P_context_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_P_context_result_list */
 /**
  * @summary Encodes a(n) P_context_result_list into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_P_context_result_list(
   return _cached_encoder_for_P_context_result_list(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_P_context_result_list */
 
 /* eslint-enable */

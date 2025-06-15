@@ -6,7 +6,6 @@ import {
     _encode_TBprot,
 } from "../TrustBroker/TBprot.ta.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION tbprot */
 /**
  * @summary tbprot
  * @description
@@ -34,6 +33,5 @@ export const tbprot: WRAPPED_PROT = {
     "&id": id_tbprot /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION tbprot */
 
 /* eslint-enable */

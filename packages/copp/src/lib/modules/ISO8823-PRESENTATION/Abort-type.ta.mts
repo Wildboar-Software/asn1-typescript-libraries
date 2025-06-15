@@ -20,7 +20,7 @@ import {
     _decode_ARP_PPDU,
     _encode_ARP_PPDU,
 } from '../ISO8823-PRESENTATION/ARP-PPDU.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Abort_type */
+
 /**
  * @summary Abort_type
  * @description
@@ -37,13 +37,11 @@ import {
 export type Abort_type =
     | { aru_ppdu: ARU_PPDU } /* CHOICE_ALT_ROOT */
     | { arp_ppdu: ARP_PPDU } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Abort_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort_type */
+
 let _cached_decoder_for_Abort_type: $.ASN1Decoder<Abort_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Abort_type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Abort_type
  * @function
@@ -62,13 +60,11 @@ export function _decode_Abort_type(el: _Element) {
     }
     return _cached_decoder_for_Abort_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Abort_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort_type */
+
 let _cached_encoder_for_Abort_type: $.ASN1Encoder<Abort_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Abort_type */
+
 /**
  * @summary Encodes a(n) Abort_type into an ASN.1 Element.
  * @function
@@ -92,6 +88,5 @@ export function _encode_Abort_type(
     return _cached_encoder_for_Abort_type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Abort_type */
 
 /* eslint-enable */

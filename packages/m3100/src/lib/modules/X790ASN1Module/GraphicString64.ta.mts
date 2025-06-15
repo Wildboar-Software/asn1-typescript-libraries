@@ -15,7 +15,7 @@ import {
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
 } from '../X790ASN1Module/GraphicStringBase.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GraphicString64 */
+
 /**
  * @summary GraphicString64
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GraphicString64 = GraphicStringBase; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GraphicString64 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicString64 */
+
 let _cached_decoder_for_GraphicString64: $.ASN1Decoder<GraphicString64> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicString64 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GraphicString64 */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GraphicString64
  * @function
@@ -46,13 +44,11 @@ export function _decode_GraphicString64(el: _Element) {
     }
     return _cached_decoder_for_GraphicString64(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GraphicString64 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicString64 */
+
 let _cached_encoder_for_GraphicString64: $.ASN1Encoder<GraphicString64> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicString64 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GraphicString64 */
+
 /**
  * @summary Encodes a(n) GraphicString64 into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_GraphicString64(
     return _cached_encoder_for_GraphicString64(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GraphicString64 */
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ import {
     _decode_PinAttributes,
     _encode_PinAttributes,
 } from "../PKCS-15/PinAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthenticationType */
+
 /**
  * @summary AuthenticationType
  * @description
@@ -53,13 +53,11 @@ export type AuthenticationType =
           external: AuthenticationObject<ExternalAuthObjectAttributes>;
       } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AuthenticationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationType */
+
 let _cached_decoder_for_AuthenticationType: $.ASN1Decoder<AuthenticationType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthenticationType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticationType
  * @function
@@ -110,13 +108,11 @@ export function _decode_AuthenticationType(el: _Element) {
     }
     return _cached_decoder_for_AuthenticationType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthenticationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationType */
+
 let _cached_encoder_for_AuthenticationType: $.ASN1Encoder<AuthenticationType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthenticationType */
+
 /**
  * @summary Encodes a(n) AuthenticationType into an ASN.1 Element.
  * @function
@@ -168,6 +164,5 @@ export function _encode_AuthenticationType(
     return _cached_encoder_for_AuthenticationType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthenticationType */
 
 /* eslint-enable */

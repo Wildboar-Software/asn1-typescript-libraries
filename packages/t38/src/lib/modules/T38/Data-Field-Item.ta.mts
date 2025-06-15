@@ -18,7 +18,7 @@ import {
   _decode_Data_Field_Item_field_type,
   _encode_Data_Field_Item_field_type,
 } from '../T38/Data-Field-Item-field-type.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Data_Field_Item */
+
 /**
  * @summary Data_Field_Item
  * @description
@@ -73,9 +73,8 @@ export class Data_Field_Item {
 
   public static _enum_for_field_type = _enum_for_Data_Field_Item_field_type;
 }
-/* END_OF_SYMBOL_DEFINITION Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Data_Field_Item */
+
 /**
  * @summary The Leading Root Component Types of Data_Field_Item
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_Data_Field_Item: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Data_Field_Item */
+
 /**
  * @summary The Trailing Root Component Types of Data_Field_Item
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_Data_Field_Item: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Data_Field_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Data_Field_Item */
+
 /**
  * @summary The Extension Addition Component Types of Data_Field_Item
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_Data_Field_Item: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_Data_Field_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Data_Field_Item */
+
 let _cached_decoder_for_Data_Field_Item: $.ASN1Decoder<Data_Field_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Data_Field_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Data_Field_Item
  * @function
@@ -172,13 +167,11 @@ export function _decode_Data_Field_Item(el: _Element) {
   }
   return _cached_decoder_for_Data_Field_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Data_Field_Item */
+
 let _cached_encoder_for_Data_Field_Item: $.ASN1Encoder<Data_Field_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Data_Field_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Data_Field_Item */
+
 /**
  * @summary Encodes a(n) Data_Field_Item into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_Data_Field_Item(
   return _cached_encoder_for_Data_Field_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Data_Field_Item */
 
 /* eslint-enable */

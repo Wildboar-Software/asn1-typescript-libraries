@@ -11,7 +11,6 @@ import {
     _decode_OpBindingErrorParam,
     _encode_OpBindingErrorParam,
 } from "../OperationalBindingManagement/OpBindingErrorParam.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION operationalBindingError */
 /**
  * @summary operationalBindingError
  * @description
@@ -45,6 +44,5 @@ export const operationalBindingError: ERROR<
     "&errorCode": id_err_operationalBindingError /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ParameterType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION operationalBindingError */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION optionallyRegisteredAs */
 /**
  * @summary optionallyRegisteredAs
  * @description
@@ -64,6 +63,5 @@ export const optionallyRegisteredAs: ATTRIBUTE<OptionallyRegisteredAs> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION optionallyRegisteredAs */
 
 /* eslint-enable */

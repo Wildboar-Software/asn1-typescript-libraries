@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "@wildboar/tsp/src/lib/modules/PKIXTSP/TimeStampToken.ta.mjs";
 import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "@wildboar/ers/src/lib/modules/ERS/EvidenceRecord.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LongTermValidation_poeValue */
 /**
  * @summary LongTermValidation_poeValue
  * @description
@@ -27,13 +26,9 @@ export
 type LongTermValidation_poeValue =
     { timeStamp: TimeStampToken } /* CHOICE_ALT_ROOT */
     | { evidenceRecord: EvidenceRecord } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION LongTermValidation_poeValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LongTermValidation_poeValue */
 let _cached_decoder_for_LongTermValidation_poeValue: $.ASN1Decoder<LongTermValidation_poeValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LongTermValidation_poeValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LongTermValidation_poeValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) LongTermValidation_poeValue
  * @function
@@ -48,13 +43,9 @@ function _decode_LongTermValidation_poeValue (el: _Element) {
 }); }
     return _cached_decoder_for_LongTermValidation_poeValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LongTermValidation_poeValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LongTermValidation_poeValue */
 let _cached_encoder_for_LongTermValidation_poeValue: $.ASN1Encoder<LongTermValidation_poeValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LongTermValidation_poeValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LongTermValidation_poeValue */
 /**
  * @summary Encodes a(n) LongTermValidation_poeValue into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ function _encode_LongTermValidation_poeValue (value: LongTermValidation_poeValue
     return _cached_encoder_for_LongTermValidation_poeValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LongTermValidation_poeValue */
 
 /* eslint-enable */

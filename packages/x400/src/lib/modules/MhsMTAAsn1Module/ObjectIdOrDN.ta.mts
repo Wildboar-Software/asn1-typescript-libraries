@@ -16,7 +16,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectIdOrDN */
 /**
  * @summary ObjectIdOrDN
  * @description
@@ -33,13 +32,9 @@ import {
 export type ObjectIdOrDN =
     | { distinguishedName: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ObjectIdOrDN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectIdOrDN */
 let _cached_decoder_for_ObjectIdOrDN: $.ASN1Decoder<ObjectIdOrDN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectIdOrDN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectIdOrDN */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectIdOrDN
  * @function
@@ -60,13 +55,9 @@ export function _decode_ObjectIdOrDN(el: _Element) {
     }
     return _cached_decoder_for_ObjectIdOrDN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectIdOrDN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectIdOrDN */
 let _cached_encoder_for_ObjectIdOrDN: $.ASN1Encoder<ObjectIdOrDN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectIdOrDN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectIdOrDN */
 /**
  * @summary Encodes a(n) ObjectIdOrDN into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_ObjectIdOrDN(
     return _cached_encoder_for_ObjectIdOrDN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectIdOrDN */
 
 /* eslint-enable */

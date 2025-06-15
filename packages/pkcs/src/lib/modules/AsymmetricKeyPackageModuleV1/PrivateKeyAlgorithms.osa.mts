@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateKeyAlgorithms */
+
 /**
  * @summary PrivateKeyAlgorithms
  * @description
@@ -19,6 +19,5 @@ import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramewor
  *
  */
 export const PrivateKeyAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION PrivateKeyAlgorithms */
 
 /* eslint-enable */

@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oa_collectiveExclusions } from "../InformationFramework/id-oa-collectiveExclusions.va.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveExclusions */
 /**
  * @summary collectiveExclusions
  * @description
@@ -44,6 +43,5 @@ export const collectiveExclusions: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveExclusions */
 
 /* eslint-enable */

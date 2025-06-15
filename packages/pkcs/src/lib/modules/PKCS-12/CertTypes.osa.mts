@@ -2,7 +2,7 @@
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { sdsiCertificate } from "../PKCS-12/sdsiCertificate.oa.mjs";
 import { x509Certificate } from "../PKCS-12/x509Certificate.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION CertTypes */
+
 /**
  * @summary CertTypes
  * @description
@@ -22,6 +22,5 @@ import { x509Certificate } from "../PKCS-12/x509Certificate.oa.mjs";
  *
  */
 export const CertTypes: BAG_TYPE<any>[] = [x509Certificate, sdsiCertificate];
-/* END_OF_SYMBOL_DEFINITION CertTypes */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary ProbeOriginAuthenticationAlgorithmIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProbeOriginAuthenticationAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier */
 let _cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier: $.ASN1Decoder<ProbeOriginAuthenticationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeOriginAuthenticationAlgorithmIdentifier
  * @function
@@ -48,13 +43,9 @@ export function _decode_ProbeOriginAuthenticationAlgorithmIdentifier(
     }
     return _cached_decoder_for_ProbeOriginAuthenticationAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeOriginAuthenticationAlgorithmIdentifier */
 let _cached_encoder_for_ProbeOriginAuthenticationAlgorithmIdentifier: $.ASN1Encoder<ProbeOriginAuthenticationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary Encodes a(n) ProbeOriginAuthenticationAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ProbeOriginAuthenticationAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeOriginAuthenticationAlgorithmIdentifier */
 
 /* eslint-enable */

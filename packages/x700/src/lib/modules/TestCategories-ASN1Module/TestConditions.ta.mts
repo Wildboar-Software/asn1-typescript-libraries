@@ -21,7 +21,6 @@ import {
     _decode_TestConditions_second,
     _encode_TestConditions_second,
 } from '../TestCategories-ASN1Module/TestConditions-second.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestConditions */
 /**
  * @summary TestConditions
  * @description
@@ -71,9 +70,7 @@ export class TestConditions {
         return new TestConditions(_o.first, _o.second);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestConditions */
 /**
  * @summary The Leading Root Component Types of TestConditions
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_TestConditions: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestConditions */
 /**
  * @summary The Trailing Root Component Types of TestConditions
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_TestConditions: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestConditions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestConditions */
 /**
  * @summary The Extension Addition Component Types of TestConditions
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_TestConditions: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_TestConditions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestConditions */
 let _cached_decoder_for_TestConditions: $.ASN1Decoder<TestConditions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestConditions */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestConditions
  * @function
@@ -170,13 +159,9 @@ export function _decode_TestConditions(el: _Element) {
     }
     return _cached_decoder_for_TestConditions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestConditions */
 let _cached_encoder_for_TestConditions: $.ASN1Encoder<TestConditions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestConditions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestConditions */
 /**
  * @summary Encodes a(n) TestConditions into an ASN.1 Element.
  * @function
@@ -213,6 +198,5 @@ export function _encode_TestConditions(
     return _cached_encoder_for_TestConditions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestConditions */
 
 /* eslint-enable */

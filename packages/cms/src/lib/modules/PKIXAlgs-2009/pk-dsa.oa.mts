@@ -14,7 +14,7 @@ import {
     _encode_DSAPublicKey,
 } from "../PKIXAlgs-2009/DSAPublicKey.ta.mjs";
 import { id_dsa } from "../PKIXAlgs-2009/id-dsa.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_dsa */
+
 /**
  * @summary pk_dsa
  * @description
@@ -55,6 +55,5 @@ export const pk_dsa: PUBLIC_KEY<DSAPublicKey, DSA_Params> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_dsa */
 
 /* eslint-enable */

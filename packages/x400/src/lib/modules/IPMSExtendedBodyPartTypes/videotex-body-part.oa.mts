@@ -12,7 +12,6 @@ import {
 import { videotex_body_part_parameters } from '../IPMSExtendedBodyPartTypes/videotex-body-part-parameters.oa.mjs';
 import { videotex_body_part_data } from '../IPMSExtendedBodyPartTypes/videotex-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION videotex_body_part */
 /**
  * @summary videotex_body_part
  * @description
@@ -39,6 +38,5 @@ export const videotex_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': videotex_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': videotex_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION videotex_body_part */
 
 /* eslint-enable */

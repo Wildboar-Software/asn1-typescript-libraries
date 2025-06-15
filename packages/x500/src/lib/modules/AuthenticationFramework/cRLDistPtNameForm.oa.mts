@@ -3,7 +3,6 @@ import { cRLDistributionPoint } from "../AuthenticationFramework/cRLDistribution
 import { id_nf_cRLDistPtNameForm } from "../AuthenticationFramework/id-nf-cRLDistPtNameForm.va.mjs";
 import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION cRLDistPtNameForm */
 /**
  * @summary cRLDistPtNameForm
  * @description
@@ -29,6 +28,5 @@ export const cRLDistPtNameForm: NAME_FORM = {
     "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_cRLDistPtNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cRLDistPtNameForm */
 
 /* eslint-enable */

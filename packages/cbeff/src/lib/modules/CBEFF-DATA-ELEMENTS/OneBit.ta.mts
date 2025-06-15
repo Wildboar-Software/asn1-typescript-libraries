@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OneBit */
 /**
  * @summary OneBit
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type OneBit = INTEGER;
-/* END_OF_SYMBOL_DEFINITION OneBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OneBit */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OneBit */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OneBit */
 export const _decode_OneBit = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_OneBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OneBit */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OneBit */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OneBit */
 export const _encode_OneBit = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OneBit */
 
 /* eslint-enable */

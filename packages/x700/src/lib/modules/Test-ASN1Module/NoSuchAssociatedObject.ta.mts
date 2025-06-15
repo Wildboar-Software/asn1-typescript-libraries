@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchAssociatedObject */
 /**
  * @summary NoSuchAssociatedObject
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NoSuchAssociatedObject = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NoSuchAssociatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchAssociatedObject */
 let _cached_decoder_for_NoSuchAssociatedObject: $.ASN1Decoder<NoSuchAssociatedObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchAssociatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchAssociatedObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchAssociatedObject
  * @function
@@ -48,13 +43,9 @@ export function _decode_NoSuchAssociatedObject(el: _Element) {
     }
     return _cached_decoder_for_NoSuchAssociatedObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchAssociatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchAssociatedObject */
 let _cached_encoder_for_NoSuchAssociatedObject: $.ASN1Encoder<NoSuchAssociatedObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchAssociatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchAssociatedObject */
 /**
  * @summary Encodes a(n) NoSuchAssociatedObject into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_NoSuchAssociatedObject(
     return _cached_encoder_for_NoSuchAssociatedObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchAssociatedObject */
 
 /* eslint-enable */

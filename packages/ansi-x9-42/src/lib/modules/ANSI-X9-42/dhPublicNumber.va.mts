@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { numberType } from "../ANSI-X9-42/numberType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dhPublicNumber */
+
 /**
  * @summary dhPublicNumber
  * @description
@@ -15,6 +15,5 @@ import { numberType } from "../ANSI-X9-42/numberType.va.mjs";
  * @constant
  */
 export const dhPublicNumber: OBJECT_IDENTIFIER = new _OID([1], numberType);
-/* END_OF_SYMBOL_DEFINITION dhPublicNumber */
 
 /* eslint-enable */

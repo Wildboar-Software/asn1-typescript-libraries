@@ -38,7 +38,7 @@ import {
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,
 } from "../PKCS-15/TokenInfo-version.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TokenInfo */
+
 /**
  * @summary TokenInfo
  * @description
@@ -179,9 +179,8 @@ export class TokenInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TokenInfo */
+
 /**
  * @summary The Leading Root Component Types of TokenInfo
  * @description
@@ -248,9 +247,8 @@ export const _root_component_type_list_1_spec_for_TokenInfo: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TokenInfo */
+
 /**
  * @summary The Trailing Root Component Types of TokenInfo
  * @description
@@ -260,9 +258,8 @@ export const _root_component_type_list_1_spec_for_TokenInfo: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TokenInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TokenInfo */
+
 /**
  * @summary The Extension Addition Component Types of TokenInfo
  * @description
@@ -301,13 +298,11 @@ export const _extension_additions_list_spec_for_TokenInfo: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenInfo */
+
 let _cached_decoder_for_TokenInfo: $.ASN1Decoder<TokenInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TokenInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TokenInfo
  * @function
@@ -416,13 +411,11 @@ export function _decode_TokenInfo(el: _Element) {
     }
     return _cached_decoder_for_TokenInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenInfo */
+
 let _cached_encoder_for_TokenInfo: $.ASN1Encoder<TokenInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TokenInfo */
+
 /**
  * @summary Encodes a(n) TokenInfo into an ASN.1 Element.
  * @function
@@ -537,6 +530,5 @@ export function _encode_TokenInfo(
     return _cached_encoder_for_TokenInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TokenInfo */
 
 /* eslint-enable */

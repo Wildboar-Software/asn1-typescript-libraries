@@ -6,7 +6,7 @@ import {
     _decode_RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
 } from "../PKCS-1/RSAES-OAEP-params.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union10_Intersection0_Element */
+
 /**
  * @summary PKCS1Algorithms_Union10_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PKCS1Algorithms_Union10_Intersection0_Element: ALGORITHM_IDENTIFIER
     "&id": id_RSAES_OAEP /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union10_Intersection0_Element */
 
 /* eslint-enable */

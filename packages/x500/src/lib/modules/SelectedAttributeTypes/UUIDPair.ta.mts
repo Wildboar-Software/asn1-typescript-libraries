@@ -10,7 +10,6 @@ import {
     _decode_UUID,
     _encode_UUID,
 } from "../SelectedAttributeTypes/UUID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UUIDPair */
 /**
  * @summary UUIDPair
  * @description
@@ -70,9 +69,7 @@ export class UUIDPair {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UUIDPair */
 /**
  * @summary The Leading Root Component Types of UUIDPair
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_UUIDPair: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UUIDPair */
 /**
  * @summary The Trailing Root Component Types of UUIDPair
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_UUIDPair: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UUIDPair: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UUIDPair */
 /**
  * @summary The Extension Addition Component Types of UUIDPair
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_UUIDPair: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_UUIDPair: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UUIDPair */
 let _cached_decoder_for_UUIDPair: $.ASN1Decoder<UUIDPair> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UUIDPair */
 /**
  * @summary Decodes an ASN.1 element into a(n) UUIDPair
  * @function
@@ -156,13 +145,9 @@ export function _decode_UUIDPair(el: _Element) {
     }
     return _cached_decoder_for_UUIDPair(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UUIDPair */
 let _cached_encoder_for_UUIDPair: $.ASN1Encoder<UUIDPair> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UUIDPair */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UUIDPair */
 /**
  * @summary Encodes a(n) UUIDPair into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ export function _encode_UUIDPair(
     return _cached_encoder_for_UUIDPair(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UUIDPair */
 
 /* eslint-enable */

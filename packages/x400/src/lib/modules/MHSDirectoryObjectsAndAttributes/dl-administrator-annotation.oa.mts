@@ -17,7 +17,6 @@ import {
 } from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta.mjs';
 import { id_con_dl_administrator_annotation } from '../MHSObjectIdentifiers/id-con-dl-administrator-annotation.va.mjs';
 import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_administrator_annotation */
 /**
  * @summary dl_administrator_annotation
  * @description
@@ -52,6 +51,5 @@ export const dl_administrator_annotation: CONTEXT<dl_administrator_annotation_Ty
     '&Assertion': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&absentMatch': TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_administrator_annotation */
 
 /* eslint-enable */

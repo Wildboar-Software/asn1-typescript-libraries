@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AC_AUTH_CONTEXT */
 /**
  * @summary AC_AUTH_CONTEXT
  * @description
@@ -24,6 +23,5 @@ import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modu
  * @interface
  */
 export type AC_AUTH_CONTEXT = DMI_TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION AC_AUTH_CONTEXT */
 
 /* eslint-enable */

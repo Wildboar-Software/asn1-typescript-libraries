@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SoftwareIdentification */
+
 /**
  * @summary SoftwareIdentification
  * @description
@@ -87,9 +87,8 @@ export class SoftwareIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SoftwareIdentification */
+
 /**
  * @summary The Leading Root Component Types of SoftwareIdentification
  * @description
@@ -128,9 +127,8 @@ export const _root_component_type_list_1_spec_for_SoftwareIdentification: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SoftwareIdentification */
+
 /**
  * @summary The Trailing Root Component Types of SoftwareIdentification
  * @description
@@ -140,9 +138,8 @@ export const _root_component_type_list_1_spec_for_SoftwareIdentification: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SoftwareIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SoftwareIdentification */
+
 /**
  * @summary The Extension Addition Component Types of SoftwareIdentification
  * @description
@@ -152,13 +149,11 @@ export const _root_component_type_list_2_spec_for_SoftwareIdentification: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_SoftwareIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SoftwareIdentification */
+
 let _cached_decoder_for_SoftwareIdentification: $.ASN1Decoder<SoftwareIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SoftwareIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SoftwareIdentification
  * @function
@@ -210,13 +205,11 @@ export function _decode_SoftwareIdentification(el: _Element) {
     }
     return _cached_decoder_for_SoftwareIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SoftwareIdentification */
+
 let _cached_encoder_for_SoftwareIdentification: $.ASN1Encoder<SoftwareIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SoftwareIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SoftwareIdentification */
+
 /**
  * @summary Encodes a(n) SoftwareIdentification into an ASN.1 Element.
  * @function
@@ -254,6 +247,5 @@ export function _encode_SoftwareIdentification(
     return _cached_encoder_for_SoftwareIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SoftwareIdentification */
 
 /* eslint-enable */

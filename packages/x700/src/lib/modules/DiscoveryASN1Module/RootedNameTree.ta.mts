@@ -26,7 +26,6 @@ import {
     _decode_NameTree,
     _encode_NameTree,
 } from '../DiscoveryASN1Module/NameTree.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RootedNameTree */
 /**
  * @summary RootedNameTree
  * @description
@@ -87,9 +86,7 @@ export class RootedNameTree {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RootedNameTree */
 /**
  * @summary The Leading Root Component Types of RootedNameTree
  * @description
@@ -115,9 +112,7 @@ export const _root_component_type_list_1_spec_for_RootedNameTree: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RootedNameTree */
 /**
  * @summary The Trailing Root Component Types of RootedNameTree
  * @description
@@ -127,9 +122,7 @@ export const _root_component_type_list_1_spec_for_RootedNameTree: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RootedNameTree: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RootedNameTree */
 /**
  * @summary The Extension Addition Component Types of RootedNameTree
  * @description
@@ -139,13 +132,9 @@ export const _root_component_type_list_2_spec_for_RootedNameTree: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_RootedNameTree: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RootedNameTree */
 let _cached_decoder_for_RootedNameTree: $.ASN1Decoder<RootedNameTree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RootedNameTree */
 /**
  * @summary Decodes an ASN.1 element into a(n) RootedNameTree
  * @function
@@ -194,13 +183,9 @@ export function _decode_RootedNameTree(el: _Element) {
     }
     return _cached_decoder_for_RootedNameTree(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RootedNameTree */
 let _cached_encoder_for_RootedNameTree: $.ASN1Encoder<RootedNameTree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RootedNameTree */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RootedNameTree */
 /**
  * @summary Encodes a(n) RootedNameTree into an ASN.1 Element.
  * @function
@@ -240,6 +225,5 @@ export function _encode_RootedNameTree(
     return _cached_encoder_for_RootedNameTree(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RootedNameTree */
 
 /* eslint-enable */

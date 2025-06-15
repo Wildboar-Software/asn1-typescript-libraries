@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ArcAffectedObjectList */
+
 /**
  * @summary ArcAffectedObjectList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ArcAffectedObjectList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ArcAffectedObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcAffectedObjectList */
+
 let _cached_decoder_for_ArcAffectedObjectList: $.ASN1Decoder<ArcAffectedObjectList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcAffectedObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArcAffectedObjectList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArcAffectedObjectList
  * @function
@@ -48,13 +46,11 @@ export function _decode_ArcAffectedObjectList(el: _Element) {
     }
     return _cached_decoder_for_ArcAffectedObjectList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArcAffectedObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcAffectedObjectList */
+
 let _cached_encoder_for_ArcAffectedObjectList: $.ASN1Encoder<ArcAffectedObjectList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcAffectedObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArcAffectedObjectList */
+
 /**
  * @summary Encodes a(n) ArcAffectedObjectList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ArcAffectedObjectList(
     return _cached_encoder_for_ArcAffectedObjectList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArcAffectedObjectList */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _decode_PBMAC1_params,
     _encode_PBMAC1_params,
 } from "../PKCS5v2-1/PBMAC1-params.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PBMAC1Algorithms_Union0_Intersection0_Element */
+
 /**
  * @summary PBMAC1Algorithms_Union0_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PBMAC1Algorithms_Union0_Intersection0_Element: ALGORITHM_IDENTIFIER
     "&id": id_PBMAC1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PBMAC1Algorithms_Union0_Intersection0_Element */
 
 /* eslint-enable */

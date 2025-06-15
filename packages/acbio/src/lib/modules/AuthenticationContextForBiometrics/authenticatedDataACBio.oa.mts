@@ -19,7 +19,7 @@ import type {
     CONTENT_TYPE,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION authenticatedDataACBio */
+
 /**
  * @summary authenticatedDataACBio
  * @description
@@ -47,6 +47,5 @@ export const authenticatedDataACBio: CONTENT_TYPE<AuthenticatedDataACBio> = {
     '&id': id_authenticatedDataACBio /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authenticatedDataACBio */
 
 /* eslint-enable */

@@ -53,7 +53,6 @@ import {
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Query */
 /**
  * @summary Query
  * @description
@@ -176,9 +175,7 @@ export class Query {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Query */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Query */
 /**
  * @summary The Leading Root Component Types of Query
  * @description
@@ -260,9 +257,7 @@ export const _root_component_type_list_1_spec_for_Query: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Query */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Query */
 /**
  * @summary The Trailing Root Component Types of Query
  * @description
@@ -272,9 +267,7 @@ export const _root_component_type_list_1_spec_for_Query: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Query: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Query */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Query */
 /**
  * @summary The Extension Addition Component Types of Query
  * @description
@@ -284,13 +277,9 @@ export const _root_component_type_list_2_spec_for_Query: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Query: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Query */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Query */
 let _cached_decoder_for_Query: $.ASN1Decoder<Query> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Query */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Query */
 /**
  * @summary Decodes an ASN.1 element into a(n) Query
  * @function
@@ -387,13 +376,9 @@ export function _decode_Query(el: _Element) {
   }
   return _cached_decoder_for_Query(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Query */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Query */
 let _cached_encoder_for_Query: $.ASN1Encoder<Query> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Query */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Query */
 /**
  * @summary Encodes a(n) Query into an ASN.1 Element.
  * @function
@@ -482,6 +467,5 @@ export function _encode_Query(value: Query, elGetter: $.ASN1Encoder<Query>) {
   return _cached_encoder_for_Query(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Query */
 
 /* eslint-enable */

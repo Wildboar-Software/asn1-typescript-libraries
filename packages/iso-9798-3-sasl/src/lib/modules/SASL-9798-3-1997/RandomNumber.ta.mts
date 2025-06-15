@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION RandomNumber */
+
 /**
  * @summary RandomNumber
  * @description
@@ -27,21 +27,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type RandomNumber = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RandomNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RandomNumber */
+
+
 export const _decode_RandomNumber = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RandomNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RandomNumber */
+
+
 export const _encode_RandomNumber = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RandomNumber */
 
 /* eslint-enable */

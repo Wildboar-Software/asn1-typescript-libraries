@@ -11,7 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MULTY_SIGNED_parmeters_sign */
 /**
  * @summary MULTY_SIGNED_parmeters_sign
  * @description
@@ -72,9 +71,7 @@ export class MULTY_SIGNED_parmeters_sign<_ToBeSigned> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MULTY_SIGNED_parmeters_sign */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MULTY_SIGNED_parmeters_sign */
 /**
  * @summary The Leading Root Component Types of MULTY_SIGNED_parmeters_sign
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_MULTY_SIGNED_parmeters_sign: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MULTY_SIGNED_parmeters_sign */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MULTY_SIGNED_parmeters_sign */
 /**
  * @summary The Trailing Root Component Types of MULTY_SIGNED_parmeters_sign
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_MULTY_SIGNED_parmeters_sign: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MULTY_SIGNED_parmeters_sign: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MULTY_SIGNED_parmeters_sign */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MULTY_SIGNED_parmeters_sign */
 /**
  * @summary The Extension Addition Component Types of MULTY_SIGNED_parmeters_sign
  * @description
@@ -123,9 +116,7 @@ export const _root_component_type_list_2_spec_for_MULTY_SIGNED_parmeters_sign: $
  * @constant
  */
 export const _extension_additions_list_spec_for_MULTY_SIGNED_parmeters_sign: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MULTY_SIGNED_parmeters_sign */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_MULTY_SIGNED_parmeters_sign */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) MULTY_SIGNED_parmeters_sign
  * @function
@@ -159,9 +150,7 @@ export function _get_decoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_MULTY_SIGNED_parmeters_sign */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_MULTY_SIGNED_parmeters_sign */
 /**
  * @summary Returns a function that will encode a(n) MULTY_SIGNED_parmeters_sign into an ASN.1 Element.
  * @function
@@ -194,6 +183,5 @@ export function _get_encoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_MULTY_SIGNED_parmeters_sign */
 
 /* eslint-enable */

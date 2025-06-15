@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_bpuReportContentInformation */
+
 /**
  * @summary id_bpuReportContentInformation
  * @description
@@ -31,6 +31,5 @@ export const id_bpuReportContentInformation: OBJECT_IDENTIFIER = new _OID([
     /* contentType */ 2,
     /* bpuReportContent */ 5,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_bpuReportContentInformation */
 
 /* eslint-enable */

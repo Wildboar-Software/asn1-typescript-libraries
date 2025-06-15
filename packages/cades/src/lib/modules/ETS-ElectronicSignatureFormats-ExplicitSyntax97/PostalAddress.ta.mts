@@ -17,7 +17,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION PostalAddress */
 /**
  * @summary PostalAddress
  * @description
@@ -30,13 +29,9 @@ import {
  */
 export
 type PostalAddress = DirectoryString[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PostalAddress */
 let _cached_decoder_for_PostalAddress: $.ASN1Decoder<PostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PostalAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PostalAddress
  * @function
@@ -48,13 +43,9 @@ function _decode_PostalAddress (el: _Element) {
     if (!_cached_decoder_for_PostalAddress) { _cached_decoder_for_PostalAddress = $._decodeSequenceOf<DirectoryString>(() => _decode_DirectoryString); }
     return _cached_decoder_for_PostalAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PostalAddress */
 let _cached_encoder_for_PostalAddress: $.ASN1Encoder<PostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PostalAddress */
 /**
  * @summary Encodes a(n) PostalAddress into an ASN.1 Element.
  * @function
@@ -68,6 +59,5 @@ function _encode_PostalAddress (value: PostalAddress, elGetter: $.ASN1Encoder<Po
     return _cached_encoder_for_PostalAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PostalAddress */
 
 /* eslint-enable */

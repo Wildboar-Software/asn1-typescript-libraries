@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MedicalStaffIdentification */
+
 /**
  * @summary MedicalStaffIdentification
  * @description
@@ -91,9 +91,8 @@ export class MedicalStaffIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MedicalStaffIdentification */
+
 /**
  * @summary The Leading Root Component Types of MedicalStaffIdentification
  * @description
@@ -132,9 +131,8 @@ export const _root_component_type_list_1_spec_for_MedicalStaffIdentification: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MedicalStaffIdentification */
+
 /**
  * @summary The Trailing Root Component Types of MedicalStaffIdentification
  * @description
@@ -144,9 +142,8 @@ export const _root_component_type_list_1_spec_for_MedicalStaffIdentification: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MedicalStaffIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MedicalStaffIdentification */
+
 /**
  * @summary The Extension Addition Component Types of MedicalStaffIdentification
  * @description
@@ -156,13 +153,11 @@ export const _root_component_type_list_2_spec_for_MedicalStaffIdentification: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_MedicalStaffIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MedicalStaffIdentification */
+
 let _cached_decoder_for_MedicalStaffIdentification: $.ASN1Decoder<MedicalStaffIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MedicalStaffIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MedicalStaffIdentification
  * @function
@@ -214,13 +209,11 @@ export function _decode_MedicalStaffIdentification(el: _Element) {
     }
     return _cached_decoder_for_MedicalStaffIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MedicalStaffIdentification */
+
 let _cached_encoder_for_MedicalStaffIdentification: $.ASN1Encoder<MedicalStaffIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MedicalStaffIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MedicalStaffIdentification */
+
 /**
  * @summary Encodes a(n) MedicalStaffIdentification into an ASN.1 Element.
  * @function
@@ -261,6 +254,5 @@ export function _encode_MedicalStaffIdentification(
     return _cached_encoder_for_MedicalStaffIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MedicalStaffIdentification */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
   _encode_ROS,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ROS.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ROSEapdus */
+
 /**
  * @summary ROSEapdus
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type ROSEapdus = ROS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ROSEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ROSEapdus */
+
 let _cached_decoder_for_ROSEapdus: $.ASN1Decoder<ROSEapdus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ROSEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ROSEapdus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROSEapdus
  * @function
@@ -48,13 +46,11 @@ export function _decode_ROSEapdus(el: _Element) {
   }
   return _cached_decoder_for_ROSEapdus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ROSEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ROSEapdus */
+
 let _cached_encoder_for_ROSEapdus: $.ASN1Encoder<ROSEapdus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ROSEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ROSEapdus */
+
 /**
  * @summary Encodes a(n) ROSEapdus into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_ROSEapdus(
   return _cached_encoder_for_ROSEapdus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ROSEapdus */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { id_att_per_message_indicators } from '../MSObjectIdentifiers/id-att-per
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_per_message_indicators */
 /**
  * @summary mt_per_message_indicators
  * @description
@@ -56,6 +55,5 @@ export const mt_per_message_indicators: X413ATTRIBUTE<PerMessageIndicators> = {
     '&id': id_att_per_message_indicators /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_per_message_indicators */
 
 /* eslint-enable */

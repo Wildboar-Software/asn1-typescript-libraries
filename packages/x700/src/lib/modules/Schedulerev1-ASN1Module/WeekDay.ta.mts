@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_WeekDay */
+
 /**
  * @summary WeekDay
  * @description
@@ -33,9 +33,8 @@ export enum _enum_for_WeekDay {
     friday = 5,
     saturday = 6,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_WeekDay */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay */
+
 /**
  * @summary WeekDay
  * @description
@@ -49,9 +48,8 @@ export enum _enum_for_WeekDay {
  * ```@enum {number}
  */
 export type WeekDay = _enum_for_WeekDay;
-/* END_OF_SYMBOL_DEFINITION WeekDay */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay */
+
 /**
  * @summary WeekDay
  * @description
@@ -65,9 +63,8 @@ export type WeekDay = _enum_for_WeekDay;
  * ```@enum {number}
  */
 export const WeekDay = _enum_for_WeekDay;
-/* END_OF_SYMBOL_DEFINITION WeekDay */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_sunday */
+
 /**
  * @summary WeekDay_sunday
  * @constant
@@ -75,9 +72,8 @@ export const WeekDay = _enum_for_WeekDay;
  */
 export const WeekDay_sunday: WeekDay =
     WeekDay.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_sunday */
 
-/* START_OF_SYMBOL_DEFINITION sunday */
+
 /**
  * @summary sunday
  * @constant
@@ -85,9 +81,8 @@ export const WeekDay_sunday: WeekDay =
  */
 export const sunday: WeekDay =
     WeekDay.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sunday */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_monday */
+
 /**
  * @summary WeekDay_monday
  * @constant
@@ -95,9 +90,8 @@ export const sunday: WeekDay =
  */
 export const WeekDay_monday: WeekDay =
     WeekDay.monday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_monday */
 
-/* START_OF_SYMBOL_DEFINITION monday */
+
 /**
  * @summary monday
  * @constant
@@ -105,9 +99,8 @@ export const WeekDay_monday: WeekDay =
  */
 export const monday: WeekDay =
     WeekDay.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION monday */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_tuesday */
+
 /**
  * @summary WeekDay_tuesday
  * @constant
@@ -115,9 +108,8 @@ export const monday: WeekDay =
  */
 export const WeekDay_tuesday: WeekDay =
     WeekDay.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_tuesday */
 
-/* START_OF_SYMBOL_DEFINITION tuesday */
+
 /**
  * @summary tuesday
  * @constant
@@ -125,9 +117,8 @@ export const WeekDay_tuesday: WeekDay =
  */
 export const tuesday: WeekDay =
     WeekDay.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION tuesday */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_wednesday */
+
 /**
  * @summary WeekDay_wednesday
  * @constant
@@ -135,9 +126,8 @@ export const tuesday: WeekDay =
  */
 export const WeekDay_wednesday: WeekDay =
     WeekDay.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_wednesday */
 
-/* START_OF_SYMBOL_DEFINITION wednesday */
+
 /**
  * @summary wednesday
  * @constant
@@ -145,9 +135,8 @@ export const WeekDay_wednesday: WeekDay =
  */
 export const wednesday: WeekDay =
     WeekDay.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION wednesday */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_thursday */
+
 /**
  * @summary WeekDay_thursday
  * @constant
@@ -155,9 +144,8 @@ export const wednesday: WeekDay =
  */
 export const WeekDay_thursday: WeekDay =
     WeekDay.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_thursday */
 
-/* START_OF_SYMBOL_DEFINITION thursday */
+
 /**
  * @summary thursday
  * @constant
@@ -165,9 +153,8 @@ export const WeekDay_thursday: WeekDay =
  */
 export const thursday: WeekDay =
     WeekDay.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION thursday */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_friday */
+
 /**
  * @summary WeekDay_friday
  * @constant
@@ -175,9 +162,8 @@ export const thursday: WeekDay =
  */
 export const WeekDay_friday: WeekDay =
     WeekDay.friday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_friday */
 
-/* START_OF_SYMBOL_DEFINITION friday */
+
 /**
  * @summary friday
  * @constant
@@ -185,9 +171,8 @@ export const WeekDay_friday: WeekDay =
  */
 export const friday: WeekDay =
     WeekDay.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION friday */
 
-/* START_OF_SYMBOL_DEFINITION WeekDay_saturday */
+
 /**
  * @summary WeekDay_saturday
  * @constant
@@ -195,9 +180,8 @@ export const friday: WeekDay =
  */
 export const WeekDay_saturday: WeekDay =
     WeekDay.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION WeekDay_saturday */
 
-/* START_OF_SYMBOL_DEFINITION saturday */
+
 /**
  * @summary saturday
  * @constant
@@ -205,21 +189,16 @@ export const WeekDay_saturday: WeekDay =
  */
 export const saturday: WeekDay =
     WeekDay.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION saturday */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekDay */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekDay */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WeekDay */
+
+
 export const _decode_WeekDay = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_WeekDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekDay */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekDay */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WeekDay */
+
+
 export const _encode_WeekDay = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_WeekDay */
 
 /* eslint-enable */

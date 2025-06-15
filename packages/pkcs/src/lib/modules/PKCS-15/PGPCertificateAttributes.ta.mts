@@ -9,7 +9,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PGPCertificateAttributes */
+
 /**
  * @summary PGPCertificateAttributes
  * @description
@@ -64,9 +64,8 @@ export class PGPCertificateAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PGPCertificateAttributes */
+
 /**
  * @summary The Leading Root Component Types of PGPCertificateAttributes
  * @description
@@ -78,9 +77,8 @@ export class PGPCertificateAttributes {
 export const _root_component_type_list_1_spec_for_PGPCertificateAttributes: $.ComponentSpec[] = [
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PGPCertificateAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PGPCertificateAttributes
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_PGPCertificateAttributes: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PGPCertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PGPCertificateAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PGPCertificateAttributes
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_PGPCertificateAttributes: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_PGPCertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PGPCertificateAttributes */
+
 let _cached_decoder_for_PGPCertificateAttributes: $.ASN1Decoder<PGPCertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PGPCertificateAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PGPCertificateAttributes
  * @function
@@ -138,13 +133,11 @@ export function _decode_PGPCertificateAttributes(el: _Element) {
     }
     return _cached_decoder_for_PGPCertificateAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PGPCertificateAttributes */
+
 let _cached_encoder_for_PGPCertificateAttributes: $.ASN1Encoder<PGPCertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PGPCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PGPCertificateAttributes */
+
 /**
  * @summary Encodes a(n) PGPCertificateAttributes into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_PGPCertificateAttributes(
     return _cached_encoder_for_PGPCertificateAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PGPCertificateAttributes */
 
 /* eslint-enable */

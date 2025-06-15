@@ -12,7 +12,6 @@ import {
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { content_correlator } from '../MTSAbstractService/content-correlator.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportTransferContentExtensions */
 /**
  * @summary ReportTransferContentExtensions
  * @description
@@ -33,6 +32,5 @@ export const ReportTransferContentExtensions: EXTENSION[] = [
     content_correlator,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION ReportTransferContentExtensions */
 
 /* eslint-enable */

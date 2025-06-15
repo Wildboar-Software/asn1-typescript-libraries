@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_wf_integer } from '../MHSRoutingObjectIdentifiers/id-wf-integer.va.mjs';
-/* START_OF_SYMBOL_DEFINITION simpleWeight */
 /**
  * @summary simpleWeight
  * @description
@@ -41,6 +40,5 @@ export const simpleWeight: TYPE_IDENTIFIER<INTEGER> = {
     '&id': id_wf_integer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION simpleWeight */
 
 /* eslint-enable */

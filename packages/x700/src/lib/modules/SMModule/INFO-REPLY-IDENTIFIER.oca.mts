@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION INFO_REPLY_IDENTIFIER */
 /**
  * @summary INFO_REPLY_IDENTIFIER
  * @description
@@ -75,6 +74,5 @@ export interface INFO_REPLY_IDENTIFIER<
      */
     readonly '&registeredAs'?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION INFO_REPLY_IDENTIFIER */
 
 /* eslint-enable */

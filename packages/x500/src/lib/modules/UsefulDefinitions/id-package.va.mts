@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { package_ } from "../UsefulDefinitions/package.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_package */
 /**
  * @summary id_package
  * @description
@@ -15,6 +14,5 @@ import { package_ } from "../UsefulDefinitions/package.va.mjs";
  * @constant
  */
 export const id_package: ID = package_;
-/* END_OF_SYMBOL_DEFINITION id_package */
 
 /* eslint-enable */

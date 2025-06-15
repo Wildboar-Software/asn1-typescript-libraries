@@ -6,7 +6,7 @@ import {
     _encode_MessageDigest,
 } from "../CryptographicMessageSyntax-2010/MessageDigest.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION aa_messageDigest */
+
 /**
  * @summary aa_messageDigest
  * @description
@@ -32,6 +32,5 @@ export const aa_messageDigest: ATTRIBUTE<MessageDigest> = {
     "&id": id_messageDigest /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_messageDigest */
 
 /* eslint-enable */

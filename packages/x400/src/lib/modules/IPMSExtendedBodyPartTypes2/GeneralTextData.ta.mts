@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GeneralTextData */
 /**
  * @summary GeneralTextData
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type GeneralTextData = GeneralString; // GeneralString
-/* END_OF_SYMBOL_DEFINITION GeneralTextData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralTextData */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralTextData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralTextData */
 export const _decode_GeneralTextData = $._decodeGeneralString;
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralTextData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralTextData */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralTextData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralTextData */
 export const _encode_GeneralTextData = $._encodeGeneralString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralTextData */
 
 /* eslint-enable */

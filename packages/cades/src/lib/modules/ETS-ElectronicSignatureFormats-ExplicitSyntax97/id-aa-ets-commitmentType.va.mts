@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_commitmentType */
 /**
  * @summary id_aa_ets_commitmentType
  * @description
@@ -47,6 +46,5 @@ const id_aa_ets_commitmentType: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     16,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_commitmentType */
 
 /* eslint-enable */

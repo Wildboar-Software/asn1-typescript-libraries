@@ -15,7 +15,6 @@ import {
     _decode_BodyPartReferences,
     _encode_BodyPartReferences,
 } from '../IPMSInformationObjects/BodyPartReferences.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMAssemblyInstructions */
 /**
  * @summary IPMAssemblyInstructions
  * @description
@@ -59,9 +58,7 @@ export class IPMAssemblyInstructions {
         return new IPMAssemblyInstructions(_o.assembly_instructions);
     }
 }
-/* END_OF_SYMBOL_DEFINITION IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPMAssemblyInstructions */
 /**
  * @summary The Leading Root Component Types of IPMAssemblyInstructions
  * @description
@@ -79,9 +76,7 @@ export const _root_component_type_list_1_spec_for_IPMAssemblyInstructions: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPMAssemblyInstructions */
 /**
  * @summary The Trailing Root Component Types of IPMAssemblyInstructions
  * @description
@@ -91,9 +86,7 @@ export const _root_component_type_list_1_spec_for_IPMAssemblyInstructions: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IPMAssemblyInstructions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPMAssemblyInstructions */
 /**
  * @summary The Extension Addition Component Types of IPMAssemblyInstructions
  * @description
@@ -103,13 +96,9 @@ export const _root_component_type_list_2_spec_for_IPMAssemblyInstructions: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_IPMAssemblyInstructions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMAssemblyInstructions */
 let _cached_decoder_for_IPMAssemblyInstructions: $.ASN1Decoder<IPMAssemblyInstructions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMAssemblyInstructions */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMAssemblyInstructions
  * @function
@@ -148,13 +137,9 @@ export function _decode_IPMAssemblyInstructions(el: _Element) {
     }
     return _cached_decoder_for_IPMAssemblyInstructions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMAssemblyInstructions */
 let _cached_encoder_for_IPMAssemblyInstructions: $.ASN1Encoder<IPMAssemblyInstructions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMAssemblyInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMAssemblyInstructions */
 /**
  * @summary Encodes a(n) IPMAssemblyInstructions into an ASN.1 Element.
  * @function
@@ -187,6 +172,5 @@ export function _encode_IPMAssemblyInstructions(
     return _cached_encoder_for_IPMAssemblyInstructions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMAssemblyInstructions */
 
 /* eslint-enable */

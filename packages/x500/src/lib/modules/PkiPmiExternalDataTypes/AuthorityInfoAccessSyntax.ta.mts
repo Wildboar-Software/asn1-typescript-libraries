@@ -6,7 +6,6 @@ import {
     _decode_AccessDescription,
     _encode_AccessDescription,
 } from "../PkiPmiExternalDataTypes/AccessDescription.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthorityInfoAccessSyntax */
 /**
  * @summary AuthorityInfoAccessSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AuthorityInfoAccessSyntax = AccessDescription[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AuthorityInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorityInfoAccessSyntax */
 let _cached_decoder_for_AuthorityInfoAccessSyntax: $.ASN1Decoder<AuthorityInfoAccessSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorityInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorityInfoAccessSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthorityInfoAccessSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_AuthorityInfoAccessSyntax(el: _Element) {
     }
     return _cached_decoder_for_AuthorityInfoAccessSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorityInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorityInfoAccessSyntax */
 let _cached_encoder_for_AuthorityInfoAccessSyntax: $.ASN1Encoder<AuthorityInfoAccessSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorityInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorityInfoAccessSyntax */
 /**
  * @summary Encodes a(n) AuthorityInfoAccessSyntax into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_AuthorityInfoAccessSyntax(
     return _cached_encoder_for_AuthorityInfoAccessSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorityInfoAccessSyntax */
 
 /* eslint-enable */

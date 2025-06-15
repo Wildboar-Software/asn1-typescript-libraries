@@ -24,7 +24,6 @@ import { id_att_proof_of_delivery_request } from '../MSObjectIdentifiers/id-att-
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_proof_of_delivery_request */
 /**
  * @summary mt_proof_of_delivery_request
  * @description
@@ -59,6 +58,5 @@ export const mt_proof_of_delivery_request: X413ATTRIBUTE<ProofOfDeliveryRequest>
     '&id': id_att_proof_of_delivery_request /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_proof_of_delivery_request */
 
 /* eslint-enable */

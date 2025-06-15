@@ -15,7 +15,6 @@ import {
   _decode_SystemId,
   _encode_SystemId,
 } from '../ISIS/SystemId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SystemIds */
 /**
  * @summary SystemIds
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SystemIds = SystemId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SystemIds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemIds */
 let _cached_decoder_for_SystemIds: $.ASN1Decoder<SystemIds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemIds */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SystemIds */
 /**
  * @summary Decodes an ASN.1 element into a(n) SystemIds
  * @function
@@ -48,13 +43,9 @@ export function _decode_SystemIds(el: _Element) {
   }
   return _cached_decoder_for_SystemIds(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SystemIds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemIds */
 let _cached_encoder_for_SystemIds: $.ASN1Encoder<SystemIds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemIds */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SystemIds */
 /**
  * @summary Encodes a(n) SystemIds into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SystemIds(
   return _cached_encoder_for_SystemIds(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SystemIds */
 
 /* eslint-enable */

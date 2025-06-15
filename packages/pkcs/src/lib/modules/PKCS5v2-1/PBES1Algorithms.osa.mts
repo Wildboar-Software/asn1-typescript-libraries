@@ -7,7 +7,7 @@ import { PBES1Algorithms_Union3_Intersection0_Element } from "../PKCS5v2-1/PBES1
 import { PBES1Algorithms_Union4_Intersection0_Element } from "../PKCS5v2-1/PBES1Algorithms-Union4-Intersection0-Element.oa.mjs";
 import { PBES1Algorithms_Union5_Intersection0_Element } from "../PKCS5v2-1/PBES1Algorithms-Union5-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PBES1Algorithms */
+
 /**
  * @summary PBES1Algorithms
  * @description
@@ -38,6 +38,5 @@ export const PBES1Algorithms: ALGORITHM_IDENTIFIER<any>[] = [
     PBES1Algorithms_Union4_Intersection0_Element,
     PBES1Algorithms_Union5_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION PBES1Algorithms */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReceiptsFrom */
+
 /**
  * @summary ReceiptsFrom
  * @description
@@ -28,13 +28,11 @@ import {
 export type ReceiptsFrom =
     | { allOrFirstTier: AllOrFirstTier } /* CHOICE_ALT_ROOT */
     | { receiptList: GeneralNames[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ReceiptsFrom */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptsFrom */
+
 let _cached_decoder_for_ReceiptsFrom: $.ASN1Decoder<ReceiptsFrom> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptsFrom */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReceiptsFrom */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReceiptsFrom
  * @function
@@ -64,13 +62,11 @@ export function _decode_ReceiptsFrom(el: _Element) {
     }
     return _cached_decoder_for_ReceiptsFrom(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReceiptsFrom */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptsFrom */
+
 let _cached_encoder_for_ReceiptsFrom: $.ASN1Encoder<ReceiptsFrom> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptsFrom */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReceiptsFrom */
+
 /**
  * @summary Encodes a(n) ReceiptsFrom into an ASN.1 Element.
  * @function
@@ -108,6 +104,5 @@ export function _encode_ReceiptsFrom(
     return _cached_encoder_for_ReceiptsFrom(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReceiptsFrom */
 
 /* eslint-enable */

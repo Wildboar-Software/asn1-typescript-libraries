@@ -26,7 +26,6 @@ import {
     _decode_EDIReceptionSecurity,
     _encode_EDIReceptionSecurity,
 } from '../EDIMSInformationObjects/EDIReceptionSecurity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDINotificationRequestsField */
 /**
  * @summary EDINotificationRequestsField
  * @description
@@ -117,9 +116,7 @@ export class EDINotificationRequestsField {
         return new Uint8ClampedArray([]);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDINotificationRequestsField */
 /**
  * @summary The Leading Root Component Types of EDINotificationRequestsField
  * @description
@@ -151,9 +148,7 @@ export const _root_component_type_list_1_spec_for_EDINotificationRequestsField: 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDINotificationRequestsField */
 /**
  * @summary The Trailing Root Component Types of EDINotificationRequestsField
  * @description
@@ -163,9 +158,7 @@ export const _root_component_type_list_1_spec_for_EDINotificationRequestsField: 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDINotificationRequestsField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDINotificationRequestsField */
 /**
  * @summary The Extension Addition Component Types of EDINotificationRequestsField
  * @description
@@ -175,13 +168,9 @@ export const _root_component_type_list_2_spec_for_EDINotificationRequestsField: 
  * @constant
  */
 export const _extension_additions_list_spec_for_EDINotificationRequestsField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationRequestsField */
 let _cached_decoder_for_EDINotificationRequestsField: $.ASN1Decoder<EDINotificationRequestsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDINotificationRequestsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDINotificationRequestsField
  * @function
@@ -237,13 +226,9 @@ export function _decode_EDINotificationRequestsField(el: _Element) {
     }
     return _cached_decoder_for_EDINotificationRequestsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationRequestsField */
 let _cached_encoder_for_EDINotificationRequestsField: $.ASN1Encoder<EDINotificationRequestsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDINotificationRequestsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDINotificationRequestsField */
 /**
  * @summary Encodes a(n) EDINotificationRequestsField into an ASN.1 Element.
  * @function
@@ -309,6 +294,5 @@ export function _encode_EDINotificationRequestsField(
     return _cached_encoder_for_EDINotificationRequestsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDINotificationRequestsField */
 
 /* eslint-enable */

@@ -25,7 +25,7 @@ import {
   _decode_EntityChallengeType,
   _encode_EntityChallengeType,
 } from '../CMAIL/EntityChallengeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EntityEnvelopeInformationType */
+
 /**
  * @summary EntityEnvelopeInformationType
  * @description
@@ -88,9 +88,8 @@ export class EntityEnvelopeInformationType {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntityEnvelopeInformationType */
+
 /**
  * @summary The Leading Root Component Types of EntityEnvelopeInformationType
  * @description
@@ -122,9 +121,8 @@ export const _root_component_type_list_1_spec_for_EntityEnvelopeInformationType:
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntityEnvelopeInformationType */
+
 /**
  * @summary The Trailing Root Component Types of EntityEnvelopeInformationType
  * @description
@@ -134,9 +132,8 @@ export const _root_component_type_list_1_spec_for_EntityEnvelopeInformationType:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EntityEnvelopeInformationType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntityEnvelopeInformationType */
+
 /**
  * @summary The Extension Addition Component Types of EntityEnvelopeInformationType
  * @description
@@ -146,13 +143,11 @@ export const _root_component_type_list_2_spec_for_EntityEnvelopeInformationType:
  * @constant
  */
 export const _extension_additions_list_spec_for_EntityEnvelopeInformationType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityEnvelopeInformationType */
+
 let _cached_decoder_for_EntityEnvelopeInformationType: $.ASN1Decoder<EntityEnvelopeInformationType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntityEnvelopeInformationType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EntityEnvelopeInformationType
  * @function
@@ -192,13 +187,11 @@ export function _decode_EntityEnvelopeInformationType(el: _Element) {
   }
   return _cached_decoder_for_EntityEnvelopeInformationType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityEnvelopeInformationType */
+
 let _cached_encoder_for_EntityEnvelopeInformationType: $.ASN1Encoder<EntityEnvelopeInformationType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityEnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntityEnvelopeInformationType */
+
 /**
  * @summary Encodes a(n) EntityEnvelopeInformationType into an ASN.1 Element.
  * @function
@@ -234,6 +227,5 @@ export function _encode_EntityEnvelopeInformationType(
   return _cached_encoder_for_EntityEnvelopeInformationType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntityEnvelopeInformationType */
 
 /* eslint-enable */

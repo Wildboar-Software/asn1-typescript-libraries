@@ -16,7 +16,6 @@ import {
     _encode_TeletexData,
 } from '../IPMSInformationObjects/TeletexData.ta.mjs';
 import { id_et_teletex } from '../IPMSObjectIdentifiers/id-et-teletex.va.mjs';
-/* START_OF_SYMBOL_DEFINITION teletex_body_part_data */
 /**
  * @summary teletex_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const teletex_body_part_data: TYPE_IDENTIFIER<TeletexData> = {
     '&id': id_et_teletex /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_body_part_data */
 
 /* eslint-enable */

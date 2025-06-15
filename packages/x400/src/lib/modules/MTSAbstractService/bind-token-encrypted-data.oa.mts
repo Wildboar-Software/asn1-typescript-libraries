@@ -15,7 +15,6 @@ import {
     _encode_BindTokenEncryptedData,
 } from '../MTSAbstractService/BindTokenEncryptedData.ta.mjs';
 import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION bind_token_encrypted_data */
 /**
  * @summary bind_token_encrypted_data
  * @description
@@ -44,6 +43,5 @@ export const bind_token_encrypted_data: TOKEN_DATA<BindTokenEncryptedData> = {
     '&id': 4 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION bind_token_encrypted_data */
 
 /* eslint-enable */

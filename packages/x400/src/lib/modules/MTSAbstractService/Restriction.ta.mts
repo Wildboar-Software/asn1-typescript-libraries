@@ -16,7 +16,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta.mjs";
 import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Restriction */
 /**
  * @summary Restriction
  * @description
@@ -97,9 +96,7 @@ class Restriction {
         })();
     }
 }
-/* END_OF_SYMBOL_DEFINITION Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Restriction */
 /**
  * @summary The Leading Root Component Types of Restriction
  * @description
@@ -114,9 +111,7 @@ const _root_component_type_list_1_spec_for_Restriction: $.ComponentSpec[] = [
     new $.ComponentSpec("source-type", true, $.hasTag(_TagClass.universal, 3), undefined, undefined),
     new $.ComponentSpec("source-name", true, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Restriction */
 /**
  * @summary The Trailing Root Component Types of Restriction
  * @description
@@ -129,9 +124,7 @@ export
 const _root_component_type_list_2_spec_for_Restriction: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Restriction */
 /**
  * @summary The Extension Addition Component Types of Restriction
  * @description
@@ -144,13 +137,9 @@ export
 const _extension_additions_list_spec_for_Restriction: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Restriction */
 let _cached_decoder_for_Restriction: $.ASN1Decoder<Restriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Restriction */
 /**
  * @summary Decodes an ASN.1 element into a(n) Restriction
  * @function
@@ -186,13 +175,9 @@ function _decode_Restriction (el: _Element) {
 }; }
     return _cached_decoder_for_Restriction(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Restriction */
 let _cached_encoder_for_Restriction: $.ASN1Encoder<Restriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Restriction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Restriction */
 /**
  * @summary Encodes a(n) Restriction into an ASN.1 Element.
  * @function
@@ -214,6 +199,5 @@ function _encode_Restriction (value: Restriction, elGetter: $.ASN1Encoder<Restri
     return _cached_encoder_for_Restriction(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Restriction */
 
 /* eslint-enable */

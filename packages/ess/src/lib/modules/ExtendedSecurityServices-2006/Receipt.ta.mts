@@ -21,7 +21,7 @@ import {
     _decode_ESSVersion,
     _encode_ESSVersion,
 } from "../ExtendedSecurityServices-2006/ESSVersion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Receipt */
+
 /**
  * @summary Receipt
  * @description
@@ -90,9 +90,8 @@ export class Receipt {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Receipt */
+
 /**
  * @summary The Leading Root Component Types of Receipt
  * @description
@@ -131,9 +130,8 @@ export const _root_component_type_list_1_spec_for_Receipt: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Receipt */
+
 /**
  * @summary The Trailing Root Component Types of Receipt
  * @description
@@ -143,9 +141,8 @@ export const _root_component_type_list_1_spec_for_Receipt: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Receipt: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Receipt */
+
 /**
  * @summary The Extension Addition Component Types of Receipt
  * @description
@@ -155,13 +152,11 @@ export const _root_component_type_list_2_spec_for_Receipt: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Receipt: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Receipt */
+
 let _cached_decoder_for_Receipt: $.ASN1Decoder<Receipt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Receipt */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Receipt
  * @function
@@ -201,13 +196,11 @@ export function _decode_Receipt(el: _Element) {
     }
     return _cached_decoder_for_Receipt(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Receipt */
+
 let _cached_encoder_for_Receipt: $.ASN1Encoder<Receipt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Receipt */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Receipt */
+
 /**
  * @summary Encodes a(n) Receipt into an ASN.1 Element.
  * @function
@@ -250,6 +243,5 @@ export function _encode_Receipt(
     return _cached_encoder_for_Receipt(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Receipt */
 
 /* eslint-enable */

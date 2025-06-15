@@ -15,7 +15,6 @@ import {
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MSMessageSubmissionPDUs */
 /**
  * @summary MSMessageSubmissionPDUs
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MSMessageSubmissionPDUs = ROS_SingleAS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MSMessageSubmissionPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSMessageSubmissionPDUs */
 let _cached_decoder_for_MSMessageSubmissionPDUs: $.ASN1Decoder<MSMessageSubmissionPDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSMessageSubmissionPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSMessageSubmissionPDUs */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSMessageSubmissionPDUs
  * @function
@@ -46,13 +41,9 @@ export function _decode_MSMessageSubmissionPDUs(el: _Element) {
     }
     return _cached_decoder_for_MSMessageSubmissionPDUs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSMessageSubmissionPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSMessageSubmissionPDUs */
 let _cached_encoder_for_MSMessageSubmissionPDUs: $.ASN1Encoder<MSMessageSubmissionPDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSMessageSubmissionPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSMessageSubmissionPDUs */
 /**
  * @summary Encodes a(n) MSMessageSubmissionPDUs into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MSMessageSubmissionPDUs(
     return _cached_encoder_for_MSMessageSubmissionPDUs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSMessageSubmissionPDUs */
 
 /* eslint-enable */

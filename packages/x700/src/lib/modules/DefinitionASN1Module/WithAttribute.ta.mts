@@ -15,7 +15,6 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WithAttribute */
 /**
  * @summary WithAttribute
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type WithAttribute = TemplateLabel; // DefinedType
-/* END_OF_SYMBOL_DEFINITION WithAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WithAttribute */
 let _cached_decoder_for_WithAttribute: $.ASN1Decoder<WithAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WithAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WithAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) WithAttribute
  * @function
@@ -46,13 +41,9 @@ export function _decode_WithAttribute(el: _Element) {
     }
     return _cached_decoder_for_WithAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WithAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WithAttribute */
 let _cached_encoder_for_WithAttribute: $.ASN1Encoder<WithAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WithAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WithAttribute */
 /**
  * @summary Encodes a(n) WithAttribute into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_WithAttribute(
     return _cached_encoder_for_WithAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WithAttribute */
 
 /* eslint-enable */

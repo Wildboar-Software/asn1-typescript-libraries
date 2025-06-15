@@ -51,7 +51,7 @@ import {
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
 } from '../ISO8571-FTAM/Attribute-Extensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Change_Attributes */
+
 /**
  * @summary Change_Attributes
  * @description
@@ -167,9 +167,8 @@ export class Change_Attributes {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Change_Attributes */
+
 /**
  * @summary The Leading Root Component Types of Change_Attributes
  * @description
@@ -237,9 +236,8 @@ export const _root_component_type_list_1_spec_for_Change_Attributes: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Change_Attributes */
+
 /**
  * @summary The Trailing Root Component Types of Change_Attributes
  * @description
@@ -249,9 +247,8 @@ export const _root_component_type_list_1_spec_for_Change_Attributes: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Change_Attributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Change_Attributes */
+
 /**
  * @summary The Extension Addition Component Types of Change_Attributes
  * @description
@@ -261,13 +258,11 @@ export const _root_component_type_list_2_spec_for_Change_Attributes: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_Change_Attributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Change_Attributes */
+
 let _cached_decoder_for_Change_Attributes: $.ASN1Decoder<Change_Attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Change_Attributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Change_Attributes
  * @function
@@ -361,13 +356,11 @@ export function _decode_Change_Attributes(el: _Element) {
   }
   return _cached_decoder_for_Change_Attributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Change_Attributes */
+
 let _cached_encoder_for_Change_Attributes: $.ASN1Encoder<Change_Attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Change_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Change_Attributes */
+
 /**
  * @summary Encodes a(n) Change_Attributes into an ASN.1 Element.
  * @function
@@ -467,6 +460,5 @@ export function _encode_Change_Attributes(
   return _cached_encoder_for_Change_Attributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Change_Attributes */
 
 /* eslint-enable */

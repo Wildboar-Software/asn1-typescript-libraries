@@ -16,7 +16,7 @@ import {
 } from '../E-health-common/E-terminateError.ta.mjs';
 import { id_health_term_err } from '../E-health-common/id-health-term-err.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION health_term_err */
+
 /**
  * @summary health_term_err
  * @description
@@ -44,6 +44,5 @@ export const health_term_err: CONTENT_TYPE<E_terminateError> = {
     '&id': id_health_term_err /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION health_term_err */
 
 /* eslint-enable */

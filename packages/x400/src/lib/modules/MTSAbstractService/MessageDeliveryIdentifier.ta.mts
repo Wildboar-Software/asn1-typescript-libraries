@@ -15,7 +15,6 @@ import {
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryIdentifier */
 /**
  * @summary MessageDeliveryIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageDeliveryIdentifier = MTSIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryIdentifier */
 let _cached_decoder_for_MessageDeliveryIdentifier: $.ASN1Decoder<MessageDeliveryIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageDeliveryIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageDeliveryIdentifier(el: _Element) {
     }
     return _cached_decoder_for_MessageDeliveryIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageDeliveryIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryIdentifier */
 let _cached_encoder_for_MessageDeliveryIdentifier: $.ASN1Encoder<MessageDeliveryIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageDeliveryIdentifier */
 /**
  * @summary Encodes a(n) MessageDeliveryIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageDeliveryIdentifier(
     return _cached_encoder_for_MessageDeliveryIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageDeliveryIdentifier */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { compare } from "../DirectoryAbstractService/compare.oa.mjs";
 import { chained } from "../DistributedOperations/chained.oa.mjs";
 import type { ChainedOperation } from "./chained.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION chainedCompare */
 /**
  * @summary chainedCompare
  * @description
@@ -19,6 +18,5 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @implements {OPERATION}
  */
 export const chainedCompare: ChainedOperation = chained(compare);
-/* END_OF_SYMBOL_DEFINITION chainedCompare */
 
 /* eslint-enable */

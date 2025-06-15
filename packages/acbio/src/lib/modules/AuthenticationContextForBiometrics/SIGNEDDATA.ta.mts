@@ -37,7 +37,7 @@ import {
     _encode_SignerInfos,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/SignerInfos.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SIGNEDDATA */
+
 /**
  * @summary SIGNEDDATA
  * @description
@@ -121,9 +121,8 @@ export class SIGNEDDATA<EncapsulatedContentInfo> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SIGNEDDATA */
+
 /**
  * @summary The Leading Root Component Types of SIGNEDDATA
  * @description
@@ -176,9 +175,8 @@ export const _root_component_type_list_1_spec_for_SIGNEDDATA: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNEDDATA */
+
 /**
  * @summary The Trailing Root Component Types of SIGNEDDATA
  * @description
@@ -188,9 +186,8 @@ export const _root_component_type_list_1_spec_for_SIGNEDDATA: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SIGNEDDATA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNEDDATA */
+
 /**
  * @summary The Extension Addition Component Types of SIGNEDDATA
  * @description
@@ -200,12 +197,10 @@ export const _root_component_type_list_2_spec_for_SIGNEDDATA: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_SIGNEDDATA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SIGNEDDATA */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_SIGNEDDATA */
+
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) SIGNEDDATA
  * @function
@@ -270,12 +265,10 @@ export function _get_decoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SIGNEDDATA */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SIGNEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_SIGNEDDATA */
+
+
 /**
  * @summary Returns a function that will encode a(n) SIGNEDDATA into an ASN.1 Element.
  * @function
@@ -324,6 +317,5 @@ export function _get_encoder_for_SIGNEDDATA<EncapsulatedContentInfo>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_SIGNEDDATA */
 
 /* eslint-enable */

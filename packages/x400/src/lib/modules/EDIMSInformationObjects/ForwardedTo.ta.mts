@@ -15,7 +15,6 @@ import {
     _decode_ORName,
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardedTo */
 /**
  * @summary ForwardedTo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ForwardedTo = ORName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ForwardedTo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedTo */
 let _cached_decoder_for_ForwardedTo: $.ASN1Decoder<ForwardedTo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedTo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardedTo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardedTo
  * @function
@@ -46,13 +41,9 @@ export function _decode_ForwardedTo(el: _Element) {
     }
     return _cached_decoder_for_ForwardedTo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardedTo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedTo */
 let _cached_encoder_for_ForwardedTo: $.ASN1Encoder<ForwardedTo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedTo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardedTo */
 /**
  * @summary Encodes a(n) ForwardedTo into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ForwardedTo(
     return _cached_encoder_for_ForwardedTo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardedTo */
 
 /* eslint-enable */

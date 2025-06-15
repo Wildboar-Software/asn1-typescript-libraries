@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION SMIMECapability */
+
 /**
  * @summary SMIMECapability
  * @description
@@ -64,9 +64,8 @@ class SMIMECapability {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SMIMECapability */
+
 /**
  * @summary The Leading Root Component Types of SMIMECapability
  * @description
@@ -80,9 +79,8 @@ const _root_component_type_list_1_spec_for_SMIMECapability: $.ComponentSpec[] = 
     new $.ComponentSpec("capabilityID", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("parameters", true, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SMIMECapability */
+
 /**
  * @summary The Trailing Root Component Types of SMIMECapability
  * @description
@@ -95,9 +93,8 @@ export
 const _root_component_type_list_2_spec_for_SMIMECapability: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SMIMECapability */
+
 /**
  * @summary The Extension Addition Component Types of SMIMECapability
  * @description
@@ -110,13 +107,11 @@ export
 const _extension_additions_list_spec_for_SMIMECapability: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMECapability */
+
 let _cached_decoder_for_SMIMECapability: $.ASN1Decoder<SMIMECapability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SMIMECapability */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SMIMECapability
  * @function
@@ -149,13 +144,11 @@ function _decode_SMIMECapability (el: _Element) {
 }; }
     return _cached_decoder_for_SMIMECapability(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMECapability */
+
 let _cached_encoder_for_SMIMECapability: $.ASN1Encoder<SMIMECapability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMECapability */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SMIMECapability */
+
 /**
  * @summary Encodes a(n) SMIMECapability into an ASN.1 Element.
  * @function
@@ -176,6 +169,5 @@ function _encode_SMIMECapability (value: SMIMECapability, elGetter: $.ASN1Encode
     return _cached_encoder_for_SMIMECapability(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SMIMECapability */
 
 /* eslint-enable */

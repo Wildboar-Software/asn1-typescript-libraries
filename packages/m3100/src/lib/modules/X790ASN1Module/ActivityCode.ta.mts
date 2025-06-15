@@ -16,7 +16,7 @@ import {
     _decode_ActivityCode_number,
     _encode_ActivityCode_number,
 } from '../X790ASN1Module/ActivityCode-number.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActivityCode */
+
 /**
  * @summary ActivityCode
  * @description
@@ -38,13 +38,11 @@ export type ActivityCode =
     | { number_: ActivityCode_number } /* CHOICE_ALT_ROOT */
     | { identifier: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ActivityCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityCode */
+
 let _cached_decoder_for_ActivityCode: $.ASN1Decoder<ActivityCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActivityCode */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActivityCode
  * @function
@@ -62,13 +60,11 @@ export function _decode_ActivityCode(el: _Element) {
     }
     return _cached_decoder_for_ActivityCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActivityCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityCode */
+
 let _cached_encoder_for_ActivityCode: $.ASN1Encoder<ActivityCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActivityCode */
+
 /**
  * @summary Encodes a(n) ActivityCode into an ASN.1 Element.
  * @function
@@ -92,6 +88,5 @@ export function _encode_ActivityCode(
     return _cached_encoder_for_ActivityCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActivityCode */
 
 /* eslint-enable */

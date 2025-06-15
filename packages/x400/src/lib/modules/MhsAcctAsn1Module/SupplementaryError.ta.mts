@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupplementaryError */
 /**
  * @summary SupplementaryError
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SupplementaryError = UniversalString; // UniversalString
-/* END_OF_SYMBOL_DEFINITION SupplementaryError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplementaryError */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplementaryError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupplementaryError */
 export const _decode_SupplementaryError = $._decodeUniversalString;
-/* END_OF_SYMBOL_DEFINITION _decode_SupplementaryError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplementaryError */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplementaryError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupplementaryError */
 export const _encode_SupplementaryError = $._encodeUniversalString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupplementaryError */
 
 /* eslint-enable */

@@ -7,7 +7,6 @@ import {
     _encode_RDNSequence,
 } from "../PKI-Stub/RDNSequence.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DistinguishedName */
 /**
  * @summary DistinguishedName
  * @description
@@ -22,9 +21,7 @@ import {
  * ```
  */
 export type DistinguishedName = RDNSequence; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DistinguishedName */
 /**
  * @summary Decodes an ASN.1 element into a(n) DistinguishedName
  * @function
@@ -34,9 +31,7 @@ export type DistinguishedName = RDNSequence; // DefinedType
 export function _decode_DistinguishedName(el: _Element) {
     return _decode_RDNSequence(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DistinguishedName */
 /**
  * @summary Encodes a(n) DistinguishedName into an ASN.1 Element.
  * @function
@@ -51,6 +46,5 @@ export function _encode_DistinguishedName(
     return _encode_RDNSequence(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DistinguishedName */
 
 /* eslint-enable */

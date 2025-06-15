@@ -15,7 +15,6 @@ import {
     _decode_RecipientRedirection,
     _encode_RecipientRedirection,
 } from '../MTSAbstractService/RecipientRedirection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Redirections */
 /**
  * @summary Redirections
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Redirections = RecipientRedirection[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Redirections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Redirections */
 let _cached_decoder_for_Redirections: $.ASN1Decoder<Redirections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Redirections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Redirections */
 /**
  * @summary Decodes an ASN.1 element into a(n) Redirections
  * @function
@@ -48,13 +43,9 @@ export function _decode_Redirections(el: _Element) {
     }
     return _cached_decoder_for_Redirections(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Redirections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Redirections */
 let _cached_encoder_for_Redirections: $.ASN1Encoder<Redirections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Redirections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Redirections */
 /**
  * @summary Encodes a(n) Redirections into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Redirections(
     return _cached_encoder_for_Redirections(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Redirections */
 
 /* eslint-enable */

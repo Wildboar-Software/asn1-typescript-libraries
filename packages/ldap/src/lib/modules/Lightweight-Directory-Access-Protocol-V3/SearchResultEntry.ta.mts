@@ -22,7 +22,7 @@ import {
   _decode_PartialAttributeList,
   _encode_PartialAttributeList,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SearchResultEntry */
+
 /**
  * @summary SearchResultEntry
  * @description
@@ -82,9 +82,8 @@ export class SearchResultEntry {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION SearchResultEntry */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchResultEntry */
+
 /**
  * @summary The Leading Root Component Types of SearchResultEntry
  * @description
@@ -109,9 +108,8 @@ export const _root_component_type_list_1_spec_for_SearchResultEntry: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchResultEntry */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchResultEntry */
+
 /**
  * @summary The Trailing Root Component Types of SearchResultEntry
  * @description
@@ -121,9 +119,8 @@ export const _root_component_type_list_1_spec_for_SearchResultEntry: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SearchResultEntry: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchResultEntry */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchResultEntry */
+
 /**
  * @summary The Extension Addition Component Types of SearchResultEntry
  * @description
@@ -133,9 +130,8 @@ export const _root_component_type_list_2_spec_for_SearchResultEntry: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_SearchResultEntry: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchResultEntry */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchResultEntry */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchResultEntry
  * @function
@@ -163,9 +159,8 @@ export function _decode_SearchResultEntry(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchResultEntry */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchResultEntry */
+
 /**
  * @summary Encodes a(n) SearchResultEntry into an ASN.1 Element.
  * @function
@@ -189,6 +184,5 @@ export function _encode_SearchResultEntry(
     return el;
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchResultEntry */
 
 /* eslint-enable */

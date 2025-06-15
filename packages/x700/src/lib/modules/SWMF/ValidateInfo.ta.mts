@@ -17,7 +17,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ValidateInfo */
 /**
  * @summary ValidateInfo
  * @description
@@ -38,13 +37,9 @@ export type ValidateInfo =
     | {
           systemSpecificValidationType: ManagementExtension[];
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ValidateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidateInfo */
 let _cached_decoder_for_ValidateInfo: $.ASN1Decoder<ValidateInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ValidateInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ValidateInfo
  * @function
@@ -78,13 +73,9 @@ export function _decode_ValidateInfo(el: _Element) {
     }
     return _cached_decoder_for_ValidateInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ValidateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidateInfo */
 let _cached_encoder_for_ValidateInfo: $.ASN1Encoder<ValidateInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ValidateInfo */
 /**
  * @summary Encodes a(n) ValidateInfo into an ASN.1 Element.
  * @function
@@ -128,6 +119,5 @@ export function _encode_ValidateInfo(
     return _cached_encoder_for_ValidateInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ValidateInfo */
 
 /* eslint-enable */

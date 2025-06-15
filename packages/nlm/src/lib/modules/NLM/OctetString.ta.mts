@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OctetString */
+
 /**
  * @summary OctetString
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type OctetString = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION OctetString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OctetString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OctetString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OctetString */
+
+
 export const _decode_OctetString = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_OctetString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OctetString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OctetString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OctetString */
+
+
 export const _encode_OctetString = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OctetString */
 
 /* eslint-enable */

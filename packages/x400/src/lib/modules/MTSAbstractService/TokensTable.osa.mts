@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
 import { asymmetric_token } from '../MTSAbstractService/asymmetric-token.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION TokensTable */
 /**
  * @summary TokensTable
  * @description
@@ -27,6 +26,5 @@ import { asymmetric_token } from '../MTSAbstractService/asymmetric-token.oa.mjs'
  *
  */
 export const TokensTable: TOKEN[] = [asymmetric_token];
-/* END_OF_SYMBOL_DEFINITION TokensTable */
 
 /* eslint-enable */

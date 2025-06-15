@@ -9,7 +9,7 @@ import {
     _decode_RC2wrapParameter,
     _encode_RC2wrapParameter,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/RC2wrapParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION kwa_RC2Wrap */
+
 /**
  * @summary kwa_RC2Wrap
  * @description
@@ -40,6 +40,5 @@ export const kwa_RC2Wrap: KEY_WRAP<RC2wrapParameter> = {
     "&paramPresence": required /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kwa_RC2Wrap */
 
 /* eslint-enable */

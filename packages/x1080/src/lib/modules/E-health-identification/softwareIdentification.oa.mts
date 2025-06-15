@@ -16,7 +16,7 @@ import {
     _encode_SoftwareIdentification,
 } from '../E-health-identification/SoftwareIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION softwareIdentification */
+
 /**
  * @summary softwareIdentification
  * @description
@@ -44,6 +44,5 @@ export const softwareIdentification: IDENTIFICATION<SoftwareIdentification> = {
     '&category': id_med_softw /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION softwareIdentification */
 
 /* eslint-enable */

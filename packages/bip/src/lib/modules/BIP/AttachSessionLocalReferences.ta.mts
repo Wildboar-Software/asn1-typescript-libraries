@@ -15,7 +15,7 @@ import {
   _decode_AttachSessionLocalReference,
   _encode_AttachSessionLocalReference,
 } from '../BIP/AttachSessionLocalReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttachSessionLocalReferences */
+
 /**
  * @summary AttachSessionLocalReferences
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AttachSessionLocalReferences = AttachSessionLocalReference[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AttachSessionLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttachSessionLocalReferences */
+
 let _cached_decoder_for_AttachSessionLocalReferences: $.ASN1Decoder<AttachSessionLocalReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttachSessionLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttachSessionLocalReferences */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttachSessionLocalReferences
  * @function
@@ -48,13 +46,11 @@ export function _decode_AttachSessionLocalReferences(el: _Element) {
   }
   return _cached_decoder_for_AttachSessionLocalReferences(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttachSessionLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttachSessionLocalReferences */
+
 let _cached_encoder_for_AttachSessionLocalReferences: $.ASN1Encoder<AttachSessionLocalReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttachSessionLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttachSessionLocalReferences */
+
 /**
  * @summary Encodes a(n) AttachSessionLocalReferences into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AttachSessionLocalReferences(
   return _cached_encoder_for_AttachSessionLocalReferences(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttachSessionLocalReferences */
 
 /* eslint-enable */

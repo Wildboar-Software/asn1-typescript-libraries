@@ -16,7 +16,7 @@ import {
     _encode_InsuranceIdentification,
 } from '../E-health-identification/InsuranceIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION insuranceIdentification */
+
 /**
  * @summary insuranceIdentification
  * @description
@@ -44,6 +44,5 @@ export const insuranceIdentification: IDENTIFICATION<InsuranceIdentification> = 
     '&category': id_med_insur /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION insuranceIdentification */
 
 /* eslint-enable */

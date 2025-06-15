@@ -15,7 +15,7 @@ import {
     _decode_Result_list,
     _encode_Result_list,
 } from '../ISO8823-PRESENTATION/Result-list.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Presentation_context_definition_result_list */
+
 /**
  * @summary Presentation_context_definition_result_list
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Presentation_context_definition_result_list = Result_list; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Presentation_context_definition_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_context_definition_result_list */
+
 let _cached_decoder_for_Presentation_context_definition_result_list: $.ASN1Decoder<Presentation_context_definition_result_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_context_definition_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Presentation_context_definition_result_list */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Presentation_context_definition_result_list
  * @function
@@ -48,13 +46,11 @@ export function _decode_Presentation_context_definition_result_list(
     }
     return _cached_decoder_for_Presentation_context_definition_result_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Presentation_context_definition_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_context_definition_result_list */
+
 let _cached_encoder_for_Presentation_context_definition_result_list: $.ASN1Encoder<Presentation_context_definition_result_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_context_definition_result_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Presentation_context_definition_result_list */
+
 /**
  * @summary Encodes a(n) Presentation_context_definition_result_list into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_Presentation_context_definition_result_list(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Presentation_context_definition_result_list */
 
 /* eslint-enable */

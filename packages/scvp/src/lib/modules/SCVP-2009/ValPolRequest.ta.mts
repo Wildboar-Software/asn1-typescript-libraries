@@ -14,7 +14,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ValPolRequest */
 /**
  * @summary ValPolRequest
  * @description
@@ -74,9 +73,7 @@ export class ValPolRequest {
     return 1;
   }
 }
-/* END_OF_SYMBOL_DEFINITION ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ValPolRequest */
 /**
  * @summary The Leading Root Component Types of ValPolRequest
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_ValPolRequest: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ValPolRequest */
 /**
  * @summary The Trailing Root Component Types of ValPolRequest
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_ValPolRequest: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ValPolRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ValPolRequest */
 /**
  * @summary The Extension Addition Component Types of ValPolRequest
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_ValPolRequest: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ValPolRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValPolRequest */
 let _cached_decoder_for_ValPolRequest: $.ASN1Decoder<ValPolRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ValPolRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) ValPolRequest
  * @function
@@ -172,13 +161,9 @@ export function _decode_ValPolRequest(el: _Element) {
   }
   return _cached_decoder_for_ValPolRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValPolRequest */
 let _cached_encoder_for_ValPolRequest: $.ASN1Encoder<ValPolRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValPolRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ValPolRequest */
 /**
  * @summary Encodes a(n) ValPolRequest into an ASN.1 Element.
  * @function
@@ -213,6 +198,5 @@ export function _encode_ValPolRequest(
   return _cached_encoder_for_ValPolRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ValPolRequest */
 
 /* eslint-enable */

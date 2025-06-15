@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
 import { id_sa } from '../MTSObjectIdentifiers/id-sa.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_sa_ms */
 /**
  * @summary id_sa_ms
  * @description
@@ -25,6 +24,5 @@ import { id_sa } from '../MTSObjectIdentifiers/id-sa.va.mjs';
  * @constant
  */
 export const id_sa_ms: ID = new _OID([1], id_sa);
-/* END_OF_SYMBOL_DEFINITION id_sa_ms */
 
 /* eslint-enable */

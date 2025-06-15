@@ -19,7 +19,6 @@ import { report_origin_authentication_check } from '../MTSAbstractService/report
 import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.mjs';
 import { reporting_MTA_name } from '../MTSAbstractService/reporting-MTA-name.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportTransferEnvelopeExtensions */
 /**
  * @summary ReportTransferEnvelopeExtensions
  * @description
@@ -51,6 +50,5 @@ export const ReportTransferEnvelopeExtensions: EXTENSION[] = [
     reporting_MTA_name,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION ReportTransferEnvelopeExtensions */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_SimpleCredentials_validity_time2,
     _encode_SimpleCredentials_validity_time2,
 } from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SimpleCredentials_validity */
 /**
  * @summary SimpleCredentials_validity
  * @description
@@ -84,9 +83,7 @@ export class SimpleCredentials_validity {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SimpleCredentials_validity */
 /**
  * @summary The Leading Root Component Types of SimpleCredentials_validity
  * @description
@@ -125,9 +122,7 @@ export const _root_component_type_list_1_spec_for_SimpleCredentials_validity: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SimpleCredentials_validity */
 /**
  * @summary The Trailing Root Component Types of SimpleCredentials_validity
  * @description
@@ -137,9 +132,7 @@ export const _root_component_type_list_1_spec_for_SimpleCredentials_validity: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SimpleCredentials_validity: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SimpleCredentials_validity */
 /**
  * @summary The Extension Addition Component Types of SimpleCredentials_validity
  * @description
@@ -149,13 +142,9 @@ export const _root_component_type_list_2_spec_for_SimpleCredentials_validity: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_SimpleCredentials_validity: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleCredentials_validity */
 let _cached_decoder_for_SimpleCredentials_validity: $.ASN1Decoder<SimpleCredentials_validity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SimpleCredentials_validity */
 /**
  * @summary Decodes an ASN.1 element into a(n) SimpleCredentials_validity
  * @function
@@ -215,13 +204,9 @@ export function _decode_SimpleCredentials_validity(el: _Element) {
     }
     return _cached_decoder_for_SimpleCredentials_validity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleCredentials_validity */
 let _cached_encoder_for_SimpleCredentials_validity: $.ASN1Encoder<SimpleCredentials_validity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleCredentials_validity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SimpleCredentials_validity */
 /**
  * @summary Encodes a(n) SimpleCredentials_validity into an ASN.1 Element.
  * @function
@@ -282,6 +267,5 @@ export function _encode_SimpleCredentials_validity(
     return _cached_encoder_for_SimpleCredentials_validity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SimpleCredentials_validity */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import { physical_forwarding_address } from '../MTSAbstractService/physical-forw
 import { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa.mjs';
 import { proof_of_delivery } from '../MTSAbstractService/proof-of-delivery.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientReportDeliveryExtensions */
 /**
  * @summary PerRecipientReportDeliveryExtensions
  * @description
@@ -40,6 +39,5 @@ export const PerRecipientReportDeliveryExtensions: EXTENSION[] = [
     proof_of_delivery,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerRecipientReportDeliveryExtensions */
 
 /* eslint-enable */

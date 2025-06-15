@@ -19,7 +19,7 @@ import {
   _decode_Content,
   _encode_Content,
 } from '../ASN1SOAP/Content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Fault */
+
 /**
  * @summary Fault
  * @description
@@ -88,9 +88,8 @@ export class Fault {
     return new Fault(_o.code, _o.reason, _o.node, _o.role, _o.detail);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Fault */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Fault */
+
 /**
  * @summary The Leading Root Component Types of Fault
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_Fault: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Fault */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Fault */
+
 /**
  * @summary The Trailing Root Component Types of Fault
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_Fault: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Fault: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Fault */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Fault */
+
 /**
  * @summary The Extension Addition Component Types of Fault
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_Fault: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Fault: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Fault */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Fault */
+
 let _cached_decoder_for_Fault: $.ASN1Decoder<Fault> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Fault */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Fault */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Fault
  * @function
@@ -221,13 +216,11 @@ export function _decode_Fault(el: _Element) {
   }
   return _cached_decoder_for_Fault(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Fault */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Fault */
+
 let _cached_encoder_for_Fault: $.ASN1Encoder<Fault> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Fault */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Fault */
+
 /**
  * @summary Encodes a(n) Fault into an ASN.1 Element.
  * @function
@@ -265,6 +258,5 @@ export function _encode_Fault(value: Fault, elGetter: $.ASN1Encoder<Fault>) {
   return _cached_encoder_for_Fault(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Fault */
 
 /* eslint-enable */

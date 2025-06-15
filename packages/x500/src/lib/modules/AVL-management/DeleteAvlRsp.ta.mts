@@ -15,7 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DeleteAvlRsp */
 /**
  * @summary DeleteAvlRsp
  * @description
@@ -78,9 +77,7 @@ export class DeleteAvlRsp {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteAvlRsp */
 /**
  * @summary The Leading Root Component Types of DeleteAvlRsp
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_DeleteAvlRsp: $.ComponentSpec[
     ),
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteAvlRsp */
 /**
  * @summary The Trailing Root Component Types of DeleteAvlRsp
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_DeleteAvlRsp: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeleteAvlRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteAvlRsp */
 /**
  * @summary The Extension Addition Component Types of DeleteAvlRsp
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_DeleteAvlRsp: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_DeleteAvlRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteAvlRsp */
 let _cached_decoder_for_DeleteAvlRsp: $.ASN1Decoder<DeleteAvlRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteAvlRsp */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteAvlRsp
  * @function
@@ -160,13 +149,9 @@ export function _decode_DeleteAvlRsp(el: _Element) {
     }
     return _cached_decoder_for_DeleteAvlRsp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteAvlRsp */
 let _cached_encoder_for_DeleteAvlRsp: $.ASN1Encoder<DeleteAvlRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteAvlRsp */
 /**
  * @summary Encodes a(n) DeleteAvlRsp into an ASN.1 Element.
  * @function
@@ -206,6 +191,5 @@ export function _encode_DeleteAvlRsp(
     return _cached_encoder_for_DeleteAvlRsp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteAvlRsp */
 
 /* eslint-enable */

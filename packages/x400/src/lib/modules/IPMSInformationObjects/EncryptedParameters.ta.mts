@@ -21,7 +21,6 @@ import {
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncryptedParameters */
 /**
  * @summary EncryptedParameters
  * @description
@@ -82,9 +81,7 @@ export class EncryptedParameters {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedParameters */
 /**
  * @summary The Leading Root Component Types of EncryptedParameters
  * @description
@@ -109,9 +106,7 @@ export const _root_component_type_list_1_spec_for_EncryptedParameters: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedParameters */
 /**
  * @summary The Trailing Root Component Types of EncryptedParameters
  * @description
@@ -121,9 +116,7 @@ export const _root_component_type_list_1_spec_for_EncryptedParameters: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedParameters */
 /**
  * @summary The Extension Addition Component Types of EncryptedParameters
  * @description
@@ -133,13 +126,9 @@ export const _root_component_type_list_2_spec_for_EncryptedParameters: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedParameters */
 let _cached_decoder_for_EncryptedParameters: $.ASN1Decoder<EncryptedParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedParameters
  * @function
@@ -185,13 +174,9 @@ export function _decode_EncryptedParameters(el: _Element) {
     }
     return _cached_decoder_for_EncryptedParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedParameters */
 let _cached_encoder_for_EncryptedParameters: $.ASN1Encoder<EncryptedParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedParameters */
 /**
  * @summary Encodes a(n) EncryptedParameters into an ASN.1 Element.
  * @function
@@ -234,6 +219,5 @@ export function _encode_EncryptedParameters(
     return _cached_encoder_for_EncryptedParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedParameters */
 
 /* eslint-enable */

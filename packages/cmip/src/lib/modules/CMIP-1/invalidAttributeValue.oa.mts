@@ -23,7 +23,7 @@ import {
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta.mjs';
 import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION invalidAttributeValue */
+
 /**
  * @summary invalidAttributeValue
  * @description
@@ -56,6 +56,5 @@ export const invalidAttributeValue: ERROR<Attribute> = {
   '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION invalidAttributeValue */
 
 /* eslint-enable */

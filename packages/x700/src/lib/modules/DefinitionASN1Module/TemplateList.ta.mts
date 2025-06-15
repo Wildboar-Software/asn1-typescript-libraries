@@ -15,7 +15,7 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TemplateList */
+
 /**
  * @summary TemplateList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TemplateList = TemplateLabel[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TemplateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateList */
+
 let _cached_decoder_for_TemplateList: $.ASN1Decoder<TemplateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TemplateList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TemplateList
  * @function
@@ -48,13 +46,11 @@ export function _decode_TemplateList(el: _Element) {
     }
     return _cached_decoder_for_TemplateList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TemplateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateList */
+
 let _cached_encoder_for_TemplateList: $.ASN1Encoder<TemplateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TemplateList */
+
 /**
  * @summary Encodes a(n) TemplateList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_TemplateList(
     return _cached_encoder_for_TemplateList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TemplateList */
 
 /* eslint-enable */

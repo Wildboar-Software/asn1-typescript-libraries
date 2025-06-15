@@ -8,7 +8,7 @@ import { sha1 } from "./sha1.va.mjs";
 import { mgf1SHA1 } from "./mgf1SHA1.va.mjs";
 import { trailerFieldBC } from "./TrailerField.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION rSASSA_PSS_Default_Identifier */
+
 /**
  * @summary rSASSA_PSS_Default_Identifier
  * @description
@@ -41,6 +41,5 @@ export const rSASSA_PSS_Default_Identifier: RSASSA_AlgorithmIdentifier = Algorit
         _unrecognizedExtensionsList: undefined,
     }
 );
-/* END_OF_SYMBOL_DEFINITION rSASSA_PSS_Default_Identifier */
 
 /* eslint-enable */

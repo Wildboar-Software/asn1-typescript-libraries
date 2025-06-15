@@ -15,7 +15,7 @@ import {
   _decode_KDC_REQ,
   _encode_KDC_REQ,
 } from '../KerberosV5Spec2/KDC-REQ.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AS_REQ */
+
 /**
  * @summary AS_REQ
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AS_REQ = KDC_REQ; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AS_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AS_REQ */
+
 let _cached_decoder_for_AS_REQ: $.ASN1Decoder<AS_REQ> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AS_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AS_REQ */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AS_REQ
  * @function
@@ -48,13 +46,11 @@ export function _decode_AS_REQ(el: _Element) {
   }
   return _cached_decoder_for_AS_REQ(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AS_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AS_REQ */
+
 let _cached_encoder_for_AS_REQ: $.ASN1Encoder<AS_REQ> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AS_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AS_REQ */
+
 /**
  * @summary Encodes a(n) AS_REQ into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_AS_REQ(value: AS_REQ, elGetter: $.ASN1Encoder<AS_REQ>) {
   return _cached_encoder_for_AS_REQ(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AS_REQ */
 
 /* eslint-enable */

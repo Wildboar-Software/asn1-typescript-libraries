@@ -17,7 +17,7 @@ import {
   _decode_SecurityIdentity,
   _encode_SecurityIdentity,
 } from '../Notation/SecurityIdentity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExternalSAID */
+
 /**
  * @summary ExternalSAID
  * @description
@@ -68,9 +68,8 @@ export class ExternalSAID {
     return new ExternalSAID(_o.localSAID, _o.assignerIdentity);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExternalSAID */
+
 /**
  * @summary The Leading Root Component Types of ExternalSAID
  * @description
@@ -95,9 +94,8 @@ export const _root_component_type_list_1_spec_for_ExternalSAID: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExternalSAID */
+
 /**
  * @summary The Trailing Root Component Types of ExternalSAID
  * @description
@@ -107,9 +105,8 @@ export const _root_component_type_list_1_spec_for_ExternalSAID: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExternalSAID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExternalSAID */
+
 /**
  * @summary The Extension Addition Component Types of ExternalSAID
  * @description
@@ -119,13 +116,11 @@ export const _root_component_type_list_2_spec_for_ExternalSAID: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ExternalSAID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalSAID */
+
 let _cached_decoder_for_ExternalSAID: $.ASN1Decoder<ExternalSAID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExternalSAID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExternalSAID
  * @function
@@ -165,13 +160,11 @@ export function _decode_ExternalSAID(el: _Element) {
   }
   return _cached_decoder_for_ExternalSAID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalSAID */
+
 let _cached_encoder_for_ExternalSAID: $.ASN1Encoder<ExternalSAID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalSAID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExternalSAID */
+
 /**
  * @summary Encodes a(n) ExternalSAID into an ASN.1 Element.
  * @function
@@ -202,6 +195,5 @@ export function _encode_ExternalSAID(
   return _cached_encoder_for_ExternalSAID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExternalSAID */
 
 /* eslint-enable */

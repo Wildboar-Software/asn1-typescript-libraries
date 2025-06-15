@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InvokeldsOutstanding */
 /**
  * @summary InvokeldsOutstanding
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type InvokeldsOutstanding = INTEGER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION InvokeldsOutstanding */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeldsOutstanding */
 let _cached_decoder_for_InvokeldsOutstanding: $.ASN1Decoder<InvokeldsOutstanding> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeldsOutstanding */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvokeldsOutstanding */
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeldsOutstanding
  * @function
@@ -45,13 +40,9 @@ export function _decode_InvokeldsOutstanding(el: _Element) {
     }
     return _cached_decoder_for_InvokeldsOutstanding(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvokeldsOutstanding */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeldsOutstanding */
 let _cached_encoder_for_InvokeldsOutstanding: $.ASN1Encoder<InvokeldsOutstanding> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeldsOutstanding */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvokeldsOutstanding */
 /**
  * @summary Encodes a(n) InvokeldsOutstanding into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_InvokeldsOutstanding(
     return _cached_encoder_for_InvokeldsOutstanding(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvokeldsOutstanding */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AuthenticationContextSet */
 /**
  * @summary AuthenticationContextSet
  * @description
@@ -26,6 +25,5 @@ import { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca
  *
  */
 export const AuthenticationContextSet: AC_AUTH_CONTEXT[] = [];
-/* END_OF_SYMBOL_DEFINITION AuthenticationContextSet */
 
 /* eslint-enable */

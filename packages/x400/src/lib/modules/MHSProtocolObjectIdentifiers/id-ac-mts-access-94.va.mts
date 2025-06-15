@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSProtocolObjectIdentifiers/ID.ta.mjs';
 import { id_ac } from '../MHSProtocolObjectIdentifiers/id-ac.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_ac_mts_access_94 */
 /**
  * @summary id_ac_mts_access_94
  * @description
@@ -29,6 +28,5 @@ import { id_ac } from '../MHSProtocolObjectIdentifiers/id-ac.va.mjs';
  * @constant
  */
 export const id_ac_mts_access_94: ID = new _OID([7], id_ac);
-/* END_OF_SYMBOL_DEFINITION id_ac_mts_access_94 */
 
 /* eslint-enable */

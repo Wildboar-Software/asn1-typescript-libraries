@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION acceptableCertPoliciesMatch */
 /**
  * @summary acceptableCertPoliciesMatch
  * @description
@@ -34,6 +33,5 @@ export const acceptableCertPoliciesMatch: MATCHING_RULE<AcceptableCertPoliciesSy
     "&id": id_mr_acceptableCertPoliciesMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION acceptableCertPoliciesMatch */
 
 /* eslint-enable */

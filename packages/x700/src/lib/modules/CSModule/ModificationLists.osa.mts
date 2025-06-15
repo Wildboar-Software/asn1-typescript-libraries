@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ModificationLists */
 /**
  * @summary ModificationLists
  * @description
@@ -27,6 +26,5 @@ import {
  *
  */
 export const ModificationLists: TYPE_IDENTIFIER[] = [];
-/* END_OF_SYMBOL_DEFINITION ModificationLists */
 
 /* eslint-enable */

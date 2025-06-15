@@ -25,7 +25,6 @@ import {
     _decode_Report,
     _encode_Report,
 } from '../MTAAbstractService/Report.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MTS_APDU */
 /**
  * @summary MTS_APDU
  * @description
@@ -44,13 +43,9 @@ export type MTS_APDU =
     | { message: Message } /* CHOICE_ALT_ROOT */
     | { probe: Probe } /* CHOICE_ALT_ROOT */
     | { report: Report } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MTS_APDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTS_APDU */
 let _cached_decoder_for_MTS_APDU: $.ASN1Decoder<MTS_APDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTS_APDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTS_APDU */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTS_APDU
  * @function
@@ -76,13 +71,9 @@ export function _decode_MTS_APDU(el: _Element) {
     }
     return _cached_decoder_for_MTS_APDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTS_APDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTS_APDU */
 let _cached_encoder_for_MTS_APDU: $.ASN1Encoder<MTS_APDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTS_APDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTS_APDU */
 /**
  * @summary Encodes a(n) MTS_APDU into an ASN.1 Element.
  * @function
@@ -122,6 +113,5 @@ export function _encode_MTS_APDU(
     return _cached_encoder_for_MTS_APDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTS_APDU */
 
 /* eslint-enable */

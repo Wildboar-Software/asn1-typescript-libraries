@@ -24,7 +24,6 @@ import { id_sat_ipm_entry_type } from '../IPMSObjectIdentifiers/id-sat-ipm-entry
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ipm_entry_type */
 /**
  * @summary ipm_entry_type
  * @description
@@ -57,6 +56,5 @@ export const ipm_entry_type: X413ATTRIBUTE<IPMEntryType> = {
     '&id': id_sat_ipm_entry_type /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_entry_type */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION WaveLength */
+
 /**
  * @summary WaveLength
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type WaveLength = INTEGER;
-/* END_OF_SYMBOL_DEFINITION WaveLength */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WaveLength */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WaveLength */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WaveLength */
+
+
 export const _decode_WaveLength = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_WaveLength */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WaveLength */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WaveLength */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WaveLength */
+
+
 export const _encode_WaveLength = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_WaveLength */
 
 /* eslint-enable */

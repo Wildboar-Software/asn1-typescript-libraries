@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ExpiryTimeField */
 /**
  * @summary ExpiryTimeField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ExpiryTimeField = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiryTimeField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExpiryTimeField */
 export const _decode_ExpiryTimeField = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiryTimeField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExpiryTimeField */
 export const _encode_ExpiryTimeField = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExpiryTimeField */
 
 /* eslint-enable */

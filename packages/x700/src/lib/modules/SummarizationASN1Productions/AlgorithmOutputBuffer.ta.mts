@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmOutputBuffer_Item,
     _encode_AlgorithmOutputBuffer_Item,
 } from '../SummarizationASN1Productions/AlgorithmOutputBuffer-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlgorithmOutputBuffer */
 /**
  * @summary AlgorithmOutputBuffer
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type AlgorithmOutputBuffer = AlgorithmOutputBuffer_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AlgorithmOutputBuffer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmOutputBuffer */
 let _cached_decoder_for_AlgorithmOutputBuffer: $.ASN1Decoder<AlgorithmOutputBuffer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmOutputBuffer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgorithmOutputBuffer */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmOutputBuffer
  * @function
@@ -51,13 +46,9 @@ export function _decode_AlgorithmOutputBuffer(el: _Element) {
     }
     return _cached_decoder_for_AlgorithmOutputBuffer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgorithmOutputBuffer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmOutputBuffer */
 let _cached_encoder_for_AlgorithmOutputBuffer: $.ASN1Encoder<AlgorithmOutputBuffer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmOutputBuffer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgorithmOutputBuffer */
 /**
  * @summary Encodes a(n) AlgorithmOutputBuffer into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_AlgorithmOutputBuffer(
     return _cached_encoder_for_AlgorithmOutputBuffer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgorithmOutputBuffer */
 
 /* eslint-enable */

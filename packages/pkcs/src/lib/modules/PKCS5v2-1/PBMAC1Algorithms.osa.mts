@@ -2,7 +2,7 @@
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { PBMAC1Algorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/PBMAC1Algorithms-Union0-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PBMAC1Algorithms */
+
 /**
  * @summary PBMAC1Algorithms
  * @description
@@ -23,6 +23,5 @@ import { PBMAC1Algorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/PBMA
 export const PBMAC1Algorithms: ALGORITHM_IDENTIFIER<any>[] = [
     PBMAC1Algorithms_Union0_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION PBMAC1Algorithms */
 
 /* eslint-enable */

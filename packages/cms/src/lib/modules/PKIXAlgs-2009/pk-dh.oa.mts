@@ -14,7 +14,7 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "../PKIXAlgs-2009/DomainParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_dh */
+
 /**
  * @summary pk_dh
  * @description
@@ -54,6 +54,5 @@ export const pk_dh: PUBLIC_KEY<DHPublicKey, DomainParameters> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_dh */
 
 /* eslint-enable */

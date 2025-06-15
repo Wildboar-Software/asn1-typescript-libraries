@@ -15,7 +15,7 @@ import {
     _decode_IssuerSerial,
     _encode_IssuerSerial,
 } from "../ExtendedSecurityServices-2006/IssuerSerial.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ESSCertID */
+
 /**
  * @summary ESSCertID
  * @description
@@ -65,9 +65,8 @@ export class ESSCertID {
         return new ESSCertID(_o.certHash, _o.issuerSerial);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ESSCertID */
+
 /**
  * @summary The Leading Root Component Types of ESSCertID
  * @description
@@ -92,9 +91,8 @@ export const _root_component_type_list_1_spec_for_ESSCertID: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ESSCertID */
+
 /**
  * @summary The Trailing Root Component Types of ESSCertID
  * @description
@@ -104,9 +102,8 @@ export const _root_component_type_list_1_spec_for_ESSCertID: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ESSCertID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ESSCertID */
+
 /**
  * @summary The Extension Addition Component Types of ESSCertID
  * @description
@@ -116,13 +113,11 @@ export const _root_component_type_list_2_spec_for_ESSCertID: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_ESSCertID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSCertID */
+
 let _cached_decoder_for_ESSCertID: $.ASN1Decoder<ESSCertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ESSCertID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ESSCertID
  * @function
@@ -162,13 +157,11 @@ export function _decode_ESSCertID(el: _Element) {
     }
     return _cached_decoder_for_ESSCertID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSCertID */
+
 let _cached_encoder_for_ESSCertID: $.ASN1Encoder<ESSCertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSCertID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ESSCertID */
+
 /**
  * @summary Encodes a(n) ESSCertID into an ASN.1 Element.
  * @function
@@ -199,6 +192,5 @@ export function _encode_ESSCertID(
     return _cached_encoder_for_ESSCertID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ESSCertID */
 
 /* eslint-enable */

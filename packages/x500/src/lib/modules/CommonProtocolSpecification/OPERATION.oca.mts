@@ -2,7 +2,6 @@
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
 import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION OPERATION */
 /**
  * @summary OPERATION
  * @description
@@ -71,6 +70,5 @@ export interface OPERATION<
      */
     readonly "&operationCode"?: Code;
 }
-/* END_OF_SYMBOL_DEFINITION OPERATION */
 
 /* eslint-enable */

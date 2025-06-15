@@ -16,7 +16,6 @@ import {
     _encode_AddressCapabilities,
 } from '../MHSDirectoryObjectsAndAttributes/AddressCapabilities.ta.mjs';
 import { id_mr_address_capabilities_match } from '../MHSObjectIdentifiers/id-mr-address-capabilities-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION addressCapabilitiesMatch */
 /**
  * @summary addressCapabilitiesMatch
  * @description
@@ -45,6 +44,5 @@ export const addressCapabilitiesMatch: MATCHING_RULE<AddressCapabilities> = {
     '&id': id_mr_address_capabilities_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION addressCapabilitiesMatch */
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubordinateCircuitPackSoftwareLoad */
+
 /**
  * @summary SubordinateCircuitPackSoftwareLoad
  * @description
@@ -36,13 +36,11 @@ export type SubordinateCircuitPackSoftwareLoad =
     | { notApplicable: NULL } /* CHOICE_ALT_ROOT */
     | { softwareInstances: ObjectInstance[] } /* CHOICE_ALT_ROOT */
     | { softwareIdentifiers: PrintableString[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SubordinateCircuitPackSoftwareLoad */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubordinateCircuitPackSoftwareLoad */
+
 let _cached_decoder_for_SubordinateCircuitPackSoftwareLoad: $.ASN1Decoder<SubordinateCircuitPackSoftwareLoad> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubordinateCircuitPackSoftwareLoad */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubordinateCircuitPackSoftwareLoad */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubordinateCircuitPackSoftwareLoad
  * @function
@@ -75,13 +73,11 @@ export function _decode_SubordinateCircuitPackSoftwareLoad(el: _Element) {
     }
     return _cached_decoder_for_SubordinateCircuitPackSoftwareLoad(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubordinateCircuitPackSoftwareLoad */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubordinateCircuitPackSoftwareLoad */
+
 let _cached_encoder_for_SubordinateCircuitPackSoftwareLoad: $.ASN1Encoder<SubordinateCircuitPackSoftwareLoad> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubordinateCircuitPackSoftwareLoad */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubordinateCircuitPackSoftwareLoad */
+
 /**
  * @summary Encodes a(n) SubordinateCircuitPackSoftwareLoad into an ASN.1 Element.
  * @function
@@ -127,6 +123,5 @@ export function _encode_SubordinateCircuitPackSoftwareLoad(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubordinateCircuitPackSoftwareLoad */
 
 /* eslint-enable */

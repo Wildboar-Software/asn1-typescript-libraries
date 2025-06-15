@@ -15,7 +15,7 @@ import {
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIP_ATTRIBUTE */
+
 /**
  * @summary CMIP_ATTRIBUTE
  * @description
@@ -70,6 +70,5 @@ export interface CMIP_ATTRIBUTE<
    */
   readonly '&Value': Value;
 }
-/* END_OF_SYMBOL_DEFINITION CMIP_ATTRIBUTE */
 
 /* eslint-enable */

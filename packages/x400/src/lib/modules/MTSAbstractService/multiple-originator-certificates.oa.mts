@@ -23,7 +23,6 @@ import {
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION multiple_originator_certificates */
 /**
  * @summary multiple_originator_certificates
  * @description
@@ -57,6 +56,5 @@ export const multiple_originator_certificates: EXTENSION<ExtendedCertificates> =
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION multiple_originator_certificates */
 
 /* eslint-enable */

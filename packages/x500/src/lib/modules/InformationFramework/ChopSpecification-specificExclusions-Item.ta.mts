@@ -6,7 +6,6 @@ import {
     _decode_LocalName,
     _encode_LocalName,
 } from "../InformationFramework/LocalName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ChopSpecification_specificExclusions_Item */
 /**
  * @summary ChopSpecification_specificExclusions_Item
  * @description
@@ -24,13 +23,9 @@ export type ChopSpecification_specificExclusions_Item =
     | { chopBefore: LocalName } /* CHOICE_ALT_ROOT */
     | { chopAfter: LocalName } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ChopSpecification_specificExclusions_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChopSpecification_specificExclusions_Item */
 let _cached_decoder_for_ChopSpecification_specificExclusions_Item: $.ASN1Decoder<ChopSpecification_specificExclusions_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChopSpecification_specificExclusions_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChopSpecification_specificExclusions_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChopSpecification_specificExclusions_Item
  * @function
@@ -56,13 +51,9 @@ export function _decode_ChopSpecification_specificExclusions_Item(
     }
     return _cached_decoder_for_ChopSpecification_specificExclusions_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChopSpecification_specificExclusions_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChopSpecification_specificExclusions_Item */
 let _cached_encoder_for_ChopSpecification_specificExclusions_Item: $.ASN1Encoder<ChopSpecification_specificExclusions_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChopSpecification_specificExclusions_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChopSpecification_specificExclusions_Item */
 /**
  * @summary Encodes a(n) ChopSpecification_specificExclusions_Item into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_ChopSpecification_specificExclusions_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChopSpecification_specificExclusions_Item */
 
 /* eslint-enable */

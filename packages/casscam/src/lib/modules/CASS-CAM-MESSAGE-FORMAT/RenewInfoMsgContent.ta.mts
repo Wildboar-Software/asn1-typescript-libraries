@@ -14,7 +14,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MESSAGE-FORMAT/ImageInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RenewInfoMsgContent */
+
 /**
  * @summary RenewInfoMsgContent
  * @description
@@ -119,9 +119,8 @@ class RenewInfoMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RenewInfoMsgContent */
+
 /**
  * @summary The Leading Root Component Types of RenewInfoMsgContent
  * @description
@@ -141,9 +140,8 @@ const _root_component_type_list_1_spec_for_RenewInfoMsgContent: $.ComponentSpec[
     new $.ComponentSpec("hashed-ICCI", false, $.hasTag(_TagClass.context, 6), undefined, undefined),
     new $.ComponentSpec("directives", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RenewInfoMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of RenewInfoMsgContent
  * @description
@@ -156,9 +154,8 @@ export
 const _root_component_type_list_2_spec_for_RenewInfoMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RenewInfoMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of RenewInfoMsgContent
  * @description
@@ -171,13 +168,11 @@ export
 const _extension_additions_list_spec_for_RenewInfoMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RenewInfoMsgContent */
+
 let _cached_decoder_for_RenewInfoMsgContent: $.ASN1Decoder<RenewInfoMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RenewInfoMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RenewInfoMsgContent
  * @function
@@ -228,13 +223,11 @@ function _decode_RenewInfoMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_RenewInfoMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RenewInfoMsgContent */
+
 let _cached_encoder_for_RenewInfoMsgContent: $.ASN1Encoder<RenewInfoMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RenewInfoMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RenewInfoMsgContent */
+
 /**
  * @summary Encodes a(n) RenewInfoMsgContent into an ASN.1 Element.
  * @function
@@ -261,6 +254,5 @@ function _encode_RenewInfoMsgContent (value: RenewInfoMsgContent, elGetter: $.AS
     return _cached_encoder_for_RenewInfoMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RenewInfoMsgContent */
 
 /* eslint-enable */

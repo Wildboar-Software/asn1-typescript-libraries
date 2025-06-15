@@ -23,7 +23,6 @@ import {
     _encode_Report,
 } from '../MTAAbstractService/Report.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION report_transfer */
 /**
  * @summary report_transfer
  * @description
@@ -58,6 +57,5 @@ export const report_transfer: ABSTRACT_OPERATION<Report> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION report_transfer */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va.mjs";
-/* START_OF_SYMBOL_DEFINITION teletrust */
 /**
  * @summary teletrust
  * @description
@@ -16,6 +15,5 @@ import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization
  * @constant
  */
 export const teletrust: ID = new _OID([/* teletrust */ 36], iso_organization);
-/* END_OF_SYMBOL_DEFINITION teletrust */
 
 /* eslint-enable */

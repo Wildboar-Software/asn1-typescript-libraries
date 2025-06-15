@@ -20,7 +20,6 @@ import {
     _decode_ForwardWithRespAccepted,
     _encode_ForwardWithRespAccepted,
 } from '../EDIMSAutoActionTypes/ForwardWithRespAccepted.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 /**
  * @summary EDIAutoForwardRegistrationParameter_edi_forwarding_mode
  * @description
@@ -38,13 +37,9 @@ export type EDIAutoForwardRegistrationParameter_edi_forwarding_mode =
     | {
           forwarding_with_responsibility_accepted: ForwardWithRespAccepted;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 let _cached_decoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode: $.ASN1Decoder<EDIAutoForwardRegistrationParameter_edi_forwarding_mode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIAutoForwardRegistrationParameter_edi_forwarding_mode
  * @function
@@ -78,13 +73,9 @@ export function _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 let _cached_encoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode: $.ASN1Encoder<EDIAutoForwardRegistrationParameter_edi_forwarding_mode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 /**
  * @summary Encodes a(n) EDIAutoForwardRegistrationParameter_edi_forwarding_mode into an ASN.1 Element.
  * @function
@@ -123,6 +114,5 @@ export function _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 
 /* eslint-enable */

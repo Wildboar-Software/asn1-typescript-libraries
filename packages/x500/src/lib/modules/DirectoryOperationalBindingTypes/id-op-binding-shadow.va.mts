@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ob } from "../UsefulDefinitions/id-ob.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_op_binding_shadow */
 /**
  * @summary id_op_binding_shadow
  * @description
@@ -15,6 +14,5 @@ import { id_ob } from "../UsefulDefinitions/id-ob.va.mjs";
  * @constant
  */
 export const id_op_binding_shadow: OBJECT_IDENTIFIER = new _OID([1], id_ob);
-/* END_OF_SYMBOL_DEFINITION id_op_binding_shadow */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GroupObjects */
 /**
  * @summary GroupObjects
  * @description
@@ -24,13 +23,9 @@ import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "
  */
 export
 type GroupObjects = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GroupObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupObjects */
 let _cached_decoder_for_GroupObjects: $.ASN1Decoder<GroupObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupObjects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GroupObjects */
 /**
  * @summary Decodes an ASN.1 element into a(n) GroupObjects
  * @function
@@ -42,13 +37,9 @@ function _decode_GroupObjects (el: _Element) {
     if (!_cached_decoder_for_GroupObjects) { _cached_decoder_for_GroupObjects = $._decodeSetOf<ObjectInstance>(() => _decode_ObjectInstance); }
     return _cached_decoder_for_GroupObjects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GroupObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupObjects */
 let _cached_encoder_for_GroupObjects: $.ASN1Encoder<GroupObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupObjects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GroupObjects */
 /**
  * @summary Encodes a(n) GroupObjects into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_GroupObjects (value: GroupObjects, elGetter: $.ASN1Encoder<Grou
     return _cached_encoder_for_GroupObjects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GroupObjects */
 
 /* eslint-enable */

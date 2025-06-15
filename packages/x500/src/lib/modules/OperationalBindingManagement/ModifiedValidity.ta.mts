@@ -15,7 +15,6 @@ import {
     _decode_ModifiedValidity_validUntil,
     _encode_ModifiedValidity_validUntil,
 } from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifiedValidity */
 /**
  * @summary ModifiedValidity
  * @description
@@ -101,9 +100,7 @@ export class ModifiedValidity {
         return { unchanged: null };
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifiedValidity */
 /**
  * @summary The Leading Root Component Types of ModifiedValidity
  * @description
@@ -128,9 +125,7 @@ export const _root_component_type_list_1_spec_for_ModifiedValidity: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifiedValidity */
 /**
  * @summary The Trailing Root Component Types of ModifiedValidity
  * @description
@@ -140,9 +135,7 @@ export const _root_component_type_list_1_spec_for_ModifiedValidity: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifiedValidity: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifiedValidity */
 /**
  * @summary The Extension Addition Component Types of ModifiedValidity
  * @description
@@ -152,13 +145,9 @@ export const _root_component_type_list_2_spec_for_ModifiedValidity: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifiedValidity: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifiedValidity */
 let _cached_decoder_for_ModifiedValidity: $.ASN1Decoder<ModifiedValidity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifiedValidity */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifiedValidity
  * @function
@@ -210,13 +199,9 @@ export function _decode_ModifiedValidity(el: _Element) {
     }
     return _cached_decoder_for_ModifiedValidity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifiedValidity */
 let _cached_encoder_for_ModifiedValidity: $.ASN1Encoder<ModifiedValidity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifiedValidity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifiedValidity */
 /**
  * @summary Encodes a(n) ModifiedValidity into an ASN.1 Element.
  * @function
@@ -272,6 +257,5 @@ export function _encode_ModifiedValidity(
     return _cached_encoder_for_ModifiedValidity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifiedValidity */
 
 /* eslint-enable */

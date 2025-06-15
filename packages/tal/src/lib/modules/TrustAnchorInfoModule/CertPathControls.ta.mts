@@ -19,7 +19,6 @@ import { CertPolicyFlags, _decode_CertPolicyFlags, _encode_CertPolicyFlags } fro
 import { NameConstraintsSyntax, _decode_NameConstraintsSyntax, _encode_NameConstraintsSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION CertPathControls */
 /**
  * @summary CertPathControls
  * @description
@@ -97,9 +96,7 @@ class CertPathControls {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertPathControls */
 /**
  * @summary The Leading Root Component Types of CertPathControls
  * @description
@@ -117,9 +114,7 @@ const _root_component_type_list_1_spec_for_CertPathControls: $.ComponentSpec[] =
     new $.ComponentSpec("nameConstr", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("pathLenConstraint", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertPathControls */
 /**
  * @summary The Trailing Root Component Types of CertPathControls
  * @description
@@ -132,9 +127,7 @@ export
 const _root_component_type_list_2_spec_for_CertPathControls: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertPathControls */
 /**
  * @summary The Extension Addition Component Types of CertPathControls
  * @description
@@ -147,13 +140,9 @@ export
 const _extension_additions_list_spec_for_CertPathControls: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertPathControls */
 let _cached_decoder_for_CertPathControls: $.ASN1Decoder<CertPathControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertPathControls */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertPathControls
  * @function
@@ -198,13 +187,9 @@ function _decode_CertPathControls (el: _Element) {
 }; }
     return _cached_decoder_for_CertPathControls(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertPathControls */
 let _cached_encoder_for_CertPathControls: $.ASN1Encoder<CertPathControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertPathControls */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertPathControls */
 /**
  * @summary Encodes a(n) CertPathControls into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ function _encode_CertPathControls (value: CertPathControls, elGetter: $.ASN1Enco
     return _cached_encoder_for_CertPathControls(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertPathControls */
 
 /* eslint-enable */

@@ -27,7 +27,6 @@ import {
     _encode_DLExpansionProhibited,
 } from '../MTSAbstractService/DLExpansionProhibited.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_expansion_prohibited */
 /**
  * @summary dl_expansion_prohibited
  * @description
@@ -66,6 +65,5 @@ export const dl_expansion_prohibited: EXTENSION<DLExpansionProhibited> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_expansion_prohibited */
 
 /* eslint-enable */

@@ -12,13 +12,12 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ServiceAffectingErrorParameter */
+
 export enum _enum_for_ServiceAffectingErrorParameter {
     affectingExistingService = 0,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ServiceAffectingErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION ServiceAffectingErrorParameter */
+
 /**
  * @summary ServiceAffectingErrorParameter
  * @description
@@ -33,31 +32,27 @@ export enum _enum_for_ServiceAffectingErrorParameter {
 export type ServiceAffectingErrorParameter =
     | _enum_for_ServiceAffectingErrorParameter
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION ServiceAffectingErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION ServiceAffectingErrorParameter_affectingExistingService */
+
 /**
  * @summary ServiceAffectingErrorParameter_affectingExistingService
  * @constant
  * @type {number}
  */
 export const ServiceAffectingErrorParameter_affectingExistingService: ServiceAffectingErrorParameter = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ServiceAffectingErrorParameter_affectingExistingService */
 
-/* START_OF_SYMBOL_DEFINITION affectingExistingService */
+
 /**
  * @summary affectingExistingService
  * @constant
  * @type {number}
  */
 export const affectingExistingService: ServiceAffectingErrorParameter = ServiceAffectingErrorParameter_affectingExistingService; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION affectingExistingService */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceAffectingErrorParameter */
+
 let _cached_decoder_for_ServiceAffectingErrorParameter: $.ASN1Decoder<ServiceAffectingErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceAffectingErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceAffectingErrorParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceAffectingErrorParameter
  * @function
@@ -71,13 +66,11 @@ export function _decode_ServiceAffectingErrorParameter(el: _Element) {
     }
     return _cached_decoder_for_ServiceAffectingErrorParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceAffectingErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceAffectingErrorParameter */
+
 let _cached_encoder_for_ServiceAffectingErrorParameter: $.ASN1Encoder<ServiceAffectingErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceAffectingErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceAffectingErrorParameter */
+
 /**
  * @summary Encodes a(n) ServiceAffectingErrorParameter into an ASN.1 Element.
  * @function
@@ -96,6 +89,5 @@ export function _encode_ServiceAffectingErrorParameter(
     return _cached_encoder_for_ServiceAffectingErrorParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceAffectingErrorParameter */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_AttributeOperations,
     _encode_AttributeOperations,
 } from '../Pbact-access/AttributeOperations.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeSel_attSelect_allAttr */
+
 /**
  * @summary AttributeSel_attSelect_allAttr
  * @description
@@ -68,9 +68,8 @@ export class AttributeSel_attSelect_allAttr {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeSel_attSelect_allAttr */
+
 /**
  * @summary The Leading Root Component Types of AttributeSel_attSelect_allAttr
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_AttributeSel_attSelect_allAttr
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeSel_attSelect_allAttr */
+
 /**
  * @summary The Trailing Root Component Types of AttributeSel_attSelect_allAttr
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_AttributeSel_attSelect_allAttr
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeSel_attSelect_allAttr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeSel_attSelect_allAttr */
+
 /**
  * @summary The Extension Addition Component Types of AttributeSel_attSelect_allAttr
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_AttributeSel_attSelect_allAttr
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeSel_attSelect_allAttr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSel_attSelect_allAttr */
+
 let _cached_decoder_for_AttributeSel_attSelect_allAttr: $.ASN1Decoder<AttributeSel_attSelect_allAttr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeSel_attSelect_allAttr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeSel_attSelect_allAttr
  * @function
@@ -161,13 +156,11 @@ export function _decode_AttributeSel_attSelect_allAttr(el: _Element) {
     }
     return _cached_decoder_for_AttributeSel_attSelect_allAttr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSel_attSelect_allAttr */
+
 let _cached_encoder_for_AttributeSel_attSelect_allAttr: $.ASN1Encoder<AttributeSel_attSelect_allAttr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSel_attSelect_allAttr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeSel_attSelect_allAttr */
+
 /**
  * @summary Encodes a(n) AttributeSel_attSelect_allAttr into an ASN.1 Element.
  * @function
@@ -207,6 +200,5 @@ export function _encode_AttributeSel_attSelect_allAttr(
     return _cached_encoder_for_AttributeSel_attSelect_allAttr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeSel_attSelect_allAttr */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_ArcTime,
     _encode_ArcTime,
 } from '../M3100ASN1TypeModule4/ArcTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ArcDefaultNALMCDInterval */
+
 /**
  * @summary ArcDefaultNALMCDInterval
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ArcDefaultNALMCDInterval = ArcTime; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ArcDefaultNALMCDInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcDefaultNALMCDInterval */
+
 let _cached_decoder_for_ArcDefaultNALMCDInterval: $.ASN1Decoder<ArcDefaultNALMCDInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcDefaultNALMCDInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArcDefaultNALMCDInterval */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArcDefaultNALMCDInterval
  * @function
@@ -46,13 +44,11 @@ export function _decode_ArcDefaultNALMCDInterval(el: _Element) {
     }
     return _cached_decoder_for_ArcDefaultNALMCDInterval(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArcDefaultNALMCDInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcDefaultNALMCDInterval */
+
 let _cached_encoder_for_ArcDefaultNALMCDInterval: $.ASN1Encoder<ArcDefaultNALMCDInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcDefaultNALMCDInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArcDefaultNALMCDInterval */
+
 /**
  * @summary Encodes a(n) ArcDefaultNALMCDInterval into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_ArcDefaultNALMCDInterval(
     return _cached_encoder_for_ArcDefaultNALMCDInterval(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArcDefaultNALMCDInterval */
 
 /* eslint-enable */

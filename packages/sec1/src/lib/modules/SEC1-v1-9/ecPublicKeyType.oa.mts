@@ -12,7 +12,6 @@ import {
 import { id_ecPublicKey } from "../SEC1-v1-9/id-ecPublicKey.va.mjs";
 import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ecPublicKeyType */
 /**
  * @summary ecPublicKeyType
  * @description
@@ -41,6 +40,5 @@ const ecPublicKeyType: ALGORITHM<ECDomainParameters> = {
     "&id": id_ecPublicKey /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecPublicKeyType */
 
 /* eslint-enable */

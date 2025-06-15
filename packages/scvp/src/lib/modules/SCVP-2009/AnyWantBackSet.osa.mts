@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 import { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION AnyWantBackSet */
 /**
  * @summary AnyWantBackSet
  * @description
@@ -27,6 +26,5 @@ import { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa.mjs
  *
  */
 export const AnyWantBackSet: WANT_BACK<any>[] = [swb_relayed_responses];
-/* END_OF_SYMBOL_DEFINITION AnyWantBackSet */
 
 /* eslint-enable */

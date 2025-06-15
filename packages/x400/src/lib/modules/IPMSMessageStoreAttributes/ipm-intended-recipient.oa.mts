@@ -26,7 +26,6 @@ import { id_nat_ipm_intended_recipient } from '../IPMSObjectIdentifiers/id-nat-i
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ipm_intended_recipient */
 /**
  * @summary ipm_intended_recipient
  * @description
@@ -67,6 +66,5 @@ export const ipm_intended_recipient: X413ATTRIBUTE<IPMIntendedRecipientField> = 
     '&id': id_nat_ipm_intended_recipient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_intended_recipient */
 
 /* eslint-enable */

@@ -9,7 +9,6 @@ import {
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
 import { id_not_contextList } from "../SelectedAttributeTypes/id-not-contextList.va.mjs";
-/* START_OF_SYMBOL_DEFINITION contextList */
 /**
  * @summary contextList
  * @description
@@ -43,6 +42,5 @@ export const contextList: ATTRIBUTE<ContextAssertion> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contextList */
 
 /* eslint-enable */

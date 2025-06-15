@@ -11,7 +11,7 @@ import {
     _decode_SecurityPolicyName,
     _encode_SecurityPolicyName,
 } from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EquivalentPolicy */
+
 /**
  * @summary EquivalentPolicy
  * @description
@@ -61,9 +61,8 @@ export class EquivalentPolicy {
         return new EquivalentPolicy(_o.securityPolicyId, _o.securityPolicyName);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EquivalentPolicy */
+
 /**
  * @summary The Leading Root Component Types of EquivalentPolicy
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_EquivalentPolicy: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EquivalentPolicy */
+
 /**
  * @summary The Trailing Root Component Types of EquivalentPolicy
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_EquivalentPolicy: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EquivalentPolicy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EquivalentPolicy */
+
 /**
  * @summary The Extension Addition Component Types of EquivalentPolicy
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_EquivalentPolicy: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_EquivalentPolicy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentPolicy */
+
 let _cached_decoder_for_EquivalentPolicy: $.ASN1Decoder<EquivalentPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EquivalentPolicy */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EquivalentPolicy
  * @function
@@ -160,13 +155,11 @@ export function _decode_EquivalentPolicy(el: _Element) {
     }
     return _cached_decoder_for_EquivalentPolicy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentPolicy */
+
 let _cached_encoder_for_EquivalentPolicy: $.ASN1Encoder<EquivalentPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EquivalentPolicy */
+
 /**
  * @summary Encodes a(n) EquivalentPolicy into an ASN.1 Element.
  * @function
@@ -203,6 +196,5 @@ export function _encode_EquivalentPolicy(
     return _cached_encoder_for_EquivalentPolicy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EquivalentPolicy */
 
 /* eslint-enable */

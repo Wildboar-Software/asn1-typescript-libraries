@@ -52,7 +52,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateAssertion */
 /**
  * @summary CertificateAssertion
  * @description
@@ -200,9 +199,7 @@ export class CertificateAssertion {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateAssertion */
 /**
  * @summary The Leading Root Component Types of CertificateAssertion
  * @description
@@ -304,9 +301,7 @@ export const _root_component_type_list_1_spec_for_CertificateAssertion: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateAssertion */
 /**
  * @summary The Trailing Root Component Types of CertificateAssertion
  * @description
@@ -316,9 +311,7 @@ export const _root_component_type_list_1_spec_for_CertificateAssertion: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificateAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateAssertion */
 /**
  * @summary The Extension Addition Component Types of CertificateAssertion
  * @description
@@ -328,13 +321,9 @@ export const _root_component_type_list_2_spec_for_CertificateAssertion: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificateAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateAssertion */
 let _cached_decoder_for_CertificateAssertion: $.ASN1Decoder<CertificateAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateAssertion
  * @function
@@ -457,13 +446,9 @@ export function _decode_CertificateAssertion(el: _Element) {
     }
     return _cached_decoder_for_CertificateAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateAssertion */
 let _cached_encoder_for_CertificateAssertion: $.ASN1Encoder<CertificateAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateAssertion */
 /**
  * @summary Encodes a(n) CertificateAssertion into an ASN.1 Element.
  * @function
@@ -603,6 +588,5 @@ export function _encode_CertificateAssertion(
     return _cached_encoder_for_CertificateAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateAssertion */
 
 /* eslint-enable */

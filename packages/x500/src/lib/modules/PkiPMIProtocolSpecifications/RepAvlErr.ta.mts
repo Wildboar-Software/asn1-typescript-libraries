@@ -11,7 +11,6 @@ import {
     _encode_AVMP_error,
     _enum_for_AVMP_error,
 } from "../PkiPMIProtocolSpecifications/AVMP-error.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RepAvlErr */
 /**
  * @summary RepAvlErr
  * @description
@@ -68,9 +67,7 @@ export class RepAvlErr {
 
     public static _enum_for_notOK = _enum_for_AVMP_error;
 }
-/* END_OF_SYMBOL_DEFINITION RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RepAvlErr */
 /**
  * @summary The Leading Root Component Types of RepAvlErr
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_RepAvlErr: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RepAvlErr */
 /**
  * @summary The Trailing Root Component Types of RepAvlErr
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_RepAvlErr: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RepAvlErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RepAvlErr */
 /**
  * @summary The Extension Addition Component Types of RepAvlErr
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_RepAvlErr: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_RepAvlErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepAvlErr */
 let _cached_decoder_for_RepAvlErr: $.ASN1Decoder<RepAvlErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RepAvlErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) RepAvlErr
  * @function
@@ -144,13 +133,9 @@ export function _decode_RepAvlErr(el: _Element) {
     }
     return _cached_decoder_for_RepAvlErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepAvlErr */
 let _cached_encoder_for_RepAvlErr: $.ASN1Encoder<RepAvlErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RepAvlErr */
 /**
  * @summary Encodes a(n) RepAvlErr into an ASN.1 Element.
  * @function
@@ -186,6 +171,5 @@ export function _encode_RepAvlErr(
     return _cached_encoder_for_RepAvlErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RepAvlErr */
 
 /* eslint-enable */

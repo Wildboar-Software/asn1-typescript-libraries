@@ -9,7 +9,7 @@ import {
     _decode_DHPublicKey,
     _encode_DHPublicKey,
 } from "../PKIXAlgs-2009/DHPublicKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_originator_dh */
+
 /**
  * @summary pk_originator_dh
  * @description
@@ -48,6 +48,5 @@ export const pk_originator_dh: PUBLIC_KEY<DHPublicKey> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_originator_dh */
 
 /* eslint-enable */

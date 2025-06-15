@@ -6,7 +6,6 @@ import {
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION substringAssertion */
 /**
  * @summary substringAssertion
  * @description
@@ -36,6 +35,5 @@ export const substringAssertion: SYNTAX_NAME<SubstringAssertion> = {
     "&id": id_lsx_substringAssertion /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION substringAssertion */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_RelatedMessageReference,
     _encode_RelatedMessageReference,
 } from '../EDIMSInformationObjects/RelatedMessageReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedMessagesField */
 /**
  * @summary RelatedMessagesField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RelatedMessagesField = RelatedMessageReference[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RelatedMessagesField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedMessagesField */
 let _cached_decoder_for_RelatedMessagesField: $.ASN1Decoder<RelatedMessagesField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedMessagesField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedMessagesField */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedMessagesField
  * @function
@@ -48,13 +43,9 @@ export function _decode_RelatedMessagesField(el: _Element) {
     }
     return _cached_decoder_for_RelatedMessagesField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedMessagesField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedMessagesField */
 let _cached_encoder_for_RelatedMessagesField: $.ASN1Encoder<RelatedMessagesField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedMessagesField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedMessagesField */
 /**
  * @summary Encodes a(n) RelatedMessagesField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RelatedMessagesField(
     return _cached_encoder_for_RelatedMessagesField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedMessagesField */
 
 /* eslint-enable */

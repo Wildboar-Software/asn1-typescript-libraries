@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { id_not_dSAProblem } from "../SelectedAttributeTypes/id-not-dSAProblem.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dSAProblem */
 /**
  * @summary dSAProblem
  * @description
@@ -43,6 +42,5 @@ export const dSAProblem: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dSAProblem */
 
 /* eslint-enable */

@@ -46,7 +46,7 @@ import {
     _decode_ReturnMode,
     _encode_ReturnMode,
 } from '../E-health-common/ReturnMode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION E_setupRequest */
+
 /**
  * @summary E_setupRequest
  * @description
@@ -188,9 +188,8 @@ export class E_setupRequest {
 
     public static _enum_for_returnMode = _enum_for_ReturnMode;
 }
-/* END_OF_SYMBOL_DEFINITION E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_setupRequest */
+
 /**
  * @summary The Leading Root Component Types of E_setupRequest
  * @description
@@ -264,9 +263,8 @@ export const _root_component_type_list_1_spec_for_E_setupRequest: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_setupRequest */
+
 /**
  * @summary The Trailing Root Component Types of E_setupRequest
  * @description
@@ -276,9 +274,8 @@ export const _root_component_type_list_1_spec_for_E_setupRequest: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_E_setupRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_setupRequest */
+
 /**
  * @summary The Extension Addition Component Types of E_setupRequest
  * @description
@@ -288,13 +285,11 @@ export const _root_component_type_list_2_spec_for_E_setupRequest: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_E_setupRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_setupRequest */
+
 let _cached_decoder_for_E_setupRequest: $.ASN1Decoder<E_setupRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_setupRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_setupRequest
  * @function
@@ -384,13 +379,11 @@ export function _decode_E_setupRequest(el: _Element) {
     }
     return _cached_decoder_for_E_setupRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_setupRequest */
+
 let _cached_encoder_for_E_setupRequest: $.ASN1Encoder<E_setupRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_setupRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_setupRequest */
+
 /**
  * @summary Encodes a(n) E_setupRequest into an ASN.1 Element.
  * @function
@@ -472,6 +465,5 @@ export function _encode_E_setupRequest(
     return _cached_encoder_for_E_setupRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_setupRequest */
 
 /* eslint-enable */

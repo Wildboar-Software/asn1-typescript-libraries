@@ -22,7 +22,6 @@ import {
     _decode_ServiceSpecificId,
     _encode_ServiceSpecificId,
 } from '../UsageMeteringFunction/ServiceSpecificId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProviderId */
 /**
  * @summary ProviderId
  * @description
@@ -43,13 +42,9 @@ export type ProviderId =
     | { textualName: GraphicString } /* CHOICE_ALT_ROOT */
     | { serviceSpecific: ServiceSpecificId } /* CHOICE_ALT_ROOT */
     | { unknown: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProviderId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProviderId */
 let _cached_decoder_for_ProviderId: $.ASN1Decoder<ProviderId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProviderId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProviderId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProviderId
  * @function
@@ -87,13 +82,9 @@ export function _decode_ProviderId(el: _Element) {
     }
     return _cached_decoder_for_ProviderId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProviderId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProviderId */
 let _cached_encoder_for_ProviderId: $.ASN1Encoder<ProviderId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProviderId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProviderId */
 /**
  * @summary Encodes a(n) ProviderId into an ASN.1 Element.
  * @function
@@ -139,6 +130,5 @@ export function _encode_ProviderId(
     return _cached_encoder_for_ProviderId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProviderId */
 
 /* eslint-enable */

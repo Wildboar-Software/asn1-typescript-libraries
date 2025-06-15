@@ -15,7 +15,6 @@ import {
     _decode_BodyPartSignatureVerification_Item,
     _encode_BodyPartSignatureVerification_Item,
 } from '../IPMSMessageStoreAttributes/BodyPartSignatureVerification-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartSignatureVerification */
 /**
  * @summary BodyPartSignatureVerification
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type BodyPartSignatureVerification = BodyPartSignatureVerification_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION BodyPartSignatureVerification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSignatureVerification */
 let _cached_decoder_for_BodyPartSignatureVerification: $.ASN1Decoder<BodyPartSignatureVerification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSignatureVerification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartSignatureVerification */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartSignatureVerification
  * @function
@@ -51,13 +46,9 @@ export function _decode_BodyPartSignatureVerification(el: _Element) {
     }
     return _cached_decoder_for_BodyPartSignatureVerification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartSignatureVerification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSignatureVerification */
 let _cached_encoder_for_BodyPartSignatureVerification: $.ASN1Encoder<BodyPartSignatureVerification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSignatureVerification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartSignatureVerification */
 /**
  * @summary Encodes a(n) BodyPartSignatureVerification into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_BodyPartSignatureVerification(
     return _cached_encoder_for_BodyPartSignatureVerification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartSignatureVerification */
 
 /* eslint-enable */

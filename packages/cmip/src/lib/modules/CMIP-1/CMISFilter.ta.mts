@@ -15,7 +15,7 @@ import {
   _decode_FilterItem,
   _encode_FilterItem,
 } from '../CMIP-1/FilterItem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CMISFilter */
+
 // TODO: CHECK_RECURSIVE_DEFINITION
 /**
  * @summary CMISFilter
@@ -37,13 +37,11 @@ export type CMISFilter =
   | { and: CMISFilter[] } /* CHOICE_ALT_ROOT */
   | { or: CMISFilter[] } /* CHOICE_ALT_ROOT */
   | { not: CMISFilter } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CMISFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMISFilter */
+
 let _cached_decoder_for_CMISFilter: $.ASN1Decoder<CMISFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMISFilter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CMISFilter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CMISFilter
  * @function
@@ -77,13 +75,11 @@ export function _decode_CMISFilter(el: _Element) {
   }
   return _cached_decoder_for_CMISFilter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CMISFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMISFilter */
+
 let _cached_encoder_for_CMISFilter: $.ASN1Encoder<CMISFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMISFilter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CMISFilter */
+
 /**
  * @summary Encodes a(n) CMISFilter into an ASN.1 Element.
  * @function
@@ -129,6 +125,5 @@ export function _encode_CMISFilter(
   return _cached_encoder_for_CMISFilter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CMISFilter */
 
 /* eslint-enable */

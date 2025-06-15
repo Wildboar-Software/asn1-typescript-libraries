@@ -15,7 +15,6 @@ import {
     _decode_ActionFilterList_Item,
     _encode_ActionFilterList_Item,
 } from '../AccessControl-ASN1Module/ActionFilterList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActionFilterList */
 /**
  * @summary ActionFilterList
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type ActionFilterList = ActionFilterList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ActionFilterList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionFilterList */
 let _cached_decoder_for_ActionFilterList: $.ASN1Decoder<ActionFilterList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionFilterList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionFilterList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionFilterList
  * @function
@@ -51,13 +46,9 @@ export function _decode_ActionFilterList(el: _Element) {
     }
     return _cached_decoder_for_ActionFilterList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionFilterList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionFilterList */
 let _cached_encoder_for_ActionFilterList: $.ASN1Encoder<ActionFilterList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionFilterList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionFilterList */
 /**
  * @summary Encodes a(n) ActionFilterList into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_ActionFilterList(
     return _cached_encoder_for_ActionFilterList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionFilterList */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_UnprotectedAttributes,
     _encode_UnprotectedAttributes,
 } from "../CryptographicMessageSyntax/UnprotectedAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptedData */
+
 /**
  * @summary EncryptedData
  * @description
@@ -81,9 +81,8 @@ export class EncryptedData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedData */
+
 /**
  * @summary The Leading Root Component Types of EncryptedData
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_EncryptedData: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedData */
+
 /**
  * @summary The Trailing Root Component Types of EncryptedData
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_EncryptedData: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedData */
+
 /**
  * @summary The Extension Addition Component Types of EncryptedData
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_EncryptedData: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedData */
+
 let _cached_decoder_for_EncryptedData: $.ASN1Decoder<EncryptedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedData
  * @function
@@ -194,13 +189,11 @@ export function _decode_EncryptedData(el: _Element) {
     }
     return _cached_decoder_for_EncryptedData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedData */
+
 let _cached_encoder_for_EncryptedData: $.ASN1Encoder<EncryptedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedData */
+
 /**
  * @summary Encodes a(n) EncryptedData into an ASN.1 Element.
  * @function
@@ -243,6 +236,5 @@ export function _encode_EncryptedData(
     return _cached_encoder_for_EncryptedData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedData */
 
 /* eslint-enable */

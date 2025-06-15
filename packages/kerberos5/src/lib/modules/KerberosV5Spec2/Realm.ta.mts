@@ -15,7 +15,7 @@ import {
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Realm */
+
 /**
  * @summary Realm
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Realm = KerberosString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Realm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Realm */
+
 let _cached_decoder_for_Realm: $.ASN1Decoder<Realm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Realm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Realm */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Realm
  * @function
@@ -46,13 +44,11 @@ export function _decode_Realm(el: _Element) {
   }
   return _cached_decoder_for_Realm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Realm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Realm */
+
 let _cached_encoder_for_Realm: $.ASN1Encoder<Realm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Realm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Realm */
+
 /**
  * @summary Encodes a(n) Realm into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_Realm(value: Realm, elGetter: $.ASN1Encoder<Realm>) {
   return _cached_encoder_for_Realm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Realm */
 
 /* eslint-enable */

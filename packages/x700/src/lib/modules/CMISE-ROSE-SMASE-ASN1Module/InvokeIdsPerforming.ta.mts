@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InvokeIdsPerforming */
 /**
  * @summary InvokeIdsPerforming
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type InvokeIdsPerforming = INTEGER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION InvokeIdsPerforming */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeIdsPerforming */
 let _cached_decoder_for_InvokeIdsPerforming: $.ASN1Decoder<InvokeIdsPerforming> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeIdsPerforming */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvokeIdsPerforming */
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeIdsPerforming
  * @function
@@ -45,13 +40,9 @@ export function _decode_InvokeIdsPerforming(el: _Element) {
     }
     return _cached_decoder_for_InvokeIdsPerforming(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvokeIdsPerforming */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeIdsPerforming */
 let _cached_encoder_for_InvokeIdsPerforming: $.ASN1Encoder<InvokeIdsPerforming> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeIdsPerforming */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvokeIdsPerforming */
 /**
  * @summary Encodes a(n) InvokeIdsPerforming into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_InvokeIdsPerforming(
     return _cached_encoder_for_InvokeIdsPerforming(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvokeIdsPerforming */
 
 /* eslint-enable */

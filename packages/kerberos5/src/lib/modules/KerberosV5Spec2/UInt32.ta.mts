@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UInt32 */
+
 /**
  * @summary UInt32
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type UInt32 = INTEGER;
-/* END_OF_SYMBOL_DEFINITION UInt32 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UInt32 */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UInt32 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UInt32 */
+
+
 export const _decode_UInt32 = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_UInt32 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UInt32 */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UInt32 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UInt32 */
+
+
 export const _encode_UInt32 = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_UInt32 */
 
 /* eslint-enable */

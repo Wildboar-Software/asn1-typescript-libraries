@@ -11,7 +11,6 @@ import {
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
 } from "../OSIProtocolSpecification/ARU-PPDU.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PresentationAbort */
 /**
  * @summary PresentationAbort
  * @description
@@ -27,13 +26,9 @@ import {
 export type PresentationAbort =
     | { aru_ppdu: ARU_PPDU } /* CHOICE_ALT_ROOT */
     | { arp_ppdu: ARP_PPDU } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PresentationAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAbort */
 let _cached_decoder_for_PresentationAbort: $.ASN1Decoder<PresentationAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PresentationAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) PresentationAbort
  * @function
@@ -51,13 +46,9 @@ export function _decode_PresentationAbort(el: _Element) {
     }
     return _cached_decoder_for_PresentationAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PresentationAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PresentationAbort */
 let _cached_encoder_for_PresentationAbort: $.ASN1Encoder<PresentationAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PresentationAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PresentationAbort */
 /**
  * @summary Encodes a(n) PresentationAbort into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_PresentationAbort(
     return _cached_encoder_for_PresentationAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PresentationAbort */
 
 /* eslint-enable */

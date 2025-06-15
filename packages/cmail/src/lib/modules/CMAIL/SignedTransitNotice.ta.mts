@@ -15,7 +15,7 @@ import {
   _decode_SignedTransitNoticeType,
   _encode_SignedTransitNoticeType,
 } from '../CMAIL/SignedTransitNoticeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignedTransitNotice */
+
 /**
  * @summary SignedTransitNotice
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SignedTransitNotice = SignedTransitNoticeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignedTransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedTransitNotice */
+
 let _cached_decoder_for_SignedTransitNotice: $.ASN1Decoder<SignedTransitNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedTransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedTransitNotice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedTransitNotice
  * @function
@@ -46,13 +44,11 @@ export function _decode_SignedTransitNotice(el: _Element) {
   }
   return _cached_decoder_for_SignedTransitNotice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedTransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedTransitNotice */
+
 let _cached_encoder_for_SignedTransitNotice: $.ASN1Encoder<SignedTransitNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedTransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedTransitNotice */
+
 /**
  * @summary Encodes a(n) SignedTransitNotice into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_SignedTransitNotice(
   return _cached_encoder_for_SignedTransitNotice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedTransitNotice */
 
 /* eslint-enable */

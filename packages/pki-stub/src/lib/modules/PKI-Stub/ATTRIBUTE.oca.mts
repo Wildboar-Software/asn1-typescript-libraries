@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ATTRIBUTE */
 /**
  * @summary ATTRIBUTE
  * @description
@@ -63,6 +62,5 @@ export interface ATTRIBUTE {
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION ATTRIBUTE */
 
 /* eslint-enable */

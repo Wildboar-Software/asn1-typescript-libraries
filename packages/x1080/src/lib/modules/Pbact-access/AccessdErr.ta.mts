@@ -22,7 +22,7 @@ import {
     _decode_PbactErr,
     _encode_PbactErr,
 } from '../Pbact-access/PbactErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AccessdErr */
+
 /**
  * @summary AccessdErr
  * @description
@@ -40,13 +40,11 @@ export type AccessdErr =
     | { cmsErr: CmsErrorCode } /* CHOICE_ALT_ROOT */
     | { pbactErr: PbactErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AccessdErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessdErr */
+
 let _cached_decoder_for_AccessdErr: $.ASN1Decoder<AccessdErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessdErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessdErr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessdErr
  * @function
@@ -72,13 +70,11 @@ export function _decode_AccessdErr(el: _Element) {
     }
     return _cached_decoder_for_AccessdErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessdErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessdErr */
+
 let _cached_encoder_for_AccessdErr: $.ASN1Encoder<AccessdErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessdErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessdErr */
+
 /**
  * @summary Encodes a(n) AccessdErr into an ASN.1 Element.
  * @function
@@ -112,6 +108,5 @@ export function _encode_AccessdErr(
     return _cached_encoder_for_AccessdErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessdErr */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MaxAperature */
 /**
  * @summary MaxAperature
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MaxAperature = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MaxAperature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxAperature */
 let _cached_decoder_for_MaxAperature: $.ASN1Decoder<MaxAperature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxAperature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaxAperature */
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxAperature
  * @function
@@ -46,13 +41,9 @@ export function _decode_MaxAperature(el: _Element) {
     }
     return _cached_decoder_for_MaxAperature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaxAperature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxAperature */
 let _cached_encoder_for_MaxAperature: $.ASN1Encoder<MaxAperature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxAperature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaxAperature */
 /**
  * @summary Encodes a(n) MaxAperature into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MaxAperature(
     return _cached_encoder_for_MaxAperature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaxAperature */
 
 /* eslint-enable */

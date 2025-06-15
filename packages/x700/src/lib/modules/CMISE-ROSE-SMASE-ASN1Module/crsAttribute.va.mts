@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION crsAttribute */
 /**
  * @summary crsAttribute
  * @description
@@ -29,6 +28,5 @@ export const crsAttribute: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* smi */ 3, /* part9 */ 9, /* attribute */ 7],
     joint_iso_ccitt
 );
-/* END_OF_SYMBOL_DEFINITION crsAttribute */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AuditInfoSet */
 /**
  * @summary AuditInfoSet
  * @description
@@ -26,6 +25,5 @@ import { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca.mjs';
  *
  */
 export const AuditInfoSet: UMF_AUDIT[] = [];
-/* END_OF_SYMBOL_DEFINITION AuditInfoSet */
 
 /* eslint-enable */

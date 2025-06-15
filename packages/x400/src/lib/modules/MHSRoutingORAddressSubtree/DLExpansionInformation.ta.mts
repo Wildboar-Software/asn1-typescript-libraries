@@ -22,7 +22,6 @@ import {
     _decode_MHSDistributionListName,
     _encode_MHSDistributionListName,
 } from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DLExpansionInformation */
 /**
  * @summary DLExpansionInformation
  * @description
@@ -93,9 +92,7 @@ export class DLExpansionInformation {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DLExpansionInformation */
 /**
  * @summary The Leading Root Component Types of DLExpansionInformation
  * @description
@@ -127,9 +124,7 @@ export const _root_component_type_list_1_spec_for_DLExpansionInformation: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DLExpansionInformation */
 /**
  * @summary The Trailing Root Component Types of DLExpansionInformation
  * @description
@@ -139,9 +134,7 @@ export const _root_component_type_list_1_spec_for_DLExpansionInformation: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DLExpansionInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DLExpansionInformation */
 /**
  * @summary The Extension Addition Component Types of DLExpansionInformation
  * @description
@@ -151,13 +144,9 @@ export const _root_component_type_list_2_spec_for_DLExpansionInformation: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_DLExpansionInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExpansionInformation */
 let _cached_decoder_for_DLExpansionInformation: $.ASN1Decoder<DLExpansionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLExpansionInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLExpansionInformation
  * @function
@@ -215,13 +204,9 @@ export function _decode_DLExpansionInformation(el: _Element) {
     }
     return _cached_decoder_for_DLExpansionInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExpansionInformation */
 let _cached_encoder_for_DLExpansionInformation: $.ASN1Encoder<DLExpansionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExpansionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLExpansionInformation */
 /**
  * @summary Encodes a(n) DLExpansionInformation into an ASN.1 Element.
  * @function
@@ -279,6 +264,5 @@ export function _encode_DLExpansionInformation(
     return _cached_encoder_for_DLExpansionInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLExpansionInformation */
 
 /* eslint-enable */

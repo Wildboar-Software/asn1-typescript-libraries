@@ -27,7 +27,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectionTestResults */
 /**
  * @summary ConnectionTestResults
  * @description
@@ -96,9 +95,7 @@ export class ConnectionTestResults {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConnectionTestResults */
 /**
  * @summary The Leading Root Component Types of ConnectionTestResults
  * @description
@@ -137,9 +134,7 @@ export const _root_component_type_list_1_spec_for_ConnectionTestResults: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConnectionTestResults */
 /**
  * @summary The Trailing Root Component Types of ConnectionTestResults
  * @description
@@ -149,9 +144,7 @@ export const _root_component_type_list_1_spec_for_ConnectionTestResults: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ConnectionTestResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConnectionTestResults */
 /**
  * @summary The Extension Addition Component Types of ConnectionTestResults
  * @description
@@ -161,13 +154,9 @@ export const _root_component_type_list_2_spec_for_ConnectionTestResults: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_ConnectionTestResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionTestResults */
 let _cached_decoder_for_ConnectionTestResults: $.ASN1Decoder<ConnectionTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectionTestResults
  * @function
@@ -227,13 +216,9 @@ export function _decode_ConnectionTestResults(el: _Element) {
     }
     return _cached_decoder_for_ConnectionTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionTestResults */
 let _cached_encoder_for_ConnectionTestResults: $.ASN1Encoder<ConnectionTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionTestResults */
 /**
  * @summary Encodes a(n) ConnectionTestResults into an ASN.1 Element.
  * @function
@@ -292,6 +277,5 @@ export function _encode_ConnectionTestResults(
     return _cached_encoder_for_ConnectionTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionTestResults */
 
 /* eslint-enable */

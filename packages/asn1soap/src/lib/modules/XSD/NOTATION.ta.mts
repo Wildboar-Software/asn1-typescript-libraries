@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NOTATION */
+
 /**
  * @summary NOTATION
  * @description
@@ -23,13 +23,11 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * ```
  */
 export type NOTATION = QName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NOTATION */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NOTATION */
+
 let _cached_decoder_for_NOTATION: $.ASN1Decoder<NOTATION> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NOTATION */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NOTATION */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NOTATION
  * @function
@@ -42,13 +40,11 @@ export function _decode_NOTATION(el: _Element) {
   }
   return _cached_decoder_for_NOTATION(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NOTATION */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NOTATION */
+
 let _cached_encoder_for_NOTATION: $.ASN1Encoder<NOTATION> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NOTATION */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NOTATION */
+
 /**
  * @summary Encodes a(n) NOTATION into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_NOTATION(
   return _cached_encoder_for_NOTATION(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NOTATION */
 
 /* eslint-enable */

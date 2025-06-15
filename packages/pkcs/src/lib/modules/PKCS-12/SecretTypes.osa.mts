@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SecretTypes */
+
 /**
  * @summary SecretTypes
  * @description
@@ -18,6 +18,5 @@ import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
  *
  */
 export const SecretTypes: BAG_TYPE<any>[] = [];
-/* END_OF_SYMBOL_DEFINITION SecretTypes */
 
 /* eslint-enable */

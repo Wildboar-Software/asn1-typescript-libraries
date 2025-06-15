@@ -15,7 +15,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from '../MTSAbstractService/PDSParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryPersonalName */
 /**
  * @summary PhysicalDeliveryPersonalName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PhysicalDeliveryPersonalName = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryPersonalName */
 let _cached_decoder_for_PhysicalDeliveryPersonalName: $.ASN1Decoder<PhysicalDeliveryPersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryPersonalName */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryPersonalName
  * @function
@@ -46,13 +41,9 @@ export function _decode_PhysicalDeliveryPersonalName(el: _Element) {
     }
     return _cached_decoder_for_PhysicalDeliveryPersonalName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryPersonalName */
 let _cached_encoder_for_PhysicalDeliveryPersonalName: $.ASN1Encoder<PhysicalDeliveryPersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryPersonalName */
 /**
  * @summary Encodes a(n) PhysicalDeliveryPersonalName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PhysicalDeliveryPersonalName(
     return _cached_encoder_for_PhysicalDeliveryPersonalName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryPersonalName */
 
 /* eslint-enable */

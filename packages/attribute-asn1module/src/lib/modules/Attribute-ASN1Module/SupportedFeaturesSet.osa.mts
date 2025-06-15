@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedFeaturesSet */
 /**
  * @summary SupportedFeaturesSet
  * @description
@@ -27,6 +26,5 @@ import { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEAT
  */
 export
 const SupportedFeaturesSet: (DMI_SUPPORTEDFEATURES)[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedFeaturesSet */
 
 /* eslint-enable */

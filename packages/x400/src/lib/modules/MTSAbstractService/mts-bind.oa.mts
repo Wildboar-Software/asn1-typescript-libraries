@@ -29,7 +29,6 @@ import {
 } from '../MTSAbstractService/MTSBindResult.ta.mjs';
 import { mts_bind_error } from '../MTSAbstractService/mts-bind-error.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_bind */
 /**
  * @summary mts_bind
  * @description
@@ -68,6 +67,5 @@ export const mts_bind: ABSTRACT_OPERATION<MTSBindArgument, MTSBindResult> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mts_bind */
 
 /* eslint-enable */

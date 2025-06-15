@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Extension_Attribute_identifier */
+
 /**
  * @summary Extension_Attribute_identifier
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Extension_Attribute_identifier = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION Extension_Attribute_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension_Attribute_identifier */
+
 let _cached_decoder_for_Extension_Attribute_identifier: $.ASN1Decoder<Extension_Attribute_identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension_Attribute_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Extension_Attribute_identifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Extension_Attribute_identifier
  * @function
@@ -44,13 +42,11 @@ export function _decode_Extension_Attribute_identifier(el: _Element) {
   }
   return _cached_decoder_for_Extension_Attribute_identifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Extension_Attribute_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Extension_Attribute_identifier */
+
 let _cached_encoder_for_Extension_Attribute_identifier: $.ASN1Encoder<Extension_Attribute_identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Extension_Attribute_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Extension_Attribute_identifier */
+
 /**
  * @summary Encodes a(n) Extension_Attribute_identifier into an ASN.1 Element.
  * @function
@@ -69,6 +65,5 @@ export function _encode_Extension_Attribute_identifier(
   return _cached_encoder_for_Extension_Attribute_identifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Extension_Attribute_identifier */
 
 /* eslint-enable */

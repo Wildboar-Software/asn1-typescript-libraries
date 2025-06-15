@@ -15,7 +15,6 @@ import {
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Trace */
 /**
  * @summary Trace
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Trace = TraceInformation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Trace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Trace */
 let _cached_decoder_for_Trace: $.ASN1Decoder<Trace> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Trace */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Trace */
 /**
  * @summary Decodes an ASN.1 element into a(n) Trace
  * @function
@@ -46,13 +41,9 @@ export function _decode_Trace(el: _Element) {
     }
     return _cached_decoder_for_Trace(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Trace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Trace */
 let _cached_encoder_for_Trace: $.ASN1Encoder<Trace> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Trace */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Trace */
 /**
  * @summary Encodes a(n) Trace into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_Trace(value: Trace, elGetter: $.ASN1Encoder<Trace>) {
     return _cached_encoder_for_Trace(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Trace */
 
 /* eslint-enable */

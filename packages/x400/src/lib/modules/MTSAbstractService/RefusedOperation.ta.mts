@@ -20,7 +20,6 @@ import {
     _decode_RefusalReason,
     _encode_RefusalReason,
 } from '../MTSAbstractService/RefusalReason.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RefusedOperation */
 /**
  * @summary RefusedOperation
  * @description
@@ -72,9 +71,7 @@ export class RefusedOperation {
         return new RefusedOperation(_o.refused_argument, _o.refusal_reason);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RefusedOperation */
 /**
  * @summary The Leading Root Component Types of RefusedOperation
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_RefusedOperation: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RefusedOperation */
 /**
  * @summary The Trailing Root Component Types of RefusedOperation
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_RefusedOperation: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RefusedOperation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RefusedOperation */
 /**
  * @summary The Extension Addition Component Types of RefusedOperation
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_RefusedOperation: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_RefusedOperation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusedOperation */
 let _cached_decoder_for_RefusedOperation: $.ASN1Decoder<RefusedOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RefusedOperation */
 /**
  * @summary Decodes an ASN.1 element into a(n) RefusedOperation
  * @function
@@ -175,13 +164,9 @@ export function _decode_RefusedOperation(el: _Element) {
     }
     return _cached_decoder_for_RefusedOperation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusedOperation */
 let _cached_encoder_for_RefusedOperation: $.ASN1Encoder<RefusedOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusedOperation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RefusedOperation */
 /**
  * @summary Encodes a(n) RefusedOperation into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ export function _encode_RefusedOperation(
     return _cached_encoder_for_RefusedOperation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RefusedOperation */
 
 /* eslint-enable */

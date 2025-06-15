@@ -11,7 +11,7 @@ import {
     _encode_Content,
 } from "../CMSSigncryption/Content.ta.mjs";
 import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentInformation */
+
 /**
  * @summary ContentInformation
  * @description
@@ -61,9 +61,8 @@ export class ContentInformation {
         return new ContentInformation(_o.mode, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentInformation */
+
 /**
  * @summary The Leading Root Component Types of ContentInformation
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_ContentInformation: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentInformation */
+
 /**
  * @summary The Trailing Root Component Types of ContentInformation
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_ContentInformation: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ContentInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentInformation */
+
 /**
  * @summary The Extension Addition Component Types of ContentInformation
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_ContentInformation: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_ContentInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentInformation */
+
 let _cached_decoder_for_ContentInformation: $.ASN1Decoder<ContentInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentInformation
  * @function
@@ -160,13 +155,11 @@ export function _decode_ContentInformation(el: _Element) {
     }
     return _cached_decoder_for_ContentInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentInformation */
+
 let _cached_encoder_for_ContentInformation: $.ASN1Encoder<ContentInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentInformation */
+
 /**
  * @summary Encodes a(n) ContentInformation into an ASN.1 Element.
  * @function
@@ -197,6 +190,5 @@ export function _encode_ContentInformation(
     return _cached_encoder_for_ContentInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentInformation */
 
 /* eslint-enable */

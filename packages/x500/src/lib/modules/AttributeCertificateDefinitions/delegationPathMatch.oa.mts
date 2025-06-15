@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/DelMatchSyntax.ta.mjs";
 import { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION delegationPathMatch */
 /**
  * @summary delegationPathMatch
  * @description
@@ -34,6 +33,5 @@ export const delegationPathMatch: MATCHING_RULE<DelMatchSyntax> = {
     "&id": id_mr_delegationPathMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delegationPathMatch */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_SupportedProtocol,
     _encode_SupportedProtocol,
 } from '../NLM/SupportedProtocol.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SupportedProtocols */
+
 /**
  * @summary SupportedProtocols
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SupportedProtocols = SupportedProtocol[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedProtocols */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedProtocols */
+
 let _cached_decoder_for_SupportedProtocols: $.ASN1Decoder<SupportedProtocols> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedProtocols */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedProtocols */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedProtocols
  * @function
@@ -48,13 +46,11 @@ export function _decode_SupportedProtocols(el: _Element) {
     }
     return _cached_decoder_for_SupportedProtocols(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedProtocols */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedProtocols */
+
 let _cached_encoder_for_SupportedProtocols: $.ASN1Encoder<SupportedProtocols> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedProtocols */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedProtocols */
+
 /**
  * @summary Encodes a(n) SupportedProtocols into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SupportedProtocols(
     return _cached_encoder_for_SupportedProtocols(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedProtocols */
 
 /* eslint-enable */

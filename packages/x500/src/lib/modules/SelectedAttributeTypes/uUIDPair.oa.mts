@@ -10,7 +10,6 @@ import {
     _encode_UUIDPair,
 } from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
 import { uUIDPairMatch } from "../SelectedAttributeTypes/uUIDPairMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION uUIDPair */
 /**
  * @summary uUIDPair
  * @description
@@ -46,6 +45,5 @@ export const uUIDPair: ATTRIBUTE<UUIDPair> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uUIDPair */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlgorithmOutputBuffer_Item */
 /**
  * @summary AlgorithmOutputBuffer_Item
  * @description
@@ -72,9 +71,7 @@ export class AlgorithmOutputBuffer_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmOutputBuffer_Item */
 /**
  * @summary The Leading Root Component Types of AlgorithmOutputBuffer_Item
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_AlgorithmOutputBuffer_Item: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmOutputBuffer_Item */
 /**
  * @summary The Trailing Root Component Types of AlgorithmOutputBuffer_Item
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_AlgorithmOutputBuffer_Item: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AlgorithmOutputBuffer_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmOutputBuffer_Item */
 /**
  * @summary The Extension Addition Component Types of AlgorithmOutputBuffer_Item
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_AlgorithmOutputBuffer_Item: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_AlgorithmOutputBuffer_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmOutputBuffer_Item */
 let _cached_decoder_for_AlgorithmOutputBuffer_Item: $.ASN1Decoder<AlgorithmOutputBuffer_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgorithmOutputBuffer_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmOutputBuffer_Item
  * @function
@@ -162,13 +151,9 @@ export function _decode_AlgorithmOutputBuffer_Item(el: _Element) {
     }
     return _cached_decoder_for_AlgorithmOutputBuffer_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmOutputBuffer_Item */
 let _cached_encoder_for_AlgorithmOutputBuffer_Item: $.ASN1Encoder<AlgorithmOutputBuffer_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmOutputBuffer_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgorithmOutputBuffer_Item */
 /**
  * @summary Encodes a(n) AlgorithmOutputBuffer_Item into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_AlgorithmOutputBuffer_Item(
     return _cached_encoder_for_AlgorithmOutputBuffer_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgorithmOutputBuffer_Item */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AnyType */
+
 /**
  * @summary AnyType
  * @description
@@ -75,9 +75,8 @@ export class AnyType {
     return new AnyType(_o.embed_values, _o.attr, _o.elem_list);
   }
 }
-/* END_OF_SYMBOL_DEFINITION AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AnyType */
+
 /**
  * @summary The Leading Root Component Types of AnyType
  * @description
@@ -109,9 +108,8 @@ export const _root_component_type_list_1_spec_for_AnyType: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AnyType */
+
 /**
  * @summary The Trailing Root Component Types of AnyType
  * @description
@@ -121,9 +119,8 @@ export const _root_component_type_list_1_spec_for_AnyType: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AnyType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AnyType */
+
 /**
  * @summary The Extension Addition Component Types of AnyType
  * @description
@@ -133,13 +130,11 @@ export const _root_component_type_list_2_spec_for_AnyType: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_AnyType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyType */
+
 let _cached_decoder_for_AnyType: $.ASN1Decoder<AnyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AnyType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AnyType
  * @function
@@ -173,13 +168,11 @@ export function _decode_AnyType(el: _Element) {
   }
   return _cached_decoder_for_AnyType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyType */
+
 let _cached_encoder_for_AnyType: $.ASN1Encoder<AnyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AnyType */
+
 /**
  * @summary Encodes a(n) AnyType into an ASN.1 Element.
  * @function
@@ -218,6 +211,5 @@ export function _encode_AnyType(
   return _cached_encoder_for_AnyType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AnyType */
 
 /* eslint-enable */

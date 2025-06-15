@@ -21,7 +21,6 @@ import {
     _decode_ReturnResultProblem,
     _encode_ReturnResultProblem,
 } from "../OSIProtocolSpecification/ReturnResultProblem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiRej_problem */
 /**
  * @summary OsiRej_problem
  * @description
@@ -38,13 +37,9 @@ export type OsiRej_problem =
     | { returnResult: ReturnResultProblem } /* CHOICE_ALT_ROOT */
     | { returnError: ReturnErrorProblem } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION OsiRej_problem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRej_problem */
 let _cached_decoder_for_OsiRej_problem: $.ASN1Decoder<OsiRej_problem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRej_problem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiRej_problem */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiRej_problem
  * @function
@@ -84,13 +79,9 @@ export function _decode_OsiRej_problem(el: _Element) {
     }
     return _cached_decoder_for_OsiRej_problem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiRej_problem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRej_problem */
 let _cached_encoder_for_OsiRej_problem: $.ASN1Encoder<OsiRej_problem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRej_problem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiRej_problem */
 /**
  * @summary Encodes a(n) OsiRej_problem into an ASN.1 Element.
  * @function
@@ -136,6 +127,5 @@ export function _encode_OsiRej_problem(
     return _cached_encoder_for_OsiRej_problem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiRej_problem */
 
 /* eslint-enable */

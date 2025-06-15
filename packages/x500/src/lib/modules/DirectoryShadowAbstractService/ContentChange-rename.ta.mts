@@ -11,7 +11,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentChange_rename */
 /**
  * @summary ContentChange_rename
  * @description
@@ -25,13 +24,9 @@ import {
 export type ContentChange_rename =
     | { newRDN: RelativeDistinguishedName } /* CHOICE_ALT_ROOT */
     | { newDN: DistinguishedName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ContentChange_rename */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentChange_rename */
 let _cached_decoder_for_ContentChange_rename: $.ASN1Decoder<ContentChange_rename> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentChange_rename */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentChange_rename */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentChange_rename
  * @function
@@ -49,13 +44,9 @@ export function _decode_ContentChange_rename(el: _Element) {
     }
     return _cached_decoder_for_ContentChange_rename(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentChange_rename */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentChange_rename */
 let _cached_encoder_for_ContentChange_rename: $.ASN1Encoder<ContentChange_rename> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentChange_rename */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentChange_rename */
 /**
  * @summary Encodes a(n) ContentChange_rename into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_ContentChange_rename(
     return _cached_encoder_for_ContentChange_rename(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentChange_rename */
 
 /* eslint-enable */

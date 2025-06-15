@@ -17,7 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DITContextUseDescription */
 /**
  * @summary DITContextUseDescription
  * @description
@@ -115,9 +114,7 @@ export class DITContextUseDescription {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DITContextUseDescription */
 /**
  * @summary The Leading Root Component Types of DITContextUseDescription
  * @description
@@ -169,9 +166,7 @@ export const _root_component_type_list_1_spec_for_DITContextUseDescription: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DITContextUseDescription */
 /**
  * @summary The Trailing Root Component Types of DITContextUseDescription
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_DITContextUseDescription: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DITContextUseDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DITContextUseDescription */
 /**
  * @summary The Extension Addition Component Types of DITContextUseDescription
  * @description
@@ -193,13 +186,9 @@ export const _root_component_type_list_2_spec_for_DITContextUseDescription: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_DITContextUseDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DITContextUseDescription */
 let _cached_decoder_for_DITContextUseDescription: $.ASN1Decoder<DITContextUseDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DITContextUseDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) DITContextUseDescription
  * @function
@@ -265,13 +254,9 @@ export function _decode_DITContextUseDescription(el: _Element) {
     }
     return _cached_decoder_for_DITContextUseDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DITContextUseDescription */
 let _cached_encoder_for_DITContextUseDescription: $.ASN1Encoder<DITContextUseDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DITContextUseDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DITContextUseDescription */
 /**
  * @summary Encodes a(n) DITContextUseDescription into an ASN.1 Element.
  * @function
@@ -332,6 +317,5 @@ export function _encode_DITContextUseDescription(
     return _cached_encoder_for_DITContextUseDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DITContextUseDescription */
 
 /* eslint-enable */

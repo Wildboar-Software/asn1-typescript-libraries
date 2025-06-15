@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION troubleDetectionTimeTroubleDetectionTimeDefault */
+
 /**
  * @summary troubleDetectionTimeTroubleDetectionTimeDefault
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const troubleDetectionTimeTroubleDetectionTimeDefault: NULL = null;
-/* END_OF_SYMBOL_DEFINITION troubleDetectionTimeTroubleDetectionTimeDefault */
 
 /* eslint-enable */

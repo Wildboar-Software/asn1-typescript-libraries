@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
 import { id_tok } from '../MTSObjectIdentifiers/id-tok.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_tok_asymmetricToken */
 /**
  * @summary id_tok_asymmetricToken
  * @description
@@ -25,6 +24,5 @@ import { id_tok } from '../MTSObjectIdentifiers/id-tok.va.mjs';
  * @constant
  */
 export const id_tok_asymmetricToken: ID = new _OID([0], id_tok);
-/* END_OF_SYMBOL_DEFINITION id_tok_asymmetricToken */
 
 /* eslint-enable */

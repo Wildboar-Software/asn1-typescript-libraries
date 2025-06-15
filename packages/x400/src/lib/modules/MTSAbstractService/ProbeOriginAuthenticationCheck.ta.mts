@@ -20,7 +20,6 @@ export {
     _encode_SIGNATURE as _encode_ProbeOriginAuthenticationCheck,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProbeOriginAuthenticationCheck */
 /**
  * @summary ProbeOriginAuthenticationCheck
  * @description
@@ -37,6 +36,5 @@ export {
  * ```
  */
 export type ProbeOriginAuthenticationCheck = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeOriginAuthenticationCheck */
 
 /* eslint-enable */

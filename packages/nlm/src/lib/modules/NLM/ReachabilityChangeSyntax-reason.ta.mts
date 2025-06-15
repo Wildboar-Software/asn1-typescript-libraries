@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ReachabilityChangeSyntax_reason */
+
 /**
  * @summary ReachabilityChangeSyntax_reason
  * @description
@@ -26,9 +26,8 @@ export enum _enum_for_ReachabilityChangeSyntax_reason {
     holdingTimerExpired = 0,
     circuitDisabled = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ReachabilityChangeSyntax_reason */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason */
+
 /**
  * @summary ReachabilityChangeSyntax_reason
  * @description
@@ -40,9 +39,8 @@ export enum _enum_for_ReachabilityChangeSyntax_reason {
  * ```@enum {number}
  */
 export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason */
+
 /**
  * @summary ReachabilityChangeSyntax_reason
  * @description
@@ -54,9 +52,8 @@ export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax
  * ```@enum {number}
  */
 export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason_holdingTimerExpired */
+
 /**
  * @summary ReachabilityChangeSyntax_reason_holdingTimerExpired
  * @constant
@@ -64,9 +61,8 @@ export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSynta
  */
 export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityChangeSyntax_reason =
     ReachabilityChangeSyntax_reason.holdingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason_holdingTimerExpired */
 
-/* START_OF_SYMBOL_DEFINITION holdingTimerExpired */
+
 /**
  * @summary holdingTimerExpired
  * @constant
@@ -74,9 +70,8 @@ export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityCh
  */
 export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
     ReachabilityChangeSyntax_reason.holdingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION holdingTimerExpired */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason_circuitDisabled */
+
 /**
  * @summary ReachabilityChangeSyntax_reason_circuitDisabled
  * @constant
@@ -84,9 +79,8 @@ export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
  */
 export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChangeSyntax_reason =
     ReachabilityChangeSyntax_reason.circuitDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_reason_circuitDisabled */
 
-/* START_OF_SYMBOL_DEFINITION circuitDisabled */
+
 /**
  * @summary circuitDisabled
  * @constant
@@ -94,13 +88,11 @@ export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChange
  */
 export const circuitDisabled: ReachabilityChangeSyntax_reason =
     ReachabilityChangeSyntax_reason.circuitDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION circuitDisabled */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReachabilityChangeSyntax_reason */
+
 let _cached_decoder_for_ReachabilityChangeSyntax_reason: $.ASN1Decoder<ReachabilityChangeSyntax_reason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReachabilityChangeSyntax_reason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReachabilityChangeSyntax_reason */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReachabilityChangeSyntax_reason
  * @function
@@ -114,13 +106,11 @@ export function _decode_ReachabilityChangeSyntax_reason(el: _Element) {
     }
     return _cached_decoder_for_ReachabilityChangeSyntax_reason(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReachabilityChangeSyntax_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReachabilityChangeSyntax_reason */
+
 let _cached_encoder_for_ReachabilityChangeSyntax_reason: $.ASN1Encoder<ReachabilityChangeSyntax_reason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReachabilityChangeSyntax_reason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReachabilityChangeSyntax_reason */
+
 /**
  * @summary Encodes a(n) ReachabilityChangeSyntax_reason into an ASN.1 Element.
  * @function
@@ -139,6 +129,5 @@ export function _encode_ReachabilityChangeSyntax_reason(
     return _cached_encoder_for_ReachabilityChangeSyntax_reason(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReachabilityChangeSyntax_reason */
 
 /* eslint-enable */

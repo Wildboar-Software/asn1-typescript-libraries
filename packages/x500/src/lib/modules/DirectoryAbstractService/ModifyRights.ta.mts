@@ -6,7 +6,6 @@ import {
     _decode_ModifyRights_Item,
     _encode_ModifyRights_Item,
 } from "../DirectoryAbstractService/ModifyRights-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyRights */
 /**
  * @summary ModifyRights
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type ModifyRights = ModifyRights_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ModifyRights */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights */
 let _cached_decoder_for_ModifyRights: $.ASN1Decoder<ModifyRights> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyRights */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyRights
  * @function
@@ -50,13 +45,9 @@ export function _decode_ModifyRights(el: _Element) {
     }
     return _cached_decoder_for_ModifyRights(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyRights */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights */
 let _cached_encoder_for_ModifyRights: $.ASN1Encoder<ModifyRights> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyRights */
 /**
  * @summary Encodes a(n) ModifyRights into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_ModifyRights(
     return _cached_encoder_for_ModifyRights(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyRights */
 
 /* eslint-enable */

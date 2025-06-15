@@ -15,7 +15,6 @@ import {
     _decode_ObservationScan,
     _encode_ObservationScan,
 } from '../SummarizationASN1Productions/ObservationScan.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObservationScanList */
 /**
  * @summary ObservationScanList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ObservationScanList = ObservationScan[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ObservationScanList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservationScanList */
 let _cached_decoder_for_ObservationScanList: $.ASN1Decoder<ObservationScanList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservationScanList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObservationScanList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObservationScanList
  * @function
@@ -48,13 +43,9 @@ export function _decode_ObservationScanList(el: _Element) {
     }
     return _cached_decoder_for_ObservationScanList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObservationScanList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservationScanList */
 let _cached_encoder_for_ObservationScanList: $.ASN1Encoder<ObservationScanList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservationScanList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObservationScanList */
 /**
  * @summary Encodes a(n) ObservationScanList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ObservationScanList(
     return _cached_encoder_for_ObservationScanList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObservationScanList */
 
 /* eslint-enable */

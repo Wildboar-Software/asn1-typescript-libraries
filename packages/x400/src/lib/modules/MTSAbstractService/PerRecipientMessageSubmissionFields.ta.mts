@@ -31,7 +31,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientMessageSubmissionFields */
 /**
  * @summary PerRecipientMessageSubmissionFields
  * @description
@@ -114,9 +113,7 @@ export class PerRecipientMessageSubmissionFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientMessageSubmissionFields */
 /**
  * @summary The Leading Root Component Types of PerRecipientMessageSubmissionFields
  * @description
@@ -155,9 +152,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientMessageSubmissionF
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientMessageSubmissionFields */
 /**
  * @summary The Trailing Root Component Types of PerRecipientMessageSubmissionFields
  * @description
@@ -167,9 +162,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientMessageSubmissionF
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerRecipientMessageSubmissionFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientMessageSubmissionFields */
 /**
  * @summary The Extension Addition Component Types of PerRecipientMessageSubmissionFields
  * @description
@@ -179,13 +172,9 @@ export const _root_component_type_list_2_spec_for_PerRecipientMessageSubmissionF
  * @constant
  */
 export const _extension_additions_list_spec_for_PerRecipientMessageSubmissionFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientMessageSubmissionFields */
 let _cached_decoder_for_PerRecipientMessageSubmissionFields: $.ASN1Decoder<PerRecipientMessageSubmissionFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerRecipientMessageSubmissionFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerRecipientMessageSubmissionFields
  * @function
@@ -246,13 +235,9 @@ export function _decode_PerRecipientMessageSubmissionFields(el: _Element) {
     }
     return _cached_decoder_for_PerRecipientMessageSubmissionFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientMessageSubmissionFields */
 let _cached_encoder_for_PerRecipientMessageSubmissionFields: $.ASN1Encoder<PerRecipientMessageSubmissionFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerRecipientMessageSubmissionFields */
 /**
  * @summary Encodes a(n) PerRecipientMessageSubmissionFields into an ASN.1 Element.
  * @function
@@ -316,6 +301,5 @@ export function _encode_PerRecipientMessageSubmissionFields(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerRecipientMessageSubmissionFields */
 
 /* eslint-enable */

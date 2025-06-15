@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_asx_pwdAlphabetDescription */
 /**
  * @summary id_asx_pwdAlphabetDescription
  * @description
@@ -18,6 +17,5 @@ export const id_asx_pwdAlphabetDescription: OBJECT_IDENTIFIER = new _OID(
     [2],
     id_asx
 );
-/* END_OF_SYMBOL_DEFINITION id_asx_pwdAlphabetDescription */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DistributionPointName */
 /**
  * @summary DistributionPointName
  * @description
@@ -31,13 +30,9 @@ export type DistributionPointName =
           nameRelativeToCRLIssuer: RelativeDistinguishedName;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DistributionPointName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributionPointName */
 let _cached_decoder_for_DistributionPointName: $.ASN1Decoder<DistributionPointName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributionPointName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DistributionPointName */
 /**
  * @summary Decodes an ASN.1 element into a(n) DistributionPointName
  * @function
@@ -65,13 +60,9 @@ export function _decode_DistributionPointName(el: _Element) {
     }
     return _cached_decoder_for_DistributionPointName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DistributionPointName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributionPointName */
 let _cached_encoder_for_DistributionPointName: $.ASN1Encoder<DistributionPointName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributionPointName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DistributionPointName */
 /**
  * @summary Encodes a(n) DistributionPointName into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_DistributionPointName(
     return _cached_encoder_for_DistributionPointName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DistributionPointName */
 
 /* eslint-enable */

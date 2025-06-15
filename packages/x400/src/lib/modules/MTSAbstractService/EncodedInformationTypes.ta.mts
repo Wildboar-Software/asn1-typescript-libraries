@@ -42,7 +42,6 @@ import {
     _extension_additions_list_spec_for_NonBasicParameters,
 } from '../MTSAbstractService/NonBasicParameters.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EncodedInformationTypes */
 /**
  * @summary EncodedInformationTypes
  * @description
@@ -138,9 +137,7 @@ export class EncodedInformationTypes implements NonBasicParameters {
         ));
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncodedInformationTypes */
 /**
  * @summary The Leading Root Component Types of EncodedInformationTypes
  * @description
@@ -166,9 +163,7 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypes: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncodedInformationTypes */
 /**
  * @summary The Trailing Root Component Types of EncodedInformationTypes
  * @description
@@ -180,9 +175,7 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypes: $.Com
 export const _root_component_type_list_2_spec_for_EncodedInformationTypes: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_NonBasicParameters,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncodedInformationTypes */
 /**
  * @summary The Extension Addition Component Types of EncodedInformationTypes
  * @description
@@ -194,13 +187,9 @@ export const _root_component_type_list_2_spec_for_EncodedInformationTypes: $.Com
 export const _extension_additions_list_spec_for_EncodedInformationTypes: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_NonBasicParameters,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedInformationTypes */
 let _cached_decoder_for_EncodedInformationTypes: $.ASN1Decoder<EncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncodedInformationTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) EncodedInformationTypes
  * @function
@@ -267,13 +256,9 @@ export function _decode_EncodedInformationTypes(el: _Element) {
     }
     return _cached_decoder_for_EncodedInformationTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedInformationTypes */
 let _cached_encoder_for_EncodedInformationTypes: $.ASN1Encoder<EncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncodedInformationTypes */
 /**
  * @summary Encodes a(n) EncodedInformationTypes into an ASN.1 Element.
  * @function
@@ -358,6 +343,5 @@ export function _encode_EncodedInformationTypes(
     return _cached_encoder_for_EncodedInformationTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncodedInformationTypes */
 
 /* eslint-enable */

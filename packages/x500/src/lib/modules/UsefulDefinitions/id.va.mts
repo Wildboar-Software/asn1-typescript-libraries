@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { joint_iso_itu_t, ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id */
 /**
  * @summary id
  * @description
@@ -18,6 +17,5 @@ export const id: ID = new _OID(
     [/* registration-procedures */ 17, /* module */ 1, /* directory-defs */ 2],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION diskFailure */
+
 /**
  * @summary diskFailure
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const diskFailure: ProbableCause = { localValue: 73 };
-/* END_OF_SYMBOL_DEFINITION diskFailure */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _encode_EncryptedParameters,
 } from '../IPMSInformationObjects/EncryptedParameters.ta.mjs';
 import { id_ep_encrypted } from '../IPMSObjectIdentifiers/id-ep-encrypted.va.mjs';
-/* START_OF_SYMBOL_DEFINITION encrypted_body_part_parameters */
 /**
  * @summary encrypted_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const encrypted_body_part_parameters: TYPE_IDENTIFIER<EncryptedParameters
     '&id': id_ep_encrypted /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION encrypted_body_part_parameters */
 
 /* eslint-enable */

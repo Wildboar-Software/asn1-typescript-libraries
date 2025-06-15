@@ -15,7 +15,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SoftwareProcessingFailure */
 /**
  * @summary SoftwareProcessingFailure
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SoftwareProcessingFailure = Attribute[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SoftwareProcessingFailure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SoftwareProcessingFailure */
 let _cached_decoder_for_SoftwareProcessingFailure: $.ASN1Decoder<SoftwareProcessingFailure> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SoftwareProcessingFailure */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SoftwareProcessingFailure */
 /**
  * @summary Decodes an ASN.1 element into a(n) SoftwareProcessingFailure
  * @function
@@ -48,13 +43,9 @@ export function _decode_SoftwareProcessingFailure(el: _Element) {
     }
     return _cached_decoder_for_SoftwareProcessingFailure(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SoftwareProcessingFailure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SoftwareProcessingFailure */
 let _cached_encoder_for_SoftwareProcessingFailure: $.ASN1Encoder<SoftwareProcessingFailure> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SoftwareProcessingFailure */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SoftwareProcessingFailure */
 /**
  * @summary Encodes a(n) SoftwareProcessingFailure into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SoftwareProcessingFailure(
     return _cached_encoder_for_SoftwareProcessingFailure(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SoftwareProcessingFailure */
 
 /* eslint-enable */

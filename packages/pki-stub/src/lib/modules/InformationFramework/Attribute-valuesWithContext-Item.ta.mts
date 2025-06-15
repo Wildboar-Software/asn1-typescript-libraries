@@ -11,7 +11,6 @@ import {
     _encode_Context,
 } from "../InformationFramework/Context.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Attribute_valuesWithContext_Item */
 /**
  * @summary Attribute_valuesWithContext_Item
  * @description
@@ -72,9 +71,7 @@ export class Attribute_valuesWithContext_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Attribute_valuesWithContext_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute_valuesWithContext_Item */
 /**
  * @summary The Leading Root Component Types of Attribute_valuesWithContext_Item
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_Attribute_valuesWithContext_It
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute_valuesWithContext_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item */
 /**
  * @summary The Trailing Root Component Types of Attribute_valuesWithContext_Item
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_Attribute_valuesWithContext_It
  */
 export const _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_valuesWithContext_Item */
 /**
  * @summary The Extension Addition Component Types of Attribute_valuesWithContext_Item
  * @description
@@ -120,9 +113,7 @@ export const _root_component_type_list_2_spec_for_Attribute_valuesWithContext_It
  */
 export const _extension_additions_list_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_valuesWithContext_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attribute_valuesWithContext_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute_valuesWithContext_Item
  * @function
@@ -150,9 +141,7 @@ export function _decode_Attribute_valuesWithContext_Item(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attribute_valuesWithContext_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attribute_valuesWithContext_Item */
 /**
  * @summary Encodes a(n) Attribute_valuesWithContext_Item into an ASN.1 Element.
  * @function
@@ -175,6 +164,5 @@ export function _encode_Attribute_valuesWithContext_Item(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attribute_valuesWithContext_Item */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HierarchicalAgreement */
 /**
  * @summary HierarchicalAgreement
  * @description
@@ -75,9 +74,7 @@ export class HierarchicalAgreement {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HierarchicalAgreement */
 /**
  * @summary The Leading Root Component Types of HierarchicalAgreement
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_HierarchicalAgreement: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HierarchicalAgreement */
 /**
  * @summary The Trailing Root Component Types of HierarchicalAgreement
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_HierarchicalAgreement: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HierarchicalAgreement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HierarchicalAgreement */
 /**
  * @summary The Extension Addition Component Types of HierarchicalAgreement
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_HierarchicalAgreement: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_HierarchicalAgreement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HierarchicalAgreement */
 let _cached_decoder_for_HierarchicalAgreement: $.ASN1Decoder<HierarchicalAgreement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HierarchicalAgreement */
 /**
  * @summary Decodes an ASN.1 element into a(n) HierarchicalAgreement
  * @function
@@ -171,13 +160,9 @@ export function _decode_HierarchicalAgreement(el: _Element) {
     }
     return _cached_decoder_for_HierarchicalAgreement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HierarchicalAgreement */
 let _cached_encoder_for_HierarchicalAgreement: $.ASN1Encoder<HierarchicalAgreement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HierarchicalAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HierarchicalAgreement */
 /**
  * @summary Encodes a(n) HierarchicalAgreement into an ASN.1 Element.
  * @function
@@ -221,6 +206,5 @@ export function _encode_HierarchicalAgreement(
     return _cached_encoder_for_HierarchicalAgreement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HierarchicalAgreement */
 
 /* eslint-enable */

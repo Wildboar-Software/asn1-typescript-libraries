@@ -33,7 +33,6 @@ import { operation_refused } from '../MTSAbstractService/operation-refused.oa.mj
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_delivery_control } from '../MTSAccessProtocol/op-delivery-control.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION delivery_control */
 /**
  * @summary delivery_control
  * @description
@@ -85,6 +84,5 @@ export const delivery_control: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delivery_control */
 
 /* eslint-enable */

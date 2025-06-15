@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EndToEndDelay */
+
 /**
  * @summary EndToEndDelay
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EndToEndDelay = INTEGER;
-/* END_OF_SYMBOL_DEFINITION EndToEndDelay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EndToEndDelay */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EndToEndDelay */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EndToEndDelay */
+
+
 export const _decode_EndToEndDelay = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_EndToEndDelay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EndToEndDelay */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EndToEndDelay */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EndToEndDelay */
+
+
 export const _encode_EndToEndDelay = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EndToEndDelay */
 
 /* eslint-enable */

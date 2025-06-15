@@ -6,7 +6,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AUTHEN_ENCRYPT */
 /**
  * @summary AUTHEN_ENCRYPT
  * @description
@@ -73,9 +72,7 @@ export class AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AUTHEN_ENCRYPT */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AUTHEN_ENCRYPT */
 /**
  * @summary The Leading Root Component Types of AUTHEN_ENCRYPT
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_AUTHEN_ENCRYPT: $.ComponentSpe
     new $.ComponentSpec("aad", true, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("encr", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AUTHEN_ENCRYPT */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AUTHEN_ENCRYPT */
 /**
  * @summary The Trailing Root Component Types of AUTHEN_ENCRYPT
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_AUTHEN_ENCRYPT: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AUTHEN_ENCRYPT: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AUTHEN_ENCRYPT */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AUTHEN_ENCRYPT */
 /**
  * @summary The Extension Addition Component Types of AUTHEN_ENCRYPT
  * @description
@@ -112,9 +105,7 @@ export const _root_component_type_list_2_spec_for_AUTHEN_ENCRYPT: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_AUTHEN_ENCRYPT: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AUTHEN_ENCRYPT */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_AUTHEN_ENCRYPT */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) AUTHEN_ENCRYPT
  * @function
@@ -160,9 +151,7 @@ export function _get_decoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_AUTHEN_ENCRYPT */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_AUTHEN_ENCRYPT */
 /**
  * @summary Returns a function that will encode a(n) AUTHEN_ENCRYPT into an ASN.1 Element.
  * @function
@@ -202,6 +191,5 @@ export function _get_encoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_AUTHEN_ENCRYPT */
 
 /* eslint-enable */

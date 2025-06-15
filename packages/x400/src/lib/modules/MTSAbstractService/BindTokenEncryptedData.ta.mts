@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BindTokenEncryptedData */
 /**
  * @summary BindTokenEncryptedData
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BindTokenEncryptedData = EXTERNAL; // ExternalType
-/* END_OF_SYMBOL_DEFINITION BindTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindTokenEncryptedData */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindTokenEncryptedData */
 export const _decode_BindTokenEncryptedData = $._decodeExternal;
-/* END_OF_SYMBOL_DEFINITION _decode_BindTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindTokenEncryptedData */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindTokenEncryptedData */
 export const _encode_BindTokenEncryptedData = $._encodeExternal;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindTokenEncryptedData */
 
 /* eslint-enable */

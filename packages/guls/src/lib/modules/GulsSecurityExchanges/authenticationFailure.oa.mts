@@ -20,7 +20,7 @@ import {
     _encode_SecurityProblem,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/SecurityProblem.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION authenticationFailure */
+
 /**
  * @summary authenticationFailure
  * @description
@@ -51,6 +51,5 @@ export const authenticationFailure: SE_ERROR<SecurityProblem> = {
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authenticationFailure */
 
 /* eslint-enable */

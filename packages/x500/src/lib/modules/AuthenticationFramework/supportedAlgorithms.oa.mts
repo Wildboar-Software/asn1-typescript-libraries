@@ -11,7 +11,6 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION supportedAlgorithms */
 /**
  * @summary supportedAlgorithms
  * @description
@@ -53,6 +52,5 @@ export const supportedAlgorithms: ATTRIBUTE<SupportedAlgorithm> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedAlgorithms */
 
 /* eslint-enable */

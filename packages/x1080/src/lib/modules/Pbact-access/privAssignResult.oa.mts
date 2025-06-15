@@ -16,7 +16,7 @@ import {
 } from '../Pbact-access/PrivAssignResult.ta.mjs';
 import { id_privAssignResult } from '../Pbact-access/id-privAssignResult.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION privAssignResult */
+
 /**
  * @summary privAssignResult
  * @description
@@ -44,6 +44,5 @@ export const privAssignResult: CONTENT_TYPE<PrivAssignResult> = {
     '&id': id_privAssignResult /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION privAssignResult */
 
 /* eslint-enable */

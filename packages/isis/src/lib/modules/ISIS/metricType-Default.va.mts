@@ -16,7 +16,6 @@ import {
   _decode_MetricType,
   _encode_MetricType,
 } from '../ISIS/MetricType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION metricType_Default */
 /**
  * @summary metricType_Default
  * @description
@@ -30,6 +29,5 @@ import {
  * @constant
  */
 export const metricType_Default: MetricType = MetricType_internal;
-/* END_OF_SYMBOL_DEFINITION metricType_Default */
 
 /* eslint-enable */

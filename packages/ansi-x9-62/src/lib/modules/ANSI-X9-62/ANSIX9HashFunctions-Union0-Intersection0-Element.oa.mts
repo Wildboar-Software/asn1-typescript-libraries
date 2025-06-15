@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { sha_1 } from "../ANSI-X9-62/sha-1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union0_Intersection0_Element */
 /**
  * @summary ANSIX9HashFunctions_Union0_Intersection0_Element
  * @description
@@ -27,6 +26,5 @@ export const ANSIX9HashFunctions_Union0_Intersection0_Element: ALGORITHM = {
     "&id": sha_1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union0_Intersection0_Element */
 
 /* eslint-enable */

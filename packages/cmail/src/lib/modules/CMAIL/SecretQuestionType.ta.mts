@@ -20,7 +20,7 @@ import {
   _decode_ResponseType,
   _encode_ResponseType,
 } from '../CMAIL/ResponseType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecretQuestionType */
+
 /**
  * @summary SecretQuestionType
  * @description
@@ -70,9 +70,8 @@ export class SecretQuestionType {
     return new SecretQuestionType(_o.request, _o.response);
   }
 }
-/* END_OF_SYMBOL_DEFINITION SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecretQuestionType */
+
 /**
  * @summary The Leading Root Component Types of SecretQuestionType
  * @description
@@ -97,9 +96,8 @@ export const _root_component_type_list_1_spec_for_SecretQuestionType: $.Componen
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecretQuestionType */
+
 /**
  * @summary The Trailing Root Component Types of SecretQuestionType
  * @description
@@ -109,9 +107,8 @@ export const _root_component_type_list_1_spec_for_SecretQuestionType: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecretQuestionType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecretQuestionType */
+
 /**
  * @summary The Extension Addition Component Types of SecretQuestionType
  * @description
@@ -121,13 +118,11 @@ export const _root_component_type_list_2_spec_for_SecretQuestionType: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_SecretQuestionType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecretQuestionType */
+
 let _cached_decoder_for_SecretQuestionType: $.ASN1Decoder<SecretQuestionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecretQuestionType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecretQuestionType
  * @function
@@ -158,13 +153,11 @@ export function _decode_SecretQuestionType(el: _Element) {
   }
   return _cached_decoder_for_SecretQuestionType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecretQuestionType */
+
 let _cached_encoder_for_SecretQuestionType: $.ASN1Encoder<SecretQuestionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecretQuestionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecretQuestionType */
+
 /**
  * @summary Encodes a(n) SecretQuestionType into an ASN.1 Element.
  * @function
@@ -193,6 +186,5 @@ export function _encode_SecretQuestionType(
   return _cached_encoder_for_SecretQuestionType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecretQuestionType */
 
 /* eslint-enable */

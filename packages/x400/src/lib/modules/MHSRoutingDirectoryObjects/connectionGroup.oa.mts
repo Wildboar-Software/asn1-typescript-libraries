@@ -25,7 +25,6 @@ import { groupMTAPassword } from '../MHSRoutingDirectoryObjects/groupMTAPassword
 import { memberMTA } from '../MHSRoutingDirectoryObjects/memberMTA.oa.mjs';
 import { securityContext } from '../MHSRoutingDirectoryObjects/securityContext.oa.mjs';
 import { id_oc_connection_group } from '../MHSRoutingObjectIdentifiers/id-oc-connection-group.va.mjs';
-/* START_OF_SYMBOL_DEFINITION connectionGroup */
 /**
  * @summary connectionGroup
  * @description
@@ -66,6 +65,5 @@ export const connectionGroup: OBJECT_CLASS = {
     '&id': id_oc_connection_group /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION connectionGroup */
 
 /* eslint-enable */

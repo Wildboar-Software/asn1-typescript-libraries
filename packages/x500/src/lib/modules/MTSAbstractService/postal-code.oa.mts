@@ -5,7 +5,6 @@ import {
     _decode_PostalCode,
     _encode_PostalCode,
 } from "../MTSAbstractService/PostalCode.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION postal_code */
 /**
  * @summary postal_code
  * @description
@@ -33,6 +32,5 @@ export const postal_code: EXTENSION_ATTRIBUTE<PostalCode> = {
     "&id": 9 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION postal_code */
 
 /* eslint-enable */

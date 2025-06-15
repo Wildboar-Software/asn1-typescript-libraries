@@ -27,7 +27,7 @@ import {
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MatchingRuleAssertion */
+
 /**
  * @summary MatchingRuleAssertion
  * @description
@@ -113,9 +113,8 @@ export class MatchingRuleAssertion {
     return false;
   }
 }
-/* END_OF_SYMBOL_DEFINITION MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MatchingRuleAssertion */
+
 /**
  * @summary The Leading Root Component Types of MatchingRuleAssertion
  * @description
@@ -154,9 +153,8 @@ export const _root_component_type_list_1_spec_for_MatchingRuleAssertion: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MatchingRuleAssertion */
+
 /**
  * @summary The Trailing Root Component Types of MatchingRuleAssertion
  * @description
@@ -166,9 +164,8 @@ export const _root_component_type_list_1_spec_for_MatchingRuleAssertion: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MatchingRuleAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MatchingRuleAssertion */
+
 /**
  * @summary The Extension Addition Component Types of MatchingRuleAssertion
  * @description
@@ -178,9 +175,8 @@ export const _root_component_type_list_2_spec_for_MatchingRuleAssertion: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_MatchingRuleAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MatchingRuleAssertion */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchingRuleAssertion
  * @function
@@ -238,9 +234,8 @@ export function _decode_MatchingRuleAssertion(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MatchingRuleAssertion */
+
 /**
  * @summary Encodes a(n) MatchingRuleAssertion into an ASN.1 Element.
  * @function
@@ -288,6 +283,5 @@ export function _encode_MatchingRuleAssertion(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MatchingRuleAssertion */
 
 /* eslint-enable */

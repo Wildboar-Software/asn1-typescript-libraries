@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_msstring_match */
 /**
  * @summary ub_msstring_match
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_msstring_match: INTEGER = 512;
-/* END_OF_SYMBOL_DEFINITION ub_msstring_match */
 
 /* eslint-enable */

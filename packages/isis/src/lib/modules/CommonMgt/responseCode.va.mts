@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { proi } from '../CommonMgt/proi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION responseCode */
 /**
  * @summary responseCode
  * @description
@@ -28,6 +27,5 @@ export const responseCode: OBJECT_IDENTIFIER = new _OID(
   [/* responseCode */ 1001],
   proi
 );
-/* END_OF_SYMBOL_DEFINITION responseCode */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_RetrievalError,
     _encode_RetrievalError,
 } from '../MhsAcctAsn1Module/RetrievalError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SummarizeErrors */
 /**
  * @summary SummarizeErrors
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type SummarizeErrors = RetrievalError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SummarizeErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SummarizeErrors */
 let _cached_decoder_for_SummarizeErrors: $.ASN1Decoder<SummarizeErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SummarizeErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SummarizeErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) SummarizeErrors
  * @function
@@ -49,13 +44,9 @@ export function _decode_SummarizeErrors(el: _Element) {
     }
     return _cached_decoder_for_SummarizeErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SummarizeErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SummarizeErrors */
 let _cached_encoder_for_SummarizeErrors: $.ASN1Encoder<SummarizeErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SummarizeErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SummarizeErrors */
 /**
  * @summary Encodes a(n) SummarizeErrors into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_SummarizeErrors(
     return _cached_encoder_for_SummarizeErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SummarizeErrors */
 
 /* eslint-enable */

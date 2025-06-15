@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EXTENSION_ATTRIBUTE */
 /**
  * @summary EXTENSION_ATTRIBUTE
  * @description
@@ -68,6 +67,5 @@ export interface EXTENSION_ATTRIBUTE<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION EXTENSION_ATTRIBUTE */
 
 /* eslint-enable */

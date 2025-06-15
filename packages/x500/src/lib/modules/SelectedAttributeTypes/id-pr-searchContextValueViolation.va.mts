@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pr } from "../UsefulDefinitions/id-pr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_pr_searchContextValueViolation */
 /**
  * @summary id_pr_searchContextValueViolation
  * @description
@@ -18,6 +17,5 @@ export const id_pr_searchContextValueViolation: OBJECT_IDENTIFIER = new _OID(
     [16],
     id_pr
 );
-/* END_OF_SYMBOL_DEFINITION id_pr_searchContextValueViolation */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_BodyPartTokens_Item,
     _encode_BodyPartTokens_Item,
 } from '../IPMSSecurityExtensions/BodyPartTokens-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartTokens */
 /**
  * @summary BodyPartTokens
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type BodyPartTokens = BodyPartTokens_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION BodyPartTokens */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartTokens */
 let _cached_decoder_for_BodyPartTokens: $.ASN1Decoder<BodyPartTokens> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartTokens */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartTokens */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartTokens
  * @function
@@ -54,13 +49,9 @@ export function _decode_BodyPartTokens(el: _Element) {
     }
     return _cached_decoder_for_BodyPartTokens(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartTokens */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartTokens */
 let _cached_encoder_for_BodyPartTokens: $.ASN1Encoder<BodyPartTokens> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartTokens */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartTokens */
 /**
  * @summary Encodes a(n) BodyPartTokens into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_BodyPartTokens(
     return _cached_encoder_for_BodyPartTokens(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartTokens */
 
 /* eslint-enable */

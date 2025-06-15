@@ -11,7 +11,7 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentHints */
+
 /**
  * @summary ContentHints
  * @description
@@ -61,9 +61,8 @@ export class ContentHints {
         return new ContentHints(_o.contentDescription, _o.contentType);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentHints */
+
 /**
  * @summary The Leading Root Component Types of ContentHints
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_ContentHints: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentHints */
+
 /**
  * @summary The Trailing Root Component Types of ContentHints
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_ContentHints: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ContentHints: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentHints */
+
 /**
  * @summary The Extension Addition Component Types of ContentHints
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_ContentHints: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ContentHints: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentHints */
+
 let _cached_decoder_for_ContentHints: $.ASN1Decoder<ContentHints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentHints */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentHints
  * @function
@@ -160,13 +155,11 @@ export function _decode_ContentHints(el: _Element) {
     }
     return _cached_decoder_for_ContentHints(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentHints */
+
 let _cached_encoder_for_ContentHints: $.ASN1Encoder<ContentHints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentHints */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentHints */
+
 /**
  * @summary Encodes a(n) ContentHints into an ASN.1 Element.
  * @function
@@ -203,6 +196,5 @@ export function _encode_ContentHints(
     return _cached_encoder_for_ContentHints(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentHints */
 
 /* eslint-enable */

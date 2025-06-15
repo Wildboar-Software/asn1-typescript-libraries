@@ -20,7 +20,6 @@ import {
     _encode_ReturnResult,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Component */
 /**
  * @summary Component
  * @description
@@ -40,13 +39,9 @@ export type Component =
   | {
       returnResultNotLast: $.Selection<ROS, 'returnResult'>;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Component */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Component */
 let _cached_decoder_for_Component: $.ASN1Decoder<Component> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Component */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Component */
 /**
  * @summary Decodes an ASN.1 element into a(n) Component
  * @function
@@ -70,13 +65,9 @@ export function _decode_Component(el: _Element) {
   }
   return _cached_decoder_for_Component(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Component */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Component */
 let _cached_encoder_for_Component: $.ASN1Encoder<Component> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Component */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Component */
 /**
  * @summary Encodes a(n) Component into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_Component(
   return _cached_encoder_for_Component(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Component */
 
 /* eslint-enable */

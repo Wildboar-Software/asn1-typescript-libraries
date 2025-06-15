@@ -23,7 +23,6 @@ import {
     _encode_ProofOfDelivery,
 } from '../MTSAbstractService/ProofOfDelivery.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION proof_of_delivery */
 /**
  * @summary proof_of_delivery
  * @description
@@ -57,6 +56,5 @@ export const proof_of_delivery: EXTENSION<ProofOfDelivery> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION proof_of_delivery */
 
 /* eslint-enable */

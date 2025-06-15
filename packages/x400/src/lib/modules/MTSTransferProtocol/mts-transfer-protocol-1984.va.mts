@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION mts_transfer_protocol_1984 */
 /**
  * @summary mts_transfer_protocol_1984
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const mts_transfer_protocol_1984: INTEGER = 1;
-/* END_OF_SYMBOL_DEFINITION mts_transfer_protocol_1984 */
 
 /* eslint-enable */

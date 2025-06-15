@@ -55,7 +55,7 @@ import {
   _decode_Attribute_Extensions_Pattern,
   _encode_Attribute_Extensions_Pattern,
 } from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AND_Set_Item */
+
 /**
  * @summary AND_Set_Item
  * @description
@@ -104,13 +104,11 @@ export type AND_Set_Item =
   | {
       attribute_extensions_pattern: Attribute_Extensions_Pattern;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AND_Set_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AND_Set_Item */
+
 let _cached_decoder_for_AND_Set_Item: $.ASN1Decoder<AND_Set_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AND_Set_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AND_Set_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AND_Set_Item
  * @function
@@ -232,13 +230,11 @@ export function _decode_AND_Set_Item(el: _Element) {
   }
   return _cached_decoder_for_AND_Set_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AND_Set_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AND_Set_Item */
+
 let _cached_encoder_for_AND_Set_Item: $.ASN1Encoder<AND_Set_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AND_Set_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AND_Set_Item */
+
 /**
  * @summary Encodes a(n) AND_Set_Item into an ASN.1 Element.
  * @function
@@ -386,6 +382,5 @@ export function _encode_AND_Set_Item(
   return _cached_encoder_for_AND_Set_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AND_Set_Item */
 
 /* eslint-enable */

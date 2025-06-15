@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_Purpose */
+
 /**
  * @summary Purpose
  * @description
@@ -28,9 +28,8 @@ export enum _enum_for_Purpose {
     reference = 1,
     sample = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION Purpose */
+
 /**
  * @summary Purpose
  * @description
@@ -44,9 +43,8 @@ export enum _enum_for_Purpose {
  * ```@enum {number}
  */
 export type Purpose = _enum_for_Purpose;
-/* END_OF_SYMBOL_DEFINITION Purpose */
 
-/* START_OF_SYMBOL_DEFINITION Purpose */
+
 /**
  * @summary Purpose
  * @description
@@ -60,9 +58,8 @@ export type Purpose = _enum_for_Purpose;
  * ```@enum {number}
  */
 export const Purpose = _enum_for_Purpose;
-/* END_OF_SYMBOL_DEFINITION Purpose */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_reference */
+
 /**
  * @summary Purpose_reference
  * @constant
@@ -70,9 +67,8 @@ export const Purpose = _enum_for_Purpose;
  */
 export const Purpose_reference: Purpose =
     Purpose.reference; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_reference */
 
-/* START_OF_SYMBOL_DEFINITION reference */
+
 /**
  * @summary reference
  * @constant
@@ -80,9 +76,8 @@ export const Purpose_reference: Purpose =
  */
 export const reference: Purpose =
     Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION reference */
 
-/* START_OF_SYMBOL_DEFINITION Purpose_sample */
+
 /**
  * @summary Purpose_sample
  * @constant
@@ -90,9 +85,8 @@ export const reference: Purpose =
  */
 export const Purpose_sample: Purpose =
     Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Purpose_sample */
 
-/* START_OF_SYMBOL_DEFINITION sample */
+
 /**
  * @summary sample
  * @constant
@@ -100,21 +94,16 @@ export const Purpose_sample: Purpose =
  */
 export const sample: Purpose =
     Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sample */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Purpose */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Purpose */
+
+
 export const _decode_Purpose = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Purpose */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Purpose */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Purpose */
+
+
 export const _encode_Purpose = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Purpose */
 
 /* eslint-enable */

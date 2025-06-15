@@ -33,7 +33,7 @@ import {
     _decode_AutoSwitchReason,
     _encode_AutoSwitchReason,
 } from '../SDHProtASN1/AutoSwitchReason.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatus_Item_autoSwitch */
+
 /**
  * @summary ProtectionStatus_Item_autoSwitch
  * @description
@@ -114,9 +114,8 @@ export class ProtectionStatus_Item_autoSwitch {
 
     public static _enum_for_switchStatus = _enum_for_SwitchStatus;
 }
-/* END_OF_SYMBOL_DEFINITION ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatus_Item_autoSwitch */
+
 /**
  * @summary The Leading Root Component Types of ProtectionStatus_Item_autoSwitch
  * @description
@@ -155,9 +154,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatus_Item_autoSwit
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatus_Item_autoSwitch */
+
 /**
  * @summary The Trailing Root Component Types of ProtectionStatus_Item_autoSwitch
  * @description
@@ -167,9 +165,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatus_Item_autoSwit
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectionStatus_Item_autoSwitch: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatus_Item_autoSwitch */
+
 /**
  * @summary The Extension Addition Component Types of ProtectionStatus_Item_autoSwitch
  * @description
@@ -179,13 +176,11 @@ export const _root_component_type_list_2_spec_for_ProtectionStatus_Item_autoSwit
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectionStatus_Item_autoSwitch: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus_Item_autoSwitch */
+
 let _cached_decoder_for_ProtectionStatus_Item_autoSwitch: $.ASN1Decoder<ProtectionStatus_Item_autoSwitch> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatus_Item_autoSwitch */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatus_Item_autoSwitch
  * @function
@@ -245,13 +240,11 @@ export function _decode_ProtectionStatus_Item_autoSwitch(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatus_Item_autoSwitch(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus_Item_autoSwitch */
+
 let _cached_encoder_for_ProtectionStatus_Item_autoSwitch: $.ASN1Encoder<ProtectionStatus_Item_autoSwitch> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus_Item_autoSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatus_Item_autoSwitch */
+
 /**
  * @summary Encodes a(n) ProtectionStatus_Item_autoSwitch into an ASN.1 Element.
  * @function
@@ -307,6 +300,5 @@ export function _encode_ProtectionStatus_Item_autoSwitch(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatus_Item_autoSwitch */
 
 /* eslint-enable */

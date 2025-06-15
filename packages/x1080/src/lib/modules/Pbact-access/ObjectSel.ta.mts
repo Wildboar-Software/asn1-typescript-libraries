@@ -16,7 +16,7 @@ import {
     _decode_ObjectSel_objSelect,
     _encode_ObjectSel_objSelect,
 } from '../Pbact-access/ObjectSel-objSelect.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectSel */
+
 /**
  * @summary ObjectSel
  * @description
@@ -85,9 +85,8 @@ export class ObjectSel {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectSel */
+
 /**
  * @summary The Leading Root Component Types of ObjectSel
  * @description
@@ -106,9 +105,8 @@ export const _root_component_type_list_1_spec_for_ObjectSel: $.ComponentSpec[] =
     ),
     new $.ComponentSpec('objSelect', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectSel */
+
 /**
  * @summary The Trailing Root Component Types of ObjectSel
  * @description
@@ -118,9 +116,8 @@ export const _root_component_type_list_1_spec_for_ObjectSel: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObjectSel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectSel */
+
 /**
  * @summary The Extension Addition Component Types of ObjectSel
  * @description
@@ -130,13 +127,11 @@ export const _root_component_type_list_2_spec_for_ObjectSel: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_ObjectSel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectSel */
+
 let _cached_decoder_for_ObjectSel: $.ASN1Decoder<ObjectSel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectSel */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectSel
  * @function
@@ -165,13 +160,11 @@ export function _decode_ObjectSel(el: _Element) {
     }
     return _cached_decoder_for_ObjectSel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectSel */
+
 let _cached_encoder_for_ObjectSel: $.ASN1Encoder<ObjectSel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectSel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectSel */
+
 /**
  * @summary Encodes a(n) ObjectSel into an ASN.1 Element.
  * @function
@@ -211,6 +204,5 @@ export function _encode_ObjectSel(
     return _cached_encoder_for_ObjectSel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectSel */
 
 /* eslint-enable */

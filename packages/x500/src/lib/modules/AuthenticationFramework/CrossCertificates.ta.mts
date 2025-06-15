@@ -6,7 +6,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CrossCertificates */
 /**
  * @summary CrossCertificates
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type CrossCertificates = Certificate[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CrossCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossCertificates */
 let _cached_decoder_for_CrossCertificates: $.ASN1Decoder<CrossCertificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrossCertificates */
 /**
  * @summary Decodes an ASN.1 element into a(n) CrossCertificates
  * @function
@@ -39,13 +34,9 @@ export function _decode_CrossCertificates(el: _Element) {
     }
     return _cached_decoder_for_CrossCertificates(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrossCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossCertificates */
 let _cached_encoder_for_CrossCertificates: $.ASN1Encoder<CrossCertificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrossCertificates */
 /**
  * @summary Encodes a(n) CrossCertificates into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_CrossCertificates(
     return _cached_encoder_for_CrossCertificates(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrossCertificates */
 
 /* eslint-enable */

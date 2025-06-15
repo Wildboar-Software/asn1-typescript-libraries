@@ -15,7 +15,7 @@ import {
     _decode_Channel,
     _encode_Channel,
 } from '../M3100ASN1TypeModule2/Channel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Channels */
+
 /**
  * @summary Channels
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Channels = Channel[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Channels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Channels */
+
 let _cached_decoder_for_Channels: $.ASN1Decoder<Channels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Channels */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Channels */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Channels
  * @function
@@ -48,13 +46,11 @@ export function _decode_Channels(el: _Element) {
     }
     return _cached_decoder_for_Channels(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Channels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Channels */
+
 let _cached_encoder_for_Channels: $.ASN1Encoder<Channels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Channels */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Channels */
+
 /**
  * @summary Encodes a(n) Channels into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_Channels(
     return _cached_encoder_for_Channels(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Channels */
 
 /* eslint-enable */

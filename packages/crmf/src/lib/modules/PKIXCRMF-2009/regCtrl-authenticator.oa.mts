@@ -7,7 +7,7 @@ import {
 } from "../PKIXCRMF-2009/Authenticator.ta.mjs";
 import { id_regCtrl_authenticator } from "../PKIXCRMF-2009/id-regCtrl-authenticator.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regCtrl_authenticator */
+
 /**
  * @summary regCtrl_authenticator
  * @description
@@ -33,6 +33,5 @@ export const regCtrl_authenticator: ATTRIBUTE<Authenticator> = {
     "&id": id_regCtrl_authenticator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regCtrl_authenticator */
 
 /* eslint-enable */

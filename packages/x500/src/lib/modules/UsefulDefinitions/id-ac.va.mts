@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { applicationContext } from "../UsefulDefinitions/applicationContext.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ac */
 /**
  * @summary id_ac
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_ac: ID = applicationContext;
-/* END_OF_SYMBOL_DEFINITION id_ac */
 
 /* eslint-enable */

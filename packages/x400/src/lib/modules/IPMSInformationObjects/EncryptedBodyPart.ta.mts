@@ -20,7 +20,6 @@ import {
     _decode_EncryptedData,
     _encode_EncryptedData,
 } from '../IPMSInformationObjects/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncryptedBodyPart */
 /**
  * @summary EncryptedBodyPart
  * @description
@@ -70,9 +69,7 @@ export class EncryptedBodyPart {
         return new EncryptedBodyPart(_o.parameters, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedBodyPart */
 /**
  * @summary The Leading Root Component Types of EncryptedBodyPart
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_EncryptedBodyPart: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedBodyPart */
 /**
  * @summary The Trailing Root Component Types of EncryptedBodyPart
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_EncryptedBodyPart: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedBodyPart */
 /**
  * @summary The Extension Addition Component Types of EncryptedBodyPart
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_EncryptedBodyPart: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedBodyPart */
 let _cached_decoder_for_EncryptedBodyPart: $.ASN1Decoder<EncryptedBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedBodyPart
  * @function
@@ -158,13 +147,9 @@ export function _decode_EncryptedBodyPart(el: _Element) {
     }
     return _cached_decoder_for_EncryptedBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedBodyPart */
 let _cached_encoder_for_EncryptedBodyPart: $.ASN1Encoder<EncryptedBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedBodyPart */
 /**
  * @summary Encodes a(n) EncryptedBodyPart into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_EncryptedBodyPart(
     return _cached_encoder_for_EncryptedBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedBodyPart */
 
 /* eslint-enable */

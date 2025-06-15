@@ -16,7 +16,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Extension */
 /**
  * @summary Extension
  * @description
@@ -102,9 +101,7 @@ export class Extension {
         return el;
     }
 }
-/* END_OF_SYMBOL_DEFINITION Extension */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Extension */
 /**
  * @summary The Leading Root Component Types of Extension
  * @description
@@ -137,9 +134,7 @@ export const _root_component_type_list_1_spec_for_Extension: $.ComponentSpec[] =
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Extension */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Extension */
 /**
  * @summary The Trailing Root Component Types of Extension
  * @description
@@ -150,9 +145,7 @@ export const _root_component_type_list_1_spec_for_Extension: $.ComponentSpec[] =
  */
 export const _root_component_type_list_2_spec_for_Extension: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Extension */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Extension */
 /**
  * @summary The Extension Addition Component Types of Extension
  * @description
@@ -163,9 +156,7 @@ export const _root_component_type_list_2_spec_for_Extension: $.ComponentSpec[] =
  */
 export const _extension_additions_list_spec_for_Extension: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Extension */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Extension */
 /**
  * @summary Decodes an ASN.1 element into a(n) Extension
  * @function
@@ -210,9 +201,7 @@ export function _decode_Extension(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Extension */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Extension */
 /**
  * @summary Encodes a(n) Extension into an ASN.1 Element.
  * @function
@@ -236,6 +225,5 @@ export function _encode_Extension(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Extension */
 
 /* eslint-enable */

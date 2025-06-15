@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MaxClockAge */
 /**
  * @summary MaxClockAge
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MaxClockAge = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MaxClockAge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxClockAge */
 let _cached_decoder_for_MaxClockAge: $.ASN1Decoder<MaxClockAge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxClockAge */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaxClockAge */
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxClockAge
  * @function
@@ -46,13 +41,9 @@ export function _decode_MaxClockAge(el: _Element) {
     }
     return _cached_decoder_for_MaxClockAge(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaxClockAge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxClockAge */
 let _cached_encoder_for_MaxClockAge: $.ASN1Encoder<MaxClockAge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxClockAge */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaxClockAge */
 /**
  * @summary Encodes a(n) MaxClockAge into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MaxClockAge(
     return _cached_encoder_for_MaxClockAge(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaxClockAge */
 
 /* eslint-enable */

@@ -31,7 +31,6 @@ import {
     _decode_Validity,
     _encode_Validity,
 } from "../OperationalBindingManagement/Validity.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingArgumentData */
 /**
  * @summary EstablishOperationalBindingArgumentData
  * @description
@@ -153,9 +152,7 @@ export class EstablishOperationalBindingArgumentData {
         return Validity._from_object({});
     }
 }
-/* END_OF_SYMBOL_DEFINITION EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EstablishOperationalBindingArgumentData */
 /**
  * @summary The Leading Root Component Types of EstablishOperationalBindingArgumentData
  * @description
@@ -209,9 +206,7 @@ export const _root_component_type_list_1_spec_for_EstablishOperationalBindingArg
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EstablishOperationalBindingArgumentData */
 /**
  * @summary The Trailing Root Component Types of EstablishOperationalBindingArgumentData
  * @description
@@ -221,9 +216,7 @@ export const _root_component_type_list_1_spec_for_EstablishOperationalBindingArg
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EstablishOperationalBindingArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EstablishOperationalBindingArgumentData */
 /**
  * @summary The Extension Addition Component Types of EstablishOperationalBindingArgumentData
  * @description
@@ -233,13 +226,9 @@ export const _root_component_type_list_2_spec_for_EstablishOperationalBindingArg
  * @constant
  */
 export const _extension_additions_list_spec_for_EstablishOperationalBindingArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EstablishOperationalBindingArgumentData */
 let _cached_decoder_for_EstablishOperationalBindingArgumentData: $.ASN1Decoder<EstablishOperationalBindingArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EstablishOperationalBindingArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) EstablishOperationalBindingArgumentData
  * @function
@@ -325,13 +314,9 @@ export function _decode_EstablishOperationalBindingArgumentData(el: _Element) {
     }
     return _cached_decoder_for_EstablishOperationalBindingArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EstablishOperationalBindingArgumentData */
 let _cached_encoder_for_EstablishOperationalBindingArgumentData: $.ASN1Encoder<EstablishOperationalBindingArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EstablishOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EstablishOperationalBindingArgumentData */
 /**
  * @summary Encodes a(n) EstablishOperationalBindingArgumentData into an ASN.1 Element.
  * @function
@@ -417,6 +402,5 @@ export function _encode_EstablishOperationalBindingArgumentData(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EstablishOperationalBindingArgumentData */
 
 /* eslint-enable */

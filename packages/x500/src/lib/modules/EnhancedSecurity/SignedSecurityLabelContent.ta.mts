@@ -30,7 +30,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignedSecurityLabelContent */
 /**
  * @summary SignedSecurityLabelContent
  * @description
@@ -110,9 +109,7 @@ export class SignedSecurityLabelContent {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignedSecurityLabelContent */
 /**
  * @summary The Leading Root Component Types of SignedSecurityLabelContent
  * @description
@@ -151,9 +148,7 @@ export const _root_component_type_list_1_spec_for_SignedSecurityLabelContent: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignedSecurityLabelContent */
 /**
  * @summary The Trailing Root Component Types of SignedSecurityLabelContent
  * @description
@@ -163,9 +158,7 @@ export const _root_component_type_list_1_spec_for_SignedSecurityLabelContent: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SignedSecurityLabelContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignedSecurityLabelContent */
 /**
  * @summary The Extension Addition Component Types of SignedSecurityLabelContent
  * @description
@@ -175,13 +168,9 @@ export const _root_component_type_list_2_spec_for_SignedSecurityLabelContent: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_SignedSecurityLabelContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedSecurityLabelContent */
 let _cached_decoder_for_SignedSecurityLabelContent: $.ASN1Decoder<SignedSecurityLabelContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedSecurityLabelContent */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedSecurityLabelContent
  * @function
@@ -239,13 +228,9 @@ export function _decode_SignedSecurityLabelContent(el: _Element) {
     }
     return _cached_decoder_for_SignedSecurityLabelContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedSecurityLabelContent */
 let _cached_encoder_for_SignedSecurityLabelContent: $.ASN1Encoder<SignedSecurityLabelContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedSecurityLabelContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedSecurityLabelContent */
 /**
  * @summary Encodes a(n) SignedSecurityLabelContent into an ASN.1 Element.
  * @function
@@ -293,6 +278,5 @@ export function _encode_SignedSecurityLabelContent(
     return _cached_encoder_for_SignedSecurityLabelContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedSecurityLabelContent */
 
 /* eslint-enable */

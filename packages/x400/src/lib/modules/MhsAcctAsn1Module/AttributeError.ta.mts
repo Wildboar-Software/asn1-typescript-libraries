@@ -15,7 +15,6 @@ import {
     _decode_AttributeError_problems_Item,
     _encode_AttributeError_problems_Item,
 } from '../MhsAcctAsn1Module/AttributeError-problems-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeError */
 /**
  * @summary AttributeError
  * @description
@@ -61,9 +60,7 @@ export class AttributeError {
         return new AttributeError(_o.problems);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeError */
 /**
  * @summary The Leading Root Component Types of AttributeError
  * @description
@@ -81,9 +78,7 @@ export const _root_component_type_list_1_spec_for_AttributeError: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeError */
 /**
  * @summary The Trailing Root Component Types of AttributeError
  * @description
@@ -93,9 +88,7 @@ export const _root_component_type_list_1_spec_for_AttributeError: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeError */
 /**
  * @summary The Extension Addition Component Types of AttributeError
  * @description
@@ -105,13 +98,9 @@ export const _root_component_type_list_2_spec_for_AttributeError: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeError */
 let _cached_decoder_for_AttributeError: $.ASN1Decoder<AttributeError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeError */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeError
  * @function
@@ -152,13 +141,9 @@ export function _decode_AttributeError(el: _Element) {
     }
     return _cached_decoder_for_AttributeError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeError */
 let _cached_encoder_for_AttributeError: $.ASN1Encoder<AttributeError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeError */
 /**
  * @summary Encodes a(n) AttributeError into an ASN.1 Element.
  * @function
@@ -195,6 +180,5 @@ export function _encode_AttributeError(
     return _cached_encoder_for_AttributeError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeError */
 
 /* eslint-enable */

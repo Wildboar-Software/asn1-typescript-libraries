@@ -27,7 +27,7 @@ import {
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Verify_ResponseParams */
+
 /**
  * @summary Verify_ResponseParams
  * @description
@@ -104,9 +104,8 @@ export class Verify_ResponseParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Verify_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of Verify_ResponseParams
  * @description
@@ -152,9 +151,8 @@ export const _root_component_type_list_1_spec_for_Verify_ResponseParams: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Verify_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of Verify_ResponseParams
  * @description
@@ -164,9 +162,8 @@ export const _root_component_type_list_1_spec_for_Verify_ResponseParams: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Verify_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Verify_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of Verify_ResponseParams
  * @description
@@ -176,13 +173,11 @@ export const _root_component_type_list_2_spec_for_Verify_ResponseParams: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_Verify_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Verify_ResponseParams */
+
 let _cached_decoder_for_Verify_ResponseParams: $.ASN1Decoder<Verify_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Verify_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Verify_ResponseParams
  * @function
@@ -239,13 +234,11 @@ export function _decode_Verify_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_Verify_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Verify_ResponseParams */
+
 let _cached_encoder_for_Verify_ResponseParams: $.ASN1Encoder<Verify_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Verify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Verify_ResponseParams */
+
 /**
  * @summary Encodes a(n) Verify_ResponseParams into an ASN.1 Element.
  * @function
@@ -285,6 +278,5 @@ export function _encode_Verify_ResponseParams(
   return _cached_encoder_for_Verify_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Verify_ResponseParams */
 
 /* eslint-enable */

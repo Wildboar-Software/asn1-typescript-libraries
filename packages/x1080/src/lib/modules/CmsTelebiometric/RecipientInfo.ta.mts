@@ -20,7 +20,7 @@ import {
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
 } from '../CmsTelebiometric/KEKRecipientInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientInfo */
+
 /**
  * @summary RecipientInfo
  * @description
@@ -41,13 +41,11 @@ export type RecipientInfo =
     | { kari: KeyAgreeRecipientInfo } /* CHOICE_ALT_ROOT */
     | { kekri: KEKRecipientInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientInfo */
+
 let _cached_decoder_for_RecipientInfo: $.ASN1Decoder<RecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientInfo
  * @function
@@ -75,13 +73,11 @@ export function _decode_RecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_RecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientInfo */
+
 let _cached_encoder_for_RecipientInfo: $.ASN1Encoder<RecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientInfo */
+
 /**
  * @summary Encodes a(n) RecipientInfo into an ASN.1 Element.
  * @function
@@ -115,6 +111,5 @@ export function _encode_RecipientInfo(
     return _cached_encoder_for_RecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientInfo */
 
 /* eslint-enable */

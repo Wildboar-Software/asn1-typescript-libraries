@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AssertionValue */
+
 /**
  * @summary AssertionValue
  * @description
@@ -24,9 +24,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AssertionValue = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION AssertionValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssertionValue */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AssertionValue
  * @function
@@ -36,9 +35,8 @@ export type AssertionValue = OCTET_STRING; // OctetStringType
 export function _decode_AssertionValue(el: _Element) {
   return $._decodeOctetString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssertionValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssertionValue */
+
 /**
  * @summary Encodes a(n) AssertionValue into an ASN.1 Element.
  * @function
@@ -53,6 +51,5 @@ export function _encode_AssertionValue(
   return $._encodeOctetString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssertionValue */
 
 /* eslint-enable */

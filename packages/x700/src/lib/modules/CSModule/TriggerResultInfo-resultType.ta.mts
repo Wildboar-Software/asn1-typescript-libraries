@@ -15,7 +15,6 @@ import {
     _decode_ResultInfoFromThread,
     _encode_ResultInfoFromThread,
 } from '../CSModule/ResultInfoFromThread.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TriggerResultInfo_resultType */
 /**
  * @summary TriggerResultInfo_resultType
  * @description
@@ -30,13 +29,9 @@ export type TriggerResultInfo_resultType =
     | { singleTriggerResult: ResultInfoFromThread } /* CHOICE_ALT_ROOT */
     | { sequentialTriggerResult: ResultInfoFromThread[] } /* CHOICE_ALT_ROOT */
     | { parallelTriggerResult: ResultInfoFromThread[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TriggerResultInfo_resultType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerResultInfo_resultType */
 let _cached_decoder_for_TriggerResultInfo_resultType: $.ASN1Decoder<TriggerResultInfo_resultType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerResultInfo_resultType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TriggerResultInfo_resultType */
 /**
  * @summary Decodes an ASN.1 element into a(n) TriggerResultInfo_resultType
  * @function
@@ -70,13 +65,9 @@ export function _decode_TriggerResultInfo_resultType(el: _Element) {
     }
     return _cached_decoder_for_TriggerResultInfo_resultType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TriggerResultInfo_resultType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerResultInfo_resultType */
 let _cached_encoder_for_TriggerResultInfo_resultType: $.ASN1Encoder<TriggerResultInfo_resultType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerResultInfo_resultType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TriggerResultInfo_resultType */
 /**
  * @summary Encodes a(n) TriggerResultInfo_resultType into an ASN.1 Element.
  * @function
@@ -113,6 +104,5 @@ export function _encode_TriggerResultInfo_resultType(
     return _cached_encoder_for_TriggerResultInfo_resultType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TriggerResultInfo_resultType */
 
 /* eslint-enable */

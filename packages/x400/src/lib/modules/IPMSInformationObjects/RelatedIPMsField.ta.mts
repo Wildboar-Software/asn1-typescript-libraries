@@ -15,7 +15,6 @@ import {
     _decode_RelatedIPMsSubfield,
     _encode_RelatedIPMsSubfield,
 } from '../IPMSInformationObjects/RelatedIPMsSubfield.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedIPMsField */
 /**
  * @summary RelatedIPMsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RelatedIPMsField = RelatedIPMsSubfield[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RelatedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedIPMsField */
 let _cached_decoder_for_RelatedIPMsField: $.ASN1Decoder<RelatedIPMsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedIPMsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedIPMsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_RelatedIPMsField(el: _Element) {
     }
     return _cached_decoder_for_RelatedIPMsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedIPMsField */
 let _cached_encoder_for_RelatedIPMsField: $.ASN1Encoder<RelatedIPMsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedIPMsField */
 /**
  * @summary Encodes a(n) RelatedIPMsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RelatedIPMsField(
     return _cached_encoder_for_RelatedIPMsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedIPMsField */
 
 /* eslint-enable */

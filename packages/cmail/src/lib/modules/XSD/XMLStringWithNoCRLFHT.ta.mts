@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION XMLStringWithNoCRLFHT */
+
 /**
  * @summary XMLStringWithNoCRLFHT
  * @description
@@ -27,21 +27,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type XMLStringWithNoCRLFHT = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION XMLStringWithNoCRLFHT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoCRLFHT */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoCRLFHT */
 
-/* START_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoCRLFHT */
+
+
 export const _decode_XMLStringWithNoCRLFHT = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoCRLFHT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoCRLFHT */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoCRLFHT */
 
-/* START_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoCRLFHT */
+
+
 export const _encode_XMLStringWithNoCRLFHT = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoCRLFHT */
 
 /* eslint-enable */

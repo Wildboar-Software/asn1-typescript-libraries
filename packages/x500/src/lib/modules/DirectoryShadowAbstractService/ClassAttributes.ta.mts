@@ -10,7 +10,6 @@ import {
     _decode_AttributeTypes,
     _encode_AttributeTypes,
 } from "../DirectoryShadowAbstractService/AttributeTypes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ClassAttributes */
 /**
  * @summary ClassAttributes
  * @description
@@ -30,13 +29,9 @@ export type ClassAttributes =
     | { include: AttributeTypes } /* CHOICE_ALT_ROOT */
     | { exclude: AttributeTypes } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ClassAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassAttributes */
 let _cached_decoder_for_ClassAttributes: $.ASN1Decoder<ClassAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClassAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClassAttributes
  * @function
@@ -65,13 +60,9 @@ export function _decode_ClassAttributes(el: _Element) {
     }
     return _cached_decoder_for_ClassAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClassAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassAttributes */
 let _cached_encoder_for_ClassAttributes: $.ASN1Encoder<ClassAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClassAttributes */
 /**
  * @summary Encodes a(n) ClassAttributes into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_ClassAttributes(
     return _cached_encoder_for_ClassAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClassAttributes */
 
 /* eslint-enable */

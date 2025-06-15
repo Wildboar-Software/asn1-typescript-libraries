@@ -16,7 +16,7 @@ import {
 } from '../CmsTelebiometric/EnvelopedData.ta.mjs';
 import { id_envelopedData } from '../CmsTelebiometric/id-envelopedData.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION envelopedData */
+
 /**
  * @summary envelopedData
  * @description
@@ -44,6 +44,5 @@ export const envelopedData: CONTENT_TYPE<EnvelopedData> = {
     '&id': id_envelopedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION envelopedData */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_local_id_length */
 /**
  * @summary ub_local_id_length
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_local_id_length: INTEGER = 32;
-/* END_OF_SYMBOL_DEFINITION ub_local_id_length */
 
 /* eslint-enable */

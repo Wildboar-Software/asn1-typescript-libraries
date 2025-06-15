@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION md5_DES_CBC */
 /**
  * @summary md5_DES_CBC
  * @description
@@ -24,6 +23,5 @@ export const md5_DES_CBC: OBJECT_IDENTIFIER = new _OID([
     /* integrity */ 3,
     /* md5-DES-CBC */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION md5_DES_CBC */
 
 /* eslint-enable */

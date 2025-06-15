@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_sha */
 /**
  * @summary id_sha
  * @description
@@ -38,6 +37,5 @@ const id_sha: OBJECT_IDENTIFIER = new _OID([
     /* nistalgorithm */ 4,
     /* hashalgs */ 2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_sha */
 
 /* eslint-enable */

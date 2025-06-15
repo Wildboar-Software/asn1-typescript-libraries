@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AvaSet */
+
 /**
  * @summary AvaSet
  * @description
@@ -26,6 +26,5 @@ import { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca.mjs';
  *
  */
 export const AvaSet: CMIP_AVA[] = [];
-/* END_OF_SYMBOL_DEFINITION AvaSet */
 
 /* eslint-enable */

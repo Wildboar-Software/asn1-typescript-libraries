@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_cms_XKMS */
+
 /**
  * @summary id_cms_XKMS
  * @description
@@ -16,6 +16,5 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  * @constant
  */
 export const id_cms_XKMS: OID = new _OID([/* xkms */ 2], xmlMarkup);
-/* END_OF_SYMBOL_DEFINITION id_cms_XKMS */
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SigncryptedDataAlgorithmIdentifier */
+
 /**
  * @summary SigncryptedDataAlgorithmIdentifier
  * @description
@@ -15,13 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type SigncryptedDataAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SigncryptedDataAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SigncryptedDataAlgorithmIdentifier */
+
 let _cached_decoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Decoder<SigncryptedDataAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SigncryptedDataAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SigncryptedDataAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SigncryptedDataAlgorithmIdentifier
  * @function
@@ -34,13 +32,11 @@ export function _decode_SigncryptedDataAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_SigncryptedDataAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SigncryptedDataAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SigncryptedDataAlgorithmIdentifier */
+
 let _cached_encoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Encoder<SigncryptedDataAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SigncryptedDataAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SigncryptedDataAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) SigncryptedDataAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_SigncryptedDataAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SigncryptedDataAlgorithmIdentifier */
 
 /* eslint-enable */

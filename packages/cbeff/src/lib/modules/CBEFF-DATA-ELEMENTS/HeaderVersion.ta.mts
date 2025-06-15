@@ -20,7 +20,6 @@ import {
   _decode_HeaderVersion_header_minor,
   _encode_HeaderVersion_header_minor,
 } from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-minor.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HeaderVersion */
 /**
  * @summary HeaderVersion
  * @description
@@ -70,9 +69,7 @@ export class HeaderVersion {
     return new HeaderVersion(_o.header_major, _o.header_minor);
   }
 }
-/* END_OF_SYMBOL_DEFINITION HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HeaderVersion */
 /**
  * @summary The Leading Root Component Types of HeaderVersion
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_HeaderVersion: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HeaderVersion */
 /**
  * @summary The Trailing Root Component Types of HeaderVersion
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_HeaderVersion: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HeaderVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HeaderVersion */
 /**
  * @summary The Extension Addition Component Types of HeaderVersion
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_HeaderVersion: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_HeaderVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HeaderVersion */
 let _cached_decoder_for_HeaderVersion: $.ASN1Decoder<HeaderVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HeaderVersion */
 /**
  * @summary Decodes an ASN.1 element into a(n) HeaderVersion
  * @function
@@ -156,13 +145,9 @@ export function _decode_HeaderVersion(el: _Element) {
   }
   return _cached_decoder_for_HeaderVersion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HeaderVersion */
 let _cached_encoder_for_HeaderVersion: $.ASN1Encoder<HeaderVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HeaderVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HeaderVersion */
 /**
  * @summary Encodes a(n) HeaderVersion into an ASN.1 Element.
  * @function
@@ -197,6 +182,5 @@ export function _encode_HeaderVersion(
   return _cached_encoder_for_HeaderVersion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HeaderVersion */
 
 /* eslint-enable */

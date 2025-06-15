@@ -23,7 +23,6 @@ import {
     _encode_mta_bind_error_ParameterType,
 } from '../MTAAbstractService/mta-bind-error-ParameterType.ta.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_bind_error */
 /**
  * @summary mta_bind_error
  * @description
@@ -54,6 +53,5 @@ export const mta_bind_error: ABSTRACT_ERROR<mta_bind_error_ParameterType> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mta_bind_error */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifier.va.mjs';
-/* START_OF_SYMBOL_DEFINITION m3108Part2Attribute */
+
 /**
  * @summary m3108Part2Attribute
  * @description
@@ -28,6 +28,5 @@ export const m3108Part2Attribute: OBJECT_IDENTIFIER = new _OID(
     [/* attribute */ 6],
     m3108Part2Identifier
 );
-/* END_OF_SYMBOL_DEFINITION m3108Part2Attribute */
 
 /* eslint-enable */

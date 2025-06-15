@@ -15,7 +15,6 @@ import {
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION URI */
 /**
  * @summary URI
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type URI = NonEmptyOctetString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION URI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_URI */
 let _cached_decoder_for_URI: $.ASN1Decoder<URI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_URI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_URI */
 /**
  * @summary Decodes an ASN.1 element into a(n) URI
  * @function
@@ -46,13 +41,9 @@ export function _decode_URI(el: _Element) {
   }
   return _cached_decoder_for_URI(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_URI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_URI */
 let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_URI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_URI */
 /**
  * @summary Encodes a(n) URI into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>) {
   return _cached_encoder_for_URI(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_URI */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MSString */
 /**
  * @summary MSString
  * @description
@@ -39,13 +38,9 @@ export type MSString =
     | { general: GeneralString } /* CHOICE_ALT_ROOT */
     | { universal: UniversalString } /* CHOICE_ALT_ROOT */
     | { bmp: BMPString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MSString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSString */
 let _cached_decoder_for_MSString: $.ASN1Decoder<MSString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSString */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSString
  * @function
@@ -64,13 +59,9 @@ export function _decode_MSString(el: _Element) {
     }
     return _cached_decoder_for_MSString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSString */
 let _cached_encoder_for_MSString: $.ASN1Encoder<MSString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSString */
 /**
  * @summary Encodes a(n) MSString into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_MSString(
     return _cached_encoder_for_MSString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSString */
 
 /* eslint-enable */

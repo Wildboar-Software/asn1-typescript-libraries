@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va.mjs";
-/* START_OF_SYMBOL_DEFINITION brainpoolP160r1 */
 /**
  * @summary brainpoolP160r1
  * @description
@@ -16,6 +15,5 @@ import { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va.mjs";
  * @constant
  */
 export const brainpoolP160r1: ID = new _OID([1], versionOne);
-/* END_OF_SYMBOL_DEFINITION brainpoolP160r1 */
 
 /* eslint-enable */

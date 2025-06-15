@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs";
 import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityAlarmDetector */
 /**
  * @summary SecurityAlarmDetector
  * @description
@@ -33,13 +32,9 @@ type SecurityAlarmDetector =
     { mechanism: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { object: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { application: AE_title } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SecurityAlarmDetector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityAlarmDetector */
 let _cached_decoder_for_SecurityAlarmDetector: $.ASN1Decoder<SecurityAlarmDetector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityAlarmDetector */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityAlarmDetector */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityAlarmDetector
  * @function
@@ -55,13 +50,9 @@ function _decode_SecurityAlarmDetector (el: _Element) {
 }); }
     return _cached_decoder_for_SecurityAlarmDetector(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityAlarmDetector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityAlarmDetector */
 let _cached_encoder_for_SecurityAlarmDetector: $.ASN1Encoder<SecurityAlarmDetector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityAlarmDetector */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityAlarmDetector */
 /**
  * @summary Encodes a(n) SecurityAlarmDetector into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ function _encode_SecurityAlarmDetector (value: SecurityAlarmDetector, elGetter: 
     return _cached_encoder_for_SecurityAlarmDetector(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityAlarmDetector */
 
 /* eslint-enable */

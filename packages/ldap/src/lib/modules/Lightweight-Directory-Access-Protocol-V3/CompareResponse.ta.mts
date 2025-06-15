@@ -15,7 +15,7 @@ import {
   _decode_LDAPResult,
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CompareResponse */
+
 /**
  * @summary CompareResponse
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type CompareResponse = LDAPResult; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CompareResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResponse */
+
 let _cached_decoder_for_CompareResponse: $.ASN1Decoder<CompareResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareResponse
  * @function
@@ -48,13 +46,11 @@ export function _decode_CompareResponse(el: _Element) {
   }
   return _cached_decoder_for_CompareResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResponse */
+
 let _cached_encoder_for_CompareResponse: $.ASN1Encoder<CompareResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareResponse */
+
 /**
  * @summary Encodes a(n) CompareResponse into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_CompareResponse(
   return _cached_encoder_for_CompareResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareResponse */
 
 /* eslint-enable */

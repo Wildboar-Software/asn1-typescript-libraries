@@ -9,7 +9,6 @@ import {
     _decode_MultipleMatchingLocalities,
     _encode_MultipleMatchingLocalities,
 } from "../SelectedAttributeTypes/MultipleMatchingLocalities.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION multipleMatchingLocalities */
 /**
  * @summary multipleMatchingLocalities
  * @description
@@ -43,6 +42,5 @@ export const multipleMatchingLocalities: ATTRIBUTE<MultipleMatchingLocalities> =
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION multipleMatchingLocalities */
 
 /* eslint-enable */

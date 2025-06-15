@@ -15,7 +15,6 @@ import {
   _decode_PKCReference,
   _encode_PKCReference,
 } from '../SCVP-2009/PKCReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TrustAnchors */
 /**
  * @summary TrustAnchors
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TrustAnchors = PKCReference[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TrustAnchors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchors */
 let _cached_decoder_for_TrustAnchors: $.ASN1Decoder<TrustAnchors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustAnchors */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchors
  * @function
@@ -48,13 +43,9 @@ export function _decode_TrustAnchors(el: _Element) {
   }
   return _cached_decoder_for_TrustAnchors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustAnchors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchors */
 let _cached_encoder_for_TrustAnchors: $.ASN1Encoder<TrustAnchors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustAnchors */
 /**
  * @summary Encodes a(n) TrustAnchors into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TrustAnchors(
   return _cached_encoder_for_TrustAnchors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustAnchors */
 
 /* eslint-enable */

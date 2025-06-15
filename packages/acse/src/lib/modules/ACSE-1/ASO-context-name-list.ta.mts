@@ -15,7 +15,6 @@ import {
   _decode_ASO_context_name,
   _encode_ASO_context_name,
 } from '../ACSE-1/ASO-context-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ASO_context_name_list */
 /**
  * @summary ASO_context_name_list
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ASO_context_name_list = ASO_context_name[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ASO_context_name_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_context_name_list */
 let _cached_decoder_for_ASO_context_name_list: $.ASN1Decoder<ASO_context_name_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_context_name_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ASO_context_name_list */
 /**
  * @summary Decodes an ASN.1 element into a(n) ASO_context_name_list
  * @function
@@ -48,13 +43,9 @@ export function _decode_ASO_context_name_list(el: _Element) {
   }
   return _cached_decoder_for_ASO_context_name_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ASO_context_name_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_context_name_list */
 let _cached_encoder_for_ASO_context_name_list: $.ASN1Encoder<ASO_context_name_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_context_name_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ASO_context_name_list */
 /**
  * @summary Encodes a(n) ASO_context_name_list into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ASO_context_name_list(
   return _cached_encoder_for_ASO_context_name_list(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ASO_context_name_list */
 
 /* eslint-enable */

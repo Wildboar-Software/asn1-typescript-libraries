@@ -16,7 +16,7 @@ import {
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Checksum */
+
 /**
  * @summary Checksum
  * @description
@@ -66,9 +66,8 @@ export class Checksum {
     return new Checksum(_o.cksumtype, _o.checksum);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Checksum */
+
 /**
  * @summary The Leading Root Component Types of Checksum
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_Checksum: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Checksum */
+
 /**
  * @summary The Trailing Root Component Types of Checksum
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_Checksum: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Checksum: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Checksum */
+
 /**
  * @summary The Extension Addition Component Types of Checksum
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_Checksum: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Checksum: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Checksum */
+
 let _cached_decoder_for_Checksum: $.ASN1Decoder<Checksum> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Checksum */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Checksum
  * @function
@@ -152,13 +147,11 @@ export function _decode_Checksum(el: _Element) {
   }
   return _cached_decoder_for_Checksum(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Checksum */
+
 let _cached_encoder_for_Checksum: $.ASN1Encoder<Checksum> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Checksum */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Checksum */
+
 /**
  * @summary Encodes a(n) Checksum into an ASN.1 Element.
  * @function
@@ -197,6 +190,5 @@ export function _encode_Checksum(
   return _cached_encoder_for_Checksum(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Checksum */
 
 /* eslint-enable */

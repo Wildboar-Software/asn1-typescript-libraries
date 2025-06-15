@@ -10,7 +10,6 @@ import { hierarchicalOperationalBinding_roleA } from "../HierarchicalOperational
 import { hierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleB.oa.mjs";
 import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding */
 /**
  * @summary hierarchicalOperationalBinding
  * @description
@@ -62,6 +61,5 @@ export const hierarchicalOperationalBinding: OPERATIONAL_BINDING<HierarchicalAgr
     "&id": id_op_binding_hierarchical /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Agreement": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding */
 
 /* eslint-enable */

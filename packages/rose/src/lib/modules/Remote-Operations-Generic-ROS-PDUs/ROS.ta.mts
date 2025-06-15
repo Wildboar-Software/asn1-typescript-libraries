@@ -38,7 +38,7 @@ import {
   _decode_RejectProblem,
   _encode_RejectProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ROS */
+
 /**
  * @summary ROS
  * @description
@@ -62,13 +62,11 @@ export type ROS =
   | { returnResult: ReturnResult } /* CHOICE_ALT_ROOT */
   | { returnError: ReturnError } /* CHOICE_ALT_ROOT */
   | { reject: Reject } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ROS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ROS */
+
 let _cached_decoder_for_ROS: $.ASN1Decoder<ROS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ROS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ROS */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROS
  * @function
@@ -92,13 +90,11 @@ export function _decode_ROS(el: _Element) {
   }
   return _cached_decoder_for_ROS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ROS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ROS */
+
 let _cached_encoder_for_ROS: $.ASN1Encoder<ROS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ROS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ROS */
+
 /**
  * @summary Encodes a(n) ROS into an ASN.1 Element.
  * @function
@@ -141,6 +137,5 @@ export function _encode_ROS(value: ROS, elGetter: $.ASN1Encoder<ROS>) {
   return _cached_encoder_for_ROS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ROS */
 
 /* eslint-enable */

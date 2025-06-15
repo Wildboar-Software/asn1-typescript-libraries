@@ -7,7 +7,7 @@ import {
     _encode_GeneralName,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION NameRegistrationAuthorities */
+
 /**
  * @summary NameRegistrationAuthorities
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type NameRegistrationAuthorities = GeneralName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION NameRegistrationAuthorities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameRegistrationAuthorities */
+
 let _cached_decoder_for_NameRegistrationAuthorities: $.ASN1Decoder<NameRegistrationAuthorities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameRegistrationAuthorities */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameRegistrationAuthorities */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NameRegistrationAuthorities
  * @function
@@ -40,13 +38,11 @@ export function _decode_NameRegistrationAuthorities(el: _Element) {
     }
     return _cached_decoder_for_NameRegistrationAuthorities(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameRegistrationAuthorities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameRegistrationAuthorities */
+
 let _cached_encoder_for_NameRegistrationAuthorities: $.ASN1Encoder<NameRegistrationAuthorities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameRegistrationAuthorities */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameRegistrationAuthorities */
+
 /**
  * @summary Encodes a(n) NameRegistrationAuthorities into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_NameRegistrationAuthorities(
     return _cached_encoder_for_NameRegistrationAuthorities(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameRegistrationAuthorities */
 
 /* eslint-enable */

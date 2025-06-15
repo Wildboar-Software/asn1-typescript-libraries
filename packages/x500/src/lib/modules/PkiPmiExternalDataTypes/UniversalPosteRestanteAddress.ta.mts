@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../PkiPmiExternalDataTypes/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalPosteRestanteAddress */
 /**
  * @summary UniversalPosteRestanteAddress
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalPosteRestanteAddress = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPosteRestanteAddress */
 let _cached_decoder_for_UniversalPosteRestanteAddress: $.ASN1Decoder<UniversalPosteRestanteAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPosteRestanteAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPosteRestanteAddress
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalPosteRestanteAddress(el: _Element) {
     }
     return _cached_decoder_for_UniversalPosteRestanteAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPosteRestanteAddress */
 let _cached_encoder_for_UniversalPosteRestanteAddress: $.ASN1Encoder<UniversalPosteRestanteAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPosteRestanteAddress */
 /**
  * @summary Encodes a(n) UniversalPosteRestanteAddress into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_UniversalPosteRestanteAddress(
     return _cached_encoder_for_UniversalPosteRestanteAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPosteRestanteAddress */
 
 /* eslint-enable */

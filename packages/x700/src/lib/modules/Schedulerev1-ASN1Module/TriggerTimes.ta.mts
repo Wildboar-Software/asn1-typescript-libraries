@@ -15,7 +15,6 @@ import {
     _decode_Time24Wps,
     _encode_Time24Wps,
 } from '../Schedulerev1-ASN1Module/Time24Wps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TriggerTimes */
 /**
  * @summary TriggerTimes
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TriggerTimes = Time24Wps[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TriggerTimes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerTimes */
 let _cached_decoder_for_TriggerTimes: $.ASN1Decoder<TriggerTimes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerTimes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TriggerTimes */
 /**
  * @summary Decodes an ASN.1 element into a(n) TriggerTimes
  * @function
@@ -48,13 +43,9 @@ export function _decode_TriggerTimes(el: _Element) {
     }
     return _cached_decoder_for_TriggerTimes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TriggerTimes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerTimes */
 let _cached_encoder_for_TriggerTimes: $.ASN1Encoder<TriggerTimes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerTimes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TriggerTimes */
 /**
  * @summary Encodes a(n) TriggerTimes into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TriggerTimes(
     return _cached_encoder_for_TriggerTimes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TriggerTimes */
 
 /* eslint-enable */

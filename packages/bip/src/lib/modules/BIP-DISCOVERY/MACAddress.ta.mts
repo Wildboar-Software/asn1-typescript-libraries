@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MACAddress */
+
 /**
  * @summary MACAddress
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MACAddress = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION MACAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MACAddress */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MACAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MACAddress */
+
+
 export const _decode_MACAddress = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_MACAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MACAddress */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MACAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MACAddress */
+
+
 export const _encode_MACAddress = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MACAddress */
 
 /* eslint-enable */

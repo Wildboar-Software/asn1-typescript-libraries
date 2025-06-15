@@ -31,7 +31,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientAutoForwardFields */
 /**
  * @summary PerRecipientAutoForwardFields
  * @description
@@ -115,9 +114,7 @@ export class PerRecipientAutoForwardFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientAutoForwardFields */
 /**
  * @summary The Leading Root Component Types of PerRecipientAutoForwardFields
  * @description
@@ -156,9 +153,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientAutoForwardFields:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientAutoForwardFields */
 /**
  * @summary The Trailing Root Component Types of PerRecipientAutoForwardFields
  * @description
@@ -168,9 +163,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientAutoForwardFields:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerRecipientAutoForwardFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientAutoForwardFields */
 /**
  * @summary The Extension Addition Component Types of PerRecipientAutoForwardFields
  * @description
@@ -180,13 +173,9 @@ export const _root_component_type_list_2_spec_for_PerRecipientAutoForwardFields:
  * @constant
  */
 export const _extension_additions_list_spec_for_PerRecipientAutoForwardFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientAutoForwardFields */
 let _cached_decoder_for_PerRecipientAutoForwardFields: $.ASN1Decoder<PerRecipientAutoForwardFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerRecipientAutoForwardFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerRecipientAutoForwardFields
  * @function
@@ -247,13 +236,9 @@ export function _decode_PerRecipientAutoForwardFields(el: _Element) {
     }
     return _cached_decoder_for_PerRecipientAutoForwardFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientAutoForwardFields */
 let _cached_encoder_for_PerRecipientAutoForwardFields: $.ASN1Encoder<PerRecipientAutoForwardFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientAutoForwardFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerRecipientAutoForwardFields */
 /**
  * @summary Encodes a(n) PerRecipientAutoForwardFields into an ASN.1 Element.
  * @function
@@ -314,6 +299,5 @@ export function _encode_PerRecipientAutoForwardFields(
     return _cached_encoder_for_PerRecipientAutoForwardFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerRecipientAutoForwardFields */
 
 /* eslint-enable */

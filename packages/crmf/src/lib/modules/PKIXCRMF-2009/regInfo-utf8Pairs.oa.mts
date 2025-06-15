@@ -7,7 +7,7 @@ import {
     _encode_UTF8Pairs,
 } from "../PKIXCRMF-2009/UTF8Pairs.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regInfo_utf8Pairs */
+
 /**
  * @summary regInfo_utf8Pairs
  * @description
@@ -33,6 +33,5 @@ export const regInfo_utf8Pairs: ATTRIBUTE<UTF8Pairs> = {
     "&id": id_regInfo_utf8Pairs /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regInfo_utf8Pairs */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
     _encode_GeneralName,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EncKeyWithID_identifier */
+
 /**
  * @summary EncKeyWithID_identifier
  * @description
@@ -21,13 +21,11 @@ import {
 export type EncKeyWithID_identifier =
     | { string_: UTF8String } /* CHOICE_ALT_ROOT */
     | { generalName: GeneralName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EncKeyWithID_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncKeyWithID_identifier */
+
 let _cached_decoder_for_EncKeyWithID_identifier: $.ASN1Decoder<EncKeyWithID_identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncKeyWithID_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncKeyWithID_identifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncKeyWithID_identifier
  * @function
@@ -53,13 +51,11 @@ export function _decode_EncKeyWithID_identifier(el: _Element) {
     }
     return _cached_decoder_for_EncKeyWithID_identifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncKeyWithID_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncKeyWithID_identifier */
+
 let _cached_encoder_for_EncKeyWithID_identifier: $.ASN1Encoder<EncKeyWithID_identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncKeyWithID_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncKeyWithID_identifier */
+
 /**
  * @summary Encodes a(n) EncKeyWithID_identifier into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_EncKeyWithID_identifier(
     return _cached_encoder_for_EncKeyWithID_identifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncKeyWithID_identifier */
 
 /* eslint-enable */

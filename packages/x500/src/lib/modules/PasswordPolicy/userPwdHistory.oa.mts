@@ -4,7 +4,6 @@ import { pwdHistory } from "../InformationFramework/pwdHistory.oa.mjs";
 import { id_oa_userPwdHistory } from "../PasswordPolicy/id-oa-userPwdHistory.va.mjs";
 import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";
 import { userPwdHistoryMatch } from "../PasswordPolicy/userPwdHistoryMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION userPwdHistory */
 /**
  * @summary userPwdHistory
  * @description
@@ -24,6 +23,5 @@ export const userPwdHistory: ATTRIBUTE = pwdHistory(
     userPwdHistoryMatch,
     id_oa_userPwdHistory
 );
-/* END_OF_SYMBOL_DEFINITION userPwdHistory */
 
 /* eslint-enable */

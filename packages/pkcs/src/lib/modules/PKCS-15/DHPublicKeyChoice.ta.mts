@@ -12,7 +12,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DHPublicKeyChoice */
+
 /**
  * @summary DHPublicKeyChoice
  * @description
@@ -31,13 +31,11 @@ export type DHPublicKeyChoice =
     | { raw: DiffieHellmanPublicNumber } /* CHOICE_ALT_ROOT */
     | { spki: SubjectPublicKeyInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DHPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DHPublicKeyChoice */
+
 let _cached_decoder_for_DHPublicKeyChoice: $.ASN1Decoder<DHPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DHPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DHPublicKeyChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DHPublicKeyChoice
  * @function
@@ -55,13 +53,11 @@ export function _decode_DHPublicKeyChoice(el: _Element) {
     }
     return _cached_decoder_for_DHPublicKeyChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DHPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DHPublicKeyChoice */
+
 let _cached_encoder_for_DHPublicKeyChoice: $.ASN1Encoder<DHPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DHPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DHPublicKeyChoice */
+
 /**
  * @summary Encodes a(n) DHPublicKeyChoice into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_DHPublicKeyChoice(
     return _cached_encoder_for_DHPublicKeyChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DHPublicKeyChoice */
 
 /* eslint-enable */

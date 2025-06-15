@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SmUserInfoReceived */
 /**
  * @summary SmUserInfoReceived
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type SmUserInfoReceived =
     | { nothingReceived: NULL } /* CHOICE_ALT_ROOT */
     | { informationReceived: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SmUserInfoReceived */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SmUserInfoReceived */
 let _cached_decoder_for_SmUserInfoReceived: $.ASN1Decoder<SmUserInfoReceived> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SmUserInfoReceived */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SmUserInfoReceived */
 /**
  * @summary Decodes an ASN.1 element into a(n) SmUserInfoReceived
  * @function
@@ -54,13 +49,9 @@ export function _decode_SmUserInfoReceived(el: _Element) {
     }
     return _cached_decoder_for_SmUserInfoReceived(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SmUserInfoReceived */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SmUserInfoReceived */
 let _cached_encoder_for_SmUserInfoReceived: $.ASN1Encoder<SmUserInfoReceived> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SmUserInfoReceived */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SmUserInfoReceived */
 /**
  * @summary Encodes a(n) SmUserInfoReceived into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_SmUserInfoReceived(
     return _cached_encoder_for_SmUserInfoReceived(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SmUserInfoReceived */
 
 /* eslint-enable */

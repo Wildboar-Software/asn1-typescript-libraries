@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AlertResult */
 /**
  * @summary AlertResult
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AlertResult = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION AlertResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertResult */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlertResult */
 export const _decode_AlertResult = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_AlertResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertResult */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlertResult */
 export const _encode_AlertResult = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlertResult */
 
 /* eslint-enable */

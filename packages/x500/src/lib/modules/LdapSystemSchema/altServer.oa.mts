@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_lat_altServer } from "../LdapSystemSchema/id-lat-altServer.va.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION altServer */
 /**
  * @summary altServer
  * @description
@@ -46,6 +45,5 @@ export const altServer: ATTRIBUTE<IA5String> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION altServer */
 
 /* eslint-enable */

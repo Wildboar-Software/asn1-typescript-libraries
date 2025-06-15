@@ -6,7 +6,6 @@ import {
     _decode_CertSubscribeOK_Item,
     _encode_CertSubscribeOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertSubscribeOK */
 /**
  * @summary CertSubscribeOK
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CertSubscribeOK = CertSubscribeOK_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertSubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeOK */
 let _cached_decoder_for_CertSubscribeOK: $.ASN1Decoder<CertSubscribeOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertSubscribeOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertSubscribeOK
  * @function
@@ -48,13 +43,9 @@ export function _decode_CertSubscribeOK(el: _Element) {
     }
     return _cached_decoder_for_CertSubscribeOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertSubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeOK */
 let _cached_encoder_for_CertSubscribeOK: $.ASN1Encoder<CertSubscribeOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertSubscribeOK */
 /**
  * @summary Encodes a(n) CertSubscribeOK into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_CertSubscribeOK(
     return _cached_encoder_for_CertSubscribeOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertSubscribeOK */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ResponsibilityPassingAllowedField */
 /**
  * @summary ResponsibilityPassingAllowedField
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ResponsibilityPassingAllowedField = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION ResponsibilityPassingAllowedField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponsibilityPassingAllowedField */
 let _cached_decoder_for_ResponsibilityPassingAllowedField: $.ASN1Decoder<ResponsibilityPassingAllowedField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponsibilityPassingAllowedField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponsibilityPassingAllowedField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponsibilityPassingAllowedField
  * @function
@@ -44,13 +39,9 @@ export function _decode_ResponsibilityPassingAllowedField(el: _Element) {
     }
     return _cached_decoder_for_ResponsibilityPassingAllowedField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponsibilityPassingAllowedField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponsibilityPassingAllowedField */
 let _cached_encoder_for_ResponsibilityPassingAllowedField: $.ASN1Encoder<ResponsibilityPassingAllowedField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponsibilityPassingAllowedField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponsibilityPassingAllowedField */
 /**
  * @summary Encodes a(n) ResponsibilityPassingAllowedField into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_ResponsibilityPassingAllowedField(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponsibilityPassingAllowedField */
 
 /* eslint-enable */

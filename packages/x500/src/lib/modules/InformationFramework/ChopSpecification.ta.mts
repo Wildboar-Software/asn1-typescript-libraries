@@ -15,7 +15,6 @@ import {
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
 } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ChopSpecification */
 /**
  * @summary ChopSpecification
  * @description
@@ -95,9 +94,7 @@ export class ChopSpecification {
         return 0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChopSpecification */
 /**
  * @summary The Leading Root Component Types of ChopSpecification
  * @description
@@ -129,9 +126,7 @@ export const _root_component_type_list_1_spec_for_ChopSpecification: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChopSpecification */
 /**
  * @summary The Trailing Root Component Types of ChopSpecification
  * @description
@@ -141,9 +136,7 @@ export const _root_component_type_list_1_spec_for_ChopSpecification: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ChopSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChopSpecification */
 /**
  * @summary The Extension Addition Component Types of ChopSpecification
  * @description
@@ -153,13 +146,9 @@ export const _root_component_type_list_2_spec_for_ChopSpecification: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_ChopSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChopSpecification */
 let _cached_decoder_for_ChopSpecification: $.ASN1Decoder<ChopSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChopSpecification */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChopSpecification
  * @function
@@ -224,13 +213,9 @@ export function _decode_ChopSpecification(el: _Element) {
     }
     return _cached_decoder_for_ChopSpecification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChopSpecification */
 let _cached_encoder_for_ChopSpecification: $.ASN1Encoder<ChopSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChopSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChopSpecification */
 /**
  * @summary Encodes a(n) ChopSpecification into an ASN.1 Element.
  * @function
@@ -296,6 +281,5 @@ export function _encode_ChopSpecification(
     return _cached_encoder_for_ChopSpecification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChopSpecification */
 
 /* eslint-enable */

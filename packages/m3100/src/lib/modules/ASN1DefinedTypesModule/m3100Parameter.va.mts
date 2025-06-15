@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { m3100InformationModel } from '../ASN1DefinedTypesModule/m3100InformationModel.va.mjs';
-/* START_OF_SYMBOL_DEFINITION m3100Parameter */
+
 /**
  * @summary m3100Parameter
  * @description
@@ -28,6 +28,5 @@ export const m3100Parameter: OBJECT_IDENTIFIER = new _OID(
     [/* parameter */ 5],
     m3100InformationModel
 );
-/* END_OF_SYMBOL_DEFINITION m3100Parameter */
 
 /* eslint-enable */

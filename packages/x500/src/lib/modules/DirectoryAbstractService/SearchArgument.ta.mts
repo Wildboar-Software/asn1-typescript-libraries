@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SearchArgument */
 /**
  * @summary SearchArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type SearchArgument = OPTIONALLY_PROTECTED<SearchArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SearchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgument */
 let _cached_decoder_for_SearchArgument: $.ASN1Decoder<SearchArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_SearchArgument(el: _Element) {
     }
     return _cached_decoder_for_SearchArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgument */
 let _cached_encoder_for_SearchArgument: $.ASN1Encoder<SearchArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchArgument */
 /**
  * @summary Encodes a(n) SearchArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SearchArgument(
     return _cached_encoder_for_SearchArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchArgument */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { AdviceNotifications } from '../IPMSInformationObjects/AdviceNotifications.osa.mjs';
 import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION OtherNotifications */
 /**
  * @summary OtherNotifications
  * @description
@@ -31,6 +30,5 @@ export const OtherNotifications: IPMS_EXTENSION[] = [
     ...AdviceNotifications,
     ...PrivateIPMSExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION OtherNotifications */
 
 /* eslint-enable */

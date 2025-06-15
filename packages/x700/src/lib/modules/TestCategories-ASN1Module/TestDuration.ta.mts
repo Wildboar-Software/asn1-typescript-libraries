@@ -20,7 +20,6 @@ import {
     _decode_TestDuration_signalLength,
     _encode_TestDuration_signalLength,
 } from '../TestCategories-ASN1Module/TestDuration-signalLength.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestDuration */
 /**
  * @summary TestDuration
  * @description
@@ -38,13 +37,9 @@ import {
 export type TestDuration =
     | { signalDuration: Timespec } /* CHOICE_ALT_ROOT */
     | { signalLength: TestDuration_signalLength } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestDuration */
 let _cached_decoder_for_TestDuration: $.ASN1Decoder<TestDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestDuration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestDuration */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestDuration
  * @function
@@ -71,13 +66,9 @@ export function _decode_TestDuration(el: _Element) {
     }
     return _cached_decoder_for_TestDuration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestDuration */
 let _cached_encoder_for_TestDuration: $.ASN1Encoder<TestDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestDuration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestDuration */
 /**
  * @summary Encodes a(n) TestDuration into an ASN.1 Element.
  * @function
@@ -101,6 +92,5 @@ export function _encode_TestDuration(
     return _cached_encoder_for_TestDuration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestDuration */
 
 /* eslint-enable */

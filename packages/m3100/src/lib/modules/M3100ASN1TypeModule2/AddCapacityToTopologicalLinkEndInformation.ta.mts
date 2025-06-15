@@ -15,7 +15,7 @@ import {
     _decode_RequestedPointCapacity,
     _encode_RequestedPointCapacity,
 } from '../M3100ASN1TypeModule2/RequestedPointCapacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkEndInformation */
+
 /**
  * @summary AddCapacityToTopologicalLinkEndInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AddCapacityToTopologicalLinkEndInformation = RequestedPointCapacity; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddCapacityToTopologicalLinkEndInformation */
+
 let _cached_decoder_for_AddCapacityToTopologicalLinkEndInformation: $.ASN1Decoder<AddCapacityToTopologicalLinkEndInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddCapacityToTopologicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddCapacityToTopologicalLinkEndInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddCapacityToTopologicalLinkEndInformation
  * @function
@@ -48,13 +46,11 @@ export function _decode_AddCapacityToTopologicalLinkEndInformation(
     }
     return _cached_decoder_for_AddCapacityToTopologicalLinkEndInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddCapacityToTopologicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddCapacityToTopologicalLinkEndInformation */
+
 let _cached_encoder_for_AddCapacityToTopologicalLinkEndInformation: $.ASN1Encoder<AddCapacityToTopologicalLinkEndInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddCapacityToTopologicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddCapacityToTopologicalLinkEndInformation */
+
 /**
  * @summary Encodes a(n) AddCapacityToTopologicalLinkEndInformation into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AddCapacityToTopologicalLinkEndInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddCapacityToTopologicalLinkEndInformation */
 
 /* eslint-enable */

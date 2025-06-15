@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKIFreeText */
 /**
  * @summary PKIFreeText
  * @description
@@ -14,13 +13,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type PKIFreeText = UTF8String[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PKIFreeText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIFreeText */
 let _cached_decoder_for_PKIFreeText: $.ASN1Decoder<PKIFreeText> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIFreeText */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIFreeText */
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIFreeText
  * @function
@@ -35,13 +30,9 @@ export function _decode_PKIFreeText(el: _Element) {
     }
     return _cached_decoder_for_PKIFreeText(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIFreeText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIFreeText */
 let _cached_encoder_for_PKIFreeText: $.ASN1Encoder<PKIFreeText> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIFreeText */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIFreeText */
 /**
  * @summary Encodes a(n) PKIFreeText into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ export function _encode_PKIFreeText(
     return _cached_encoder_for_PKIFreeText(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIFreeText */
 
 /* eslint-enable */

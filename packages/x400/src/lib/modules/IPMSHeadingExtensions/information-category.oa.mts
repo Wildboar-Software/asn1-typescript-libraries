@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/InformationCategories.ta.mjs';
 import { id_hex_information_category } from '../IPMSObjectIdentifiers/id-hex-information-category.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION information_category */
 /**
  * @summary information_category
  * @description
@@ -45,6 +44,5 @@ export const information_category: IPMS_EXTENSION<InformationCategories> = {
     '&id': id_hex_information_category /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION information_category */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
   _decode_Information,
   _encode_Information,
 } from '../CINF-module/Information.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ChildInformation */
+
 /**
  * @summary ChildInformation
  * @description
@@ -33,13 +33,11 @@ import {
 export type ChildInformation =
   | { noDisclosure: NULL } /* CHOICE_ALT_ROOT */
   | { disclosure: Information } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ChildInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChildInformation */
+
 let _cached_decoder_for_ChildInformation: $.ASN1Decoder<ChildInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChildInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChildInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ChildInformation
  * @function
@@ -57,13 +55,11 @@ export function _decode_ChildInformation(el: _Element) {
   }
   return _cached_decoder_for_ChildInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChildInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChildInformation */
+
 let _cached_encoder_for_ChildInformation: $.ASN1Encoder<ChildInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChildInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChildInformation */
+
 /**
  * @summary Encodes a(n) ChildInformation into an ASN.1 Element.
  * @function
@@ -87,6 +83,5 @@ export function _encode_ChildInformation(
   return _cached_encoder_for_ChildInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChildInformation */
 
 /* eslint-enable */

@@ -53,7 +53,6 @@ import {
     _extension_additions_list_spec_for_AdditionalActions,
 } from '../MTAAbstractService/AdditionalActions.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DomainSuppliedInformation */
 /**
  * @summary DomainSuppliedInformation
  * @description
@@ -155,9 +154,7 @@ export class DomainSuppliedInformation implements AdditionalActions {
 
     public static _enum_for_routing_action = _enum_for_RoutingAction;
 }
-/* END_OF_SYMBOL_DEFINITION DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DomainSuppliedInformation */
 /**
  * @summary The Leading Root Component Types of DomainSuppliedInformation
  * @description
@@ -190,9 +187,7 @@ export const _root_component_type_list_1_spec_for_DomainSuppliedInformation: $.C
     ),
     ..._root_component_type_list_1_spec_for_AdditionalActions,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DomainSuppliedInformation */
 /**
  * @summary The Trailing Root Component Types of DomainSuppliedInformation
  * @description
@@ -204,9 +199,7 @@ export const _root_component_type_list_1_spec_for_DomainSuppliedInformation: $.C
 export const _root_component_type_list_2_spec_for_DomainSuppliedInformation: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_AdditionalActions,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DomainSuppliedInformation */
 /**
  * @summary The Extension Addition Component Types of DomainSuppliedInformation
  * @description
@@ -218,13 +211,9 @@ export const _root_component_type_list_2_spec_for_DomainSuppliedInformation: $.C
 export const _extension_additions_list_spec_for_DomainSuppliedInformation: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_AdditionalActions,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainSuppliedInformation */
 let _cached_decoder_for_DomainSuppliedInformation: $.ASN1Decoder<DomainSuppliedInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DomainSuppliedInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainSuppliedInformation
  * @function
@@ -299,13 +288,9 @@ export function _decode_DomainSuppliedInformation(el: _Element) {
     }
     return _cached_decoder_for_DomainSuppliedInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainSuppliedInformation */
 let _cached_encoder_for_DomainSuppliedInformation: $.ASN1Encoder<DomainSuppliedInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainSuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DomainSuppliedInformation */
 /**
  * @summary Encodes a(n) DomainSuppliedInformation into an ASN.1 Element.
  * @function
@@ -377,6 +362,5 @@ export function _encode_DomainSuppliedInformation(
     return _cached_encoder_for_DomainSuppliedInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DomainSuppliedInformation */
 
 /* eslint-enable */

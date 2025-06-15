@@ -7,7 +7,7 @@ import {
     _encode_CertificateList,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertificateRevocationLists */
+
 /**
  * @summary CertificateRevocationLists
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type CertificateRevocationLists = CertificateList[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CertificateRevocationLists */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateRevocationLists */
+
 let _cached_decoder_for_CertificateRevocationLists: $.ASN1Decoder<CertificateRevocationLists> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateRevocationLists */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateRevocationLists */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateRevocationLists
  * @function
@@ -40,13 +38,11 @@ export function _decode_CertificateRevocationLists(el: _Element) {
     }
     return _cached_decoder_for_CertificateRevocationLists(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateRevocationLists */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateRevocationLists */
+
 let _cached_encoder_for_CertificateRevocationLists: $.ASN1Encoder<CertificateRevocationLists> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateRevocationLists */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateRevocationLists */
+
 /**
  * @summary Encodes a(n) CertificateRevocationLists into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_CertificateRevocationLists(
     return _cached_encoder_for_CertificateRevocationLists(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateRevocationLists */
 
 /* eslint-enable */

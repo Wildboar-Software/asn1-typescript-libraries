@@ -20,7 +20,7 @@ import {
 import { CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../ERS/EncryptionInfo.ta.mjs";
 import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EvidenceRecord */
+
 /**
  * @summary EvidenceRecord
  * @description
@@ -91,9 +91,8 @@ class EvidenceRecord {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EvidenceRecord */
+
 /**
  * @summary The Leading Root Component Types of EvidenceRecord
  * @description
@@ -110,9 +109,8 @@ const _root_component_type_list_1_spec_for_EvidenceRecord: $.ComponentSpec[] = [
     new $.ComponentSpec("encryptionInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("archiveTimeStampSequence", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EvidenceRecord */
+
 /**
  * @summary The Trailing Root Component Types of EvidenceRecord
  * @description
@@ -125,9 +123,8 @@ export
 const _root_component_type_list_2_spec_for_EvidenceRecord: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EvidenceRecord */
+
 /**
  * @summary The Extension Addition Component Types of EvidenceRecord
  * @description
@@ -140,13 +137,11 @@ export
 const _extension_additions_list_spec_for_EvidenceRecord: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EvidenceRecord */
+
 let _cached_decoder_for_EvidenceRecord: $.ASN1Decoder<EvidenceRecord> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EvidenceRecord */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EvidenceRecord
  * @function
@@ -188,13 +183,11 @@ function _decode_EvidenceRecord (el: _Element) {
 }; }
     return _cached_decoder_for_EvidenceRecord(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EvidenceRecord */
+
 let _cached_encoder_for_EvidenceRecord: $.ASN1Encoder<EvidenceRecord> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EvidenceRecord */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EvidenceRecord */
+
 /**
  * @summary Encodes a(n) EvidenceRecord into an ASN.1 Element.
  * @function
@@ -218,6 +211,5 @@ function _encode_EvidenceRecord (value: EvidenceRecord, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_EvidenceRecord(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EvidenceRecord */
 
 /* eslint-enable */

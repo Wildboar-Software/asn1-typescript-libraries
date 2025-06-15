@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { joint_CCR } from '../CCR/joint-CCR.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ccr_syntax_apdus_2 */
+
 /**
  * @summary ccr_syntax_apdus_2
  * @description
@@ -28,6 +28,5 @@ export const ccr_syntax_apdus_2: OBJECT_IDENTIFIER = new _OID(
   [/* abstract-syntax */ 2, /* apdus */ 1, /* version2 */ 2],
   joint_CCR
 );
-/* END_OF_SYMBOL_DEFINITION ccr_syntax_apdus_2 */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultipleHashAlgo */
 /**
  * @summary MultipleHashAlgo
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type MultipleHashAlgo = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MultipleHashAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleHashAlgo */
 let _cached_decoder_for_MultipleHashAlgo: $.ASN1Decoder<MultipleHashAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleHashAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleHashAlgo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleHashAlgo
  * @function
@@ -40,13 +35,9 @@ export function _decode_MultipleHashAlgo(el: _Element) {
     }
     return _cached_decoder_for_MultipleHashAlgo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleHashAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleHashAlgo */
 let _cached_encoder_for_MultipleHashAlgo: $.ASN1Encoder<MultipleHashAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleHashAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleHashAlgo */
 /**
  * @summary Encodes a(n) MultipleHashAlgo into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_MultipleHashAlgo(
     return _cached_encoder_for_MultipleHashAlgo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleHashAlgo */
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { smime } from "../CMSObjectIdentifiers/smime.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ct_authData */
+
 /**
  * @summary id_ct_authData
  * @description
@@ -16,6 +16,5 @@ import { smime } from "../CMSObjectIdentifiers/smime.va.mjs";
  * @constant
  */
 export const id_ct_authData: OID = new _OID([/* ct */ 1, 2], smime);
-/* END_OF_SYMBOL_DEFINITION id_ct_authData */
 
 /* eslint-enable */

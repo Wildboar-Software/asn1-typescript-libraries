@@ -6,7 +6,6 @@ import {
     _decode_IssuerSerial,
     _encode_IssuerSerial,
 } from "../AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthAttId */
 /**
  * @summary AuthAttId
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AuthAttId = IssuerSerial; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AuthAttId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthAttId */
 let _cached_decoder_for_AuthAttId: $.ASN1Decoder<AuthAttId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthAttId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthAttId */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthAttId
  * @function
@@ -37,13 +32,9 @@ export function _decode_AuthAttId(el: _Element) {
     }
     return _cached_decoder_for_AuthAttId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthAttId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthAttId */
 let _cached_encoder_for_AuthAttId: $.ASN1Encoder<AuthAttId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthAttId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthAttId */
 /**
  * @summary Encodes a(n) AuthAttId into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_AuthAttId(
     return _cached_encoder_for_AuthAttId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthAttId */
 
 /* eslint-enable */

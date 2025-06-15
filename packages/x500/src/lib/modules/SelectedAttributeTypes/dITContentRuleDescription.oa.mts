@@ -6,7 +6,6 @@ import {
     _encode_DITContentRuleDescription,
 } from "../SchemaAdministration/DITContentRuleDescription.ta.mjs";
 import { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dITContentRuleDescription */
 /**
  * @summary dITContentRuleDescription
  * @description
@@ -36,6 +35,5 @@ export const dITContentRuleDescription: SYNTAX_NAME<DITContentRuleDescription> =
     "&id": id_lsx_dITContentRuleDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dITContentRuleDescription */
 
 /* eslint-enable */

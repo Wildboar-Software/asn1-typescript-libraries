@@ -20,7 +20,7 @@ import {
     _decode_CPR_PPDU_normal_mode_parameters,
     _encode_CPR_PPDU_normal_mode_parameters,
 } from '../ISO8823-PRESENTATION/CPR-PPDU-normal-mode-parameters.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CPR_PPDU */
+
 /**
  * @summary CPR_PPDU
  * @description
@@ -49,13 +49,11 @@ export type CPR_PPDU =
     | {
           normal_mode_parameters: CPR_PPDU_normal_mode_parameters;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CPR_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CPR_PPDU */
+
 let _cached_decoder_for_CPR_PPDU: $.ASN1Decoder<CPR_PPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CPR_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CPR_PPDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CPR_PPDU
  * @function
@@ -77,13 +75,11 @@ export function _decode_CPR_PPDU(el: _Element) {
     }
     return _cached_decoder_for_CPR_PPDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CPR_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CPR_PPDU */
+
 let _cached_encoder_for_CPR_PPDU: $.ASN1Encoder<CPR_PPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CPR_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CPR_PPDU */
+
 /**
  * @summary Encodes a(n) CPR_PPDU into an ASN.1 Element.
  * @function
@@ -107,6 +103,5 @@ export function _encode_CPR_PPDU(
     return _cached_encoder_for_CPR_PPDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CPR_PPDU */
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import { INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KEY_IDENTIFIER */
+
 /**
  * @summary KEY_IDENTIFIER
  * @description
@@ -59,6 +59,5 @@ export interface KEY_IDENTIFIER<
      */
     readonly "&Value": Value;
 }
-/* END_OF_SYMBOL_DEFINITION KEY_IDENTIFIER */
 
 /* eslint-enable */

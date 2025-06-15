@@ -15,7 +15,6 @@ import {
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TransferRecipientField */
 /**
  * @summary TransferRecipientField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TransferRecipientField = MTAName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TransferRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferRecipientField */
 let _cached_decoder_for_TransferRecipientField: $.ASN1Decoder<TransferRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransferRecipientField */
 /**
  * @summary Decodes an ASN.1 element into a(n) TransferRecipientField
  * @function
@@ -46,13 +41,9 @@ export function _decode_TransferRecipientField(el: _Element) {
     }
     return _cached_decoder_for_TransferRecipientField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TransferRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferRecipientField */
 let _cached_encoder_for_TransferRecipientField: $.ASN1Encoder<TransferRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransferRecipientField */
 /**
  * @summary Encodes a(n) TransferRecipientField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TransferRecipientField(
     return _cached_encoder_for_TransferRecipientField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransferRecipientField */
 
 /* eslint-enable */

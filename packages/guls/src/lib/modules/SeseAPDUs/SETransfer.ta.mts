@@ -24,7 +24,7 @@ import {
     _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SETransfer */
+
 /**
  * @summary SETransfer
  * @description
@@ -157,9 +157,8 @@ export class SETransfer {
     return false;
   }
 }
-/* END_OF_SYMBOL_DEFINITION SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SETransfer */
+
 /**
  * @summary The Leading Root Component Types of SETransfer
  * @description
@@ -212,9 +211,8 @@ export const _root_component_type_list_1_spec_for_SETransfer: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SETransfer */
+
 /**
  * @summary The Trailing Root Component Types of SETransfer
  * @description
@@ -224,9 +222,8 @@ export const _root_component_type_list_1_spec_for_SETransfer: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SETransfer: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SETransfer */
+
 /**
  * @summary The Extension Addition Component Types of SETransfer
  * @description
@@ -236,13 +233,11 @@ export const _root_component_type_list_2_spec_for_SETransfer: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_SETransfer: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SETransfer */
+
 let _cached_decoder_for_SETransfer: $.ASN1Decoder<SETransfer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SETransfer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SETransfer
  * @function
@@ -304,13 +299,11 @@ export function _decode_SETransfer(el: _Element) {
   }
   return _cached_decoder_for_SETransfer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SETransfer */
+
 let _cached_encoder_for_SETransfer: $.ASN1Encoder<SETransfer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SETransfer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SETransfer */
+
 /**
  * @summary Encodes a(n) SETransfer into an ASN.1 Element.
  * @function
@@ -355,6 +348,5 @@ export function _encode_SETransfer(
   return _cached_encoder_for_SETransfer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SETransfer */
 
 /* eslint-enable */

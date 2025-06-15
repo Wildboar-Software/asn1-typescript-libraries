@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { WeekMask_Item_daysOfWeek, _decode_WeekMask_Item_daysOfWeek, _encode_WeekMask_Item_daysOfWeek } from "../Attribute-ASN1Module/WeekMask-Item-daysOfWeek.ta.mjs";
 import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION WeekMask_Item */
 /**
  * @summary WeekMask_Item
  * @description
@@ -60,9 +59,7 @@ class WeekMask_Item {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_WeekMask_Item */
 /**
  * @summary The Leading Root Component Types of WeekMask_Item
  * @description
@@ -76,9 +73,7 @@ const _root_component_type_list_1_spec_for_WeekMask_Item: $.ComponentSpec[] = [
     new $.ComponentSpec("daysOfWeek", false, $.hasTag(_TagClass.universal, 3), undefined, undefined),
     new $.ComponentSpec("intervalsOfDay", false, $.hasTag(_TagClass.universal, 17), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_WeekMask_Item */
 /**
  * @summary The Trailing Root Component Types of WeekMask_Item
  * @description
@@ -91,9 +86,7 @@ export
 const _root_component_type_list_2_spec_for_WeekMask_Item: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_WeekMask_Item */
 /**
  * @summary The Extension Addition Component Types of WeekMask_Item
  * @description
@@ -106,13 +99,9 @@ export
 const _extension_additions_list_spec_for_WeekMask_Item: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask_Item */
 let _cached_decoder_for_WeekMask_Item: $.ASN1Decoder<WeekMask_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WeekMask_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) WeekMask_Item
  * @function
@@ -140,13 +129,9 @@ function _decode_WeekMask_Item (el: _Element) {
 }; }
     return _cached_decoder_for_WeekMask_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask_Item */
 let _cached_encoder_for_WeekMask_Item: $.ASN1Encoder<WeekMask_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WeekMask_Item */
 /**
  * @summary Encodes a(n) WeekMask_Item into an ASN.1 Element.
  * @function
@@ -167,6 +152,5 @@ function _encode_WeekMask_Item (value: WeekMask_Item, elGetter: $.ASN1Encoder<We
     return _cached_encoder_for_WeekMask_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WeekMask_Item */
 
 /* eslint-enable */

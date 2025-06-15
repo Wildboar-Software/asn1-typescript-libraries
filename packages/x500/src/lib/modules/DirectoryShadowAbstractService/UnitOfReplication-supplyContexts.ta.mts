@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION UnitOfReplication_supplyContexts */
 /**
  * @summary UnitOfReplication_supplyContexts
  * @description
@@ -16,13 +15,9 @@ export type UnitOfReplication_supplyContexts =
     | { allContexts: NULL } /* CHOICE_ALT_ROOT */
     | { selectedContexts: OBJECT_IDENTIFIER[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION UnitOfReplication_supplyContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitOfReplication_supplyContexts */
 let _cached_decoder_for_UnitOfReplication_supplyContexts: $.ASN1Decoder<UnitOfReplication_supplyContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitOfReplication_supplyContexts */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnitOfReplication_supplyContexts */
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitOfReplication_supplyContexts
  * @function
@@ -45,13 +40,9 @@ export function _decode_UnitOfReplication_supplyContexts(el: _Element) {
     }
     return _cached_decoder_for_UnitOfReplication_supplyContexts(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnitOfReplication_supplyContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitOfReplication_supplyContexts */
 let _cached_encoder_for_UnitOfReplication_supplyContexts: $.ASN1Encoder<UnitOfReplication_supplyContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitOfReplication_supplyContexts */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnitOfReplication_supplyContexts */
 /**
  * @summary Encodes a(n) UnitOfReplication_supplyContexts into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_UnitOfReplication_supplyContexts(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnitOfReplication_supplyContexts */
 
 /* eslint-enable */

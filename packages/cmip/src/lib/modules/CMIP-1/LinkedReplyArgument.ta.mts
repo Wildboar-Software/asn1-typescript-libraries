@@ -55,7 +55,7 @@ import {
   _decode_DeleteError,
   _encode_DeleteError,
 } from '../CMIP-1/DeleteError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LinkedReplyArgument */
+
 /**
  * @summary LinkedReplyArgument
  * @description
@@ -86,13 +86,11 @@ export type LinkedReplyArgument =
   | { deleteResult: DeleteResult } /* CHOICE_ALT_ROOT */
   | { actionError: ActionError } /* CHOICE_ALT_ROOT */
   | { deleteError: DeleteError } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION LinkedReplyArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkedReplyArgument */
+
 let _cached_decoder_for_LinkedReplyArgument: $.ASN1Decoder<LinkedReplyArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkedReplyArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkedReplyArgument */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LinkedReplyArgument
  * @function
@@ -146,13 +144,11 @@ export function _decode_LinkedReplyArgument(el: _Element) {
   }
   return _cached_decoder_for_LinkedReplyArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LinkedReplyArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkedReplyArgument */
+
 let _cached_encoder_for_LinkedReplyArgument: $.ASN1Encoder<LinkedReplyArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkedReplyArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkedReplyArgument */
+
 /**
  * @summary Encodes a(n) LinkedReplyArgument into an ASN.1 Element.
  * @function
@@ -228,6 +224,5 @@ export function _encode_LinkedReplyArgument(
   return _cached_encoder_for_LinkedReplyArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkedReplyArgument */
 
 /* eslint-enable */

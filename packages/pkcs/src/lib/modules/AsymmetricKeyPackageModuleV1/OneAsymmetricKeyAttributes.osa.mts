@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OneAsymmetricKeyAttributes */
+
 /**
  * @summary OneAsymmetricKeyAttributes
  * @description
@@ -19,6 +19,5 @@ import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramew
  *
  */
 export const OneAsymmetricKeyAttributes: ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION OneAsymmetricKeyAttributes */
 
 /* eslint-enable */

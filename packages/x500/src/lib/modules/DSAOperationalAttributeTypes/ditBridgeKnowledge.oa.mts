@@ -10,7 +10,6 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/directoryStringFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ditBridgeKnowledge */
 /**
  * @summary ditBridgeKnowledge
  * @description
@@ -48,6 +47,5 @@ export const ditBridgeKnowledge: ATTRIBUTE<DitBridgeKnowledge> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ditBridgeKnowledge */
 
 /* eslint-enable */

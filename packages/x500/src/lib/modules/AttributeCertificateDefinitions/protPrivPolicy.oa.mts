@@ -10,7 +10,6 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION protPrivPolicy */
 /**
  * @summary protPrivPolicy
  * @description
@@ -46,6 +45,5 @@ export const protPrivPolicy: ATTRIBUTE<AttributeCertificate> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION protPrivPolicy */
 
 /* eslint-enable */

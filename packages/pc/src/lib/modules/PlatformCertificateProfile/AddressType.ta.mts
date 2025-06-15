@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION AddressType */
 /**
  * @summary AddressType
  * @description
@@ -30,21 +29,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type AddressType = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION AddressType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddressType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddressType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddressType */
 export const _decode_AddressType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_AddressType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddressType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddressType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddressType */
 export const _encode_AddressType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddressType */
 
 /* eslint-enable */

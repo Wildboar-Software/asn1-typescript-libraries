@@ -16,7 +16,6 @@ import {
     _decode_ResponseSync,
     _encode_ResponseSync,
 } from '../RTMModule/ResponseSync.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultResponseSync */
 /**
  * @summary defaultResponseSync
  * @description
@@ -30,6 +29,5 @@ import {
  * @constant
  */
 export const defaultResponseSync: ResponseSync = ResponseSync_singleCast;
-/* END_OF_SYMBOL_DEFINITION defaultResponseSync */
 
 /* eslint-enable */

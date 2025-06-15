@@ -31,7 +31,7 @@ import {
     _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Invoke */
+
 /**
  * @summary Invoke
  * @description
@@ -119,9 +119,8 @@ export class Invoke {
     return new Invoke(_o.invokeId, _o.linkedId, _o.opcode, _o.argument);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Invoke */
+
 /**
  * @summary The Leading Root Component Types of Invoke
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_Invoke: $.ComponentSpec[] = [
   new $.ComponentSpec('opcode', false, $.hasAnyTag, undefined, undefined),
   new $.ComponentSpec('argument', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Invoke */
+
 /**
  * @summary The Trailing Root Component Types of Invoke
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_Invoke: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Invoke: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Invoke */
+
 /**
  * @summary The Extension Addition Component Types of Invoke
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_Invoke: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Invoke: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Invoke */
+
 let _cached_decoder_for_Invoke: $.ASN1Decoder<Invoke> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Invoke */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Invoke
  * @function
@@ -216,13 +211,11 @@ export function _decode_Invoke(el: _Element) {
   }
   return _cached_decoder_for_Invoke(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Invoke */
+
 let _cached_encoder_for_Invoke: $.ASN1Encoder<Invoke> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Invoke */
+
 /**
  * @summary Encodes a(n) Invoke into an ASN.1 Element.
  * @function
@@ -254,6 +247,5 @@ export function _encode_Invoke(value: Invoke, elGetter: $.ASN1Encoder<Invoke>) {
   return _cached_encoder_for_Invoke(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Invoke */
 
 /* eslint-enable */

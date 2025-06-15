@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LeasedCircuitServicePtrList */
+
 /**
  * @summary LeasedCircuitServicePtrList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type LeasedCircuitServicePtrList = ObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION LeasedCircuitServicePtrList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LeasedCircuitServicePtrList */
+
 let _cached_decoder_for_LeasedCircuitServicePtrList: $.ASN1Decoder<LeasedCircuitServicePtrList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LeasedCircuitServicePtrList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LeasedCircuitServicePtrList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LeasedCircuitServicePtrList
  * @function
@@ -48,13 +46,11 @@ export function _decode_LeasedCircuitServicePtrList(el: _Element) {
     }
     return _cached_decoder_for_LeasedCircuitServicePtrList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LeasedCircuitServicePtrList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LeasedCircuitServicePtrList */
+
 let _cached_encoder_for_LeasedCircuitServicePtrList: $.ASN1Encoder<LeasedCircuitServicePtrList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LeasedCircuitServicePtrList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LeasedCircuitServicePtrList */
+
 /**
  * @summary Encodes a(n) LeasedCircuitServicePtrList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_LeasedCircuitServicePtrList(
     return _cached_encoder_for_LeasedCircuitServicePtrList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LeasedCircuitServicePtrList */
 
 /* eslint-enable */

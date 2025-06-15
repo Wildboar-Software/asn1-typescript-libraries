@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { encryptionAlgorithm } from "../AlgorithmObjectIdentifiers/encryptionAlgorithm.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ea */
 /**
  * @summary id_ea
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_ea: ID = encryptionAlgorithm;
-/* END_OF_SYMBOL_DEFINITION id_ea */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
 } from '../E-health-setup/IntegrityOptions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Command_Response */
+
 /**
  * @summary Command_Response
  * @description
@@ -86,9 +86,8 @@ export class Command_Response {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Command_Response */
+
 /**
  * @summary The Leading Root Component Types of Command_Response
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_Command_Response: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Command_Response */
+
 /**
  * @summary The Trailing Root Component Types of Command_Response
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_Command_Response: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Command_Response: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Command_Response */
+
 /**
  * @summary The Extension Addition Component Types of Command_Response
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_Command_Response: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_Command_Response: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Command_Response */
+
 let _cached_decoder_for_Command_Response: $.ASN1Decoder<Command_Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Command_Response */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Command_Response
  * @function
@@ -188,13 +183,11 @@ export function _decode_Command_Response(el: _Element) {
     }
     return _cached_decoder_for_Command_Response(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Command_Response */
+
 let _cached_encoder_for_Command_Response: $.ASN1Encoder<Command_Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Command_Response */
+
 /**
  * @summary Encodes a(n) Command_Response into an ASN.1 Element.
  * @function
@@ -233,6 +226,5 @@ export function _encode_Command_Response(
     return _cached_encoder_for_Command_Response(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Command_Response */
 
 /* eslint-enable */

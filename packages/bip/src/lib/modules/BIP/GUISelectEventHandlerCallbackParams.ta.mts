@@ -64,7 +64,7 @@ import {
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
 } from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUISelectEventHandlerCallbackParams */
+
 /**
  * @summary GUISelectEventHandlerCallbackParams
  * @description
@@ -222,9 +222,8 @@ export class GUISelectEventHandlerCallbackParams {
 
   public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
 }
-/* END_OF_SYMBOL_DEFINITION GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUISelectEventHandlerCallbackParams */
+
 /**
  * @summary The Leading Root Component Types of GUISelectEventHandlerCallbackParams
  * @description
@@ -326,9 +325,8 @@ export const _root_component_type_list_1_spec_for_GUISelectEventHandlerCallbackP
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUISelectEventHandlerCallbackParams */
+
 /**
  * @summary The Trailing Root Component Types of GUISelectEventHandlerCallbackParams
  * @description
@@ -338,9 +336,8 @@ export const _root_component_type_list_1_spec_for_GUISelectEventHandlerCallbackP
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUISelectEventHandlerCallbackParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUISelectEventHandlerCallbackParams */
+
 /**
  * @summary The Extension Addition Component Types of GUISelectEventHandlerCallbackParams
  * @description
@@ -350,13 +347,11 @@ export const _root_component_type_list_2_spec_for_GUISelectEventHandlerCallbackP
  * @constant
  */
 export const _extension_additions_list_spec_for_GUISelectEventHandlerCallbackParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUISelectEventHandlerCallbackParams */
+
 let _cached_decoder_for_GUISelectEventHandlerCallbackParams: $.ASN1Decoder<GUISelectEventHandlerCallbackParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUISelectEventHandlerCallbackParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUISelectEventHandlerCallbackParams
  * @function
@@ -453,13 +448,11 @@ export function _decode_GUISelectEventHandlerCallbackParams(el: _Element) {
   }
   return _cached_decoder_for_GUISelectEventHandlerCallbackParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUISelectEventHandlerCallbackParams */
+
 let _cached_encoder_for_GUISelectEventHandlerCallbackParams: $.ASN1Encoder<GUISelectEventHandlerCallbackParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUISelectEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUISelectEventHandlerCallbackParams */
+
 /**
  * @summary Encodes a(n) GUISelectEventHandlerCallbackParams into an ASN.1 Element.
  * @function
@@ -527,6 +520,5 @@ export function _encode_GUISelectEventHandlerCallbackParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUISelectEventHandlerCallbackParams */
 
 /* eslint-enable */

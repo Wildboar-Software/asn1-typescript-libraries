@@ -20,7 +20,6 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SyntaxOrAttribute */
 /**
  * @summary SyntaxOrAttribute
  * @description
@@ -37,13 +36,9 @@ import {
 export type SyntaxOrAttribute =
     | { withSyntax: DefinedType } /* CHOICE_ALT_ROOT */
     | { attribute: TemplateLabel } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SyntaxOrAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxOrAttribute */
 let _cached_decoder_for_SyntaxOrAttribute: $.ASN1Decoder<SyntaxOrAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxOrAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SyntaxOrAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) SyntaxOrAttribute
  * @function
@@ -69,13 +64,9 @@ export function _decode_SyntaxOrAttribute(el: _Element) {
     }
     return _cached_decoder_for_SyntaxOrAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SyntaxOrAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxOrAttribute */
 let _cached_encoder_for_SyntaxOrAttribute: $.ASN1Encoder<SyntaxOrAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxOrAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SyntaxOrAttribute */
 /**
  * @summary Encodes a(n) SyntaxOrAttribute into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_SyntaxOrAttribute(
     return _cached_encoder_for_SyntaxOrAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SyntaxOrAttribute */
 
 /* eslint-enable */

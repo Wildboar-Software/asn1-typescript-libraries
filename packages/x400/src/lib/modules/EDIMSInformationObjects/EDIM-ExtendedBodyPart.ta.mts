@@ -21,7 +21,6 @@ import {
     _decode_ExtendedBodyPart,
     _encode_ExtendedBodyPart,
 } from '../IPMSInformationObjects/ExtendedBodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIM_ExtendedBodyPart */
 /**
  * @summary EDIM_ExtendedBodyPart
  * @description
@@ -75,9 +74,7 @@ export class EDIM_ExtendedBodyPart {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIM_ExtendedBodyPart */
 /**
  * @summary The Leading Root Component Types of EDIM_ExtendedBodyPart
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_EDIM_ExtendedBodyPart: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIM_ExtendedBodyPart */
 /**
  * @summary The Trailing Root Component Types of EDIM_ExtendedBodyPart
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_EDIM_ExtendedBodyPart: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIM_ExtendedBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIM_ExtendedBodyPart */
 /**
  * @summary The Extension Addition Component Types of EDIM_ExtendedBodyPart
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_EDIM_ExtendedBodyPart: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIM_ExtendedBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIM_ExtendedBodyPart */
 let _cached_decoder_for_EDIM_ExtendedBodyPart: $.ASN1Decoder<EDIM_ExtendedBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIM_ExtendedBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIM_ExtendedBodyPart
  * @function
@@ -178,13 +167,9 @@ export function _decode_EDIM_ExtendedBodyPart(el: _Element) {
     }
     return _cached_decoder_for_EDIM_ExtendedBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIM_ExtendedBodyPart */
 let _cached_encoder_for_EDIM_ExtendedBodyPart: $.ASN1Encoder<EDIM_ExtendedBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIM_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIM_ExtendedBodyPart */
 /**
  * @summary Encodes a(n) EDIM_ExtendedBodyPart into an ASN.1 Element.
  * @function
@@ -225,6 +210,5 @@ export function _encode_EDIM_ExtendedBodyPart(
     return _cached_encoder_for_EDIM_ExtendedBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIM_ExtendedBodyPart */
 
 /* eslint-enable */

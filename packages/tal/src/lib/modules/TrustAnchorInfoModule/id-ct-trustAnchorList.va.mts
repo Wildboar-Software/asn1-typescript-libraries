@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_ct_trustAnchorList */
 /**
  * @summary id_ct_trustAnchorList
  * @description
@@ -38,6 +37,5 @@ const id_ct_trustAnchorList: OBJECT_IDENTIFIER = new _OID([
     /* id-ct */ 1,
     34,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_ct_trustAnchorList */
 
 /* eslint-enable */

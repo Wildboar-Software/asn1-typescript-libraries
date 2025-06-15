@@ -11,7 +11,6 @@ import {
     _decode_TimeSpecification_time_absolute,
     _encode_TimeSpecification_time_absolute,
 } from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TimeSpecification_time */
 /**
  * @summary TimeSpecification_time
  * @description
@@ -25,13 +24,9 @@ import {
 export type TimeSpecification_time =
     | { absolute: TimeSpecification_time_absolute } /* CHOICE_ALT_ROOT */
     | { periodic: Period[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TimeSpecification_time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeSpecification_time */
 let _cached_decoder_for_TimeSpecification_time: $.ASN1Decoder<TimeSpecification_time> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeSpecification_time */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeSpecification_time */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeSpecification_time
  * @function
@@ -55,13 +50,9 @@ export function _decode_TimeSpecification_time(el: _Element) {
     }
     return _cached_decoder_for_TimeSpecification_time(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeSpecification_time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeSpecification_time */
 let _cached_encoder_for_TimeSpecification_time: $.ASN1Encoder<TimeSpecification_time> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeSpecification_time */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeSpecification_time */
 /**
  * @summary Encodes a(n) TimeSpecification_time into an ASN.1 Element.
  * @function
@@ -85,6 +76,5 @@ export function _encode_TimeSpecification_time(
     return _cached_encoder_for_TimeSpecification_time(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeSpecification_time */
 
 /* eslint-enable */

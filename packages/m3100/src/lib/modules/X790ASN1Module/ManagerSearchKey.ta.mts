@@ -20,7 +20,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagerSearchKey */
+
 /**
  * @summary ManagerSearchKey
  * @description
@@ -39,13 +39,11 @@ export type ManagerSearchKey =
     | { searchString: ManagerSearchString } /* CHOICE_ALT_ROOT */
     | { objectInstance: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ManagerSearchKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerSearchKey */
+
 let _cached_decoder_for_ManagerSearchKey: $.ASN1Decoder<ManagerSearchKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerSearchKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagerSearchKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagerSearchKey
  * @function
@@ -65,13 +63,11 @@ export function _decode_ManagerSearchKey(el: _Element) {
     }
     return _cached_decoder_for_ManagerSearchKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagerSearchKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerSearchKey */
+
 let _cached_encoder_for_ManagerSearchKey: $.ASN1Encoder<ManagerSearchKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerSearchKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagerSearchKey */
+
 /**
  * @summary Encodes a(n) ManagerSearchKey into an ASN.1 Element.
  * @function
@@ -95,6 +91,5 @@ export function _encode_ManagerSearchKey(
     return _cached_encoder_for_ManagerSearchKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagerSearchKey */
 
 /* eslint-enable */

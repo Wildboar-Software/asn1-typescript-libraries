@@ -15,7 +15,7 @@ import {
     _decode_CallBackInfoList_Item,
     _encode_CallBackInfoList_Item,
 } from '../X790ASN1Module/CallBackInfoList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CallBackInfoList */
+
 /**
  * @summary CallBackInfoList
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type CallBackInfoList = CallBackInfoList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CallBackInfoList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CallBackInfoList */
+
 let _cached_decoder_for_CallBackInfoList: $.ASN1Decoder<CallBackInfoList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CallBackInfoList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CallBackInfoList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CallBackInfoList
  * @function
@@ -53,13 +51,11 @@ export function _decode_CallBackInfoList(el: _Element) {
     }
     return _cached_decoder_for_CallBackInfoList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CallBackInfoList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CallBackInfoList */
+
 let _cached_encoder_for_CallBackInfoList: $.ASN1Encoder<CallBackInfoList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CallBackInfoList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CallBackInfoList */
+
 /**
  * @summary Encodes a(n) CallBackInfoList into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_CallBackInfoList(
     return _cached_encoder_for_CallBackInfoList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CallBackInfoList */
 
 /* eslint-enable */

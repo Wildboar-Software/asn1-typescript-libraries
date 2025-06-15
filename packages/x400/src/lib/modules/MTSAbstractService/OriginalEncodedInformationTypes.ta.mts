@@ -15,7 +15,6 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginalEncodedInformationTypes */
 /**
  * @summary OriginalEncodedInformationTypes
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginalEncodedInformationTypes = EncodedInformationTypes; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginalEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalEncodedInformationTypes */
 let _cached_decoder_for_OriginalEncodedInformationTypes: $.ASN1Decoder<OriginalEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginalEncodedInformationTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalEncodedInformationTypes
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginalEncodedInformationTypes(el: _Element) {
     }
     return _cached_decoder_for_OriginalEncodedInformationTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginalEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalEncodedInformationTypes */
 let _cached_encoder_for_OriginalEncodedInformationTypes: $.ASN1Encoder<OriginalEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginalEncodedInformationTypes */
 /**
  * @summary Encodes a(n) OriginalEncodedInformationTypes into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginalEncodedInformationTypes(
     return _cached_encoder_for_OriginalEncodedInformationTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginalEncodedInformationTypes */
 
 /* eslint-enable */

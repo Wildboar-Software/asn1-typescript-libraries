@@ -11,7 +11,6 @@ import {
     _decode_SignedSecurityLabelContent,
     _encode_SignedSecurityLabelContent,
 } from "../EnhancedSecurity/SignedSecurityLabelContent.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignedSecurityLabel */
 /**
  * @summary SignedSecurityLabel
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type SignedSecurityLabel = SIGNED<SignedSecurityLabelContent>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignedSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedSecurityLabel */
 let _cached_decoder_for_SignedSecurityLabel: $.ASN1Decoder<SignedSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedSecurityLabel */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedSecurityLabel
  * @function
@@ -44,13 +39,9 @@ export function _decode_SignedSecurityLabel(el: _Element) {
     }
     return _cached_decoder_for_SignedSecurityLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedSecurityLabel */
 let _cached_encoder_for_SignedSecurityLabel: $.ASN1Encoder<SignedSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedSecurityLabel */
 /**
  * @summary Encodes a(n) SignedSecurityLabel into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SignedSecurityLabel(
     return _cached_encoder_for_SignedSecurityLabel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedSecurityLabel */
 
 /* eslint-enable */

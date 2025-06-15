@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { dSA } from "../SelectedObjectClasses/dSA.oa.mjs";
 import { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dSANameForm */
 /**
  * @summary dSANameForm
  * @description
@@ -29,6 +28,5 @@ export const dSANameForm: NAME_FORM = {
     "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_dSANameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dSANameForm */
 
 /* eslint-enable */

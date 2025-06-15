@@ -7,7 +7,6 @@ import {
 } from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.mjs";
 import { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va.mjs";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeValueIntegrityInfoContext */
 /**
  * @summary attributeValueIntegrityInfoContext
  * @description
@@ -39,6 +38,5 @@ export const attributeValueIntegrityInfoContext: CONTEXT<AttributeValueIntegrity
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&absentMatch": TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeValueIntegrityInfoContext */
 
 /* eslint-enable */

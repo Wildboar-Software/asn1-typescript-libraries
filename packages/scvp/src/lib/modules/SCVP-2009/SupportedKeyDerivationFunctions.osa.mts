@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { KEY_DERIVATION } from '../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupportedKeyDerivationFunctions */
 /**
  * @summary SupportedKeyDerivationFunctions
  * @description
@@ -27,6 +26,5 @@ import { KEY_DERIVATION } from '../AlgorithmInformation-2009/KEY-DERIVATION.oca.
  *
  */
 export const SupportedKeyDerivationFunctions: KEY_DERIVATION[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedKeyDerivationFunctions */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import { nonSpecificHierarchicalOperationalBinding_roleA } from "../Hierarchical
 import { nonSpecificHierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding-roleB.oa.mjs";
 import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding */
 /**
  * @summary nonSpecificHierarchicalOperationalBinding
  * @description
@@ -61,6 +60,5 @@ export const nonSpecificHierarchicalOperationalBinding: OPERATIONAL_BINDING<NonS
     "&id": id_op_binding_non_specific_hierarchical /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Agreement": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding */
 
 /* eslint-enable */

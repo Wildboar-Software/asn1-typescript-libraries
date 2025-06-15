@@ -16,7 +16,6 @@ import {
     _encode_RTSE_apdus,
 } from '../MSAccessProtocol/RTSE-apdus.ta.mjs';
 import { id_as_ms_rtse } from '../MHSProtocolObjectIdentifiers/id-as-ms-rtse.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_bind_unbind_rtse_abstract_syntax */
 /**
  * @summary ms_bind_unbind_rtse_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const ms_bind_unbind_rtse_abstract_syntax: ABSTRACT_SYNTAX<RTSE_apdus> = 
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION ms_bind_unbind_rtse_abstract_syntax */
 
 /* eslint-enable */

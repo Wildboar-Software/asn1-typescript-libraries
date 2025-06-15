@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { MEDICAL_RECORD_SCHEME } from '../E-health-identification/MEDICAL-RECORD-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION MedicalRecordSchemes */
+
 /**
  * @summary MedicalRecordSchemes
  * @description
@@ -26,6 +26,5 @@ import { MEDICAL_RECORD_SCHEME } from '../E-health-identification/MEDICAL-RECORD
  *
  */
 export const MedicalRecordSchemes: MEDICAL_RECORD_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION MedicalRecordSchemes */
 
 /* eslint-enable */

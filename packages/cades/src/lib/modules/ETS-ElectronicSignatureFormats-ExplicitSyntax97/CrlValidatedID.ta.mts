@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
 import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CrlValidatedID */
 /**
  * @summary CrlValidatedID
  * @description
@@ -63,9 +62,7 @@ class CrlValidatedID {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrlValidatedID */
 /**
  * @summary The Leading Root Component Types of CrlValidatedID
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_CrlValidatedID: $.ComponentSpec[] = [
     new $.ComponentSpec("crlHash", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("crlIdentifier", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrlValidatedID */
 /**
  * @summary The Trailing Root Component Types of CrlValidatedID
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_CrlValidatedID: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrlValidatedID */
 /**
  * @summary The Extension Addition Component Types of CrlValidatedID
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_CrlValidatedID: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrlValidatedID */
 let _cached_decoder_for_CrlValidatedID: $.ASN1Decoder<CrlValidatedID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrlValidatedID */
 /**
  * @summary Decodes an ASN.1 element into a(n) CrlValidatedID
  * @function
@@ -148,13 +137,9 @@ function _decode_CrlValidatedID (el: _Element) {
 }; }
     return _cached_decoder_for_CrlValidatedID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrlValidatedID */
 let _cached_encoder_for_CrlValidatedID: $.ASN1Encoder<CrlValidatedID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrlValidatedID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrlValidatedID */
 /**
  * @summary Encodes a(n) CrlValidatedID into an ASN.1 Element.
  * @function
@@ -175,6 +160,5 @@ function _encode_CrlValidatedID (value: CrlValidatedID, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_CrlValidatedID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrlValidatedID */
 
 /* eslint-enable */

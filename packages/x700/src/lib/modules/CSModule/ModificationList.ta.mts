@@ -15,7 +15,6 @@ import {
     _decode_ModificationList_Item,
     _encode_ModificationList_Item,
 } from '../CSModule/ModificationList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModificationList */
 /**
  * @summary ModificationList
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type ModificationList = ModificationList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ModificationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModificationList */
 let _cached_decoder_for_ModificationList: $.ASN1Decoder<ModificationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModificationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModificationList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModificationList
  * @function
@@ -54,13 +49,9 @@ export function _decode_ModificationList(el: _Element) {
     }
     return _cached_decoder_for_ModificationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModificationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModificationList */
 let _cached_encoder_for_ModificationList: $.ASN1Encoder<ModificationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModificationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModificationList */
 /**
  * @summary Encodes a(n) ModificationList into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_ModificationList(
     return _cached_encoder_for_ModificationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModificationList */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AdditionalInformation */
 /**
  * @summary AdditionalInformation
  * @description
@@ -64,9 +63,7 @@ export class AdditionalInformation {
         return new AdditionalInformation(_o.creationDate, _o.comment);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdditionalInformation */
 /**
  * @summary The Leading Root Component Types of AdditionalInformation
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_AdditionalInformation: $.Compo
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdditionalInformation */
 /**
  * @summary The Trailing Root Component Types of AdditionalInformation
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_AdditionalInformation: $.Compo
  */
 export const _root_component_type_list_2_spec_for_AdditionalInformation: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdditionalInformation */
 /**
  * @summary The Extension Addition Component Types of AdditionalInformation
  * @description
@@ -118,14 +111,10 @@ export const _root_component_type_list_2_spec_for_AdditionalInformation: $.Compo
  */
 export const _extension_additions_list_spec_for_AdditionalInformation: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
 let _cached_decoder_for_AdditionalInformation: $.ASN1Decoder<AdditionalInformation> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalInformation
  * @function
@@ -167,14 +156,10 @@ export function _decode_AdditionalInformation(el: _Element) {
     }
     return _cached_decoder_for_AdditionalInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
 let _cached_encoder_for_AdditionalInformation: $.ASN1Encoder<AdditionalInformation> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */
 /**
  * @summary Encodes a(n) AdditionalInformation into an ASN.1 Element.
  * @function
@@ -210,6 +195,5 @@ export function _encode_AdditionalInformation(
     return _cached_encoder_for_AdditionalInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */
 
 /* eslint-enable */

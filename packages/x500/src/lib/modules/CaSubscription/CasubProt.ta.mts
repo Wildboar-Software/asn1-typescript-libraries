@@ -66,7 +66,6 @@ import {
     _decode_InitializationRej,
     _encode_InitializationRej,
 } from "../CaSubscription/InitializationRej.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CasubProt */
 /**
  * @summary CasubProt
  * @description
@@ -106,13 +105,9 @@ export type CasubProt =
     | { certUpdateRsp: CertUpdateRsp } /* CHOICE_ALT_ROOT */
     | { cAsubscribeAbort: CAsubscribeAbort } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CasubProt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CasubProt */
 let _cached_decoder_for_CasubProt: $.ASN1Decoder<CasubProt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CasubProt */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CasubProt */
 /**
  * @summary Decodes an ASN.1 element into a(n) CasubProt
  * @function
@@ -200,13 +195,9 @@ export function _decode_CasubProt(el: _Element) {
     }
     return _cached_decoder_for_CasubProt(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CasubProt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CasubProt */
 let _cached_encoder_for_CasubProt: $.ASN1Encoder<CasubProt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CasubProt */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CasubProt */
 /**
  * @summary Encodes a(n) CasubProt into an ASN.1 Element.
  * @function
@@ -306,6 +297,5 @@ export function _encode_CasubProt(
     return _cached_encoder_for_CasubProt(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CasubProt */
 
 /* eslint-enable */

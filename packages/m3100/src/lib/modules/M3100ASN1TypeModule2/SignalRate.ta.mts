@@ -17,7 +17,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SignalRate */
+
 /**
  * @summary SignalRate
  * @description
@@ -36,13 +36,11 @@ export type SignalRate =
     | {
           characteristicInformation: CharacteristicInformation;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SignalRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalRate */
+
 let _cached_decoder_for_SignalRate: $.ASN1Decoder<SignalRate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalRate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignalRate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalRate
  * @function
@@ -70,13 +68,11 @@ export function _decode_SignalRate(el: _Element) {
     }
     return _cached_decoder_for_SignalRate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignalRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalRate */
+
 let _cached_encoder_for_SignalRate: $.ASN1Encoder<SignalRate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalRate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignalRate */
+
 /**
  * @summary Encodes a(n) SignalRate into an ASN.1 Element.
  * @function
@@ -110,6 +106,5 @@ export function _encode_SignalRate(
     return _cached_encoder_for_SignalRate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignalRate */
 
 /* eslint-enable */

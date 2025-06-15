@@ -16,7 +16,6 @@ import {
     _encode_ContentCorrelator,
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';
 import { id_mr_content_correlator_match } from '../MSObjectIdentifiers/id-mr-content-correlator-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION contentCorrelatorMatch */
 /**
  * @summary contentCorrelatorMatch
  * @description
@@ -45,6 +44,5 @@ export const contentCorrelatorMatch: MATCHING_RULE<ContentCorrelator> = {
     '&id': id_mr_content_correlator_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contentCorrelatorMatch */
 
 /* eslint-enable */

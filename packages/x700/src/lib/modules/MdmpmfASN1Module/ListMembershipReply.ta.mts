@@ -21,7 +21,6 @@ import {
     _decode_Membership,
     _encode_Membership,
 } from '../MdmpmfASN1Module/Membership.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ListMembershipReply */
 /**
  * @summary ListMembershipReply
  * @description
@@ -79,9 +78,7 @@ export class ListMembershipReply {
 
     public static _enum_for_completeness = _enum_for_Completeness;
 }
-/* END_OF_SYMBOL_DEFINITION ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListMembershipReply */
 /**
  * @summary The Leading Root Component Types of ListMembershipReply
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_ListMembershipReply: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListMembershipReply */
 /**
  * @summary The Trailing Root Component Types of ListMembershipReply
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_ListMembershipReply: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ListMembershipReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListMembershipReply */
 /**
  * @summary The Extension Addition Component Types of ListMembershipReply
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_ListMembershipReply: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_ListMembershipReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListMembershipReply */
 let _cached_decoder_for_ListMembershipReply: $.ASN1Decoder<ListMembershipReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListMembershipReply */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListMembershipReply
  * @function
@@ -167,13 +156,9 @@ export function _decode_ListMembershipReply(el: _Element) {
     }
     return _cached_decoder_for_ListMembershipReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListMembershipReply */
 let _cached_encoder_for_ListMembershipReply: $.ASN1Encoder<ListMembershipReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListMembershipReply */
 /**
  * @summary Encodes a(n) ListMembershipReply into an ASN.1 Element.
  * @function
@@ -208,6 +193,5 @@ export function _encode_ListMembershipReply(
     return _cached_encoder_for_ListMembershipReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListMembershipReply */
 
 /* eslint-enable */

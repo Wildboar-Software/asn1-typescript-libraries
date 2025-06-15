@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CMIP_SPECIFICERROR */
+
 /**
  * @summary CMIP_SPECIFICERROR
  * @description
@@ -67,6 +67,5 @@ export interface CMIP_SPECIFICERROR<
    */
   readonly '&Value': Value;
 }
-/* END_OF_SYMBOL_DEFINITION CMIP_SPECIFICERROR */
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { KeyEncryptionAlgorithms_Union0_Intersection0_Element } from "../PKCS-15/KeyEncryptionAlgorithms-Union0-Intersection0-Element.oa.mjs";
 import { KeyEncryptionAlgorithms_Union1_Intersection0_Element } from "../PKCS-15/KeyEncryptionAlgorithms-Union1-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithms */
+
 /**
  * @summary KeyEncryptionAlgorithms
  * @description
@@ -26,6 +26,5 @@ export const KeyEncryptionAlgorithms: ALGORITHM_IDENTIFIER<any>[] = [
     KeyEncryptionAlgorithms_Union0_Intersection0_Element,
     KeyEncryptionAlgorithms_Union1_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithms */
 
 /* eslint-enable */

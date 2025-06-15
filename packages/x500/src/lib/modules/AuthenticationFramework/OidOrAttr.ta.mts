@@ -6,7 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OidOrAttr */
 /**
  * @summary OidOrAttr
  * @description
@@ -24,13 +23,9 @@ export type OidOrAttr =
     | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { attribute: Attribute } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION OidOrAttr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OidOrAttr */
 let _cached_decoder_for_OidOrAttr: $.ASN1Decoder<OidOrAttr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OidOrAttr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OidOrAttr */
 /**
  * @summary Decodes an ASN.1 element into a(n) OidOrAttr
  * @function
@@ -46,13 +41,9 @@ export function _decode_OidOrAttr(el: _Element) {
     }
     return _cached_decoder_for_OidOrAttr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OidOrAttr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OidOrAttr */
 let _cached_encoder_for_OidOrAttr: $.ASN1Encoder<OidOrAttr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OidOrAttr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OidOrAttr */
 /**
  * @summary Encodes a(n) OidOrAttr into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_OidOrAttr(
     return _cached_encoder_for_OidOrAttr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OidOrAttr */
 
 /* eslint-enable */

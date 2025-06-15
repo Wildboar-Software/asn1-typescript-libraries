@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-manifest.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_XPathSigncryptionSet */
+
 /**
  * @summary id_XPathSigncryptionSet
  * @description
@@ -19,6 +19,5 @@ export const id_XPathSigncryptionSet: OID = new _OID(
     [/* xPathSigncryptionSet */ 2],
     signcryption_manifest
 );
-/* END_OF_SYMBOL_DEFINITION id_XPathSigncryptionSet */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
     _encode_SigningTime,
 } from "../PKCS-9/SigningTime.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION signingTimeMatch */
+
 /**
  * @summary signingTimeMatch
  * @description
@@ -37,6 +37,5 @@ export const signingTimeMatch: MATCHING_RULE<SigningTime> = {
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ParentMatchingRules": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signingTimeMatch */
 
 /* eslint-enable */

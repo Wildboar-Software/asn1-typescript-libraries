@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION PartialHashtree */
+
 /**
  * @summary PartialHashtree
  * @description
@@ -27,13 +27,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type PartialHashtree = OCTET_STRING[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PartialHashtree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialHashtree */
+
 let _cached_decoder_for_PartialHashtree: $.ASN1Decoder<PartialHashtree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialHashtree */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PartialHashtree */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PartialHashtree
  * @function
@@ -45,13 +43,11 @@ function _decode_PartialHashtree (el: _Element) {
     if (!_cached_decoder_for_PartialHashtree) { _cached_decoder_for_PartialHashtree = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString); }
     return _cached_decoder_for_PartialHashtree(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PartialHashtree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialHashtree */
+
 let _cached_encoder_for_PartialHashtree: $.ASN1Encoder<PartialHashtree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialHashtree */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PartialHashtree */
+
 /**
  * @summary Encodes a(n) PartialHashtree into an ASN.1 Element.
  * @function
@@ -65,6 +61,5 @@ function _encode_PartialHashtree (value: PartialHashtree, elGetter: $.ASN1Encode
     return _cached_encoder_for_PartialHashtree(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PartialHashtree */
 
 /* eslint-enable */

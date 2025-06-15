@@ -20,7 +20,6 @@ import {
     _decode_BodyPartTokens_Item_body_part_choice,
     _encode_BodyPartTokens_Item_body_part_choice,
 } from '../IPMSSecurityExtensions/BodyPartTokens-Item-body-part-choice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartTokens_Item */
 /**
  * @summary BodyPartTokens_Item
  * @description
@@ -70,9 +69,7 @@ export class BodyPartTokens_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BodyPartTokens_Item */
 /**
  * @summary The Leading Root Component Types of BodyPartTokens_Item
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_BodyPartTokens_Item: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BodyPartTokens_Item */
 /**
  * @summary The Trailing Root Component Types of BodyPartTokens_Item
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_BodyPartTokens_Item: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BodyPartTokens_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BodyPartTokens_Item */
 /**
  * @summary The Extension Addition Component Types of BodyPartTokens_Item
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_BodyPartTokens_Item: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_BodyPartTokens_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartTokens_Item */
 let _cached_decoder_for_BodyPartTokens_Item: $.ASN1Decoder<BodyPartTokens_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartTokens_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartTokens_Item
  * @function
@@ -171,13 +160,9 @@ export function _decode_BodyPartTokens_Item(el: _Element) {
     }
     return _cached_decoder_for_BodyPartTokens_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartTokens_Item */
 let _cached_encoder_for_BodyPartTokens_Item: $.ASN1Encoder<BodyPartTokens_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartTokens_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartTokens_Item */
 /**
  * @summary Encodes a(n) BodyPartTokens_Item into an ASN.1 Element.
  * @function
@@ -212,6 +197,5 @@ export function _encode_BodyPartTokens_Item(
     return _cached_encoder_for_BodyPartTokens_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartTokens_Item */
 
 /* eslint-enable */

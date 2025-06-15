@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LockedInCondition */
+
 /**
  * @summary LockedInCondition
  * @description
@@ -73,9 +73,8 @@ export class LockedInCondition {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LockedInCondition */
+
 /**
  * @summary The Leading Root Component Types of LockedInCondition
  * @description
@@ -107,9 +106,8 @@ export const _root_component_type_list_1_spec_for_LockedInCondition: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LockedInCondition */
+
 /**
  * @summary The Trailing Root Component Types of LockedInCondition
  * @description
@@ -119,9 +117,8 @@ export const _root_component_type_list_1_spec_for_LockedInCondition: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LockedInCondition: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LockedInCondition */
+
 /**
  * @summary The Extension Addition Component Types of LockedInCondition
  * @description
@@ -131,13 +128,11 @@ export const _root_component_type_list_2_spec_for_LockedInCondition: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_LockedInCondition: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LockedInCondition */
+
 let _cached_decoder_for_LockedInCondition: $.ASN1Decoder<LockedInCondition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LockedInCondition */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LockedInCondition
  * @function
@@ -181,13 +176,11 @@ export function _decode_LockedInCondition(el: _Element) {
     }
     return _cached_decoder_for_LockedInCondition(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LockedInCondition */
+
 let _cached_encoder_for_LockedInCondition: $.ASN1Encoder<LockedInCondition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LockedInCondition */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LockedInCondition */
+
 /**
  * @summary Encodes a(n) LockedInCondition into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_LockedInCondition(
     return _cached_encoder_for_LockedInCondition(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LockedInCondition */
 
 /* eslint-enable */

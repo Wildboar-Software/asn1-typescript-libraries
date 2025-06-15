@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_lat_supportedLDAPVersion } from "../LdapSystemSchema/id-lat-supportedLDAPVersion.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION supportedLDAPVersion */
 /**
  * @summary supportedLDAPVersion
  * @description
@@ -46,6 +45,5 @@ export const supportedLDAPVersion: ATTRIBUTE<INTEGER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedLDAPVersion */
 
 /* eslint-enable */

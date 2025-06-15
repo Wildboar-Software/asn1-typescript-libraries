@@ -15,7 +15,6 @@ import {
     _decode_SummarizeErrors,
     _encode_SummarizeErrors,
 } from '../MhsAcctAsn1Module/SummarizeErrors.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ListErrors */
 /**
  * @summary ListErrors
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ListErrors = SummarizeErrors; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ListErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListErrors */
 let _cached_decoder_for_ListErrors: $.ASN1Decoder<ListErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListErrors
  * @function
@@ -46,13 +41,9 @@ export function _decode_ListErrors(el: _Element) {
     }
     return _cached_decoder_for_ListErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListErrors */
 let _cached_encoder_for_ListErrors: $.ASN1Encoder<ListErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListErrors */
 /**
  * @summary Encodes a(n) ListErrors into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ListErrors(
     return _cached_encoder_for_ListErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListErrors */
 
 /* eslint-enable */

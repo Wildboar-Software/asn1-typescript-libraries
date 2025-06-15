@@ -2,7 +2,7 @@
 import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs";
 import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/maca-hMAC-SHA1.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MACAlgorithms */
+
 /**
  * @summary MACAlgorithms
  * @description
@@ -27,6 +27,5 @@ import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/mac
  *
  */
 export const MACAlgorithms: MAC_ALGORITHM[] = [maca_hMAC_SHA1];
-/* END_OF_SYMBOL_DEFINITION MACAlgorithms */
 
 /* eslint-enable */

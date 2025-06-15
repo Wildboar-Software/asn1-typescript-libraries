@@ -15,7 +15,6 @@ import {
     _decode_TransferRecipientField,
     _encode_TransferRecipientField,
 } from '../MhsAcctAsn1Module/TransferRecipientField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatingDomainTransferOutList */
 /**
  * @summary OriginatingDomainTransferOutList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatingDomainTransferOutList = TransferRecipientField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OriginatingDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatingDomainTransferOutList */
 let _cached_decoder_for_OriginatingDomainTransferOutList: $.ASN1Decoder<OriginatingDomainTransferOutList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatingDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatingDomainTransferOutList */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatingDomainTransferOutList
  * @function
@@ -48,13 +43,9 @@ export function _decode_OriginatingDomainTransferOutList(el: _Element) {
     }
     return _cached_decoder_for_OriginatingDomainTransferOutList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatingDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatingDomainTransferOutList */
 let _cached_encoder_for_OriginatingDomainTransferOutList: $.ASN1Encoder<OriginatingDomainTransferOutList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatingDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatingDomainTransferOutList */
 /**
  * @summary Encodes a(n) OriginatingDomainTransferOutList into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_OriginatingDomainTransferOutList(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatingDomainTransferOutList */
 
 /* eslint-enable */

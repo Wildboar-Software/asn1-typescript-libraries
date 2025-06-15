@@ -7,7 +7,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SingleAttribute */
+
 /**
  * @summary SingleAttribute
  * @description
@@ -57,9 +57,8 @@ export class SingleAttribute {
         return new SingleAttribute(_o.type_, _o.value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SingleAttribute */
+
 /**
  * @summary The Leading Root Component Types of SingleAttribute
  * @description
@@ -78,9 +77,8 @@ export const _root_component_type_list_1_spec_for_SingleAttribute: $.ComponentSp
     ),
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SingleAttribute */
+
 /**
  * @summary The Trailing Root Component Types of SingleAttribute
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_SingleAttribute: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SingleAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SingleAttribute */
+
 /**
  * @summary The Extension Addition Component Types of SingleAttribute
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_SingleAttribute: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SingleAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SingleAttribute */
+
 let _cached_decoder_for_SingleAttribute: $.ASN1Decoder<SingleAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SingleAttribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SingleAttribute
  * @function
@@ -139,13 +134,11 @@ export function _decode_SingleAttribute(el: _Element) {
     }
     return _cached_decoder_for_SingleAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SingleAttribute */
+
 let _cached_encoder_for_SingleAttribute: $.ASN1Encoder<SingleAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SingleAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SingleAttribute */
+
 /**
  * @summary Encodes a(n) SingleAttribute into an ASN.1 Element.
  * @function
@@ -177,6 +170,5 @@ export function _encode_SingleAttribute(
     return _cached_encoder_for_SingleAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SingleAttribute */
 
 /* eslint-enable */

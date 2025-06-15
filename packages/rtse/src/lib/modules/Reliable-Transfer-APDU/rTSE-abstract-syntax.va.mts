@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION rTSE_abstract_syntax */
+
 /**
  * @summary rTSE_abstract_syntax
  * @description
@@ -29,6 +29,5 @@ export const rTSE_abstract_syntax: OBJECT_IDENTIFIER = new _OID(
   [/* reliable-transfer */ 3, /* abstract-syntax */ 2],
   joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION rTSE_abstract_syntax */
 
 /* eslint-enable */

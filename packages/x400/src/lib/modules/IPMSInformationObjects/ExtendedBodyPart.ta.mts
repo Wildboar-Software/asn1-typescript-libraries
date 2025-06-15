@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ExtendedBodyPart */
 /**
  * @summary ExtendedBodyPart
  * @description
@@ -65,9 +64,7 @@ export class ExtendedBodyPart {
         return new ExtendedBodyPart(_o.parameters, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedBodyPart */
 /**
  * @summary The Leading Root Component Types of ExtendedBodyPart
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_ExtendedBodyPart: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedBodyPart */
 /**
  * @summary The Trailing Root Component Types of ExtendedBodyPart
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_ExtendedBodyPart: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtendedBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedBodyPart */
 /**
  * @summary The Extension Addition Component Types of ExtendedBodyPart
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_ExtendedBodyPart: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtendedBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedBodyPart */
 let _cached_decoder_for_ExtendedBodyPart: $.ASN1Decoder<ExtendedBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedBodyPart
  * @function
@@ -166,13 +155,9 @@ export function _decode_ExtendedBodyPart(el: _Element) {
     }
     return _cached_decoder_for_ExtendedBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedBodyPart */
 let _cached_encoder_for_ExtendedBodyPart: $.ASN1Encoder<ExtendedBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedBodyPart */
 /**
  * @summary Encodes a(n) ExtendedBodyPart into an ASN.1 Element.
  * @function
@@ -208,6 +193,5 @@ export function _encode_ExtendedBodyPart(
     return _cached_encoder_for_ExtendedBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedBodyPart */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _decode_CertificateChoice,
     _encode_CertificateChoice,
 } from "../PKCS7/CertificateChoice.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateSet */
+
 /**
  * @summary CertificateSet
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type CertificateSet = CertificateChoice[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CertificateSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateSet */
+
 let _cached_decoder_for_CertificateSet: $.ASN1Decoder<CertificateSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateSet */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateSet
  * @function
@@ -39,13 +37,11 @@ export function _decode_CertificateSet(el: _Element) {
     }
     return _cached_decoder_for_CertificateSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateSet */
+
 let _cached_encoder_for_CertificateSet: $.ASN1Encoder<CertificateSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateSet */
+
 /**
  * @summary Encodes a(n) CertificateSet into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_CertificateSet(
     return _cached_encoder_for_CertificateSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateSet */
 
 /* eslint-enable */

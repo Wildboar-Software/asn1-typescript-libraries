@@ -21,7 +21,6 @@ import {
     _encode_AE_qualifier,
 } from "@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Application_Entity_Title */
 /**
  * @summary Application_Entity_Title
  * @description
@@ -73,9 +72,7 @@ export class Application_Entity_Title {
         return new Application_Entity_Title(_o.ap_title, _o.ae_qualifier);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Application_Entity_Title */
 /**
  * @summary The Leading Root Component Types of Application_Entity_Title
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_Application_Entity_Title: $.Co
     ,/* FIXME: ap-title COULD_NOT_RESOLVE_TYPE_DEF */
 /* FIXME: ae-qualifier COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Application_Entity_Title */
 /**
  * @summary The Trailing Root Component Types of Application_Entity_Title
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_Application_Entity_Title: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Application_Entity_Title: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Application_Entity_Title */
 /**
  * @summary The Extension Addition Component Types of Application_Entity_Title
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_Application_Entity_Title: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_Application_Entity_Title: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Application_Entity_Title */
 let _cached_decoder_for_Application_Entity_Title: $.ASN1Decoder<Application_Entity_Title> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Application_Entity_Title */
 /**
  * @summary Decodes an ASN.1 element into a(n) Application_Entity_Title
  * @function
@@ -149,13 +138,9 @@ export function _decode_Application_Entity_Title(el: _Element) {
     }
     return _cached_decoder_for_Application_Entity_Title(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Application_Entity_Title */
 let _cached_encoder_for_Application_Entity_Title: $.ASN1Encoder<Application_Entity_Title> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Application_Entity_Title */
 /**
  * @summary Encodes a(n) Application_Entity_Title into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ export function _encode_Application_Entity_Title(
     return _cached_encoder_for_Application_Entity_Title(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Application_Entity_Title */
 
 /* eslint-enable */

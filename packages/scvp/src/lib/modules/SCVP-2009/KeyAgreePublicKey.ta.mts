@@ -18,7 +18,6 @@ import {
     _decode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION KeyAgreePublicKey */
 /**
  * @summary KeyAgreePublicKey
  * @description
@@ -91,9 +90,7 @@ export class KeyAgreePublicKey {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreePublicKey */
 /**
  * @summary The Leading Root Component Types of KeyAgreePublicKey
  * @description
@@ -132,9 +129,7 @@ export const _root_component_type_list_1_spec_for_KeyAgreePublicKey: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreePublicKey */
 /**
  * @summary The Trailing Root Component Types of KeyAgreePublicKey
  * @description
@@ -144,9 +139,7 @@ export const _root_component_type_list_1_spec_for_KeyAgreePublicKey: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyAgreePublicKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreePublicKey */
 /**
  * @summary The Extension Addition Component Types of KeyAgreePublicKey
  * @description
@@ -156,13 +149,9 @@ export const _root_component_type_list_2_spec_for_KeyAgreePublicKey: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyAgreePublicKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreePublicKey */
 let _cached_decoder_for_KeyAgreePublicKey: $.ASN1Decoder<KeyAgreePublicKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyAgreePublicKey */
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyAgreePublicKey
  * @function
@@ -214,13 +203,9 @@ export function _decode_KeyAgreePublicKey(el: _Element) {
   }
   return _cached_decoder_for_KeyAgreePublicKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreePublicKey */
 let _cached_encoder_for_KeyAgreePublicKey: $.ASN1Encoder<KeyAgreePublicKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreePublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyAgreePublicKey */
 /**
  * @summary Encodes a(n) KeyAgreePublicKey into an ASN.1 Element.
  * @function
@@ -259,6 +244,5 @@ export function _encode_KeyAgreePublicKey(
   return _cached_encoder_for_KeyAgreePublicKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyAgreePublicKey */
 
 /* eslint-enable */

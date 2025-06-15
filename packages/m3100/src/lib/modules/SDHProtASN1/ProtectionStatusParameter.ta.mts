@@ -23,7 +23,7 @@ import {
     _decode_ProtectionDirection,
     _encode_ProtectionDirection,
 } from '../SDHProtASN1/ProtectionDirection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatusParameter */
+
 /**
  * @summary ProtectionStatusParameter
  * @description
@@ -103,9 +103,8 @@ export class ProtectionStatusParameter {
 
     public static _enum_for_psDirection = _enum_for_ProtectionDirection;
 }
-/* END_OF_SYMBOL_DEFINITION ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatusParameter */
+
 /**
  * @summary The Leading Root Component Types of ProtectionStatusParameter
  * @description
@@ -137,9 +136,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatusParameter: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatusParameter */
+
 /**
  * @summary The Trailing Root Component Types of ProtectionStatusParameter
  * @description
@@ -149,9 +147,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatusParameter: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectionStatusParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatusParameter */
+
 /**
  * @summary The Extension Addition Component Types of ProtectionStatusParameter
  * @description
@@ -161,13 +158,11 @@ export const _root_component_type_list_2_spec_for_ProtectionStatusParameter: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectionStatusParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusParameter */
+
 let _cached_decoder_for_ProtectionStatusParameter: $.ASN1Decoder<ProtectionStatusParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatusParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatusParameter
  * @function
@@ -215,13 +210,11 @@ export function _decode_ProtectionStatusParameter(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatusParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusParameter */
+
 let _cached_encoder_for_ProtectionStatusParameter: $.ASN1Encoder<ProtectionStatusParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatusParameter */
+
 /**
  * @summary Encodes a(n) ProtectionStatusParameter into an ASN.1 Element.
  * @function
@@ -266,6 +259,5 @@ export function _encode_ProtectionStatusParameter(
     return _cached_encoder_for_ProtectionStatusParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatusParameter */
 
 /* eslint-enable */

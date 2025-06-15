@@ -5,7 +5,6 @@ import {
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
 } from "../MTSAbstractService/ExtensionORAddressComponents.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION extension_OR_address_components */
 /**
  * @summary extension_OR_address_components
  * @description
@@ -34,6 +33,5 @@ export const extension_OR_address_components: EXTENSION_ATTRIBUTE<ExtensionORAdd
     "&id": 12 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION extension_OR_address_components */
 
 /* eslint-enable */

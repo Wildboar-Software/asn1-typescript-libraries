@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION sum64_DES_CBC */
 /**
  * @summary sum64_DES_CBC
  * @description
@@ -24,6 +23,5 @@ export const sum64_DES_CBC: OBJECT_IDENTIFIER = new _OID([
     /* integrity */ 3,
     /* sum64-DES-CBC */ 2,
 ]);
-/* END_OF_SYMBOL_DEFINITION sum64_DES_CBC */
 
 /* eslint-enable */

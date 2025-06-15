@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_AutoSwitchReason */
+
 /**
  * @summary AutoSwitchReason
  * @description
@@ -28,9 +28,8 @@ export enum _enum_for_AutoSwitchReason {
     resourceDegrade = 1,
     resourceFailed = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION AutoSwitchReason */
+
 /**
  * @summary AutoSwitchReason
  * @description
@@ -43,9 +42,8 @@ export enum _enum_for_AutoSwitchReason {
  * ```@enum {number}
  */
 export type AutoSwitchReason = _enum_for_AutoSwitchReason;
-/* END_OF_SYMBOL_DEFINITION AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION AutoSwitchReason */
+
 /**
  * @summary AutoSwitchReason
  * @description
@@ -58,9 +56,8 @@ export type AutoSwitchReason = _enum_for_AutoSwitchReason;
  * ```@enum {number}
  */
 export const AutoSwitchReason = _enum_for_AutoSwitchReason;
-/* END_OF_SYMBOL_DEFINITION AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION AutoSwitchReason_waitToRestore */
+
 /**
  * @summary AutoSwitchReason_waitToRestore
  * @constant
@@ -68,9 +65,8 @@ export const AutoSwitchReason = _enum_for_AutoSwitchReason;
  */
 export const AutoSwitchReason_waitToRestore: AutoSwitchReason =
     AutoSwitchReason.waitToRestore; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AutoSwitchReason_waitToRestore */
 
-/* START_OF_SYMBOL_DEFINITION waitToRestore */
+
 /**
  * @summary waitToRestore
  * @constant
@@ -78,9 +74,8 @@ export const AutoSwitchReason_waitToRestore: AutoSwitchReason =
  */
 export const waitToRestore: AutoSwitchReason =
     AutoSwitchReason.waitToRestore; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION waitToRestore */
 
-/* START_OF_SYMBOL_DEFINITION AutoSwitchReason_resourceDegrade */
+
 /**
  * @summary AutoSwitchReason_resourceDegrade
  * @constant
@@ -88,9 +83,8 @@ export const waitToRestore: AutoSwitchReason =
  */
 export const AutoSwitchReason_resourceDegrade: AutoSwitchReason =
     AutoSwitchReason.resourceDegrade; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AutoSwitchReason_resourceDegrade */
 
-/* START_OF_SYMBOL_DEFINITION resourceDegrade */
+
 /**
  * @summary resourceDegrade
  * @constant
@@ -98,9 +92,8 @@ export const AutoSwitchReason_resourceDegrade: AutoSwitchReason =
  */
 export const resourceDegrade: AutoSwitchReason =
     AutoSwitchReason.resourceDegrade; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION resourceDegrade */
 
-/* START_OF_SYMBOL_DEFINITION AutoSwitchReason_resourceFailed */
+
 /**
  * @summary AutoSwitchReason_resourceFailed
  * @constant
@@ -108,9 +101,8 @@ export const resourceDegrade: AutoSwitchReason =
  */
 export const AutoSwitchReason_resourceFailed: AutoSwitchReason =
     AutoSwitchReason.resourceFailed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AutoSwitchReason_resourceFailed */
 
-/* START_OF_SYMBOL_DEFINITION resourceFailed */
+
 /**
  * @summary resourceFailed
  * @constant
@@ -118,21 +110,16 @@ export const AutoSwitchReason_resourceFailed: AutoSwitchReason =
  */
 export const resourceFailed: AutoSwitchReason =
     AutoSwitchReason.resourceFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION resourceFailed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSwitchReason */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoSwitchReason */
+
+
 export const _decode_AutoSwitchReason = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSwitchReason */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoSwitchReason */
+
+
 export const _encode_AutoSwitchReason = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoSwitchReason */
 
 /* eslint-enable */

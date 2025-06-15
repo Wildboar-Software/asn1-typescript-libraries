@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION InformationType */
+
 /**
  * @summary InformationType
  * @description
@@ -27,21 +27,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type InformationType = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION InformationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationType */
+
+
 export const _decode_InformationType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_InformationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationType */
+
+
 export const _encode_InformationType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationType */
 
 /* eslint-enable */

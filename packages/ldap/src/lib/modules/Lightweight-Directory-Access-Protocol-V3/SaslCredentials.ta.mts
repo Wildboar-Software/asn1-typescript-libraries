@@ -17,7 +17,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SaslCredentials */
+
 /**
  * @summary SaslCredentials
  * @description
@@ -77,9 +77,8 @@ export class SaslCredentials {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SaslCredentials */
+
 /**
  * @summary The Leading Root Component Types of SaslCredentials
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_SaslCredentials: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SaslCredentials */
+
 /**
  * @summary The Trailing Root Component Types of SaslCredentials
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_SaslCredentials: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SaslCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SaslCredentials */
+
 /**
  * @summary The Extension Addition Component Types of SaslCredentials
  * @description
@@ -128,9 +125,8 @@ export const _root_component_type_list_2_spec_for_SaslCredentials: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SaslCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SaslCredentials */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SaslCredentials
  * @function
@@ -169,9 +165,8 @@ export function _decode_SaslCredentials(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SaslCredentials */
+
 /**
  * @summary Encodes a(n) SaslCredentials into an ASN.1 Element.
  * @function
@@ -190,6 +185,5 @@ export function _encode_SaslCredentials(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SaslCredentials */
 
 /* eslint-enable */

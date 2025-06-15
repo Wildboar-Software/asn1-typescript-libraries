@@ -21,7 +21,6 @@ import {
     _decode_ResourceSelfTestResults_nonIntermediate,
     _encode_ResourceSelfTestResults_nonIntermediate,
 } from '../TestCategories-ASN1Module/ResourceSelfTestResults-nonIntermediate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResourceSelfTestResults */
 /**
  * @summary ResourceSelfTestResults
  * @description
@@ -44,13 +43,9 @@ export type ResourceSelfTestResults =
     | {
           nonIntermediate: ResourceSelfTestResults_nonIntermediate;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ResourceSelfTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSelfTestResults */
 let _cached_decoder_for_ResourceSelfTestResults: $.ASN1Decoder<ResourceSelfTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSelfTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResourceSelfTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceSelfTestResults
  * @function
@@ -74,13 +69,9 @@ export function _decode_ResourceSelfTestResults(el: _Element) {
     }
     return _cached_decoder_for_ResourceSelfTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResourceSelfTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSelfTestResults */
 let _cached_encoder_for_ResourceSelfTestResults: $.ASN1Encoder<ResourceSelfTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSelfTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResourceSelfTestResults */
 /**
  * @summary Encodes a(n) ResourceSelfTestResults into an ASN.1 Element.
  * @function
@@ -104,6 +95,5 @@ export function _encode_ResourceSelfTestResults(
     return _cached_encoder_for_ResourceSelfTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResourceSelfTestResults */
 
 /* eslint-enable */

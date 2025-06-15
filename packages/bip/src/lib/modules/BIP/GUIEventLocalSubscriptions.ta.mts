@@ -15,7 +15,7 @@ import {
   _decode_GUIEventLocalSubscription,
   _encode_GUIEventLocalSubscription,
 } from '../BIP/GUIEventLocalSubscription.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIEventLocalSubscriptions */
+
 /**
  * @summary GUIEventLocalSubscriptions
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GUIEventLocalSubscriptions = GUIEventLocalSubscription[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GUIEventLocalSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventLocalSubscriptions */
+
 let _cached_decoder_for_GUIEventLocalSubscriptions: $.ASN1Decoder<GUIEventLocalSubscriptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventLocalSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIEventLocalSubscriptions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIEventLocalSubscriptions
  * @function
@@ -48,13 +46,11 @@ export function _decode_GUIEventLocalSubscriptions(el: _Element) {
   }
   return _cached_decoder_for_GUIEventLocalSubscriptions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIEventLocalSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventLocalSubscriptions */
+
 let _cached_encoder_for_GUIEventLocalSubscriptions: $.ASN1Encoder<GUIEventLocalSubscriptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventLocalSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIEventLocalSubscriptions */
+
 /**
  * @summary Encodes a(n) GUIEventLocalSubscriptions into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_GUIEventLocalSubscriptions(
   return _cached_encoder_for_GUIEventLocalSubscriptions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIEventLocalSubscriptions */
 
 /* eslint-enable */

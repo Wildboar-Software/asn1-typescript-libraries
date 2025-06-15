@@ -29,7 +29,6 @@ import {
 } from '../EDIMSAbstractService/originate-edin-ResultType.ta.mjs';
 import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originate_edin */
 /**
  * @summary originate_edin
  * @description
@@ -74,6 +73,5 @@ export const originate_edin: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originate_edin */
 
 /* eslint-enable */

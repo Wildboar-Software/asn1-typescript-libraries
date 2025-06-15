@@ -15,7 +15,6 @@ import {
     _decode_Holder,
     _encode_Holder,
 } from "../AttributeCertificateDefinitions/Holder.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DelMatchSyntax */
 /**
  * @summary DelMatchSyntax
  * @description
@@ -75,9 +74,7 @@ export class DelMatchSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DelMatchSyntax */
 /**
  * @summary The Leading Root Component Types of DelMatchSyntax
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_DelMatchSyntax: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DelMatchSyntax */
 /**
  * @summary The Trailing Root Component Types of DelMatchSyntax
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_DelMatchSyntax: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DelMatchSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DelMatchSyntax */
 /**
  * @summary The Extension Addition Component Types of DelMatchSyntax
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_DelMatchSyntax: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_DelMatchSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DelMatchSyntax */
 let _cached_decoder_for_DelMatchSyntax: $.ASN1Decoder<DelMatchSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DelMatchSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) DelMatchSyntax
  * @function
@@ -167,13 +156,9 @@ export function _decode_DelMatchSyntax(el: _Element) {
     }
     return _cached_decoder_for_DelMatchSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DelMatchSyntax */
 let _cached_encoder_for_DelMatchSyntax: $.ASN1Encoder<DelMatchSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DelMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DelMatchSyntax */
 /**
  * @summary Encodes a(n) DelMatchSyntax into an ASN.1 Element.
  * @function
@@ -213,6 +198,5 @@ export function _encode_DelMatchSyntax(
     return _cached_encoder_for_DelMatchSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DelMatchSyntax */
 
 /* eslint-enable */

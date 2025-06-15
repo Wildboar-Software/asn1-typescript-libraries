@@ -5,7 +5,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_acseAS */
 /**
  * @summary id_acseAS
  * @description
@@ -27,6 +26,5 @@ export const id_acseAS: OBJECT_IDENTIFIER = new _OID(
     ],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_acseAS */
 
 /* eslint-enable */

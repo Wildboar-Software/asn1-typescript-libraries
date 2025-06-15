@@ -23,7 +23,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RemoveEntryResultData */
 /**
  * @summary RemoveEntryResultData
  * @description
@@ -107,9 +106,7 @@ export class RemoveEntryResultData implements CommonResultsSeq {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RemoveEntryResultData */
 /**
  * @summary The Leading Root Component Types of RemoveEntryResultData
  * @description
@@ -119,9 +116,7 @@ export class RemoveEntryResultData implements CommonResultsSeq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_RemoveEntryResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RemoveEntryResultData */
 /**
  * @summary The Trailing Root Component Types of RemoveEntryResultData
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_RemoveEntryResultData: $.Compo
 export const _root_component_type_list_2_spec_for_RemoveEntryResultData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RemoveEntryResultData */
 /**
  * @summary The Extension Addition Component Types of RemoveEntryResultData
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_RemoveEntryResultData: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_RemoveEntryResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveEntryResultData */
 let _cached_decoder_for_RemoveEntryResultData: $.ASN1Decoder<RemoveEntryResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveEntryResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveEntryResultData
  * @function
@@ -216,13 +205,9 @@ export function _decode_RemoveEntryResultData(el: _Element) {
     }
     return _cached_decoder_for_RemoveEntryResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveEntryResultData */
 let _cached_encoder_for_RemoveEntryResultData: $.ASN1Encoder<RemoveEntryResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveEntryResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveEntryResultData */
 /**
  * @summary Encodes a(n) RemoveEntryResultData into an ASN.1 Element.
  * @function
@@ -296,6 +281,5 @@ export function _encode_RemoveEntryResultData(
     return _cached_encoder_for_RemoveEntryResultData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveEntryResultData */
 
 /* eslint-enable */

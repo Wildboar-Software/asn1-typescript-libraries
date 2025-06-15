@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute */
+
 /**
  * @summary Permitted_Actions_Attribute
  * @description
@@ -30,229 +30,198 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Permitted_Actions_Attribute = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_read */
+
 /**
  * @summary Permitted_Actions_Attribute_read
  * @constant
  */
 export const Permitted_Actions_Attribute_read: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_read */
 
-/* START_OF_SYMBOL_DEFINITION read */
+
 /**
  * @summary read
  * @constant
  */
 export const read: number = Permitted_Actions_Attribute_read; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION read */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_insert */
+
 /**
  * @summary Permitted_Actions_Attribute_insert
  * @constant
  */
 export const Permitted_Actions_Attribute_insert: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_insert */
 
-/* START_OF_SYMBOL_DEFINITION insert */
+
 /**
  * @summary insert
  * @constant
  */
 export const insert: number = Permitted_Actions_Attribute_insert; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION insert */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_replace */
+
 /**
  * @summary Permitted_Actions_Attribute_replace
  * @constant
  */
 export const Permitted_Actions_Attribute_replace: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_replace */
 
-/* START_OF_SYMBOL_DEFINITION replace */
+
 /**
  * @summary replace
  * @constant
  */
 export const replace: number = Permitted_Actions_Attribute_replace; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION replace */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_extend */
+
 /**
  * @summary Permitted_Actions_Attribute_extend
  * @constant
  */
 export const Permitted_Actions_Attribute_extend: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_extend */
 
-/* START_OF_SYMBOL_DEFINITION extend */
+
 /**
  * @summary extend
  * @constant
  */
 export const extend: number = Permitted_Actions_Attribute_extend; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION extend */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_erase */
+
 /**
  * @summary Permitted_Actions_Attribute_erase
  * @constant
  */
 export const Permitted_Actions_Attribute_erase: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_erase */
 
-/* START_OF_SYMBOL_DEFINITION erase */
+
 /**
  * @summary erase
  * @constant
  */
 export const erase: number = Permitted_Actions_Attribute_erase; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION erase */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_read_attribute */
+
 /**
  * @summary Permitted_Actions_Attribute_read_attribute
  * @constant
  */
 export const Permitted_Actions_Attribute_read_attribute: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_read_attribute */
 
-/* START_OF_SYMBOL_DEFINITION read_attribute */
+
 /**
  * @summary read_attribute
  * @constant
  */
 export const read_attribute: number = Permitted_Actions_Attribute_read_attribute; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION read_attribute */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_change_attribute */
+
 /**
  * @summary Permitted_Actions_Attribute_change_attribute
  * @constant
  */
 export const Permitted_Actions_Attribute_change_attribute: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_change_attribute */
 
-/* START_OF_SYMBOL_DEFINITION change_attribute */
+
 /**
  * @summary change_attribute
  * @constant
  */
 export const change_attribute: number = Permitted_Actions_Attribute_change_attribute; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION change_attribute */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_delete_Object */
+
 /**
  * @summary Permitted_Actions_Attribute_delete_Object
  * @constant
  */
 export const Permitted_Actions_Attribute_delete_Object: number = 7; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_delete_Object */
 
-/* START_OF_SYMBOL_DEFINITION delete_Object */
+
 /**
  * @summary delete_Object
  * @constant
  */
 export const delete_Object: number = Permitted_Actions_Attribute_delete_Object; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION delete_Object */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_pass */
+
 /**
  * @summary Permitted_Actions_Attribute_pass
  * @constant
  */
 export const Permitted_Actions_Attribute_pass: number = 11; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_pass */
 
-/* START_OF_SYMBOL_DEFINITION pass */
+
 /**
  * @summary pass
  * @constant
  */
 export const pass: number = Permitted_Actions_Attribute_pass; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION pass */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_link */
+
 /**
  * @summary Permitted_Actions_Attribute_link
  * @constant
  */
 export const Permitted_Actions_Attribute_link: number = 12; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_link */
 
-/* START_OF_SYMBOL_DEFINITION link */
+
 /**
  * @summary link
  * @constant
  */
 export const link: number = Permitted_Actions_Attribute_link; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION link */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_traversal */
+
 /**
  * @summary Permitted_Actions_Attribute_traversal
  * @constant
  */
 export const Permitted_Actions_Attribute_traversal: number = 8; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_traversal */
 
-/* START_OF_SYMBOL_DEFINITION traversal */
+
 /**
  * @summary traversal
  * @constant
  */
 export const traversal: number = Permitted_Actions_Attribute_traversal; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION traversal */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_reverse_traversal */
+
 /**
  * @summary Permitted_Actions_Attribute_reverse_traversal
  * @constant
  */
 export const Permitted_Actions_Attribute_reverse_traversal: number = 9; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_reverse_traversal */
 
-/* START_OF_SYMBOL_DEFINITION reverse_traversal */
+
 /**
  * @summary reverse_traversal
  * @constant
  */
 export const reverse_traversal: number = Permitted_Actions_Attribute_reverse_traversal; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION reverse_traversal */
 
-/* START_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_random_Order */
+
 /**
  * @summary Permitted_Actions_Attribute_random_Order
  * @constant
  */
 export const Permitted_Actions_Attribute_random_Order: number = 10; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Permitted_Actions_Attribute_random_Order */
 
-/* START_OF_SYMBOL_DEFINITION random_Order */
+
 /**
  * @summary random_Order
  * @constant
  */
 export const random_Order: number = Permitted_Actions_Attribute_random_Order; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION random_Order */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Permitted_Actions_Attribute */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Permitted_Actions_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Permitted_Actions_Attribute */
+
+
 export const _decode_Permitted_Actions_Attribute = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_Permitted_Actions_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Permitted_Actions_Attribute */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Permitted_Actions_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Permitted_Actions_Attribute */
+
+
 export const _encode_Permitted_Actions_Attribute = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Permitted_Actions_Attribute */
 
 /* eslint-enable */

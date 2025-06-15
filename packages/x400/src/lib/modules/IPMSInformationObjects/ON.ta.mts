@@ -15,7 +15,6 @@ import {
     _decode_IPN,
     _encode_IPN,
 } from '../IPMSInformationObjects/IPN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ON */
 /**
  * @summary ON
  * @description
@@ -34,13 +33,9 @@ import {
  * ```
  */
 export type ON = IPN; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ON */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ON */
 let _cached_decoder_for_ON: $.ASN1Decoder<ON> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ON */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ON */
 /**
  * @summary Decodes an ASN.1 element into a(n) ON
  * @function
@@ -53,13 +48,9 @@ export function _decode_ON(el: _Element) {
     }
     return _cached_decoder_for_ON(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ON */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ON */
 let _cached_encoder_for_ON: $.ASN1Encoder<ON> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ON */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ON */
 /**
  * @summary Encodes a(n) ON into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_ON(value: ON, elGetter: $.ASN1Encoder<ON>) {
     return _cached_encoder_for_ON(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ON */
 
 /* eslint-enable */

@@ -30,7 +30,7 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax/UserKeyingMaterial.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyAgreeRecipientInfo */
+
 /**
  * @summary KeyAgreeRecipientInfo
  * @description
@@ -107,9 +107,8 @@ export class KeyAgreeRecipientInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreeRecipientInfo */
+
 /**
  * @summary The Leading Root Component Types of KeyAgreeRecipientInfo
  * @description
@@ -155,9 +154,8 @@ export const _root_component_type_list_1_spec_for_KeyAgreeRecipientInfo: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreeRecipientInfo */
+
 /**
  * @summary The Trailing Root Component Types of KeyAgreeRecipientInfo
  * @description
@@ -167,9 +165,8 @@ export const _root_component_type_list_1_spec_for_KeyAgreeRecipientInfo: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyAgreeRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreeRecipientInfo */
+
 /**
  * @summary The Extension Addition Component Types of KeyAgreeRecipientInfo
  * @description
@@ -179,13 +176,11 @@ export const _root_component_type_list_2_spec_for_KeyAgreeRecipientInfo: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyAgreeRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreeRecipientInfo */
+
 let _cached_decoder_for_KeyAgreeRecipientInfo: $.ASN1Decoder<KeyAgreeRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyAgreeRecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyAgreeRecipientInfo
  * @function
@@ -250,13 +245,11 @@ export function _decode_KeyAgreeRecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_KeyAgreeRecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreeRecipientInfo */
+
 let _cached_encoder_for_KeyAgreeRecipientInfo: $.ASN1Encoder<KeyAgreeRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreeRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyAgreeRecipientInfo */
+
 /**
  * @summary Encodes a(n) KeyAgreeRecipientInfo into an ASN.1 Element.
  * @function
@@ -309,6 +302,5 @@ export function _encode_KeyAgreeRecipientInfo(
     return _cached_encoder_for_KeyAgreeRecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyAgreeRecipientInfo */
 
 /* eslint-enable */

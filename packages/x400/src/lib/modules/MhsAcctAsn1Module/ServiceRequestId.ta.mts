@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceRequestId */
 /**
  * @summary ServiceRequestId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ServiceRequestId = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ServiceRequestId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceRequestId */
 let _cached_decoder_for_ServiceRequestId: $.ASN1Decoder<ServiceRequestId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceRequestId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceRequestId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceRequestId
  * @function
@@ -46,13 +41,9 @@ export function _decode_ServiceRequestId(el: _Element) {
     }
     return _cached_decoder_for_ServiceRequestId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceRequestId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceRequestId */
 let _cached_encoder_for_ServiceRequestId: $.ASN1Encoder<ServiceRequestId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceRequestId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceRequestId */
 /**
  * @summary Encodes a(n) ServiceRequestId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ServiceRequestId(
     return _cached_encoder_for_ServiceRequestId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceRequestId */
 
 /* eslint-enable */

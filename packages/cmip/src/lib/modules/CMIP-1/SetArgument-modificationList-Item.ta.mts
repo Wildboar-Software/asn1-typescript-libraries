@@ -23,7 +23,7 @@ import {
     _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SetArgument_modificationList_Item */
+
 /**
  * @summary SetArgument_modificationList_Item
  * @description
@@ -92,9 +92,8 @@ export class SetArgument_modificationList_Item {
     return replace;
   }
 }
-/* END_OF_SYMBOL_DEFINITION SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetArgument_modificationList_Item */
+
 /**
  * @summary The Leading Root Component Types of SetArgument_modificationList_Item
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_SetArgument_modificationList_I
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetArgument_modificationList_Item */
+
 /**
  * @summary The Trailing Root Component Types of SetArgument_modificationList_Item
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_SetArgument_modificationList_I
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SetArgument_modificationList_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetArgument_modificationList_Item */
+
 /**
  * @summary The Extension Addition Component Types of SetArgument_modificationList_Item
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_SetArgument_modificationList_I
  * @constant
  */
 export const _extension_additions_list_spec_for_SetArgument_modificationList_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SetArgument_modificationList_Item */
+
 let _cached_decoder_for_SetArgument_modificationList_Item: $.ASN1Decoder<SetArgument_modificationList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SetArgument_modificationList_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SetArgument_modificationList_Item
  * @function
@@ -200,13 +195,11 @@ export function _decode_SetArgument_modificationList_Item(el: _Element) {
   }
   return _cached_decoder_for_SetArgument_modificationList_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SetArgument_modificationList_Item */
+
 let _cached_encoder_for_SetArgument_modificationList_Item: $.ASN1Encoder<SetArgument_modificationList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SetArgument_modificationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SetArgument_modificationList_Item */
+
 /**
  * @summary Encodes a(n) SetArgument_modificationList_Item into an ASN.1 Element.
  * @function
@@ -249,6 +242,5 @@ export function _encode_SetArgument_modificationList_Item(
   return _cached_encoder_for_SetArgument_modificationList_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SetArgument_modificationList_Item */
 
 /* eslint-enable */

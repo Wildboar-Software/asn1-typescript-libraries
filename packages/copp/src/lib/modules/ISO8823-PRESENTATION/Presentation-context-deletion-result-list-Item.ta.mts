@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Presentation_context_deletion_result_list_Item */
+
 /**
  * @summary Presentation_context_deletion_result_list_Item
  * @description
@@ -24,49 +24,43 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Presentation_context_deletion_result_list_Item = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Presentation_context_deletion_result_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION Presentation_context_deletion_result_list_Item_acceptance */
+
 /**
  * @summary Presentation_context_deletion_result_list_Item_acceptance
  * @constant
  * @type {number}
  */
 export const Presentation_context_deletion_result_list_Item_acceptance: Presentation_context_deletion_result_list_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Presentation_context_deletion_result_list_Item_acceptance */
 
-/* START_OF_SYMBOL_DEFINITION acceptance */
+
 /**
  * @summary Presentation_context_deletion_result_list_Item_acceptance
  * @constant
  * @type {number}
  */
 export const acceptance: Presentation_context_deletion_result_list_Item = Presentation_context_deletion_result_list_Item_acceptance; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION acceptance */
 
-/* START_OF_SYMBOL_DEFINITION Presentation_context_deletion_result_list_Item_user_rejection */
+
 /**
  * @summary Presentation_context_deletion_result_list_Item_user_rejection
  * @constant
  * @type {number}
  */
 export const Presentation_context_deletion_result_list_Item_user_rejection: Presentation_context_deletion_result_list_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Presentation_context_deletion_result_list_Item_user_rejection */
 
-/* START_OF_SYMBOL_DEFINITION user_rejection */
+
 /**
  * @summary Presentation_context_deletion_result_list_Item_user_rejection
  * @constant
  * @type {number}
  */
 export const user_rejection: Presentation_context_deletion_result_list_Item = Presentation_context_deletion_result_list_Item_user_rejection; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION user_rejection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_context_deletion_result_list_Item */
+
 let _cached_decoder_for_Presentation_context_deletion_result_list_Item: $.ASN1Decoder<Presentation_context_deletion_result_list_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Presentation_context_deletion_result_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Presentation_context_deletion_result_list_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Presentation_context_deletion_result_list_Item
  * @function
@@ -84,13 +78,11 @@ export function _decode_Presentation_context_deletion_result_list_Item(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Presentation_context_deletion_result_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_context_deletion_result_list_Item */
+
 let _cached_encoder_for_Presentation_context_deletion_result_list_Item: $.ASN1Encoder<Presentation_context_deletion_result_list_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Presentation_context_deletion_result_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Presentation_context_deletion_result_list_Item */
+
 /**
  * @summary Encodes a(n) Presentation_context_deletion_result_list_Item into an ASN.1 Element.
  * @function
@@ -112,6 +104,5 @@ export function _encode_Presentation_context_deletion_result_list_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Presentation_context_deletion_result_list_Item */
 
 /* eslint-enable */

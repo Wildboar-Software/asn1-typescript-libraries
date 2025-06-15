@@ -13,7 +13,6 @@ import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
 import { WantBackSet } from '../SCVP-2009/WantBackSet.osa.mjs';
 import { ACertWantBackSet } from '../SCVP-2009/ACertWantBackSet.osa.mjs';
 import { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION AllWantBacks */
 /**
  * @summary AllWantBacks
  * @description
@@ -35,6 +34,5 @@ export const AllWantBacks: WANT_BACK<any>[] = [
   ...ACertWantBackSet,
   ...AnyWantBackSet,
 ];
-/* END_OF_SYMBOL_DEFINITION AllWantBacks */
 
 /* eslint-enable */

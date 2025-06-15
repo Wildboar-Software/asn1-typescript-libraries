@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { id_shake256 } from "../AlgorithmObjectIdentifiers/id-shake256.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION shake256 */
 /**
  * @summary shake256
  * @description
@@ -28,6 +27,5 @@ export const shake256: ALGORITHM = {
     "&id": id_shake256 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shake256 */
 
 /* eslint-enable */

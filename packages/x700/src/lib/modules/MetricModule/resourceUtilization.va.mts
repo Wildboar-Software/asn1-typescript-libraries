@@ -15,7 +15,6 @@ import {
     _encode_SpecificIdentifier,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta.mjs';
 import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs';
-/* START_OF_SYMBOL_DEFINITION resourceUtilization */
 /**
  * @summary resourceUtilization
  * @description
@@ -31,6 +30,5 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
 export const resourceUtilization: SpecificIdentifier = {
     oi: new _OID([2], moaSpecificProblems),
 };
-/* END_OF_SYMBOL_DEFINITION resourceUtilization */
 
 /* eslint-enable */

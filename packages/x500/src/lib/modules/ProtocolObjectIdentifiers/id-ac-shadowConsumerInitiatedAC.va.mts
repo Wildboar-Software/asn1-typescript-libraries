@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ac_shadowConsumerInitiatedAC */
 /**
  * @summary id_ac_shadowConsumerInitiatedAC
  * @description
@@ -18,6 +17,5 @@ export const id_ac_shadowConsumerInitiatedAC: OBJECT_IDENTIFIER = new _OID(
     [4],
     id_ac
 );
-/* END_OF_SYMBOL_DEFINITION id_ac_shadowConsumerInitiatedAC */
 
 /* eslint-enable */

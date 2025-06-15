@@ -15,7 +15,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeDescription */
+
 /**
  * @summary AttributeDescription
  * @description
@@ -27,9 +27,8 @@ import {
  * ```
  */
 export type AttributeDescription = LDAPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AttributeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeDescription */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeDescription
  * @function
@@ -39,9 +38,8 @@ export type AttributeDescription = LDAPString; // DefinedType
 export function _decode_AttributeDescription(el: _Element) {
   return _decode_LDAPString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeDescription */
+
 /**
  * @summary Encodes a(n) AttributeDescription into an ASN.1 Element.
  * @function
@@ -56,6 +54,5 @@ export function _encode_AttributeDescription(
   return _encode_LDAPString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeDescription */
 
 /* eslint-enable */

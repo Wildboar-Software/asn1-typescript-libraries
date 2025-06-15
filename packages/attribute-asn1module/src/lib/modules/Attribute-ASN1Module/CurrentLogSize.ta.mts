@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CurrentLogSize */
 /**
  * @summary CurrentLogSize
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type CurrentLogSize = INTEGER;
-/* END_OF_SYMBOL_DEFINITION CurrentLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrentLogSize */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrentLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CurrentLogSize */
 export const _decode_CurrentLogSize = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_CurrentLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrentLogSize */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrentLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CurrentLogSize */
 export const _encode_CurrentLogSize = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CurrentLogSize */
 
 /* eslint-enable */

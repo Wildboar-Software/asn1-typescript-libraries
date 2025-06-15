@@ -15,7 +15,6 @@ import { chainedRead } from "../DistributedOperations/chainedRead.oa.mjs";
 import { chainedRemoveEntry } from "../DistributedOperations/chainedRemoveEntry.oa.mjs";
 import { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
 import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION directorySystemAC */
 /**
  * @summary directorySystemAC
  * @description
@@ -67,6 +66,5 @@ export const directorySystemAC: APPLICATION_CONTEXT = {
     ] /* OBJECT_FIELD_SETTING */,
     "&applicationContextName": id_ac_directorySystemAC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION directorySystemAC */
 
 /* eslint-enable */

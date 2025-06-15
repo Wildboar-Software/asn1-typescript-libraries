@@ -15,7 +15,7 @@ import {
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
 } from '../CmsTelebiometric/IssuerAndSerialNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignerIdentifier */
+
 /**
  * @summary SignerIdentifier
  * @description
@@ -32,13 +32,11 @@ import {
 export type SignerIdentifier =
     | { issuerAndSerialNumber: IssuerAndSerialNumber } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SignerIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerIdentifier */
+
 let _cached_decoder_for_SignerIdentifier: $.ASN1Decoder<SignerIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignerIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignerIdentifier
  * @function
@@ -58,13 +56,11 @@ export function _decode_SignerIdentifier(el: _Element) {
     }
     return _cached_decoder_for_SignerIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignerIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerIdentifier */
+
 let _cached_encoder_for_SignerIdentifier: $.ASN1Encoder<SignerIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignerIdentifier */
+
 /**
  * @summary Encodes a(n) SignerIdentifier into an ASN.1 Element.
  * @function
@@ -87,6 +83,5 @@ export function _encode_SignerIdentifier(
     return _cached_encoder_for_SignerIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignerIdentifier */
 
 /* eslint-enable */

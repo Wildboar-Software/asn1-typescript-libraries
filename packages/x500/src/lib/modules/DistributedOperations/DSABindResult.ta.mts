@@ -6,7 +6,6 @@ import {
     _decode_DSABindArgument,
     _encode_DSABindArgument,
 } from "../DistributedOperations/DSABindArgument.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DSABindResult */
 /**
  * @summary DSABindResult
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type DSABindResult = DSABindArgument; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DSABindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSABindResult */
 let _cached_decoder_for_DSABindResult: $.ASN1Decoder<DSABindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSABindResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DSABindResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) DSABindResult
  * @function
@@ -37,13 +32,9 @@ export function _decode_DSABindResult(el: _Element) {
     }
     return _cached_decoder_for_DSABindResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DSABindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSABindResult */
 let _cached_encoder_for_DSABindResult: $.ASN1Encoder<DSABindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSABindResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DSABindResult */
 /**
  * @summary Encodes a(n) DSABindResult into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_DSABindResult(
     return _cached_encoder_for_DSABindResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DSABindResult */
 
 /* eslint-enable */

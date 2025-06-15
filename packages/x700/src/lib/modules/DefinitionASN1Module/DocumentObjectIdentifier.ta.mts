@@ -15,7 +15,7 @@ import {
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DocumentObjectIdentifier */
+
 /**
  * @summary DocumentObjectIdentifier
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DocumentObjectIdentifier = OptionallyRegisteredAs; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DocumentObjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentObjectIdentifier */
+
 let _cached_decoder_for_DocumentObjectIdentifier: $.ASN1Decoder<DocumentObjectIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentObjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DocumentObjectIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DocumentObjectIdentifier
  * @function
@@ -46,13 +44,11 @@ export function _decode_DocumentObjectIdentifier(el: _Element) {
     }
     return _cached_decoder_for_DocumentObjectIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DocumentObjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentObjectIdentifier */
+
 let _cached_encoder_for_DocumentObjectIdentifier: $.ASN1Encoder<DocumentObjectIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentObjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DocumentObjectIdentifier */
+
 /**
  * @summary Encodes a(n) DocumentObjectIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_DocumentObjectIdentifier(
     return _cached_encoder_for_DocumentObjectIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DocumentObjectIdentifier */
 
 /* eslint-enable */

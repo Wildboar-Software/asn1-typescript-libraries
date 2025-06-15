@@ -20,7 +20,6 @@ import {
     _decode_UnitsTotal,
     _encode_UnitsTotal,
 } from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ErrorUnitThreshold */
 /**
  * @summary ErrorUnitThreshold
  * @description
@@ -70,9 +69,7 @@ export class ErrorUnitThreshold {
         return new ErrorUnitThreshold(_o.unitType, _o.unitsTotal);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorUnitThreshold */
 /**
  * @summary The Leading Root Component Types of ErrorUnitThreshold
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_ErrorUnitThreshold: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorUnitThreshold */
 /**
  * @summary The Trailing Root Component Types of ErrorUnitThreshold
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_ErrorUnitThreshold: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ErrorUnitThreshold: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorUnitThreshold */
 /**
  * @summary The Extension Addition Component Types of ErrorUnitThreshold
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_ErrorUnitThreshold: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_ErrorUnitThreshold: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorUnitThreshold */
 let _cached_decoder_for_ErrorUnitThreshold: $.ASN1Decoder<ErrorUnitThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ErrorUnitThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorUnitThreshold
  * @function
@@ -162,13 +151,9 @@ export function _decode_ErrorUnitThreshold(el: _Element) {
     }
     return _cached_decoder_for_ErrorUnitThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorUnitThreshold */
 let _cached_encoder_for_ErrorUnitThreshold: $.ASN1Encoder<ErrorUnitThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorUnitThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ErrorUnitThreshold */
 /**
  * @summary Encodes a(n) ErrorUnitThreshold into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_ErrorUnitThreshold(
     return _cached_encoder_for_ErrorUnitThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ErrorUnitThreshold */
 
 /* eslint-enable */

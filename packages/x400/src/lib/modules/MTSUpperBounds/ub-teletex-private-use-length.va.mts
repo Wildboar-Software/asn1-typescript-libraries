@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_teletex_private_use_length */
 /**
  * @summary ub_teletex_private_use_length
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_teletex_private_use_length: INTEGER = 128;
-/* END_OF_SYMBOL_DEFINITION ub_teletex_private_use_length */
 
 /* eslint-enable */

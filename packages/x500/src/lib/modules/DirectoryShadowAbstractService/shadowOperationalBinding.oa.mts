@@ -13,7 +13,6 @@ import { shadowOperationalBinding_roleA } from "../DirectoryShadowAbstractServic
 import { shadowOperationalBinding_roleB } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleB.oa.mjs";
 import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION shadowOperationalBinding */
 /**
  * @summary shadowOperationalBinding
  * @description
@@ -76,6 +75,5 @@ export const shadowOperationalBinding: OPERATIONAL_BINDING<ShadowingAgreementInf
     "&id": id_op_binding_shadow /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Agreement": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shadowOperationalBinding */
 
 /* eslint-enable */

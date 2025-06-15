@@ -6,7 +6,6 @@ import {
     _encode_MultipleIcvAlgo,
 } from "../CryptoTools/MultipleIcvAlgo.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION multipleIcvAlgo */
 /**
  * @summary multipleIcvAlgo
  * @description
@@ -37,6 +36,5 @@ export const multipleIcvAlgo: ALGORITHM<MultipleIcvAlgo> = {
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&DynParms": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION multipleIcvAlgo */
 
 /* eslint-enable */

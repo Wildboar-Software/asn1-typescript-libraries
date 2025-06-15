@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION KerberosFlags */
+
 /**
  * @summary KerberosFlags
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type KerberosFlags = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION KerberosFlags */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KerberosFlags */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KerberosFlags */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KerberosFlags */
+
+
 export const _decode_KerberosFlags = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_KerberosFlags */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KerberosFlags */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KerberosFlags */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KerberosFlags */
+
+
 export const _encode_KerberosFlags = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_KerberosFlags */
 
 /* eslint-enable */

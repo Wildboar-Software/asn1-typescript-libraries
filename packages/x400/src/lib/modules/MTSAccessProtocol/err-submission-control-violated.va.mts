@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_submission_control_violated */
 /**
  * @summary err_submission_control_violated
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_submission_control_violated: Code = { local: 1 };
-/* END_OF_SYMBOL_DEFINITION err_submission_control_violated */
 
 /* eslint-enable */

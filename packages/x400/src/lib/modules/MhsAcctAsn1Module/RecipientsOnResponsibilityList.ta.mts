@@ -15,7 +15,6 @@ import {
     _decode_RecipientName,
     _encode_RecipientName,
 } from '../MhsAcctAsn1Module/RecipientName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientsOnResponsibilityList */
 /**
  * @summary RecipientsOnResponsibilityList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RecipientsOnResponsibilityList = RecipientName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RecipientsOnResponsibilityList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientsOnResponsibilityList */
 let _cached_decoder_for_RecipientsOnResponsibilityList: $.ASN1Decoder<RecipientsOnResponsibilityList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientsOnResponsibilityList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientsOnResponsibilityList */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientsOnResponsibilityList
  * @function
@@ -46,13 +41,9 @@ export function _decode_RecipientsOnResponsibilityList(el: _Element) {
     }
     return _cached_decoder_for_RecipientsOnResponsibilityList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientsOnResponsibilityList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientsOnResponsibilityList */
 let _cached_encoder_for_RecipientsOnResponsibilityList: $.ASN1Encoder<RecipientsOnResponsibilityList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientsOnResponsibilityList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientsOnResponsibilityList */
 /**
  * @summary Encodes a(n) RecipientsOnResponsibilityList into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RecipientsOnResponsibilityList(
     return _cached_encoder_for_RecipientsOnResponsibilityList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientsOnResponsibilityList */
 
 /* eslint-enable */

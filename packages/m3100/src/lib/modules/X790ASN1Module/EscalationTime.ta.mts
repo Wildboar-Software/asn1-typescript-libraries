@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EscalationTime */
+
 /**
  * @summary EscalationTime
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EscalationTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION EscalationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EscalationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EscalationTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EscalationTime */
+
+
 export const _decode_EscalationTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_EscalationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EscalationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EscalationTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EscalationTime */
+
+
 export const _encode_EscalationTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EscalationTime */
 
 /* eslint-enable */

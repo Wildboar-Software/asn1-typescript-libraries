@@ -10,6 +10,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION Errors */
+
 
 /* eslint-enable */

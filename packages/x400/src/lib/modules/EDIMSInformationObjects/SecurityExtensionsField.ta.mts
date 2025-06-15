@@ -15,7 +15,6 @@ import {
     _decode_SecurityExtensionsSubField,
     _encode_SecurityExtensionsSubField,
 } from '../EDIMSInformationObjects/SecurityExtensionsSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityExtensionsField */
 /**
  * @summary SecurityExtensionsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SecurityExtensionsField = SecurityExtensionsSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SecurityExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityExtensionsField */
 let _cached_decoder_for_SecurityExtensionsField: $.ASN1Decoder<SecurityExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityExtensionsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityExtensionsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_SecurityExtensionsField(el: _Element) {
     }
     return _cached_decoder_for_SecurityExtensionsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityExtensionsField */
 let _cached_encoder_for_SecurityExtensionsField: $.ASN1Encoder<SecurityExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityExtensionsField */
 /**
  * @summary Encodes a(n) SecurityExtensionsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SecurityExtensionsField(
     return _cached_encoder_for_SecurityExtensionsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityExtensionsField */
 
 /* eslint-enable */

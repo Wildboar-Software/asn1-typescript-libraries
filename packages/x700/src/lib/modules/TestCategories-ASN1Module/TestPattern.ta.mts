@@ -21,7 +21,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestPattern */
 /**
  * @summary TestPattern
  * @description
@@ -40,13 +39,9 @@ export type TestPattern =
     | { rawData: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { standardType: DataType } /* CHOICE_ALT_ROOT */
     | { undefinedType: ManagementExtension } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestPattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestPattern */
 let _cached_decoder_for_TestPattern: $.ASN1Decoder<TestPattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestPattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestPattern */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestPattern
  * @function
@@ -66,13 +61,9 @@ export function _decode_TestPattern(el: _Element) {
     }
     return _cached_decoder_for_TestPattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestPattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestPattern */
 let _cached_encoder_for_TestPattern: $.ASN1Encoder<TestPattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestPattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestPattern */
 /**
  * @summary Encodes a(n) TestPattern into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_TestPattern(
     return _cached_encoder_for_TestPattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestPattern */
 
 /* eslint-enable */

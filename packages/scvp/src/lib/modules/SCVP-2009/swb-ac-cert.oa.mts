@@ -16,7 +16,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs';
 import { id_swb_ac_cert } from '../SCVP-2009/id-swb-ac-cert.va.mjs';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION swb_ac_cert */
 /**
  * @summary swb_ac_cert
  * @description
@@ -42,6 +41,5 @@ export const swb_ac_cert: WANT_BACK<AttributeCertificate> = {
   '&id': id_swb_ac_cert /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION swb_ac_cert */
 
 /* eslint-enable */

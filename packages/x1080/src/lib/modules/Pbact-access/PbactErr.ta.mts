@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_PbactErr */
+
 export enum _enum_for_PbactErr {
     noSuchService = 0,
     invalidOperationForService = 1,
@@ -25,9 +25,8 @@ export enum _enum_for_PbactErr {
     attributeValueAlreadyExists = 8,
     noInformation = 9,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_PbactErr */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr */
+
 /**
  * @summary PbactErr
  * @description
@@ -50,201 +49,176 @@ export enum _enum_for_PbactErr {
  * ```@enum {number}
  */
 export type PbactErr = _enum_for_PbactErr | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION PbactErr */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_noSuchService */
+
 /**
  * @summary PbactErr_noSuchService
  * @constant
  * @type {number}
  */
 export const PbactErr_noSuchService: PbactErr = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_noSuchService */
 
-/* START_OF_SYMBOL_DEFINITION noSuchService */
+
 /**
  * @summary noSuchService
  * @constant
  * @type {number}
  */
 export const noSuchService: PbactErr = PbactErr_noSuchService; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noSuchService */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_invalidOperationForService */
+
 /**
  * @summary PbactErr_invalidOperationForService
  * @constant
  * @type {number}
  */
 export const PbactErr_invalidOperationForService: PbactErr = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_invalidOperationForService */
 
-/* START_OF_SYMBOL_DEFINITION invalidOperationForService */
+
 /**
  * @summary invalidOperationForService
  * @constant
  * @type {number}
  */
 export const invalidOperationForService: PbactErr = PbactErr_invalidOperationForService; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidOperationForService */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_insufficientAccessRigth */
+
 /**
  * @summary PbactErr_insufficientAccessRigth
  * @constant
  * @type {number}
  */
 export const PbactErr_insufficientAccessRigth: PbactErr = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_insufficientAccessRigth */
 
-/* START_OF_SYMBOL_DEFINITION insufficientAccessRigth */
+
 /**
  * @summary insufficientAccessRigth
  * @constant
  * @type {number}
  */
 export const insufficientAccessRigth: PbactErr = PbactErr_insufficientAccessRigth; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION insufficientAccessRigth */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_noSuchObject */
+
 /**
  * @summary PbactErr_noSuchObject
  * @constant
  * @type {number}
  */
 export const PbactErr_noSuchObject: PbactErr = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_noSuchObject */
 
-/* START_OF_SYMBOL_DEFINITION noSuchObject */
+
 /**
  * @summary noSuchObject
  * @constant
  * @type {number}
  */
 export const noSuchObject: PbactErr = PbactErr_noSuchObject; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noSuchObject */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_noSuchAttribute */
+
 /**
  * @summary PbactErr_noSuchAttribute
  * @constant
  * @type {number}
  */
 export const PbactErr_noSuchAttribute: PbactErr = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_noSuchAttribute */
 
-/* START_OF_SYMBOL_DEFINITION noSuchAttribute */
+
 /**
  * @summary noSuchAttribute
  * @constant
  * @type {number}
  */
 export const noSuchAttribute: PbactErr = PbactErr_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noSuchAttribute */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_noSuchAttributeValue */
+
 /**
  * @summary PbactErr_noSuchAttributeValue
  * @constant
  * @type {number}
  */
 export const PbactErr_noSuchAttributeValue: PbactErr = 5; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_noSuchAttributeValue */
 
-/* START_OF_SYMBOL_DEFINITION noSuchAttributeValue */
+
 /**
  * @summary noSuchAttributeValue
  * @constant
  * @type {number}
  */
 export const noSuchAttributeValue: PbactErr = PbactErr_noSuchAttributeValue; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noSuchAttributeValue */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_objectAlreadyExists */
+
 /**
  * @summary PbactErr_objectAlreadyExists
  * @constant
  * @type {number}
  */
 export const PbactErr_objectAlreadyExists: PbactErr = 6; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_objectAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION objectAlreadyExists */
+
 /**
  * @summary objectAlreadyExists
  * @constant
  * @type {number}
  */
 export const objectAlreadyExists: PbactErr = PbactErr_objectAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION objectAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_attributeAlreadyExists */
+
 /**
  * @summary PbactErr_attributeAlreadyExists
  * @constant
  * @type {number}
  */
 export const PbactErr_attributeAlreadyExists: PbactErr = 7; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_attributeAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION attributeAlreadyExists */
+
 /**
  * @summary attributeAlreadyExists
  * @constant
  * @type {number}
  */
 export const attributeAlreadyExists: PbactErr = PbactErr_attributeAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION attributeAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_attributeValueAlreadyExists */
+
 /**
  * @summary PbactErr_attributeValueAlreadyExists
  * @constant
  * @type {number}
  */
 export const PbactErr_attributeValueAlreadyExists: PbactErr = 8; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_attributeValueAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION attributeValueAlreadyExists */
+
 /**
  * @summary attributeValueAlreadyExists
  * @constant
  * @type {number}
  */
 export const attributeValueAlreadyExists: PbactErr = PbactErr_attributeValueAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION attributeValueAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION PbactErr_noInformation */
+
 /**
  * @summary PbactErr_noInformation
  * @constant
  * @type {number}
  */
 export const PbactErr_noInformation: PbactErr = 9; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PbactErr_noInformation */
 
-/* START_OF_SYMBOL_DEFINITION noInformation */
+
 /**
  * @summary noInformation
  * @constant
  * @type {number}
  */
 export const noInformation: PbactErr = PbactErr_noInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PbactErr */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PbactErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PbactErr */
+
+
 export const _decode_PbactErr = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_PbactErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PbactErr */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PbactErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PbactErr */
+
+
 export const _encode_PbactErr = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PbactErr */
 
 /* eslint-enable */

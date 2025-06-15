@@ -6,7 +6,7 @@ import {
     _decode_SMIMEEncryptionKeyPreference,
     _encode_SMIMEEncryptionKeyPreference,
 } from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION aa_encrypKeyPref */
+
 /**
  * @summary aa_encrypKeyPref
  * @description
@@ -34,6 +34,5 @@ export const aa_encrypKeyPref: ATTRIBUTE<SMIMEEncryptionKeyPreference> = {
     "&id": id_aa_encrypKeyPref /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_encrypKeyPref */
 
 /* eslint-enable */

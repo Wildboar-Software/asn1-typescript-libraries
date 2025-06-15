@@ -25,7 +25,6 @@ import {
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION forwarded_content_token */
 /**
  * @summary forwarded_content_token
  * @description
@@ -62,6 +61,5 @@ export const forwarded_content_token: EXTENSION<ForwardedContentToken> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION forwarded_content_token */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AssociationAssignedCode */
 /**
  * @summary AssociationAssignedCode
  * @description
@@ -25,21 +24,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AssociationAssignedCode = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION AssociationAssignedCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociationAssignedCode */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociationAssignedCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssociationAssignedCode */
 export const _decode_AssociationAssignedCode = $._decodeTeletexString;
-/* END_OF_SYMBOL_DEFINITION _decode_AssociationAssignedCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociationAssignedCode */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociationAssignedCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssociationAssignedCode */
 export const _encode_AssociationAssignedCode = $._encodeTeletexString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssociationAssignedCode */
 
 /* eslint-enable */

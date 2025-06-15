@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GeneralErrorCause */
+
 /**
  * @summary GeneralErrorCause
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type GeneralErrorCause =
     | { globalValue: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { localValue: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION GeneralErrorCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralErrorCause */
+
 let _cached_decoder_for_GeneralErrorCause: $.ASN1Decoder<GeneralErrorCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralErrorCause */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralErrorCause */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralErrorCause
  * @function
@@ -54,13 +52,11 @@ export function _decode_GeneralErrorCause(el: _Element) {
     }
     return _cached_decoder_for_GeneralErrorCause(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralErrorCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralErrorCause */
+
 let _cached_encoder_for_GeneralErrorCause: $.ASN1Encoder<GeneralErrorCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralErrorCause */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralErrorCause */
+
 /**
  * @summary Encodes a(n) GeneralErrorCause into an ASN.1 Element.
  * @function
@@ -84,6 +80,5 @@ export function _encode_GeneralErrorCause(
     return _cached_encoder_for_GeneralErrorCause(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralErrorCause */
 
 /* eslint-enable */

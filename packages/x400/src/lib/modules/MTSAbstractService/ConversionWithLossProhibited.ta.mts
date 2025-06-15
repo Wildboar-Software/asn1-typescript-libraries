@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ConversionWithLossProhibited */
 /**
  * @summary ConversionWithLossProhibited
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_ConversionWithLossProhibited {
     conversion_with_loss_allowed = 0,
     conversion_with_loss_prohibited = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ConversionWithLossProhibited */
 
-/* START_OF_SYMBOL_DEFINITION ConversionWithLossProhibited */
 /**
  * @summary ConversionWithLossProhibited
  * @description
@@ -44,9 +41,7 @@ export enum _enum_for_ConversionWithLossProhibited {
  * ```@enum {number}
  */
 export type ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
-/* END_OF_SYMBOL_DEFINITION ConversionWithLossProhibited */
 
-/* START_OF_SYMBOL_DEFINITION ConversionWithLossProhibited */
 /**
  * @summary ConversionWithLossProhibited
  * @description
@@ -60,9 +55,7 @@ export type ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibite
  * ```@enum {number}
  */
 export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
-/* END_OF_SYMBOL_DEFINITION ConversionWithLossProhibited */
 
-/* START_OF_SYMBOL_DEFINITION ConversionWithLossProhibited_conversion_with_loss_allowed */
 /**
  * @summary ConversionWithLossProhibited_conversion_with_loss_allowed
  * @constant
@@ -70,9 +63,7 @@ export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibit
  */
 export const ConversionWithLossProhibited_conversion_with_loss_allowed: ConversionWithLossProhibited =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ConversionWithLossProhibited_conversion_with_loss_allowed */
 
-/* START_OF_SYMBOL_DEFINITION conversion_with_loss_allowed */
 /**
  * @summary conversion_with_loss_allowed
  * @constant
@@ -80,9 +71,7 @@ export const ConversionWithLossProhibited_conversion_with_loss_allowed: Conversi
  */
 export const conversion_with_loss_allowed: ConversionWithLossProhibited =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION conversion_with_loss_allowed */
 
-/* START_OF_SYMBOL_DEFINITION ConversionWithLossProhibited_conversion_with_loss_prohibited */
 /**
  * @summary ConversionWithLossProhibited_conversion_with_loss_prohibited
  * @constant
@@ -90,9 +79,7 @@ export const conversion_with_loss_allowed: ConversionWithLossProhibited =
  */
 export const ConversionWithLossProhibited_conversion_with_loss_prohibited: ConversionWithLossProhibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ConversionWithLossProhibited_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION conversion_with_loss_prohibited */
 /**
  * @summary conversion_with_loss_prohibited
  * @constant
@@ -100,21 +87,12 @@ export const ConversionWithLossProhibited_conversion_with_loss_prohibited: Conve
  */
 export const conversion_with_loss_prohibited: ConversionWithLossProhibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionWithLossProhibited */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionWithLossProhibited */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConversionWithLossProhibited */
 export const _decode_ConversionWithLossProhibited = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ConversionWithLossProhibited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionWithLossProhibited */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionWithLossProhibited */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConversionWithLossProhibited */
 export const _encode_ConversionWithLossProhibited = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConversionWithLossProhibited */
 
 /* eslint-enable */

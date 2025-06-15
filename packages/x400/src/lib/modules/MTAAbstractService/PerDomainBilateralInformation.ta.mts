@@ -39,7 +39,6 @@ import {
 
 // Manually edited.
 
-/* START_OF_SYMBOL_DEFINITION PerDomainBilateralInformation */
 /**
  * @summary PerDomainBilateralInformation
  * @description
@@ -101,9 +100,7 @@ export class PerDomainBilateralInformation implements BilateralDomain {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerDomainBilateralInformation */
 /**
  * @summary The Leading Root Component Types of PerDomainBilateralInformation
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_PerDomainBilateralInformation:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerDomainBilateralInformation */
 /**
  * @summary The Trailing Root Component Types of PerDomainBilateralInformation
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_PerDomainBilateralInformation:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerDomainBilateralInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerDomainBilateralInformation */
 /**
  * @summary The Extension Addition Component Types of PerDomainBilateralInformation
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_PerDomainBilateralInformation:
  * @constant
  */
 export const _extension_additions_list_spec_for_PerDomainBilateralInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerDomainBilateralInformation */
 let _cached_decoder_for_PerDomainBilateralInformation: $.ASN1Decoder<PerDomainBilateralInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerDomainBilateralInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerDomainBilateralInformation
  * @function
@@ -199,13 +188,9 @@ export function _decode_PerDomainBilateralInformation(el: _Element) {
     }
     return _cached_decoder_for_PerDomainBilateralInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerDomainBilateralInformation */
 let _cached_encoder_for_PerDomainBilateralInformation: $.ASN1Encoder<PerDomainBilateralInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerDomainBilateralInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerDomainBilateralInformation */
 /**
  * @summary Encodes a(n) PerDomainBilateralInformation into an ASN.1 Element.
  * @function
@@ -241,6 +226,5 @@ export function _encode_PerDomainBilateralInformation(
     return _cached_encoder_for_PerDomainBilateralInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerDomainBilateralInformation */
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import {
   _encode_SetListError,
 } from '../CMIP-1/SetListError.ta.mjs';
 import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION setListError */
+
 /**
  * @summary setListError
  * @description
@@ -56,6 +56,5 @@ export const setListError: ERROR<SetListError> = {
   '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION setListError */
 
 /* eslint-enable */

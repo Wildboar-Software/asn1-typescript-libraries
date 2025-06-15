@@ -25,7 +25,6 @@ import {
     _decode_GetArgument,
     _encode_GetArgument,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplyOperationToMembershipRequest */
 /**
  * @summary ApplyOperationToMembershipRequest
  * @description
@@ -44,13 +43,9 @@ export type ApplyOperationToMembershipRequest =
     | { set_: SetArgument } /* CHOICE_ALT_ROOT */
     | { action: ActionArgument } /* CHOICE_ALT_ROOT */
     | { get_: GetArgument } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ApplyOperationToMembershipRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplyOperationToMembershipRequest */
 let _cached_decoder_for_ApplyOperationToMembershipRequest: $.ASN1Decoder<ApplyOperationToMembershipRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplyOperationToMembershipRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplyOperationToMembershipRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplyOperationToMembershipRequest
  * @function
@@ -80,13 +75,9 @@ export function _decode_ApplyOperationToMembershipRequest(el: _Element) {
     }
     return _cached_decoder_for_ApplyOperationToMembershipRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplyOperationToMembershipRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplyOperationToMembershipRequest */
 let _cached_encoder_for_ApplyOperationToMembershipRequest: $.ASN1Encoder<ApplyOperationToMembershipRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplyOperationToMembershipRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplyOperationToMembershipRequest */
 /**
  * @summary Encodes a(n) ApplyOperationToMembershipRequest into an ASN.1 Element.
  * @function
@@ -129,6 +120,5 @@ export function _encode_ApplyOperationToMembershipRequest(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplyOperationToMembershipRequest */
 
 /* eslint-enable */

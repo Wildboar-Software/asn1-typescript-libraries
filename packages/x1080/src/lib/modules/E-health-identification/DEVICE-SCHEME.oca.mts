@@ -21,7 +21,7 @@ import {
     _decode_Supported_formats,
     _encode_Supported_formats,
 } from '../E-health-identification/Supported-formats.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DEVICE_SCHEME */
+
 /**
  * @summary DEVICE_SCHEME
  * @description
@@ -93,6 +93,5 @@ export interface DEVICE_SCHEME<
      */
     readonly '&supportedFormats'?: Supported_formats;
 }
-/* END_OF_SYMBOL_DEFINITION DEVICE_SCHEME */
 
 /* eslint-enable */

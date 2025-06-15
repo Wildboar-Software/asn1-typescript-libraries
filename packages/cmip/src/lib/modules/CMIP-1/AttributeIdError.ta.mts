@@ -21,7 +21,7 @@ import {
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeIdError */
+
 /**
  * @summary AttributeIdError
  * @description
@@ -91,9 +91,8 @@ export class AttributeIdError {
 
   public static _enum_for_errorStatus = _enum_for_AttributeIdError_errorStatus;
 }
-/* END_OF_SYMBOL_DEFINITION AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeIdError */
+
 /**
  * @summary The Leading Root Component Types of AttributeIdError
  * @description
@@ -112,9 +111,8 @@ export const _root_component_type_list_1_spec_for_AttributeIdError: $.ComponentS
   ),
   new $.ComponentSpec('attributeId', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeIdError */
+
 /**
  * @summary The Trailing Root Component Types of AttributeIdError
  * @description
@@ -124,9 +122,8 @@ export const _root_component_type_list_1_spec_for_AttributeIdError: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeIdError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeIdError */
+
 /**
  * @summary The Extension Addition Component Types of AttributeIdError
  * @description
@@ -136,13 +133,11 @@ export const _root_component_type_list_2_spec_for_AttributeIdError: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeIdError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIdError */
+
 let _cached_decoder_for_AttributeIdError: $.ASN1Decoder<AttributeIdError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeIdError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeIdError
  * @function
@@ -173,13 +168,11 @@ export function _decode_AttributeIdError(el: _Element) {
   }
   return _cached_decoder_for_AttributeIdError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIdError */
+
 let _cached_encoder_for_AttributeIdError: $.ASN1Encoder<AttributeIdError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIdError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeIdError */
+
 /**
  * @summary Encodes a(n) AttributeIdError into an ASN.1 Element.
  * @function
@@ -216,6 +209,5 @@ export function _encode_AttributeIdError(
   return _cached_encoder_for_AttributeIdError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeIdError */
 
 /* eslint-enable */

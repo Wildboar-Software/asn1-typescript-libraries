@@ -6,7 +6,6 @@ import {
     _encode_CRLDistPointsSyntax,
 } from "../CertificateExtensions/CRLDistPointsSyntax.ta.mjs";
 import { id_ce_cRLDistributionPoints } from "../CertificateExtensions/id-ce-cRLDistributionPoints.va.mjs";
-/* START_OF_SYMBOL_DEFINITION cRLDistributionPoints */
 /**
  * @summary cRLDistributionPoints
  * @description
@@ -34,6 +33,5 @@ export const cRLDistributionPoints: EXTENSION<CRLDistPointsSyntax> = {
     "&id": id_ce_cRLDistributionPoints /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cRLDistributionPoints */
 
 /* eslint-enable */

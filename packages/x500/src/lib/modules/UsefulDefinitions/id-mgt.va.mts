@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { managementObject } from "../UsefulDefinitions/managementObject.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mgt */
 /**
  * @summary id_mgt
  * @description
@@ -15,6 +14,5 @@ import { managementObject } from "../UsefulDefinitions/managementObject.va.mjs";
  * @constant
  */
 export const id_mgt: ID = managementObject;
-/* END_OF_SYMBOL_DEFINITION id_mgt */
 
 /* eslint-enable */

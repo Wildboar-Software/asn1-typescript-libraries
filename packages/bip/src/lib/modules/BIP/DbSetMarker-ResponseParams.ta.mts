@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DbSetMarker_ResponseParams */
+
 /**
  * @summary DbSetMarker_ResponseParams
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DbSetMarker_ResponseParams = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION DbSetMarker_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbSetMarker_ResponseParams */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbSetMarker_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbSetMarker_ResponseParams */
+
+
 export const _decode_DbSetMarker_ResponseParams = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_DbSetMarker_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbSetMarker_ResponseParams */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbSetMarker_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbSetMarker_ResponseParams */
+
+
 export const _encode_DbSetMarker_ResponseParams = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbSetMarker_ResponseParams */
 
 /* eslint-enable */

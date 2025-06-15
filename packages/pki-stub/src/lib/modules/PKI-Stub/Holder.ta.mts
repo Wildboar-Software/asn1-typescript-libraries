@@ -27,7 +27,6 @@ import {
     _encode_ObjectDigestInfo,
 } from "../PKI-Stub/ObjectDigestInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Holder */
 /**
  * @summary Holder
  * @description
@@ -90,9 +89,7 @@ export class Holder {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Holder */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Holder */
 /**
  * @summary The Leading Root Component Types of Holder
  * @description
@@ -124,9 +121,7 @@ export const _root_component_type_list_1_spec_for_Holder: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Holder */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Holder */
 /**
  * @summary The Trailing Root Component Types of Holder
  * @description
@@ -137,9 +132,7 @@ export const _root_component_type_list_1_spec_for_Holder: $.ComponentSpec[] = [
  */
 export const _root_component_type_list_2_spec_for_Holder: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Holder */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Holder */
 /**
  * @summary The Extension Addition Component Types of Holder
  * @description
@@ -149,9 +142,7 @@ export const _root_component_type_list_2_spec_for_Holder: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Holder: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Holder */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Holder */
 /**
  * @summary Decodes an ASN.1 element into a(n) Holder
  * @function
@@ -197,9 +188,7 @@ export function _decode_Holder(el: _Element) {
         objectDigestInfo
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Holder */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Holder */
 /**
  * @summary Encodes a(n) Holder into an ASN.1 Element.
  * @function
@@ -239,6 +228,5 @@ export function _encode_Holder(value: Holder, _elGetter: $.ASN1Encoder<Holder>) 
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Holder */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
   _decode_AE_title_form2,
   _encode_AE_title_form2,
 } from '../ACSE-1/AE-title-form2.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AE_title */
 /**
  * @summary AE_title
  * @description
@@ -39,13 +38,9 @@ export type AE_title =
   | { ae_title_form1: AE_title_form1 } /* CHOICE_ALT_ROOT */
   | { ae_title_form2: AE_title_form2 } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AE_title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_title */
 let _cached_decoder_for_AE_title: $.ASN1Decoder<AE_title> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_title */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AE_title */
 /**
  * @summary Decodes an ASN.1 element into a(n) AE_title
  * @function
@@ -61,13 +56,9 @@ export function _decode_AE_title(el: _Element) {
   }
   return _cached_decoder_for_AE_title(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AE_title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_title */
 let _cached_encoder_for_AE_title: $.ASN1Encoder<AE_title> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_title */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AE_title */
 /**
  * @summary Encodes a(n) AE_title into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_AE_title(
   return _cached_encoder_for_AE_title(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AE_title */
 
 /* eslint-enable */

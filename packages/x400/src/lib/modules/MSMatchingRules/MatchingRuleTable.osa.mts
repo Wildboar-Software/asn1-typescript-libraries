@@ -12,7 +12,6 @@ import {
 import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs';
 import { GeneralMatchingRules } from '../MSMatchingRules/GeneralMatchingRules.osa.mjs';
 import { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecificMatchingRules.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION MatchingRuleTable */
 /**
  * @summary MatchingRuleTable
  * @description
@@ -31,6 +30,5 @@ export const MatchingRuleTable: MATCHING_RULE[] = [
     ...GeneralMatchingRules,
     ...ContentSpecificMatchingRules,
 ];
-/* END_OF_SYMBOL_DEFINITION MatchingRuleTable */
 
 /* eslint-enable */

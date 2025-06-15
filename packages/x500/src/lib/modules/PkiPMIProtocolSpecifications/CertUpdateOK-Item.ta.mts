@@ -11,7 +11,6 @@ import {
     _decode_CertUpdateOK_Item_ok,
     _encode_CertUpdateOK_Item_ok,
 } from "../PkiPMIProtocolSpecifications/CertUpdateOK-Item-ok.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUpdateOK_Item */
 /**
  * @summary CertUpdateOK_Item
  * @description
@@ -26,13 +25,9 @@ export type CertUpdateOK_Item =
     | { ok: CertUpdateOK_Item_ok } /* CHOICE_ALT_ROOT */
     | { not_ok: CertUpdateOK_Item_not_ok } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertUpdateOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateOK_Item */
 let _cached_decoder_for_CertUpdateOK_Item: $.ASN1Decoder<CertUpdateOK_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUpdateOK_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUpdateOK_Item
  * @function
@@ -60,13 +55,9 @@ export function _decode_CertUpdateOK_Item(el: _Element) {
     }
     return _cached_decoder_for_CertUpdateOK_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUpdateOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateOK_Item */
 let _cached_encoder_for_CertUpdateOK_Item: $.ASN1Encoder<CertUpdateOK_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUpdateOK_Item */
 /**
  * @summary Encodes a(n) CertUpdateOK_Item into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_CertUpdateOK_Item(
     return _cached_encoder_for_CertUpdateOK_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUpdateOK_Item */
 
 /* eslint-enable */

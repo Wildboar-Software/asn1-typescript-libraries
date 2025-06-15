@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION PrivateExtensions */
 /**
  * @summary PrivateExtensions
  * @description
@@ -28,6 +27,5 @@ import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
  *
  */
 export const PrivateExtensions: EXTENSION[] = [];
-/* END_OF_SYMBOL_DEFINITION PrivateExtensions */
 
 /* eslint-enable */

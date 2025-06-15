@@ -15,7 +15,7 @@ import {
     _decode_RevocationInfoChoice,
     _encode_RevocationInfoChoice,
 } from '../AuthenticationContextForBiometrics/RevocationInfoChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevocationInfoChoices */
+
 /**
  * @summary RevocationInfoChoices
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RevocationInfoChoices = RevocationInfoChoice[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RevocationInfoChoices */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfoChoices */
+
 let _cached_decoder_for_RevocationInfoChoices: $.ASN1Decoder<RevocationInfoChoices> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfoChoices */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevocationInfoChoices */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RevocationInfoChoices
  * @function
@@ -48,13 +46,11 @@ export function _decode_RevocationInfoChoices(el: _Element) {
     }
     return _cached_decoder_for_RevocationInfoChoices(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevocationInfoChoices */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfoChoices */
+
 let _cached_encoder_for_RevocationInfoChoices: $.ASN1Encoder<RevocationInfoChoices> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfoChoices */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevocationInfoChoices */
+
 /**
  * @summary Encodes a(n) RevocationInfoChoices into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RevocationInfoChoices(
     return _cached_encoder_for_RevocationInfoChoices(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevocationInfoChoices */
 
 /* eslint-enable */

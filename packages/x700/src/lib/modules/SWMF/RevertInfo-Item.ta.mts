@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevertInfo_Item */
 /**
  * @summary RevertInfo_Item
  * @description
@@ -30,13 +29,9 @@ import {
 export type RevertInfo_Item =
     | { patchId: GraphicString } /* CHOICE_ALT_ROOT */
     | { patchPointer: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RevertInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevertInfo_Item */
 let _cached_decoder_for_RevertInfo_Item: $.ASN1Decoder<RevertInfo_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevertInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevertInfo_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevertInfo_Item
  * @function
@@ -56,13 +51,9 @@ export function _decode_RevertInfo_Item(el: _Element) {
     }
     return _cached_decoder_for_RevertInfo_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevertInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevertInfo_Item */
 let _cached_encoder_for_RevertInfo_Item: $.ASN1Encoder<RevertInfo_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevertInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevertInfo_Item */
 /**
  * @summary Encodes a(n) RevertInfo_Item into an ASN.1 Element.
  * @function
@@ -86,6 +77,5 @@ export function _encode_RevertInfo_Item(
     return _cached_encoder_for_RevertInfo_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevertInfo_Item */
 
 /* eslint-enable */

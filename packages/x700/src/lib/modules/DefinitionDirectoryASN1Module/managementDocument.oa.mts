@@ -20,7 +20,6 @@ import { documentName } from '../DefinitionDirectoryASN1Module/documentName.oa.m
 import { documentObjectIdentifier } from '../DefinitionDirectoryASN1Module/documentObjectIdentifier.oa.mjs';
 import { specification } from '../DefinitionDirectoryASN1Module/specification.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementDocument */
 /**
  * @summary managementDocument
  * @description
@@ -55,6 +54,5 @@ export const managementDocument: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementDocument */
 
 /* eslint-enable */

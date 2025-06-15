@@ -22,7 +22,7 @@ import {
   _decode_Code,
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OPERATION */
+
 /**
  * @summary OPERATION
  * @description
@@ -147,6 +147,5 @@ export interface OPERATION<
    */
   readonly '&operationCode'?: Code;
 }
-/* END_OF_SYMBOL_DEFINITION OPERATION */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ReplyRecipientsSubfield,
     _encode_ReplyRecipientsSubfield,
 } from '../IPMSInformationObjects/ReplyRecipientsSubfield.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyRecipientsField */
 /**
  * @summary ReplyRecipientsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReplyRecipientsField = ReplyRecipientsSubfield[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ReplyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyRecipientsField */
 let _cached_decoder_for_ReplyRecipientsField: $.ASN1Decoder<ReplyRecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyRecipientsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyRecipientsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_ReplyRecipientsField(el: _Element) {
     }
     return _cached_decoder_for_ReplyRecipientsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyRecipientsField */
 let _cached_encoder_for_ReplyRecipientsField: $.ASN1Encoder<ReplyRecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyRecipientsField */
 /**
  * @summary Encodes a(n) ReplyRecipientsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ReplyRecipientsField(
     return _cached_encoder_for_ReplyRecipientsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyRecipientsField */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
 } from '../E-health-common/E-terminateResponse.ta.mjs';
 import { id_health_term_rsp } from '../E-health-common/id-health-term-rsp.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION health_term_rsp */
+
 /**
  * @summary health_term_rsp
  * @description
@@ -44,6 +44,5 @@ export const health_term_rsp: CONTENT_TYPE<E_terminateResponse> = {
     '&id': id_health_term_rsp /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION health_term_rsp */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
 } from '../MHSDirectoryObjectsAndAttributes/mta-name-Type.ta.mjs';
 import { id_san_mta_name } from '../MHSObjectIdentifiers/id-san-mta-name.va.mjs';
 import { OTHER_NAME } from '@wildboar/x500/src/lib/modules/CertificateExtensions/OTHER-NAME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_name */
 /**
  * @summary mta_name
  * @description
@@ -46,6 +45,5 @@ export const mta_name: OTHER_NAME<mta_name_Type> = {
     '&id': id_san_mta_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mta_name */
 
 /* eslint-enable */

@@ -27,7 +27,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SCVPCertID */
 /**
  * @summary SCVPCertID
  * @description
@@ -99,9 +98,7 @@ export class SCVPCertID {
     });
   }
 }
-/* END_OF_SYMBOL_DEFINITION SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SCVPCertID */
 /**
  * @summary The Leading Root Component Types of SCVPCertID
  * @description
@@ -133,9 +130,7 @@ export const _root_component_type_list_1_spec_for_SCVPCertID: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SCVPCertID */
 /**
  * @summary The Trailing Root Component Types of SCVPCertID
  * @description
@@ -145,9 +140,7 @@ export const _root_component_type_list_1_spec_for_SCVPCertID: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SCVPCertID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SCVPCertID */
 /**
  * @summary The Extension Addition Component Types of SCVPCertID
  * @description
@@ -157,13 +150,9 @@ export const _root_component_type_list_2_spec_for_SCVPCertID: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_SCVPCertID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SCVPCertID */
 let _cached_decoder_for_SCVPCertID: $.ASN1Decoder<SCVPCertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SCVPCertID */
 /**
  * @summary Decodes an ASN.1 element into a(n) SCVPCertID
  * @function
@@ -209,13 +198,9 @@ export function _decode_SCVPCertID(el: _Element) {
   }
   return _cached_decoder_for_SCVPCertID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SCVPCertID */
 let _cached_encoder_for_SCVPCertID: $.ASN1Encoder<SCVPCertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SCVPCertID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SCVPCertID */
 /**
  * @summary Encodes a(n) SCVPCertID into an ASN.1 Element.
  * @function
@@ -254,6 +239,5 @@ export function _encode_SCVPCertID(
   return _cached_encoder_for_SCVPCertID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SCVPCertID */
 
 /* eslint-enable */

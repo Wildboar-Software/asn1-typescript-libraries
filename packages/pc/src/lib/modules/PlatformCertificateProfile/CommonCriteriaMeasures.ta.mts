@@ -24,7 +24,6 @@ import {
 } from "./EvaluationStatus.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION CommonCriteriaMeasures */
 /**
  * @summary CommonCriteriaMeasures
  * @description
@@ -141,9 +140,7 @@ class CommonCriteriaMeasures {
 
     public static _enum_for_strengthOfFunction = _enum_for_StrengthOfFunction;
 }
-/* END_OF_SYMBOL_DEFINITION CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonCriteriaMeasures */
 /**
  * @summary The Leading Root Component Types of CommonCriteriaMeasures
  * @description
@@ -164,9 +161,7 @@ const _root_component_type_list_1_spec_for_CommonCriteriaMeasures: $.ComponentSp
     new $.ComponentSpec("targetOid", true, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("targetUri", true, $.hasTag(_TagClass.context, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonCriteriaMeasures */
 /**
  * @summary The Trailing Root Component Types of CommonCriteriaMeasures
  * @description
@@ -179,9 +174,7 @@ export
 const _root_component_type_list_2_spec_for_CommonCriteriaMeasures: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonCriteriaMeasures */
 /**
  * @summary The Extension Addition Component Types of CommonCriteriaMeasures
  * @description
@@ -194,13 +187,9 @@ export
 const _extension_additions_list_spec_for_CommonCriteriaMeasures: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonCriteriaMeasures */
 let _cached_decoder_for_CommonCriteriaMeasures: $.ASN1Decoder<CommonCriteriaMeasures> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonCriteriaMeasures */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonCriteriaMeasures
  * @function
@@ -254,13 +243,9 @@ function _decode_CommonCriteriaMeasures (el: _Element) {
 }; }
     return _cached_decoder_for_CommonCriteriaMeasures(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonCriteriaMeasures */
 let _cached_encoder_for_CommonCriteriaMeasures: $.ASN1Encoder<CommonCriteriaMeasures> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonCriteriaMeasures */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonCriteriaMeasures */
 /**
  * @summary Encodes a(n) CommonCriteriaMeasures into an ASN.1 Element.
  * @function
@@ -288,6 +273,5 @@ function _encode_CommonCriteriaMeasures (value: CommonCriteriaMeasures, elGetter
     return _cached_encoder_for_CommonCriteriaMeasures(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonCriteriaMeasures */
 
 /* eslint-enable */

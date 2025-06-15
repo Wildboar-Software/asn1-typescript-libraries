@@ -15,7 +15,6 @@ import {
     _decode_IPN,
     _encode_IPN,
 } from '../IPMSInformationObjects/IPN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NRN */
 /**
  * @summary NRN
  * @description
@@ -34,13 +33,9 @@ import {
  * ```
  */
 export type NRN = IPN; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NRN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NRN */
 let _cached_decoder_for_NRN: $.ASN1Decoder<NRN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NRN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NRN */
 /**
  * @summary Decodes an ASN.1 element into a(n) NRN
  * @function
@@ -53,13 +48,9 @@ export function _decode_NRN(el: _Element) {
     }
     return _cached_decoder_for_NRN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NRN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NRN */
 let _cached_encoder_for_NRN: $.ASN1Encoder<NRN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NRN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NRN */
 /**
  * @summary Encodes a(n) NRN into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_NRN(value: NRN, elGetter: $.ASN1Encoder<NRN>) {
     return _cached_encoder_for_NRN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NRN */
 
 /* eslint-enable */

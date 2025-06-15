@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MixedModeBodyPart */
 /**
  * @summary MixedModeBodyPart
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MixedModeBodyPart = ASN1Element[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MixedModeBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MixedModeBodyPart */
 let _cached_decoder_for_MixedModeBodyPart: $.ASN1Decoder<MixedModeBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MixedModeBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MixedModeBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) MixedModeBodyPart
  * @function
@@ -45,13 +40,9 @@ export function _decode_MixedModeBodyPart(el: _Element) {
     }
     return _cached_decoder_for_MixedModeBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MixedModeBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MixedModeBodyPart */
 let _cached_encoder_for_MixedModeBodyPart: $.ASN1Encoder<MixedModeBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MixedModeBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MixedModeBodyPart */
 /**
  * @summary Encodes a(n) MixedModeBodyPart into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_MixedModeBodyPart(
     return _cached_encoder_for_MixedModeBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MixedModeBodyPart */
 
 /* eslint-enable */

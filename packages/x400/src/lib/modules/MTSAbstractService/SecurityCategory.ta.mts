@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityCategory */
 /**
  * @summary SecurityCategory
  * @description
@@ -61,9 +60,7 @@ export class SecurityCategory {
         return new SecurityCategory(_o.type_, _o.value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityCategory */
 /**
  * @summary The Leading Root Component Types of SecurityCategory
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_SecurityCategory: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityCategory */
 /**
  * @summary The Trailing Root Component Types of SecurityCategory
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_SecurityCategory: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityCategory: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityCategory */
 /**
  * @summary The Extension Addition Component Types of SecurityCategory
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_SecurityCategory: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_SecurityCategory: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityCategory */
 let _cached_decoder_for_SecurityCategory: $.ASN1Decoder<SecurityCategory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityCategory */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityCategory
  * @function
@@ -153,13 +142,9 @@ export function _decode_SecurityCategory(el: _Element) {
     }
     return _cached_decoder_for_SecurityCategory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityCategory */
 let _cached_encoder_for_SecurityCategory: $.ASN1Encoder<SecurityCategory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityCategory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityCategory */
 /**
  * @summary Encodes a(n) SecurityCategory into an ASN.1 Element.
  * @function
@@ -198,6 +183,5 @@ export function _encode_SecurityCategory(
     return _cached_encoder_for_SecurityCategory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityCategory */
 
 /* eslint-enable */

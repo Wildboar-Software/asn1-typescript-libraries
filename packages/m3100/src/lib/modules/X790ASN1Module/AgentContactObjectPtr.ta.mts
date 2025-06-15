@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AgentContactObjectPtr */
+
 /**
  * @summary AgentContactObjectPtr
  * @description
@@ -35,13 +35,11 @@ export type AgentContactObjectPtr =
     | { noContact: NULL } /* CHOICE_ALT_ROOT */
     | { contact: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AgentContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AgentContactObjectPtr */
+
 let _cached_decoder_for_AgentContactObjectPtr: $.ASN1Decoder<AgentContactObjectPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AgentContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AgentContactObjectPtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AgentContactObjectPtr
  * @function
@@ -61,13 +59,11 @@ export function _decode_AgentContactObjectPtr(el: _Element) {
     }
     return _cached_decoder_for_AgentContactObjectPtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AgentContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AgentContactObjectPtr */
+
 let _cached_encoder_for_AgentContactObjectPtr: $.ASN1Encoder<AgentContactObjectPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AgentContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AgentContactObjectPtr */
+
 /**
  * @summary Encodes a(n) AgentContactObjectPtr into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_AgentContactObjectPtr(
     return _cached_encoder_for_AgentContactObjectPtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AgentContactObjectPtr */
 
 /* eslint-enable */

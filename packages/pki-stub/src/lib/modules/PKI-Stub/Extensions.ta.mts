@@ -16,7 +16,6 @@ import {
     _encode_Extension,
 } from "../PKI-Stub/Extension.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Extensions */
 /**
  * @summary Extensions
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type Extensions = Extension[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Extensions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Extensions */
 let _cached_decoder_for_Extensions: $.ASN1Decoder<Extensions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Extensions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Extensions */
 /**
  * @summary Decodes an ASN.1 element into a(n) Extensions
  * @function
@@ -49,13 +44,9 @@ export function _decode_Extensions(el: _Element) {
     }
     return _cached_decoder_for_Extensions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Extensions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Extensions */
 let _cached_encoder_for_Extensions: $.ASN1Encoder<Extensions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Extensions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Extensions */
 /**
  * @summary Encodes a(n) Extensions into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_Extensions(
     return _cached_encoder_for_Extensions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Extensions */
 
 /* eslint-enable */

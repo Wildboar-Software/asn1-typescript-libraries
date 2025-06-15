@@ -10,7 +10,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UpdateWindow */
 /**
  * @summary UpdateWindow
  * @description
@@ -70,9 +69,7 @@ export class UpdateWindow {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UpdateWindow */
 /**
  * @summary The Leading Root Component Types of UpdateWindow
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_UpdateWindow: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UpdateWindow */
 /**
  * @summary The Trailing Root Component Types of UpdateWindow
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_UpdateWindow: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UpdateWindow: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UpdateWindow */
 /**
  * @summary The Extension Addition Component Types of UpdateWindow
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_UpdateWindow: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_UpdateWindow: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateWindow */
 let _cached_decoder_for_UpdateWindow: $.ASN1Decoder<UpdateWindow> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UpdateWindow */
 /**
  * @summary Decodes an ASN.1 element into a(n) UpdateWindow
  * @function
@@ -158,13 +147,9 @@ export function _decode_UpdateWindow(el: _Element) {
     }
     return _cached_decoder_for_UpdateWindow(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateWindow */
 let _cached_encoder_for_UpdateWindow: $.ASN1Encoder<UpdateWindow> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateWindow */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UpdateWindow */
 /**
  * @summary Encodes a(n) UpdateWindow into an ASN.1 Element.
  * @function
@@ -198,6 +183,5 @@ export function _encode_UpdateWindow(
     return _cached_encoder_for_UpdateWindow(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UpdateWindow */
 
 /* eslint-enable */

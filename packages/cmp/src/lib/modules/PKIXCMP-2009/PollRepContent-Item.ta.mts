@@ -17,7 +17,7 @@ import {
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PollRepContent_Item */
+
 /**
  * @summary PollRepContent_Item
  * @description
@@ -70,9 +70,8 @@ export class PollRepContent_Item {
     return new PollRepContent_Item(_o.certReqId, _o.checkAfter, _o.reason);
   }
 }
-/* END_OF_SYMBOL_DEFINITION PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PollRepContent_Item */
+
 /**
  * @summary The Leading Root Component Types of PollRepContent_Item
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_PollRepContent_Item: $.Compone
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PollRepContent_Item */
+
 /**
  * @summary The Trailing Root Component Types of PollRepContent_Item
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_PollRepContent_Item: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PollRepContent_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PollRepContent_Item */
+
 /**
  * @summary The Extension Addition Component Types of PollRepContent_Item
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_PollRepContent_Item: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_PollRepContent_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PollRepContent_Item */
+
 let _cached_decoder_for_PollRepContent_Item: $.ASN1Decoder<PollRepContent_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PollRepContent_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PollRepContent_Item
  * @function
@@ -181,13 +176,11 @@ export function _decode_PollRepContent_Item(el: _Element) {
   }
   return _cached_decoder_for_PollRepContent_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PollRepContent_Item */
+
 let _cached_encoder_for_PollRepContent_Item: $.ASN1Encoder<PollRepContent_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PollRepContent_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PollRepContent_Item */
+
 /**
  * @summary Encodes a(n) PollRepContent_Item into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_PollRepContent_Item(
   return _cached_encoder_for_PollRepContent_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PollRepContent_Item */
 
 /* eslint-enable */

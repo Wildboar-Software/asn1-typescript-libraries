@@ -13,7 +13,6 @@ import { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-8
 import { ms_access_contract_94 } from '../MSAbstractService/ms-access-contract-94.oa.mjs';
 import { id_ot_ms_user } from '../MSObjectIdentifiers/id-ot-ms-user.va.mjs';
 import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_user */
 /**
  * @summary ms_user
  * @description
@@ -41,6 +40,5 @@ export const ms_user: MHS_OBJECT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_ot_ms_user /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_user */
 
 /* eslint-enable */

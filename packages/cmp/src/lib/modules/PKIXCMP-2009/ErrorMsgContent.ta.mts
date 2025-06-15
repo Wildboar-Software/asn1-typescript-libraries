@@ -22,7 +22,7 @@ import {
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ErrorMsgContent */
+
 /**
  * @summary ErrorMsgContent
  * @description
@@ -81,9 +81,8 @@ export class ErrorMsgContent {
     return new ErrorMsgContent(_o.pKIStatusInfo, _o.errorCode, _o.errorDetails);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorMsgContent */
+
 /**
  * @summary The Leading Root Component Types of ErrorMsgContent
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_ErrorMsgContent: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of ErrorMsgContent
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_ErrorMsgContent: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ErrorMsgContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of ErrorMsgContent
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_ErrorMsgContent: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ErrorMsgContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorMsgContent */
+
 let _cached_decoder_for_ErrorMsgContent: $.ASN1Decoder<ErrorMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ErrorMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorMsgContent
  * @function
@@ -192,13 +187,11 @@ export function _decode_ErrorMsgContent(el: _Element) {
   }
   return _cached_decoder_for_ErrorMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorMsgContent */
+
 let _cached_encoder_for_ErrorMsgContent: $.ASN1Encoder<ErrorMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ErrorMsgContent */
+
 /**
  * @summary Encodes a(n) ErrorMsgContent into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_ErrorMsgContent(
   return _cached_encoder_for_ErrorMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ErrorMsgContent */
 
 /* eslint-enable */

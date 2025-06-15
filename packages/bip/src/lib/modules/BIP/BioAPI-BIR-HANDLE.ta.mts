@@ -15,7 +15,7 @@ import {
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_HANDLE */
+
 /**
  * @summary BioAPI_BIR_HANDLE
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BioAPI_BIR_HANDLE = SignedInt; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_HANDLE */
+
 let _cached_decoder_for_BioAPI_BIR_HANDLE: $.ASN1Decoder<BioAPI_BIR_HANDLE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_HANDLE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_HANDLE
  * @function
@@ -46,13 +44,11 @@ export function _decode_BioAPI_BIR_HANDLE(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_BIR_HANDLE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_HANDLE */
+
 let _cached_encoder_for_BioAPI_BIR_HANDLE: $.ASN1Encoder<BioAPI_BIR_HANDLE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_HANDLE */
+
 /**
  * @summary Encodes a(n) BioAPI_BIR_HANDLE into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_BioAPI_BIR_HANDLE(
   return _cached_encoder_for_BioAPI_BIR_HANDLE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_HANDLE */
 
 /* eslint-enable */

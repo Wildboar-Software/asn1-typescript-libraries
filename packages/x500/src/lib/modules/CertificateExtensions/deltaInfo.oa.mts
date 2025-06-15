@@ -6,7 +6,6 @@ import {
     _encode_DeltaInformation,
 } from "../CertificateExtensions/DeltaInformation.ta.mjs";
 import { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va.mjs";
-/* START_OF_SYMBOL_DEFINITION deltaInfo */
 /**
  * @summary deltaInfo
  * @description
@@ -34,6 +33,5 @@ export const deltaInfo: EXTENSION<DeltaInformation> = {
     "&id": id_ce_deltaInfo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION deltaInfo */
 
 /* eslint-enable */

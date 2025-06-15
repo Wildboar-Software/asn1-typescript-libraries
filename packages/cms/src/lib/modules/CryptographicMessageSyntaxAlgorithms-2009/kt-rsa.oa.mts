@@ -7,7 +7,7 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
 import { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va.mjs";
-/* START_OF_SYMBOL_DEFINITION kt_rsa */
+
 /**
  * @summary kt_rsa
  * @description
@@ -40,6 +40,5 @@ export const kt_rsa: KEY_TRANSPORT<NULL> = {
     "&PublicKeySet": [pk_rsa] /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kt_rsa */
 
 /* eslint-enable */

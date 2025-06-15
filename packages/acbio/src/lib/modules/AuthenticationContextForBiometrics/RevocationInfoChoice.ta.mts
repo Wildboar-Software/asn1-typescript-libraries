@@ -20,7 +20,7 @@ import {
     _decode_OtherRevocationInfoFormat,
     _encode_OtherRevocationInfoFormat,
 } from '../AuthenticationContextForBiometrics/OtherRevocationInfoFormat.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevocationInfoChoice */
+
 /**
  * @summary RevocationInfoChoice
  * @description
@@ -36,13 +36,11 @@ import {
 export type RevocationInfoChoice =
     | { crl: CertificateList } /* CHOICE_ALT_ROOT */
     | { other: OtherRevocationInfoFormat } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RevocationInfoChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfoChoice */
+
 let _cached_decoder_for_RevocationInfoChoice: $.ASN1Decoder<RevocationInfoChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfoChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevocationInfoChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RevocationInfoChoice
  * @function
@@ -65,13 +63,11 @@ export function _decode_RevocationInfoChoice(el: _Element) {
     }
     return _cached_decoder_for_RevocationInfoChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevocationInfoChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfoChoice */
+
 let _cached_encoder_for_RevocationInfoChoice: $.ASN1Encoder<RevocationInfoChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfoChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevocationInfoChoice */
+
 /**
  * @summary Encodes a(n) RevocationInfoChoice into an ASN.1 Element.
  * @function
@@ -100,6 +96,5 @@ export function _encode_RevocationInfoChoice(
     return _cached_encoder_for_RevocationInfoChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevocationInfoChoice */
 
 /* eslint-enable */

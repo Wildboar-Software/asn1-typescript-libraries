@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION rsSTM4SPICI */
+
 /**
  * @summary rsSTM4SPICI
  * @description
@@ -32,6 +32,5 @@ export const rsSTM4SPICI: CharacteristicInformation = new _OID(
     [6],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION rsSTM4SPICI */
 
 /* eslint-enable */

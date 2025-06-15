@@ -5,7 +5,6 @@ import {
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
 } from "../PkiPmiExternalDataTypes/TeletexDomainDefinedAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION teletex_domain_defined_attributes */
 /**
  * @summary teletex_domain_defined_attributes
  * @description
@@ -33,6 +32,5 @@ export const teletex_domain_defined_attributes: EXTENSION_ATTRIBUTE<TeletexDomai
     "&id": 6 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_domain_defined_attributes */
 
 /* eslint-enable */

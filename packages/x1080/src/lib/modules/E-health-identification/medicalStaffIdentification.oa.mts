@@ -16,7 +16,7 @@ import {
     _encode_MedicalStaffIdentification,
 } from '../E-health-identification/MedicalStaffIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION medicalStaffIdentification */
+
 /**
  * @summary medicalStaffIdentification
  * @description
@@ -44,6 +44,5 @@ export const medicalStaffIdentification: IDENTIFICATION<MedicalStaffIdentificati
     '&category': id_med_staff /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION medicalStaffIdentification */
 
 /* eslint-enable */

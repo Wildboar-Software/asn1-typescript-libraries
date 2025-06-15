@@ -16,7 +16,7 @@ import {
     _encode_ObserverIdentification,
 } from '../E-health-identification/ObserverIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION observerIdentification */
+
 /**
  * @summary observerIdentification
  * @description
@@ -44,6 +44,5 @@ export const observerIdentification: IDENTIFICATION<ObserverIdentification> = {
     '&category': id_observer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION observerIdentification */
 
 /* eslint-enable */

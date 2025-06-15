@@ -6,7 +6,7 @@ import {
     _decode_UniqueID,
     _encode_UniqueID,
 } from "../CMSDBKeyManagement/UniqueID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniqueIdentifier */
+
 /**
  * @summary UniqueIdentifier
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type UniqueIdentifier = UniqueID; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniqueIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniqueIdentifier */
+
 let _cached_decoder_for_UniqueIdentifier: $.ASN1Decoder<UniqueIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniqueIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniqueIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UniqueIdentifier
  * @function
@@ -37,13 +35,11 @@ export function _decode_UniqueIdentifier(el: _Element) {
     }
     return _cached_decoder_for_UniqueIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniqueIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniqueIdentifier */
+
 let _cached_encoder_for_UniqueIdentifier: $.ASN1Encoder<UniqueIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniqueIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniqueIdentifier */
+
 /**
  * @summary Encodes a(n) UniqueIdentifier into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_UniqueIdentifier(
     return _cached_encoder_for_UniqueIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniqueIdentifier */
 
 /* eslint-enable */

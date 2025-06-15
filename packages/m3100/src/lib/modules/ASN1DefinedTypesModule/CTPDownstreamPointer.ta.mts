@@ -15,7 +15,7 @@ import {
     _decode_DownstreamConnectivityPointer,
     _encode_DownstreamConnectivityPointer,
 } from '../ASN1DefinedTypesModule/DownstreamConnectivityPointer.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CTPDownstreamPointer */
+
 /**
  * @summary CTPDownstreamPointer
  * @description
@@ -35,13 +35,11 @@ import {
  * ```
  */
 export type CTPDownstreamPointer = DownstreamConnectivityPointer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CTPDownstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CTPDownstreamPointer */
+
 let _cached_decoder_for_CTPDownstreamPointer: $.ASN1Decoder<CTPDownstreamPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CTPDownstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CTPDownstreamPointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CTPDownstreamPointer
  * @function
@@ -54,13 +52,11 @@ export function _decode_CTPDownstreamPointer(el: _Element) {
     }
     return _cached_decoder_for_CTPDownstreamPointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CTPDownstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CTPDownstreamPointer */
+
 let _cached_encoder_for_CTPDownstreamPointer: $.ASN1Encoder<CTPDownstreamPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CTPDownstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CTPDownstreamPointer */
+
 /**
  * @summary Encodes a(n) CTPDownstreamPointer into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_CTPDownstreamPointer(
     return _cached_encoder_for_CTPDownstreamPointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CTPDownstreamPointer */
 
 /* eslint-enable */

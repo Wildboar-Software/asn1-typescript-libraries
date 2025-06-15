@@ -20,7 +20,6 @@ import {
     _decode_GenericAddress,
     _encode_GenericAddress,
 } from '../MhsMTAAsn1Module/GenericAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailAccessPointAddress */
 /**
  * @summary EMailAccessPointAddress
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailAccessPointAddress =
     | { psap: PSAPAddress } /* CHOICE_ALT_ROOT */
     | { genericAddress: GenericAddress } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailAccessPointAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailAccessPointAddress */
 let _cached_decoder_for_EMailAccessPointAddress: $.ASN1Decoder<EMailAccessPointAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailAccessPointAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailAccessPointAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailAccessPointAddress
  * @function
@@ -69,13 +64,9 @@ export function _decode_EMailAccessPointAddress(el: _Element) {
     }
     return _cached_decoder_for_EMailAccessPointAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailAccessPointAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailAccessPointAddress */
 let _cached_encoder_for_EMailAccessPointAddress: $.ASN1Encoder<EMailAccessPointAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailAccessPointAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailAccessPointAddress */
 /**
  * @summary Encodes a(n) EMailAccessPointAddress into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_EMailAccessPointAddress(
     return _cached_encoder_for_EMailAccessPointAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailAccessPointAddress */
 
 /* eslint-enable */

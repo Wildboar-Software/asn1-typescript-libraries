@@ -15,7 +15,6 @@ import {
     _decode_ReportingTriggers_Item,
     _encode_ReportingTriggers_Item,
 } from '../UsageMeteringFunction/ReportingTriggers-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportingTriggers */
 /**
  * @summary ReportingTriggers
  * @description
@@ -32,13 +31,9 @@ import {
  * ```
  */
 export type ReportingTriggers = ReportingTriggers_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ReportingTriggers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingTriggers */
 let _cached_decoder_for_ReportingTriggers: $.ASN1Decoder<ReportingTriggers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingTriggers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportingTriggers */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingTriggers
  * @function
@@ -53,13 +48,9 @@ export function _decode_ReportingTriggers(el: _Element) {
     }
     return _cached_decoder_for_ReportingTriggers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportingTriggers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingTriggers */
 let _cached_encoder_for_ReportingTriggers: $.ASN1Encoder<ReportingTriggers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingTriggers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportingTriggers */
 /**
  * @summary Encodes a(n) ReportingTriggers into an ASN.1 Element.
  * @function
@@ -80,6 +71,5 @@ export function _encode_ReportingTriggers(
     return _cached_encoder_for_ReportingTriggers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportingTriggers */
 
 /* eslint-enable */

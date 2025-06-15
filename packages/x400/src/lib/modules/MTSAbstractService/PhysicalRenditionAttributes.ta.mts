@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PhysicalRenditionAttributes */
 /**
  * @summary PhysicalRenditionAttributes
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PhysicalRenditionAttributes = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION PhysicalRenditionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalRenditionAttributes */
 let _cached_decoder_for_PhysicalRenditionAttributes: $.ASN1Decoder<PhysicalRenditionAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalRenditionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalRenditionAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalRenditionAttributes
  * @function
@@ -44,13 +39,9 @@ export function _decode_PhysicalRenditionAttributes(el: _Element) {
     }
     return _cached_decoder_for_PhysicalRenditionAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalRenditionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalRenditionAttributes */
 let _cached_encoder_for_PhysicalRenditionAttributes: $.ASN1Encoder<PhysicalRenditionAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalRenditionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalRenditionAttributes */
 /**
  * @summary Encodes a(n) PhysicalRenditionAttributes into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_PhysicalRenditionAttributes(
     return _cached_encoder_for_PhysicalRenditionAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalRenditionAttributes */
 
 /* eslint-enable */

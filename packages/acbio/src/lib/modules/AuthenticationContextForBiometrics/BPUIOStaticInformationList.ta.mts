@@ -15,7 +15,7 @@ import {
     _decode_BPUIOStaticInformation,
     _encode_BPUIOStaticInformation,
 } from '../AuthenticationContextForBiometrics/BPUIOStaticInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BPUIOStaticInformationList */
+
 /**
  * @summary BPUIOStaticInformationList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BPUIOStaticInformationList = BPUIOStaticInformation[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BPUIOStaticInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUIOStaticInformationList */
+
 let _cached_decoder_for_BPUIOStaticInformationList: $.ASN1Decoder<BPUIOStaticInformationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUIOStaticInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BPUIOStaticInformationList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BPUIOStaticInformationList
  * @function
@@ -48,13 +46,11 @@ export function _decode_BPUIOStaticInformationList(el: _Element) {
     }
     return _cached_decoder_for_BPUIOStaticInformationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BPUIOStaticInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUIOStaticInformationList */
+
 let _cached_encoder_for_BPUIOStaticInformationList: $.ASN1Encoder<BPUIOStaticInformationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUIOStaticInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BPUIOStaticInformationList */
+
 /**
  * @summary Encodes a(n) BPUIOStaticInformationList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_BPUIOStaticInformationList(
     return _cached_encoder_for_BPUIOStaticInformationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BPUIOStaticInformationList */
 
 /* eslint-enable */

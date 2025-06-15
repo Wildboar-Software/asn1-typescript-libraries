@@ -10,7 +10,7 @@ import {
 } from "../PKCS-9/ExtensionRequest.ta.mjs";
 import { pkcs_9_at_extensionRequest } from "../PKCS-9/pkcs-9-at-extensionRequest.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION extensionRequest */
+
 /**
  * @summary extensionRequest
  * @description
@@ -44,6 +44,5 @@ export const extensionRequest: ATTRIBUTE<ExtensionRequest> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION extensionRequest */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import { sa_ecdsaWithSHA512 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA512.oa.mjs";
 import { sa_rsaWithMD2 } from "../PKIXAlgs-2009/sa-rsaWithMD2.oa.mjs";
 import { sa_rsaWithMD5 } from "../PKIXAlgs-2009/sa-rsaWithMD5.oa.mjs";
 import { sa_rsaWithSHA1 } from "../PKIXAlgs-2009/sa-rsaWithSHA1.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION SMimeCaps */
+
 /**
  * @summary SMimeCaps
  * @description
@@ -51,6 +51,5 @@ export const SMimeCaps: SMIME_CAPS[] = [
     sa_ecdsaWithSHA384["&smimeCaps"],
     sa_ecdsaWithSHA512["&smimeCaps"],
 ];
-/* END_OF_SYMBOL_DEFINITION SMimeCaps */
 
 /* eslint-enable */

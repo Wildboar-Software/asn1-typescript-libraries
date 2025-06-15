@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AddEntryResult */
 /**
  * @summary AddEntryResult
  * @description
@@ -31,13 +30,9 @@ export type AddEntryResult =
           information: OPTIONALLY_PROTECTED_SEQ<AddEntryResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AddEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddEntryResult */
 let _cached_decoder_for_AddEntryResult: $.ASN1Decoder<AddEntryResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddEntryResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) AddEntryResult
  * @function
@@ -65,13 +60,9 @@ export function _decode_AddEntryResult(el: _Element) {
     }
     return _cached_decoder_for_AddEntryResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddEntryResult */
 let _cached_encoder_for_AddEntryResult: $.ASN1Encoder<AddEntryResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddEntryResult */
 /**
  * @summary Encodes a(n) AddEntryResult into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_AddEntryResult(
     return _cached_encoder_for_AddEntryResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddEntryResult */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.mjs";
 import { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CommunicationsInformation */
+
 /**
  * @summary CommunicationsInformation
  * @description
@@ -64,9 +64,8 @@ class CommunicationsInformation {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommunicationsInformation */
+
 /**
  * @summary The Leading Root Component Types of CommunicationsInformation
  * @description
@@ -80,9 +79,8 @@ const _root_component_type_list_1_spec_for_CommunicationsInformation: $.Componen
     new $.ComponentSpec("informationType", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("informationData", true, $.hasTag(_TagClass.universal, 17), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommunicationsInformation */
+
 /**
  * @summary The Trailing Root Component Types of CommunicationsInformation
  * @description
@@ -95,9 +93,8 @@ export
 const _root_component_type_list_2_spec_for_CommunicationsInformation: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommunicationsInformation */
+
 /**
  * @summary The Extension Addition Component Types of CommunicationsInformation
  * @description
@@ -110,13 +107,11 @@ export
 const _extension_additions_list_spec_for_CommunicationsInformation: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsInformation */
+
 let _cached_decoder_for_CommunicationsInformation: $.ASN1Decoder<CommunicationsInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommunicationsInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommunicationsInformation
  * @function
@@ -149,13 +144,11 @@ function _decode_CommunicationsInformation (el: _Element) {
 }; }
     return _cached_decoder_for_CommunicationsInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsInformation */
+
 let _cached_encoder_for_CommunicationsInformation: $.ASN1Encoder<CommunicationsInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommunicationsInformation */
+
 /**
  * @summary Encodes a(n) CommunicationsInformation into an ASN.1 Element.
  * @function
@@ -176,6 +169,5 @@ function _encode_CommunicationsInformation (value: CommunicationsInformation, el
     return _cached_encoder_for_CommunicationsInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommunicationsInformation */
 
 /* eslint-enable */

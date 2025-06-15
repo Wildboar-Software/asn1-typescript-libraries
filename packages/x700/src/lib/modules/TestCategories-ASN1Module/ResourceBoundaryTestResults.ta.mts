@@ -23,7 +23,6 @@ import {
     _decode_IntermediateResourceBoundaryTestOutcome,
     _encode_IntermediateResourceBoundaryTestOutcome,
 } from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResourceBoundaryTestResults */
 /**
  * @summary ResourceBoundaryTestResults
  * @description
@@ -95,9 +94,7 @@ export class ResourceBoundaryTestResults {
 
     public static _enum_for_intermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 }
-/* END_OF_SYMBOL_DEFINITION ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResourceBoundaryTestResults */
 /**
  * @summary The Leading Root Component Types of ResourceBoundaryTestResults
  * @description
@@ -129,9 +126,7 @@ export const _root_component_type_list_1_spec_for_ResourceBoundaryTestResults: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResourceBoundaryTestResults */
 /**
  * @summary The Trailing Root Component Types of ResourceBoundaryTestResults
  * @description
@@ -141,9 +136,7 @@ export const _root_component_type_list_1_spec_for_ResourceBoundaryTestResults: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResourceBoundaryTestResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResourceBoundaryTestResults */
 /**
  * @summary The Extension Addition Component Types of ResourceBoundaryTestResults
  * @description
@@ -153,13 +146,9 @@ export const _root_component_type_list_2_spec_for_ResourceBoundaryTestResults: $
  * @constant
  */
 export const _extension_additions_list_spec_for_ResourceBoundaryTestResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceBoundaryTestResults */
 let _cached_decoder_for_ResourceBoundaryTestResults: $.ASN1Decoder<ResourceBoundaryTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResourceBoundaryTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceBoundaryTestResults
  * @function
@@ -214,13 +203,9 @@ export function _decode_ResourceBoundaryTestResults(el: _Element) {
     }
     return _cached_decoder_for_ResourceBoundaryTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceBoundaryTestResults */
 let _cached_encoder_for_ResourceBoundaryTestResults: $.ASN1Encoder<ResourceBoundaryTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceBoundaryTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResourceBoundaryTestResults */
 /**
  * @summary Encodes a(n) ResourceBoundaryTestResults into an ASN.1 Element.
  * @function
@@ -276,6 +261,5 @@ export function _encode_ResourceBoundaryTestResults(
     return _cached_encoder_for_ResourceBoundaryTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResourceBoundaryTestResults */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs';
 import { id_moc } from '../MhsMTAObjectIdentifiers/id-moc.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_moc_routingFunction */
 /**
  * @summary id_moc_routingFunction
  * @description
@@ -25,6 +24,5 @@ import { id_moc } from '../MhsMTAObjectIdentifiers/id-moc.va.mjs';
  * @constant
  */
 export const id_moc_routingFunction: ID = new _OID([12], id_moc);
-/* END_OF_SYMBOL_DEFINITION id_moc_routingFunction */
 
 /* eslint-enable */

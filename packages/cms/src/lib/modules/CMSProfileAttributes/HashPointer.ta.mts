@@ -15,7 +15,7 @@ import {
     _decode_DigestedData,
     _encode_DigestedData,
 } from "../CryptographicMessageSyntax-2010/DigestedData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HashPointer */
+
 /**
  * @summary HashPointer
  * @description
@@ -66,9 +66,8 @@ export class HashPointer {
         return new HashPointer(_o.hash, _o.pointers);
     }
 }
-/* END_OF_SYMBOL_DEFINITION HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HashPointer */
+
 /**
  * @summary The Leading Root Component Types of HashPointer
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_HashPointer: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HashPointer */
+
 /**
  * @summary The Trailing Root Component Types of HashPointer
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_HashPointer: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HashPointer: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HashPointer */
+
 /**
  * @summary The Extension Addition Component Types of HashPointer
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_HashPointer: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_HashPointer: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HashPointer */
+
 let _cached_decoder_for_HashPointer: $.ASN1Decoder<HashPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HashPointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HashPointer
  * @function
@@ -163,13 +158,11 @@ export function _decode_HashPointer(el: _Element) {
     }
     return _cached_decoder_for_HashPointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HashPointer */
+
 let _cached_encoder_for_HashPointer: $.ASN1Encoder<HashPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HashPointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HashPointer */
+
 /**
  * @summary Encodes a(n) HashPointer into an ASN.1 Element.
  * @function
@@ -202,6 +195,5 @@ export function _encode_HashPointer(
     return _cached_encoder_for_HashPointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HashPointer */
 
 /* eslint-enable */

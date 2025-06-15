@@ -6,7 +6,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PwdResponseValue_warning */
 /**
  * @summary PwdResponseValue_warning
  * @description
@@ -21,13 +20,9 @@ export type PwdResponseValue_warning =
     | { timeLeft: INTEGER } /* CHOICE_ALT_ROOT */
     | { graceRemaining: INTEGER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PwdResponseValue_warning */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponseValue_warning */
 let _cached_decoder_for_PwdResponseValue_warning: $.ASN1Decoder<PwdResponseValue_warning> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponseValue_warning */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PwdResponseValue_warning */
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdResponseValue_warning
  * @function
@@ -51,13 +46,9 @@ export function _decode_PwdResponseValue_warning(el: _Element) {
     }
     return _cached_decoder_for_PwdResponseValue_warning(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PwdResponseValue_warning */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponseValue_warning */
 let _cached_encoder_for_PwdResponseValue_warning: $.ASN1Encoder<PwdResponseValue_warning> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponseValue_warning */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PwdResponseValue_warning */
 /**
  * @summary Encodes a(n) PwdResponseValue_warning into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_PwdResponseValue_warning(
     return _cached_encoder_for_PwdResponseValue_warning(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PwdResponseValue_warning */
 
 /* eslint-enable */

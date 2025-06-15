@@ -21,7 +21,6 @@ import {
     _encode_PublicKey,
 } from "../PKI-Stub/PublicKey.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SubjectPublicKeyInfo */
 /**
  * @summary SubjectPublicKeyInfo
  * @description
@@ -81,9 +80,7 @@ export class SubjectPublicKeyInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectPublicKeyInfo */
 /**
  * @summary The Leading Root Component Types of SubjectPublicKeyInfo
  * @description
@@ -109,9 +106,7 @@ export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.Compon
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectPublicKeyInfo */
 /**
  * @summary The Trailing Root Component Types of SubjectPublicKeyInfo
  * @description
@@ -122,9 +117,7 @@ export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.Compon
  */
 export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectPublicKeyInfo */
 /**
  * @summary The Extension Addition Component Types of SubjectPublicKeyInfo
  * @description
@@ -135,9 +128,7 @@ export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.Compon
  */
 export const _extension_additions_list_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectPublicKeyInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectPublicKeyInfo
  * @function
@@ -165,9 +156,7 @@ export function _decode_SubjectPublicKeyInfo(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectPublicKeyInfo */
 /**
  * @summary Encodes a(n) SubjectPublicKeyInfo into an ASN.1 Element.
  * @function
@@ -193,6 +182,5 @@ export function _encode_SubjectPublicKeyInfo(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectPublicKeyInfo */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { nameForm } from "../UsefulDefinitions/nameForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_nf */
 /**
  * @summary id_nf
  * @description
@@ -15,6 +14,5 @@ import { nameForm } from "../UsefulDefinitions/nameForm.va.mjs";
  * @constant
  */
 export const id_nf: ID = nameForm;
-/* END_OF_SYMBOL_DEFINITION id_nf */
 
 /* eslint-enable */

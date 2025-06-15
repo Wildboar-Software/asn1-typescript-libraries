@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_redirection_classes */
 /**
  * @summary ub_redirection_classes
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_redirection_classes: INTEGER = 256;
-/* END_OF_SYMBOL_DEFINITION ub_redirection_classes */
 
 /* eslint-enable */

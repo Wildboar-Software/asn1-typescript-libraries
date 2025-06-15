@@ -36,7 +36,6 @@ import { mhs_dl_archive_service } from '../MHSDirectoryObjectsAndAttributes/mhs-
 import { mhs_dl_related_lists } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-related-lists.oa.mjs';
 import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.mjs';
 import { id_oc_mhs_distribution_list } from '../MHSObjectIdentifiers/id-oc-mhs-distribution-list.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_distribution_list */
 /**
  * @summary mhs_distribution_list
  * @description
@@ -91,6 +90,5 @@ export const mhs_distribution_list: OBJECT_CLASS = {
     '&id': id_oc_mhs_distribution_list /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_distribution_list */
 
 /* eslint-enable */

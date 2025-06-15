@@ -6,7 +6,7 @@ import {
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 import { id_ckm_key_agree_multiple_encrypt } from "../CMSObjectIdentifiers/id-ckm-key-agree-multiple-encrypt.va.mjs";
-/* START_OF_SYMBOL_DEFINITION keyAgreeMultipleEncryptionConstruction */
+
 /**
  * @summary keyAgreeMultipleEncryptionConstruction
  * @description
@@ -35,6 +35,5 @@ export const keyAgreeMultipleEncryptionConstruction: ALGORITHM<KeyEncryptionAlgo
     "&id": id_ckm_key_agree_multiple_encrypt /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION keyAgreeMultipleEncryptionConstruction */
 
 /* eslint-enable */

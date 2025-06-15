@@ -19,7 +19,7 @@ import {
 } from "../GulsSecurityTransformations/gulsSignedTransformation-XformedDataType.ta.mjs";
 import { KEY_INFORMATION } from './KEY-INFORMATION.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION gulsSignedTransformation */
+
 /**
  * @summary gulsSignedTransformation
  * @description
@@ -80,6 +80,5 @@ function gulsSignedTransformation (SupportedKIClasses: KEY_INFORMATION[]): SECUR
         "&QualifierType": undefined,
     };
 }
-/* END_OF_SYMBOL_DEFINITION gulsSignedTransformation */
 
 /* eslint-enable */

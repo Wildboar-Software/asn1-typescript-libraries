@@ -16,7 +16,7 @@ import {
     _get_decoder_for_SecretKeyObject,
     _get_encoder_for_SecretKeyObject,
 } from "../PKCS-15/SecretKeyObject.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecretKeyType */
+
 /**
  * @summary SecretKeyType
  * @description
@@ -93,13 +93,11 @@ export type SecretKeyType =
       } /* CHOICE_ALT_ROOT */
     | { otherKey: OtherKey } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SecretKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecretKeyType */
+
 let _cached_decoder_for_SecretKeyType: $.ASN1Decoder<SecretKeyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecretKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecretKeyType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecretKeyType
  * @function
@@ -265,13 +263,11 @@ export function _decode_SecretKeyType(el: _Element) {
     }
     return _cached_decoder_for_SecretKeyType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecretKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecretKeyType */
+
 let _cached_encoder_for_SecretKeyType: $.ASN1Encoder<SecretKeyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecretKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecretKeyType */
+
 /**
  * @summary Encodes a(n) SecretKeyType into an ASN.1 Element.
  * @function
@@ -428,6 +424,5 @@ export function _encode_SecretKeyType(
     return _cached_encoder_for_SecretKeyType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecretKeyType */
 
 /* eslint-enable */

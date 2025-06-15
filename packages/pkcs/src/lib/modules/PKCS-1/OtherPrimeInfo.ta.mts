@@ -7,7 +7,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OtherPrimeInfo */
+
 /**
  * @summary OtherPrimeInfo
  * @description
@@ -64,9 +64,8 @@ export class OtherPrimeInfo {
         return new OtherPrimeInfo(_o.prime, _o.exponent, _o.coefficient);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherPrimeInfo */
+
 /**
  * @summary The Leading Root Component Types of OtherPrimeInfo
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_OtherPrimeInfo: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherPrimeInfo */
+
 /**
  * @summary The Trailing Root Component Types of OtherPrimeInfo
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_OtherPrimeInfo: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OtherPrimeInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherPrimeInfo */
+
 /**
  * @summary The Extension Addition Component Types of OtherPrimeInfo
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_OtherPrimeInfo: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_OtherPrimeInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherPrimeInfo */
+
 let _cached_decoder_for_OtherPrimeInfo: $.ASN1Decoder<OtherPrimeInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherPrimeInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherPrimeInfo
  * @function
@@ -162,13 +157,11 @@ export function _decode_OtherPrimeInfo(el: _Element) {
     }
     return _cached_decoder_for_OtherPrimeInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherPrimeInfo */
+
 let _cached_encoder_for_OtherPrimeInfo: $.ASN1Encoder<OtherPrimeInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherPrimeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherPrimeInfo */
+
 /**
  * @summary Encodes a(n) OtherPrimeInfo into an ASN.1 Element.
  * @function
@@ -201,6 +194,5 @@ export function _encode_OtherPrimeInfo(
     return _cached_encoder_for_OtherPrimeInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherPrimeInfo */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _encode_RC2_CBC_Parameter,
 } from "../PKCS5v2-1/RC2-CBC-Parameter.ta.mjs";
 import { rc2CBC } from "../PKCS5v2-1/rc2CBC.va.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union3_Intersection0_Element */
+
 /**
  * @summary SupportingAlgorithms_Union3_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const SupportingAlgorithms_Union3_Intersection0_Element: ALGORITHM_IDENTI
     "&id": rc2CBC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union3_Intersection0_Element */
 
 /* eslint-enable */

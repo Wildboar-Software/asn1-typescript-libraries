@@ -13,7 +13,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 
 // THIS MODULE WAS CREATED MANUALLY.
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_Priority */
 /**
  * @summary Priority
  * @description
@@ -29,9 +28,7 @@ export enum _enum_for_Priority {
     non_urgent = 1,
     urgent = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_Priority */
 
-/* START_OF_SYMBOL_DEFINITION Priority */
 /**
  * @summary Priority
  * @description
@@ -43,66 +40,52 @@ export enum _enum_for_Priority {
  * ```@enum {number}
  */
 export type Priority = _enum_for_Priority;
-/* END_OF_SYMBOL_DEFINITION Priority */
 
-/* START_OF_SYMBOL_DEFINITION Priority_normal */
 /**
  * @summary Priority_normal
  * @constant
  * @type {number}
  */
 export const Priority_normal: Priority = _enum_for_Priority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Priority_normal */
 
-/* START_OF_SYMBOL_DEFINITION Priority_non_urgent */
 /**
  * @summary Priority_non_urgent
  * @constant
  * @type {number}
  */
 export const Priority_non_urgent: Priority = _enum_for_Priority.non_urgent; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Priority_non_urgent */
 
-/* START_OF_SYMBOL_DEFINITION Priority_urgent */
 /**
  * @summary Priority_urgent
  * @constant
  * @type {number}
  */
 export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Priority_urgent */
 
 
-/* START_OF_SYMBOL_DEFINITION normal */
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
  export const normal: Priority = _enum_for_Priority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION normal */
 
-/* START_OF_SYMBOL_DEFINITION non_urgent */
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
  export const non_urgent: Priority = _enum_for_Priority.non_urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION non_urgent */
 
-/* START_OF_SYMBOL_DEFINITION urgent */
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
  export const urgent: Priority = _enum_for_Priority.urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION urgent */
 
 
 
-/* START_OF_SYMBOL_DEFINITION _decode_Priority */
 /**
  * @summary Decodes an ASN.1 element into a(n) Priority
  * @function
@@ -112,9 +95,7 @@ export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAME
  export function _decode_Priority (el: _Element) {
     return $._decodeEnumerated(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Priority */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Priority */
 /**
  * @summary Encodes a(n) Priority into an ASN.1 Element.
  * @function
@@ -134,6 +115,5 @@ export function _encode_Priority(
     )(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Priority */
 
 /* eslint-enable */

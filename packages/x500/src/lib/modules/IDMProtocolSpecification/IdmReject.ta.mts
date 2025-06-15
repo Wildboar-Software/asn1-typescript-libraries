@@ -12,7 +12,6 @@ import {
     _encode_IdmReject_reason,
     _enum_for_IdmReject_reason,
 } from "../IDMProtocolSpecification/IdmReject-reason.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IdmReject */
 /**
  * @summary IdmReject
  * @description
@@ -95,9 +94,7 @@ export class IdmReject {
 
     public static _enum_for_reason = _enum_for_IdmReject_reason;
 }
-/* END_OF_SYMBOL_DEFINITION IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmReject */
 /**
  * @summary The Leading Root Component Types of IdmReject
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_IdmReject: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmReject */
 /**
  * @summary The Trailing Root Component Types of IdmReject
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_IdmReject: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IdmReject: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmReject */
 /**
  * @summary The Extension Addition Component Types of IdmReject
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_IdmReject: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_IdmReject: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmReject */
 let _cached_decoder_for_IdmReject: $.ASN1Decoder<IdmReject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IdmReject */
 /**
  * @summary Decodes an ASN.1 element into a(n) IdmReject
  * @function
@@ -181,13 +170,9 @@ export function _decode_IdmReject(el: _Element) {
     }
     return _cached_decoder_for_IdmReject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmReject */
 let _cached_encoder_for_IdmReject: $.ASN1Encoder<IdmReject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmReject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IdmReject */
 /**
  * @summary Encodes a(n) IdmReject into an ASN.1 Element.
  * @function
@@ -227,6 +212,5 @@ export function _encode_IdmReject(
     return _cached_encoder_for_IdmReject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IdmReject */
 
 /* eslint-enable */

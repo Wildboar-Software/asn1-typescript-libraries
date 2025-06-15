@@ -20,7 +20,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QualityEvaluationExtensionInformation */
+
 /**
  * @summary QualityEvaluationExtensionInformation
  * @description
@@ -38,13 +38,11 @@ export type QualityEvaluationExtensionInformation =
           qualityEvaluationExtension: QualityEvaluationExtension;
       } /* CHOICE_ALT_ROOT */
     | { qualityEvaluationExtensionReferrer: URI } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION QualityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QualityEvaluationExtensionInformation */
+
 let _cached_decoder_for_QualityEvaluationExtensionInformation: $.ASN1Decoder<QualityEvaluationExtensionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QualityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QualityEvaluationExtensionInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QualityEvaluationExtensionInformation
  * @function
@@ -68,13 +66,11 @@ export function _decode_QualityEvaluationExtensionInformation(el: _Element) {
     }
     return _cached_decoder_for_QualityEvaluationExtensionInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QualityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QualityEvaluationExtensionInformation */
+
 let _cached_encoder_for_QualityEvaluationExtensionInformation: $.ASN1Encoder<QualityEvaluationExtensionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QualityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QualityEvaluationExtensionInformation */
+
 /**
  * @summary Encodes a(n) QualityEvaluationExtensionInformation into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_QualityEvaluationExtensionInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QualityEvaluationExtensionInformation */
 
 /* eslint-enable */

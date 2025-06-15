@@ -15,7 +15,6 @@ import {
     _decode_BufferedObservationId,
     _encode_BufferedObservationId,
 } from '../SummarizationASN1Productions/BufferedObservationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BufferedObservationIdList */
 /**
  * @summary BufferedObservationIdList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type BufferedObservationIdList = BufferedObservationId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION BufferedObservationIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedObservationIdList */
 let _cached_decoder_for_BufferedObservationIdList: $.ASN1Decoder<BufferedObservationIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedObservationIdList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BufferedObservationIdList */
 /**
  * @summary Decodes an ASN.1 element into a(n) BufferedObservationIdList
  * @function
@@ -48,13 +43,9 @@ export function _decode_BufferedObservationIdList(el: _Element) {
     }
     return _cached_decoder_for_BufferedObservationIdList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BufferedObservationIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedObservationIdList */
 let _cached_encoder_for_BufferedObservationIdList: $.ASN1Encoder<BufferedObservationIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedObservationIdList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BufferedObservationIdList */
 /**
  * @summary Encodes a(n) BufferedObservationIdList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_BufferedObservationIdList(
     return _cached_encoder_for_BufferedObservationIdList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BufferedObservationIdList */
 
 /* eslint-enable */

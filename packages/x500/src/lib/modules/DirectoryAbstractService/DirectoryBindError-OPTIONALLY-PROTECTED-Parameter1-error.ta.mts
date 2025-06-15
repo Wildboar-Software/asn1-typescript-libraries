@@ -11,7 +11,6 @@ import {
     _decode_ServiceProblem,
     _encode_ServiceProblem,
 } from "../DirectoryAbstractService/ServiceProblem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 /**
  * @summary DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
  * @description
@@ -26,13 +25,9 @@ export type DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error =
     | { serviceError: ServiceProblem } /* CHOICE_ALT_ROOT */
     | { securityError: SecurityProblem } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 let _cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error: $.ASN1Decoder<DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 /**
  * @summary Decodes an ASN.1 element into a(n) DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
  * @function
@@ -66,13 +61,9 @@ export function _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 let _cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error: $.ASN1Encoder<DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 /**
  * @summary Encodes a(n) DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 
 /* eslint-enable */

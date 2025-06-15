@@ -16,7 +16,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InitializingTime */
 /**
  * @summary InitializingTime
  * @description
@@ -33,13 +32,9 @@ import {
 export type InitializingTime =
     | { actualTime: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | { relativeTime: Timespec } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION InitializingTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializingTime */
 let _cached_decoder_for_InitializingTime: $.ASN1Decoder<InitializingTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializingTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InitializingTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) InitializingTime
  * @function
@@ -63,13 +58,9 @@ export function _decode_InitializingTime(el: _Element) {
     }
     return _cached_decoder_for_InitializingTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InitializingTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializingTime */
 let _cached_encoder_for_InitializingTime: $.ASN1Encoder<InitializingTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializingTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InitializingTime */
 /**
  * @summary Encodes a(n) InitializingTime into an ASN.1 Element.
  * @function
@@ -93,6 +84,5 @@ export function _encode_InitializingTime(
     return _cached_encoder_for_InitializingTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InitializingTime */
 
 /* eslint-enable */

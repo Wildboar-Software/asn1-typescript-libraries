@@ -20,7 +20,7 @@ import {
     _decode_EncapsulatedContentInfoBRTCertificate,
     _encode_EncapsulatedContentInfoBRTCertificate,
 } from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoBRTCertificate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentBRTCertificate */
+
 /**
  * @summary ContentBRTCertificate
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type ContentBRTCertificate = SIGNEDDATA<EncapsulatedContentInfoBRTCertificate>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContentBRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentBRTCertificate */
+
 let _cached_decoder_for_ContentBRTCertificate: $.ASN1Decoder<ContentBRTCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentBRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentBRTCertificate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentBRTCertificate
  * @function
@@ -53,13 +51,11 @@ export function _decode_ContentBRTCertificate(el: _Element) {
     }
     return _cached_decoder_for_ContentBRTCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentBRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentBRTCertificate */
+
 let _cached_encoder_for_ContentBRTCertificate: $.ASN1Encoder<ContentBRTCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentBRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentBRTCertificate */
+
 /**
  * @summary Encodes a(n) ContentBRTCertificate into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_ContentBRTCertificate(
     return _cached_encoder_for_ContentBRTCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentBRTCertificate */
 
 /* eslint-enable */

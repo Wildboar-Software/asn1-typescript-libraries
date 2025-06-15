@@ -15,7 +15,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BindingOperations */
 /**
  * @summary BindingOperations
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type BindingOperations = EventTypeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BindingOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindingOperations */
 let _cached_decoder_for_BindingOperations: $.ASN1Decoder<BindingOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindingOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindingOperations */
 /**
  * @summary Decodes an ASN.1 element into a(n) BindingOperations
  * @function
@@ -48,13 +43,9 @@ export function _decode_BindingOperations(el: _Element) {
     }
     return _cached_decoder_for_BindingOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindingOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindingOperations */
 let _cached_encoder_for_BindingOperations: $.ASN1Encoder<BindingOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindingOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindingOperations */
 /**
  * @summary Encodes a(n) BindingOperations into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_BindingOperations(
     return _cached_encoder_for_BindingOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindingOperations */
 
 /* eslint-enable */

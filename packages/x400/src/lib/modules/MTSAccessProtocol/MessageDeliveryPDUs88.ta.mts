@@ -15,7 +15,6 @@ import {
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryPDUs88 */
 /**
  * @summary MessageDeliveryPDUs88
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageDeliveryPDUs88 = ROS_SingleAS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryPDUs88 */
 let _cached_decoder_for_MessageDeliveryPDUs88: $.ASN1Decoder<MessageDeliveryPDUs88> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageDeliveryPDUs88 */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryPDUs88
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageDeliveryPDUs88(el: _Element) {
     }
     return _cached_decoder_for_MessageDeliveryPDUs88(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageDeliveryPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryPDUs88 */
 let _cached_encoder_for_MessageDeliveryPDUs88: $.ASN1Encoder<MessageDeliveryPDUs88> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageDeliveryPDUs88 */
 /**
  * @summary Encodes a(n) MessageDeliveryPDUs88 into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageDeliveryPDUs88(
     return _cached_encoder_for_MessageDeliveryPDUs88(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageDeliveryPDUs88 */
 
 /* eslint-enable */

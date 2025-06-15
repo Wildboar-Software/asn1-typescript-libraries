@@ -15,7 +15,6 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityContext */
 /**
  * @summary SecurityContext
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SecurityContext = SecurityLabel[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityContext */
 let _cached_decoder_for_SecurityContext: $.ASN1Decoder<SecurityContext> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityContext */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityContext
  * @function
@@ -48,13 +43,9 @@ export function _decode_SecurityContext(el: _Element) {
     }
     return _cached_decoder_for_SecurityContext(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityContext */
 let _cached_encoder_for_SecurityContext: $.ASN1Encoder<SecurityContext> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityContext */
 /**
  * @summary Encodes a(n) SecurityContext into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SecurityContext(
     return _cached_encoder_for_SecurityContext(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityContext */
 
 /* eslint-enable */

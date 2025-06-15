@@ -25,7 +25,7 @@ import {
   _decode_ROS_SingleAS,
   _encode_ROS_SingleAS,
 } from '../Remote-Operations-Abstract-Syntaxes/ROS-SingleAS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AllValues */
+
 /**
  * @summary AllValues
  * @description
@@ -51,13 +51,11 @@ export type AllValues =
   | { bind: Bind } /* CHOICE_ALT_ROOT */
   | { unbind: Unbind } /* CHOICE_ALT_ROOT */
   | { ros_singleAS: ROS_SingleAS } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AllValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AllValues */
+
 let _cached_decoder_for_AllValues: $.ASN1Decoder<AllValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AllValues */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AllValues */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AllValues
  * @function
@@ -81,13 +79,11 @@ export function _decode_AllValues(el: _Element) {
   }
   return _cached_decoder_for_AllValues(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AllValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AllValues */
+
 let _cached_encoder_for_AllValues: $.ASN1Encoder<AllValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AllValues */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AllValues */
+
 /**
  * @summary Encodes a(n) AllValues into an ASN.1 Element.
  * @function
@@ -112,6 +108,5 @@ export function _encode_AllValues(
   return _cached_encoder_for_AllValues(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AllValues */
 
 /* eslint-enable */

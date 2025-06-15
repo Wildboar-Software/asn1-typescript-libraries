@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NotificationTimeField */
 /**
  * @summary NotificationTimeField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NotificationTimeField = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION NotificationTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationTimeField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotificationTimeField */
 export const _decode_NotificationTimeField = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_NotificationTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationTimeField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotificationTimeField */
 export const _encode_NotificationTimeField = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotificationTimeField */
 
 /* eslint-enable */

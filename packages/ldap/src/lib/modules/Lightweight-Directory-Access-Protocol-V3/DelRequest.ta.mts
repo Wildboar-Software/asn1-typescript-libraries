@@ -15,7 +15,7 @@ import {
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DelRequest */
+
 /**
  * @summary DelRequest
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DelRequest = LDAPDN; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DelRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DelRequest */
+
 let _cached_decoder_for_DelRequest: $.ASN1Decoder<DelRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DelRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DelRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DelRequest
  * @function
@@ -48,13 +46,11 @@ export function _decode_DelRequest(el: _Element) {
   }
   return _cached_decoder_for_DelRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DelRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DelRequest */
+
 let _cached_encoder_for_DelRequest: $.ASN1Encoder<DelRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DelRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DelRequest */
+
 /**
  * @summary Encodes a(n) DelRequest into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_DelRequest(
   return _cached_encoder_for_DelRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DelRequest */
 
 /* eslint-enable */

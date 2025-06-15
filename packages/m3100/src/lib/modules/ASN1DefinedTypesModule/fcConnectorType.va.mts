@@ -14,7 +14,7 @@ import {
     _decode_ConnectorType,
     _encode_ConnectorType,
 } from '../ASN1DefinedTypesModule/ConnectorType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION fcConnectorType */
+
 /**
  * @summary fcConnectorType
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const fcConnectorType: ConnectorType = 1;
-/* END_OF_SYMBOL_DEFINITION fcConnectorType */
 
 /* eslint-enable */

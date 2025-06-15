@@ -10,7 +10,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { PARAMETER } from '../CommonMgt/PARAMETER.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION Parameters */
 /**
  * @summary Parameters
  * @description
@@ -26,6 +25,5 @@ import { PARAMETER } from '../CommonMgt/PARAMETER.oca.mjs';
  *
  */
 export const Parameters: PARAMETER[] = [];
-/* END_OF_SYMBOL_DEFINITION Parameters */
 
 /* eslint-enable */

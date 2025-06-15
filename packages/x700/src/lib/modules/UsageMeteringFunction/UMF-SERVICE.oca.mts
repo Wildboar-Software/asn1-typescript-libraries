@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION UMF_SERVICE */
 /**
  * @summary UMF_SERVICE
  * @description
@@ -24,6 +23,5 @@ import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modu
  * @interface
  */
 export type UMF_SERVICE = DMI_TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION UMF_SERVICE */
 
 /* eslint-enable */

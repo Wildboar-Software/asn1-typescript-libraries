@@ -25,7 +25,7 @@ import {
   _decode_BioAPI_DB_MARKER_HANDLE,
   _encode_BioAPI_DB_MARKER_HANDLE,
 } from '../BIP/BioAPI-DB-MARKER-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DbGetNextBIR_RequestParams */
+
 /**
  * @summary DbGetNextBIR_RequestParams
  * @description
@@ -88,9 +88,8 @@ export class DbGetNextBIR_RequestParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbGetNextBIR_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of DbGetNextBIR_RequestParams
  * @description
@@ -122,9 +121,8 @@ export const _root_component_type_list_1_spec_for_DbGetNextBIR_RequestParams: $.
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbGetNextBIR_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of DbGetNextBIR_RequestParams
  * @description
@@ -134,9 +132,8 @@ export const _root_component_type_list_1_spec_for_DbGetNextBIR_RequestParams: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DbGetNextBIR_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbGetNextBIR_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of DbGetNextBIR_RequestParams
  * @description
@@ -146,13 +143,11 @@ export const _root_component_type_list_2_spec_for_DbGetNextBIR_RequestParams: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_DbGetNextBIR_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbGetNextBIR_RequestParams */
+
 let _cached_decoder_for_DbGetNextBIR_RequestParams: $.ASN1Decoder<DbGetNextBIR_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbGetNextBIR_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DbGetNextBIR_RequestParams
  * @function
@@ -190,13 +185,11 @@ export function _decode_DbGetNextBIR_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_DbGetNextBIR_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbGetNextBIR_RequestParams */
+
 let _cached_encoder_for_DbGetNextBIR_RequestParams: $.ASN1Encoder<DbGetNextBIR_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbGetNextBIR_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbGetNextBIR_RequestParams */
+
 /**
  * @summary Encodes a(n) DbGetNextBIR_RequestParams into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_DbGetNextBIR_RequestParams(
   return _cached_encoder_for_DbGetNextBIR_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbGetNextBIR_RequestParams */
 
 /* eslint-enable */

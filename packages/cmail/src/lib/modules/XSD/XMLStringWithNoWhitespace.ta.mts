@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION XMLStringWithNoWhitespace */
+
 /**
  * @summary XMLStringWithNoWhitespace
  * @description
@@ -27,21 +27,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type XMLStringWithNoWhitespace = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION XMLStringWithNoWhitespace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoWhitespace */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLStringWithNoWhitespace */
 
-/* START_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoWhitespace */
+
+
 export const _decode_XMLStringWithNoWhitespace = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_XMLStringWithNoWhitespace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoWhitespace */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLStringWithNoWhitespace */
 
-/* START_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoWhitespace */
+
+
 export const _encode_XMLStringWithNoWhitespace = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_XMLStringWithNoWhitespace */
 
 /* eslint-enable */

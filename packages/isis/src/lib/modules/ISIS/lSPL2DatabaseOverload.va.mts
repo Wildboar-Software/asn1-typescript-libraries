@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { se } from '../ISIS/se.va.mjs';
-/* START_OF_SYMBOL_DEFINITION lSPL2DatabaseOverload */
 /**
  * @summary lSPL2DatabaseOverload
  * @description
@@ -28,6 +27,5 @@ export const lSPL2DatabaseOverload: OBJECT_IDENTIFIER = new _OID(
   [/* lSPL2DatabaseOverload */ 7],
   se
 );
-/* END_OF_SYMBOL_DEFINITION lSPL2DatabaseOverload */
 
 /* eslint-enable */

@@ -9,7 +9,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION X9_68CertificateAttributes */
+
 /**
  * @summary X9_68CertificateAttributes
  * @description
@@ -64,9 +64,8 @@ export class X9_68CertificateAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_X9_68CertificateAttributes */
+
 /**
  * @summary The Leading Root Component Types of X9_68CertificateAttributes
  * @description
@@ -78,9 +77,8 @@ export class X9_68CertificateAttributes {
 export const _root_component_type_list_1_spec_for_X9_68CertificateAttributes: $.ComponentSpec[] = [
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_X9_68CertificateAttributes */
+
 /**
  * @summary The Trailing Root Component Types of X9_68CertificateAttributes
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_X9_68CertificateAttributes: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_X9_68CertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_X9_68CertificateAttributes */
+
 /**
  * @summary The Extension Addition Component Types of X9_68CertificateAttributes
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_X9_68CertificateAttributes: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_X9_68CertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X9_68CertificateAttributes */
+
 let _cached_decoder_for_X9_68CertificateAttributes: $.ASN1Decoder<X9_68CertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_X9_68CertificateAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) X9_68CertificateAttributes
  * @function
@@ -138,13 +133,11 @@ export function _decode_X9_68CertificateAttributes(el: _Element) {
     }
     return _cached_decoder_for_X9_68CertificateAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X9_68CertificateAttributes */
+
 let _cached_encoder_for_X9_68CertificateAttributes: $.ASN1Encoder<X9_68CertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X9_68CertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_X9_68CertificateAttributes */
+
 /**
  * @summary Encodes a(n) X9_68CertificateAttributes into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_X9_68CertificateAttributes(
     return _cached_encoder_for_X9_68CertificateAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_X9_68CertificateAttributes */
 
 /* eslint-enable */

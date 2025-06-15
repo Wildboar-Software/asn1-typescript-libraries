@@ -16,7 +16,7 @@ import {
     _decode_E_health_SetUp_Message_Response_interactive,
     _encode_E_health_SetUp_Message_Response_interactive,
 } from '../E-health-setup/E-health-SetUp-Message-Response-interactive.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Response */
+
 /**
  * @summary E_health_SetUp_Message_Response
  * @description
@@ -45,13 +45,11 @@ export type E_health_SetUp_Message_Response =
     | {
           interactive: E_health_SetUp_Message_Response_interactive;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_health_SetUp_Message_Response */
+
 let _cached_decoder_for_E_health_SetUp_Message_Response: $.ASN1Decoder<E_health_SetUp_Message_Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_health_SetUp_Message_Response */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_health_SetUp_Message_Response */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_health_SetUp_Message_Response
  * @function
@@ -74,13 +72,11 @@ export function _decode_E_health_SetUp_Message_Response(el: _Element) {
     }
     return _cached_decoder_for_E_health_SetUp_Message_Response(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_health_SetUp_Message_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_health_SetUp_Message_Response */
+
 let _cached_encoder_for_E_health_SetUp_Message_Response: $.ASN1Encoder<E_health_SetUp_Message_Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_health_SetUp_Message_Response */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_health_SetUp_Message_Response */
+
 /**
  * @summary Encodes a(n) E_health_SetUp_Message_Response into an ASN.1 Element.
  * @function
@@ -114,6 +110,5 @@ export function _encode_E_health_SetUp_Message_Response(
     return _cached_encoder_for_E_health_SetUp_Message_Response(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_health_SetUp_Message_Response */
 
 /* eslint-enable */

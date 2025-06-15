@@ -15,7 +15,7 @@ import {
     _decode_SecurityCondition,
     _encode_SecurityCondition,
 } from "../PKCS-15/SecurityCondition.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AccessControlRule */
+
 /**
  * @summary AccessControlRule
  * @description
@@ -76,9 +76,8 @@ export class AccessControlRule {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AccessControlRule */
+
 /**
  * @summary The Leading Root Component Types of AccessControlRule
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_AccessControlRule: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessControlRule */
+
 /**
  * @summary The Trailing Root Component Types of AccessControlRule
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_AccessControlRule: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AccessControlRule: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessControlRule */
+
 /**
  * @summary The Extension Addition Component Types of AccessControlRule
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_AccessControlRule: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_AccessControlRule: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlRule */
+
 let _cached_decoder_for_AccessControlRule: $.ASN1Decoder<AccessControlRule> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessControlRule */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessControlRule
  * @function
@@ -168,13 +163,11 @@ export function _decode_AccessControlRule(el: _Element) {
     }
     return _cached_decoder_for_AccessControlRule(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlRule */
+
 let _cached_encoder_for_AccessControlRule: $.ASN1Encoder<AccessControlRule> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlRule */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessControlRule */
+
 /**
  * @summary Encodes a(n) AccessControlRule into an ASN.1 Element.
  * @function
@@ -214,6 +207,5 @@ export function _encode_AccessControlRule(
     return _cached_encoder_for_AccessControlRule(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessControlRule */
 
 /* eslint-enable */

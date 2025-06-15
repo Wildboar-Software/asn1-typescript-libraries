@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
 import { sect233k1 } from "../PKIXAlgs-2009/sect233k1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION NamedCurve_Union4_Intersection0_Element */
+
 /**
  * @summary NamedCurve_Union4_Intersection0_Element
  * @description
@@ -22,6 +22,5 @@ export const NamedCurve_Union4_Intersection0_Element: CURVE = {
     encoderFor: {},
     "&id": sect233k1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION NamedCurve_Union4_Intersection0_Element */
 
 /* eslint-enable */

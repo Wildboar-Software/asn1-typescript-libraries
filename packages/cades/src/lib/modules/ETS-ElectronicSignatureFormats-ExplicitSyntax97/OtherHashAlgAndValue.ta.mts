@@ -14,7 +14,6 @@ import {
     AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OtherHashAlgAndValue */
 /**
  * @summary OtherHashAlgAndValue
  * @description
@@ -64,9 +63,7 @@ class OtherHashAlgAndValue {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherHashAlgAndValue */
 /**
  * @summary The Leading Root Component Types of OtherHashAlgAndValue
  * @description
@@ -80,9 +77,7 @@ const _root_component_type_list_1_spec_for_OtherHashAlgAndValue: $.ComponentSpec
     new $.ComponentSpec("hashAlgorithm", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("hashValue", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherHashAlgAndValue */
 /**
  * @summary The Trailing Root Component Types of OtherHashAlgAndValue
  * @description
@@ -95,9 +90,7 @@ export
 const _root_component_type_list_2_spec_for_OtherHashAlgAndValue: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherHashAlgAndValue */
 /**
  * @summary The Extension Addition Component Types of OtherHashAlgAndValue
  * @description
@@ -110,13 +103,9 @@ export
 const _extension_additions_list_spec_for_OtherHashAlgAndValue: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherHashAlgAndValue */
 let _cached_decoder_for_OtherHashAlgAndValue: $.ASN1Decoder<OtherHashAlgAndValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherHashAlgAndValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherHashAlgAndValue
  * @function
@@ -144,13 +133,9 @@ function _decode_OtherHashAlgAndValue (el: _Element) {
 }; }
     return _cached_decoder_for_OtherHashAlgAndValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherHashAlgAndValue */
 let _cached_encoder_for_OtherHashAlgAndValue: $.ASN1Encoder<OtherHashAlgAndValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherHashAlgAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherHashAlgAndValue */
 /**
  * @summary Encodes a(n) OtherHashAlgAndValue into an ASN.1 Element.
  * @function
@@ -171,6 +156,5 @@ function _encode_OtherHashAlgAndValue (value: OtherHashAlgAndValue, elGetter: $.
     return _cached_encoder_for_OtherHashAlgAndValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherHashAlgAndValue */
 
 /* eslint-enable */

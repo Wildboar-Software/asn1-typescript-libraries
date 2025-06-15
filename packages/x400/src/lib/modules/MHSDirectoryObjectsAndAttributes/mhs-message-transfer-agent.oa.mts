@@ -21,7 +21,6 @@ import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/own
 import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.mjs';
 import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.mjs';
 import { id_oc_mhs_message_transfer_agent } from '../MHSObjectIdentifiers/id-oc-mhs-message-transfer-agent.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_message_transfer_agent */
 /**
  * @summary mhs_message_transfer_agent
  * @description
@@ -53,6 +52,5 @@ export const mhs_message_transfer_agent: OBJECT_CLASS = {
     '&id': id_oc_mhs_message_transfer_agent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_message_transfer_agent */
 
 /* eslint-enable */

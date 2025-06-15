@@ -16,7 +16,7 @@ import {
 } from '../CmsTelebiometric/SignedData.ta.mjs';
 import { id_signedData } from '../CmsTelebiometric/id-signedData.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION signedData */
+
 /**
  * @summary signedData
  * @description
@@ -44,6 +44,5 @@ export const signedData: CONTENT_TYPE<SignedData> = {
     '&id': id_signedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signedData */
 
 /* eslint-enable */

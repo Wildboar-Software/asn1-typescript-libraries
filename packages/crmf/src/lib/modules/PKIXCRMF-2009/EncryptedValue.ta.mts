@@ -13,7 +13,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EncryptedValue */
+
 /**
  * @summary EncryptedValue
  * @description
@@ -106,9 +106,8 @@ export class EncryptedValue {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedValue */
+
 /**
  * @summary The Leading Root Component Types of EncryptedValue
  * @description
@@ -161,9 +160,8 @@ export const _root_component_type_list_1_spec_for_EncryptedValue: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedValue */
+
 /**
  * @summary The Trailing Root Component Types of EncryptedValue
  * @description
@@ -173,9 +171,8 @@ export const _root_component_type_list_1_spec_for_EncryptedValue: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedValue */
+
 /**
  * @summary The Extension Addition Component Types of EncryptedValue
  * @description
@@ -185,13 +182,11 @@ export const _root_component_type_list_2_spec_for_EncryptedValue: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedValue */
+
 let _cached_decoder_for_EncryptedValue: $.ASN1Decoder<EncryptedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedValue */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedValue
  * @function
@@ -263,13 +258,11 @@ export function _decode_EncryptedValue(el: _Element) {
     }
     return _cached_decoder_for_EncryptedValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedValue */
+
 let _cached_encoder_for_EncryptedValue: $.ASN1Encoder<EncryptedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedValue */
+
 /**
  * @summary Encodes a(n) EncryptedValue into an ASN.1 Element.
  * @function
@@ -340,6 +333,5 @@ export function _encode_EncryptedValue(
     return _cached_encoder_for_EncryptedValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedValue */
 
 /* eslint-enable */

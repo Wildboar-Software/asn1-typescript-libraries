@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BiometricDataBlock */
 /**
  * @summary BiometricDataBlock
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BiometricDataBlock = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION BiometricDataBlock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricDataBlock */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricDataBlock */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricDataBlock */
 export const _decode_BiometricDataBlock = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricDataBlock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricDataBlock */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricDataBlock */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricDataBlock */
 export const _encode_BiometricDataBlock = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricDataBlock */
 
 /* eslint-enable */

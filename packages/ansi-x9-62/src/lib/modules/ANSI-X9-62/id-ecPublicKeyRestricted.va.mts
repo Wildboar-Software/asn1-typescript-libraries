@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ecPublicKeyRestricted */
 /**
  * @summary id_ecPublicKeyRestricted
  * @description
@@ -20,6 +19,5 @@ export const id_ecPublicKeyRestricted: OBJECT_IDENTIFIER = new _OID(
     [/* restricted */ 2],
     id_publicKeyType
 );
-/* END_OF_SYMBOL_DEFINITION id_ecPublicKeyRestricted */
 
 /* eslint-enable */

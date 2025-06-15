@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ROASequence */
+
 /**
  * @summary ROASequence
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ROASequence = NumericString[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ROASequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ROASequence */
+
 let _cached_decoder_for_ROASequence: $.ASN1Decoder<ROASequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ROASequence */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ROASequence */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROASequence
  * @function
@@ -45,13 +43,11 @@ export function _decode_ROASequence(el: _Element) {
     }
     return _cached_decoder_for_ROASequence(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ROASequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ROASequence */
+
 let _cached_encoder_for_ROASequence: $.ASN1Encoder<ROASequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ROASequence */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ROASequence */
+
 /**
  * @summary Encodes a(n) ROASequence into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_ROASequence(
     return _cached_encoder_for_ROASequence(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ROASequence */
 
 /* eslint-enable */

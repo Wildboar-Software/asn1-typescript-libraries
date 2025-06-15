@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION internet */
 /**
  * @summary internet
  * @description
@@ -20,6 +19,5 @@ export const internet: ID = new _OID([
     /* dod */ 6,
     /* internet */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION internet */
 
 /* eslint-enable */

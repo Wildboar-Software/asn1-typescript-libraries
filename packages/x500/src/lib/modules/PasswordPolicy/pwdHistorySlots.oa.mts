@@ -9,7 +9,6 @@ import { id_oa_pwdHistorySlots } from "../PasswordPolicy/id-oa-pwdHistorySlots.v
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdHistorySlots */
 /**
  * @summary pwdHistorySlots
  * @description
@@ -53,6 +52,5 @@ export const pwdHistorySlots: ATTRIBUTE<INTEGER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdHistorySlots */
 
 /* eslint-enable */

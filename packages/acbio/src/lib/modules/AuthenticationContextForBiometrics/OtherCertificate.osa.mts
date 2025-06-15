@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION OtherCertificate */
+
 /**
  * @summary OtherCertificate
  * @description
@@ -26,6 +26,5 @@ import { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCER
  *
  */
 export const OtherCertificate: OTHERCERTIFICATE[] = [];
-/* END_OF_SYMBOL_DEFINITION OtherCertificate */
 
 /* eslint-enable */

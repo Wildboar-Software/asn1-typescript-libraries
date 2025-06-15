@@ -10,7 +10,6 @@ import {
     _decode_TelexNumber,
     _encode_TelexNumber,
 } from "../SelectedAttributeTypes/TelexNumber.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION telexNumber */
 /**
  * @summary telexNumber
  * @description
@@ -48,6 +47,5 @@ export const telexNumber: ATTRIBUTE<TelexNumber> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION telexNumber */
 
 /* eslint-enable */

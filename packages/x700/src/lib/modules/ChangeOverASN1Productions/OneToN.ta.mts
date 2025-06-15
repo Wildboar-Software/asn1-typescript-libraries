@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OneToN */
 /**
  * @summary OneToN
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type OneToN = INTEGER;
-/* END_OF_SYMBOL_DEFINITION OneToN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OneToN */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OneToN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OneToN */
 export const _decode_OneToN = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_OneToN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OneToN */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OneToN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OneToN */
 export const _encode_OneToN = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OneToN */
 
 /* eslint-enable */

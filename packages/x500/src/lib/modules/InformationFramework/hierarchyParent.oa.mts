@@ -10,7 +10,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { id_oa_hierarchyParent } from "../InformationFramework/id-oa-hierarchyParent.va.mjs";
-/* START_OF_SYMBOL_DEFINITION hierarchyParent */
 /**
  * @summary hierarchyParent
  * @description
@@ -48,6 +47,5 @@ export const hierarchyParent: ATTRIBUTE<DistinguishedName> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION hierarchyParent */
 
 /* eslint-enable */

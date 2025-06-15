@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultiplePublicKeyAlgo */
 /**
  * @summary MultiplePublicKeyAlgo
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type MultiplePublicKeyAlgo = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MultiplePublicKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultiplePublicKeyAlgo */
 let _cached_decoder_for_MultiplePublicKeyAlgo: $.ASN1Decoder<MultiplePublicKeyAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultiplePublicKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultiplePublicKeyAlgo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultiplePublicKeyAlgo
  * @function
@@ -40,13 +35,9 @@ export function _decode_MultiplePublicKeyAlgo(el: _Element) {
     }
     return _cached_decoder_for_MultiplePublicKeyAlgo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultiplePublicKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultiplePublicKeyAlgo */
 let _cached_encoder_for_MultiplePublicKeyAlgo: $.ASN1Encoder<MultiplePublicKeyAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultiplePublicKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultiplePublicKeyAlgo */
 /**
  * @summary Encodes a(n) MultiplePublicKeyAlgo into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_MultiplePublicKeyAlgo(
     return _cached_encoder_for_MultiplePublicKeyAlgo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultiplePublicKeyAlgo */
 
 /* eslint-enable */

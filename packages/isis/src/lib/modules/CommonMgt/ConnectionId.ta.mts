@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ConnectionId */
 /**
  * @summary ConnectionId
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ConnectionId = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION ConnectionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionId */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionId */
 export const _decode_ConnectionId = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionId */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionId */
 export const _encode_ConnectionId = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionId */
 
 /* eslint-enable */

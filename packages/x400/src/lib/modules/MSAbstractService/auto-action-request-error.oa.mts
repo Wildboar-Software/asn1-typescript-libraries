@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/auto-action-request-error-ParameterType.ta.mjs';
 import { err_auto_action_request_error } from '../MSAccessProtocol/err-auto-action-request-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_action_request_error */
 /**
  * @summary auto_action_request_error
  * @description
@@ -59,6 +58,5 @@ export const auto_action_request_error: ABSTRACT_ERROR<auto_action_request_error
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_action_request_error */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION dhpublicnumber */
+
 /**
  * @summary dhpublicnumber
  * @description
@@ -23,6 +23,5 @@ export const dhpublicnumber: OBJECT_IDENTIFIER = new _OID([
     /* number-type */ 2,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION dhpublicnumber */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_EncryptedData,
   _encode_EncryptedData,
 } from '../KerberosV5Spec2/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION KRB_CRED */
+
 /**
  * @summary KRB_CRED
  * @description
@@ -85,9 +85,8 @@ export class KRB_CRED {
     return new KRB_CRED(_o.pvno, _o.msg_type, _o.tickets, _o.enc_part);
   }
 }
-/* END_OF_SYMBOL_DEFINITION KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_CRED */
+
 /**
  * @summary The Leading Root Component Types of KRB_CRED
  * @description
@@ -126,9 +125,8 @@ export const _root_component_type_list_1_spec_for_KRB_CRED: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_CRED */
+
 /**
  * @summary The Trailing Root Component Types of KRB_CRED
  * @description
@@ -138,9 +136,8 @@ export const _root_component_type_list_1_spec_for_KRB_CRED: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KRB_CRED: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_CRED */
+
 /**
  * @summary The Extension Addition Component Types of KRB_CRED
  * @description
@@ -150,13 +147,11 @@ export const _root_component_type_list_2_spec_for_KRB_CRED: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_KRB_CRED: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_CRED */
+
 let _cached_decoder_for_KRB_CRED: $.ASN1Decoder<KRB_CRED> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KRB_CRED */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KRB_CRED
  * @function
@@ -202,13 +197,11 @@ export function _decode_KRB_CRED(el: _Element) {
   }
   return _cached_decoder_for_KRB_CRED(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_CRED */
+
 let _cached_encoder_for_KRB_CRED: $.ASN1Encoder<KRB_CRED> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_CRED */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KRB_CRED */
+
 /**
  * @summary Encodes a(n) KRB_CRED into an ASN.1 Element.
  * @function
@@ -266,6 +259,5 @@ export function _encode_KRB_CRED(
   return _cached_encoder_for_KRB_CRED(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KRB_CRED */
 
 /* eslint-enable */

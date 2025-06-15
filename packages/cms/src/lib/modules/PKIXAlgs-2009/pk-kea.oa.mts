@@ -9,7 +9,7 @@ import {
     _decode_KEA_Params_Id,
     _encode_KEA_Params_Id,
 } from "../PKIXAlgs-2009/KEA-Params-Id.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_kea */
+
 /**
  * @summary pk_kea
  * @description
@@ -49,6 +49,5 @@ export const pk_kea: PUBLIC_KEY<KEA_Params_Id> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_kea */
 
 /* eslint-enable */

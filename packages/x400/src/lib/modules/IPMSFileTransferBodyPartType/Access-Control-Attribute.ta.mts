@@ -16,7 +16,6 @@ import {
     _decode_Access_Control_Element,
     _encode_Access_Control_Element,
 } from '../IPMSFileTransferBodyPartType/Access-Control-Element.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Access_Control_Attribute */
 /**
  * @summary Access_Control_Attribute
  * @description
@@ -34,13 +33,9 @@ import {
 export type Access_Control_Attribute =
     | { no_value_available: NULL } /* CHOICE_ALT_ROOT */
     | { actual_values: Access_Control_Element[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Access_Control_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Control_Attribute */
 let _cached_decoder_for_Access_Control_Attribute: $.ASN1Decoder<Access_Control_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Control_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Access_Control_Attribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) Access_Control_Attribute
  * @function
@@ -68,13 +63,9 @@ export function _decode_Access_Control_Attribute(el: _Element) {
     }
     return _cached_decoder_for_Access_Control_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Access_Control_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Control_Attribute */
 let _cached_encoder_for_Access_Control_Attribute: $.ASN1Encoder<Access_Control_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Control_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Access_Control_Attribute */
 /**
  * @summary Encodes a(n) Access_Control_Attribute into an ASN.1 Element.
  * @function
@@ -112,6 +103,5 @@ export function _encode_Access_Control_Attribute(
     return _cached_encoder_for_Access_Control_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Access_Control_Attribute */
 
 /* eslint-enable */

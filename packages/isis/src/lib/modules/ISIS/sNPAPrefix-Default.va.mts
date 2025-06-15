@@ -14,7 +14,6 @@ import {
   _decode_SNPAPrefix,
   _encode_SNPAPrefix,
 } from '../ISIS/SNPAPrefix.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION sNPAPrefix_Default */
 /**
  * @summary sNPAPrefix_Default
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const sNPAPrefix_Default: SNPAPrefix = new Uint8ClampedArray([]);
-/* END_OF_SYMBOL_DEFINITION sNPAPrefix_Default */
 
 /* eslint-enable */

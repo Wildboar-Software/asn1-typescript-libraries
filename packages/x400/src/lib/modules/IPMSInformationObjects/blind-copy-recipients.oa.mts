@@ -23,7 +23,6 @@ import {
     _encode_BlindCopyRecipientsField,
 } from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION blind_copy_recipients */
 /**
  * @summary blind_copy_recipients
  * @description
@@ -57,6 +56,5 @@ export const blind_copy_recipients: EXTENSION<BlindCopyRecipientsField> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION blind_copy_recipients */
 
 /* eslint-enable */

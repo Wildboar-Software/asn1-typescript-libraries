@@ -15,7 +15,6 @@ import {
     _decode_ControlStatus,
     _encode_ControlStatus,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ControlStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ControlStatusValue */
 /**
  * @summary ControlStatusValue
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ControlStatusValue = ControlStatus; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ControlStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlStatusValue */
 let _cached_decoder_for_ControlStatusValue: $.ASN1Decoder<ControlStatusValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ControlStatusValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) ControlStatusValue
  * @function
@@ -46,13 +41,9 @@ export function _decode_ControlStatusValue(el: _Element) {
     }
     return _cached_decoder_for_ControlStatusValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ControlStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlStatusValue */
 let _cached_encoder_for_ControlStatusValue: $.ASN1Encoder<ControlStatusValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ControlStatusValue */
 /**
  * @summary Encodes a(n) ControlStatusValue into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ControlStatusValue(
     return _cached_encoder_for_ControlStatusValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ControlStatusValue */
 
 /* eslint-enable */

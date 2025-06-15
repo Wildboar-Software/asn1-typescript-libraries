@@ -20,7 +20,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CryptoModuleSecurityInformation */
+
 /**
  * @summary CryptoModuleSecurityInformation
  * @description
@@ -36,13 +36,11 @@ import {
 export type CryptoModuleSecurityInformation =
     | { cryptoModuleSecurity: CryptoModuleSecurity } /* CHOICE_ALT_ROOT */
     | { cryptoModuleSecurityReferrer: URI } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CryptoModuleSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoModuleSecurityInformation */
+
 let _cached_decoder_for_CryptoModuleSecurityInformation: $.ASN1Decoder<CryptoModuleSecurityInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoModuleSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CryptoModuleSecurityInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CryptoModuleSecurityInformation
  * @function
@@ -63,13 +61,11 @@ export function _decode_CryptoModuleSecurityInformation(el: _Element) {
     }
     return _cached_decoder_for_CryptoModuleSecurityInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CryptoModuleSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoModuleSecurityInformation */
+
 let _cached_encoder_for_CryptoModuleSecurityInformation: $.ASN1Encoder<CryptoModuleSecurityInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoModuleSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CryptoModuleSecurityInformation */
+
 /**
  * @summary Encodes a(n) CryptoModuleSecurityInformation into an ASN.1 Element.
  * @function
@@ -93,6 +89,5 @@ export function _encode_CryptoModuleSecurityInformation(
     return _cached_encoder_for_CryptoModuleSecurityInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CryptoModuleSecurityInformation */
 
 /* eslint-enable */

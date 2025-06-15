@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LocationName */
+
 /**
  * @summary LocationName
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LocationName = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION LocationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocationName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocationName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocationName */
+
+
 export const _decode_LocationName = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_LocationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocationName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocationName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocationName */
+
+
 export const _encode_LocationName = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocationName */
 
 /* eslint-enable */

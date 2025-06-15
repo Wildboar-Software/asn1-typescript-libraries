@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION rc5_CBC_PAD */
+
 /**
  * @summary rc5_CBC_PAD
  * @description
@@ -18,6 +18,5 @@ export const rc5_CBC_PAD: OBJECT_IDENTIFIER = new _OID(
     [9],
     encryptionAlgorithm
 );
-/* END_OF_SYMBOL_DEFINITION rc5_CBC_PAD */
 
 /* eslint-enable */

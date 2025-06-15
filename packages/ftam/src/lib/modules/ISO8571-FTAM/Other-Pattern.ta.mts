@@ -15,7 +15,7 @@ import {
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Other_Pattern */
+
 /**
  * @summary Other_Pattern
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Other_Pattern = Equality_Comparision; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Other_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Other_Pattern */
+
 let _cached_decoder_for_Other_Pattern: $.ASN1Decoder<Other_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Other_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Other_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Other_Pattern
  * @function
@@ -46,13 +44,11 @@ export function _decode_Other_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Other_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Other_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Other_Pattern */
+
 let _cached_encoder_for_Other_Pattern: $.ASN1Encoder<Other_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Other_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Other_Pattern */
+
 /**
  * @summary Encodes a(n) Other_Pattern into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Other_Pattern(
   return _cached_encoder_for_Other_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Other_Pattern */
 
 /* eslint-enable */

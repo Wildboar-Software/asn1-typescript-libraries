@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Object_Size_Attribute */
+
 /**
  * @summary Object_Size_Attribute
  * @description
@@ -32,13 +32,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type Object_Size_Attribute =
   | { no_value_available: NULL } /* CHOICE_ALT_ROOT */
   | { actual_values: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Object_Size_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Size_Attribute */
+
 let _cached_decoder_for_Object_Size_Attribute: $.ASN1Decoder<Object_Size_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Size_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Object_Size_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Object_Size_Attribute
  * @function
@@ -62,13 +60,11 @@ export function _decode_Object_Size_Attribute(el: _Element) {
   }
   return _cached_decoder_for_Object_Size_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Object_Size_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Size_Attribute */
+
 let _cached_encoder_for_Object_Size_Attribute: $.ASN1Encoder<Object_Size_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Size_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Object_Size_Attribute */
+
 /**
  * @summary Encodes a(n) Object_Size_Attribute into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_Object_Size_Attribute(
   return _cached_encoder_for_Object_Size_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Object_Size_Attribute */
 
 /* eslint-enable */

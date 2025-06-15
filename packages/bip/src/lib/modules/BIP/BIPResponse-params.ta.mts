@@ -280,7 +280,7 @@ import {
   _decode_UnregisterBFP_ResponseParams,
   _encode_UnregisterBFP_ResponseParams,
 } from '../BIP/UnregisterBFP-ResponseParams.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPResponse_params */
+
 /**
  * @summary BIPResponse_params
  * @description
@@ -375,13 +375,11 @@ export type BIPResponse_params =
   | { registerBFP: RegisterBFP_ResponseParams } /* CHOICE_ALT_ROOT */
   | { unregisterBFP: UnregisterBFP_ResponseParams } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BIPResponse_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPResponse_params */
+
 let _cached_decoder_for_BIPResponse_params: $.ASN1Decoder<BIPResponse_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPResponse_params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPResponse_params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPResponse_params
  * @function
@@ -502,13 +500,11 @@ export function _decode_BIPResponse_params(el: _Element) {
   }
   return _cached_decoder_for_BIPResponse_params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPResponse_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPResponse_params */
+
 let _cached_encoder_for_BIPResponse_params: $.ASN1Encoder<BIPResponse_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPResponse_params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPResponse_params */
+
 /**
  * @summary Encodes a(n) BIPResponse_params into an ASN.1 Element.
  * @function
@@ -584,6 +580,5 @@ export function _encode_BIPResponse_params(
   return _cached_encoder_for_BIPResponse_params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPResponse_params */
 
 /* eslint-enable */

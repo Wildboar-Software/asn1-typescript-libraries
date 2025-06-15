@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_InformationStatus */
 /**
  * @summary InformationStatus
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_InformationStatus {
     deleted = 1,
     preliminary = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_InformationStatus */
 
-/* START_OF_SYMBOL_DEFINITION InformationStatus */
 /**
  * @summary InformationStatus
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_InformationStatus {
  * ```@enum {number}
  */
 export type InformationStatus = _enum_for_InformationStatus;
-/* END_OF_SYMBOL_DEFINITION InformationStatus */
 
-/* START_OF_SYMBOL_DEFINITION InformationStatus */
 /**
  * @summary InformationStatus
  * @description
@@ -55,9 +50,7 @@ export type InformationStatus = _enum_for_InformationStatus;
  * ```@enum {number}
  */
 export const InformationStatus = _enum_for_InformationStatus;
-/* END_OF_SYMBOL_DEFINITION InformationStatus */
 
-/* START_OF_SYMBOL_DEFINITION InformationStatus_active */
 /**
  * @summary InformationStatus_active
  * @constant
@@ -65,9 +58,7 @@ export const InformationStatus = _enum_for_InformationStatus;
  */
 export const InformationStatus_active: InformationStatus =
     InformationStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationStatus_active */
 
-/* START_OF_SYMBOL_DEFINITION active */
 /**
  * @summary active
  * @constant
@@ -75,9 +66,7 @@ export const InformationStatus_active: InformationStatus =
  */
 export const active: InformationStatus =
     InformationStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION active */
 
-/* START_OF_SYMBOL_DEFINITION InformationStatus_deleted */
 /**
  * @summary InformationStatus_deleted
  * @constant
@@ -85,9 +74,7 @@ export const active: InformationStatus =
  */
 export const InformationStatus_deleted: InformationStatus =
     InformationStatus.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationStatus_deleted */
 
-/* START_OF_SYMBOL_DEFINITION deleted */
 /**
  * @summary deleted
  * @constant
@@ -95,9 +82,7 @@ export const InformationStatus_deleted: InformationStatus =
  */
 export const deleted: InformationStatus =
     InformationStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION deleted */
 
-/* START_OF_SYMBOL_DEFINITION InformationStatus_preliminary */
 /**
  * @summary InformationStatus_preliminary
  * @constant
@@ -105,9 +90,7 @@ export const deleted: InformationStatus =
  */
 export const InformationStatus_preliminary: InformationStatus =
     InformationStatus.preliminary; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationStatus_preliminary */
 
-/* START_OF_SYMBOL_DEFINITION preliminary */
 /**
  * @summary preliminary
  * @constant
@@ -115,21 +98,12 @@ export const InformationStatus_preliminary: InformationStatus =
  */
 export const preliminary: InformationStatus =
     InformationStatus.preliminary; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION preliminary */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationStatus */
 export const _decode_InformationStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_InformationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationStatus */
 export const _encode_InformationStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationStatus */
 
 /* eslint-enable */

@@ -38,7 +38,6 @@ import {
     _extension_additions_list_spec_for_CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AbandonFailedData */
 /**
  * @summary AbandonFailedData
  * @description
@@ -138,9 +137,7 @@ export class AbandonFailedData implements CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AbandonFailedData */
 /**
  * @summary The Leading Root Component Types of AbandonFailedData
  * @description
@@ -166,9 +163,7 @@ export const _root_component_type_list_1_spec_for_AbandonFailedData: $.Component
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AbandonFailedData */
 /**
  * @summary The Trailing Root Component Types of AbandonFailedData
  * @description
@@ -180,9 +175,7 @@ export const _root_component_type_list_1_spec_for_AbandonFailedData: $.Component
 export const _root_component_type_list_2_spec_for_AbandonFailedData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AbandonFailedData */
 /**
  * @summary The Extension Addition Component Types of AbandonFailedData
  * @description
@@ -194,13 +187,9 @@ export const _root_component_type_list_2_spec_for_AbandonFailedData: $.Component
 export const _extension_additions_list_spec_for_AbandonFailedData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonFailedData */
 let _cached_decoder_for_AbandonFailedData: $.ASN1Decoder<AbandonFailedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbandonFailedData */
 /**
  * @summary Decodes an ASN.1 element into a(n) AbandonFailedData
  * @function
@@ -279,13 +268,9 @@ export function _decode_AbandonFailedData(el: _Element) {
     }
     return _cached_decoder_for_AbandonFailedData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonFailedData */
 let _cached_encoder_for_AbandonFailedData: $.ASN1Encoder<AbandonFailedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonFailedData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbandonFailedData */
 /**
  * @summary Encodes a(n) AbandonFailedData into an ASN.1 Element.
  * @function
@@ -373,6 +358,5 @@ export function _encode_AbandonFailedData(
     return _cached_encoder_for_AbandonFailedData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbandonFailedData */
 
 /* eslint-enable */

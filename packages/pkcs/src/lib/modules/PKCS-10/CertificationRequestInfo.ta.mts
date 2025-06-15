@@ -26,7 +26,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "../PKCS-10/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertificationRequestInfo */
+
 /**
  * @summary CertificationRequestInfo
  * @description
@@ -97,9 +97,8 @@ export class CertificationRequestInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificationRequestInfo */
+
 /**
  * @summary The Leading Root Component Types of CertificationRequestInfo
  * @description
@@ -132,9 +131,8 @@ export const _root_component_type_list_1_spec_for_CertificationRequestInfo: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificationRequestInfo */
+
 /**
  * @summary The Trailing Root Component Types of CertificationRequestInfo
  * @description
@@ -144,9 +142,8 @@ export const _root_component_type_list_1_spec_for_CertificationRequestInfo: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificationRequestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificationRequestInfo */
+
 /**
  * @summary The Extension Addition Component Types of CertificationRequestInfo
  * @description
@@ -156,13 +153,11 @@ export const _root_component_type_list_2_spec_for_CertificationRequestInfo: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificationRequestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationRequestInfo */
+
 let _cached_decoder_for_CertificationRequestInfo: $.ASN1Decoder<CertificationRequestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificationRequestInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificationRequestInfo
  * @function
@@ -206,13 +201,11 @@ export function _decode_CertificationRequestInfo(el: _Element) {
     }
     return _cached_decoder_for_CertificationRequestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationRequestInfo */
+
 let _cached_encoder_for_CertificationRequestInfo: $.ASN1Encoder<CertificationRequestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationRequestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificationRequestInfo */
+
 /**
  * @summary Encodes a(n) CertificationRequestInfo into an ASN.1 Element.
  * @function
@@ -254,6 +247,5 @@ export function _encode_CertificationRequestInfo(
     return _cached_encoder_for_CertificationRequestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificationRequestInfo */
 
 /* eslint-enable */

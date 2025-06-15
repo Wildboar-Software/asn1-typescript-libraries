@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ObserverIdentification */
+
 /**
  * @summary ObserverIdentification
  * @description
@@ -79,9 +79,8 @@ export class ObserverIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObserverIdentification */
+
 /**
  * @summary The Leading Root Component Types of ObserverIdentification
  * @description
@@ -113,9 +112,8 @@ export const _root_component_type_list_1_spec_for_ObserverIdentification: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObserverIdentification */
+
 /**
  * @summary The Trailing Root Component Types of ObserverIdentification
  * @description
@@ -125,9 +123,8 @@ export const _root_component_type_list_1_spec_for_ObserverIdentification: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObserverIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObserverIdentification */
+
 /**
  * @summary The Extension Addition Component Types of ObserverIdentification
  * @description
@@ -137,13 +134,11 @@ export const _root_component_type_list_2_spec_for_ObserverIdentification: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_ObserverIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObserverIdentification */
+
 let _cached_decoder_for_ObserverIdentification: $.ASN1Decoder<ObserverIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObserverIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObserverIdentification
  * @function
@@ -190,13 +185,11 @@ export function _decode_ObserverIdentification(el: _Element) {
     }
     return _cached_decoder_for_ObserverIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObserverIdentification */
+
 let _cached_encoder_for_ObserverIdentification: $.ASN1Encoder<ObserverIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObserverIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObserverIdentification */
+
 /**
  * @summary Encodes a(n) ObserverIdentification into an ASN.1 Element.
  * @function
@@ -231,6 +224,5 @@ export function _encode_ObserverIdentification(
     return _cached_encoder_for_ObserverIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObserverIdentification */
 
 /* eslint-enable */

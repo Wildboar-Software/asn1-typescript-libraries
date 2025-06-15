@@ -4,7 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION objectIdentifierMatch */
 /**
  * @summary objectIdentifierMatch
  * @description
@@ -36,6 +35,5 @@ export const objectIdentifierMatch: MATCHING_RULE<OBJECT_IDENTIFIER> = {
     "&id": id_mr_objectIdentifierMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION objectIdentifierMatch */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_DataType,
     _encode_DataType,
 } from '../TestCategories-ASN1Module/DataType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PatternType */
 /**
  * @summary PatternType
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PatternType = DataType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PatternType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PatternType */
 let _cached_decoder_for_PatternType: $.ASN1Decoder<PatternType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PatternType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PatternType */
 /**
  * @summary Decodes an ASN.1 element into a(n) PatternType
  * @function
@@ -46,13 +41,9 @@ export function _decode_PatternType(el: _Element) {
     }
     return _cached_decoder_for_PatternType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PatternType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PatternType */
 let _cached_encoder_for_PatternType: $.ASN1Encoder<PatternType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PatternType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PatternType */
 /**
  * @summary Encodes a(n) PatternType into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PatternType(
     return _cached_encoder_for_PatternType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PatternType */
 
 /* eslint-enable */

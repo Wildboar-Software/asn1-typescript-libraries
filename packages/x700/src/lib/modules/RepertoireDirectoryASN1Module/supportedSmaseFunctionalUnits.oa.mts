@@ -22,7 +22,6 @@ import {
     _encode_FunctionalUnitPackage,
 } from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION supportedSmaseFunctionalUnits */
 /**
  * @summary supportedSmaseFunctionalUnits
  * @description
@@ -64,6 +63,5 @@ export const supportedSmaseFunctionalUnits: ATTRIBUTE<FunctionalUnitPackage> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedSmaseFunctionalUnits */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_contract } from "../UsefulDefinitions/id-contract.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_contract_dap */
 /**
  * @summary id_contract_dap
  * @description
@@ -15,6 +14,5 @@ import { id_contract } from "../UsefulDefinitions/id-contract.va.mjs";
  * @constant
  */
 export const id_contract_dap: OBJECT_IDENTIFIER = new _OID([1], id_contract);
-/* END_OF_SYMBOL_DEFINITION id_contract_dap */
 
 /* eslint-enable */

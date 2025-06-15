@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, BIT_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_protocol_version */
 /**
  * @summary OsiBind_normal_mode_parameters_protocol_version
  * @description
@@ -14,29 +13,21 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type OsiBind_normal_mode_parameters_protocol_version = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_protocol_version */
 
-/* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_protocol_version_version_1 */
 /**
  * @summary OsiBind_normal_mode_parameters_protocol_version_version_1
  * @constant
  */
 export const OsiBind_normal_mode_parameters_protocol_version_version_1: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_protocol_version_version_1 */
 
-/* START_OF_SYMBOL_DEFINITION version_1 */
 /**
  * @summary version_1
  * @constant
  */
 export const version_1: number = OsiBind_normal_mode_parameters_protocol_version_version_1; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION version_1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind_normal_mode_parameters_protocol_version */
 let _cached_decoder_for_OsiBind_normal_mode_parameters_protocol_version: $.ASN1Decoder<OsiBind_normal_mode_parameters_protocol_version> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind_normal_mode_parameters_protocol_version */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiBind_normal_mode_parameters_protocol_version */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiBind_normal_mode_parameters_protocol_version
  * @function
@@ -54,13 +45,9 @@ export function _decode_OsiBind_normal_mode_parameters_protocol_version(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiBind_normal_mode_parameters_protocol_version */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind_normal_mode_parameters_protocol_version */
 let _cached_encoder_for_OsiBind_normal_mode_parameters_protocol_version: $.ASN1Encoder<OsiBind_normal_mode_parameters_protocol_version> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind_normal_mode_parameters_protocol_version */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiBind_normal_mode_parameters_protocol_version */
 /**
  * @summary Encodes a(n) OsiBind_normal_mode_parameters_protocol_version into an ASN.1 Element.
  * @function
@@ -82,6 +69,5 @@ export function _encode_OsiBind_normal_mode_parameters_protocol_version(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiBind_normal_mode_parameters_protocol_version */
 
 /* eslint-enable */

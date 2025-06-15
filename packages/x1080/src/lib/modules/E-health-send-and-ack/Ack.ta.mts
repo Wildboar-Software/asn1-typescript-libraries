@@ -16,7 +16,7 @@ import {
     _decode_Ack_error,
     _encode_Ack_error,
 } from '../E-health-send-and-ack/Ack-error.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Ack */
+
 /**
  * @summary Ack
  * @description
@@ -36,13 +36,11 @@ import {
 export type Ack =
     | { ok: NULL } /* CHOICE_ALT_ROOT */
     | { error: Ack_error } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Ack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Ack */
+
 let _cached_decoder_for_Ack: $.ASN1Decoder<Ack> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Ack */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Ack */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Ack
  * @function
@@ -58,13 +56,11 @@ export function _decode_Ack(el: _Element) {
     }
     return _cached_decoder_for_Ack(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Ack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Ack */
+
 let _cached_encoder_for_Ack: $.ASN1Encoder<Ack> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Ack */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Ack */
+
 /**
  * @summary Encodes a(n) Ack into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_Ack(value: Ack, elGetter: $.ASN1Encoder<Ack>) {
     return _cached_encoder_for_Ack(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Ack */
 
 /* eslint-enable */

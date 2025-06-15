@@ -6,7 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../MTSAbstractService/PDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PosteRestanteAddress */
 /**
  * @summary PosteRestanteAddress
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type PosteRestanteAddress = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PosteRestanteAddress */
 let _cached_decoder_for_PosteRestanteAddress: $.ASN1Decoder<PosteRestanteAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PosteRestanteAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PosteRestanteAddress
  * @function
@@ -37,13 +32,9 @@ export function _decode_PosteRestanteAddress(el: _Element) {
     }
     return _cached_decoder_for_PosteRestanteAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PosteRestanteAddress */
 let _cached_encoder_for_PosteRestanteAddress: $.ASN1Encoder<PosteRestanteAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PosteRestanteAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PosteRestanteAddress */
 /**
  * @summary Encodes a(n) PosteRestanteAddress into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_PosteRestanteAddress(
     return _cached_encoder_for_PosteRestanteAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PosteRestanteAddress */
 
 /* eslint-enable */

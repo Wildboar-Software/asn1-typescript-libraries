@@ -15,7 +15,6 @@ import {
     _decode_EDIMIdentifier,
     _encode_EDIMIdentifier,
 } from '../EDIMSInformationObjects/EDIMIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubjectEDIMField */
 /**
  * @summary SubjectEDIMField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubjectEDIMField = EDIMIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubjectEDIMField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectEDIMField */
 let _cached_decoder_for_SubjectEDIMField: $.ASN1Decoder<SubjectEDIMField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectEDIMField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectEDIMField */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectEDIMField
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubjectEDIMField(el: _Element) {
     }
     return _cached_decoder_for_SubjectEDIMField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectEDIMField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectEDIMField */
 let _cached_encoder_for_SubjectEDIMField: $.ASN1Encoder<SubjectEDIMField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectEDIMField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectEDIMField */
 /**
  * @summary Encodes a(n) SubjectEDIMField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubjectEDIMField(
     return _cached_encoder_for_SubjectEDIMField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectEDIMField */
 
 /* eslint-enable */

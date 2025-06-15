@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtendedRegularExpression */
 /**
  * @summary ExtendedRegularExpression
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type ExtendedRegularExpression = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ExtendedRegularExpression */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedRegularExpression */
 let _cached_decoder_for_ExtendedRegularExpression: $.ASN1Decoder<ExtendedRegularExpression> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedRegularExpression */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedRegularExpression */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedRegularExpression
  * @function
@@ -47,13 +42,9 @@ export function _decode_ExtendedRegularExpression(el: _Element) {
     }
     return _cached_decoder_for_ExtendedRegularExpression(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedRegularExpression */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedRegularExpression */
 let _cached_encoder_for_ExtendedRegularExpression: $.ASN1Encoder<ExtendedRegularExpression> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedRegularExpression */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedRegularExpression */
 /**
  * @summary Encodes a(n) ExtendedRegularExpression into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_ExtendedRegularExpression(
     return _cached_encoder_for_ExtendedRegularExpression(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedRegularExpression */
 
 /* eslint-enable */

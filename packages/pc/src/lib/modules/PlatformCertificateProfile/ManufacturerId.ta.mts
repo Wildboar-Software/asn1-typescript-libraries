@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfile/PrivateEnterpriseNumber.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ManufacturerId */
 /**
  * @summary ManufacturerId
  * @description
@@ -54,9 +53,7 @@ class ManufacturerId {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ManufacturerId */
 /**
  * @summary The Leading Root Component Types of ManufacturerId
  * @description
@@ -69,9 +66,7 @@ export
 const _root_component_type_list_1_spec_for_ManufacturerId: $.ComponentSpec[] = [
     new $.ComponentSpec("manufacturerIdentifier", false, $.hasTag(_TagClass.universal, 6), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ManufacturerId */
 /**
  * @summary The Trailing Root Component Types of ManufacturerId
  * @description
@@ -84,9 +79,7 @@ export
 const _root_component_type_list_2_spec_for_ManufacturerId: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ManufacturerId */
 /**
  * @summary The Extension Addition Component Types of ManufacturerId
  * @description
@@ -99,13 +92,9 @@ export
 const _extension_additions_list_spec_for_ManufacturerId: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManufacturerId */
 let _cached_decoder_for_ManufacturerId: $.ASN1Decoder<ManufacturerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManufacturerId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ManufacturerId
  * @function
@@ -129,13 +118,9 @@ function _decode_ManufacturerId (el: _Element) {
 }; }
     return _cached_decoder_for_ManufacturerId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManufacturerId */
 let _cached_encoder_for_ManufacturerId: $.ASN1Encoder<ManufacturerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManufacturerId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManufacturerId */
 /**
  * @summary Encodes a(n) ManufacturerId into an ASN.1 Element.
  * @function
@@ -155,6 +140,5 @@ function _encode_ManufacturerId (value: ManufacturerId, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_ManufacturerId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManufacturerId */
 
 /* eslint-enable */

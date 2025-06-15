@@ -24,7 +24,6 @@ import {
 } from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.mjs';
 import { err_recipient_improperly_specified } from '../MTSAccessProtocol/err-recipient-improperly-specified.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION recipient_improperly_specified */
 /**
  * @summary recipient_improperly_specified
  * @description
@@ -54,6 +53,5 @@ export const recipient_improperly_specified: ABSTRACT_ERROR<ImproperlySpecifiedR
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipient_improperly_specified */
 
 /* eslint-enable */

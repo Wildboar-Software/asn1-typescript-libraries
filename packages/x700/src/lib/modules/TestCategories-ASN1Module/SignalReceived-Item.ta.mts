@@ -21,7 +21,6 @@ import {
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignalReceived_Item */
 /**
  * @summary SignalReceived_Item
  * @description
@@ -85,9 +84,7 @@ export class SignalReceived_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignalReceived_Item */
 /**
  * @summary The Leading Root Component Types of SignalReceived_Item
  * @description
@@ -126,9 +123,7 @@ export const _root_component_type_list_1_spec_for_SignalReceived_Item: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignalReceived_Item */
 /**
  * @summary The Trailing Root Component Types of SignalReceived_Item
  * @description
@@ -138,9 +133,7 @@ export const _root_component_type_list_1_spec_for_SignalReceived_Item: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SignalReceived_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignalReceived_Item */
 /**
  * @summary The Extension Addition Component Types of SignalReceived_Item
  * @description
@@ -150,13 +143,9 @@ export const _root_component_type_list_2_spec_for_SignalReceived_Item: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_SignalReceived_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalReceived_Item */
 let _cached_decoder_for_SignalReceived_Item: $.ASN1Decoder<SignalReceived_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignalReceived_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalReceived_Item
  * @function
@@ -198,13 +187,9 @@ export function _decode_SignalReceived_Item(el: _Element) {
     }
     return _cached_decoder_for_SignalReceived_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalReceived_Item */
 let _cached_encoder_for_SignalReceived_Item: $.ASN1Encoder<SignalReceived_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalReceived_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignalReceived_Item */
 /**
  * @summary Encodes a(n) SignalReceived_Item into an ASN.1 Element.
  * @function
@@ -241,6 +226,5 @@ export function _encode_SignalReceived_Item(
     return _cached_encoder_for_SignalReceived_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignalReceived_Item */
 
 /* eslint-enable */

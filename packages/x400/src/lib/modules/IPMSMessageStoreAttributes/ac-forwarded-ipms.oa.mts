@@ -24,7 +24,6 @@ import { id_cat_forwarded_ipms } from '../IPMSObjectIdentifiers/id-cat-forwarded
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ac_forwarded_ipms */
 /**
  * @summary ac_forwarded_ipms
  * @description
@@ -59,6 +58,5 @@ export const ac_forwarded_ipms: X413ATTRIBUTE<SequenceNumber> = {
     '&id': id_cat_forwarded_ipms /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ac_forwarded_ipms */
 
 /* eslint-enable */

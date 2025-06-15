@@ -6,7 +6,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS-1/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DigestAlgorithm */
+
 /**
  * @summary DigestAlgorithm
  * @description
@@ -20,13 +20,11 @@ import {
  * ```
  */
 export type DigestAlgorithm = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DigestAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestAlgorithm */
+
 let _cached_decoder_for_DigestAlgorithm: $.ASN1Decoder<DigestAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DigestAlgorithm */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DigestAlgorithm
  * @function
@@ -39,13 +37,11 @@ export function _decode_DigestAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_DigestAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DigestAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestAlgorithm */
+
 let _cached_encoder_for_DigestAlgorithm: $.ASN1Encoder<DigestAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DigestAlgorithm */
+
 /**
  * @summary Encodes a(n) DigestAlgorithm into an ASN.1 Element.
  * @function
@@ -63,6 +59,5 @@ export function _encode_DigestAlgorithm(
     return _cached_encoder_for_DigestAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DigestAlgorithm */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageSecurityLabel */
 /**
  * @summary MessageSecurityLabel
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageSecurityLabel = SecurityLabel; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSecurityLabel */
 let _cached_decoder_for_MessageSecurityLabel: $.ASN1Decoder<MessageSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageSecurityLabel */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSecurityLabel
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageSecurityLabel(el: _Element) {
     }
     return _cached_decoder_for_MessageSecurityLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSecurityLabel */
 let _cached_encoder_for_MessageSecurityLabel: $.ASN1Encoder<MessageSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageSecurityLabel */
 /**
  * @summary Encodes a(n) MessageSecurityLabel into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageSecurityLabel(
     return _cached_encoder_for_MessageSecurityLabel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageSecurityLabel */
 
 /* eslint-enable */

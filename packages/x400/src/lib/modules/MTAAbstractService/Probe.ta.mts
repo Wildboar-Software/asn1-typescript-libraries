@@ -15,7 +15,6 @@ import {
     _decode_ProbeTransferEnvelope,
     _encode_ProbeTransferEnvelope,
 } from '../MTAAbstractService/ProbeTransferEnvelope.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Probe */
 /**
  * @summary Probe
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Probe = ProbeTransferEnvelope; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Probe */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Probe */
 let _cached_decoder_for_Probe: $.ASN1Decoder<Probe> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Probe */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Probe */
 /**
  * @summary Decodes an ASN.1 element into a(n) Probe
  * @function
@@ -46,13 +41,9 @@ export function _decode_Probe(el: _Element) {
     }
     return _cached_decoder_for_Probe(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Probe */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Probe */
 let _cached_encoder_for_Probe: $.ASN1Encoder<Probe> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Probe */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Probe */
 /**
  * @summary Encodes a(n) Probe into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_Probe(value: Probe, elGetter: $.ASN1Encoder<Probe>) {
     return _cached_encoder_for_Probe(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Probe */
 
 /* eslint-enable */

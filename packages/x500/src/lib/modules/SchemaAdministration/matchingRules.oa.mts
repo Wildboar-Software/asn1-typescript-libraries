@@ -11,7 +11,6 @@ import {
 } from "../SchemaAdministration/MatchingRuleDescription.ta.mjs";
 import { matchingRuleDescription } from "../SelectedAttributeTypes/matchingRuleDescription.oa.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION matchingRules */
 /**
  * @summary matchingRules
  * @description
@@ -52,6 +51,5 @@ export const matchingRules: ATTRIBUTE<MatchingRuleDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION matchingRules */
 
 /* eslint-enable */

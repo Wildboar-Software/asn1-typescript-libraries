@@ -15,7 +15,7 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UsageMeteringControlObjectId */
+
 /**
  * @summary UsageMeteringControlObjectId
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type UsageMeteringControlObjectId = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UsageMeteringControlObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageMeteringControlObjectId */
+
 let _cached_decoder_for_UsageMeteringControlObjectId: $.ASN1Decoder<UsageMeteringControlObjectId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageMeteringControlObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UsageMeteringControlObjectId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UsageMeteringControlObjectId
  * @function
@@ -46,13 +44,11 @@ export function _decode_UsageMeteringControlObjectId(el: _Element) {
     }
     return _cached_decoder_for_UsageMeteringControlObjectId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UsageMeteringControlObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageMeteringControlObjectId */
+
 let _cached_encoder_for_UsageMeteringControlObjectId: $.ASN1Encoder<UsageMeteringControlObjectId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageMeteringControlObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UsageMeteringControlObjectId */
+
 /**
  * @summary Encodes a(n) UsageMeteringControlObjectId into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_UsageMeteringControlObjectId(
     return _cached_encoder_for_UsageMeteringControlObjectId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UsageMeteringControlObjectId */
 
 /* eslint-enable */

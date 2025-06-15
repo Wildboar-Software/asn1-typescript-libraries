@@ -20,7 +20,7 @@ import {
     _decode_ProtectedXC,
     _encode_ProtectedXC,
 } from '../M3100ASN1TypeModule6/ProtectedXC.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION JoinXCReply_Item_success */
+
 /**
  * @summary JoinXCReply_Item_success
  * @description
@@ -34,13 +34,11 @@ import {
 export type JoinXCReply_Item_success =
     | { unprotected: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { protected_: ProtectedXC } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION JoinXCReply_Item_success */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCReply_Item_success */
+
 let _cached_decoder_for_JoinXCReply_Item_success: $.ASN1Decoder<JoinXCReply_Item_success> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCReply_Item_success */
 
-/* START_OF_SYMBOL_DEFINITION _decode_JoinXCReply_Item_success */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) JoinXCReply_Item_success
  * @function
@@ -60,13 +58,11 @@ export function _decode_JoinXCReply_Item_success(el: _Element) {
     }
     return _cached_decoder_for_JoinXCReply_Item_success(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_JoinXCReply_Item_success */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCReply_Item_success */
+
 let _cached_encoder_for_JoinXCReply_Item_success: $.ASN1Encoder<JoinXCReply_Item_success> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCReply_Item_success */
 
-/* START_OF_SYMBOL_DEFINITION _encode_JoinXCReply_Item_success */
+
 /**
  * @summary Encodes a(n) JoinXCReply_Item_success into an ASN.1 Element.
  * @function
@@ -90,6 +86,5 @@ export function _encode_JoinXCReply_Item_success(
     return _cached_encoder_for_JoinXCReply_Item_success(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_JoinXCReply_Item_success */
 
 /* eslint-enable */

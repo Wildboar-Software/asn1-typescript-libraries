@@ -17,7 +17,7 @@ import {
   _encode_Scope_namedNumbers,
 } from '../CMIP-1/Scope-namedNumbers.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Scope */
+
 /**
  * @summary Scope
  * @description
@@ -36,13 +36,11 @@ export type Scope =
   | { namedNumbers: Scope_namedNumbers } /* CHOICE_ALT_ROOT */
   | { individualLevels: INTEGER } /* CHOICE_ALT_ROOT */
   | { baseToNthLevel: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Scope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope */
+
 let _cached_decoder_for_Scope: $.ASN1Decoder<Scope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Scope */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Scope
  * @function
@@ -65,13 +63,11 @@ export function _decode_Scope(el: _Element) {
   }
   return _cached_decoder_for_Scope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Scope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope */
+
 let _cached_encoder_for_Scope: $.ASN1Encoder<Scope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Scope */
+
 /**
  * @summary Encodes a(n) Scope into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_Scope(value: Scope, elGetter: $.ASN1Encoder<Scope>) {
   return _cached_encoder_for_Scope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Scope */
 
 /* eslint-enable */

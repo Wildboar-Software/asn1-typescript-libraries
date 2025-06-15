@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_x1080_0_Cont } from '../Pbact-access/id-x1080-0-Cont.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_renameResult */
+
 /**
  * @summary id_renameResult
  * @description
@@ -28,6 +28,5 @@ export const id_renameResult: OBJECT_IDENTIFIER = new _OID(
     [/* renameResult */ 14],
     id_x1080_0_Cont
 );
-/* END_OF_SYMBOL_DEFINITION id_renameResult */
 
 /* eslint-enable */

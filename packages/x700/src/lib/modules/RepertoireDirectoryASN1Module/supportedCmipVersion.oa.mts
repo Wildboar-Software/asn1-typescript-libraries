@@ -23,7 +23,6 @@ import {
 } from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.mjs';
 import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION supportedCmipVersion */
 /**
  * @summary supportedCmipVersion
  * @description
@@ -67,6 +66,5 @@ export const supportedCmipVersion: ATTRIBUTE<ProtocolVersion> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedCmipVersion */
 
 /* eslint-enable */

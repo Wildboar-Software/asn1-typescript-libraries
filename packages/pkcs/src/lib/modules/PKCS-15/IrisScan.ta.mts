@@ -11,7 +11,7 @@ import {
     _encode_IrisScan_eye,
     _enum_for_IrisScan_eye,
 } from "../PKCS-15/IrisScan-eye.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IrisScan */
+
 /**
  * @summary IrisScan
  * @description
@@ -69,9 +69,8 @@ export class IrisScan {
 
     public static _enum_for_eye = _enum_for_IrisScan_eye;
 }
-/* END_OF_SYMBOL_DEFINITION IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IrisScan */
+
 /**
  * @summary The Leading Root Component Types of IrisScan
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_IrisScan: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IrisScan */
+
 /**
  * @summary The Trailing Root Component Types of IrisScan
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_IrisScan: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IrisScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IrisScan */
+
 /**
  * @summary The Extension Addition Component Types of IrisScan
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_IrisScan: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_IrisScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IrisScan */
+
 let _cached_decoder_for_IrisScan: $.ASN1Decoder<IrisScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IrisScan */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IrisScan
  * @function
@@ -145,13 +140,11 @@ export function _decode_IrisScan(el: _Element) {
     }
     return _cached_decoder_for_IrisScan(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IrisScan */
+
 let _cached_encoder_for_IrisScan: $.ASN1Encoder<IrisScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IrisScan */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IrisScan */
+
 /**
  * @summary Encodes a(n) IrisScan into an ASN.1 Element.
  * @function
@@ -187,6 +180,5 @@ export function _encode_IrisScan(
     return _cached_encoder_for_IrisScan(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IrisScan */
 
 /* eslint-enable */

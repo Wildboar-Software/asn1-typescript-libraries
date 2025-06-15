@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION dataPacketRetransmissionCountDefault */
+
 /**
  * @summary dataPacketRetransmissionCountDefault
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const dataPacketRetransmissionCountDefault: INTEGER = 0;
-/* END_OF_SYMBOL_DEFINITION dataPacketRetransmissionCountDefault */
 
 /* eslint-enable */

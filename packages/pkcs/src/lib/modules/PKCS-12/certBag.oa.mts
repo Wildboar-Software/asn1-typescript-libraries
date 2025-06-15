@@ -7,7 +7,7 @@ import {
     _decode_CertBag,
     _encode_CertBag,
 } from "../PKCS-12/CertBag.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION certBag */
+
 /**
  * @summary certBag
  * @description
@@ -36,6 +36,5 @@ export const certBag: BAG_TYPE<CertBag> = {
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certBag */
 
 /* eslint-enable */

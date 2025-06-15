@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectList */
+
 /**
  * @summary ObjectList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ObjectList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectList */
+
 let _cached_decoder_for_ObjectList: $.ASN1Decoder<ObjectList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectList
  * @function
@@ -48,13 +46,11 @@ export function _decode_ObjectList(el: _Element) {
     }
     return _cached_decoder_for_ObjectList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectList */
+
 let _cached_encoder_for_ObjectList: $.ASN1Encoder<ObjectList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectList */
+
 /**
  * @summary Encodes a(n) ObjectList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ObjectList(
     return _cached_encoder_for_ObjectList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectList */
 
 /* eslint-enable */

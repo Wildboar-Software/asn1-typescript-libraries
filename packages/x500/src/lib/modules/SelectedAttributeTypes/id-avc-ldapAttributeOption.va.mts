@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_avc_ldapAttributeOption */
 /**
  * @summary id_avc_ldapAttributeOption
  * @description
@@ -18,6 +17,5 @@ export const id_avc_ldapAttributeOption: OBJECT_IDENTIFIER = new _OID(
     [5],
     id_avc
 );
-/* END_OF_SYMBOL_DEFINITION id_avc_ldapAttributeOption */
 
 /* eslint-enable */

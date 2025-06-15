@@ -16,7 +16,6 @@ import {
     _decode_CreationTime,
     _encode_CreationTime,
 } from '../MSAbstractService/CreationTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TimeRange */
 /**
  * @summary TimeRange
  * @description
@@ -66,9 +65,7 @@ export class TimeRange {
         return new TimeRange(_o.from_, _o.to);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeRange */
 /**
  * @summary The Leading Root Component Types of TimeRange
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_TimeRange: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeRange */
 /**
  * @summary The Trailing Root Component Types of TimeRange
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_TimeRange: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeRange: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeRange */
 /**
  * @summary The Extension Addition Component Types of TimeRange
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_TimeRange: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeRange: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeRange */
 let _cached_decoder_for_TimeRange: $.ASN1Decoder<TimeRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeRange */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeRange
  * @function
@@ -164,13 +153,9 @@ export function _decode_TimeRange(el: _Element) {
     }
     return _cached_decoder_for_TimeRange(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeRange */
 let _cached_encoder_for_TimeRange: $.ASN1Encoder<TimeRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeRange */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeRange */
 /**
  * @summary Encodes a(n) TimeRange into an ASN.1 Element.
  * @function
@@ -213,6 +198,5 @@ export function _encode_TimeRange(
     return _cached_encoder_for_TimeRange(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeRange */
 
 /* eslint-enable */

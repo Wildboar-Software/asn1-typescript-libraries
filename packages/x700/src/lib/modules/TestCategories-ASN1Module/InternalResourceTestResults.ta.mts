@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION InternalResourceTestResults */
 /**
  * @summary InternalResourceTestResults
  * @description
@@ -67,9 +66,7 @@ export class InternalResourceTestResults {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InternalResourceTestResults */
 /**
  * @summary The Leading Root Component Types of InternalResourceTestResults
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_InternalResourceTestResults: $
     ),
     new $.ComponentSpec('testResult', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InternalResourceTestResults */
 /**
  * @summary The Trailing Root Component Types of InternalResourceTestResults
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_InternalResourceTestResults: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InternalResourceTestResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InternalResourceTestResults */
 /**
  * @summary The Extension Addition Component Types of InternalResourceTestResults
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_InternalResourceTestResults: $
  * @constant
  */
 export const _extension_additions_list_spec_for_InternalResourceTestResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalResourceTestResults */
 let _cached_decoder_for_InternalResourceTestResults: $.ASN1Decoder<InternalResourceTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InternalResourceTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) InternalResourceTestResults
  * @function
@@ -149,13 +138,9 @@ export function _decode_InternalResourceTestResults(el: _Element) {
     }
     return _cached_decoder_for_InternalResourceTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalResourceTestResults */
 let _cached_encoder_for_InternalResourceTestResults: $.ASN1Encoder<InternalResourceTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalResourceTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InternalResourceTestResults */
 /**
  * @summary Encodes a(n) InternalResourceTestResults into an ASN.1 Element.
  * @function
@@ -187,6 +172,5 @@ export function _encode_InternalResourceTestResults(
     return _cached_encoder_for_InternalResourceTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InternalResourceTestResults */
 
 /* eslint-enable */

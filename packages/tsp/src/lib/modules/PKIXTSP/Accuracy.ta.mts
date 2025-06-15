@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Accuracy */
 /**
  * @summary Accuracy
  * @description
@@ -63,9 +62,7 @@ export class Accuracy {
         return new Accuracy(_o.seconds, _o.millis, _o.micros);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Accuracy */
 /**
  * @summary The Leading Root Component Types of Accuracy
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_Accuracy: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Accuracy */
 /**
  * @summary The Trailing Root Component Types of Accuracy
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_Accuracy: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Accuracy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Accuracy */
 /**
  * @summary The Extension Addition Component Types of Accuracy
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_Accuracy: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Accuracy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Accuracy */
 let _cached_decoder_for_Accuracy: $.ASN1Decoder<Accuracy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Accuracy */
 /**
  * @summary Decodes an ASN.1 element into a(n) Accuracy
  * @function
@@ -176,13 +165,9 @@ export function _decode_Accuracy(el: _Element) {
     }
     return _cached_decoder_for_Accuracy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Accuracy */
 let _cached_encoder_for_Accuracy: $.ASN1Encoder<Accuracy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Accuracy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Accuracy */
 /**
  * @summary Encodes a(n) Accuracy into an ASN.1 Element.
  * @function
@@ -228,6 +213,5 @@ export function _encode_Accuracy(
     return _cached_encoder_for_Accuracy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Accuracy */
 
 /* eslint-enable */

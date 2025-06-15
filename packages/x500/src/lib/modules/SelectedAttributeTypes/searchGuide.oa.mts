@@ -10,7 +10,6 @@ import {
     _encode_Guide,
 } from "../SelectedAttributeTypes/Guide.ta.mjs";
 import { id_at_searchGuide } from "../SelectedAttributeTypes/id-at-searchGuide.va.mjs";
-/* START_OF_SYMBOL_DEFINITION searchGuide */
 /**
  * @summary searchGuide
  * @description
@@ -48,6 +47,5 @@ export const searchGuide: ATTRIBUTE<Guide> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION searchGuide */
 
 /* eslint-enable */

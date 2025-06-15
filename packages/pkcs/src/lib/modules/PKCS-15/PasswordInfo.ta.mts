@@ -11,7 +11,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PasswordInfo */
+
 /**
  * @summary PasswordInfo
  * @description
@@ -72,9 +72,8 @@ export class PasswordInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PasswordInfo */
+
 /**
  * @summary The Leading Root Component Types of PasswordInfo
  * @description
@@ -99,9 +98,8 @@ export const _root_component_type_list_1_spec_for_PasswordInfo: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PasswordInfo */
+
 /**
  * @summary The Trailing Root Component Types of PasswordInfo
  * @description
@@ -111,9 +109,8 @@ export const _root_component_type_list_1_spec_for_PasswordInfo: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PasswordInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PasswordInfo */
+
 /**
  * @summary The Extension Addition Component Types of PasswordInfo
  * @description
@@ -123,13 +120,11 @@ export const _root_component_type_list_2_spec_for_PasswordInfo: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PasswordInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PasswordInfo */
+
 let _cached_decoder_for_PasswordInfo: $.ASN1Decoder<PasswordInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PasswordInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PasswordInfo
  * @function
@@ -175,13 +170,11 @@ export function _decode_PasswordInfo(el: _Element) {
     }
     return _cached_decoder_for_PasswordInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PasswordInfo */
+
 let _cached_encoder_for_PasswordInfo: $.ASN1Encoder<PasswordInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PasswordInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PasswordInfo */
+
 /**
  * @summary Encodes a(n) PasswordInfo into an ASN.1 Element.
  * @function
@@ -220,6 +213,5 @@ export function _encode_PasswordInfo(
     return _cached_encoder_for_PasswordInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PasswordInfo */
 
 /* eslint-enable */

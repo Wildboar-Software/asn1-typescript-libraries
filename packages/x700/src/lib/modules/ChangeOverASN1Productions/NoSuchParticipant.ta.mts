@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchParticipant */
 /**
  * @summary NoSuchParticipant
  * @description
@@ -66,9 +65,7 @@ export class NoSuchParticipant {
         return new NoSuchParticipant(_o.role, _o.objectInstance);
     }
 }
-/* END_OF_SYMBOL_DEFINITION NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NoSuchParticipant */
 /**
  * @summary The Leading Root Component Types of NoSuchParticipant
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_NoSuchParticipant: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NoSuchParticipant */
 /**
  * @summary The Trailing Root Component Types of NoSuchParticipant
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_NoSuchParticipant: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NoSuchParticipant: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NoSuchParticipant */
 /**
  * @summary The Extension Addition Component Types of NoSuchParticipant
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_NoSuchParticipant: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_NoSuchParticipant: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchParticipant */
 let _cached_decoder_for_NoSuchParticipant: $.ASN1Decoder<NoSuchParticipant> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchParticipant */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchParticipant
  * @function
@@ -158,13 +147,9 @@ export function _decode_NoSuchParticipant(el: _Element) {
     }
     return _cached_decoder_for_NoSuchParticipant(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchParticipant */
 let _cached_encoder_for_NoSuchParticipant: $.ASN1Encoder<NoSuchParticipant> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchParticipant */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchParticipant */
 /**
  * @summary Encodes a(n) NoSuchParticipant into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_NoSuchParticipant(
     return _cached_encoder_for_NoSuchParticipant(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchParticipant */
 
 /* eslint-enable */

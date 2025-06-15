@@ -32,7 +32,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PartialOutcomeQualifier */
 /**
  * @summary PartialOutcomeQualifier
  * @description
@@ -152,9 +151,7 @@ export class PartialOutcomeQualifier {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PartialOutcomeQualifier */
 /**
  * @summary The Leading Root Component Types of PartialOutcomeQualifier
  * @description
@@ -225,9 +222,7 @@ export const _root_component_type_list_1_spec_for_PartialOutcomeQualifier: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PartialOutcomeQualifier */
 /**
  * @summary The Trailing Root Component Types of PartialOutcomeQualifier
  * @description
@@ -237,9 +232,7 @@ export const _root_component_type_list_1_spec_for_PartialOutcomeQualifier: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PartialOutcomeQualifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PartialOutcomeQualifier */
 /**
  * @summary The Extension Addition Component Types of PartialOutcomeQualifier
  * @description
@@ -249,13 +242,9 @@ export const _root_component_type_list_2_spec_for_PartialOutcomeQualifier: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_PartialOutcomeQualifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialOutcomeQualifier */
 let _cached_decoder_for_PartialOutcomeQualifier: $.ASN1Decoder<PartialOutcomeQualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PartialOutcomeQualifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) PartialOutcomeQualifier
  * @function
@@ -347,13 +336,9 @@ export function _decode_PartialOutcomeQualifier(el: _Element) {
     }
     return _cached_decoder_for_PartialOutcomeQualifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialOutcomeQualifier */
 let _cached_encoder_for_PartialOutcomeQualifier: $.ASN1Encoder<PartialOutcomeQualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialOutcomeQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PartialOutcomeQualifier */
 /**
  * @summary Encodes a(n) PartialOutcomeQualifier into an ASN.1 Element.
  * @function
@@ -459,6 +444,5 @@ export function _encode_PartialOutcomeQualifier(
     return _cached_encoder_for_PartialOutcomeQualifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PartialOutcomeQualifier */
 
 /* eslint-enable */

@@ -8,7 +8,6 @@ import {
 import { id_oa_pwdChangeAllowed } from "../PasswordPolicy/id-oa-pwdChangeAllowed.va.mjs";
 import { boolean_ } from "../SelectedAttributeTypes/boolean.oa.mjs";
 import { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdChangeAllowed */
 /**
  * @summary pwdChangeAllowed
  * @description
@@ -50,6 +49,5 @@ export const pwdChangeAllowed: ATTRIBUTE<BOOLEAN> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdChangeAllowed */
 
 /* eslint-enable */

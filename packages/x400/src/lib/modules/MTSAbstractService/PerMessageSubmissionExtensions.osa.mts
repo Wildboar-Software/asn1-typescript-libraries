@@ -27,7 +27,6 @@ import { recipient_reassignment_prohibited } from "../MTSAbstractService/recipie
 import { dl_expansion_prohibited } from "../MTSAbstractService/dl-expansion-prohibited.oa.mjs";
 import { conversion_with_loss_prohibited } from "../MTSAbstractService/conversion-with-loss-prohibited.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PerMessageSubmissionExtensions */
 /**
  * @summary PerMessageSubmissionExtensions
  * @description
@@ -70,6 +69,5 @@ export const PerMessageSubmissionExtensions: EXTENSION[] = [
     forwarding_request,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerMessageSubmissionExtensions */
 
 /* eslint-enable */

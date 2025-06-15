@@ -15,7 +15,6 @@ import {
     _decode_ScheduledManagedObjectsList_Item,
     _encode_ScheduledManagedObjectsList_Item,
 } from '../Schedulerev1-ASN1Module/ScheduledManagedObjectsList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScheduledManagedObjectsList */
 /**
  * @summary ScheduledManagedObjectsList
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type ScheduledManagedObjectsList = ScheduledManagedObjectsList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ScheduledManagedObjectsList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScheduledManagedObjectsList */
 let _cached_decoder_for_ScheduledManagedObjectsList: $.ASN1Decoder<ScheduledManagedObjectsList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScheduledManagedObjectsList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScheduledManagedObjectsList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScheduledManagedObjectsList
  * @function
@@ -51,13 +46,9 @@ export function _decode_ScheduledManagedObjectsList(el: _Element) {
     }
     return _cached_decoder_for_ScheduledManagedObjectsList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScheduledManagedObjectsList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScheduledManagedObjectsList */
 let _cached_encoder_for_ScheduledManagedObjectsList: $.ASN1Encoder<ScheduledManagedObjectsList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScheduledManagedObjectsList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScheduledManagedObjectsList */
 /**
  * @summary Encodes a(n) ScheduledManagedObjectsList into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_ScheduledManagedObjectsList(
     return _cached_encoder_for_ScheduledManagedObjectsList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScheduledManagedObjectsList */
 
 /* eslint-enable */

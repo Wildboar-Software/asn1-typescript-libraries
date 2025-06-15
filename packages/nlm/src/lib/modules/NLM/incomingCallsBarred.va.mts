@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { aoi } from '../NLM/aoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION incomingCallsBarred */
+
 /**
  * @summary incomingCallsBarred
  * @description
@@ -25,6 +25,5 @@ import { aoi } from '../NLM/aoi.va.mjs';
  * @constant
  */
 export const incomingCallsBarred: OBJECT_IDENTIFIER = new _OID([148], aoi);
-/* END_OF_SYMBOL_DEFINITION incomingCallsBarred */
 
 /* eslint-enable */

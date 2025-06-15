@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_PhysicalForwardingAddressRequest */
 /**
  * @summary PhysicalForwardingAddressRequest
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_PhysicalForwardingAddressRequest {
     physical_forwarding_address_not_requested = 0,
     physical_forwarding_address_requested = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_PhysicalForwardingAddressRequest */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest */
 /**
  * @summary PhysicalForwardingAddressRequest
  * @description
@@ -44,9 +41,7 @@ export enum _enum_for_PhysicalForwardingAddressRequest {
  * ```@enum {number}
  */
 export type PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddressRequest;
-/* END_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest */
 /**
  * @summary PhysicalForwardingAddressRequest
  * @description
@@ -60,9 +55,7 @@ export type PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddre
  * ```@enum {number}
  */
 export const PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddressRequest;
-/* END_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested */
 /**
  * @summary PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested
  * @constant
@@ -70,9 +63,7 @@ export const PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddr
  */
 export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested: PhysicalForwardingAddressRequest =
     PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested */
 
-/* START_OF_SYMBOL_DEFINITION physical_forwarding_address_not_requested */
 /**
  * @summary physical_forwarding_address_not_requested
  * @constant
@@ -80,9 +71,7 @@ export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_re
  */
 export const physical_forwarding_address_not_requested: PhysicalForwardingAddressRequest =
     PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION physical_forwarding_address_not_requested */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest_physical_forwarding_address_requested */
 /**
  * @summary PhysicalForwardingAddressRequest_physical_forwarding_address_requested
  * @constant
@@ -90,9 +79,7 @@ export const physical_forwarding_address_not_requested: PhysicalForwardingAddres
  */
 export const PhysicalForwardingAddressRequest_physical_forwarding_address_requested: PhysicalForwardingAddressRequest =
     PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PhysicalForwardingAddressRequest_physical_forwarding_address_requested */
 
-/* START_OF_SYMBOL_DEFINITION physical_forwarding_address_requested */
 /**
  * @summary physical_forwarding_address_requested
  * @constant
@@ -100,13 +87,9 @@ export const PhysicalForwardingAddressRequest_physical_forwarding_address_reques
  */
 export const physical_forwarding_address_requested: PhysicalForwardingAddressRequest =
     PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION physical_forwarding_address_requested */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalForwardingAddressRequest */
 let _cached_decoder_for_PhysicalForwardingAddressRequest: $.ASN1Decoder<PhysicalForwardingAddressRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalForwardingAddressRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalForwardingAddressRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalForwardingAddressRequest
  * @function
@@ -120,13 +103,9 @@ export function _decode_PhysicalForwardingAddressRequest(el: _Element) {
     }
     return _cached_decoder_for_PhysicalForwardingAddressRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalForwardingAddressRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalForwardingAddressRequest */
 let _cached_encoder_for_PhysicalForwardingAddressRequest: $.ASN1Encoder<PhysicalForwardingAddressRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalForwardingAddressRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalForwardingAddressRequest */
 /**
  * @summary Encodes a(n) PhysicalForwardingAddressRequest into an ASN.1 Element.
  * @function
@@ -148,6 +127,5 @@ export function _encode_PhysicalForwardingAddressRequest(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalForwardingAddressRequest */
 
 /* eslint-enable */

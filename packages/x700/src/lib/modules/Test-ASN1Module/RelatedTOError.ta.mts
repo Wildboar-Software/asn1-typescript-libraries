@@ -15,7 +15,6 @@ import {
     _decode_RelatedTOError_Item,
     _encode_RelatedTOError_Item,
 } from '../Test-ASN1Module/RelatedTOError-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedTOError */
 /**
  * @summary RelatedTOError
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type RelatedTOError = RelatedTOError_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RelatedTOError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedTOError */
 let _cached_decoder_for_RelatedTOError: $.ASN1Decoder<RelatedTOError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedTOError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedTOError */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedTOError
  * @function
@@ -50,13 +45,9 @@ export function _decode_RelatedTOError(el: _Element) {
     }
     return _cached_decoder_for_RelatedTOError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedTOError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedTOError */
 let _cached_encoder_for_RelatedTOError: $.ASN1Encoder<RelatedTOError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedTOError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedTOError */
 /**
  * @summary Encodes a(n) RelatedTOError into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_RelatedTOError(
     return _cached_encoder_for_RelatedTOError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedTOError */
 
 /* eslint-enable */

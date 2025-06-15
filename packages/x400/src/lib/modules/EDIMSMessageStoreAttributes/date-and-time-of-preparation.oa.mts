@@ -24,7 +24,6 @@ import { id_hat_date_and_time_of_preparation } from '../EDIMSObjectIdentifiers/i
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION date_and_time_of_preparation */
 /**
  * @summary date_and_time_of_preparation
  * @description
@@ -61,6 +60,5 @@ export const date_and_time_of_preparation: X413ATTRIBUTE<DateAndTimeOfPreparatio
     '&id': id_hat_date_and_time_of_preparation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION date_and_time_of_preparation */
 
 /* eslint-enable */

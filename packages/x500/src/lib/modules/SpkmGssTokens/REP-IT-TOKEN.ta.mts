@@ -17,7 +17,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION REP_IT_TOKEN */
 /**
  * @summary REP_IT_TOKEN
  * @description
@@ -110,9 +109,7 @@ export class REP_IT_TOKEN {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_REP_IT_TOKEN */
 /**
  * @summary The Leading Root Component Types of REP_IT_TOKEN
  * @description
@@ -166,9 +163,7 @@ export const _root_component_type_list_1_spec_for_REP_IT_TOKEN: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_REP_IT_TOKEN */
 /**
  * @summary The Trailing Root Component Types of REP_IT_TOKEN
  * @description
@@ -178,9 +173,7 @@ export const _root_component_type_list_1_spec_for_REP_IT_TOKEN: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_REP_IT_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_REP_IT_TOKEN */
 /**
  * @summary The Extension Addition Component Types of REP_IT_TOKEN
  * @description
@@ -190,13 +183,9 @@ export const _root_component_type_list_2_spec_for_REP_IT_TOKEN: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_REP_IT_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_REP_IT_TOKEN */
 let _cached_decoder_for_REP_IT_TOKEN: $.ASN1Decoder<REP_IT_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_REP_IT_TOKEN */
 /**
  * @summary Decodes an ASN.1 element into a(n) REP_IT_TOKEN
  * @function
@@ -263,13 +252,9 @@ export function _decode_REP_IT_TOKEN(el: _Element) {
     }
     return _cached_decoder_for_REP_IT_TOKEN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_REP_IT_TOKEN */
 let _cached_encoder_for_REP_IT_TOKEN: $.ASN1Encoder<REP_IT_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_REP_IT_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_REP_IT_TOKEN */
 /**
  * @summary Encodes a(n) REP_IT_TOKEN into an ASN.1 Element.
  * @function
@@ -316,6 +301,5 @@ export function _encode_REP_IT_TOKEN(
     return _cached_encoder_for_REP_IT_TOKEN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_REP_IT_TOKEN */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
   _encode_ContentInfo,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SCVPResponses */
 /**
  * @summary SCVPResponses
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type SCVPResponses = ContentInfo[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SCVPResponses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SCVPResponses */
 let _cached_decoder_for_SCVPResponses: $.ASN1Decoder<SCVPResponses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SCVPResponses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SCVPResponses */
 /**
  * @summary Decodes an ASN.1 element into a(n) SCVPResponses
  * @function
@@ -49,13 +44,9 @@ export function _decode_SCVPResponses(el: _Element) {
   }
   return _cached_decoder_for_SCVPResponses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SCVPResponses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SCVPResponses */
 let _cached_encoder_for_SCVPResponses: $.ASN1Encoder<SCVPResponses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SCVPResponses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SCVPResponses */
 /**
  * @summary Encodes a(n) SCVPResponses into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_SCVPResponses(
   return _cached_encoder_for_SCVPResponses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SCVPResponses */
 
 /* eslint-enable */

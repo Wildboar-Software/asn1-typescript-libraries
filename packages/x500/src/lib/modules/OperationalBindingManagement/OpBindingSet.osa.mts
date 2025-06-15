@@ -3,7 +3,6 @@ import { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shad
 import { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa.mjs";
 import { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa.mjs";
 import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION OpBindingSet */
 /**
  * @summary OpBindingSet
  * @description
@@ -26,6 +25,5 @@ export const OpBindingSet: OPERATIONAL_BINDING[] = [
     hierarchicalOperationalBinding,
     nonSpecificHierarchicalOperationalBinding,
 ];
-/* END_OF_SYMBOL_DEFINITION OpBindingSet */
 
 /* eslint-enable */

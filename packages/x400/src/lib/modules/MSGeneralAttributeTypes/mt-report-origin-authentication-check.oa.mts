@@ -22,7 +22,6 @@ import { id_att_report_origin_authentication_check } from '../MSObjectIdentifier
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_report_origin_authentication_check */
 /**
  * @summary mt_report_origin_authentication_check
  * @description
@@ -53,6 +52,5 @@ export const mt_report_origin_authentication_check: X413ATTRIBUTE<ReportOriginAu
     '&id': id_att_report_origin_authentication_check /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_report_origin_authentication_check */
 
 /* eslint-enable */

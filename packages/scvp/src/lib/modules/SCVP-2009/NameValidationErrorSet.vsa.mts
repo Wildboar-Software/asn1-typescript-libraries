@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NameValidationErrorSet */
 /**
  * @summary NameValidationErrorSet
  * @description
@@ -29,26 +28,18 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * @type {OBJECT_IDENTIFIER}
  */
 export type NameValidationErrorSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION NameValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameValidationErrorSet */
 let _cached_decoder_for_NameValidationErrorSet: $.ASN1Decoder<NameValidationErrorSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameValidationErrorSet */
 export function _decode_NameValidationErrorSet(el: _Element) {
   if (!_cached_decoder_for_NameValidationErrorSet) {
     _cached_decoder_for_NameValidationErrorSet = $._decodeObjectIdentifier;
   }
   return _cached_decoder_for_NameValidationErrorSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameValidationErrorSet */
 let _cached_encoder_for_NameValidationErrorSet: $.ASN1Encoder<NameValidationErrorSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameValidationErrorSet */
 export function _encode_NameValidationErrorSet(
   value: NameValidationErrorSet,
   elGetter: $.ASN1Encoder<NameValidationErrorSet>
@@ -58,6 +49,5 @@ export function _encode_NameValidationErrorSet(
   }
   return _cached_encoder_for_NameValidationErrorSet(value, elGetter);
 }
-/* END_OF_SYMBOL_DEFINITION _encode_NameValidationErrorSet */
 
 /* eslint-enable */

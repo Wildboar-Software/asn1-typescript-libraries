@@ -8,7 +8,7 @@ import { PBKDF2_PRFs_Union4_Intersection0_Element } from "../PKCS5v2-1/PBKDF2-PR
 import { PBKDF2_PRFs_Union5_Intersection0_Element } from "../PKCS5v2-1/PBKDF2-PRFs-Union5-Intersection0-Element.oa.mjs";
 import { PBKDF2_PRFs_Union6_Intersection0_Element } from "../PKCS5v2-1/PBKDF2-PRFs-Union6-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs */
+
 /**
  * @summary PBKDF2_PRFs
  * @description
@@ -41,6 +41,5 @@ export const PBKDF2_PRFs: ALGORITHM_IDENTIFIER<any>[] = [
     PBKDF2_PRFs_Union5_Intersection0_Element,
     PBKDF2_PRFs_Union6_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION PBKDF2_PRFs */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from '../MTSAbstractService/UniversalPDSParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryPersonalName */
 /**
  * @summary UniversalPhysicalDeliveryPersonalName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UniversalPhysicalDeliveryPersonalName = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryPersonalName */
 let _cached_decoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Decoder<UniversalPhysicalDeliveryPersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryPersonalName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryPersonalName
  * @function
@@ -46,13 +41,9 @@ export function _decode_UniversalPhysicalDeliveryPersonalName(el: _Element) {
     }
     return _cached_decoder_for_UniversalPhysicalDeliveryPersonalName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryPersonalName */
 let _cached_encoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Encoder<UniversalPhysicalDeliveryPersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryPersonalName */
 /**
  * @summary Encodes a(n) UniversalPhysicalDeliveryPersonalName into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_UniversalPhysicalDeliveryPersonalName(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryPersonalName */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TargetRoutingCollective */
 /**
  * @summary TargetRoutingCollective
  * @description
@@ -77,9 +76,7 @@ export class TargetRoutingCollective {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TargetRoutingCollective */
 /**
  * @summary The Leading Root Component Types of TargetRoutingCollective
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_TargetRoutingCollective: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TargetRoutingCollective */
 /**
  * @summary The Trailing Root Component Types of TargetRoutingCollective
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_TargetRoutingCollective: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TargetRoutingCollective: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TargetRoutingCollective */
 /**
  * @summary The Extension Addition Component Types of TargetRoutingCollective
  * @description
@@ -128,13 +121,9 @@ export const _root_component_type_list_2_spec_for_TargetRoutingCollective: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_TargetRoutingCollective: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TargetRoutingCollective */
 let _cached_decoder_for_TargetRoutingCollective: $.ASN1Decoder<TargetRoutingCollective> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TargetRoutingCollective */
 /**
  * @summary Decodes an ASN.1 element into a(n) TargetRoutingCollective
  * @function
@@ -180,13 +169,9 @@ export function _decode_TargetRoutingCollective(el: _Element) {
     }
     return _cached_decoder_for_TargetRoutingCollective(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TargetRoutingCollective */
 let _cached_encoder_for_TargetRoutingCollective: $.ASN1Encoder<TargetRoutingCollective> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TargetRoutingCollective */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TargetRoutingCollective */
 /**
  * @summary Encodes a(n) TargetRoutingCollective into an ASN.1 Element.
  * @function
@@ -228,6 +213,5 @@ export function _encode_TargetRoutingCollective(
     return _cached_encoder_for_TargetRoutingCollective(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TargetRoutingCollective */
 
 /* eslint-enable */

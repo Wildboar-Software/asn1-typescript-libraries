@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION prime_field */
 /**
  * @summary prime_field
  * @description
@@ -28,6 +27,5 @@ export
 const prime_field: OBJECT_IDENTIFIER = new _OID([
     1,
 ], id_fieldType);
-/* END_OF_SYMBOL_DEFINITION prime_field */
 
 /* eslint-enable */

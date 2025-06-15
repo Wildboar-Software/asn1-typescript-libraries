@@ -17,7 +17,7 @@ import {
   _encode_Value,
 } from '../ASN1SOAP/Value.ta.mjs';
 import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Code */
+
 /**
  * @summary Code
  * @description
@@ -72,9 +72,8 @@ export class Code {
 
   public static _enum_for_value = _enum_for_Value;
 }
-/* END_OF_SYMBOL_DEFINITION Code */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Code */
+
 /**
  * @summary The Leading Root Component Types of Code
  * @description
@@ -99,9 +98,8 @@ export const _root_component_type_list_1_spec_for_Code: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Code */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Code */
+
 /**
  * @summary The Trailing Root Component Types of Code
  * @description
@@ -111,9 +109,8 @@ export const _root_component_type_list_1_spec_for_Code: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Code: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Code */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Code */
+
 /**
  * @summary The Extension Addition Component Types of Code
  * @description
@@ -123,13 +120,11 @@ export const _root_component_type_list_2_spec_for_Code: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Code: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Code */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Code */
+
 let _cached_decoder_for_Code: $.ASN1Decoder<Code> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Code */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Code */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Code
  * @function
@@ -158,13 +153,11 @@ export function _decode_Code(el: _Element) {
   }
   return _cached_decoder_for_Code(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Code */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Code */
+
 let _cached_encoder_for_Code: $.ASN1Encoder<Code> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Code */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Code */
+
 /**
  * @summary Encodes a(n) Code into an ASN.1 Element.
  * @function
@@ -193,6 +186,5 @@ export function _encode_Code(value: Code, elGetter: $.ASN1Encoder<Code>) {
   return _cached_encoder_for_Code(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Code */
 
 /* eslint-enable */

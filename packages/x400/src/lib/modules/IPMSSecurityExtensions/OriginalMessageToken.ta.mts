@@ -15,7 +15,6 @@ import {
     _decode_MessageToken,
     _encode_MessageToken,
 } from '../MTSAbstractService/MessageToken.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginalMessageToken */
 /**
  * @summary OriginalMessageToken
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginalMessageToken = MessageToken; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginalMessageToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalMessageToken */
 let _cached_decoder_for_OriginalMessageToken: $.ASN1Decoder<OriginalMessageToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalMessageToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginalMessageToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalMessageToken
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginalMessageToken(el: _Element) {
     }
     return _cached_decoder_for_OriginalMessageToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginalMessageToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalMessageToken */
 let _cached_encoder_for_OriginalMessageToken: $.ASN1Encoder<OriginalMessageToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalMessageToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginalMessageToken */
 /**
  * @summary Encodes a(n) OriginalMessageToken into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginalMessageToken(
     return _cached_encoder_for_OriginalMessageToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginalMessageToken */
 
 /* eslint-enable */

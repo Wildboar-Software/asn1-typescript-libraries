@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION change_auto_discard_ArgumentType */
 /**
  * @summary change_auto_discard_ArgumentType
  * @description
@@ -64,9 +63,7 @@ export class change_auto_discard_ArgumentType {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_change_auto_discard_ArgumentType */
 /**
  * @summary The Leading Root Component Types of change_auto_discard_ArgumentType
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_change_auto_discard_ArgumentTy
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_change_auto_discard_ArgumentType */
 /**
  * @summary The Trailing Root Component Types of change_auto_discard_ArgumentType
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_change_auto_discard_ArgumentTy
  * @constant
  */
 export const _root_component_type_list_2_spec_for_change_auto_discard_ArgumentType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_change_auto_discard_ArgumentType */
 /**
  * @summary The Extension Addition Component Types of change_auto_discard_ArgumentType
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_change_auto_discard_ArgumentTy
  * @constant
  */
 export const _extension_additions_list_spec_for_change_auto_discard_ArgumentType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_change_auto_discard_ArgumentType */
 let _cached_decoder_for_change_auto_discard_ArgumentType: $.ASN1Decoder<change_auto_discard_ArgumentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_change_auto_discard_ArgumentType */
 /**
  * @summary Decodes an ASN.1 element into a(n) change_auto_discard_ArgumentType
  * @function
@@ -167,13 +156,9 @@ export function _decode_change_auto_discard_ArgumentType(el: _Element) {
     }
     return _cached_decoder_for_change_auto_discard_ArgumentType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_change_auto_discard_ArgumentType */
 let _cached_encoder_for_change_auto_discard_ArgumentType: $.ASN1Encoder<change_auto_discard_ArgumentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_change_auto_discard_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_change_auto_discard_ArgumentType */
 /**
  * @summary Encodes a(n) change_auto_discard_ArgumentType into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_change_auto_discard_ArgumentType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_change_auto_discard_ArgumentType */
 
 /* eslint-enable */

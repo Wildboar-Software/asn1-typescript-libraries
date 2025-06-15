@@ -6,7 +6,6 @@ import {
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgumentData_updateStrategy */
 /**
  * @summary CoordinateShadowUpdateArgumentData_updateStrategy
  * @description
@@ -23,13 +22,9 @@ export type CoordinateShadowUpdateArgumentData_updateStrategy =
       } /* CHOICE_ALT_ROOT */
     | { other: EXTERNAL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgumentData_updateStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CoordinateShadowUpdateArgumentData_updateStrategy */
 let _cached_decoder_for_CoordinateShadowUpdateArgumentData_updateStrategy: $.ASN1Decoder<CoordinateShadowUpdateArgumentData_updateStrategy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CoordinateShadowUpdateArgumentData_updateStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CoordinateShadowUpdateArgumentData_updateStrategy */
 /**
  * @summary Decodes an ASN.1 element into a(n) CoordinateShadowUpdateArgumentData_updateStrategy
  * @function
@@ -56,13 +51,9 @@ export function _decode_CoordinateShadowUpdateArgumentData_updateStrategy(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CoordinateShadowUpdateArgumentData_updateStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CoordinateShadowUpdateArgumentData_updateStrategy */
 let _cached_encoder_for_CoordinateShadowUpdateArgumentData_updateStrategy: $.ASN1Encoder<CoordinateShadowUpdateArgumentData_updateStrategy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CoordinateShadowUpdateArgumentData_updateStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CoordinateShadowUpdateArgumentData_updateStrategy */
 /**
  * @summary Encodes a(n) CoordinateShadowUpdateArgumentData_updateStrategy into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_CoordinateShadowUpdateArgumentData_updateStrategy(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CoordinateShadowUpdateArgumentData_updateStrategy */
 
 /* eslint-enable */

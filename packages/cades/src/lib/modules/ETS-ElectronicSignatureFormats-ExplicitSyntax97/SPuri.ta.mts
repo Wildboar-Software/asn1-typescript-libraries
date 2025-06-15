@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION SPuri */
 /**
  * @summary SPuri
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type SPuri = IA5String; // IA5String
-/* END_OF_SYMBOL_DEFINITION SPuri */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPuri */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPuri */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPuri */
 export const _decode_SPuri = $._decodeIA5String;
-/* END_OF_SYMBOL_DEFINITION _decode_SPuri */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPuri */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPuri */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPuri */
 export const _encode_SPuri = $._encodeIA5String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPuri */
 
 /* eslint-enable */

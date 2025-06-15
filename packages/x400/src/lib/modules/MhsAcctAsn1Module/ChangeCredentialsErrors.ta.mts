@@ -15,7 +15,6 @@ import {
     _decode_AdministrationError,
     _encode_AdministrationError,
 } from '../MhsAcctAsn1Module/AdministrationError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ChangeCredentialsErrors */
 /**
  * @summary ChangeCredentialsErrors
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type ChangeCredentialsErrors = AdministrationError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ChangeCredentialsErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeCredentialsErrors */
 let _cached_decoder_for_ChangeCredentialsErrors: $.ASN1Decoder<ChangeCredentialsErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeCredentialsErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChangeCredentialsErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangeCredentialsErrors
  * @function
@@ -49,13 +44,9 @@ export function _decode_ChangeCredentialsErrors(el: _Element) {
     }
     return _cached_decoder_for_ChangeCredentialsErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChangeCredentialsErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeCredentialsErrors */
 let _cached_encoder_for_ChangeCredentialsErrors: $.ASN1Encoder<ChangeCredentialsErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeCredentialsErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChangeCredentialsErrors */
 /**
  * @summary Encodes a(n) ChangeCredentialsErrors into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_ChangeCredentialsErrors(
     return _cached_encoder_for_ChangeCredentialsErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChangeCredentialsErrors */
 
 /* eslint-enable */

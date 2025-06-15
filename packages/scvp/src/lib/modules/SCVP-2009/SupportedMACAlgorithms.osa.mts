@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { MAC_ALGORITHM } from '../AlgorithmInformation-2009/MAC-ALGORITHM.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupportedMACAlgorithms */
 /**
  * @summary SupportedMACAlgorithms
  * @description
@@ -27,6 +26,5 @@ import { MAC_ALGORITHM } from '../AlgorithmInformation-2009/MAC-ALGORITHM.oca.mj
  *
  */
 export const SupportedMACAlgorithms: MAC_ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedMACAlgorithms */
 
 /* eslint-enable */

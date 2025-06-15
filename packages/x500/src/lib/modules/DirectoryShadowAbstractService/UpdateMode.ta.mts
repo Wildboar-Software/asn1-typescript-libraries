@@ -11,7 +11,6 @@ import {
     _decode_SupplierUpdateMode,
     _encode_SupplierUpdateMode,
 } from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UpdateMode */
 /**
  * @summary UpdateMode
  * @description
@@ -29,13 +28,9 @@ export type UpdateMode =
     | { supplierInitiated: SupplierUpdateMode } /* CHOICE_ALT_ROOT */
     | { consumerInitiated: ConsumerUpdateMode } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION UpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateMode */
 let _cached_decoder_for_UpdateMode: $.ASN1Decoder<UpdateMode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UpdateMode */
 /**
  * @summary Decodes an ASN.1 element into a(n) UpdateMode
  * @function
@@ -63,13 +58,9 @@ export function _decode_UpdateMode(el: _Element) {
     }
     return _cached_decoder_for_UpdateMode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateMode */
 let _cached_encoder_for_UpdateMode: $.ASN1Encoder<UpdateMode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UpdateMode */
 /**
  * @summary Encodes a(n) UpdateMode into an ASN.1 Element.
  * @function
@@ -103,6 +94,5 @@ export function _encode_UpdateMode(
     return _cached_encoder_for_UpdateMode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UpdateMode */
 
 /* eslint-enable */

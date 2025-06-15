@@ -20,7 +20,7 @@ import {
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeValueAssertion */
+
 /**
  * @summary AttributeValueAssertion
  * @description
@@ -80,9 +80,8 @@ export class AttributeValueAssertion {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeValueAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeValueAssertion */
+
 /**
  * @summary The Leading Root Component Types of AttributeValueAssertion
  * @description
@@ -107,9 +106,8 @@ export const _root_component_type_list_1_spec_for_AttributeValueAssertion: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeValueAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeValueAssertion */
+
 /**
  * @summary The Trailing Root Component Types of AttributeValueAssertion
  * @description
@@ -119,9 +117,8 @@ export const _root_component_type_list_1_spec_for_AttributeValueAssertion: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeValueAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeValueAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueAssertion */
+
 /**
  * @summary The Extension Addition Component Types of AttributeValueAssertion
  * @description
@@ -131,9 +128,8 @@ export const _root_component_type_list_2_spec_for_AttributeValueAssertion: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeValueAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeValueAssertion */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValueAssertion
  * @function
@@ -161,9 +157,8 @@ export function _decode_AttributeValueAssertion(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeValueAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeValueAssertion */
+
 /**
  * @summary Encodes a(n) AttributeValueAssertion into an ASN.1 Element.
  * @function
@@ -183,6 +178,5 @@ export function _encode_AttributeValueAssertion(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeValueAssertion */
 
 /* eslint-enable */

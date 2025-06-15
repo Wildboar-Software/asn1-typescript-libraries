@@ -14,7 +14,6 @@ import { originate_edim } from '../EDIMSAbstractService/originate-edim.oa.mjs';
 import { originate_edin } from '../EDIMSAbstractService/originate-edin.oa.mjs';
 import { id_pt_origination } from '../EDIMSObjectIdentifiers/id-pt-origination.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION origination */
 /**
  * @summary origination
  * @description
@@ -43,6 +42,5 @@ export const origination: PORT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_origination /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION origination */
 
 /* eslint-enable */

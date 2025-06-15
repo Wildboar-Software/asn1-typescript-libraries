@@ -15,7 +15,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SuperiorToSubordinate */
 /**
  * @summary SuperiorToSubordinate
  * @description
@@ -85,9 +84,7 @@ export class SuperiorToSubordinate {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SuperiorToSubordinate */
 /**
  * @summary The Leading Root Component Types of SuperiorToSubordinate
  * @description
@@ -119,9 +116,7 @@ export const _root_component_type_list_1_spec_for_SuperiorToSubordinate: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SuperiorToSubordinate */
 /**
  * @summary The Trailing Root Component Types of SuperiorToSubordinate
  * @description
@@ -131,9 +126,7 @@ export const _root_component_type_list_1_spec_for_SuperiorToSubordinate: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SuperiorToSubordinate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SuperiorToSubordinate */
 /**
  * @summary The Extension Addition Component Types of SuperiorToSubordinate
  * @description
@@ -143,13 +136,9 @@ export const _root_component_type_list_2_spec_for_SuperiorToSubordinate: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_SuperiorToSubordinate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SuperiorToSubordinate */
 let _cached_decoder_for_SuperiorToSubordinate: $.ASN1Decoder<SuperiorToSubordinate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SuperiorToSubordinate */
 /**
  * @summary Decodes an ASN.1 element into a(n) SuperiorToSubordinate
  * @function
@@ -206,13 +195,9 @@ export function _decode_SuperiorToSubordinate(el: _Element) {
     }
     return _cached_decoder_for_SuperiorToSubordinate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SuperiorToSubordinate */
 let _cached_encoder_for_SuperiorToSubordinate: $.ASN1Encoder<SuperiorToSubordinate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SuperiorToSubordinate */
 /**
  * @summary Encodes a(n) SuperiorToSubordinate into an ASN.1 Element.
  * @function
@@ -275,6 +260,5 @@ export function _encode_SuperiorToSubordinate(
     return _cached_encoder_for_SuperiorToSubordinate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SuperiorToSubordinate */
 
 /* eslint-enable */

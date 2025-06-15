@@ -15,7 +15,7 @@ import {
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_HANDLE */
+
 /**
  * @summary BioAPI_HANDLE
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BioAPI_HANDLE = UnsignedInt; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BioAPI_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_HANDLE */
+
 let _cached_decoder_for_BioAPI_HANDLE: $.ASN1Decoder<BioAPI_HANDLE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_HANDLE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_HANDLE
  * @function
@@ -46,13 +44,11 @@ export function _decode_BioAPI_HANDLE(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_HANDLE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_HANDLE */
+
 let _cached_encoder_for_BioAPI_HANDLE: $.ASN1Encoder<BioAPI_HANDLE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_HANDLE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_HANDLE */
+
 /**
  * @summary Encodes a(n) BioAPI_HANDLE into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_BioAPI_HANDLE(
   return _cached_encoder_for_BioAPI_HANDLE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_HANDLE */
 
 /* eslint-enable */

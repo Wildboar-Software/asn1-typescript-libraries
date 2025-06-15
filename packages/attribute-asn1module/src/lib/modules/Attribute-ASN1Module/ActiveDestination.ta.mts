@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Destination, _decode_Destination, _encode_Destination } from "../Attribute-ASN1Module/Destination.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ActiveDestination */
 /**
  * @summary ActiveDestination
  * @description
@@ -28,13 +27,9 @@ import { Destination, _decode_Destination, _encode_Destination } from "../Attrib
  */
 export
 type ActiveDestination = Destination; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ActiveDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActiveDestination */
 let _cached_decoder_for_ActiveDestination: $.ASN1Decoder<ActiveDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActiveDestination */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActiveDestination */
 /**
  * @summary Decodes an ASN.1 element into a(n) ActiveDestination
  * @function
@@ -46,13 +41,9 @@ function _decode_ActiveDestination (el: _Element) {
     if (!_cached_decoder_for_ActiveDestination) { _cached_decoder_for_ActiveDestination = _decode_Destination; }
     return _cached_decoder_for_ActiveDestination(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActiveDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActiveDestination */
 let _cached_encoder_for_ActiveDestination: $.ASN1Encoder<ActiveDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActiveDestination */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActiveDestination */
 /**
  * @summary Encodes a(n) ActiveDestination into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ function _encode_ActiveDestination (value: ActiveDestination, elGetter: $.ASN1En
     return _cached_encoder_for_ActiveDestination(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActiveDestination */
 
 /* eslint-enable */

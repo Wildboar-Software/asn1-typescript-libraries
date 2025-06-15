@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION mkmAction */
 /**
  * @summary mkmAction
  * @description
@@ -31,6 +30,5 @@ export const mkmAction: OBJECT_IDENTIFIER = new _OID([
     /* part16 */ 16,
     /* action */ 9,
 ]);
-/* END_OF_SYMBOL_DEFINITION mkmAction */
 
 /* eslint-enable */

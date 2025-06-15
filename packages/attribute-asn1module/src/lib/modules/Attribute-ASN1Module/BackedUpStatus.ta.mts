@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION BackedUpStatus */
 /**
  * @summary BackedUpStatus
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type BackedUpStatus = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION BackedUpStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackedUpStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackedUpStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackedUpStatus */
 export const _decode_BackedUpStatus = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_BackedUpStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackedUpStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackedUpStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackedUpStatus */
 export const _encode_BackedUpStatus = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackedUpStatus */
 
 /* eslint-enable */

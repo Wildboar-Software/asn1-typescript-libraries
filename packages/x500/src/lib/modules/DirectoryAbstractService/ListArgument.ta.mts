@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ListArgument */
 /**
  * @summary ListArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ListArgument = OPTIONALLY_PROTECTED<ListArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ListArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListArgument */
 let _cached_decoder_for_ListArgument: $.ASN1Decoder<ListArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_ListArgument(el: _Element) {
     }
     return _cached_decoder_for_ListArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListArgument */
 let _cached_encoder_for_ListArgument: $.ASN1Encoder<ListArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListArgument */
 /**
  * @summary Encodes a(n) ListArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ListArgument(
     return _cached_encoder_for_ListArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListArgument */
 
 /* eslint-enable */

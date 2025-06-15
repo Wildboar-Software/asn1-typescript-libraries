@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_measures } from '../Telebiometrics/id-measures.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_units */
+
 /**
  * @summary id_units
  * @description
@@ -28,6 +28,5 @@ export const id_units: OBJECT_IDENTIFIER = new _OID(
     [/* units */ 2],
     id_measures
 );
-/* END_OF_SYMBOL_DEFINITION id_units */
 
 /* eslint-enable */

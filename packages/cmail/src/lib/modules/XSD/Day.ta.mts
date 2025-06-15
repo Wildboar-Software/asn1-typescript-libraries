@@ -15,7 +15,7 @@ import {
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Day */
+
 /**
  * @summary Day
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type Day = DateTimeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Day */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Day */
+
 let _cached_decoder_for_Day: $.ASN1Decoder<Day> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Day */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Day */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Day
  * @function
@@ -47,13 +45,11 @@ export function _decode_Day(el: _Element) {
   }
   return _cached_decoder_for_Day(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Day */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Day */
+
 let _cached_encoder_for_Day: $.ASN1Encoder<Day> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Day */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Day */
+
 /**
  * @summary Encodes a(n) Day into an ASN.1 Element.
  * @function
@@ -68,6 +64,5 @@ export function _encode_Day(value: Day, elGetter: $.ASN1Encoder<Day>) {
   return _cached_encoder_for_Day(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Day */
 
 /* eslint-enable */

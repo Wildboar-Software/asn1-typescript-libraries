@@ -15,7 +15,6 @@ import {
     _decode_EDIMIdentifier,
     _encode_EDIMIdentifier,
 } from '../EDIMSInformationObjects/EDIMIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageReference */
 /**
  * @summary MessageReference
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageReference = EDIMIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageReference */
 let _cached_decoder_for_MessageReference: $.ASN1Decoder<MessageReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageReference
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageReference(el: _Element) {
     }
     return _cached_decoder_for_MessageReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageReference */
 let _cached_encoder_for_MessageReference: $.ASN1Encoder<MessageReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageReference */
 /**
  * @summary Encodes a(n) MessageReference into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageReference(
     return _cached_encoder_for_MessageReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageReference */
 
 /* eslint-enable */

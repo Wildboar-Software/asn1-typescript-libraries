@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_mts_user_types */
 /**
  * @summary ub_mts_user_types
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_mts_user_types: INTEGER = 256;
-/* END_OF_SYMBOL_DEFINITION ub_mts_user_types */
 
 /* eslint-enable */

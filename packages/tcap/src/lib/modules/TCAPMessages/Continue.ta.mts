@@ -31,7 +31,6 @@ import {
   _decode_ComponentPortion,
   _encode_ComponentPortion,
 } from '../TCAPMessages/ComponentPortion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Continue */
 /**
  * @summary Continue
  * @description
@@ -95,9 +94,7 @@ export class Continue {
     return new Continue(_o.otid, _o.dtid, _o.dialoguePortion, _o.components);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Continue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Continue */
 /**
  * @summary The Leading Root Component Types of Continue
  * @description
@@ -136,9 +133,7 @@ export const _root_component_type_list_1_spec_for_Continue: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Continue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Continue */
 /**
  * @summary The Trailing Root Component Types of Continue
  * @description
@@ -148,9 +143,7 @@ export const _root_component_type_list_1_spec_for_Continue: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Continue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Continue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Continue */
 /**
  * @summary The Extension Addition Component Types of Continue
  * @description
@@ -160,13 +153,9 @@ export const _root_component_type_list_2_spec_for_Continue: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Continue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Continue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Continue */
 let _cached_decoder_for_Continue: $.ASN1Decoder<Continue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Continue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Continue */
 /**
  * @summary Decodes an ASN.1 element into a(n) Continue
  * @function
@@ -216,13 +205,9 @@ export function _decode_Continue(el: _Element) {
   }
   return _cached_decoder_for_Continue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Continue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Continue */
 let _cached_encoder_for_Continue: $.ASN1Encoder<Continue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Continue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Continue */
 /**
  * @summary Encodes a(n) Continue into an ASN.1 Element.
  * @function
@@ -257,6 +242,5 @@ export function _encode_Continue(
   return _cached_encoder_for_Continue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Continue */
 
 /* eslint-enable */

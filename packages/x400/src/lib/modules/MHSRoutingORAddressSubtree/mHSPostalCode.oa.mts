@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa.mjs';
 import { id_oc_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-postal-code.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSPostalCode */
 /**
  * @summary mHSPostalCode
  * @description
@@ -48,6 +47,5 @@ export const mHSPostalCode: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSPostalCodeAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_postal_code /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSPostalCode */
 
 /* eslint-enable */

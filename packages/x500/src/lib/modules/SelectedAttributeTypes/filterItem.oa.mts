@@ -9,7 +9,6 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_filterItem } from "../SelectedAttributeTypes/id-not-filterItem.va.mjs";
-/* START_OF_SYMBOL_DEFINITION filterItem */
 /**
  * @summary filterItem
  * @description
@@ -43,6 +42,5 @@ export const filterItem: ATTRIBUTE<FilterItem> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION filterItem */
 
 /* eslint-enable */

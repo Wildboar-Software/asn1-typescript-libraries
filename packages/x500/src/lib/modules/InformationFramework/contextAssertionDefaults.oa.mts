@@ -10,7 +10,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oa_contextAssertionDefault } from "../InformationFramework/id-oa-contextAssertionDefault.va.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION contextAssertionDefaults */
 /**
  * @summary contextAssertionDefaults
  * @description
@@ -47,6 +46,5 @@ export const contextAssertionDefaults: ATTRIBUTE<TypeAndContextAssertion> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contextAssertionDefaults */
 
 /* eslint-enable */

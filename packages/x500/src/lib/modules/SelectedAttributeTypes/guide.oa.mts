@@ -6,7 +6,6 @@ import {
     _encode_Guide,
 } from "../SelectedAttributeTypes/Guide.ta.mjs";
 import { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.mjs";
-/* START_OF_SYMBOL_DEFINITION guide */
 /**
  * @summary guide
  * @description
@@ -36,6 +35,5 @@ export const guide: SYNTAX_NAME<Guide> = {
     "&id": id_lsx_guide /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION guide */
 
 /* eslint-enable */

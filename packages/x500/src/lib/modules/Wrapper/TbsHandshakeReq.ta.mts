@@ -49,7 +49,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsHandshakeReq */
 /**
  * @summary TbsHandshakeReq
  * @description
@@ -212,9 +211,7 @@ export class TbsHandshakeReq {
         })();
     }
 }
-/* END_OF_SYMBOL_DEFINITION TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsHandshakeReq */
 /**
  * @summary The Leading Root Component Types of TbsHandshakeReq
  * @description
@@ -303,9 +300,7 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeReq: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsHandshakeReq */
 /**
  * @summary The Trailing Root Component Types of TbsHandshakeReq
  * @description
@@ -315,9 +310,7 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeReq: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbsHandshakeReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsHandshakeReq */
 /**
  * @summary The Extension Addition Component Types of TbsHandshakeReq
  * @description
@@ -327,13 +320,9 @@ export const _root_component_type_list_2_spec_for_TbsHandshakeReq: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_TbsHandshakeReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeReq */
 let _cached_decoder_for_TbsHandshakeReq: $.ASN1Decoder<TbsHandshakeReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsHandshakeReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsHandshakeReq
  * @function
@@ -436,13 +425,9 @@ export function _decode_TbsHandshakeReq(el: _Element) {
     }
     return _cached_decoder_for_TbsHandshakeReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeReq */
 let _cached_encoder_for_TbsHandshakeReq: $.ASN1Encoder<TbsHandshakeReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsHandshakeReq */
 /**
  * @summary Encodes a(n) TbsHandshakeReq into an ASN.1 Element.
  * @function
@@ -539,6 +524,5 @@ export function _encode_TbsHandshakeReq(
     return _cached_encoder_for_TbsHandshakeReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsHandshakeReq */
 
 /* eslint-enable */

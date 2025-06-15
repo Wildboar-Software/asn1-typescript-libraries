@@ -2,7 +2,7 @@
 import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
 import { MessageDigestAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/MessageDigestAlgs.osa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DigestAlgorithmSet */
+
 /**
  * @summary DigestAlgorithmSet
  * @description
@@ -21,6 +21,5 @@ import { MessageDigestAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/
 export const DigestAlgorithmSet: DIGEST_ALGORITHM[] = [
     ...MessageDigestAlgs,
 ];
-/* END_OF_SYMBOL_DEFINITION DigestAlgorithmSet */
 
 /* eslint-enable */

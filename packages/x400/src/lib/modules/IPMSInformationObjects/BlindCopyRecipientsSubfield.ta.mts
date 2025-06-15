@@ -15,7 +15,6 @@ import {
     _decode_RecipientSpecifier,
     _encode_RecipientSpecifier,
 } from '../IPMSInformationObjects/RecipientSpecifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BlindCopyRecipientsSubfield */
 /**
  * @summary BlindCopyRecipientsSubfield
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type BlindCopyRecipientsSubfield = RecipientSpecifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BlindCopyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BlindCopyRecipientsSubfield */
 let _cached_decoder_for_BlindCopyRecipientsSubfield: $.ASN1Decoder<BlindCopyRecipientsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BlindCopyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BlindCopyRecipientsSubfield */
 /**
  * @summary Decodes an ASN.1 element into a(n) BlindCopyRecipientsSubfield
  * @function
@@ -46,13 +41,9 @@ export function _decode_BlindCopyRecipientsSubfield(el: _Element) {
     }
     return _cached_decoder_for_BlindCopyRecipientsSubfield(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BlindCopyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BlindCopyRecipientsSubfield */
 let _cached_encoder_for_BlindCopyRecipientsSubfield: $.ASN1Encoder<BlindCopyRecipientsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BlindCopyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BlindCopyRecipientsSubfield */
 /**
  * @summary Encodes a(n) BlindCopyRecipientsSubfield into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_BlindCopyRecipientsSubfield(
     return _cached_encoder_for_BlindCopyRecipientsSubfield(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BlindCopyRecipientsSubfield */
 
 /* eslint-enable */

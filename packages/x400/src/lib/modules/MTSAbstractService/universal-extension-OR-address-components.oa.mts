@@ -15,7 +15,6 @@ import {
     _encode_UniversalExtensionORAddressComponents,
 } from '../MTSAbstractService/UniversalExtensionORAddressComponents.ta.mjs';
 import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION universal_extension_OR_address_components */
 /**
  * @summary universal_extension_OR_address_components
  * @description
@@ -44,6 +43,5 @@ export const universal_extension_OR_address_components: EXTENSION_ATTRIBUTE<Univ
     '&id': 31 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_extension_OR_address_components */
 
 /* eslint-enable */

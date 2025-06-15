@@ -20,7 +20,6 @@ import { CertPathControls, _decode_CertPathControls, _encode_CertPathControls } 
 import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION TrustAnchorInfo */
 /**
  * @summary TrustAnchorInfo
  * @description
@@ -111,9 +110,7 @@ class TrustAnchorInfo {
      */
     public static get _default_value_for_version () { return v1; }
 }
-/* END_OF_SYMBOL_DEFINITION TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TrustAnchorInfo */
 /**
  * @summary The Leading Root Component Types of TrustAnchorInfo
  * @description
@@ -132,9 +129,7 @@ const _root_component_type_list_1_spec_for_TrustAnchorInfo: $.ComponentSpec[] = 
     new $.ComponentSpec("exts", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("taTitleLangTag", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TrustAnchorInfo */
 /**
  * @summary The Trailing Root Component Types of TrustAnchorInfo
  * @description
@@ -147,9 +142,7 @@ export
 const _root_component_type_list_2_spec_for_TrustAnchorInfo: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TrustAnchorInfo */
 /**
  * @summary The Extension Addition Component Types of TrustAnchorInfo
  * @description
@@ -162,13 +155,9 @@ export
 const _extension_additions_list_spec_for_TrustAnchorInfo: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorInfo */
 let _cached_decoder_for_TrustAnchorInfo: $.ASN1Decoder<TrustAnchorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorInfo
  * @function
@@ -216,13 +205,9 @@ function _decode_TrustAnchorInfo (el: _Element) {
 }; }
     return _cached_decoder_for_TrustAnchorInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorInfo */
 let _cached_encoder_for_TrustAnchorInfo: $.ASN1Encoder<TrustAnchorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorInfo */
 /**
  * @summary Encodes a(n) TrustAnchorInfo into an ASN.1 Element.
  * @function
@@ -248,6 +233,5 @@ function _encode_TrustAnchorInfo (value: TrustAnchorInfo, elGetter: $.ASN1Encode
     return _cached_encoder_for_TrustAnchorInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorInfo */
 
 /* eslint-enable */

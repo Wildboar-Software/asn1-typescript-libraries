@@ -16,7 +16,7 @@ import {
     _encode_String,
 } from '../XSD/String.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RequestType */
+
 /**
  * @summary RequestType
  * @description
@@ -59,9 +59,8 @@ export class RequestType {
     return new RequestType(_o.randomNumer);
   }
 }
-/* END_OF_SYMBOL_DEFINITION RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestType */
+
 /**
  * @summary The Leading Root Component Types of RequestType
  * @description
@@ -73,9 +72,8 @@ export class RequestType {
 export const _root_component_type_list_1_spec_for_RequestType: $.ComponentSpec[] = [
   /* FIXME: randomNumer COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestType */
+
 /**
  * @summary The Trailing Root Component Types of RequestType
  * @description
@@ -85,9 +83,8 @@ export const _root_component_type_list_1_spec_for_RequestType: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RequestType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestType */
+
 /**
  * @summary The Extension Addition Component Types of RequestType
  * @description
@@ -97,13 +94,11 @@ export const _root_component_type_list_2_spec_for_RequestType: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_RequestType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestType */
+
 let _cached_decoder_for_RequestType: $.ASN1Decoder<RequestType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestType
  * @function
@@ -129,13 +124,11 @@ export function _decode_RequestType(el: _Element) {
   }
   return _cached_decoder_for_RequestType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestType */
+
 let _cached_encoder_for_RequestType: $.ASN1Encoder<RequestType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestType */
+
 /**
  * @summary Encodes a(n) RequestType into an ASN.1 Element.
  * @function
@@ -161,6 +154,5 @@ export function _encode_RequestType(
   return _cached_encoder_for_RequestType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestType */
 
 /* eslint-enable */

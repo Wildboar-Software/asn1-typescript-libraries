@@ -6,7 +6,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateDomainName */
 /**
  * @summary PrivateDomainName
  * @description
@@ -22,14 +21,10 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type PrivateDomainName =
     | { numeric: NumericString } /* CHOICE_ALT_ROOT */
     | { printable: PrintableString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PrivateDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDomainName */
 let _cached_decoder_for_PrivateDomainName: $.ASN1Decoder<PrivateDomainName> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateDomainName */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateDomainName
  * @function
@@ -46,14 +41,10 @@ export function _decode_PrivateDomainName(el: _Element) {
     }
     return _cached_decoder_for_PrivateDomainName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDomainName */
 let _cached_encoder_for_PrivateDomainName: $.ASN1Encoder<PrivateDomainName> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateDomainName */
 /**
  * @summary Encodes a(n) PrivateDomainName into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_PrivateDomainName(
     return _cached_encoder_for_PrivateDomainName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateDomainName */
 
 /* eslint-enable */

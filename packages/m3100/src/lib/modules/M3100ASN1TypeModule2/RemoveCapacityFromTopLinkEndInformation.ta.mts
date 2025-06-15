@@ -15,7 +15,7 @@ import {
     _decode_RequestedPointCapacity,
     _encode_RequestedPointCapacity,
 } from '../M3100ASN1TypeModule2/RequestedPointCapacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RemoveCapacityFromTopLinkEndInformation */
+
 /**
  * @summary RemoveCapacityFromTopLinkEndInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RemoveCapacityFromTopLinkEndInformation = RequestedPointCapacity; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RemoveCapacityFromTopLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation */
+
 let _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Decoder<RemoveCapacityFromTopLinkEndInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopLinkEndInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopLinkEndInformation
  * @function
@@ -46,13 +44,11 @@ export function _decode_RemoveCapacityFromTopLinkEndInformation(el: _Element) {
     }
     return _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation */
+
 let _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Encoder<RemoveCapacityFromTopLinkEndInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopLinkEndInformation */
+
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopLinkEndInformation into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_RemoveCapacityFromTopLinkEndInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopLinkEndInformation */
 
 /* eslint-enable */

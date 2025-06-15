@@ -16,7 +16,7 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../X790ASN1Module/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OutageDuration */
+
 /**
  * @summary OutageDuration
  * @description
@@ -34,13 +34,11 @@ export type OutageDuration =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { time: TimeInterval } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION OutageDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OutageDuration */
+
 let _cached_decoder_for_OutageDuration: $.ASN1Decoder<OutageDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OutageDuration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OutageDuration */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OutageDuration
  * @function
@@ -58,13 +56,11 @@ export function _decode_OutageDuration(el: _Element) {
     }
     return _cached_decoder_for_OutageDuration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OutageDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OutageDuration */
+
 let _cached_encoder_for_OutageDuration: $.ASN1Encoder<OutageDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OutageDuration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OutageDuration */
+
 /**
  * @summary Encodes a(n) OutageDuration into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_OutageDuration(
     return _cached_encoder_for_OutageDuration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OutageDuration */
 
 /* eslint-enable */

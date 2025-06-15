@@ -11,7 +11,6 @@ import {
     _decode_SPKM_REQ,
     _encode_SPKM_REQ,
 } from "../SpkmGssTokens/SPKM-REQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SpkmCredentials */
 /**
  * @summary SpkmCredentials
  * @description
@@ -29,13 +28,9 @@ export type SpkmCredentials =
     | { req: SPKM_REQ } /* CHOICE_ALT_ROOT */
     | { rep: SPKM_REP_TI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SpkmCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpkmCredentials */
 let _cached_decoder_for_SpkmCredentials: $.ASN1Decoder<SpkmCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpkmCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpkmCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) SpkmCredentials
  * @function
@@ -59,13 +54,9 @@ export function _decode_SpkmCredentials(el: _Element) {
     }
     return _cached_decoder_for_SpkmCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpkmCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpkmCredentials */
 let _cached_encoder_for_SpkmCredentials: $.ASN1Encoder<SpkmCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpkmCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpkmCredentials */
 /**
  * @summary Encodes a(n) SpkmCredentials into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_SpkmCredentials(
     return _cached_encoder_for_SpkmCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpkmCredentials */
 
 /* eslint-enable */

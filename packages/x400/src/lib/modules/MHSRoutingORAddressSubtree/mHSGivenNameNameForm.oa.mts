@@ -13,7 +13,6 @@ import { mHSGivenName } from '../MHSRoutingORAddressSubtree/mHSGivenName.oa.mjs'
 import { mHSGivenNameAttribute } from '../MHSRoutingORAddressSubtree/mHSGivenNameAttribute.oa.mjs';
 import { id_nf_mhs_given_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-given-name.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSGivenNameNameForm */
 /**
  * @summary mHSGivenNameNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSGivenNameNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSGivenNameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_given_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSGivenNameNameForm */
 
 /* eslint-enable */

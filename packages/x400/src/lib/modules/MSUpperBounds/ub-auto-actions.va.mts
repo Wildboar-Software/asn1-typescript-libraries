@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_auto_actions */
 /**
  * @summary ub_auto_actions
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_auto_actions: INTEGER = 128;
-/* END_OF_SYMBOL_DEFINITION ub_auto_actions */
 
 /* eslint-enable */

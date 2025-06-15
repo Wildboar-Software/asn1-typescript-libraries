@@ -20,7 +20,6 @@ export {
     _encode_SIGNATURE as _encode_ContentIntegrityCheck,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ContentIntegrityCheck */
 /**
  * @summary ContentIntegrityCheck
  * @description
@@ -36,6 +35,5 @@ export {
  * ```
  */
 export type ContentIntegrityCheck = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContentIntegrityCheck */
 
 /* eslint-enable */

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_opcode_modifyEntry */
 /**
  * @summary id_opcode_modifyEntry
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_opcode_modifyEntry: Code = { local: 8 };
-/* END_OF_SYMBOL_DEFINITION id_opcode_modifyEntry */
 
 /* eslint-enable */

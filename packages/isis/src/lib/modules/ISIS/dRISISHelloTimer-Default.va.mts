@@ -15,7 +15,6 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION dRISISHelloTimer_Default */
 /**
  * @summary dRISISHelloTimer_Default
  * @description
@@ -32,6 +31,5 @@ export const dRISISHelloTimer_Default: Timer = Timer._from_object({
   exponent: 0,
   mantissa: 1,
 });
-/* END_OF_SYMBOL_DEFINITION dRISISHelloTimer_Default */
 
 /* eslint-enable */

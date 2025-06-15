@@ -7,7 +7,7 @@ import {
     _encode_EncryptedPrivateKeyInfo,
 } from "../AsymmetricKeyPackageModuleV1/EncryptedPrivateKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCS8ShroudedKeyBag */
+
 /**
  * @summary PKCS8ShroudedKeyBag
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type PKCS8ShroudedKeyBag = EncryptedPrivateKeyInfo; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PKCS8ShroudedKeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCS8ShroudedKeyBag */
+
 let _cached_decoder_for_PKCS8ShroudedKeyBag: $.ASN1Decoder<PKCS8ShroudedKeyBag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCS8ShroudedKeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKCS8ShroudedKeyBag */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKCS8ShroudedKeyBag
  * @function
@@ -38,13 +36,11 @@ export function _decode_PKCS8ShroudedKeyBag(el: _Element) {
     }
     return _cached_decoder_for_PKCS8ShroudedKeyBag(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKCS8ShroudedKeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCS8ShroudedKeyBag */
+
 let _cached_encoder_for_PKCS8ShroudedKeyBag: $.ASN1Encoder<PKCS8ShroudedKeyBag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCS8ShroudedKeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKCS8ShroudedKeyBag */
+
 /**
  * @summary Encodes a(n) PKCS8ShroudedKeyBag into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_PKCS8ShroudedKeyBag(
     return _cached_encoder_for_PKCS8ShroudedKeyBag(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKCS8ShroudedKeyBag */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     _decode_Release_request_reason,
     _encode_Release_request_reason,
 } from "../OSIProtocolSpecification/Release-request-reason.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TheOsiUnbind */
 /**
  * @summary TheOsiUnbind
  * @description
@@ -52,9 +51,7 @@ export class TheOsiUnbind {
         return new TheOsiUnbind(_o.reason);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TheOsiUnbind */
 /**
  * @summary The Leading Root Component Types of TheOsiUnbind
  * @description
@@ -72,9 +69,7 @@ export const _root_component_type_list_1_spec_for_TheOsiUnbind: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TheOsiUnbind */
 /**
  * @summary The Trailing Root Component Types of TheOsiUnbind
  * @description
@@ -84,9 +79,7 @@ export const _root_component_type_list_1_spec_for_TheOsiUnbind: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TheOsiUnbind: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TheOsiUnbind */
 /**
  * @summary The Extension Addition Component Types of TheOsiUnbind
  * @description
@@ -96,13 +89,9 @@ export const _root_component_type_list_2_spec_for_TheOsiUnbind: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_TheOsiUnbind: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TheOsiUnbind */
 let _cached_decoder_for_TheOsiUnbind: $.ASN1Decoder<TheOsiUnbind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TheOsiUnbind */
 /**
  * @summary Decodes an ASN.1 element into a(n) TheOsiUnbind
  * @function
@@ -142,13 +131,9 @@ export function _decode_TheOsiUnbind(el: _Element) {
     }
     return _cached_decoder_for_TheOsiUnbind(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TheOsiUnbind */
 let _cached_encoder_for_TheOsiUnbind: $.ASN1Encoder<TheOsiUnbind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TheOsiUnbind */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TheOsiUnbind */
 /**
  * @summary Encodes a(n) TheOsiUnbind into an ASN.1 Element.
  * @function
@@ -191,6 +176,5 @@ export function _encode_TheOsiUnbind(
     return _cached_encoder_for_TheOsiUnbind(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TheOsiUnbind */
 
 /* eslint-enable */

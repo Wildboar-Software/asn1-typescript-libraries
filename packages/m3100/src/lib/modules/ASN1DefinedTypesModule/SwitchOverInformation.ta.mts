@@ -15,7 +15,7 @@ import {
     _decode_IndividualSwitchOver,
     _encode_IndividualSwitchOver,
 } from '../ASN1DefinedTypesModule/IndividualSwitchOver.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SwitchOverInformation */
+
 /**
  * @summary SwitchOverInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SwitchOverInformation = IndividualSwitchOver[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SwitchOverInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SwitchOverInformation */
+
 let _cached_decoder_for_SwitchOverInformation: $.ASN1Decoder<SwitchOverInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SwitchOverInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SwitchOverInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SwitchOverInformation
  * @function
@@ -48,13 +46,11 @@ export function _decode_SwitchOverInformation(el: _Element) {
     }
     return _cached_decoder_for_SwitchOverInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SwitchOverInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SwitchOverInformation */
+
 let _cached_encoder_for_SwitchOverInformation: $.ASN1Encoder<SwitchOverInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SwitchOverInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SwitchOverInformation */
+
 /**
  * @summary Encodes a(n) SwitchOverInformation into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SwitchOverInformation(
     return _cached_encoder_for_SwitchOverInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SwitchOverInformation */
 
 /* eslint-enable */

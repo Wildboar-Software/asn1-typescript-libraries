@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../MTSAbstractService/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryOfficeName */
 /**
  * @summary UniversalPhysicalDeliveryOfficeName
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalPhysicalDeliveryOfficeName = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryOfficeName */
 let _cached_decoder_for_UniversalPhysicalDeliveryOfficeName: $.ASN1Decoder<UniversalPhysicalDeliveryOfficeName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryOfficeName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryOfficeName
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalPhysicalDeliveryOfficeName(el: _Element) {
     }
     return _cached_decoder_for_UniversalPhysicalDeliveryOfficeName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryOfficeName */
 let _cached_encoder_for_UniversalPhysicalDeliveryOfficeName: $.ASN1Encoder<UniversalPhysicalDeliveryOfficeName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryOfficeName */
 /**
  * @summary Encodes a(n) UniversalPhysicalDeliveryOfficeName into an ASN.1 Element.
  * @function
@@ -64,6 +55,5 @@ export function _encode_UniversalPhysicalDeliveryOfficeName(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryOfficeName */
 
 /* eslint-enable */

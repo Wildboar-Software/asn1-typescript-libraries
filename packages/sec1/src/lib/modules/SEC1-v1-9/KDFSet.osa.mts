@@ -14,7 +14,6 @@ import { KDFSet_Union0_Intersection0_Element } from "../SEC1-v1-9/KDFSet-Union0-
 import { KDFSet_Union1_Intersection0_Element } from "../SEC1-v1-9/KDFSet-Union1-Intersection0-Element.oa.mjs";
 import { KDFSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KDFSet-Union2-Intersection0-Element.oa.mjs";
 import { KDFSet_Union3_Intersection0_Element } from "../SEC1-v1-9/KDFSet-Union3-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION KDFSet */
 /**
  * @summary KDFSet
  * @description
@@ -37,6 +36,5 @@ import { KDFSet_Union3_Intersection0_Element } from "../SEC1-v1-9/KDFSet-Union3-
  */
 export
 const KDFSet: (ALGORITHM)[] = [ KDFSet_Union0_Intersection0_Element, KDFSet_Union1_Intersection0_Element, KDFSet_Union2_Intersection0_Element, KDFSet_Union3_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION KDFSet */
 
 /* eslint-enable */

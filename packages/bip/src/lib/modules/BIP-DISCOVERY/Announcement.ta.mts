@@ -33,7 +33,7 @@ import {
   _decode_SecurityProtocol,
   _encode_SecurityProtocol,
 } from '../BIP-DISCOVERY/SecurityProtocol.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Announcement */
+
 /**
  * @summary Announcement
  * @description
@@ -136,9 +136,8 @@ export class Announcement {
     return 4376;
   }
 }
-/* END_OF_SYMBOL_DEFINITION Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Announcement */
+
 /**
  * @summary The Leading Root Component Types of Announcement
  * @description
@@ -191,9 +190,8 @@ export const _root_component_type_list_1_spec_for_Announcement: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Announcement */
+
 /**
  * @summary The Trailing Root Component Types of Announcement
  * @description
@@ -203,9 +201,8 @@ export const _root_component_type_list_1_spec_for_Announcement: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Announcement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Announcement */
+
 /**
  * @summary The Extension Addition Component Types of Announcement
  * @description
@@ -215,13 +212,11 @@ export const _root_component_type_list_2_spec_for_Announcement: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_Announcement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Announcement */
+
 let _cached_decoder_for_Announcement: $.ASN1Decoder<Announcement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Announcement */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Announcement
  * @function
@@ -288,13 +283,11 @@ export function _decode_Announcement(el: _Element) {
   }
   return _cached_decoder_for_Announcement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Announcement */
+
 let _cached_encoder_for_Announcement: $.ASN1Encoder<Announcement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Announcement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Announcement */
+
 /**
  * @summary Encodes a(n) Announcement into an ASN.1 Element.
  * @function
@@ -355,6 +348,5 @@ export function _encode_Announcement(
   return _cached_encoder_for_Announcement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Announcement */
 
 /* eslint-enable */

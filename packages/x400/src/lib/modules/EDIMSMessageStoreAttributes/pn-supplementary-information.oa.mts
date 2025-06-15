@@ -24,7 +24,6 @@ import { id_nat_pn_supplementary_info } from '../EDIMSObjectIdentifiers/id-nat-p
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pn_supplementary_information */
 /**
  * @summary pn_supplementary_information
  * @description
@@ -59,6 +58,5 @@ export const pn_supplementary_information: X413ATTRIBUTE<EDISupplementaryInforma
     '&id': id_nat_pn_supplementary_info /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pn_supplementary_information */
 
 /* eslint-enable */

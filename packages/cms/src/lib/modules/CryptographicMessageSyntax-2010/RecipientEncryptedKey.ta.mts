@@ -15,7 +15,7 @@ import {
     _decode_KeyAgreeRecipientIdentifier,
     _encode_KeyAgreeRecipientIdentifier,
 } from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RecipientEncryptedKey */
+
 /**
  * @summary RecipientEncryptedKey
  * @description
@@ -64,9 +64,8 @@ export class RecipientEncryptedKey {
         return new RecipientEncryptedKey(_o.rid, _o.encryptedKey);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RecipientEncryptedKey */
+
 /**
  * @summary The Leading Root Component Types of RecipientEncryptedKey
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_RecipientEncryptedKey: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RecipientEncryptedKey */
+
 /**
  * @summary The Trailing Root Component Types of RecipientEncryptedKey
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_RecipientEncryptedKey: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RecipientEncryptedKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RecipientEncryptedKey */
+
 /**
  * @summary The Extension Addition Component Types of RecipientEncryptedKey
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_RecipientEncryptedKey: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_RecipientEncryptedKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientEncryptedKey */
+
 let _cached_decoder_for_RecipientEncryptedKey: $.ASN1Decoder<RecipientEncryptedKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientEncryptedKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientEncryptedKey
  * @function
@@ -146,13 +141,11 @@ export function _decode_RecipientEncryptedKey(el: _Element) {
     }
     return _cached_decoder_for_RecipientEncryptedKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientEncryptedKey */
+
 let _cached_encoder_for_RecipientEncryptedKey: $.ASN1Encoder<RecipientEncryptedKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientEncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientEncryptedKey */
+
 /**
  * @summary Encodes a(n) RecipientEncryptedKey into an ASN.1 Element.
  * @function
@@ -187,6 +180,5 @@ export function _encode_RecipientEncryptedKey(
     return _cached_encoder_for_RecipientEncryptedKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientEncryptedKey */
 
 /* eslint-enable */

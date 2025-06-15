@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BackUpDestinationList */
 /**
  * @summary BackUpDestinationList
  * @description
@@ -24,13 +23,9 @@ import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse/src
  */
 export
 type BackUpDestinationList = AE_title[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BackUpDestinationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpDestinationList */
 let _cached_decoder_for_BackUpDestinationList: $.ASN1Decoder<BackUpDestinationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpDestinationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackUpDestinationList */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackUpDestinationList
  * @function
@@ -42,13 +37,9 @@ function _decode_BackUpDestinationList (el: _Element) {
     if (!_cached_decoder_for_BackUpDestinationList) { _cached_decoder_for_BackUpDestinationList = $._decodeSequenceOf<AE_title>(() => _decode_AE_title); }
     return _cached_decoder_for_BackUpDestinationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackUpDestinationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpDestinationList */
 let _cached_encoder_for_BackUpDestinationList: $.ASN1Encoder<BackUpDestinationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpDestinationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackUpDestinationList */
 /**
  * @summary Encodes a(n) BackUpDestinationList into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_BackUpDestinationList (value: BackUpDestinationList, elGetter: 
     return _cached_encoder_for_BackUpDestinationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackUpDestinationList */
 
 /* eslint-enable */

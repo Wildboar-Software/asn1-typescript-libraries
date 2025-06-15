@@ -6,7 +6,7 @@ import {
     _decode_XPath,
     _encode_XPath,
 } from "../CMSSigncryption/XPath.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION XPathSet */
+
 /**
  * @summary XPathSet
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type XPathSet = XPath[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION XPathSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XPathSet */
+
 let _cached_decoder_for_XPathSet: $.ASN1Decoder<XPathSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XPathSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_XPathSet */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) XPathSet
  * @function
@@ -39,13 +37,11 @@ export function _decode_XPathSet(el: _Element) {
     }
     return _cached_decoder_for_XPathSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_XPathSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XPathSet */
+
 let _cached_encoder_for_XPathSet: $.ASN1Encoder<XPathSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XPathSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_XPathSet */
+
 /**
  * @summary Encodes a(n) XPathSet into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_XPathSet(
     return _cached_encoder_for_XPathSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_XPathSet */
 
 /* eslint-enable */

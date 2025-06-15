@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_BFP_SCHEMA,
   _encode_BioAPI_BFP_SCHEMA,
 } from '../BIP/BioAPI-BFP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VisibleBFPRegistration */
+
 /**
  * @summary VisibleBFPRegistration
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type VisibleBFPRegistration = BioAPI_BFP_SCHEMA; // DefinedType
-/* END_OF_SYMBOL_DEFINITION VisibleBFPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBFPRegistration */
+
 let _cached_decoder_for_VisibleBFPRegistration: $.ASN1Decoder<VisibleBFPRegistration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBFPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VisibleBFPRegistration */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleBFPRegistration
  * @function
@@ -46,13 +44,11 @@ export function _decode_VisibleBFPRegistration(el: _Element) {
   }
   return _cached_decoder_for_VisibleBFPRegistration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VisibleBFPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBFPRegistration */
+
 let _cached_encoder_for_VisibleBFPRegistration: $.ASN1Encoder<VisibleBFPRegistration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBFPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VisibleBFPRegistration */
+
 /**
  * @summary Encodes a(n) VisibleBFPRegistration into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_VisibleBFPRegistration(
   return _cached_encoder_for_VisibleBFPRegistration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VisibleBFPRegistration */
 
 /* eslint-enable */

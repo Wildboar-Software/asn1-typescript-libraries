@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_identification_code_qualifier */
 /**
  * @summary ub_identification_code_qualifier
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_identification_code_qualifier: INTEGER = 4;
-/* END_OF_SYMBOL_DEFINITION ub_identification_code_qualifier */
 
 /* eslint-enable */

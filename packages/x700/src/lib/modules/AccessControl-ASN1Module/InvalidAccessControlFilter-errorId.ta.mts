@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_InvalidAccessControlFilter_errorId */
 /**
  * @summary InvalidAccessControlFilter_errorId
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_InvalidAccessControlFilter_errorId {
     heterogeneousId = 1,
     invalidId = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_InvalidAccessControlFilter_errorId */
 
-/* START_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId */
 /**
  * @summary InvalidAccessControlFilter_errorId
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_InvalidAccessControlFilter_errorId {
  * ```@enum {number}
  */
 export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
-/* END_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId */
 
-/* START_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId */
 /**
  * @summary InvalidAccessControlFilter_errorId
  * @description
@@ -55,9 +50,7 @@ export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlF
  * ```@enum {number}
  */
 export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
-/* END_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId */
 
-/* START_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId_duplicateId */
 /**
  * @summary InvalidAccessControlFilter_errorId_duplicateId
  * @constant
@@ -65,9 +58,7 @@ export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControl
  */
 export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessControlFilter_errorId =
     InvalidAccessControlFilter_errorId.duplicateId; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId_duplicateId */
 
-/* START_OF_SYMBOL_DEFINITION duplicateId */
 /**
  * @summary duplicateId
  * @constant
@@ -75,9 +66,7 @@ export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessContro
  */
 export const duplicateId: InvalidAccessControlFilter_errorId =
     InvalidAccessControlFilter_errorId.duplicateId; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION duplicateId */
 
-/* START_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId_heterogeneousId */
 /**
  * @summary InvalidAccessControlFilter_errorId_heterogeneousId
  * @constant
@@ -85,9 +74,7 @@ export const duplicateId: InvalidAccessControlFilter_errorId =
  */
 export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessControlFilter_errorId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId_heterogeneousId */
 
-/* START_OF_SYMBOL_DEFINITION heterogeneousId */
 /**
  * @summary heterogeneousId
  * @constant
@@ -95,9 +82,7 @@ export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessCo
  */
 export const heterogeneousId: InvalidAccessControlFilter_errorId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION heterogeneousId */
 
-/* START_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId_invalidId */
 /**
  * @summary InvalidAccessControlFilter_errorId_invalidId
  * @constant
@@ -105,9 +90,7 @@ export const heterogeneousId: InvalidAccessControlFilter_errorId =
  */
 export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlFilter_errorId =
     InvalidAccessControlFilter_errorId.invalidId; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InvalidAccessControlFilter_errorId_invalidId */
 
-/* START_OF_SYMBOL_DEFINITION invalidId */
 /**
  * @summary invalidId
  * @constant
@@ -115,13 +98,9 @@ export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlF
  */
 export const invalidId: InvalidAccessControlFilter_errorId =
     InvalidAccessControlFilter_errorId.invalidId; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidAccessControlFilter_errorId */
 let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<InvalidAccessControlFilter_errorId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidAccessControlFilter_errorId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvalidAccessControlFilter_errorId */
 /**
  * @summary Decodes an ASN.1 element into a(n) InvalidAccessControlFilter_errorId
  * @function
@@ -135,13 +114,9 @@ export function _decode_InvalidAccessControlFilter_errorId(el: _Element) {
     }
     return _cached_decoder_for_InvalidAccessControlFilter_errorId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvalidAccessControlFilter_errorId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidAccessControlFilter_errorId */
 let _cached_encoder_for_InvalidAccessControlFilter_errorId: $.ASN1Encoder<InvalidAccessControlFilter_errorId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidAccessControlFilter_errorId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvalidAccessControlFilter_errorId */
 /**
  * @summary Encodes a(n) InvalidAccessControlFilter_errorId into an ASN.1 Element.
  * @function
@@ -163,6 +138,5 @@ export function _encode_InvalidAccessControlFilter_errorId(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvalidAccessControlFilter_errorId */
 
 /* eslint-enable */

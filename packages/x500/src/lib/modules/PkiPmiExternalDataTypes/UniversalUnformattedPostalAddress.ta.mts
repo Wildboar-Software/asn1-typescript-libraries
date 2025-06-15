@@ -6,7 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalUnformattedPostalAddress */
 /**
  * @summary UniversalUnformattedPostalAddress
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type UniversalUnformattedPostalAddress = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalUnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalUnformattedPostalAddress */
 let _cached_decoder_for_UniversalUnformattedPostalAddress: $.ASN1Decoder<UniversalUnformattedPostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalUnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalUnformattedPostalAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalUnformattedPostalAddress
  * @function
@@ -38,13 +33,9 @@ export function _decode_UniversalUnformattedPostalAddress(el: _Element) {
     }
     return _cached_decoder_for_UniversalUnformattedPostalAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalUnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalUnformattedPostalAddress */
 let _cached_encoder_for_UniversalUnformattedPostalAddress: $.ASN1Encoder<UniversalUnformattedPostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalUnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalUnformattedPostalAddress */
 /**
  * @summary Encodes a(n) UniversalUnformattedPostalAddress into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ export function _encode_UniversalUnformattedPostalAddress(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalUnformattedPostalAddress */
 
 /* eslint-enable */

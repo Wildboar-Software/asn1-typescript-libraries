@@ -12,7 +12,6 @@ import {
     _encode_ListResultData_listInfo,
 } from "../DirectoryAbstractService/ListResultData-listInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ListResultData */
 /**
  * @summary ListResultData
  * @description
@@ -41,13 +40,9 @@ export type ListResultData =
     | { listInfo: ListResultData_listInfo } /* CHOICE_ALT_ROOT */
     | { uncorrelatedListInfo: ListResult[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ListResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResultData */
 let _cached_decoder_for_ListResultData: $.ASN1Decoder<ListResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListResultData
  * @function
@@ -70,13 +65,9 @@ export function _decode_ListResultData(el: _Element) {
     }
     return _cached_decoder_for_ListResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResultData */
 let _cached_encoder_for_ListResultData: $.ASN1Encoder<ListResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListResultData */
 /**
  * @summary Encodes a(n) ListResultData into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_ListResultData(
     return _cached_encoder_for_ListResultData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListResultData */
 
 /* eslint-enable */

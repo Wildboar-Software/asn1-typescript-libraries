@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AutoSwitchReason */
+
 /**
  * @summary AutoSwitchReason
  * @description
@@ -31,13 +31,11 @@ export type AutoSwitchReason =
     | { waitToRestore: NULL } /* CHOICE_ALT_ROOT */
     | { signalDegrade: NULL } /* CHOICE_ALT_ROOT */
     | { signalFail: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSwitchReason */
+
 let _cached_decoder_for_AutoSwitchReason: $.ASN1Decoder<AutoSwitchReason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoSwitchReason */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoSwitchReason
  * @function
@@ -65,13 +63,11 @@ export function _decode_AutoSwitchReason(el: _Element) {
     }
     return _cached_decoder_for_AutoSwitchReason(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSwitchReason */
+
 let _cached_encoder_for_AutoSwitchReason: $.ASN1Encoder<AutoSwitchReason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSwitchReason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoSwitchReason */
+
 /**
  * @summary Encodes a(n) AutoSwitchReason into an ASN.1 Element.
  * @function
@@ -111,6 +107,5 @@ export function _encode_AutoSwitchReason(
     return _cached_encoder_for_AutoSwitchReason(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoSwitchReason */
 
 /* eslint-enable */

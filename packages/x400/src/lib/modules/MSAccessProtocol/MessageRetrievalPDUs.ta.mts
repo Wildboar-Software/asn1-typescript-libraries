@@ -15,7 +15,6 @@ import {
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageRetrievalPDUs */
 /**
  * @summary MessageRetrievalPDUs
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type MessageRetrievalPDUs = ROS_SingleAS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageRetrievalPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageRetrievalPDUs */
 let _cached_decoder_for_MessageRetrievalPDUs: $.ASN1Decoder<MessageRetrievalPDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageRetrievalPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageRetrievalPDUs */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageRetrievalPDUs
  * @function
@@ -47,13 +42,9 @@ export function _decode_MessageRetrievalPDUs(el: _Element) {
     }
     return _cached_decoder_for_MessageRetrievalPDUs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageRetrievalPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageRetrievalPDUs */
 let _cached_encoder_for_MessageRetrievalPDUs: $.ASN1Encoder<MessageRetrievalPDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageRetrievalPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageRetrievalPDUs */
 /**
  * @summary Encodes a(n) MessageRetrievalPDUs into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_MessageRetrievalPDUs(
     return _cached_encoder_for_MessageRetrievalPDUs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageRetrievalPDUs */
 
 /* eslint-enable */

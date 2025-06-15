@@ -6,7 +6,7 @@ import { keyBag } from "../PKCS-12/keyBag.oa.mjs";
 import { pkcs8ShroudedKeyBag } from "../PKCS-12/pkcs8ShroudedKeyBag.oa.mjs";
 import { safeContentsBag } from "../PKCS-12/safeContentsBag.oa.mjs";
 import { secretBag } from "../PKCS-12/secretBag.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS12BagSet */
+
 /**
  * @summary PKCS12BagSet
  * @description
@@ -37,6 +37,5 @@ export const PKCS12BagSet: BAG_TYPE<any>[] = [
     secretBag,
     safeContentsBag,
 ];
-/* END_OF_SYMBOL_DEFINITION PKCS12BagSet */
 
 /* eslint-enable */

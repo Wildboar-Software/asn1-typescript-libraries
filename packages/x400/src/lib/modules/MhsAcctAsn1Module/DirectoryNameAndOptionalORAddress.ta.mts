@@ -15,7 +15,6 @@ import {
     _decode_ORName,
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DirectoryNameAndOptionalORAddress */
 /**
  * @summary DirectoryNameAndOptionalORAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DirectoryNameAndOptionalORAddress = ORName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DirectoryNameAndOptionalORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryNameAndOptionalORAddress */
 let _cached_decoder_for_DirectoryNameAndOptionalORAddress: $.ASN1Decoder<DirectoryNameAndOptionalORAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryNameAndOptionalORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DirectoryNameAndOptionalORAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) DirectoryNameAndOptionalORAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_DirectoryNameAndOptionalORAddress(el: _Element) {
     }
     return _cached_decoder_for_DirectoryNameAndOptionalORAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DirectoryNameAndOptionalORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryNameAndOptionalORAddress */
 let _cached_encoder_for_DirectoryNameAndOptionalORAddress: $.ASN1Encoder<DirectoryNameAndOptionalORAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryNameAndOptionalORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DirectoryNameAndOptionalORAddress */
 /**
  * @summary Encodes a(n) DirectoryNameAndOptionalORAddress into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_DirectoryNameAndOptionalORAddress(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DirectoryNameAndOptionalORAddress */
 
 /* eslint-enable */

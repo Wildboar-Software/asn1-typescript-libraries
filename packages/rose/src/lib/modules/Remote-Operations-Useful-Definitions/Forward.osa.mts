@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION Forward */
+
 /**
  * @summary Forward
  * @description
@@ -40,6 +40,5 @@ function Forward (OperationSet: OPERATION[]): OPERATION[] {
                         ?.flatMap((op4: OPERATION) => op4["&Linked"]) ?? []) ?? []) ?? []),
     ];
 }
-/* END_OF_SYMBOL_DEFINITION Forward */
 
 /* eslint-enable */

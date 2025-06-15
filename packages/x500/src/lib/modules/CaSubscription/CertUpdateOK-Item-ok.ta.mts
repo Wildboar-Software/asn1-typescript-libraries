@@ -11,7 +11,6 @@ import {
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUpdateOK_Item_ok */
 /**
  * @summary CertUpdateOK_Item_ok
  * @description
@@ -68,9 +67,7 @@ export class CertUpdateOK_Item_ok {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateOK_Item_ok */
 /**
  * @summary The Leading Root Component Types of CertUpdateOK_Item_ok
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateOK_Item_ok: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateOK_Item_ok */
 /**
  * @summary The Trailing Root Component Types of CertUpdateOK_Item_ok
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateOK_Item_ok: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertUpdateOK_Item_ok: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateOK_Item_ok */
 /**
  * @summary The Extension Addition Component Types of CertUpdateOK_Item_ok
  * @description
@@ -113,13 +106,9 @@ export const _root_component_type_list_2_spec_for_CertUpdateOK_Item_ok: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_CertUpdateOK_Item_ok: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateOK_Item_ok */
 let _cached_decoder_for_CertUpdateOK_Item_ok: $.ASN1Decoder<CertUpdateOK_Item_ok> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUpdateOK_Item_ok */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUpdateOK_Item_ok
  * @function
@@ -154,13 +143,9 @@ export function _decode_CertUpdateOK_Item_ok(el: _Element) {
     }
     return _cached_decoder_for_CertUpdateOK_Item_ok(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateOK_Item_ok */
 let _cached_encoder_for_CertUpdateOK_Item_ok: $.ASN1Encoder<CertUpdateOK_Item_ok> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUpdateOK_Item_ok */
 /**
  * @summary Encodes a(n) CertUpdateOK_Item_ok into an ASN.1 Element.
  * @function
@@ -197,6 +182,5 @@ export function _encode_CertUpdateOK_Item_ok(
     return _cached_encoder_for_CertUpdateOK_Item_ok(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUpdateOK_Item_ok */
 
 /* eslint-enable */

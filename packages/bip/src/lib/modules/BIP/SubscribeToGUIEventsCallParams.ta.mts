@@ -26,7 +26,7 @@ import {
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubscribeToGUIEventsCallParams */
+
 /**
  * @summary SubscribeToGUIEventsCallParams
  * @description
@@ -137,9 +137,8 @@ export class SubscribeToGUIEventsCallParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubscribeToGUIEventsCallParams */
+
 /**
  * @summary The Leading Root Component Types of SubscribeToGUIEventsCallParams
  * @description
@@ -213,9 +212,8 @@ export const _root_component_type_list_1_spec_for_SubscribeToGUIEventsCallParams
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubscribeToGUIEventsCallParams */
+
 /**
  * @summary The Trailing Root Component Types of SubscribeToGUIEventsCallParams
  * @description
@@ -225,9 +223,8 @@ export const _root_component_type_list_1_spec_for_SubscribeToGUIEventsCallParams
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubscribeToGUIEventsCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubscribeToGUIEventsCallParams */
+
 /**
  * @summary The Extension Addition Component Types of SubscribeToGUIEventsCallParams
  * @description
@@ -237,13 +234,11 @@ export const _root_component_type_list_2_spec_for_SubscribeToGUIEventsCallParams
  * @constant
  */
 export const _extension_additions_list_spec_for_SubscribeToGUIEventsCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscribeToGUIEventsCallParams */
+
 let _cached_decoder_for_SubscribeToGUIEventsCallParams: $.ASN1Decoder<SubscribeToGUIEventsCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubscribeToGUIEventsCallParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscribeToGUIEventsCallParams
  * @function
@@ -320,13 +315,11 @@ export function _decode_SubscribeToGUIEventsCallParams(el: _Element) {
   }
   return _cached_decoder_for_SubscribeToGUIEventsCallParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscribeToGUIEventsCallParams */
+
 let _cached_encoder_for_SubscribeToGUIEventsCallParams: $.ASN1Encoder<SubscribeToGUIEventsCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscribeToGUIEventsCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubscribeToGUIEventsCallParams */
+
 /**
  * @summary Encodes a(n) SubscribeToGUIEventsCallParams into an ASN.1 Element.
  * @function
@@ -386,6 +379,5 @@ export function _encode_SubscribeToGUIEventsCallParams(
   return _cached_encoder_for_SubscribeToGUIEventsCallParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubscribeToGUIEventsCallParams */
 
 /* eslint-enable */

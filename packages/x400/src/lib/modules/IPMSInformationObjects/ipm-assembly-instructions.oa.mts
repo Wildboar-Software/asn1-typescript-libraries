@@ -16,7 +16,6 @@ import {
 } from '../IPMSInformationObjects/IPMAssemblyInstructions.ta.mjs';
 import { id_mst_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-assembly-instructions.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_assembly_instructions */
 /**
  * @summary ipm_assembly_instructions
  * @description
@@ -45,6 +44,5 @@ export const ipm_assembly_instructions: MS_EXTENSION<IPMAssemblyInstructions> = 
     '&id': id_mst_assembly_instructions /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_assembly_instructions */
 
 /* eslint-enable */

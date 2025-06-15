@@ -15,7 +15,7 @@ import {
     _decode_Result_list_Item,
     _encode_Result_list_Item,
 } from '../ISO8823-PRESENTATION/Result-list-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Result_list */
+
 /**
  * @summary Result_list
  * @description
@@ -36,13 +36,11 @@ import {
  * ```
  */
 export type Result_list = Result_list_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Result_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Result_list */
+
 let _cached_decoder_for_Result_list: $.ASN1Decoder<Result_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Result_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Result_list */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Result_list
  * @function
@@ -57,13 +55,11 @@ export function _decode_Result_list(el: _Element) {
     }
     return _cached_decoder_for_Result_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Result_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Result_list */
+
 let _cached_encoder_for_Result_list: $.ASN1Encoder<Result_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Result_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Result_list */
+
 /**
  * @summary Encodes a(n) Result_list into an ASN.1 Element.
  * @function
@@ -84,6 +80,5 @@ export function _encode_Result_list(
     return _cached_encoder_for_Result_list(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Result_list */
 
 /* eslint-enable */

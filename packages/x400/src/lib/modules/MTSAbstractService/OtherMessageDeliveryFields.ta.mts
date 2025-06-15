@@ -72,7 +72,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OtherMessageDeliveryFields */
 /**
  * @summary OtherMessageDeliveryFields
  * @description
@@ -230,9 +229,7 @@ export class OtherMessageDeliveryFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherMessageDeliveryFields */
 /**
  * @summary The Leading Root Component Types of OtherMessageDeliveryFields
  * @description
@@ -327,9 +324,7 @@ export const _root_component_type_list_1_spec_for_OtherMessageDeliveryFields: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherMessageDeliveryFields */
 /**
  * @summary The Trailing Root Component Types of OtherMessageDeliveryFields
  * @description
@@ -339,9 +334,7 @@ export const _root_component_type_list_1_spec_for_OtherMessageDeliveryFields: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OtherMessageDeliveryFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherMessageDeliveryFields */
 /**
  * @summary The Extension Addition Component Types of OtherMessageDeliveryFields
  * @description
@@ -351,13 +344,9 @@ export const _root_component_type_list_2_spec_for_OtherMessageDeliveryFields: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_OtherMessageDeliveryFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherMessageDeliveryFields */
 let _cached_decoder_for_OtherMessageDeliveryFields: $.ASN1Decoder<OtherMessageDeliveryFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherMessageDeliveryFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherMessageDeliveryFields
  * @function
@@ -473,13 +462,9 @@ export function _decode_OtherMessageDeliveryFields(el: _Element) {
     }
     return _cached_decoder_for_OtherMessageDeliveryFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherMessageDeliveryFields */
 let _cached_encoder_for_OtherMessageDeliveryFields: $.ASN1Encoder<OtherMessageDeliveryFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherMessageDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherMessageDeliveryFields */
 /**
  * @summary Encodes a(n) OtherMessageDeliveryFields into an ASN.1 Element.
  * @function
@@ -611,6 +596,5 @@ export function _encode_OtherMessageDeliveryFields(
     return _cached_encoder_for_OtherMessageDeliveryFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherMessageDeliveryFields */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import { mta_transfer } from '../MTAAbstractService/mta-transfer.oa.mjs';
 import { id_ot_mta } from '../MTSObjectIdentifiers/id-ot-mta.va.mjs';
 import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta */
 /**
  * @summary mta
  * @description
@@ -36,6 +35,5 @@ export const mta: MHS_OBJECT = {
     '&InitiatesAndResponds': [mta_transfer] /* OBJECT_FIELD_SETTING */,
     '&id': id_ot_mta /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mta */
 
 /* eslint-enable */

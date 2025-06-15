@@ -23,7 +23,6 @@ import {
 } from '../MTSAbstractService/ContentLength.ta.mjs';
 import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
 import { id_at_mhs_maximum_content_length } from '../MHSObjectIdentifiers/id-at-mhs-maximum-content-length.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_maximum_content_length */
 /**
  * @summary mhs_maximum_content_length
  * @description
@@ -61,6 +60,5 @@ export const mhs_maximum_content_length: ATTRIBUTE<ContentLength> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_maximum_content_length */
 
 /* eslint-enable */

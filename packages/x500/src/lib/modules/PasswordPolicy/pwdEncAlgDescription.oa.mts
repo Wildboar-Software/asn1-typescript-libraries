@@ -6,7 +6,6 @@ import {
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdEncAlgDescription */
 /**
  * @summary pwdEncAlgDescription
  * @description
@@ -36,6 +35,5 @@ export const pwdEncAlgDescription: SYNTAX_NAME<PwdEncAlg> = {
     "&id": id_asx_pwdEncAlgDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdEncAlgDescription */
 
 /* eslint-enable */

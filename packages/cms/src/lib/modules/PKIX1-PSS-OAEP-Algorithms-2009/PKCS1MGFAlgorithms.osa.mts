@@ -19,7 +19,7 @@ const PKCS1MGFAlgorithms_0: ALGORITHM<HashAlgorithm> = {
     "&Type": 0 as never,
 };
 
-/* START_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms */
+
 /**
  * @summary PKCS1MGFAlgorithms
  * @description
@@ -40,6 +40,5 @@ const PKCS1MGFAlgorithms_0: ALGORITHM<HashAlgorithm> = {
 export const PKCS1MGFAlgorithms: ALGORITHM[] = [
     PKCS1MGFAlgorithms_0,
 ];
-/* END_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms */
 
 /* eslint-enable */

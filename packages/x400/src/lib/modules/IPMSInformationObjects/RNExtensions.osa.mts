@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION RNExtensions */
 /**
  * @summary RNExtensions
  * @description
@@ -27,6 +26,5 @@ import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExte
  *
  */
 export const RNExtensions: IPMS_EXTENSION[] = [...PrivateIPMSExtensions];
-/* END_OF_SYMBOL_DEFINITION RNExtensions */
 
 /* eslint-enable */

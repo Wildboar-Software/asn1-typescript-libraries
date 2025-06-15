@@ -16,7 +16,7 @@ import {
     _encode_RelatedObjectInstance,
 } from '../ASN1DefinedTypesModule/RelatedObjectInstance.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CompositePointer */
+
 /**
  * @summary CompositePointer
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type CompositePointer = RelatedObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CompositePointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompositePointer */
+
 let _cached_decoder_for_CompositePointer: $.ASN1Decoder<CompositePointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompositePointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompositePointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CompositePointer
  * @function
@@ -47,13 +45,11 @@ export function _decode_CompositePointer(el: _Element) {
     }
     return _cached_decoder_for_CompositePointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompositePointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompositePointer */
+
 let _cached_encoder_for_CompositePointer: $.ASN1Encoder<CompositePointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompositePointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompositePointer */
+
 /**
  * @summary Encodes a(n) CompositePointer into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_CompositePointer(
     return _cached_encoder_for_CompositePointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompositePointer */
 
 /* eslint-enable */

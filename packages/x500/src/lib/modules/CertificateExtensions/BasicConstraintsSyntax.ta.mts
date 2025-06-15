@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION BasicConstraintsSyntax */
 /**
  * @summary BasicConstraintsSyntax
  * @description
@@ -78,9 +77,7 @@ export class BasicConstraintsSyntax {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BasicConstraintsSyntax */
 /**
  * @summary The Leading Root Component Types of BasicConstraintsSyntax
  * @description
@@ -105,9 +102,7 @@ export const _root_component_type_list_1_spec_for_BasicConstraintsSyntax: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BasicConstraintsSyntax */
 /**
  * @summary The Trailing Root Component Types of BasicConstraintsSyntax
  * @description
@@ -117,9 +112,7 @@ export const _root_component_type_list_1_spec_for_BasicConstraintsSyntax: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BasicConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BasicConstraintsSyntax */
 /**
  * @summary The Extension Addition Component Types of BasicConstraintsSyntax
  * @description
@@ -129,13 +122,9 @@ export const _root_component_type_list_2_spec_for_BasicConstraintsSyntax: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_BasicConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicConstraintsSyntax */
 let _cached_decoder_for_BasicConstraintsSyntax: $.ASN1Decoder<BasicConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BasicConstraintsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) BasicConstraintsSyntax
  * @function
@@ -182,13 +171,9 @@ export function _decode_BasicConstraintsSyntax(el: _Element) {
     }
     return _cached_decoder_for_BasicConstraintsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicConstraintsSyntax */
 let _cached_encoder_for_BasicConstraintsSyntax: $.ASN1Encoder<BasicConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BasicConstraintsSyntax */
 /**
  * @summary Encodes a(n) BasicConstraintsSyntax into an ASN.1 Element.
  * @function
@@ -234,6 +219,5 @@ export function _encode_BasicConstraintsSyntax(
     return _cached_encoder_for_BasicConstraintsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BasicConstraintsSyntax */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { supports } from '../GrmDefinitionDirectoryASN1Module/supports.oa.mjs';
 import { qualifiedBy } from '../GrmDefinitionDirectoryASN1Module/qualifiedBy.oa.mjs';
 import { roleSpecifier } from '../GrmDefinitionDirectoryASN1Module/roleSpecifier.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementRelationshipClass */
 /**
  * @summary managementRelationshipClass
  * @description
@@ -61,6 +60,5 @@ export const managementRelationshipClass: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementRelationshipClass */
 
 /* eslint-enable */

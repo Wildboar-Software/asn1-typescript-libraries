@@ -22,7 +22,6 @@ import {
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InvalidAccessControlFilter */
 /**
  * @summary InvalidAccessControlFilter
  * @description
@@ -82,9 +81,7 @@ export class InvalidAccessControlFilter {
 
     public static _enum_for_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 }
-/* END_OF_SYMBOL_DEFINITION InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvalidAccessControlFilter */
 /**
  * @summary The Leading Root Component Types of InvalidAccessControlFilter
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_InvalidAccessControlFilter: $.
     ),
     new $.ComponentSpec('filter', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvalidAccessControlFilter */
 /**
  * @summary The Trailing Root Component Types of InvalidAccessControlFilter
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_InvalidAccessControlFilter: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InvalidAccessControlFilter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvalidAccessControlFilter */
 /**
  * @summary The Extension Addition Component Types of InvalidAccessControlFilter
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_InvalidAccessControlFilter: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_InvalidAccessControlFilter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidAccessControlFilter */
 let _cached_decoder_for_InvalidAccessControlFilter: $.ASN1Decoder<InvalidAccessControlFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvalidAccessControlFilter */
 /**
  * @summary Decodes an ASN.1 element into a(n) InvalidAccessControlFilter
  * @function
@@ -175,13 +164,9 @@ export function _decode_InvalidAccessControlFilter(el: _Element) {
     }
     return _cached_decoder_for_InvalidAccessControlFilter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidAccessControlFilter */
 let _cached_encoder_for_InvalidAccessControlFilter: $.ASN1Encoder<InvalidAccessControlFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidAccessControlFilter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvalidAccessControlFilter */
 /**
  * @summary Encodes a(n) InvalidAccessControlFilter into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_InvalidAccessControlFilter(
     return _cached_encoder_for_InvalidAccessControlFilter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvalidAccessControlFilter */
 
 /* eslint-enable */

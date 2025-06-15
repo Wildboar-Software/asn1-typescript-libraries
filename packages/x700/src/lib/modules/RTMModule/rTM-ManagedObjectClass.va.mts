@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION rTM_ManagedObjectClass */
 /**
  * @summary rTM_ManagedObjectClass
  * @description
@@ -29,6 +28,5 @@ export const rTM_ManagedObjectClass: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part22 */ 22, /* managedObjectClass */ 3],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION rTM_ManagedObjectClass */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_TroubleFound,
     _encode_TroubleFound,
 } from '../X790ASN1Module/TroubleFound.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION troubleFoundTroubleFoundInitial */
+
 /**
  * @summary troubleFoundTroubleFoundInitial
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const troubleFoundTroubleFoundInitial: TroubleFound = { number_: 0 };
-/* END_OF_SYMBOL_DEFINITION troubleFoundTroubleFoundInitial */
 
 /* eslint-enable */

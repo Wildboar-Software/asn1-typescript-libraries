@@ -12,7 +12,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION FriendsDescription */
 /**
  * @summary FriendsDescription
  * @description
@@ -106,9 +105,7 @@ export class FriendsDescription {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FriendsDescription */
 /**
  * @summary The Leading Root Component Types of FriendsDescription
  * @description
@@ -160,9 +157,7 @@ export const _root_component_type_list_1_spec_for_FriendsDescription: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FriendsDescription */
 /**
  * @summary The Trailing Root Component Types of FriendsDescription
  * @description
@@ -172,9 +167,7 @@ export const _root_component_type_list_1_spec_for_FriendsDescription: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FriendsDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FriendsDescription */
 /**
  * @summary The Extension Addition Component Types of FriendsDescription
  * @description
@@ -184,13 +177,9 @@ export const _root_component_type_list_2_spec_for_FriendsDescription: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_FriendsDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FriendsDescription */
 let _cached_decoder_for_FriendsDescription: $.ASN1Decoder<FriendsDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FriendsDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) FriendsDescription
  * @function
@@ -258,13 +247,9 @@ export function _decode_FriendsDescription(el: _Element) {
     }
     return _cached_decoder_for_FriendsDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FriendsDescription */
 let _cached_encoder_for_FriendsDescription: $.ASN1Encoder<FriendsDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FriendsDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FriendsDescription */
 /**
  * @summary Encodes a(n) FriendsDescription into an ASN.1 Element.
  * @function
@@ -329,6 +314,5 @@ export function _encode_FriendsDescription(
     return _cached_encoder_for_FriendsDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FriendsDescription */
 
 /* eslint-enable */

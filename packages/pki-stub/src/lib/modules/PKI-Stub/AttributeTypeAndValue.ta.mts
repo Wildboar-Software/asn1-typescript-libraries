@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeTypeAndValue */
 /**
  * @summary AttributeTypeAndValue
  * @description
@@ -67,9 +66,7 @@ export class AttributeTypeAndValue {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeAndValue */
 /**
  * @summary The Leading Root Component Types of AttributeTypeAndValue
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_AttributeTypeAndValue: $.Compo
         ),
         new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeAndValue */
 /**
  * @summary The Trailing Root Component Types of AttributeTypeAndValue
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_AttributeTypeAndValue: $.Compo
  */
 export const _root_component_type_list_2_spec_for_AttributeTypeAndValue: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeAndValue */
 /**
  * @summary The Extension Addition Component Types of AttributeTypeAndValue
  * @description
@@ -115,9 +108,7 @@ export const _root_component_type_list_2_spec_for_AttributeTypeAndValue: $.Compo
  */
 export const _extension_additions_list_spec_for_AttributeTypeAndValue: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeTypeAndValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeTypeAndValue
  * @function
@@ -141,9 +132,7 @@ export function _decode_AttributeTypeAndValue(el: _Element) {
     value = $._decodeAny(sequence[1]);
     return new AttributeTypeAndValue(type_, value, sequence.slice(2));
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeTypeAndValue */
 /**
  * @summary Encodes a(n) AttributeTypeAndValue into an ASN.1 Element.
  * @function
@@ -164,6 +153,5 @@ export function _encode_AttributeTypeAndValue(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeTypeAndValue */
 
 /* eslint-enable */

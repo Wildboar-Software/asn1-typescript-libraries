@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_bp } from '../EDIMSObjectIdentifiers/id-bp.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_bp_ansiX12_octet */
 /**
  * @summary id_bp_ansiX12_octet
  * @description
@@ -25,6 +24,5 @@ import { id_bp } from '../EDIMSObjectIdentifiers/id-bp.va.mjs';
  * @constant
  */
 export const id_bp_ansiX12_octet: ID = new _OID([5], id_bp);
-/* END_OF_SYMBOL_DEFINITION id_bp_ansiX12_octet */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageSubmissionTime */
 /**
  * @summary MessageSubmissionTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageSubmissionTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSubmissionTime */
 let _cached_decoder_for_MessageSubmissionTime: $.ASN1Decoder<MessageSubmissionTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageSubmissionTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSubmissionTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageSubmissionTime(el: _Element) {
     }
     return _cached_decoder_for_MessageSubmissionTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSubmissionTime */
 let _cached_encoder_for_MessageSubmissionTime: $.ASN1Encoder<MessageSubmissionTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageSubmissionTime */
 /**
  * @summary Encodes a(n) MessageSubmissionTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageSubmissionTime(
     return _cached_encoder_for_MessageSubmissionTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageSubmissionTime */
 
 /* eslint-enable */

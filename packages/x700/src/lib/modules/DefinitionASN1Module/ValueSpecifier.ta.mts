@@ -20,7 +20,7 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ValueSpecifier */
+
 /**
  * @summary ValueSpecifier
  * @description
@@ -37,13 +37,11 @@ import {
 export type ValueSpecifier =
     | { valueReference: DefinedValue } /* CHOICE_ALT_ROOT */
     | { derivationRule: TemplateLabel } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ValueSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValueSpecifier */
+
 let _cached_decoder_for_ValueSpecifier: $.ASN1Decoder<ValueSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValueSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ValueSpecifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ValueSpecifier
  * @function
@@ -71,13 +69,11 @@ export function _decode_ValueSpecifier(el: _Element) {
     }
     return _cached_decoder_for_ValueSpecifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ValueSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValueSpecifier */
+
 let _cached_encoder_for_ValueSpecifier: $.ASN1Encoder<ValueSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValueSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ValueSpecifier */
+
 /**
  * @summary Encodes a(n) ValueSpecifier into an ASN.1 Element.
  * @function
@@ -111,6 +107,5 @@ export function _encode_ValueSpecifier(
     return _cached_encoder_for_ValueSpecifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ValueSpecifier */
 
 /* eslint-enable */

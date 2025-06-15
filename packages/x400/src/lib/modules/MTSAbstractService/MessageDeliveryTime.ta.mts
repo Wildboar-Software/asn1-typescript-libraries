@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryTime */
 /**
  * @summary MessageDeliveryTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageDeliveryTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryTime */
 let _cached_decoder_for_MessageDeliveryTime: $.ASN1Decoder<MessageDeliveryTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageDeliveryTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageDeliveryTime(el: _Element) {
     }
     return _cached_decoder_for_MessageDeliveryTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryTime */
 let _cached_encoder_for_MessageDeliveryTime: $.ASN1Encoder<MessageDeliveryTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageDeliveryTime */
 /**
  * @summary Encodes a(n) MessageDeliveryTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageDeliveryTime(
     return _cached_encoder_for_MessageDeliveryTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageDeliveryTime */
 
 /* eslint-enable */

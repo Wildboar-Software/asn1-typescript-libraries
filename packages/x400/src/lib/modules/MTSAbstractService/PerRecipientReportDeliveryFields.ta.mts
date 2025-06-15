@@ -41,7 +41,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientReportDeliveryFields */
 /**
  * @summary PerRecipientReportDeliveryFields
  * @description
@@ -142,9 +141,7 @@ export class PerRecipientReportDeliveryFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientReportDeliveryFields */
 /**
  * @summary The Leading Root Component Types of PerRecipientReportDeliveryFields
  * @description
@@ -197,9 +194,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientReportDeliveryFiel
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientReportDeliveryFields */
 /**
  * @summary The Trailing Root Component Types of PerRecipientReportDeliveryFields
  * @description
@@ -209,9 +204,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientReportDeliveryFiel
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerRecipientReportDeliveryFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientReportDeliveryFields */
 /**
  * @summary The Extension Addition Component Types of PerRecipientReportDeliveryFields
  * @description
@@ -221,13 +214,9 @@ export const _root_component_type_list_2_spec_for_PerRecipientReportDeliveryFiel
  * @constant
  */
 export const _extension_additions_list_spec_for_PerRecipientReportDeliveryFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientReportDeliveryFields */
 let _cached_decoder_for_PerRecipientReportDeliveryFields: $.ASN1Decoder<PerRecipientReportDeliveryFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerRecipientReportDeliveryFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerRecipientReportDeliveryFields
  * @function
@@ -306,13 +295,9 @@ export function _decode_PerRecipientReportDeliveryFields(el: _Element) {
     }
     return _cached_decoder_for_PerRecipientReportDeliveryFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientReportDeliveryFields */
 let _cached_encoder_for_PerRecipientReportDeliveryFields: $.ASN1Encoder<PerRecipientReportDeliveryFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientReportDeliveryFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerRecipientReportDeliveryFields */
 /**
  * @summary Encodes a(n) PerRecipientReportDeliveryFields into an ASN.1 Element.
  * @function
@@ -398,6 +383,5 @@ export function _encode_PerRecipientReportDeliveryFields(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerRecipientReportDeliveryFields */
 
 /* eslint-enable */

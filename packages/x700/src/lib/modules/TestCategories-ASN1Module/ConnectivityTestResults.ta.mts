@@ -26,7 +26,6 @@ import {
     _decode_TestThreshold,
     _encode_TestThreshold,
 } from '../TestCategories-ASN1Module/TestThreshold.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectivityTestResults */
 /**
  * @summary ConnectivityTestResults
  * @description
@@ -47,13 +46,9 @@ export type ConnectivityTestResults =
     | { timeoutPeriod: TimeoutPeriod } /* CHOICE_ALT_ROOT */
     | { testThreshold: TestThreshold } /* CHOICE_ALT_ROOT */
     | { specificError: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectivityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityTestResults */
 let _cached_decoder_for_ConnectivityTestResults: $.ASN1Decoder<ConnectivityTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectivityTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectivityTestResults
  * @function
@@ -91,13 +86,9 @@ export function _decode_ConnectivityTestResults(el: _Element) {
     }
     return _cached_decoder_for_ConnectivityTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectivityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityTestResults */
 let _cached_encoder_for_ConnectivityTestResults: $.ASN1Encoder<ConnectivityTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectivityTestResults */
 /**
  * @summary Encodes a(n) ConnectivityTestResults into an ASN.1 Element.
  * @function
@@ -143,6 +134,5 @@ export function _encode_ConnectivityTestResults(
     return _cached_encoder_for_ConnectivityTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectivityTestResults */
 
 /* eslint-enable */

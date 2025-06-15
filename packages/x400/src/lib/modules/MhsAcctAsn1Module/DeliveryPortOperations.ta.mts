@@ -15,7 +15,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliveryPortOperations */
 /**
  * @summary DeliveryPortOperations
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type DeliveryPortOperations = EventTypeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeliveryPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryPortOperations */
 let _cached_decoder_for_DeliveryPortOperations: $.ASN1Decoder<DeliveryPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveryPortOperations */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryPortOperations
  * @function
@@ -47,13 +42,9 @@ export function _decode_DeliveryPortOperations(el: _Element) {
     }
     return _cached_decoder_for_DeliveryPortOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveryPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryPortOperations */
 let _cached_encoder_for_DeliveryPortOperations: $.ASN1Encoder<DeliveryPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveryPortOperations */
 /**
  * @summary Encodes a(n) DeliveryPortOperations into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_DeliveryPortOperations(
     return _cached_encoder_for_DeliveryPortOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveryPortOperations */
 
 /* eslint-enable */

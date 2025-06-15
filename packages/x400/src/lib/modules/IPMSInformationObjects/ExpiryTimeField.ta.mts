@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExpiryTimeField */
 /**
  * @summary ExpiryTimeField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExpiryTimeField = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiryTimeField */
 let _cached_decoder_for_ExpiryTimeField: $.ASN1Decoder<ExpiryTimeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExpiryTimeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExpiryTimeField
  * @function
@@ -46,13 +41,9 @@ export function _decode_ExpiryTimeField(el: _Element) {
     }
     return _cached_decoder_for_ExpiryTimeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiryTimeField */
 let _cached_encoder_for_ExpiryTimeField: $.ASN1Encoder<ExpiryTimeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpiryTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExpiryTimeField */
 /**
  * @summary Encodes a(n) ExpiryTimeField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ExpiryTimeField(
     return _cached_encoder_for_ExpiryTimeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExpiryTimeField */
 
 /* eslint-enable */

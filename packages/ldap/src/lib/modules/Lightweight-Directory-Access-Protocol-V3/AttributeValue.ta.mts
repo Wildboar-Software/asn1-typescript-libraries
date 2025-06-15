@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AttributeValue */
+
 /**
  * @summary AttributeValue
  * @description
@@ -24,9 +24,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AttributeValue = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION AttributeValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeValue */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValue
  * @function
@@ -36,9 +35,8 @@ export type AttributeValue = OCTET_STRING; // OctetStringType
 export function _decode_AttributeValue(el: _Element) {
   return $._decodeOctetString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeValue */
+
 /**
  * @summary Encodes a(n) AttributeValue into an ASN.1 Element.
  * @function
@@ -53,6 +51,5 @@ export function _encode_AttributeValue(
   return $._encodeOctetString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeValue */
 
 /* eslint-enable */

@@ -49,7 +49,6 @@ import {
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TBSCertificate */
 /**
  * @summary TBSCertificate
  * @description
@@ -187,9 +186,7 @@ export class TBSCertificate {
         return v1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCertificate */
 /**
  * @summary The Leading Root Component Types of TBSCertificate
  * @description
@@ -251,9 +248,7 @@ export const _root_component_type_list_1_spec_for_TBSCertificate: $.ComponentSpe
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertificate */
 /**
  * @summary The Trailing Root Component Types of TBSCertificate
  * @description
@@ -264,9 +259,7 @@ export const _root_component_type_list_1_spec_for_TBSCertificate: $.ComponentSpe
  */
 export const _root_component_type_list_2_spec_for_TBSCertificate: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertificate */
 /**
  * @summary The Extension Addition Component Types of TBSCertificate
  * @description
@@ -292,9 +285,7 @@ export const _extension_additions_list_spec_for_TBSCertificate: $.ComponentSpec[
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSCertificate
  * @function
@@ -383,9 +374,7 @@ export function _decode_TBSCertificate(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSCertificate */
 /**
  * @summary Encodes a(n) TBSCertificate into an ASN.1 Element.
  * @function
@@ -445,6 +434,5 @@ export function _encode_TBSCertificate(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSCertificate */
 
 /* eslint-enable */

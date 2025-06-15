@@ -15,7 +15,6 @@ import {
     _decode_IPM,
     _encode_IPM,
 } from '../IPMSInformationObjects/IPM.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReturnedIPMField */
 /**
  * @summary ReturnedIPMField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReturnedIPMField = IPM; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReturnedIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnedIPMField */
 let _cached_decoder_for_ReturnedIPMField: $.ASN1Decoder<ReturnedIPMField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnedIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReturnedIPMField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReturnedIPMField
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReturnedIPMField(el: _Element) {
     }
     return _cached_decoder_for_ReturnedIPMField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReturnedIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnedIPMField */
 let _cached_encoder_for_ReturnedIPMField: $.ASN1Encoder<ReturnedIPMField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnedIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReturnedIPMField */
 /**
  * @summary Encodes a(n) ReturnedIPMField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReturnedIPMField(
     return _cached_encoder_for_ReturnedIPMField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReturnedIPMField */
 
 /* eslint-enable */

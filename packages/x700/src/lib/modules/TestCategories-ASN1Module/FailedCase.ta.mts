@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_FailedCase */
 /**
  * @summary FailedCase
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_FailedCase {
     lineDisconnected = 0,
     counterOverflow = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_FailedCase */
 
-/* START_OF_SYMBOL_DEFINITION FailedCase */
 /**
  * @summary FailedCase
  * @description
@@ -42,9 +39,7 @@ export enum _enum_for_FailedCase {
  * ```@enum {number}
  */
 export type FailedCase = _enum_for_FailedCase;
-/* END_OF_SYMBOL_DEFINITION FailedCase */
 
-/* START_OF_SYMBOL_DEFINITION FailedCase */
 /**
  * @summary FailedCase
  * @description
@@ -57,9 +52,7 @@ export type FailedCase = _enum_for_FailedCase;
  * ```@enum {number}
  */
 export const FailedCase = _enum_for_FailedCase;
-/* END_OF_SYMBOL_DEFINITION FailedCase */
 
-/* START_OF_SYMBOL_DEFINITION FailedCase_lineDisconnected */
 /**
  * @summary FailedCase_lineDisconnected
  * @constant
@@ -67,9 +60,7 @@ export const FailedCase = _enum_for_FailedCase;
  */
 export const FailedCase_lineDisconnected: FailedCase =
     FailedCase.lineDisconnected; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION FailedCase_lineDisconnected */
 
-/* START_OF_SYMBOL_DEFINITION lineDisconnected */
 /**
  * @summary lineDisconnected
  * @constant
@@ -77,9 +68,7 @@ export const FailedCase_lineDisconnected: FailedCase =
  */
 export const lineDisconnected: FailedCase =
     FailedCase.lineDisconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION lineDisconnected */
 
-/* START_OF_SYMBOL_DEFINITION FailedCase_counterOverflow */
 /**
  * @summary FailedCase_counterOverflow
  * @constant
@@ -87,9 +76,7 @@ export const lineDisconnected: FailedCase =
  */
 export const FailedCase_counterOverflow: FailedCase =
     FailedCase.counterOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION FailedCase_counterOverflow */
 
-/* START_OF_SYMBOL_DEFINITION counterOverflow */
 /**
  * @summary counterOverflow
  * @constant
@@ -97,21 +84,12 @@ export const FailedCase_counterOverflow: FailedCase =
  */
 export const counterOverflow: FailedCase =
     FailedCase.counterOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION counterOverflow */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FailedCase */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FailedCase */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FailedCase */
 export const _decode_FailedCase = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_FailedCase */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FailedCase */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FailedCase */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FailedCase */
 export const _encode_FailedCase = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FailedCase */
 
 /* eslint-enable */

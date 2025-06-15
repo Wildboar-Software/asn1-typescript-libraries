@@ -26,7 +26,6 @@ import {
   _decode_PDV_list_presentation_data_values,
   _encode_PDV_list_presentation_data_values,
 } from '../ACSE-1/PDV-list-presentation-data-values.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PDV_list */
 /**
  * @summary PDV_list
  * @description
@@ -92,9 +91,7 @@ export class PDV_list {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDV_list */
 /**
  * @summary The Leading Root Component Types of PDV_list
  * @description
@@ -126,9 +123,7 @@ export const _root_component_type_list_1_spec_for_PDV_list: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDV_list */
 /**
  * @summary The Trailing Root Component Types of PDV_list
  * @description
@@ -138,9 +133,7 @@ export const _root_component_type_list_1_spec_for_PDV_list: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PDV_list: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDV_list */
 /**
  * @summary The Extension Addition Component Types of PDV_list
  * @description
@@ -150,13 +143,9 @@ export const _root_component_type_list_2_spec_for_PDV_list: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_PDV_list: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDV_list */
 let _cached_decoder_for_PDV_list: $.ASN1Decoder<PDV_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDV_list */
 /**
  * @summary Decodes an ASN.1 element into a(n) PDV_list
  * @function
@@ -205,13 +194,9 @@ export function _decode_PDV_list(el: _Element) {
   }
   return _cached_decoder_for_PDV_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDV_list */
 let _cached_encoder_for_PDV_list: $.ASN1Encoder<PDV_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDV_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDV_list */
 /**
  * @summary Encodes a(n) PDV_list into an ASN.1 Element.
  * @function
@@ -249,6 +234,5 @@ export function _encode_PDV_list(
   return _cached_encoder_for_PDV_list(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDV_list */
 
 /* eslint-enable */

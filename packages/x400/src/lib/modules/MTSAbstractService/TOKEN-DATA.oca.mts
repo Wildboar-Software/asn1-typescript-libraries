@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TOKEN_DATA */
 /**
  * @summary TOKEN_DATA
  * @description
@@ -63,6 +62,5 @@ export interface TOKEN_DATA<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION TOKEN_DATA */
 
 /* eslint-enable */

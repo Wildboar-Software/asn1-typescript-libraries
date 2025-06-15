@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NumberOfMessagesPerDeliveryServiceType */
 /**
  * @summary NumberOfMessagesPerDeliveryServiceType
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NumberOfMessagesPerDeliveryServiceType = INTEGER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NumberOfMessagesPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfMessagesPerDeliveryServiceType */
 let _cached_decoder_for_NumberOfMessagesPerDeliveryServiceType: $.ASN1Decoder<NumberOfMessagesPerDeliveryServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfMessagesPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NumberOfMessagesPerDeliveryServiceType */
 /**
  * @summary Decodes an ASN.1 element into a(n) NumberOfMessagesPerDeliveryServiceType
  * @function
@@ -45,13 +40,9 @@ export function _decode_NumberOfMessagesPerDeliveryServiceType(el: _Element) {
     }
     return _cached_decoder_for_NumberOfMessagesPerDeliveryServiceType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NumberOfMessagesPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfMessagesPerDeliveryServiceType */
 let _cached_encoder_for_NumberOfMessagesPerDeliveryServiceType: $.ASN1Encoder<NumberOfMessagesPerDeliveryServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfMessagesPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NumberOfMessagesPerDeliveryServiceType */
 /**
  * @summary Encodes a(n) NumberOfMessagesPerDeliveryServiceType into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_NumberOfMessagesPerDeliveryServiceType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NumberOfMessagesPerDeliveryServiceType */
 
 /* eslint-enable */

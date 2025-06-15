@@ -11,7 +11,6 @@ import {
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ICV_Total */
 /**
  * @summary ICV_Total
  * @description
@@ -97,9 +96,7 @@ export class ICV_Total<ToBeProtected> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ICV_Total */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ICV_Total */
 /**
  * @summary The Leading Root Component Types of ICV_Total
  * @description
@@ -145,9 +142,7 @@ export const _root_component_type_list_1_spec_for_ICV_Total: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ICV_Total */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ICV_Total */
 /**
  * @summary The Trailing Root Component Types of ICV_Total
  * @description
@@ -157,9 +152,7 @@ export const _root_component_type_list_1_spec_for_ICV_Total: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ICV_Total: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ICV_Total */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ICV_Total */
 /**
  * @summary The Extension Addition Component Types of ICV_Total
  * @description
@@ -169,9 +162,7 @@ export const _root_component_type_list_2_spec_for_ICV_Total: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_ICV_Total: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ICV_Total */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_ICV_Total */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ICV_Total
  * @function
@@ -233,9 +224,7 @@ export function _get_decoder_for_ICV_Total<ToBeProtected>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_ICV_Total */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_ICV_Total */
 /**
  * @summary Returns a function that will encode a(n) ICV_Total into an ASN.1 Element.
  * @function
@@ -286,6 +275,5 @@ export function _get_encoder_for_ICV_Total<ToBeProtected>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_ICV_Total */
 
 /* eslint-enable */

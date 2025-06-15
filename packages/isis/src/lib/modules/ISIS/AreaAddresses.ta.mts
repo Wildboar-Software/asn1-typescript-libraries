@@ -15,7 +15,6 @@ import {
   _decode_AreaAddress,
   _encode_AreaAddress,
 } from '../ISIS/AreaAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AreaAddresses */
 /**
  * @summary AreaAddresses
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AreaAddresses = AreaAddress[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AreaAddresses */
 let _cached_decoder_for_AreaAddresses: $.ASN1Decoder<AreaAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AreaAddresses */
 /**
  * @summary Decodes an ASN.1 element into a(n) AreaAddresses
  * @function
@@ -48,13 +43,9 @@ export function _decode_AreaAddresses(el: _Element) {
   }
   return _cached_decoder_for_AreaAddresses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AreaAddresses */
 let _cached_encoder_for_AreaAddresses: $.ASN1Encoder<AreaAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AreaAddresses */
 /**
  * @summary Encodes a(n) AreaAddresses into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AreaAddresses(
   return _cached_encoder_for_AreaAddresses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AreaAddresses */
 
 /* eslint-enable */

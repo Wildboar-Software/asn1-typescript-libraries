@@ -15,7 +15,6 @@ import {
     _decode_ErrorCode_Item,
     _encode_ErrorCode_Item,
 } from '../CSModule/ErrorCode-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ErrorCode */
 /**
  * @summary ErrorCode
  * @description
@@ -32,13 +31,9 @@ import {
  * ```
  */
 export type ErrorCode = ErrorCode_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ErrorCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorCode */
 let _cached_decoder_for_ErrorCode: $.ASN1Decoder<ErrorCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ErrorCode */
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorCode
  * @function
@@ -53,13 +48,9 @@ export function _decode_ErrorCode(el: _Element) {
     }
     return _cached_decoder_for_ErrorCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ErrorCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorCode */
 let _cached_encoder_for_ErrorCode: $.ASN1Encoder<ErrorCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ErrorCode */
 /**
  * @summary Encodes a(n) ErrorCode into an ASN.1 Element.
  * @function
@@ -80,6 +71,5 @@ export function _encode_ErrorCode(
     return _cached_encoder_for_ErrorCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ErrorCode */
 
 /* eslint-enable */

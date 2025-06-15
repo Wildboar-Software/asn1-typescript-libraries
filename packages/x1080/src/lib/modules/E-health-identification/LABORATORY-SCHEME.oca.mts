@@ -16,7 +16,7 @@ import {
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LABORATORY_SCHEME */
+
 /**
  * @summary LABORATORY_SCHEME
  * @description
@@ -76,6 +76,5 @@ export interface LABORATORY_SCHEME<
      */
     readonly '&Qualifications': Qualifications;
 }
-/* END_OF_SYMBOL_DEFINITION LABORATORY_SCHEME */
 
 /* eslint-enable */

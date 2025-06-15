@@ -17,7 +17,6 @@ import {
 import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.mjs';
 import { WeekMaskWps_Item } from '../Schedulerev1-ASN1Module/WeekMaskWps-Item.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION defaultWeekMaskWps */
 /**
  * @summary defaultWeekMaskWps
  * @description
@@ -41,6 +40,5 @@ export const defaultWeekMaskWps: WeekMaskWps = [
         },
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION defaultWeekMaskWps */
 
 /* eslint-enable */

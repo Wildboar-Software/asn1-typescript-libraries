@@ -19,7 +19,6 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { id_at_enumerated_flag } from '../MHSRoutingObjectIdentifiers/id-at-enumerated-flag.va.mjs';
-/* START_OF_SYMBOL_DEFINITION enumeratedFlag */
 /**
  * @summary enumeratedFlag
  * @description
@@ -55,6 +54,5 @@ export const enumeratedFlag: ATTRIBUTE<BOOLEAN> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION enumeratedFlag */
 
 /* eslint-enable */

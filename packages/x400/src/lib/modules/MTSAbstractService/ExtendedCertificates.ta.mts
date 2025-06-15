@@ -15,7 +15,6 @@ import {
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
 } from '../MTSAbstractService/ExtendedCertificate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtendedCertificates */
 /**
  * @summary ExtendedCertificates
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExtendedCertificates = ExtendedCertificate[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExtendedCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificates */
 let _cached_decoder_for_ExtendedCertificates: $.ASN1Decoder<ExtendedCertificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedCertificates */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedCertificates
  * @function
@@ -48,13 +43,9 @@ export function _decode_ExtendedCertificates(el: _Element) {
     }
     return _cached_decoder_for_ExtendedCertificates(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificates */
 let _cached_encoder_for_ExtendedCertificates: $.ASN1Encoder<ExtendedCertificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedCertificates */
 /**
  * @summary Encodes a(n) ExtendedCertificates into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ExtendedCertificates(
     return _cached_encoder_for_ExtendedCertificates(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedCertificates */
 
 /* eslint-enable */

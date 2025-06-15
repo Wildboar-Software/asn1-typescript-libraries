@@ -15,7 +15,7 @@ import {
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION probe_ArgumentType */
+
 /**
  * @summary probe_ArgumentType
  * @description
@@ -56,9 +56,8 @@ export class probe_ArgumentType {
     return new probe_ArgumentType(_o.invokeId);
   }
 }
-/* END_OF_SYMBOL_DEFINITION probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_probe_ArgumentType */
+
 /**
  * @summary The Leading Root Component Types of probe_ArgumentType
  * @description
@@ -76,9 +75,8 @@ export const _root_component_type_list_1_spec_for_probe_ArgumentType: $.Componen
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_probe_ArgumentType */
+
 /**
  * @summary The Trailing Root Component Types of probe_ArgumentType
  * @description
@@ -88,9 +86,8 @@ export const _root_component_type_list_1_spec_for_probe_ArgumentType: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_probe_ArgumentType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_probe_ArgumentType */
+
 /**
  * @summary The Extension Addition Component Types of probe_ArgumentType
  * @description
@@ -100,13 +97,11 @@ export const _root_component_type_list_2_spec_for_probe_ArgumentType: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_probe_ArgumentType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_probe_ArgumentType */
+
 let _cached_decoder_for_probe_ArgumentType: $.ASN1Decoder<probe_ArgumentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_probe_ArgumentType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) probe_ArgumentType
  * @function
@@ -136,13 +131,11 @@ export function _decode_probe_ArgumentType(el: _Element) {
   }
   return _cached_decoder_for_probe_ArgumentType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_probe_ArgumentType */
+
 let _cached_encoder_for_probe_ArgumentType: $.ASN1Encoder<probe_ArgumentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_probe_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_probe_ArgumentType */
+
 /**
  * @summary Encodes a(n) probe_ArgumentType into an ASN.1 Element.
  * @function
@@ -175,6 +168,5 @@ export function _encode_probe_ArgumentType(
   return _cached_encoder_for_probe_ArgumentType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_probe_ArgumentType */
 
 /* eslint-enable */

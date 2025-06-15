@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION OPERATION_PACKAGE */
+
 /**
  * @summary OPERATION_PACKAGE
  * @description
@@ -77,6 +77,5 @@ export interface OPERATION_PACKAGE {
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION OPERATION_PACKAGE */
 
 /* eslint-enable */

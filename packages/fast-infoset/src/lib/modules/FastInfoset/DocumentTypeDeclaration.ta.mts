@@ -21,7 +21,6 @@ import {
   _decode_ProcessingInstruction,
   _encode_ProcessingInstruction,
 } from '../FastInfoset/ProcessingInstruction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DocumentTypeDeclaration */
 /**
  * @summary DocumentTypeDeclaration
  * @description
@@ -82,9 +81,7 @@ export class DocumentTypeDeclaration {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DocumentTypeDeclaration */
 /**
  * @summary The Leading Root Component Types of DocumentTypeDeclaration
  * @description
@@ -116,9 +113,7 @@ export const _root_component_type_list_1_spec_for_DocumentTypeDeclaration: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DocumentTypeDeclaration */
 /**
  * @summary The Trailing Root Component Types of DocumentTypeDeclaration
  * @description
@@ -128,9 +123,7 @@ export const _root_component_type_list_1_spec_for_DocumentTypeDeclaration: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DocumentTypeDeclaration: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DocumentTypeDeclaration */
 /**
  * @summary The Extension Addition Component Types of DocumentTypeDeclaration
  * @description
@@ -140,13 +133,9 @@ export const _root_component_type_list_2_spec_for_DocumentTypeDeclaration: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_DocumentTypeDeclaration: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentTypeDeclaration */
 let _cached_decoder_for_DocumentTypeDeclaration: $.ASN1Decoder<DocumentTypeDeclaration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DocumentTypeDeclaration */
 /**
  * @summary Decodes an ASN.1 element into a(n) DocumentTypeDeclaration
  * @function
@@ -195,13 +184,9 @@ export function _decode_DocumentTypeDeclaration(el: _Element) {
   }
   return _cached_decoder_for_DocumentTypeDeclaration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentTypeDeclaration */
 let _cached_encoder_for_DocumentTypeDeclaration: $.ASN1Encoder<DocumentTypeDeclaration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentTypeDeclaration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DocumentTypeDeclaration */
 /**
  * @summary Encodes a(n) DocumentTypeDeclaration into an ASN.1 Element.
  * @function
@@ -244,6 +229,5 @@ export function _encode_DocumentTypeDeclaration(
   return _cached_encoder_for_DocumentTypeDeclaration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DocumentTypeDeclaration */
 
 /* eslint-enable */

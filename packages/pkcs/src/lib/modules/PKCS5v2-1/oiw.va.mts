@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION oiw */
+
 /**
  * @summary oiw
  * @description
@@ -19,6 +19,5 @@ export const oiw: OBJECT_IDENTIFIER = new _OID([
     /* identified-organization */ 3,
     14,
 ]);
-/* END_OF_SYMBOL_DEFINITION oiw */
 
 /* eslint-enable */

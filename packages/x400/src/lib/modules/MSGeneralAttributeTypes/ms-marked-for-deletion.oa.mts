@@ -19,7 +19,6 @@ import { id_att_marked_for_deletion } from '../MSObjectIdentifiers/id-att-marked
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_marked_for_deletion */
 /**
  * @summary ms_marked_for_deletion
  * @description
@@ -50,6 +49,5 @@ export const ms_marked_for_deletion: X413ATTRIBUTE<NULL> = {
     '&id': id_att_marked_for_deletion /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_marked_for_deletion */
 
 /* eslint-enable */

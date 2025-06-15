@@ -11,7 +11,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { pkcs_9_at_placeOfBirth } from "../PKCS-9/pkcs-9-at-placeOfBirth.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION placeOfBirth */
+
 /**
  * @summary placeOfBirth
  * @description
@@ -47,6 +47,5 @@ export const placeOfBirth: ATTRIBUTE<DirectoryString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION placeOfBirth */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_OsiBind_normal_mode_parameters,
     _encode_OsiBind_normal_mode_parameters,
 } from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiBind */
 /**
  * @summary OsiBind
  * @description
@@ -74,9 +73,7 @@ export class OsiBind {
         return new OsiBind(_o.mode_selector, _o.normal_mode_parameters);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiBind */
 /**
  * @summary The Leading Root Component Types of OsiBind
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_OsiBind: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiBind */
 /**
  * @summary The Trailing Root Component Types of OsiBind
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_OsiBind: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiBind: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiBind */
 /**
  * @summary The Extension Addition Component Types of OsiBind
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_OsiBind: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiBind: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind */
 let _cached_decoder_for_OsiBind: $.ASN1Decoder<OsiBind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiBind */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiBind
  * @function
@@ -175,13 +164,9 @@ export function _decode_OsiBind(el: _Element) {
     }
     return _cached_decoder_for_OsiBind(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind */
 let _cached_encoder_for_OsiBind: $.ASN1Encoder<OsiBind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiBind */
 /**
  * @summary Encodes a(n) OsiBind into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_OsiBind(
     return _cached_encoder_for_OsiBind(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiBind */
 
 /* eslint-enable */

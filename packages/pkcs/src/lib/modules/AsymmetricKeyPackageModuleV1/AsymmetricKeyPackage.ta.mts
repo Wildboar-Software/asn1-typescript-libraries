@@ -6,7 +6,7 @@ import {
     _decode_OneAsymmetricKey,
     _encode_OneAsymmetricKey,
 } from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AsymmetricKeyPackage */
+
 /**
  * @summary AsymmetricKeyPackage
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type AsymmetricKeyPackage = OneAsymmetricKey[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AsymmetricKeyPackage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AsymmetricKeyPackage */
+
 let _cached_decoder_for_AsymmetricKeyPackage: $.ASN1Decoder<AsymmetricKeyPackage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AsymmetricKeyPackage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AsymmetricKeyPackage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AsymmetricKeyPackage
  * @function
@@ -39,13 +37,11 @@ export function _decode_AsymmetricKeyPackage(el: _Element) {
     }
     return _cached_decoder_for_AsymmetricKeyPackage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AsymmetricKeyPackage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AsymmetricKeyPackage */
+
 let _cached_encoder_for_AsymmetricKeyPackage: $.ASN1Encoder<AsymmetricKeyPackage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AsymmetricKeyPackage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AsymmetricKeyPackage */
+
 /**
  * @summary Encodes a(n) AsymmetricKeyPackage into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_AsymmetricKeyPackage(
     return _cached_encoder_for_AsymmetricKeyPackage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AsymmetricKeyPackage */
 
 /* eslint-enable */

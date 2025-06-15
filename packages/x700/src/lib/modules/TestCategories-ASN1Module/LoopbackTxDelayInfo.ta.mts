@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LoopbackTxDelayInfo */
 /**
  * @summary LoopbackTxDelayInfo
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LoopbackTxDelayInfo = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION LoopbackTxDelayInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackTxDelayInfo */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackTxDelayInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoopbackTxDelayInfo */
 export const _decode_LoopbackTxDelayInfo = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_LoopbackTxDelayInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackTxDelayInfo */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackTxDelayInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoopbackTxDelayInfo */
 export const _encode_LoopbackTxDelayInfo = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoopbackTxDelayInfo */
 
 /* eslint-enable */

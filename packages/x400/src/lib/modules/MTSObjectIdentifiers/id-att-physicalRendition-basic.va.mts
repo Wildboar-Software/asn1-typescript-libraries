@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
 import { id_att } from '../MTSObjectIdentifiers/id-att.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_att_physicalRendition_basic */
 /**
  * @summary id_att_physicalRendition_basic
  * @description
@@ -25,6 +24,5 @@ import { id_att } from '../MTSObjectIdentifiers/id-att.va.mjs';
  * @constant
  */
 export const id_att_physicalRendition_basic: ID = new _OID([0], id_att);
-/* END_OF_SYMBOL_DEFINITION id_att_physicalRendition_basic */
 
 /* eslint-enable */

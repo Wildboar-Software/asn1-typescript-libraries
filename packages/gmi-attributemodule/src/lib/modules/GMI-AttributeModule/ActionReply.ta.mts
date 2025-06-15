@@ -17,7 +17,7 @@ import {
 } from "@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION ActionReply */
+
 /**
  * @summary ActionReply
  * @description
@@ -30,13 +30,11 @@ import {
  */
 export
 type ActionReply = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ActionReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionReply */
+
 let _cached_decoder_for_ActionReply: $.ASN1Decoder<ActionReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionReply */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionReply
  * @function
@@ -48,13 +46,11 @@ function _decode_ActionReply (el: _Element) {
     if (!_cached_decoder_for_ActionReply) { _cached_decoder_for_ActionReply = $._decodeSetOf<ManagementExtension>(() => _decode_ManagementExtension); }
     return _cached_decoder_for_ActionReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionReply */
+
 let _cached_encoder_for_ActionReply: $.ASN1Encoder<ActionReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionReply */
+
 /**
  * @summary Encodes a(n) ActionReply into an ASN.1 Element.
  * @function
@@ -68,6 +64,5 @@ function _encode_ActionReply (value: ActionReply, elGetter: $.ASN1Encoder<Action
     return _cached_encoder_for_ActionReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionReply */
 
 /* eslint-enable */

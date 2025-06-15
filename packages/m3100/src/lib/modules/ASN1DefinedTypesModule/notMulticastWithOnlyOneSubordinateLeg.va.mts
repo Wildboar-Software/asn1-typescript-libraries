@@ -14,7 +14,7 @@ import {
     _decode_ProblemCause,
     _encode_ProblemCause,
 } from '../ASN1DefinedTypesModule/ProblemCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION notMulticastWithOnlyOneSubordinateLeg */
+
 /**
  * @summary notMulticastWithOnlyOneSubordinateLeg
  * @description
@@ -30,6 +30,5 @@ import {
 export const notMulticastWithOnlyOneSubordinateLeg: ProblemCause = {
     integerValue: 14,
 };
-/* END_OF_SYMBOL_DEFINITION notMulticastWithOnlyOneSubordinateLeg */
 
 /* eslint-enable */

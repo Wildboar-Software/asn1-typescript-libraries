@@ -14,7 +14,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UnformattedPostalAddress */
 /**
  * @summary UnformattedPostalAddress
  * @description
@@ -72,9 +71,7 @@ export class UnformattedPostalAddress {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnformattedPostalAddress */
 /**
  * @summary The Leading Root Component Types of UnformattedPostalAddress
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_UnformattedPostalAddress: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnformattedPostalAddress */
 /**
  * @summary The Trailing Root Component Types of UnformattedPostalAddress
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_UnformattedPostalAddress: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnformattedPostalAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnformattedPostalAddress */
 /**
  * @summary The Extension Addition Component Types of UnformattedPostalAddress
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_UnformattedPostalAddress: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_UnformattedPostalAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnformattedPostalAddress */
 let _cached_decoder_for_UnformattedPostalAddress: $.ASN1Decoder<UnformattedPostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnformattedPostalAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) UnformattedPostalAddress
  * @function
@@ -173,13 +162,9 @@ export function _decode_UnformattedPostalAddress(el: _Element) {
     }
     return _cached_decoder_for_UnformattedPostalAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnformattedPostalAddress */
 let _cached_encoder_for_UnformattedPostalAddress: $.ASN1Encoder<UnformattedPostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnformattedPostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnformattedPostalAddress */
 /**
  * @summary Encodes a(n) UnformattedPostalAddress into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ export function _encode_UnformattedPostalAddress(
     return _cached_encoder_for_UnformattedPostalAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnformattedPostalAddress */
 
 /* eslint-enable */

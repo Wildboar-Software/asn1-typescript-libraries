@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION gigabit_Ethernet */
+
 /**
  * @summary gigabit_Ethernet
  * @description
@@ -32,6 +32,5 @@ export const gigabit_Ethernet: CharacteristicInformation = new _OID(
     [39],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION gigabit_Ethernet */
 
 /* eslint-enable */

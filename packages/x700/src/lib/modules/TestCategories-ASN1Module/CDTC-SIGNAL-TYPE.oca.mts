@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION CDTC_SIGNAL_TYPE */
 /**
  * @summary CDTC_SIGNAL_TYPE
  * @description
@@ -24,6 +23,5 @@ import { DMI_TYPE_IDENTIFIER } from '@wildboar/attribute-asn1module/src/lib/modu
  * @interface
  */
 export type CDTC_SIGNAL_TYPE = DMI_TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION CDTC_SIGNAL_TYPE */
 
 /* eslint-enable */

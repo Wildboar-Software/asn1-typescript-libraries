@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION timeoutExpired */
+
 /**
  * @summary timeoutExpired
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const timeoutExpired: ProbableCause = { localValue: 165 };
-/* END_OF_SYMBOL_DEFINITION timeoutExpired */
 
 /* eslint-enable */

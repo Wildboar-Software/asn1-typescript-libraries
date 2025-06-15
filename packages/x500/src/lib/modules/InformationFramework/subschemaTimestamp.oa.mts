@@ -8,7 +8,6 @@ import {
 import { id_oa_subschemaTimestamp } from "../InformationFramework/id-oa-subschemaTimestamp.va.mjs";
 import { generalizedTimeMatch } from "../SelectedAttributeTypes/generalizedTimeMatch.oa.mjs";
 import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generalizedTimeOrderingMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION subschemaTimestamp */
 /**
  * @summary subschemaTimestamp
  * @description
@@ -50,6 +49,5 @@ export const subschemaTimestamp: ATTRIBUTE<GeneralizedTime> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subschemaTimestamp */
 
 /* eslint-enable */

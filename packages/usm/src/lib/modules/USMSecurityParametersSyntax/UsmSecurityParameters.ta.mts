@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION UsmSecurityParameters */
+
 /**
  * @summary UsmSecurityParameters
  * @description
@@ -96,9 +96,8 @@ class UsmSecurityParameters {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UsmSecurityParameters */
+
 /**
  * @summary The Leading Root Component Types of UsmSecurityParameters
  * @description
@@ -116,9 +115,8 @@ const _root_component_type_list_1_spec_for_UsmSecurityParameters: $.ComponentSpe
     new $.ComponentSpec("msgAuthenticationParameters", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
     new $.ComponentSpec("msgPrivacyParameters", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UsmSecurityParameters */
+
 /**
  * @summary The Trailing Root Component Types of UsmSecurityParameters
  * @description
@@ -131,9 +129,8 @@ export
 const _root_component_type_list_2_spec_for_UsmSecurityParameters: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UsmSecurityParameters */
+
 /**
  * @summary The Extension Addition Component Types of UsmSecurityParameters
  * @description
@@ -146,13 +143,11 @@ export
 const _extension_additions_list_spec_for_UsmSecurityParameters: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UsmSecurityParameters */
+
 let _cached_decoder_for_UsmSecurityParameters: $.ASN1Decoder<UsmSecurityParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UsmSecurityParameters */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UsmSecurityParameters
  * @function
@@ -196,13 +191,11 @@ function _decode_UsmSecurityParameters (el: _Element) {
 }; }
     return _cached_decoder_for_UsmSecurityParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UsmSecurityParameters */
+
 let _cached_encoder_for_UsmSecurityParameters: $.ASN1Encoder<UsmSecurityParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UsmSecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UsmSecurityParameters */
+
 /**
  * @summary Encodes a(n) UsmSecurityParameters into an ASN.1 Element.
  * @function
@@ -227,6 +220,5 @@ function _encode_UsmSecurityParameters (value: UsmSecurityParameters, elGetter: 
     return _cached_encoder_for_UsmSecurityParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UsmSecurityParameters */
 
 /* eslint-enable */

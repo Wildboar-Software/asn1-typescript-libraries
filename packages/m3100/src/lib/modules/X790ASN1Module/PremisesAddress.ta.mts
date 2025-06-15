@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PremisesAddress */
+
 /**
  * @summary PremisesAddress
  * @description
@@ -89,9 +89,8 @@ export class PremisesAddress {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PremisesAddress */
+
 /**
  * @summary The Leading Root Component Types of PremisesAddress
  * @description
@@ -130,9 +129,8 @@ export const _root_component_type_list_1_spec_for_PremisesAddress: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PremisesAddress */
+
 /**
  * @summary The Trailing Root Component Types of PremisesAddress
  * @description
@@ -142,9 +140,8 @@ export const _root_component_type_list_1_spec_for_PremisesAddress: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PremisesAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PremisesAddress */
+
 /**
  * @summary The Extension Addition Component Types of PremisesAddress
  * @description
@@ -154,13 +151,11 @@ export const _root_component_type_list_2_spec_for_PremisesAddress: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_PremisesAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PremisesAddress */
+
 let _cached_decoder_for_PremisesAddress: $.ASN1Decoder<PremisesAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PremisesAddress */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PremisesAddress
  * @function
@@ -203,13 +198,11 @@ export function _decode_PremisesAddress(el: _Element) {
     }
     return _cached_decoder_for_PremisesAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PremisesAddress */
+
 let _cached_encoder_for_PremisesAddress: $.ASN1Encoder<PremisesAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PremisesAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PremisesAddress */
+
 /**
  * @summary Encodes a(n) PremisesAddress into an ASN.1 Element.
  * @function
@@ -257,6 +250,5 @@ export function _encode_PremisesAddress(
     return _cached_encoder_for_PremisesAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PremisesAddress */
 
 /* eslint-enable */

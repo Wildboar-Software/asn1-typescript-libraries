@@ -12,7 +12,6 @@ import {
 import { ipms_access_contract } from '../IPMSFunctionalObjects/ipms-access-contract.oa.mjs';
 import { id_ot_ipms } from '../IPMSObjectIdentifiers/id-ot-ipms.va.mjs';
 import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipms */
 /**
  * @summary ipms
  * @description
@@ -36,6 +35,5 @@ export const ipms: MHS_OBJECT = {
     '&Responds': [ipms_access_contract] /* OBJECT_FIELD_SETTING */,
     '&id': id_ot_ipms /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipms */
 
 /* eslint-enable */

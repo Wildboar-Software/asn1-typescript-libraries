@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EventTypeId */
+
 /**
  * @summary EventTypeId
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type EventTypeId =
   | { globalForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
   | { localForm: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EventTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EventTypeId */
+
 let _cached_decoder_for_EventTypeId: $.ASN1Decoder<EventTypeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EventTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EventTypeId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EventTypeId
  * @function
@@ -62,13 +60,11 @@ export function _decode_EventTypeId(el: _Element) {
   }
   return _cached_decoder_for_EventTypeId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EventTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EventTypeId */
+
 let _cached_encoder_for_EventTypeId: $.ASN1Encoder<EventTypeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EventTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EventTypeId */
+
 /**
  * @summary Encodes a(n) EventTypeId into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_EventTypeId(
   return _cached_encoder_for_EventTypeId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EventTypeId */
 
 /* eslint-enable */

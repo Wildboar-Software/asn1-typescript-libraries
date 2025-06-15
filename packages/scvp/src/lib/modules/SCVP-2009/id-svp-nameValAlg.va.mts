@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_svp } from '../SCVP-2009/id-svp.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_svp_nameValAlg */
 /**
  * @summary id_svp_nameValAlg
  * @description
@@ -25,6 +24,5 @@ import { id_svp } from '../SCVP-2009/id-svp.va.mjs';
  * @constant
  */
 export const id_svp_nameValAlg: OBJECT_IDENTIFIER = new _OID([2], id_svp);
-/* END_OF_SYMBOL_DEFINITION id_svp_nameValAlg */
 
 /* eslint-enable */

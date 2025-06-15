@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION op_ms_cancel_deferred_delivery */
 /**
  * @summary op_ms_cancel_deferred_delivery
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const op_ms_cancel_deferred_delivery: Code = { local: 7 };
-/* END_OF_SYMBOL_DEFINITION op_ms_cancel_deferred_delivery */
 
 /* eslint-enable */

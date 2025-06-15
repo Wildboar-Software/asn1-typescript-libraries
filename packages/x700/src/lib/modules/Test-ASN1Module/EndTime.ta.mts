@@ -17,7 +17,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EndTime */
 /**
  * @summary EndTime
  * @description
@@ -36,13 +35,9 @@ export type EndTime =
     | { specific: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | { relative: Timespec } /* CHOICE_ALT_ROOT */
     | { continual: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EndTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EndTime */
 let _cached_decoder_for_EndTime: $.ASN1Decoder<EndTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EndTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EndTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) EndTime
  * @function
@@ -65,13 +60,9 @@ export function _decode_EndTime(el: _Element) {
     }
     return _cached_decoder_for_EndTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EndTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EndTime */
 let _cached_encoder_for_EndTime: $.ASN1Encoder<EndTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EndTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EndTime */
 /**
  * @summary Encodes a(n) EndTime into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_EndTime(
     return _cached_encoder_for_EndTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EndTime */
 
 /* eslint-enable */

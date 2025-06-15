@@ -11,7 +11,6 @@ import {
     _decode_LinkedResult,
     _encode_LinkedResult,
 } from "../DirectoryAbstractService/LinkedResult.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION linkedLDAP */
 /**
  * @summary linkedLDAP
  * @description
@@ -43,6 +42,5 @@ export const linkedLDAP: OPERATION<LinkedArgument, LinkedResult> = {
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION linkedLDAP */
 
 /* eslint-enable */

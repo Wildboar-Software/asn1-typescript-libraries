@@ -23,7 +23,6 @@ import {
     _encode_ReportingMTAName,
 } from '../MTSAbstractService/ReportingMTAName.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION reporting_MTA_name */
 /**
  * @summary reporting_MTA_name
  * @description
@@ -57,6 +56,5 @@ export const reporting_MTA_name: EXTENSION<ReportingMTAName> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION reporting_MTA_name */
 
 /* eslint-enable */

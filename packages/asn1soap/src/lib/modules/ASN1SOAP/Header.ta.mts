@@ -15,7 +15,7 @@ import {
   _decode_HeaderBlock,
   _encode_HeaderBlock,
 } from '../ASN1SOAP/HeaderBlock.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Header */
+
 /**
  * @summary Header
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Header = HeaderBlock[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Header */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Header */
+
 let _cached_decoder_for_Header: $.ASN1Decoder<Header> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Header */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Header */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Header
  * @function
@@ -48,13 +46,11 @@ export function _decode_Header(el: _Element) {
   }
   return _cached_decoder_for_Header(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Header */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Header */
+
 let _cached_encoder_for_Header: $.ASN1Encoder<Header> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Header */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Header */
+
 /**
  * @summary Encodes a(n) Header into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_Header(value: Header, elGetter: $.ASN1Encoder<Header>) {
   return _cached_encoder_for_Header(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Header */
 
 /* eslint-enable */

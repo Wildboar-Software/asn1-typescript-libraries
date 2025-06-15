@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION SIG_POLICY_QUALIFIER */
 /**
  * @summary SIG_POLICY_QUALIFIER
  * @description
@@ -61,6 +60,5 @@ interface SIG_POLICY_QUALIFIER<
      */
     readonly "&Qualifier": Qualifier;
 };
-/* END_OF_SYMBOL_DEFINITION SIG_POLICY_QUALIFIER */
 
 /* eslint-enable */

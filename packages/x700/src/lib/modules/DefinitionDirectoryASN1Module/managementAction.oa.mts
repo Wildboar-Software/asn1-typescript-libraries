@@ -24,7 +24,6 @@ import { withInformationSyntax } from '../DefinitionDirectoryASN1Module/withInfo
 import { withReplySyntax } from '../DefinitionDirectoryASN1Module/withReplySyntax.oa.mjs';
 import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementAction */
 /**
  * @summary managementAction
  * @description
@@ -65,6 +64,5 @@ export const managementAction: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementAction */
 
 /* eslint-enable */

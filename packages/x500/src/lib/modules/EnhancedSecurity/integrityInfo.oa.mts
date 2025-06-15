@@ -6,7 +6,6 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION integrityInfo */
 /**
  * @summary integrityInfo
  * @description
@@ -34,6 +33,5 @@ export const integrityInfo: OBJECT_CLASS = {
     "&MandatoryAttributes": [attributeIntegrityInfo] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_integrityInfo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION integrityInfo */
 
 /* eslint-enable */

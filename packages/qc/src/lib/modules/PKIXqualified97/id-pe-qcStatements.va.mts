@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pe } from "../PKIX1Explicit88/id-pe.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION id_pe_qcStatements */
+
 /**
  * @summary id_pe_qcStatements
  * @description
@@ -16,6 +16,5 @@ import { id_pe } from "../PKIX1Explicit88/id-pe.va.mjs";
  * @constant
  */
 export const id_pe_qcStatements: OBJECT_IDENTIFIER = new _OID([3], id_pe);
-/* END_OF_SYMBOL_DEFINITION id_pe_qcStatements */
 
 /* eslint-enable */

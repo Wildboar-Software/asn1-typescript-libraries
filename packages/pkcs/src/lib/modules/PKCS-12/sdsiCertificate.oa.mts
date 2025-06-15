@@ -3,7 +3,7 @@ import { IA5String, ObjectIdentifier as _OID } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { certTypes } from "../PKCS-9/certTypes.va.mjs";
-/* START_OF_SYMBOL_DEFINITION sdsiCertificate */
+
 /**
  * @summary sdsiCertificate
  * @description
@@ -32,6 +32,5 @@ export const sdsiCertificate: BAG_TYPE<IA5String> = {
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sdsiCertificate */
 
 /* eslint-enable */

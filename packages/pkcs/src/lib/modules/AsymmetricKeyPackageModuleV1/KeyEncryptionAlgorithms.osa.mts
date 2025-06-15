@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithms */
+
 /**
  * @summary KeyEncryptionAlgorithms
  * @description
@@ -19,6 +19,5 @@ import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFra
  *
  */
 export const KeyEncryptionAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithms */
 
 /* eslint-enable */

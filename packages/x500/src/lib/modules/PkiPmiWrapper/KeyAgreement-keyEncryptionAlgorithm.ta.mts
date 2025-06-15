@@ -6,7 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary KeyAgreement_keyEncryptionAlgorithm
  * @description
@@ -67,9 +66,7 @@ export class KeyAgreement_keyEncryptionAlgorithm {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary The Leading Root Component Types of KeyAgreement_keyEncryptionAlgorithm
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_KeyAgreement_keyEncryptionAlgo
     ),
     new $.ComponentSpec("parameters", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary The Trailing Root Component Types of KeyAgreement_keyEncryptionAlgorithm
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_KeyAgreement_keyEncryptionAlgo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyAgreement_keyEncryptionAlgorithm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary The Extension Addition Component Types of KeyAgreement_keyEncryptionAlgorithm
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_KeyAgreement_keyEncryptionAlgo
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyAgreement_keyEncryptionAlgorithm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm */
 let _cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm: $.ASN1Decoder<KeyAgreement_keyEncryptionAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyAgreement_keyEncryptionAlgorithm
  * @function
@@ -153,13 +142,9 @@ export function _decode_KeyAgreement_keyEncryptionAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_KeyAgreement_keyEncryptionAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm */
 let _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm: $.ASN1Encoder<KeyAgreement_keyEncryptionAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary Encodes a(n) KeyAgreement_keyEncryptionAlgorithm into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ export function _encode_KeyAgreement_keyEncryptionAlgorithm(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyAgreement_keyEncryptionAlgorithm */
 
 /* eslint-enable */

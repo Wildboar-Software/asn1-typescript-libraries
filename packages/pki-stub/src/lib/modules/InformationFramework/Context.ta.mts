@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Context */
 /**
  * @summary Context
  * @description
@@ -87,9 +86,7 @@ export class Context {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION Context */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Context */
 /**
  * @summary The Leading Root Component Types of Context
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_Context: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Context */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context */
 /**
  * @summary The Trailing Root Component Types of Context
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_Context: $.ComponentSpec[] = [
  */
 export const _root_component_type_list_2_spec_for_Context: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context */
 /**
  * @summary The Extension Addition Component Types of Context
  * @description
@@ -146,9 +139,7 @@ export const _root_component_type_list_2_spec_for_Context: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Context: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Context */
 /**
  * @summary Decodes an ASN.1 element into a(n) Context
  * @function
@@ -194,9 +185,7 @@ export function _decode_Context(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Context */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Context */
 /**
  * @summary Encodes a(n) Context into an ASN.1 Element.
  * @function
@@ -223,6 +212,5 @@ export function _encode_Context(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Context */
 
 /* eslint-enable */

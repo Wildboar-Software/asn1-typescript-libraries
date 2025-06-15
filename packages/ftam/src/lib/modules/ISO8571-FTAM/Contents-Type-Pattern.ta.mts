@@ -20,7 +20,7 @@ import {
   _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
   _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
 } from '../ISO8571-FTAM/Contents-Type-Pattern-constraint-set-abstract-Syntax-Pattern.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Contents_Type_Pattern */
+
 /**
  * @summary Contents_Type_Pattern
  * @description
@@ -47,13 +47,11 @@ export type Contents_Type_Pattern =
   | {
       constraint_set_abstract_Syntax_Pattern: Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Contents_Type_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_Pattern */
+
 let _cached_decoder_for_Contents_Type_Pattern: $.ASN1Decoder<Contents_Type_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Contents_Type_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Contents_Type_Pattern
  * @function
@@ -82,13 +80,11 @@ export function _decode_Contents_Type_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Contents_Type_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Contents_Type_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_Pattern */
+
 let _cached_encoder_for_Contents_Type_Pattern: $.ASN1Encoder<Contents_Type_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Contents_Type_Pattern */
+
 /**
  * @summary Encodes a(n) Contents_Type_Pattern into an ASN.1 Element.
  * @function
@@ -123,6 +119,5 @@ export function _encode_Contents_Type_Pattern(
   return _cached_encoder_for_Contents_Type_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Contents_Type_Pattern */
 
 /* eslint-enable */

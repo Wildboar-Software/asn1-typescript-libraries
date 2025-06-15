@@ -22,7 +22,6 @@ import {
     _encode_NamingObjectClass,
 } from '../DefinitionASN1Module/NamingObjectClass.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION namedBySuperiorObjectClass */
 /**
  * @summary namedBySuperiorObjectClass
  * @description
@@ -64,6 +63,5 @@ export const namedBySuperiorObjectClass: ATTRIBUTE<NamingObjectClass> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION namedBySuperiorObjectClass */
 
 /* eslint-enable */

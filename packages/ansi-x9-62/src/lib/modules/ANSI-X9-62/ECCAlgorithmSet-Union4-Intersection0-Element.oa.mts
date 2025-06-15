@@ -6,7 +6,6 @@ import {
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../ANSI-X9-62/HashAlgorithm.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union4_Intersection0_Element */
 /**
  * @summary ECCAlgorithmSet_Union4_Intersection0_Element
  * @description
@@ -32,6 +31,5 @@ export const ECCAlgorithmSet_Union4_Intersection0_Element: ALGORITHM<HashAlgorit
     "&id": ecdsa_with_Specified /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union4_Intersection0_Element */
 
 /* eslint-enable */

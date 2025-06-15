@@ -6,7 +6,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS-1/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PSourceAlgorithm */
+
 /**
  * @summary PSourceAlgorithm
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type PSourceAlgorithm = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PSourceAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PSourceAlgorithm */
+
 let _cached_decoder_for_PSourceAlgorithm: $.ASN1Decoder<PSourceAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PSourceAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PSourceAlgorithm */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PSourceAlgorithm
  * @function
@@ -37,13 +35,11 @@ export function _decode_PSourceAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_PSourceAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PSourceAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PSourceAlgorithm */
+
 let _cached_encoder_for_PSourceAlgorithm: $.ASN1Encoder<PSourceAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PSourceAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PSourceAlgorithm */
+
 /**
  * @summary Encodes a(n) PSourceAlgorithm into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_PSourceAlgorithm(
     return _cached_encoder_for_PSourceAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PSourceAlgorithm */
 
 /* eslint-enable */

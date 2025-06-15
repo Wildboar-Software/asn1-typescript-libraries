@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { ProbableCause, _decode_ProbableCause, _encode_ProbableCause } from "../Attribute-ASN1Module/ProbableCause.ta.mjs";
 import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mjs";
-/* START_OF_SYMBOL_DEFINITION transmitFailure */
 /**
  * @summary transmitFailure
  * @description
@@ -26,6 +25,5 @@ import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.mj
  */
 export
 const transmitFailure: ProbableCause = { globalValue: new _OID([54,], arfProbableCause) };
-/* END_OF_SYMBOL_DEFINITION transmitFailure */
 
 /* eslint-enable */

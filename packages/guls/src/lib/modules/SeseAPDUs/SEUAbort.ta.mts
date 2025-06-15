@@ -22,7 +22,7 @@ import {
   _decode_SEerror,
   _encode_SEerror,
 } from '../SeseAPDUs/SEerror.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SEUAbort */
+
 /**
  * @summary SEUAbort
  * @description
@@ -100,9 +100,8 @@ export class SEUAbort {
     return noInvocationId;
   }
 }
-/* END_OF_SYMBOL_DEFINITION SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SEUAbort */
+
 /**
  * @summary The Leading Root Component Types of SEUAbort
  * @description
@@ -134,9 +133,8 @@ export const _root_component_type_list_1_spec_for_SEUAbort: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SEUAbort */
+
 /**
  * @summary The Trailing Root Component Types of SEUAbort
  * @description
@@ -146,9 +144,8 @@ export const _root_component_type_list_1_spec_for_SEUAbort: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SEUAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SEUAbort */
+
 /**
  * @summary The Extension Addition Component Types of SEUAbort
  * @description
@@ -158,13 +155,11 @@ export const _root_component_type_list_2_spec_for_SEUAbort: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_SEUAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SEUAbort */
+
 let _cached_decoder_for_SEUAbort: $.ASN1Decoder<SEUAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SEUAbort */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SEUAbort
  * @function
@@ -210,13 +205,11 @@ export function _decode_SEUAbort(el: _Element) {
   }
   return _cached_decoder_for_SEUAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SEUAbort */
+
 let _cached_encoder_for_SEUAbort: $.ASN1Encoder<SEUAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SEUAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SEUAbort */
+
 /**
  * @summary Encodes a(n) SEUAbort into an ASN.1 Element.
  * @function
@@ -259,6 +252,5 @@ export function _encode_SEUAbort(
   return _cached_encoder_for_SEUAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SEUAbort */
 
 /* eslint-enable */

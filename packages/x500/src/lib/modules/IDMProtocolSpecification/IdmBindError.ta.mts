@@ -17,7 +17,6 @@ import {
     _encode_IdmBindError_aETitleError,
     _enum_for_IdmBindError_aETitleError,
 } from "../IDMProtocolSpecification/IdmBindError-aETitleError.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IdmBindError */
 /**
  * @summary IdmBindError
  * @description
@@ -106,9 +105,7 @@ export class IdmBindError {
 
     public static _enum_for_aETitleError = _enum_for_IdmBindError_aETitleError;
 }
-/* END_OF_SYMBOL_DEFINITION IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmBindError */
 /**
  * @summary The Leading Root Component Types of IdmBindError
  * @description
@@ -147,9 +144,7 @@ export const _root_component_type_list_1_spec_for_IdmBindError: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmBindError */
 /**
  * @summary The Trailing Root Component Types of IdmBindError
  * @description
@@ -159,9 +154,7 @@ export const _root_component_type_list_1_spec_for_IdmBindError: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IdmBindError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmBindError */
 /**
  * @summary The Extension Addition Component Types of IdmBindError
  * @description
@@ -171,13 +164,9 @@ export const _root_component_type_list_2_spec_for_IdmBindError: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_IdmBindError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBindError */
 let _cached_decoder_for_IdmBindError: $.ASN1Decoder<IdmBindError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IdmBindError */
 /**
  * @summary Decodes an ASN.1 element into a(n) IdmBindError
  * @function
@@ -237,13 +226,9 @@ export function _decode_IdmBindError(el: _Element) {
     }
     return _cached_decoder_for_IdmBindError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBindError */
 let _cached_encoder_for_IdmBindError: $.ASN1Encoder<IdmBindError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBindError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IdmBindError */
 /**
  * @summary Encodes a(n) IdmBindError into an ASN.1 Element.
  * @function
@@ -300,6 +285,5 @@ export function _encode_IdmBindError(
     return _cached_encoder_for_IdmBindError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IdmBindError */
 
 /* eslint-enable */

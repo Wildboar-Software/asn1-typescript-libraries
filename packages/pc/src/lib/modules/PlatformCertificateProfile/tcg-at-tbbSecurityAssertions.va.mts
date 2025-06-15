@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_attribute } from "../PlatformCertificateProfile/tcg-attribute.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_at_tbbSecurityAssertions */
 /**
  * @summary tcg_at_tbbSecurityAssertions
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_at_tbbSecurityAssertions: OBJECT_IDENTIFIER = new _OID([
     19,
 ], tcg_attribute);
-/* END_OF_SYMBOL_DEFINITION tcg_at_tbbSecurityAssertions */
 
 /* eslint-enable */

@@ -56,7 +56,7 @@ import {
   _root_component_type_list_1_spec_for_BaseManagedObjectId,
 } from '../CMIP-1/BaseManagedObjectId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SetArgument */
+
 /**
  * @summary SetArgument
  * @description
@@ -201,9 +201,8 @@ export class SetArgument implements BaseManagedObjectId {
 
   public static _enum_for_synchronization = _enum_for_CMISSync;
 }
-/* END_OF_SYMBOL_DEFINITION SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetArgument */
+
 /**
  * @summary The Leading Root Component Types of SetArgument
  * @description
@@ -244,9 +243,8 @@ export const _root_component_type_list_1_spec_for_SetArgument: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetArgument */
+
 /**
  * @summary The Trailing Root Component Types of SetArgument
  * @description
@@ -256,9 +254,8 @@ export const _root_component_type_list_1_spec_for_SetArgument: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SetArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetArgument */
+
 /**
  * @summary The Extension Addition Component Types of SetArgument
  * @description
@@ -268,13 +265,11 @@ export const _root_component_type_list_2_spec_for_SetArgument: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_SetArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SetArgument */
+
 let _cached_decoder_for_SetArgument: $.ASN1Decoder<SetArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SetArgument */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SetArgument
  * @function
@@ -354,13 +349,11 @@ export function _decode_SetArgument(el: _Element) {
   }
   return _cached_decoder_for_SetArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SetArgument */
+
 let _cached_encoder_for_SetArgument: $.ASN1Encoder<SetArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SetArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SetArgument */
+
 /**
  * @summary Encodes a(n) SetArgument into an ASN.1 Element.
  * @function
@@ -443,6 +436,5 @@ export function _encode_SetArgument(
   return _cached_encoder_for_SetArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SetArgument */
 
 /* eslint-enable */

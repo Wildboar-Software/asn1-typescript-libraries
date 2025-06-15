@@ -21,7 +21,7 @@ import {
   _decode_BioAPI_BIR_DATA_TYPE_flags,
   _encode_BioAPI_BIR_DATA_TYPE_flags,
 } from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE */
+
 /**
  * @summary BioAPI_BIR_DATA_TYPE
  * @description
@@ -81,9 +81,8 @@ export class BioAPI_BIR_DATA_TYPE {
 
   public static _enum_for_processedLevel = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel;
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_BIR_DATA_TYPE */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_BIR_DATA_TYPE
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_BIR_DATA_TYPE: $.Compon
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_BIR_DATA_TYPE */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_BIR_DATA_TYPE
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_BIR_DATA_TYPE: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_BIR_DATA_TYPE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_BIR_DATA_TYPE */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_BIR_DATA_TYPE
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_BIR_DATA_TYPE: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_BIR_DATA_TYPE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_DATA_TYPE */
+
 let _cached_decoder_for_BioAPI_BIR_DATA_TYPE: $.ASN1Decoder<BioAPI_BIR_DATA_TYPE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_DATA_TYPE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_DATA_TYPE
  * @function
@@ -169,13 +164,11 @@ export function _decode_BioAPI_BIR_DATA_TYPE(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_BIR_DATA_TYPE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_DATA_TYPE */
+
 let _cached_encoder_for_BioAPI_BIR_DATA_TYPE: $.ASN1Encoder<BioAPI_BIR_DATA_TYPE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_DATA_TYPE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_DATA_TYPE */
+
 /**
  * @summary Encodes a(n) BioAPI_BIR_DATA_TYPE into an ASN.1 Element.
  * @function
@@ -210,6 +203,5 @@ export function _encode_BioAPI_BIR_DATA_TYPE(
   return _cached_encoder_for_BioAPI_BIR_DATA_TYPE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_DATA_TYPE */
 
 /* eslint-enable */

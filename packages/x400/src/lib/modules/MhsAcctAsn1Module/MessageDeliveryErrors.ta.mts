@@ -15,7 +15,6 @@ import {
     _decode_DeliveryError,
     _encode_DeliveryError,
 } from '../MhsAcctAsn1Module/DeliveryError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryErrors */
 /**
  * @summary MessageDeliveryErrors
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type MessageDeliveryErrors = DeliveryError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryErrors */
 let _cached_decoder_for_MessageDeliveryErrors: $.ASN1Decoder<MessageDeliveryErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageDeliveryErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryErrors
  * @function
@@ -49,13 +44,9 @@ export function _decode_MessageDeliveryErrors(el: _Element) {
     }
     return _cached_decoder_for_MessageDeliveryErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryErrors */
 let _cached_encoder_for_MessageDeliveryErrors: $.ASN1Encoder<MessageDeliveryErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageDeliveryErrors */
 /**
  * @summary Encodes a(n) MessageDeliveryErrors into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_MessageDeliveryErrors(
     return _cached_encoder_for_MessageDeliveryErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageDeliveryErrors */
 
 /* eslint-enable */

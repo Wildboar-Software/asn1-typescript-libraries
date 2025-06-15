@@ -3,7 +3,7 @@ import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTE
 import { CrlID, _decode_CrlID, _encode_CrlID } from "../OCSP-2013-08/CrlID.ta.mjs";
 import { id_pkix_ocsp_crl } from "../OCSP-2013-08/id-pkix-ocsp-crl.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION re_ocsp_crl */
+
 /**
  * @summary re_ocsp_crl
  * @description
@@ -30,6 +30,5 @@ export const re_ocsp_crl: EXTENSION<CrlID> = {
     "&id": id_pkix_ocsp_crl /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION re_ocsp_crl */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import { id_nat_nn_extensions } from '../EDIMSObjectIdentifiers/id-nat-nn-extens
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION nn_extensions */
 /**
  * @summary nn_extensions
  * @description
@@ -55,6 +54,5 @@ export const nn_extensions: X413ATTRIBUTE<NNExtensionsSubField> = {
     '&id': id_nat_nn_extensions /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nn_extensions */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MgtCommonName */
 /**
  * @summary MgtCommonName
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type MgtCommonName = UnboundedDirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MgtCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtCommonName */
 let _cached_decoder_for_MgtCommonName: $.ASN1Decoder<MgtCommonName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MgtCommonName */
 /**
  * @summary Decodes an ASN.1 element into a(n) MgtCommonName
  * @function
@@ -37,13 +32,9 @@ export function _decode_MgtCommonName(el: _Element) {
     }
     return _cached_decoder_for_MgtCommonName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MgtCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtCommonName */
 let _cached_encoder_for_MgtCommonName: $.ASN1Encoder<MgtCommonName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MgtCommonName */
 /**
  * @summary Encodes a(n) MgtCommonName into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_MgtCommonName(
     return _cached_encoder_for_MgtCommonName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MgtCommonName */
 
 /* eslint-enable */

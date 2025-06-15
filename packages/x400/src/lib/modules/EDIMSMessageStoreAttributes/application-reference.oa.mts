@@ -24,7 +24,6 @@ import { id_hat_application_reference } from '../EDIMSObjectIdentifiers/id-hat-a
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION application_reference */
 /**
  * @summary application_reference
  * @description
@@ -59,6 +58,5 @@ export const application_reference: X413ATTRIBUTE<ApplicationReferenceField> = {
     '&id': id_hat_application_reference /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION application_reference */
 
 /* eslint-enable */

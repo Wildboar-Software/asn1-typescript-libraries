@@ -10,7 +10,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION knowledgeInformation */
 /**
  * @summary knowledgeInformation
  * @description
@@ -47,6 +46,5 @@ export const knowledgeInformation: ATTRIBUTE<UnboundedDirectoryString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION knowledgeInformation */
 
 /* eslint-enable */

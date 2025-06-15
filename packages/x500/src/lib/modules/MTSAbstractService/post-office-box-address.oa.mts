@@ -5,7 +5,6 @@ import {
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
 } from "../MTSAbstractService/PostOfficeBoxAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION post_office_box_address */
 /**
  * @summary post_office_box_address
  * @description
@@ -34,6 +33,5 @@ export const post_office_box_address: EXTENSION_ATTRIBUTE<PostOfficeBoxAddress> 
     "&id": 18 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION post_office_box_address */
 
 /* eslint-enable */

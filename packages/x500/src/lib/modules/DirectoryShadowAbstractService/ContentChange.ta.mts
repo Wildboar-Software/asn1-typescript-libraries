@@ -26,7 +26,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentChange */
 /**
  * @summary ContentChange
  * @description
@@ -141,9 +140,7 @@ export class ContentChange {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentChange */
 /**
  * @summary The Leading Root Component Types of ContentChange
  * @description
@@ -202,9 +199,7 @@ export const _root_component_type_list_1_spec_for_ContentChange: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentChange */
 /**
  * @summary The Trailing Root Component Types of ContentChange
  * @description
@@ -214,9 +209,7 @@ export const _root_component_type_list_1_spec_for_ContentChange: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ContentChange: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentChange */
 /**
  * @summary The Extension Addition Component Types of ContentChange
  * @description
@@ -226,13 +219,9 @@ export const _root_component_type_list_2_spec_for_ContentChange: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ContentChange: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentChange */
 let _cached_decoder_for_ContentChange: $.ASN1Decoder<ContentChange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentChange */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentChange
  * @function
@@ -308,13 +297,9 @@ export function _decode_ContentChange(el: _Element) {
     }
     return _cached_decoder_for_ContentChange(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentChange */
 let _cached_encoder_for_ContentChange: $.ASN1Encoder<ContentChange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentChange */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentChange */
 /**
  * @summary Encodes a(n) ContentChange into an ASN.1 Element.
  * @function
@@ -394,6 +379,5 @@ export function _encode_ContentChange(
     return _cached_encoder_for_ContentChange(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentChange */
 
 /* eslint-enable */

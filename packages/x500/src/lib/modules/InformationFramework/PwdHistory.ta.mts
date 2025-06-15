@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PwdHistory */
 /**
  * @summary PwdHistory
  * @description
@@ -67,9 +66,7 @@ export class PwdHistory {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PwdHistory */
 /**
  * @summary The Leading Root Component Types of PwdHistory
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_PwdHistory: $.ComponentSpec[] 
     ),
     new $.ComponentSpec("password", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PwdHistory */
 /**
  * @summary The Trailing Root Component Types of PwdHistory
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_PwdHistory: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PwdHistory: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PwdHistory */
 /**
  * @summary The Extension Addition Component Types of PwdHistory
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_PwdHistory: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_PwdHistory: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdHistory */
 let _cached_decoder_for_PwdHistory: $.ASN1Decoder<PwdHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PwdHistory */
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdHistory
  * @function
@@ -147,13 +136,9 @@ export function _decode_PwdHistory(el: _Element) {
     }
     return _cached_decoder_for_PwdHistory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdHistory */
 let _cached_encoder_for_PwdHistory: $.ASN1Encoder<PwdHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdHistory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PwdHistory */
 /**
  * @summary Encodes a(n) PwdHistory into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_PwdHistory(
     return _cached_encoder_for_PwdHistory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PwdHistory */
 
 /* eslint-enable */

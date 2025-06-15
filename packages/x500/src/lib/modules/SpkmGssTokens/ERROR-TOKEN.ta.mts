@@ -11,7 +11,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ERROR_TOKEN */
 /**
  * @summary ERROR_TOKEN
  * @description
@@ -61,9 +60,7 @@ export class ERROR_TOKEN {
         return new ERROR_TOKEN(_o.tok_id, _o.context_id);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ERROR_TOKEN */
 /**
  * @summary The Leading Root Component Types of ERROR_TOKEN
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_ERROR_TOKEN: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ERROR_TOKEN */
 /**
  * @summary The Trailing Root Component Types of ERROR_TOKEN
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_ERROR_TOKEN: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ERROR_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ERROR_TOKEN */
 /**
  * @summary The Extension Addition Component Types of ERROR_TOKEN
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_ERROR_TOKEN: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_ERROR_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ERROR_TOKEN */
 let _cached_decoder_for_ERROR_TOKEN: $.ASN1Decoder<ERROR_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ERROR_TOKEN */
 /**
  * @summary Decodes an ASN.1 element into a(n) ERROR_TOKEN
  * @function
@@ -147,13 +136,9 @@ export function _decode_ERROR_TOKEN(el: _Element) {
     }
     return _cached_decoder_for_ERROR_TOKEN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ERROR_TOKEN */
 let _cached_encoder_for_ERROR_TOKEN: $.ASN1Encoder<ERROR_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ERROR_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ERROR_TOKEN */
 /**
  * @summary Encodes a(n) ERROR_TOKEN into an ASN.1 Element.
  * @function
@@ -185,6 +170,5 @@ export function _encode_ERROR_TOKEN(
     return _cached_encoder_for_ERROR_TOKEN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ERROR_TOKEN */
 
 /* eslint-enable */

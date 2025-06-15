@@ -17,7 +17,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION OtherSigningCertificate */
 /**
  * @summary OtherSigningCertificate
  * @description
@@ -69,9 +68,7 @@ class OtherSigningCertificate {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherSigningCertificate */
 /**
  * @summary The Leading Root Component Types of OtherSigningCertificate
  * @description
@@ -85,9 +82,7 @@ const _root_component_type_list_1_spec_for_OtherSigningCertificate: $.ComponentS
     new $.ComponentSpec("certs", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("policies", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherSigningCertificate */
 /**
  * @summary The Trailing Root Component Types of OtherSigningCertificate
  * @description
@@ -100,9 +95,7 @@ export
 const _root_component_type_list_2_spec_for_OtherSigningCertificate: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherSigningCertificate */
 /**
  * @summary The Extension Addition Component Types of OtherSigningCertificate
  * @description
@@ -115,13 +108,9 @@ export
 const _extension_additions_list_spec_for_OtherSigningCertificate: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherSigningCertificate */
 let _cached_decoder_for_OtherSigningCertificate: $.ASN1Decoder<OtherSigningCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherSigningCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherSigningCertificate
  * @function
@@ -154,13 +143,9 @@ function _decode_OtherSigningCertificate (el: _Element) {
 }; }
     return _cached_decoder_for_OtherSigningCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherSigningCertificate */
 let _cached_encoder_for_OtherSigningCertificate: $.ASN1Encoder<OtherSigningCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherSigningCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherSigningCertificate */
 /**
  * @summary Encodes a(n) OtherSigningCertificate into an ASN.1 Element.
  * @function
@@ -181,6 +166,5 @@ function _encode_OtherSigningCertificate (value: OtherSigningCertificate, elGett
     return _cached_encoder_for_OtherSigningCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherSigningCertificate */
 
 /* eslint-enable */

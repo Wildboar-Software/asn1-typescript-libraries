@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { modules } from '../ObjectIdentifiers/modules.va.mjs';
-/* START_OF_SYMBOL_DEFINITION notation */
+
 /**
  * @summary notation
  * @description
@@ -25,6 +25,5 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @constant
  */
 export const notation: OBJECT_IDENTIFIER = new _OID([1], modules);
-/* END_OF_SYMBOL_DEFINITION notation */
 
 /* eslint-enable */

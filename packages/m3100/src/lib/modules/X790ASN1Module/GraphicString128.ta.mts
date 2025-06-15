@@ -15,7 +15,7 @@ import {
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
 } from '../X790ASN1Module/GraphicStringBase.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GraphicString128 */
+
 /**
  * @summary GraphicString128
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GraphicString128 = GraphicStringBase; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GraphicString128 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicString128 */
+
 let _cached_decoder_for_GraphicString128: $.ASN1Decoder<GraphicString128> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicString128 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GraphicString128 */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GraphicString128
  * @function
@@ -46,13 +44,11 @@ export function _decode_GraphicString128(el: _Element) {
     }
     return _cached_decoder_for_GraphicString128(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GraphicString128 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicString128 */
+
 let _cached_encoder_for_GraphicString128: $.ASN1Encoder<GraphicString128> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicString128 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GraphicString128 */
+
 /**
  * @summary Encodes a(n) GraphicString128 into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_GraphicString128(
     return _cached_encoder_for_GraphicString128(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GraphicString128 */
 
 /* eslint-enable */

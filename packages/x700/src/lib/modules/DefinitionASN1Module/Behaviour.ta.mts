@@ -15,7 +15,7 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Behaviour */
+
 /**
  * @summary Behaviour
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Behaviour = TemplateList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Behaviour */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Behaviour */
+
 let _cached_decoder_for_Behaviour: $.ASN1Decoder<Behaviour> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Behaviour */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Behaviour */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Behaviour
  * @function
@@ -46,13 +44,11 @@ export function _decode_Behaviour(el: _Element) {
     }
     return _cached_decoder_for_Behaviour(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Behaviour */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Behaviour */
+
 let _cached_encoder_for_Behaviour: $.ASN1Encoder<Behaviour> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Behaviour */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Behaviour */
+
 /**
  * @summary Encodes a(n) Behaviour into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Behaviour(
     return _cached_encoder_for_Behaviour(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Behaviour */
 
 /* eslint-enable */

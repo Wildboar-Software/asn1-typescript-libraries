@@ -22,7 +22,6 @@ import {
     _encode_RoutingMTAName,
 } from '../MHSRoutingDirectoryObjects/RoutingMTAName.ta.mjs';
 import { id_at_member_mta } from '../MHSRoutingObjectIdentifiers/id-at-member-mta.va.mjs';
-/* START_OF_SYMBOL_DEFINITION memberMTA */
 /**
  * @summary memberMTA
  * @description
@@ -58,6 +57,5 @@ export const memberMTA: ATTRIBUTE<RoutingMTAName> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION memberMTA */
 
 /* eslint-enable */

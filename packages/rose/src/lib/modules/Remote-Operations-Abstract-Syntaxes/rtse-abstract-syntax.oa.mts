@@ -16,7 +16,7 @@ import {
   _decode_RTSE_apdus,
   _encode_RTSE_apdus,
 } from '../Remote-Operations-Abstract-Syntaxes/RTSE-apdus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION rtse_abstract_syntax */
+
 /**
  * @summary rtse_abstract_syntax
  * @description
@@ -49,6 +49,5 @@ export const rtse_abstract_syntax: ABSTRACT_SYNTAX<RTSE_apdus> = {
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION rtse_abstract_syntax */
 
 /* eslint-enable */

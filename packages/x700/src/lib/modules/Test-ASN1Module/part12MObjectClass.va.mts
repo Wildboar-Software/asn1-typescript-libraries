@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION part12MObjectClass */
 /**
  * @summary part12MObjectClass
  * @description
@@ -29,6 +28,5 @@ export const part12MObjectClass: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part12 */ 12, /* mObjectClass */ 3],
     joint_iso_ccitt
 );
-/* END_OF_SYMBOL_DEFINITION part12MObjectClass */
 
 /* eslint-enable */

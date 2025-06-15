@@ -20,7 +20,6 @@ import {
     _decode_MSBindError,
     _encode_MSBindError,
 } from '../MhsAcctAsn1Module/MSBindError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BindingError */
 /**
  * @summary BindingError
  * @description
@@ -40,13 +39,9 @@ import {
 export type BindingError =
     | { integer: BindingError_integer } /* CHOICE_ALT_ROOT */
     | { msbinderror: MSBindError } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BindingError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindingError */
 let _cached_decoder_for_BindingError: $.ASN1Decoder<BindingError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindingError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindingError */
 /**
  * @summary Decodes an ASN.1 element into a(n) BindingError
  * @function
@@ -72,13 +67,9 @@ export function _decode_BindingError(el: _Element) {
     }
     return _cached_decoder_for_BindingError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindingError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindingError */
 let _cached_encoder_for_BindingError: $.ASN1Encoder<BindingError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindingError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindingError */
 /**
  * @summary Encodes a(n) BindingError into an ASN.1 Element.
  * @function
@@ -112,6 +103,5 @@ export function _encode_BindingError(
     return _cached_encoder_for_BindingError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindingError */
 
 /* eslint-enable */

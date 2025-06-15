@@ -68,7 +68,6 @@ import {
     _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CompareArgumentData */
 /**
  * @summary CompareArgumentData
  * @description
@@ -277,9 +276,7 @@ export class CompareArgumentData implements CommonArguments {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareArgumentData */
 /**
  * @summary The Leading Root Component Types of CompareArgumentData
  * @description
@@ -305,9 +302,7 @@ export const _root_component_type_list_1_spec_for_CompareArgumentData: $.Compone
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareArgumentData */
 /**
  * @summary The Trailing Root Component Types of CompareArgumentData
  * @description
@@ -319,9 +314,7 @@ export const _root_component_type_list_1_spec_for_CompareArgumentData: $.Compone
 export const _root_component_type_list_2_spec_for_CompareArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareArgumentData */
 /**
  * @summary The Extension Addition Component Types of CompareArgumentData
  * @description
@@ -333,13 +326,9 @@ export const _root_component_type_list_2_spec_for_CompareArgumentData: $.Compone
 export const _extension_additions_list_spec_for_CompareArgumentData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareArgumentData */
 let _cached_decoder_for_CompareArgumentData: $.ASN1Decoder<CompareArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareArgumentData
  * @function
@@ -476,13 +465,9 @@ export function _decode_CompareArgumentData(el: _Element) {
     }
     return _cached_decoder_for_CompareArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareArgumentData */
 let _cached_encoder_for_CompareArgumentData: $.ASN1Encoder<CompareArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareArgumentData */
 /**
  * @summary Encodes a(n) CompareArgumentData into an ASN.1 Element.
  * @function
@@ -651,6 +636,5 @@ export function _encode_CompareArgumentData(
     return _cached_encoder_for_CompareArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareArgumentData */
 
 /* eslint-enable */

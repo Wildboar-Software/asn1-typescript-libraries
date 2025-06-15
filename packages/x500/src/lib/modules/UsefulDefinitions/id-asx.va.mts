@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { attributeSyntax } from "../UsefulDefinitions/attributeSyntax.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_asx */
 /**
  * @summary id_asx
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_asx: ID = attributeSyntax;
-/* END_OF_SYMBOL_DEFINITION id_asx */
 
 /* eslint-enable */

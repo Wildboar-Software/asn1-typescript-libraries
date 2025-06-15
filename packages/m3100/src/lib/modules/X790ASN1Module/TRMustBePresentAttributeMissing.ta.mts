@@ -15,7 +15,7 @@ import {
     _decode_AttributeIDList,
     _encode_AttributeIDList,
 } from '../X790ASN1Module/AttributeIDList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TRMustBePresentAttributeMissing */
+
 /**
  * @summary TRMustBePresentAttributeMissing
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TRMustBePresentAttributeMissing = AttributeIDList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TRMustBePresentAttributeMissing */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TRMustBePresentAttributeMissing */
+
 let _cached_decoder_for_TRMustBePresentAttributeMissing: $.ASN1Decoder<TRMustBePresentAttributeMissing> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TRMustBePresentAttributeMissing */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TRMustBePresentAttributeMissing */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TRMustBePresentAttributeMissing
  * @function
@@ -46,13 +44,11 @@ export function _decode_TRMustBePresentAttributeMissing(el: _Element) {
     }
     return _cached_decoder_for_TRMustBePresentAttributeMissing(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TRMustBePresentAttributeMissing */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TRMustBePresentAttributeMissing */
+
 let _cached_encoder_for_TRMustBePresentAttributeMissing: $.ASN1Encoder<TRMustBePresentAttributeMissing> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TRMustBePresentAttributeMissing */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TRMustBePresentAttributeMissing */
+
 /**
  * @summary Encodes a(n) TRMustBePresentAttributeMissing into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TRMustBePresentAttributeMissing(
     return _cached_encoder_for_TRMustBePresentAttributeMissing(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TRMustBePresentAttributeMissing */
 
 /* eslint-enable */

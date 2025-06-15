@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason */
 /**
  * @summary P_context_result_list_Item_provider_reason
  * @description
@@ -24,85 +23,65 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type P_context_result_list_Item_provider_reason = INTEGER;
-/* END_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason */
 
-/* START_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_reason_not_specified */
 /**
  * @summary P_context_result_list_Item_provider_reason_reason_not_specified
  * @constant
  * @type {number}
  */
 export const P_context_result_list_Item_provider_reason_reason_not_specified: P_context_result_list_Item_provider_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_reason_not_specified */
 
-/* START_OF_SYMBOL_DEFINITION reason_not_specified */
 /**
  * @summary P_context_result_list_Item_provider_reason_reason_not_specified
  * @constant
  * @type {number}
  */
 export const reason_not_specified: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION reason_not_specified */
 
-/* START_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_abstract_syntax_not_supported */
 /**
  * @summary P_context_result_list_Item_provider_reason_abstract_syntax_not_supported
  * @constant
  * @type {number}
  */
 export const P_context_result_list_Item_provider_reason_abstract_syntax_not_supported: P_context_result_list_Item_provider_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_abstract_syntax_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION abstract_syntax_not_supported */
 /**
  * @summary P_context_result_list_Item_provider_reason_abstract_syntax_not_supported
  * @constant
  * @type {number}
  */
 export const abstract_syntax_not_supported: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION abstract_syntax_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported */
 /**
  * @summary P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
  * @constant
  * @type {number}
  */
 export const P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported: P_context_result_list_Item_provider_reason = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION proposed_transfer_syntaxes_not_supported */
 /**
  * @summary P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
  * @constant
  * @type {number}
  */
 export const proposed_transfer_syntaxes_not_supported: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION proposed_transfer_syntaxes_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded */
 /**
  * @summary P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded
  * @constant
  * @type {number}
  */
 export const P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded: P_context_result_list_Item_provider_reason = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded */
 
-/* START_OF_SYMBOL_DEFINITION local_limit_on_DCS_exceeded */
 /**
  * @summary P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded
  * @constant
  * @type {number}
  */
 export const local_limit_on_DCS_exceeded: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION local_limit_on_DCS_exceeded */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_P_context_result_list_Item_provider_reason */
 let _cached_decoder_for_P_context_result_list_Item_provider_reason: $.ASN1Decoder<P_context_result_list_Item_provider_reason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_P_context_result_list_Item_provider_reason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_P_context_result_list_Item_provider_reason */
 /**
  * @summary Decodes an ASN.1 element into a(n) P_context_result_list_Item_provider_reason
  * @function
@@ -118,13 +97,9 @@ export function _decode_P_context_result_list_Item_provider_reason(
   }
   return _cached_decoder_for_P_context_result_list_Item_provider_reason(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_P_context_result_list_Item_provider_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_P_context_result_list_Item_provider_reason */
 let _cached_encoder_for_P_context_result_list_Item_provider_reason: $.ASN1Encoder<P_context_result_list_Item_provider_reason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_P_context_result_list_Item_provider_reason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_P_context_result_list_Item_provider_reason */
 /**
  * @summary Encodes a(n) P_context_result_list_Item_provider_reason into an ASN.1 Element.
  * @function
@@ -146,6 +121,5 @@ export function _encode_P_context_result_list_Item_provider_reason(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_P_context_result_list_Item_provider_reason */
 
 /* eslint-enable */

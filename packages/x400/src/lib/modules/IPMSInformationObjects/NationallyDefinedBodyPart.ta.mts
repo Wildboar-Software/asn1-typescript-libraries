@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION NationallyDefinedBodyPart */
 /**
  * @summary NationallyDefinedBodyPart
  * @description
@@ -22,21 +21,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NationallyDefinedBodyPart = _Element; // ObjectClassFieldType
-/* END_OF_SYMBOL_DEFINITION NationallyDefinedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NationallyDefinedBodyPart */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NationallyDefinedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NationallyDefinedBodyPart */
 export const _decode_NationallyDefinedBodyPart = $._decodeAny;
-/* END_OF_SYMBOL_DEFINITION _decode_NationallyDefinedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NationallyDefinedBodyPart */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NationallyDefinedBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NationallyDefinedBodyPart */
 export const _encode_NationallyDefinedBodyPart = $._encodeAny;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NationallyDefinedBodyPart */
 
 /* eslint-enable */

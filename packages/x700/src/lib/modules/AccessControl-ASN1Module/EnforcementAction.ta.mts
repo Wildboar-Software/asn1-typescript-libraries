@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_EnforcementAction */
 /**
  * @summary EnforcementAction
  * @description
@@ -31,9 +30,7 @@ export enum _enum_for_EnforcementAction {
     denyWithFalseResponse = 3,
     allow = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_EnforcementAction */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction */
 /**
  * @summary EnforcementAction
  * @description
@@ -47,9 +44,7 @@ export enum _enum_for_EnforcementAction {
  * ```@enum {number}
  */
 export type EnforcementAction = _enum_for_EnforcementAction;
-/* END_OF_SYMBOL_DEFINITION EnforcementAction */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction */
 /**
  * @summary EnforcementAction
  * @description
@@ -63,9 +58,7 @@ export type EnforcementAction = _enum_for_EnforcementAction;
  * ```@enum {number}
  */
 export const EnforcementAction = _enum_for_EnforcementAction;
-/* END_OF_SYMBOL_DEFINITION EnforcementAction */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction_denyWithResponse */
 /**
  * @summary EnforcementAction_denyWithResponse
  * @constant
@@ -73,9 +66,7 @@ export const EnforcementAction = _enum_for_EnforcementAction;
  */
 export const EnforcementAction_denyWithResponse: EnforcementAction =
     EnforcementAction.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EnforcementAction_denyWithResponse */
 
-/* START_OF_SYMBOL_DEFINITION denyWithResponse */
 /**
  * @summary denyWithResponse
  * @constant
@@ -83,9 +74,7 @@ export const EnforcementAction_denyWithResponse: EnforcementAction =
  */
 export const denyWithResponse: EnforcementAction =
     EnforcementAction.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION denyWithResponse */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction_denyWithoutResponse */
 /**
  * @summary EnforcementAction_denyWithoutResponse
  * @constant
@@ -93,9 +82,7 @@ export const denyWithResponse: EnforcementAction =
  */
 export const EnforcementAction_denyWithoutResponse: EnforcementAction =
     EnforcementAction.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EnforcementAction_denyWithoutResponse */
 
-/* START_OF_SYMBOL_DEFINITION denyWithoutResponse */
 /**
  * @summary denyWithoutResponse
  * @constant
@@ -103,9 +90,7 @@ export const EnforcementAction_denyWithoutResponse: EnforcementAction =
  */
 export const denyWithoutResponse: EnforcementAction =
     EnforcementAction.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION denyWithoutResponse */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction_abortAssociation */
 /**
  * @summary EnforcementAction_abortAssociation
  * @constant
@@ -113,9 +98,7 @@ export const denyWithoutResponse: EnforcementAction =
  */
 export const EnforcementAction_abortAssociation: EnforcementAction =
     EnforcementAction.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EnforcementAction_abortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION abortAssociation */
 /**
  * @summary abortAssociation
  * @constant
@@ -123,9 +106,7 @@ export const EnforcementAction_abortAssociation: EnforcementAction =
  */
 export const abortAssociation: EnforcementAction =
     EnforcementAction.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION abortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction_denyWithFalseResponse */
 /**
  * @summary EnforcementAction_denyWithFalseResponse
  * @constant
@@ -133,9 +114,7 @@ export const abortAssociation: EnforcementAction =
  */
 export const EnforcementAction_denyWithFalseResponse: EnforcementAction =
     EnforcementAction.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EnforcementAction_denyWithFalseResponse */
 
-/* START_OF_SYMBOL_DEFINITION denyWithFalseResponse */
 /**
  * @summary denyWithFalseResponse
  * @constant
@@ -143,9 +122,7 @@ export const EnforcementAction_denyWithFalseResponse: EnforcementAction =
  */
 export const denyWithFalseResponse: EnforcementAction =
     EnforcementAction.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION denyWithFalseResponse */
 
-/* START_OF_SYMBOL_DEFINITION EnforcementAction_allow */
 /**
  * @summary EnforcementAction_allow
  * @constant
@@ -153,9 +130,7 @@ export const denyWithFalseResponse: EnforcementAction =
  */
 export const EnforcementAction_allow: EnforcementAction =
     EnforcementAction.allow; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EnforcementAction_allow */
 
-/* START_OF_SYMBOL_DEFINITION allow */
 /**
  * @summary allow
  * @constant
@@ -163,21 +138,12 @@ export const EnforcementAction_allow: EnforcementAction =
  */
 export const allow: EnforcementAction =
     EnforcementAction.allow; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION allow */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnforcementAction */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnforcementAction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EnforcementAction */
 export const _decode_EnforcementAction = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_EnforcementAction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnforcementAction */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnforcementAction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EnforcementAction */
 export const _encode_EnforcementAction = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EnforcementAction */
 
 /* eslint-enable */

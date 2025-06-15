@@ -6,7 +6,6 @@ import {
     _decode_OrganizationalUnitName,
     _encode_OrganizationalUnitName,
 } from "../MTSAbstractService/OrganizationalUnitName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OrganizationalUnitNames */
 /**
  * @summary OrganizationalUnitNames
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type OrganizationalUnitNames = OrganizationalUnitName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION OrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OrganizationalUnitNames */
 let _cached_decoder_for_OrganizationalUnitNames: $.ASN1Decoder<OrganizationalUnitNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OrganizationalUnitNames */
 /**
  * @summary Decodes an ASN.1 element into a(n) OrganizationalUnitNames
  * @function
@@ -40,13 +35,9 @@ export function _decode_OrganizationalUnitNames(el: _Element) {
     }
     return _cached_decoder_for_OrganizationalUnitNames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OrganizationalUnitNames */
 let _cached_encoder_for_OrganizationalUnitNames: $.ASN1Encoder<OrganizationalUnitNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OrganizationalUnitNames */
 /**
  * @summary Encodes a(n) OrganizationalUnitNames into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_OrganizationalUnitNames(
     return _cached_encoder_for_OrganizationalUnitNames(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OrganizationalUnitNames */
 
 /* eslint-enable */

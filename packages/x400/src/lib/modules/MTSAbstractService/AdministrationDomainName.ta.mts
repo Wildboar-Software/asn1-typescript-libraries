@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AdministrationDomainName */
 /**
  * @summary AdministrationDomainName
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type AdministrationDomainName =
     | { numeric: NumericString } /* CHOICE_ALT_ROOT */
     | { printable: PrintableString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AdministrationDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationDomainName */
 let _cached_decoder_for_AdministrationDomainName: $.ASN1Decoder<AdministrationDomainName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdministrationDomainName */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdministrationDomainName
  * @function
@@ -55,13 +50,9 @@ export function _decode_AdministrationDomainName(el: _Element) {
     }
     return _cached_decoder_for_AdministrationDomainName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdministrationDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationDomainName */
 let _cached_encoder_for_AdministrationDomainName: $.ASN1Encoder<AdministrationDomainName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationDomainName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdministrationDomainName */
 /**
  * @summary Encodes a(n) AdministrationDomainName into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_AdministrationDomainName(
     return _cached_encoder_for_AdministrationDomainName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdministrationDomainName */
 
 /* eslint-enable */

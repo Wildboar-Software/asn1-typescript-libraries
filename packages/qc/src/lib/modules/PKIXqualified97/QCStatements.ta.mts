@@ -6,7 +6,7 @@ import {
     _decode_QCStatement,
     _encode_QCStatement,
 } from "../PKIXqualified97/QCStatement.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION QCStatements */
+
 /**
  * @summary QCStatements
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type QCStatements = QCStatement[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION QCStatements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QCStatements */
+
 let _cached_decoder_for_QCStatements: $.ASN1Decoder<QCStatements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QCStatements */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QCStatements */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QCStatements
  * @function
@@ -39,13 +37,11 @@ export function _decode_QCStatements(el: _Element) {
     }
     return _cached_decoder_for_QCStatements(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QCStatements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QCStatements */
+
 let _cached_encoder_for_QCStatements: $.ASN1Encoder<QCStatements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QCStatements */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QCStatements */
+
 /**
  * @summary Encodes a(n) QCStatements into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_QCStatements(
     return _cached_encoder_for_QCStatements(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QCStatements */
 
 /* eslint-enable */

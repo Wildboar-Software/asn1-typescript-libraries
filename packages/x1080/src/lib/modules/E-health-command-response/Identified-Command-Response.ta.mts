@@ -20,7 +20,7 @@ import {
     _decode_Identified_Command_Response_response,
     _encode_Identified_Command_Response_response,
 } from '../E-health-command-response/Identified-Command-Response-response.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Identified_Command_Response */
+
 /**
  * @summary Identified_Command_Response
  * @description
@@ -50,13 +50,11 @@ import {
 export type Identified_Command_Response =
     | { command: Identified_Command_Response_command } /* CHOICE_ALT_ROOT */
     | { response: Identified_Command_Response_response } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Identified_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Identified_Command_Response */
+
 let _cached_decoder_for_Identified_Command_Response: $.ASN1Decoder<Identified_Command_Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Identified_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Identified_Command_Response */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Identified_Command_Response
  * @function
@@ -80,13 +78,11 @@ export function _decode_Identified_Command_Response(el: _Element) {
     }
     return _cached_decoder_for_Identified_Command_Response(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Identified_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Identified_Command_Response */
+
 let _cached_encoder_for_Identified_Command_Response: $.ASN1Encoder<Identified_Command_Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Identified_Command_Response */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Identified_Command_Response */
+
 /**
  * @summary Encodes a(n) Identified_Command_Response into an ASN.1 Element.
  * @function
@@ -110,6 +106,5 @@ export function _encode_Identified_Command_Response(
     return _cached_encoder_for_Identified_Command_Response(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Identified_Command_Response */
 
 /* eslint-enable */

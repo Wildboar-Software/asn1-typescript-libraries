@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maintenanceOrgContactTimeMaintenanceOrgContactTimeInitial */
+
 /**
  * @summary maintenanceOrgContactTimeMaintenanceOrgContactTimeInitial
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const maintenanceOrgContactTimeMaintenanceOrgContactTimeInitial: NULL = null;
-/* END_OF_SYMBOL_DEFINITION maintenanceOrgContactTimeMaintenanceOrgContactTimeInitial */
 
 /* eslint-enable */

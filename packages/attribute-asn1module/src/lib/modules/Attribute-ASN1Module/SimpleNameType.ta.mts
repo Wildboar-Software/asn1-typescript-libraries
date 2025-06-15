@@ -15,7 +15,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION SimpleNameType */
 /**
  * @summary SimpleNameType
  * @description
@@ -32,13 +31,9 @@ export
 type SimpleNameType =
     { number_: INTEGER } /* CHOICE_ALT_ROOT */
     | { string_: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SimpleNameType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleNameType */
 let _cached_decoder_for_SimpleNameType: $.ASN1Decoder<SimpleNameType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleNameType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SimpleNameType */
 /**
  * @summary Decodes an ASN.1 element into a(n) SimpleNameType
  * @function
@@ -53,13 +48,9 @@ function _decode_SimpleNameType (el: _Element) {
 }); }
     return _cached_decoder_for_SimpleNameType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SimpleNameType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleNameType */
 let _cached_encoder_for_SimpleNameType: $.ASN1Encoder<SimpleNameType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleNameType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SimpleNameType */
 /**
  * @summary Encodes a(n) SimpleNameType into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_SimpleNameType (value: SimpleNameType, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_SimpleNameType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SimpleNameType */
 
 /* eslint-enable */

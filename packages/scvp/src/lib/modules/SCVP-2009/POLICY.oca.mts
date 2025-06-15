@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION POLICY */
 /**
  * @summary POLICY
  * @description
@@ -25,6 +24,5 @@ import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/A
  * @interface
  */
 export type POLICY = ATTRIBUTE;
-/* END_OF_SYMBOL_DEFINITION POLICY */
 
 /* eslint-enable */

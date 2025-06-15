@@ -10,7 +10,6 @@ import {
     _encode_PwdAlphabet,
 } from "../PasswordPolicy/PwdAlphabet.ta.mjs";
 import { pwdAlphabetDescription } from "../PasswordPolicy/pwdAlphabetDescription.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdAlphabet */
 /**
  * @summary pwdAlphabet
  * @description
@@ -50,6 +49,5 @@ export const pwdAlphabet: ATTRIBUTE<PwdAlphabet> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdAlphabet */
 
 /* eslint-enable */

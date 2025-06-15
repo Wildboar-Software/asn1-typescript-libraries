@@ -27,7 +27,6 @@ import {
   _decode_NameSurrogate,
   _encode_NameSurrogate,
 } from '../FastInfoset/NameSurrogate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Document_initial_vocabulary */
 /**
  * @summary Document_initial_vocabulary
  * @description
@@ -156,9 +155,7 @@ export class Document_initial_vocabulary {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Document_initial_vocabulary */
 /**
  * @summary The Leading Root Component Types of Document_initial_vocabulary
  * @description
@@ -260,9 +257,7 @@ export const _root_component_type_list_1_spec_for_Document_initial_vocabulary: $
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Document_initial_vocabulary */
 /**
  * @summary The Trailing Root Component Types of Document_initial_vocabulary
  * @description
@@ -272,9 +267,7 @@ export const _root_component_type_list_1_spec_for_Document_initial_vocabulary: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Document_initial_vocabulary: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Document_initial_vocabulary */
 /**
  * @summary The Extension Addition Component Types of Document_initial_vocabulary
  * @description
@@ -284,13 +277,9 @@ export const _root_component_type_list_2_spec_for_Document_initial_vocabulary: $
  * @constant
  */
 export const _extension_additions_list_spec_for_Document_initial_vocabulary: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_initial_vocabulary */
 let _cached_decoder_for_Document_initial_vocabulary: $.ASN1Decoder<Document_initial_vocabulary> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Document_initial_vocabulary */
 /**
  * @summary Decodes an ASN.1 element into a(n) Document_initial_vocabulary
  * @function
@@ -411,13 +400,9 @@ export function _decode_Document_initial_vocabulary(el: _Element) {
   }
   return _cached_decoder_for_Document_initial_vocabulary(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_initial_vocabulary */
 let _cached_encoder_for_Document_initial_vocabulary: $.ASN1Encoder<Document_initial_vocabulary> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_initial_vocabulary */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Document_initial_vocabulary */
 /**
  * @summary Encodes a(n) Document_initial_vocabulary into an ASN.1 Element.
  * @function
@@ -519,6 +504,5 @@ export function _encode_Document_initial_vocabulary(
   return _cached_encoder_for_Document_initial_vocabulary(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Document_initial_vocabulary */
 
 /* eslint-enable */

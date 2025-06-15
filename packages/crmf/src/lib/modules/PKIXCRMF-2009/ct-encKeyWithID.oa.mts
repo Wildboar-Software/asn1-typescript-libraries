@@ -9,7 +9,7 @@ import {
 } from "../PKIXCRMF-2009/EncKeyWithID.ta.mjs";
 import { id_ct_encKeyWithID } from "../PKIXCRMF-2009/id-ct-encKeyWithID.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ct_encKeyWithID */
+
 /**
  * @summary ct_encKeyWithID
  * @description
@@ -35,6 +35,5 @@ export const ct_encKeyWithID: CONTENT_TYPE<EncKeyWithID> = {
     "&id": id_ct_encKeyWithID /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_encKeyWithID */
 
 /* eslint-enable */

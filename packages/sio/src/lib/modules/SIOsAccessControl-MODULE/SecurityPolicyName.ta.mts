@@ -6,7 +6,7 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityPolicyName */
+
 /**
  * @summary SecurityPolicyName
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SecurityPolicyName = DirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SecurityPolicyName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityPolicyName */
+
 let _cached_decoder_for_SecurityPolicyName: $.ASN1Decoder<SecurityPolicyName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityPolicyName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityPolicyName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityPolicyName
  * @function
@@ -37,13 +35,11 @@ export function _decode_SecurityPolicyName(el: _Element) {
     }
     return _cached_decoder_for_SecurityPolicyName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityPolicyName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityPolicyName */
+
 let _cached_encoder_for_SecurityPolicyName: $.ASN1Encoder<SecurityPolicyName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityPolicyName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityPolicyName */
+
 /**
  * @summary Encodes a(n) SecurityPolicyName into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_SecurityPolicyName(
     return _cached_encoder_for_SecurityPolicyName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityPolicyName */
 
 /* eslint-enable */

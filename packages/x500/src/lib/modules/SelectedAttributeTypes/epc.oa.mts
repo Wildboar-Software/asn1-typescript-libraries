@@ -8,7 +8,6 @@ import {
 import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
 import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
 import { id_at_epc } from "../SelectedAttributeTypes/id-at-epc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION epc */
 /**
  * @summary epc
  * @description
@@ -48,6 +47,5 @@ export const epc: ATTRIBUTE<BIT_STRING> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION epc */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionAlarmInfo */
+
 /**
  * @summary ProtectionAlarmInfo
  * @description
@@ -70,9 +70,8 @@ export class ProtectionAlarmInfo {
         return new ProtectionAlarmInfo(_o.probableCause, _o.additionalInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionAlarmInfo */
+
 /**
  * @summary The Leading Root Component Types of ProtectionAlarmInfo
  * @description
@@ -97,9 +96,8 @@ export const _root_component_type_list_1_spec_for_ProtectionAlarmInfo: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionAlarmInfo */
+
 /**
  * @summary The Trailing Root Component Types of ProtectionAlarmInfo
  * @description
@@ -109,9 +107,8 @@ export const _root_component_type_list_1_spec_for_ProtectionAlarmInfo: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectionAlarmInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionAlarmInfo */
+
 /**
  * @summary The Extension Addition Component Types of ProtectionAlarmInfo
  * @description
@@ -121,13 +118,11 @@ export const _root_component_type_list_2_spec_for_ProtectionAlarmInfo: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectionAlarmInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionAlarmInfo */
+
 let _cached_decoder_for_ProtectionAlarmInfo: $.ASN1Decoder<ProtectionAlarmInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionAlarmInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionAlarmInfo
  * @function
@@ -158,13 +153,11 @@ export function _decode_ProtectionAlarmInfo(el: _Element) {
     }
     return _cached_decoder_for_ProtectionAlarmInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionAlarmInfo */
+
 let _cached_encoder_for_ProtectionAlarmInfo: $.ASN1Encoder<ProtectionAlarmInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionAlarmInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionAlarmInfo */
+
 /**
  * @summary Encodes a(n) ProtectionAlarmInfo into an ASN.1 Element.
  * @function
@@ -199,6 +192,5 @@ export function _encode_ProtectionAlarmInfo(
     return _cached_encoder_for_ProtectionAlarmInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionAlarmInfo */
 
 /* eslint-enable */

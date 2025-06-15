@@ -23,7 +23,6 @@ import {
 } from '../MTSAbstractService/ExtendedContentType.ta.mjs';
 import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { id_at_mhs_deliverable_content_types } from '../MHSObjectIdentifiers/id-at-mhs-deliverable-content-types.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_deliverable_content_types */
 /**
  * @summary mhs_deliverable_content_types
  * @description
@@ -60,6 +59,5 @@ export const mhs_deliverable_content_types: ATTRIBUTE<ExtendedContentType> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_deliverable_content_types */
 
 /* eslint-enable */

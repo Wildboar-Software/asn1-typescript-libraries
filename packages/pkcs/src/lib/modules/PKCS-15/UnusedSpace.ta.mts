@@ -16,7 +16,7 @@ import {
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UnusedSpace */
+
 /**
  * @summary UnusedSpace
  * @description
@@ -85,9 +85,8 @@ export class UnusedSpace {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnusedSpace */
+
 /**
  * @summary The Leading Root Component Types of UnusedSpace
  * @description
@@ -112,9 +111,8 @@ export const _root_component_type_list_1_spec_for_UnusedSpace: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnusedSpace */
+
 /**
  * @summary The Trailing Root Component Types of UnusedSpace
  * @description
@@ -124,9 +122,8 @@ export const _root_component_type_list_1_spec_for_UnusedSpace: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnusedSpace: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnusedSpace */
+
 /**
  * @summary The Extension Addition Component Types of UnusedSpace
  * @description
@@ -144,13 +141,11 @@ export const _extension_additions_list_spec_for_UnusedSpace: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnusedSpace */
+
 let _cached_decoder_for_UnusedSpace: $.ASN1Decoder<UnusedSpace> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnusedSpace */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnusedSpace
  * @function
@@ -201,13 +196,11 @@ export function _decode_UnusedSpace(el: _Element) {
     }
     return _cached_decoder_for_UnusedSpace(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnusedSpace */
+
 let _cached_encoder_for_UnusedSpace: $.ASN1Encoder<UnusedSpace> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnusedSpace */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnusedSpace */
+
 /**
  * @summary Encodes a(n) UnusedSpace into an ASN.1 Element.
  * @function
@@ -252,6 +245,5 @@ export function _encode_UnusedSpace(
     return _cached_encoder_for_UnusedSpace(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnusedSpace */
 
 /* eslint-enable */

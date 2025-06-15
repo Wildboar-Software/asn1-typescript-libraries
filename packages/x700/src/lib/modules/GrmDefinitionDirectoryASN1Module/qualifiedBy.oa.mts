@@ -22,7 +22,6 @@ import {
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION qualifiedBy */
 /**
  * @summary qualifiedBy
  * @description
@@ -64,6 +63,5 @@ export const qualifiedBy: ATTRIBUTE<TemplateLabel> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION qualifiedBy */
 
 /* eslint-enable */

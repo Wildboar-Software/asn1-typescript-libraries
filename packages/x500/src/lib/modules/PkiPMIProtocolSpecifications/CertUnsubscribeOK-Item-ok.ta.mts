@@ -15,7 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUnsubscribeOK_Item_ok */
 /**
  * @summary CertUnsubscribeOK_Item_ok
  * @description
@@ -76,9 +75,7 @@ export class CertUnsubscribeOK_Item_ok {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUnsubscribeOK_Item_ok */
 /**
  * @summary The Leading Root Component Types of CertUnsubscribeOK_Item_ok
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_CertUnsubscribeOK_Item_ok: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUnsubscribeOK_Item_ok */
 /**
  * @summary The Trailing Root Component Types of CertUnsubscribeOK_Item_ok
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_CertUnsubscribeOK_Item_ok: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertUnsubscribeOK_Item_ok: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUnsubscribeOK_Item_ok */
 /**
  * @summary The Extension Addition Component Types of CertUnsubscribeOK_Item_ok
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_CertUnsubscribeOK_Item_ok: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_CertUnsubscribeOK_Item_ok: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUnsubscribeOK_Item_ok */
 let _cached_decoder_for_CertUnsubscribeOK_Item_ok: $.ASN1Decoder<CertUnsubscribeOK_Item_ok> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUnsubscribeOK_Item_ok */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUnsubscribeOK_Item_ok
  * @function
@@ -162,13 +151,9 @@ export function _decode_CertUnsubscribeOK_Item_ok(el: _Element) {
     }
     return _cached_decoder_for_CertUnsubscribeOK_Item_ok(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUnsubscribeOK_Item_ok */
 let _cached_encoder_for_CertUnsubscribeOK_Item_ok: $.ASN1Encoder<CertUnsubscribeOK_Item_ok> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUnsubscribeOK_Item_ok */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUnsubscribeOK_Item_ok */
 /**
  * @summary Encodes a(n) CertUnsubscribeOK_Item_ok into an ASN.1 Element.
  * @function
@@ -205,6 +190,5 @@ export function _encode_CertUnsubscribeOK_Item_ok(
     return _cached_encoder_for_CertUnsubscribeOK_Item_ok(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUnsubscribeOK_Item_ok */
 
 /* eslint-enable */

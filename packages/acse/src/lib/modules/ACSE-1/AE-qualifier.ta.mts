@@ -15,7 +15,6 @@ import {
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
 } from '../ACSE-1/ASO-qualifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AE_qualifier */
 /**
  * @summary AE_qualifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AE_qualifier = ASO_qualifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AE_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_qualifier */
 let _cached_decoder_for_AE_qualifier: $.ASN1Decoder<AE_qualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AE_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AE_qualifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) AE_qualifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_AE_qualifier(el: _Element) {
   }
   return _cached_decoder_for_AE_qualifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AE_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_qualifier */
 let _cached_encoder_for_AE_qualifier: $.ASN1Encoder<AE_qualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AE_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AE_qualifier */
 /**
  * @summary Encodes a(n) AE_qualifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AE_qualifier(
   return _cached_encoder_for_AE_qualifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AE_qualifier */
 
 /* eslint-enable */

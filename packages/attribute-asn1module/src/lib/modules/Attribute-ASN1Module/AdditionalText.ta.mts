@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION AdditionalText */
 /**
  * @summary AdditionalText
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type AdditionalText = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION AdditionalText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalText */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalText */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalText */
 export const _decode_AdditionalText = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalText */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalText */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalText */
 export const _encode_AdditionalText = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalText */
 
 /* eslint-enable */

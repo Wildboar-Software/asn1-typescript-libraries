@@ -15,7 +15,6 @@ import {
     _decode_FetchRestrictionError_problems_Item,
     _encode_FetchRestrictionError_problems_Item,
 } from '../MhsAcctAsn1Module/FetchRestrictionError-problems-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FetchRestrictionError */
 /**
  * @summary FetchRestrictionError
  * @description
@@ -64,9 +63,7 @@ export class FetchRestrictionError {
         return new FetchRestrictionError(_o.problems);
     }
 }
-/* END_OF_SYMBOL_DEFINITION FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FetchRestrictionError */
 /**
  * @summary The Leading Root Component Types of FetchRestrictionError
  * @description
@@ -84,9 +81,7 @@ export const _root_component_type_list_1_spec_for_FetchRestrictionError: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FetchRestrictionError */
 /**
  * @summary The Trailing Root Component Types of FetchRestrictionError
  * @description
@@ -96,9 +91,7 @@ export const _root_component_type_list_1_spec_for_FetchRestrictionError: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FetchRestrictionError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FetchRestrictionError */
 /**
  * @summary The Extension Addition Component Types of FetchRestrictionError
  * @description
@@ -108,13 +101,9 @@ export const _root_component_type_list_2_spec_for_FetchRestrictionError: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_FetchRestrictionError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchRestrictionError */
 let _cached_decoder_for_FetchRestrictionError: $.ASN1Decoder<FetchRestrictionError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FetchRestrictionError */
 /**
  * @summary Decodes an ASN.1 element into a(n) FetchRestrictionError
  * @function
@@ -157,13 +146,9 @@ export function _decode_FetchRestrictionError(el: _Element) {
     }
     return _cached_decoder_for_FetchRestrictionError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchRestrictionError */
 let _cached_encoder_for_FetchRestrictionError: $.ASN1Encoder<FetchRestrictionError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchRestrictionError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FetchRestrictionError */
 /**
  * @summary Encodes a(n) FetchRestrictionError into an ASN.1 Element.
  * @function
@@ -201,6 +186,5 @@ export function _encode_FetchRestrictionError(
     return _cached_encoder_for_FetchRestrictionError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FetchRestrictionError */
 
 /* eslint-enable */

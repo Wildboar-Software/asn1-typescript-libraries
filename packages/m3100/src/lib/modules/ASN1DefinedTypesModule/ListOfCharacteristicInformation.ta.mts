@@ -15,7 +15,7 @@ import {
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ListOfCharacteristicInformation */
+
 /**
  * @summary ListOfCharacteristicInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ListOfCharacteristicInformation = CharacteristicInformation[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ListOfCharacteristicInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListOfCharacteristicInformation */
+
 let _cached_decoder_for_ListOfCharacteristicInformation: $.ASN1Decoder<ListOfCharacteristicInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListOfCharacteristicInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListOfCharacteristicInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ListOfCharacteristicInformation
  * @function
@@ -48,13 +46,11 @@ export function _decode_ListOfCharacteristicInformation(el: _Element) {
     }
     return _cached_decoder_for_ListOfCharacteristicInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListOfCharacteristicInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListOfCharacteristicInformation */
+
 let _cached_encoder_for_ListOfCharacteristicInformation: $.ASN1Encoder<ListOfCharacteristicInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListOfCharacteristicInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListOfCharacteristicInformation */
+
 /**
  * @summary Encodes a(n) ListOfCharacteristicInformation into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ListOfCharacteristicInformation(
     return _cached_encoder_for_ListOfCharacteristicInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListOfCharacteristicInformation */
 
 /* eslint-enable */

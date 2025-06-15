@@ -14,7 +14,6 @@ import { receive_edim } from '../EDIMSAbstractService/receive-edim.oa.mjs';
 import { receive_edin } from '../EDIMSAbstractService/receive-edin.oa.mjs';
 import { id_pt_reception } from '../EDIMSObjectIdentifiers/id-pt-reception.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION reception */
 /**
  * @summary reception
  * @description
@@ -43,6 +42,5 @@ export const reception: PORT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_reception /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION reception */
 
 /* eslint-enable */

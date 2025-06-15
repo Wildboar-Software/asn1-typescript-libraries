@@ -21,7 +21,7 @@ import {
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
 } from '../E-health-setup/IntegrityOptions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Response */
+
 /**
  * @summary Response
  * @description
@@ -86,9 +86,8 @@ export class Response {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Response */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Response */
+
 /**
  * @summary The Leading Root Component Types of Response
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_Response: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Response */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Response */
+
 /**
  * @summary The Trailing Root Component Types of Response
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_Response: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Response: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Response */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Response */
+
 /**
  * @summary The Extension Addition Component Types of Response
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_Response: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Response: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Response */
+
 let _cached_decoder_for_Response: $.ASN1Decoder<Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Response */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Response */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Response
  * @function
@@ -182,13 +177,11 @@ export function _decode_Response(el: _Element) {
     }
     return _cached_decoder_for_Response(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Response */
+
 let _cached_encoder_for_Response: $.ASN1Encoder<Response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Response */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Response */
+
 /**
  * @summary Encodes a(n) Response into an ASN.1 Element.
  * @function
@@ -227,6 +220,5 @@ export function _encode_Response(
     return _cached_encoder_for_Response(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Response */
 
 /* eslint-enable */

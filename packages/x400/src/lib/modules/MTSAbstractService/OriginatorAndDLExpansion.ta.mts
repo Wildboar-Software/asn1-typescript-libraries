@@ -20,7 +20,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorAndDLExpansion */
 /**
  * @summary OriginatorAndDLExpansion
  * @description
@@ -75,9 +74,7 @@ export class OriginatorAndDLExpansion {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OriginatorAndDLExpansion */
 /**
  * @summary The Leading Root Component Types of OriginatorAndDLExpansion
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_OriginatorAndDLExpansion: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OriginatorAndDLExpansion */
 /**
  * @summary The Trailing Root Component Types of OriginatorAndDLExpansion
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_OriginatorAndDLExpansion: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OriginatorAndDLExpansion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OriginatorAndDLExpansion */
 /**
  * @summary The Extension Addition Component Types of OriginatorAndDLExpansion
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_OriginatorAndDLExpansion: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_OriginatorAndDLExpansion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorAndDLExpansion */
 let _cached_decoder_for_OriginatorAndDLExpansion: $.ASN1Decoder<OriginatorAndDLExpansion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorAndDLExpansion */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorAndDLExpansion
  * @function
@@ -168,13 +157,9 @@ export function _decode_OriginatorAndDLExpansion(el: _Element) {
     }
     return _cached_decoder_for_OriginatorAndDLExpansion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorAndDLExpansion */
 let _cached_encoder_for_OriginatorAndDLExpansion: $.ASN1Encoder<OriginatorAndDLExpansion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorAndDLExpansion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorAndDLExpansion */
 /**
  * @summary Encodes a(n) OriginatorAndDLExpansion into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_OriginatorAndDLExpansion(
     return _cached_encoder_for_OriginatorAndDLExpansion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorAndDLExpansion */
 
 /* eslint-enable */

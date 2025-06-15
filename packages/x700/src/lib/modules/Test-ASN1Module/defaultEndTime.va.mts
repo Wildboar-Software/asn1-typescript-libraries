@@ -18,7 +18,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultEndTime */
 /**
  * @summary defaultEndTime
  * @description
@@ -32,6 +31,5 @@ import {
  * @constant
  */
 export const defaultEndTime: EndTime = { continual: null };
-/* END_OF_SYMBOL_DEFINITION defaultEndTime */
 
 /* eslint-enable */

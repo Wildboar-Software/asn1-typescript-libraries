@@ -19,7 +19,6 @@ import { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/
 import { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa.mjs';
 import { id_ac_mts_forced_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-forced-access-94.va.mjs';
 import { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_forced_access_94 */
 /**
  * @summary mts_forced_access_94
  * @description
@@ -62,6 +61,5 @@ export const mts_forced_access_94: APPLICATION_CONTEXT = {
     '&probe': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&acknowledge': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mts_forced_access_94 */
 
 /* eslint-enable */

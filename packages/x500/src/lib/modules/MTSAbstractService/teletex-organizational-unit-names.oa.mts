@@ -5,7 +5,6 @@ import {
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
 } from "../MTSAbstractService/TeletexOrganizationalUnitNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION teletex_organizational_unit_names */
 /**
  * @summary teletex_organizational_unit_names
  * @description
@@ -34,6 +33,5 @@ export const teletex_organizational_unit_names: EXTENSION_ATTRIBUTE<TeletexOrgan
     "&id": 5 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_organizational_unit_names */
 
 /* eslint-enable */

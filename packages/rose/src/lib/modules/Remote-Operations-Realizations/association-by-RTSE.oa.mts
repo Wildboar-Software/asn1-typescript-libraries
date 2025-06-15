@@ -16,7 +16,7 @@ import {
   _encode_RealizationParameter,
 } from '../Remote-Operations-Realizations/RealizationParameter.ta.mjs';
 import { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION association_by_RTSE */
+
 /**
  * @summary association_by_RTSE
  * @description
@@ -57,6 +57,5 @@ export const association_by_RTSE: REALIZATION<RealizationParameter> = {
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION association_by_RTSE */
 
 /* eslint-enable */

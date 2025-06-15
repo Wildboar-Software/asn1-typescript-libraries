@@ -22,7 +22,6 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import { id_at_global_domain_identifier } from '../MHSRoutingObjectIdentifiers/id-at-global-domain-identifier.va.mjs';
-/* START_OF_SYMBOL_DEFINITION globalDomainIdentifier */
 /**
  * @summary globalDomainIdentifier
  * @description
@@ -58,6 +57,5 @@ export const globalDomainIdentifier: ATTRIBUTE<GlobalDomainIdentifier> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION globalDomainIdentifier */
 
 /* eslint-enable */

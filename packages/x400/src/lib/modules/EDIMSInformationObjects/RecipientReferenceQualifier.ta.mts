@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RecipientReferenceQualifier */
 /**
  * @summary RecipientReferenceQualifier
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RecipientReferenceQualifier = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION RecipientReferenceQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReferenceQualifier */
 let _cached_decoder_for_RecipientReferenceQualifier: $.ASN1Decoder<RecipientReferenceQualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReferenceQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientReferenceQualifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientReferenceQualifier
  * @function
@@ -45,13 +40,9 @@ export function _decode_RecipientReferenceQualifier(el: _Element) {
     }
     return _cached_decoder_for_RecipientReferenceQualifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientReferenceQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReferenceQualifier */
 let _cached_encoder_for_RecipientReferenceQualifier: $.ASN1Encoder<RecipientReferenceQualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReferenceQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientReferenceQualifier */
 /**
  * @summary Encodes a(n) RecipientReferenceQualifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RecipientReferenceQualifier(
     return _cached_encoder_for_RecipientReferenceQualifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientReferenceQualifier */
 
 /* eslint-enable */

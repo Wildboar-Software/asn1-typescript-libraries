@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ansi_x9_57 } from "../AlgorithmObjectIdentifiers/ansi-x9-57.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_dsa */
 /**
  * @summary id_dsa
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_dsa: ID = new _OID([/* x9algorithm */ 4, 1], ansi_x9_57);
-/* END_OF_SYMBOL_DEFINITION id_dsa */
 
 /* eslint-enable */

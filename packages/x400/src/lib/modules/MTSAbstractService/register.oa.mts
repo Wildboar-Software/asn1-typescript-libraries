@@ -34,7 +34,6 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_register } from '../MTSAccessProtocol/op-register.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION register */
 /**
  * @summary register
  * @description
@@ -85,6 +84,5 @@ export const register: ABSTRACT_OPERATION<RegisterArgument, RegisterResult> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION register */
 
 /* eslint-enable */

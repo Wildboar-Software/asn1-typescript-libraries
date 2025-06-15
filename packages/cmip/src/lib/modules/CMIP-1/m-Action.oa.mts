@@ -23,7 +23,7 @@ import {
   _decode_ActionArgument,
   _encode_ActionArgument,
 } from '../CMIP-1/ActionArgument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION m_Action */
+
 /**
  * @summary m_Action
  * @description
@@ -65,6 +65,5 @@ export const m_Action: OPERATION<ActionArgument> = {
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Action */
 
 /* eslint-enable */

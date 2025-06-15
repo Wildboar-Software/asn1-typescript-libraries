@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion */
+
 /**
  * @summary ProtocolVersion
  * @description
@@ -61,9 +61,8 @@ export class ProtocolVersion {
     return new ProtocolVersion(_o.major, _o.minor);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtocolVersion */
+
 /**
  * @summary The Leading Root Component Types of ProtocolVersion
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_ProtocolVersion: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtocolVersion */
+
 /**
  * @summary The Trailing Root Component Types of ProtocolVersion
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_ProtocolVersion: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtocolVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtocolVersion */
+
 /**
  * @summary The Extension Addition Component Types of ProtocolVersion
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_ProtocolVersion: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtocolVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersion */
+
 let _cached_decoder_for_ProtocolVersion: $.ASN1Decoder<ProtocolVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtocolVersion */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolVersion
  * @function
@@ -149,13 +144,11 @@ export function _decode_ProtocolVersion(el: _Element) {
   }
   return _cached_decoder_for_ProtocolVersion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersion */
+
 let _cached_encoder_for_ProtocolVersion: $.ASN1Encoder<ProtocolVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtocolVersion */
+
 /**
  * @summary Encodes a(n) ProtocolVersion into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_ProtocolVersion(
   return _cached_encoder_for_ProtocolVersion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtocolVersion */
 
 /* eslint-enable */

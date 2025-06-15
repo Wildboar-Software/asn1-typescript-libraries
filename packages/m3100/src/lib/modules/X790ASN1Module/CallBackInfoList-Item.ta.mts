@@ -15,7 +15,7 @@ import {
     _decode_PersonReach,
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CallBackInfoList_Item */
+
 /**
  * @summary CallBackInfoList_Item
  * @description
@@ -31,13 +31,11 @@ export type CallBackInfoList_Item =
     | { beforeAutoTest: PersonReach } /* CHOICE_ALT_ROOT */
     | { afterCleared: PersonReach } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CallBackInfoList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CallBackInfoList_Item */
+
 let _cached_decoder_for_CallBackInfoList_Item: $.ASN1Decoder<CallBackInfoList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CallBackInfoList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CallBackInfoList_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CallBackInfoList_Item
  * @function
@@ -65,13 +63,11 @@ export function _decode_CallBackInfoList_Item(el: _Element) {
     }
     return _cached_decoder_for_CallBackInfoList_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CallBackInfoList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CallBackInfoList_Item */
+
 let _cached_encoder_for_CallBackInfoList_Item: $.ASN1Encoder<CallBackInfoList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CallBackInfoList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CallBackInfoList_Item */
+
 /**
  * @summary Encodes a(n) CallBackInfoList_Item into an ASN.1 Element.
  * @function
@@ -111,6 +107,5 @@ export function _encode_CallBackInfoList_Item(
     return _cached_encoder_for_CallBackInfoList_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CallBackInfoList_Item */
 
 /* eslint-enable */

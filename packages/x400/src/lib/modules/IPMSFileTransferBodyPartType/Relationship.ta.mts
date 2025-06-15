@@ -16,7 +16,6 @@ import {
     _decode_ExplicitRelationship,
     _encode_ExplicitRelationship,
 } from '../IPMSFileTransferBodyPartType/ExplicitRelationship.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Relationship */
 /**
  * @summary Relationship
  * @description
@@ -33,13 +32,9 @@ import {
 export type Relationship =
     | { explicit_relationship: ExplicitRelationship } /* CHOICE_ALT_ROOT */
     | { descriptive_relationship: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Relationship */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Relationship */
 let _cached_decoder_for_Relationship: $.ASN1Decoder<Relationship> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Relationship */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Relationship */
 /**
  * @summary Decodes an ASN.1 element into a(n) Relationship
  * @function
@@ -67,13 +62,9 @@ export function _decode_Relationship(el: _Element) {
     }
     return _cached_decoder_for_Relationship(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Relationship */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Relationship */
 let _cached_encoder_for_Relationship: $.ASN1Encoder<Relationship> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Relationship */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Relationship */
 /**
  * @summary Encodes a(n) Relationship into an ASN.1 Element.
  * @function
@@ -107,6 +98,5 @@ export function _encode_Relationship(
     return _cached_encoder_for_Relationship(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Relationship */
 
 /* eslint-enable */

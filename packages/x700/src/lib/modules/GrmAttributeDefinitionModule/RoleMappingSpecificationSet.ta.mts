@@ -15,7 +15,6 @@ import {
     _decode_RoleMappingSpecification,
     _encode_RoleMappingSpecification,
 } from '../GrmAttributeDefinitionModule/RoleMappingSpecification.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoleMappingSpecificationSet */
 /**
  * @summary RoleMappingSpecificationSet
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RoleMappingSpecificationSet = RoleMappingSpecification[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RoleMappingSpecificationSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleMappingSpecificationSet */
 let _cached_decoder_for_RoleMappingSpecificationSet: $.ASN1Decoder<RoleMappingSpecificationSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleMappingSpecificationSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleMappingSpecificationSet */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleMappingSpecificationSet
  * @function
@@ -48,13 +43,9 @@ export function _decode_RoleMappingSpecificationSet(el: _Element) {
     }
     return _cached_decoder_for_RoleMappingSpecificationSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleMappingSpecificationSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleMappingSpecificationSet */
 let _cached_encoder_for_RoleMappingSpecificationSet: $.ASN1Encoder<RoleMappingSpecificationSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleMappingSpecificationSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleMappingSpecificationSet */
 /**
  * @summary Encodes a(n) RoleMappingSpecificationSet into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RoleMappingSpecificationSet(
     return _cached_encoder_for_RoleMappingSpecificationSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleMappingSpecificationSet */
 
 /* eslint-enable */

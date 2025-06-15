@@ -15,7 +15,6 @@ import {
     _decode_MessageDeliveryErrors,
     _encode_MessageDeliveryErrors,
 } from '../MhsAcctAsn1Module/MessageDeliveryErrors.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportDeliveryErrors */
 /**
  * @summary ReportDeliveryErrors
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportDeliveryErrors = MessageDeliveryErrors; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryErrors */
 let _cached_decoder_for_ReportDeliveryErrors: $.ASN1Decoder<ReportDeliveryErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportDeliveryErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportDeliveryErrors
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReportDeliveryErrors(el: _Element) {
     }
     return _cached_decoder_for_ReportDeliveryErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryErrors */
 let _cached_encoder_for_ReportDeliveryErrors: $.ASN1Encoder<ReportDeliveryErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportDeliveryErrors */
 /**
  * @summary Encodes a(n) ReportDeliveryErrors into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReportDeliveryErrors(
     return _cached_encoder_for_ReportDeliveryErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportDeliveryErrors */
 
 /* eslint-enable */

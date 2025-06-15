@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_krb5 */
+
 /**
  * @summary id_krb5
  * @description
@@ -35,6 +35,5 @@ export const id_krb5: OBJECT_IDENTIFIER = new _OID([
   /* security */ 5,
   /* kerberosV5 */ 2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_krb5 */
 
 /* eslint-enable */

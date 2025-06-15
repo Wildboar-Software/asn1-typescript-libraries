@@ -10,7 +10,6 @@ import {
 } from "../SchemaAdministration/FriendsDescription.ta.mjs";
 import { id_soa_friends } from "../SchemaAdministration/id-soa-friends.va.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION friends */
 /**
  * @summary friends
  * @description
@@ -47,6 +46,5 @@ export const friends: ATTRIBUTE<FriendsDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION friends */
 
 /* eslint-enable */

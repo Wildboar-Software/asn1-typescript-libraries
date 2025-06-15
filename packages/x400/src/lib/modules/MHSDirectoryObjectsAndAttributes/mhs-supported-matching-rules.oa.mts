@@ -20,7 +20,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { id_at_mhs_supported_matching_rules } from '../MHSObjectIdentifiers/id-at-mhs-supported-matching-rules.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_supported_matching_rules */
 /**
  * @summary mhs_supported_matching_rules
  * @description
@@ -57,6 +56,5 @@ export const mhs_supported_matching_rules: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_supported_matching_rules */
 
 /* eslint-enable */

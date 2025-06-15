@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CommunicationsAgreementIdField */
 /**
  * @summary CommunicationsAgreementIdField
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CommunicationsAgreementIdField = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION CommunicationsAgreementIdField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsAgreementIdField */
 let _cached_decoder_for_CommunicationsAgreementIdField: $.ASN1Decoder<CommunicationsAgreementIdField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsAgreementIdField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommunicationsAgreementIdField */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommunicationsAgreementIdField
  * @function
@@ -45,13 +40,9 @@ export function _decode_CommunicationsAgreementIdField(el: _Element) {
     }
     return _cached_decoder_for_CommunicationsAgreementIdField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommunicationsAgreementIdField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsAgreementIdField */
 let _cached_encoder_for_CommunicationsAgreementIdField: $.ASN1Encoder<CommunicationsAgreementIdField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsAgreementIdField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommunicationsAgreementIdField */
 /**
  * @summary Encodes a(n) CommunicationsAgreementIdField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CommunicationsAgreementIdField(
     return _cached_encoder_for_CommunicationsAgreementIdField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommunicationsAgreementIdField */
 
 /* eslint-enable */

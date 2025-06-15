@@ -52,7 +52,7 @@ import {
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_BFP_SCHEMA */
+
 /**
  * @summary BioAPI_BFP_SCHEMA
  * @description
@@ -195,9 +195,8 @@ export class BioAPI_BFP_SCHEMA {
 
   public static _enum_for_category = _enum_for_BioAPI_CATEGORY;
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_BFP_SCHEMA */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_BFP_SCHEMA
  * @description
@@ -292,9 +291,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_BFP_SCHEMA: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_BFP_SCHEMA */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_BFP_SCHEMA
  * @description
@@ -304,9 +302,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_BFP_SCHEMA: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_BFP_SCHEMA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_BFP_SCHEMA */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_BFP_SCHEMA
  * @description
@@ -316,13 +313,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_BFP_SCHEMA: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_BFP_SCHEMA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BFP_SCHEMA */
+
 let _cached_decoder_for_BioAPI_BFP_SCHEMA: $.ASN1Decoder<BioAPI_BFP_SCHEMA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BFP_SCHEMA */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BFP_SCHEMA
  * @function
@@ -398,13 +393,11 @@ export function _decode_BioAPI_BFP_SCHEMA(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_BFP_SCHEMA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BFP_SCHEMA */
+
 let _cached_encoder_for_BioAPI_BFP_SCHEMA: $.ASN1Encoder<BioAPI_BFP_SCHEMA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BFP_SCHEMA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BFP_SCHEMA */
+
 /**
  * @summary Encodes a(n) BioAPI_BFP_SCHEMA into an ASN.1 Element.
  * @function
@@ -452,6 +445,5 @@ export function _encode_BioAPI_BFP_SCHEMA(
   return _cached_encoder_for_BioAPI_BFP_SCHEMA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BFP_SCHEMA */
 
 /* eslint-enable */

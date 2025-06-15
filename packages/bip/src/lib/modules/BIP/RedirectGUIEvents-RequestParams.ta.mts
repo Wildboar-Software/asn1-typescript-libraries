@@ -26,7 +26,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RedirectGUIEvents_RequestParams */
+
 /**
  * @summary RedirectGUIEvents_RequestParams
  * @description
@@ -113,9 +113,8 @@ export class RedirectGUIEvents_RequestParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RedirectGUIEvents_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of RedirectGUIEvents_RequestParams
  * @description
@@ -168,9 +167,8 @@ export const _root_component_type_list_1_spec_for_RedirectGUIEvents_RequestParam
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RedirectGUIEvents_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of RedirectGUIEvents_RequestParams
  * @description
@@ -180,9 +178,8 @@ export const _root_component_type_list_1_spec_for_RedirectGUIEvents_RequestParam
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RedirectGUIEvents_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RedirectGUIEvents_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of RedirectGUIEvents_RequestParams
  * @description
@@ -192,13 +189,11 @@ export const _root_component_type_list_2_spec_for_RedirectGUIEvents_RequestParam
  * @constant
  */
 export const _extension_additions_list_spec_for_RedirectGUIEvents_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectGUIEvents_RequestParams */
+
 let _cached_decoder_for_RedirectGUIEvents_RequestParams: $.ASN1Decoder<RedirectGUIEvents_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RedirectGUIEvents_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RedirectGUIEvents_RequestParams
  * @function
@@ -248,13 +243,11 @@ export function _decode_RedirectGUIEvents_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_RedirectGUIEvents_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectGUIEvents_RequestParams */
+
 let _cached_encoder_for_RedirectGUIEvents_RequestParams: $.ASN1Encoder<RedirectGUIEvents_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RedirectGUIEvents_RequestParams */
+
 /**
  * @summary Encodes a(n) RedirectGUIEvents_RequestParams into an ASN.1 Element.
  * @function
@@ -305,6 +298,5 @@ export function _encode_RedirectGUIEvents_RequestParams(
   return _cached_encoder_for_RedirectGUIEvents_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RedirectGUIEvents_RequestParams */
 
 /* eslint-enable */

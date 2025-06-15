@@ -6,7 +6,7 @@ import {
     _decode_OneAsymmetricKey,
     _encode_OneAsymmetricKey,
 } from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrivateKeyInfo */
+
 /**
  * @summary PrivateKeyInfo
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type PrivateKeyInfo = OneAsymmetricKey; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyInfo */
+
 let _cached_decoder_for_PrivateKeyInfo: $.ASN1Decoder<PrivateKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateKeyInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateKeyInfo
  * @function
@@ -37,13 +35,11 @@ export function _decode_PrivateKeyInfo(el: _Element) {
     }
     return _cached_decoder_for_PrivateKeyInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyInfo */
+
 let _cached_encoder_for_PrivateKeyInfo: $.ASN1Encoder<PrivateKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateKeyInfo */
+
 /**
  * @summary Encodes a(n) PrivateKeyInfo into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_PrivateKeyInfo(
     return _cached_encoder_for_PrivateKeyInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateKeyInfo */
 
 /* eslint-enable */

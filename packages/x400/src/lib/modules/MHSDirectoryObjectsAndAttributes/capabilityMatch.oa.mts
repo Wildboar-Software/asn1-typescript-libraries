@@ -16,7 +16,6 @@ import {
     _encode_Capability,
 } from '../MHSDirectoryObjectsAndAttributes/Capability.ta.mjs';
 import { id_mr_capability_match } from '../MHSObjectIdentifiers/id-mr-capability-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION capabilityMatch */
 /**
  * @summary capabilityMatch
  * @description
@@ -45,6 +44,5 @@ export const capabilityMatch: MATCHING_RULE<Capability> = {
     '&id': id_mr_capability_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION capabilityMatch */
 
 /* eslint-enable */

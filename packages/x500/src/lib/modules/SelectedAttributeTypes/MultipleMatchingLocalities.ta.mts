@@ -11,7 +11,6 @@ import {
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
 } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultipleMatchingLocalities */
 /**
  * @summary MultipleMatchingLocalities
  * @description
@@ -75,9 +74,7 @@ export class MultipleMatchingLocalities {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MultipleMatchingLocalities */
 /**
  * @summary The Leading Root Component Types of MultipleMatchingLocalities
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_MultipleMatchingLocalities: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MultipleMatchingLocalities */
 /**
  * @summary The Trailing Root Component Types of MultipleMatchingLocalities
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_MultipleMatchingLocalities: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MultipleMatchingLocalities: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MultipleMatchingLocalities */
 /**
  * @summary The Extension Addition Component Types of MultipleMatchingLocalities
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_MultipleMatchingLocalities: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_MultipleMatchingLocalities: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleMatchingLocalities */
 let _cached_decoder_for_MultipleMatchingLocalities: $.ASN1Decoder<MultipleMatchingLocalities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleMatchingLocalities */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleMatchingLocalities
  * @function
@@ -180,13 +169,9 @@ export function _decode_MultipleMatchingLocalities(el: _Element) {
     }
     return _cached_decoder_for_MultipleMatchingLocalities(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleMatchingLocalities */
 let _cached_encoder_for_MultipleMatchingLocalities: $.ASN1Encoder<MultipleMatchingLocalities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleMatchingLocalities */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleMatchingLocalities */
 /**
  * @summary Encodes a(n) MultipleMatchingLocalities into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_MultipleMatchingLocalities(
     return _cached_encoder_for_MultipleMatchingLocalities(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleMatchingLocalities */
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
     _decode_UniversalPhysicalDeliveryOfficeName,
     _encode_UniversalPhysicalDeliveryOfficeName,
 } from "../MTSAbstractService/UniversalPhysicalDeliveryOfficeName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_physical_delivery_office_name */
 /**
  * @summary universal_physical_delivery_office_name
  * @description
@@ -34,6 +33,5 @@ export const universal_physical_delivery_office_name: EXTENSION_ATTRIBUTE<Univer
     "&id": 29 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_physical_delivery_office_name */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DaysOfMonth */
 /**
  * @summary DaysOfMonth
  * @description
@@ -62,9 +61,7 @@ export class DaysOfMonth {
         return new DaysOfMonth(_o.daysFromFirst, _o.daysFromLast);
     }
 }
-/* END_OF_SYMBOL_DEFINITION DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DaysOfMonth */
 /**
  * @summary The Leading Root Component Types of DaysOfMonth
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_DaysOfMonth: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DaysOfMonth */
 /**
  * @summary The Trailing Root Component Types of DaysOfMonth
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_DaysOfMonth: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DaysOfMonth: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DaysOfMonth */
 /**
  * @summary The Extension Addition Component Types of DaysOfMonth
  * @description
@@ -113,13 +106,9 @@ export const _root_component_type_list_2_spec_for_DaysOfMonth: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_DaysOfMonth: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DaysOfMonth */
 let _cached_decoder_for_DaysOfMonth: $.ASN1Decoder<DaysOfMonth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DaysOfMonth */
 /**
  * @summary Decodes an ASN.1 element into a(n) DaysOfMonth
  * @function
@@ -152,13 +141,9 @@ export function _decode_DaysOfMonth(el: _Element) {
     }
     return _cached_decoder_for_DaysOfMonth(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DaysOfMonth */
 let _cached_encoder_for_DaysOfMonth: $.ASN1Encoder<DaysOfMonth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DaysOfMonth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DaysOfMonth */
 /**
  * @summary Encodes a(n) DaysOfMonth into an ASN.1 Element.
  * @function
@@ -197,6 +182,5 @@ export function _encode_DaysOfMonth(
     return _cached_encoder_for_DaysOfMonth(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DaysOfMonth */
 
 /* eslint-enable */

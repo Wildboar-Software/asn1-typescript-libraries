@@ -10,7 +10,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DualStringSyntax */
 /**
  * @summary DualStringSyntax
  * @description
@@ -70,9 +69,7 @@ export class DualStringSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DualStringSyntax */
 /**
  * @summary The Leading Root Component Types of DualStringSyntax
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_DualStringSyntax: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DualStringSyntax */
 /**
  * @summary The Trailing Root Component Types of DualStringSyntax
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_DualStringSyntax: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DualStringSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DualStringSyntax */
 /**
  * @summary The Extension Addition Component Types of DualStringSyntax
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_DualStringSyntax: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_DualStringSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DualStringSyntax */
 let _cached_decoder_for_DualStringSyntax: $.ASN1Decoder<DualStringSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DualStringSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) DualStringSyntax
  * @function
@@ -162,13 +151,9 @@ export function _decode_DualStringSyntax(el: _Element) {
     }
     return _cached_decoder_for_DualStringSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DualStringSyntax */
 let _cached_encoder_for_DualStringSyntax: $.ASN1Encoder<DualStringSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DualStringSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DualStringSyntax */
 /**
  * @summary Encodes a(n) DualStringSyntax into an ASN.1 Element.
  * @function
@@ -212,6 +197,5 @@ export function _encode_DualStringSyntax(
     return _cached_encoder_for_DualStringSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DualStringSyntax */
 
 /* eslint-enable */

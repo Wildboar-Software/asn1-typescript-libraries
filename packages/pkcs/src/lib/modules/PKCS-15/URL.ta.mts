@@ -10,7 +10,7 @@ import {
     _decode_URL_urlWithDigest,
     _encode_URL_urlWithDigest,
 } from "../PKCS-15/URL-urlWithDigest.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION URL */
+
 /**
  * @summary URL
  * @description
@@ -30,13 +30,11 @@ import {
 export type URL =
     | { url: PrintableString } /* CHOICE_ALT_ROOT */
     | { urlWithDigest: URL_urlWithDigest } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION URL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_URL */
+
 let _cached_decoder_for_URL: $.ASN1Decoder<URL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_URL */
 
-/* START_OF_SYMBOL_DEFINITION _decode_URL */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) URL
  * @function
@@ -57,13 +55,11 @@ export function _decode_URL(el: _Element) {
     }
     return _cached_decoder_for_URL(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_URL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_URL */
+
 let _cached_encoder_for_URL: $.ASN1Encoder<URL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_URL */
 
-/* START_OF_SYMBOL_DEFINITION _encode_URL */
+
 /**
  * @summary Encodes a(n) URL into an ASN.1 Element.
  * @function
@@ -89,6 +85,5 @@ export function _encode_URL(value: URL, elGetter: $.ASN1Encoder<URL>) {
     return _cached_encoder_for_URL(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_URL */
 
 /* eslint-enable */

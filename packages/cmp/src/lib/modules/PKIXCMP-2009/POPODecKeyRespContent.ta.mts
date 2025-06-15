@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION POPODecKeyRespContent */
+
 /**
  * @summary POPODecKeyRespContent
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type POPODecKeyRespContent = INTEGER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION POPODecKeyRespContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_POPODecKeyRespContent */
+
 let _cached_decoder_for_POPODecKeyRespContent: $.ASN1Decoder<POPODecKeyRespContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_POPODecKeyRespContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_POPODecKeyRespContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) POPODecKeyRespContent
  * @function
@@ -45,13 +43,11 @@ export function _decode_POPODecKeyRespContent(el: _Element) {
   }
   return _cached_decoder_for_POPODecKeyRespContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_POPODecKeyRespContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_POPODecKeyRespContent */
+
 let _cached_encoder_for_POPODecKeyRespContent: $.ASN1Encoder<POPODecKeyRespContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_POPODecKeyRespContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_POPODecKeyRespContent */
+
 /**
  * @summary Encodes a(n) POPODecKeyRespContent into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_POPODecKeyRespContent(
   return _cached_encoder_for_POPODecKeyRespContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_POPODecKeyRespContent */
 
 /* eslint-enable */

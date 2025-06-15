@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_EDIMSEntryType */
 /**
  * @summary EDIMSEntryType
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_EDIMSEntryType {
     nn = 2,
     fn = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_EDIMSEntryType */
 
-/* START_OF_SYMBOL_DEFINITION EDIMSEntryType */
 /**
  * @summary EDIMSEntryType
  * @description
@@ -42,9 +39,7 @@ export enum _enum_for_EDIMSEntryType {
  * ```@enum {number}
  */
 export type EDIMSEntryType = _enum_for_EDIMSEntryType;
-/* END_OF_SYMBOL_DEFINITION EDIMSEntryType */
 
-/* START_OF_SYMBOL_DEFINITION EDIMSEntryType */
 /**
  * @summary EDIMSEntryType
  * @description
@@ -56,9 +51,7 @@ export type EDIMSEntryType = _enum_for_EDIMSEntryType;
  * ```@enum {number}
  */
 export const EDIMSEntryType = _enum_for_EDIMSEntryType;
-/* END_OF_SYMBOL_DEFINITION EDIMSEntryType */
 
-/* START_OF_SYMBOL_DEFINITION EDIMSEntryType_edim */
 /**
  * @summary EDIMSEntryType_edim
  * @constant
@@ -66,9 +59,7 @@ export const EDIMSEntryType = _enum_for_EDIMSEntryType;
  */
 export const EDIMSEntryType_edim: EDIMSEntryType =
     EDIMSEntryType.edim; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EDIMSEntryType_edim */
 
-/* START_OF_SYMBOL_DEFINITION edim */
 /**
  * @summary edim
  * @constant
@@ -76,9 +67,7 @@ export const EDIMSEntryType_edim: EDIMSEntryType =
  */
 export const edim: EDIMSEntryType =
     EDIMSEntryType.edim; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION edim */
 
-/* START_OF_SYMBOL_DEFINITION EDIMSEntryType_pn */
 /**
  * @summary EDIMSEntryType_pn
  * @constant
@@ -86,9 +75,7 @@ export const edim: EDIMSEntryType =
  */
 export const EDIMSEntryType_pn: EDIMSEntryType =
     EDIMSEntryType.pn; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EDIMSEntryType_pn */
 
-/* START_OF_SYMBOL_DEFINITION pn */
 /**
  * @summary pn
  * @constant
@@ -96,9 +83,7 @@ export const EDIMSEntryType_pn: EDIMSEntryType =
  */
 export const pn: EDIMSEntryType =
     EDIMSEntryType.pn; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION pn */
 
-/* START_OF_SYMBOL_DEFINITION EDIMSEntryType_nn */
 /**
  * @summary EDIMSEntryType_nn
  * @constant
@@ -106,9 +91,7 @@ export const pn: EDIMSEntryType =
  */
 export const EDIMSEntryType_nn: EDIMSEntryType =
     EDIMSEntryType.nn; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EDIMSEntryType_nn */
 
-/* START_OF_SYMBOL_DEFINITION nn */
 /**
  * @summary nn
  * @constant
@@ -116,9 +99,7 @@ export const EDIMSEntryType_nn: EDIMSEntryType =
  */
 export const nn: EDIMSEntryType =
     EDIMSEntryType.nn; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nn */
 
-/* START_OF_SYMBOL_DEFINITION EDIMSEntryType_fn */
 /**
  * @summary EDIMSEntryType_fn
  * @constant
@@ -126,9 +107,7 @@ export const nn: EDIMSEntryType =
  */
 export const EDIMSEntryType_fn: EDIMSEntryType =
     EDIMSEntryType.fn; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EDIMSEntryType_fn */
 
-/* START_OF_SYMBOL_DEFINITION fn */
 /**
  * @summary fn
  * @constant
@@ -136,21 +115,12 @@ export const EDIMSEntryType_fn: EDIMSEntryType =
  */
 export const fn: EDIMSEntryType =
     EDIMSEntryType.fn; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION fn */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMSEntryType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMSEntryType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIMSEntryType */
 export const _decode_EDIMSEntryType = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_EDIMSEntryType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMSEntryType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMSEntryType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIMSEntryType */
 export const _encode_EDIMSEntryType = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIMSEntryType */
 
 /* eslint-enable */

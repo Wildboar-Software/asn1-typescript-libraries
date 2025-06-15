@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_sat } from '../EDIMSObjectIdentifiers/id-sat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_sat_edi_notification_indicator */
 /**
  * @summary id_sat_edi_notification_indicator
  * @description
@@ -25,6 +24,5 @@ import { id_sat } from '../EDIMSObjectIdentifiers/id-sat.va.mjs';
  * @constant
  */
 export const id_sat_edi_notification_indicator: ID = new _OID([2], id_sat);
-/* END_OF_SYMBOL_DEFINITION id_sat_edi_notification_indicator */
 
 /* eslint-enable */

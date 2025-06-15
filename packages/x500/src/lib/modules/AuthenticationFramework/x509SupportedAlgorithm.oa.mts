@@ -6,7 +6,6 @@ import {
     _encode_SupportedAlgorithm,
 } from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION x509SupportedAlgorithm */
 /**
  * @summary x509SupportedAlgorithm
  * @description
@@ -36,6 +35,5 @@ export const x509SupportedAlgorithm: SYNTAX_NAME<SupportedAlgorithm> = {
     "&id": id_lsx_x509SupportedAlgorithm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION x509SupportedAlgorithm */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_OptionalObject,
     _encode_OptionalObject,
 } from '../ChangeOverASN1Productions/OptionalObject.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BackUpObject */
 /**
  * @summary BackUpObject
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type BackUpObject = OptionalObject; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BackUpObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpObject */
 let _cached_decoder_for_BackUpObject: $.ASN1Decoder<BackUpObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackUpObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackUpObject
  * @function
@@ -46,13 +41,9 @@ export function _decode_BackUpObject(el: _Element) {
     }
     return _cached_decoder_for_BackUpObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackUpObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpObject */
 let _cached_encoder_for_BackUpObject: $.ASN1Encoder<BackUpObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackUpObject */
 /**
  * @summary Encodes a(n) BackUpObject into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_BackUpObject(
     return _cached_encoder_for_BackUpObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackUpObject */
 
 /* eslint-enable */

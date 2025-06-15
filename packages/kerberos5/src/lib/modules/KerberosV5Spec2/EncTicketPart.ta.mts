@@ -51,7 +51,7 @@ import {
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncTicketPart */
+
 /**
  * @summary EncTicketPart
  * @description
@@ -178,9 +178,8 @@ export class EncTicketPart {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncTicketPart */
+
 /**
  * @summary The Leading Root Component Types of EncTicketPart
  * @description
@@ -268,9 +267,8 @@ export const _root_component_type_list_1_spec_for_EncTicketPart: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncTicketPart */
+
 /**
  * @summary The Trailing Root Component Types of EncTicketPart
  * @description
@@ -280,9 +278,8 @@ export const _root_component_type_list_1_spec_for_EncTicketPart: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncTicketPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncTicketPart */
+
 /**
  * @summary The Extension Addition Component Types of EncTicketPart
  * @description
@@ -292,13 +289,11 @@ export const _root_component_type_list_2_spec_for_EncTicketPart: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_EncTicketPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncTicketPart */
+
 let _cached_decoder_for_EncTicketPart: $.ASN1Decoder<EncTicketPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncTicketPart */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncTicketPart
  * @function
@@ -406,13 +401,11 @@ export function _decode_EncTicketPart(el: _Element) {
   }
   return _cached_decoder_for_EncTicketPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncTicketPart */
+
 let _cached_encoder_for_EncTicketPart: $.ASN1Encoder<EncTicketPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncTicketPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncTicketPart */
+
 /**
  * @summary Encodes a(n) EncTicketPart into an ASN.1 Element.
  * @function
@@ -519,6 +512,5 @@ export function _encode_EncTicketPart(
   return _cached_encoder_for_EncTicketPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncTicketPart */
 
 /* eslint-enable */

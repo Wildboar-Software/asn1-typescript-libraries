@@ -12,7 +12,6 @@ import {
     _encode_CoordinateShadowUpdateResult,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION coordinateShadowUpdate */
 /**
  * @summary coordinateShadowUpdate
  * @description
@@ -50,6 +49,5 @@ export const coordinateShadowUpdate: OPERATION<
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION coordinateShadowUpdate */
 
 /* eslint-enable */

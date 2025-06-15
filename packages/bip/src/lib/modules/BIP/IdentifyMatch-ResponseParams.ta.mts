@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_CANDIDATE,
   _encode_BioAPI_CANDIDATE,
 } from '../BIP/BioAPI-CANDIDATE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IdentifyMatch_ResponseParams */
+
 /**
  * @summary IdentifyMatch_ResponseParams
  * @description
@@ -61,9 +61,8 @@ export class IdentifyMatch_ResponseParams {
     return new IdentifyMatch_ResponseParams(_o.candidates);
   }
 }
-/* END_OF_SYMBOL_DEFINITION IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdentifyMatch_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of IdentifyMatch_ResponseParams
  * @description
@@ -81,9 +80,8 @@ export const _root_component_type_list_1_spec_for_IdentifyMatch_ResponseParams: 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdentifyMatch_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of IdentifyMatch_ResponseParams
  * @description
@@ -93,9 +91,8 @@ export const _root_component_type_list_1_spec_for_IdentifyMatch_ResponseParams: 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IdentifyMatch_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdentifyMatch_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of IdentifyMatch_ResponseParams
  * @description
@@ -105,13 +102,11 @@ export const _root_component_type_list_2_spec_for_IdentifyMatch_ResponseParams: 
  * @constant
  */
 export const _extension_additions_list_spec_for_IdentifyMatch_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdentifyMatch_ResponseParams */
+
 let _cached_decoder_for_IdentifyMatch_ResponseParams: $.ASN1Decoder<IdentifyMatch_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IdentifyMatch_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IdentifyMatch_ResponseParams
  * @function
@@ -141,13 +136,11 @@ export function _decode_IdentifyMatch_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_IdentifyMatch_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdentifyMatch_ResponseParams */
+
 let _cached_encoder_for_IdentifyMatch_ResponseParams: $.ASN1Encoder<IdentifyMatch_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdentifyMatch_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IdentifyMatch_ResponseParams */
+
 /**
  * @summary Encodes a(n) IdentifyMatch_ResponseParams into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ export function _encode_IdentifyMatch_ResponseParams(
   return _cached_encoder_for_IdentifyMatch_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IdentifyMatch_ResponseParams */
 
 /* eslint-enable */

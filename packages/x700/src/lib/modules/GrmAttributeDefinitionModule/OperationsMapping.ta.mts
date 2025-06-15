@@ -15,7 +15,6 @@ import {
     _decode_MappingPair,
     _encode_MappingPair,
 } from '../GrmAttributeDefinitionModule/MappingPair.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OperationsMapping */
 /**
  * @summary OperationsMapping
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OperationsMapping = MappingPair[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OperationsMapping */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationsMapping */
 let _cached_decoder_for_OperationsMapping: $.ASN1Decoder<OperationsMapping> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationsMapping */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationsMapping */
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationsMapping
  * @function
@@ -48,13 +43,9 @@ export function _decode_OperationsMapping(el: _Element) {
     }
     return _cached_decoder_for_OperationsMapping(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationsMapping */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationsMapping */
 let _cached_encoder_for_OperationsMapping: $.ASN1Encoder<OperationsMapping> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationsMapping */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationsMapping */
 /**
  * @summary Encodes a(n) OperationsMapping into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_OperationsMapping(
     return _cached_encoder_for_OperationsMapping(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationsMapping */
 
 /* eslint-enable */

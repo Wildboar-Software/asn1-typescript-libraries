@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION URI */
+
 /**
  * @summary URI
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type URI = VisibleString; // VisibleString
-/* END_OF_SYMBOL_DEFINITION URI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_URI */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_URI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_URI */
+
+
 export const _decode_URI = $._decodeVisibleString;
-/* END_OF_SYMBOL_DEFINITION _decode_URI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_URI */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_URI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_URI */
+
+
 export const _encode_URI = $._encodeVisibleString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_URI */
 
 /* eslint-enable */

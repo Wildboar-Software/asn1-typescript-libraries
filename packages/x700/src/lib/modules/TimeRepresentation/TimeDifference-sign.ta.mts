@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_TimeDifference_sign */
 /**
  * @summary TimeDifference_sign
  * @description
@@ -26,9 +25,7 @@ export enum _enum_for_TimeDifference_sign {
     positive = 0,
     negative = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_TimeDifference_sign */
 
-/* START_OF_SYMBOL_DEFINITION TimeDifference_sign */
 /**
  * @summary TimeDifference_sign
  * @description
@@ -40,9 +37,7 @@ export enum _enum_for_TimeDifference_sign {
  * ```@enum {number}
  */
 export type TimeDifference_sign = _enum_for_TimeDifference_sign;
-/* END_OF_SYMBOL_DEFINITION TimeDifference_sign */
 
-/* START_OF_SYMBOL_DEFINITION TimeDifference_sign */
 /**
  * @summary TimeDifference_sign
  * @description
@@ -54,9 +49,7 @@ export type TimeDifference_sign = _enum_for_TimeDifference_sign;
  * ```@enum {number}
  */
 export const TimeDifference_sign = _enum_for_TimeDifference_sign;
-/* END_OF_SYMBOL_DEFINITION TimeDifference_sign */
 
-/* START_OF_SYMBOL_DEFINITION TimeDifference_sign_positive */
 /**
  * @summary TimeDifference_sign_positive
  * @constant
@@ -64,9 +57,7 @@ export const TimeDifference_sign = _enum_for_TimeDifference_sign;
  */
 export const TimeDifference_sign_positive: TimeDifference_sign =
     TimeDifference_sign.positive; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TimeDifference_sign_positive */
 
-/* START_OF_SYMBOL_DEFINITION positive */
 /**
  * @summary positive
  * @constant
@@ -74,9 +65,7 @@ export const TimeDifference_sign_positive: TimeDifference_sign =
  */
 export const positive: TimeDifference_sign =
     TimeDifference_sign.positive; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION positive */
 
-/* START_OF_SYMBOL_DEFINITION TimeDifference_sign_negative */
 /**
  * @summary TimeDifference_sign_negative
  * @constant
@@ -84,9 +73,7 @@ export const positive: TimeDifference_sign =
  */
 export const TimeDifference_sign_negative: TimeDifference_sign =
     TimeDifference_sign.negative; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TimeDifference_sign_negative */
 
-/* START_OF_SYMBOL_DEFINITION negative */
 /**
  * @summary negative
  * @constant
@@ -94,21 +81,12 @@ export const TimeDifference_sign_negative: TimeDifference_sign =
  */
 export const negative: TimeDifference_sign =
     TimeDifference_sign.negative; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION negative */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeDifference_sign */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeDifference_sign */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeDifference_sign */
 export const _decode_TimeDifference_sign = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_TimeDifference_sign */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeDifference_sign */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeDifference_sign */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeDifference_sign */
 export const _encode_TimeDifference_sign = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeDifference_sign */
 
 /* eslint-enable */

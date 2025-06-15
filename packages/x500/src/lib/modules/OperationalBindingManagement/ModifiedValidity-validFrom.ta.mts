@@ -10,7 +10,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifiedValidity_validFrom */
 /**
  * @summary ModifiedValidity_validFrom
  * @description
@@ -25,13 +24,9 @@ export type ModifiedValidity_validFrom =
     | { now: NULL } /* CHOICE_ALT_ROOT */
     | { time: Time } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ModifiedValidity_validFrom */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifiedValidity_validFrom */
 let _cached_decoder_for_ModifiedValidity_validFrom: $.ASN1Decoder<ModifiedValidity_validFrom> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifiedValidity_validFrom */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifiedValidity_validFrom */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifiedValidity_validFrom
  * @function
@@ -55,13 +50,9 @@ export function _decode_ModifiedValidity_validFrom(el: _Element) {
     }
     return _cached_decoder_for_ModifiedValidity_validFrom(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifiedValidity_validFrom */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifiedValidity_validFrom */
 let _cached_encoder_for_ModifiedValidity_validFrom: $.ASN1Encoder<ModifiedValidity_validFrom> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifiedValidity_validFrom */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifiedValidity_validFrom */
 /**
  * @summary Encodes a(n) ModifiedValidity_validFrom into an ASN.1 Element.
  * @function
@@ -95,6 +86,5 @@ export function _encode_ModifiedValidity_validFrom(
     return _cached_encoder_for_ModifiedValidity_validFrom(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifiedValidity_validFrom */
 
 /* eslint-enable */

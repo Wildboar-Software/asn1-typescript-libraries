@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataObjectsReferenceList */
 /**
  * @summary DataObjectsReferenceList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DataObjectsReferenceList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION DataObjectsReferenceList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataObjectsReferenceList */
 let _cached_decoder_for_DataObjectsReferenceList: $.ASN1Decoder<DataObjectsReferenceList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataObjectsReferenceList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataObjectsReferenceList */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataObjectsReferenceList
  * @function
@@ -48,13 +43,9 @@ export function _decode_DataObjectsReferenceList(el: _Element) {
     }
     return _cached_decoder_for_DataObjectsReferenceList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataObjectsReferenceList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataObjectsReferenceList */
 let _cached_encoder_for_DataObjectsReferenceList: $.ASN1Encoder<DataObjectsReferenceList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataObjectsReferenceList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataObjectsReferenceList */
 /**
  * @summary Encodes a(n) DataObjectsReferenceList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_DataObjectsReferenceList(
     return _cached_encoder_for_DataObjectsReferenceList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataObjectsReferenceList */
 
 /* eslint-enable */

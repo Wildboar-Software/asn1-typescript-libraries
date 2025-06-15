@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { EncodingParameters } from "../PKCS-1/EncodingParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION emptyString */
+
 /**
  * @summary emptyString
  * @description
@@ -14,6 +14,5 @@ import { EncodingParameters } from "../PKCS-1/EncodingParameters.ta.mjs";
  * @constant
  */
 export const emptyString: EncodingParameters = new Uint8Array(0);
-/* END_OF_SYMBOL_DEFINITION emptyString */
 
 /* eslint-enable */

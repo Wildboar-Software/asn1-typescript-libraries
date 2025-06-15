@@ -20,7 +20,7 @@ import {
     _decode_ToTermSpecifier,
     _encode_ToTermSpecifier,
 } from '../ASN1DefinedTypesModule/ToTermSpecifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddLeg */
+
 /**
  * @summary AddLeg
  * @description
@@ -70,9 +70,8 @@ export class AddLeg {
         return new AddLeg(_o.mpCrossConnection, _o.legs);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddLeg */
+
 /**
  * @summary The Leading Root Component Types of AddLeg
  * @description
@@ -97,9 +96,8 @@ export const _root_component_type_list_1_spec_for_AddLeg: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddLeg */
+
 /**
  * @summary The Trailing Root Component Types of AddLeg
  * @description
@@ -109,9 +107,8 @@ export const _root_component_type_list_1_spec_for_AddLeg: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddLeg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddLeg */
+
 /**
  * @summary The Extension Addition Component Types of AddLeg
  * @description
@@ -121,13 +118,11 @@ export const _root_component_type_list_2_spec_for_AddLeg: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_AddLeg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddLeg */
+
 let _cached_decoder_for_AddLeg: $.ASN1Decoder<AddLeg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddLeg */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddLeg
  * @function
@@ -158,13 +153,11 @@ export function _decode_AddLeg(el: _Element) {
     }
     return _cached_decoder_for_AddLeg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddLeg */
+
 let _cached_encoder_for_AddLeg: $.ASN1Encoder<AddLeg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddLeg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddLeg */
+
 /**
  * @summary Encodes a(n) AddLeg into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_AddLeg(value: AddLeg, elGetter: $.ASN1Encoder<AddLeg>) {
     return _cached_encoder_for_AddLeg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddLeg */
 
 /* eslint-enable */

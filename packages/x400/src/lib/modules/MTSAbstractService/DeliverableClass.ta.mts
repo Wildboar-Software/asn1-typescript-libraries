@@ -15,7 +15,6 @@ import {
     _decode_MessageClass,
     _encode_MessageClass,
 } from '../MTSAbstractService/MessageClass.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliverableClass */
 /**
  * @summary DeliverableClass
  * @description
@@ -36,13 +35,9 @@ import {
  * ```
  */
 export type DeliverableClass = MessageClass; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeliverableClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverableClass */
 let _cached_decoder_for_DeliverableClass: $.ASN1Decoder<DeliverableClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverableClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliverableClass */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliverableClass
  * @function
@@ -55,13 +50,9 @@ export function _decode_DeliverableClass(el: _Element) {
     }
     return _cached_decoder_for_DeliverableClass(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliverableClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverableClass */
 let _cached_encoder_for_DeliverableClass: $.ASN1Encoder<DeliverableClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverableClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliverableClass */
 /**
  * @summary Encodes a(n) DeliverableClass into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_DeliverableClass(
     return _cached_encoder_for_DeliverableClass(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliverableClass */
 
 /* eslint-enable */

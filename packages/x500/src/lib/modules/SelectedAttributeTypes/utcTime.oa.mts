@@ -3,7 +3,6 @@ import { UTCTime } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_utcTime } from "../SelectedAttributeTypes/id-lsx-utcTime.va.mjs";
-/* START_OF_SYMBOL_DEFINITION utcTime */
 /**
  * @summary utcTime
  * @description
@@ -33,6 +32,5 @@ export const utcTime: SYNTAX_NAME<UTCTime> = {
     "&id": id_lsx_utcTime /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION utcTime */
 
 /* eslint-enable */

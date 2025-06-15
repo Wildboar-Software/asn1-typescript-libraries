@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_post_office_box */
 /**
  * @summary ub_post_office_box
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_post_office_box: INTEGER = 40;
-/* END_OF_SYMBOL_DEFINITION ub_post_office_box */
 
 /* eslint-enable */

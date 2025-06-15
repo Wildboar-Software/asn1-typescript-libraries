@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_CMISSync */
+
 /**
  * @summary CMISSync
  * @description
@@ -26,9 +26,8 @@ export enum _enum_for_CMISSync {
   bestEffort = 0,
   atomic = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_CMISSync */
 
-/* START_OF_SYMBOL_DEFINITION CMISSync */
+
 /**
  * @summary CMISSync
  * @description
@@ -40,9 +39,8 @@ export enum _enum_for_CMISSync {
  * ```@enum {number}
  */
 export type CMISSync = _enum_for_CMISSync;
-/* END_OF_SYMBOL_DEFINITION CMISSync */
 
-/* START_OF_SYMBOL_DEFINITION CMISSync */
+
 /**
  * @summary CMISSync
  * @description
@@ -54,9 +52,8 @@ export type CMISSync = _enum_for_CMISSync;
  * ```@enum {number}
  */
 export const CMISSync = _enum_for_CMISSync;
-/* END_OF_SYMBOL_DEFINITION CMISSync */
 
-/* START_OF_SYMBOL_DEFINITION CMISSync_bestEffort */
+
 /**
  * @summary CMISSync_bestEffort
  * @constant
@@ -64,9 +61,8 @@ export const CMISSync = _enum_for_CMISSync;
  */
 export const CMISSync_bestEffort: CMISSync =
   CMISSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CMISSync_bestEffort */
 
-/* START_OF_SYMBOL_DEFINITION bestEffort */
+
 /**
  * @summary bestEffort
  * @constant
@@ -74,9 +70,8 @@ export const CMISSync_bestEffort: CMISSync =
  */
 export const bestEffort: CMISSync =
   CMISSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bestEffort */
 
-/* START_OF_SYMBOL_DEFINITION CMISSync_atomic */
+
 /**
  * @summary CMISSync_atomic
  * @constant
@@ -84,9 +79,8 @@ export const bestEffort: CMISSync =
  */
 export const CMISSync_atomic: CMISSync =
   CMISSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CMISSync_atomic */
 
-/* START_OF_SYMBOL_DEFINITION atomic */
+
 /**
  * @summary atomic
  * @constant
@@ -94,21 +88,16 @@ export const CMISSync_atomic: CMISSync =
  */
 export const atomic: CMISSync =
   CMISSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION atomic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMISSync */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMISSync */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CMISSync */
+
+
 export const _decode_CMISSync = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_CMISSync */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMISSync */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMISSync */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CMISSync */
+
+
 export const _encode_CMISSync = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CMISSync */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_wall } from "../UsefulDefinitions/ldap-wall.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ldap_dynExt */
 /**
  * @summary ldap_dynExt
  * @description
@@ -16,6 +15,5 @@ import { ldap_wall } from "../UsefulDefinitions/ldap-wall.va.mjs";
  * @constant
  */
 export const ldap_dynExt: ID = new _OID([101, 119], ldap_wall);
-/* END_OF_SYMBOL_DEFINITION ldap_dynExt */
 
 /* eslint-enable */

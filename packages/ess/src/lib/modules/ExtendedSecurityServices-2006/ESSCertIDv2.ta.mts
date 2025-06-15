@@ -22,7 +22,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ESSCertIDv2 */
+
 /**
  * @summary ESSCertIDv2
  * @description
@@ -93,9 +93,8 @@ export class ESSCertIDv2 {
         });
     }
 }
-/* END_OF_SYMBOL_DEFINITION ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ESSCertIDv2 */
+
 /**
  * @summary The Leading Root Component Types of ESSCertIDv2
  * @description
@@ -127,9 +126,8 @@ export const _root_component_type_list_1_spec_for_ESSCertIDv2: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ESSCertIDv2 */
+
 /**
  * @summary The Trailing Root Component Types of ESSCertIDv2
  * @description
@@ -139,9 +137,8 @@ export const _root_component_type_list_1_spec_for_ESSCertIDv2: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ESSCertIDv2: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ESSCertIDv2 */
+
 /**
  * @summary The Extension Addition Component Types of ESSCertIDv2
  * @description
@@ -151,13 +148,11 @@ export const _root_component_type_list_2_spec_for_ESSCertIDv2: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_ESSCertIDv2: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSCertIDv2 */
+
 let _cached_decoder_for_ESSCertIDv2: $.ASN1Decoder<ESSCertIDv2> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ESSCertIDv2 */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ESSCertIDv2
  * @function
@@ -203,13 +198,11 @@ export function _decode_ESSCertIDv2(el: _Element) {
     }
     return _cached_decoder_for_ESSCertIDv2(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSCertIDv2 */
+
 let _cached_encoder_for_ESSCertIDv2: $.ASN1Encoder<ESSCertIDv2> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSCertIDv2 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ESSCertIDv2 */
+
 /**
  * @summary Encodes a(n) ESSCertIDv2 into an ASN.1 Element.
  * @function
@@ -250,6 +243,5 @@ export function _encode_ESSCertIDv2(
     return _cached_encoder_for_ESSCertIDv2(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ESSCertIDv2 */
 
 /* eslint-enable */

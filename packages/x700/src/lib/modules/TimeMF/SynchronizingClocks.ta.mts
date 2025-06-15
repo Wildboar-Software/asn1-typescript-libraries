@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SynchronizingClocks */
 /**
  * @summary SynchronizingClocks
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SynchronizingClocks = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SynchronizingClocks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SynchronizingClocks */
 let _cached_decoder_for_SynchronizingClocks: $.ASN1Decoder<SynchronizingClocks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SynchronizingClocks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SynchronizingClocks */
 /**
  * @summary Decodes an ASN.1 element into a(n) SynchronizingClocks
  * @function
@@ -48,13 +43,9 @@ export function _decode_SynchronizingClocks(el: _Element) {
     }
     return _cached_decoder_for_SynchronizingClocks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SynchronizingClocks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SynchronizingClocks */
 let _cached_encoder_for_SynchronizingClocks: $.ASN1Encoder<SynchronizingClocks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SynchronizingClocks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SynchronizingClocks */
 /**
  * @summary Encodes a(n) SynchronizingClocks into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SynchronizingClocks(
     return _cached_encoder_for_SynchronizingClocks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SynchronizingClocks */
 
 /* eslint-enable */

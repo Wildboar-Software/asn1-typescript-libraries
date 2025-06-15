@@ -15,7 +15,7 @@ import {
     _decode_CTPList,
     _encode_CTPList,
 } from '../M3100ASN1TypeModule2/CTPList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeassignNetworkCTPFromLogicalLinkEndInformation */
+
 /**
  * @summary DeassignNetworkCTPFromLogicalLinkEndInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DeassignNetworkCTPFromLogicalLinkEndInformation = CTPList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeassignNetworkCTPFromLogicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation */
+
 let _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1Decoder<DeassignNetworkCTPFromLogicalLinkEndInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeassignNetworkCTPFromLogicalLinkEndInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeassignNetworkCTPFromLogicalLinkEndInformation
  * @function
@@ -50,13 +48,11 @@ export function _decode_DeassignNetworkCTPFromLogicalLinkEndInformation(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeassignNetworkCTPFromLogicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation */
+
 let _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1Encoder<DeassignNetworkCTPFromLogicalLinkEndInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeassignNetworkCTPFromLogicalLinkEndInformation */
+
 /**
  * @summary Encodes a(n) DeassignNetworkCTPFromLogicalLinkEndInformation into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_DeassignNetworkCTPFromLogicalLinkEndInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeassignNetworkCTPFromLogicalLinkEndInformation */
 
 /* eslint-enable */

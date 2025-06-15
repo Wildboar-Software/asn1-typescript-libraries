@@ -20,7 +20,6 @@ import {
     _decode_TBSAsymmetricToken_name_mta,
     _encode_TBSAsymmetricToken_name_mta,
 } from '../MTSAbstractService/TBSAsymmetricToken-name-mta.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TBSAsymmetricToken_name */
 /**
  * @summary TBSAsymmetricToken_name
  * @description
@@ -36,13 +35,9 @@ import {
 export type TBSAsymmetricToken_name =
     | { recipient_name: RecipientName } /* CHOICE_ALT_ROOT */
     | { mta: TBSAsymmetricToken_name_mta } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TBSAsymmetricToken_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAsymmetricToken_name */
 let _cached_decoder_for_TBSAsymmetricToken_name: $.ASN1Decoder<TBSAsymmetricToken_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAsymmetricToken_name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSAsymmetricToken_name */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSAsymmetricToken_name
  * @function
@@ -65,13 +60,9 @@ export function _decode_TBSAsymmetricToken_name(el: _Element) {
     }
     return _cached_decoder_for_TBSAsymmetricToken_name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSAsymmetricToken_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAsymmetricToken_name */
 let _cached_encoder_for_TBSAsymmetricToken_name: $.ASN1Encoder<TBSAsymmetricToken_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAsymmetricToken_name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSAsymmetricToken_name */
 /**
  * @summary Encodes a(n) TBSAsymmetricToken_name into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_TBSAsymmetricToken_name(
     return _cached_encoder_for_TBSAsymmetricToken_name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSAsymmetricToken_name */
 
 /* eslint-enable */

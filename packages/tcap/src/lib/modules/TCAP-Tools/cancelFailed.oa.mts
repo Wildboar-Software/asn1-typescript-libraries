@@ -23,7 +23,6 @@ import {
   _encode_cancelFailed_ParameterType,
 } from '../TCAP-Tools/cancelFailed-ParameterType.ta.mjs';
 import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION cancelFailed */
 /**
  * @summary cancelFailed
  * @description
@@ -53,6 +52,5 @@ export const cancelFailed: ERROR<cancelFailed_ParameterType> = {
   '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cancelFailed */
 
 /* eslint-enable */

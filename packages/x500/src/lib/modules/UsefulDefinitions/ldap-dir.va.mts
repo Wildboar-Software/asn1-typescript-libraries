@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { internet } from "../UsefulDefinitions/internet.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ldap_dir */
 /**
  * @summary ldap_dir
  * @description
@@ -16,6 +15,5 @@ import { internet } from "../UsefulDefinitions/internet.va.mjs";
  * @constant
  */
 export const ldap_dir: ID = new _OID([/* directory */ 1], internet);
-/* END_OF_SYMBOL_DEFINITION ldap_dir */
 
 /* eslint-enable */

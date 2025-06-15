@@ -13,7 +13,7 @@ import { _enum_for_ParamOptions, absent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _
 import { id_X25519 } from "../Safecurves-pkix-18/id-X25519.va.mjs";
 import { CurvePrivateKey, _decode_CurvePrivateKey, _encode_CurvePrivateKey } from "../Safecurves-pkix-18/CurvePrivateKey.ta.mjs";
 import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_X25519 */
+
 /**
  * @summary pk_X25519
  * @description
@@ -54,6 +54,5 @@ const pk_X25519: PUBLIC_KEY<CurvePrivateKey> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_X25519 */
 
 /* eslint-enable */

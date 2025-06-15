@@ -66,7 +66,7 @@ import {
   _decode_BioAPI_GUI_BITMAP_ARRAY,
   _encode_BioAPI_GUI_BITMAP_ARRAY,
 } from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIProgressEventHandlerCallbackParams */
+
 /**
  * @summary GUIProgressEventHandlerCallbackParams
  * @description
@@ -230,9 +230,8 @@ export class GUIProgressEventHandlerCallbackParams {
 
   public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
 }
-/* END_OF_SYMBOL_DEFINITION GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIProgressEventHandlerCallbackParams */
+
 /**
  * @summary The Leading Root Component Types of GUIProgressEventHandlerCallbackParams
  * @description
@@ -327,9 +326,8 @@ export const _root_component_type_list_1_spec_for_GUIProgressEventHandlerCallbac
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIProgressEventHandlerCallbackParams */
+
 /**
  * @summary The Trailing Root Component Types of GUIProgressEventHandlerCallbackParams
  * @description
@@ -339,9 +337,8 @@ export const _root_component_type_list_1_spec_for_GUIProgressEventHandlerCallbac
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUIProgressEventHandlerCallbackParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIProgressEventHandlerCallbackParams */
+
 /**
  * @summary The Extension Addition Component Types of GUIProgressEventHandlerCallbackParams
  * @description
@@ -351,13 +348,11 @@ export const _root_component_type_list_2_spec_for_GUIProgressEventHandlerCallbac
  * @constant
  */
 export const _extension_additions_list_spec_for_GUIProgressEventHandlerCallbackParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIProgressEventHandlerCallbackParams */
+
 let _cached_decoder_for_GUIProgressEventHandlerCallbackParams: $.ASN1Decoder<GUIProgressEventHandlerCallbackParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIProgressEventHandlerCallbackParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIProgressEventHandlerCallbackParams
  * @function
@@ -449,13 +444,11 @@ export function _decode_GUIProgressEventHandlerCallbackParams(el: _Element) {
   }
   return _cached_decoder_for_GUIProgressEventHandlerCallbackParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIProgressEventHandlerCallbackParams */
+
 let _cached_encoder_for_GUIProgressEventHandlerCallbackParams: $.ASN1Encoder<GUIProgressEventHandlerCallbackParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIProgressEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIProgressEventHandlerCallbackParams */
+
 /**
  * @summary Encodes a(n) GUIProgressEventHandlerCallbackParams into an ASN.1 Element.
  * @function
@@ -518,6 +511,5 @@ export function _encode_GUIProgressEventHandlerCallbackParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIProgressEventHandlerCallbackParams */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_ExecutionParameterList,
     _encode_ExecutionParameterList,
 } from '../CSModule/ExecutionParameterList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TriggerParameters */
 /**
  * @summary TriggerParameters
  * @description
@@ -70,9 +69,7 @@ export class TriggerParameters {
         return new TriggerParameters(_o.triggerId, _o.executionParameterList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TriggerParameters */
 /**
  * @summary The Leading Root Component Types of TriggerParameters
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_TriggerParameters: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TriggerParameters */
 /**
  * @summary The Trailing Root Component Types of TriggerParameters
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_TriggerParameters: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TriggerParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TriggerParameters */
 /**
  * @summary The Extension Addition Component Types of TriggerParameters
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_TriggerParameters: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_TriggerParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerParameters */
 let _cached_decoder_for_TriggerParameters: $.ASN1Decoder<TriggerParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TriggerParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) TriggerParameters
  * @function
@@ -154,13 +143,9 @@ export function _decode_TriggerParameters(el: _Element) {
     }
     return _cached_decoder_for_TriggerParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerParameters */
 let _cached_encoder_for_TriggerParameters: $.ASN1Encoder<TriggerParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TriggerParameters */
 /**
  * @summary Encodes a(n) TriggerParameters into an ASN.1 Element.
  * @function
@@ -195,6 +180,5 @@ export function _encode_TriggerParameters(
     return _cached_encoder_for_TriggerParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TriggerParameters */
 
 /* eslint-enable */

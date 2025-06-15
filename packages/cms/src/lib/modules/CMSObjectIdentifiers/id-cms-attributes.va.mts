@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_cms_attributes */
+
 /**
  * @summary id_cms_attributes
  * @description
@@ -25,6 +25,5 @@ export const id_cms_attributes: OID = new _OID([
     /* x9-73 */ 73,
     /* attributes */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_cms_attributes */
 
 /* eslint-enable */

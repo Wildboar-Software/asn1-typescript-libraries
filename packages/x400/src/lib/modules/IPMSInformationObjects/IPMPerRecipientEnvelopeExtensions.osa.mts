@@ -13,7 +13,6 @@ import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { blind_copy_recipients } from '../IPMSInformationObjects/blind-copy-recipients.oa.mjs';
 import { body_part_encryption_token } from '../IPMSSecurityExtensions/body-part-encryption-token.oa.mjs';
 import { forwarded_content_token } from '../IPMSSecurityExtensions/forwarded-content-token.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMPerRecipientEnvelopeExtensions */
 /**
  * @summary IPMPerRecipientEnvelopeExtensions
  * @description
@@ -34,6 +33,5 @@ export const IPMPerRecipientEnvelopeExtensions: EXTENSION[] = [
     body_part_encryption_token,
     forwarded_content_token,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMPerRecipientEnvelopeExtensions */
 
 /* eslint-enable */

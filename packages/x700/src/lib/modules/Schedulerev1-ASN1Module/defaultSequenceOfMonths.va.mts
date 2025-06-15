@@ -22,7 +22,6 @@ import {
 } from '../Schedulerev1-ASN1Module/MonthMask.ta.mjs';
 import { MonthMask_Item } from '../Schedulerev1-ASN1Module/MonthMask-Item.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION defaultSequenceOfMonths */
 /**
  * @summary defaultSequenceOfMonths
  * @description
@@ -52,6 +51,5 @@ export const defaultSequenceOfMonths: SequenceOfMonths = [
         ),
     ],
 ];
-/* END_OF_SYMBOL_DEFINITION defaultSequenceOfMonths */
 
 /* eslint-enable */

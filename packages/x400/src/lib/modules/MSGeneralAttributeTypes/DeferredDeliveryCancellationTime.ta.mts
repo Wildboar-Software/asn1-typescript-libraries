@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DeferredDeliveryCancellationTime */
 /**
  * @summary DeferredDeliveryCancellationTime
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DeferredDeliveryCancellationTime = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION DeferredDeliveryCancellationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeferredDeliveryCancellationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeferredDeliveryCancellationTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeferredDeliveryCancellationTime */
 export const _decode_DeferredDeliveryCancellationTime = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_DeferredDeliveryCancellationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeferredDeliveryCancellationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeferredDeliveryCancellationTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeferredDeliveryCancellationTime */
 export const _encode_DeferredDeliveryCancellationTime = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeferredDeliveryCancellationTime */
 
 /* eslint-enable */

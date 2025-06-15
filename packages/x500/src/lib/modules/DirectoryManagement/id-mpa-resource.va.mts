@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mpa_resource */
 /**
  * @summary id_mpa_resource
  * @description
@@ -15,6 +14,5 @@ import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
  * @constant
  */
 export const id_mpa_resource: OBJECT_IDENTIFIER = new _OID([10], id_mpa);
-/* END_OF_SYMBOL_DEFINITION id_mpa_resource */
 
 /* eslint-enable */

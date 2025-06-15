@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { passwordQuality } from "../UsefulDefinitions/passwordQuality.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_pq */
 /**
  * @summary id_pq
  * @description
@@ -15,6 +14,5 @@ import { passwordQuality } from "../UsefulDefinitions/passwordQuality.va.mjs";
  * @constant
  */
 export const id_pq: ID = passwordQuality;
-/* END_OF_SYMBOL_DEFINITION id_pq */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_domain_name_length */
 /**
  * @summary ub_domain_name_length
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_domain_name_length: INTEGER = 16;
-/* END_OF_SYMBOL_DEFINITION ub_domain_name_length */
 
 /* eslint-enable */

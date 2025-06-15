@@ -6,7 +6,6 @@ import {
 } from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.mjs";
 import { id_aes128_CBC } from "../AlgorithmObjectIdentifiers/id-aes128-CBC.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION aes128_CBC */
 /**
  * @summary aes128_CBC
  * @description
@@ -34,6 +33,5 @@ export const aes128_CBC: ALGORITHM<AES_InitializationVector> = {
     "&id": id_aes128_CBC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aes128_CBC */
 
 /* eslint-enable */

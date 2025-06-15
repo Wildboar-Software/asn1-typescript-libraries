@@ -6,7 +6,7 @@ import {
     _decode_KeyManagementInfo_Item,
     _encode_KeyManagementInfo_Item,
 } from "../PKCS-15/KeyManagementInfo-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyManagementInfo */
+
 /**
  * @summary KeyManagementInfo
  * @description
@@ -24,13 +24,11 @@ import {
  * ```
  */
 export type KeyManagementInfo = KeyManagementInfo_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION KeyManagementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyManagementInfo */
+
 let _cached_decoder_for_KeyManagementInfo: $.ASN1Decoder<KeyManagementInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyManagementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyManagementInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyManagementInfo
  * @function
@@ -45,13 +43,11 @@ export function _decode_KeyManagementInfo(el: _Element) {
     }
     return _cached_decoder_for_KeyManagementInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyManagementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyManagementInfo */
+
 let _cached_encoder_for_KeyManagementInfo: $.ASN1Encoder<KeyManagementInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyManagementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyManagementInfo */
+
 /**
  * @summary Encodes a(n) KeyManagementInfo into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_KeyManagementInfo(
     return _cached_encoder_for_KeyManagementInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyManagementInfo */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import {
     _decode_ErrorUnitThreshold,
     _encode_ErrorUnitThreshold,
 } from '../TestCategories-ASN1Module/ErrorUnitThreshold.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestThreshold */
 /**
  * @summary TestThreshold
  * @description
@@ -36,13 +35,9 @@ export type TestThreshold =
     | { bitErrorThreshold: INTEGER } /* CHOICE_ALT_ROOT */
     | { percentageErrorThreshold: REAL } /* CHOICE_ALT_ROOT */
     | { errorUnitThreshold: ErrorUnitThreshold } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestThreshold */
 let _cached_decoder_for_TestThreshold: $.ASN1Decoder<TestThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestThreshold
  * @function
@@ -72,13 +67,9 @@ export function _decode_TestThreshold(el: _Element) {
     }
     return _cached_decoder_for_TestThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestThreshold */
 let _cached_encoder_for_TestThreshold: $.ASN1Encoder<TestThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestThreshold */
 /**
  * @summary Encodes a(n) TestThreshold into an ASN.1 Element.
  * @function
@@ -118,6 +109,5 @@ export function _encode_TestThreshold(
     return _cached_encoder_for_TestThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestThreshold */
 
 /* eslint-enable */

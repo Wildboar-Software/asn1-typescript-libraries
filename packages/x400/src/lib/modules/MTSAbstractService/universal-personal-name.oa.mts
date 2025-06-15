@@ -15,7 +15,6 @@ import {
     _encode_UniversalPersonalName,
 } from '../MTSAbstractService/UniversalPersonalName.ta.mjs';
 import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION universal_personal_name */
 /**
  * @summary universal_personal_name
  * @description
@@ -44,6 +43,5 @@ export const universal_personal_name: EXTENSION_ATTRIBUTE<UniversalPersonalName>
     '&id': 26 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_personal_name */
 
 /* eslint-enable */

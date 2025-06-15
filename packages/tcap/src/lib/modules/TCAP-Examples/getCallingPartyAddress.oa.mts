@@ -25,7 +25,6 @@ import {
 } from '../TCAP-Examples/CallingPartyAddress.ta.mjs';
 import { callingPartyAddressNotAvailable } from '../TCAP-Examples/callingPartyAddressNotAvailable.oa.mjs';
 import { processingFailure } from '../TCAP-Examples/processingFailure.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION getCallingPartyAddress */
 /**
  * @summary getCallingPartyAddress
  * @description
@@ -66,6 +65,5 @@ export const getCallingPartyAddress: OPERATION<CallingPartyAddress> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION getCallingPartyAddress */
 
 /* eslint-enable */

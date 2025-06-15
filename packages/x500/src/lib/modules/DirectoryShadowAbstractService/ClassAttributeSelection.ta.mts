@@ -11,7 +11,6 @@ import {
     _decode_ClassAttributes,
     _encode_ClassAttributes,
 } from "../DirectoryShadowAbstractService/ClassAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ClassAttributeSelection */
 /**
  * @summary ClassAttributeSelection
  * @description
@@ -74,9 +73,7 @@ export class ClassAttributeSelection {
         return { allAttributes: null };
     }
 }
-/* END_OF_SYMBOL_DEFINITION ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ClassAttributeSelection */
 /**
  * @summary The Leading Root Component Types of ClassAttributeSelection
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_ClassAttributeSelection: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ClassAttributeSelection */
 /**
  * @summary The Trailing Root Component Types of ClassAttributeSelection
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_ClassAttributeSelection: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ClassAttributeSelection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ClassAttributeSelection */
 /**
  * @summary The Extension Addition Component Types of ClassAttributeSelection
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_ClassAttributeSelection: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_ClassAttributeSelection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassAttributeSelection */
 let _cached_decoder_for_ClassAttributeSelection: $.ASN1Decoder<ClassAttributeSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClassAttributeSelection */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClassAttributeSelection
  * @function
@@ -174,13 +163,9 @@ export function _decode_ClassAttributeSelection(el: _Element) {
     }
     return _cached_decoder_for_ClassAttributeSelection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassAttributeSelection */
 let _cached_encoder_for_ClassAttributeSelection: $.ASN1Encoder<ClassAttributeSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassAttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClassAttributeSelection */
 /**
  * @summary Encodes a(n) ClassAttributeSelection into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_ClassAttributeSelection(
     return _cached_encoder_for_ClassAttributeSelection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClassAttributeSelection */
 
 /* eslint-enable */

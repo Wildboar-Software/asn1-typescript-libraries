@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../SEC1-v1-9/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ASN1SharedInfo */
 /**
  * @summary ASN1SharedInfo
  * @description
@@ -85,9 +84,7 @@ class ASN1SharedInfo {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ASN1SharedInfo */
 /**
  * @summary The Leading Root Component Types of ASN1SharedInfo
  * @description
@@ -104,9 +101,7 @@ const _root_component_type_list_1_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("suppPubInfo", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
     new $.ComponentSpec("suppPrivInfo", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ASN1SharedInfo */
 /**
  * @summary The Trailing Root Component Types of ASN1SharedInfo
  * @description
@@ -119,9 +114,7 @@ export
 const _root_component_type_list_2_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ASN1SharedInfo */
 /**
  * @summary The Extension Addition Component Types of ASN1SharedInfo
  * @description
@@ -134,13 +127,9 @@ export
 const _extension_additions_list_spec_for_ASN1SharedInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASN1SharedInfo */
 let _cached_decoder_for_ASN1SharedInfo: $.ASN1Decoder<ASN1SharedInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ASN1SharedInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ASN1SharedInfo
  * @function
@@ -182,13 +171,9 @@ function _decode_ASN1SharedInfo (el: _Element) {
 }; }
     return _cached_decoder_for_ASN1SharedInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASN1SharedInfo */
 let _cached_encoder_for_ASN1SharedInfo: $.ASN1Encoder<ASN1SharedInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASN1SharedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ASN1SharedInfo */
 /**
  * @summary Encodes a(n) ASN1SharedInfo into an ASN.1 Element.
  * @function
@@ -212,6 +197,5 @@ function _encode_ASN1SharedInfo (value: ASN1SharedInfo, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_ASN1SharedInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ASN1SharedInfo */
 
 /* eslint-enable */

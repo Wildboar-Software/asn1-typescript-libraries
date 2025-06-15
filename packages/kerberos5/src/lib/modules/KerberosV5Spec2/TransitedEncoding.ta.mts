@@ -16,7 +16,7 @@ import {
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TransitedEncoding */
+
 /**
  * @summary TransitedEncoding
  * @description
@@ -66,9 +66,8 @@ export class TransitedEncoding {
     return new TransitedEncoding(_o.tr_type, _o.contents);
   }
 }
-/* END_OF_SYMBOL_DEFINITION TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TransitedEncoding */
+
 /**
  * @summary The Leading Root Component Types of TransitedEncoding
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_TransitedEncoding: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TransitedEncoding */
+
 /**
  * @summary The Trailing Root Component Types of TransitedEncoding
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_TransitedEncoding: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TransitedEncoding: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TransitedEncoding */
+
 /**
  * @summary The Extension Addition Component Types of TransitedEncoding
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_TransitedEncoding: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_TransitedEncoding: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitedEncoding */
+
 let _cached_decoder_for_TransitedEncoding: $.ASN1Decoder<TransitedEncoding> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransitedEncoding */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TransitedEncoding
  * @function
@@ -156,13 +151,11 @@ export function _decode_TransitedEncoding(el: _Element) {
   }
   return _cached_decoder_for_TransitedEncoding(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitedEncoding */
+
 let _cached_encoder_for_TransitedEncoding: $.ASN1Encoder<TransitedEncoding> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitedEncoding */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransitedEncoding */
+
 /**
  * @summary Encodes a(n) TransitedEncoding into an ASN.1 Element.
  * @function
@@ -201,6 +194,5 @@ export function _encode_TransitedEncoding(
   return _cached_encoder_for_TransitedEncoding(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransitedEncoding */
 
 /* eslint-enable */

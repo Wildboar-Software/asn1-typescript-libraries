@@ -15,7 +15,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GeneralSubtree */
 /**
  * @summary GeneralSubtree
  * @description
@@ -93,9 +92,7 @@ export class GeneralSubtree {
         return 0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GeneralSubtree */
 /**
  * @summary The Leading Root Component Types of GeneralSubtree
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_GeneralSubtree: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GeneralSubtree */
 /**
  * @summary The Trailing Root Component Types of GeneralSubtree
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_GeneralSubtree: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GeneralSubtree: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GeneralSubtree */
 /**
  * @summary The Extension Addition Component Types of GeneralSubtree
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_GeneralSubtree: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_GeneralSubtree: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralSubtree */
 let _cached_decoder_for_GeneralSubtree: $.ASN1Decoder<GeneralSubtree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralSubtree */
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralSubtree
  * @function
@@ -207,13 +196,9 @@ export function _decode_GeneralSubtree(el: _Element) {
     }
     return _cached_decoder_for_GeneralSubtree(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralSubtree */
 let _cached_encoder_for_GeneralSubtree: $.ASN1Encoder<GeneralSubtree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralSubtree */
 /**
  * @summary Encodes a(n) GeneralSubtree into an ASN.1 Element.
  * @function
@@ -269,6 +254,5 @@ export function _encode_GeneralSubtree(
     return _cached_encoder_for_GeneralSubtree(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralSubtree */
 
 /* eslint-enable */

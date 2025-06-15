@@ -2,7 +2,6 @@
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.mjs";
 import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION zonalMatch */
 /**
  * @summary zonalMatch
  * @description
@@ -31,6 +30,5 @@ export const zonalMatch: MATCHING_RULE = {
     "&id": id_mr_zonalMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION zonalMatch */
 
 /* eslint-enable */

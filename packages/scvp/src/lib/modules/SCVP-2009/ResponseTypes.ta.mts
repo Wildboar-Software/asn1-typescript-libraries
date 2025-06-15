@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ResponseTypes */
 /**
  * @summary ResponseTypes
  * @description
@@ -31,9 +30,7 @@ export enum _enum_for_ResponseTypes {
   non_cached_only = 1,
   cached_and_non_cached = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ResponseTypes */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTypes */
 /**
  * @summary ResponseTypes
  * @description
@@ -49,9 +46,7 @@ export enum _enum_for_ResponseTypes {
  * ```@enum {number}
  */
 export type ResponseTypes = _enum_for_ResponseTypes;
-/* END_OF_SYMBOL_DEFINITION ResponseTypes */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTypes */
 /**
  * @summary ResponseTypes
  * @description
@@ -67,9 +62,7 @@ export type ResponseTypes = _enum_for_ResponseTypes;
  * ```@enum {number}
  */
 export const ResponseTypes = _enum_for_ResponseTypes;
-/* END_OF_SYMBOL_DEFINITION ResponseTypes */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTypes_cached_only */
 /**
  * @summary ResponseTypes_cached_only
  * @constant
@@ -77,9 +70,7 @@ export const ResponseTypes = _enum_for_ResponseTypes;
  */
 export const ResponseTypes_cached_only: ResponseTypes =
   ResponseTypes.cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseTypes_cached_only */
 
-/* START_OF_SYMBOL_DEFINITION cached_only */
 /**
  * @summary cached_only
  * @constant
@@ -87,9 +78,7 @@ export const ResponseTypes_cached_only: ResponseTypes =
  */
 export const cached_only: ResponseTypes =
   ResponseTypes.cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION cached_only */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTypes_non_cached_only */
 /**
  * @summary ResponseTypes_non_cached_only
  * @constant
@@ -97,9 +86,7 @@ export const cached_only: ResponseTypes =
  */
 export const ResponseTypes_non_cached_only: ResponseTypes =
   ResponseTypes.non_cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseTypes_non_cached_only */
 
-/* START_OF_SYMBOL_DEFINITION non_cached_only */
 /**
  * @summary non_cached_only
  * @constant
@@ -107,9 +94,7 @@ export const ResponseTypes_non_cached_only: ResponseTypes =
  */
 export const non_cached_only: ResponseTypes =
   ResponseTypes.non_cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION non_cached_only */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTypes_cached_and_non_cached */
 /**
  * @summary ResponseTypes_cached_and_non_cached
  * @constant
@@ -117,9 +102,7 @@ export const non_cached_only: ResponseTypes =
  */
 export const ResponseTypes_cached_and_non_cached: ResponseTypes =
   ResponseTypes.cached_and_non_cached; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseTypes_cached_and_non_cached */
 
-/* START_OF_SYMBOL_DEFINITION cached_and_non_cached */
 /**
  * @summary cached_and_non_cached
  * @constant
@@ -127,21 +110,12 @@ export const ResponseTypes_cached_and_non_cached: ResponseTypes =
  */
 export const cached_and_non_cached: ResponseTypes =
   ResponseTypes.cached_and_non_cached; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION cached_and_non_cached */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTypes */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseTypes */
 export const _decode_ResponseTypes = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTypes */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseTypes */
 export const _encode_ResponseTypes = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseTypes */
 
 /* eslint-enable */

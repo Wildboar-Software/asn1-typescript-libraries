@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CancelDeferredDeliveryResult */
 /**
  * @summary CancelDeferredDeliveryResult
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CancelDeferredDeliveryResult = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION CancelDeferredDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliveryResult */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliveryResult */
 export const _decode_CancelDeferredDeliveryResult = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliveryResult */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliveryResult */
 export const _encode_CancelDeferredDeliveryResult = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliveryResult */
 
 /* eslint-enable */

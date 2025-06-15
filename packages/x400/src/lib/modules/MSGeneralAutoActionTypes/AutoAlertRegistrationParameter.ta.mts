@@ -28,7 +28,6 @@ import {
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
 } from '../MSAbstractService/EntryInformationSelection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoAlertRegistrationParameter */
 /**
  * @summary AutoAlertRegistrationParameter
  * @description
@@ -111,9 +110,7 @@ export class AutoAlertRegistrationParameter {
         return TRUE;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoAlertRegistrationParameter */
 /**
  * @summary The Leading Root Component Types of AutoAlertRegistrationParameter
  * @description
@@ -152,9 +149,7 @@ export const _root_component_type_list_1_spec_for_AutoAlertRegistrationParameter
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoAlertRegistrationParameter */
 /**
  * @summary The Trailing Root Component Types of AutoAlertRegistrationParameter
  * @description
@@ -164,9 +159,7 @@ export const _root_component_type_list_1_spec_for_AutoAlertRegistrationParameter
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AutoAlertRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoAlertRegistrationParameter */
 /**
  * @summary The Extension Addition Component Types of AutoAlertRegistrationParameter
  * @description
@@ -176,13 +169,9 @@ export const _root_component_type_list_2_spec_for_AutoAlertRegistrationParameter
  * @constant
  */
 export const _extension_additions_list_spec_for_AutoAlertRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoAlertRegistrationParameter */
 let _cached_decoder_for_AutoAlertRegistrationParameter: $.ASN1Decoder<AutoAlertRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoAlertRegistrationParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoAlertRegistrationParameter
  * @function
@@ -246,13 +235,9 @@ export function _decode_AutoAlertRegistrationParameter(el: _Element) {
     }
     return _cached_decoder_for_AutoAlertRegistrationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoAlertRegistrationParameter */
 let _cached_encoder_for_AutoAlertRegistrationParameter: $.ASN1Encoder<AutoAlertRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoAlertRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoAlertRegistrationParameter */
 /**
  * @summary Encodes a(n) AutoAlertRegistrationParameter into an ASN.1 Element.
  * @function
@@ -321,6 +306,5 @@ export function _encode_AutoAlertRegistrationParameter(
     return _cached_encoder_for_AutoAlertRegistrationParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoAlertRegistrationParameter */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CDTC_SIGNAL_TYPE } from '../TestCategories-ASN1Module/CDTC-SIGNAL-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SignalTypeSet */
 /**
  * @summary SignalTypeSet
  * @description
@@ -26,6 +25,5 @@ import { CDTC_SIGNAL_TYPE } from '../TestCategories-ASN1Module/CDTC-SIGNAL-TYPE.
  *
  */
 export const SignalTypeSet: CDTC_SIGNAL_TYPE[] = [];
-/* END_OF_SYMBOL_DEFINITION SignalTypeSet */
 
 /* eslint-enable */

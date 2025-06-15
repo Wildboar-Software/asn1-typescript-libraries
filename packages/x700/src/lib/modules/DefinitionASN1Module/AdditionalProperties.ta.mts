@@ -15,7 +15,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AdditionalProperties */
 /**
  * @summary AdditionalProperties
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AdditionalProperties = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AdditionalProperties */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalProperties */
 let _cached_decoder_for_AdditionalProperties: $.ASN1Decoder<AdditionalProperties> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalProperties */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalProperties */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalProperties
  * @function
@@ -48,13 +43,9 @@ export function _decode_AdditionalProperties(el: _Element) {
     }
     return _cached_decoder_for_AdditionalProperties(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalProperties */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalProperties */
 let _cached_encoder_for_AdditionalProperties: $.ASN1Encoder<AdditionalProperties> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalProperties */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalProperties */
 /**
  * @summary Encodes a(n) AdditionalProperties into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AdditionalProperties(
     return _cached_encoder_for_AdditionalProperties(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalProperties */
 
 /* eslint-enable */

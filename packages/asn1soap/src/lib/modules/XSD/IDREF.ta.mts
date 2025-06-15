@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IDREF */
+
 /**
  * @summary IDREF
  * @description
@@ -23,13 +23,11 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  * ```
  */
 export type IDREF = NCName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION IDREF */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IDREF */
+
 let _cached_decoder_for_IDREF: $.ASN1Decoder<IDREF> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IDREF */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IDREF */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IDREF
  * @function
@@ -42,13 +40,11 @@ export function _decode_IDREF(el: _Element) {
   }
   return _cached_decoder_for_IDREF(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IDREF */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IDREF */
+
 let _cached_encoder_for_IDREF: $.ASN1Encoder<IDREF> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IDREF */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IDREF */
+
 /**
  * @summary Encodes a(n) IDREF into an ASN.1 Element.
  * @function
@@ -63,6 +59,5 @@ export function _encode_IDREF(value: IDREF, elGetter: $.ASN1Encoder<IDREF>) {
   return _cached_encoder_for_IDREF(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IDREF */
 
 /* eslint-enable */

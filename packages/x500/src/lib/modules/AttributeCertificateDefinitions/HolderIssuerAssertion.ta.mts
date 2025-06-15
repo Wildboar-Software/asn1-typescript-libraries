@@ -15,7 +15,6 @@ import {
     _decode_Holder,
     _encode_Holder,
 } from "../AttributeCertificateDefinitions/Holder.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HolderIssuerAssertion */
 /**
  * @summary HolderIssuerAssertion
  * @description
@@ -75,9 +74,7 @@ export class HolderIssuerAssertion {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HolderIssuerAssertion */
 /**
  * @summary The Leading Root Component Types of HolderIssuerAssertion
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_HolderIssuerAssertion: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HolderIssuerAssertion */
 /**
  * @summary The Trailing Root Component Types of HolderIssuerAssertion
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_HolderIssuerAssertion: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HolderIssuerAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HolderIssuerAssertion */
 /**
  * @summary The Extension Addition Component Types of HolderIssuerAssertion
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_HolderIssuerAssertion: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_HolderIssuerAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HolderIssuerAssertion */
 let _cached_decoder_for_HolderIssuerAssertion: $.ASN1Decoder<HolderIssuerAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HolderIssuerAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) HolderIssuerAssertion
  * @function
@@ -182,13 +171,9 @@ export function _decode_HolderIssuerAssertion(el: _Element) {
     }
     return _cached_decoder_for_HolderIssuerAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HolderIssuerAssertion */
 let _cached_encoder_for_HolderIssuerAssertion: $.ASN1Encoder<HolderIssuerAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HolderIssuerAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HolderIssuerAssertion */
 /**
  * @summary Encodes a(n) HolderIssuerAssertion into an ASN.1 Element.
  * @function
@@ -236,6 +221,5 @@ export function _encode_HolderIssuerAssertion(
     return _cached_encoder_for_HolderIssuerAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HolderIssuerAssertion */
 
 /* eslint-enable */

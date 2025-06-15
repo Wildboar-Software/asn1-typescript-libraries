@@ -5,7 +5,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION Refinement */
 /**
  * @summary Refinement
  * @description
@@ -27,13 +26,9 @@ export type Refinement =
     | { or: Refinement[] } /* CHOICE_ALT_ROOT */
     | { not: Refinement } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Refinement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Refinement */
 let _cached_decoder_for_Refinement: $.ASN1Decoder<Refinement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Refinement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Refinement */
 /**
  * @summary Decodes an ASN.1 element into a(n) Refinement
  * @function
@@ -71,13 +66,9 @@ export function _decode_Refinement(el: _Element) {
     }
     return _cached_decoder_for_Refinement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Refinement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Refinement */
 let _cached_encoder_for_Refinement: $.ASN1Encoder<Refinement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Refinement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Refinement */
 /**
  * @summary Encodes a(n) Refinement into an ASN.1 Element.
  * @function
@@ -131,6 +122,5 @@ export function _encode_Refinement(
     return _cached_encoder_for_Refinement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Refinement */
 
 /* eslint-enable */

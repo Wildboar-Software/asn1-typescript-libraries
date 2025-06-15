@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_SpecifiedMultiples_Item } from "../SEC1-v1-9/SpecifiedMultiples-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SpecifiedMultiples */
 /**
  * @summary SpecifiedMultiples
  * @description
@@ -26,13 +25,9 @@ import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_Speci
  */
 export
 type SpecifiedMultiples = SpecifiedMultiples_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SpecifiedMultiples */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecifiedMultiples */
 let _cached_decoder_for_SpecifiedMultiples: $.ASN1Decoder<SpecifiedMultiples> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecifiedMultiples */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpecifiedMultiples */
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecifiedMultiples
  * @function
@@ -44,13 +39,9 @@ function _decode_SpecifiedMultiples (el: _Element) {
     if (!_cached_decoder_for_SpecifiedMultiples) { _cached_decoder_for_SpecifiedMultiples = $._decodeSequenceOf<SpecifiedMultiples_Item>(() => _decode_SpecifiedMultiples_Item); }
     return _cached_decoder_for_SpecifiedMultiples(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpecifiedMultiples */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecifiedMultiples */
 let _cached_encoder_for_SpecifiedMultiples: $.ASN1Encoder<SpecifiedMultiples> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecifiedMultiples */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpecifiedMultiples */
 /**
  * @summary Encodes a(n) SpecifiedMultiples into an ASN.1 Element.
  * @function
@@ -64,6 +55,5 @@ function _encode_SpecifiedMultiples (value: SpecifiedMultiples, elGetter: $.ASN1
     return _cached_encoder_for_SpecifiedMultiples(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpecifiedMultiples */
 
 /* eslint-enable */

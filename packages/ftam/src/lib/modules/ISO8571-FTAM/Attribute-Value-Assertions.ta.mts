@@ -15,7 +15,7 @@ import {
   _decode_OR_Set,
   _encode_OR_Set,
 } from '../ISO8571-FTAM/OR-Set.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Attribute_Value_Assertions */
+
 /**
  * @summary Attribute_Value_Assertions
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Attribute_Value_Assertions = OR_Set; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Attribute_Value_Assertions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Value_Assertions */
+
 let _cached_decoder_for_Attribute_Value_Assertions: $.ASN1Decoder<Attribute_Value_Assertions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Value_Assertions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attribute_Value_Assertions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute_Value_Assertions
  * @function
@@ -48,13 +46,11 @@ export function _decode_Attribute_Value_Assertions(el: _Element) {
   }
   return _cached_decoder_for_Attribute_Value_Assertions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attribute_Value_Assertions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Value_Assertions */
+
 let _cached_encoder_for_Attribute_Value_Assertions: $.ASN1Encoder<Attribute_Value_Assertions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Value_Assertions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attribute_Value_Assertions */
+
 /**
  * @summary Encodes a(n) Attribute_Value_Assertions into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_Attribute_Value_Assertions(
   return _cached_encoder_for_Attribute_Value_Assertions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attribute_Value_Assertions */
 
 /* eslint-enable */

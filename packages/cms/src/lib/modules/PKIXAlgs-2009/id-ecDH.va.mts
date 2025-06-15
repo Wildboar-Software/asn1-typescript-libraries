@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_ecDH */
+
 /**
  * @summary id_ecDH
  * @description
@@ -22,6 +22,5 @@ export const id_ecDH: OBJECT_IDENTIFIER = new _OID([
     /* schemes */ 1,
     /* ecdh */ 12,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_ecDH */
 
 /* eslint-enable */

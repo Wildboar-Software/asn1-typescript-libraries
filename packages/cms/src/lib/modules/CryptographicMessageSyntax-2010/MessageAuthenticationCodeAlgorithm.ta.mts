@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MessageAuthenticationCodeAlgorithm */
+
 /**
  * @summary MessageAuthenticationCodeAlgorithm
  * @description
@@ -15,13 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type MessageAuthenticationCodeAlgorithm = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageAuthenticationCodeAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageAuthenticationCodeAlgorithm */
+
 let _cached_decoder_for_MessageAuthenticationCodeAlgorithm: $.ASN1Decoder<MessageAuthenticationCodeAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageAuthenticationCodeAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageAuthenticationCodeAlgorithm */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAuthenticationCodeAlgorithm
  * @function
@@ -34,13 +32,11 @@ export function _decode_MessageAuthenticationCodeAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_MessageAuthenticationCodeAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageAuthenticationCodeAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageAuthenticationCodeAlgorithm */
+
 let _cached_encoder_for_MessageAuthenticationCodeAlgorithm: $.ASN1Encoder<MessageAuthenticationCodeAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageAuthenticationCodeAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageAuthenticationCodeAlgorithm */
+
 /**
  * @summary Encodes a(n) MessageAuthenticationCodeAlgorithm into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_MessageAuthenticationCodeAlgorithm(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageAuthenticationCodeAlgorithm */
 
 /* eslint-enable */

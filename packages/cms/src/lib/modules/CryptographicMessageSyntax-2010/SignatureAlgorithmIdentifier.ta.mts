@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignatureAlgorithmIdentifier */
+
 /**
  * @summary SignatureAlgorithmIdentifier
  * @description
@@ -15,13 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type SignatureAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignatureAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureAlgorithmIdentifier */
+
 let _cached_decoder_for_SignatureAlgorithmIdentifier: $.ASN1Decoder<SignatureAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignatureAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignatureAlgorithmIdentifier
  * @function
@@ -34,13 +32,11 @@ export function _decode_SignatureAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_SignatureAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignatureAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureAlgorithmIdentifier */
+
 let _cached_encoder_for_SignatureAlgorithmIdentifier: $.ASN1Encoder<SignatureAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignatureAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) SignatureAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -58,6 +54,5 @@ export function _encode_SignatureAlgorithmIdentifier(
     return _cached_encoder_for_SignatureAlgorithmIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignatureAlgorithmIdentifier */
 
 /* eslint-enable */

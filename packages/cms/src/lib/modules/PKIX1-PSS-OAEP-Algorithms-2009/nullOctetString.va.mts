@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION nullOctetString */
+
 /**
  * @summary nullOctetString
  * @description
@@ -14,6 +14,5 @@ import { EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingPa
  * @constant
  */
 export const nullOctetString: EncodingParameters = new Uint8Array(0);
-/* END_OF_SYMBOL_DEFINITION nullOctetString */
 
 /* eslint-enable */

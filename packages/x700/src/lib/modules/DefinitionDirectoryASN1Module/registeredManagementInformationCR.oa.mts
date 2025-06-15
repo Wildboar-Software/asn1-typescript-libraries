@@ -23,7 +23,6 @@ import { managementAction } from '../DefinitionDirectoryASN1Module/managementAct
 import { managementNotification } from '../DefinitionDirectoryASN1Module/managementNotification.oa.mjs';
 import { asn1Module } from '../DefinitionDirectoryASN1Module/asn1Module.oa.mjs';
 import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION registeredManagementInformationCR */
 /**
  * @summary registeredManagementInformationCR
  * @description
@@ -68,6 +67,5 @@ export const registeredManagementInformationCR: CONTENT_RULE = {
         asn1Module,
     ] /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION registeredManagementInformationCR */
 
 /* eslint-enable */

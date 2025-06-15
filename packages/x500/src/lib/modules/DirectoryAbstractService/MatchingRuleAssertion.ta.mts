@@ -12,7 +12,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MatchingRuleAssertion */
 /**
  * @summary MatchingRuleAssertion
  * @description
@@ -100,9 +99,7 @@ export class MatchingRuleAssertion {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MatchingRuleAssertion */
 /**
  * @summary The Leading Root Component Types of MatchingRuleAssertion
  * @description
@@ -141,9 +138,7 @@ export const _root_component_type_list_1_spec_for_MatchingRuleAssertion: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MatchingRuleAssertion */
 /**
  * @summary The Trailing Root Component Types of MatchingRuleAssertion
  * @description
@@ -153,9 +148,7 @@ export const _root_component_type_list_1_spec_for_MatchingRuleAssertion: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MatchingRuleAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MatchingRuleAssertion */
 /**
  * @summary The Extension Addition Component Types of MatchingRuleAssertion
  * @description
@@ -165,13 +158,9 @@ export const _root_component_type_list_2_spec_for_MatchingRuleAssertion: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_MatchingRuleAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchingRuleAssertion */
 let _cached_decoder_for_MatchingRuleAssertion: $.ASN1Decoder<MatchingRuleAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MatchingRuleAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchingRuleAssertion
  * @function
@@ -238,13 +227,9 @@ export function _decode_MatchingRuleAssertion(el: _Element) {
     }
     return _cached_decoder_for_MatchingRuleAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchingRuleAssertion */
 let _cached_encoder_for_MatchingRuleAssertion: $.ASN1Encoder<MatchingRuleAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MatchingRuleAssertion */
 /**
  * @summary Encodes a(n) MatchingRuleAssertion into an ASN.1 Element.
  * @function
@@ -312,6 +297,5 @@ export function _encode_MatchingRuleAssertion(
     return _cached_encoder_for_MatchingRuleAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MatchingRuleAssertion */
 
 /* eslint-enable */

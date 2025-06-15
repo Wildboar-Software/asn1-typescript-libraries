@@ -25,7 +25,6 @@ import {
     _encode_MessageToken,
 } from '../MTSAbstractService/MessageToken.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION message_token */
 /**
  * @summary message_token
  * @description
@@ -62,6 +61,5 @@ export const message_token: EXTENSION<MessageToken> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_token */
 
 /* eslint-enable */

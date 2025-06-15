@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION CapabilityIdentitiesSet */
 /**
  * @summary CapabilityIdentitiesSet
  * @description
@@ -26,6 +25,5 @@ import { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca
  *
  */
 export const CapabilityIdentitiesSet: AC_CAP_IDENTITY[] = [];
-/* END_OF_SYMBOL_DEFINITION CapabilityIdentitiesSet */
 
 /* eslint-enable */

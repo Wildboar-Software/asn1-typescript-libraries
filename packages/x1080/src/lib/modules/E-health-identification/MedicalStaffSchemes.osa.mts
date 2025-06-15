@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { MEDICAL_STAFF_SCHEME } from '../E-health-identification/MEDICAL-STAFF-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION MedicalStaffSchemes */
+
 /**
  * @summary MedicalStaffSchemes
  * @description
@@ -26,6 +26,5 @@ import { MEDICAL_STAFF_SCHEME } from '../E-health-identification/MEDICAL-STAFF-S
  *
  */
 export const MedicalStaffSchemes: MEDICAL_STAFF_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION MedicalStaffSchemes */
 
 /* eslint-enable */

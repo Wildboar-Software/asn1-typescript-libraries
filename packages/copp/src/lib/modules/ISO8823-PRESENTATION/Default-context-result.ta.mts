@@ -15,7 +15,7 @@ import {
     _decode_Result,
     _encode_Result,
 } from '../ISO8823-PRESENTATION/Result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Default_context_result */
+
 /**
  * @summary Default_context_result
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Default_context_result = Result; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Default_context_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_context_result */
+
 let _cached_decoder_for_Default_context_result: $.ASN1Decoder<Default_context_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_context_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Default_context_result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Default_context_result
  * @function
@@ -46,13 +44,11 @@ export function _decode_Default_context_result(el: _Element) {
     }
     return _cached_decoder_for_Default_context_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Default_context_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_context_result */
+
 let _cached_encoder_for_Default_context_result: $.ASN1Encoder<Default_context_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_context_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Default_context_result */
+
 /**
  * @summary Encodes a(n) Default_context_result into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Default_context_result(
     return _cached_encoder_for_Default_context_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Default_context_result */
 
 /* eslint-enable */

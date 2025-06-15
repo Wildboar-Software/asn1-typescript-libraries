@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ce } from "../UsefulDefinitions/id-ce.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ce_holderNameConstraints */
 /**
  * @summary id_ce_holderNameConstraints
  * @description
@@ -18,6 +17,5 @@ export const id_ce_holderNameConstraints: OBJECT_IDENTIFIER = new _OID(
     [69],
     id_ce
 );
-/* END_OF_SYMBOL_DEFINITION id_ce_holderNameConstraints */
 
 /* eslint-enable */

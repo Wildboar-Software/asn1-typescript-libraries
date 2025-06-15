@@ -11,7 +11,6 @@ import {
     _decode_Mic_Header,
     _encode_Mic_Header,
 } from "../SpkmGssTokens/Mic-Header.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPKM_MIC */
 /**
  * @summary SPKM_MIC
  * @description
@@ -60,9 +59,7 @@ export class SPKM_MIC {
         return new SPKM_MIC(_o.mic_header, _o.int_cksum);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKM_MIC */
 /**
  * @summary The Leading Root Component Types of SPKM_MIC
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_SPKM_MIC: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKM_MIC */
 /**
  * @summary The Trailing Root Component Types of SPKM_MIC
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_SPKM_MIC: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SPKM_MIC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKM_MIC */
 /**
  * @summary The Extension Addition Component Types of SPKM_MIC
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_SPKM_MIC: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_SPKM_MIC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKM_MIC */
 let _cached_decoder_for_SPKM_MIC: $.ASN1Decoder<SPKM_MIC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPKM_MIC */
 /**
  * @summary Decodes an ASN.1 element into a(n) SPKM_MIC
  * @function
@@ -146,13 +135,9 @@ export function _decode_SPKM_MIC(el: _Element) {
     }
     return _cached_decoder_for_SPKM_MIC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKM_MIC */
 let _cached_encoder_for_SPKM_MIC: $.ASN1Encoder<SPKM_MIC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKM_MIC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPKM_MIC */
 /**
  * @summary Encodes a(n) SPKM_MIC into an ASN.1 Element.
  * @function
@@ -187,6 +172,5 @@ export function _encode_SPKM_MIC(
     return _cached_encoder_for_SPKM_MIC(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPKM_MIC */
 
 /* eslint-enable */

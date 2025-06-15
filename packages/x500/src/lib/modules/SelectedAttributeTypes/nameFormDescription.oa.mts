@@ -6,7 +6,6 @@ import {
     _encode_NameFormDescription,
 } from "../SchemaAdministration/NameFormDescription.ta.mjs";
 import { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va.mjs";
-/* START_OF_SYMBOL_DEFINITION nameFormDescription */
 /**
  * @summary nameFormDescription
  * @description
@@ -36,6 +35,5 @@ export const nameFormDescription: SYNTAX_NAME<NameFormDescription> = {
     "&id": id_lsx_nameFormDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nameFormDescription */
 
 /* eslint-enable */

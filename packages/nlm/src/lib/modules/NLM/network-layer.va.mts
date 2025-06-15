@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION network_layer */
+
 /**
  * @summary network_layer
  * @description
@@ -29,6 +29,5 @@ export const network_layer: OBJECT_IDENTIFIER = new _OID(
     [/* network-layer */ 13],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION network_layer */
 
 /* eslint-enable */

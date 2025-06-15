@@ -21,7 +21,6 @@ import {
     _decode_EDIProcessableDocument,
     _encode_EDIProcessableDocument,
 } from '../EDIMUseOfDirectory/EDIProcessableDocument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIUserCapability */
 /**
  * @summary EDIUserCapability
  * @description
@@ -74,9 +73,7 @@ export class EDIUserCapability {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIUserCapability */
 /**
  * @summary The Leading Root Component Types of EDIUserCapability
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_EDIUserCapability: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIUserCapability */
 /**
  * @summary The Trailing Root Component Types of EDIUserCapability
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_EDIUserCapability: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIUserCapability: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIUserCapability */
 /**
  * @summary The Extension Addition Component Types of EDIUserCapability
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_EDIUserCapability: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIUserCapability: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIUserCapability */
 let _cached_decoder_for_EDIUserCapability: $.ASN1Decoder<EDIUserCapability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIUserCapability */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIUserCapability
  * @function
@@ -177,13 +166,9 @@ export function _decode_EDIUserCapability(el: _Element) {
     }
     return _cached_decoder_for_EDIUserCapability(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIUserCapability */
 let _cached_encoder_for_EDIUserCapability: $.ASN1Encoder<EDIUserCapability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIUserCapability */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIUserCapability */
 /**
  * @summary Encodes a(n) EDIUserCapability into an ASN.1 Element.
  * @function
@@ -227,6 +212,5 @@ export function _encode_EDIUserCapability(
     return _cached_encoder_for_EDIUserCapability(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIUserCapability */
 
 /* eslint-enable */

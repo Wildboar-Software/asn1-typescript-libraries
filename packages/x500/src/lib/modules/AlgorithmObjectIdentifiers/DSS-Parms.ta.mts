@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DSS_Parms */
 /**
  * @summary DSS_Parms
  * @description
@@ -70,9 +69,7 @@ export class DSS_Parms {
         return new DSS_Parms(_o.p, _o.q, _o.g, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DSS_Parms */
 /**
  * @summary The Leading Root Component Types of DSS_Parms
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_DSS_Parms: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DSS_Parms */
 /**
  * @summary The Trailing Root Component Types of DSS_Parms
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_DSS_Parms: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DSS_Parms: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DSS_Parms */
 /**
  * @summary The Extension Addition Component Types of DSS_Parms
  * @description
@@ -128,13 +121,9 @@ export const _root_component_type_list_2_spec_for_DSS_Parms: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_DSS_Parms: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSS_Parms */
 let _cached_decoder_for_DSS_Parms: $.ASN1Decoder<DSS_Parms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DSS_Parms */
 /**
  * @summary Decodes an ASN.1 element into a(n) DSS_Parms
  * @function
@@ -166,13 +155,9 @@ export function _decode_DSS_Parms(el: _Element) {
     }
     return _cached_decoder_for_DSS_Parms(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSS_Parms */
 let _cached_encoder_for_DSS_Parms: $.ASN1Encoder<DSS_Parms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSS_Parms */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DSS_Parms */
 /**
  * @summary Encodes a(n) DSS_Parms into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_DSS_Parms(
     return _cached_encoder_for_DSS_Parms(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DSS_Parms */
 
 /* eslint-enable */

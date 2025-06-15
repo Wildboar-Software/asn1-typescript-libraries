@@ -14,7 +14,7 @@ import {
     _decode_RSAPublicKey,
     _encode_RSAPublicKey,
 } from "../PKIXAlgs-2009/RSAPublicKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_rsaES_OAEP */
+
 /**
  * @summary pk_rsaES_OAEP
  * @description
@@ -54,6 +54,5 @@ export const pk_rsaES_OAEP: PUBLIC_KEY<RSAPublicKey, RSAES_OAEP_params> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_rsaES_OAEP */
 
 /* eslint-enable */

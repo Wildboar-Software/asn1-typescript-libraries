@@ -20,7 +20,7 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AndAttributeIds_Item */
+
 /**
  * @summary AndAttributeIds_Item
  * @description
@@ -67,9 +67,8 @@ export class AndAttributeIds_Item {
         return new AndAttributeIds_Item(_o.fieldName, _o.attribute);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AndAttributeIds_Item */
+
 /**
  * @summary The Leading Root Component Types of AndAttributeIds_Item
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_AndAttributeIds_Item: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AndAttributeIds_Item */
+
 /**
  * @summary The Trailing Root Component Types of AndAttributeIds_Item
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_AndAttributeIds_Item: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AndAttributeIds_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AndAttributeIds_Item */
+
 /**
  * @summary The Extension Addition Component Types of AndAttributeIds_Item
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_AndAttributeIds_Item: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_AndAttributeIds_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AndAttributeIds_Item */
+
 let _cached_decoder_for_AndAttributeIds_Item: $.ASN1Decoder<AndAttributeIds_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AndAttributeIds_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AndAttributeIds_Item
  * @function
@@ -155,13 +150,11 @@ export function _decode_AndAttributeIds_Item(el: _Element) {
     }
     return _cached_decoder_for_AndAttributeIds_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AndAttributeIds_Item */
+
 let _cached_encoder_for_AndAttributeIds_Item: $.ASN1Encoder<AndAttributeIds_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AndAttributeIds_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AndAttributeIds_Item */
+
 /**
  * @summary Encodes a(n) AndAttributeIds_Item into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_AndAttributeIds_Item(
     return _cached_encoder_for_AndAttributeIds_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AndAttributeIds_Item */
 
 /* eslint-enable */

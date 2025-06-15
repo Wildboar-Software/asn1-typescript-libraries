@@ -15,7 +15,7 @@ import {
   _decode_VisibleBSPRegistration,
   _encode_VisibleBSPRegistration,
 } from '../BIP/VisibleBSPRegistration.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VisibleBSPRegistrations */
+
 /**
  * @summary VisibleBSPRegistrations
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type VisibleBSPRegistrations = VisibleBSPRegistration[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION VisibleBSPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBSPRegistrations */
+
 let _cached_decoder_for_VisibleBSPRegistrations: $.ASN1Decoder<VisibleBSPRegistrations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBSPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VisibleBSPRegistrations */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleBSPRegistrations
  * @function
@@ -48,13 +46,11 @@ export function _decode_VisibleBSPRegistrations(el: _Element) {
   }
   return _cached_decoder_for_VisibleBSPRegistrations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VisibleBSPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBSPRegistrations */
+
 let _cached_encoder_for_VisibleBSPRegistrations: $.ASN1Encoder<VisibleBSPRegistrations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBSPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VisibleBSPRegistrations */
+
 /**
  * @summary Encodes a(n) VisibleBSPRegistrations into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_VisibleBSPRegistrations(
   return _cached_encoder_for_VisibleBSPRegistrations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VisibleBSPRegistrations */
 
 /* eslint-enable */

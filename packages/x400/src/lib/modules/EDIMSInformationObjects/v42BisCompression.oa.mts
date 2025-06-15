@@ -16,7 +16,6 @@ import {
 } from '../EDIMSInformationObjects/V42BisCompressionParameter.ta.mjs';
 import { id_edi_compression_v42bis } from '../EDIMSObjectIdentifiers/id-edi-compression-v42bis.va.mjs';
 import { COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION v42BisCompression */
 /**
  * @summary v42BisCompression
  * @description
@@ -45,6 +44,5 @@ export const v42BisCompression: COMPRESSION_ALGORITHM<V42BisCompressionParameter
     '&id': id_edi_compression_v42bis /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION v42BisCompression */
 
 /* eslint-enable */

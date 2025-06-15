@@ -21,7 +21,6 @@ import {
   _decode_Transfer_syntax_name,
   _encode_Transfer_syntax_name,
 } from '../ACSE-1/Transfer-syntax-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Default_Context_List_Item */
 /**
  * @summary Default_Context_List_Item
  * @description
@@ -73,9 +72,7 @@ export class Default_Context_List_Item {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Default_Context_List_Item */
 /**
  * @summary The Leading Root Component Types of Default_Context_List_Item
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_Default_Context_List_Item: $.C
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Default_Context_List_Item */
 /**
  * @summary The Trailing Root Component Types of Default_Context_List_Item
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_Default_Context_List_Item: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Default_Context_List_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Default_Context_List_Item */
 /**
  * @summary The Extension Addition Component Types of Default_Context_List_Item
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_Default_Context_List_Item: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_Default_Context_List_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_Context_List_Item */
 let _cached_decoder_for_Default_Context_List_Item: $.ASN1Decoder<Default_Context_List_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Default_Context_List_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) Default_Context_List_Item
  * @function
@@ -176,13 +165,9 @@ export function _decode_Default_Context_List_Item(el: _Element) {
   }
   return _cached_decoder_for_Default_Context_List_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_Context_List_Item */
 let _cached_encoder_for_Default_Context_List_Item: $.ASN1Encoder<Default_Context_List_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_Context_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Default_Context_List_Item */
 /**
  * @summary Encodes a(n) Default_Context_List_Item into an ASN.1 Element.
  * @function
@@ -223,6 +208,5 @@ export function _encode_Default_Context_List_Item(
   return _cached_encoder_for_Default_Context_List_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Default_Context_List_Item */
 
 /* eslint-enable */

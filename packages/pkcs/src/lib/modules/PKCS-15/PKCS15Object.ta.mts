@@ -10,7 +10,7 @@ import {
     _decode_CommonObjectAttributes,
     _encode_CommonObjectAttributes,
 } from "../PKCS-15/CommonObjectAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS15Object */
+
 /**
  * @summary PKCS15Object
  * @description
@@ -85,9 +85,8 @@ export class PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PKCS15Object */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKCS15Object */
+
 /**
  * @summary The Leading Root Component Types of PKCS15Object
  * @description
@@ -126,9 +125,8 @@ export const _root_component_type_list_1_spec_for_PKCS15Object: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKCS15Object */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKCS15Object */
+
 /**
  * @summary The Trailing Root Component Types of PKCS15Object
  * @description
@@ -138,9 +136,8 @@ export const _root_component_type_list_1_spec_for_PKCS15Object: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PKCS15Object: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKCS15Object */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKCS15Object */
+
 /**
  * @summary The Extension Addition Component Types of PKCS15Object
  * @description
@@ -150,9 +147,8 @@ export const _root_component_type_list_2_spec_for_PKCS15Object: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PKCS15Object: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKCS15Object */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PKCS15Object */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PKCS15Object
  * @function
@@ -213,9 +209,8 @@ export function _get_decoder_for_PKCS15Object<
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PKCS15Object */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PKCS15Object */
+
 /**
  * @summary Returns a function that will encode a(n) PKCS15Object into an ASN.1 Element.
  * @function
@@ -271,6 +266,5 @@ export function _get_encoder_for_PKCS15Object<
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PKCS15Object */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _encode_KeyWrapAlgorithm,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta.mjs";
 import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION kaa_esdh */
+
 /**
  * @summary kaa_esdh
  * @description
@@ -50,6 +50,5 @@ export const kaa_esdh: KEY_AGREE<KeyWrapAlgorithm> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Ukm": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kaa_esdh */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pkix } from "../PkiPmiExternalDataTypes/id-pkix.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_pe */
 /**
  * @summary id_pe
  * @description
@@ -15,6 +14,5 @@ import { id_pkix } from "../PkiPmiExternalDataTypes/id-pkix.va.mjs";
  * @constant
  */
 export const id_pe: OBJECT_IDENTIFIER = new _OID([1], id_pkix);
-/* END_OF_SYMBOL_DEFINITION id_pe */
 
 /* eslint-enable */

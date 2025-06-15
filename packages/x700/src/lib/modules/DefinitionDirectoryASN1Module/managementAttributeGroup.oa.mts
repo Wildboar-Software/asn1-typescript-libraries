@@ -22,7 +22,6 @@ import { fixed } from '../DefinitionDirectoryASN1Module/fixed.oa.mjs';
 import { description } from '../DefinitionDirectoryASN1Module/description.oa.mjs';
 import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementAttributeGroup */
 /**
  * @summary managementAttributeGroup
  * @description
@@ -59,6 +58,5 @@ export const managementAttributeGroup: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementAttributeGroup */
 
 /* eslint-enable */

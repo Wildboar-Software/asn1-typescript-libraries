@@ -8,7 +8,7 @@ import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGO
 import { mda_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha224.oa.mjs";
 import { sha224WithRSAEncryption } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha224WithRSAEncryption.va.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION sa_sha224WithRSAEncryption */
+
 /**
  * @summary sa_sha224WithRSAEncryption
  * @description
@@ -46,6 +46,5 @@ export const sa_sha224WithRSAEncryption: SIGNATURE_ALGORITHM<NULL> = {
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sa_sha224WithRSAEncryption */
 
 /* eslint-enable */

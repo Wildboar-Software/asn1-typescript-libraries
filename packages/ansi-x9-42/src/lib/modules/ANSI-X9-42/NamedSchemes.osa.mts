@@ -9,7 +9,7 @@ import { NamedSchemes_Union5_Intersection0_Element } from "./NamedSchemes-Union5
 import { NamedSchemes_Union6_Intersection0_Element } from "./NamedSchemes-Union6-Intersection0-Element.oa.mjs";
 import { NamedSchemes_Union7_Intersection0_Element } from "./NamedSchemes-Union7-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION NamedSchemes */
+
 /**
  * @summary NamedSchemes
  * @description
@@ -44,6 +44,5 @@ export const NamedSchemes: KEY_AGREEMENT<any>[] = [
     NamedSchemes_Union6_Intersection0_Element,
     NamedSchemes_Union7_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION NamedSchemes */
 
 /* eslint-enable */

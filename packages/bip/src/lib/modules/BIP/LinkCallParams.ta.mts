@@ -15,7 +15,7 @@ import {
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LinkCallParams */
+
 /**
  * @summary LinkCallParams
  * @description
@@ -57,9 +57,8 @@ export class LinkCallParams {
     return new LinkCallParams(_o.slaveEndpointIRI);
   }
 }
-/* END_OF_SYMBOL_DEFINITION LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LinkCallParams */
+
 /**
  * @summary The Leading Root Component Types of LinkCallParams
  * @description
@@ -77,9 +76,8 @@ export const _root_component_type_list_1_spec_for_LinkCallParams: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LinkCallParams */
+
 /**
  * @summary The Trailing Root Component Types of LinkCallParams
  * @description
@@ -89,9 +87,8 @@ export const _root_component_type_list_1_spec_for_LinkCallParams: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LinkCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LinkCallParams */
+
 /**
  * @summary The Extension Addition Component Types of LinkCallParams
  * @description
@@ -101,13 +98,11 @@ export const _root_component_type_list_2_spec_for_LinkCallParams: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_LinkCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkCallParams */
+
 let _cached_decoder_for_LinkCallParams: $.ASN1Decoder<LinkCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkCallParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LinkCallParams
  * @function
@@ -135,13 +130,11 @@ export function _decode_LinkCallParams(el: _Element) {
   }
   return _cached_decoder_for_LinkCallParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkCallParams */
+
 let _cached_encoder_for_LinkCallParams: $.ASN1Encoder<LinkCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkCallParams */
+
 /**
  * @summary Encodes a(n) LinkCallParams into an ASN.1 Element.
  * @function
@@ -169,6 +162,5 @@ export function _encode_LinkCallParams(
   return _cached_encoder_for_LinkCallParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkCallParams */
 
 /* eslint-enable */

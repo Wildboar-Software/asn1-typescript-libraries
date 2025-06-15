@@ -21,7 +21,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CommonResults */
 /**
  * @summary CommonResults
  * @description
@@ -108,9 +107,7 @@ export class CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonResults */
 /**
  * @summary The Leading Root Component Types of CommonResults
  * @description
@@ -149,9 +146,7 @@ export const _root_component_type_list_1_spec_for_CommonResults: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonResults */
 /**
  * @summary The Trailing Root Component Types of CommonResults
  * @description
@@ -161,9 +156,7 @@ export const _root_component_type_list_1_spec_for_CommonResults: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonResults */
 /**
  * @summary The Extension Addition Component Types of CommonResults
  * @description
@@ -173,13 +166,9 @@ export const _root_component_type_list_2_spec_for_CommonResults: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_CommonResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonResults */
 let _cached_decoder_for_CommonResults: $.ASN1Decoder<CommonResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonResults
  * @function
@@ -244,13 +233,9 @@ export function _decode_CommonResults(el: _Element) {
     }
     return _cached_decoder_for_CommonResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonResults */
 let _cached_encoder_for_CommonResults: $.ASN1Encoder<CommonResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonResults */
 /**
  * @summary Encodes a(n) CommonResults into an ASN.1 Element.
  * @function
@@ -324,6 +309,5 @@ export function _encode_CommonResults(
     return _cached_encoder_for_CommonResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonResults */
 
 /* eslint-enable */

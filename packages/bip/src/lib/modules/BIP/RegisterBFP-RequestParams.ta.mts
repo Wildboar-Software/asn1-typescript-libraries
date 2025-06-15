@@ -16,7 +16,7 @@ import {
   _decode_BioAPI_BFP_SCHEMA,
   _encode_BioAPI_BFP_SCHEMA,
 } from '../BIP/BioAPI-BFP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RegisterBFP_RequestParams */
+
 /**
  * @summary RegisterBFP_RequestParams
  * @description
@@ -68,9 +68,8 @@ export class RegisterBFP_RequestParams {
     return new RegisterBFP_RequestParams(_o.bfpSchema, _o.update);
   }
 }
-/* END_OF_SYMBOL_DEFINITION RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RegisterBFP_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of RegisterBFP_RequestParams
  * @description
@@ -95,9 +94,8 @@ export const _root_component_type_list_1_spec_for_RegisterBFP_RequestParams: $.C
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RegisterBFP_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of RegisterBFP_RequestParams
  * @description
@@ -107,9 +105,8 @@ export const _root_component_type_list_1_spec_for_RegisterBFP_RequestParams: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RegisterBFP_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RegisterBFP_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of RegisterBFP_RequestParams
  * @description
@@ -119,13 +116,11 @@ export const _root_component_type_list_2_spec_for_RegisterBFP_RequestParams: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_RegisterBFP_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterBFP_RequestParams */
+
 let _cached_decoder_for_RegisterBFP_RequestParams: $.ASN1Decoder<RegisterBFP_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegisterBFP_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RegisterBFP_RequestParams
  * @function
@@ -156,13 +151,11 @@ export function _decode_RegisterBFP_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_RegisterBFP_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterBFP_RequestParams */
+
 let _cached_encoder_for_RegisterBFP_RequestParams: $.ASN1Encoder<RegisterBFP_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterBFP_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegisterBFP_RequestParams */
+
 /**
  * @summary Encodes a(n) RegisterBFP_RequestParams into an ASN.1 Element.
  * @function
@@ -191,6 +184,5 @@ export function _encode_RegisterBFP_RequestParams(
   return _cached_encoder_for_RegisterBFP_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegisterBFP_RequestParams */
 
 /* eslint-enable */

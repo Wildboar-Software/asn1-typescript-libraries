@@ -11,7 +11,7 @@ import {
 } from "asn1-ts";
 import { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION sa_Ed25519_smimeCaps */
+
 /**
  * @summary sa_Ed25519_smimeCaps
  * @description
@@ -38,6 +38,5 @@ const sa_Ed25519_smimeCaps: SMIME_CAPS = {
     "&id": id_Ed25519 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sa_Ed25519_smimeCaps */
 
 /* eslint-enable */

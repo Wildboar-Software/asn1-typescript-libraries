@@ -23,7 +23,6 @@ import {
     _encode_DLExpansionHistory,
 } from '../MTSAbstractService/DLExpansionHistory.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_expansion_history */
 /**
  * @summary dl_expansion_history
  * @description
@@ -57,6 +56,5 @@ export const dl_expansion_history: EXTENSION<DLExpansionHistory> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_expansion_history */
 
 /* eslint-enable */

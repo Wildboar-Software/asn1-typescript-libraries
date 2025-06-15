@@ -8,7 +8,6 @@ import {
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { id_at_urnC } from "../SelectedAttributeTypes/id-at-urnC.va.mjs";
 import { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION urnC */
 /**
  * @summary urnC
  * @description
@@ -49,6 +48,5 @@ export const urnC: ATTRIBUTE<PrintableString> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION urnC */
 
 /* eslint-enable */

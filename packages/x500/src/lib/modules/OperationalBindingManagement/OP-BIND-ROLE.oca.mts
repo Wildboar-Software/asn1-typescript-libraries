@@ -2,7 +2,6 @@
 import { BOOLEAN } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OP_BIND_ROLE */
 /**
  * @summary OP_BIND_ROLE
  * @description
@@ -92,6 +91,5 @@ export interface OP_BIND_ROLE<
      */
     readonly "&TerminateParam": TerminateParam;
 }
-/* END_OF_SYMBOL_DEFINITION OP_BIND_ROLE */
 
 /* eslint-enable */

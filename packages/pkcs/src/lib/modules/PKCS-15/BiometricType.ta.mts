@@ -11,7 +11,7 @@ import {
     _decode_IrisScan,
     _encode_IrisScan,
 } from "../PKCS-15/IrisScan.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BiometricType */
+
 /**
  * @summary BiometricType
  * @description
@@ -38,13 +38,11 @@ export type BiometricType =
     | { fingerPrint: FingerPrint } /* CHOICE_ALT_ROOT */
     | { irisScan: IrisScan } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricType */
+
 let _cached_decoder_for_BiometricType: $.ASN1Decoder<BiometricType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricType
  * @function
@@ -65,13 +63,11 @@ export function _decode_BiometricType(el: _Element) {
     }
     return _cached_decoder_for_BiometricType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricType */
+
 let _cached_encoder_for_BiometricType: $.ASN1Encoder<BiometricType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricType */
+
 /**
  * @summary Encodes a(n) BiometricType into an ASN.1 Element.
  * @function
@@ -100,6 +96,5 @@ export function _encode_BiometricType(
     return _cached_encoder_for_BiometricType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricType */
 
 /* eslint-enable */

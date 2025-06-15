@@ -15,7 +15,6 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConversionStatistics */
 /**
  * @summary ConversionStatistics
  * @description
@@ -65,9 +64,7 @@ export class ConversionStatistics {
         return new ConversionStatistics(_o.oldEit, _o.newEit);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConversionStatistics */
 /**
  * @summary The Leading Root Component Types of ConversionStatistics
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_ConversionStatistics: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConversionStatistics */
 /**
  * @summary The Trailing Root Component Types of ConversionStatistics
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_ConversionStatistics: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ConversionStatistics: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConversionStatistics */
 /**
  * @summary The Extension Addition Component Types of ConversionStatistics
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_ConversionStatistics: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ConversionStatistics: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionStatistics */
 let _cached_decoder_for_ConversionStatistics: $.ASN1Decoder<ConversionStatistics> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConversionStatistics */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConversionStatistics
  * @function
@@ -153,13 +142,9 @@ export function _decode_ConversionStatistics(el: _Element) {
     }
     return _cached_decoder_for_ConversionStatistics(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionStatistics */
 let _cached_encoder_for_ConversionStatistics: $.ASN1Encoder<ConversionStatistics> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionStatistics */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConversionStatistics */
 /**
  * @summary Encodes a(n) ConversionStatistics into an ASN.1 Element.
  * @function
@@ -194,6 +179,5 @@ export function _encode_ConversionStatistics(
     return _cached_encoder_for_ConversionStatistics(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConversionStatistics */
 
 /* eslint-enable */

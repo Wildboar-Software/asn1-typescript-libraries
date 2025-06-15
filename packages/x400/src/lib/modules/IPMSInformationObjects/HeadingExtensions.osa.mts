@@ -24,7 +24,6 @@ import { manual_handling_instructions } from '../IPMSHeadingExtensions/manual-ha
 import { originators_reference } from '../IPMSHeadingExtensions/originators-reference.oa.mjs';
 import { precedence_policy_identifier } from '../IPMSHeadingExtensions/precedence-policy-identifier.oa.mjs';
 import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION HeadingExtensions */
 /**
  * @summary HeadingExtensions
  * @description
@@ -59,6 +58,5 @@ export const HeadingExtensions: IPMS_EXTENSION[] = [
     precedence_policy_identifier,
     ...PrivateIPMSExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION HeadingExtensions */
 
 /* eslint-enable */

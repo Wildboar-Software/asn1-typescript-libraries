@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_signedData */
+
 /**
  * @summary id_signedData
  * @description
@@ -34,6 +34,5 @@ export const id_signedData: OBJECT_IDENTIFIER = new _OID([
     /* pkcs7 */ 7,
     2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_signedData */
 
 /* eslint-enable */

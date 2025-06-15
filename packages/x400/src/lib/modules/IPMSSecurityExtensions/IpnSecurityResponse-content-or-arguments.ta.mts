@@ -20,7 +20,6 @@ import {
     _decode_IpnSecurityResponse_content_or_arguments_original_security_arguments,
     _encode_IpnSecurityResponse_content_or_arguments_original_security_arguments,
 } from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments-original-security-arguments.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IpnSecurityResponse_content_or_arguments */
 /**
  * @summary IpnSecurityResponse_content_or_arguments
  * @description
@@ -36,13 +35,9 @@ export type IpnSecurityResponse_content_or_arguments =
     | {
           original_security_arguments: IpnSecurityResponse_content_or_arguments_original_security_arguments;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION IpnSecurityResponse_content_or_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IpnSecurityResponse_content_or_arguments */
 let _cached_decoder_for_IpnSecurityResponse_content_or_arguments: $.ASN1Decoder<IpnSecurityResponse_content_or_arguments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IpnSecurityResponse_content_or_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IpnSecurityResponse_content_or_arguments */
 /**
  * @summary Decodes an ASN.1 element into a(n) IpnSecurityResponse_content_or_arguments
  * @function
@@ -63,13 +58,9 @@ export function _decode_IpnSecurityResponse_content_or_arguments(el: _Element) {
     }
     return _cached_decoder_for_IpnSecurityResponse_content_or_arguments(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IpnSecurityResponse_content_or_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IpnSecurityResponse_content_or_arguments */
 let _cached_encoder_for_IpnSecurityResponse_content_or_arguments: $.ASN1Encoder<IpnSecurityResponse_content_or_arguments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IpnSecurityResponse_content_or_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IpnSecurityResponse_content_or_arguments */
 /**
  * @summary Encodes a(n) IpnSecurityResponse_content_or_arguments into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_IpnSecurityResponse_content_or_arguments(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IpnSecurityResponse_content_or_arguments */
 
 /* eslint-enable */

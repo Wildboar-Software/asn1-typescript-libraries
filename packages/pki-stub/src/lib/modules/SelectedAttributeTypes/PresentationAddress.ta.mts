@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PresentationAddress */
 /**
  * @summary PresentationAddress
  * @description
@@ -83,9 +82,7 @@ export class PresentationAddress {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PresentationAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PresentationAddress */
 /**
  * @summary The Leading Root Component Types of PresentationAddress
  * @description
@@ -125,9 +122,7 @@ export const _root_component_type_list_1_spec_for_PresentationAddress: $.Compone
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PresentationAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PresentationAddress */
 /**
  * @summary The Trailing Root Component Types of PresentationAddress
  * @description
@@ -138,9 +133,7 @@ export const _root_component_type_list_1_spec_for_PresentationAddress: $.Compone
  */
 export const _root_component_type_list_2_spec_for_PresentationAddress: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PresentationAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PresentationAddress */
 /**
  * @summary The Extension Addition Component Types of PresentationAddress
  * @description
@@ -151,12 +144,8 @@ export const _root_component_type_list_2_spec_for_PresentationAddress: $.Compone
  */
 export const _extension_additions_list_spec_for_PresentationAddress: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PresentationAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAddress */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PresentationAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PresentationAddress
  * @function
@@ -213,9 +202,7 @@ export function _decode_PresentationAddress(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PresentationAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PresentationAddress */
 /**
  * @summary Encodes a(n) PresentationAddress into an ASN.1 Element.
  * @function
@@ -267,6 +254,5 @@ export function _encode_PresentationAddress(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PresentationAddress */
 
 /* eslint-enable */

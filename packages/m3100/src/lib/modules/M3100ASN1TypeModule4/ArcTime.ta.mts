@@ -16,7 +16,7 @@ import {
     _decode_ArcInterval,
     _encode_ArcInterval,
 } from '../M3100ASN1TypeModule4/ArcInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ArcTime */
+
 /**
  * @summary ArcTime
  * @description
@@ -33,13 +33,11 @@ import {
 export type ArcTime =
     | { noAdjustment: NULL } /* CHOICE_ALT_ROOT */
     | { time: ArcInterval } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ArcTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcTime */
+
 let _cached_decoder_for_ArcTime: $.ASN1Decoder<ArcTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArcTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArcTime
  * @function
@@ -61,13 +59,11 @@ export function _decode_ArcTime(el: _Element) {
     }
     return _cached_decoder_for_ArcTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArcTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcTime */
+
 let _cached_encoder_for_ArcTime: $.ASN1Encoder<ArcTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArcTime */
+
 /**
  * @summary Encodes a(n) ArcTime into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_ArcTime(
     return _cached_encoder_for_ArcTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArcTime */
 
 /* eslint-enable */

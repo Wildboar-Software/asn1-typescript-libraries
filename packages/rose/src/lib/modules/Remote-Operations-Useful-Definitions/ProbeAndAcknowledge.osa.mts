@@ -12,7 +12,7 @@ import {
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { probe } from '../Remote-Operations-Useful-Definitions/probe.oa.mjs';
 import { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeAndAcknowledge */
+
 /**
  * @summary ProbeAndAcknowledge
  * @description
@@ -28,6 +28,5 @@ import { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge
  *
  */
 export const ProbeAndAcknowledge: OPERATION[] = [probe, acknowledge];
-/* END_OF_SYMBOL_DEFINITION ProbeAndAcknowledge */
 
 /* eslint-enable */

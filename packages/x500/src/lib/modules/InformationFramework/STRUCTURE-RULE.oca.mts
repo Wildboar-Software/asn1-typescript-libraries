@@ -2,7 +2,6 @@
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION STRUCTURE_RULE */
 /**
  * @summary STRUCTURE_RULE
  * @description
@@ -58,6 +57,5 @@ export interface STRUCTURE_RULE {
      */
     readonly "&id"?: RuleIdentifier;
 }
-/* END_OF_SYMBOL_DEFINITION STRUCTURE_RULE */
 
 /* eslint-enable */

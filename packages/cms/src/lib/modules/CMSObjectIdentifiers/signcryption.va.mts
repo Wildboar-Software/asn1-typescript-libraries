@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION signcryption */
+
 /**
  * @summary signcryption
  * @description
@@ -25,6 +25,5 @@ export const signcryption: OID = new _OID([
     /* x9-73 */ 73,
     /* signcryption */ 4,
 ]);
-/* END_OF_SYMBOL_DEFINITION signcryption */
 
 /* eslint-enable */

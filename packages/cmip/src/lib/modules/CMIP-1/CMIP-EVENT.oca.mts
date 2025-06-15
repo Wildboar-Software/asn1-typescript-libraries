@@ -15,7 +15,7 @@ import {
   _decode_EventTypeId,
   _encode_EventTypeId,
 } from '../CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIP_EVENT */
+
 /**
  * @summary CMIP_EVENT
  * @description
@@ -66,6 +66,5 @@ export interface CMIP_EVENT<
    */
   readonly '&Value': Value;
 }
-/* END_OF_SYMBOL_DEFINITION CMIP_EVENT */
 
 /* eslint-enable */

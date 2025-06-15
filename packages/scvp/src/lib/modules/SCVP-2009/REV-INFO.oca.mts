@@ -11,8 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION REV_INFO */
 export type REV_INFO = TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION REV_INFO */
 
 /* eslint-enable */

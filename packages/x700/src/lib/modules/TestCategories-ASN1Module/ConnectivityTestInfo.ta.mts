@@ -20,7 +20,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectivityTestInfo */
 /**
  * @summary ConnectivityTestInfo
  * @description
@@ -72,9 +71,7 @@ export class ConnectivityTestInfo {
         return new ConnectivityTestInfo(_o.timeoutPeriod, _o.effectiveTime);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConnectivityTestInfo */
 /**
  * @summary The Leading Root Component Types of ConnectivityTestInfo
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_ConnectivityTestInfo: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConnectivityTestInfo */
 /**
  * @summary The Trailing Root Component Types of ConnectivityTestInfo
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_ConnectivityTestInfo: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ConnectivityTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConnectivityTestInfo */
 /**
  * @summary The Extension Addition Component Types of ConnectivityTestInfo
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_ConnectivityTestInfo: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ConnectivityTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityTestInfo */
 let _cached_decoder_for_ConnectivityTestInfo: $.ASN1Decoder<ConnectivityTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectivityTestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectivityTestInfo
  * @function
@@ -164,13 +153,9 @@ export function _decode_ConnectivityTestInfo(el: _Element) {
     }
     return _cached_decoder_for_ConnectivityTestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityTestInfo */
 let _cached_encoder_for_ConnectivityTestInfo: $.ASN1Encoder<ConnectivityTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectivityTestInfo */
 /**
  * @summary Encodes a(n) ConnectivityTestInfo into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_ConnectivityTestInfo(
     return _cached_encoder_for_ConnectivityTestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectivityTestInfo */
 
 /* eslint-enable */

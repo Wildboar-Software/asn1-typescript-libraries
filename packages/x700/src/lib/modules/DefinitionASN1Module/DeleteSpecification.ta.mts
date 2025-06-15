@@ -22,7 +22,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeleteSpecification */
 /**
  * @summary DeleteSpecification
  * @description
@@ -82,9 +81,7 @@ export class DeleteSpecification {
 
     public static _enum_for_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
 }
-/* END_OF_SYMBOL_DEFINITION DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteSpecification */
 /**
  * @summary The Leading Root Component Types of DeleteSpecification
  * @description
@@ -109,9 +106,7 @@ export const _root_component_type_list_1_spec_for_DeleteSpecification: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteSpecification */
 /**
  * @summary The Trailing Root Component Types of DeleteSpecification
  * @description
@@ -121,9 +116,7 @@ export const _root_component_type_list_1_spec_for_DeleteSpecification: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeleteSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteSpecification */
 /**
  * @summary The Extension Addition Component Types of DeleteSpecification
  * @description
@@ -133,13 +126,9 @@ export const _root_component_type_list_2_spec_for_DeleteSpecification: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_DeleteSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteSpecification */
 let _cached_decoder_for_DeleteSpecification: $.ASN1Decoder<DeleteSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteSpecification */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteSpecification
  * @function
@@ -183,13 +172,9 @@ export function _decode_DeleteSpecification(el: _Element) {
     }
     return _cached_decoder_for_DeleteSpecification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteSpecification */
 let _cached_encoder_for_DeleteSpecification: $.ASN1Encoder<DeleteSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteSpecification */
 /**
  * @summary Encodes a(n) DeleteSpecification into an ASN.1 Element.
  * @function
@@ -225,6 +210,5 @@ export function _encode_DeleteSpecification(
     return _cached_encoder_for_DeleteSpecification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteSpecification */
 
 /* eslint-enable */

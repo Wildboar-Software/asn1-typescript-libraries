@@ -16,7 +16,6 @@ import {
     _encode_GeneralTextParameters,
 } from '../IPMSExtendedBodyPartTypes2/GeneralTextParameters.ta.mjs';
 import { id_ep_general_text } from '../IPMSObjectIdentifiers/id-ep-general-text.va.mjs';
-/* START_OF_SYMBOL_DEFINITION general_text_body_part_parameters */
 /**
  * @summary general_text_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const general_text_body_part_parameters: TYPE_IDENTIFIER<GeneralTextParam
     '&id': id_ep_general_text /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION general_text_body_part_parameters */
 
 /* eslint-enable */

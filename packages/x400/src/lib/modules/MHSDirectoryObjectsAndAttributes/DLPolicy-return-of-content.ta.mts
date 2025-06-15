@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DLPolicy_return_of_content */
 /**
  * @summary DLPolicy_return_of_content
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_DLPolicy_return_of_content {
     content_return_not_requested = 1,
     content_return_requested = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DLPolicy_return_of_content */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_return_of_content */
 /**
  * @summary DLPolicy_return_of_content
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_DLPolicy_return_of_content {
  * ```@enum {number}
  */
 export type DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_return_of_content */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_return_of_content */
 /**
  * @summary DLPolicy_return_of_content
  * @description
@@ -55,9 +50,7 @@ export type DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  * ```@enum {number}
  */
 export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_return_of_content */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_return_of_content_unchanged */
 /**
  * @summary DLPolicy_return_of_content_unchanged
  * @constant
@@ -65,9 +58,7 @@ export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  */
 export const DLPolicy_return_of_content_unchanged: DLPolicy_return_of_content =
     DLPolicy_return_of_content.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_return_of_content_unchanged */
 
-/* START_OF_SYMBOL_DEFINITION unchanged */
 /**
  * @summary unchanged
  * @constant
@@ -75,9 +66,7 @@ export const DLPolicy_return_of_content_unchanged: DLPolicy_return_of_content =
  */
 export const unchanged: DLPolicy_return_of_content =
     DLPolicy_return_of_content.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unchanged */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_return_of_content_content_return_not_requested */
 /**
  * @summary DLPolicy_return_of_content_content_return_not_requested
  * @constant
@@ -85,9 +74,7 @@ export const unchanged: DLPolicy_return_of_content =
  */
 export const DLPolicy_return_of_content_content_return_not_requested: DLPolicy_return_of_content =
     DLPolicy_return_of_content.content_return_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_return_of_content_content_return_not_requested */
 
-/* START_OF_SYMBOL_DEFINITION content_return_not_requested */
 /**
  * @summary content_return_not_requested
  * @constant
@@ -95,9 +82,7 @@ export const DLPolicy_return_of_content_content_return_not_requested: DLPolicy_r
  */
 export const content_return_not_requested: DLPolicy_return_of_content =
     DLPolicy_return_of_content.content_return_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION content_return_not_requested */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_return_of_content_content_return_requested */
 /**
  * @summary DLPolicy_return_of_content_content_return_requested
  * @constant
@@ -105,9 +90,7 @@ export const content_return_not_requested: DLPolicy_return_of_content =
  */
 export const DLPolicy_return_of_content_content_return_requested: DLPolicy_return_of_content =
     DLPolicy_return_of_content.content_return_requested; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_return_of_content_content_return_requested */
 
-/* START_OF_SYMBOL_DEFINITION content_return_requested */
 /**
  * @summary content_return_requested
  * @constant
@@ -115,21 +98,12 @@ export const DLPolicy_return_of_content_content_return_requested: DLPolicy_retur
  */
 export const content_return_requested: DLPolicy_return_of_content =
     DLPolicy_return_of_content.content_return_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION content_return_requested */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_return_of_content */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_return_of_content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_return_of_content */
 export const _decode_DLPolicy_return_of_content = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_return_of_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_return_of_content */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_return_of_content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_return_of_content */
 export const _encode_DLPolicy_return_of_content = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_return_of_content */
 
 /* eslint-enable */

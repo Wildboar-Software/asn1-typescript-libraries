@@ -18,7 +18,6 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SIGNED */
 /**
  * @summary SIGNED
  * @description
@@ -126,9 +125,7 @@ export class SIGNED<ToBeSigned> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SIGNED */
 /**
  * @summary The Leading Root Component Types of SIGNED
  * @description
@@ -154,9 +151,7 @@ export const _root_component_type_list_1_spec_for_SIGNED: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNED */
 /**
  * @summary The Trailing Root Component Types of SIGNED
  * @description
@@ -167,9 +162,7 @@ export const _root_component_type_list_1_spec_for_SIGNED: $.ComponentSpec[] = [
  */
 export const _root_component_type_list_2_spec_for_SIGNED: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNED */
 /**
  * @summary The Extension Addition Component Types of SIGNED
  * @description
@@ -194,9 +187,7 @@ export const _extension_additions_list_spec_for_SIGNED: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_SIGNED */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) SIGNED
  * @function
@@ -258,9 +249,7 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
         return ret;
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_SIGNED */
 /**
  * @summary Returns a function that will encode a(n) SIGNED into an ASN.1 Element.
  * @function
@@ -309,6 +298,5 @@ export function _get_encoder_for_SIGNED<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_SIGNED */
 
 /* eslint-enable */

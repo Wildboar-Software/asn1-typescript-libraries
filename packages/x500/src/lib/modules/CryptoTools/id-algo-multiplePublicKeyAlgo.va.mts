@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_algo_mca } from "../GenAlgo/id-algo-mca.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_algo_multiplePublicKeyAlgo */
 /**
  * @summary id_algo_multiplePublicKeyAlgo
  * @description
@@ -18,6 +17,5 @@ export const id_algo_multiplePublicKeyAlgo: OBJECT_IDENTIFIER = new _OID(
     [3],
     id_algo_mca
 );
-/* END_OF_SYMBOL_DEFINITION id_algo_multiplePublicKeyAlgo */
 
 /* eslint-enable */

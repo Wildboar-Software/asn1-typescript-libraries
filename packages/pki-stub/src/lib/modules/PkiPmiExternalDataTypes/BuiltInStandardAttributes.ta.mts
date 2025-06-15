@@ -51,7 +51,6 @@ import {
     _encode_TerminalIdentifier,
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 /**
  * @summary BuiltInStandardAttributes
  * @description
@@ -167,9 +166,7 @@ export class BuiltInStandardAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInStandardAttributes */
 /**
  * @summary The Leading Root Component Types of BuiltInStandardAttributes
  * @description
@@ -244,9 +241,7 @@ export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.C
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInStandardAttributes */
 /**
  * @summary The Trailing Root Component Types of BuiltInStandardAttributes
  * @description
@@ -257,9 +252,7 @@ export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.C
  */
 export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
 /**
  * @summary The Extension Addition Component Types of BuiltInStandardAttributes
  * @description
@@ -270,9 +263,7 @@ export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.C
  */
 export const _extension_additions_list_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) BuiltInStandardAttributes
  * @function
@@ -360,9 +351,7 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
         organizational_unit_names
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */
 /**
  * @summary Encodes a(n) BuiltInStandardAttributes into an ASN.1 Element.
  * @function
@@ -451,6 +440,5 @@ export function _encode_BuiltInStandardAttributes(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */
 
 /* eslint-enable */

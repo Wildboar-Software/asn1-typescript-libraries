@@ -15,7 +15,6 @@ import {
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResponseTimeout */
 /**
  * @summary ResponseTimeout
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ResponseTimeout = TimeoutPeriod; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ResponseTimeout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTimeout */
 let _cached_decoder_for_ResponseTimeout: $.ASN1Decoder<ResponseTimeout> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTimeout */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseTimeout */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseTimeout
  * @function
@@ -46,13 +41,9 @@ export function _decode_ResponseTimeout(el: _Element) {
     }
     return _cached_decoder_for_ResponseTimeout(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseTimeout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTimeout */
 let _cached_encoder_for_ResponseTimeout: $.ASN1Encoder<ResponseTimeout> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTimeout */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseTimeout */
 /**
  * @summary Encodes a(n) ResponseTimeout into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ResponseTimeout(
     return _cached_encoder_for_ResponseTimeout(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseTimeout */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_MultipleConnections,
     _encode_MultipleConnections,
 } from '../ASN1DefinedTypesModule/MultipleConnections.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CrossConnectionObjectPointer */
+
 /**
  * @summary CrossConnectionObjectPointer
  * @description
@@ -39,13 +39,11 @@ export type CrossConnectionObjectPointer =
     | { notConnected: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { connected: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { multipleConnections: MultipleConnections } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CrossConnectionObjectPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossConnectionObjectPointer */
+
 let _cached_decoder_for_CrossConnectionObjectPointer: $.ASN1Decoder<CrossConnectionObjectPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossConnectionObjectPointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrossConnectionObjectPointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CrossConnectionObjectPointer
  * @function
@@ -77,13 +75,11 @@ export function _decode_CrossConnectionObjectPointer(el: _Element) {
     }
     return _cached_decoder_for_CrossConnectionObjectPointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrossConnectionObjectPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossConnectionObjectPointer */
+
 let _cached_encoder_for_CrossConnectionObjectPointer: $.ASN1Encoder<CrossConnectionObjectPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossConnectionObjectPointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrossConnectionObjectPointer */
+
 /**
  * @summary Encodes a(n) CrossConnectionObjectPointer into an ASN.1 Element.
  * @function
@@ -118,6 +114,5 @@ export function _encode_CrossConnectionObjectPointer(
     return _cached_encoder_for_CrossConnectionObjectPointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrossConnectionObjectPointer */
 
 /* eslint-enable */

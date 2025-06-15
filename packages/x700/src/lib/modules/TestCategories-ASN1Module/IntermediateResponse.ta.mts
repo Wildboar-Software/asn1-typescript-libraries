@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_IntermediateResponse */
 /**
  * @summary IntermediateResponse
  * @description
@@ -32,9 +31,7 @@ export enum _enum_for_IntermediateResponse {
     repeatLater = 3,
     noAcknowledgement = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse */
 /**
  * @summary IntermediateResponse
  * @description
@@ -49,9 +46,7 @@ export enum _enum_for_IntermediateResponse {
  * ```@enum {number}
  */
 export type IntermediateResponse = _enum_for_IntermediateResponse;
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse */
 /**
  * @summary IntermediateResponse
  * @description
@@ -66,9 +61,7 @@ export type IntermediateResponse = _enum_for_IntermediateResponse;
  * ```@enum {number}
  */
 export const IntermediateResponse = _enum_for_IntermediateResponse;
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse_inProgress */
 /**
  * @summary IntermediateResponse_inProgress
  * @constant
@@ -76,9 +69,7 @@ export const IntermediateResponse = _enum_for_IntermediateResponse;
  */
 export const IntermediateResponse_inProgress: IntermediateResponse =
     IntermediateResponse.inProgress; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse_inProgress */
 
-/* START_OF_SYMBOL_DEFINITION inProgress */
 /**
  * @summary inProgress
  * @constant
@@ -86,9 +77,7 @@ export const IntermediateResponse_inProgress: IntermediateResponse =
  */
 export const inProgress: IntermediateResponse =
     IntermediateResponse.inProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION inProgress */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse_delayedMeasurement */
 /**
  * @summary IntermediateResponse_delayedMeasurement
  * @constant
@@ -96,9 +85,7 @@ export const inProgress: IntermediateResponse =
  */
 export const IntermediateResponse_delayedMeasurement: IntermediateResponse =
     IntermediateResponse.delayedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse_delayedMeasurement */
 
-/* START_OF_SYMBOL_DEFINITION delayedMeasurement */
 /**
  * @summary delayedMeasurement
  * @constant
@@ -106,9 +93,7 @@ export const IntermediateResponse_delayedMeasurement: IntermediateResponse =
  */
 export const delayedMeasurement: IntermediateResponse =
     IntermediateResponse.delayedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION delayedMeasurement */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse_interruptedMeasurement */
 /**
  * @summary IntermediateResponse_interruptedMeasurement
  * @constant
@@ -116,9 +101,7 @@ export const delayedMeasurement: IntermediateResponse =
  */
 export const IntermediateResponse_interruptedMeasurement: IntermediateResponse =
     IntermediateResponse.interruptedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse_interruptedMeasurement */
 
-/* START_OF_SYMBOL_DEFINITION interruptedMeasurement */
 /**
  * @summary interruptedMeasurement
  * @constant
@@ -126,9 +109,7 @@ export const IntermediateResponse_interruptedMeasurement: IntermediateResponse =
  */
 export const interruptedMeasurement: IntermediateResponse =
     IntermediateResponse.interruptedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION interruptedMeasurement */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse_repeatLater */
 /**
  * @summary IntermediateResponse_repeatLater
  * @constant
@@ -136,9 +117,7 @@ export const interruptedMeasurement: IntermediateResponse =
  */
 export const IntermediateResponse_repeatLater: IntermediateResponse =
     IntermediateResponse.repeatLater; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse_repeatLater */
 
-/* START_OF_SYMBOL_DEFINITION repeatLater */
 /**
  * @summary repeatLater
  * @constant
@@ -146,9 +125,7 @@ export const IntermediateResponse_repeatLater: IntermediateResponse =
  */
 export const repeatLater: IntermediateResponse =
     IntermediateResponse.repeatLater; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION repeatLater */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse_noAcknowledgement */
 /**
  * @summary IntermediateResponse_noAcknowledgement
  * @constant
@@ -156,9 +133,7 @@ export const repeatLater: IntermediateResponse =
  */
 export const IntermediateResponse_noAcknowledgement: IntermediateResponse =
     IntermediateResponse.noAcknowledgement; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse_noAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION noAcknowledgement */
 /**
  * @summary noAcknowledgement
  * @constant
@@ -166,21 +141,12 @@ export const IntermediateResponse_noAcknowledgement: IntermediateResponse =
  */
 export const noAcknowledgement: IntermediateResponse =
     IntermediateResponse.noAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResponse */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntermediateResponse */
 export const _decode_IntermediateResponse = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResponse */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntermediateResponse */
 export const _encode_IntermediateResponse = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntermediateResponse */
 
 /* eslint-enable */

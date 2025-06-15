@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.mjs";
 import { simpleString } from "../CMSDBKeyManagement/simpleString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION SchemaIdentifier */
+
 /**
  * @summary SchemaIdentifier
  * @description
@@ -20,6 +20,5 @@ import { simpleString } from "../CMSDBKeyManagement/simpleString.oa.mjs";
  *
  */
 export const SchemaIdentifier: DBEKM[] = [simpleString];
-/* END_OF_SYMBOL_DEFINITION SchemaIdentifier */
 
 /* eslint-enable */

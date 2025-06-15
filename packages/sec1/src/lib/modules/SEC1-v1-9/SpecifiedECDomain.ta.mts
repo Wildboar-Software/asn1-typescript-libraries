@@ -17,7 +17,6 @@ import { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.
 import { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta.mjs";
 import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
 import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SpecifiedECDomain */
 /**
  * @summary SpecifiedECDomain
  * @description
@@ -110,9 +109,7 @@ class SpecifiedECDomain {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecifiedECDomain */
 /**
  * @summary The Leading Root Component Types of SpecifiedECDomain
  * @description
@@ -131,9 +128,7 @@ const _root_component_type_list_1_spec_for_SpecifiedECDomain: $.ComponentSpec[] 
     new $.ComponentSpec("cofactor", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
     new $.ComponentSpec("hash", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecifiedECDomain */
 /**
  * @summary The Trailing Root Component Types of SpecifiedECDomain
  * @description
@@ -146,9 +141,7 @@ export
 const _root_component_type_list_2_spec_for_SpecifiedECDomain: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecifiedECDomain */
 /**
  * @summary The Extension Addition Component Types of SpecifiedECDomain
  * @description
@@ -161,13 +154,9 @@ export
 const _extension_additions_list_spec_for_SpecifiedECDomain: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecifiedECDomain */
 let _cached_decoder_for_SpecifiedECDomain: $.ASN1Decoder<SpecifiedECDomain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpecifiedECDomain */
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecifiedECDomain
  * @function
@@ -217,13 +206,9 @@ function _decode_SpecifiedECDomain (el: _Element) {
 }; }
     return _cached_decoder_for_SpecifiedECDomain(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecifiedECDomain */
 let _cached_encoder_for_SpecifiedECDomain: $.ASN1Encoder<SpecifiedECDomain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecifiedECDomain */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpecifiedECDomain */
 /**
  * @summary Encodes a(n) SpecifiedECDomain into an ASN.1 Element.
  * @function
@@ -250,6 +235,5 @@ function _encode_SpecifiedECDomain (value: SpecifiedECDomain, elGetter: $.ASN1En
     return _cached_encoder_for_SpecifiedECDomain(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpecifiedECDomain */
 
 /* eslint-enable */

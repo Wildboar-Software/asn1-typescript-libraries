@@ -25,7 +25,7 @@ import {
   _decode_BioAPI_BIR,
   _encode_BioAPI_BIR,
 } from '../BIP/BioAPI-BIR.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_INPUT_BIR_inputBIR */
+
 /**
  * @summary BioAPI_INPUT_BIR_inputBIR
  * @description
@@ -40,13 +40,11 @@ export type BioAPI_INPUT_BIR_inputBIR =
   | { birInDB: BioAPI_DBBIR_ID } /* CHOICE_ALT_ROOT */
   | { birInBSP: BioAPI_BIR_HANDLE } /* CHOICE_ALT_ROOT */
   | { bir: BioAPI_BIR } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BioAPI_INPUT_BIR_inputBIR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_INPUT_BIR_inputBIR */
+
 let _cached_decoder_for_BioAPI_INPUT_BIR_inputBIR: $.ASN1Decoder<BioAPI_INPUT_BIR_inputBIR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_INPUT_BIR_inputBIR */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_INPUT_BIR_inputBIR */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_INPUT_BIR_inputBIR
  * @function
@@ -65,13 +63,11 @@ export function _decode_BioAPI_INPUT_BIR_inputBIR(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_INPUT_BIR_inputBIR(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_INPUT_BIR_inputBIR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_INPUT_BIR_inputBIR */
+
 let _cached_encoder_for_BioAPI_INPUT_BIR_inputBIR: $.ASN1Encoder<BioAPI_INPUT_BIR_inputBIR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_INPUT_BIR_inputBIR */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_INPUT_BIR_inputBIR */
+
 /**
  * @summary Encodes a(n) BioAPI_INPUT_BIR_inputBIR into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_BioAPI_INPUT_BIR_inputBIR(
   return _cached_encoder_for_BioAPI_INPUT_BIR_inputBIR(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_INPUT_BIR_inputBIR */
 
 /* eslint-enable */

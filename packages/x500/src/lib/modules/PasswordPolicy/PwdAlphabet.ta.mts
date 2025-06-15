@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PwdAlphabet */
 /**
  * @summary PwdAlphabet
  * @description
@@ -14,13 +13,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type PwdAlphabet = UTF8String[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PwdAlphabet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdAlphabet */
 let _cached_decoder_for_PwdAlphabet: $.ASN1Decoder<PwdAlphabet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdAlphabet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PwdAlphabet */
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdAlphabet
  * @function
@@ -35,13 +30,9 @@ export function _decode_PwdAlphabet(el: _Element) {
     }
     return _cached_decoder_for_PwdAlphabet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PwdAlphabet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdAlphabet */
 let _cached_encoder_for_PwdAlphabet: $.ASN1Encoder<PwdAlphabet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdAlphabet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PwdAlphabet */
 /**
  * @summary Encodes a(n) PwdAlphabet into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ export function _encode_PwdAlphabet(
     return _cached_encoder_for_PwdAlphabet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PwdAlphabet */
 
 /* eslint-enable */

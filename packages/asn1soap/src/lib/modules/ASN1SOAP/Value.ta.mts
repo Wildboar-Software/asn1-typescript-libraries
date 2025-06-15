@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_Value */
+
 /**
  * @summary Value
  * @description
@@ -31,9 +31,8 @@ export enum _enum_for_Value {
   sender = 3,
   receiver = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_Value */
 
-/* START_OF_SYMBOL_DEFINITION Value */
+
 /**
  * @summary Value
  * @description
@@ -47,9 +46,8 @@ export enum _enum_for_Value {
  * ```@enum {number}
  */
 export type Value = _enum_for_Value;
-/* END_OF_SYMBOL_DEFINITION Value */
 
-/* START_OF_SYMBOL_DEFINITION Value */
+
 /**
  * @summary Value
  * @description
@@ -63,9 +61,8 @@ export type Value = _enum_for_Value;
  * ```@enum {number}
  */
 export const Value = _enum_for_Value;
-/* END_OF_SYMBOL_DEFINITION Value */
 
-/* START_OF_SYMBOL_DEFINITION Value_versionMismatch */
+
 /**
  * @summary Value_versionMismatch
  * @constant
@@ -73,9 +70,8 @@ export const Value = _enum_for_Value;
  */
 export const Value_versionMismatch: Value =
   Value.versionMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Value_versionMismatch */
 
-/* START_OF_SYMBOL_DEFINITION versionMismatch */
+
 /**
  * @summary versionMismatch
  * @constant
@@ -83,9 +79,8 @@ export const Value_versionMismatch: Value =
  */
 export const versionMismatch: Value =
   Value.versionMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION versionMismatch */
 
-/* START_OF_SYMBOL_DEFINITION Value_mustUnderstand */
+
 /**
  * @summary Value_mustUnderstand
  * @constant
@@ -93,9 +88,8 @@ export const versionMismatch: Value =
  */
 export const Value_mustUnderstand: Value =
   Value.mustUnderstand; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Value_mustUnderstand */
 
-/* START_OF_SYMBOL_DEFINITION mustUnderstand */
+
 /**
  * @summary mustUnderstand
  * @constant
@@ -103,9 +97,8 @@ export const Value_mustUnderstand: Value =
  */
 export const mustUnderstand: Value =
   Value.mustUnderstand; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mustUnderstand */
 
-/* START_OF_SYMBOL_DEFINITION Value_dataEncodingUnknown */
+
 /**
  * @summary Value_dataEncodingUnknown
  * @constant
@@ -113,9 +106,8 @@ export const mustUnderstand: Value =
  */
 export const Value_dataEncodingUnknown: Value =
   Value.dataEncodingUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Value_dataEncodingUnknown */
 
-/* START_OF_SYMBOL_DEFINITION dataEncodingUnknown */
+
 /**
  * @summary dataEncodingUnknown
  * @constant
@@ -123,9 +115,8 @@ export const Value_dataEncodingUnknown: Value =
  */
 export const dataEncodingUnknown: Value =
   Value.dataEncodingUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dataEncodingUnknown */
 
-/* START_OF_SYMBOL_DEFINITION Value_sender */
+
 /**
  * @summary Value_sender
  * @constant
@@ -133,18 +124,16 @@ export const dataEncodingUnknown: Value =
  */
 export const Value_sender: Value =
   Value.sender; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Value_sender */
 
-/* START_OF_SYMBOL_DEFINITION sender */
+
 /**
  * @summary sender
  * @constant
  * @type {number}
  */
 export const sender: Value = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sender */
 
-/* START_OF_SYMBOL_DEFINITION Value_receiver */
+
 /**
  * @summary Value_receiver
  * @constant
@@ -152,9 +141,8 @@ export const sender: Value = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
  */
 export const Value_receiver: Value =
   Value.receiver; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Value_receiver */
 
-/* START_OF_SYMBOL_DEFINITION receiver */
+
 /**
  * @summary receiver
  * @constant
@@ -162,21 +150,16 @@ export const Value_receiver: Value =
  */
 export const receiver: Value =
   Value.receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION receiver */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Value */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Value */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Value */
+
+
 export const _decode_Value = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_Value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Value */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Value */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Value */
+
+
 export const _encode_Value = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Value */
 
 /* eslint-enable */

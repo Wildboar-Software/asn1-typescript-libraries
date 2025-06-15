@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { cosineAttr } from "../UsefulDefinitions/cosineAttr.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_coat */
 /**
  * @summary id_coat
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_coat: ID = cosineAttr;
-/* END_OF_SYMBOL_DEFINITION id_coat */
 
 /* eslint-enable */

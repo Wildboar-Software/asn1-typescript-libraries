@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LocalIdentifier */
 /**
  * @summary LocalIdentifier
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LocalIdentifier = IA5String; // IA5String
-/* END_OF_SYMBOL_DEFINITION LocalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocalIdentifier */
 export const _decode_LocalIdentifier = $._decodeIA5String;
-/* END_OF_SYMBOL_DEFINITION _decode_LocalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocalIdentifier */
 export const _encode_LocalIdentifier = $._encodeIA5String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocalIdentifier */
 
 /* eslint-enable */

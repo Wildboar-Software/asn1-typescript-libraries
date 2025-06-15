@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PBKDF2_PRFsAlgorithmIdentifier */
+
 /**
  * @summary PBKDF2_PRFsAlgorithmIdentifier
  * @description
@@ -14,13 +14,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type PBKDF2_PRFsAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PBKDF2_PRFsAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier */
+
 let _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Decoder<PBKDF2_PRFsAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PBKDF2_PRFsAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PBKDF2_PRFsAlgorithmIdentifier
  * @function
@@ -33,13 +31,11 @@ export function _decode_PBKDF2_PRFsAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PBKDF2_PRFsAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier */
+
 let _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_PRFsAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PBKDF2_PRFsAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) PBKDF2_PRFsAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -57,6 +53,5 @@ export function _encode_PBKDF2_PRFsAlgorithmIdentifier(
     return _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PBKDF2_PRFsAlgorithmIdentifier */
 
 /* eslint-enable */

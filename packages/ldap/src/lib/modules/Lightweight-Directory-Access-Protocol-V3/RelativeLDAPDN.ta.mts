@@ -15,7 +15,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelativeLDAPDN */
+
 /**
  * @summary RelativeLDAPDN
  * @description
@@ -28,9 +28,8 @@ import {
  * ```
  */
 export type RelativeLDAPDN = LDAPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RelativeLDAPDN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelativeLDAPDN */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RelativeLDAPDN
  * @function
@@ -40,9 +39,8 @@ export type RelativeLDAPDN = LDAPString; // DefinedType
 export function _decode_RelativeLDAPDN(el: _Element) {
   return _decode_LDAPString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelativeLDAPDN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelativeLDAPDN */
+
 /**
  * @summary Encodes a(n) RelativeLDAPDN into an ASN.1 Element.
  * @function
@@ -57,6 +55,5 @@ export function _encode_RelativeLDAPDN(
   return _encode_LDAPString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelativeLDAPDN */
 
 /* eslint-enable */

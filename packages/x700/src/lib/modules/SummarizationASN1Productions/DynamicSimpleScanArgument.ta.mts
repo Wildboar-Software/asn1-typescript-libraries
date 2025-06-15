@@ -42,7 +42,6 @@ import {
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
 } from '../SummarizationASN1Productions/TimeStampReportMode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument */
 /**
  * @summary DynamicSimpleScanArgument
  * @description
@@ -143,9 +142,7 @@ export class DynamicSimpleScanArgument {
 
     public static _enum_for_timeStampReportMode = _enum_for_TimeStampReportMode;
 }
-/* END_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DynamicSimpleScanArgument */
 /**
  * @summary The Leading Root Component Types of DynamicSimpleScanArgument
  * @description
@@ -198,9 +195,7 @@ export const _root_component_type_list_1_spec_for_DynamicSimpleScanArgument: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DynamicSimpleScanArgument */
 /**
  * @summary The Trailing Root Component Types of DynamicSimpleScanArgument
  * @description
@@ -210,9 +205,7 @@ export const _root_component_type_list_1_spec_for_DynamicSimpleScanArgument: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DynamicSimpleScanArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DynamicSimpleScanArgument */
 /**
  * @summary The Extension Addition Component Types of DynamicSimpleScanArgument
  * @description
@@ -222,13 +215,9 @@ export const _root_component_type_list_2_spec_for_DynamicSimpleScanArgument: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_DynamicSimpleScanArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DynamicSimpleScanArgument */
 let _cached_decoder_for_DynamicSimpleScanArgument: $.ASN1Decoder<DynamicSimpleScanArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DynamicSimpleScanArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) DynamicSimpleScanArgument
  * @function
@@ -300,13 +289,9 @@ export function _decode_DynamicSimpleScanArgument(el: _Element) {
     }
     return _cached_decoder_for_DynamicSimpleScanArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DynamicSimpleScanArgument */
 let _cached_encoder_for_DynamicSimpleScanArgument: $.ASN1Encoder<DynamicSimpleScanArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DynamicSimpleScanArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DynamicSimpleScanArgument */
 /**
  * @summary Encodes a(n) DynamicSimpleScanArgument into an ASN.1 Element.
  * @function
@@ -374,6 +359,5 @@ export function _encode_DynamicSimpleScanArgument(
     return _cached_encoder_for_DynamicSimpleScanArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DynamicSimpleScanArgument */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _encode_Negotiation_SEI,
 } from '../GulsSecurityExchanges/Negotiation-SEI.ta.mjs';
 import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION offeredIds */
+
 /**
  * @summary offeredIds
  * @description
@@ -43,6 +43,5 @@ export const offeredIds: SEC_EXCHG_ITEM<Negotiation_SEI> = {
   '&itemId': 1 /* OBJECT_FIELD_SETTING */,
   '&ItemType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION offeredIds */
 
 /* eslint-enable */

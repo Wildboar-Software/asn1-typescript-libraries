@@ -15,7 +15,6 @@ import {
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlgorithmParameters */
 /**
  * @summary AlgorithmParameters
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AlgorithmParameters = ObservedValue[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AlgorithmParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmParameters */
 let _cached_decoder_for_AlgorithmParameters: $.ASN1Decoder<AlgorithmParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgorithmParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmParameters
  * @function
@@ -48,13 +43,9 @@ export function _decode_AlgorithmParameters(el: _Element) {
     }
     return _cached_decoder_for_AlgorithmParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgorithmParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmParameters */
 let _cached_encoder_for_AlgorithmParameters: $.ASN1Encoder<AlgorithmParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgorithmParameters */
 /**
  * @summary Encodes a(n) AlgorithmParameters into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AlgorithmParameters(
     return _cached_encoder_for_AlgorithmParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgorithmParameters */
 
 /* eslint-enable */

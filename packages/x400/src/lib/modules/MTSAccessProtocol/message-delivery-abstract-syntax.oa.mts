@@ -16,7 +16,6 @@ import {
     _encode_MessageDeliveryPDUs,
 } from '../MTSAccessProtocol/MessageDeliveryPDUs.ta.mjs';
 import { id_as_mdse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-94.va.mjs';
-/* START_OF_SYMBOL_DEFINITION message_delivery_abstract_syntax */
 /**
  * @summary message_delivery_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const message_delivery_abstract_syntax: ABSTRACT_SYNTAX<MessageDeliveryPD
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION message_delivery_abstract_syntax */
 
 /* eslint-enable */

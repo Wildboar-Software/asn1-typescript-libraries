@@ -16,7 +16,6 @@ import {
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';
 import { id_mst_originator_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-mst-originator-body-part-encryption-token.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originator_body_part_encryption_token */
 /**
  * @summary originator_body_part_encryption_token
  * @description
@@ -45,6 +44,5 @@ export const originator_body_part_encryption_token: MS_EXTENSION<BodyPartTokens>
     '&id': id_mst_originator_body_part_encryption_token /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originator_body_part_encryption_token */
 
 /* eslint-enable */

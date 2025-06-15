@@ -16,7 +16,7 @@ import {
   _decode_RefuseReason,
   _encode_RefuseReason,
 } from '../Reliable-Transfer-APDU/RefuseReason.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RTORJapdu */
+
 /**
  * @summary RTORJapdu
  * @description
@@ -67,9 +67,8 @@ export class RTORJapdu {
     return new RTORJapdu(_o.refuseReason, _o.userDataRJ);
   }
 }
-/* END_OF_SYMBOL_DEFINITION RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RTORJapdu */
+
 /**
  * @summary The Leading Root Component Types of RTORJapdu
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_RTORJapdu: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RTORJapdu */
+
 /**
  * @summary The Trailing Root Component Types of RTORJapdu
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_RTORJapdu: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RTORJapdu: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RTORJapdu */
+
 /**
  * @summary The Extension Addition Component Types of RTORJapdu
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_RTORJapdu: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_RTORJapdu: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RTORJapdu */
+
 let _cached_decoder_for_RTORJapdu: $.ASN1Decoder<RTORJapdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RTORJapdu */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RTORJapdu
  * @function
@@ -163,13 +158,11 @@ export function _decode_RTORJapdu(el: _Element) {
   }
   return _cached_decoder_for_RTORJapdu(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RTORJapdu */
+
 let _cached_encoder_for_RTORJapdu: $.ASN1Encoder<RTORJapdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RTORJapdu */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RTORJapdu */
+
 /**
  * @summary Encodes a(n) RTORJapdu into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_RTORJapdu(
   return _cached_encoder_for_RTORJapdu(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RTORJapdu */
 
 /* eslint-enable */

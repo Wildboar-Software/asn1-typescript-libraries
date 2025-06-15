@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InformationSize */
 /**
  * @summary InformationSize
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type InformationSize =
     | { numberOfBits: INTEGER } /* CHOICE_ALT_ROOT */
     | { numberOfBytes: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION InformationSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationSize */
 let _cached_decoder_for_InformationSize: $.ASN1Decoder<InformationSize> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationSize */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationSize */
 /**
  * @summary Decodes an ASN.1 element into a(n) InformationSize
  * @function
@@ -59,13 +54,9 @@ export function _decode_InformationSize(el: _Element) {
     }
     return _cached_decoder_for_InformationSize(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InformationSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationSize */
 let _cached_encoder_for_InformationSize: $.ASN1Encoder<InformationSize> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationSize */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationSize */
 /**
  * @summary Encodes a(n) InformationSize into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_InformationSize(
     return _cached_encoder_for_InformationSize(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationSize */
 
 /* eslint-enable */

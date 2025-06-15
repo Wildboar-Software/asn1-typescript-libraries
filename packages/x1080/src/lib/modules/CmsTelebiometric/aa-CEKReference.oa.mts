@@ -23,7 +23,7 @@ import {
 } from '../CmsTelebiometric/CEKReference.ta.mjs';
 import { octetStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.mjs';
 import { id_aa_CEKReference } from '../CmsTelebiometric/id-aa-CEKReference.va.mjs';
-/* START_OF_SYMBOL_DEFINITION aa_CEKReference */
+
 /**
  * @summary aa_CEKReference
  * @description
@@ -60,6 +60,5 @@ export const aa_CEKReference: ATTRIBUTE<CEKReference> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_CEKReference */
 
 /* eslint-enable */

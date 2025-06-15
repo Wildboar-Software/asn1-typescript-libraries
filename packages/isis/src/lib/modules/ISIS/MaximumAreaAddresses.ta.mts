@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MaximumAreaAddresses */
 /**
  * @summary MaximumAreaAddresses
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MaximumAreaAddresses = INTEGER;
-/* END_OF_SYMBOL_DEFINITION MaximumAreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaximumAreaAddresses */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaximumAreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaximumAreaAddresses */
 export const _decode_MaximumAreaAddresses = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_MaximumAreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaximumAreaAddresses */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaximumAreaAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaximumAreaAddresses */
 export const _encode_MaximumAreaAddresses = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaximumAreaAddresses */
 
 /* eslint-enable */

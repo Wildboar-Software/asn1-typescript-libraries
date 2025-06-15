@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION joint_CCR */
+
 /**
  * @summary joint_CCR
  * @description
@@ -29,6 +29,5 @@ export const joint_CCR: OBJECT_IDENTIFIER = new _OID(
   [/* ccr */ 7],
   joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION joint_CCR */
 
 /* eslint-enable */

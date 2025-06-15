@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_pt } from '../IPMSObjectIdentifiers/id-pt.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_pt_reception */
 /**
  * @summary id_pt_reception
  * @description
@@ -25,6 +24,5 @@ import { id_pt } from '../IPMSObjectIdentifiers/id-pt.va.mjs';
  * @constant
  */
 export const id_pt_reception: ID = new _OID([1], id_pt);
-/* END_OF_SYMBOL_DEFINITION id_pt_reception */
 
 /* eslint-enable */

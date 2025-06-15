@@ -15,7 +15,6 @@ import {
     _decode_SubentryInfo,
     _encode_SubentryInfo,
 } from "../HierarchicalOperationalBindings/SubentryInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NHOBSubordinateToSuperior */
 /**
  * @summary NHOBSubordinateToSuperior
  * @description
@@ -79,9 +78,7 @@ export class NHOBSubordinateToSuperior {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NHOBSubordinateToSuperior */
 /**
  * @summary The Leading Root Component Types of NHOBSubordinateToSuperior
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_NHOBSubordinateToSuperior: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NHOBSubordinateToSuperior */
 /**
  * @summary The Trailing Root Component Types of NHOBSubordinateToSuperior
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_NHOBSubordinateToSuperior: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NHOBSubordinateToSuperior: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NHOBSubordinateToSuperior */
 /**
  * @summary The Extension Addition Component Types of NHOBSubordinateToSuperior
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_NHOBSubordinateToSuperior: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_NHOBSubordinateToSuperior: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NHOBSubordinateToSuperior */
 let _cached_decoder_for_NHOBSubordinateToSuperior: $.ASN1Decoder<NHOBSubordinateToSuperior> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NHOBSubordinateToSuperior */
 /**
  * @summary Decodes an ASN.1 element into a(n) NHOBSubordinateToSuperior
  * @function
@@ -186,13 +175,9 @@ export function _decode_NHOBSubordinateToSuperior(el: _Element) {
     }
     return _cached_decoder_for_NHOBSubordinateToSuperior(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NHOBSubordinateToSuperior */
 let _cached_encoder_for_NHOBSubordinateToSuperior: $.ASN1Encoder<NHOBSubordinateToSuperior> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NHOBSubordinateToSuperior */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NHOBSubordinateToSuperior */
 /**
  * @summary Encodes a(n) NHOBSubordinateToSuperior into an ASN.1 Element.
  * @function
@@ -244,6 +229,5 @@ export function _encode_NHOBSubordinateToSuperior(
     return _cached_encoder_for_NHOBSubordinateToSuperior(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NHOBSubordinateToSuperior */
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ import {
     _decode_CP_type_normal_mode_parameters,
     _encode_CP_type_normal_mode_parameters,
 } from '../ISO8823-PRESENTATION/CP-type-normal-mode-parameters.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CP_type */
+
 /**
  * @summary CP_type
  * @description
@@ -123,9 +123,8 @@ export class CP_type {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CP_type */
+
 /**
  * @summary The Leading Root Component Types of CP_type
  * @description
@@ -157,9 +156,8 @@ export const _root_component_type_list_1_spec_for_CP_type: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CP_type */
+
 /**
  * @summary The Trailing Root Component Types of CP_type
  * @description
@@ -169,9 +167,8 @@ export const _root_component_type_list_1_spec_for_CP_type: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CP_type: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CP_type */
+
 /**
  * @summary The Extension Addition Component Types of CP_type
  * @description
@@ -181,13 +178,11 @@ export const _root_component_type_list_2_spec_for_CP_type: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_CP_type: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CP_type */
+
 let _cached_decoder_for_CP_type: $.ASN1Decoder<CP_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CP_type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CP_type
  * @function
@@ -238,13 +233,11 @@ export function _decode_CP_type(el: _Element) {
     }
     return _cached_decoder_for_CP_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CP_type */
+
 let _cached_encoder_for_CP_type: $.ASN1Encoder<CP_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CP_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CP_type */
+
 /**
  * @summary Encodes a(n) CP_type into an ASN.1 Element.
  * @function
@@ -295,6 +288,5 @@ export function _encode_CP_type(
     return _cached_encoder_for_CP_type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CP_type */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
   _decode_ASO_context_name,
   _encode_ASO_context_name,
 } from '../ACSE-1/ASO-context-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Application_context_name */
 /**
  * @summary Application_context_name
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Application_context_name = ASO_context_name; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Application_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Application_context_name */
 let _cached_decoder_for_Application_context_name: $.ASN1Decoder<Application_context_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Application_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Application_context_name */
 /**
  * @summary Decodes an ASN.1 element into a(n) Application_context_name
  * @function
@@ -46,13 +41,9 @@ export function _decode_Application_context_name(el: _Element) {
   }
   return _cached_decoder_for_Application_context_name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Application_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Application_context_name */
 let _cached_encoder_for_Application_context_name: $.ASN1Encoder<Application_context_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Application_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Application_context_name */
 /**
  * @summary Encodes a(n) Application_context_name into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_Application_context_name(
   return _cached_encoder_for_Application_context_name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Application_context_name */
 
 /* eslint-enable */

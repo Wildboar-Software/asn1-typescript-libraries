@@ -19,7 +19,7 @@ import {
   _decode_Content,
   _encode_Content,
 } from '../ASN1SOAP/Content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HeaderBlock */
+
 /**
  * @summary HeaderBlock
  * @description
@@ -93,9 +93,8 @@ export class HeaderBlock {
     return ultimateReceiver;
   }
 }
-/* END_OF_SYMBOL_DEFINITION HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HeaderBlock */
+
 /**
  * @summary The Leading Root Component Types of HeaderBlock
  * @description
@@ -134,9 +133,8 @@ export const _root_component_type_list_1_spec_for_HeaderBlock: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HeaderBlock */
+
 /**
  * @summary The Trailing Root Component Types of HeaderBlock
  * @description
@@ -146,9 +144,8 @@ export const _root_component_type_list_1_spec_for_HeaderBlock: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HeaderBlock: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HeaderBlock */
+
 /**
  * @summary The Extension Addition Component Types of HeaderBlock
  * @description
@@ -158,13 +155,11 @@ export const _root_component_type_list_2_spec_for_HeaderBlock: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_HeaderBlock: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HeaderBlock */
+
 let _cached_decoder_for_HeaderBlock: $.ASN1Decoder<HeaderBlock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HeaderBlock */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HeaderBlock
  * @function
@@ -214,13 +209,11 @@ export function _decode_HeaderBlock(el: _Element) {
   }
   return _cached_decoder_for_HeaderBlock(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HeaderBlock */
+
 let _cached_encoder_for_HeaderBlock: $.ASN1Encoder<HeaderBlock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HeaderBlock */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HeaderBlock */
+
 /**
  * @summary Encodes a(n) HeaderBlock into an ASN.1 Element.
  * @function
@@ -258,6 +251,5 @@ export function _encode_HeaderBlock(
   return _cached_encoder_for_HeaderBlock(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HeaderBlock */
 
 /* eslint-enable */

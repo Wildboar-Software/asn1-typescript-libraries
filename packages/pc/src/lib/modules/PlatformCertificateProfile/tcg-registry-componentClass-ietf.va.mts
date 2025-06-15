@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_registry_componentClass } from "../PlatformCertificateProfile/tcg-registry-componentClass.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_registry_componentClass_ietf */
 /**
  * @summary tcg_registry_componentClass_ietf
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_registry_componentClass_ietf: OBJECT_IDENTIFIER = new _OID([
     2,
 ], tcg_registry_componentClass);
-/* END_OF_SYMBOL_DEFINITION tcg_registry_componentClass_ietf */
 
 /* eslint-enable */

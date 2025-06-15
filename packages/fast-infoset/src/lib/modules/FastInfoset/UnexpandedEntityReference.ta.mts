@@ -16,7 +16,6 @@ import {
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnexpandedEntityReference */
 /**
  * @summary UnexpandedEntityReference
  * @description
@@ -79,9 +78,7 @@ export class UnexpandedEntityReference {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnexpandedEntityReference */
 /**
  * @summary The Leading Root Component Types of UnexpandedEntityReference
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_UnexpandedEntityReference: $.C
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnexpandedEntityReference */
 /**
  * @summary The Trailing Root Component Types of UnexpandedEntityReference
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_UnexpandedEntityReference: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnexpandedEntityReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnexpandedEntityReference */
 /**
  * @summary The Extension Addition Component Types of UnexpandedEntityReference
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_UnexpandedEntityReference: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_UnexpandedEntityReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnexpandedEntityReference */
 let _cached_decoder_for_UnexpandedEntityReference: $.ASN1Decoder<UnexpandedEntityReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnexpandedEntityReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) UnexpandedEntityReference
  * @function
@@ -190,13 +179,9 @@ export function _decode_UnexpandedEntityReference(el: _Element) {
   }
   return _cached_decoder_for_UnexpandedEntityReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnexpandedEntityReference */
 let _cached_encoder_for_UnexpandedEntityReference: $.ASN1Encoder<UnexpandedEntityReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnexpandedEntityReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnexpandedEntityReference */
 /**
  * @summary Encodes a(n) UnexpandedEntityReference into an ASN.1 Element.
  * @function
@@ -239,6 +224,5 @@ export function _encode_UnexpandedEntityReference(
   return _cached_encoder_for_UnexpandedEntityReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnexpandedEntityReference */
 
 /* eslint-enable */

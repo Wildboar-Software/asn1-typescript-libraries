@@ -16,7 +16,7 @@ import {
   _encode_InvokeId,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InvokeIDType */
+
 /**
  * @summary InvokeIDType
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type InvokeIDType = InvokeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION InvokeIDType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeIDType */
+
 let _cached_decoder_for_InvokeIDType: $.ASN1Decoder<InvokeIDType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeIDType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvokeIDType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeIDType
  * @function
@@ -47,13 +45,11 @@ export function _decode_InvokeIDType(el: _Element) {
   }
   return _cached_decoder_for_InvokeIDType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvokeIDType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeIDType */
+
 let _cached_encoder_for_InvokeIDType: $.ASN1Encoder<InvokeIDType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeIDType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvokeIDType */
+
 /**
  * @summary Encodes a(n) InvokeIDType into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_InvokeIDType(
   return _cached_encoder_for_InvokeIDType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvokeIDType */
 
 /* eslint-enable */

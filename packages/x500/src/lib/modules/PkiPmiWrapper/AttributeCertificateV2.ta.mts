@@ -6,7 +6,6 @@ import {
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeCertificateV2 */
 /**
  * @summary AttributeCertificateV2
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AttributeCertificateV2 = AttributeCertificate; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AttributeCertificateV2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificateV2 */
 let _cached_decoder_for_AttributeCertificateV2: $.ASN1Decoder<AttributeCertificateV2> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificateV2 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeCertificateV2 */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeCertificateV2
  * @function
@@ -37,13 +32,9 @@ export function _decode_AttributeCertificateV2(el: _Element) {
     }
     return _cached_decoder_for_AttributeCertificateV2(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeCertificateV2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificateV2 */
 let _cached_encoder_for_AttributeCertificateV2: $.ASN1Encoder<AttributeCertificateV2> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificateV2 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeCertificateV2 */
 /**
  * @summary Encodes a(n) AttributeCertificateV2 into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_AttributeCertificateV2(
     return _cached_encoder_for_AttributeCertificateV2(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeCertificateV2 */
 
 /* eslint-enable */

@@ -50,7 +50,6 @@ import {
   _decode_ACRP_apdu,
   _encode_ACRP_apdu,
 } from '../ACSE-1/ACRP-apdu.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ACSE_apdu */
 /**
  * @summary ACSE_apdu
  * @description
@@ -82,13 +81,9 @@ export type ACSE_apdu =
   | { acrq: ACRQ_apdu } /* CHOICE_ALT_EXT */
   | { acrp: ACRP_apdu } /* CHOICE_ALT_EXT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ACSE_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACSE_apdu */
 let _cached_decoder_for_ACSE_apdu: $.ASN1Decoder<ACSE_apdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACSE_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACSE_apdu */
 /**
  * @summary Decodes an ASN.1 element into a(n) ACSE_apdu
  * @function
@@ -110,13 +105,9 @@ export function _decode_ACSE_apdu(el: _Element) {
   }
   return _cached_decoder_for_ACSE_apdu(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACSE_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACSE_apdu */
 let _cached_encoder_for_ACSE_apdu: $.ASN1Encoder<ACSE_apdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACSE_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACSE_apdu */
 /**
  * @summary Encodes a(n) ACSE_apdu into an ASN.1 Element.
  * @function
@@ -146,6 +137,5 @@ export function _encode_ACSE_apdu(
   return _cached_encoder_for_ACSE_apdu(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ACSE_apdu */
 
 /* eslint-enable */

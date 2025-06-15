@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { id_sa } from "../AlgorithmObjectIdentifiers/id-sa.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_sa_sqMod_nWithRSA */
 /**
  * @summary id_sa_sqMod_nWithRSA
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_sa_sqMod_nWithRSA: ID = new _OID([1], id_sa);
-/* END_OF_SYMBOL_DEFINITION id_sa_sqMod_nWithRSA */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_CertificatePair,
     _encode_CertificatePair,
 } from "../AuthenticationFramework/CertificatePair.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificationPath */
 /**
  * @summary CertificationPath
  * @description
@@ -75,9 +74,7 @@ export class CertificationPath {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificationPath */
 /**
  * @summary The Leading Root Component Types of CertificationPath
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_CertificationPath: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificationPath */
 /**
  * @summary The Trailing Root Component Types of CertificationPath
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_CertificationPath: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificationPath: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificationPath */
 /**
  * @summary The Extension Addition Component Types of CertificationPath
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_CertificationPath: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificationPath: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationPath */
 let _cached_decoder_for_CertificationPath: $.ASN1Decoder<CertificationPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificationPath */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificationPath
  * @function
@@ -180,13 +169,9 @@ export function _decode_CertificationPath(el: _Element) {
     }
     return _cached_decoder_for_CertificationPath(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationPath */
 let _cached_encoder_for_CertificationPath: $.ASN1Encoder<CertificationPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificationPath */
 /**
  * @summary Encodes a(n) CertificationPath into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_CertificationPath(
     return _cached_encoder_for_CertificationPath(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificationPath */
 
 /* eslint-enable */

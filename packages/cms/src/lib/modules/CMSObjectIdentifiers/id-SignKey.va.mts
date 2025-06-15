@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ckm_CMS } from "../CMSObjectIdentifiers/ckm-CMS.va.mjs";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_SignKey */
+
 /**
  * @summary id_SignKey
  * @description
@@ -16,6 +16,5 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @constant
  */
 export const id_SignKey: OID = new _OID([10], ckm_CMS);
-/* END_OF_SYMBOL_DEFINITION id_SignKey */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FallBackReporting */
+
 /**
  * @summary FallBackReporting
  * @description
@@ -31,13 +31,11 @@ export type FallBackReporting =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { reporting: GraphicString } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION FallBackReporting */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FallBackReporting */
+
 let _cached_decoder_for_FallBackReporting: $.ASN1Decoder<FallBackReporting> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FallBackReporting */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FallBackReporting */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FallBackReporting
  * @function
@@ -55,13 +53,11 @@ export function _decode_FallBackReporting(el: _Element) {
     }
     return _cached_decoder_for_FallBackReporting(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FallBackReporting */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FallBackReporting */
+
 let _cached_encoder_for_FallBackReporting: $.ASN1Encoder<FallBackReporting> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FallBackReporting */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FallBackReporting */
+
 /**
  * @summary Encodes a(n) FallBackReporting into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_FallBackReporting(
     return _cached_encoder_for_FallBackReporting(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FallBackReporting */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import { id_att_message_security_label } from '../MSObjectIdentifiers/id-att-mes
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_message_security_label */
 /**
  * @summary mt_message_security_label
  * @description
@@ -53,6 +52,5 @@ export const mt_message_security_label: X413ATTRIBUTE<MessageSecurityLabel> = {
     '&id': id_att_message_security_label /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_message_security_label */
 
 /* eslint-enable */

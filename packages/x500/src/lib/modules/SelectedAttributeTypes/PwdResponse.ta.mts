@@ -16,7 +16,6 @@ import {
     _decode_PwdResponse_warning,
     _encode_PwdResponse_warning,
 } from "../SelectedAttributeTypes/PwdResponse-warning.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PwdResponse */
 /**
  * @summary PwdResponse
  * @description
@@ -79,9 +78,7 @@ export class PwdResponse {
 
     public static _enum_for_error = _enum_for_PwdResponse_error;
 }
-/* END_OF_SYMBOL_DEFINITION PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PwdResponse */
 /**
  * @summary The Leading Root Component Types of PwdResponse
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_PwdResponse: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PwdResponse */
 /**
  * @summary The Trailing Root Component Types of PwdResponse
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_PwdResponse: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PwdResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PwdResponse */
 /**
  * @summary The Extension Addition Component Types of PwdResponse
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_PwdResponse: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_PwdResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponse */
 let _cached_decoder_for_PwdResponse: $.ASN1Decoder<PwdResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PwdResponse */
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdResponse
  * @function
@@ -170,13 +159,9 @@ export function _decode_PwdResponse(el: _Element) {
     }
     return _cached_decoder_for_PwdResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponse */
 let _cached_encoder_for_PwdResponse: $.ASN1Encoder<PwdResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PwdResponse */
 /**
  * @summary Encodes a(n) PwdResponse into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_PwdResponse(
     return _cached_encoder_for_PwdResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PwdResponse */
 
 /* eslint-enable */

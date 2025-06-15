@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION transmitFailure */
+
 /**
  * @summary transmitFailure
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const transmitFailure: ProbableCause = { localValue: 18 };
-/* END_OF_SYMBOL_DEFINITION transmitFailure */
 
 /* eslint-enable */

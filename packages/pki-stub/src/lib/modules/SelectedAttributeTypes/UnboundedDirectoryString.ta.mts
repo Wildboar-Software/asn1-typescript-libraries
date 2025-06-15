@@ -9,7 +9,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION UnboundedDirectoryString */
 /**
  * @summary UnboundedDirectoryString
  * @description
@@ -31,9 +30,7 @@ export type UnboundedDirectoryString =
     | { bmpString: BMPString } /* CHOICE_ALT_ROOT */
     | { universalString: UniversalString } /* CHOICE_ALT_ROOT */
     | { uTF8String: UTF8String } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UnboundedDirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnboundedDirectoryString */
 const _cached_decoder_for_UnboundedDirectoryString: $.ASN1Decoder<UnboundedDirectoryString> =
     $._decode_inextensible_choice<UnboundedDirectoryString>({
         "UNIVERSAL 20": ["teletexString", $._decodeTeletexString],
@@ -42,9 +39,7 @@ const _cached_decoder_for_UnboundedDirectoryString: $.ASN1Decoder<UnboundedDirec
         "UNIVERSAL 28": ["universalString", $._decodeUniversalString],
         "UNIVERSAL 12": ["uTF8String", $._decodeUTF8String],
     });
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnboundedDirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnboundedDirectoryString */
 /**
  * @summary Decodes an ASN.1 element into a(n) UnboundedDirectoryString
  * @function
@@ -54,9 +49,7 @@ const _cached_decoder_for_UnboundedDirectoryString: $.ASN1Decoder<UnboundedDirec
 export function _decode_UnboundedDirectoryString(el: _Element) {
     return _cached_decoder_for_UnboundedDirectoryString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnboundedDirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnboundedDirectoryString */
 const _cached_encoder_for_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirectoryString> =
     $._encode_choice<UnboundedDirectoryString>(
         {
@@ -68,9 +61,7 @@ const _cached_encoder_for_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirec
         },
         $.BER
     );
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnboundedDirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnboundedDirectoryString */
 /**
  * @summary Encodes a(n) UnboundedDirectoryString into an ASN.1 Element.
  * @function
@@ -85,6 +76,5 @@ export function _encode_UnboundedDirectoryString(
     return _cached_encoder_for_UnboundedDirectoryString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnboundedDirectoryString */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_ACIItem_itemOrUserFirst_userFirst,
     _encode_ACIItem_itemOrUserFirst_userFirst,
 } from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst */
 /**
  * @summary ACIItem_itemOrUserFirst
  * @description
@@ -26,13 +25,9 @@ export type ACIItem_itemOrUserFirst =
     | { itemFirst: ACIItem_itemOrUserFirst_itemFirst } /* CHOICE_ALT_ROOT */
     | { userFirst: ACIItem_itemOrUserFirst_userFirst } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACIItem_itemOrUserFirst */
 let _cached_decoder_for_ACIItem_itemOrUserFirst: $.ASN1Decoder<ACIItem_itemOrUserFirst> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACIItem_itemOrUserFirst */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACIItem_itemOrUserFirst */
 /**
  * @summary Decodes an ASN.1 element into a(n) ACIItem_itemOrUserFirst
  * @function
@@ -60,13 +55,9 @@ export function _decode_ACIItem_itemOrUserFirst(el: _Element) {
     }
     return _cached_decoder_for_ACIItem_itemOrUserFirst(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACIItem_itemOrUserFirst */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACIItem_itemOrUserFirst */
 let _cached_encoder_for_ACIItem_itemOrUserFirst: $.ASN1Encoder<ACIItem_itemOrUserFirst> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACIItem_itemOrUserFirst */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACIItem_itemOrUserFirst */
 /**
  * @summary Encodes a(n) ACIItem_itemOrUserFirst into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_ACIItem_itemOrUserFirst(
     return _cached_encoder_for_ACIItem_itemOrUserFirst(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ACIItem_itemOrUserFirst */
 
 /* eslint-enable */

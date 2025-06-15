@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OptionallyRegisteredAs */
+
 /**
  * @summary OptionallyRegisteredAs
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type OptionallyRegisteredAs =
     | { present: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OptionallyRegisteredAs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionallyRegisteredAs */
+
 let _cached_decoder_for_OptionallyRegisteredAs: $.ASN1Decoder<OptionallyRegisteredAs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionallyRegisteredAs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionallyRegisteredAs */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionallyRegisteredAs
  * @function
@@ -53,13 +51,11 @@ export function _decode_OptionallyRegisteredAs(el: _Element) {
     }
     return _cached_decoder_for_OptionallyRegisteredAs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionallyRegisteredAs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionallyRegisteredAs */
+
 let _cached_encoder_for_OptionallyRegisteredAs: $.ASN1Encoder<OptionallyRegisteredAs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionallyRegisteredAs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionallyRegisteredAs */
+
 /**
  * @summary Encodes a(n) OptionallyRegisteredAs into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_OptionallyRegisteredAs(
     return _cached_encoder_for_OptionallyRegisteredAs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionallyRegisteredAs */
 
 /* eslint-enable */

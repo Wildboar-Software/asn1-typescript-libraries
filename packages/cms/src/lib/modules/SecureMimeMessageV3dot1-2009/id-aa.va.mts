@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_aa */
+
 /**
  * @summary id_aa
  * @description
@@ -25,6 +25,5 @@ export const id_aa: OBJECT_IDENTIFIER = new _OID([
     /* smime */ 16,
     /* attributes */ 2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa */
 
 /* eslint-enable */

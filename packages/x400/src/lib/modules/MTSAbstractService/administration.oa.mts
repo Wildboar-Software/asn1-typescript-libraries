@@ -14,7 +14,6 @@ import { register } from '../MTSAbstractService/register.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION administration */
 /**
  * @summary administration
  * @description
@@ -43,6 +42,5 @@ export const administration: PORT = {
     '&Consumer': [operationObject1] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_administration /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION administration */
 
 /* eslint-enable */

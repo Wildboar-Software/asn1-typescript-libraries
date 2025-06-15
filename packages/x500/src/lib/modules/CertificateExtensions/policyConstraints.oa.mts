@@ -6,7 +6,6 @@ import {
     _decode_PolicyConstraintsSyntax,
     _encode_PolicyConstraintsSyntax,
 } from "../CertificateExtensions/PolicyConstraintsSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION policyConstraints */
 /**
  * @summary policyConstraints
  * @description
@@ -34,6 +33,5 @@ export const policyConstraints: EXTENSION<PolicyConstraintsSyntax> = {
     "&id": id_ce_policyConstraints /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION policyConstraints */
 
 /* eslint-enable */

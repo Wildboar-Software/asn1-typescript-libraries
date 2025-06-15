@@ -6,7 +6,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION OtherCertificateFormat */
+
 /**
  * @summary OtherCertificateFormat
  * @description
@@ -56,9 +56,8 @@ export class OtherCertificateFormat {
         return new OtherCertificateFormat(_o.otherCertFormat, _o.otherCert);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherCertificateFormat */
+
 /**
  * @summary The Leading Root Component Types of OtherCertificateFormat
  * @description
@@ -77,9 +76,8 @@ export const _root_component_type_list_1_spec_for_OtherCertificateFormat: $.Comp
     ),
     new $.ComponentSpec("otherCert", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherCertificateFormat */
+
 /**
  * @summary The Trailing Root Component Types of OtherCertificateFormat
  * @description
@@ -89,9 +87,8 @@ export const _root_component_type_list_1_spec_for_OtherCertificateFormat: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OtherCertificateFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherCertificateFormat */
+
 /**
  * @summary The Extension Addition Component Types of OtherCertificateFormat
  * @description
@@ -101,13 +98,11 @@ export const _root_component_type_list_2_spec_for_OtherCertificateFormat: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_OtherCertificateFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherCertificateFormat */
+
 let _cached_decoder_for_OtherCertificateFormat: $.ASN1Decoder<OtherCertificateFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherCertificateFormat */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherCertificateFormat
  * @function
@@ -138,13 +133,11 @@ export function _decode_OtherCertificateFormat(el: _Element) {
     }
     return _cached_decoder_for_OtherCertificateFormat(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherCertificateFormat */
+
 let _cached_encoder_for_OtherCertificateFormat: $.ASN1Encoder<OtherCertificateFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherCertificateFormat */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherCertificateFormat */
+
 /**
  * @summary Encodes a(n) OtherCertificateFormat into an ASN.1 Element.
  * @function
@@ -176,6 +169,5 @@ export function _encode_OtherCertificateFormat(
     return _cached_encoder_for_OtherCertificateFormat(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherCertificateFormat */
 
 /* eslint-enable */

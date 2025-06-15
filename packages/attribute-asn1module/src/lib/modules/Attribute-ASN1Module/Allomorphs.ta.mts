@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Allomorphs */
 /**
  * @summary Allomorphs
  * @description
@@ -24,13 +23,9 @@ import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "@wildboar
  */
 export
 type Allomorphs = ObjectClass[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Allomorphs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Allomorphs */
 let _cached_decoder_for_Allomorphs: $.ASN1Decoder<Allomorphs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Allomorphs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Allomorphs */
 /**
  * @summary Decodes an ASN.1 element into a(n) Allomorphs
  * @function
@@ -42,13 +37,9 @@ function _decode_Allomorphs (el: _Element) {
     if (!_cached_decoder_for_Allomorphs) { _cached_decoder_for_Allomorphs = $._decodeSetOf<ObjectClass>(() => _decode_ObjectClass); }
     return _cached_decoder_for_Allomorphs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Allomorphs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Allomorphs */
 let _cached_encoder_for_Allomorphs: $.ASN1Encoder<Allomorphs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Allomorphs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Allomorphs */
 /**
  * @summary Encodes a(n) Allomorphs into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_Allomorphs (value: Allomorphs, elGetter: $.ASN1Encoder<Allomorp
     return _cached_encoder_for_Allomorphs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Allomorphs */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_KerberosFlags,
   _encode_KerberosFlags,
 } from '../KerberosV5Spec2/KerberosFlags.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION APOptions */
+
 /**
  * @summary APOptions
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type APOptions = KerberosFlags; // DefinedType
-/* END_OF_SYMBOL_DEFINITION APOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_APOptions */
+
 let _cached_decoder_for_APOptions: $.ASN1Decoder<APOptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_APOptions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_APOptions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) APOptions
  * @function
@@ -46,13 +44,11 @@ export function _decode_APOptions(el: _Element) {
   }
   return _cached_decoder_for_APOptions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_APOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_APOptions */
+
 let _cached_encoder_for_APOptions: $.ASN1Encoder<APOptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_APOptions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_APOptions */
+
 /**
  * @summary Encodes a(n) APOptions into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_APOptions(
   return _cached_encoder_for_APOptions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_APOptions */
 
 /* eslint-enable */

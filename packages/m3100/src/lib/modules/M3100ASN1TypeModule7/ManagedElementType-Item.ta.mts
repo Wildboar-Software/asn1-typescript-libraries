@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ManagedElementType_Item */
+
 /**
  * @summary ManagedElementType_Item
  * @description
@@ -27,13 +27,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ManagedElementType_Item =
     | { meTypeString: GraphicString } /* CHOICE_ALT_ROOT */
     | { meTypeOID: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ManagedElementType_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedElementType_Item */
+
 let _cached_decoder_for_ManagedElementType_Item: $.ASN1Decoder<ManagedElementType_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedElementType_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedElementType_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedElementType_Item
  * @function
@@ -51,13 +49,11 @@ export function _decode_ManagedElementType_Item(el: _Element) {
     }
     return _cached_decoder_for_ManagedElementType_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedElementType_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedElementType_Item */
+
 let _cached_encoder_for_ManagedElementType_Item: $.ASN1Encoder<ManagedElementType_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedElementType_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedElementType_Item */
+
 /**
  * @summary Encodes a(n) ManagedElementType_Item into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_ManagedElementType_Item(
     return _cached_encoder_for_ManagedElementType_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedElementType_Item */
 
 /* eslint-enable */

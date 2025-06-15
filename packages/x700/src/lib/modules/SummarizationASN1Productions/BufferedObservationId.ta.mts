@@ -31,7 +31,6 @@ import {
     _decode_ReportTimeAttributeIdList,
     _encode_ReportTimeAttributeIdList,
 } from '../SummarizationASN1Productions/ReportTimeAttributeIdList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BufferedObservationId */
 /**
  * @summary BufferedObservationId
  * @description
@@ -100,9 +99,7 @@ export class BufferedObservationId {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BufferedObservationId */
 /**
  * @summary The Leading Root Component Types of BufferedObservationId
  * @description
@@ -141,9 +138,7 @@ export const _root_component_type_list_1_spec_for_BufferedObservationId: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BufferedObservationId */
 /**
  * @summary The Trailing Root Component Types of BufferedObservationId
  * @description
@@ -153,9 +148,7 @@ export const _root_component_type_list_1_spec_for_BufferedObservationId: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BufferedObservationId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BufferedObservationId */
 /**
  * @summary The Extension Addition Component Types of BufferedObservationId
  * @description
@@ -165,13 +158,9 @@ export const _root_component_type_list_2_spec_for_BufferedObservationId: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_BufferedObservationId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedObservationId */
 let _cached_decoder_for_BufferedObservationId: $.ASN1Decoder<BufferedObservationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BufferedObservationId */
 /**
  * @summary Decodes an ASN.1 element into a(n) BufferedObservationId
  * @function
@@ -232,13 +221,9 @@ export function _decode_BufferedObservationId(el: _Element) {
     }
     return _cached_decoder_for_BufferedObservationId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedObservationId */
 let _cached_encoder_for_BufferedObservationId: $.ASN1Encoder<BufferedObservationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BufferedObservationId */
 /**
  * @summary Encodes a(n) BufferedObservationId into an ASN.1 Element.
  * @function
@@ -299,6 +284,5 @@ export function _encode_BufferedObservationId(
     return _cached_encoder_for_BufferedObservationId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BufferedObservationId */
 
 /* eslint-enable */

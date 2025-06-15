@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SynchronizedClock */
 /**
  * @summary SynchronizedClock
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SynchronizedClock = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SynchronizedClock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SynchronizedClock */
 let _cached_decoder_for_SynchronizedClock: $.ASN1Decoder<SynchronizedClock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SynchronizedClock */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SynchronizedClock */
 /**
  * @summary Decodes an ASN.1 element into a(n) SynchronizedClock
  * @function
@@ -46,13 +41,9 @@ export function _decode_SynchronizedClock(el: _Element) {
     }
     return _cached_decoder_for_SynchronizedClock(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SynchronizedClock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SynchronizedClock */
 let _cached_encoder_for_SynchronizedClock: $.ASN1Encoder<SynchronizedClock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SynchronizedClock */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SynchronizedClock */
 /**
  * @summary Encodes a(n) SynchronizedClock into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SynchronizedClock(
     return _cached_encoder_for_SynchronizedClock(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SynchronizedClock */
 
 /* eslint-enable */

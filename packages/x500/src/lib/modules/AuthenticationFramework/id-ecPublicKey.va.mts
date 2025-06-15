@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_ecPublicKey */
 /**
  * @summary id_ecPublicKey
  * @description
@@ -23,6 +22,5 @@ export const id_ecPublicKey: OBJECT_IDENTIFIER = new _OID([
     /* keyType */ 2,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_ecPublicKey */
 
 /* eslint-enable */

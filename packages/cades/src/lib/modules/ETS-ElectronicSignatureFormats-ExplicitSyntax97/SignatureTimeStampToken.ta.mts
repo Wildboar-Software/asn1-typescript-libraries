@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "@wildboar/tsp/src/lib/modules/PKIXTSP/TimeStampToken.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignatureTimeStampToken */
 /**
  * @summary SignatureTimeStampToken
  * @description
@@ -24,13 +23,9 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
  */
 export
 type SignatureTimeStampToken = TimeStampToken; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignatureTimeStampToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureTimeStampToken */
 let _cached_decoder_for_SignatureTimeStampToken: $.ASN1Decoder<SignatureTimeStampToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureTimeStampToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignatureTimeStampToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignatureTimeStampToken
  * @function
@@ -42,13 +37,9 @@ function _decode_SignatureTimeStampToken (el: _Element) {
     if (!_cached_decoder_for_SignatureTimeStampToken) { _cached_decoder_for_SignatureTimeStampToken = _decode_TimeStampToken; }
     return _cached_decoder_for_SignatureTimeStampToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignatureTimeStampToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureTimeStampToken */
 let _cached_encoder_for_SignatureTimeStampToken: $.ASN1Encoder<SignatureTimeStampToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureTimeStampToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignatureTimeStampToken */
 /**
  * @summary Encodes a(n) SignatureTimeStampToken into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_SignatureTimeStampToken (value: SignatureTimeStampToken, elGett
     return _cached_encoder_for_SignatureTimeStampToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignatureTimeStampToken */
 
 /* eslint-enable */

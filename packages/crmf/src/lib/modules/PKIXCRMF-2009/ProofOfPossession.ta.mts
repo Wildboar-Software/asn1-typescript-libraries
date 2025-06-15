@@ -15,7 +15,7 @@ import {
     _decode_POPOSigningKey,
     _encode_POPOSigningKey,
 } from "../PKIXCRMF-2009/POPOSigningKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ProofOfPossession */
+
 /**
  * @summary ProofOfPossession
  * @description
@@ -37,13 +37,11 @@ export type ProofOfPossession =
     | { signature: POPOSigningKey } /* CHOICE_ALT_ROOT */
     | { keyEncipherment: POPOPrivKey } /* CHOICE_ALT_ROOT */
     | { keyAgreement: POPOPrivKey } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProofOfPossession */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfPossession */
+
 let _cached_decoder_for_ProofOfPossession: $.ASN1Decoder<ProofOfPossession> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfPossession */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProofOfPossession */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProofOfPossession
  * @function
@@ -77,13 +75,11 @@ export function _decode_ProofOfPossession(el: _Element) {
     }
     return _cached_decoder_for_ProofOfPossession(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProofOfPossession */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfPossession */
+
 let _cached_encoder_for_ProofOfPossession: $.ASN1Encoder<ProofOfPossession> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfPossession */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProofOfPossession */
+
 /**
  * @summary Encodes a(n) ProofOfPossession into an ASN.1 Element.
  * @function
@@ -129,6 +125,5 @@ export function _encode_ProofOfPossession(
     return _cached_encoder_for_ProofOfPossession(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProofOfPossession */
 
 /* eslint-enable */

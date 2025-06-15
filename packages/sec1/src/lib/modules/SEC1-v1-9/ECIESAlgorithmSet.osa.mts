@@ -12,7 +12,6 @@ import {
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { ECIESAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECIESAlgorithmSet-Union0-Intersection0-Element.oa.mjs";
 import { ECIESAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECIESAlgorithmSet-Union1-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ECIESAlgorithmSet */
 /**
  * @summary ECIESAlgorithmSet
  * @description
@@ -33,6 +32,5 @@ import { ECIESAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECI
  */
 export
 const ECIESAlgorithmSet: (ALGORITHM)[] = [ ECIESAlgorithmSet_Union0_Intersection0_Element, ECIESAlgorithmSet_Union1_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION ECIESAlgorithmSet */
 
 /* eslint-enable */

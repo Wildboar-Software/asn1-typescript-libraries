@@ -15,7 +15,6 @@ import {
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
 } from '../RepertoireASN1Module/GdmoObjectClass.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagedObjectClassRepertoireId */
 /**
  * @summary ManagedObjectClassRepertoireId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ManagedObjectClassRepertoireId = GdmoObjectClass; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ManagedObjectClassRepertoireId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectClassRepertoireId */
 let _cached_decoder_for_ManagedObjectClassRepertoireId: $.ASN1Decoder<ManagedObjectClassRepertoireId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectClassRepertoireId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedObjectClassRepertoireId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectClassRepertoireId
  * @function
@@ -46,13 +41,9 @@ export function _decode_ManagedObjectClassRepertoireId(el: _Element) {
     }
     return _cached_decoder_for_ManagedObjectClassRepertoireId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedObjectClassRepertoireId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectClassRepertoireId */
 let _cached_encoder_for_ManagedObjectClassRepertoireId: $.ASN1Encoder<ManagedObjectClassRepertoireId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectClassRepertoireId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedObjectClassRepertoireId */
 /**
  * @summary Encodes a(n) ManagedObjectClassRepertoireId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ManagedObjectClassRepertoireId(
     return _cached_encoder_for_ManagedObjectClassRepertoireId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedObjectClassRepertoireId */
 
 /* eslint-enable */

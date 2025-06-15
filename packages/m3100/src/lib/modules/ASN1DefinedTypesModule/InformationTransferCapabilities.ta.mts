@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_InformationTransferCapabilities */
+
 /**
  * @summary InformationTransferCapabilities
  * @description
@@ -35,9 +35,8 @@ export enum _enum_for_InformationTransferCapabilities {
     digitalRestricted56 = 4,
     digitalUnrestricted64 = 5,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_InformationTransferCapabilities */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities */
+
 /**
  * @summary InformationTransferCapabilities
  * @description
@@ -54,9 +53,8 @@ export enum _enum_for_InformationTransferCapabilities {
  * ```@enum {number}
  */
 export type InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities */
+
 /**
  * @summary InformationTransferCapabilities
  * @description
@@ -73,9 +71,8 @@ export type InformationTransferCapabilities = _enum_for_InformationTransferCapab
  * ```@enum {number}
  */
 export const InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities_speech */
+
 /**
  * @summary InformationTransferCapabilities_speech
  * @constant
@@ -83,9 +80,8 @@ export const InformationTransferCapabilities = _enum_for_InformationTransferCapa
  */
 export const InformationTransferCapabilities_speech: InformationTransferCapabilities =
     InformationTransferCapabilities.speech; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities_speech */
 
-/* START_OF_SYMBOL_DEFINITION speech */
+
 /**
  * @summary speech
  * @constant
@@ -93,9 +89,8 @@ export const InformationTransferCapabilities_speech: InformationTransferCapabili
  */
 export const speech: InformationTransferCapabilities =
     InformationTransferCapabilities.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION speech */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities_audio3pt1 */
+
 /**
  * @summary InformationTransferCapabilities_audio3pt1
  * @constant
@@ -103,9 +98,8 @@ export const speech: InformationTransferCapabilities =
  */
 export const InformationTransferCapabilities_audio3pt1: InformationTransferCapabilities =
     InformationTransferCapabilities.audio3pt1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities_audio3pt1 */
 
-/* START_OF_SYMBOL_DEFINITION audio3pt1 */
+
 /**
  * @summary audio3pt1
  * @constant
@@ -113,9 +107,8 @@ export const InformationTransferCapabilities_audio3pt1: InformationTransferCapab
  */
 export const audio3pt1: InformationTransferCapabilities =
     InformationTransferCapabilities.audio3pt1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION audio3pt1 */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities_audio7 */
+
 /**
  * @summary InformationTransferCapabilities_audio7
  * @constant
@@ -123,9 +116,8 @@ export const audio3pt1: InformationTransferCapabilities =
  */
 export const InformationTransferCapabilities_audio7: InformationTransferCapabilities =
     InformationTransferCapabilities.audio7; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities_audio7 */
 
-/* START_OF_SYMBOL_DEFINITION audio7 */
+
 /**
  * @summary audio7
  * @constant
@@ -133,9 +125,8 @@ export const InformationTransferCapabilities_audio7: InformationTransferCapabili
  */
 export const audio7: InformationTransferCapabilities =
     InformationTransferCapabilities.audio7; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION audio7 */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities_audioComb */
+
 /**
  * @summary InformationTransferCapabilities_audioComb
  * @constant
@@ -143,9 +134,8 @@ export const audio7: InformationTransferCapabilities =
  */
 export const InformationTransferCapabilities_audioComb: InformationTransferCapabilities =
     InformationTransferCapabilities.audioComb; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities_audioComb */
 
-/* START_OF_SYMBOL_DEFINITION audioComb */
+
 /**
  * @summary audioComb
  * @constant
@@ -153,9 +143,8 @@ export const InformationTransferCapabilities_audioComb: InformationTransferCapab
  */
 export const audioComb: InformationTransferCapabilities =
     InformationTransferCapabilities.audioComb; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION audioComb */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities_digitalRestricted56 */
+
 /**
  * @summary InformationTransferCapabilities_digitalRestricted56
  * @constant
@@ -163,9 +152,8 @@ export const audioComb: InformationTransferCapabilities =
  */
 export const InformationTransferCapabilities_digitalRestricted56: InformationTransferCapabilities =
     InformationTransferCapabilities.digitalRestricted56; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities_digitalRestricted56 */
 
-/* START_OF_SYMBOL_DEFINITION digitalRestricted56 */
+
 /**
  * @summary digitalRestricted56
  * @constant
@@ -173,9 +161,8 @@ export const InformationTransferCapabilities_digitalRestricted56: InformationTra
  */
 export const digitalRestricted56: InformationTransferCapabilities =
     InformationTransferCapabilities.digitalRestricted56; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION digitalRestricted56 */
 
-/* START_OF_SYMBOL_DEFINITION InformationTransferCapabilities_digitalUnrestricted64 */
+
 /**
  * @summary InformationTransferCapabilities_digitalUnrestricted64
  * @constant
@@ -183,9 +170,8 @@ export const digitalRestricted56: InformationTransferCapabilities =
  */
 export const InformationTransferCapabilities_digitalUnrestricted64: InformationTransferCapabilities =
     InformationTransferCapabilities.digitalUnrestricted64; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationTransferCapabilities_digitalUnrestricted64 */
 
-/* START_OF_SYMBOL_DEFINITION digitalUnrestricted64 */
+
 /**
  * @summary digitalUnrestricted64
  * @constant
@@ -193,13 +179,11 @@ export const InformationTransferCapabilities_digitalUnrestricted64: InformationT
  */
 export const digitalUnrestricted64: InformationTransferCapabilities =
     InformationTransferCapabilities.digitalUnrestricted64; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION digitalUnrestricted64 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationTransferCapabilities */
+
 let _cached_decoder_for_InformationTransferCapabilities: $.ASN1Decoder<InformationTransferCapabilities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationTransferCapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationTransferCapabilities */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InformationTransferCapabilities
  * @function
@@ -213,13 +197,11 @@ export function _decode_InformationTransferCapabilities(el: _Element) {
     }
     return _cached_decoder_for_InformationTransferCapabilities(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InformationTransferCapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationTransferCapabilities */
+
 let _cached_encoder_for_InformationTransferCapabilities: $.ASN1Encoder<InformationTransferCapabilities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationTransferCapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationTransferCapabilities */
+
 /**
  * @summary Encodes a(n) InformationTransferCapabilities into an ASN.1 Element.
  * @function
@@ -238,6 +220,5 @@ export function _encode_InformationTransferCapabilities(
     return _cached_encoder_for_InformationTransferCapabilities(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationTransferCapabilities */
 
 /* eslint-enable */

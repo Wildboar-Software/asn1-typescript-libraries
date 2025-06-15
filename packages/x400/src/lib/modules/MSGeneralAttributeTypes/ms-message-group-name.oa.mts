@@ -27,7 +27,6 @@ import { id_att_message_group_name } from '../MSObjectIdentifiers/id-att-message
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_message_group_name */
 /**
  * @summary ms_message_group_name
  * @description
@@ -69,6 +68,5 @@ export const ms_message_group_name: X413ATTRIBUTE<MessageGroupName> = {
     '&id': id_att_message_group_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_message_group_name */
 
 /* eslint-enable */

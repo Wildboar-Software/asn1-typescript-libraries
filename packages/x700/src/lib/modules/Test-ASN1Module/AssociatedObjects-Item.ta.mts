@@ -20,7 +20,6 @@ import {
     _decode_AssociatedObjects_Item_associatedObjectInfo,
     _encode_AssociatedObjects_Item_associatedObjectInfo,
 } from '../Test-ASN1Module/AssociatedObjects-Item-associatedObjectInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AssociatedObjects_Item */
 /**
  * @summary AssociatedObjects_Item
  * @description
@@ -70,9 +69,7 @@ export class AssociatedObjects_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AssociatedObjects_Item */
 /**
  * @summary The Leading Root Component Types of AssociatedObjects_Item
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_AssociatedObjects_Item: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AssociatedObjects_Item */
 /**
  * @summary The Trailing Root Component Types of AssociatedObjects_Item
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_AssociatedObjects_Item: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AssociatedObjects_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AssociatedObjects_Item */
 /**
  * @summary The Extension Addition Component Types of AssociatedObjects_Item
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_AssociatedObjects_Item: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_AssociatedObjects_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociatedObjects_Item */
 let _cached_decoder_for_AssociatedObjects_Item: $.ASN1Decoder<AssociatedObjects_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssociatedObjects_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) AssociatedObjects_Item
  * @function
@@ -163,13 +152,9 @@ export function _decode_AssociatedObjects_Item(el: _Element) {
     }
     return _cached_decoder_for_AssociatedObjects_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociatedObjects_Item */
 let _cached_encoder_for_AssociatedObjects_Item: $.ASN1Encoder<AssociatedObjects_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociatedObjects_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssociatedObjects_Item */
 /**
  * @summary Encodes a(n) AssociatedObjects_Item into an ASN.1 Element.
  * @function
@@ -204,6 +189,5 @@ export function _encode_AssociatedObjects_Item(
     return _cached_encoder_for_AssociatedObjects_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssociatedObjects_Item */
 
 /* eslint-enable */

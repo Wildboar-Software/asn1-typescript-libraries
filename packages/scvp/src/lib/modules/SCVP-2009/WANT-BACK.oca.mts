@@ -11,8 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION WANT_BACK */
 export type WANT_BACK <Type> = TYPE_IDENTIFIER <Type>;
-/* END_OF_SYMBOL_DEFINITION WANT_BACK */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ScriptList,
     _encode_ScriptList,
 } from '../CSModule/ScriptList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AvailableScriptList */
 /**
  * @summary AvailableScriptList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AvailableScriptList = ScriptList[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AvailableScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailableScriptList */
 let _cached_decoder_for_AvailableScriptList: $.ASN1Decoder<AvailableScriptList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailableScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AvailableScriptList */
 /**
  * @summary Decodes an ASN.1 element into a(n) AvailableScriptList
  * @function
@@ -48,13 +43,9 @@ export function _decode_AvailableScriptList(el: _Element) {
     }
     return _cached_decoder_for_AvailableScriptList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AvailableScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailableScriptList */
 let _cached_encoder_for_AvailableScriptList: $.ASN1Encoder<AvailableScriptList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailableScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AvailableScriptList */
 /**
  * @summary Encodes a(n) AvailableScriptList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AvailableScriptList(
     return _cached_encoder_for_AvailableScriptList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AvailableScriptList */
 
 /* eslint-enable */

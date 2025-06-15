@@ -20,7 +20,6 @@ import {
   _decode_CBEFFVersion_cbeff_minor,
   _encode_CBEFFVersion_cbeff_minor,
 } from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CBEFFVersion */
 /**
  * @summary CBEFFVersion
  * @description
@@ -70,9 +69,7 @@ export class CBEFFVersion {
     return new CBEFFVersion(_o.cbeff_major, _o.cbeff_minor);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CBEFFVersion */
 /**
  * @summary The Leading Root Component Types of CBEFFVersion
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_CBEFFVersion: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CBEFFVersion */
 /**
  * @summary The Trailing Root Component Types of CBEFFVersion
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_CBEFFVersion: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CBEFFVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CBEFFVersion */
 /**
  * @summary The Extension Addition Component Types of CBEFFVersion
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_CBEFFVersion: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_CBEFFVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CBEFFVersion */
 let _cached_decoder_for_CBEFFVersion: $.ASN1Decoder<CBEFFVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CBEFFVersion */
 /**
  * @summary Decodes an ASN.1 element into a(n) CBEFFVersion
  * @function
@@ -156,13 +145,9 @@ export function _decode_CBEFFVersion(el: _Element) {
   }
   return _cached_decoder_for_CBEFFVersion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CBEFFVersion */
 let _cached_encoder_for_CBEFFVersion: $.ASN1Encoder<CBEFFVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CBEFFVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CBEFFVersion */
 /**
  * @summary Encodes a(n) CBEFFVersion into an ASN.1 Element.
  * @function
@@ -197,6 +182,5 @@ export function _encode_CBEFFVersion(
   return _cached_encoder_for_CBEFFVersion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CBEFFVersion */
 
 /* eslint-enable */

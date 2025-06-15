@@ -23,7 +23,6 @@ import {
   _encode_Continue,
 } from '../TCAPMessages/Continue.ta.mjs';
 import { Abort, _decode_Abort, _encode_Abort } from '../TCAPMessages/Abort.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCMessage */
 /**
  * @summary TCMessage
  * @description
@@ -46,13 +45,9 @@ export type TCMessage =
   | { end: End } /* CHOICE_ALT_ROOT */
   | { continue_: Continue } /* CHOICE_ALT_ROOT */
   | { abort: Abort } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TCMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCMessage */
 let _cached_decoder_for_TCMessage: $.ASN1Decoder<TCMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCMessage */
 /**
  * @summary Decodes an ASN.1 element into a(n) TCMessage
  * @function
@@ -83,13 +78,9 @@ export function _decode_TCMessage(el: _Element) {
   }
   return _cached_decoder_for_TCMessage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCMessage */
 let _cached_encoder_for_TCMessage: $.ASN1Encoder<TCMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCMessage */
 /**
  * @summary Encodes a(n) TCMessage into an ASN.1 Element.
  * @function
@@ -141,6 +132,5 @@ export function _encode_TCMessage(
   return _cached_encoder_for_TCMessage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCMessage */
 
 /* eslint-enable */

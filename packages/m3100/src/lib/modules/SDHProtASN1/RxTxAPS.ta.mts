@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RxTxAPS */
+
 /**
  * @summary RxTxAPS
  * @description
@@ -61,9 +61,8 @@ export class RxTxAPS {
         return new RxTxAPS(_o.rxAPSvalue, _o.txAPSvalue);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RxTxAPS */
+
 /**
  * @summary The Leading Root Component Types of RxTxAPS
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_RxTxAPS: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RxTxAPS */
+
 /**
  * @summary The Trailing Root Component Types of RxTxAPS
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_RxTxAPS: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RxTxAPS: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RxTxAPS */
+
 /**
  * @summary The Extension Addition Component Types of RxTxAPS
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_RxTxAPS: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_RxTxAPS: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RxTxAPS */
+
 let _cached_decoder_for_RxTxAPS: $.ASN1Decoder<RxTxAPS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RxTxAPS */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RxTxAPS
  * @function
@@ -151,13 +146,11 @@ export function _decode_RxTxAPS(el: _Element) {
     }
     return _cached_decoder_for_RxTxAPS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RxTxAPS */
+
 let _cached_encoder_for_RxTxAPS: $.ASN1Encoder<RxTxAPS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RxTxAPS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RxTxAPS */
+
 /**
  * @summary Encodes a(n) RxTxAPS into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_RxTxAPS(
     return _cached_encoder_for_RxTxAPS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RxTxAPS */
 
 /* eslint-enable */

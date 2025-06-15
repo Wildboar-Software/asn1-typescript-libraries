@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_PerceivedSeverity */
 /**
  * @summary PerceivedSeverity
  * @description
@@ -36,9 +35,7 @@ enum _enum_for_PerceivedSeverity {
     warning = 4,
     cleared = 5,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_PerceivedSeverity */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity */
 /**
  * @summary PerceivedSeverity
  * @description
@@ -54,9 +51,7 @@ enum _enum_for_PerceivedSeverity {
  */
 export
 type PerceivedSeverity = _enum_for_PerceivedSeverity;
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity */
 /**
  * @summary PerceivedSeverity
  * @description
@@ -72,9 +67,7 @@ type PerceivedSeverity = _enum_for_PerceivedSeverity;
  */
 export
 const PerceivedSeverity = _enum_for_PerceivedSeverity;
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity_indeterminate */
 /**
  * @summary PerceivedSeverity_indeterminate
  * @constant
@@ -82,9 +75,7 @@ const PerceivedSeverity = _enum_for_PerceivedSeverity;
  */
 export
 const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity_indeterminate */
 
-/* START_OF_SYMBOL_DEFINITION indeterminate */
 /**
  * @summary indeterminate
  * @constant
@@ -92,9 +83,7 @@ const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.ind
  */
 export
 const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION indeterminate */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity_critical */
 /**
  * @summary PerceivedSeverity_critical
  * @constant
@@ -102,9 +91,7 @@ const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHO
  */
 export
 const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity_critical */
 
-/* START_OF_SYMBOL_DEFINITION critical */
 /**
  * @summary critical
  * @constant
@@ -112,9 +99,7 @@ const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical
  */
 export
 const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION critical */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity_major */
 /**
  * @summary PerceivedSeverity_major
  * @constant
@@ -122,9 +107,7 @@ const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_E
  */
 export
 const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity_major */
 
-/* START_OF_SYMBOL_DEFINITION major */
 /**
  * @summary major
  * @constant
@@ -132,9 +115,7 @@ const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* L
  */
 export
 const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION major */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity_minor */
 /**
  * @summary PerceivedSeverity_minor
  * @constant
@@ -142,9 +123,7 @@ const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERA
  */
 export
 const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity_minor */
 
-/* START_OF_SYMBOL_DEFINITION minor */
 /**
  * @summary minor
  * @constant
@@ -152,9 +131,7 @@ const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* L
  */
 export
 const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION minor */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity_warning */
 /**
  * @summary PerceivedSeverity_warning
  * @constant
@@ -162,9 +139,7 @@ const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERA
  */
 export
 const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity_warning */
 
-/* START_OF_SYMBOL_DEFINITION warning */
 /**
  * @summary warning
  * @constant
@@ -172,9 +147,7 @@ const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; 
  */
 export
 const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION warning */
 
-/* START_OF_SYMBOL_DEFINITION PerceivedSeverity_cleared */
 /**
  * @summary PerceivedSeverity_cleared
  * @constant
@@ -182,9 +155,7 @@ const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENU
  */
 export
 const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PerceivedSeverity_cleared */
 
-/* START_OF_SYMBOL_DEFINITION cleared */
 /**
  * @summary cleared
  * @constant
@@ -192,21 +163,12 @@ const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; 
  */
 export
 const cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION cleared */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedSeverity */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerceivedSeverity */
 export const _decode_PerceivedSeverity = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_PerceivedSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedSeverity */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerceivedSeverity */
 export const _encode_PerceivedSeverity = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerceivedSeverity */
 
 /* eslint-enable */

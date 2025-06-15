@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Action_Result */
+
 /**
  * @summary Action_Result
  * @description
@@ -25,67 +25,59 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Action_Result = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Action_Result */
 
-/* START_OF_SYMBOL_DEFINITION Action_Result_success */
+
 /**
  * @summary Action_Result_success
  * @constant
  * @type {number}
  */
 export const Action_Result_success: Action_Result = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Action_Result_success */
 
-/* START_OF_SYMBOL_DEFINITION success */
+
 /**
  * @summary Action_Result_success
  * @constant
  * @type {number}
  */
 export const success: Action_Result = Action_Result_success; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION success */
 
-/* START_OF_SYMBOL_DEFINITION Action_Result_transient_error */
+
 /**
  * @summary Action_Result_transient_error
  * @constant
  * @type {number}
  */
 export const Action_Result_transient_error: Action_Result = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Action_Result_transient_error */
 
-/* START_OF_SYMBOL_DEFINITION transient_error */
+
 /**
  * @summary Action_Result_transient_error
  * @constant
  * @type {number}
  */
 export const transient_error: Action_Result = Action_Result_transient_error; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION transient_error */
 
-/* START_OF_SYMBOL_DEFINITION Action_Result_permanent_error */
+
 /**
  * @summary Action_Result_permanent_error
  * @constant
  * @type {number}
  */
 export const Action_Result_permanent_error: Action_Result = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Action_Result_permanent_error */
 
-/* START_OF_SYMBOL_DEFINITION permanent_error */
+
 /**
  * @summary Action_Result_permanent_error
  * @constant
  * @type {number}
  */
 export const permanent_error: Action_Result = Action_Result_permanent_error; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION permanent_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Action_Result */
+
 let _cached_decoder_for_Action_Result: $.ASN1Decoder<Action_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Action_Result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Action_Result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Action_Result
  * @function
@@ -100,13 +92,11 @@ export function _decode_Action_Result(el: _Element) {
   }
   return _cached_decoder_for_Action_Result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Action_Result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Action_Result */
+
 let _cached_encoder_for_Action_Result: $.ASN1Encoder<Action_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Action_Result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Action_Result */
+
 /**
  * @summary Encodes a(n) Action_Result into an ASN.1 Element.
  * @function
@@ -129,6 +119,5 @@ export function _encode_Action_Result(
   return _cached_encoder_for_Action_Result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Action_Result */
 
 /* eslint-enable */

@@ -28,7 +28,6 @@ import {
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsReleaseRsp */
 /**
  * @summary TbsReleaseRsp
  * @description
@@ -126,9 +125,7 @@ export class TbsReleaseRsp {
         })();
     }
 }
-/* END_OF_SYMBOL_DEFINITION TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsReleaseRsp */
 /**
  * @summary The Leading Root Component Types of TbsReleaseRsp
  * @description
@@ -174,9 +171,7 @@ export const _root_component_type_list_1_spec_for_TbsReleaseRsp: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsReleaseRsp */
 /**
  * @summary The Trailing Root Component Types of TbsReleaseRsp
  * @description
@@ -186,9 +181,7 @@ export const _root_component_type_list_1_spec_for_TbsReleaseRsp: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbsReleaseRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsReleaseRsp */
 /**
  * @summary The Extension Addition Component Types of TbsReleaseRsp
  * @description
@@ -198,13 +191,9 @@ export const _root_component_type_list_2_spec_for_TbsReleaseRsp: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_TbsReleaseRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsReleaseRsp */
 let _cached_decoder_for_TbsReleaseRsp: $.ASN1Decoder<TbsReleaseRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsReleaseRsp */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsReleaseRsp
  * @function
@@ -266,13 +255,9 @@ export function _decode_TbsReleaseRsp(el: _Element) {
     }
     return _cached_decoder_for_TbsReleaseRsp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsReleaseRsp */
 let _cached_encoder_for_TbsReleaseRsp: $.ASN1Encoder<TbsReleaseRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsReleaseRsp */
 /**
  * @summary Encodes a(n) TbsReleaseRsp into an ASN.1 Element.
  * @function
@@ -327,6 +312,5 @@ export function _encode_TbsReleaseRsp(
     return _cached_encoder_for_TbsReleaseRsp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsReleaseRsp */
 
 /* eslint-enable */

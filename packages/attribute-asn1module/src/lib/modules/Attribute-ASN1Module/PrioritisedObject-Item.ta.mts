@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs";
 import { PrioritisedObject_Item_priority, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrioritisedObject_Item */
 /**
  * @summary PrioritisedObject_Item
  * @description
@@ -60,9 +59,7 @@ class PrioritisedObject_Item {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrioritisedObject_Item */
 /**
  * @summary The Leading Root Component Types of PrioritisedObject_Item
  * @description
@@ -76,9 +73,7 @@ const _root_component_type_list_1_spec_for_PrioritisedObject_Item: $.ComponentSp
     new $.ComponentSpec("object", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("priority", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrioritisedObject_Item */
 /**
  * @summary The Trailing Root Component Types of PrioritisedObject_Item
  * @description
@@ -91,9 +86,7 @@ export
 const _root_component_type_list_2_spec_for_PrioritisedObject_Item: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrioritisedObject_Item */
 /**
  * @summary The Extension Addition Component Types of PrioritisedObject_Item
  * @description
@@ -106,13 +99,9 @@ export
 const _extension_additions_list_spec_for_PrioritisedObject_Item: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrioritisedObject_Item */
 let _cached_decoder_for_PrioritisedObject_Item: $.ASN1Decoder<PrioritisedObject_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrioritisedObject_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrioritisedObject_Item
  * @function
@@ -140,13 +129,9 @@ function _decode_PrioritisedObject_Item (el: _Element) {
 }; }
     return _cached_decoder_for_PrioritisedObject_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrioritisedObject_Item */
 let _cached_encoder_for_PrioritisedObject_Item: $.ASN1Encoder<PrioritisedObject_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrioritisedObject_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrioritisedObject_Item */
 /**
  * @summary Encodes a(n) PrioritisedObject_Item into an ASN.1 Element.
  * @function
@@ -167,6 +152,5 @@ function _encode_PrioritisedObject_Item (value: PrioritisedObject_Item, elGetter
     return _cached_encoder_for_PrioritisedObject_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrioritisedObject_Item */
 
 /* eslint-enable */

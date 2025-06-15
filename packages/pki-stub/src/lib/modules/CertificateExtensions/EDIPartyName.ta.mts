@@ -11,7 +11,6 @@ import {
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EDIPartyName */
 /**
  * @summary EDIPartyName
  * @description
@@ -71,9 +70,7 @@ export class EDIPartyName {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIPartyName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIPartyName */
 /**
  * @summary The Leading Root Component Types of EDIPartyName
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_EDIPartyName: $.ComponentSpec[
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIPartyName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIPartyName */
 /**
  * @summary The Trailing Root Component Types of EDIPartyName
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_EDIPartyName: $.ComponentSpec[
  */
 export const _root_component_type_list_2_spec_for_EDIPartyName: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIPartyName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIPartyName */
 /**
  * @summary The Extension Addition Component Types of EDIPartyName
  * @description
@@ -125,9 +118,7 @@ export const _root_component_type_list_2_spec_for_EDIPartyName: $.ComponentSpec[
  */
 export const _extension_additions_list_spec_for_EDIPartyName: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIPartyName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIPartyName */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIPartyName
  * @function
@@ -170,9 +161,7 @@ export function _decode_EDIPartyName(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIPartyName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIPartyName */
 /**
  * @summary Encodes a(n) EDIPartyName into an ASN.1 Element.
  * @function
@@ -202,6 +191,5 @@ export function _encode_EDIPartyName(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIPartyName */
 
 /* eslint-enable */

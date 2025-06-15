@@ -27,7 +27,7 @@ import {
   _decode_FADU_Lock,
   _encode_FADU_Lock,
 } from '../ISO8571-FTAM/FADU-Lock.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION F_WRITE_request */
+
 /**
  * @summary F_WRITE_request
  * @description
@@ -98,9 +98,8 @@ export class F_WRITE_request {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_F_WRITE_request */
+
 /**
  * @summary The Leading Root Component Types of F_WRITE_request
  * @description
@@ -139,9 +138,8 @@ export const _root_component_type_list_1_spec_for_F_WRITE_request: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_F_WRITE_request */
+
 /**
  * @summary The Trailing Root Component Types of F_WRITE_request
  * @description
@@ -151,9 +149,8 @@ export const _root_component_type_list_1_spec_for_F_WRITE_request: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_F_WRITE_request: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_F_WRITE_request */
+
 /**
  * @summary The Extension Addition Component Types of F_WRITE_request
  * @description
@@ -163,13 +160,11 @@ export const _root_component_type_list_2_spec_for_F_WRITE_request: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_F_WRITE_request: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_F_WRITE_request */
+
 let _cached_decoder_for_F_WRITE_request: $.ASN1Decoder<F_WRITE_request> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _decode_F_WRITE_request */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) F_WRITE_request
  * @function
@@ -225,13 +220,11 @@ export function _decode_F_WRITE_request(el: _Element) {
   }
   return _cached_decoder_for_F_WRITE_request(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_F_WRITE_request */
+
 let _cached_encoder_for_F_WRITE_request: $.ASN1Encoder<F_WRITE_request> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_F_WRITE_request */
 
-/* START_OF_SYMBOL_DEFINITION _encode_F_WRITE_request */
+
 /**
  * @summary Encodes a(n) F_WRITE_request into an ASN.1 Element.
  * @function
@@ -279,6 +272,5 @@ export function _encode_F_WRITE_request(
   return _cached_encoder_for_F_WRITE_request(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_F_WRITE_request */
 
 /* eslint-enable */

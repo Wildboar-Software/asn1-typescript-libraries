@@ -29,7 +29,7 @@ import {
     _decode_ExchangeMode,
     _encode_ExchangeMode,
 } from '../E-health-common/ExchangeMode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION INTERACTIVE_OPERATION */
+
 /**
  * @summary INTERACTIVE_OPERATION
  * @description
@@ -173,6 +173,5 @@ export interface INTERACTIVE_OPERATION<
      */
     readonly '&exchangeMode'?: ExchangeMode;
 }
-/* END_OF_SYMBOL_DEFINITION INTERACTIVE_OPERATION */
 
 /* eslint-enable */

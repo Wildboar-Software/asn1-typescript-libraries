@@ -30,7 +30,7 @@ import {
   _decode_FSM_PDU,
   _encode_FSM_PDU,
 } from '../ISO8571-FTAM/FSM-PDU.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PDU */
+
 /**
  * @summary PDU
  * @description
@@ -51,13 +51,11 @@ export type PDU =
   | { file_PDU: File_PDU } /* CHOICE_ALT_ROOT */
   | { bulk_Data_PDU: Bulk_Data_PDU } /* CHOICE_ALT_ROOT */
   | { fSM_PDU: FSM_PDU } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDU */
+
 let _cached_decoder_for_PDU: $.ASN1Decoder<PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PDU
  * @function
@@ -144,13 +142,11 @@ export function _decode_PDU(el: _Element) {
   }
   return _cached_decoder_for_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDU */
+
 let _cached_encoder_for_PDU: $.ASN1Encoder<PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDU */
+
 /**
  * @summary Encodes a(n) PDU into an ASN.1 Element.
  * @function
@@ -173,6 +169,5 @@ export function _encode_PDU(value: PDU, elGetter: $.ASN1Encoder<PDU>) {
   return _cached_encoder_for_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDU */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Date */
 /**
  * @summary Date
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type Date =
     | { time: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | { noSuchInformation: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Date */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Date */
 let _cached_decoder_for_Date: $.ASN1Decoder<Date> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Date */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Date */
 /**
  * @summary Decodes an ASN.1 element into a(n) Date
  * @function
@@ -51,13 +46,9 @@ export function _decode_Date(el: _Element) {
     }
     return _cached_decoder_for_Date(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Date */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Date */
 let _cached_encoder_for_Date: $.ASN1Encoder<Date> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Date */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Date */
 /**
  * @summary Encodes a(n) Date into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_Date(value: Date, elGetter: $.ASN1Encoder<Date>) {
     return _cached_encoder_for_Date(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Date */
 
 /* eslint-enable */

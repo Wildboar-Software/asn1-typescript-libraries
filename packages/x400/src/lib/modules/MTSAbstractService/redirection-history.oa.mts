@@ -23,7 +23,6 @@ import {
     _encode_RedirectionHistory,
 } from '../MTSAbstractService/RedirectionHistory.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION redirection_history */
 /**
  * @summary redirection_history
  * @description
@@ -57,6 +56,5 @@ export const redirection_history: EXTENSION<RedirectionHistory> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION redirection_history */
 
 /* eslint-enable */

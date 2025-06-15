@@ -15,7 +15,6 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyRecipientsSubfield */
 /**
  * @summary ReplyRecipientsSubfield
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type ReplyRecipientsSubfield = ORDescriptor; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReplyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyRecipientsSubfield */
 let _cached_decoder_for_ReplyRecipientsSubfield: $.ASN1Decoder<ReplyRecipientsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyRecipientsSubfield */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyRecipientsSubfield
  * @function
@@ -50,13 +45,9 @@ export function _decode_ReplyRecipientsSubfield(el: _Element) {
     }
     return _cached_decoder_for_ReplyRecipientsSubfield(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyRecipientsSubfield */
 let _cached_encoder_for_ReplyRecipientsSubfield: $.ASN1Encoder<ReplyRecipientsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyRecipientsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyRecipientsSubfield */
 /**
  * @summary Encodes a(n) ReplyRecipientsSubfield into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_ReplyRecipientsSubfield(
     return _cached_encoder_for_ReplyRecipientsSubfield(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyRecipientsSubfield */
 
 /* eslint-enable */

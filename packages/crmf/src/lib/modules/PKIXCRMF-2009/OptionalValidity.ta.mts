@@ -11,7 +11,7 @@ import {
     _encode_Time,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Time.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OptionalValidity */
+
 /**
  * @summary OptionalValidity
  * @description
@@ -60,9 +60,8 @@ export class OptionalValidity {
         return new OptionalValidity(_o.notBefore, _o.notAfter);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalValidity */
+
 /**
  * @summary The Leading Root Component Types of OptionalValidity
  * @description
@@ -87,9 +86,8 @@ export const _root_component_type_list_1_spec_for_OptionalValidity: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalValidity */
+
 /**
  * @summary The Trailing Root Component Types of OptionalValidity
  * @description
@@ -99,9 +97,8 @@ export const _root_component_type_list_1_spec_for_OptionalValidity: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OptionalValidity: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalValidity */
+
 /**
  * @summary The Extension Addition Component Types of OptionalValidity
  * @description
@@ -111,13 +108,11 @@ export const _root_component_type_list_2_spec_for_OptionalValidity: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_OptionalValidity: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalValidity */
+
 let _cached_decoder_for_OptionalValidity: $.ASN1Decoder<OptionalValidity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalValidity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalValidity
  * @function
@@ -163,13 +158,11 @@ export function _decode_OptionalValidity(el: _Element) {
     }
     return _cached_decoder_for_OptionalValidity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalValidity */
+
 let _cached_encoder_for_OptionalValidity: $.ASN1Encoder<OptionalValidity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalValidity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalValidity */
+
 /**
  * @summary Encodes a(n) OptionalValidity into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_OptionalValidity(
     return _cached_encoder_for_OptionalValidity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalValidity */
 
 /* eslint-enable */

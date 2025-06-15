@@ -42,7 +42,7 @@ import {
     _decode_VersionInformationData,
     _encode_VersionInformationData,
 } from "../SIOsAccessControl-MODULE/VersionInformationData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPIF */
+
 /**
  * @summary SPIF
  * @description
@@ -167,9 +167,8 @@ export class SPIF {
         return v1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPIF */
+
 /**
  * @summary The Leading Root Component Types of SPIF
  * @description
@@ -250,9 +249,8 @@ export const _root_component_type_list_1_spec_for_SPIF: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPIF */
+
 /**
  * @summary The Trailing Root Component Types of SPIF
  * @description
@@ -262,9 +260,8 @@ export const _root_component_type_list_1_spec_for_SPIF: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SPIF: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPIF */
+
 /**
  * @summary The Extension Addition Component Types of SPIF
  * @description
@@ -274,13 +271,11 @@ export const _root_component_type_list_2_spec_for_SPIF: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_SPIF: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPIF */
+
 let _cached_decoder_for_SPIF: $.ASN1Decoder<SPIF> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPIF */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SPIF
  * @function
@@ -371,13 +366,11 @@ export function _decode_SPIF(el: _Element) {
     }
     return _cached_decoder_for_SPIF(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPIF */
+
 let _cached_encoder_for_SPIF: $.ASN1Encoder<SPIF> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPIF */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPIF */
+
 /**
  * @summary Encodes a(n) SPIF into an ASN.1 Element.
  * @function
@@ -470,6 +463,5 @@ export function _encode_SPIF(value: SPIF, elGetter: $.ASN1Encoder<SPIF>) {
     return _cached_encoder_for_SPIF(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPIF */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _decode_KeyConstructionLabels,
     _encode_KeyConstructionLabels,
 } from "../CMSCKMKeyManagement/KeyConstructionLabels.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyConstructionRecipient */
+
 /**
  * @summary KeyConstructionRecipient
  * @description
@@ -28,13 +28,11 @@ import {
 export type KeyConstructionRecipient =
     | { unencrypted: KeyConstructionLabels } /* CHOICE_ALT_ROOT */
     | { encrypted: EncryptedRecipientID } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION KeyConstructionRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructionRecipient */
+
 let _cached_decoder_for_KeyConstructionRecipient: $.ASN1Decoder<KeyConstructionRecipient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructionRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyConstructionRecipient */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyConstructionRecipient
  * @function
@@ -62,13 +60,11 @@ export function _decode_KeyConstructionRecipient(el: _Element) {
     }
     return _cached_decoder_for_KeyConstructionRecipient(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyConstructionRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructionRecipient */
+
 let _cached_encoder_for_KeyConstructionRecipient: $.ASN1Encoder<KeyConstructionRecipient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructionRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyConstructionRecipient */
+
 /**
  * @summary Encodes a(n) KeyConstructionRecipient into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_KeyConstructionRecipient(
     return _cached_encoder_for_KeyConstructionRecipient(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyConstructionRecipient */
 
 /* eslint-enable */

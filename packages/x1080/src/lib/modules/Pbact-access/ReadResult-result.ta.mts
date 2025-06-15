@@ -20,7 +20,7 @@ import {
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReadResult_result */
+
 /**
  * @summary ReadResult_result
  * @description
@@ -35,13 +35,11 @@ export type ReadResult_result =
     | { success: ObjectInformation } /* CHOICE_ALT_ROOT */
     | { failure: AccessdErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ReadResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadResult_result */
+
 let _cached_decoder_for_ReadResult_result: $.ASN1Decoder<ReadResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReadResult_result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReadResult_result
  * @function
@@ -67,13 +65,11 @@ export function _decode_ReadResult_result(el: _Element) {
     }
     return _cached_decoder_for_ReadResult_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReadResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadResult_result */
+
 let _cached_encoder_for_ReadResult_result: $.ASN1Encoder<ReadResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReadResult_result */
+
 /**
  * @summary Encodes a(n) ReadResult_result into an ASN.1 Element.
  * @function
@@ -107,6 +103,5 @@ export function _encode_ReadResult_result(
     return _cached_encoder_for_ReadResult_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReadResult_result */
 
 /* eslint-enable */

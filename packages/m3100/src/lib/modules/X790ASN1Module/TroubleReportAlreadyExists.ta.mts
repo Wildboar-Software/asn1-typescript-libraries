@@ -21,7 +21,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleReportAlreadyExists */
+
 /**
  * @summary TroubleReportAlreadyExists
  * @description
@@ -92,9 +92,8 @@ export class TroubleReportAlreadyExists {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TroubleReportAlreadyExists */
+
 /**
  * @summary The Leading Root Component Types of TroubleReportAlreadyExists
  * @description
@@ -126,9 +125,8 @@ export const _root_component_type_list_1_spec_for_TroubleReportAlreadyExists: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TroubleReportAlreadyExists */
+
 /**
  * @summary The Trailing Root Component Types of TroubleReportAlreadyExists
  * @description
@@ -138,9 +136,8 @@ export const _root_component_type_list_1_spec_for_TroubleReportAlreadyExists: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TroubleReportAlreadyExists: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TroubleReportAlreadyExists */
+
 /**
  * @summary The Extension Addition Component Types of TroubleReportAlreadyExists
  * @description
@@ -150,13 +147,11 @@ export const _root_component_type_list_2_spec_for_TroubleReportAlreadyExists: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_TroubleReportAlreadyExists: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportAlreadyExists */
+
 let _cached_decoder_for_TroubleReportAlreadyExists: $.ASN1Decoder<TroubleReportAlreadyExists> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportAlreadyExists */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportAlreadyExists
  * @function
@@ -207,13 +202,11 @@ export function _decode_TroubleReportAlreadyExists(el: _Element) {
     }
     return _cached_decoder_for_TroubleReportAlreadyExists(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportAlreadyExists */
+
 let _cached_encoder_for_TroubleReportAlreadyExists: $.ASN1Encoder<TroubleReportAlreadyExists> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportAlreadyExists */
+
 /**
  * @summary Encodes a(n) TroubleReportAlreadyExists into an ASN.1 Element.
  * @function
@@ -260,6 +253,5 @@ export function _encode_TroubleReportAlreadyExists(
     return _cached_encoder_for_TroubleReportAlreadyExists(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportAlreadyExists */
 
 /* eslint-enable */

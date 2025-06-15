@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mat_nameErrors */
 /**
  * @summary id_mat_nameErrors
  * @description
@@ -15,6 +14,5 @@ import { id_mat } from "../DirectoryManagement/id-mat.va.mjs";
  * @constant
  */
 export const id_mat_nameErrors: OBJECT_IDENTIFIER = new _OID([5], id_mat);
-/* END_OF_SYMBOL_DEFINITION id_mat_nameErrors */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
   _encode_SNPAAddress,
 } from '@wildboar/nlm/src/lib/modules/NLM/SNPAAddress.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SNPAAddresses */
 /**
  * @summary SNPAAddresses
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type SNPAAddresses = SNPAAddress[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SNPAAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SNPAAddresses */
 let _cached_decoder_for_SNPAAddresses: $.ASN1Decoder<SNPAAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SNPAAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SNPAAddresses */
 /**
  * @summary Decodes an ASN.1 element into a(n) SNPAAddresses
  * @function
@@ -49,13 +44,9 @@ export function _decode_SNPAAddresses(el: _Element) {
   }
   return _cached_decoder_for_SNPAAddresses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SNPAAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SNPAAddresses */
 let _cached_encoder_for_SNPAAddresses: $.ASN1Encoder<SNPAAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SNPAAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SNPAAddresses */
 /**
  * @summary Encodes a(n) SNPAAddresses into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_SNPAAddresses(
   return _cached_encoder_for_SNPAAddresses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SNPAAddresses */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_XDayOf,
     _encode_XDayOf,
 } from "../SelectedAttributeTypes/XDayOf.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Period_days */
 /**
  * @summary Period_days
  * @description
@@ -27,13 +26,9 @@ export type Period_days =
     | { bitDay: Period_days_bitDay } /* CHOICE_ALT_ROOT */
     | { dayOf: XDayOf } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Period_days */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_days */
 let _cached_decoder_for_Period_days: $.ASN1Decoder<Period_days> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_days */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Period_days */
 /**
  * @summary Decodes an ASN.1 element into a(n) Period_days
  * @function
@@ -59,13 +54,9 @@ export function _decode_Period_days(el: _Element) {
     }
     return _cached_decoder_for_Period_days(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Period_days */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_days */
 let _cached_encoder_for_Period_days: $.ASN1Encoder<Period_days> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_days */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Period_days */
 /**
  * @summary Encodes a(n) Period_days into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_Period_days(
     return _cached_encoder_for_Period_days(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Period_days */
 
 /* eslint-enable */

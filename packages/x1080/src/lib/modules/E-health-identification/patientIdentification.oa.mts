@@ -16,7 +16,7 @@ import {
     _encode_PatientIdentification,
 } from '../E-health-identification/PatientIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION patientIdentification */
+
 /**
  * @summary patientIdentification
  * @description
@@ -44,6 +44,5 @@ export const patientIdentification: IDENTIFICATION<PatientIdentification> = {
     '&category': id_patient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION patientIdentification */
 
 /* eslint-enable */

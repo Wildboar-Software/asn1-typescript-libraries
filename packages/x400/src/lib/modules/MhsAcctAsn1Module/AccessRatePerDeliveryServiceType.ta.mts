@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AccessRatePerDeliveryServiceType */
 /**
  * @summary AccessRatePerDeliveryServiceType
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AccessRatePerDeliveryServiceType = REAL[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AccessRatePerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessRatePerDeliveryServiceType */
 let _cached_decoder_for_AccessRatePerDeliveryServiceType: $.ASN1Decoder<AccessRatePerDeliveryServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessRatePerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessRatePerDeliveryServiceType */
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessRatePerDeliveryServiceType
  * @function
@@ -45,13 +40,9 @@ export function _decode_AccessRatePerDeliveryServiceType(el: _Element) {
     }
     return _cached_decoder_for_AccessRatePerDeliveryServiceType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessRatePerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessRatePerDeliveryServiceType */
 let _cached_encoder_for_AccessRatePerDeliveryServiceType: $.ASN1Encoder<AccessRatePerDeliveryServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessRatePerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessRatePerDeliveryServiceType */
 /**
  * @summary Encodes a(n) AccessRatePerDeliveryServiceType into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AccessRatePerDeliveryServiceType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessRatePerDeliveryServiceType */
 
 /* eslint-enable */

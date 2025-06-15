@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION schedNb */
 /**
  * @summary schedNb
  * @description
@@ -29,6 +28,5 @@ export const schedNb: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part15 */ 15, /* nameBinding */ 6],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION schedNb */
 
 /* eslint-enable */

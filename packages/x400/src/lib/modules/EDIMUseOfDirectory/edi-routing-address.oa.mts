@@ -22,7 +22,6 @@ import {
     _encode_DirectoryString,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs';
 import { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-routing-address.va.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_routing_address */
 /**
  * @summary edi_routing_address
  * @description
@@ -58,6 +57,5 @@ export const edi_routing_address: ATTRIBUTE<DirectoryString> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_routing_address */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION md5 */
+
 /**
  * @summary md5
  * @description
@@ -22,6 +22,5 @@ export const md5: OBJECT_IDENTIFIER = new _OID([
     /* digestAlgorithm */ 2,
     5,
 ]);
-/* END_OF_SYMBOL_DEFINITION md5 */
 
 /* eslint-enable */

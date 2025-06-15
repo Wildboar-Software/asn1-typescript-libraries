@@ -6,7 +6,7 @@ import {
     _decode_CertId,
     _encode_CertId,
 } from "../PKIXCRMF-2009/CertId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OldCertId */
+
 /**
  * @summary OldCertId
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type OldCertId = CertId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OldCertId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OldCertId */
+
 let _cached_decoder_for_OldCertId: $.ASN1Decoder<OldCertId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OldCertId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OldCertId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OldCertId
  * @function
@@ -37,13 +35,11 @@ export function _decode_OldCertId(el: _Element) {
     }
     return _cached_decoder_for_OldCertId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OldCertId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OldCertId */
+
 let _cached_encoder_for_OldCertId: $.ASN1Encoder<OldCertId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OldCertId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OldCertId */
+
 /**
  * @summary Encodes a(n) OldCertId into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_OldCertId(
     return _cached_encoder_for_OldCertId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OldCertId */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import {
 } from "../MSAbstractService/AutoActionType.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION mhs_supported_automatic_actions */
 /**
  * @summary mhs_supported_automatic_actions
  * @description
@@ -62,6 +61,5 @@ export const mhs_supported_automatic_actions: ATTRIBUTE<AutoActionType> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_supported_automatic_actions */
 
 /* eslint-enable */

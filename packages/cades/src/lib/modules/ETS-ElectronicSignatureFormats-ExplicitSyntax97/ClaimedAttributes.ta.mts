@@ -15,7 +15,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION ClaimedAttributes */
 /**
  * @summary ClaimedAttributes
  * @description
@@ -28,13 +27,9 @@ import {
  */
 export
 type ClaimedAttributes = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ClaimedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClaimedAttributes */
 let _cached_decoder_for_ClaimedAttributes: $.ASN1Decoder<ClaimedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClaimedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClaimedAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClaimedAttributes
  * @function
@@ -46,13 +41,9 @@ function _decode_ClaimedAttributes (el: _Element) {
     if (!_cached_decoder_for_ClaimedAttributes) { _cached_decoder_for_ClaimedAttributes = $._decodeSequenceOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_ClaimedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClaimedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClaimedAttributes */
 let _cached_encoder_for_ClaimedAttributes: $.ASN1Encoder<ClaimedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClaimedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClaimedAttributes */
 /**
  * @summary Encodes a(n) ClaimedAttributes into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ function _encode_ClaimedAttributes (value: ClaimedAttributes, elGetter: $.ASN1En
     return _cached_encoder_for_ClaimedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClaimedAttributes */
 
 /* eslint-enable */

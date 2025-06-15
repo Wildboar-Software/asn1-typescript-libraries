@@ -19,7 +19,6 @@ import { modify } from '../MSAbstractService/modify.oa.mjs';
 import { alert } from '../MSAbstractService/alert.oa.mjs';
 import { id_pt_retrieval_94 } from '../MSObjectIdentifiers/id-pt-retrieval-94.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION retrieval */
 /**
  * @summary retrieval
  * @description
@@ -57,6 +56,5 @@ export const retrieval: PORT = {
     '&Consumer': [alert] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_retrieval_94 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION retrieval */
 
 /* eslint-enable */

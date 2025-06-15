@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AreaAddress */
 /**
  * @summary AreaAddress
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AreaAddress = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION AreaAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AreaAddress */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AreaAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AreaAddress */
 export const _decode_AreaAddress = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_AreaAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AreaAddress */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AreaAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AreaAddress */
 export const _encode_AreaAddress = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AreaAddress */
 
 /* eslint-enable */

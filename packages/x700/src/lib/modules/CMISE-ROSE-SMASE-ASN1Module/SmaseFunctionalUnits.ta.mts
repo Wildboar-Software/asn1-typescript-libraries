@@ -16,7 +16,6 @@ import {
     _encode_FunctionalUnitPackage,
 } from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SmaseFunctionalUnits */
 /**
  * @summary SmaseFunctionalUnits
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type SmaseFunctionalUnits = FunctionalUnitPackage[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SmaseFunctionalUnits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SmaseFunctionalUnits */
 let _cached_decoder_for_SmaseFunctionalUnits: $.ASN1Decoder<SmaseFunctionalUnits> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SmaseFunctionalUnits */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SmaseFunctionalUnits */
 /**
  * @summary Decodes an ASN.1 element into a(n) SmaseFunctionalUnits
  * @function
@@ -49,13 +44,9 @@ export function _decode_SmaseFunctionalUnits(el: _Element) {
     }
     return _cached_decoder_for_SmaseFunctionalUnits(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SmaseFunctionalUnits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SmaseFunctionalUnits */
 let _cached_encoder_for_SmaseFunctionalUnits: $.ASN1Encoder<SmaseFunctionalUnits> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SmaseFunctionalUnits */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SmaseFunctionalUnits */
 /**
  * @summary Encodes a(n) SmaseFunctionalUnits into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_SmaseFunctionalUnits(
     return _cached_encoder_for_SmaseFunctionalUnits(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SmaseFunctionalUnits */
 
 /* eslint-enable */

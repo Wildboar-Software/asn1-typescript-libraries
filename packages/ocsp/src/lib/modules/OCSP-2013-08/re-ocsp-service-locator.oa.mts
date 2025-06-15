@@ -7,7 +7,7 @@ import {
     _encode_ServiceLocator,
 } from "../OCSP-2013-08/ServiceLocator.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION re_ocsp_service_locator */
+
 /**
  * @summary re_ocsp_service_locator
  * @description
@@ -35,6 +35,5 @@ export const re_ocsp_service_locator: EXTENSION<ServiceLocator> = {
     "&id": id_pkix_ocsp_service_locator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION re_ocsp_service_locator */
 
 /* eslint-enable */

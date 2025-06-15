@@ -16,7 +16,7 @@ import {
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION C_COMMIT_RI */
+
 /**
  * @summary C_COMMIT_RI
  * @description
@@ -66,9 +66,8 @@ export class C_COMMIT_RI {
     return new C_COMMIT_RI(_o._unrecognizedExtensionsList, _o.user_data);
   }
 }
-/* END_OF_SYMBOL_DEFINITION C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_C_COMMIT_RI */
+
 /**
  * @summary The Leading Root Component Types of C_COMMIT_RI
  * @description
@@ -78,9 +77,8 @@ export class C_COMMIT_RI {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_C_COMMIT_RI: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_C_COMMIT_RI */
+
 /**
  * @summary The Trailing Root Component Types of C_COMMIT_RI
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_2_spec_for_C_COMMIT_RI: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_C_COMMIT_RI */
+
 /**
  * @summary The Extension Addition Component Types of C_COMMIT_RI
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_C_COMMIT_RI: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_C_COMMIT_RI: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_C_COMMIT_RI */
+
 let _cached_decoder_for_C_COMMIT_RI: $.ASN1Decoder<C_COMMIT_RI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_C_COMMIT_RI */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) C_COMMIT_RI
  * @function
@@ -158,13 +153,11 @@ export function _decode_C_COMMIT_RI(el: _Element) {
   }
   return _cached_decoder_for_C_COMMIT_RI(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_C_COMMIT_RI */
+
 let _cached_encoder_for_C_COMMIT_RI: $.ASN1Encoder<C_COMMIT_RI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_C_COMMIT_RI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_C_COMMIT_RI */
+
 /**
  * @summary Encodes a(n) C_COMMIT_RI into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_C_COMMIT_RI(
   return _cached_encoder_for_C_COMMIT_RI(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_C_COMMIT_RI */
 
 /* eslint-enable */

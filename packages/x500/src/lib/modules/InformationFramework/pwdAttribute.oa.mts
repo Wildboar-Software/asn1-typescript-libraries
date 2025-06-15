@@ -8,7 +8,6 @@ import {
 import { id_at_pwdAttribute } from "../InformationFramework/id-at-pwdAttribute.va.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdAttribute */
 /**
  * @summary pwdAttribute
  * @description
@@ -49,6 +48,5 @@ export const pwdAttribute: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdAttribute */
 
 /* eslint-enable */

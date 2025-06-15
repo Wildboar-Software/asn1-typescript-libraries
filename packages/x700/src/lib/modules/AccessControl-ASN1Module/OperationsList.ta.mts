@@ -16,7 +16,6 @@ import {
     _encode_OperationType,
 } from '../AccessControl-ASN1Module/OperationType.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OperationsList */
 /**
  * @summary OperationsList
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type OperationsList = OperationType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OperationsList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationsList */
 let _cached_decoder_for_OperationsList: $.ASN1Decoder<OperationsList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationsList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationsList */
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationsList
  * @function
@@ -49,13 +44,9 @@ export function _decode_OperationsList(el: _Element) {
     }
     return _cached_decoder_for_OperationsList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationsList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationsList */
 let _cached_encoder_for_OperationsList: $.ASN1Encoder<OperationsList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationsList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationsList */
 /**
  * @summary Encodes a(n) OperationsList into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_OperationsList(
     return _cached_encoder_for_OperationsList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationsList */
 
 /* eslint-enable */

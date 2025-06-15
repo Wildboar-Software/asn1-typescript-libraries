@@ -20,7 +20,7 @@ import {
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CompareResult_result */
+
 /**
  * @summary CompareResult_result
  * @description
@@ -35,13 +35,11 @@ export type CompareResult_result =
     | { success: CompareOK } /* CHOICE_ALT_ROOT */
     | { failure: AccessdErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CompareResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResult_result */
+
 let _cached_decoder_for_CompareResult_result: $.ASN1Decoder<CompareResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareResult_result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareResult_result
  * @function
@@ -65,13 +63,11 @@ export function _decode_CompareResult_result(el: _Element) {
     }
     return _cached_decoder_for_CompareResult_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResult_result */
+
 let _cached_encoder_for_CompareResult_result: $.ASN1Encoder<CompareResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareResult_result */
+
 /**
  * @summary Encodes a(n) CompareResult_result into an ASN.1 Element.
  * @function
@@ -105,6 +101,5 @@ export function _encode_CompareResult_result(
     return _cached_encoder_for_CompareResult_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareResult_result */
 
 /* eslint-enable */

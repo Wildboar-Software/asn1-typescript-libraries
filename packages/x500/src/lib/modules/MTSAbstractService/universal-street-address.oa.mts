@@ -5,7 +5,6 @@ import {
     _decode_UniversalStreetAddress,
     _encode_UniversalStreetAddress,
 } from "../MTSAbstractService/UniversalStreetAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_street_address */
 /**
  * @summary universal_street_address
  * @description
@@ -34,6 +33,5 @@ export const universal_street_address: EXTENSION_ATTRIBUTE<UniversalStreetAddres
     "&id": 36 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_street_address */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
 import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta.mjs";
 import { ECCSupplements, _decode_ECCSupplements, _encode_ECCSupplements } from "../SEC1-v1-9/ECCSupplements.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECPKSupplements */
 /**
  * @summary ECPKSupplements
  * @description
@@ -70,9 +69,7 @@ class ECPKSupplements {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECPKSupplements */
 /**
  * @summary The Leading Root Component Types of ECPKSupplements
  * @description
@@ -87,9 +84,7 @@ const _root_component_type_list_1_spec_for_ECPKSupplements: $.ComponentSpec[] = 
     new $.ComponentSpec("eccAlgorithms", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("eccSupplements", false, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECPKSupplements */
 /**
  * @summary The Trailing Root Component Types of ECPKSupplements
  * @description
@@ -102,9 +97,7 @@ export
 const _root_component_type_list_2_spec_for_ECPKSupplements: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECPKSupplements */
 /**
  * @summary The Extension Addition Component Types of ECPKSupplements
  * @description
@@ -117,13 +110,9 @@ export
 const _extension_additions_list_spec_for_ECPKSupplements: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPKSupplements */
 let _cached_decoder_for_ECPKSupplements: $.ASN1Decoder<ECPKSupplements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECPKSupplements */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECPKSupplements
  * @function
@@ -155,13 +144,9 @@ function _decode_ECPKSupplements (el: _Element) {
 }; }
     return _cached_decoder_for_ECPKSupplements(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPKSupplements */
 let _cached_encoder_for_ECPKSupplements: $.ASN1Encoder<ECPKSupplements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPKSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECPKSupplements */
 /**
  * @summary Encodes a(n) ECPKSupplements into an ASN.1 Element.
  * @function
@@ -183,6 +168,5 @@ function _encode_ECPKSupplements (value: ECPKSupplements, elGetter: $.ASN1Encode
     return _cached_encoder_for_ECPKSupplements(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECPKSupplements */
 
 /* eslint-enable */

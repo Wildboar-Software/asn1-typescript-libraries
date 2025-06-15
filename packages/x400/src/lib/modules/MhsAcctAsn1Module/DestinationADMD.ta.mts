@@ -15,7 +15,6 @@ import {
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
 } from '../MTSAbstractService/AdministrationDomainName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DestinationADMD */
 /**
  * @summary DestinationADMD
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DestinationADMD = AdministrationDomainName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DestinationADMD */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DestinationADMD */
 let _cached_decoder_for_DestinationADMD: $.ASN1Decoder<DestinationADMD> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DestinationADMD */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DestinationADMD */
 /**
  * @summary Decodes an ASN.1 element into a(n) DestinationADMD
  * @function
@@ -46,13 +41,9 @@ export function _decode_DestinationADMD(el: _Element) {
     }
     return _cached_decoder_for_DestinationADMD(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DestinationADMD */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DestinationADMD */
 let _cached_encoder_for_DestinationADMD: $.ASN1Encoder<DestinationADMD> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DestinationADMD */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DestinationADMD */
 /**
  * @summary Encodes a(n) DestinationADMD into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DestinationADMD(
     return _cached_encoder_for_DestinationADMD(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DestinationADMD */
 
 /* eslint-enable */

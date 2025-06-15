@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ManagedObjectInstanceAliasList */
+
 /**
  * @summary ManagedObjectInstanceAliasList
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ManagedObjectInstanceAliasList = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ManagedObjectInstanceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectInstanceAliasList */
+
 let _cached_decoder_for_ManagedObjectInstanceAliasList: $.ASN1Decoder<ManagedObjectInstanceAliasList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectInstanceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedObjectInstanceAliasList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectInstanceAliasList
  * @function
@@ -45,13 +43,11 @@ export function _decode_ManagedObjectInstanceAliasList(el: _Element) {
     }
     return _cached_decoder_for_ManagedObjectInstanceAliasList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedObjectInstanceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectInstanceAliasList */
+
 let _cached_encoder_for_ManagedObjectInstanceAliasList: $.ASN1Encoder<ManagedObjectInstanceAliasList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectInstanceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedObjectInstanceAliasList */
+
 /**
  * @summary Encodes a(n) ManagedObjectInstanceAliasList into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_ManagedObjectInstanceAliasList(
     return _cached_encoder_for_ManagedObjectInstanceAliasList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedObjectInstanceAliasList */
 
 /* eslint-enable */

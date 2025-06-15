@@ -6,7 +6,6 @@ import {
     _decode_UiiFormat,
     _encode_UiiFormat,
 } from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION uiiForm */
 /**
  * @summary uiiForm
  * @description
@@ -36,6 +35,5 @@ export const uiiForm: SYNTAX_NAME<UiiFormat> = {
     "&id": id_asx_uiiForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uiiForm */
 
 /* eslint-enable */

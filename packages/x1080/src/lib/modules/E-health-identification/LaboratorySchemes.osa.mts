@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION LaboratorySchemes */
+
 /**
  * @summary LaboratorySchemes
  * @description
@@ -26,6 +26,5 @@ import { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.
  *
  */
 export const LaboratorySchemes: LABORATORY_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION LaboratorySchemes */
 
 /* eslint-enable */

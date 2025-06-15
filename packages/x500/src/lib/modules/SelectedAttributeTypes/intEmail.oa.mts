@@ -11,7 +11,6 @@ import {
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
 import { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa.mjs";
 import { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION intEmail */
 /**
  * @summary intEmail
  * @description
@@ -52,6 +51,5 @@ export const intEmail: ATTRIBUTE<IntEmail> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION intEmail */
 
 /* eslint-enable */

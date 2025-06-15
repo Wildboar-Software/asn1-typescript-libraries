@@ -10,7 +10,6 @@ import {
     _decode_SupplierAndConsumers,
     _encode_SupplierAndConsumers,
 } from "../DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModificationParameter */
 /**
  * @summary ModificationParameter
  * @description
@@ -62,9 +61,7 @@ export class ModificationParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModificationParameter */
 /**
  * @summary The Leading Root Component Types of ModificationParameter
  * @description
@@ -82,9 +79,7 @@ export const _root_component_type_list_1_spec_for_ModificationParameter: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModificationParameter */
 /**
  * @summary The Trailing Root Component Types of ModificationParameter
  * @description
@@ -94,9 +89,7 @@ export const _root_component_type_list_1_spec_for_ModificationParameter: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModificationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModificationParameter */
 /**
  * @summary The Extension Addition Component Types of ModificationParameter
  * @description
@@ -106,13 +99,9 @@ export const _root_component_type_list_2_spec_for_ModificationParameter: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_ModificationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModificationParameter */
 let _cached_decoder_for_ModificationParameter: $.ASN1Decoder<ModificationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModificationParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModificationParameter
  * @function
@@ -145,13 +134,9 @@ export function _decode_ModificationParameter(el: _Element) {
     }
     return _cached_decoder_for_ModificationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModificationParameter */
 let _cached_encoder_for_ModificationParameter: $.ASN1Encoder<ModificationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModificationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModificationParameter */
 /**
  * @summary Encodes a(n) ModificationParameter into an ASN.1 Element.
  * @function
@@ -187,6 +172,5 @@ export function _encode_ModificationParameter(
     return _cached_encoder_for_ModificationParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModificationParameter */
 
 /* eslint-enable */

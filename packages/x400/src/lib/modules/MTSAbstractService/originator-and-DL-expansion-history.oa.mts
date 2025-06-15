@@ -23,7 +23,6 @@ import {
     _encode_OriginatorAndDLExpansionHistory,
 } from '../MTSAbstractService/OriginatorAndDLExpansionHistory.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originator_and_DL_expansion_history */
 /**
  * @summary originator_and_DL_expansion_history
  * @description
@@ -57,6 +56,5 @@ export const originator_and_DL_expansion_history: EXTENSION<OriginatorAndDLExpan
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originator_and_DL_expansion_history */
 
 /* eslint-enable */

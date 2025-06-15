@@ -83,7 +83,6 @@ import {
     _extension_additions_list_spec_for_PerMessageTransferFields,
 } from '../MTAAbstractService/PerMessageTransferFields.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MessageTransferEnvelope */
 /**
  * @summary MessageTransferEnvelope
  * @description
@@ -241,9 +240,7 @@ export class MessageTransferEnvelope implements PerMessageTransferFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageTransferEnvelope */
 /**
  * @summary The Leading Root Component Types of MessageTransferEnvelope
  * @description
@@ -262,9 +259,7 @@ export const _root_component_type_list_1_spec_for_MessageTransferEnvelope: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageTransferEnvelope */
 /**
  * @summary The Trailing Root Component Types of MessageTransferEnvelope
  * @description
@@ -276,9 +271,7 @@ export const _root_component_type_list_1_spec_for_MessageTransferEnvelope: $.Com
 export const _root_component_type_list_2_spec_for_MessageTransferEnvelope: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_PerMessageTransferFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageTransferEnvelope */
 /**
  * @summary The Extension Addition Component Types of MessageTransferEnvelope
  * @description
@@ -290,13 +283,9 @@ export const _root_component_type_list_2_spec_for_MessageTransferEnvelope: $.Com
 export const _extension_additions_list_spec_for_MessageTransferEnvelope: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_PerMessageTransferFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageTransferEnvelope */
 let _cached_decoder_for_MessageTransferEnvelope: $.ASN1Decoder<MessageTransferEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageTransferEnvelope */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageTransferEnvelope
  * @function
@@ -413,13 +402,9 @@ export function _decode_MessageTransferEnvelope(el: _Element) {
     }
     return _cached_decoder_for_MessageTransferEnvelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageTransferEnvelope */
 let _cached_encoder_for_MessageTransferEnvelope: $.ASN1Encoder<MessageTransferEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageTransferEnvelope */
 /**
  * @summary Encodes a(n) MessageTransferEnvelope into an ASN.1 Element.
  * @function
@@ -543,6 +528,5 @@ export function _encode_MessageTransferEnvelope(
     return _cached_encoder_for_MessageTransferEnvelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageTransferEnvelope */
 
 /* eslint-enable */

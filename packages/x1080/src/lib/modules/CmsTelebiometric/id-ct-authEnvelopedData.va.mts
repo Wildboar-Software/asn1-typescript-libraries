@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_ct } from '../CmsTelebiometric/id-ct.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_ct_authEnvelopedData */
+
 /**
  * @summary id_ct_authEnvelopedData
  * @description
@@ -25,6 +25,5 @@ import { id_ct } from '../CmsTelebiometric/id-ct.va.mjs';
  * @constant
  */
 export const id_ct_authEnvelopedData: OBJECT_IDENTIFIER = new _OID([23], id_ct);
-/* END_OF_SYMBOL_DEFINITION id_ct_authEnvelopedData */
 
 /* eslint-enable */

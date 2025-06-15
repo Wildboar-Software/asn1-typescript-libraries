@@ -15,7 +15,7 @@ import {
     _decode_SignalRateAndMappingList,
     _encode_SignalRateAndMappingList,
 } from '../ASN1DefinedTypesModule/SignalRateAndMappingList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PhysicalPortSignalRateAndMappingList_diverse */
+
 /**
  * @summary PhysicalPortSignalRateAndMappingList_diverse
  * @description
@@ -67,9 +67,8 @@ export class PhysicalPortSignalRateAndMappingList_diverse {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PhysicalPortSignalRateAndMappingList_diverse */
+
 /**
  * @summary The Leading Root Component Types of PhysicalPortSignalRateAndMappingList_diverse
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_PhysicalPortSignalRateAndMappi
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PhysicalPortSignalRateAndMappingList_diverse */
+
 /**
  * @summary The Trailing Root Component Types of PhysicalPortSignalRateAndMappingList_diverse
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_PhysicalPortSignalRateAndMappi
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PhysicalPortSignalRateAndMappingList_diverse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PhysicalPortSignalRateAndMappingList_diverse */
+
 /**
  * @summary The Extension Addition Component Types of PhysicalPortSignalRateAndMappingList_diverse
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_PhysicalPortSignalRateAndMappi
  * @constant
  */
 export const _extension_additions_list_spec_for_PhysicalPortSignalRateAndMappingList_diverse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse */
+
 let _cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse: $.ASN1Decoder<PhysicalPortSignalRateAndMappingList_diverse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalPortSignalRateAndMappingList_diverse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalPortSignalRateAndMappingList_diverse
  * @function
@@ -160,13 +155,11 @@ export function _decode_PhysicalPortSignalRateAndMappingList_diverse(
     }
     return _cached_decoder_for_PhysicalPortSignalRateAndMappingList_diverse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalPortSignalRateAndMappingList_diverse */
+
 let _cached_encoder_for_PhysicalPortSignalRateAndMappingList_diverse: $.ASN1Encoder<PhysicalPortSignalRateAndMappingList_diverse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalPortSignalRateAndMappingList_diverse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalPortSignalRateAndMappingList_diverse */
+
 /**
  * @summary Encodes a(n) PhysicalPortSignalRateAndMappingList_diverse into an ASN.1 Element.
  * @function
@@ -204,6 +197,5 @@ export function _encode_PhysicalPortSignalRateAndMappingList_diverse(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalPortSignalRateAndMappingList_diverse */
 
 /* eslint-enable */

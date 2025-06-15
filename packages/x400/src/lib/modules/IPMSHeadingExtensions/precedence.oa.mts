@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/Precedence.ta.mjs';
 import { id_rex_precedence } from '../IPMSObjectIdentifiers/id-rex-precedence.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION precedence */
 /**
  * @summary precedence
  * @description
@@ -45,6 +44,5 @@ export const precedence: IPMS_EXTENSION<Precedence> = {
     '&id': id_rex_precedence /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION precedence */
 
 /* eslint-enable */

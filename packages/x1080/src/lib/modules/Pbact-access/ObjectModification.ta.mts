@@ -20,7 +20,7 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectModification */
+
 /**
  * @summary ObjectModification
  * @description
@@ -44,13 +44,11 @@ export type ObjectModification =
     | { deleteValues: Attribute } /* CHOICE_ALT_ROOT */
     | { replaceAttribute: Attribute } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ObjectModification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectModification */
+
 let _cached_decoder_for_ObjectModification: $.ASN1Decoder<ObjectModification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectModification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectModification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectModification
  * @function
@@ -88,13 +86,11 @@ export function _decode_ObjectModification(el: _Element) {
     }
     return _cached_decoder_for_ObjectModification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectModification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectModification */
+
 let _cached_encoder_for_ObjectModification: $.ASN1Encoder<ObjectModification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectModification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectModification */
+
 /**
  * @summary Encodes a(n) ObjectModification into an ASN.1 Element.
  * @function
@@ -146,6 +142,5 @@ export function _encode_ObjectModification(
     return _cached_encoder_for_ObjectModification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectModification */
 
 /* eslint-enable */

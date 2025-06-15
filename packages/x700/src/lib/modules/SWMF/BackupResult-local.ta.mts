@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BackupResult_local */
 /**
  * @summary BackupResult_local
  * @description
@@ -63,9 +62,7 @@ export class BackupResult_local {
         return new BackupResult_local(_o.destination, _o.success);
     }
 }
-/* END_OF_SYMBOL_DEFINITION BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BackupResult_local */
 /**
  * @summary The Leading Root Component Types of BackupResult_local
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_BackupResult_local: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BackupResult_local */
 /**
  * @summary The Trailing Root Component Types of BackupResult_local
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_BackupResult_local: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BackupResult_local: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BackupResult_local */
 /**
  * @summary The Extension Addition Component Types of BackupResult_local
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_BackupResult_local: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_BackupResult_local: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_local */
 let _cached_decoder_for_BackupResult_local: $.ASN1Decoder<BackupResult_local> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackupResult_local */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackupResult_local
  * @function
@@ -151,13 +140,9 @@ export function _decode_BackupResult_local(el: _Element) {
     }
     return _cached_decoder_for_BackupResult_local(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_local */
 let _cached_encoder_for_BackupResult_local: $.ASN1Encoder<BackupResult_local> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_local */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackupResult_local */
 /**
  * @summary Encodes a(n) BackupResult_local into an ASN.1 Element.
  * @function
@@ -189,6 +174,5 @@ export function _encode_BackupResult_local(
     return _cached_encoder_for_BackupResult_local(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackupResult_local */
 
 /* eslint-enable */

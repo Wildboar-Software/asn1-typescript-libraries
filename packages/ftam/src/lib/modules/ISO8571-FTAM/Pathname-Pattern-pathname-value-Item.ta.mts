@@ -16,7 +16,7 @@ import {
   _decode_String_Pattern,
   _encode_String_Pattern,
 } from '../ISO8571-FTAM/String-Pattern.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Pathname_Pattern_pathname_value_Item */
+
 /**
  * @summary Pathname_Pattern_pathname_value_Item
  * @description
@@ -30,13 +30,11 @@ import {
 export type Pathname_Pattern_pathname_value_Item =
   | { string_match: String_Pattern } /* CHOICE_ALT_ROOT */
   | { any_match: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Pathname_Pattern_pathname_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname_Pattern_pathname_value_Item */
+
 let _cached_decoder_for_Pathname_Pattern_pathname_value_Item: $.ASN1Decoder<Pathname_Pattern_pathname_value_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname_Pattern_pathname_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pathname_Pattern_pathname_value_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Pathname_Pattern_pathname_value_Item
  * @function
@@ -60,13 +58,11 @@ export function _decode_Pathname_Pattern_pathname_value_Item(el: _Element) {
   }
   return _cached_decoder_for_Pathname_Pattern_pathname_value_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pathname_Pattern_pathname_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname_Pattern_pathname_value_Item */
+
 let _cached_encoder_for_Pathname_Pattern_pathname_value_Item: $.ASN1Encoder<Pathname_Pattern_pathname_value_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname_Pattern_pathname_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pathname_Pattern_pathname_value_Item */
+
 /**
  * @summary Encodes a(n) Pathname_Pattern_pathname_value_Item into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_Pathname_Pattern_pathname_value_Item(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pathname_Pattern_pathname_value_Item */
 
 /* eslint-enable */

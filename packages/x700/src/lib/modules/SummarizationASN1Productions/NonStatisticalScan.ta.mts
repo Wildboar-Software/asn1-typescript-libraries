@@ -21,7 +21,6 @@ import {
     _decode_AttributeMeasure,
     _encode_AttributeMeasure,
 } from '../SummarizationASN1Productions/AttributeMeasure.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NonStatisticalScan */
 /**
  * @summary NonStatisticalScan
  * @description
@@ -73,9 +72,7 @@ export class NonStatisticalScan {
         return new NonStatisticalScan(_o.objectInstance, _o.attributeValues);
     }
 }
-/* END_OF_SYMBOL_DEFINITION NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonStatisticalScan */
 /**
  * @summary The Leading Root Component Types of NonStatisticalScan
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_NonStatisticalScan: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonStatisticalScan */
 /**
  * @summary The Trailing Root Component Types of NonStatisticalScan
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_NonStatisticalScan: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NonStatisticalScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonStatisticalScan */
 /**
  * @summary The Extension Addition Component Types of NonStatisticalScan
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_NonStatisticalScan: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_NonStatisticalScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonStatisticalScan */
 let _cached_decoder_for_NonStatisticalScan: $.ASN1Decoder<NonStatisticalScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonStatisticalScan */
 /**
  * @summary Decodes an ASN.1 element into a(n) NonStatisticalScan
  * @function
@@ -174,13 +163,9 @@ export function _decode_NonStatisticalScan(el: _Element) {
     }
     return _cached_decoder_for_NonStatisticalScan(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonStatisticalScan */
 let _cached_encoder_for_NonStatisticalScan: $.ASN1Encoder<NonStatisticalScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonStatisticalScan */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonStatisticalScan */
 /**
  * @summary Encodes a(n) NonStatisticalScan into an ASN.1 Element.
  * @function
@@ -219,6 +204,5 @@ export function _encode_NonStatisticalScan(
     return _cached_encoder_for_NonStatisticalScan(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonStatisticalScan */
 
 /* eslint-enable */

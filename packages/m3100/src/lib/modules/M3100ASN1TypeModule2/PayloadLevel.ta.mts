@@ -16,7 +16,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PayloadLevel */
+
 /**
  * @summary PayloadLevel
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type PayloadLevel = CharacteristicInformation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PayloadLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PayloadLevel */
+
 let _cached_decoder_for_PayloadLevel: $.ASN1Decoder<PayloadLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PayloadLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PayloadLevel */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PayloadLevel
  * @function
@@ -47,13 +45,11 @@ export function _decode_PayloadLevel(el: _Element) {
     }
     return _cached_decoder_for_PayloadLevel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PayloadLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PayloadLevel */
+
 let _cached_encoder_for_PayloadLevel: $.ASN1Encoder<PayloadLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PayloadLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PayloadLevel */
+
 /**
  * @summary Encodes a(n) PayloadLevel into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_PayloadLevel(
     return _cached_encoder_for_PayloadLevel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PayloadLevel */
 
 /* eslint-enable */

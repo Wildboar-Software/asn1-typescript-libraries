@@ -23,7 +23,6 @@ import {
 } from '../DefinitionASN1Module/MatchesFor.ta.mjs';
 import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION matchesFor */
 /**
  * @summary matchesFor
  * @description
@@ -67,6 +66,5 @@ export const matchesFor: ATTRIBUTE<MatchesFor> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION matchesFor */
 
 /* eslint-enable */

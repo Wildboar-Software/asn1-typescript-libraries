@@ -16,7 +16,7 @@ import {
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SMIMEEncryptionKeyPreference */
+
 /**
  * @summary SMIMEEncryptionKeyPreference
  * @description
@@ -35,13 +35,11 @@ export type SMIMEEncryptionKeyPreference =
     | { issuerAndSerialNumber: IssuerAndSerialNumber } /* CHOICE_ALT_ROOT */
     | { receipentKeyId: RecipientKeyIdentifier } /* CHOICE_ALT_ROOT */
     | { subjectAltKeyIdentifier: SubjectKeyIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SMIMEEncryptionKeyPreference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMEEncryptionKeyPreference */
+
 let _cached_decoder_for_SMIMEEncryptionKeyPreference: $.ASN1Decoder<SMIMEEncryptionKeyPreference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMEEncryptionKeyPreference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SMIMEEncryptionKeyPreference */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SMIMEEncryptionKeyPreference
  * @function
@@ -75,13 +73,11 @@ export function _decode_SMIMEEncryptionKeyPreference(el: _Element) {
     }
     return _cached_decoder_for_SMIMEEncryptionKeyPreference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SMIMEEncryptionKeyPreference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMEEncryptionKeyPreference */
+
 let _cached_encoder_for_SMIMEEncryptionKeyPreference: $.ASN1Encoder<SMIMEEncryptionKeyPreference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMEEncryptionKeyPreference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SMIMEEncryptionKeyPreference */
+
 /**
  * @summary Encodes a(n) SMIMEEncryptionKeyPreference into an ASN.1 Element.
  * @function
@@ -121,6 +117,5 @@ export function _encode_SMIMEEncryptionKeyPreference(
     return _cached_encoder_for_SMIMEEncryptionKeyPreference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SMIMEEncryptionKeyPreference */
 
 /* eslint-enable */

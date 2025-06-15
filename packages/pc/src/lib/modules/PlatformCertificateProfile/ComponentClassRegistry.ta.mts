@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ComponentClassRegistry */
 /**
  * @summary ComponentClassRegistry
  * @description
@@ -30,21 +29,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type ComponentClassRegistry = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION ComponentClassRegistry */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentClassRegistry */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentClassRegistry */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentClassRegistry */
 export const _decode_ComponentClassRegistry = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentClassRegistry */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentClassRegistry */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentClassRegistry */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentClassRegistry */
 export const _encode_ComponentClassRegistry = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentClassRegistry */
 
 /* eslint-enable */

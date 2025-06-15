@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_rex_circulation_list_indicator } from '../IPMSObjectIdentifiers/id-rex-circulation-list-indicator.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION circulation_list_indicator */
 /**
  * @summary circulation_list_indicator
  * @description
@@ -42,6 +41,5 @@ export const circulation_list_indicator: IPMS_EXTENSION<NULL> = {
     '&id': id_rex_circulation_list_indicator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION circulation_list_indicator */
 
 /* eslint-enable */

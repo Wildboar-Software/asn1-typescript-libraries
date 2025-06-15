@@ -16,7 +16,7 @@ import {
     _decode_DefinedType,
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WithSyntax */
+
 /**
  * @summary WithSyntax
  * @description
@@ -32,13 +32,11 @@ import {
 export type WithSyntax =
     | { present: DefinedType } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION WithSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WithSyntax */
+
 let _cached_decoder_for_WithSyntax: $.ASN1Decoder<WithSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WithSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WithSyntax */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) WithSyntax
  * @function
@@ -56,13 +54,11 @@ export function _decode_WithSyntax(el: _Element) {
     }
     return _cached_decoder_for_WithSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WithSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WithSyntax */
+
 let _cached_encoder_for_WithSyntax: $.ASN1Encoder<WithSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WithSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WithSyntax */
+
 /**
  * @summary Encodes a(n) WithSyntax into an ASN.1 Element.
  * @function
@@ -86,6 +82,5 @@ export function _encode_WithSyntax(
     return _cached_encoder_for_WithSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WithSyntax */
 
 /* eslint-enable */

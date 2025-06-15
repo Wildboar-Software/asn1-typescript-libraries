@@ -15,7 +15,7 @@ import {
     _decode_ACBioInstance,
     _encode_ACBioInstance,
 } from '../AuthenticationContextForBiometrics/ACBioInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SequenceOfACBioInstances */
+
 /**
  * @summary SequenceOfACBioInstances
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SequenceOfACBioInstances = ACBioInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SequenceOfACBioInstances */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfACBioInstances */
+
 let _cached_decoder_for_SequenceOfACBioInstances: $.ASN1Decoder<SequenceOfACBioInstances> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfACBioInstances */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SequenceOfACBioInstances */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SequenceOfACBioInstances
  * @function
@@ -48,13 +46,11 @@ export function _decode_SequenceOfACBioInstances(el: _Element) {
     }
     return _cached_decoder_for_SequenceOfACBioInstances(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SequenceOfACBioInstances */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfACBioInstances */
+
 let _cached_encoder_for_SequenceOfACBioInstances: $.ASN1Encoder<SequenceOfACBioInstances> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfACBioInstances */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SequenceOfACBioInstances */
+
 /**
  * @summary Encodes a(n) SequenceOfACBioInstances into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SequenceOfACBioInstances(
     return _cached_encoder_for_SequenceOfACBioInstances(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SequenceOfACBioInstances */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_match } from "../UsefulDefinitions/ldap-match.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_lmr */
 /**
  * @summary id_lmr
  * @description
@@ -15,6 +14,5 @@ import { ldap_match } from "../UsefulDefinitions/ldap-match.va.mjs";
  * @constant
  */
 export const id_lmr: ID = ldap_match;
-/* END_OF_SYMBOL_DEFINITION id_lmr */
 
 /* eslint-enable */

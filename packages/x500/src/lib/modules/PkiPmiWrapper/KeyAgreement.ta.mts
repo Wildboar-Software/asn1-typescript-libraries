@@ -15,7 +15,6 @@ import {
     _decode_SenderDhInfo,
     _encode_SenderDhInfo,
 } from "../PkiPmiWrapper/SenderDhInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyAgreement */
 /**
  * @summary KeyAgreement
  * @description
@@ -78,9 +77,7 @@ export class KeyAgreement {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreement */
 /**
  * @summary The Leading Root Component Types of KeyAgreement
  * @description
@@ -105,9 +102,7 @@ export const _root_component_type_list_1_spec_for_KeyAgreement: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreement */
 /**
  * @summary The Trailing Root Component Types of KeyAgreement
  * @description
@@ -117,9 +112,7 @@ export const _root_component_type_list_1_spec_for_KeyAgreement: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyAgreement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreement */
 /**
  * @summary The Extension Addition Component Types of KeyAgreement
  * @description
@@ -129,13 +122,9 @@ export const _root_component_type_list_2_spec_for_KeyAgreement: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyAgreement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreement */
 let _cached_decoder_for_KeyAgreement: $.ASN1Decoder<KeyAgreement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyAgreement */
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyAgreement
  * @function
@@ -174,13 +163,9 @@ export function _decode_KeyAgreement(el: _Element) {
     }
     return _cached_decoder_for_KeyAgreement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreement */
 let _cached_encoder_for_KeyAgreement: $.ASN1Encoder<KeyAgreement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyAgreement */
 /**
  * @summary Encodes a(n) KeyAgreement into an ASN.1 Element.
  * @function
@@ -222,6 +207,5 @@ export function _encode_KeyAgreement(
     return _cached_encoder_for_KeyAgreement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyAgreement */
 
 /* eslint-enable */

@@ -115,7 +115,7 @@ import {
   _decode_IntermediateResponse,
   _encode_IntermediateResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LDAPMessage_protocolOp */
+
 /**
  * @summary LDAPMessage_protocolOp
  * @description
@@ -149,13 +149,11 @@ export type LDAPMessage_protocolOp =
   | { extendedResp: ExtendedResponse } /* CHOICE_ALT_ROOT */
   | { intermediateResponse: IntermediateResponse } /* CHOICE_ALT_EXT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION LDAPMessage_protocolOp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPMessage_protocolOp */
+
 let _cached_decoder_for_LDAPMessage_protocolOp: $.ASN1Decoder<LDAPMessage_protocolOp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPMessage_protocolOp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LDAPMessage_protocolOp */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPMessage_protocolOp
  * @function
@@ -195,13 +193,11 @@ export function _decode_LDAPMessage_protocolOp(el: _Element) {
   }
   return _cached_decoder_for_LDAPMessage_protocolOp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LDAPMessage_protocolOp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPMessage_protocolOp */
+
 let _cached_encoder_for_LDAPMessage_protocolOp: $.ASN1Encoder<LDAPMessage_protocolOp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPMessage_protocolOp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LDAPMessage_protocolOp */
+
 /**
  * @summary Encodes a(n) LDAPMessage_protocolOp into an ASN.1 Element.
  * @function
@@ -244,6 +240,5 @@ export function _encode_LDAPMessage_protocolOp(
   return _cached_encoder_for_LDAPMessage_protocolOp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LDAPMessage_protocolOp */
 
 /* eslint-enable */

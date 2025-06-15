@@ -13,7 +13,7 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
 import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QName */
+
 /**
  * @summary QName
  * @description
@@ -60,9 +60,8 @@ export class QName {
     return new QName(_o.uri, _o.name);
   }
 }
-/* END_OF_SYMBOL_DEFINITION QName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QName */
+
 /**
  * @summary The Leading Root Component Types of QName
  * @description
@@ -87,9 +86,8 @@ export const _root_component_type_list_1_spec_for_QName: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QName */
+
 /**
  * @summary The Trailing Root Component Types of QName
  * @description
@@ -99,9 +97,8 @@ export const _root_component_type_list_1_spec_for_QName: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_QName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QName */
+
 /**
  * @summary The Extension Addition Component Types of QName
  * @description
@@ -111,13 +108,11 @@ export const _root_component_type_list_2_spec_for_QName: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_QName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QName */
+
 let _cached_decoder_for_QName: $.ASN1Decoder<QName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QName
  * @function
@@ -154,13 +149,11 @@ export function _decode_QName(el: _Element) {
   }
   return _cached_decoder_for_QName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QName */
+
 let _cached_encoder_for_QName: $.ASN1Encoder<QName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QName */
+
 /**
  * @summary Encodes a(n) QName into an ASN.1 Element.
  * @function
@@ -188,6 +181,5 @@ export function _encode_QName(value: QName, elGetter: $.ASN1Encoder<QName>) {
   return _cached_encoder_for_QName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QName */
 
 /* eslint-enable */

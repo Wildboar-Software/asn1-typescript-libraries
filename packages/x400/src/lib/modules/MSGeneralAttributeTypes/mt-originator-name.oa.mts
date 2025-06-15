@@ -26,7 +26,6 @@ import { id_att_originator_name } from '../MSObjectIdentifiers/id-att-originator
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_originator_name */
 /**
  * @summary mt_originator_name
  * @description
@@ -67,6 +66,5 @@ export const mt_originator_name: X413ATTRIBUTE<ORName> = {
     '&id': id_att_originator_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_originator_name */
 
 /* eslint-enable */

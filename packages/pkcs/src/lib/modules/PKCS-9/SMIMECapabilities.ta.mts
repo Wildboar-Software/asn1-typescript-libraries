@@ -6,7 +6,7 @@ import {
     _decode_SMIMECapability,
     _encode_SMIMECapability,
 } from "../PKCS-9/SMIMECapability.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SMIMECapabilities */
+
 /**
  * @summary SMIMECapabilities
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SMIMECapabilities = SMIMECapability[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SMIMECapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMECapabilities */
+
 let _cached_decoder_for_SMIMECapabilities: $.ASN1Decoder<SMIMECapabilities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMECapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SMIMECapabilities */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SMIMECapabilities
  * @function
@@ -39,13 +37,11 @@ export function _decode_SMIMECapabilities(el: _Element) {
     }
     return _cached_decoder_for_SMIMECapabilities(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SMIMECapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMECapabilities */
+
 let _cached_encoder_for_SMIMECapabilities: $.ASN1Encoder<SMIMECapabilities> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMECapabilities */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SMIMECapabilities */
+
 /**
  * @summary Encodes a(n) SMIMECapabilities into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_SMIMECapabilities(
     return _cached_encoder_for_SMIMECapabilities(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SMIMECapabilities */
 
 /* eslint-enable */

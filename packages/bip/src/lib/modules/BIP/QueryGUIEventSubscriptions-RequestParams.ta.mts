@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QueryGUIEventSubscriptions_RequestParams */
+
 /**
  * @summary QueryGUIEventSubscriptions_RequestParams
  * @description
@@ -60,9 +60,8 @@ export class QueryGUIEventSubscriptions_RequestParams {
     return new QueryGUIEventSubscriptions_RequestParams(_o.bspProductUuid);
   }
 }
-/* END_OF_SYMBOL_DEFINITION QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QueryGUIEventSubscriptions_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of QueryGUIEventSubscriptions_RequestParams
  * @description
@@ -80,9 +79,8 @@ export const _root_component_type_list_1_spec_for_QueryGUIEventSubscriptions_Req
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QueryGUIEventSubscriptions_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of QueryGUIEventSubscriptions_RequestParams
  * @description
@@ -92,9 +90,8 @@ export const _root_component_type_list_1_spec_for_QueryGUIEventSubscriptions_Req
  * @constant
  */
 export const _root_component_type_list_2_spec_for_QueryGUIEventSubscriptions_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QueryGUIEventSubscriptions_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of QueryGUIEventSubscriptions_RequestParams
  * @description
@@ -104,13 +101,11 @@ export const _root_component_type_list_2_spec_for_QueryGUIEventSubscriptions_Req
  * @constant
  */
 export const _extension_additions_list_spec_for_QueryGUIEventSubscriptions_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QueryGUIEventSubscriptions_RequestParams */
+
 let _cached_decoder_for_QueryGUIEventSubscriptions_RequestParams: $.ASN1Decoder<QueryGUIEventSubscriptions_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QueryGUIEventSubscriptions_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QueryGUIEventSubscriptions_RequestParams
  * @function
@@ -138,13 +133,11 @@ export function _decode_QueryGUIEventSubscriptions_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_QueryGUIEventSubscriptions_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QueryGUIEventSubscriptions_RequestParams */
+
 let _cached_encoder_for_QueryGUIEventSubscriptions_RequestParams: $.ASN1Encoder<QueryGUIEventSubscriptions_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QueryGUIEventSubscriptions_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QueryGUIEventSubscriptions_RequestParams */
+
 /**
  * @summary Encodes a(n) QueryGUIEventSubscriptions_RequestParams into an ASN.1 Element.
  * @function
@@ -175,6 +168,5 @@ export function _encode_QueryGUIEventSubscriptions_RequestParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QueryGUIEventSubscriptions_RequestParams */
 
 /* eslint-enable */

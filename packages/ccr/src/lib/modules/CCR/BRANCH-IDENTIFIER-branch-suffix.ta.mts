@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_branch_suffix */
+
 /**
  * @summary BRANCH_IDENTIFIER_branch_suffix
  * @description
@@ -28,13 +28,11 @@ export type BRANCH_IDENTIFIER_branch_suffix =
   | { form1: OCTET_STRING } /* CHOICE_ALT_ROOT */
   | { form2: INTEGER } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_branch_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix */
+
 let _cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix: $.ASN1Decoder<BRANCH_IDENTIFIER_branch_suffix> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRANCH_IDENTIFIER_branch_suffix */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRANCH_IDENTIFIER_branch_suffix
  * @function
@@ -58,13 +56,11 @@ export function _decode_BRANCH_IDENTIFIER_branch_suffix(el: _Element) {
   }
   return _cached_decoder_for_BRANCH_IDENTIFIER_branch_suffix(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRANCH_IDENTIFIER_branch_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix */
+
 let _cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix: $.ASN1Encoder<BRANCH_IDENTIFIER_branch_suffix> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRANCH_IDENTIFIER_branch_suffix */
+
 /**
  * @summary Encodes a(n) BRANCH_IDENTIFIER_branch_suffix into an ASN.1 Element.
  * @function
@@ -98,6 +94,5 @@ export function _encode_BRANCH_IDENTIFIER_branch_suffix(
   return _cached_encoder_for_BRANCH_IDENTIFIER_branch_suffix(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRANCH_IDENTIFIER_branch_suffix */
 
 /* eslint-enable */

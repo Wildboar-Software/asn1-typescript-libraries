@@ -6,7 +6,6 @@ import {
 } from "../CertificateExtensions/CertificateListExactAssertion.ta.mjs";
 import { id_ldx_certListExactAssertion } from "../CertificateExtensions/id-ldx-certListExactAssertion.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION certListExactAssertion */
 /**
  * @summary certListExactAssertion
  * @description
@@ -37,6 +36,5 @@ export const certListExactAssertion: SYNTAX_NAME<CertificateListExactAssertion> 
     "&id": id_ldx_certListExactAssertion /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certListExactAssertion */
 
 /* eslint-enable */

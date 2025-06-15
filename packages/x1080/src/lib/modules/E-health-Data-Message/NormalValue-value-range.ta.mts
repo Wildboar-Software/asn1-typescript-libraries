@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NormalValue_value_range */
+
 /**
  * @summary NormalValue_value_range
  * @description
@@ -61,9 +61,8 @@ export class NormalValue_value_range {
         return new NormalValue_value_range(_o.minimum, _o.maximum);
     }
 }
-/* END_OF_SYMBOL_DEFINITION NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NormalValue_value_range */
+
 /**
  * @summary The Leading Root Component Types of NormalValue_value_range
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_NormalValue_value_range: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NormalValue_value_range */
+
 /**
  * @summary The Trailing Root Component Types of NormalValue_value_range
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_NormalValue_value_range: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NormalValue_value_range: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NormalValue_value_range */
+
 /**
  * @summary The Extension Addition Component Types of NormalValue_value_range
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_NormalValue_value_range: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_NormalValue_value_range: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NormalValue_value_range */
+
 let _cached_decoder_for_NormalValue_value_range: $.ASN1Decoder<NormalValue_value_range> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NormalValue_value_range */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NormalValue_value_range
  * @function
@@ -149,13 +144,11 @@ export function _decode_NormalValue_value_range(el: _Element) {
     }
     return _cached_decoder_for_NormalValue_value_range(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NormalValue_value_range */
+
 let _cached_encoder_for_NormalValue_value_range: $.ASN1Encoder<NormalValue_value_range> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NormalValue_value_range */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NormalValue_value_range */
+
 /**
  * @summary Encodes a(n) NormalValue_value_range into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_NormalValue_value_range(
     return _cached_encoder_for_NormalValue_value_range(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NormalValue_value_range */
 
 /* eslint-enable */

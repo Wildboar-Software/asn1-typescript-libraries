@@ -20,7 +20,7 @@ import {
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Contents_Type_List_Item */
+
 /**
  * @summary Contents_Type_List_Item
  * @description
@@ -34,13 +34,11 @@ import {
 export type Contents_Type_List_Item =
   | { document_type_name: Document_Type_Name } /* CHOICE_ALT_ROOT */
   | { abstract_Syntax_name: Abstract_Syntax_Name } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Contents_Type_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_List_Item */
+
 let _cached_decoder_for_Contents_Type_List_Item: $.ASN1Decoder<Contents_Type_List_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Contents_Type_List_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Contents_Type_List_Item
  * @function
@@ -58,13 +56,11 @@ export function _decode_Contents_Type_List_Item(el: _Element) {
   }
   return _cached_decoder_for_Contents_Type_List_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Contents_Type_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_List_Item */
+
 let _cached_encoder_for_Contents_Type_List_Item: $.ASN1Encoder<Contents_Type_List_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_List_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Contents_Type_List_Item */
+
 /**
  * @summary Encodes a(n) Contents_Type_List_Item into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_Contents_Type_List_Item(
   return _cached_encoder_for_Contents_Type_List_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Contents_Type_List_Item */
 
 /* eslint-enable */

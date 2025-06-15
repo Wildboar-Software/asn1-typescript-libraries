@@ -15,7 +15,7 @@ import {
     _decode_ConnectionList,
     _encode_ConnectionList,
 } from '../M3100ASN1TypeModule2/ConnectionList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LinkConnectionList */
+
 /**
  * @summary LinkConnectionList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type LinkConnectionList = ConnectionList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LinkConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkConnectionList */
+
 let _cached_decoder_for_LinkConnectionList: $.ASN1Decoder<LinkConnectionList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkConnectionList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LinkConnectionList
  * @function
@@ -46,13 +44,11 @@ export function _decode_LinkConnectionList(el: _Element) {
     }
     return _cached_decoder_for_LinkConnectionList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LinkConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkConnectionList */
+
 let _cached_encoder_for_LinkConnectionList: $.ASN1Encoder<LinkConnectionList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkConnectionList */
+
 /**
  * @summary Encodes a(n) LinkConnectionList into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_LinkConnectionList(
     return _cached_encoder_for_LinkConnectionList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkConnectionList */
 
 /* eslint-enable */

@@ -26,7 +26,6 @@ import { id_hat_authorizing_users } from '../IPMSObjectIdentifiers/id-hat-author
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION authorizing_users */
 /**
  * @summary authorizing_users
  * @description
@@ -67,6 +66,5 @@ export const authorizing_users: X413ATTRIBUTE<AuthorizingUsersSubfield> = {
     '&id': id_hat_authorizing_users /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authorizing_users */
 
 /* eslint-enable */

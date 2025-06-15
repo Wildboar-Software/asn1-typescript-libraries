@@ -36,7 +36,6 @@ import {
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../IPMSInformationObjects/NotificationExtensionsField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CommonFields */
 /**
  * @summary CommonFields
  * @description
@@ -113,9 +112,7 @@ export class CommonFields {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonFields */
 /**
  * @summary The Leading Root Component Types of CommonFields
  * @description
@@ -161,9 +158,7 @@ export const _root_component_type_list_1_spec_for_CommonFields: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonFields */
 /**
  * @summary The Trailing Root Component Types of CommonFields
  * @description
@@ -173,9 +168,7 @@ export const _root_component_type_list_1_spec_for_CommonFields: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonFields */
 /**
  * @summary The Extension Addition Component Types of CommonFields
  * @description
@@ -185,13 +178,9 @@ export const _root_component_type_list_2_spec_for_CommonFields: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_CommonFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonFields */
 let _cached_decoder_for_CommonFields: $.ASN1Decoder<CommonFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonFields
  * @function
@@ -254,13 +243,9 @@ export function _decode_CommonFields(el: _Element) {
     }
     return _cached_decoder_for_CommonFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonFields */
 let _cached_encoder_for_CommonFields: $.ASN1Encoder<CommonFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonFields */
 /**
  * @summary Encodes a(n) CommonFields into an ASN.1 Element.
  * @function
@@ -323,6 +308,5 @@ export function _encode_CommonFields(
     return _cached_encoder_for_CommonFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonFields */
 
 /* eslint-enable */

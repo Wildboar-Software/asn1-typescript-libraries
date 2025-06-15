@@ -15,7 +15,7 @@ import {
   _decode_ApplicationOwnedMemoryBlock,
   _encode_ApplicationOwnedMemoryBlock,
 } from '../BIP/ApplicationOwnedMemoryBlock.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplicationOwnedMemoryBlocks */
+
 /**
  * @summary ApplicationOwnedMemoryBlocks
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ApplicationOwnedMemoryBlocks = ApplicationOwnedMemoryBlock[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ApplicationOwnedMemoryBlocks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationOwnedMemoryBlocks */
+
 let _cached_decoder_for_ApplicationOwnedMemoryBlocks: $.ASN1Decoder<ApplicationOwnedMemoryBlocks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationOwnedMemoryBlocks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplicationOwnedMemoryBlocks */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplicationOwnedMemoryBlocks
  * @function
@@ -48,13 +46,11 @@ export function _decode_ApplicationOwnedMemoryBlocks(el: _Element) {
   }
   return _cached_decoder_for_ApplicationOwnedMemoryBlocks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplicationOwnedMemoryBlocks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationOwnedMemoryBlocks */
+
 let _cached_encoder_for_ApplicationOwnedMemoryBlocks: $.ASN1Encoder<ApplicationOwnedMemoryBlocks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationOwnedMemoryBlocks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplicationOwnedMemoryBlocks */
+
 /**
  * @summary Encodes a(n) ApplicationOwnedMemoryBlocks into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ApplicationOwnedMemoryBlocks(
   return _cached_encoder_for_ApplicationOwnedMemoryBlocks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplicationOwnedMemoryBlocks */
 
 /* eslint-enable */

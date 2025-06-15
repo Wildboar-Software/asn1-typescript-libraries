@@ -7,7 +7,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DDO */
+
 /**
  * @summary DDO
  * @description
@@ -82,9 +82,8 @@ export class DDO {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DDO */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DDO */
+
 /**
  * @summary The Leading Root Component Types of DDO
  * @description
@@ -123,9 +122,8 @@ export const _root_component_type_list_1_spec_for_DDO: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DDO */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DDO */
+
 /**
  * @summary The Trailing Root Component Types of DDO
  * @description
@@ -135,9 +133,8 @@ export const _root_component_type_list_1_spec_for_DDO: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DDO: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DDO */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DDO */
+
 /**
  * @summary The Extension Addition Component Types of DDO
  * @description
@@ -147,13 +144,11 @@ export const _root_component_type_list_2_spec_for_DDO: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_DDO: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DDO */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DDO */
+
 let _cached_decoder_for_DDO: $.ASN1Decoder<DDO> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DDO */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DDO */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DDO
  * @function
@@ -211,13 +206,11 @@ export function _decode_DDO(el: _Element) {
     }
     return _cached_decoder_for_DDO(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DDO */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DDO */
+
 let _cached_encoder_for_DDO: $.ASN1Encoder<DDO> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DDO */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DDO */
+
 /**
  * @summary Encodes a(n) DDO into an ASN.1 Element.
  * @function
@@ -269,6 +262,5 @@ export function _encode_DDO(value: DDO, elGetter: $.ASN1Encoder<DDO>) {
     return _cached_encoder_for_DDO(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DDO */
 
 /* eslint-enable */

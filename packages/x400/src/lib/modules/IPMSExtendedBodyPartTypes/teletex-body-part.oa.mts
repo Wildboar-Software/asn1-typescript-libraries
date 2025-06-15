@@ -12,7 +12,6 @@ import {
 import { teletex_body_part_parameters } from '../IPMSExtendedBodyPartTypes/teletex-body-part-parameters.oa.mjs';
 import { teletex_body_part_data } from '../IPMSExtendedBodyPartTypes/teletex-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION teletex_body_part */
 /**
  * @summary teletex_body_part
  * @description
@@ -39,6 +38,5 @@ export const teletex_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': teletex_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': teletex_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_body_part */
 
 /* eslint-enable */

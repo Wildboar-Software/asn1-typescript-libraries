@@ -12,7 +12,7 @@ import {
     _encode_SubjectKeyIdentifier,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EntityIdentifier */
+
 /**
  * @summary EntityIdentifier
  * @description
@@ -29,13 +29,11 @@ import {
 export type EntityIdentifier =
     | { issuerAndSerialNumber: IssuerAndSerialNumber } /* CHOICE_ALT_ROOT */
     | { subjectKeyIdentifier: SubjectKeyIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EntityIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityIdentifier */
+
 let _cached_decoder_for_EntityIdentifier: $.ASN1Decoder<EntityIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntityIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EntityIdentifier
  * @function
@@ -59,13 +57,11 @@ export function _decode_EntityIdentifier(el: _Element) {
     }
     return _cached_decoder_for_EntityIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntityIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityIdentifier */
+
 let _cached_encoder_for_EntityIdentifier: $.ASN1Encoder<EntityIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntityIdentifier */
+
 /**
  * @summary Encodes a(n) EntityIdentifier into an ASN.1 Element.
  * @function
@@ -89,6 +85,5 @@ export function _encode_EntityIdentifier(
     return _cached_encoder_for_EntityIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntityIdentifier */
 
 /* eslint-enable */

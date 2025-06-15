@@ -15,7 +15,7 @@ import {
     _decode_AttributeSel_attSelect,
     _encode_AttributeSel_attSelect,
 } from '../Pbact-access/AttributeSel-attSelect.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeSel */
+
 /**
  * @summary AttributeSel
  * @description
@@ -72,9 +72,8 @@ export class AttributeSel {
         return new AttributeSel(_o.attSelect, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeSel */
+
 /**
  * @summary The Leading Root Component Types of AttributeSel
  * @description
@@ -86,9 +85,8 @@ export class AttributeSel {
 export const _root_component_type_list_1_spec_for_AttributeSel: $.ComponentSpec[] = [
     new $.ComponentSpec('attSelect', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeSel */
+
 /**
  * @summary The Trailing Root Component Types of AttributeSel
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_1_spec_for_AttributeSel: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeSel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeSel */
+
 /**
  * @summary The Extension Addition Component Types of AttributeSel
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_AttributeSel: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeSel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSel */
+
 let _cached_decoder_for_AttributeSel: $.ASN1Decoder<AttributeSel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeSel */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeSel
  * @function
@@ -144,13 +139,11 @@ export function _decode_AttributeSel(el: _Element) {
     }
     return _cached_decoder_for_AttributeSel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSel */
+
 let _cached_encoder_for_AttributeSel: $.ASN1Encoder<AttributeSel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeSel */
+
 /**
  * @summary Encodes a(n) AttributeSel into an ASN.1 Element.
  * @function
@@ -186,6 +179,5 @@ export function _encode_AttributeSel(
     return _cached_encoder_for_AttributeSel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeSel */
 
 /* eslint-enable */

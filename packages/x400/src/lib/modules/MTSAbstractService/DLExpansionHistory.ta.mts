@@ -15,7 +15,6 @@ import {
     _decode_DLExpansion,
     _encode_DLExpansion,
 } from '../MTSAbstractService/DLExpansion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DLExpansionHistory */
 /**
  * @summary DLExpansionHistory
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DLExpansionHistory = DLExpansion[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExpansionHistory */
 let _cached_decoder_for_DLExpansionHistory: $.ASN1Decoder<DLExpansionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLExpansionHistory */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLExpansionHistory
  * @function
@@ -48,13 +43,9 @@ export function _decode_DLExpansionHistory(el: _Element) {
     }
     return _cached_decoder_for_DLExpansionHistory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExpansionHistory */
 let _cached_encoder_for_DLExpansionHistory: $.ASN1Encoder<DLExpansionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLExpansionHistory */
 /**
  * @summary Encodes a(n) DLExpansionHistory into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_DLExpansionHistory(
     return _cached_encoder_for_DLExpansionHistory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLExpansionHistory */
 
 /* eslint-enable */

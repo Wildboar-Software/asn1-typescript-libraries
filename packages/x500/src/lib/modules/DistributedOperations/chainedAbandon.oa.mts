@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { abandon } from "../DirectoryAbstractService/abandon.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION chainedAbandon */
 /**
  * @summary chainedAbandon
  * @description
@@ -17,6 +16,5 @@ import { abandon } from "../DirectoryAbstractService/abandon.oa.mjs";
  * @implements {OPERATION}
  */
 export const chainedAbandon: OPERATION = abandon;
-/* END_OF_SYMBOL_DEFINITION chainedAbandon */
 
 /* eslint-enable */

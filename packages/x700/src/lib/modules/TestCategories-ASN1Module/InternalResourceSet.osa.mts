@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULTS.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION InternalResourceSet */
 /**
  * @summary InternalResourceSet
  * @description
@@ -26,6 +25,5 @@ import { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULT
  *
  */
 export const InternalResourceSet: CDTC_TEST_RESULTS[] = [];
-/* END_OF_SYMBOL_DEFINITION InternalResourceSet */
 
 /* eslint-enable */

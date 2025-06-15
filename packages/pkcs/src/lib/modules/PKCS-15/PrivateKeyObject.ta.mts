@@ -16,7 +16,7 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrivateKeyObject */
+
 /**
  * @summary PrivateKeyObject
  * @description
@@ -36,9 +36,8 @@ export type PrivateKeyObject<KeyAttributes> = PKCS15Object<
     CommonPrivateKeyAttributes,
     KeyAttributes
 >; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PrivateKeyObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PrivateKeyObject */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PrivateKeyObject
  * @function
@@ -58,9 +57,8 @@ export function _get_decoder_for_PrivateKeyObject<KeyAttributes>(
         _decode_KeyAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PrivateKeyObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PrivateKeyObject */
+
 /**
  * @summary Returns a function that will encode a(n) PrivateKeyObject into an ASN.1 Element.
  * @function
@@ -79,6 +77,5 @@ export function _get_encoder_for_PrivateKeyObject<KeyAttributes>(
         _encode_KeyAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PrivateKeyObject */
 
 /* eslint-enable */

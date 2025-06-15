@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RemoveEntryResult */
 /**
  * @summary RemoveEntryResult
  * @description
@@ -31,13 +30,9 @@ export type RemoveEntryResult =
           information: OPTIONALLY_PROTECTED_SEQ<RemoveEntryResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RemoveEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveEntryResult */
 let _cached_decoder_for_RemoveEntryResult: $.ASN1Decoder<RemoveEntryResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveEntryResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveEntryResult
  * @function
@@ -65,13 +60,9 @@ export function _decode_RemoveEntryResult(el: _Element) {
     }
     return _cached_decoder_for_RemoveEntryResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveEntryResult */
 let _cached_encoder_for_RemoveEntryResult: $.ASN1Encoder<RemoveEntryResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveEntryResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveEntryResult */
 /**
  * @summary Encodes a(n) RemoveEntryResult into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_RemoveEntryResult(
     return _cached_encoder_for_RemoveEntryResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveEntryResult */
 
 /* eslint-enable */

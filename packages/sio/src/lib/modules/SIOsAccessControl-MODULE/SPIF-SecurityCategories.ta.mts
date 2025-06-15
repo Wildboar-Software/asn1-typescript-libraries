@@ -6,7 +6,7 @@ import {
     _decode_SecurityCategory,
     _encode_SecurityCategory,
 } from "../SIOsAccessControl-MODULE/SecurityCategory.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPIF_SecurityCategories */
+
 /**
  * @summary SPIF_SecurityCategories
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SPIF_SecurityCategories = SecurityCategory[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SPIF_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPIF_SecurityCategories */
+
 let _cached_decoder_for_SPIF_SecurityCategories: $.ASN1Decoder<SPIF_SecurityCategories> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPIF_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPIF_SecurityCategories */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SPIF_SecurityCategories
  * @function
@@ -39,13 +37,11 @@ export function _decode_SPIF_SecurityCategories(el: _Element) {
     }
     return _cached_decoder_for_SPIF_SecurityCategories(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPIF_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPIF_SecurityCategories */
+
 let _cached_encoder_for_SPIF_SecurityCategories: $.ASN1Encoder<SPIF_SecurityCategories> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPIF_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPIF_SecurityCategories */
+
 /**
  * @summary Encodes a(n) SPIF_SecurityCategories into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_SPIF_SecurityCategories(
     return _cached_encoder_for_SPIF_SecurityCategories(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPIF_SecurityCategories */
 
 /* eslint-enable */

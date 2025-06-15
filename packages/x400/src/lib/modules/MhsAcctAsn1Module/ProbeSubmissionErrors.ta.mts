@@ -15,7 +15,6 @@ import {
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeSubmissionErrors */
 /**
  * @summary ProbeSubmissionErrors
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type ProbeSubmissionErrors = SubmissionError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionErrors */
 let _cached_decoder_for_ProbeSubmissionErrors: $.ASN1Decoder<ProbeSubmissionErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionErrors
  * @function
@@ -50,13 +45,9 @@ export function _decode_ProbeSubmissionErrors(el: _Element) {
     }
     return _cached_decoder_for_ProbeSubmissionErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionErrors */
 let _cached_encoder_for_ProbeSubmissionErrors: $.ASN1Encoder<ProbeSubmissionErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionErrors */
 /**
  * @summary Encodes a(n) ProbeSubmissionErrors into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_ProbeSubmissionErrors(
     return _cached_encoder_for_ProbeSubmissionErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionErrors */
 
 /* eslint-enable */

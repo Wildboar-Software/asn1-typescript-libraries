@@ -20,7 +20,7 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionSwitchReportingInfo */
+
 /**
  * @summary ProtectionSwitchReportingInfo
  * @description
@@ -75,9 +75,8 @@ export class ProtectionSwitchReportingInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionSwitchReportingInfo */
+
 /**
  * @summary The Leading Root Component Types of ProtectionSwitchReportingInfo
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_ProtectionSwitchReportingInfo:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionSwitchReportingInfo */
+
 /**
  * @summary The Trailing Root Component Types of ProtectionSwitchReportingInfo
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_ProtectionSwitchReportingInfo:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectionSwitchReportingInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionSwitchReportingInfo */
+
 /**
  * @summary The Extension Addition Component Types of ProtectionSwitchReportingInfo
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_ProtectionSwitchReportingInfo:
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectionSwitchReportingInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionSwitchReportingInfo */
+
 let _cached_decoder_for_ProtectionSwitchReportingInfo: $.ASN1Decoder<ProtectionSwitchReportingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionSwitchReportingInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionSwitchReportingInfo
  * @function
@@ -166,13 +161,11 @@ export function _decode_ProtectionSwitchReportingInfo(el: _Element) {
     }
     return _cached_decoder_for_ProtectionSwitchReportingInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionSwitchReportingInfo */
+
 let _cached_encoder_for_ProtectionSwitchReportingInfo: $.ASN1Encoder<ProtectionSwitchReportingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionSwitchReportingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionSwitchReportingInfo */
+
 /**
  * @summary Encodes a(n) ProtectionSwitchReportingInfo into an ASN.1 Element.
  * @function
@@ -207,6 +200,5 @@ export function _encode_ProtectionSwitchReportingInfo(
     return _cached_encoder_for_ProtectionSwitchReportingInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionSwitchReportingInfo */
 
 /* eslint-enable */

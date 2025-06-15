@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va.mjs";
-/* START_OF_SYMBOL_DEFINITION kdConcatenation */
+
 /**
  * @summary kdConcatenation
  * @description
@@ -18,6 +18,5 @@ export const kdConcatenation: OBJECT_IDENTIFIER = new _OID(
     [/* concatenation */ 1],
     keyDerivationMethod
 );
-/* END_OF_SYMBOL_DEFINITION kdConcatenation */
 
 /* eslint-enable */

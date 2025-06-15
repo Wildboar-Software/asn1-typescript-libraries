@@ -16,7 +16,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIMLocation */
 /**
  * @summary EDIMLocation
  * @description
@@ -34,13 +33,9 @@ export type EDIMLocation =
     | { stored: SequenceNumber[] } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION EDIMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMLocation */
 let _cached_decoder_for_EDIMLocation: $.ASN1Decoder<EDIMLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIMLocation */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIMLocation
  * @function
@@ -63,13 +58,9 @@ export function _decode_EDIMLocation(el: _Element) {
     }
     return _cached_decoder_for_EDIMLocation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMLocation */
 let _cached_encoder_for_EDIMLocation: $.ASN1Encoder<EDIMLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIMLocation */
 /**
  * @summary Encodes a(n) EDIMLocation into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_EDIMLocation(
     return _cached_encoder_for_EDIMLocation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIMLocation */
 
 /* eslint-enable */

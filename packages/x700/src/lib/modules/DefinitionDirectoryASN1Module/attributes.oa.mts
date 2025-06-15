@@ -22,7 +22,6 @@ import {
     _encode_Attributes,
 } from '../DefinitionASN1Module/Attributes.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION attributes */
 /**
  * @summary attributes
  * @description
@@ -64,6 +63,5 @@ export const attributes: ATTRIBUTE<Attributes> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributes */
 
 /* eslint-enable */

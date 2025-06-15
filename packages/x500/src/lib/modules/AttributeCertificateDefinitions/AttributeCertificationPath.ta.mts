@@ -15,7 +15,6 @@ import {
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeCertificationPath */
 /**
  * @summary AttributeCertificationPath
  * @description
@@ -79,9 +78,7 @@ export class AttributeCertificationPath {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeCertificationPath */
 /**
  * @summary The Leading Root Component Types of AttributeCertificationPath
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_AttributeCertificationPath: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeCertificationPath */
 /**
  * @summary The Trailing Root Component Types of AttributeCertificationPath
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_AttributeCertificationPath: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeCertificationPath: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeCertificationPath */
 /**
  * @summary The Extension Addition Component Types of AttributeCertificationPath
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_AttributeCertificationPath: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeCertificationPath: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificationPath */
 let _cached_decoder_for_AttributeCertificationPath: $.ASN1Decoder<AttributeCertificationPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeCertificationPath */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeCertificationPath
  * @function
@@ -184,13 +173,9 @@ export function _decode_AttributeCertificationPath(el: _Element) {
     }
     return _cached_decoder_for_AttributeCertificationPath(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificationPath */
 let _cached_encoder_for_AttributeCertificationPath: $.ASN1Encoder<AttributeCertificationPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeCertificationPath */
 /**
  * @summary Encodes a(n) AttributeCertificationPath into an ASN.1 Element.
  * @function
@@ -232,6 +217,5 @@ export function _encode_AttributeCertificationPath(
     return _cached_encoder_for_AttributeCertificationPath(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeCertificationPath */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../PkiPmiExternalDataTypes/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryOrganizationName */
 /**
  * @summary UniversalPhysicalDeliveryOrganizationName
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalPhysicalDeliveryOrganizationName = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryOrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName */
 let _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName: $.ASN1Decoder<UniversalPhysicalDeliveryOrganizationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryOrganizationName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryOrganizationName
  * @function
@@ -39,13 +34,9 @@ export function _decode_UniversalPhysicalDeliveryOrganizationName(
     }
     return _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryOrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName */
 let _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName: $.ASN1Encoder<UniversalPhysicalDeliveryOrganizationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryOrganizationName */
 /**
  * @summary Encodes a(n) UniversalPhysicalDeliveryOrganizationName into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_UniversalPhysicalDeliveryOrganizationName(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryOrganizationName */
 
 /* eslint-enable */

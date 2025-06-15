@@ -13,9 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION FIELD_ID */
 export
 type FIELD_ID <Type> = TYPE_IDENTIFIER <Type>;
-/* END_OF_SYMBOL_DEFINITION FIELD_ID */
 
 /* eslint-enable */

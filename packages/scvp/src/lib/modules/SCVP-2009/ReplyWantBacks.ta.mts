@@ -15,7 +15,6 @@ import {
   _decode_ReplyWantBack,
   _encode_ReplyWantBack,
 } from '../SCVP-2009/ReplyWantBack.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyWantBacks */
 /**
  * @summary ReplyWantBacks
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReplyWantBacks = ReplyWantBack[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ReplyWantBacks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyWantBacks */
 let _cached_decoder_for_ReplyWantBacks: $.ASN1Decoder<ReplyWantBacks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyWantBacks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyWantBacks */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyWantBacks
  * @function
@@ -48,13 +43,9 @@ export function _decode_ReplyWantBacks(el: _Element) {
   }
   return _cached_decoder_for_ReplyWantBacks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyWantBacks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyWantBacks */
 let _cached_encoder_for_ReplyWantBacks: $.ASN1Encoder<ReplyWantBacks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyWantBacks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyWantBacks */
 /**
  * @summary Encodes a(n) ReplyWantBacks into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ReplyWantBacks(
   return _cached_encoder_for_ReplyWantBacks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyWantBacks */
 
 /* eslint-enable */

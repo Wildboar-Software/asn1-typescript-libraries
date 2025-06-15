@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Request_Type */
+
 /**
  * @summary Request_Type
  * @description
@@ -24,49 +24,43 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Request_Type = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Request_Type */
 
-/* START_OF_SYMBOL_DEFINITION Request_Type_read */
+
 /**
  * @summary Request_Type_read
  * @constant
  * @type {number}
  */
 export const Request_Type_read: Request_Type = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Request_Type_read */
 
-/* START_OF_SYMBOL_DEFINITION read */
+
 /**
  * @summary Request_Type_read
  * @constant
  * @type {number}
  */
 export const read: Request_Type = Request_Type_read; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION read */
 
-/* START_OF_SYMBOL_DEFINITION Request_Type_write */
+
 /**
  * @summary Request_Type_write
  * @constant
  * @type {number}
  */
 export const Request_Type_write: Request_Type = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Request_Type_write */
 
-/* START_OF_SYMBOL_DEFINITION write */
+
 /**
  * @summary Request_Type_write
  * @constant
  * @type {number}
  */
 export const write: Request_Type = Request_Type_write; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION write */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Request_Type */
+
 let _cached_decoder_for_Request_Type: $.ASN1Decoder<Request_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Request_Type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Request_Type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Request_Type
  * @function
@@ -81,13 +75,11 @@ export function _decode_Request_Type(el: _Element) {
   }
   return _cached_decoder_for_Request_Type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Request_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Request_Type */
+
 let _cached_encoder_for_Request_Type: $.ASN1Encoder<Request_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Request_Type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Request_Type */
+
 /**
  * @summary Encodes a(n) Request_Type into an ASN.1 Element.
  * @function
@@ -110,6 +102,5 @@ export function _encode_Request_Type(
   return _cached_encoder_for_Request_Type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Request_Type */
 
 /* eslint-enable */

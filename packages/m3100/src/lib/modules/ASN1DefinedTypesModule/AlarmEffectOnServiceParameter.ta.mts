@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AlarmEffectOnServiceParameter */
+
 /**
  * @summary AlarmEffectOnServiceParameter
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AlarmEffectOnServiceParameter = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION AlarmEffectOnServiceParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmEffectOnServiceParameter */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmEffectOnServiceParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmEffectOnServiceParameter */
+
+
 export const _decode_AlarmEffectOnServiceParameter = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmEffectOnServiceParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmEffectOnServiceParameter */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmEffectOnServiceParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmEffectOnServiceParameter */
+
+
 export const _encode_AlarmEffectOnServiceParameter = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmEffectOnServiceParameter */
 
 /* eslint-enable */

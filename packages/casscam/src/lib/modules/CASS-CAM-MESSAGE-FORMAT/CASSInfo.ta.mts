@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CASSInfo */
+
 /**
  * @summary CASSInfo
  * @description
@@ -94,9 +94,8 @@ class CASSInfo {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CASSInfo */
+
 /**
  * @summary The Leading Root Component Types of CASSInfo
  * @description
@@ -113,9 +112,8 @@ const _root_component_type_list_1_spec_for_CASSInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("cASSConnectionType", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("cASSListeningPort", false, $.hasTag(_TagClass.context, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CASSInfo */
+
 /**
  * @summary The Trailing Root Component Types of CASSInfo
  * @description
@@ -128,9 +126,8 @@ export
 const _root_component_type_list_2_spec_for_CASSInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CASSInfo */
+
 /**
  * @summary The Extension Addition Component Types of CASSInfo
  * @description
@@ -143,13 +140,11 @@ export
 const _extension_additions_list_spec_for_CASSInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CASSInfo */
+
 let _cached_decoder_for_CASSInfo: $.ASN1Decoder<CASSInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CASSInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CASSInfo
  * @function
@@ -189,13 +184,11 @@ function _decode_CASSInfo (el: _Element) {
 }; }
     return _cached_decoder_for_CASSInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CASSInfo */
+
 let _cached_encoder_for_CASSInfo: $.ASN1Encoder<CASSInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CASSInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CASSInfo */
+
 /**
  * @summary Encodes a(n) CASSInfo into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ function _encode_CASSInfo (value: CASSInfo, elGetter: $.ASN1Encoder<CASSInfo>) {
     return _cached_encoder_for_CASSInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CASSInfo */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MonthMask_Item */
+
 /**
  * @summary MonthMask_Item
  * @description
@@ -67,9 +67,8 @@ export class MonthMask_Item {
         return new MonthMask_Item(_o.daysOfMonth, _o.timesOfDayWps);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MonthMask_Item */
+
 /**
  * @summary The Leading Root Component Types of MonthMask_Item
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_MonthMask_Item: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MonthMask_Item */
+
 /**
  * @summary The Trailing Root Component Types of MonthMask_Item
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_MonthMask_Item: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MonthMask_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MonthMask_Item */
+
 /**
  * @summary The Extension Addition Component Types of MonthMask_Item
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_MonthMask_Item: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_MonthMask_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MonthMask_Item */
+
 let _cached_decoder_for_MonthMask_Item: $.ASN1Decoder<MonthMask_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MonthMask_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MonthMask_Item
  * @function
@@ -155,13 +150,11 @@ export function _decode_MonthMask_Item(el: _Element) {
     }
     return _cached_decoder_for_MonthMask_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MonthMask_Item */
+
 let _cached_encoder_for_MonthMask_Item: $.ASN1Encoder<MonthMask_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MonthMask_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MonthMask_Item */
+
 /**
  * @summary Encodes a(n) MonthMask_Item into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_MonthMask_Item(
     return _cached_encoder_for_MonthMask_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MonthMask_Item */
 
 /* eslint-enable */

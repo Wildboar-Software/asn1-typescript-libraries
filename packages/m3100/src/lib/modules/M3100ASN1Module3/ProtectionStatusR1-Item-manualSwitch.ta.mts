@@ -21,7 +21,7 @@ import {
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
 } from '../M3100ASN1Module3/FromAndToProtectionUnit.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item_manualSwitch */
+
 /**
  * @summary ProtectionStatusR1_Item_manualSwitch
  * @description
@@ -81,9 +81,8 @@ export class ProtectionStatusR1_Item_manualSwitch {
 
     public static _enum_for_switchStatus = _enum_for_SwitchStatus;
 }
-/* END_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatusR1_Item_manualSwitch */
+
 /**
  * @summary The Leading Root Component Types of ProtectionStatusR1_Item_manualSwitch
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatusR1_Item_manual
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatusR1_Item_manualSwitch */
+
 /**
  * @summary The Trailing Root Component Types of ProtectionStatusR1_Item_manualSwitch
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatusR1_Item_manual
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectionStatusR1_Item_manualSwitch: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatusR1_Item_manualSwitch */
+
 /**
  * @summary The Extension Addition Component Types of ProtectionStatusR1_Item_manualSwitch
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_ProtectionStatusR1_Item_manual
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectionStatusR1_Item_manualSwitch: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusR1_Item_manualSwitch */
+
 let _cached_decoder_for_ProtectionStatusR1_Item_manualSwitch: $.ASN1Decoder<ProtectionStatusR1_Item_manualSwitch> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatusR1_Item_manualSwitch */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatusR1_Item_manualSwitch
  * @function
@@ -176,13 +171,11 @@ export function _decode_ProtectionStatusR1_Item_manualSwitch(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatusR1_Item_manualSwitch(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusR1_Item_manualSwitch */
+
 let _cached_encoder_for_ProtectionStatusR1_Item_manualSwitch: $.ASN1Encoder<ProtectionStatusR1_Item_manualSwitch> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusR1_Item_manualSwitch */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatusR1_Item_manualSwitch */
+
 /**
  * @summary Encodes a(n) ProtectionStatusR1_Item_manualSwitch into an ASN.1 Element.
  * @function
@@ -224,6 +217,5 @@ export function _encode_ProtectionStatusR1_Item_manualSwitch(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatusR1_Item_manualSwitch */
 
 /* eslint-enable */

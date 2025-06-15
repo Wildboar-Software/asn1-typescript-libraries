@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION User_Identity */
 /**
  * @summary User_Identity
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type User_Identity = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_Identity */
 export const _decode_User_Identity = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_Identity */
 export const _encode_User_Identity = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_Identity */
 
 /* eslint-enable */

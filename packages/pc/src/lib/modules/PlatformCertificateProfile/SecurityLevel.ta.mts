@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_SecurityLevel */
 /**
  * @summary SecurityLevel
  * @description
@@ -35,9 +34,7 @@ enum _enum_for_SecurityLevel {
     level3 = 3,
     level4 = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_SecurityLevel */
 
-/* START_OF_SYMBOL_DEFINITION SecurityLevel */
 /**
  * @summary SecurityLevel
  * @description
@@ -54,9 +51,7 @@ enum _enum_for_SecurityLevel {
  */
 export
 type SecurityLevel = _enum_for_SecurityLevel;
-/* END_OF_SYMBOL_DEFINITION SecurityLevel */
 
-/* START_OF_SYMBOL_DEFINITION SecurityLevel */
 /**
  * @summary SecurityLevel
  * @description
@@ -73,9 +68,7 @@ type SecurityLevel = _enum_for_SecurityLevel;
  */
 export
 const SecurityLevel = _enum_for_SecurityLevel;
-/* END_OF_SYMBOL_DEFINITION SecurityLevel */
 
-/* START_OF_SYMBOL_DEFINITION SecurityLevel_level1 */
 /**
  * @summary SecurityLevel_level1
  * @constant
@@ -83,9 +76,7 @@ const SecurityLevel = _enum_for_SecurityLevel;
  */
 export
 const SecurityLevel_level1: SecurityLevel = SecurityLevel.level1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SecurityLevel_level1 */
 
-/* START_OF_SYMBOL_DEFINITION level1 */
 /**
  * @summary level1
  * @constant
@@ -93,9 +84,7 @@ const SecurityLevel_level1: SecurityLevel = SecurityLevel.level1; /* LONG_NAMED_
  */
 export
 const level1: SecurityLevel = SecurityLevel.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION level1 */
 
-/* START_OF_SYMBOL_DEFINITION SecurityLevel_level2 */
 /**
  * @summary SecurityLevel_level2
  * @constant
@@ -103,9 +92,7 @@ const level1: SecurityLevel = SecurityLevel.level1; /* SHORT_NAMED_ENUMERATED_VA
  */
 export
 const SecurityLevel_level2: SecurityLevel = SecurityLevel.level2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SecurityLevel_level2 */
 
-/* START_OF_SYMBOL_DEFINITION level2 */
 /**
  * @summary level2
  * @constant
@@ -113,9 +100,7 @@ const SecurityLevel_level2: SecurityLevel = SecurityLevel.level2; /* LONG_NAMED_
  */
 export
 const level2: SecurityLevel = SecurityLevel.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION level2 */
 
-/* START_OF_SYMBOL_DEFINITION SecurityLevel_level3 */
 /**
  * @summary SecurityLevel_level3
  * @constant
@@ -123,9 +108,7 @@ const level2: SecurityLevel = SecurityLevel.level2; /* SHORT_NAMED_ENUMERATED_VA
  */
 export
 const SecurityLevel_level3: SecurityLevel = SecurityLevel.level3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SecurityLevel_level3 */
 
-/* START_OF_SYMBOL_DEFINITION level3 */
 /**
  * @summary level3
  * @constant
@@ -133,9 +116,7 @@ const SecurityLevel_level3: SecurityLevel = SecurityLevel.level3; /* LONG_NAMED_
  */
 export
 const level3: SecurityLevel = SecurityLevel.level3; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION level3 */
 
-/* START_OF_SYMBOL_DEFINITION SecurityLevel_level4 */
 /**
  * @summary SecurityLevel_level4
  * @constant
@@ -143,9 +124,7 @@ const level3: SecurityLevel = SecurityLevel.level3; /* SHORT_NAMED_ENUMERATED_VA
  */
 export
 const SecurityLevel_level4: SecurityLevel = SecurityLevel.level4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SecurityLevel_level4 */
 
-/* START_OF_SYMBOL_DEFINITION level4 */
 /**
  * @summary level4
  * @constant
@@ -153,21 +132,12 @@ const SecurityLevel_level4: SecurityLevel = SecurityLevel.level4; /* LONG_NAMED_
  */
 export
 const level4: SecurityLevel = SecurityLevel.level4; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION level4 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLevel */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityLevel */
 export const _decode_SecurityLevel = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLevel */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityLevel */
 export const _encode_SecurityLevel = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityLevel */
 
 /* eslint-enable */

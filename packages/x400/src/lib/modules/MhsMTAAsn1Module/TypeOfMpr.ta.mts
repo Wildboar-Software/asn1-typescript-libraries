@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMpr */
 /**
  * @summary TypeOfMpr
  * @description
@@ -24,75 +23,54 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TypeOfMpr = INTEGER;
-/* END_OF_SYMBOL_DEFINITION TypeOfMpr */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMpr_message */
 /**
  * @summary TypeOfMpr_message
  * @constant
  * @type {number}
  */
 export const TypeOfMpr_message: TypeOfMpr = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMpr_message */
 
-/* START_OF_SYMBOL_DEFINITION message */
 /**
  * @summary TypeOfMpr_message
  * @constant
  * @type {number}
  */
 export const message: TypeOfMpr = TypeOfMpr_message; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION message */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMpr_probe */
 /**
  * @summary TypeOfMpr_probe
  * @constant
  * @type {number}
  */
 export const TypeOfMpr_probe: TypeOfMpr = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMpr_probe */
 
-/* START_OF_SYMBOL_DEFINITION probe */
 /**
  * @summary TypeOfMpr_probe
  * @constant
  * @type {number}
  */
 export const probe: TypeOfMpr = TypeOfMpr_probe; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION probe */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMpr_report */
 /**
  * @summary TypeOfMpr_report
  * @constant
  * @type {number}
  */
 export const TypeOfMpr_report: TypeOfMpr = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMpr_report */
 
-/* START_OF_SYMBOL_DEFINITION report */
 /**
  * @summary TypeOfMpr_report
  * @constant
  * @type {number}
  */
 export const report: TypeOfMpr = TypeOfMpr_report; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION report */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMpr */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMpr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeOfMpr */
 export const _decode_TypeOfMpr = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_TypeOfMpr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMpr */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMpr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeOfMpr */
 export const _encode_TypeOfMpr = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeOfMpr */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
 } from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnattainableAttributeList */
 /**
  * @summary UnattainableAttributeList
  * @description
@@ -71,9 +70,7 @@ export class UnattainableAttributeList {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnattainableAttributeList */
 /**
  * @summary The Leading Root Component Types of UnattainableAttributeList
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_UnattainableAttributeList: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnattainableAttributeList */
 /**
  * @summary The Trailing Root Component Types of UnattainableAttributeList
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_UnattainableAttributeList: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnattainableAttributeList: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnattainableAttributeList */
 /**
  * @summary The Extension Addition Component Types of UnattainableAttributeList
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_UnattainableAttributeList: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_UnattainableAttributeList: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnattainableAttributeList */
 let _cached_decoder_for_UnattainableAttributeList: $.ASN1Decoder<UnattainableAttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnattainableAttributeList */
 /**
  * @summary Decodes an ASN.1 element into a(n) UnattainableAttributeList
  * @function
@@ -174,13 +163,9 @@ export function _decode_UnattainableAttributeList(el: _Element) {
     }
     return _cached_decoder_for_UnattainableAttributeList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnattainableAttributeList */
 let _cached_encoder_for_UnattainableAttributeList: $.ASN1Encoder<UnattainableAttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnattainableAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnattainableAttributeList */
 /**
  * @summary Encodes a(n) UnattainableAttributeList into an ASN.1 Element.
  * @function
@@ -223,6 +208,5 @@ export function _encode_UnattainableAttributeList(
     return _cached_encoder_for_UnattainableAttributeList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnattainableAttributeList */
 
 /* eslint-enable */

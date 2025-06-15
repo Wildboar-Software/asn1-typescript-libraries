@@ -19,7 +19,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION TBSDataBA */
+
 /**
  * @summary TBSDataBA
  * @description
@@ -84,9 +84,8 @@ class TBSDataBA {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSDataBA */
+
 /**
  * @summary The Leading Root Component Types of TBSDataBA
  * @description
@@ -102,9 +101,8 @@ const _root_component_type_list_1_spec_for_TBSDataBA: $.ComponentSpec[] = [
     new $.ComponentSpec("randomC", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
     /* FIXME: entityA COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSDataBA */
+
 /**
  * @summary The Trailing Root Component Types of TBSDataBA
  * @description
@@ -117,9 +115,8 @@ export
 const _root_component_type_list_2_spec_for_TBSDataBA: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSDataBA */
+
 /**
  * @summary The Extension Addition Component Types of TBSDataBA
  * @description
@@ -132,13 +129,11 @@ export
 const _extension_additions_list_spec_for_TBSDataBA: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSDataBA */
+
 let _cached_decoder_for_TBSDataBA: $.ASN1Decoder<TBSDataBA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSDataBA */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSDataBA
  * @function
@@ -177,13 +172,11 @@ function _decode_TBSDataBA (el: _Element) {
 }; }
     return _cached_decoder_for_TBSDataBA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSDataBA */
+
 let _cached_encoder_for_TBSDataBA: $.ASN1Encoder<TBSDataBA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSDataBA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSDataBA */
+
 /**
  * @summary Encodes a(n) TBSDataBA into an ASN.1 Element.
  * @function
@@ -206,6 +199,5 @@ function _encode_TBSDataBA (value: TBSDataBA, elGetter: $.ASN1Encoder<TBSDataBA>
     return _cached_encoder_for_TBSDataBA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSDataBA */
 
 /* eslint-enable */

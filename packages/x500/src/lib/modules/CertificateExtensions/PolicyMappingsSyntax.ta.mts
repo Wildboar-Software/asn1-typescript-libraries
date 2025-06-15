@@ -6,7 +6,6 @@ import {
     _decode_PolicyMappingsSyntax_Item,
     _encode_PolicyMappingsSyntax_Item,
 } from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PolicyMappingsSyntax */
 /**
  * @summary PolicyMappingsSyntax
  * @description
@@ -21,13 +20,9 @@ import {
  * ```
  */
 export type PolicyMappingsSyntax = PolicyMappingsSyntax_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PolicyMappingsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyMappingsSyntax */
 let _cached_decoder_for_PolicyMappingsSyntax: $.ASN1Decoder<PolicyMappingsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyMappingsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PolicyMappingsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) PolicyMappingsSyntax
  * @function
@@ -42,13 +37,9 @@ export function _decode_PolicyMappingsSyntax(el: _Element) {
     }
     return _cached_decoder_for_PolicyMappingsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PolicyMappingsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyMappingsSyntax */
 let _cached_encoder_for_PolicyMappingsSyntax: $.ASN1Encoder<PolicyMappingsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyMappingsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PolicyMappingsSyntax */
 /**
  * @summary Encodes a(n) PolicyMappingsSyntax into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_PolicyMappingsSyntax(
     return _cached_encoder_for_PolicyMappingsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PolicyMappingsSyntax */
 
 /* eslint-enable */

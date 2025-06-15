@@ -20,7 +20,6 @@ import {
     _decode_UnitsTotal,
     _encode_UnitsTotal,
 } from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectivityThreshold_time */
 /**
  * @summary ConnectivityThreshold_time
  * @description
@@ -69,9 +68,7 @@ export class ConnectivityThreshold_time {
         return new ConnectivityThreshold_time(_o.unitsType, _o.unitsTotal);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConnectivityThreshold_time */
 /**
  * @summary The Leading Root Component Types of ConnectivityThreshold_time
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_ConnectivityThreshold_time: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConnectivityThreshold_time */
 /**
  * @summary The Trailing Root Component Types of ConnectivityThreshold_time
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_ConnectivityThreshold_time: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ConnectivityThreshold_time: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConnectivityThreshold_time */
 /**
  * @summary The Extension Addition Component Types of ConnectivityThreshold_time
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_ConnectivityThreshold_time: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_ConnectivityThreshold_time: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityThreshold_time */
 let _cached_decoder_for_ConnectivityThreshold_time: $.ASN1Decoder<ConnectivityThreshold_time> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectivityThreshold_time */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectivityThreshold_time
  * @function
@@ -157,13 +146,9 @@ export function _decode_ConnectivityThreshold_time(el: _Element) {
     }
     return _cached_decoder_for_ConnectivityThreshold_time(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityThreshold_time */
 let _cached_encoder_for_ConnectivityThreshold_time: $.ASN1Encoder<ConnectivityThreshold_time> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityThreshold_time */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectivityThreshold_time */
 /**
  * @summary Encodes a(n) ConnectivityThreshold_time into an ASN.1 Element.
  * @function
@@ -198,6 +183,5 @@ export function _encode_ConnectivityThreshold_time(
     return _cached_encoder_for_ConnectivityThreshold_time(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectivityThreshold_time */
 
 /* eslint-enable */

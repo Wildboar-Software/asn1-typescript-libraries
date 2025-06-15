@@ -11,7 +11,6 @@ import {
     _decode_DataTransferClientNEA,
     _encode_DataTransferClientNEA,
 } from "../Wrapper/DataTransferClientNEA.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataTransferClient */
 /**
  * @summary DataTransferClient
  * @description
@@ -29,13 +28,9 @@ export type DataTransferClient =
     | { aead: DataTransferClientAE } /* CHOICE_ALT_ROOT */
     | { non_aead: DataTransferClientNEA } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferClient */
 let _cached_decoder_for_DataTransferClient: $.ASN1Decoder<DataTransferClient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataTransferClient */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataTransferClient
  * @function
@@ -63,13 +58,9 @@ export function _decode_DataTransferClient(el: _Element) {
     }
     return _cached_decoder_for_DataTransferClient(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferClient */
 let _cached_encoder_for_DataTransferClient: $.ASN1Encoder<DataTransferClient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataTransferClient */
 /**
  * @summary Encodes a(n) DataTransferClient into an ASN.1 Element.
  * @function
@@ -103,6 +94,5 @@ export function _encode_DataTransferClient(
     return _cached_encoder_for_DataTransferClient(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataTransferClient */
 
 /* eslint-enable */

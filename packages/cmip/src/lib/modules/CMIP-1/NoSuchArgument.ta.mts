@@ -20,7 +20,7 @@ import {
   _decode_NoSuchArgument_eventId,
   _encode_NoSuchArgument_eventId,
 } from '../CMIP-1/NoSuchArgument-eventId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchArgument */
+
 /**
  * @summary NoSuchArgument
  * @description
@@ -43,13 +43,11 @@ import {
 export type NoSuchArgument =
   | { actionId: NoSuchArgument_actionId } /* CHOICE_ALT_ROOT */
   | { eventId: NoSuchArgument_eventId } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NoSuchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchArgument */
+
 let _cached_decoder_for_NoSuchArgument: $.ASN1Decoder<NoSuchArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchArgument */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchArgument
  * @function
@@ -77,13 +75,11 @@ export function _decode_NoSuchArgument(el: _Element) {
   }
   return _cached_decoder_for_NoSuchArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchArgument */
+
 let _cached_encoder_for_NoSuchArgument: $.ASN1Encoder<NoSuchArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchArgument */
+
 /**
  * @summary Encodes a(n) NoSuchArgument into an ASN.1 Element.
  * @function
@@ -117,6 +113,5 @@ export function _encode_NoSuchArgument(
   return _cached_encoder_for_NoSuchArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchArgument */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION String_Pattern_string_value_Item */
+
 /**
  * @summary String_Pattern_string_value_Item
  * @description
@@ -29,13 +29,11 @@ export type String_Pattern_string_value_Item =
   | { substring_match: GraphicString } /* CHOICE_ALT_ROOT */
   | { any_match: NULL } /* CHOICE_ALT_ROOT */
   | { number_of_characters_match: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION String_Pattern_string_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_String_Pattern_string_value_Item */
+
 let _cached_decoder_for_String_Pattern_string_value_Item: $.ASN1Decoder<String_Pattern_string_value_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_String_Pattern_string_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_String_Pattern_string_value_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) String_Pattern_string_value_Item
  * @function
@@ -63,13 +61,11 @@ export function _decode_String_Pattern_string_value_Item(el: _Element) {
   }
   return _cached_decoder_for_String_Pattern_string_value_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_String_Pattern_string_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_String_Pattern_string_value_Item */
+
 let _cached_encoder_for_String_Pattern_string_value_Item: $.ASN1Encoder<String_Pattern_string_value_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_String_Pattern_string_value_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_String_Pattern_string_value_Item */
+
 /**
  * @summary Encodes a(n) String_Pattern_string_value_Item into an ASN.1 Element.
  * @function
@@ -109,6 +105,5 @@ export function _encode_String_Pattern_string_value_Item(
   return _cached_encoder_for_String_Pattern_string_value_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_String_Pattern_string_value_Item */
 
 /* eslint-enable */

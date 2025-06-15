@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { id_not_serviceType } from "../SelectedAttributeTypes/id-not-serviceType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION serviceType */
 /**
  * @summary serviceType
  * @description
@@ -44,6 +43,5 @@ export const serviceType: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION serviceType */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ClockMaximumError */
 /**
  * @summary ClockMaximumError
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ClockMaximumError = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ClockMaximumError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockMaximumError */
 let _cached_decoder_for_ClockMaximumError: $.ASN1Decoder<ClockMaximumError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockMaximumError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockMaximumError */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockMaximumError
  * @function
@@ -46,13 +41,9 @@ export function _decode_ClockMaximumError(el: _Element) {
     }
     return _cached_decoder_for_ClockMaximumError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClockMaximumError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockMaximumError */
 let _cached_encoder_for_ClockMaximumError: $.ASN1Encoder<ClockMaximumError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockMaximumError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockMaximumError */
 /**
  * @summary Encodes a(n) ClockMaximumError into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ClockMaximumError(
     return _cached_encoder_for_ClockMaximumError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockMaximumError */
 
 /* eslint-enable */

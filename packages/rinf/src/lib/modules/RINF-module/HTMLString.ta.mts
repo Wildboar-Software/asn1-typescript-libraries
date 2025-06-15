@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION HTMLString */
 /**
  * @summary HTMLString
  * @description
@@ -26,21 +25,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type HTMLString = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION HTMLString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HTMLString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HTMLString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HTMLString */
 export const _decode_HTMLString = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_HTMLString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HTMLString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HTMLString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HTMLString */
 export const _encode_HTMLString = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_HTMLString */
 
 /* eslint-enable */

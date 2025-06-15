@@ -14,7 +14,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_con_dl_reset_originator } from '../MHSObjectIdentifiers/id-con-dl-reset-originator.va.mjs';
 import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_reset_originator */
 /**
  * @summary dl_reset_originator
  * @description
@@ -47,6 +46,5 @@ export const dl_reset_originator: CONTEXT<NULL> = {
     '&Assertion': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&absentMatch': TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_reset_originator */
 
 /* eslint-enable */

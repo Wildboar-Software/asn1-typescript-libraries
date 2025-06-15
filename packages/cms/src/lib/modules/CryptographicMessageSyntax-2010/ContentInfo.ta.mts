@@ -6,7 +6,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentInfo */
+
 /**
  * @summary ContentInfo
  * @description
@@ -55,9 +55,8 @@ export class ContentInfo {
         return new ContentInfo(_o.contentType, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentInfo */
+
 /**
  * @summary The Leading Root Component Types of ContentInfo
  * @description
@@ -82,9 +81,8 @@ export const _root_component_type_list_1_spec_for_ContentInfo: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentInfo */
+
 /**
  * @summary The Trailing Root Component Types of ContentInfo
  * @description
@@ -94,9 +92,8 @@ export const _root_component_type_list_1_spec_for_ContentInfo: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentInfo */
+
 /**
  * @summary The Extension Addition Component Types of ContentInfo
  * @description
@@ -106,13 +103,11 @@ export const _root_component_type_list_2_spec_for_ContentInfo: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_ContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentInfo */
+
 let _cached_decoder_for_ContentInfo: $.ASN1Decoder<ContentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentInfo
  * @function
@@ -143,13 +138,11 @@ export function _decode_ContentInfo(el: _Element) {
     }
     return _cached_decoder_for_ContentInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentInfo */
+
 let _cached_encoder_for_ContentInfo: $.ASN1Encoder<ContentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentInfo */
+
 /**
  * @summary Encodes a(n) ContentInfo into an ASN.1 Element.
  * @function
@@ -186,6 +179,5 @@ export function _encode_ContentInfo(
     return _cached_encoder_for_ContentInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentInfo */
 
 /* eslint-enable */

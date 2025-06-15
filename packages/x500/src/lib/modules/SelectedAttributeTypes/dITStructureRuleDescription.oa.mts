@@ -6,7 +6,6 @@ import {
     _encode_DITStructureRuleDescription,
 } from "../SchemaAdministration/DITStructureRuleDescription.ta.mjs";
 import { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dITStructureRuleDescription */
 /**
  * @summary dITStructureRuleDescription
  * @description
@@ -36,6 +35,5 @@ export const dITStructureRuleDescription: SYNTAX_NAME<DITStructureRuleDescriptio
     "&id": id_lsx_dITStructureRuleDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dITStructureRuleDescription */
 
 /* eslint-enable */

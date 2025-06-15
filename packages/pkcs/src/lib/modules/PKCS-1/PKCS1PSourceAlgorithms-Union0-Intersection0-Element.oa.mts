@@ -6,7 +6,7 @@ import {
     _encode_EncodingParameters,
 } from "../PKCS-1/EncodingParameters.ta.mjs";
 import { id_pSpecified } from "../PKCS-1/id-pSpecified.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS1PSourceAlgorithms_Union0_Intersection0_Element */
+
 /**
  * @summary PKCS1PSourceAlgorithms_Union0_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PKCS1PSourceAlgorithms_Union0_Intersection0_Element: ALGORITHM_IDEN
     "&id": id_pSpecified /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PKCS1PSourceAlgorithms_Union0_Intersection0_Element */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubmissionPortOperations */
 /**
  * @summary SubmissionPortOperations
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type SubmissionPortOperations = EventTypeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubmissionPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionPortOperations */
 let _cached_decoder_for_SubmissionPortOperations: $.ASN1Decoder<SubmissionPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmissionPortOperations */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionPortOperations
  * @function
@@ -49,13 +44,9 @@ export function _decode_SubmissionPortOperations(el: _Element) {
     }
     return _cached_decoder_for_SubmissionPortOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubmissionPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionPortOperations */
 let _cached_encoder_for_SubmissionPortOperations: $.ASN1Encoder<SubmissionPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmissionPortOperations */
 /**
  * @summary Encodes a(n) SubmissionPortOperations into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_SubmissionPortOperations(
     return _cached_encoder_for_SubmissionPortOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmissionPortOperations */
 
 /* eslint-enable */

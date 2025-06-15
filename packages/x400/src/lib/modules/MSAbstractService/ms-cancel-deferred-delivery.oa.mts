@@ -19,7 +19,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-delivery.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_cancel_deferred_delivery */
 /**
  * @summary ms_cancel_deferred_delivery
  * @description
@@ -35,6 +34,5 @@ import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca
  * @implements {ABSTRACT_OPERATION}
  */
 export const ms_cancel_deferred_delivery: ABSTRACT_OPERATION = cancel_deferred_delivery;
-/* END_OF_SYMBOL_DEFINITION ms_cancel_deferred_delivery */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION id_mts */
 /**
  * @summary id_mts
  * @description
@@ -25,6 +24,5 @@ import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
  * @constant
  */
 export const id_mts: ID = new _OID([/* mhs */ 6, /* mts */ 3], joint_iso_itu_t);
-/* END_OF_SYMBOL_DEFINITION id_mts */
 
 /* eslint-enable */

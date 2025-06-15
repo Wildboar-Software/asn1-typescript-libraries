@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PhysicalForwardingAddress */
 /**
  * @summary PhysicalForwardingAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PhysicalForwardingAddress = ORAddressAndOptionalDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PhysicalForwardingAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalForwardingAddress */
 let _cached_decoder_for_PhysicalForwardingAddress: $.ASN1Decoder<PhysicalForwardingAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalForwardingAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalForwardingAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalForwardingAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_PhysicalForwardingAddress(el: _Element) {
     }
     return _cached_decoder_for_PhysicalForwardingAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalForwardingAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalForwardingAddress */
 let _cached_encoder_for_PhysicalForwardingAddress: $.ASN1Encoder<PhysicalForwardingAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalForwardingAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalForwardingAddress */
 /**
  * @summary Encodes a(n) PhysicalForwardingAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PhysicalForwardingAddress(
     return _cached_encoder_for_PhysicalForwardingAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalForwardingAddress */
 
 /* eslint-enable */

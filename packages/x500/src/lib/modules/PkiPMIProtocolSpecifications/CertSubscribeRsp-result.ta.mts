@@ -11,7 +11,6 @@ import {
     _decode_CertSubscribeOK,
     _encode_CertSubscribeOK,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertSubscribeRsp_result */
 /**
  * @summary CertSubscribeRsp_result
  * @description
@@ -26,13 +25,9 @@ export type CertSubscribeRsp_result =
     | { success: CertSubscribeOK } /* CHOICE_ALT_ROOT */
     | { failure: CertSubscribeErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertSubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeRsp_result */
 let _cached_decoder_for_CertSubscribeRsp_result: $.ASN1Decoder<CertSubscribeRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertSubscribeRsp_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertSubscribeRsp_result
  * @function
@@ -60,13 +55,9 @@ export function _decode_CertSubscribeRsp_result(el: _Element) {
     }
     return _cached_decoder_for_CertSubscribeRsp_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertSubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeRsp_result */
 let _cached_encoder_for_CertSubscribeRsp_result: $.ASN1Encoder<CertSubscribeRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertSubscribeRsp_result */
 /**
  * @summary Encodes a(n) CertSubscribeRsp_result into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_CertSubscribeRsp_result(
     return _cached_encoder_for_CertSubscribeRsp_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertSubscribeRsp_result */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Wrap_Header,
     _encode_Wrap_Header,
 } from "../SpkmGssTokens/Wrap-Header.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPKM_WRAP */
 /**
  * @summary SPKM_WRAP
  * @description
@@ -64,9 +63,7 @@ export class SPKM_WRAP {
         return new SPKM_WRAP(_o.wrap_header, _o.wrap_body);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKM_WRAP */
 /**
  * @summary The Leading Root Component Types of SPKM_WRAP
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_SPKM_WRAP: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKM_WRAP */
 /**
  * @summary The Trailing Root Component Types of SPKM_WRAP
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_SPKM_WRAP: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SPKM_WRAP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKM_WRAP */
 /**
  * @summary The Extension Addition Component Types of SPKM_WRAP
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_SPKM_WRAP: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_SPKM_WRAP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKM_WRAP */
 let _cached_decoder_for_SPKM_WRAP: $.ASN1Decoder<SPKM_WRAP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPKM_WRAP */
 /**
  * @summary Decodes an ASN.1 element into a(n) SPKM_WRAP
  * @function
@@ -150,13 +139,9 @@ export function _decode_SPKM_WRAP(el: _Element) {
     }
     return _cached_decoder_for_SPKM_WRAP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKM_WRAP */
 let _cached_encoder_for_SPKM_WRAP: $.ASN1Encoder<SPKM_WRAP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKM_WRAP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPKM_WRAP */
 /**
  * @summary Encodes a(n) SPKM_WRAP into an ASN.1 Element.
  * @function
@@ -191,6 +176,5 @@ export function _encode_SPKM_WRAP(
     return _cached_encoder_for_SPKM_WRAP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPKM_WRAP */
 
 /* eslint-enable */

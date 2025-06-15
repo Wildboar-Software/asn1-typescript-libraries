@@ -19,7 +19,6 @@ import { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } 
 import { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfile/CertificateIdentifier.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
 import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ComponentIdentifier */
 /**
  * @summary ComponentIdentifier
  * @description
@@ -138,9 +137,7 @@ class ComponentIdentifier {
 
     public static _enum_for_status = _enum_for_AttributeStatus;
 }
-/* END_OF_SYMBOL_DEFINITION ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComponentIdentifier */
 /**
  * @summary The Leading Root Component Types of ComponentIdentifier
  * @description
@@ -163,9 +160,7 @@ const _root_component_type_list_1_spec_for_ComponentIdentifier: $.ComponentSpec[
     new $.ComponentSpec("componentPlatformCertUri", true, $.hasTag(_TagClass.context, 6), undefined, undefined),
     new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 7), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComponentIdentifier */
 /**
  * @summary The Trailing Root Component Types of ComponentIdentifier
  * @description
@@ -178,9 +173,7 @@ export
 const _root_component_type_list_2_spec_for_ComponentIdentifier: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComponentIdentifier */
 /**
  * @summary The Extension Addition Component Types of ComponentIdentifier
  * @description
@@ -193,13 +186,9 @@ export
 const _extension_additions_list_spec_for_ComponentIdentifier: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentIdentifier */
 let _cached_decoder_for_ComponentIdentifier: $.ASN1Decoder<ComponentIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentIdentifier
  * @function
@@ -259,13 +248,9 @@ function _decode_ComponentIdentifier (el: _Element) {
 }; }
     return _cached_decoder_for_ComponentIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentIdentifier */
 let _cached_encoder_for_ComponentIdentifier: $.ASN1Encoder<ComponentIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentIdentifier */
 /**
  * @summary Encodes a(n) ComponentIdentifier into an ASN.1 Element.
  * @function
@@ -295,6 +280,5 @@ function _encode_ComponentIdentifier (value: ComponentIdentifier, elGetter: $.AS
     return _cached_encoder_for_ComponentIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentIdentifier */
 
 /* eslint-enable */

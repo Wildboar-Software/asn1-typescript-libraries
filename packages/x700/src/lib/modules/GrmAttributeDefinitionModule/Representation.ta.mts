@@ -16,7 +16,6 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Representation */
 /**
  * @summary Representation
  * @description
@@ -39,13 +38,9 @@ export type Representation =
     | { attribute: TemplateLabel } /* CHOICE_ALT_ROOT */
     | { relationshipObjectPointer: TemplateLabel } /* CHOICE_ALT_ROOT */
     | { operation: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Representation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Representation */
 let _cached_decoder_for_Representation: $.ASN1Decoder<Representation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Representation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Representation */
 /**
  * @summary Decodes an ASN.1 element into a(n) Representation
  * @function
@@ -86,13 +81,9 @@ export function _decode_Representation(el: _Element) {
     }
     return _cached_decoder_for_Representation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Representation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Representation */
 let _cached_encoder_for_Representation: $.ASN1Encoder<Representation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Representation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Representation */
 /**
  * @summary Encodes a(n) Representation into an ASN.1 Element.
  * @function
@@ -139,6 +130,5 @@ export function _encode_Representation(
     return _cached_encoder_for_Representation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Representation */
 
 /* eslint-enable */

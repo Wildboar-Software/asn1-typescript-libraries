@@ -15,7 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary ServiceControls_manageDSAITPlaneRef
  * @description
@@ -76,9 +75,7 @@ export class ServiceControls_manageDSAITPlaneRef {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary The Leading Root Component Types of ServiceControls_manageDSAITPlaneRef
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_ServiceControls_manageDSAITPla
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary The Trailing Root Component Types of ServiceControls_manageDSAITPlaneRef
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_ServiceControls_manageDSAITPla
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceControls_manageDSAITPlaneRef: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary The Extension Addition Component Types of ServiceControls_manageDSAITPlaneRef
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_ServiceControls_manageDSAITPla
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceControls_manageDSAITPlaneRef: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControls_manageDSAITPlaneRef */
 let _cached_decoder_for_ServiceControls_manageDSAITPlaneRef: $.ASN1Decoder<ServiceControls_manageDSAITPlaneRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceControls_manageDSAITPlaneRef
  * @function
@@ -162,13 +151,9 @@ export function _decode_ServiceControls_manageDSAITPlaneRef(el: _Element) {
     }
     return _cached_decoder_for_ServiceControls_manageDSAITPlaneRef(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControls_manageDSAITPlaneRef */
 let _cached_encoder_for_ServiceControls_manageDSAITPlaneRef: $.ASN1Encoder<ServiceControls_manageDSAITPlaneRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControls_manageDSAITPlaneRef */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary Encodes a(n) ServiceControls_manageDSAITPlaneRef into an ASN.1 Element.
  * @function
@@ -208,6 +193,5 @@ export function _encode_ServiceControls_manageDSAITPlaneRef(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceControls_manageDSAITPlaneRef */
 
 /* eslint-enable */

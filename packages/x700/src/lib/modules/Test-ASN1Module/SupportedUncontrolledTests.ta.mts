@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupportedUncontrolledTests */
 /**
  * @summary SupportedUncontrolledTests
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SupportedUncontrolledTests = OBJECT_IDENTIFIER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedUncontrolledTests */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedUncontrolledTests */
 let _cached_decoder_for_SupportedUncontrolledTests: $.ASN1Decoder<SupportedUncontrolledTests> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedUncontrolledTests */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedUncontrolledTests */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedUncontrolledTests
  * @function
@@ -45,13 +40,9 @@ export function _decode_SupportedUncontrolledTests(el: _Element) {
     }
     return _cached_decoder_for_SupportedUncontrolledTests(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedUncontrolledTests */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedUncontrolledTests */
 let _cached_encoder_for_SupportedUncontrolledTests: $.ASN1Encoder<SupportedUncontrolledTests> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedUncontrolledTests */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedUncontrolledTests */
 /**
  * @summary Encodes a(n) SupportedUncontrolledTests into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_SupportedUncontrolledTests(
     return _cached_encoder_for_SupportedUncontrolledTests(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedUncontrolledTests */
 
 /* eslint-enable */

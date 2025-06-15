@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_name_binding_customerAcctLog_customer */
 /**
  * @summary id_name_binding_customerAcctLog_customer
  * @description
@@ -28,6 +27,5 @@ export const id_name_binding_customerAcctLog_customer: ID = new _OID(
     [5],
     id_name_binding
 );
-/* END_OF_SYMBOL_DEFINITION id_name_binding_customerAcctLog_customer */
 
 /* eslint-enable */

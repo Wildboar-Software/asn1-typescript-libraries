@@ -9,7 +9,6 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pmiAA */
 /**
  * @summary pmiAA
  * @description
@@ -45,6 +44,5 @@ export const pmiAA: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pmiAA /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pmiAA */
 
 /* eslint-enable */

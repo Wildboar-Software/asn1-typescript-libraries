@@ -15,7 +15,6 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliverableContentTypes */
 /**
  * @summary DeliverableContentTypes
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DeliverableContentTypes = ContentType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION DeliverableContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverableContentTypes */
 let _cached_decoder_for_DeliverableContentTypes: $.ASN1Decoder<DeliverableContentTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverableContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliverableContentTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliverableContentTypes
  * @function
@@ -48,13 +43,9 @@ export function _decode_DeliverableContentTypes(el: _Element) {
     }
     return _cached_decoder_for_DeliverableContentTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliverableContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverableContentTypes */
 let _cached_encoder_for_DeliverableContentTypes: $.ASN1Encoder<DeliverableContentTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverableContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliverableContentTypes */
 /**
  * @summary Encodes a(n) DeliverableContentTypes into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_DeliverableContentTypes(
     return _cached_encoder_for_DeliverableContentTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliverableContentTypes */
 
 /* eslint-enable */

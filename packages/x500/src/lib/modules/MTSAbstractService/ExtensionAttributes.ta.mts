@@ -6,7 +6,6 @@ import {
     _decode_ExtensionAttribute,
     _encode_ExtensionAttribute,
 } from "../MTSAbstractService/ExtensionAttribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ExtensionAttributes */
 /**
  * @summary ExtensionAttributes
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type ExtensionAttributes = ExtensionAttribute[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExtensionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttributes */
 let _cached_decoder_for_ExtensionAttributes: $.ASN1Decoder<ExtensionAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtensionAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionAttributes
  * @function
@@ -40,13 +35,9 @@ export function _decode_ExtensionAttributes(el: _Element) {
     }
     return _cached_decoder_for_ExtensionAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtensionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttributes */
 let _cached_encoder_for_ExtensionAttributes: $.ASN1Encoder<ExtensionAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtensionAttributes */
 /**
  * @summary Encodes a(n) ExtensionAttributes into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_ExtensionAttributes(
     return _cached_encoder_for_ExtensionAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtensionAttributes */
 
 /* eslint-enable */

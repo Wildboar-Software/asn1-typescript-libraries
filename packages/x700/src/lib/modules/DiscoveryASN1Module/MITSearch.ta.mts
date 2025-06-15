@@ -18,7 +18,6 @@ import {
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MITSearch */
 /**
  * @summary MITSearch
  * @description
@@ -86,9 +85,7 @@ export class MITSearch {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MITSearch */
 /**
  * @summary The Leading Root Component Types of MITSearch
  * @description
@@ -114,9 +111,7 @@ export const _root_component_type_list_1_spec_for_MITSearch: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MITSearch */
 /**
  * @summary The Trailing Root Component Types of MITSearch
  * @description
@@ -126,9 +121,7 @@ export const _root_component_type_list_1_spec_for_MITSearch: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MITSearch: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MITSearch */
 /**
  * @summary The Extension Addition Component Types of MITSearch
  * @description
@@ -138,13 +131,9 @@ export const _root_component_type_list_2_spec_for_MITSearch: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_MITSearch: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MITSearch */
 let _cached_decoder_for_MITSearch: $.ASN1Decoder<MITSearch> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MITSearch */
 /**
  * @summary Decodes an ASN.1 element into a(n) MITSearch
  * @function
@@ -190,13 +179,9 @@ export function _decode_MITSearch(el: _Element) {
     }
     return _cached_decoder_for_MITSearch(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MITSearch */
 let _cached_encoder_for_MITSearch: $.ASN1Encoder<MITSearch> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MITSearch */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MITSearch */
 /**
  * @summary Encodes a(n) MITSearch into an ASN.1 Element.
  * @function
@@ -238,6 +223,5 @@ export function _encode_MITSearch(
     return _cached_encoder_for_MITSearch(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MITSearch */
 
 /* eslint-enable */

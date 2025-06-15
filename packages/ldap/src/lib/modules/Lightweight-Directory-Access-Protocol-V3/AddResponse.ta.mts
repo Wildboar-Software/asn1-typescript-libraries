@@ -15,7 +15,7 @@ import {
   _decode_LDAPResult,
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddResponse */
+
 /**
  * @summary AddResponse
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AddResponse = LDAPResult; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AddResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddResponse */
+
 let _cached_decoder_for_AddResponse: $.ASN1Decoder<AddResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddResponse
  * @function
@@ -48,13 +46,11 @@ export function _decode_AddResponse(el: _Element) {
   }
   return _cached_decoder_for_AddResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddResponse */
+
 let _cached_encoder_for_AddResponse: $.ASN1Encoder<AddResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddResponse */
+
 /**
  * @summary Encodes a(n) AddResponse into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_AddResponse(
   return _cached_encoder_for_AddResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddResponse */
 
 /* eslint-enable */

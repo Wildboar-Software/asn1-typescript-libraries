@@ -20,7 +20,6 @@ import {
     _decode_AutoForwardRegistrationParameter88,
     _encode_AutoForwardRegistrationParameter88,
 } from '../IPMSAutoActionTypes/AutoForwardRegistrationParameter88.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_forward_RegistrationParameter */
 /**
  * @summary ipm_auto_forward_RegistrationParameter
  * @description
@@ -38,13 +37,9 @@ export type ipm_auto_forward_RegistrationParameter =
     | {
           auto_forward_registration_parameter_88: AutoForwardRegistrationParameter88;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ipm_auto_forward_RegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ipm_auto_forward_RegistrationParameter */
 let _cached_decoder_for_ipm_auto_forward_RegistrationParameter: $.ASN1Decoder<ipm_auto_forward_RegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ipm_auto_forward_RegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ipm_auto_forward_RegistrationParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) ipm_auto_forward_RegistrationParameter
  * @function
@@ -68,13 +63,9 @@ export function _decode_ipm_auto_forward_RegistrationParameter(el: _Element) {
     }
     return _cached_decoder_for_ipm_auto_forward_RegistrationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ipm_auto_forward_RegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ipm_auto_forward_RegistrationParameter */
 let _cached_encoder_for_ipm_auto_forward_RegistrationParameter: $.ASN1Encoder<ipm_auto_forward_RegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ipm_auto_forward_RegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ipm_auto_forward_RegistrationParameter */
 /**
  * @summary Encodes a(n) ipm_auto_forward_RegistrationParameter into an ASN.1 Element.
  * @function
@@ -101,6 +92,5 @@ export function _encode_ipm_auto_forward_RegistrationParameter(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ipm_auto_forward_RegistrationParameter */
 
 /* eslint-enable */

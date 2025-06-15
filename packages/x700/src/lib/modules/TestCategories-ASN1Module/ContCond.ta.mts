@@ -20,7 +20,6 @@ import {
     _decode_PDUReception,
     _encode_PDUReception,
 } from '../TestCategories-ASN1Module/PDUReception.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContCond */
 /**
  * @summary ContCond
  * @description
@@ -36,13 +35,9 @@ import {
 export type ContCond =
     | { intervalTime: Timespec } /* CHOICE_ALT_ROOT */
     | { pDUReception: PDUReception } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ContCond */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContCond */
 let _cached_decoder_for_ContCond: $.ASN1Decoder<ContCond> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContCond */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContCond */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContCond
  * @function
@@ -64,13 +59,9 @@ export function _decode_ContCond(el: _Element) {
     }
     return _cached_decoder_for_ContCond(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContCond */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContCond */
 let _cached_encoder_for_ContCond: $.ASN1Encoder<ContCond> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContCond */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContCond */
 /**
  * @summary Encodes a(n) ContCond into an ASN.1 Element.
  * @function
@@ -94,6 +85,5 @@ export function _encode_ContCond(
     return _cached_encoder_for_ContCond(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContCond */
 
 /* eslint-enable */

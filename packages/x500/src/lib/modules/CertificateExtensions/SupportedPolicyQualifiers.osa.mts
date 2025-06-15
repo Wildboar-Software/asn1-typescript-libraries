@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedPolicyQualifiers */
 /**
  * @summary SupportedPolicyQualifiers
  * @description
@@ -16,6 +15,5 @@ import { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUAL
  *
  */
 export const SupportedPolicyQualifiers: CERT_POLICY_QUALIFIER[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedPolicyQualifiers */
 
 /* eslint-enable */

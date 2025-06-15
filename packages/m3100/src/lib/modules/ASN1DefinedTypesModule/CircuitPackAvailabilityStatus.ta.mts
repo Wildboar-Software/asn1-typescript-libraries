@@ -15,7 +15,7 @@ import {
     _decode_AvailabilityStatus,
     _encode_AvailabilityStatus,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AvailabilityStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CircuitPackAvailabilityStatus */
+
 /**
  * @summary CircuitPackAvailabilityStatus
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type CircuitPackAvailabilityStatus = AvailabilityStatus; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CircuitPackAvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitPackAvailabilityStatus */
+
 let _cached_decoder_for_CircuitPackAvailabilityStatus: $.ASN1Decoder<CircuitPackAvailabilityStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CircuitPackAvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CircuitPackAvailabilityStatus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CircuitPackAvailabilityStatus
  * @function
@@ -47,13 +45,11 @@ export function _decode_CircuitPackAvailabilityStatus(el: _Element) {
     }
     return _cached_decoder_for_CircuitPackAvailabilityStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CircuitPackAvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitPackAvailabilityStatus */
+
 let _cached_encoder_for_CircuitPackAvailabilityStatus: $.ASN1Encoder<CircuitPackAvailabilityStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CircuitPackAvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CircuitPackAvailabilityStatus */
+
 /**
  * @summary Encodes a(n) CircuitPackAvailabilityStatus into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_CircuitPackAvailabilityStatus(
     return _cached_encoder_for_CircuitPackAvailabilityStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CircuitPackAvailabilityStatus */
 
 /* eslint-enable */

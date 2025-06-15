@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InterworkingMDName */
 /**
  * @summary InterworkingMDName
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type InterworkingMDName = UniversalString; // UniversalString
-/* END_OF_SYMBOL_DEFINITION InterworkingMDName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InterworkingMDName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InterworkingMDName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InterworkingMDName */
 export const _decode_InterworkingMDName = $._decodeUniversalString;
-/* END_OF_SYMBOL_DEFINITION _decode_InterworkingMDName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InterworkingMDName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InterworkingMDName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InterworkingMDName */
 export const _encode_InterworkingMDName = $._encodeUniversalString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_InterworkingMDName */
 
 /* eslint-enable */

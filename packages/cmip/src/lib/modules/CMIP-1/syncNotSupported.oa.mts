@@ -24,7 +24,7 @@ import {
   _encode_CMISSync,
 } from '../CMIP-1/CMISSync.ta.mjs';
 import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION syncNotSupported */
+
 /**
  * @summary syncNotSupported
  * @description
@@ -57,6 +57,5 @@ export const syncNotSupported: ERROR<CMISSync> = {
   '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION syncNotSupported */
 
 /* eslint-enable */

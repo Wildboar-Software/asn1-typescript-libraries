@@ -8,7 +8,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RC2CBCParameter */
+
 /**
  * @summary RC2CBCParameter
  * @description
@@ -58,9 +58,8 @@ export class RC2CBCParameter {
         return new RC2CBCParameter(_o.rc2ParameterVersion, _o.iv);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RC2CBCParameter */
+
 /**
  * @summary The Leading Root Component Types of RC2CBCParameter
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_RC2CBCParameter: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RC2CBCParameter */
+
 /**
  * @summary The Trailing Root Component Types of RC2CBCParameter
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_RC2CBCParameter: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RC2CBCParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RC2CBCParameter */
+
 /**
  * @summary The Extension Addition Component Types of RC2CBCParameter
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_RC2CBCParameter: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_RC2CBCParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RC2CBCParameter */
+
 let _cached_decoder_for_RC2CBCParameter: $.ASN1Decoder<RC2CBCParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RC2CBCParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RC2CBCParameter
  * @function
@@ -146,13 +141,11 @@ export function _decode_RC2CBCParameter(el: _Element) {
     }
     return _cached_decoder_for_RC2CBCParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RC2CBCParameter */
+
 let _cached_encoder_for_RC2CBCParameter: $.ASN1Encoder<RC2CBCParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RC2CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RC2CBCParameter */
+
 /**
  * @summary Encodes a(n) RC2CBCParameter into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_RC2CBCParameter(
     return _cached_encoder_for_RC2CBCParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RC2CBCParameter */
 
 /* eslint-enable */

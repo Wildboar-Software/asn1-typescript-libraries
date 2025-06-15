@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TroubleDetectionTime */
+
 /**
  * @summary TroubleDetectionTime
  * @description
@@ -31,13 +31,11 @@ export type TroubleDetectionTime =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { time: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TroubleDetectionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleDetectionTime */
+
 let _cached_decoder_for_TroubleDetectionTime: $.ASN1Decoder<TroubleDetectionTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleDetectionTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleDetectionTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleDetectionTime
  * @function
@@ -55,13 +53,11 @@ export function _decode_TroubleDetectionTime(el: _Element) {
     }
     return _cached_decoder_for_TroubleDetectionTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleDetectionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleDetectionTime */
+
 let _cached_encoder_for_TroubleDetectionTime: $.ASN1Encoder<TroubleDetectionTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleDetectionTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleDetectionTime */
+
 /**
  * @summary Encodes a(n) TroubleDetectionTime into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_TroubleDetectionTime(
     return _cached_encoder_for_TroubleDetectionTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleDetectionTime */
 
 /* eslint-enable */

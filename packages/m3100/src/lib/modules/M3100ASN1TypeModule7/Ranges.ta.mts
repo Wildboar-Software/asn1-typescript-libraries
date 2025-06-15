@@ -15,7 +15,7 @@ import {
     _decode_Ranges_Item,
     _encode_Ranges_Item,
 } from '../M3100ASN1TypeModule7/Ranges-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Ranges */
+
 /**
  * @summary Ranges
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type Ranges = Ranges_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Ranges */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Ranges */
+
 let _cached_decoder_for_Ranges: $.ASN1Decoder<Ranges> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Ranges */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Ranges */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Ranges
  * @function
@@ -51,13 +49,11 @@ export function _decode_Ranges(el: _Element) {
     }
     return _cached_decoder_for_Ranges(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Ranges */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Ranges */
+
 let _cached_encoder_for_Ranges: $.ASN1Encoder<Ranges> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Ranges */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Ranges */
+
 /**
  * @summary Encodes a(n) Ranges into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_Ranges(value: Ranges, elGetter: $.ASN1Encoder<Ranges>) {
     return _cached_encoder_for_Ranges(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Ranges */
 
 /* eslint-enable */

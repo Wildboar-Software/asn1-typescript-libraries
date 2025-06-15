@@ -15,7 +15,7 @@ import {
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnlinkCallParams */
+
 /**
  * @summary UnlinkCallParams
  * @description
@@ -57,9 +57,8 @@ export class UnlinkCallParams {
     return new UnlinkCallParams(_o.slaveEndpointIRI);
   }
 }
-/* END_OF_SYMBOL_DEFINITION UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnlinkCallParams */
+
 /**
  * @summary The Leading Root Component Types of UnlinkCallParams
  * @description
@@ -77,9 +76,8 @@ export const _root_component_type_list_1_spec_for_UnlinkCallParams: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnlinkCallParams */
+
 /**
  * @summary The Trailing Root Component Types of UnlinkCallParams
  * @description
@@ -89,9 +87,8 @@ export const _root_component_type_list_1_spec_for_UnlinkCallParams: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnlinkCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnlinkCallParams */
+
 /**
  * @summary The Extension Addition Component Types of UnlinkCallParams
  * @description
@@ -101,13 +98,11 @@ export const _root_component_type_list_2_spec_for_UnlinkCallParams: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_UnlinkCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnlinkCallParams */
+
 let _cached_decoder_for_UnlinkCallParams: $.ASN1Decoder<UnlinkCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnlinkCallParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnlinkCallParams
  * @function
@@ -135,13 +130,11 @@ export function _decode_UnlinkCallParams(el: _Element) {
   }
   return _cached_decoder_for_UnlinkCallParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnlinkCallParams */
+
 let _cached_encoder_for_UnlinkCallParams: $.ASN1Encoder<UnlinkCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnlinkCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnlinkCallParams */
+
 /**
  * @summary Encodes a(n) UnlinkCallParams into an ASN.1 Element.
  * @function
@@ -169,6 +162,5 @@ export function _encode_UnlinkCallParams(
   return _cached_encoder_for_UnlinkCallParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnlinkCallParams */
 
 /* eslint-enable */

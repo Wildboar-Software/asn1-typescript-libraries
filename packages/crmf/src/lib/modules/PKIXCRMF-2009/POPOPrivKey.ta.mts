@@ -21,7 +21,7 @@ import {
     _encode_SubsequentMessage,
 } from "../PKIXCRMF-2009/SubsequentMessage.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION POPOPrivKey */
+
 /**
  * @summary POPOPrivKey
  * @description
@@ -46,13 +46,11 @@ export type POPOPrivKey =
     | { dhMAC: BIT_STRING } /* CHOICE_ALT_ROOT */
     | { agreeMAC: PKMACValue } /* CHOICE_ALT_ROOT */
     | { encryptedKey: EnvelopedData } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION POPOPrivKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_POPOPrivKey */
+
 let _cached_decoder_for_POPOPrivKey: $.ASN1Decoder<POPOPrivKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_POPOPrivKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_POPOPrivKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) POPOPrivKey
  * @function
@@ -92,13 +90,11 @@ export function _decode_POPOPrivKey(el: _Element) {
     }
     return _cached_decoder_for_POPOPrivKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_POPOPrivKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_POPOPrivKey */
+
 let _cached_encoder_for_POPOPrivKey: $.ASN1Encoder<POPOPrivKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_POPOPrivKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_POPOPrivKey */
+
 /**
  * @summary Encodes a(n) POPOPrivKey into an ASN.1 Element.
  * @function
@@ -150,6 +146,5 @@ export function _encode_POPOPrivKey(
     return _cached_encoder_for_POPOPrivKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_POPOPrivKey */
 
 /* eslint-enable */

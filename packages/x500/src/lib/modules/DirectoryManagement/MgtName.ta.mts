@@ -6,7 +6,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MgtName */
 /**
  * @summary MgtName
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type MgtName = Name; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MgtName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtName */
 let _cached_decoder_for_MgtName: $.ASN1Decoder<MgtName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MgtName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MgtName */
 /**
  * @summary Decodes an ASN.1 element into a(n) MgtName
  * @function
@@ -37,13 +32,9 @@ export function _decode_MgtName(el: _Element) {
     }
     return _cached_decoder_for_MgtName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MgtName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtName */
 let _cached_encoder_for_MgtName: $.ASN1Encoder<MgtName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MgtName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MgtName */
 /**
  * @summary Encodes a(n) MgtName into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_MgtName(
     return _cached_encoder_for_MgtName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MgtName */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { service_error } from '../MSAbstractService/service-error.oa.mjs';
 import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMAutoActionErrorTable */
 /**
  * @summary IPMAutoActionErrorTable
  * @description
@@ -57,6 +56,5 @@ export const IPMAutoActionErrorTable: AUTO_ACTION_ERROR[] = [
     submission_control_violated,
     unsupported_critical_function,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMAutoActionErrorTable */
 
 /* eslint-enable */

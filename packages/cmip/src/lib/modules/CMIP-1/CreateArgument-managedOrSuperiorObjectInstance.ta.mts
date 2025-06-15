@@ -15,7 +15,7 @@ import {
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CreateArgument_managedOrSuperiorObjectInstance */
+
 /**
  * @summary CreateArgument_managedOrSuperiorObjectInstance
  * @description
@@ -29,13 +29,11 @@ import {
 export type CreateArgument_managedOrSuperiorObjectInstance =
   | { managedObjectInstance: ObjectInstance } /* CHOICE_ALT_ROOT */
   | { superiorObjectInstance: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CreateArgument_managedOrSuperiorObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance */
+
 let _cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance: $.ASN1Decoder<CreateArgument_managedOrSuperiorObjectInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CreateArgument_managedOrSuperiorObjectInstance */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CreateArgument_managedOrSuperiorObjectInstance
  * @function
@@ -60,13 +58,11 @@ export function _decode_CreateArgument_managedOrSuperiorObjectInstance(
   }
   return _cached_decoder_for_CreateArgument_managedOrSuperiorObjectInstance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CreateArgument_managedOrSuperiorObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateArgument_managedOrSuperiorObjectInstance */
+
 let _cached_encoder_for_CreateArgument_managedOrSuperiorObjectInstance: $.ASN1Encoder<CreateArgument_managedOrSuperiorObjectInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateArgument_managedOrSuperiorObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CreateArgument_managedOrSuperiorObjectInstance */
+
 /**
  * @summary Encodes a(n) CreateArgument_managedOrSuperiorObjectInstance into an ASN.1 Element.
  * @function
@@ -98,6 +94,5 @@ export function _encode_CreateArgument_managedOrSuperiorObjectInstance(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CreateArgument_managedOrSuperiorObjectInstance */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
 import { GeneralAutoActions } from '../MSGeneralAutoActionTypes/GeneralAutoActions.osa.mjs';
 import { ContentSpecificAutoActions } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoActionTable */
 /**
  * @summary AutoActionTable
  * @description
@@ -31,6 +30,5 @@ export const AutoActionTable: AUTO_ACTION[] = [
     ...GeneralAutoActions,
     ...ContentSpecificAutoActions,
 ];
-/* END_OF_SYMBOL_DEFINITION AutoActionTable */
 
 /* eslint-enable */

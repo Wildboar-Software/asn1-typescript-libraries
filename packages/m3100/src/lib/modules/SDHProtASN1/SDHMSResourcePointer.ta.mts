@@ -15,7 +15,7 @@ import {
     _decode_ResourcePointer,
     _encode_ResourcePointer,
 } from '../SDHProtASN1/ResourcePointer.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SDHMSResourcePointer */
+
 /**
  * @summary SDHMSResourcePointer
  * @description
@@ -31,13 +31,11 @@ import {
  * ```
  */
 export type SDHMSResourcePointer = ResourcePointer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SDHMSResourcePointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SDHMSResourcePointer */
+
 let _cached_decoder_for_SDHMSResourcePointer: $.ASN1Decoder<SDHMSResourcePointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SDHMSResourcePointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SDHMSResourcePointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SDHMSResourcePointer
  * @function
@@ -50,13 +48,11 @@ export function _decode_SDHMSResourcePointer(el: _Element) {
     }
     return _cached_decoder_for_SDHMSResourcePointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SDHMSResourcePointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SDHMSResourcePointer */
+
 let _cached_encoder_for_SDHMSResourcePointer: $.ASN1Encoder<SDHMSResourcePointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SDHMSResourcePointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SDHMSResourcePointer */
+
 /**
  * @summary Encodes a(n) SDHMSResourcePointer into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_SDHMSResourcePointer(
     return _cached_encoder_for_SDHMSResourcePointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SDHMSResourcePointer */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import { chainedRemoveEntry } from "../DistributedOperations/chainedRemoveEntry.
 import { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
 import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
 import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dsp_ip */
 /**
  * @summary dsp_ip
  * @description
@@ -67,6 +66,5 @@ export const dsp_ip: IDM_PROTOCOL = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": id_idm_dsp /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dsp_ip */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "../SelectedAttributeTypes/Jid.ta.mjs";
 import { jidMatch } from "../SelectedAttributeTypes/jidMatch.oa.mjs";
 import { jidString } from "../SelectedAttributeTypes/jidString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION jid */
 /**
  * @summary jid
  * @description
@@ -52,6 +51,5 @@ export const jid: ATTRIBUTE<Jid> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION jid */
 
 /* eslint-enable */

@@ -51,7 +51,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RegisterArgument */
 /**
  * @summary RegisterArgument
  * @description
@@ -164,9 +163,7 @@ export class RegisterArgument {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RegisterArgument */
 /**
  * @summary The Leading Root Component Types of RegisterArgument
  * @description
@@ -233,9 +230,7 @@ export const _root_component_type_list_1_spec_for_RegisterArgument: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RegisterArgument */
 /**
  * @summary The Trailing Root Component Types of RegisterArgument
  * @description
@@ -245,9 +240,7 @@ export const _root_component_type_list_1_spec_for_RegisterArgument: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RegisterArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RegisterArgument */
 /**
  * @summary The Extension Addition Component Types of RegisterArgument
  * @description
@@ -257,13 +250,9 @@ export const _root_component_type_list_2_spec_for_RegisterArgument: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_RegisterArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterArgument */
 let _cached_decoder_for_RegisterArgument: $.ASN1Decoder<RegisterArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegisterArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) RegisterArgument
  * @function
@@ -352,13 +341,9 @@ export function _decode_RegisterArgument(el: _Element) {
     }
     return _cached_decoder_for_RegisterArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterArgument */
 let _cached_encoder_for_RegisterArgument: $.ASN1Encoder<RegisterArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegisterArgument */
 /**
  * @summary Encodes a(n) RegisterArgument into an ASN.1 Element.
  * @function
@@ -452,6 +437,5 @@ export function _encode_RegisterArgument(
     return _cached_encoder_for_RegisterArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegisterArgument */
 
 /* eslint-enable */

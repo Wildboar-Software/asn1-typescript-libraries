@@ -31,7 +31,6 @@ import {
     _decode_SecurityCategories,
     _encode_SecurityCategories,
 } from '../MTSAbstractService/SecurityCategories.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityLabel */
 /**
  * @summary SecurityLabel
  * @description
@@ -100,9 +99,7 @@ export class SecurityLabel {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityLabel */
 /**
  * @summary The Leading Root Component Types of SecurityLabel
  * @description
@@ -141,9 +138,7 @@ export const _root_component_type_list_1_spec_for_SecurityLabel: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityLabel */
 /**
  * @summary The Trailing Root Component Types of SecurityLabel
  * @description
@@ -153,9 +148,7 @@ export const _root_component_type_list_1_spec_for_SecurityLabel: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityLabel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityLabel */
 /**
  * @summary The Extension Addition Component Types of SecurityLabel
  * @description
@@ -165,13 +158,9 @@ export const _root_component_type_list_2_spec_for_SecurityLabel: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_SecurityLabel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel */
 let _cached_decoder_for_SecurityLabel: $.ASN1Decoder<SecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityLabel */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityLabel
  * @function
@@ -227,13 +216,9 @@ export function _decode_SecurityLabel(el: _Element) {
     }
     return _cached_decoder_for_SecurityLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel */
 let _cached_encoder_for_SecurityLabel: $.ASN1Encoder<SecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityLabel */
 /**
  * @summary Encodes a(n) SecurityLabel into an ASN.1 Element.
  * @function
@@ -283,6 +268,5 @@ export function _encode_SecurityLabel(
     return _cached_encoder_for_SecurityLabel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityLabel */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TeletexOrganizationalUnitName */
 /**
  * @summary TeletexOrganizationalUnitName
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TeletexOrganizationalUnitName = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION TeletexOrganizationalUnitName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TeletexOrganizationalUnitName */
 let _cached_decoder_for_TeletexOrganizationalUnitName: $.ASN1Decoder<TeletexOrganizationalUnitName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TeletexOrganizationalUnitName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TeletexOrganizationalUnitName */
 /**
  * @summary Decodes an ASN.1 element into a(n) TeletexOrganizationalUnitName
  * @function
@@ -45,13 +40,9 @@ export function _decode_TeletexOrganizationalUnitName(el: _Element) {
     }
     return _cached_decoder_for_TeletexOrganizationalUnitName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TeletexOrganizationalUnitName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TeletexOrganizationalUnitName */
 let _cached_encoder_for_TeletexOrganizationalUnitName: $.ASN1Encoder<TeletexOrganizationalUnitName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TeletexOrganizationalUnitName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TeletexOrganizationalUnitName */
 /**
  * @summary Encodes a(n) TeletexOrganizationalUnitName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TeletexOrganizationalUnitName(
     return _cached_encoder_for_TeletexOrganizationalUnitName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TeletexOrganizationalUnitName */
 
 /* eslint-enable */

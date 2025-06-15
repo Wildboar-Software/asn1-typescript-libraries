@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ThreeBit */
 /**
  * @summary ThreeBit
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ThreeBit = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ThreeBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ThreeBit */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ThreeBit */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ThreeBit */
 export const _decode_ThreeBit = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ThreeBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ThreeBit */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ThreeBit */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ThreeBit */
 export const _encode_ThreeBit = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ThreeBit */
 
 /* eslint-enable */

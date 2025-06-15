@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RepAvlOK */
 /**
  * @summary RepAvlOK
  * @description
@@ -56,9 +55,7 @@ export class RepAvlOK {
         return new RepAvlOK(_o.ok, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RepAvlOK */
 /**
  * @summary The Leading Root Component Types of RepAvlOK
  * @description
@@ -76,9 +73,7 @@ export const _root_component_type_list_1_spec_for_RepAvlOK: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RepAvlOK */
 /**
  * @summary The Trailing Root Component Types of RepAvlOK
  * @description
@@ -88,9 +83,7 @@ export const _root_component_type_list_1_spec_for_RepAvlOK: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RepAvlOK: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RepAvlOK */
 /**
  * @summary The Extension Addition Component Types of RepAvlOK
  * @description
@@ -100,13 +93,9 @@ export const _root_component_type_list_2_spec_for_RepAvlOK: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_RepAvlOK: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepAvlOK */
 let _cached_decoder_for_RepAvlOK: $.ASN1Decoder<RepAvlOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RepAvlOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) RepAvlOK
  * @function
@@ -132,13 +121,9 @@ export function _decode_RepAvlOK(el: _Element) {
     }
     return _cached_decoder_for_RepAvlOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepAvlOK */
 let _cached_encoder_for_RepAvlOK: $.ASN1Encoder<RepAvlOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RepAvlOK */
 /**
  * @summary Encodes a(n) RepAvlOK into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ export function _encode_RepAvlOK(
     return _cached_encoder_for_RepAvlOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RepAvlOK */
 
 /* eslint-enable */

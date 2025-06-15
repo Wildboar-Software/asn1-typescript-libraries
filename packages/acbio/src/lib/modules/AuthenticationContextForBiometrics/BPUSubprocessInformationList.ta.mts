@@ -15,7 +15,7 @@ import {
     _decode_BPUSubprocessInformation,
     _encode_BPUSubprocessInformation,
 } from '../AuthenticationContextForBiometrics/BPUSubprocessInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BPUSubprocessInformationList */
+
 /**
  * @summary BPUSubprocessInformationList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BPUSubprocessInformationList = BPUSubprocessInformation[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BPUSubprocessInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUSubprocessInformationList */
+
 let _cached_decoder_for_BPUSubprocessInformationList: $.ASN1Decoder<BPUSubprocessInformationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUSubprocessInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BPUSubprocessInformationList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BPUSubprocessInformationList
  * @function
@@ -48,13 +46,11 @@ export function _decode_BPUSubprocessInformationList(el: _Element) {
     }
     return _cached_decoder_for_BPUSubprocessInformationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BPUSubprocessInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUSubprocessInformationList */
+
 let _cached_encoder_for_BPUSubprocessInformationList: $.ASN1Encoder<BPUSubprocessInformationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUSubprocessInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BPUSubprocessInformationList */
+
 /**
  * @summary Encodes a(n) BPUSubprocessInformationList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_BPUSubprocessInformationList(
     return _cached_encoder_for_BPUSubprocessInformationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BPUSubprocessInformationList */
 
 /* eslint-enable */

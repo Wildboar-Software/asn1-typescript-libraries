@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_as } from "../UsefulDefinitions/id-as.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_as_directoryOperationalBindingManagementAS */
 /**
  * @summary id_as_directoryOperationalBindingManagementAS
  * @description
@@ -18,6 +17,5 @@ export const id_as_directoryOperationalBindingManagementAS: OBJECT_IDENTIFIER = 
     [4],
     id_as
 );
-/* END_OF_SYMBOL_DEFINITION id_as_directoryOperationalBindingManagementAS */
 
 /* eslint-enable */

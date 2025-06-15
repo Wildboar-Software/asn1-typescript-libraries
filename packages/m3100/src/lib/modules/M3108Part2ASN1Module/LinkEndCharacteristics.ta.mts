@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LinkEndCharacteristics */
+
 /**
  * @summary LinkEndCharacteristics
  * @description
@@ -74,9 +74,8 @@ export class LinkEndCharacteristics {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LinkEndCharacteristics */
+
 /**
  * @summary The Leading Root Component Types of LinkEndCharacteristics
  * @description
@@ -101,9 +100,8 @@ export const _root_component_type_list_1_spec_for_LinkEndCharacteristics: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LinkEndCharacteristics */
+
 /**
  * @summary The Trailing Root Component Types of LinkEndCharacteristics
  * @description
@@ -113,9 +111,8 @@ export const _root_component_type_list_1_spec_for_LinkEndCharacteristics: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LinkEndCharacteristics: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LinkEndCharacteristics */
+
 /**
  * @summary The Extension Addition Component Types of LinkEndCharacteristics
  * @description
@@ -125,13 +122,11 @@ export const _root_component_type_list_2_spec_for_LinkEndCharacteristics: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_LinkEndCharacteristics: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkEndCharacteristics */
+
 let _cached_decoder_for_LinkEndCharacteristics: $.ASN1Decoder<LinkEndCharacteristics> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkEndCharacteristics */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LinkEndCharacteristics
  * @function
@@ -170,13 +165,11 @@ export function _decode_LinkEndCharacteristics(el: _Element) {
     }
     return _cached_decoder_for_LinkEndCharacteristics(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkEndCharacteristics */
+
 let _cached_encoder_for_LinkEndCharacteristics: $.ASN1Encoder<LinkEndCharacteristics> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkEndCharacteristics */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkEndCharacteristics */
+
 /**
  * @summary Encodes a(n) LinkEndCharacteristics into an ASN.1 Element.
  * @function
@@ -220,6 +213,5 @@ export function _encode_LinkEndCharacteristics(
     return _cached_encoder_for_LinkEndCharacteristics(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkEndCharacteristics */
 
 /* eslint-enable */

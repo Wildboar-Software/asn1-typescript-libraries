@@ -23,7 +23,6 @@ import {
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION trace_information */
 /**
  * @summary trace_information
  * @description
@@ -57,6 +56,5 @@ export const trace_information: EXTENSION<TraceInformation> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION trace_information */
 
 /* eslint-enable */

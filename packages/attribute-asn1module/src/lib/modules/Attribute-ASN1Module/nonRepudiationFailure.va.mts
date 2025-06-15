@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { SecurityAlarmCause, _decode_SecurityAlarmCause, _encode_SecurityAlarmCause } from "../Attribute-ASN1Module/SecurityAlarmCause.ta.mjs";
 import { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.va.mjs";
-/* START_OF_SYMBOL_DEFINITION nonRepudiationFailure */
 /**
  * @summary nonRepudiationFailure
  * @description
@@ -28,6 +27,5 @@ export
 const nonRepudiationFailure: SecurityAlarmCause = new _OID([
     12,
 ], securityAlarmCause);
-/* END_OF_SYMBOL_DEFINITION nonRepudiationFailure */
 
 /* eslint-enable */

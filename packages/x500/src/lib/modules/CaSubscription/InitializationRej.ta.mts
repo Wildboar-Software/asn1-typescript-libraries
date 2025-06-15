@@ -11,7 +11,6 @@ import {
     _encode_InitializationRej_diag,
     _enum_for_InitializationRej_diag,
 } from "../CaSubscription/InitializationRej-diag.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION InitializationRej */
 /**
  * @summary InitializationRej
  * @description
@@ -70,9 +69,7 @@ export class InitializationRej {
 
     public static _enum_for_diag = _enum_for_InitializationRej_diag;
 }
-/* END_OF_SYMBOL_DEFINITION InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InitializationRej */
 /**
  * @summary The Leading Root Component Types of InitializationRej
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_InitializationRej: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InitializationRej */
 /**
  * @summary The Trailing Root Component Types of InitializationRej
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_InitializationRej: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InitializationRej: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InitializationRej */
 /**
  * @summary The Extension Addition Component Types of InitializationRej
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_InitializationRej: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_InitializationRej: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationRej */
 let _cached_decoder_for_InitializationRej: $.ASN1Decoder<InitializationRej> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InitializationRej */
 /**
  * @summary Decodes an ASN.1 element into a(n) InitializationRej
  * @function
@@ -148,13 +137,9 @@ export function _decode_InitializationRej(el: _Element) {
     }
     return _cached_decoder_for_InitializationRej(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationRej */
 let _cached_encoder_for_InitializationRej: $.ASN1Encoder<InitializationRej> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationRej */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InitializationRej */
 /**
  * @summary Encodes a(n) InitializationRej into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ export function _encode_InitializationRej(
     return _cached_encoder_for_InitializationRej(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InitializationRej */
 
 /* eslint-enable */

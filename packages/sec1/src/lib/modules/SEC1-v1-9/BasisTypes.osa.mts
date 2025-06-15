@@ -13,7 +13,6 @@ import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
 import { BasisTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union0-Intersection0-Element.oa.mjs";
 import { BasisTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union1-Intersection0-Element.oa.mjs";
 import { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union2-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION BasisTypes */
 /**
  * @summary BasisTypes
  * @description
@@ -35,6 +34,5 @@ import { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes
  */
 export
 const BasisTypes: (CHARACTERISTIC_TWO<any>)[] = [ BasisTypes_Union0_Intersection0_Element, BasisTypes_Union1_Intersection0_Element, BasisTypes_Union2_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION BasisTypes */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_TokenContent,
     _encode_TokenContent,
 } from "../DirectoryAbstractService/TokenContent.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Token */
 /**
  * @summary Token
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type Token = SIGNED<TokenContent>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Token */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Token */
 let _cached_decoder_for_Token: $.ASN1Decoder<Token> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Token */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Token */
 /**
  * @summary Decodes an ASN.1 element into a(n) Token
  * @function
@@ -44,13 +39,9 @@ export function _decode_Token(el: _Element) {
     }
     return _cached_decoder_for_Token(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Token */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Token */
 let _cached_encoder_for_Token: $.ASN1Encoder<Token> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Token */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Token */
 /**
  * @summary Encodes a(n) Token into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_Token(value: Token, elGetter: $.ASN1Encoder<Token>) {
     return _cached_encoder_for_Token(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Token */
 
 /* eslint-enable */

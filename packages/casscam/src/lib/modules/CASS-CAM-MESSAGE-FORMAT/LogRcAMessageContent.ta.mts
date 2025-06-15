@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION LogRcAMessageContent */
+
 /**
  * @summary LogRcAMessageContent
  * @description
@@ -66,9 +66,8 @@ class LogRcAMessageContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LogRcAMessageContent */
+
 /**
  * @summary The Leading Root Component Types of LogRcAMessageContent
  * @description
@@ -82,9 +81,8 @@ const _root_component_type_list_1_spec_for_LogRcAMessageContent: $.ComponentSpec
     new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("logResponseInfo", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LogRcAMessageContent */
+
 /**
  * @summary The Trailing Root Component Types of LogRcAMessageContent
  * @description
@@ -97,9 +95,8 @@ export
 const _root_component_type_list_2_spec_for_LogRcAMessageContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LogRcAMessageContent */
+
 /**
  * @summary The Extension Addition Component Types of LogRcAMessageContent
  * @description
@@ -112,13 +109,11 @@ export
 const _extension_additions_list_spec_for_LogRcAMessageContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LogRcAMessageContent */
+
 let _cached_decoder_for_LogRcAMessageContent: $.ASN1Decoder<LogRcAMessageContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LogRcAMessageContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LogRcAMessageContent
  * @function
@@ -151,13 +146,11 @@ function _decode_LogRcAMessageContent (el: _Element) {
 }; }
     return _cached_decoder_for_LogRcAMessageContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LogRcAMessageContent */
+
 let _cached_encoder_for_LogRcAMessageContent: $.ASN1Encoder<LogRcAMessageContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LogRcAMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LogRcAMessageContent */
+
 /**
  * @summary Encodes a(n) LogRcAMessageContent into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ function _encode_LogRcAMessageContent (value: LogRcAMessageContent, elGetter: $.
     return _cached_encoder_for_LogRcAMessageContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LogRcAMessageContent */
 
 /* eslint-enable */

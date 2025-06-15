@@ -20,7 +20,6 @@ import {
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IndicatedTests */
 /**
  * @summary IndicatedTests
  * @description
@@ -37,13 +36,9 @@ import {
 export type IndicatedTests =
     | { testSessionId: TestSessionId } /* CHOICE_ALT_ROOT */
     | { testInvocationId: TestInvocationId[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION IndicatedTests */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IndicatedTests */
 let _cached_decoder_for_IndicatedTests: $.ASN1Decoder<IndicatedTests> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IndicatedTests */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IndicatedTests */
 /**
  * @summary Decodes an ASN.1 element into a(n) IndicatedTests
  * @function
@@ -73,13 +68,9 @@ export function _decode_IndicatedTests(el: _Element) {
     }
     return _cached_decoder_for_IndicatedTests(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IndicatedTests */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IndicatedTests */
 let _cached_encoder_for_IndicatedTests: $.ASN1Encoder<IndicatedTests> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IndicatedTests */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IndicatedTests */
 /**
  * @summary Encodes a(n) IndicatedTests into an ASN.1 Element.
  * @function
@@ -117,6 +108,5 @@ export function _encode_IndicatedTests(
     return _cached_encoder_for_IndicatedTests(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IndicatedTests */
 
 /* eslint-enable */

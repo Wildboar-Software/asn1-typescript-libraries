@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceSpecificSet */
 /**
  * @summary ServiceSpecificSet
  * @description
@@ -26,6 +25,5 @@ import { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.mjs';
  *
  */
 export const ServiceSpecificSet: UMF_SERVICE[] = [];
-/* END_OF_SYMBOL_DEFINITION ServiceSpecificSet */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_CircuitPackType,
     _encode_CircuitPackType,
 } from '../ASN1DefinedTypesModule/CircuitPackType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HolderStatus */
+
 /**
  * @summary HolderStatus
  * @description
@@ -37,13 +37,11 @@ export type HolderStatus =
     | { inTheAcceptableList: CircuitPackType } /* CHOICE_ALT_ROOT */
     | { notInTheAcceptableList: CircuitPackType } /* CHOICE_ALT_ROOT */
     | { unknownType: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION HolderStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HolderStatus */
+
 let _cached_decoder_for_HolderStatus: $.ASN1Decoder<HolderStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HolderStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HolderStatus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HolderStatus
  * @function
@@ -79,13 +77,11 @@ export function _decode_HolderStatus(el: _Element) {
     }
     return _cached_decoder_for_HolderStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HolderStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HolderStatus */
+
 let _cached_encoder_for_HolderStatus: $.ASN1Encoder<HolderStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HolderStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HolderStatus */
+
 /**
  * @summary Encodes a(n) HolderStatus into an ASN.1 Element.
  * @function
@@ -131,6 +127,5 @@ export function _encode_HolderStatus(
     return _cached_encoder_for_HolderStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HolderStatus */
 
 /* eslint-enable */

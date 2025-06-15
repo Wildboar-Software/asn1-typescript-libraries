@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION OtherRevocation */
+
 /**
  * @summary OtherRevocation
  * @description
@@ -26,6 +26,5 @@ import { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVO
  *
  */
 export const OtherRevocation: OTHERREVOCATION[] = [];
-/* END_OF_SYMBOL_DEFINITION OtherRevocation */
 
 /* eslint-enable */

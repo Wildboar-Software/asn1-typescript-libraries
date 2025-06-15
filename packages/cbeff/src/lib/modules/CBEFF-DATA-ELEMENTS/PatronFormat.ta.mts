@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PatronFormat */
 /**
  * @summary PatronFormat
  * @description
@@ -63,9 +62,7 @@ export class PatronFormat {
     return new PatronFormat(_o.patron_format_owner, _o.patron_format_type);
   }
 }
-/* END_OF_SYMBOL_DEFINITION PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PatronFormat */
 /**
  * @summary The Leading Root Component Types of PatronFormat
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_PatronFormat: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PatronFormat */
 /**
  * @summary The Trailing Root Component Types of PatronFormat
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_PatronFormat: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PatronFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PatronFormat */
 /**
  * @summary The Extension Addition Component Types of PatronFormat
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_PatronFormat: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PatronFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PatronFormat */
 let _cached_decoder_for_PatronFormat: $.ASN1Decoder<PatronFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PatronFormat */
 /**
  * @summary Decodes an ASN.1 element into a(n) PatronFormat
  * @function
@@ -160,13 +149,9 @@ export function _decode_PatronFormat(el: _Element) {
   }
   return _cached_decoder_for_PatronFormat(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PatronFormat */
 let _cached_encoder_for_PatronFormat: $.ASN1Encoder<PatronFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PatronFormat */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PatronFormat */
 /**
  * @summary Encodes a(n) PatronFormat into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_PatronFormat(
   return _cached_encoder_for_PatronFormat(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PatronFormat */
 
 /* eslint-enable */

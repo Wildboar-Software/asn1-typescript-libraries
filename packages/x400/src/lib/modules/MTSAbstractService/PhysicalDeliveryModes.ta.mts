@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes */
 /**
  * @summary PhysicalDeliveryModes
  * @description
@@ -32,149 +31,108 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PhysicalDeliveryModes = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_ordinary_mail */
 /**
  * @summary PhysicalDeliveryModes_ordinary_mail
  * @constant
  */
 export const PhysicalDeliveryModes_ordinary_mail: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_ordinary_mail */
 
-/* START_OF_SYMBOL_DEFINITION ordinary_mail */
 /**
  * @summary ordinary_mail
  * @constant
  */
 export const ordinary_mail: number = PhysicalDeliveryModes_ordinary_mail; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION ordinary_mail */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_special_delivery */
 /**
  * @summary PhysicalDeliveryModes_special_delivery
  * @constant
  */
 export const PhysicalDeliveryModes_special_delivery: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_special_delivery */
 
-/* START_OF_SYMBOL_DEFINITION special_delivery */
 /**
  * @summary special_delivery
  * @constant
  */
 export const special_delivery: number = PhysicalDeliveryModes_special_delivery; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION special_delivery */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_express_mail */
 /**
  * @summary PhysicalDeliveryModes_express_mail
  * @constant
  */
 export const PhysicalDeliveryModes_express_mail: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_express_mail */
 
-/* START_OF_SYMBOL_DEFINITION express_mail */
 /**
  * @summary express_mail
  * @constant
  */
 export const express_mail: number = PhysicalDeliveryModes_express_mail; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION express_mail */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection */
 /**
  * @summary PhysicalDeliveryModes_counter_collection
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection */
 
-/* START_OF_SYMBOL_DEFINITION counter_collection */
 /**
  * @summary counter_collection
  * @constant
  */
 export const counter_collection: number = PhysicalDeliveryModes_counter_collection; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION counter_collection */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection_with_telephone_advice */
 /**
  * @summary PhysicalDeliveryModes_counter_collection_with_telephone_advice
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection_with_telephone_advice: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection_with_telephone_advice */
 
-/* START_OF_SYMBOL_DEFINITION counter_collection_with_telephone_advice */
 /**
  * @summary counter_collection_with_telephone_advice
  * @constant
  */
 export const counter_collection_with_telephone_advice: number = PhysicalDeliveryModes_counter_collection_with_telephone_advice; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION counter_collection_with_telephone_advice */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection_with_telex_advice */
 /**
  * @summary PhysicalDeliveryModes_counter_collection_with_telex_advice
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection_with_telex_advice: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection_with_telex_advice */
 
-/* START_OF_SYMBOL_DEFINITION counter_collection_with_telex_advice */
 /**
  * @summary counter_collection_with_telex_advice
  * @constant
  */
 export const counter_collection_with_telex_advice: number = PhysicalDeliveryModes_counter_collection_with_telex_advice; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION counter_collection_with_telex_advice */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection_with_teletex_advice */
 /**
  * @summary PhysicalDeliveryModes_counter_collection_with_teletex_advice
  * @constant
  */
 export const PhysicalDeliveryModes_counter_collection_with_teletex_advice: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_counter_collection_with_teletex_advice */
 
-/* START_OF_SYMBOL_DEFINITION counter_collection_with_teletex_advice */
 /**
  * @summary counter_collection_with_teletex_advice
  * @constant
  */
 export const counter_collection_with_teletex_advice: number = PhysicalDeliveryModes_counter_collection_with_teletex_advice; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION counter_collection_with_teletex_advice */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_bureau_fax_delivery */
 /**
  * @summary PhysicalDeliveryModes_bureau_fax_delivery
  * @constant
  */
 export const PhysicalDeliveryModes_bureau_fax_delivery: number = 7; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryModes_bureau_fax_delivery */
 
-/* START_OF_SYMBOL_DEFINITION bureau_fax_delivery */
 /**
  * @summary bureau_fax_delivery
  * @constant
  */
 export const bureau_fax_delivery: number = PhysicalDeliveryModes_bureau_fax_delivery; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION bureau_fax_delivery */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryModes */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryModes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryModes */
 export const _decode_PhysicalDeliveryModes = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryModes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryModes */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryModes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryModes */
 export const _encode_PhysicalDeliveryModes = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryModes */
 
 /* eslint-enable */

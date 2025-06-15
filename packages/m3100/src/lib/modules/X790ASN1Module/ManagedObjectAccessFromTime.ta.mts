@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ManagedObjectAccessFromTime */
+
 /**
  * @summary ManagedObjectAccessFromTime
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ManagedObjectAccessFromTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION ManagedObjectAccessFromTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectAccessFromTime */
+
 let _cached_decoder_for_ManagedObjectAccessFromTime: $.ASN1Decoder<ManagedObjectAccessFromTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectAccessFromTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedObjectAccessFromTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectAccessFromTime
  * @function
@@ -44,13 +42,11 @@ export function _decode_ManagedObjectAccessFromTime(el: _Element) {
     }
     return _cached_decoder_for_ManagedObjectAccessFromTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedObjectAccessFromTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectAccessFromTime */
+
 let _cached_encoder_for_ManagedObjectAccessFromTime: $.ASN1Encoder<ManagedObjectAccessFromTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectAccessFromTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedObjectAccessFromTime */
+
 /**
  * @summary Encodes a(n) ManagedObjectAccessFromTime into an ASN.1 Element.
  * @function
@@ -69,6 +65,5 @@ export function _encode_ManagedObjectAccessFromTime(
     return _cached_encoder_for_ManagedObjectAccessFromTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedObjectAccessFromTime */
 
 /* eslint-enable */

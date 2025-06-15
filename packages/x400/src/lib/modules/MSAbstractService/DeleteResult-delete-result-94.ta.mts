@@ -21,7 +21,6 @@ import {
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeleteResult_delete_result_94 */
 /**
  * @summary DeleteResult_delete_result_94
  * @description
@@ -73,9 +72,7 @@ export class DeleteResult_delete_result_94 {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteResult_delete_result_94 */
 /**
  * @summary The Leading Root Component Types of DeleteResult_delete_result_94
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_DeleteResult_delete_result_94:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteResult_delete_result_94 */
 /**
  * @summary The Trailing Root Component Types of DeleteResult_delete_result_94
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_DeleteResult_delete_result_94:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeleteResult_delete_result_94: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteResult_delete_result_94 */
 /**
  * @summary The Extension Addition Component Types of DeleteResult_delete_result_94
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_DeleteResult_delete_result_94:
  * @constant
  */
 export const _extension_additions_list_spec_for_DeleteResult_delete_result_94: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteResult_delete_result_94 */
 let _cached_decoder_for_DeleteResult_delete_result_94: $.ASN1Decoder<DeleteResult_delete_result_94> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteResult_delete_result_94 */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteResult_delete_result_94
  * @function
@@ -178,13 +167,9 @@ export function _decode_DeleteResult_delete_result_94(el: _Element) {
     }
     return _cached_decoder_for_DeleteResult_delete_result_94(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteResult_delete_result_94 */
 let _cached_encoder_for_DeleteResult_delete_result_94: $.ASN1Encoder<DeleteResult_delete_result_94> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteResult_delete_result_94 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteResult_delete_result_94 */
 /**
  * @summary Encodes a(n) DeleteResult_delete_result_94 into an ASN.1 Element.
  * @function
@@ -232,6 +217,5 @@ export function _encode_DeleteResult_delete_result_94(
     return _cached_encoder_for_DeleteResult_delete_result_94(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteResult_delete_result_94 */
 
 /* eslint-enable */

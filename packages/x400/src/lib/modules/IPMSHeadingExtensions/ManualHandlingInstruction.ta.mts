@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManualHandlingInstruction */
 /**
  * @summary ManualHandlingInstruction
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type ManualHandlingInstruction = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ManualHandlingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManualHandlingInstruction */
 let _cached_decoder_for_ManualHandlingInstruction: $.ASN1Decoder<ManualHandlingInstruction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManualHandlingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManualHandlingInstruction */
 /**
  * @summary Decodes an ASN.1 element into a(n) ManualHandlingInstruction
  * @function
@@ -47,13 +42,9 @@ export function _decode_ManualHandlingInstruction(el: _Element) {
     }
     return _cached_decoder_for_ManualHandlingInstruction(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManualHandlingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManualHandlingInstruction */
 let _cached_encoder_for_ManualHandlingInstruction: $.ASN1Encoder<ManualHandlingInstruction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManualHandlingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManualHandlingInstruction */
 /**
  * @summary Encodes a(n) ManualHandlingInstruction into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_ManualHandlingInstruction(
     return _cached_encoder_for_ManualHandlingInstruction(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManualHandlingInstruction */
 
 /* eslint-enable */

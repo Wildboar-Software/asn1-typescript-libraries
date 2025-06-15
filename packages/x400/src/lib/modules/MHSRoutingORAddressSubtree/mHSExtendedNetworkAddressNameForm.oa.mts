@@ -13,7 +13,6 @@ import { mHSExtendedNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSExte
 import { mHSExtendedNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddressAttribute.oa.mjs';
 import { id_nf_mhs_extended_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-extended-network-address.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSExtendedNetworkAddressNameForm */
 /**
  * @summary mHSExtendedNetworkAddressNameForm
  * @description
@@ -42,6 +41,5 @@ export const mHSExtendedNetworkAddressNameForm: NAME_FORM = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_extended_network_address /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSExtendedNetworkAddressNameForm */
 
 /* eslint-enable */

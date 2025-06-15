@@ -16,7 +16,7 @@ import {
   _decode_Identifier,
   _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SECURITY_EXCHANGE */
+
 /**
  * @summary SECURITY_EXCHANGE
  * @description
@@ -77,6 +77,5 @@ export interface SECURITY_EXCHANGE {
    */
   readonly '&sE-Identifier'?: Identifier;
 }
-/* END_OF_SYMBOL_DEFINITION SECURITY_EXCHANGE */
 
 /* eslint-enable */

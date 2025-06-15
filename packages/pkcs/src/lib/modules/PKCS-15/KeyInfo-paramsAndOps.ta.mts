@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, OPTIONAL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyInfo_paramsAndOps */
+
 /**
  * @summary KeyInfo_paramsAndOps
  * @description
@@ -54,9 +54,8 @@ export class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
         return new KeyInfo_paramsAndOps(_o.parameters, _o.supportedOperations);
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyInfo_paramsAndOps */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyInfo_paramsAndOps */
+
 /**
  * @summary The Leading Root Component Types of KeyInfo_paramsAndOps
  * @description
@@ -75,9 +74,8 @@ export const _root_component_type_list_1_spec_for_KeyInfo_paramsAndOps: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyInfo_paramsAndOps */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyInfo_paramsAndOps */
+
 /**
  * @summary The Trailing Root Component Types of KeyInfo_paramsAndOps
  * @description
@@ -87,9 +85,8 @@ export const _root_component_type_list_1_spec_for_KeyInfo_paramsAndOps: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyInfo_paramsAndOps: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyInfo_paramsAndOps */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyInfo_paramsAndOps */
+
 /**
  * @summary The Extension Addition Component Types of KeyInfo_paramsAndOps
  * @description
@@ -99,9 +96,8 @@ export const _root_component_type_list_2_spec_for_KeyInfo_paramsAndOps: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyInfo_paramsAndOps: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyInfo_paramsAndOps */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_KeyInfo_paramsAndOps */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) KeyInfo_paramsAndOps
  * @function
@@ -146,9 +142,8 @@ export function _get_decoder_for_KeyInfo_paramsAndOps<
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_KeyInfo_paramsAndOps */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_KeyInfo_paramsAndOps */
+
 /**
  * @summary Returns a function that will encode a(n) KeyInfo_paramsAndOps into an ASN.1 Element.
  * @function
@@ -182,6 +177,5 @@ export function _get_encoder_for_KeyInfo_paramsAndOps<
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_KeyInfo_paramsAndOps */
 
 /* eslint-enable */

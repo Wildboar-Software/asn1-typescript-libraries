@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-algs.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_X25519 */
+
 /**
  * @summary id_X25519
  * @description
@@ -28,6 +28,5 @@ export
 const id_X25519: OBJECT_IDENTIFIER = new _OID([
     110,
 ], id_edwards_curve_algs);
-/* END_OF_SYMBOL_DEFINITION id_X25519 */
 
 /* eslint-enable */

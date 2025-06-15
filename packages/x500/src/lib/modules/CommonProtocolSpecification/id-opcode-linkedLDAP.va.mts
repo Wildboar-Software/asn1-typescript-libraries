@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_opcode_linkedLDAP */
 /**
  * @summary id_opcode_linkedLDAP
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_opcode_linkedLDAP: Code = { local: 13 };
-/* END_OF_SYMBOL_DEFINITION id_opcode_linkedLDAP */
 
 /* eslint-enable */

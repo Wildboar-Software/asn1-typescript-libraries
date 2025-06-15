@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TrustAnchorTitle */
 /**
  * @summary TrustAnchorTitle
  * @description
@@ -25,9 +24,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type TrustAnchorTitle = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION TrustAnchorTitle */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorTitle */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorTitle
  * @function
@@ -38,9 +35,7 @@ export
 function _decode_TrustAnchorTitle (el: _Element) {
     return $._decodeUTF8String(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorTitle */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorTitle */
 /**
  * @summary Encodes a(n) TrustAnchorTitle into an ASN.1 Element.
  * @function
@@ -53,6 +48,5 @@ function _encode_TrustAnchorTitle (value: TrustAnchorTitle, elGetter: $.ASN1Enco
     return $._encodeUTF8String(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorTitle */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
     DERElement,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION pSpecifiedEmpty */
+
 /**
  * @summary pSpecifiedEmpty
  * @description
@@ -38,6 +38,5 @@ export const pSpecifiedEmpty: PSourceAlgorithm = new AlgorithmIdentifier(
     ),
 );
 
-/* END_OF_SYMBOL_DEFINITION pSpecifiedEmpty */
 
 /* eslint-enable */

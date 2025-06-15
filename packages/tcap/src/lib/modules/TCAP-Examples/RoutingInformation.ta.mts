@@ -15,7 +15,6 @@ import {
     _decode_IsdnNumber,
     _encode_IsdnNumber,
 } from '../TCAP-Examples/IsdnNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoutingInformation */
 /**
  * @summary RoutingInformation
  * @description
@@ -32,13 +31,9 @@ import {
 export type RoutingInformation =
     | { reroutingNumber: IsdnNumber } /* CHOICE_ALT_ROOT */
     | { forwardedToNumber: IsdnNumber } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RoutingInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingInformation */
 let _cached_decoder_for_RoutingInformation: $.ASN1Decoder<RoutingInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoutingInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoutingInformation
  * @function
@@ -62,13 +57,9 @@ export function _decode_RoutingInformation(el: _Element) {
     }
     return _cached_decoder_for_RoutingInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoutingInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingInformation */
 let _cached_encoder_for_RoutingInformation: $.ASN1Encoder<RoutingInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoutingInformation */
 /**
  * @summary Encodes a(n) RoutingInformation into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_RoutingInformation(
     return _cached_encoder_for_RoutingInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoutingInformation */
 
 /* eslint-enable */

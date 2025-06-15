@@ -6,7 +6,6 @@ import {
 import { distinguishedName } from "../SelectedAttributeTypes/distinguishedName.oa.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 import { id_at_roleOccupant } from "../SelectedAttributeTypes/id-at-roleOccupant.va.mjs";
-/* START_OF_SYMBOL_DEFINITION roleOccupant */
 /**
  * @summary roleOccupant
  * @description
@@ -45,6 +44,5 @@ export const roleOccupant: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION roleOccupant */
 
 /* eslint-enable */

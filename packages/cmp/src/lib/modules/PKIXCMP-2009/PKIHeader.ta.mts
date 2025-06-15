@@ -44,7 +44,7 @@ import {
   _encode_InfoTypeAndValue,
 } from '../PKIXCMP-2009/InfoTypeAndValue.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PKIHeader */
+
 /**
  * @summary PKIHeader
  * @description
@@ -197,9 +197,8 @@ export class PKIHeader {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKIHeader */
+
 /**
  * @summary The Leading Root Component Types of PKIHeader
  * @description
@@ -282,9 +281,8 @@ export const _root_component_type_list_1_spec_for_PKIHeader: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKIHeader */
+
 /**
  * @summary The Trailing Root Component Types of PKIHeader
  * @description
@@ -294,9 +292,8 @@ export const _root_component_type_list_1_spec_for_PKIHeader: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PKIHeader: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKIHeader */
+
 /**
  * @summary The Extension Addition Component Types of PKIHeader
  * @description
@@ -306,13 +303,11 @@ export const _root_component_type_list_2_spec_for_PKIHeader: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_PKIHeader: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIHeader */
+
 let _cached_decoder_for_PKIHeader: $.ASN1Decoder<PKIHeader> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIHeader */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIHeader
  * @function
@@ -422,13 +417,11 @@ export function _decode_PKIHeader(el: _Element) {
   }
   return _cached_decoder_for_PKIHeader(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIHeader */
+
 let _cached_encoder_for_PKIHeader: $.ASN1Encoder<PKIHeader> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIHeader */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIHeader */
+
 /**
  * @summary Encodes a(n) PKIHeader into an ASN.1 Element.
  * @function
@@ -534,6 +527,5 @@ export function _encode_PKIHeader(
   return _cached_encoder_for_PKIHeader(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIHeader */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
   _decode_EncodedCharacterString,
   _encode_EncodedCharacterString,
 } from '../FastInfoset/EncodedCharacterString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NonIdentifyingStringOrIndex_literal_character_string */
 /**
  * @summary NonIdentifyingStringOrIndex_literal_character_string
  * @description
@@ -68,9 +67,7 @@ export class NonIdentifyingStringOrIndex_literal_character_string {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonIdentifyingStringOrIndex_literal_character_string */
 /**
  * @summary The Leading Root Component Types of NonIdentifyingStringOrIndex_literal_character_string
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_NonIdentifyingStringOrIndex_li
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonIdentifyingStringOrIndex_literal_character_string */
 /**
  * @summary The Trailing Root Component Types of NonIdentifyingStringOrIndex_literal_character_string
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_NonIdentifyingStringOrIndex_li
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NonIdentifyingStringOrIndex_literal_character_string: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonIdentifyingStringOrIndex_literal_character_string */
 /**
  * @summary The Extension Addition Component Types of NonIdentifyingStringOrIndex_literal_character_string
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_NonIdentifyingStringOrIndex_li
  * @constant
  */
 export const _extension_additions_list_spec_for_NonIdentifyingStringOrIndex_literal_character_string: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonIdentifyingStringOrIndex_literal_character_string */
 let _cached_decoder_for_NonIdentifyingStringOrIndex_literal_character_string: $.ASN1Decoder<NonIdentifyingStringOrIndex_literal_character_string> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonIdentifyingStringOrIndex_literal_character_string */
 /**
  * @summary Decodes an ASN.1 element into a(n) NonIdentifyingStringOrIndex_literal_character_string
  * @function
@@ -165,13 +154,9 @@ export function _decode_NonIdentifyingStringOrIndex_literal_character_string(
     el
   );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonIdentifyingStringOrIndex_literal_character_string */
 let _cached_encoder_for_NonIdentifyingStringOrIndex_literal_character_string: $.ASN1Encoder<NonIdentifyingStringOrIndex_literal_character_string> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonIdentifyingStringOrIndex_literal_character_string */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonIdentifyingStringOrIndex_literal_character_string */
 /**
  * @summary Encodes a(n) NonIdentifyingStringOrIndex_literal_character_string into an ASN.1 Element.
  * @function
@@ -208,6 +193,5 @@ export function _encode_NonIdentifyingStringOrIndex_literal_character_string(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonIdentifyingStringOrIndex_literal_character_string */
 
 /* eslint-enable */

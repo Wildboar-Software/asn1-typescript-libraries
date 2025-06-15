@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ComponentRatesPerOctetsPerDeliveryServiceType */
 /**
  * @summary ComponentRatesPerOctetsPerDeliveryServiceType
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ComponentRatesPerOctetsPerDeliveryServiceType = REAL[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ComponentRatesPerOctetsPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentRatesPerOctetsPerDeliveryServiceType */
 let _cached_decoder_for_ComponentRatesPerOctetsPerDeliveryServiceType: $.ASN1Decoder<ComponentRatesPerOctetsPerDeliveryServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentRatesPerOctetsPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentRatesPerOctetsPerDeliveryServiceType */
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentRatesPerOctetsPerDeliveryServiceType
  * @function
@@ -49,13 +44,9 @@ export function _decode_ComponentRatesPerOctetsPerDeliveryServiceType(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentRatesPerOctetsPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentRatesPerOctetsPerDeliveryServiceType */
 let _cached_encoder_for_ComponentRatesPerOctetsPerDeliveryServiceType: $.ASN1Encoder<ComponentRatesPerOctetsPerDeliveryServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentRatesPerOctetsPerDeliveryServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentRatesPerOctetsPerDeliveryServiceType */
 /**
  * @summary Encodes a(n) ComponentRatesPerOctetsPerDeliveryServiceType into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_ComponentRatesPerOctetsPerDeliveryServiceType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentRatesPerOctetsPerDeliveryServiceType */
 
 /* eslint-enable */

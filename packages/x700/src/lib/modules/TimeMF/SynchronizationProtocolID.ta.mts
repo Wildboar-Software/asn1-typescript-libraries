@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SynchronizationProtocolID */
 /**
  * @summary SynchronizationProtocolID
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SynchronizationProtocolID = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SynchronizationProtocolID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SynchronizationProtocolID */
 let _cached_decoder_for_SynchronizationProtocolID: $.ASN1Decoder<SynchronizationProtocolID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SynchronizationProtocolID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SynchronizationProtocolID */
 /**
  * @summary Decodes an ASN.1 element into a(n) SynchronizationProtocolID
  * @function
@@ -46,13 +41,9 @@ export function _decode_SynchronizationProtocolID(el: _Element) {
     }
     return _cached_decoder_for_SynchronizationProtocolID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SynchronizationProtocolID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SynchronizationProtocolID */
 let _cached_encoder_for_SynchronizationProtocolID: $.ASN1Encoder<SynchronizationProtocolID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SynchronizationProtocolID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SynchronizationProtocolID */
 /**
  * @summary Encodes a(n) SynchronizationProtocolID into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SynchronizationProtocolID(
     return _cached_encoder_for_SynchronizationProtocolID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SynchronizationProtocolID */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_OperationResult_Item,
     _encode_OperationResult_Item,
 } from '../Schedulerev1-ASN1Module/OperationResult-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OperationResult */
 /**
  * @summary OperationResult
  * @description
@@ -34,13 +33,9 @@ import {
  * ```
  */
 export type OperationResult = OperationResult_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OperationResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationResult */
 let _cached_decoder_for_OperationResult: $.ASN1Decoder<OperationResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationResult
  * @function
@@ -55,13 +50,9 @@ export function _decode_OperationResult(el: _Element) {
     }
     return _cached_decoder_for_OperationResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationResult */
 let _cached_encoder_for_OperationResult: $.ASN1Encoder<OperationResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationResult */
 /**
  * @summary Encodes a(n) OperationResult into an ASN.1 Element.
  * @function
@@ -82,6 +73,5 @@ export function _encode_OperationResult(
     return _cached_encoder_for_OperationResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationResult */
 
 /* eslint-enable */

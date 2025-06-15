@@ -29,7 +29,6 @@ import { unsupported_critical_function } from '../MTSAbstractService/unsupported
 import { duplicate_ipn } from '../IPMSAutoActionTypes/duplicate-ipn.oa.mjs';
 import { id_aa_ipm_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-acknowledgement.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_acknowledgement */
 /**
  * @summary ipm_auto_acknowledgement
  * @description
@@ -74,6 +73,5 @@ export const ipm_auto_acknowledgement: AUTO_ACTION<IPMAutoAcknowledgementRegistr
     '&id': id_aa_ipm_auto_acknowledgement /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_acknowledgement */
 
 /* eslint-enable */

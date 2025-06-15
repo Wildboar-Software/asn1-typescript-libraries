@@ -15,7 +15,6 @@ import {
     _decode_IPMSExtension,
     _encode_IPMSExtension,
 } from '../IPMSInformationObjects/IPMSExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtensionsField */
 /**
  * @summary ExtensionsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExtensionsField = IPMSExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionsField */
 let _cached_decoder_for_ExtensionsField: $.ASN1Decoder<ExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtensionsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_ExtensionsField(el: _Element) {
     }
     return _cached_decoder_for_ExtensionsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionsField */
 let _cached_encoder_for_ExtensionsField: $.ASN1Encoder<ExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtensionsField */
 /**
  * @summary Encodes a(n) ExtensionsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ExtensionsField(
     return _cached_encoder_for_ExtensionsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtensionsField */
 
 /* eslint-enable */

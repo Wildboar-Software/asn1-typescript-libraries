@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta.mjs';
 import { id_hex_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hex-manual-handling-instructions.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION manual_handling_instructions */
 /**
  * @summary manual_handling_instructions
  * @description
@@ -45,6 +44,5 @@ export const manual_handling_instructions: IPMS_EXTENSION<ManualHandlingInstruct
     '&id': id_hex_manual_handling_instructions /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION manual_handling_instructions */
 
 /* eslint-enable */

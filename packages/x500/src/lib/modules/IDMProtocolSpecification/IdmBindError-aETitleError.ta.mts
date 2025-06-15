@@ -2,14 +2,11 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_IdmBindError_aETitleError */
 export enum _enum_for_IdmBindError_aETitleError {
     callingAETitleNotAccepted = 0,
     calledAETitleNotRecognized = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_IdmBindError_aETitleError */
 
-/* START_OF_SYMBOL_DEFINITION IdmBindError_aETitleError */
 /**
  * @summary IdmBindError_aETitleError
  * @description
@@ -23,57 +20,40 @@ export enum _enum_for_IdmBindError_aETitleError {
 export type IdmBindError_aETitleError =
     | _enum_for_IdmBindError_aETitleError
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION IdmBindError_aETitleError */
 
-/* START_OF_SYMBOL_DEFINITION IdmBindError_aETitleError_callingAETitleNotAccepted */
 /**
  * @summary IdmBindError_aETitleError_callingAETitleNotAccepted
  * @constant
  * @type {number}
  */
 export const IdmBindError_aETitleError_callingAETitleNotAccepted: IdmBindError_aETitleError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IdmBindError_aETitleError_callingAETitleNotAccepted */
 
-/* START_OF_SYMBOL_DEFINITION callingAETitleNotAccepted */
 /**
  * @summary callingAETitleNotAccepted
  * @constant
  * @type {number}
  */
 export const callingAETitleNotAccepted: IdmBindError_aETitleError = IdmBindError_aETitleError_callingAETitleNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION callingAETitleNotAccepted */
 
-/* START_OF_SYMBOL_DEFINITION IdmBindError_aETitleError_calledAETitleNotRecognized */
 /**
  * @summary IdmBindError_aETitleError_calledAETitleNotRecognized
  * @constant
  * @type {number}
  */
 export const IdmBindError_aETitleError_calledAETitleNotRecognized: IdmBindError_aETitleError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IdmBindError_aETitleError_calledAETitleNotRecognized */
 
-/* START_OF_SYMBOL_DEFINITION calledAETitleNotRecognized */
 /**
  * @summary calledAETitleNotRecognized
  * @constant
  * @type {number}
  */
 export const calledAETitleNotRecognized: IdmBindError_aETitleError = IdmBindError_aETitleError_calledAETitleNotRecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION calledAETitleNotRecognized */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBindError_aETitleError */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBindError_aETitleError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IdmBindError_aETitleError */
 export const _decode_IdmBindError_aETitleError = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_IdmBindError_aETitleError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBindError_aETitleError */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBindError_aETitleError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IdmBindError_aETitleError */
 export const _encode_IdmBindError_aETitleError = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_IdmBindError_aETitleError */
 
 /* eslint-enable */

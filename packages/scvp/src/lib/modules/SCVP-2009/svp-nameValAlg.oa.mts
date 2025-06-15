@@ -16,7 +16,6 @@ import {
 } from '../SCVP-2009/NameValidationAlgParams.ta.mjs';
 import { id_svp_nameValAlg } from '../SCVP-2009/id-svp-nameValAlg.va.mjs';
 import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION svp_nameValAlg */
 /**
  * @summary svp_nameValAlg
  * @description
@@ -43,6 +42,5 @@ export const svp_nameValAlg: POLICY = {
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 //   '&minCount': 1 /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION svp_nameValAlg */
 
 /* eslint-enable */

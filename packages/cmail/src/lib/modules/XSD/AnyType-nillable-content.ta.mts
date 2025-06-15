@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AnyType_nillable_content */
+
 /**
  * @summary AnyType_nillable_content
  * @description
@@ -52,9 +52,8 @@ export class AnyType_nillable_content {
     return new AnyType_nillable_content(_o.elem_list);
   }
 }
-/* END_OF_SYMBOL_DEFINITION AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AnyType_nillable_content */
+
 /**
  * @summary The Leading Root Component Types of AnyType_nillable_content
  * @description
@@ -72,9 +71,8 @@ export const _root_component_type_list_1_spec_for_AnyType_nillable_content: $.Co
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AnyType_nillable_content */
+
 /**
  * @summary The Trailing Root Component Types of AnyType_nillable_content
  * @description
@@ -84,9 +82,8 @@ export const _root_component_type_list_1_spec_for_AnyType_nillable_content: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AnyType_nillable_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AnyType_nillable_content */
+
 /**
  * @summary The Extension Addition Component Types of AnyType_nillable_content
  * @description
@@ -96,13 +93,11 @@ export const _root_component_type_list_2_spec_for_AnyType_nillable_content: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_AnyType_nillable_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyType_nillable_content */
+
 let _cached_decoder_for_AnyType_nillable_content: $.ASN1Decoder<AnyType_nillable_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AnyType_nillable_content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AnyType_nillable_content
  * @function
@@ -132,13 +127,11 @@ export function _decode_AnyType_nillable_content(el: _Element) {
   }
   return _cached_decoder_for_AnyType_nillable_content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyType_nillable_content */
+
 let _cached_encoder_for_AnyType_nillable_content: $.ASN1Encoder<AnyType_nillable_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyType_nillable_content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AnyType_nillable_content */
+
 /**
  * @summary Encodes a(n) AnyType_nillable_content into an ASN.1 Element.
  * @function
@@ -169,6 +162,5 @@ export function _encode_AnyType_nillable_content(
   return _cached_encoder_for_AnyType_nillable_content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AnyType_nillable_content */
 
 /* eslint-enable */

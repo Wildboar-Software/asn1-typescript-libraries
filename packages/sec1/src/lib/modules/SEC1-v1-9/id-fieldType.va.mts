@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_fieldType */
 /**
  * @summary id_fieldType
  * @description
@@ -28,6 +27,5 @@ export
 const id_fieldType: OBJECT_IDENTIFIER = new _OID([
     /* fieldType */ 1,
 ], ansi_X9_62);
-/* END_OF_SYMBOL_DEFINITION id_fieldType */
 
 /* eslint-enable */

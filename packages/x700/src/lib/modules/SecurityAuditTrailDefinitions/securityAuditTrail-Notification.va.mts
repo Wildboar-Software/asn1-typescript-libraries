@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION securityAuditTrail_Notification */
+
 /**
  * @summary securityAuditTrail_Notification
  * @description
@@ -29,6 +29,5 @@ export const securityAuditTrail_Notification: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part8 */ 8, /* notification */ 10],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION securityAuditTrail_Notification */
 
 /* eslint-enable */

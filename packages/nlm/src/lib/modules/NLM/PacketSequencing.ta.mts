@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PacketSequencing */
+
 /**
  * @summary PacketSequencing
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PacketSequencing = INTEGER;
-/* END_OF_SYMBOL_DEFINITION PacketSequencing */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PacketSequencing */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PacketSequencing */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PacketSequencing */
+
+
 export const _decode_PacketSequencing = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_PacketSequencing */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PacketSequencing */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PacketSequencing */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PacketSequencing */
+
+
 export const _encode_PacketSequencing = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PacketSequencing */
 
 /* eslint-enable */

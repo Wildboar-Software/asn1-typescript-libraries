@@ -15,7 +15,6 @@ import {
     _decode_WeekDayTranslationList_Item,
     _encode_WeekDayTranslationList_Item,
 } from '../Schedulerev1-ASN1Module/WeekDayTranslationList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WeekDayTranslationList */
 /**
  * @summary WeekDayTranslationList
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type WeekDayTranslationList = WeekDayTranslationList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION WeekDayTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekDayTranslationList */
 let _cached_decoder_for_WeekDayTranslationList: $.ASN1Decoder<WeekDayTranslationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekDayTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WeekDayTranslationList */
 /**
  * @summary Decodes an ASN.1 element into a(n) WeekDayTranslationList
  * @function
@@ -50,13 +45,9 @@ export function _decode_WeekDayTranslationList(el: _Element) {
     }
     return _cached_decoder_for_WeekDayTranslationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WeekDayTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekDayTranslationList */
 let _cached_encoder_for_WeekDayTranslationList: $.ASN1Encoder<WeekDayTranslationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekDayTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WeekDayTranslationList */
 /**
  * @summary Encodes a(n) WeekDayTranslationList into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_WeekDayTranslationList(
     return _cached_encoder_for_WeekDayTranslationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WeekDayTranslationList */
 
 /* eslint-enable */

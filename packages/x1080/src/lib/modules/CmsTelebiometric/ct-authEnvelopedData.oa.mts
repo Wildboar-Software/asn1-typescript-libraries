@@ -16,7 +16,7 @@ import {
 } from '../CmsTelebiometric/AuthEnvelopedData.ta.mjs';
 import { id_ct_authEnvelopedData } from '../CmsTelebiometric/id-ct-authEnvelopedData.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ct_authEnvelopedData */
+
 /**
  * @summary ct_authEnvelopedData
  * @description
@@ -44,6 +44,5 @@ export const ct_authEnvelopedData: CONTENT_TYPE<AuthEnvelopedData> = {
     '&id': id_ct_authEnvelopedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_authEnvelopedData */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ds } from "../UsefulDefinitions/ds.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION operationalBinding */
 /**
  * @summary operationalBinding
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const operationalBinding: ID = new _OID([19], ds);
-/* END_OF_SYMBOL_DEFINITION operationalBinding */
 
 /* eslint-enable */

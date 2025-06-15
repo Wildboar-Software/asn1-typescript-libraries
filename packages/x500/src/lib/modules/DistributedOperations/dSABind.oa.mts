@@ -8,7 +8,6 @@ import {
     _decode_DSABindResult,
     _encode_DSABindResult,
 } from "../DistributedOperations/DSABindResult.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION dSABind */
 /**
  * @summary dSABind
  * @description
@@ -40,6 +39,5 @@ export const dSABind: OPERATION = {
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dSABind */
 
 /* eslint-enable */

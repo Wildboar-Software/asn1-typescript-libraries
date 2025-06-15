@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_archiveTimestampV2 */
 /**
  * @summary id_aa_ets_archiveTimestampV2
  * @description
@@ -47,6 +46,5 @@ const id_aa_ets_archiveTimestampV2: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     48,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_archiveTimestampV2 */
 
 /* eslint-enable */

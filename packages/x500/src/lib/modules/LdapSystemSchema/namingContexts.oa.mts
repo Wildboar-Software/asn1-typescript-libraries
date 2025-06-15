@@ -10,7 +10,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { id_lat_namingContexts } from "../LdapSystemSchema/id-lat-namingContexts.va.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION namingContexts */
 /**
  * @summary namingContexts
  * @description
@@ -49,6 +48,5 @@ export const namingContexts: ATTRIBUTE<DistinguishedName> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION namingContexts */
 
 /* eslint-enable */

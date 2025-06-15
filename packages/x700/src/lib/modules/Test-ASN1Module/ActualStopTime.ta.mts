@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActualStopTime */
 /**
  * @summary ActualStopTime
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ActualStopTime =
     | { unknown: NULL } /* CHOICE_ALT_ROOT */
     | { actualStop: GeneralizedTime } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ActualStopTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActualStopTime */
 let _cached_decoder_for_ActualStopTime: $.ASN1Decoder<ActualStopTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActualStopTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActualStopTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ActualStopTime
  * @function
@@ -53,13 +48,9 @@ export function _decode_ActualStopTime(el: _Element) {
     }
     return _cached_decoder_for_ActualStopTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActualStopTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActualStopTime */
 let _cached_encoder_for_ActualStopTime: $.ASN1Encoder<ActualStopTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActualStopTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActualStopTime */
 /**
  * @summary Encodes a(n) ActualStopTime into an ASN.1 Element.
  * @function
@@ -83,6 +74,5 @@ export function _encode_ActualStopTime(
     return _cached_encoder_for_ActualStopTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActualStopTime */
 
 /* eslint-enable */

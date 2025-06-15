@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION frequencyHoppingFailure */
+
 /**
  * @summary frequencyHoppingFailure
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const frequencyHoppingFailure: ProbableCause = { localValue: 74 };
-/* END_OF_SYMBOL_DEFINITION frequencyHoppingFailure */
 
 /* eslint-enable */

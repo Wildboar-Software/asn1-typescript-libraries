@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_acbioContentInformation */
+
 /**
  * @summary id_acbioContentInformation
  * @description
@@ -31,6 +31,5 @@ export const id_acbioContentInformation: OBJECT_IDENTIFIER = new _OID([
     /* contentType */ 2,
     /* acbioContent */ 3,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_acbioContentInformation */
 
 /* eslint-enable */

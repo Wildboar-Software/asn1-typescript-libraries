@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_protocol } from "../PlatformCertificateProfile/tcg-protocol.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_prt_tpmIdProtocol */
 /**
  * @summary tcg_prt_tpmIdProtocol
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_prt_tpmIdProtocol: OBJECT_IDENTIFIER = new _OID([
     1,
 ], tcg_protocol);
-/* END_OF_SYMBOL_DEFINITION tcg_prt_tpmIdProtocol */
 
 /* eslint-enable */

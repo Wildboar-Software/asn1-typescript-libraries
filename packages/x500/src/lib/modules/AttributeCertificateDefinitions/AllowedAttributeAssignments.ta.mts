@@ -6,7 +6,6 @@ import {
     _decode_AllowedAttributeAssignments_Item,
     _encode_AllowedAttributeAssignments_Item,
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AllowedAttributeAssignments */
 /**
  * @summary AllowedAttributeAssignments
  * @description
@@ -24,13 +23,9 @@ import {
  * ```
  */
 export type AllowedAttributeAssignments = AllowedAttributeAssignments_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AllowedAttributeAssignments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AllowedAttributeAssignments */
 let _cached_decoder_for_AllowedAttributeAssignments: $.ASN1Decoder<AllowedAttributeAssignments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AllowedAttributeAssignments */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AllowedAttributeAssignments */
 /**
  * @summary Decodes an ASN.1 element into a(n) AllowedAttributeAssignments
  * @function
@@ -45,13 +40,9 @@ export function _decode_AllowedAttributeAssignments(el: _Element) {
     }
     return _cached_decoder_for_AllowedAttributeAssignments(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AllowedAttributeAssignments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AllowedAttributeAssignments */
 let _cached_encoder_for_AllowedAttributeAssignments: $.ASN1Encoder<AllowedAttributeAssignments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AllowedAttributeAssignments */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AllowedAttributeAssignments */
 /**
  * @summary Encodes a(n) AllowedAttributeAssignments into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_AllowedAttributeAssignments(
     return _cached_encoder_for_AllowedAttributeAssignments(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AllowedAttributeAssignments */
 
 /* eslint-enable */

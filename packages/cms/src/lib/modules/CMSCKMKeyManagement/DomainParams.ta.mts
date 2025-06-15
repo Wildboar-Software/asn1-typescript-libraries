@@ -12,7 +12,7 @@ import {
     _encode_ECDomainParameters,
 } from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECDomainParameters.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DomainParams */
+
 /**
  * @summary DomainParams
  * @description
@@ -29,13 +29,11 @@ import {
 export type DomainParams =
     | { dhParams: DomainParameters } /* CHOICE_ALT_ROOT */
     | { ecParams: ECDomainParameters } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DomainParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainParams */
+
 let _cached_decoder_for_DomainParams: $.ASN1Decoder<DomainParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DomainParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainParams
  * @function
@@ -63,13 +61,11 @@ export function _decode_DomainParams(el: _Element) {
     }
     return _cached_decoder_for_DomainParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DomainParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainParams */
+
 let _cached_encoder_for_DomainParams: $.ASN1Encoder<DomainParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DomainParams */
+
 /**
  * @summary Encodes a(n) DomainParams into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_DomainParams(
     return _cached_encoder_for_DomainParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DomainParams */
 
 /* eslint-enable */

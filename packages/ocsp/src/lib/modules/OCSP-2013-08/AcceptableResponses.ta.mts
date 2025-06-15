@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION AcceptableResponses */
+
 /**
  * @summary AcceptableResponses
  * @description
@@ -13,13 +13,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AcceptableResponses = OBJECT_IDENTIFIER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AcceptableResponses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptableResponses */
+
 let _cached_decoder_for_AcceptableResponses: $.ASN1Decoder<AcceptableResponses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptableResponses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AcceptableResponses */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AcceptableResponses
  * @function
@@ -34,13 +32,11 @@ export function _decode_AcceptableResponses(el: _Element) {
     }
     return _cached_decoder_for_AcceptableResponses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AcceptableResponses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptableResponses */
+
 let _cached_encoder_for_AcceptableResponses: $.ASN1Encoder<AcceptableResponses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptableResponses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AcceptableResponses */
+
 /**
  * @summary Encodes a(n) AcceptableResponses into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_AcceptableResponses(
     return _cached_encoder_for_AcceptableResponses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AcceptableResponses */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION cmoi */
 /**
  * @summary cmoi
  * @description
@@ -29,6 +28,5 @@ export const cmoi: OBJECT_IDENTIFIER = new _OID(
   [/* network-layer */ 13, /* management */ 0, /* sc6-gmi */ 0],
   joint_iso_ccitt
 );
-/* END_OF_SYMBOL_DEFINITION cmoi */
 
 /* eslint-enable */

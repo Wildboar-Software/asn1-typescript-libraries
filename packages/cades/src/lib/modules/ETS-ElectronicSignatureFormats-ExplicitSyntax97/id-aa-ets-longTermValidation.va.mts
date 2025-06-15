@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_longTermValidation */
 /**
  * @summary id_aa_ets_longTermValidation
  * @description
@@ -41,6 +40,5 @@ const id_aa_ets_longTermValidation: OBJECT_IDENTIFIER = new _OID([
     /* attributes */ 2,
     2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_longTermValidation */
 
 /* eslint-enable */

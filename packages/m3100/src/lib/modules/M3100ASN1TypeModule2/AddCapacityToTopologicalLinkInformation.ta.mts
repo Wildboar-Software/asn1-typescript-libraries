@@ -15,7 +15,7 @@ import {
     _decode_RequestedCapacity,
     _encode_RequestedCapacity,
 } from '../M3100ASN1TypeModule2/RequestedCapacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkInformation */
+
 /**
  * @summary AddCapacityToTopologicalLinkInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AddCapacityToTopologicalLinkInformation = RequestedCapacity; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddCapacityToTopologicalLinkInformation */
+
 let _cached_decoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Decoder<AddCapacityToTopologicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddCapacityToTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddCapacityToTopologicalLinkInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddCapacityToTopologicalLinkInformation
  * @function
@@ -46,13 +44,11 @@ export function _decode_AddCapacityToTopologicalLinkInformation(el: _Element) {
     }
     return _cached_decoder_for_AddCapacityToTopologicalLinkInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddCapacityToTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddCapacityToTopologicalLinkInformation */
+
 let _cached_encoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Encoder<AddCapacityToTopologicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddCapacityToTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddCapacityToTopologicalLinkInformation */
+
 /**
  * @summary Encodes a(n) AddCapacityToTopologicalLinkInformation into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_AddCapacityToTopologicalLinkInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddCapacityToTopologicalLinkInformation */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Stratum */
 /**
  * @summary Stratum
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Stratum = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Stratum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Stratum */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Stratum */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Stratum */
 export const _decode_Stratum = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Stratum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Stratum */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Stratum */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Stratum */
 export const _encode_Stratum = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Stratum */
 
 /* eslint-enable */

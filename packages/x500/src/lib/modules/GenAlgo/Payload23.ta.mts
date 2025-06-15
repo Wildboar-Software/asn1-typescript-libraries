@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Payload23 */
 /**
  * @summary Payload23
  * @description
@@ -67,9 +66,7 @@ export class Payload23 {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Payload23 */
 /**
  * @summary The Leading Root Component Types of Payload23
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_Payload23: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Payload23 */
 /**
  * @summary The Trailing Root Component Types of Payload23
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_Payload23: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Payload23: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Payload23 */
 /**
  * @summary The Extension Addition Component Types of Payload23
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_Payload23: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Payload23: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Payload23 */
 let _cached_decoder_for_Payload23: $.ASN1Decoder<Payload23> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Payload23 */
 /**
  * @summary Decodes an ASN.1 element into a(n) Payload23
  * @function
@@ -153,13 +142,9 @@ export function _decode_Payload23(el: _Element) {
     }
     return _cached_decoder_for_Payload23(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Payload23 */
 let _cached_encoder_for_Payload23: $.ASN1Encoder<Payload23> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Payload23 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Payload23 */
 /**
  * @summary Encodes a(n) Payload23 into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_Payload23(
     return _cached_encoder_for_Payload23(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Payload23 */
 
 /* eslint-enable */

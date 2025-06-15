@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BackUpRelationshipObject */
 /**
  * @summary BackUpRelationshipObject
  * @description
@@ -30,13 +29,9 @@ export
 type BackUpRelationshipObject =
     { objectName: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { noObject: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BackUpRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpRelationshipObject */
 let _cached_decoder_for_BackUpRelationshipObject: $.ASN1Decoder<BackUpRelationshipObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackUpRelationshipObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackUpRelationshipObject
  * @function
@@ -53,13 +48,9 @@ function _decode_BackUpRelationshipObject (el: _Element) {
 }); }
     return _cached_decoder_for_BackUpRelationshipObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackUpRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpRelationshipObject */
 let _cached_encoder_for_BackUpRelationshipObject: $.ASN1Encoder<BackUpRelationshipObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackUpRelationshipObject */
 /**
  * @summary Encodes a(n) BackUpRelationshipObject into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_BackUpRelationshipObject (value: BackUpRelationshipObject, elGe
     return _cached_encoder_for_BackUpRelationshipObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackUpRelationshipObject */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TroubleReportNumberList */
+
 /**
  * @summary TroubleReportNumberList
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TroubleReportNumberList = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TroubleReportNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportNumberList */
+
 let _cached_decoder_for_TroubleReportNumberList: $.ASN1Decoder<TroubleReportNumberList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportNumberList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportNumberList
  * @function
@@ -45,13 +43,11 @@ export function _decode_TroubleReportNumberList(el: _Element) {
     }
     return _cached_decoder_for_TroubleReportNumberList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportNumberList */
+
 let _cached_encoder_for_TroubleReportNumberList: $.ASN1Encoder<TroubleReportNumberList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportNumberList */
+
 /**
  * @summary Encodes a(n) TroubleReportNumberList into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_TroubleReportNumberList(
     return _cached_encoder_for_TroubleReportNumberList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportNumberList */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import { mHSADMD } from '../MHSRoutingORAddressSubtree/mHSADMD.oa.mjs';
 import { mHSADMDName } from '../MHSRoutingORAddressSubtree/mHSADMDName.oa.mjs';
 import { id_nf_mhs_admd } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-admd.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSADMDNameForm */
 /**
  * @summary mHSADMDNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSADMDNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSADMDName] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_admd /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSADMDNameForm */
 
 /* eslint-enable */

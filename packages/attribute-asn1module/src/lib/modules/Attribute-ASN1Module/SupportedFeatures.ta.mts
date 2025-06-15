@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_SupportedFeatures_Item } from "../Attribute-ASN1Module/SupportedFeatures-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedFeatures */
 /**
  * @summary SupportedFeatures
  * @description
@@ -30,13 +29,9 @@ import { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_Support
  */
 export
 type SupportedFeatures = SupportedFeatures_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedFeatures */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedFeatures */
 let _cached_decoder_for_SupportedFeatures: $.ASN1Decoder<SupportedFeatures> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedFeatures */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedFeatures */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedFeatures
  * @function
@@ -48,13 +43,9 @@ function _decode_SupportedFeatures (el: _Element) {
     if (!_cached_decoder_for_SupportedFeatures) { _cached_decoder_for_SupportedFeatures = $._decodeSetOf<SupportedFeatures_Item>(() => _decode_SupportedFeatures_Item); }
     return _cached_decoder_for_SupportedFeatures(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedFeatures */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedFeatures */
 let _cached_encoder_for_SupportedFeatures: $.ASN1Encoder<SupportedFeatures> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedFeatures */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedFeatures */
 /**
  * @summary Encodes a(n) SupportedFeatures into an ASN.1 Element.
  * @function
@@ -68,6 +59,5 @@ function _encode_SupportedFeatures (value: SupportedFeatures, elGetter: $.ASN1En
     return _cached_encoder_for_SupportedFeatures(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedFeatures */
 
 /* eslint-enable */

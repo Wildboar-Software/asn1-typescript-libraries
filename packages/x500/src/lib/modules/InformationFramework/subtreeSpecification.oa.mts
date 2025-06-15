@@ -10,7 +10,6 @@ import {
     _encode_SubtreeSpecification,
 } from "../InformationFramework/SubtreeSpecification.ta.mjs";
 import { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION subtreeSpecification */
 /**
  * @summary subtreeSpecification
  * @description
@@ -49,6 +48,5 @@ export const subtreeSpecification: ATTRIBUTE<SubtreeSpecification> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subtreeSpecification */
 
 /* eslint-enable */

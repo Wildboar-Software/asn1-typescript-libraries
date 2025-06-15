@@ -11,7 +11,7 @@ import {
     _encode_PKCS9String,
 } from "../PKCS-9/PKCS9String.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION unstructuredName */
+
 /**
  * @summary unstructuredName
  * @description
@@ -46,6 +46,5 @@ export const unstructuredName: ATTRIBUTE<PKCS9String> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION unstructuredName */
 
 /* eslint-enable */

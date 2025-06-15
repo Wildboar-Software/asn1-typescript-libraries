@@ -14,7 +14,7 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.mjs';
 import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dirEncryptedTransformation */
+
 /**
  * @summary dirEncryptedTransformation
  * @description
@@ -62,6 +62,5 @@ export const dirEncryptedTransformation: SECURITY_TRANSFORMATION<BIT_STRING> = {
   '&XformedDataType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&QualifierType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dirEncryptedTransformation */
 
 /* eslint-enable */

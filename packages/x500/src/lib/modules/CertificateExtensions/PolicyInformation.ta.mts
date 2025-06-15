@@ -15,7 +15,6 @@ import {
     _decode_PolicyQualifierInfo,
     _encode_PolicyQualifierInfo,
 } from "../CertificateExtensions/PolicyQualifierInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PolicyInformation */
 /**
  * @summary PolicyInformation
  * @description
@@ -75,9 +74,7 @@ export class PolicyInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PolicyInformation */
 /**
  * @summary The Leading Root Component Types of PolicyInformation
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_PolicyInformation: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PolicyInformation */
 /**
  * @summary The Trailing Root Component Types of PolicyInformation
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_PolicyInformation: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PolicyInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PolicyInformation */
 /**
  * @summary The Extension Addition Component Types of PolicyInformation
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_PolicyInformation: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_PolicyInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyInformation */
 let _cached_decoder_for_PolicyInformation: $.ASN1Decoder<PolicyInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PolicyInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) PolicyInformation
  * @function
@@ -180,13 +169,9 @@ export function _decode_PolicyInformation(el: _Element) {
     }
     return _cached_decoder_for_PolicyInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyInformation */
 let _cached_encoder_for_PolicyInformation: $.ASN1Encoder<PolicyInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PolicyInformation */
 /**
  * @summary Encodes a(n) PolicyInformation into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_PolicyInformation(
     return _cached_encoder_for_PolicyInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PolicyInformation */
 
 /* eslint-enable */

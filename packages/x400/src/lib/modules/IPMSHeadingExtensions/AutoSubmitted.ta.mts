@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_AutoSubmitted */
 /**
  * @summary AutoSubmitted
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_AutoSubmitted {
     auto_generated = 1,
     auto_replied = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_AutoSubmitted */
 
-/* START_OF_SYMBOL_DEFINITION AutoSubmitted */
 /**
  * @summary AutoSubmitted
  * @description
@@ -43,9 +40,7 @@ export enum _enum_for_AutoSubmitted {
  * ```@enum {number}
  */
 export type AutoSubmitted = _enum_for_AutoSubmitted;
-/* END_OF_SYMBOL_DEFINITION AutoSubmitted */
 
-/* START_OF_SYMBOL_DEFINITION AutoSubmitted */
 /**
  * @summary AutoSubmitted
  * @description
@@ -58,9 +53,7 @@ export type AutoSubmitted = _enum_for_AutoSubmitted;
  * ```@enum {number}
  */
 export const AutoSubmitted = _enum_for_AutoSubmitted;
-/* END_OF_SYMBOL_DEFINITION AutoSubmitted */
 
-/* START_OF_SYMBOL_DEFINITION AutoSubmitted_not_auto_submitted */
 /**
  * @summary AutoSubmitted_not_auto_submitted
  * @constant
@@ -68,9 +61,7 @@ export const AutoSubmitted = _enum_for_AutoSubmitted;
  */
 export const AutoSubmitted_not_auto_submitted: AutoSubmitted =
     AutoSubmitted.not_auto_submitted; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AutoSubmitted_not_auto_submitted */
 
-/* START_OF_SYMBOL_DEFINITION not_auto_submitted */
 /**
  * @summary not_auto_submitted
  * @constant
@@ -78,9 +69,7 @@ export const AutoSubmitted_not_auto_submitted: AutoSubmitted =
  */
 export const not_auto_submitted: AutoSubmitted =
     AutoSubmitted.not_auto_submitted; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION not_auto_submitted */
 
-/* START_OF_SYMBOL_DEFINITION AutoSubmitted_auto_generated */
 /**
  * @summary AutoSubmitted_auto_generated
  * @constant
@@ -88,9 +77,7 @@ export const not_auto_submitted: AutoSubmitted =
  */
 export const AutoSubmitted_auto_generated: AutoSubmitted =
     AutoSubmitted.auto_generated; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AutoSubmitted_auto_generated */
 
-/* START_OF_SYMBOL_DEFINITION auto_generated */
 /**
  * @summary auto_generated
  * @constant
@@ -98,9 +85,7 @@ export const AutoSubmitted_auto_generated: AutoSubmitted =
  */
 export const auto_generated: AutoSubmitted =
     AutoSubmitted.auto_generated; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION auto_generated */
 
-/* START_OF_SYMBOL_DEFINITION AutoSubmitted_auto_replied */
 /**
  * @summary AutoSubmitted_auto_replied
  * @constant
@@ -108,9 +93,7 @@ export const auto_generated: AutoSubmitted =
  */
 export const AutoSubmitted_auto_replied: AutoSubmitted =
     AutoSubmitted.auto_replied; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AutoSubmitted_auto_replied */
 
-/* START_OF_SYMBOL_DEFINITION auto_replied */
 /**
  * @summary auto_replied
  * @constant
@@ -118,21 +101,12 @@ export const AutoSubmitted_auto_replied: AutoSubmitted =
  */
 export const auto_replied: AutoSubmitted =
     AutoSubmitted.auto_replied; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION auto_replied */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSubmitted */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoSubmitted */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoSubmitted */
 export const _decode_AutoSubmitted = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_AutoSubmitted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSubmitted */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoSubmitted */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoSubmitted */
 export const _encode_AutoSubmitted = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoSubmitted */
 
 /* eslint-enable */

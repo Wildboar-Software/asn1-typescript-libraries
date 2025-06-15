@@ -12,7 +12,7 @@ import {
     _encode_RSAPublicKey,
 } from "../PKCS-1/RSAPublicKey.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RSAPublicKeyChoice */
+
 /**
  * @summary RSAPublicKeyChoice
  * @description
@@ -31,13 +31,11 @@ export type RSAPublicKeyChoice =
     | { raw: RSAPublicKey } /* CHOICE_ALT_ROOT */
     | { spki: SubjectPublicKeyInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RSAPublicKeyChoice */
+
 let _cached_decoder_for_RSAPublicKeyChoice: $.ASN1Decoder<RSAPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RSAPublicKeyChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RSAPublicKeyChoice
  * @function
@@ -60,13 +58,11 @@ export function _decode_RSAPublicKeyChoice(el: _Element) {
     }
     return _cached_decoder_for_RSAPublicKeyChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RSAPublicKeyChoice */
+
 let _cached_encoder_for_RSAPublicKeyChoice: $.ASN1Encoder<RSAPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RSAPublicKeyChoice */
+
 /**
  * @summary Encodes a(n) RSAPublicKeyChoice into an ASN.1 Element.
  * @function
@@ -95,6 +91,5 @@ export function _encode_RSAPublicKeyChoice(
     return _cached_encoder_for_RSAPublicKeyChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RSAPublicKeyChoice */
 
 /* eslint-enable */

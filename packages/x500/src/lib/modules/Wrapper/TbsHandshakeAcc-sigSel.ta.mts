@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsHandshakeAcc_sigSel */
 /**
  * @summary TbsHandshakeAcc_sigSel
  * @description
@@ -20,13 +19,9 @@ import {
 export type TbsHandshakeAcc_sigSel =
     | { sigAlg: AlgorithmIdentifier } /* CHOICE_ALT_ROOT */
     | { altSigAlg: AlgorithmIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TbsHandshakeAcc_sigSel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeAcc_sigSel */
 let _cached_decoder_for_TbsHandshakeAcc_sigSel: $.ASN1Decoder<TbsHandshakeAcc_sigSel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeAcc_sigSel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsHandshakeAcc_sigSel */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsHandshakeAcc_sigSel
  * @function
@@ -49,13 +44,9 @@ export function _decode_TbsHandshakeAcc_sigSel(el: _Element) {
     }
     return _cached_decoder_for_TbsHandshakeAcc_sigSel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsHandshakeAcc_sigSel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeAcc_sigSel */
 let _cached_encoder_for_TbsHandshakeAcc_sigSel: $.ASN1Encoder<TbsHandshakeAcc_sigSel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeAcc_sigSel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsHandshakeAcc_sigSel */
 /**
  * @summary Encodes a(n) TbsHandshakeAcc_sigSel into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_TbsHandshakeAcc_sigSel(
     return _cached_encoder_for_TbsHandshakeAcc_sigSel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsHandshakeAcc_sigSel */
 
 /* eslint-enable */

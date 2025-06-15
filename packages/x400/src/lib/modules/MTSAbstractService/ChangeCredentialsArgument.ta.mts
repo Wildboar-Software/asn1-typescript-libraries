@@ -15,7 +15,6 @@ import {
     _decode_Credentials,
     _encode_Credentials,
 } from '../MTSAbstractService/Credentials.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ChangeCredentialsArgument */
 /**
  * @summary ChangeCredentialsArgument
  * @description
@@ -74,9 +73,7 @@ export class ChangeCredentialsArgument {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChangeCredentialsArgument */
 /**
  * @summary The Leading Root Component Types of ChangeCredentialsArgument
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_ChangeCredentialsArgument: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChangeCredentialsArgument */
 /**
  * @summary The Trailing Root Component Types of ChangeCredentialsArgument
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_ChangeCredentialsArgument: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ChangeCredentialsArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChangeCredentialsArgument */
 /**
  * @summary The Extension Addition Component Types of ChangeCredentialsArgument
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_ChangeCredentialsArgument: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_ChangeCredentialsArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeCredentialsArgument */
 let _cached_decoder_for_ChangeCredentialsArgument: $.ASN1Decoder<ChangeCredentialsArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChangeCredentialsArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangeCredentialsArgument
  * @function
@@ -177,13 +166,9 @@ export function _decode_ChangeCredentialsArgument(el: _Element) {
     }
     return _cached_decoder_for_ChangeCredentialsArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeCredentialsArgument */
 let _cached_encoder_for_ChangeCredentialsArgument: $.ASN1Encoder<ChangeCredentialsArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeCredentialsArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChangeCredentialsArgument */
 /**
  * @summary Encodes a(n) ChangeCredentialsArgument into an ASN.1 Element.
  * @function
@@ -222,6 +207,5 @@ export function _encode_ChangeCredentialsArgument(
     return _cached_encoder_for_ChangeCredentialsArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChangeCredentialsArgument */
 
 /* eslint-enable */

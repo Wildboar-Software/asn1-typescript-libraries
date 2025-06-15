@@ -11,7 +11,6 @@ import {
     _decode_PresentationAddress,
     _encode_PresentationAddress,
 } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ExtendedNetworkAddress */
 /**
  * @summary ExtendedNetworkAddress
  * @description
@@ -35,13 +34,9 @@ export type ExtendedNetworkAddress =
           e163_4_address: ExtendedNetworkAddress_e163_4_address;
       } /* CHOICE_ALT_ROOT */
     | { psap_address: PresentationAddress } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ExtendedNetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedNetworkAddress */
 let _cached_decoder_for_ExtendedNetworkAddress: $.ASN1Decoder<ExtendedNetworkAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedNetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedNetworkAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedNetworkAddress
  * @function
@@ -67,13 +62,9 @@ export function _decode_ExtendedNetworkAddress(el: _Element) {
     }
     return _cached_decoder_for_ExtendedNetworkAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedNetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedNetworkAddress */
 let _cached_encoder_for_ExtendedNetworkAddress: $.ASN1Encoder<ExtendedNetworkAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedNetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedNetworkAddress */
 /**
  * @summary Encodes a(n) ExtendedNetworkAddress into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_ExtendedNetworkAddress(
     return _cached_encoder_for_ExtendedNetworkAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedNetworkAddress */
 
 /* eslint-enable */

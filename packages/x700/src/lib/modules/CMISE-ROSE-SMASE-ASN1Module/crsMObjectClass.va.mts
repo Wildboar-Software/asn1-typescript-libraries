@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION crsMObjectClass */
 /**
  * @summary crsMObjectClass
  * @description
@@ -29,6 +28,5 @@ export const crsMObjectClass: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* smi */ 3, /* part9 */ 9, /* managedObjectClass */ 3],
     joint_iso_ccitt
 );
-/* END_OF_SYMBOL_DEFINITION crsMObjectClass */
 
 /* eslint-enable */

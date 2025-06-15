@@ -20,7 +20,6 @@ import {
     _decode_ToBeTestedMORTs_scopedSet,
     _encode_ToBeTestedMORTs_scopedSet,
 } from '../Test-ASN1Module/ToBeTestedMORTs-scopedSet.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ToBeTestedMORTs */
 /**
  * @summary ToBeTestedMORTs
  * @description
@@ -40,13 +39,9 @@ import {
 export type ToBeTestedMORTs =
     | { normalForm: ObjectInstance[] } /* CHOICE_ALT_ROOT */
     | { scopedSet: ToBeTestedMORTs_scopedSet } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ToBeTestedMORTs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ToBeTestedMORTs */
 let _cached_decoder_for_ToBeTestedMORTs: $.ASN1Decoder<ToBeTestedMORTs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ToBeTestedMORTs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ToBeTestedMORTs */
 /**
  * @summary Decodes an ASN.1 element into a(n) ToBeTestedMORTs
  * @function
@@ -76,13 +71,9 @@ export function _decode_ToBeTestedMORTs(el: _Element) {
     }
     return _cached_decoder_for_ToBeTestedMORTs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ToBeTestedMORTs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ToBeTestedMORTs */
 let _cached_encoder_for_ToBeTestedMORTs: $.ASN1Encoder<ToBeTestedMORTs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ToBeTestedMORTs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ToBeTestedMORTs */
 /**
  * @summary Encodes a(n) ToBeTestedMORTs into an ASN.1 Element.
  * @function
@@ -120,6 +111,5 @@ export function _encode_ToBeTestedMORTs(
     return _cached_encoder_for_ToBeTestedMORTs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ToBeTestedMORTs */
 
 /* eslint-enable */

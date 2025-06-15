@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_stc } from '../SCVP-2009/id-stc.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_stc_status_check_ac_and_build_status_checked_aa_path */
 /**
  * @summary id_stc_status_check_ac_and_build_status_checked_aa_path
  * @description
@@ -29,6 +28,5 @@ export const id_stc_status_check_ac_and_build_status_checked_aa_path: OBJECT_IDE
   [7],
   id_stc
 );
-/* END_OF_SYMBOL_DEFINITION id_stc_status_check_ac_and_build_status_checked_aa_path */
 
 /* eslint-enable */

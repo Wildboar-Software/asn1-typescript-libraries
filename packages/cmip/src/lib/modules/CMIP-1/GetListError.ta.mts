@@ -27,7 +27,7 @@ import {
   _decode_GetInfoStatus,
   _encode_GetInfoStatus,
 } from '../CMIP-1/GetInfoStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GetListError */
+
 /**
  * @summary GetListError
  * @description
@@ -104,9 +104,8 @@ export class GetListError {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GetListError */
+
 /**
  * @summary The Leading Root Component Types of GetListError
  * @description
@@ -145,9 +144,8 @@ export const _root_component_type_list_1_spec_for_GetListError: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GetListError */
+
 /**
  * @summary The Trailing Root Component Types of GetListError
  * @description
@@ -157,9 +155,8 @@ export const _root_component_type_list_1_spec_for_GetListError: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GetListError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GetListError */
+
 /**
  * @summary The Extension Addition Component Types of GetListError
  * @description
@@ -169,13 +166,11 @@ export const _root_component_type_list_2_spec_for_GetListError: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_GetListError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GetListError */
+
 let _cached_decoder_for_GetListError: $.ASN1Decoder<GetListError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GetListError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GetListError
  * @function
@@ -233,13 +228,11 @@ export function _decode_GetListError(el: _Element) {
   }
   return _cached_decoder_for_GetListError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GetListError */
+
 let _cached_encoder_for_GetListError: $.ASN1Encoder<GetListError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GetListError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GetListError */
+
 /**
  * @summary Encodes a(n) GetListError into an ASN.1 Element.
  * @function
@@ -295,6 +288,5 @@ export function _encode_GetListError(
   return _cached_encoder_for_GetListError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GetListError */
 
 /* eslint-enable */

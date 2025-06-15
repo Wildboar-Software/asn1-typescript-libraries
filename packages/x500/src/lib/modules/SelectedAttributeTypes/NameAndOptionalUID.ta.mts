@@ -15,7 +15,6 @@ import {
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NameAndOptionalUID */
 /**
  * @summary NameAndOptionalUID
  * @description
@@ -75,9 +74,7 @@ export class NameAndOptionalUID {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameAndOptionalUID */
 /**
  * @summary The Leading Root Component Types of NameAndOptionalUID
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_NameAndOptionalUID: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameAndOptionalUID */
 /**
  * @summary The Trailing Root Component Types of NameAndOptionalUID
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_NameAndOptionalUID: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameAndOptionalUID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameAndOptionalUID */
 /**
  * @summary The Extension Addition Component Types of NameAndOptionalUID
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_NameAndOptionalUID: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_NameAndOptionalUID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameAndOptionalUID */
 let _cached_decoder_for_NameAndOptionalUID: $.ASN1Decoder<NameAndOptionalUID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameAndOptionalUID */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameAndOptionalUID
  * @function
@@ -178,13 +167,9 @@ export function _decode_NameAndOptionalUID(el: _Element) {
     }
     return _cached_decoder_for_NameAndOptionalUID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameAndOptionalUID */
 let _cached_encoder_for_NameAndOptionalUID: $.ASN1Encoder<NameAndOptionalUID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameAndOptionalUID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameAndOptionalUID */
 /**
  * @summary Encodes a(n) NameAndOptionalUID into an ASN.1 Element.
  * @function
@@ -223,6 +208,5 @@ export function _encode_NameAndOptionalUID(
     return _cached_encoder_for_NameAndOptionalUID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameAndOptionalUID */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_Par
 import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
 import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SIGNATURE_ALGORITHM */
+
 /**
  * @summary SIGNATURE_ALGORITHM
  * @description
@@ -93,6 +93,5 @@ interface SIGNATURE_ALGORITHM<
      */
     readonly "&smimeCaps"?: SMIME_CAPS;
 };
-/* END_OF_SYMBOL_DEFINITION SIGNATURE_ALGORITHM */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SimpleCredentials */
 /**
  * @summary SimpleCredentials
  * @description
@@ -88,9 +87,7 @@ export class SimpleCredentials {
         return new SimpleCredentials(_o.name, _o.validity, _o.password);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SimpleCredentials */
 /**
  * @summary The Leading Root Component Types of SimpleCredentials
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_SimpleCredentials: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SimpleCredentials */
 /**
  * @summary The Trailing Root Component Types of SimpleCredentials
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_SimpleCredentials: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SimpleCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SimpleCredentials */
 /**
  * @summary The Extension Addition Component Types of SimpleCredentials
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_SimpleCredentials: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_SimpleCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleCredentials */
 let _cached_decoder_for_SimpleCredentials: $.ASN1Decoder<SimpleCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SimpleCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) SimpleCredentials
  * @function
@@ -205,13 +194,9 @@ export function _decode_SimpleCredentials(el: _Element) {
     }
     return _cached_decoder_for_SimpleCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleCredentials */
 let _cached_encoder_for_SimpleCredentials: $.ASN1Encoder<SimpleCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SimpleCredentials */
 /**
  * @summary Encodes a(n) SimpleCredentials into an ASN.1 Element.
  * @function
@@ -260,6 +245,5 @@ export function _encode_SimpleCredentials(
     return _cached_encoder_for_SimpleCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SimpleCredentials */
 
 /* eslint-enable */

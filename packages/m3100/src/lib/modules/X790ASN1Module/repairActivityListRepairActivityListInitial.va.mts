@@ -22,7 +22,7 @@ import {
     _decode_ActivityCode,
     _encode_ActivityCode,
 } from '../X790ASN1Module/ActivityCode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION repairActivityListRepairActivityListInitial */
+
 /**
  * @summary repairActivityListRepairActivityListInitial
  * @description
@@ -36,6 +36,5 @@ import {
  * @constant
  */
 export const repairActivityListRepairActivityListInitial: RepairActivityList = [];
-/* END_OF_SYMBOL_DEFINITION repairActivityListRepairActivityListInitial */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DataSize */
 /**
  * @summary DataSize
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DataSize = INTEGER;
-/* END_OF_SYMBOL_DEFINITION DataSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataSize */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataSize */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataSize */
 export const _decode_DataSize = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_DataSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataSize */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataSize */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataSize */
 export const _encode_DataSize = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataSize */
 
 /* eslint-enable */

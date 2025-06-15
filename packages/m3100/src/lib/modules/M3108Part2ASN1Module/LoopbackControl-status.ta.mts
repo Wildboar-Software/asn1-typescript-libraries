@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_LoopbackControl_status */
+
 /**
  * @summary LoopbackControl_status
  * @description
@@ -27,9 +27,8 @@ export enum _enum_for_LoopbackControl_status {
     endALoopedBack = 1,
     endBLoopedBack = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_LoopbackControl_status */
 
-/* START_OF_SYMBOL_DEFINITION LoopbackControl_status */
+
 /**
  * @summary LoopbackControl_status
  * @description
@@ -41,9 +40,8 @@ export enum _enum_for_LoopbackControl_status {
  * ```@enum {number}
  */
 export type LoopbackControl_status = _enum_for_LoopbackControl_status;
-/* END_OF_SYMBOL_DEFINITION LoopbackControl_status */
 
-/* START_OF_SYMBOL_DEFINITION LoopbackControl_status */
+
 /**
  * @summary LoopbackControl_status
  * @description
@@ -55,9 +53,8 @@ export type LoopbackControl_status = _enum_for_LoopbackControl_status;
  * ```@enum {number}
  */
 export const LoopbackControl_status = _enum_for_LoopbackControl_status;
-/* END_OF_SYMBOL_DEFINITION LoopbackControl_status */
 
-/* START_OF_SYMBOL_DEFINITION LoopbackControl_status_noLoopback */
+
 /**
  * @summary LoopbackControl_status_noLoopback
  * @constant
@@ -65,9 +62,8 @@ export const LoopbackControl_status = _enum_for_LoopbackControl_status;
  */
 export const LoopbackControl_status_noLoopback: LoopbackControl_status =
     LoopbackControl_status.noLoopback; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LoopbackControl_status_noLoopback */
 
-/* START_OF_SYMBOL_DEFINITION noLoopback */
+
 /**
  * @summary noLoopback
  * @constant
@@ -75,9 +71,8 @@ export const LoopbackControl_status_noLoopback: LoopbackControl_status =
  */
 export const noLoopback: LoopbackControl_status =
     LoopbackControl_status.noLoopback; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noLoopback */
 
-/* START_OF_SYMBOL_DEFINITION LoopbackControl_status_endALoopedBack */
+
 /**
  * @summary LoopbackControl_status_endALoopedBack
  * @constant
@@ -85,9 +80,8 @@ export const noLoopback: LoopbackControl_status =
  */
 export const LoopbackControl_status_endALoopedBack: LoopbackControl_status =
     LoopbackControl_status.endALoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LoopbackControl_status_endALoopedBack */
 
-/* START_OF_SYMBOL_DEFINITION endALoopedBack */
+
 /**
  * @summary endALoopedBack
  * @constant
@@ -95,9 +89,8 @@ export const LoopbackControl_status_endALoopedBack: LoopbackControl_status =
  */
 export const endALoopedBack: LoopbackControl_status =
     LoopbackControl_status.endALoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION endALoopedBack */
 
-/* START_OF_SYMBOL_DEFINITION LoopbackControl_status_endBLoopedBack */
+
 /**
  * @summary LoopbackControl_status_endBLoopedBack
  * @constant
@@ -105,9 +98,8 @@ export const endALoopedBack: LoopbackControl_status =
  */
 export const LoopbackControl_status_endBLoopedBack: LoopbackControl_status =
     LoopbackControl_status.endBLoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LoopbackControl_status_endBLoopedBack */
 
-/* START_OF_SYMBOL_DEFINITION endBLoopedBack */
+
 /**
  * @summary endBLoopedBack
  * @constant
@@ -115,21 +107,16 @@ export const LoopbackControl_status_endBLoopedBack: LoopbackControl_status =
  */
 export const endBLoopedBack: LoopbackControl_status =
     LoopbackControl_status.endBLoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION endBLoopedBack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackControl_status */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackControl_status */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoopbackControl_status */
+
+
 export const _decode_LoopbackControl_status = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_LoopbackControl_status */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackControl_status */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackControl_status */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoopbackControl_status */
+
+
 export const _encode_LoopbackControl_status = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoopbackControl_status */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoForwardCommentField */
 /**
  * @summary AutoForwardCommentField
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type AutoForwardCommentField = AutoForwardComment; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AutoForwardCommentField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoForwardCommentField */
 let _cached_decoder_for_AutoForwardCommentField: $.ASN1Decoder<AutoForwardCommentField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoForwardCommentField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoForwardCommentField */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoForwardCommentField
  * @function
@@ -47,13 +42,9 @@ export function _decode_AutoForwardCommentField(el: _Element) {
     }
     return _cached_decoder_for_AutoForwardCommentField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoForwardCommentField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoForwardCommentField */
 let _cached_encoder_for_AutoForwardCommentField: $.ASN1Encoder<AutoForwardCommentField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoForwardCommentField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoForwardCommentField */
 /**
  * @summary Encodes a(n) AutoForwardCommentField into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_AutoForwardCommentField(
     return _cached_encoder_for_AutoForwardCommentField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoForwardCommentField */
 
 /* eslint-enable */

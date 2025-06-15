@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSGenerationQualifierAttribute } from '../MHSRoutingORAddressSubtree/mHSGenerationQualifierAttribute.oa.mjs';
 import { id_oc_mhs_generation_qualifier } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-generation-qualifier.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSGenerationQualifier */
 /**
  * @summary mHSGenerationQualifier
  * @description
@@ -50,6 +49,5 @@ export const mHSGenerationQualifier: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_generation_qualifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSGenerationQualifier */
 
 /* eslint-enable */

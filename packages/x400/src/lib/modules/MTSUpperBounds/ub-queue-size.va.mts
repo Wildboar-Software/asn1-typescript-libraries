@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_queue_size */
 /**
  * @summary ub_queue_size
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_queue_size: INTEGER = 2147483647;
-/* END_OF_SYMBOL_DEFINITION ub_queue_size */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AlertDestination */
 /**
  * @summary AlertDestination
  * @description
@@ -64,9 +63,7 @@ export class AlertDestination {
         return new AlertDestination(_o.alert_address, _o.alert_qualifier);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlertDestination */
 /**
  * @summary The Leading Root Component Types of AlertDestination
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_AlertDestination: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlertDestination */
 /**
  * @summary The Trailing Root Component Types of AlertDestination
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_AlertDestination: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AlertDestination: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlertDestination */
 /**
  * @summary The Extension Addition Component Types of AlertDestination
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_AlertDestination: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_AlertDestination: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertDestination */
 let _cached_decoder_for_AlertDestination: $.ASN1Decoder<AlertDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlertDestination */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertDestination
  * @function
@@ -163,13 +152,9 @@ export function _decode_AlertDestination(el: _Element) {
     }
     return _cached_decoder_for_AlertDestination(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertDestination */
 let _cached_encoder_for_AlertDestination: $.ASN1Encoder<AlertDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertDestination */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlertDestination */
 /**
  * @summary Encodes a(n) AlertDestination into an ASN.1 Element.
  * @function
@@ -206,6 +191,5 @@ export function _encode_AlertDestination(
     return _cached_encoder_for_AlertDestination(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlertDestination */
 
 /* eslint-enable */

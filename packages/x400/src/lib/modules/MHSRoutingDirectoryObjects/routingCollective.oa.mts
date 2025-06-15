@@ -23,7 +23,6 @@ import { entryConnectionGroupName } from '../MHSRoutingDirectoryObjects/entryCon
 import { localExitConnectionGroupName } from '../MHSRoutingDirectoryObjects/localExitConnectionGroupName.oa.mjs';
 import { transitExitConnectionGroupName } from '../MHSRoutingDirectoryObjects/transitExitConnectionGroupName.oa.mjs';
 import { id_oc_routing_collective } from '../MHSRoutingObjectIdentifiers/id-oc-routing-collective.va.mjs';
-/* START_OF_SYMBOL_DEFINITION routingCollective */
 /**
  * @summary routingCollective
  * @description
@@ -61,6 +60,5 @@ export const routingCollective: OBJECT_CLASS = {
     '&id': id_oc_routing_collective /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION routingCollective */
 
 /* eslint-enable */

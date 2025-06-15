@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActualStartTime */
 /**
  * @summary ActualStartTime
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ActualStartTime =
     | { unknown: NULL } /* CHOICE_ALT_ROOT */
     | { actualStart: GeneralizedTime } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ActualStartTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActualStartTime */
 let _cached_decoder_for_ActualStartTime: $.ASN1Decoder<ActualStartTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActualStartTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActualStartTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ActualStartTime
  * @function
@@ -53,13 +48,9 @@ export function _decode_ActualStartTime(el: _Element) {
     }
     return _cached_decoder_for_ActualStartTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActualStartTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActualStartTime */
 let _cached_encoder_for_ActualStartTime: $.ASN1Encoder<ActualStartTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActualStartTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActualStartTime */
 /**
  * @summary Encodes a(n) ActualStartTime into an ASN.1 Element.
  * @function
@@ -83,6 +74,5 @@ export function _encode_ActualStartTime(
     return _cached_encoder_for_ActualStartTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActualStartTime */
 
 /* eslint-enable */

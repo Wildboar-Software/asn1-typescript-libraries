@@ -20,7 +20,6 @@ import {
     _decode_InitiatorName,
     _encode_InitiatorName,
 } from '../AccessControl-ASN1Module/InitiatorName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AccessControlList_Item */
 /**
  * @summary AccessControlList_Item
  * @description
@@ -34,13 +33,9 @@ import {
 export type AccessControlList_Item =
     | { proxy: Proxy } /* CHOICE_ALT_ROOT */
     | { initiatorName: InitiatorName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AccessControlList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlList_Item */
 let _cached_decoder_for_AccessControlList_Item: $.ASN1Decoder<AccessControlList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessControlList_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessControlList_Item
  * @function
@@ -66,13 +61,9 @@ export function _decode_AccessControlList_Item(el: _Element) {
     }
     return _cached_decoder_for_AccessControlList_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessControlList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlList_Item */
 let _cached_encoder_for_AccessControlList_Item: $.ASN1Encoder<AccessControlList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessControlList_Item */
 /**
  * @summary Encodes a(n) AccessControlList_Item into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_AccessControlList_Item(
     return _cached_encoder_for_AccessControlList_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessControlList_Item */
 
 /* eslint-enable */

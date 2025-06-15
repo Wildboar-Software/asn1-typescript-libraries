@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_SourceIndicator */
 /**
  * @summary SourceIndicator
  * @description
@@ -31,9 +30,7 @@ enum _enum_for_SourceIndicator {
     managementOperation = 1,
     unknown = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_SourceIndicator */
 
-/* START_OF_SYMBOL_DEFINITION SourceIndicator */
 /**
  * @summary SourceIndicator
  * @description
@@ -47,9 +44,7 @@ enum _enum_for_SourceIndicator {
  */
 export
 type SourceIndicator = _enum_for_SourceIndicator;
-/* END_OF_SYMBOL_DEFINITION SourceIndicator */
 
-/* START_OF_SYMBOL_DEFINITION SourceIndicator */
 /**
  * @summary SourceIndicator
  * @description
@@ -63,9 +58,7 @@ type SourceIndicator = _enum_for_SourceIndicator;
  */
 export
 const SourceIndicator = _enum_for_SourceIndicator;
-/* END_OF_SYMBOL_DEFINITION SourceIndicator */
 
-/* START_OF_SYMBOL_DEFINITION SourceIndicator_resourceOperation */
 /**
  * @summary SourceIndicator_resourceOperation
  * @constant
@@ -73,9 +66,7 @@ const SourceIndicator = _enum_for_SourceIndicator;
  */
 export
 const SourceIndicator_resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SourceIndicator_resourceOperation */
 
-/* START_OF_SYMBOL_DEFINITION resourceOperation */
 /**
  * @summary resourceOperation
  * @constant
@@ -83,9 +74,7 @@ const SourceIndicator_resourceOperation: SourceIndicator = SourceIndicator.resou
  */
 export
 const resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION resourceOperation */
 
-/* START_OF_SYMBOL_DEFINITION SourceIndicator_managementOperation */
 /**
  * @summary SourceIndicator_managementOperation
  * @constant
@@ -93,9 +82,7 @@ const resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /*
  */
 export
 const SourceIndicator_managementOperation: SourceIndicator = SourceIndicator.managementOperation; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SourceIndicator_managementOperation */
 
-/* START_OF_SYMBOL_DEFINITION managementOperation */
 /**
  * @summary managementOperation
  * @constant
@@ -103,9 +90,7 @@ const SourceIndicator_managementOperation: SourceIndicator = SourceIndicator.man
  */
 export
 const managementOperation: SourceIndicator = SourceIndicator.managementOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION managementOperation */
 
-/* START_OF_SYMBOL_DEFINITION SourceIndicator_unknown */
 /**
  * @summary SourceIndicator_unknown
  * @constant
@@ -113,9 +98,7 @@ const managementOperation: SourceIndicator = SourceIndicator.managementOperation
  */
 export
 const SourceIndicator_unknown: SourceIndicator = SourceIndicator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SourceIndicator_unknown */
 
-/* START_OF_SYMBOL_DEFINITION unknown */
 /**
  * @summary unknown
  * @constant
@@ -123,21 +106,12 @@ const SourceIndicator_unknown: SourceIndicator = SourceIndicator.unknown; /* LON
  */
 export
 const unknown: SourceIndicator = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unknown */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SourceIndicator */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SourceIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SourceIndicator */
 export const _decode_SourceIndicator = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_SourceIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SourceIndicator */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SourceIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SourceIndicator */
 export const _encode_SourceIndicator = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SourceIndicator */
 
 /* eslint-enable */

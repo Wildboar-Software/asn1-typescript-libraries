@@ -22,7 +22,6 @@ import {
     _encode_WithSyntax,
 } from '../DefinitionASN1Module/WithSyntax.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION withInformationSyntax */
 /**
  * @summary withInformationSyntax
  * @description
@@ -64,6 +63,5 @@ export const withInformationSyntax: ATTRIBUTE<WithSyntax> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION withInformationSyntax */
 
 /* eslint-enable */

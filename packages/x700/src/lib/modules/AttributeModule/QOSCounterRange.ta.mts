@@ -15,7 +15,6 @@ import {
     _decode_QOSErrorCounter,
     _encode_QOSErrorCounter,
 } from '../AttributeModule/QOSErrorCounter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QOSCounterRange */
 /**
  * @summary QOSCounterRange
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type QOSCounterRange = QOSErrorCounter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION QOSCounterRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QOSCounterRange */
 let _cached_decoder_for_QOSCounterRange: $.ASN1Decoder<QOSCounterRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QOSCounterRange */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QOSCounterRange */
 /**
  * @summary Decodes an ASN.1 element into a(n) QOSCounterRange
  * @function
@@ -46,13 +41,9 @@ export function _decode_QOSCounterRange(el: _Element) {
     }
     return _cached_decoder_for_QOSCounterRange(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QOSCounterRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QOSCounterRange */
 let _cached_encoder_for_QOSCounterRange: $.ASN1Encoder<QOSCounterRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QOSCounterRange */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QOSCounterRange */
 /**
  * @summary Encodes a(n) QOSCounterRange into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_QOSCounterRange(
     return _cached_encoder_for_QOSCounterRange(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QOSCounterRange */
 
 /* eslint-enable */

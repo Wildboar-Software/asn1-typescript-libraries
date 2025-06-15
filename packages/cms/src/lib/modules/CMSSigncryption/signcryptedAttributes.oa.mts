@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { signcrypted_attributes } from "../CMSObjectIdentifiers/signcrypted-attributes.va.mjs";
 import { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION signcryptedAttributes */
+
 /**
  * @summary signcryptedAttributes
  * @description
@@ -27,6 +27,5 @@ export const signcryptedAttributes: MODE = {
     "&id": signcrypted_attributes /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signcryptedAttributes */
 
 /* eslint-enable */

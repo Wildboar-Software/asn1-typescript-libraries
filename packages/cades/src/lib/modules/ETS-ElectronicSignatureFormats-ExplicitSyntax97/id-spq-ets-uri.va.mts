@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_spq_ets_uri */
 /**
  * @summary id_spq_ets_uri
  * @description
@@ -47,6 +46,5 @@ const id_spq_ets_uri: OBJECT_IDENTIFIER = new _OID([
     /* id-spq */ 5,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_spq_ets_uri */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 import { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa.mjs";
 import { id_at_countryCode3n } from "../SelectedAttributeTypes/id-at-countryCode3n.va.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION countryCode3n */
 /**
  * @summary countryCode3n
  * @description
@@ -52,6 +51,5 @@ export const countryCode3n: ATTRIBUTE<CountryCode3n> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION countryCode3n */
 
 /* eslint-enable */

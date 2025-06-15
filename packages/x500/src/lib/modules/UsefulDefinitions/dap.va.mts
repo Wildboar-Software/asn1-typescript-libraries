@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { module_ } from "../UsefulDefinitions/module.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dap */
 /**
  * @summary dap
  * @description
@@ -16,6 +15,5 @@ import { module_ } from "../UsefulDefinitions/module.va.mjs";
  * @constant
  */
 export const dap: ID = new _OID([/* dap */ 11, 9], module_);
-/* END_OF_SYMBOL_DEFINITION dap */
 
 /* eslint-enable */

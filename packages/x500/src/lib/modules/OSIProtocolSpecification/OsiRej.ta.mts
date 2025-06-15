@@ -15,7 +15,6 @@ import {
     _decode_OsiRej_problem,
     _encode_OsiRej_problem,
 } from "../OSIProtocolSpecification/OsiRej-problem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiRej */
 /**
  * @summary OsiRej
  * @description
@@ -80,9 +79,7 @@ export class OsiRej {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiRej */
 /**
  * @summary The Leading Root Component Types of OsiRej
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_OsiRej: $.ComponentSpec[] = [
     new $.ComponentSpec("invokeId", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("problem", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiRej */
 /**
  * @summary The Trailing Root Component Types of OsiRej
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_OsiRej: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiRej: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiRej */
 /**
  * @summary The Extension Addition Component Types of OsiRej
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_OsiRej: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiRej: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRej */
 let _cached_decoder_for_OsiRej: $.ASN1Decoder<OsiRej> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiRej */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiRej
  * @function
@@ -157,13 +146,9 @@ export function _decode_OsiRej(el: _Element) {
     }
     return _cached_decoder_for_OsiRej(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRej */
 let _cached_encoder_for_OsiRej: $.ASN1Encoder<OsiRej> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRej */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiRej */
 /**
  * @summary Encodes a(n) OsiRej into an ASN.1 Element.
  * @function
@@ -208,6 +193,5 @@ export function _encode_OsiRej(value: OsiRej, elGetter: $.ASN1Encoder<OsiRej>) {
     return _cached_encoder_for_OsiRej(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiRej */
 
 /* eslint-enable */

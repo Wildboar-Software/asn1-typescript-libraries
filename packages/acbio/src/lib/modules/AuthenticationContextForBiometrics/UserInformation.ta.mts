@@ -22,7 +22,7 @@ import {
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UserInformation */
+
 /**
  * @summary UserInformation
  * @description
@@ -82,9 +82,8 @@ export class UserInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UserInformation */
+
 /**
  * @summary The Leading Root Component Types of UserInformation
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_UserInformation: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UserInformation */
+
 /**
  * @summary The Trailing Root Component Types of UserInformation
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_UserInformation: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UserInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UserInformation */
+
 /**
  * @summary The Extension Addition Component Types of UserInformation
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_UserInformation: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_UserInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserInformation */
+
 let _cached_decoder_for_UserInformation: $.ASN1Decoder<UserInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UserInformation
  * @function
@@ -193,13 +188,11 @@ export function _decode_UserInformation(el: _Element) {
     }
     return _cached_decoder_for_UserInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserInformation */
+
 let _cached_encoder_for_UserInformation: $.ASN1Encoder<UserInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserInformation */
+
 /**
  * @summary Encodes a(n) UserInformation into an ASN.1 Element.
  * @function
@@ -238,6 +231,5 @@ export function _encode_UserInformation(
     return _cached_encoder_for_UserInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserInformation */
 
 /* eslint-enable */

@@ -9,7 +9,7 @@ import { SupportingAlgorithms_Union5_Intersection0_Element } from "../PKCS5v2-1/
 import { SupportingAlgorithms_Union6_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union6-Intersection0-Element.oa.mjs";
 import { SupportingAlgorithms_Union7_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union7-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SupportingAlgorithms */
+
 /**
  * @summary SupportingAlgorithms
  * @description
@@ -44,6 +44,5 @@ export const SupportingAlgorithms: ALGORITHM_IDENTIFIER<any>[] = [
     SupportingAlgorithms_Union6_Intersection0_Element,
     SupportingAlgorithms_Union7_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION SupportingAlgorithms */
 
 /* eslint-enable */

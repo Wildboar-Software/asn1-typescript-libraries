@@ -20,7 +20,7 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { id_contentType } from '../CmsTelebiometric/id-contentType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION contentType */
+
 /**
  * @summary contentType
  * @description
@@ -57,6 +57,5 @@ export const contentType: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contentType */
 
 /* eslint-enable */

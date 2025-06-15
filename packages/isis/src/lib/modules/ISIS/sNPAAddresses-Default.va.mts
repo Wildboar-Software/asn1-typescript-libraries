@@ -19,7 +19,6 @@ import {
   _encode_SNPAAddress,
 } from '@wildboar/nlm/src/lib/modules/NLM/SNPAAddress.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION sNPAAddresses_Default */
 /**
  * @summary sNPAAddresses_Default
  * @description
@@ -33,6 +32,5 @@ import {
  * @constant
  */
 export const sNPAAddresses_Default: SNPAAddresses = [];
-/* END_OF_SYMBOL_DEFINITION sNPAAddresses_Default */
 
 /* eslint-enable */

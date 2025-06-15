@@ -16,7 +16,6 @@ import {
 } from '../IPMSInformationObjects/ChangeOfAddressAdvice.ta.mjs';
 import { id_on_change_of_address_advice } from '../IPMSObjectIdentifiers/id-on-change-of-address-advice.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION change_of_address_advice */
 /**
  * @summary change_of_address_advice
  * @description
@@ -45,6 +44,5 @@ export const change_of_address_advice: IPMS_EXTENSION<ChangeOfAddressAdvice> = {
     '&id': id_on_change_of_address_advice /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION change_of_address_advice */
 
 /* eslint-enable */

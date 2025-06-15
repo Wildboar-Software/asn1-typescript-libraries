@@ -6,7 +6,6 @@ import {
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
 import { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va.mjs";
-/* START_OF_SYMBOL_DEFINITION cRLNumber */
 /**
  * @summary cRLNumber
  * @description
@@ -34,6 +33,5 @@ export const cRLNumber: EXTENSION<CRLNumber> = {
     "&id": id_ce_cRLNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cRLNumber */
 
 /* eslint-enable */

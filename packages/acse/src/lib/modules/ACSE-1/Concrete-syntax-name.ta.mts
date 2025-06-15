@@ -15,7 +15,6 @@ import {
   _decode_Transfer_syntax_name,
   _encode_Transfer_syntax_name,
 } from '../ACSE-1/Transfer-syntax-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Concrete_syntax_name */
 /**
  * @summary Concrete_syntax_name
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Concrete_syntax_name = Transfer_syntax_name; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Concrete_syntax_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Concrete_syntax_name */
 let _cached_decoder_for_Concrete_syntax_name: $.ASN1Decoder<Concrete_syntax_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Concrete_syntax_name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Concrete_syntax_name */
 /**
  * @summary Decodes an ASN.1 element into a(n) Concrete_syntax_name
  * @function
@@ -46,13 +41,9 @@ export function _decode_Concrete_syntax_name(el: _Element) {
   }
   return _cached_decoder_for_Concrete_syntax_name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Concrete_syntax_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Concrete_syntax_name */
 let _cached_encoder_for_Concrete_syntax_name: $.ASN1Encoder<Concrete_syntax_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Concrete_syntax_name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Concrete_syntax_name */
 /**
  * @summary Encodes a(n) Concrete_syntax_name into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_Concrete_syntax_name(
   return _cached_encoder_for_Concrete_syntax_name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Concrete_syntax_name */
 
 /* eslint-enable */

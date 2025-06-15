@@ -12,7 +12,6 @@ import {
 import { general_text_body_part_parameters } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-parameters.oa.mjs';
 import { general_text_body_part_data } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION general_text_body_part */
 /**
  * @summary general_text_body_part
  * @description
@@ -39,6 +38,5 @@ export const general_text_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': general_text_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': general_text_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION general_text_body_part */
 
 /* eslint-enable */

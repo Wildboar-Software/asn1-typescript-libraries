@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION pkcs15_lb_minPinLength */
+
 /**
  * @summary pkcs15_lb_minPinLength
  * @description
@@ -15,6 +15,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const pkcs15_lb_minPinLength: INTEGER = 4;
-/* END_OF_SYMBOL_DEFINITION pkcs15_lb_minPinLength */
 
 /* eslint-enable */

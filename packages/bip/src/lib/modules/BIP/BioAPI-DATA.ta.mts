@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_DATA */
+
 /**
  * @summary BioAPI_DATA
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BioAPI_DATA = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION BioAPI_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_DATA */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_DATA */
+
+
 export const _decode_BioAPI_DATA = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_DATA */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_DATA */
+
+
 export const _encode_BioAPI_DATA = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_DATA */
 
 /* eslint-enable */

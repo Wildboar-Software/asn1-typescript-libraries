@@ -20,7 +20,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeleteArgument_items */
 /**
  * @summary DeleteArgument_items
  * @description
@@ -34,13 +33,9 @@ import {
 export type DeleteArgument_items =
     | { selector: Selector } /* CHOICE_ALT_ROOT */
     | { sequence_numbers: SequenceNumber[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DeleteArgument_items */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteArgument_items */
 let _cached_decoder_for_DeleteArgument_items: $.ASN1Decoder<DeleteArgument_items> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteArgument_items */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteArgument_items */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteArgument_items
  * @function
@@ -68,13 +63,9 @@ export function _decode_DeleteArgument_items(el: _Element) {
     }
     return _cached_decoder_for_DeleteArgument_items(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteArgument_items */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteArgument_items */
 let _cached_encoder_for_DeleteArgument_items: $.ASN1Encoder<DeleteArgument_items> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteArgument_items */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteArgument_items */
 /**
  * @summary Encodes a(n) DeleteArgument_items into an ASN.1 Element.
  * @function
@@ -112,6 +103,5 @@ export function _encode_DeleteArgument_items(
     return _cached_encoder_for_DeleteArgument_items(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteArgument_items */
 
 /* eslint-enable */

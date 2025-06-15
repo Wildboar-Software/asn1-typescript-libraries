@@ -37,7 +37,7 @@ import {
     _encode_String,
 } from '../XSD/String.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EntityType */
+
 /**
  * @summary EntityType
  * @description
@@ -129,9 +129,8 @@ export class EntityType {
 
   public static _enum_for_type_ = _enum_for_EntityType_type;
 }
-/* END_OF_SYMBOL_DEFINITION EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntityType */
+
 /**
  * @summary The Leading Root Component Types of EntityType
  * @description
@@ -171,9 +170,8 @@ export const _root_component_type_list_1_spec_for_EntityType: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntityType */
+
 /**
  * @summary The Trailing Root Component Types of EntityType
  * @description
@@ -183,9 +181,8 @@ export const _root_component_type_list_1_spec_for_EntityType: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EntityType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntityType */
+
 /**
  * @summary The Extension Addition Component Types of EntityType
  * @description
@@ -195,13 +192,11 @@ export const _root_component_type_list_2_spec_for_EntityType: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_EntityType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityType */
+
 let _cached_decoder_for_EntityType: $.ASN1Decoder<EntityType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntityType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EntityType
  * @function
@@ -245,13 +240,11 @@ export function _decode_EntityType(el: _Element) {
   }
   return _cached_decoder_for_EntityType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityType */
+
 let _cached_encoder_for_EntityType: $.ASN1Encoder<EntityType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntityType */
+
 /**
  * @summary Encodes a(n) EntityType into an ASN.1 Element.
  * @function
@@ -289,6 +282,5 @@ export function _encode_EntityType(
   return _cached_encoder_for_EntityType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntityType */
 
 /* eslint-enable */

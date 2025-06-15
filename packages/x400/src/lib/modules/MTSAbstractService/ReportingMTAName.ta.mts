@@ -26,7 +26,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportingMTAName */
 /**
  * @summary ReportingMTAName
  * @description
@@ -87,9 +86,7 @@ export class ReportingMTAName {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportingMTAName */
 /**
  * @summary The Leading Root Component Types of ReportingMTAName
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_ReportingMTAName: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportingMTAName */
 /**
  * @summary The Trailing Root Component Types of ReportingMTAName
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_ReportingMTAName: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReportingMTAName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportingMTAName */
 /**
  * @summary The Extension Addition Component Types of ReportingMTAName
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_ReportingMTAName: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ReportingMTAName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingMTAName */
 let _cached_decoder_for_ReportingMTAName: $.ASN1Decoder<ReportingMTAName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportingMTAName */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingMTAName
  * @function
@@ -200,13 +189,9 @@ export function _decode_ReportingMTAName(el: _Element) {
     }
     return _cached_decoder_for_ReportingMTAName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingMTAName */
 let _cached_encoder_for_ReportingMTAName: $.ASN1Encoder<ReportingMTAName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportingMTAName */
 /**
  * @summary Encodes a(n) ReportingMTAName into an ASN.1 Element.
  * @function
@@ -246,6 +231,5 @@ export function _encode_ReportingMTAName(
     return _cached_encoder_for_ReportingMTAName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportingMTAName */
 
 /* eslint-enable */

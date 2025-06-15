@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/MessageGroupErrorParameter.ta.mjs';
 import { err_message_group_error } from '../MSAccessProtocol/err-message-group-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION message_group_error */
 /**
  * @summary message_group_error
  * @description
@@ -54,6 +53,5 @@ export const message_group_error: ABSTRACT_ERROR<MessageGroupErrorParameter> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_group_error */
 
 /* eslint-enable */

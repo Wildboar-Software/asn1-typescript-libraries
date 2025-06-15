@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ALGORITHM */
 /**
  * @summary ALGORITHM
  * @description
@@ -60,6 +59,5 @@ interface ALGORITHM<
      */
     readonly "&Type": Type;
 };
-/* END_OF_SYMBOL_DEFINITION ALGORITHM */
 
 /* eslint-enable */

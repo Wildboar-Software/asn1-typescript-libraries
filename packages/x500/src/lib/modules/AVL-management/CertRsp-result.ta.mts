@@ -11,7 +11,6 @@ import {
     _decode_CertOK,
     _encode_CertOK,
 } from "../AVL-management/CertOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertRsp_result */
 /**
  * @summary CertRsp_result
  * @description
@@ -26,13 +25,9 @@ export type CertRsp_result =
     | { success: CertOK } /* CHOICE_ALT_ROOT */
     | { failure: CertErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRsp_result */
 let _cached_decoder_for_CertRsp_result: $.ASN1Decoder<CertRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertRsp_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertRsp_result
  * @function
@@ -56,13 +51,9 @@ export function _decode_CertRsp_result(el: _Element) {
     }
     return _cached_decoder_for_CertRsp_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRsp_result */
 let _cached_encoder_for_CertRsp_result: $.ASN1Encoder<CertRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertRsp_result */
 /**
  * @summary Encodes a(n) CertRsp_result into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_CertRsp_result(
     return _cached_encoder_for_CertRsp_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertRsp_result */
 
 /* eslint-enable */

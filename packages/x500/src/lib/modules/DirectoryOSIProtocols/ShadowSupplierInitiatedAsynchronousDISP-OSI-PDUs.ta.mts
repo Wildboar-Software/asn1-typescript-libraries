@@ -6,7 +6,6 @@ import {
     _decode_OSI_PDU,
     _encode_OSI_PDU,
 } from "../OSIProtocolSpecification/OSI-PDU.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 /**
  * @summary ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs = OSI_PDU; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 let _cached_decoder_for_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs: $.ASN1Decoder<ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 /**
  * @summary Decodes an ASN.1 element into a(n) ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs
  * @function
@@ -42,13 +37,9 @@ export function _decode_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 let _cached_encoder_for_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs: $.ASN1Encoder<ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 /**
  * @summary Encodes a(n) ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ShadowSupplierInitiatedAsynchronousDISP_OSI_PDUs */
 
 /* eslint-enable */

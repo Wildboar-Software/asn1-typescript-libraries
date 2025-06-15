@@ -15,7 +15,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LDAPDN */
+
 /**
  * @summary LDAPDN
  * @description
@@ -30,9 +30,8 @@ import {
  * ```
  */
 export type LDAPDN = LDAPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LDAPDN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LDAPDN */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPDN
  * @function
@@ -42,9 +41,8 @@ export type LDAPDN = LDAPString; // DefinedType
 export function _decode_LDAPDN(el: _Element) {
   return _decode_LDAPString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LDAPDN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LDAPDN */
+
 /**
  * @summary Encodes a(n) LDAPDN into an ASN.1 Element.
  * @function
@@ -56,6 +54,5 @@ export function _encode_LDAPDN(value: LDAPDN, elGetter: $.ASN1Encoder<LDAPDN>) {
   return _encode_LDAPString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LDAPDN */
 
 /* eslint-enable */

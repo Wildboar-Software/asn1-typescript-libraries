@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedTroubleReportList */
+
 /**
  * @summary RelatedTroubleReportList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RelatedTroubleReportList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RelatedTroubleReportList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedTroubleReportList */
+
 let _cached_decoder_for_RelatedTroubleReportList: $.ASN1Decoder<RelatedTroubleReportList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedTroubleReportList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedTroubleReportList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedTroubleReportList
  * @function
@@ -48,13 +46,11 @@ export function _decode_RelatedTroubleReportList(el: _Element) {
     }
     return _cached_decoder_for_RelatedTroubleReportList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedTroubleReportList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedTroubleReportList */
+
 let _cached_encoder_for_RelatedTroubleReportList: $.ASN1Encoder<RelatedTroubleReportList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedTroubleReportList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedTroubleReportList */
+
 /**
  * @summary Encodes a(n) RelatedTroubleReportList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RelatedTroubleReportList(
     return _cached_encoder_for_RelatedTroubleReportList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedTroubleReportList */
 
 /* eslint-enable */

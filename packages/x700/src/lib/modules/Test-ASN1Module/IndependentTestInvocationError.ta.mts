@@ -15,7 +15,6 @@ import {
     _decode_IndependentTestInvocationError_Item,
     _encode_IndependentTestInvocationError_Item,
 } from '../Test-ASN1Module/IndependentTestInvocationError-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IndependentTestInvocationError */
 /**
  * @summary IndependentTestInvocationError
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type IndependentTestInvocationError = IndependentTestInvocationError_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION IndependentTestInvocationError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IndependentTestInvocationError */
 let _cached_decoder_for_IndependentTestInvocationError: $.ASN1Decoder<IndependentTestInvocationError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IndependentTestInvocationError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IndependentTestInvocationError */
 /**
  * @summary Decodes an ASN.1 element into a(n) IndependentTestInvocationError
  * @function
@@ -51,13 +46,9 @@ export function _decode_IndependentTestInvocationError(el: _Element) {
     }
     return _cached_decoder_for_IndependentTestInvocationError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IndependentTestInvocationError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IndependentTestInvocationError */
 let _cached_encoder_for_IndependentTestInvocationError: $.ASN1Encoder<IndependentTestInvocationError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IndependentTestInvocationError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IndependentTestInvocationError */
 /**
  * @summary Encodes a(n) IndependentTestInvocationError into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_IndependentTestInvocationError(
     return _cached_encoder_for_IndependentTestInvocationError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IndependentTestInvocationError */
 
 /* eslint-enable */

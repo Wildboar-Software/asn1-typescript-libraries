@@ -6,7 +6,6 @@ import {
     _decode_Target,
     _encode_Target,
 } from "../AttributeCertificateDefinitions/Target.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Targets */
 /**
  * @summary Targets
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type Targets = Target[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Targets */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Targets */
 let _cached_decoder_for_Targets: $.ASN1Decoder<Targets> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Targets */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Targets */
 /**
  * @summary Decodes an ASN.1 element into a(n) Targets
  * @function
@@ -39,13 +34,9 @@ export function _decode_Targets(el: _Element) {
     }
     return _cached_decoder_for_Targets(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Targets */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Targets */
 let _cached_encoder_for_Targets: $.ASN1Encoder<Targets> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Targets */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Targets */
 /**
  * @summary Encodes a(n) Targets into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_Targets(
     return _cached_encoder_for_Targets(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Targets */
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import {
   _decode_RejectProblem,
   _encode_RejectProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Reject */
+
 /**
  * @summary Reject
  * @description
@@ -78,9 +78,8 @@ export class Reject {
     return new Reject(_o.invokeId, _o.problem);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Reject */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Reject */
+
 /**
  * @summary The Leading Root Component Types of Reject
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_Reject: $.ComponentSpec[] = [
   new $.ComponentSpec('invokeId', false, $.hasAnyTag, undefined, undefined),
   new $.ComponentSpec('problem', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Reject */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Reject */
+
 /**
  * @summary The Trailing Root Component Types of Reject
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_Reject: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Reject: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Reject */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Reject */
+
 /**
  * @summary The Extension Addition Component Types of Reject
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_Reject: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Reject: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Reject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Reject */
+
 let _cached_decoder_for_Reject: $.ASN1Decoder<Reject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Reject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Reject */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Reject
  * @function
@@ -150,13 +145,11 @@ export function _decode_Reject(el: _Element) {
   }
   return _cached_decoder_for_Reject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Reject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Reject */
+
 let _cached_encoder_for_Reject: $.ASN1Encoder<Reject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Reject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Reject */
+
 /**
  * @summary Encodes a(n) Reject into an ASN.1 Element.
  * @function
@@ -182,6 +175,5 @@ export function _encode_Reject(value: Reject, elGetter: $.ASN1Encoder<Reject>) {
   return _cached_encoder_for_Reject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Reject */
 
 /* eslint-enable */

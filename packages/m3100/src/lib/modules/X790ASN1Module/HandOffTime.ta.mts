@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION HandOffTime */
+
 /**
  * @summary HandOffTime
  * @description
@@ -31,13 +31,11 @@ export type HandOffTime =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { time: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION HandOffTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HandOffTime */
+
 let _cached_decoder_for_HandOffTime: $.ASN1Decoder<HandOffTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HandOffTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HandOffTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HandOffTime
  * @function
@@ -55,13 +53,11 @@ export function _decode_HandOffTime(el: _Element) {
     }
     return _cached_decoder_for_HandOffTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HandOffTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HandOffTime */
+
 let _cached_encoder_for_HandOffTime: $.ASN1Encoder<HandOffTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HandOffTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HandOffTime */
+
 /**
  * @summary Encodes a(n) HandOffTime into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_HandOffTime(
     return _cached_encoder_for_HandOffTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HandOffTime */
 
 /* eslint-enable */

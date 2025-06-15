@@ -20,7 +20,7 @@ import {
     _decode_Fully_encoded_data,
     _encode_Fully_encoded_data,
 } from '../ISO8823-PRESENTATION/Fully-encoded-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION User_data */
+
 /**
  * @summary User_data
  * @description
@@ -39,13 +39,11 @@ export type User_data =
     | { simply_encoded_data: Simply_encoded_data } /* CHOICE_ALT_ROOT */
     | { fully_encoded_data: Fully_encoded_data } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION User_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_data */
+
 let _cached_decoder_for_User_data: $.ASN1Decoder<User_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_data */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_data */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) User_data
  * @function
@@ -71,13 +69,11 @@ export function _decode_User_data(el: _Element) {
     }
     return _cached_decoder_for_User_data(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_User_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_data */
+
 let _cached_encoder_for_User_data: $.ASN1Encoder<User_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_data */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_data */
+
 /**
  * @summary Encodes a(n) User_data into an ASN.1 Element.
  * @function
@@ -111,6 +107,5 @@ export function _encode_User_data(
     return _cached_encoder_for_User_data(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_data */
 
 /* eslint-enable */

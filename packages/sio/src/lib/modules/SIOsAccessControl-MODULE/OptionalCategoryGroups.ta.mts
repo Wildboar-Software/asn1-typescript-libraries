@@ -6,7 +6,7 @@ import {
     _decode_OptionalCategoryGroup,
     _encode_OptionalCategoryGroup,
 } from "../SIOsAccessControl-MODULE/OptionalCategoryGroup.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OptionalCategoryGroups */
+
 /**
  * @summary OptionalCategoryGroups
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type OptionalCategoryGroups = OptionalCategoryGroup[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION OptionalCategoryGroups */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalCategoryGroups */
+
 let _cached_decoder_for_OptionalCategoryGroups: $.ASN1Decoder<OptionalCategoryGroups> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalCategoryGroups */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalCategoryGroups */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalCategoryGroups
  * @function
@@ -39,13 +37,11 @@ export function _decode_OptionalCategoryGroups(el: _Element) {
     }
     return _cached_decoder_for_OptionalCategoryGroups(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalCategoryGroups */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalCategoryGroups */
+
 let _cached_encoder_for_OptionalCategoryGroups: $.ASN1Encoder<OptionalCategoryGroups> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalCategoryGroups */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalCategoryGroups */
+
 /**
  * @summary Encodes a(n) OptionalCategoryGroups into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_OptionalCategoryGroups(
     return _cached_encoder_for_OptionalCategoryGroups(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalCategoryGroups */
 
 /* eslint-enable */

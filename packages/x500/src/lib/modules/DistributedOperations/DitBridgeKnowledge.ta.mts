@@ -15,7 +15,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DitBridgeKnowledge */
 /**
  * @summary DitBridgeKnowledge
  * @description
@@ -75,9 +74,7 @@ export class DitBridgeKnowledge {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DitBridgeKnowledge */
 /**
  * @summary The Leading Root Component Types of DitBridgeKnowledge
  * @description
@@ -108,9 +105,7 @@ export const _root_component_type_list_1_spec_for_DitBridgeKnowledge: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DitBridgeKnowledge */
 /**
  * @summary The Trailing Root Component Types of DitBridgeKnowledge
  * @description
@@ -120,9 +115,7 @@ export const _root_component_type_list_1_spec_for_DitBridgeKnowledge: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DitBridgeKnowledge: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DitBridgeKnowledge */
 /**
  * @summary The Extension Addition Component Types of DitBridgeKnowledge
  * @description
@@ -132,13 +125,9 @@ export const _root_component_type_list_2_spec_for_DitBridgeKnowledge: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_DitBridgeKnowledge: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DitBridgeKnowledge */
 let _cached_decoder_for_DitBridgeKnowledge: $.ASN1Decoder<DitBridgeKnowledge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DitBridgeKnowledge */
 /**
  * @summary Decodes an ASN.1 element into a(n) DitBridgeKnowledge
  * @function
@@ -184,13 +173,9 @@ export function _decode_DitBridgeKnowledge(el: _Element) {
     }
     return _cached_decoder_for_DitBridgeKnowledge(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DitBridgeKnowledge */
 let _cached_encoder_for_DitBridgeKnowledge: $.ASN1Encoder<DitBridgeKnowledge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DitBridgeKnowledge */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DitBridgeKnowledge */
 /**
  * @summary Encodes a(n) DitBridgeKnowledge into an ASN.1 Element.
  * @function
@@ -232,6 +217,5 @@ export function _encode_DitBridgeKnowledge(
     return _cached_encoder_for_DitBridgeKnowledge(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DitBridgeKnowledge */
 
 /* eslint-enable */

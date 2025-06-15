@@ -13,7 +13,6 @@ import { mHSTerminalIdentifier } from '../MHSRoutingORAddressSubtree/mHSTerminal
 import { mHSTerminalIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifierAttribute.oa.mjs';
 import { id_nf_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-identifier.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSTerminalIdentifierNameForm */
 /**
  * @summary mHSTerminalIdentifierNameForm
  * @description
@@ -42,6 +41,5 @@ export const mHSTerminalIdentifierNameForm: NAME_FORM = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_terminal_identifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSTerminalIdentifierNameForm */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FADU_Lock */
+
 /**
  * @summary FADU_Lock
  * @description
@@ -24,49 +24,43 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FADU_Lock = INTEGER;
-/* END_OF_SYMBOL_DEFINITION FADU_Lock */
 
-/* START_OF_SYMBOL_DEFINITION FADU_Lock_off */
+
 /**
  * @summary FADU_Lock_off
  * @constant
  * @type {number}
  */
 export const FADU_Lock_off: FADU_Lock = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FADU_Lock_off */
 
-/* START_OF_SYMBOL_DEFINITION off */
+
 /**
  * @summary FADU_Lock_off
  * @constant
  * @type {number}
  */
 export const off: FADU_Lock = FADU_Lock_off; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION off */
 
-/* START_OF_SYMBOL_DEFINITION FADU_Lock_on */
+
 /**
  * @summary FADU_Lock_on
  * @constant
  * @type {number}
  */
 export const FADU_Lock_on: FADU_Lock = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FADU_Lock_on */
 
-/* START_OF_SYMBOL_DEFINITION on */
+
 /**
  * @summary FADU_Lock_on
  * @constant
  * @type {number}
  */
 export const on: FADU_Lock = FADU_Lock_on; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION on */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FADU_Lock */
+
 let _cached_decoder_for_FADU_Lock: $.ASN1Decoder<FADU_Lock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FADU_Lock */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FADU_Lock */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FADU_Lock
  * @function
@@ -81,13 +75,11 @@ export function _decode_FADU_Lock(el: _Element) {
   }
   return _cached_decoder_for_FADU_Lock(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FADU_Lock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FADU_Lock */
+
 let _cached_encoder_for_FADU_Lock: $.ASN1Encoder<FADU_Lock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FADU_Lock */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FADU_Lock */
+
 /**
  * @summary Encodes a(n) FADU_Lock into an ASN.1 Element.
  * @function
@@ -110,6 +102,5 @@ export function _encode_FADU_Lock(
   return _cached_encoder_for_FADU_Lock(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FADU_Lock */
 
 /* eslint-enable */

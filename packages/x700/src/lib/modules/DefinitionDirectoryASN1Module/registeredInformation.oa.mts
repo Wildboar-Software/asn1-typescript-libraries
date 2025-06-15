@@ -22,7 +22,6 @@ import { nameForm } from '../DefinitionDirectoryASN1Module/nameForm.oa.mjs';
 import { informationStatus } from '../DefinitionDirectoryASN1Module/informationStatus.oa.mjs';
 import { additionalInformation } from '../DefinitionDirectoryASN1Module/additionalInformation.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION registeredInformation */
 /**
  * @summary registeredInformation
  * @description
@@ -59,6 +58,5 @@ export const registeredInformation: OBJECT_CLASS = {
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION registeredInformation */
 
 /* eslint-enable */

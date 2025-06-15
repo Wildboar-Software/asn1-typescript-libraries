@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardProtocolProcedureError */
+
 /**
  * @summary pDUDiscardProtocolProcedureError
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardProtocolProcedureError: OBJECT_IDENTIFIER = new _OID(
     [/* protocolProcedureError */ 1],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardProtocolProcedureError */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
   _decode_Extension_Attribute,
   _encode_Extension_Attribute,
 } from '../ISO8571-FTAM/Extension-Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Attribute_Extension_Set */
+
 /**
  * @summary Attribute_Extension_Set
  * @description
@@ -73,9 +73,8 @@ export class Attribute_Extension_Set {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute_Extension_Set */
+
 /**
  * @summary The Leading Root Component Types of Attribute_Extension_Set
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_Attribute_Extension_Set: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute_Extension_Set */
+
 /**
  * @summary The Trailing Root Component Types of Attribute_Extension_Set
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_Attribute_Extension_Set: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Attribute_Extension_Set: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_Extension_Set */
+
 /**
  * @summary The Extension Addition Component Types of Attribute_Extension_Set
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_Attribute_Extension_Set: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_Attribute_Extension_Set: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Extension_Set */
+
 let _cached_decoder_for_Attribute_Extension_Set: $.ASN1Decoder<Attribute_Extension_Set> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attribute_Extension_Set */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute_Extension_Set
  * @function
@@ -170,13 +165,11 @@ export function _decode_Attribute_Extension_Set(el: _Element) {
   }
   return _cached_decoder_for_Attribute_Extension_Set(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Extension_Set */
+
 let _cached_encoder_for_Attribute_Extension_Set: $.ASN1Encoder<Attribute_Extension_Set> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Extension_Set */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attribute_Extension_Set */
+
 /**
  * @summary Encodes a(n) Attribute_Extension_Set into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_Attribute_Extension_Set(
   return _cached_encoder_for_Attribute_Extension_Set(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attribute_Extension_Set */
 
 /* eslint-enable */

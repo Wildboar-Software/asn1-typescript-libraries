@@ -18,7 +18,6 @@ import { id_ct_scvp_certValResponse } from '../SCVP-2009/id-ct-scvp-certValRespo
 import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs';
 
 
-/* START_OF_SYMBOL_DEFINITION ct_scvp_certValResponse */
 /**
  * @summary ct_scvp_certValResponse
  * @description
@@ -44,6 +43,5 @@ export const ct_scvp_certValResponse: CONTENT_TYPE<CVResponse> = {
   '&id': id_ct_scvp_certValResponse /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_scvp_certValResponse */
 
 /* eslint-enable */

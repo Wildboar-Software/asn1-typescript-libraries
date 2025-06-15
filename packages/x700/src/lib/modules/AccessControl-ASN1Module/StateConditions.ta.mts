@@ -15,7 +15,6 @@ import {
     _decode_StateConditions_Item,
     _encode_StateConditions_Item,
 } from '../AccessControl-ASN1Module/StateConditions-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION StateConditions */
 /**
  * @summary StateConditions
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type StateConditions = StateConditions_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION StateConditions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StateConditions */
 let _cached_decoder_for_StateConditions: $.ASN1Decoder<StateConditions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StateConditions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StateConditions */
 /**
  * @summary Decodes an ASN.1 element into a(n) StateConditions
  * @function
@@ -51,13 +46,9 @@ export function _decode_StateConditions(el: _Element) {
     }
     return _cached_decoder_for_StateConditions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StateConditions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StateConditions */
 let _cached_encoder_for_StateConditions: $.ASN1Encoder<StateConditions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StateConditions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StateConditions */
 /**
  * @summary Encodes a(n) StateConditions into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_StateConditions(
     return _cached_encoder_for_StateConditions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StateConditions */
 
 /* eslint-enable */

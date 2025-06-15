@@ -15,7 +15,6 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MappedRelationshipClass */
 /**
  * @summary MappedRelationshipClass
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MappedRelationshipClass = TemplateLabel; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MappedRelationshipClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MappedRelationshipClass */
 let _cached_decoder_for_MappedRelationshipClass: $.ASN1Decoder<MappedRelationshipClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MappedRelationshipClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MappedRelationshipClass */
 /**
  * @summary Decodes an ASN.1 element into a(n) MappedRelationshipClass
  * @function
@@ -46,13 +41,9 @@ export function _decode_MappedRelationshipClass(el: _Element) {
     }
     return _cached_decoder_for_MappedRelationshipClass(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MappedRelationshipClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MappedRelationshipClass */
 let _cached_encoder_for_MappedRelationshipClass: $.ASN1Encoder<MappedRelationshipClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MappedRelationshipClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MappedRelationshipClass */
 /**
  * @summary Encodes a(n) MappedRelationshipClass into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MappedRelationshipClass(
     return _cached_encoder_for_MappedRelationshipClass(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MappedRelationshipClass */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _encode_Certificate,
 } from "../PKI-Stub/Certificate.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PkiPath */
 /**
  * @summary PkiPath
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type PkiPath = Certificate[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PkiPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PkiPath */
 let _cached_decoder_for_PkiPath: $.ASN1Decoder<PkiPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PkiPath */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PkiPath */
 /**
  * @summary Decodes an ASN.1 element into a(n) PkiPath
  * @function
@@ -49,13 +44,9 @@ export function _decode_PkiPath(el: _Element) {
     }
     return _cached_decoder_for_PkiPath(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PkiPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PkiPath */
 let _cached_encoder_for_PkiPath: $.ASN1Encoder<PkiPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PkiPath */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PkiPath */
 /**
  * @summary Encodes a(n) PkiPath into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_PkiPath(
     return _cached_encoder_for_PkiPath(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PkiPath */
 
 /* eslint-enable */

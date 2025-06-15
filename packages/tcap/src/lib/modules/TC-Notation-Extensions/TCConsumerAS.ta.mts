@@ -15,7 +15,6 @@ import {
     _decode_TCMessage,
     _encode_TCMessage,
 } from '../TCAPMessages/TCMessage.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCConsumerAS */
 /**
  * @summary TCConsumerAS
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type TCConsumerAS = TCMessage; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TCConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCConsumerAS */
 let _cached_decoder_for_TCConsumerAS: $.ASN1Decoder<TCConsumerAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCConsumerAS */
 /**
  * @summary Decodes an ASN.1 element into a(n) TCConsumerAS
  * @function
@@ -47,13 +42,9 @@ export function _decode_TCConsumerAS(el: _Element) {
     }
     return _cached_decoder_for_TCConsumerAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCConsumerAS */
 let _cached_encoder_for_TCConsumerAS: $.ASN1Encoder<TCConsumerAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCConsumerAS */
 /**
  * @summary Encodes a(n) TCConsumerAS into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_TCConsumerAS(
     return _cached_encoder_for_TCConsumerAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCConsumerAS */
 
 /* eslint-enable */

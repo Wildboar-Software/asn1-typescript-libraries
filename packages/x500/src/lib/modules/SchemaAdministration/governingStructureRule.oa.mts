@@ -8,7 +8,6 @@ import {
 import { id_soa_governingStructureRule } from "../SchemaAdministration/id-soa-governingStructureRule.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION governingStructureRule */
 /**
  * @summary governingStructureRule
  * @description
@@ -51,6 +50,5 @@ export const governingStructureRule: ATTRIBUTE<INTEGER> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION governingStructureRule */
 
 /* eslint-enable */

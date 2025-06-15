@@ -16,7 +16,7 @@ import {
     _decode_Controls,
     _encode_Controls,
 } from "../PKIXCRMF-2009/Controls.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertRequest */
+
 /**
  * @summary CertRequest
  * @description
@@ -74,9 +74,8 @@ export class CertRequest {
         return new CertRequest(_o.certReqId, _o.certTemplate, _o.controls);
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertRequest */
+
 /**
  * @summary The Leading Root Component Types of CertRequest
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_CertRequest: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertRequest */
+
 /**
  * @summary The Trailing Root Component Types of CertRequest
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_CertRequest: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertRequest */
+
 /**
  * @summary The Extension Addition Component Types of CertRequest
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_CertRequest: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_CertRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRequest */
+
 let _cached_decoder_for_CertRequest: $.ASN1Decoder<CertRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertRequest
  * @function
@@ -183,13 +178,11 @@ export function _decode_CertRequest(el: _Element) {
     }
     return _cached_decoder_for_CertRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRequest */
+
 let _cached_encoder_for_CertRequest: $.ASN1Encoder<CertRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertRequest */
+
 /**
  * @summary Encodes a(n) CertRequest into an ASN.1 Element.
  * @function
@@ -227,6 +220,5 @@ export function _encode_CertRequest(
     return _cached_encoder_for_CertRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertRequest */
 
 /* eslint-enable */

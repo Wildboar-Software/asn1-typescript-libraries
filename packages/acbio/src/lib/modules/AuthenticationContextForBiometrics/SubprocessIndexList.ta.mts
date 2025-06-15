@@ -15,7 +15,7 @@ import {
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
 } from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubprocessIndexList */
+
 /**
  * @summary SubprocessIndexList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SubprocessIndexList = SubprocessIndex[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SubprocessIndexList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubprocessIndexList */
+
 let _cached_decoder_for_SubprocessIndexList: $.ASN1Decoder<SubprocessIndexList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubprocessIndexList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubprocessIndexList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubprocessIndexList
  * @function
@@ -48,13 +46,11 @@ export function _decode_SubprocessIndexList(el: _Element) {
     }
     return _cached_decoder_for_SubprocessIndexList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubprocessIndexList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubprocessIndexList */
+
 let _cached_encoder_for_SubprocessIndexList: $.ASN1Encoder<SubprocessIndexList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubprocessIndexList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubprocessIndexList */
+
 /**
  * @summary Encodes a(n) SubprocessIndexList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SubprocessIndexList(
     return _cached_encoder_for_SubprocessIndexList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubprocessIndexList */
 
 /* eslint-enable */

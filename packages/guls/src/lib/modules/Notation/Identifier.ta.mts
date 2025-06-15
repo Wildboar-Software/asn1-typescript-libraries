@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Identifier */
+
 /**
  * @summary Identifier
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type Identifier =
   | { local: INTEGER } /* CHOICE_ALT_ROOT */
   | { global: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Identifier */
+
 let _cached_decoder_for_Identifier: $.ASN1Decoder<Identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Identifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Identifier
  * @function
@@ -51,13 +49,11 @@ export function _decode_Identifier(el: _Element) {
   }
   return _cached_decoder_for_Identifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Identifier */
+
 let _cached_encoder_for_Identifier: $.ASN1Encoder<Identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Identifier */
+
 /**
  * @summary Encodes a(n) Identifier into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_Identifier(
   return _cached_encoder_for_Identifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Identifier */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import { ds } from "../PKI-Stub/ds.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION algorithms */
 /**
  * @summary algorithms
  * @description
@@ -26,6 +25,5 @@ import { ds } from "../PKI-Stub/ds.va.mjs";
  * @constant
  */
 export const algorithms: OBJECT_IDENTIFIER = new _OID([44], ds);
-/* END_OF_SYMBOL_DEFINITION algorithms */
 
 /* eslint-enable */

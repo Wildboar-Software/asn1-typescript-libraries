@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { NamedMultiples, _decode_NamedMultiples, _encode_NamedMultiples } from "../SEC1-v1-9/NamedMultiples.ta.mjs";
 import { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECCSupplements */
 /**
  * @summary ECCSupplements
  * @description
@@ -30,13 +29,9 @@ export
 type ECCSupplements =
     { namedMultiples: NamedMultiples } /* CHOICE_ALT_ROOT */
     | { specifiedMultiples: SpecifiedMultiples } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ECCSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECCSupplements */
 let _cached_decoder_for_ECCSupplements: $.ASN1Decoder<ECCSupplements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECCSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECCSupplements */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECCSupplements
  * @function
@@ -51,13 +46,9 @@ function _decode_ECCSupplements (el: _Element) {
 }); }
     return _cached_decoder_for_ECCSupplements(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECCSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECCSupplements */
 let _cached_encoder_for_ECCSupplements: $.ASN1Encoder<ECCSupplements> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECCSupplements */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECCSupplements */
 /**
  * @summary Encodes a(n) ECCSupplements into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ function _encode_ECCSupplements (value: ECCSupplements, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_ECCSupplements(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECCSupplements */
 
 /* eslint-enable */

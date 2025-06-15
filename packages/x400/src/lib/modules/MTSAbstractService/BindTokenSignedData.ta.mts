@@ -15,7 +15,6 @@ import {
     _decode_RandomNumber,
     _encode_RandomNumber,
 } from '../MTSAbstractService/RandomNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BindTokenSignedData */
 /**
  * @summary BindTokenSignedData
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type BindTokenSignedData = RandomNumber; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BindTokenSignedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindTokenSignedData */
 let _cached_decoder_for_BindTokenSignedData: $.ASN1Decoder<BindTokenSignedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindTokenSignedData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindTokenSignedData */
 /**
  * @summary Decodes an ASN.1 element into a(n) BindTokenSignedData
  * @function
@@ -46,13 +41,9 @@ export function _decode_BindTokenSignedData(el: _Element) {
     }
     return _cached_decoder_for_BindTokenSignedData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindTokenSignedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindTokenSignedData */
 let _cached_encoder_for_BindTokenSignedData: $.ASN1Encoder<BindTokenSignedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindTokenSignedData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindTokenSignedData */
 /**
  * @summary Encodes a(n) BindTokenSignedData into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_BindTokenSignedData(
     return _cached_encoder_for_BindTokenSignedData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindTokenSignedData */
 
 /* eslint-enable */

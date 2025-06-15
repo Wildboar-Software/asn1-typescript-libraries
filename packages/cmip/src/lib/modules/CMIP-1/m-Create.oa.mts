@@ -41,7 +41,7 @@ import { invalidAttributeValue } from '../CMIP-1/invalidAttributeValue.oa.mjs';
 import { noSuchAttribute } from '../CMIP-1/noSuchAttribute.oa.mjs';
 
 
-/* START_OF_SYMBOL_DEFINITION m_Create */
+
 /**
  * @summary m_Create
  * @description
@@ -103,6 +103,5 @@ export const m_Create: OPERATION<CreateArgument, CreateResult> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Create */
 
 /* eslint-enable */

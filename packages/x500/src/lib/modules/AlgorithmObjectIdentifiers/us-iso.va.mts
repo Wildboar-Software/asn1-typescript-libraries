@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION us_iso */
 /**
  * @summary us_iso
  * @description
@@ -19,6 +18,5 @@ export const us_iso: ID = new _OID([
     /* member-body */ 2,
     /* us */ 840,
 ]);
-/* END_OF_SYMBOL_DEFINITION us_iso */
 
 /* eslint-enable */

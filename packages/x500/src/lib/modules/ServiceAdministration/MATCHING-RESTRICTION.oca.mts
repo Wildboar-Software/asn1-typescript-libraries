@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION MATCHING_RESTRICTION */
 /**
  * @summary MATCHING_RESTRICTION
  * @description
@@ -63,6 +62,5 @@ export interface MATCHING_RESTRICTION<
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION MATCHING_RESTRICTION */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_nat_nrn_extensions */
 /**
  * @summary id_nat_nrn_extensions
  * @description
@@ -25,6 +24,5 @@ import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.mjs';
  * @constant
  */
 export const id_nat_nrn_extensions: ID = new _OID([12], id_nat);
-/* END_OF_SYMBOL_DEFINITION id_nat_nrn_extensions */
 
 /* eslint-enable */

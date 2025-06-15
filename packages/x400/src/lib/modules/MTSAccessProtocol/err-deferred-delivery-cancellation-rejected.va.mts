@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_deferred_delivery_cancellation_rejected */
 /**
  * @summary err_deferred_delivery_cancellation_rejected
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_deferred_delivery_cancellation_rejected: Code = { local: 8 };
-/* END_OF_SYMBOL_DEFINITION err_deferred_delivery_cancellation_rejected */
 
 /* eslint-enable */

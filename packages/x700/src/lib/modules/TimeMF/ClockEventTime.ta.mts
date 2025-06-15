@@ -15,7 +15,6 @@ import {
     _decode_GlobalTime,
     _encode_GlobalTime,
 } from '../TimeMF/GlobalTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ClockEventTime */
 /**
  * @summary ClockEventTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ClockEventTime = GlobalTime; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ClockEventTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventTime */
 let _cached_decoder_for_ClockEventTime: $.ASN1Decoder<ClockEventTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockEventTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockEventTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_ClockEventTime(el: _Element) {
     }
     return _cached_decoder_for_ClockEventTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClockEventTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventTime */
 let _cached_encoder_for_ClockEventTime: $.ASN1Encoder<ClockEventTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockEventTime */
 /**
  * @summary Encodes a(n) ClockEventTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ClockEventTime(
     return _cached_encoder_for_ClockEventTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockEventTime */
 
 /* eslint-enable */

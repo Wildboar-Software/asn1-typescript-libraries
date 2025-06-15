@@ -13,7 +13,6 @@ import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/A
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { TCGPlatformSpecification, _decode_TCGPlatformSpecification, _encode_TCGPlatformSpecification } from "../PlatformCertificateProfile/TCGPlatformSpecification.ta.mjs";
 import { tcg_at_tcgPlatformSpecification } from "../PlatformCertificateProfile/tcg-at-tcgPlatformSpecification.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tCGPlatformSpecification */
 /**
  * @summary tCGPlatformSpecification
  * @description
@@ -48,6 +47,5 @@ const tCGPlatformSpecification: ATTRIBUTE<TCGPlatformSpecification> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION tCGPlatformSpecification */
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import {
   _decode_AlgorithmIdentifier,
   _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Challenge */
+
 /**
  * @summary Challenge
  * @description
@@ -90,9 +90,8 @@ export class Challenge {
     return new Challenge(_o.owf, _o.witness, _o.challenge);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Challenge */
+
 /**
  * @summary The Leading Root Component Types of Challenge
  * @description
@@ -124,9 +123,8 @@ export const _root_component_type_list_1_spec_for_Challenge: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Challenge */
+
 /**
  * @summary The Trailing Root Component Types of Challenge
  * @description
@@ -136,9 +134,8 @@ export const _root_component_type_list_1_spec_for_Challenge: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Challenge: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Challenge */
+
 /**
  * @summary The Extension Addition Component Types of Challenge
  * @description
@@ -148,13 +145,11 @@ export const _root_component_type_list_2_spec_for_Challenge: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Challenge: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Challenge */
+
 let _cached_decoder_for_Challenge: $.ASN1Decoder<Challenge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Challenge */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Challenge
  * @function
@@ -199,13 +194,11 @@ export function _decode_Challenge(el: _Element) {
   }
   return _cached_decoder_for_Challenge(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Challenge */
+
 let _cached_encoder_for_Challenge: $.ASN1Encoder<Challenge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Challenge */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Challenge */
+
 /**
  * @summary Encodes a(n) Challenge into an ASN.1 Element.
  * @function
@@ -237,6 +230,5 @@ export function _encode_Challenge(
   return _cached_encoder_for_Challenge(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Challenge */
 
 /* eslint-enable */

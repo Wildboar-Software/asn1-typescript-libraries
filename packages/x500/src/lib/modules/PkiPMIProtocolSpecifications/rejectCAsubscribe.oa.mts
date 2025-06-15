@@ -6,7 +6,6 @@ import {
     _encode_RejectCAsubscribe,
 } from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION rejectCAsubscribe */
 /**
  * @summary rejectCAsubscribe
  * @description
@@ -34,6 +33,5 @@ export const rejectCAsubscribe: WRAPPED_PDU = {
     "&id": id_rejectCAsubscribe /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION rejectCAsubscribe */
 
 /* eslint-enable */

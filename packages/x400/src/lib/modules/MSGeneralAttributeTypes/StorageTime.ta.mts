@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION StorageTime */
 /**
  * @summary StorageTime
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type StorageTime = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION StorageTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StorageTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StorageTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StorageTime */
 export const _decode_StorageTime = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_StorageTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StorageTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StorageTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StorageTime */
 export const _encode_StorageTime = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_StorageTime */
 
 /* eslint-enable */

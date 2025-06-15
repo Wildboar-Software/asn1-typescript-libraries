@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SchemeName */
+
 /**
  * @summary SchemeName
  * @description
@@ -31,13 +31,11 @@ export type SchemeName =
     | { string_: ISO646String } /* CHOICE_ALT_ROOT */
     | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SchemeName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeName */
+
 let _cached_decoder_for_SchemeName: $.ASN1Decoder<SchemeName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchemeName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SchemeName
  * @function
@@ -55,13 +53,11 @@ export function _decode_SchemeName(el: _Element) {
     }
     return _cached_decoder_for_SchemeName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SchemeName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeName */
+
 let _cached_encoder_for_SchemeName: $.ASN1Encoder<SchemeName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchemeName */
+
 /**
  * @summary Encodes a(n) SchemeName into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_SchemeName(
     return _cached_encoder_for_SchemeName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchemeName */
 
 /* eslint-enable */

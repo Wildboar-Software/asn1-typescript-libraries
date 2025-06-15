@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION terminalProblem */
+
 /**
  * @summary terminalProblem
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const terminalProblem: ProbableCause = { localValue: 65 };
-/* END_OF_SYMBOL_DEFINITION terminalProblem */
 
 /* eslint-enable */

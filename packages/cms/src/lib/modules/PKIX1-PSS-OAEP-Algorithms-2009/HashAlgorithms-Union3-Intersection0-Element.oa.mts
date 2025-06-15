@@ -6,7 +6,7 @@ import {
     preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_sha384 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-sha384.va.mjs";
-/* START_OF_SYMBOL_DEFINITION HashAlgorithms_Union3_Intersection0_Element */
+
 /**
  * @summary HashAlgorithms_Union3_Intersection0_Element
  * @description
@@ -33,6 +33,5 @@ export const HashAlgorithms_Union3_Intersection0_Element: DIGEST_ALGORITHM<NULL>
     "&paramPresence": preferredPresent /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION HashAlgorithms_Union3_Intersection0_Element */
 
 /* eslint-enable */

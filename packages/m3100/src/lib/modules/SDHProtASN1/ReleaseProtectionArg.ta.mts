@@ -27,7 +27,7 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReleaseProtectionArg */
+
 /**
  * @summary ReleaseProtectionArg
  * @description
@@ -96,9 +96,8 @@ export class ReleaseProtectionArg {
 
     public static _enum_for_switchType = _enum_for_SwitchType;
 }
-/* END_OF_SYMBOL_DEFINITION ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReleaseProtectionArg */
+
 /**
  * @summary The Leading Root Component Types of ReleaseProtectionArg
  * @description
@@ -130,9 +129,8 @@ export const _root_component_type_list_1_spec_for_ReleaseProtectionArg: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReleaseProtectionArg */
+
 /**
  * @summary The Trailing Root Component Types of ReleaseProtectionArg
  * @description
@@ -142,9 +140,8 @@ export const _root_component_type_list_1_spec_for_ReleaseProtectionArg: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReleaseProtectionArg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReleaseProtectionArg */
+
 /**
  * @summary The Extension Addition Component Types of ReleaseProtectionArg
  * @description
@@ -154,13 +151,11 @@ export const _root_component_type_list_2_spec_for_ReleaseProtectionArg: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ReleaseProtectionArg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseProtectionArg */
+
 let _cached_decoder_for_ReleaseProtectionArg: $.ASN1Decoder<ReleaseProtectionArg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReleaseProtectionArg */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReleaseProtectionArg
  * @function
@@ -209,13 +204,11 @@ export function _decode_ReleaseProtectionArg(el: _Element) {
     }
     return _cached_decoder_for_ReleaseProtectionArg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseProtectionArg */
+
 let _cached_encoder_for_ReleaseProtectionArg: $.ASN1Encoder<ReleaseProtectionArg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReleaseProtectionArg */
+
 /**
  * @summary Encodes a(n) ReleaseProtectionArg into an ASN.1 Element.
  * @function
@@ -256,6 +249,5 @@ export function _encode_ReleaseProtectionArg(
     return _cached_encoder_for_ReleaseProtectionArg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReleaseProtectionArg */
 
 /* eslint-enable */

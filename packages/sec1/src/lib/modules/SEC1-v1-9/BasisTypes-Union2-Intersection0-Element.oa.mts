@@ -12,7 +12,6 @@ import {
 import { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta.mjs";
 import { ppBasis } from "../SEC1-v1-9/ppBasis.va.mjs";
 import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION BasisTypes_Union2_Intersection0_Element */
 /**
  * @summary BasisTypes_Union2_Intersection0_Element
  * @description
@@ -39,6 +38,5 @@ const BasisTypes_Union2_Intersection0_Element: CHARACTERISTIC_TWO<Pentanomial> =
     "&id": ppBasis /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION BasisTypes_Union2_Intersection0_Element */
 
 /* eslint-enable */

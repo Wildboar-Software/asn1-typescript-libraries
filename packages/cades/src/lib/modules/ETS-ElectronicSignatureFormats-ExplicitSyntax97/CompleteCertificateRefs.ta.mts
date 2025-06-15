@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OtherCertID, _decode_OtherCertID, _encode_OtherCertID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherCertID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CompleteCertificateRefs */
 /**
  * @summary CompleteCertificateRefs
  * @description
@@ -24,13 +23,9 @@ import { OtherCertID, _decode_OtherCertID, _encode_OtherCertID } from "../ETS-El
  */
 export
 type CompleteCertificateRefs = OtherCertID[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CompleteCertificateRefs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompleteCertificateRefs */
 let _cached_decoder_for_CompleteCertificateRefs: $.ASN1Decoder<CompleteCertificateRefs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompleteCertificateRefs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompleteCertificateRefs */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompleteCertificateRefs
  * @function
@@ -42,13 +37,9 @@ function _decode_CompleteCertificateRefs (el: _Element) {
     if (!_cached_decoder_for_CompleteCertificateRefs) { _cached_decoder_for_CompleteCertificateRefs = $._decodeSequenceOf<OtherCertID>(() => _decode_OtherCertID); }
     return _cached_decoder_for_CompleteCertificateRefs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompleteCertificateRefs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompleteCertificateRefs */
 let _cached_encoder_for_CompleteCertificateRefs: $.ASN1Encoder<CompleteCertificateRefs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompleteCertificateRefs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompleteCertificateRefs */
 /**
  * @summary Encodes a(n) CompleteCertificateRefs into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_CompleteCertificateRefs (value: CompleteCertificateRefs, elGett
     return _cached_encoder_for_CompleteCertificateRefs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompleteCertificateRefs */
 
 /* eslint-enable */

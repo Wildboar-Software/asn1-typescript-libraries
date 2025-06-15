@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_fields_of_study } from '../Telebiometrics/id-fields-of-study.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_culturology */
+
 /**
  * @summary id_culturology
  * @description
@@ -29,6 +29,5 @@ export const id_culturology: OBJECT_IDENTIFIER = new _OID(
     [/* culturology */ 4],
     id_fields_of_study
 );
-/* END_OF_SYMBOL_DEFINITION id_culturology */
 
 /* eslint-enable */

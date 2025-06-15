@@ -16,7 +16,6 @@ import {
     _encode_VideotexParameters,
 } from '../IPMSInformationObjects/VideotexParameters.ta.mjs';
 import { id_ep_videotex } from '../IPMSObjectIdentifiers/id-ep-videotex.va.mjs';
-/* START_OF_SYMBOL_DEFINITION videotex_body_part_parameters */
 /**
  * @summary videotex_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const videotex_body_part_parameters: TYPE_IDENTIFIER<VideotexParameters> 
     '&id': id_ep_videotex /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION videotex_body_part_parameters */
 
 /* eslint-enable */

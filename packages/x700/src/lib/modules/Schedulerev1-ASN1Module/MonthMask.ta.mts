@@ -15,7 +15,7 @@ import {
     _decode_MonthMask_Item,
     _encode_MonthMask_Item,
 } from '../Schedulerev1-ASN1Module/MonthMask-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MonthMask */
+
 /**
  * @summary MonthMask
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type MonthMask = MonthMask_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MonthMask */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MonthMask */
+
 let _cached_decoder_for_MonthMask: $.ASN1Decoder<MonthMask> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MonthMask */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MonthMask */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MonthMask
  * @function
@@ -50,13 +48,11 @@ export function _decode_MonthMask(el: _Element) {
     }
     return _cached_decoder_for_MonthMask(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MonthMask */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MonthMask */
+
 let _cached_encoder_for_MonthMask: $.ASN1Encoder<MonthMask> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MonthMask */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MonthMask */
+
 /**
  * @summary Encodes a(n) MonthMask into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_MonthMask(
     return _cached_encoder_for_MonthMask(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MonthMask */
 
 /* eslint-enable */

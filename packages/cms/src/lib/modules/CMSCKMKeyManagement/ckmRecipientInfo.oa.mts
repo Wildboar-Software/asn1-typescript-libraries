@@ -5,7 +5,7 @@ import {
     _encode_KeyConstructRecipientInfo,
 } from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta.mjs";
 import { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ckmRecipientInfo */
+
 /**
  * @summary ckmRecipientInfo
  * @description
@@ -33,6 +33,5 @@ export const ckmRecipientInfo: EXTENDED_KEY_MGMT_INFO = {
     "&id": id_ckm_recip_info /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ckmRecipientInfo */
 
 /* eslint-enable */

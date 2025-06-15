@@ -16,7 +16,6 @@ import {
     _encode_MTS_APDU,
 } from '../MTSTransferProtocol/MTS-APDU.ta.mjs';
 import { id_as_mtse } from '../MHSProtocolObjectIdentifiers/id-as-mtse.va.mjs';
-/* START_OF_SYMBOL_DEFINITION message_transfer_abstract_syntax */
 /**
  * @summary message_transfer_abstract_syntax
  * @description
@@ -45,6 +44,5 @@ export const message_transfer_abstract_syntax: ABSTRACT_SYNTAX<MTS_APDU> = {
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION message_transfer_abstract_syntax */
 
 /* eslint-enable */

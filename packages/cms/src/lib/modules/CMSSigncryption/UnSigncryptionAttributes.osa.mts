@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION UnSigncryptionAttributes */
+
 /**
  * @summary UnSigncryptionAttributes
  * @description
@@ -19,6 +19,5 @@ import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramew
  *
  */
 export const UnSigncryptionAttributes: ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION UnSigncryptionAttributes */
 
 /* eslint-enable */

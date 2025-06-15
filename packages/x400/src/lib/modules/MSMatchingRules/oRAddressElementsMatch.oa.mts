@@ -16,7 +16,6 @@ import {
     _encode_ORAddress,
 } from '../MTSAbstractService/ORAddress.ta.mjs';
 import { id_mr_oraddress_elements_match } from '../MSObjectIdentifiers/id-mr-oraddress-elements-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRAddressElementsMatch */
 /**
  * @summary oRAddressElementsMatch
  * @description
@@ -45,6 +44,5 @@ export const oRAddressElementsMatch: MATCHING_RULE<ORAddress> = {
     '&id': id_mr_oraddress_elements_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRAddressElementsMatch */
 
 /* eslint-enable */

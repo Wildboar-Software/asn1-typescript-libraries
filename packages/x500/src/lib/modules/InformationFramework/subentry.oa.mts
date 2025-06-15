@@ -7,7 +7,6 @@ import {
 import { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION subentry */
 /**
  * @summary subentry
  * @description
@@ -41,6 +40,5 @@ export const subentry: OBJECT_CLASS = {
     "&ldapName": ["subentry"],
     "&id": id_sc_subentry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subentry */
 
 /* eslint-enable */

@@ -18,7 +18,6 @@ import { SYMENCSet_Union4_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-U
 import { SYMENCSet_Union5_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union5-Intersection0-Element.oa.mjs";
 import { SYMENCSet_Union6_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union6-Intersection0-Element.oa.mjs";
 import { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union7-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION SYMENCSet */
 /**
  * @summary SYMENCSet
  * @description
@@ -45,6 +44,5 @@ import { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-U
  */
 export
 const SYMENCSet: (ALGORITHM)[] = [ SYMENCSet_Union0_Intersection0_Element, SYMENCSet_Union1_Intersection0_Element, SYMENCSet_Union2_Intersection0_Element, SYMENCSet_Union3_Intersection0_Element, SYMENCSet_Union4_Intersection0_Element, SYMENCSet_Union5_Intersection0_Element, SYMENCSet_Union6_Intersection0_Element, SYMENCSet_Union7_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION SYMENCSet */
 
 /* eslint-enable */

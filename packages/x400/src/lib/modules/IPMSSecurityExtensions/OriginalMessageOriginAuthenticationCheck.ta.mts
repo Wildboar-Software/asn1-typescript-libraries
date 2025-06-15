@@ -15,7 +15,6 @@ import {
     _decode_MessageOriginAuthenticationCheck,
     _encode_MessageOriginAuthenticationCheck,
 } from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginalMessageOriginAuthenticationCheck */
 /**
  * @summary OriginalMessageOriginAuthenticationCheck
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginalMessageOriginAuthenticationCheck = MessageOriginAuthenticationCheck; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginalMessageOriginAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalMessageOriginAuthenticationCheck */
 let _cached_decoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Decoder<OriginalMessageOriginAuthenticationCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalMessageOriginAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginalMessageOriginAuthenticationCheck */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalMessageOriginAuthenticationCheck
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginalMessageOriginAuthenticationCheck(el: _Element) {
     }
     return _cached_decoder_for_OriginalMessageOriginAuthenticationCheck(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginalMessageOriginAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalMessageOriginAuthenticationCheck */
 let _cached_encoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Encoder<OriginalMessageOriginAuthenticationCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalMessageOriginAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginalMessageOriginAuthenticationCheck */
 /**
  * @summary Encodes a(n) OriginalMessageOriginAuthenticationCheck into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_OriginalMessageOriginAuthenticationCheck(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginalMessageOriginAuthenticationCheck */
 
 /* eslint-enable */

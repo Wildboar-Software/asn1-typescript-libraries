@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CredentialType */
 /**
  * @summary CredentialType
  * @description
@@ -29,21 +28,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type CredentialType = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION CredentialType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CredentialType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CredentialType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CredentialType */
 export const _decode_CredentialType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_CredentialType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CredentialType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CredentialType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CredentialType */
 export const _encode_CredentialType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CredentialType */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION QCStatement */
+
 /**
  * @summary QCStatement
  * @description
@@ -56,9 +56,8 @@ export class QCStatement {
         return new QCStatement(_o.statementId, _o.statementInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QCStatement */
+
 /**
  * @summary The Leading Root Component Types of QCStatement
  * @description
@@ -83,9 +82,8 @@ export const _root_component_type_list_1_spec_for_QCStatement: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QCStatement */
+
 /**
  * @summary The Trailing Root Component Types of QCStatement
  * @description
@@ -95,9 +93,8 @@ export const _root_component_type_list_1_spec_for_QCStatement: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_QCStatement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QCStatement */
+
 /**
  * @summary The Extension Addition Component Types of QCStatement
  * @description
@@ -107,13 +104,11 @@ export const _root_component_type_list_2_spec_for_QCStatement: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_QCStatement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QCStatement */
+
 let _cached_decoder_for_QCStatement: $.ASN1Decoder<QCStatement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QCStatement */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QCStatement
  * @function
@@ -153,13 +148,11 @@ export function _decode_QCStatement(el: _Element) {
     }
     return _cached_decoder_for_QCStatement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QCStatement */
+
 let _cached_encoder_for_QCStatement: $.ASN1Encoder<QCStatement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QCStatement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QCStatement */
+
 /**
  * @summary Encodes a(n) QCStatement into an ASN.1 Element.
  * @function
@@ -193,6 +186,5 @@ export function _encode_QCStatement(
     return _cached_encoder_for_QCStatement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QCStatement */
 
 /* eslint-enable */

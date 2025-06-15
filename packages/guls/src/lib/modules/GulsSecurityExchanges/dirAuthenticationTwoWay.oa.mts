@@ -17,7 +17,7 @@ import { initiatorCredentials } from '../GulsSecurityExchanges/initiatorCredenti
 import { responderCredentials } from '../GulsSecurityExchanges/responderCredentials.oa.mjs';
 import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.mjs';
 import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dirAuthenticationTwoWay */
+
 /**
  * @summary dirAuthenticationTwoWay
  * @description
@@ -47,6 +47,5 @@ export const dirAuthenticationTwoWay: SECURITY_EXCHANGE = {
     global: new _OID([/* dir-authent-two-way */ 2], securityExchanges),
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dirAuthenticationTwoWay */
 
 /* eslint-enable */

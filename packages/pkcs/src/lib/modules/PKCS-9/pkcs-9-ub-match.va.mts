@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 import { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pkcs_9_ub_match */
+
 /**
  * @summary pkcs_9_ub_match
  * @description
@@ -15,6 +15,5 @@ import { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va.mjs";
  * @constant
  */
 export const pkcs_9_ub_match: INTEGER = pkcs_9_ub_pkcs9String;
-/* END_OF_SYMBOL_DEFINITION pkcs_9_ub_match */
 
 /* eslint-enable */

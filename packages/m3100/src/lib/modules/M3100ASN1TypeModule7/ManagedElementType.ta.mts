@@ -15,7 +15,7 @@ import {
     _decode_ManagedElementType_Item,
     _encode_ManagedElementType_Item,
 } from '../M3100ASN1TypeModule7/ManagedElementType-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagedElementType */
+
 /**
  * @summary ManagedElementType
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type ManagedElementType = ManagedElementType_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ManagedElementType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedElementType */
+
 let _cached_decoder_for_ManagedElementType: $.ASN1Decoder<ManagedElementType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedElementType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedElementType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedElementType
  * @function
@@ -50,13 +48,11 @@ export function _decode_ManagedElementType(el: _Element) {
     }
     return _cached_decoder_for_ManagedElementType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedElementType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedElementType */
+
 let _cached_encoder_for_ManagedElementType: $.ASN1Encoder<ManagedElementType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedElementType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedElementType */
+
 /**
  * @summary Encodes a(n) ManagedElementType into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_ManagedElementType(
     return _cached_encoder_for_ManagedElementType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedElementType */
 
 /* eslint-enable */

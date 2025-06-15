@@ -22,7 +22,6 @@ import {
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';
 import { id_at_mta_password } from '../MHSRoutingObjectIdentifiers/id-at-mta-password.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mTAPassword */
 /**
  * @summary mTAPassword
  * @description
@@ -58,6 +57,5 @@ export const mTAPassword: ATTRIBUTE<Password> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mTAPassword */
 
 /* eslint-enable */

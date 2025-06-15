@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BodyPartReference */
 /**
  * @summary BodyPartReference
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BodyPartReference = INTEGER;
-/* END_OF_SYMBOL_DEFINITION BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartReference */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartReference */
 export const _decode_BodyPartReference = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartReference */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartReference */
 export const _encode_BodyPartReference = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartReference */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthenticationObject */
+
 /**
  * @summary AuthenticationObject
  * @description
@@ -27,9 +27,8 @@ export type AuthenticationObject<AuthObjectAttributes> = PKCS15Object<
     NULL,
     AuthObjectAttributes
 >; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AuthenticationObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_AuthenticationObject */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) AuthenticationObject
  * @function
@@ -49,9 +48,8 @@ export function _get_decoder_for_AuthenticationObject<AuthObjectAttributes>(
         _decode_AuthObjectAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_AuthenticationObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_AuthenticationObject */
+
 /**
  * @summary Returns a function that will encode a(n) AuthenticationObject into an ASN.1 Element.
  * @function
@@ -70,6 +68,5 @@ export function _get_encoder_for_AuthenticationObject<AuthObjectAttributes>(
         _encode_AuthObjectAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_AuthenticationObject */
 
 /* eslint-enable */

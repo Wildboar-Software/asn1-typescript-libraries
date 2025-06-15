@@ -6,7 +6,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION OtherKeyAttribute */
+
 /**
  * @summary OtherKeyAttribute
  * @description
@@ -55,9 +55,8 @@ export class OtherKeyAttribute {
         return new OtherKeyAttribute(_o.keyAttrId, _o.keyAttr);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherKeyAttribute */
+
 /**
  * @summary The Leading Root Component Types of OtherKeyAttribute
  * @description
@@ -76,9 +75,8 @@ export const _root_component_type_list_1_spec_for_OtherKeyAttribute: $.Component
     ),
     new $.ComponentSpec("keyAttr", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherKeyAttribute */
+
 /**
  * @summary The Trailing Root Component Types of OtherKeyAttribute
  * @description
@@ -88,9 +86,8 @@ export const _root_component_type_list_1_spec_for_OtherKeyAttribute: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OtherKeyAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherKeyAttribute */
+
 /**
  * @summary The Extension Addition Component Types of OtherKeyAttribute
  * @description
@@ -100,13 +97,11 @@ export const _root_component_type_list_2_spec_for_OtherKeyAttribute: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_OtherKeyAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherKeyAttribute */
+
 let _cached_decoder_for_OtherKeyAttribute: $.ASN1Decoder<OtherKeyAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherKeyAttribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherKeyAttribute
  * @function
@@ -137,13 +132,11 @@ export function _decode_OtherKeyAttribute(el: _Element) {
     }
     return _cached_decoder_for_OtherKeyAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherKeyAttribute */
+
 let _cached_encoder_for_OtherKeyAttribute: $.ASN1Encoder<OtherKeyAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherKeyAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherKeyAttribute */
+
 /**
  * @summary Encodes a(n) OtherKeyAttribute into an ASN.1 Element.
  * @function
@@ -175,6 +168,5 @@ export function _encode_OtherKeyAttribute(
     return _cached_encoder_for_OtherKeyAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherKeyAttribute */
 
 /* eslint-enable */

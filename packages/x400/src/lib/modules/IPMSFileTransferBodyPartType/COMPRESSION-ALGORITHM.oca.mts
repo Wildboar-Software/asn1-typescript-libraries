@@ -11,8 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION COMPRESSION_ALGORITHM */
 export type COMPRESSION_ALGORITHM = TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION COMPRESSION_ALGORITHM */
 
 /* eslint-enable */

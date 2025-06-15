@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TeletexDomainDefinedAttribute */
 /**
  * @summary TeletexDomainDefinedAttribute
  * @description
@@ -64,9 +63,7 @@ export class TeletexDomainDefinedAttribute {
         return new TeletexDomainDefinedAttribute(_o.type_, _o.value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TeletexDomainDefinedAttribute */
 /**
  * @summary The Leading Root Component Types of TeletexDomainDefinedAttribute
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_TeletexDomainDefinedAttribute:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TeletexDomainDefinedAttribute */
 /**
  * @summary The Trailing Root Component Types of TeletexDomainDefinedAttribute
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_TeletexDomainDefinedAttribute:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TeletexDomainDefinedAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TeletexDomainDefinedAttribute */
 /**
  * @summary The Extension Addition Component Types of TeletexDomainDefinedAttribute
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_TeletexDomainDefinedAttribute:
  * @constant
  */
 export const _extension_additions_list_spec_for_TeletexDomainDefinedAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TeletexDomainDefinedAttribute */
 let _cached_decoder_for_TeletexDomainDefinedAttribute: $.ASN1Decoder<TeletexDomainDefinedAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TeletexDomainDefinedAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) TeletexDomainDefinedAttribute
  * @function
@@ -152,13 +141,9 @@ export function _decode_TeletexDomainDefinedAttribute(el: _Element) {
     }
     return _cached_decoder_for_TeletexDomainDefinedAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TeletexDomainDefinedAttribute */
 let _cached_encoder_for_TeletexDomainDefinedAttribute: $.ASN1Encoder<TeletexDomainDefinedAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TeletexDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TeletexDomainDefinedAttribute */
 /**
  * @summary Encodes a(n) TeletexDomainDefinedAttribute into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_TeletexDomainDefinedAttribute(
     return _cached_encoder_for_TeletexDomainDefinedAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TeletexDomainDefinedAttribute */
 
 /* eslint-enable */

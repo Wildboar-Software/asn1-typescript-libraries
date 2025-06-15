@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MedicalRecordIdentification */
+
 /**
  * @summary MedicalRecordIdentification
  * @description
@@ -96,9 +96,8 @@ export class MedicalRecordIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MedicalRecordIdentification */
+
 /**
  * @summary The Leading Root Component Types of MedicalRecordIdentification
  * @description
@@ -144,9 +143,8 @@ export const _root_component_type_list_1_spec_for_MedicalRecordIdentification: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MedicalRecordIdentification */
+
 /**
  * @summary The Trailing Root Component Types of MedicalRecordIdentification
  * @description
@@ -156,9 +154,8 @@ export const _root_component_type_list_1_spec_for_MedicalRecordIdentification: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MedicalRecordIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MedicalRecordIdentification */
+
 /**
  * @summary The Extension Addition Component Types of MedicalRecordIdentification
  * @description
@@ -168,13 +165,11 @@ export const _root_component_type_list_2_spec_for_MedicalRecordIdentification: $
  * @constant
  */
 export const _extension_additions_list_spec_for_MedicalRecordIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MedicalRecordIdentification */
+
 let _cached_decoder_for_MedicalRecordIdentification: $.ASN1Decoder<MedicalRecordIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MedicalRecordIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MedicalRecordIdentification
  * @function
@@ -231,13 +226,11 @@ export function _decode_MedicalRecordIdentification(el: _Element) {
     }
     return _cached_decoder_for_MedicalRecordIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MedicalRecordIdentification */
+
 let _cached_encoder_for_MedicalRecordIdentification: $.ASN1Encoder<MedicalRecordIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MedicalRecordIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MedicalRecordIdentification */
+
 /**
  * @summary Encodes a(n) MedicalRecordIdentification into an ASN.1 Element.
  * @function
@@ -274,6 +267,5 @@ export function _encode_MedicalRecordIdentification(
     return _cached_encoder_for_MedicalRecordIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MedicalRecordIdentification */
 
 /* eslint-enable */

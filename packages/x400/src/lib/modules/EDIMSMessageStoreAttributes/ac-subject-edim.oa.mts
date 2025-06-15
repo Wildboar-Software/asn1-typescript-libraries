@@ -24,7 +24,6 @@ import { id_cat_subject_edim } from '../EDIMSObjectIdentifiers/id-cat-subject-ed
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ac_subject_edim */
 /**
  * @summary ac_subject_edim
  * @description
@@ -59,6 +58,5 @@ export const ac_subject_edim: X413ATTRIBUTE<SequenceNumber> = {
     '&id': id_cat_subject_edim /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ac_subject_edim */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_aa_signingCertificate */
+
 /**
  * @summary id_aa_signingCertificate
  * @description
@@ -27,6 +27,5 @@ export const id_aa_signingCertificate: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     12,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_signingCertificate */
 
 /* eslint-enable */

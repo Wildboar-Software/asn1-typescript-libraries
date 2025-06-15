@@ -6,7 +6,6 @@ import {
     _encode_DomainName,
 } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 import { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dnsString */
 /**
  * @summary dnsString
  * @description
@@ -36,6 +35,5 @@ export const dnsString: SYNTAX_NAME<DomainName> = {
     "&id": id_asx_dnsString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dnsString */
 
 /* eslint-enable */

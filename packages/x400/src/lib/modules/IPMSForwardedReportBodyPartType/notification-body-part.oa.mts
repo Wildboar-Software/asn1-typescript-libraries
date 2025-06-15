@@ -12,7 +12,6 @@ import {
 import { notification_body_part_parameters } from '../IPMSForwardedReportBodyPartType/notification-body-part-parameters.oa.mjs';
 import { notification_body_part_data } from '../IPMSForwardedReportBodyPartType/notification-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION notification_body_part */
 /**
  * @summary notification_body_part
  * @description
@@ -38,6 +37,5 @@ export const notification_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': notification_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': notification_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION notification_body_part */
 
 /* eslint-enable */

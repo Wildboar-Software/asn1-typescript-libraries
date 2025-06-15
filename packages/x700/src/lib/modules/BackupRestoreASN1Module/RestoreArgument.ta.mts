@@ -21,7 +21,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RestoreArgument */
 /**
  * @summary RestoreArgument
  * @description
@@ -71,9 +70,7 @@ export class RestoreArgument {
         return new RestoreArgument(_o.restoreSource, _o.additionalInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RestoreArgument */
 /**
  * @summary The Leading Root Component Types of RestoreArgument
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_RestoreArgument: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RestoreArgument */
 /**
  * @summary The Trailing Root Component Types of RestoreArgument
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_RestoreArgument: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RestoreArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RestoreArgument */
 /**
  * @summary The Extension Addition Component Types of RestoreArgument
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_RestoreArgument: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_RestoreArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RestoreArgument */
 let _cached_decoder_for_RestoreArgument: $.ASN1Decoder<RestoreArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RestoreArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) RestoreArgument
  * @function
@@ -177,13 +166,9 @@ export function _decode_RestoreArgument(el: _Element) {
     }
     return _cached_decoder_for_RestoreArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RestoreArgument */
 let _cached_encoder_for_RestoreArgument: $.ASN1Encoder<RestoreArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RestoreArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RestoreArgument */
 /**
  * @summary Encodes a(n) RestoreArgument into an ASN.1 Element.
  * @function
@@ -228,6 +213,5 @@ export function _encode_RestoreArgument(
     return _cached_encoder_for_RestoreArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RestoreArgument */
 
 /* eslint-enable */

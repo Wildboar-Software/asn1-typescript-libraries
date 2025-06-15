@@ -15,7 +15,7 @@ import {
   _decode_VisibleEndpoint,
   _encode_VisibleEndpoint,
 } from '../BIP/VisibleEndpoint.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VisibleEndpoints */
+
 /**
  * @summary VisibleEndpoints
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type VisibleEndpoints = VisibleEndpoint[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION VisibleEndpoints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleEndpoints */
+
 let _cached_decoder_for_VisibleEndpoints: $.ASN1Decoder<VisibleEndpoints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleEndpoints */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VisibleEndpoints */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleEndpoints
  * @function
@@ -48,13 +46,11 @@ export function _decode_VisibleEndpoints(el: _Element) {
   }
   return _cached_decoder_for_VisibleEndpoints(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VisibleEndpoints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleEndpoints */
+
 let _cached_encoder_for_VisibleEndpoints: $.ASN1Encoder<VisibleEndpoints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleEndpoints */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VisibleEndpoints */
+
 /**
  * @summary Encodes a(n) VisibleEndpoints into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_VisibleEndpoints(
   return _cached_encoder_for_VisibleEndpoints(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VisibleEndpoints */
 
 /* eslint-enable */

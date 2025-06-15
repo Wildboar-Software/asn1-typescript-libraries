@@ -21,7 +21,6 @@ import {
     _encode_TBSAsymmetricToken,
 } from '../MTSAbstractService/TBSAsymmetricToken.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AsymmetricToken */
 /**
  * @summary AsymmetricToken
  * @description
@@ -35,13 +34,9 @@ import {
  * ```
  */
 export type AsymmetricToken = SIGNED<TBSAsymmetricToken>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AsymmetricToken */
 let _cached_decoder_for_AsymmetricToken: $.ASN1Decoder<AsymmetricToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AsymmetricToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) AsymmetricToken
  * @function
@@ -56,13 +51,9 @@ export function _decode_AsymmetricToken(el: _Element) {
     }
     return _cached_decoder_for_AsymmetricToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AsymmetricToken */
 let _cached_encoder_for_AsymmetricToken: $.ASN1Encoder<AsymmetricToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AsymmetricToken */
 /**
  * @summary Encodes a(n) AsymmetricToken into an ASN.1 Element.
  * @function
@@ -82,6 +73,5 @@ export function _encode_AsymmetricToken(
     return _cached_encoder_for_AsymmetricToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AsymmetricToken */
 
 /* eslint-enable */

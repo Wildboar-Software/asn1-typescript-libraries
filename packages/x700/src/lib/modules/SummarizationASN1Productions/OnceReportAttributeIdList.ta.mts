@@ -15,7 +15,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OnceReportAttributeIdList */
 /**
  * @summary OnceReportAttributeIdList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OnceReportAttributeIdList = AttributeId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OnceReportAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OnceReportAttributeIdList */
 let _cached_decoder_for_OnceReportAttributeIdList: $.ASN1Decoder<OnceReportAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OnceReportAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OnceReportAttributeIdList */
 /**
  * @summary Decodes an ASN.1 element into a(n) OnceReportAttributeIdList
  * @function
@@ -48,13 +43,9 @@ export function _decode_OnceReportAttributeIdList(el: _Element) {
     }
     return _cached_decoder_for_OnceReportAttributeIdList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OnceReportAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OnceReportAttributeIdList */
 let _cached_encoder_for_OnceReportAttributeIdList: $.ASN1Encoder<OnceReportAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OnceReportAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OnceReportAttributeIdList */
 /**
  * @summary Encodes a(n) OnceReportAttributeIdList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_OnceReportAttributeIdList(
     return _cached_encoder_for_OnceReportAttributeIdList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OnceReportAttributeIdList */
 
 /* eslint-enable */

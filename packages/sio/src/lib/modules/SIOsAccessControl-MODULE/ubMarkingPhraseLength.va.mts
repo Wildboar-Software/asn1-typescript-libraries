@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ubMarkingPhraseLength */
+
 /**
  * @summary ubMarkingPhraseLength
  * @description
@@ -15,6 +15,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ubMarkingPhraseLength: INTEGER = 256;
-/* END_OF_SYMBOL_DEFINITION ubMarkingPhraseLength */
 
 /* eslint-enable */

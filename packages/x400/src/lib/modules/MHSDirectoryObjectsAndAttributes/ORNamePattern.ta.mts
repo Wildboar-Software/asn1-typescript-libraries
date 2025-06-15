@@ -15,7 +15,6 @@ import {
     _decode_ORName,
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ORNamePattern */
 /**
  * @summary ORNamePattern
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ORNamePattern = ORName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ORNamePattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORNamePattern */
 let _cached_decoder_for_ORNamePattern: $.ASN1Decoder<ORNamePattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORNamePattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORNamePattern */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORNamePattern
  * @function
@@ -46,13 +41,9 @@ export function _decode_ORNamePattern(el: _Element) {
     }
     return _cached_decoder_for_ORNamePattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORNamePattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORNamePattern */
 let _cached_encoder_for_ORNamePattern: $.ASN1Encoder<ORNamePattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORNamePattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORNamePattern */
 /**
  * @summary Encodes a(n) ORNamePattern into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ORNamePattern(
     return _cached_encoder_for_ORNamePattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORNamePattern */
 
 /* eslint-enable */

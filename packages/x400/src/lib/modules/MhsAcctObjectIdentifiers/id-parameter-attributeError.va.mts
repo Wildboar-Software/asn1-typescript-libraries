@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_parameter_attributeError */
 /**
  * @summary id_parameter_attributeError
  * @description
@@ -25,6 +24,5 @@ import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.mjs';
  * @constant
  */
 export const id_parameter_attributeError: ID = new _OID([0], id_parameter);
-/* END_OF_SYMBOL_DEFINITION id_parameter_attributeError */
 
 /* eslint-enable */

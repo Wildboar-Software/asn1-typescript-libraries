@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeIDs */
 /**
  * @summary AttributeIDs
  * @description
@@ -16,6 +15,5 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  *
  */
 export const AttributeIDs: ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION AttributeIDs */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { hMAC_SHA1 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA1.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION maca_hMAC_SHA1 */
+
 /**
  * @summary maca_hMAC_SHA1
  * @description
@@ -40,6 +40,5 @@ export const maca_hMAC_SHA1: MAC_ALGORITHM<NULL> = {
     "&keyed": false /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION maca_hMAC_SHA1 */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
 import { StandardBodyParts } from '../IPMSInformationObjects/StandardBodyParts.osa.mjs';
 import { ApplicationSpecificBodyParts } from '../IPMSInformationObjects/ApplicationSpecificBodyParts.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMBodyPartTable */
 /**
  * @summary IPMBodyPartTable
  * @description
@@ -31,6 +30,5 @@ export const IPMBodyPartTable: EXTENDED_BODY_PART_TYPE[] = [
     ...StandardBodyParts,
     ...ApplicationSpecificBodyParts,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMBodyPartTable */
 
 /* eslint-enable */

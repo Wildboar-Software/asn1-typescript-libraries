@@ -20,7 +20,7 @@ import {
     _decode_AttributeSel_attSelect_attributes_Item,
     _encode_AttributeSel_attSelect_attributes_Item,
 } from '../Pbact-access/AttributeSel-attSelect-attributes-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeSel_attSelect */
+
 /**
  * @summary AttributeSel_attSelect
  * @description
@@ -37,13 +37,11 @@ export type AttributeSel_attSelect =
           attributes: AttributeSel_attSelect_attributes_Item[];
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AttributeSel_attSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSel_attSelect */
+
 let _cached_decoder_for_AttributeSel_attSelect: $.ASN1Decoder<AttributeSel_attSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSel_attSelect */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeSel_attSelect */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeSel_attSelect
  * @function
@@ -75,13 +73,11 @@ export function _decode_AttributeSel_attSelect(el: _Element) {
     }
     return _cached_decoder_for_AttributeSel_attSelect(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeSel_attSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSel_attSelect */
+
 let _cached_encoder_for_AttributeSel_attSelect: $.ASN1Encoder<AttributeSel_attSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSel_attSelect */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeSel_attSelect */
+
 /**
  * @summary Encodes a(n) AttributeSel_attSelect into an ASN.1 Element.
  * @function
@@ -120,6 +116,5 @@ export function _encode_AttributeSel_attSelect(
     return _cached_encoder_for_AttributeSel_attSelect(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeSel_attSelect */
 
 /* eslint-enable */

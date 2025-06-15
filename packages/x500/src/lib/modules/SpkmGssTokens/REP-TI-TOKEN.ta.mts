@@ -20,7 +20,6 @@ import {
     _decode_Rep_ti_contents,
     _encode_Rep_ti_contents,
 } from "../SpkmGssTokens/Rep-ti-contents.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION REP_TI_TOKEN */
 /**
  * @summary REP_TI_TOKEN
  * @description
@@ -77,9 +76,7 @@ export class REP_TI_TOKEN {
         return new REP_TI_TOKEN(_o.rep_ti_contents, _o.algId, _o.rep_ti_integ);
     }
 }
-/* END_OF_SYMBOL_DEFINITION REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_REP_TI_TOKEN */
 /**
  * @summary The Leading Root Component Types of REP_TI_TOKEN
  * @description
@@ -111,9 +108,7 @@ export const _root_component_type_list_1_spec_for_REP_TI_TOKEN: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_REP_TI_TOKEN */
 /**
  * @summary The Trailing Root Component Types of REP_TI_TOKEN
  * @description
@@ -123,9 +118,7 @@ export const _root_component_type_list_1_spec_for_REP_TI_TOKEN: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_REP_TI_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_REP_TI_TOKEN */
 /**
  * @summary The Extension Addition Component Types of REP_TI_TOKEN
  * @description
@@ -135,13 +128,9 @@ export const _root_component_type_list_2_spec_for_REP_TI_TOKEN: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_REP_TI_TOKEN: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_REP_TI_TOKEN */
 let _cached_decoder_for_REP_TI_TOKEN: $.ASN1Decoder<REP_TI_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_REP_TI_TOKEN */
 /**
  * @summary Decodes an ASN.1 element into a(n) REP_TI_TOKEN
  * @function
@@ -175,13 +164,9 @@ export function _decode_REP_TI_TOKEN(el: _Element) {
     }
     return _cached_decoder_for_REP_TI_TOKEN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_REP_TI_TOKEN */
 let _cached_encoder_for_REP_TI_TOKEN: $.ASN1Encoder<REP_TI_TOKEN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_REP_TI_TOKEN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_REP_TI_TOKEN */
 /**
  * @summary Encodes a(n) REP_TI_TOKEN into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_REP_TI_TOKEN(
     return _cached_encoder_for_REP_TI_TOKEN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_REP_TI_TOKEN */
 
 /* eslint-enable */

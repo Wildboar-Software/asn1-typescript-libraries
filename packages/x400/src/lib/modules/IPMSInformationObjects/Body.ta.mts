@@ -15,7 +15,6 @@ import {
     _decode_BodyPart,
     _encode_BodyPart,
 } from '../IPMSInformationObjects/BodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Body */
 /**
  * @summary Body
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Body = BodyPart[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Body */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Body */
 let _cached_decoder_for_Body: $.ASN1Decoder<Body> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Body */
 /**
  * @summary Decodes an ASN.1 element into a(n) Body
  * @function
@@ -48,13 +43,9 @@ export function _decode_Body(el: _Element) {
     }
     return _cached_decoder_for_Body(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Body */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Body */
 let _cached_encoder_for_Body: $.ASN1Encoder<Body> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Body */
 /**
  * @summary Encodes a(n) Body into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_Body(value: Body, elGetter: $.ASN1Encoder<Body>) {
     return _cached_encoder_for_Body(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Body */
 
 /* eslint-enable */

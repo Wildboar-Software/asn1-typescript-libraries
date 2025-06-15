@@ -6,7 +6,7 @@ import {
     _decode_ESSSecurityLabel,
     _encode_ESSSecurityLabel,
 } from "../ExtendedSecurityServices-2006/ESSSecurityLabel.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EquivalentLabels */
+
 /**
  * @summary EquivalentLabels
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type EquivalentLabels = ESSSecurityLabel[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION EquivalentLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentLabels */
+
 let _cached_decoder_for_EquivalentLabels: $.ASN1Decoder<EquivalentLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentLabels */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EquivalentLabels */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EquivalentLabels
  * @function
@@ -39,13 +37,11 @@ export function _decode_EquivalentLabels(el: _Element) {
     }
     return _cached_decoder_for_EquivalentLabels(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EquivalentLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentLabels */
+
 let _cached_encoder_for_EquivalentLabels: $.ASN1Encoder<EquivalentLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentLabels */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EquivalentLabels */
+
 /**
  * @summary Encodes a(n) EquivalentLabels into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_EquivalentLabels(
     return _cached_encoder_for_EquivalentLabels(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EquivalentLabels */
 
 /* eslint-enable */

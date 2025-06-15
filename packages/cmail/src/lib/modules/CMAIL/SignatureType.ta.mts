@@ -16,7 +16,7 @@ import {
     _encode_String,
 } from '../XSD/String.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SignatureType */
+
 /**
  * @summary SignatureType
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type SignatureType = String; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignatureType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureType */
+
 let _cached_decoder_for_SignatureType: $.ASN1Decoder<SignatureType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignatureType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignatureType
  * @function
@@ -47,13 +45,11 @@ export function _decode_SignatureType(el: _Element) {
   }
   return _cached_decoder_for_SignatureType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignatureType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureType */
+
 let _cached_encoder_for_SignatureType: $.ASN1Encoder<SignatureType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignatureType */
+
 /**
  * @summary Encodes a(n) SignatureType into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_SignatureType(
   return _cached_encoder_for_SignatureType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignatureType */
 
 /* eslint-enable */

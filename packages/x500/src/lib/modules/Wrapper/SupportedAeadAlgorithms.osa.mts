@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedAeadAlgorithms */
 /**
  * @summary SupportedAeadAlgorithms
  * @description
@@ -16,6 +15,5 @@ import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM
  *
  */
 export const SupportedAeadAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedAeadAlgorithms */
 
 /* eslint-enable */

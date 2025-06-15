@@ -4,7 +4,7 @@ import { mda_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha224.oa.mjs"
 import { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa.mjs";
 import { mda_sha384 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha384.oa.mjs";
 import { mda_sha512 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha512.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION HashAlgs */
+
 /**
  * @summary HashAlgs
  * @description
@@ -27,6 +27,5 @@ export const HashAlgs: DIGEST_ALGORITHM[] = [
     mda_sha384,
     mda_sha512,
 ];
-/* END_OF_SYMBOL_DEFINITION HashAlgs */
 
 /* eslint-enable */

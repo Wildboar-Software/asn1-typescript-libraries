@@ -14,7 +14,6 @@ import {
     _decode_ActualStartTime,
     _encode_ActualStartTime,
 } from '../Test-ASN1Module/ActualStartTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultActualStartTime */
 /**
  * @summary defaultActualStartTime
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const defaultActualStartTime: ActualStartTime = { unknown: null };
-/* END_OF_SYMBOL_DEFINITION defaultActualStartTime */
 
 /* eslint-enable */

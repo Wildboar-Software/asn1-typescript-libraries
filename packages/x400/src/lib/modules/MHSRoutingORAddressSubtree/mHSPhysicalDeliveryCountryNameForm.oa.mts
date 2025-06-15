@@ -13,7 +13,6 @@ import { mHSPhysicalDeliveryCountry } from '../MHSRoutingORAddressSubtree/mHSPhy
 import { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa.mjs';
 import { id_nf_mhs_physical_delivery_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-physical-delivery-country.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSPhysicalDeliveryCountryNameForm */
 /**
  * @summary mHSPhysicalDeliveryCountryNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSPhysicalDeliveryCountryNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSCountryName] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_physical_delivery_country /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSPhysicalDeliveryCountryNameForm */
 
 /* eslint-enable */

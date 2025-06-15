@@ -41,7 +41,7 @@ import {
     _decode_X9_68CertificateAttributes,
     _encode_X9_68CertificateAttributes,
 } from "../PKCS-15/X9-68CertificateAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateType */
+
 /**
  * @summary CertificateType
  * @description
@@ -84,13 +84,11 @@ export type CertificateType =
           cvCertificate: CertificateObject<CVCertificateAttributes>;
       } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertificateType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateType */
+
 let _cached_decoder_for_CertificateType: $.ASN1Decoder<CertificateType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateType
  * @function
@@ -172,13 +170,11 @@ export function _decode_CertificateType(el: _Element) {
     }
     return _cached_decoder_for_CertificateType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateType */
+
 let _cached_encoder_for_CertificateType: $.ASN1Encoder<CertificateType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateType */
+
 /**
  * @summary Encodes a(n) CertificateType into an ASN.1 Element.
  * @function
@@ -257,6 +253,5 @@ export function _encode_CertificateType(
     return _cached_encoder_for_CertificateType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateType */
 
 /* eslint-enable */

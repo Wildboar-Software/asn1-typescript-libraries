@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Signed */
 /**
  * @summary Signed
  * @description
@@ -75,9 +74,7 @@ export class Signed<ToBeSigned> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Signed */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Signed */
 /**
  * @summary The Leading Root Component Types of Signed
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_Signed: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Signed */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Signed */
 /**
  * @summary The Trailing Root Component Types of Signed
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_Signed: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Signed: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Signed */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Signed */
 /**
  * @summary The Extension Addition Component Types of Signed
  * @description
@@ -127,9 +120,7 @@ export const _root_component_type_list_2_spec_for_Signed: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Signed: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Signed */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_Signed */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) Signed
  * @function
@@ -177,9 +168,7 @@ export function _get_decoder_for_Signed<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_Signed */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_Signed */
 /**
  * @summary Returns a function that will encode a(n) Signed into an ASN.1 Element.
  * @function
@@ -215,6 +204,5 @@ export function _get_encoder_for_Signed<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_Signed */
 
 /* eslint-enable */

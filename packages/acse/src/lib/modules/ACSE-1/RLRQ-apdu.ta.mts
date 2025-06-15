@@ -31,7 +31,6 @@ import {
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
 } from '../ACSE-1/ASOI-identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RLRQ_apdu */
 /**
  * @summary RLRQ_apdu
  * @description
@@ -111,9 +110,7 @@ export class RLRQ_apdu {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RLRQ_apdu */
 /**
  * @summary The Leading Root Component Types of RLRQ_apdu
  * @description
@@ -131,9 +128,7 @@ export const _root_component_type_list_1_spec_for_RLRQ_apdu: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RLRQ_apdu */
 /**
  * @summary The Trailing Root Component Types of RLRQ_apdu
  * @description
@@ -151,9 +146,7 @@ export const _root_component_type_list_2_spec_for_RLRQ_apdu: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RLRQ_apdu */
 /**
  * @summary The Extension Addition Component Types of RLRQ_apdu
  * @description
@@ -178,13 +171,9 @@ export const _extension_additions_list_spec_for_RLRQ_apdu: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RLRQ_apdu */
 let _cached_decoder_for_RLRQ_apdu: $.ASN1Decoder<RLRQ_apdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RLRQ_apdu */
 /**
  * @summary Decodes an ASN.1 element into a(n) RLRQ_apdu
  * @function
@@ -249,13 +238,9 @@ export function _decode_RLRQ_apdu(el: _Element) {
   }
   return _cached_decoder_for_RLRQ_apdu(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RLRQ_apdu */
 let _cached_encoder_for_RLRQ_apdu: $.ASN1Encoder<RLRQ_apdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RLRQ_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RLRQ_apdu */
 /**
  * @summary Encodes a(n) RLRQ_apdu into an ASN.1 Element.
  * @function
@@ -329,6 +314,5 @@ export function _encode_RLRQ_apdu(
   return _cached_encoder_for_RLRQ_apdu(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RLRQ_apdu */
 
 /* eslint-enable */

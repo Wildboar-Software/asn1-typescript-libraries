@@ -15,7 +15,6 @@ import {
     _decode_SignalReceived_Item,
     _encode_SignalReceived_Item,
 } from '../TestCategories-ASN1Module/SignalReceived-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignalReceived */
 /**
  * @summary SignalReceived
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type SignalReceived = SignalReceived_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SignalReceived */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalReceived */
 let _cached_decoder_for_SignalReceived: $.ASN1Decoder<SignalReceived> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalReceived */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignalReceived */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalReceived
  * @function
@@ -54,13 +49,9 @@ export function _decode_SignalReceived(el: _Element) {
     }
     return _cached_decoder_for_SignalReceived(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignalReceived */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalReceived */
 let _cached_encoder_for_SignalReceived: $.ASN1Encoder<SignalReceived> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalReceived */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignalReceived */
 /**
  * @summary Encodes a(n) SignalReceived into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_SignalReceived(
     return _cached_encoder_for_SignalReceived(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignalReceived */
 
 /* eslint-enable */

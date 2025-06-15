@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlOcspRef.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeRevocationRefs */
 /**
  * @summary AttributeRevocationRefs
  * @description
@@ -24,13 +23,9 @@ import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-Elect
  */
 export
 type AttributeRevocationRefs = CrlOcspRef[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AttributeRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeRevocationRefs */
 let _cached_decoder_for_AttributeRevocationRefs: $.ASN1Decoder<AttributeRevocationRefs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeRevocationRefs */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeRevocationRefs
  * @function
@@ -42,13 +37,9 @@ function _decode_AttributeRevocationRefs (el: _Element) {
     if (!_cached_decoder_for_AttributeRevocationRefs) { _cached_decoder_for_AttributeRevocationRefs = $._decodeSequenceOf<CrlOcspRef>(() => _decode_CrlOcspRef); }
     return _cached_decoder_for_AttributeRevocationRefs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeRevocationRefs */
 let _cached_encoder_for_AttributeRevocationRefs: $.ASN1Encoder<AttributeRevocationRefs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeRevocationRefs */
 /**
  * @summary Encodes a(n) AttributeRevocationRefs into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_AttributeRevocationRefs (value: AttributeRevocationRefs, elGett
     return _cached_encoder_for_AttributeRevocationRefs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeRevocationRefs */
 
 /* eslint-enable */

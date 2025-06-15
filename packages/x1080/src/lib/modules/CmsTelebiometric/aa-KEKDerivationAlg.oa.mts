@@ -23,7 +23,7 @@ import {
 } from '../CmsTelebiometric/KEKDerivationAlgorithm.ta.mjs';
 import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
 import { id_aa_KEKDerivationAlg } from '../CmsTelebiometric/id-aa-KEKDerivationAlg.va.mjs';
-/* START_OF_SYMBOL_DEFINITION aa_KEKDerivationAlg */
+
 /**
  * @summary aa_KEKDerivationAlg
  * @description
@@ -60,6 +60,5 @@ export const aa_KEKDerivationAlg: ATTRIBUTE<KEKDerivationAlgorithm> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_KEKDerivationAlg */
 
 /* eslint-enable */

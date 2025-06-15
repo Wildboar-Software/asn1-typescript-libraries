@@ -22,7 +22,6 @@ import { mTAPassword } from '../MHSRoutingDirectoryObjects/mTAPassword.oa.mjs';
 import { specificPasswords } from '../MHSRoutingDirectoryObjects/specificPasswords.oa.mjs';
 import { callingPSAPs } from '../MHSRoutingDirectoryObjects/callingPSAPs.oa.mjs';
 import { id_oc_mta_information } from '../MHSRoutingObjectIdentifiers/id-oc-mta-information.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mTAInformation */
 /**
  * @summary mTAInformation
  * @description
@@ -58,6 +57,5 @@ export const mTAInformation: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mta_information /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mTAInformation */
 
 /* eslint-enable */

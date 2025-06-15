@@ -6,7 +6,6 @@ import {
     _encode_EpcFormat,
 } from "../SelectedAttributeTypes/EpcFormat.ta.mjs";
 import { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION epcForm */
 /**
  * @summary epcForm
  * @description
@@ -36,6 +35,5 @@ export const epcForm: SYNTAX_NAME<EpcFormat> = {
     "&id": id_asx_epcForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION epcForm */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ApplicationContext,
     _encode_ApplicationContext,
 } from '../MhsMTAAsn1Module/ApplicationContext.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplicationContexts */
 /**
  * @summary ApplicationContexts
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ApplicationContexts = ApplicationContext[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationContexts */
 let _cached_decoder_for_ApplicationContexts: $.ASN1Decoder<ApplicationContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplicationContexts */
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplicationContexts
  * @function
@@ -48,13 +43,9 @@ export function _decode_ApplicationContexts(el: _Element) {
     }
     return _cached_decoder_for_ApplicationContexts(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationContexts */
 let _cached_encoder_for_ApplicationContexts: $.ASN1Encoder<ApplicationContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplicationContexts */
 /**
  * @summary Encodes a(n) ApplicationContexts into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ApplicationContexts(
     return _cached_encoder_for_ApplicationContexts(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplicationContexts */
 
 /* eslint-enable */

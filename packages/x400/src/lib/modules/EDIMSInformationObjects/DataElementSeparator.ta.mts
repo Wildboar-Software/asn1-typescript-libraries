@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DataElementSeparator */
 /**
  * @summary DataElementSeparator
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DataElementSeparator = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION DataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataElementSeparator */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataElementSeparator */
 export const _decode_DataElementSeparator = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_DataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataElementSeparator */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataElementSeparator */
 export const _encode_DataElementSeparator = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataElementSeparator */
 
 /* eslint-enable */

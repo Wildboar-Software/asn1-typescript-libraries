@@ -35,7 +35,6 @@ import {
     _extension_additions_list_spec_for_AccessPoint,
 } from "./AccessPoint.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint */
 /**
  * @summary MasterOrShadowAccessPoint
  * @description
@@ -159,9 +158,7 @@ export class MasterOrShadowAccessPoint extends AccessPoint {
 
     public static _enum_for_category = _enum_for_MasterOrShadowAccessPoint_category;
 }
-/* END_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint */
 /**
  * @summary The Leading Root Component Types of MasterOrShadowAccessPoint
  * @description
@@ -187,9 +184,7 @@ export const _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MasterOrShadowAccessPoint */
 /**
  * @summary The Trailing Root Component Types of MasterOrShadowAccessPoint
  * @description
@@ -199,9 +194,7 @@ export const _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MasterOrShadowAccessPoint: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MasterOrShadowAccessPoint */
 /**
  * @summary The Extension Addition Component Types of MasterOrShadowAccessPoint
  * @description
@@ -213,13 +206,9 @@ export const _root_component_type_list_2_spec_for_MasterOrShadowAccessPoint: $.C
 export const _extension_additions_list_spec_for_MasterOrShadowAccessPoint: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_AccessPoint,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MasterOrShadowAccessPoint */
 let _cached_decoder_for_MasterOrShadowAccessPoint: $.ASN1Decoder<MasterOrShadowAccessPoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MasterOrShadowAccessPoint */
 /**
  * @summary Decodes an ASN.1 element into a(n) MasterOrShadowAccessPoint
  * @function
@@ -296,13 +285,9 @@ export function _decode_MasterOrShadowAccessPoint(el: _Element) {
     }
     return _cached_decoder_for_MasterOrShadowAccessPoint(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MasterOrShadowAccessPoint */
 let _cached_encoder_for_MasterOrShadowAccessPoint: $.ASN1Encoder<MasterOrShadowAccessPoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MasterOrShadowAccessPoint */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MasterOrShadowAccessPoint */
 /**
  * @summary Encodes a(n) MasterOrShadowAccessPoint into an ASN.1 Element.
  * @function
@@ -385,6 +370,5 @@ export function _encode_MasterOrShadowAccessPoint(
     return _cached_encoder_for_MasterOrShadowAccessPoint(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MasterOrShadowAccessPoint */
 
 /* eslint-enable */

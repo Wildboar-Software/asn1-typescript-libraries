@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UnbindRequest */
+
 /**
  * @summary UnbindRequest
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type UnbindRequest = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION UnbindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnbindRequest */
+
 let _cached_decoder_for_UnbindRequest: $.ASN1Decoder<UnbindRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnbindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnbindRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnbindRequest
  * @function
@@ -45,13 +43,11 @@ export function _decode_UnbindRequest(el: _Element) {
   }
   return _cached_decoder_for_UnbindRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnbindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnbindRequest */
+
 let _cached_encoder_for_UnbindRequest: $.ASN1Encoder<UnbindRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnbindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnbindRequest */
+
 /**
  * @summary Encodes a(n) UnbindRequest into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_UnbindRequest(
   return _cached_encoder_for_UnbindRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnbindRequest */
 
 /* eslint-enable */

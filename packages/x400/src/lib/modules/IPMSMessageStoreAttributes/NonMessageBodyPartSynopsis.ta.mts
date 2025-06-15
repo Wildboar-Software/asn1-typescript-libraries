@@ -16,7 +16,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NonMessageBodyPartSynopsis */
 /**
  * @summary NonMessageBodyPartSynopsis
  * @description
@@ -97,9 +96,7 @@ export class NonMessageBodyPartSynopsis {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonMessageBodyPartSynopsis */
 /**
  * @summary The Leading Root Component Types of NonMessageBodyPartSynopsis
  * @description
@@ -138,9 +135,7 @@ export const _root_component_type_list_1_spec_for_NonMessageBodyPartSynopsis: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonMessageBodyPartSynopsis */
 /**
  * @summary The Trailing Root Component Types of NonMessageBodyPartSynopsis
  * @description
@@ -150,9 +145,7 @@ export const _root_component_type_list_1_spec_for_NonMessageBodyPartSynopsis: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NonMessageBodyPartSynopsis: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonMessageBodyPartSynopsis */
 /**
  * @summary The Extension Addition Component Types of NonMessageBodyPartSynopsis
  * @description
@@ -162,13 +155,9 @@ export const _root_component_type_list_2_spec_for_NonMessageBodyPartSynopsis: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_NonMessageBodyPartSynopsis: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonMessageBodyPartSynopsis */
 let _cached_decoder_for_NonMessageBodyPartSynopsis: $.ASN1Decoder<NonMessageBodyPartSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonMessageBodyPartSynopsis */
 /**
  * @summary Decodes an ASN.1 element into a(n) NonMessageBodyPartSynopsis
  * @function
@@ -229,13 +218,9 @@ export function _decode_NonMessageBodyPartSynopsis(el: _Element) {
     }
     return _cached_decoder_for_NonMessageBodyPartSynopsis(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonMessageBodyPartSynopsis */
 let _cached_encoder_for_NonMessageBodyPartSynopsis: $.ASN1Encoder<NonMessageBodyPartSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonMessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonMessageBodyPartSynopsis */
 /**
  * @summary Encodes a(n) NonMessageBodyPartSynopsis into an ASN.1 Element.
  * @function
@@ -294,6 +279,5 @@ export function _encode_NonMessageBodyPartSynopsis(
     return _cached_encoder_for_NonMessageBodyPartSynopsis(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonMessageBodyPartSynopsis */
 
 /* eslint-enable */

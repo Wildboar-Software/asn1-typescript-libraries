@@ -11,7 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AccessDescription */
 /**
  * @summary AccessDescription
  * @description
@@ -60,9 +59,7 @@ export class AccessDescription {
         return new AccessDescription(_o.accessMethod, _o.accessLocation);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AccessDescription */
 /**
  * @summary The Leading Root Component Types of AccessDescription
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_AccessDescription: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessDescription */
 /**
  * @summary The Trailing Root Component Types of AccessDescription
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_AccessDescription: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AccessDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessDescription */
 /**
  * @summary The Extension Addition Component Types of AccessDescription
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_AccessDescription: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_AccessDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessDescription */
 let _cached_decoder_for_AccessDescription: $.ASN1Decoder<AccessDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessDescription
  * @function
@@ -148,13 +137,9 @@ export function _decode_AccessDescription(el: _Element) {
     }
     return _cached_decoder_for_AccessDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessDescription */
 let _cached_encoder_for_AccessDescription: $.ASN1Encoder<AccessDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessDescription */
 /**
  * @summary Encodes a(n) AccessDescription into an ASN.1 Element.
  * @function
@@ -189,6 +174,5 @@ export function _encode_AccessDescription(
     return _cached_encoder_for_AccessDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessDescription */
 
 /* eslint-enable */

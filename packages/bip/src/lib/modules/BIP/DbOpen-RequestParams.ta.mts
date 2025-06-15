@@ -25,7 +25,7 @@ import {
   _decode_BioAPI_DB_ACCESS_TYPE,
   _encode_BioAPI_DB_ACCESS_TYPE,
 } from '../BIP/BioAPI-DB-ACCESS-TYPE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DbOpen_RequestParams */
+
 /**
  * @summary DbOpen_RequestParams
  * @description
@@ -86,9 +86,8 @@ export class DbOpen_RequestParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbOpen_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of DbOpen_RequestParams
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_DbOpen_RequestParams: $.Compon
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbOpen_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of DbOpen_RequestParams
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_DbOpen_RequestParams: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DbOpen_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbOpen_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of DbOpen_RequestParams
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_DbOpen_RequestParams: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_DbOpen_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbOpen_RequestParams */
+
 let _cached_decoder_for_DbOpen_RequestParams: $.ASN1Decoder<DbOpen_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbOpen_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DbOpen_RequestParams
  * @function
@@ -184,13 +179,11 @@ export function _decode_DbOpen_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_DbOpen_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbOpen_RequestParams */
+
 let _cached_encoder_for_DbOpen_RequestParams: $.ASN1Encoder<DbOpen_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbOpen_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbOpen_RequestParams */
+
 /**
  * @summary Encodes a(n) DbOpen_RequestParams into an ASN.1 Element.
  * @function
@@ -226,6 +219,5 @@ export function _encode_DbOpen_RequestParams(
   return _cached_encoder_for_DbOpen_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbOpen_RequestParams */
 
 /* eslint-enable */

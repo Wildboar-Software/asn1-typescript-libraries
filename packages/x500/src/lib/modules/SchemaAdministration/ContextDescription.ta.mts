@@ -17,7 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContextDescription */
 /**
  * @summary ContextDescription
  * @description
@@ -111,9 +110,7 @@ export class ContextDescription {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContextDescription */
 /**
  * @summary The Leading Root Component Types of ContextDescription
  * @description
@@ -165,9 +162,7 @@ export const _root_component_type_list_1_spec_for_ContextDescription: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContextDescription */
 /**
  * @summary The Trailing Root Component Types of ContextDescription
  * @description
@@ -177,9 +172,7 @@ export const _root_component_type_list_1_spec_for_ContextDescription: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ContextDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContextDescription */
 /**
  * @summary The Extension Addition Component Types of ContextDescription
  * @description
@@ -189,13 +182,9 @@ export const _root_component_type_list_2_spec_for_ContextDescription: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_ContextDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContextDescription */
 let _cached_decoder_for_ContextDescription: $.ASN1Decoder<ContextDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContextDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContextDescription
  * @function
@@ -261,13 +250,9 @@ export function _decode_ContextDescription(el: _Element) {
     }
     return _cached_decoder_for_ContextDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContextDescription */
 let _cached_encoder_for_ContextDescription: $.ASN1Encoder<ContextDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContextDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContextDescription */
 /**
  * @summary Encodes a(n) ContextDescription into an ASN.1 Element.
  * @function
@@ -328,6 +313,5 @@ export function _encode_ContextDescription(
     return _cached_encoder_for_ContextDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContextDescription */
 
 /* eslint-enable */

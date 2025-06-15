@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_OperationalState */
 /**
  * @summary OperationalState
  * @description
@@ -29,9 +28,7 @@ enum _enum_for_OperationalState {
     disabled = 0,
     enabled = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_OperationalState */
 
-/* START_OF_SYMBOL_DEFINITION OperationalState */
 /**
  * @summary OperationalState
  * @description
@@ -44,9 +41,7 @@ enum _enum_for_OperationalState {
  */
 export
 type OperationalState = _enum_for_OperationalState;
-/* END_OF_SYMBOL_DEFINITION OperationalState */
 
-/* START_OF_SYMBOL_DEFINITION OperationalState */
 /**
  * @summary OperationalState
  * @description
@@ -59,9 +54,7 @@ type OperationalState = _enum_for_OperationalState;
  */
 export
 const OperationalState = _enum_for_OperationalState;
-/* END_OF_SYMBOL_DEFINITION OperationalState */
 
-/* START_OF_SYMBOL_DEFINITION OperationalState_disabled */
 /**
  * @summary OperationalState_disabled
  * @constant
@@ -69,9 +62,7 @@ const OperationalState = _enum_for_OperationalState;
  */
 export
 const OperationalState_disabled: OperationalState = OperationalState.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OperationalState_disabled */
 
-/* START_OF_SYMBOL_DEFINITION disabled */
 /**
  * @summary disabled
  * @constant
@@ -79,9 +70,7 @@ const OperationalState_disabled: OperationalState = OperationalState.disabled; /
  */
 export
 const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION disabled */
 
-/* START_OF_SYMBOL_DEFINITION OperationalState_enabled */
 /**
  * @summary OperationalState_enabled
  * @constant
@@ -89,9 +78,7 @@ const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENU
  */
 export
 const OperationalState_enabled: OperationalState = OperationalState.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OperationalState_enabled */
 
-/* START_OF_SYMBOL_DEFINITION enabled */
 /**
  * @summary enabled
  * @constant
@@ -99,21 +86,12 @@ const OperationalState_enabled: OperationalState = OperationalState.enabled; /* 
  */
 export
 const enabled: OperationalState = OperationalState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION enabled */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationalState */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationalState */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationalState */
 export const _decode_OperationalState = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_OperationalState */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationalState */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationalState */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationalState */
 export const _encode_OperationalState = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationalState */
 
 /* eslint-enable */

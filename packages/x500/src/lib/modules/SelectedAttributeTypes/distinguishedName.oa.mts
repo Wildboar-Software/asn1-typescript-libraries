@@ -11,7 +11,6 @@ import {
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 import { id_at_distinguishedName } from "../SelectedAttributeTypes/id-at-distinguishedName.va.mjs";
-/* START_OF_SYMBOL_DEFINITION distinguishedName */
 /**
  * @summary distinguishedName
  * @description
@@ -51,6 +50,5 @@ export const distinguishedName: ATTRIBUTE<DistinguishedName> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION distinguishedName */
 
 /* eslint-enable */

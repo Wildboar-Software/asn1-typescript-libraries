@@ -27,7 +27,7 @@ import {
   _decode_EventReply,
   _encode_EventReply,
 } from '../CMIP-1/EventReply.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EventReportResult */
+
 /**
  * @summary EventReportResult
  * @description
@@ -104,9 +104,8 @@ export class EventReportResult {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EventReportResult */
+
 /**
  * @summary The Leading Root Component Types of EventReportResult
  * @description
@@ -145,9 +144,8 @@ export const _root_component_type_list_1_spec_for_EventReportResult: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EventReportResult */
+
 /**
  * @summary The Trailing Root Component Types of EventReportResult
  * @description
@@ -157,9 +155,8 @@ export const _root_component_type_list_1_spec_for_EventReportResult: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EventReportResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EventReportResult */
+
 /**
  * @summary The Extension Addition Component Types of EventReportResult
  * @description
@@ -169,13 +166,11 @@ export const _root_component_type_list_2_spec_for_EventReportResult: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_EventReportResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EventReportResult */
+
 let _cached_decoder_for_EventReportResult: $.ASN1Decoder<EventReportResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EventReportResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EventReportResult
  * @function
@@ -233,13 +228,11 @@ export function _decode_EventReportResult(el: _Element) {
   }
   return _cached_decoder_for_EventReportResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EventReportResult */
+
 let _cached_encoder_for_EventReportResult: $.ASN1Encoder<EventReportResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EventReportResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EventReportResult */
+
 /**
  * @summary Encodes a(n) EventReportResult into an ASN.1 Element.
  * @function
@@ -288,6 +281,5 @@ export function _encode_EventReportResult(
   return _cached_encoder_for_EventReportResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EventReportResult */
 
 /* eslint-enable */

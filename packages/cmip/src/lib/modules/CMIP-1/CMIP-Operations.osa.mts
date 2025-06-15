@@ -21,7 +21,7 @@ import { m_Get } from '../CMIP-1/m-Get.oa.mjs';
 import { m_Linked_Reply } from '../CMIP-1/m-Linked-Reply.oa.mjs';
 import { m_Set } from '../CMIP-1/m-Set.oa.mjs';
 import { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIP_Operations */
+
 /**
  * @summary CMIP_Operations
  * @description
@@ -51,6 +51,5 @@ export const CMIP_Operations: OPERATION[] = [
   m_Set,
   m_Set_Confirmed,
 ];
-/* END_OF_SYMBOL_DEFINITION CMIP_Operations */
 
 /* eslint-enable */

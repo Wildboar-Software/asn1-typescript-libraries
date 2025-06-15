@@ -27,7 +27,6 @@ import { recipient_certificate } from '../MTSAbstractService/recipient-certifica
 import { redirection_history } from '../MTSAbstractService/redirection-history.oa.mjs';
 import { IPMPerRecipientEnvelopeExtensions } from '../IPMSInformationObjects/IPMPerRecipientEnvelopeExtensions.osa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientMessageTransferExtensions */
 /**
  * @summary PerRecipientMessageTransferExtensions
  * @description
@@ -69,6 +68,5 @@ export const PerRecipientMessageTransferExtensions: EXTENSION[] = [
     ...IPMPerRecipientEnvelopeExtensions,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerRecipientMessageTransferExtensions */
 
 /* eslint-enable */

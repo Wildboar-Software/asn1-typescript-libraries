@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION delivery_control */
 /**
  * @summary delivery_control
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const delivery_control: EventTypeId = { localForm: 6 };
-/* END_OF_SYMBOL_DEFINITION delivery_control */
 
 /* eslint-enable */

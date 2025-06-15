@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Payload */
 /**
  * @summary Payload
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Payload = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION Payload */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Payload */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Payload */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Payload */
 export const _decode_Payload = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_Payload */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Payload */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Payload */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Payload */
 export const _encode_Payload = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Payload */
 
 /* eslint-enable */

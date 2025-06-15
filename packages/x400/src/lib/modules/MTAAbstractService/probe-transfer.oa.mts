@@ -23,7 +23,6 @@ import {
     _encode_Probe,
 } from '../MTAAbstractService/Probe.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION probe_transfer */
 /**
  * @summary probe_transfer
  * @description
@@ -58,6 +57,5 @@ export const probe_transfer: ABSTRACT_OPERATION<Probe> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION probe_transfer */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import {
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
 } from '../MTSAbstractService/InitiatorCredentials.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectedChangeCredentials */
 /**
  * @summary ProtectedChangeCredentials
  * @description
@@ -83,9 +82,7 @@ export class ProtectedChangeCredentials {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedChangeCredentials */
 /**
  * @summary The Leading Root Component Types of ProtectedChangeCredentials
  * @description
@@ -117,9 +114,7 @@ export const _root_component_type_list_1_spec_for_ProtectedChangeCredentials: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectedChangeCredentials */
 /**
  * @summary The Trailing Root Component Types of ProtectedChangeCredentials
  * @description
@@ -129,9 +124,7 @@ export const _root_component_type_list_1_spec_for_ProtectedChangeCredentials: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectedChangeCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectedChangeCredentials */
 /**
  * @summary The Extension Addition Component Types of ProtectedChangeCredentials
  * @description
@@ -141,13 +134,9 @@ export const _root_component_type_list_2_spec_for_ProtectedChangeCredentials: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectedChangeCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectedChangeCredentials */
 let _cached_decoder_for_ProtectedChangeCredentials: $.ASN1Decoder<ProtectedChangeCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectedChangeCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectedChangeCredentials
  * @function
@@ -189,13 +178,9 @@ export function _decode_ProtectedChangeCredentials(el: _Element) {
     }
     return _cached_decoder_for_ProtectedChangeCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectedChangeCredentials */
 let _cached_encoder_for_ProtectedChangeCredentials: $.ASN1Encoder<ProtectedChangeCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectedChangeCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectedChangeCredentials */
 /**
  * @summary Encodes a(n) ProtectedChangeCredentials into an ASN.1 Element.
  * @function
@@ -238,6 +223,5 @@ export function _encode_ProtectedChangeCredentials(
     return _cached_encoder_for_ProtectedChangeCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectedChangeCredentials */
 
 /* eslint-enable */

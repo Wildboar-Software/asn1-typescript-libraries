@@ -6,7 +6,7 @@ import {
     _encode_ConstructionAlgorithms,
 } from "../CMSCKMKeyManagement/ConstructionAlgorithms.ta.mjs";
 import { id_ckm_symmetric } from "../CMSObjectIdentifiers/id-ckm-symmetric.va.mjs";
-/* START_OF_SYMBOL_DEFINITION symmetricConstruction */
+
 /**
  * @summary symmetricConstruction
  * @description
@@ -34,6 +34,5 @@ export const symmetricConstruction: ALGORITHM<ConstructionAlgorithms> = {
     "&id": id_ckm_symmetric /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION symmetricConstruction */
 
 /* eslint-enable */

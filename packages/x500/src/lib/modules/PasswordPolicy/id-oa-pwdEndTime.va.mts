@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_oa_pwdEndTime */
 /**
  * @summary id_oa_pwdEndTime
  * @description
@@ -15,6 +14,5 @@ import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
  * @constant
  */
 export const id_oa_pwdEndTime: OBJECT_IDENTIFIER = new _OID([24], id_oa);
-/* END_OF_SYMBOL_DEFINITION id_oa_pwdEndTime */
 
 /* eslint-enable */

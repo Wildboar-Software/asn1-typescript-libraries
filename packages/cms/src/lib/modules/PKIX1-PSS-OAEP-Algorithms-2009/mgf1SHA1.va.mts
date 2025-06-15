@@ -10,7 +10,7 @@ import {
     DERElement,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION mgf1SHA1 */
+
 /**
  * @summary mgf1SHA1
  * @description
@@ -31,6 +31,5 @@ export const mgf1SHA1: MaskGenAlgorithm = new AlgorithmIdentifier(
     _encode_AlgorithmIdentifier(sha1Identifier, () => new DERElement()),
 );
 
-/* END_OF_SYMBOL_DEFINITION mgf1SHA1 */
 
 /* eslint-enable */

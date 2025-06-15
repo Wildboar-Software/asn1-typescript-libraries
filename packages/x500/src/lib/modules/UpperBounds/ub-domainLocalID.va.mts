@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_domainLocalID */
 /**
  * @summary ub_domainLocalID
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_domainLocalID: INTEGER = 64;
-/* END_OF_SYMBOL_DEFINITION ub_domainLocalID */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
 import { credentials } from '../GulsSecurityExchanges/credentials.oa.mjs';
 import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.mjs';
 import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dirAuthenticationOneWay */
+
 /**
  * @summary dirAuthenticationOneWay
  * @description
@@ -43,6 +43,5 @@ export const dirAuthenticationOneWay: SECURITY_EXCHANGE = {
     global: new _OID([/* dir-authent-one-way */ 1], securityExchanges),
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dirAuthenticationOneWay */
 
 /* eslint-enable */

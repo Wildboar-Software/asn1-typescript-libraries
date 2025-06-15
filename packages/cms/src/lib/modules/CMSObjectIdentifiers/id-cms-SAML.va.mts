@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_cms_SAML */
+
 /**
  * @summary id_cms_SAML
  * @description
@@ -16,6 +16,5 @@ import { xmlMarkup } from "../CMSObjectIdentifiers/xmlMarkup.va.mjs";
  * @constant
  */
 export const id_cms_SAML: OID = new _OID([/* saml */ 1], xmlMarkup);
-/* END_OF_SYMBOL_DEFINITION id_cms_SAML */
 
 /* eslint-enable */

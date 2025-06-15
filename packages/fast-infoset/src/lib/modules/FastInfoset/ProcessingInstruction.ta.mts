@@ -20,7 +20,6 @@ import {
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProcessingInstruction */
 /**
  * @summary ProcessingInstruction
  * @description
@@ -70,9 +69,7 @@ export class ProcessingInstruction {
     return new ProcessingInstruction(_o.target, _o.content);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProcessingInstruction */
 /**
  * @summary The Leading Root Component Types of ProcessingInstruction
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_ProcessingInstruction: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProcessingInstruction */
 /**
  * @summary The Trailing Root Component Types of ProcessingInstruction
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_ProcessingInstruction: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProcessingInstruction: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProcessingInstruction */
 /**
  * @summary The Extension Addition Component Types of ProcessingInstruction
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_ProcessingInstruction: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_ProcessingInstruction: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingInstruction */
 let _cached_decoder_for_ProcessingInstruction: $.ASN1Decoder<ProcessingInstruction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProcessingInstruction */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProcessingInstruction
  * @function
@@ -158,13 +147,9 @@ export function _decode_ProcessingInstruction(el: _Element) {
   }
   return _cached_decoder_for_ProcessingInstruction(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingInstruction */
 let _cached_encoder_for_ProcessingInstruction: $.ASN1Encoder<ProcessingInstruction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingInstruction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProcessingInstruction */
 /**
  * @summary Encodes a(n) ProcessingInstruction into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_ProcessingInstruction(
   return _cached_encoder_for_ProcessingInstruction(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProcessingInstruction */
 
 /* eslint-enable */

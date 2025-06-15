@@ -21,7 +21,7 @@ import {
   _decode_CertResponse,
   _encode_CertResponse,
 } from '../PKIXCMP-2009/CertResponse.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertRepMessage */
+
 /**
  * @summary CertRepMessage
  * @description
@@ -71,9 +71,8 @@ export class CertRepMessage {
     return new CertRepMessage(_o.caPubs, _o.response);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertRepMessage */
+
 /**
  * @summary The Leading Root Component Types of CertRepMessage
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_CertRepMessage: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertRepMessage */
+
 /**
  * @summary The Trailing Root Component Types of CertRepMessage
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_CertRepMessage: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertRepMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertRepMessage */
+
 /**
  * @summary The Extension Addition Component Types of CertRepMessage
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_CertRepMessage: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CertRepMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRepMessage */
+
 let _cached_decoder_for_CertRepMessage: $.ASN1Decoder<CertRepMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertRepMessage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertRepMessage
  * @function
@@ -174,13 +169,11 @@ export function _decode_CertRepMessage(el: _Element) {
   }
   return _cached_decoder_for_CertRepMessage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRepMessage */
+
 let _cached_encoder_for_CertRepMessage: $.ASN1Encoder<CertRepMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRepMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertRepMessage */
+
 /**
  * @summary Encodes a(n) CertRepMessage into an ASN.1 Element.
  * @function
@@ -223,6 +216,5 @@ export function _encode_CertRepMessage(
   return _cached_encoder_for_CertRepMessage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertRepMessage */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { id_act_auto_correlate_reports } from '../MSObjectIdentifiers/id-act-auto-correlate-reports.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_correlate_reports */
 /**
  * @summary auto_correlate_reports
  * @description
@@ -43,6 +42,5 @@ export const auto_correlate_reports: AUTO_ACTION = {
     '&id': id_act_auto_correlate_reports /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_correlate_reports */
 
 /* eslint-enable */

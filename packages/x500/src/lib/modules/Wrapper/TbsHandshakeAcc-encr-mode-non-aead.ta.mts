@@ -10,7 +10,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsHandshakeAcc_encr_mode_non_aead */
 /**
  * @summary TbsHandshakeAcc_encr_mode_non_aead
  * @description
@@ -61,9 +60,7 @@ export class TbsHandshakeAcc_encr_mode_non_aead {
         return new TbsHandshakeAcc_encr_mode_non_aead(_o.encr, _o.icvAlgID);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsHandshakeAcc_encr_mode_non_aead */
 /**
  * @summary The Leading Root Component Types of TbsHandshakeAcc_encr_mode_non_aead
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeAcc_encr_mode_non_
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsHandshakeAcc_encr_mode_non_aead */
 /**
  * @summary The Trailing Root Component Types of TbsHandshakeAcc_encr_mode_non_aead
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeAcc_encr_mode_non_
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbsHandshakeAcc_encr_mode_non_aead: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsHandshakeAcc_encr_mode_non_aead */
 /**
  * @summary The Extension Addition Component Types of TbsHandshakeAcc_encr_mode_non_aead
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_TbsHandshakeAcc_encr_mode_non_
  * @constant
  */
 export const _extension_additions_list_spec_for_TbsHandshakeAcc_encr_mode_non_aead: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeAcc_encr_mode_non_aead */
 let _cached_decoder_for_TbsHandshakeAcc_encr_mode_non_aead: $.ASN1Decoder<TbsHandshakeAcc_encr_mode_non_aead> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsHandshakeAcc_encr_mode_non_aead */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsHandshakeAcc_encr_mode_non_aead
  * @function
@@ -164,13 +153,9 @@ export function _decode_TbsHandshakeAcc_encr_mode_non_aead(el: _Element) {
     }
     return _cached_decoder_for_TbsHandshakeAcc_encr_mode_non_aead(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeAcc_encr_mode_non_aead */
 let _cached_encoder_for_TbsHandshakeAcc_encr_mode_non_aead: $.ASN1Encoder<TbsHandshakeAcc_encr_mode_non_aead> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeAcc_encr_mode_non_aead */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsHandshakeAcc_encr_mode_non_aead */
 /**
  * @summary Encodes a(n) TbsHandshakeAcc_encr_mode_non_aead into an ASN.1 Element.
  * @function
@@ -214,6 +199,5 @@ export function _encode_TbsHandshakeAcc_encr_mode_non_aead(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsHandshakeAcc_encr_mode_non_aead */
 
 /* eslint-enable */

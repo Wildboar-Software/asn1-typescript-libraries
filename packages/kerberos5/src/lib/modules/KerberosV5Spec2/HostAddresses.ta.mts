@@ -15,7 +15,7 @@ import {
   _decode_HostAddress,
   _encode_HostAddress,
 } from '../KerberosV5Spec2/HostAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HostAddresses */
+
 /**
  * @summary HostAddresses
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type HostAddresses = HostAddress[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION HostAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HostAddresses */
+
 let _cached_decoder_for_HostAddresses: $.ASN1Decoder<HostAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HostAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HostAddresses */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HostAddresses
  * @function
@@ -51,13 +49,11 @@ export function _decode_HostAddresses(el: _Element) {
   }
   return _cached_decoder_for_HostAddresses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HostAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HostAddresses */
+
 let _cached_encoder_for_HostAddresses: $.ASN1Encoder<HostAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HostAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HostAddresses */
+
 /**
  * @summary Encodes a(n) HostAddresses into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_HostAddresses(
   return _cached_encoder_for_HostAddresses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HostAddresses */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import { auto_alert } from '../MSGeneralAutoActionTypes/auto-alert.oa.mjs';
 import { auto_modify } from '../MSGeneralAutoActionTypes/auto-modify.oa.mjs';
 import { auto_correlate_reports } from '../MSGeneralAutoActionTypes/auto-correlate-reports.oa.mjs';
 import { auto_delete } from '../MSGeneralAutoActionTypes/auto-delete.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION GeneralAutoActions */
 /**
  * @summary GeneralAutoActions
  * @description
@@ -36,6 +35,5 @@ export const GeneralAutoActions: AUTO_ACTION[] = [
     auto_correlate_reports,
     auto_delete,
 ];
-/* END_OF_SYMBOL_DEFINITION GeneralAutoActions */
 
 /* eslint-enable */

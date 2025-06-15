@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { nl } from '../NLM/nl.va.mjs';
-/* START_OF_SYMBOL_DEFINITION nloi */
+
 /**
  * @summary nloi
  * @description
@@ -25,6 +25,5 @@ import { nl } from '../NLM/nl.va.mjs';
  * @constant
  */
 export const nloi: OBJECT_IDENTIFIER = new _OID([/* nLM */ 2], nl);
-/* END_OF_SYMBOL_DEFINITION nloi */
 
 /* eslint-enable */

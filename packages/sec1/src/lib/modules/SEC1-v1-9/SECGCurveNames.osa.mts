@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { ECDOMAIN } from "../SEC1-v1-9/ECDOMAIN.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SECGCurveNames */
 /**
  * @summary SECGCurveNames
  * @description
@@ -29,6 +28,5 @@ import { ECDOMAIN } from "../SEC1-v1-9/ECDOMAIN.oca.mjs";
  */
 export
 const SECGCurveNames: (ECDOMAIN)[] = [];
-/* END_OF_SYMBOL_DEFINITION SECGCurveNames */
 
 /* eslint-enable */

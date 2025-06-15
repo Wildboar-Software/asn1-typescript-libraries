@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AssociatedObjectSet */
 /**
  * @summary AssociatedObjectSet
  * @description
@@ -26,6 +25,5 @@ import { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca.mjs';
  *
  */
 export const AssociatedObjectSet: TMF_OBJECT[] = [];
-/* END_OF_SYMBOL_DEFINITION AssociatedObjectSet */
 
 /* eslint-enable */

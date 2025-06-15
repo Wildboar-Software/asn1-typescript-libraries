@@ -17,7 +17,6 @@ import {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeValueCount */
 /**
  * @summary AttributeValueCount
  * @description
@@ -67,9 +66,7 @@ export class AttributeValueCount {
         return new AttributeValueCount(_o.type_, _o.total);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeValueCount */
 /**
  * @summary The Leading Root Component Types of AttributeValueCount
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_AttributeValueCount: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeValueCount */
 /**
  * @summary The Trailing Root Component Types of AttributeValueCount
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_AttributeValueCount: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeValueCount: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueCount */
 /**
  * @summary The Extension Addition Component Types of AttributeValueCount
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_AttributeValueCount: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeValueCount: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueCount */
 let _cached_decoder_for_AttributeValueCount: $.ASN1Decoder<AttributeValueCount> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeValueCount */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValueCount
  * @function
@@ -159,13 +148,9 @@ export function _decode_AttributeValueCount(el: _Element) {
     }
     return _cached_decoder_for_AttributeValueCount(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueCount */
 let _cached_encoder_for_AttributeValueCount: $.ASN1Encoder<AttributeValueCount> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueCount */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeValueCount */
 /**
  * @summary Encodes a(n) AttributeValueCount into an ASN.1 Element.
  * @function
@@ -204,6 +189,5 @@ export function _encode_AttributeValueCount(
     return _cached_encoder_for_AttributeValueCount(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeValueCount */
 
 /* eslint-enable */

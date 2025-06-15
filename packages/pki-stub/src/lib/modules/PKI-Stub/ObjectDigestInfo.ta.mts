@@ -25,7 +25,6 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ObjectDigestInfo */
 /**
  * @summary ObjectDigestInfo
  * @description
@@ -113,9 +112,7 @@ export class ObjectDigestInfo {
     public static _enum_for_digestedObjectType =
         _enum_for_ObjectDigestInfo_digestedObjectType;
 }
-/* END_OF_SYMBOL_DEFINITION ObjectDigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectDigestInfo */
 /**
  * @summary The Leading Root Component Types of ObjectDigestInfo
  * @description
@@ -155,9 +152,7 @@ export const _root_component_type_list_1_spec_for_ObjectDigestInfo: $.ComponentS
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectDigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectDigestInfo */
 /**
  * @summary The Trailing Root Component Types of ObjectDigestInfo
  * @description
@@ -168,9 +163,7 @@ export const _root_component_type_list_1_spec_for_ObjectDigestInfo: $.ComponentS
  */
 export const _root_component_type_list_2_spec_for_ObjectDigestInfo: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectDigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectDigestInfo */
 /**
  * @summary The Extension Addition Component Types of ObjectDigestInfo
  * @description
@@ -181,9 +174,7 @@ export const _root_component_type_list_2_spec_for_ObjectDigestInfo: $.ComponentS
  */
 export const _extension_additions_list_spec_for_ObjectDigestInfo: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectDigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectDigestInfo
  * @function
@@ -233,9 +224,7 @@ export function _decode_ObjectDigestInfo(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo */
 /**
  * @summary Encodes a(n) ObjectDigestInfo into an ASN.1 Element.
  * @function
@@ -267,6 +256,5 @@ export function _encode_ObjectDigestInfo(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo */
 
 /* eslint-enable */

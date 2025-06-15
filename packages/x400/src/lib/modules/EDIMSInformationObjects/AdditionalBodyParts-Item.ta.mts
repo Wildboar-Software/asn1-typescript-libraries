@@ -20,7 +20,6 @@ import {
     _decode_BodyPartPlaceHolder,
     _encode_BodyPartPlaceHolder,
 } from '../EDIMSInformationObjects/BodyPartPlaceHolder.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AdditionalBodyParts_Item */
 /**
  * @summary AdditionalBodyParts_Item
  * @description
@@ -34,13 +33,9 @@ import {
 export type AdditionalBodyParts_Item =
     | { external_body_part: EDIM_ExtendedBodyPart } /* CHOICE_ALT_ROOT */
     | { place_holder: BodyPartPlaceHolder } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AdditionalBodyParts_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalBodyParts_Item */
 let _cached_decoder_for_AdditionalBodyParts_Item: $.ASN1Decoder<AdditionalBodyParts_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalBodyParts_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalBodyParts_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalBodyParts_Item
  * @function
@@ -68,13 +63,9 @@ export function _decode_AdditionalBodyParts_Item(el: _Element) {
     }
     return _cached_decoder_for_AdditionalBodyParts_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalBodyParts_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalBodyParts_Item */
 let _cached_encoder_for_AdditionalBodyParts_Item: $.ASN1Encoder<AdditionalBodyParts_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalBodyParts_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalBodyParts_Item */
 /**
  * @summary Encodes a(n) AdditionalBodyParts_Item into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_AdditionalBodyParts_Item(
     return _cached_encoder_for_AdditionalBodyParts_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalBodyParts_Item */
 
 /* eslint-enable */

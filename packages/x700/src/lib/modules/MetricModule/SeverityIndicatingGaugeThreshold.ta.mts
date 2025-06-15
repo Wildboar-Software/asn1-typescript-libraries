@@ -15,7 +15,6 @@ import {
     _decode_SeverityIndicatingGaugeThreshold_Item,
     _encode_SeverityIndicatingGaugeThreshold_Item,
 } from '../MetricModule/SeverityIndicatingGaugeThreshold-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SeverityIndicatingGaugeThreshold */
 /**
  * @summary SeverityIndicatingGaugeThreshold
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type SeverityIndicatingGaugeThreshold = SeverityIndicatingGaugeThreshold_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SeverityIndicatingGaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SeverityIndicatingGaugeThreshold */
 let _cached_decoder_for_SeverityIndicatingGaugeThreshold: $.ASN1Decoder<SeverityIndicatingGaugeThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SeverityIndicatingGaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SeverityIndicatingGaugeThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) SeverityIndicatingGaugeThreshold
  * @function
@@ -51,13 +46,9 @@ export function _decode_SeverityIndicatingGaugeThreshold(el: _Element) {
     }
     return _cached_decoder_for_SeverityIndicatingGaugeThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SeverityIndicatingGaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SeverityIndicatingGaugeThreshold */
 let _cached_encoder_for_SeverityIndicatingGaugeThreshold: $.ASN1Encoder<SeverityIndicatingGaugeThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SeverityIndicatingGaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SeverityIndicatingGaugeThreshold */
 /**
  * @summary Encodes a(n) SeverityIndicatingGaugeThreshold into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_SeverityIndicatingGaugeThreshold(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SeverityIndicatingGaugeThreshold */
 
 /* eslint-enable */

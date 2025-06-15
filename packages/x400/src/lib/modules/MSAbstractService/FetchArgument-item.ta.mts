@@ -20,7 +20,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FetchArgument_item */
 /**
  * @summary FetchArgument_item
  * @description
@@ -34,13 +33,9 @@ import {
 export type FetchArgument_item =
     | { search: Selector } /* CHOICE_ALT_ROOT */
     | { precise: SequenceNumber } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FetchArgument_item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchArgument_item */
 let _cached_decoder_for_FetchArgument_item: $.ASN1Decoder<FetchArgument_item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchArgument_item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FetchArgument_item */
 /**
  * @summary Decodes an ASN.1 element into a(n) FetchArgument_item
  * @function
@@ -66,13 +61,9 @@ export function _decode_FetchArgument_item(el: _Element) {
     }
     return _cached_decoder_for_FetchArgument_item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FetchArgument_item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchArgument_item */
 let _cached_encoder_for_FetchArgument_item: $.ASN1Encoder<FetchArgument_item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchArgument_item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FetchArgument_item */
 /**
  * @summary Encodes a(n) FetchArgument_item into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_FetchArgument_item(
     return _cached_encoder_for_FetchArgument_item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FetchArgument_item */
 
 /* eslint-enable */

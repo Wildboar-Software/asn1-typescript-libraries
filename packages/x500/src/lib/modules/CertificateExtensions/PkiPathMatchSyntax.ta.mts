@@ -9,7 +9,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PkiPathMatchSyntax */
 /**
  * @summary PkiPathMatchSyntax
  * @description
@@ -69,9 +68,7 @@ export class PkiPathMatchSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PkiPathMatchSyntax */
 /**
  * @summary The Leading Root Component Types of PkiPathMatchSyntax
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_PkiPathMatchSyntax: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PkiPathMatchSyntax */
 /**
  * @summary The Trailing Root Component Types of PkiPathMatchSyntax
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_PkiPathMatchSyntax: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PkiPathMatchSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PkiPathMatchSyntax */
 /**
  * @summary The Extension Addition Component Types of PkiPathMatchSyntax
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_PkiPathMatchSyntax: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_PkiPathMatchSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PkiPathMatchSyntax */
 let _cached_decoder_for_PkiPathMatchSyntax: $.ASN1Decoder<PkiPathMatchSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PkiPathMatchSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) PkiPathMatchSyntax
  * @function
@@ -161,13 +150,9 @@ export function _decode_PkiPathMatchSyntax(el: _Element) {
     }
     return _cached_decoder_for_PkiPathMatchSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PkiPathMatchSyntax */
 let _cached_encoder_for_PkiPathMatchSyntax: $.ASN1Encoder<PkiPathMatchSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PkiPathMatchSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PkiPathMatchSyntax */
 /**
  * @summary Encodes a(n) PkiPathMatchSyntax into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_PkiPathMatchSyntax(
     return _cached_encoder_for_PkiPathMatchSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PkiPathMatchSyntax */
 
 /* eslint-enable */

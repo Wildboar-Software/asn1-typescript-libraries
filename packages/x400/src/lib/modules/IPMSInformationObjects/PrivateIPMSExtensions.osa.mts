@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION PrivateIPMSExtensions */
 /**
  * @summary PrivateIPMSExtensions
  * @description
@@ -26,6 +25,5 @@ import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs
  *
  */
 export const PrivateIPMSExtensions: IPMS_EXTENSION[] = [];
-/* END_OF_SYMBOL_DEFINITION PrivateIPMSExtensions */
 
 /* eslint-enable */

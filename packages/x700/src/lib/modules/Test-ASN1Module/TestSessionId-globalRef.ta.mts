@@ -16,7 +16,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestSessionId_globalRef */
 /**
  * @summary TestSessionId_globalRef
  * @description
@@ -30,13 +29,9 @@ import {
 export type TestSessionId_globalRef =
     | { dnGlobRef: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { oidGlobRef: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestSessionId_globalRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSessionId_globalRef */
 let _cached_decoder_for_TestSessionId_globalRef: $.ASN1Decoder<TestSessionId_globalRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSessionId_globalRef */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestSessionId_globalRef */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestSessionId_globalRef
  * @function
@@ -54,13 +49,9 @@ export function _decode_TestSessionId_globalRef(el: _Element) {
     }
     return _cached_decoder_for_TestSessionId_globalRef(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestSessionId_globalRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSessionId_globalRef */
 let _cached_encoder_for_TestSessionId_globalRef: $.ASN1Encoder<TestSessionId_globalRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSessionId_globalRef */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestSessionId_globalRef */
 /**
  * @summary Encodes a(n) TestSessionId_globalRef into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_TestSessionId_globalRef(
     return _cached_encoder_for_TestSessionId_globalRef(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestSessionId_globalRef */
 
 /* eslint-enable */

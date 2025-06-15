@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_op_establishOperationalBinding */
 /**
  * @summary id_op_establishOperationalBinding
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_op_establishOperationalBinding: Code = { local: 100 };
-/* END_OF_SYMBOL_DEFINITION id_op_establishOperationalBinding */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
   _decode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
   _encode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
 } from '../BIP/BioAPI-BIR-SUBTYPE-vein-only-subtype.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_SUBTYPE */
+
 /**
  * @summary BioAPI_BIR_SUBTYPE
  * @description
@@ -43,13 +43,11 @@ export type BioAPI_BIR_SUBTYPE =
   | {
       vein_only_subtype: BioAPI_BIR_SUBTYPE_vein_only_subtype;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_SUBTYPE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_SUBTYPE */
+
 let _cached_decoder_for_BioAPI_BIR_SUBTYPE: $.ASN1Decoder<BioAPI_BIR_SUBTYPE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_SUBTYPE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_SUBTYPE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_SUBTYPE
  * @function
@@ -70,13 +68,11 @@ export function _decode_BioAPI_BIR_SUBTYPE(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_BIR_SUBTYPE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_SUBTYPE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_SUBTYPE */
+
 let _cached_encoder_for_BioAPI_BIR_SUBTYPE: $.ASN1Encoder<BioAPI_BIR_SUBTYPE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_SUBTYPE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_SUBTYPE */
+
 /**
  * @summary Encodes a(n) BioAPI_BIR_SUBTYPE into an ASN.1 Element.
  * @function
@@ -100,6 +96,5 @@ export function _encode_BioAPI_BIR_SUBTYPE(
   return _cached_encoder_for_BioAPI_BIR_SUBTYPE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_SUBTYPE */
 
 /* eslint-enable */

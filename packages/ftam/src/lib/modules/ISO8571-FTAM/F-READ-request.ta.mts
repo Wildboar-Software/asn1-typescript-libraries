@@ -27,7 +27,7 @@ import {
   _decode_FADU_Lock,
   _encode_FADU_Lock,
 } from '../ISO8571-FTAM/FADU-Lock.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION F_READ_request */
+
 /**
  * @summary F_READ_request
  * @description
@@ -97,9 +97,8 @@ export class F_READ_request {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_F_READ_request */
+
 /**
  * @summary The Leading Root Component Types of F_READ_request
  * @description
@@ -138,9 +137,8 @@ export const _root_component_type_list_1_spec_for_F_READ_request: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_F_READ_request */
+
 /**
  * @summary The Trailing Root Component Types of F_READ_request
  * @description
@@ -150,9 +148,8 @@ export const _root_component_type_list_1_spec_for_F_READ_request: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_F_READ_request: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_F_READ_request */
+
 /**
  * @summary The Extension Addition Component Types of F_READ_request
  * @description
@@ -162,13 +159,11 @@ export const _root_component_type_list_2_spec_for_F_READ_request: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_F_READ_request: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_F_READ_request */
+
 let _cached_decoder_for_F_READ_request: $.ASN1Decoder<F_READ_request> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _decode_F_READ_request */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) F_READ_request
  * @function
@@ -222,13 +217,11 @@ export function _decode_F_READ_request(el: _Element) {
   }
   return _cached_decoder_for_F_READ_request(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_F_READ_request */
+
 let _cached_encoder_for_F_READ_request: $.ASN1Encoder<F_READ_request> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_F_READ_request */
 
-/* START_OF_SYMBOL_DEFINITION _encode_F_READ_request */
+
 /**
  * @summary Encodes a(n) F_READ_request into an ASN.1 Element.
  * @function
@@ -274,6 +267,5 @@ export function _encode_F_READ_request(
   return _cached_encoder_for_F_READ_request(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_F_READ_request */
 
 /* eslint-enable */

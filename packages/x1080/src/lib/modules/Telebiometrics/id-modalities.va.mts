@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_tmm } from '../Telebiometrics/id-tmm.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_modalities */
+
 /**
  * @summary id_modalities
  * @description
@@ -28,6 +28,5 @@ export const id_modalities: OBJECT_IDENTIFIER = new _OID(
     [/* sensory */ 3],
     id_tmm
 );
-/* END_OF_SYMBOL_DEFINITION id_modalities */
 
 /* eslint-enable */

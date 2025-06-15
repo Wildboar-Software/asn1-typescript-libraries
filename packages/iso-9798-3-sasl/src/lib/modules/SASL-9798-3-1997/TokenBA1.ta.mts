@@ -19,7 +19,7 @@ import {
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TokenBA1 */
+
 /**
  * @summary TokenBA1
  * @description
@@ -77,9 +77,8 @@ class TokenBA1 {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TokenBA1 */
+
 /**
  * @summary The Leading Root Component Types of TokenBA1
  * @description
@@ -94,9 +93,8 @@ const _root_component_type_list_1_spec_for_TokenBA1: $.ComponentSpec[] = [
     /* FIXME: entityB COULD_NOT_RESOLVE_TYPE_DEF */,
     new $.ComponentSpec("certPref", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TokenBA1 */
+
 /**
  * @summary The Trailing Root Component Types of TokenBA1
  * @description
@@ -109,9 +107,8 @@ export
 const _root_component_type_list_2_spec_for_TokenBA1: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TokenBA1 */
+
 /**
  * @summary The Extension Addition Component Types of TokenBA1
  * @description
@@ -124,13 +121,11 @@ export
 const _extension_additions_list_spec_for_TokenBA1: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenBA1 */
+
 let _cached_decoder_for_TokenBA1: $.ASN1Decoder<TokenBA1> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TokenBA1 */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TokenBA1
  * @function
@@ -166,13 +161,11 @@ function _decode_TokenBA1 (el: _Element) {
 }; }
     return _cached_decoder_for_TokenBA1(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenBA1 */
+
 let _cached_encoder_for_TokenBA1: $.ASN1Encoder<TokenBA1> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenBA1 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TokenBA1 */
+
 /**
  * @summary Encodes a(n) TokenBA1 into an ASN.1 Element.
  * @function
@@ -194,6 +187,5 @@ function _encode_TokenBA1 (value: TokenBA1, elGetter: $.ASN1Encoder<TokenBA1>) {
     return _cached_encoder_for_TokenBA1(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TokenBA1 */
 
 /* eslint-enable */

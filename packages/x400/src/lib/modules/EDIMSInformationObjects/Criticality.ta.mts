@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Criticality */
 /**
  * @summary Criticality
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Criticality = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION Criticality */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Criticality */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Criticality */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Criticality */
 export const _decode_Criticality = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_Criticality */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Criticality */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Criticality */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Criticality */
 export const _encode_Criticality = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Criticality */
 
 /* eslint-enable */

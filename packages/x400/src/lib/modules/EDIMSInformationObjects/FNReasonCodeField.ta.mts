@@ -25,7 +25,6 @@ import {
     _decode_FNPDAUReasonCodeField,
     _encode_FNPDAUReasonCodeField,
 } from '../EDIMSInformationObjects/FNPDAUReasonCodeField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FNReasonCodeField */
 /**
  * @summary FNReasonCodeField
  * @description
@@ -44,13 +43,9 @@ export type FNReasonCodeField =
     | { fn_ua_ms_reason_code: FNUAMSReasonCodeField } /* CHOICE_ALT_ROOT */
     | { fn_user_reason_code: FNUserReasonCodeField } /* CHOICE_ALT_ROOT */
     | { fn_pdau_reason_code: FNPDAUReasonCodeField } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNReasonCodeField */
 let _cached_decoder_for_FNReasonCodeField: $.ASN1Decoder<FNReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FNReasonCodeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) FNReasonCodeField
  * @function
@@ -84,13 +79,9 @@ export function _decode_FNReasonCodeField(el: _Element) {
     }
     return _cached_decoder_for_FNReasonCodeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNReasonCodeField */
 let _cached_encoder_for_FNReasonCodeField: $.ASN1Encoder<FNReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FNReasonCodeField */
 /**
  * @summary Encodes a(n) FNReasonCodeField into an ASN.1 Element.
  * @function
@@ -130,6 +121,5 @@ export function _encode_FNReasonCodeField(
     return _cached_encoder_for_FNReasonCodeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FNReasonCodeField */
 
 /* eslint-enable */

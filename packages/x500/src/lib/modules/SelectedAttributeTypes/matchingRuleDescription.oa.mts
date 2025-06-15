@@ -6,7 +6,6 @@ import {
     _encode_MatchingRuleDescription,
 } from "../SchemaAdministration/MatchingRuleDescription.ta.mjs";
 import { id_lsx_matchingRuleDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleDescription.va.mjs";
-/* START_OF_SYMBOL_DEFINITION matchingRuleDescription */
 /**
  * @summary matchingRuleDescription
  * @description
@@ -36,6 +35,5 @@ export const matchingRuleDescription: SYNTAX_NAME<MatchingRuleDescription> = {
     "&id": id_lsx_matchingRuleDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION matchingRuleDescription */
 
 /* eslint-enable */

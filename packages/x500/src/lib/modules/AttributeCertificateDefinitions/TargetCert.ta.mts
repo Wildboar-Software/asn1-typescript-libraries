@@ -20,7 +20,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TargetCert */
 /**
  * @summary TargetCert
  * @description
@@ -80,9 +79,7 @@ export class TargetCert {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TargetCert */
 /**
  * @summary The Leading Root Component Types of TargetCert
  * @description
@@ -108,9 +105,7 @@ export const _root_component_type_list_1_spec_for_TargetCert: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TargetCert */
 /**
  * @summary The Trailing Root Component Types of TargetCert
  * @description
@@ -120,9 +115,7 @@ export const _root_component_type_list_1_spec_for_TargetCert: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TargetCert: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TargetCert */
 /**
  * @summary The Extension Addition Component Types of TargetCert
  * @description
@@ -132,13 +125,9 @@ export const _root_component_type_list_2_spec_for_TargetCert: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_TargetCert: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TargetCert */
 let _cached_decoder_for_TargetCert: $.ASN1Decoder<TargetCert> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TargetCert */
 /**
  * @summary Decodes an ASN.1 element into a(n) TargetCert
  * @function
@@ -183,13 +172,9 @@ export function _decode_TargetCert(el: _Element) {
     }
     return _cached_decoder_for_TargetCert(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TargetCert */
 let _cached_encoder_for_TargetCert: $.ASN1Encoder<TargetCert> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TargetCert */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TargetCert */
 /**
  * @summary Encodes a(n) TargetCert into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_TargetCert(
     return _cached_encoder_for_TargetCert(value, _elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TargetCert */
 
 /* eslint-enable */

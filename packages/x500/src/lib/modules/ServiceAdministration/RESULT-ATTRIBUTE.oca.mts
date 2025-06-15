@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RESULT_ATTRIBUTE */
 /**
  * @summary RESULT_ATTRIBUTE
  * @description
@@ -62,6 +61,5 @@ export interface RESULT_ATTRIBUTE {
      */
     readonly "&contexts"?: ContextProfile;
 }
-/* END_OF_SYMBOL_DEFINITION RESULT_ATTRIBUTE */
 
 /* eslint-enable */

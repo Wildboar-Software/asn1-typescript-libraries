@@ -15,7 +15,6 @@ import {
     _decode_CharacterSetRegistration,
     _encode_CharacterSetRegistration,
 } from '../IPMSExtendedBodyPartTypes2/CharacterSetRegistration.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GeneralTextParameters */
 /**
  * @summary GeneralTextParameters
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type GeneralTextParameters = CharacterSetRegistration[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GeneralTextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralTextParameters */
 let _cached_decoder_for_GeneralTextParameters: $.ASN1Decoder<GeneralTextParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralTextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralTextParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralTextParameters
  * @function
@@ -48,13 +43,9 @@ export function _decode_GeneralTextParameters(el: _Element) {
     }
     return _cached_decoder_for_GeneralTextParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralTextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralTextParameters */
 let _cached_encoder_for_GeneralTextParameters: $.ASN1Encoder<GeneralTextParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralTextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralTextParameters */
 /**
  * @summary Encodes a(n) GeneralTextParameters into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_GeneralTextParameters(
     return _cached_encoder_for_GeneralTextParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralTextParameters */
 
 /* eslint-enable */

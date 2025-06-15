@@ -17,7 +17,7 @@ import {
     _encode_FingerPrint_hand,
     _enum_for_FingerPrint_hand,
 } from "../PKCS-15/FingerPrint-hand.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION FingerPrint */
+
 /**
  * @summary FingerPrint
  * @description
@@ -93,9 +93,8 @@ export class FingerPrint {
 
     public static _enum_for_finger = _enum_for_FingerPrint_finger;
 }
-/* END_OF_SYMBOL_DEFINITION FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FingerPrint */
+
 /**
  * @summary The Leading Root Component Types of FingerPrint
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_FingerPrint: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FingerPrint */
+
 /**
  * @summary The Trailing Root Component Types of FingerPrint
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_FingerPrint: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FingerPrint: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FingerPrint */
+
 /**
  * @summary The Extension Addition Component Types of FingerPrint
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_FingerPrint: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_FingerPrint: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FingerPrint */
+
 let _cached_decoder_for_FingerPrint: $.ASN1Decoder<FingerPrint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FingerPrint */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FingerPrint
  * @function
@@ -179,13 +174,11 @@ export function _decode_FingerPrint(el: _Element) {
     }
     return _cached_decoder_for_FingerPrint(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FingerPrint */
+
 let _cached_encoder_for_FingerPrint: $.ASN1Encoder<FingerPrint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FingerPrint */
+
 /**
  * @summary Encodes a(n) FingerPrint into an ASN.1 Element.
  * @function
@@ -225,6 +218,5 @@ export function _encode_FingerPrint(
     return _cached_encoder_for_FingerPrint(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FingerPrint */
 
 /* eslint-enable */

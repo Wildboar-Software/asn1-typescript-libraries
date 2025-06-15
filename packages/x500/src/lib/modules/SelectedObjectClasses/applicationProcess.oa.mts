@@ -10,7 +10,6 @@ import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { id_oc_applicationProcess } from "../SelectedObjectClasses/id-oc-applicationProcess.va.mjs";
-/* START_OF_SYMBOL_DEFINITION applicationProcess */
 /**
  * @summary applicationProcess
  * @description
@@ -49,6 +48,5 @@ export const applicationProcess: OBJECT_CLASS = {
     "&id": id_oc_applicationProcess /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION applicationProcess */
 
 /* eslint-enable */

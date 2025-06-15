@@ -20,7 +20,6 @@ import {
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
 } from '../EDIMSInformationObjects/SyntaxVersion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SyntaxIdentifierField */
 /**
  * @summary SyntaxIdentifierField
  * @description
@@ -73,9 +72,7 @@ export class SyntaxIdentifierField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SyntaxIdentifierField */
 /**
  * @summary The Leading Root Component Types of SyntaxIdentifierField
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_SyntaxIdentifierField: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SyntaxIdentifierField */
 /**
  * @summary The Trailing Root Component Types of SyntaxIdentifierField
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_SyntaxIdentifierField: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SyntaxIdentifierField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SyntaxIdentifierField */
 /**
  * @summary The Extension Addition Component Types of SyntaxIdentifierField
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_SyntaxIdentifierField: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_SyntaxIdentifierField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxIdentifierField */
 let _cached_decoder_for_SyntaxIdentifierField: $.ASN1Decoder<SyntaxIdentifierField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SyntaxIdentifierField */
 /**
  * @summary Decodes an ASN.1 element into a(n) SyntaxIdentifierField
  * @function
@@ -161,13 +150,9 @@ export function _decode_SyntaxIdentifierField(el: _Element) {
     }
     return _cached_decoder_for_SyntaxIdentifierField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxIdentifierField */
 let _cached_encoder_for_SyntaxIdentifierField: $.ASN1Encoder<SyntaxIdentifierField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxIdentifierField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SyntaxIdentifierField */
 /**
  * @summary Encodes a(n) SyntaxIdentifierField into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ export function _encode_SyntaxIdentifierField(
     return _cached_encoder_for_SyntaxIdentifierField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SyntaxIdentifierField */
 
 /* eslint-enable */

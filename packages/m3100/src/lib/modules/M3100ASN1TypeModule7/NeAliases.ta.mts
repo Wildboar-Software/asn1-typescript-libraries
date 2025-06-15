@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NeAliases */
+
 /**
  * @summary NeAliases
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NeAliases = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NeAliases */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NeAliases */
+
 let _cached_decoder_for_NeAliases: $.ASN1Decoder<NeAliases> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NeAliases */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NeAliases */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NeAliases
  * @function
@@ -45,13 +43,11 @@ export function _decode_NeAliases(el: _Element) {
     }
     return _cached_decoder_for_NeAliases(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NeAliases */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NeAliases */
+
 let _cached_encoder_for_NeAliases: $.ASN1Encoder<NeAliases> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NeAliases */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NeAliases */
+
 /**
  * @summary Encodes a(n) NeAliases into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_NeAliases(
     return _cached_encoder_for_NeAliases(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NeAliases */
 
 /* eslint-enable */

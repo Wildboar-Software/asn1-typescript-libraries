@@ -18,7 +18,7 @@ import {
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION nullBidirectionalValues */
+
 /**
  * @summary nullBidirectionalValues
  * @description
@@ -34,6 +34,5 @@ import {
 export const nullBidirectionalValues: BidirectionalValues = BidirectionalValues._from_object(
     { incoming: { dontCare: null }, outgoing: { dontCare: null } }
 );
-/* END_OF_SYMBOL_DEFINITION nullBidirectionalValues */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ThresholdLevelInd_up, _decode_ThresholdLevelInd_up, _encode_ThresholdLevelInd_up } from "../Attribute-ASN1Module/ThresholdLevelInd-up.ta.mjs";
 import { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_ThresholdLevelInd_down } from "../Attribute-ASN1Module/ThresholdLevelInd-down.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ThresholdLevelInd */
 /**
  * @summary ThresholdLevelInd
  * @description
@@ -32,13 +31,9 @@ export
 type ThresholdLevelInd =
     { up: ThresholdLevelInd_up } /* CHOICE_ALT_ROOT */
     | { down: ThresholdLevelInd_down } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ThresholdLevelInd */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ThresholdLevelInd */
 let _cached_decoder_for_ThresholdLevelInd: $.ASN1Decoder<ThresholdLevelInd> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ThresholdLevelInd */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ThresholdLevelInd */
 /**
  * @summary Decodes an ASN.1 element into a(n) ThresholdLevelInd
  * @function
@@ -53,13 +48,9 @@ function _decode_ThresholdLevelInd (el: _Element) {
 }); }
     return _cached_decoder_for_ThresholdLevelInd(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ThresholdLevelInd */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ThresholdLevelInd */
 let _cached_encoder_for_ThresholdLevelInd: $.ASN1Encoder<ThresholdLevelInd> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ThresholdLevelInd */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ThresholdLevelInd */
 /**
  * @summary Encodes a(n) ThresholdLevelInd into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_ThresholdLevelInd (value: ThresholdLevelInd, elGetter: $.ASN1En
     return _cached_encoder_for_ThresholdLevelInd(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ThresholdLevelInd */
 
 /* eslint-enable */

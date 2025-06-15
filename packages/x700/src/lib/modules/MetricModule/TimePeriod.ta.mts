@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TimePeriod */
 /**
  * @summary TimePeriod
  * @description
@@ -41,13 +40,9 @@ export type TimePeriod =
     | { microSeconds: INTEGER } /* CHOICE_ALT_ROOT */
     | { nanoSeconds: INTEGER } /* CHOICE_ALT_ROOT */
     | { picoSeconds: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TimePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimePeriod */
 let _cached_decoder_for_TimePeriod: $.ASN1Decoder<TimePeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimePeriod */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimePeriod
  * @function
@@ -95,13 +90,9 @@ export function _decode_TimePeriod(el: _Element) {
     }
     return _cached_decoder_for_TimePeriod(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimePeriod */
 let _cached_encoder_for_TimePeriod: $.ASN1Encoder<TimePeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimePeriod */
 /**
  * @summary Encodes a(n) TimePeriod into an ASN.1 Element.
  * @function
@@ -171,6 +162,5 @@ export function _encode_TimePeriod(
     return _cached_encoder_for_TimePeriod(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimePeriod */
 
 /* eslint-enable */

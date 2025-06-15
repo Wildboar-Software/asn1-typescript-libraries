@@ -16,7 +16,6 @@ import {
     _encode_MTSBindUnbindPDUs,
 } from '../MTSAccessProtocol/MTSBindUnbindPDUs.ta.mjs';
 import { id_as_mts } from '../MHSProtocolObjectIdentifiers/id-as-mts.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_bind_unbind_abstract_syntax */
 /**
  * @summary mts_bind_unbind_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const mts_bind_unbind_abstract_syntax: ABSTRACT_SYNTAX<MTSBindUnbindPDUs>
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION mts_bind_unbind_abstract_syntax */
 
 /* eslint-enable */

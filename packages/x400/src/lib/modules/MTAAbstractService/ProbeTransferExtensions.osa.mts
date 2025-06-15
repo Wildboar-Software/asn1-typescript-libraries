@@ -19,7 +19,6 @@ import { content_correlator } from '../MTSAbstractService/content-correlator.oa.
 import { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa.mjs';
 import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeTransferExtensions */
 /**
  * @summary ProbeTransferExtensions
  * @description
@@ -51,6 +50,5 @@ export const ProbeTransferExtensions: EXTENSION[] = [
     internal_trace_information,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION ProbeTransferExtensions */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GMonth */
+
 /**
  * @summary GMonth
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GMonth = DateTimeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GMonth */
+
 let _cached_decoder_for_GMonth: $.ASN1Decoder<GMonth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GMonth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GMonth */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GMonth
  * @function
@@ -46,13 +44,11 @@ export function _decode_GMonth(el: _Element) {
   }
   return _cached_decoder_for_GMonth(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GMonth */
+
 let _cached_encoder_for_GMonth: $.ASN1Encoder<GMonth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GMonth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GMonth */
+
 /**
  * @summary Encodes a(n) GMonth into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_GMonth(value: GMonth, elGetter: $.ASN1Encoder<GMonth>) {
   return _cached_encoder_for_GMonth(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GMonth */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_IPMEntryType */
 /**
  * @summary IPMEntryType
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_IPMEntryType {
     nrn = 2,
     on = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_IPMEntryType */
 
-/* START_OF_SYMBOL_DEFINITION IPMEntryType */
 /**
  * @summary IPMEntryType
  * @description
@@ -42,9 +39,7 @@ export enum _enum_for_IPMEntryType {
  * ```@enum {number}
  */
 export type IPMEntryType = _enum_for_IPMEntryType;
-/* END_OF_SYMBOL_DEFINITION IPMEntryType */
 
-/* START_OF_SYMBOL_DEFINITION IPMEntryType */
 /**
  * @summary IPMEntryType
  * @description
@@ -56,9 +51,7 @@ export type IPMEntryType = _enum_for_IPMEntryType;
  * ```@enum {number}
  */
 export const IPMEntryType = _enum_for_IPMEntryType;
-/* END_OF_SYMBOL_DEFINITION IPMEntryType */
 
-/* START_OF_SYMBOL_DEFINITION IPMEntryType_ipm */
 /**
  * @summary IPMEntryType_ipm
  * @constant
@@ -66,9 +59,7 @@ export const IPMEntryType = _enum_for_IPMEntryType;
  */
 export const IPMEntryType_ipm: IPMEntryType =
     IPMEntryType.ipm; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IPMEntryType_ipm */
 
-/* START_OF_SYMBOL_DEFINITION ipm */
 /**
  * @summary ipm
  * @constant
@@ -76,9 +67,7 @@ export const IPMEntryType_ipm: IPMEntryType =
  */
 export const ipm: IPMEntryType =
     IPMEntryType.ipm; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ipm */
 
-/* START_OF_SYMBOL_DEFINITION IPMEntryType_rn */
 /**
  * @summary IPMEntryType_rn
  * @constant
@@ -86,9 +75,7 @@ export const ipm: IPMEntryType =
  */
 export const IPMEntryType_rn: IPMEntryType =
     IPMEntryType.rn; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IPMEntryType_rn */
 
-/* START_OF_SYMBOL_DEFINITION rn */
 /**
  * @summary rn
  * @constant
@@ -96,9 +83,7 @@ export const IPMEntryType_rn: IPMEntryType =
  */
 export const rn: IPMEntryType =
     IPMEntryType.rn; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION rn */
 
-/* START_OF_SYMBOL_DEFINITION IPMEntryType_nrn */
 /**
  * @summary IPMEntryType_nrn
  * @constant
@@ -106,9 +91,7 @@ export const rn: IPMEntryType =
  */
 export const IPMEntryType_nrn: IPMEntryType =
     IPMEntryType.nrn; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IPMEntryType_nrn */
 
-/* START_OF_SYMBOL_DEFINITION nrn */
 /**
  * @summary nrn
  * @constant
@@ -116,9 +99,7 @@ export const IPMEntryType_nrn: IPMEntryType =
  */
 export const nrn: IPMEntryType =
     IPMEntryType.nrn; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nrn */
 
-/* START_OF_SYMBOL_DEFINITION IPMEntryType_on */
 /**
  * @summary IPMEntryType_on
  * @constant
@@ -126,9 +107,7 @@ export const nrn: IPMEntryType =
  */
 export const IPMEntryType_on: IPMEntryType =
     IPMEntryType.on; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IPMEntryType_on */
 
-/* START_OF_SYMBOL_DEFINITION on */
 /**
  * @summary on
  * @constant
@@ -136,21 +115,12 @@ export const IPMEntryType_on: IPMEntryType =
  */
 export const on: IPMEntryType =
     IPMEntryType.on; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION on */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMEntryType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMEntryType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMEntryType */
 export const _decode_IPMEntryType = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_IPMEntryType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMEntryType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMEntryType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMEntryType */
 export const _encode_IPMEntryType = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMEntryType */
 
 /* eslint-enable */

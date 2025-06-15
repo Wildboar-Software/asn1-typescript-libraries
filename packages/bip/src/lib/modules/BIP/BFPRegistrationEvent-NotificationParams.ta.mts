@@ -16,7 +16,7 @@ import {
   _decode_BioAPI_BFP_SCHEMA,
   _encode_BioAPI_BFP_SCHEMA,
 } from '../BIP/BioAPI-BFP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BFPRegistrationEvent_NotificationParams */
+
 /**
  * @summary BFPRegistrationEvent_NotificationParams
  * @description
@@ -68,9 +68,8 @@ export class BFPRegistrationEvent_NotificationParams {
     return new BFPRegistrationEvent_NotificationParams(_o.bfpSchema, _o.update);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BFPRegistrationEvent_NotificationParams */
+
 /**
  * @summary The Leading Root Component Types of BFPRegistrationEvent_NotificationParams
  * @description
@@ -95,9 +94,8 @@ export const _root_component_type_list_1_spec_for_BFPRegistrationEvent_Notificat
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BFPRegistrationEvent_NotificationParams */
+
 /**
  * @summary The Trailing Root Component Types of BFPRegistrationEvent_NotificationParams
  * @description
@@ -107,9 +105,8 @@ export const _root_component_type_list_1_spec_for_BFPRegistrationEvent_Notificat
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BFPRegistrationEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BFPRegistrationEvent_NotificationParams */
+
 /**
  * @summary The Extension Addition Component Types of BFPRegistrationEvent_NotificationParams
  * @description
@@ -119,13 +116,11 @@ export const _root_component_type_list_2_spec_for_BFPRegistrationEvent_Notificat
  * @constant
  */
 export const _extension_additions_list_spec_for_BFPRegistrationEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BFPRegistrationEvent_NotificationParams */
+
 let _cached_decoder_for_BFPRegistrationEvent_NotificationParams: $.ASN1Decoder<BFPRegistrationEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BFPRegistrationEvent_NotificationParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BFPRegistrationEvent_NotificationParams
  * @function
@@ -156,13 +151,11 @@ export function _decode_BFPRegistrationEvent_NotificationParams(el: _Element) {
   }
   return _cached_decoder_for_BFPRegistrationEvent_NotificationParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BFPRegistrationEvent_NotificationParams */
+
 let _cached_encoder_for_BFPRegistrationEvent_NotificationParams: $.ASN1Encoder<BFPRegistrationEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BFPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BFPRegistrationEvent_NotificationParams */
+
 /**
  * @summary Encodes a(n) BFPRegistrationEvent_NotificationParams into an ASN.1 Element.
  * @function
@@ -194,6 +187,5 @@ export function _encode_BFPRegistrationEvent_NotificationParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BFPRegistrationEvent_NotificationParams */
 
 /* eslint-enable */

@@ -10,7 +10,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GenericSecretKeyAttributes */
+
 /**
  * @summary GenericSecretKeyAttributes
  * @description
@@ -65,9 +65,8 @@ export class GenericSecretKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GenericSecretKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of GenericSecretKeyAttributes
  * @description
@@ -79,9 +78,8 @@ export class GenericSecretKeyAttributes {
 export const _root_component_type_list_1_spec_for_GenericSecretKeyAttributes: $.ComponentSpec[] = [
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GenericSecretKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of GenericSecretKeyAttributes
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_GenericSecretKeyAttributes: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GenericSecretKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GenericSecretKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of GenericSecretKeyAttributes
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_GenericSecretKeyAttributes: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_GenericSecretKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GenericSecretKeyAttributes */
+
 let _cached_decoder_for_GenericSecretKeyAttributes: $.ASN1Decoder<GenericSecretKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GenericSecretKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GenericSecretKeyAttributes
  * @function
@@ -139,13 +134,11 @@ export function _decode_GenericSecretKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_GenericSecretKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GenericSecretKeyAttributes */
+
 let _cached_encoder_for_GenericSecretKeyAttributes: $.ASN1Encoder<GenericSecretKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GenericSecretKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GenericSecretKeyAttributes */
+
 /**
  * @summary Encodes a(n) GenericSecretKeyAttributes into an ASN.1 Element.
  * @function
@@ -180,6 +173,5 @@ export function _encode_GenericSecretKeyAttributes(
     return _cached_encoder_for_GenericSecretKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GenericSecretKeyAttributes */
 
 /* eslint-enable */

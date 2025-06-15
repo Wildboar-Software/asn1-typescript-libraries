@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PersonPhone */
+
 /**
  * @summary PersonPhone
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PersonPhone = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION PersonPhone */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonPhone */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonPhone */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PersonPhone */
+
+
 export const _decode_PersonPhone = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_PersonPhone */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonPhone */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonPhone */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PersonPhone */
+
+
 export const _encode_PersonPhone = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PersonPhone */
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { sha1WithRSAEncryption } from "../PKCS-1/sha1WithRSAEncryption.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union3_Intersection0_Element */
+
 /**
  * @summary PKCS1Algorithms_Union3_Intersection0_Element
  * @description
@@ -29,6 +29,5 @@ export const PKCS1Algorithms_Union3_Intersection0_Element: ALGORITHM_IDENTIFIER<
     "&id": sha1WithRSAEncryption /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union3_Intersection0_Element */
 
 /* eslint-enable */

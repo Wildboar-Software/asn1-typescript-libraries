@@ -15,7 +15,6 @@ import {
     _decode_LabelAndRedirection,
     _encode_LabelAndRedirection,
 } from '../MTSAbstractService88/LabelAndRedirection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LabelsAndRedirections */
 /**
  * @summary LabelsAndRedirections
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type LabelsAndRedirections = LabelAndRedirection[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION LabelsAndRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LabelsAndRedirections */
 let _cached_decoder_for_LabelsAndRedirections: $.ASN1Decoder<LabelsAndRedirections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LabelsAndRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LabelsAndRedirections */
 /**
  * @summary Decodes an ASN.1 element into a(n) LabelsAndRedirections
  * @function
@@ -49,13 +44,9 @@ export function _decode_LabelsAndRedirections(el: _Element) {
     }
     return _cached_decoder_for_LabelsAndRedirections(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LabelsAndRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LabelsAndRedirections */
 let _cached_encoder_for_LabelsAndRedirections: $.ASN1Encoder<LabelsAndRedirections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LabelsAndRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LabelsAndRedirections */
 /**
  * @summary Encodes a(n) LabelsAndRedirections into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_LabelsAndRedirections(
     return _cached_encoder_for_LabelsAndRedirections(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LabelsAndRedirections */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pr } from "../UsefulDefinitions/id-pr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_pr_invalidHierarchySelect */
 /**
  * @summary id_pr_invalidHierarchySelect
  * @description
@@ -18,6 +17,5 @@ export const id_pr_invalidHierarchySelect: OBJECT_IDENTIFIER = new _OID(
     [24],
     id_pr
 );
-/* END_OF_SYMBOL_DEFINITION id_pr_invalidHierarchySelect */
 
 /* eslint-enable */

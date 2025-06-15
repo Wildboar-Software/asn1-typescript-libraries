@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HandOffPersonPtr */
+
 /**
  * @summary HandOffPersonPtr
  * @description
@@ -34,13 +34,11 @@ export type HandOffPersonPtr =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { person: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION HandOffPersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HandOffPersonPtr */
+
 let _cached_decoder_for_HandOffPersonPtr: $.ASN1Decoder<HandOffPersonPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HandOffPersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HandOffPersonPtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HandOffPersonPtr
  * @function
@@ -60,13 +58,11 @@ export function _decode_HandOffPersonPtr(el: _Element) {
     }
     return _cached_decoder_for_HandOffPersonPtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HandOffPersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HandOffPersonPtr */
+
 let _cached_encoder_for_HandOffPersonPtr: $.ASN1Encoder<HandOffPersonPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HandOffPersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HandOffPersonPtr */
+
 /**
  * @summary Encodes a(n) HandOffPersonPtr into an ASN.1 Element.
  * @function
@@ -90,6 +86,5 @@ export function _encode_HandOffPersonPtr(
     return _cached_encoder_for_HandOffPersonPtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HandOffPersonPtr */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { pwdRecentlyExpired } from "../InformationFramework/pwdRecentlyExpired.oa.mjs";
 import { id_oa_userPwdRecentlyExpired } from "../PasswordPolicy/id-oa-userPwdRecentlyExpired.va.mjs";
 import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION userPwdRecentlyExpired */
 /**
  * @summary userPwdRecentlyExpired
  * @description
@@ -22,6 +21,5 @@ export const userPwdRecentlyExpired: ATTRIBUTE = pwdRecentlyExpired(
     userPwd,
     id_oa_userPwdRecentlyExpired
 );
-/* END_OF_SYMBOL_DEFINITION userPwdRecentlyExpired */
 
 /* eslint-enable */

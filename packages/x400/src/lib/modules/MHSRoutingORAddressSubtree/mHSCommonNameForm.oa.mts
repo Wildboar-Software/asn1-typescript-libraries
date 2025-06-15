@@ -13,7 +13,6 @@ import { mHSCommonName } from '../MHSRoutingORAddressSubtree/mHSCommonName.oa.mj
 import { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa.mjs';
 import { id_nf_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-common-name.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSCommonNameForm */
 /**
  * @summary mHSCommonNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSCommonNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSCommonNameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_common_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSCommonNameForm */
 
 /* eslint-enable */

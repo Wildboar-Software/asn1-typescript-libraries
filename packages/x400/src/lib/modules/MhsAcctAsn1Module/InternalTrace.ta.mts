@@ -15,7 +15,6 @@ import {
     _decode_InternalTraceInformation,
     _encode_InternalTraceInformation,
 } from '../MTAAbstractService/InternalTraceInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InternalTrace */
 /**
  * @summary InternalTrace
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type InternalTrace = InternalTraceInformation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION InternalTrace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalTrace */
 let _cached_decoder_for_InternalTrace: $.ASN1Decoder<InternalTrace> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalTrace */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InternalTrace */
 /**
  * @summary Decodes an ASN.1 element into a(n) InternalTrace
  * @function
@@ -46,13 +41,9 @@ export function _decode_InternalTrace(el: _Element) {
     }
     return _cached_decoder_for_InternalTrace(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InternalTrace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalTrace */
 let _cached_encoder_for_InternalTrace: $.ASN1Encoder<InternalTrace> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalTrace */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InternalTrace */
 /**
  * @summary Encodes a(n) InternalTrace into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_InternalTrace(
     return _cached_encoder_for_InternalTrace(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InternalTrace */
 
 /* eslint-enable */

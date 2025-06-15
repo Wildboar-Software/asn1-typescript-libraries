@@ -15,7 +15,6 @@ import { physical_rendition_attributes } from '../MTSAbstractService/physical-re
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
 import { originator_requested_alternate_recipient } from "../MTSAbstractService/originator-requested-alternate-recipient.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PerRecipientProbeSubmissionExtensions */
 /**
  * @summary PerRecipientProbeSubmissionExtensions
  * @description
@@ -39,6 +38,5 @@ export const PerRecipientProbeSubmissionExtensions: EXTENSION[] = [
     physical_rendition_attributes,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerRecipientProbeSubmissionExtensions */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ResponseSync */
 /**
  * @summary ResponseSync
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_ResponseSync {
     bestEffort = 0,
     atomic = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ResponseSync */
 
-/* START_OF_SYMBOL_DEFINITION ResponseSync */
 /**
  * @summary ResponseSync
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_ResponseSync {
  * ```@enum {number}
  */
 export type ResponseSync = _enum_for_ResponseSync;
-/* END_OF_SYMBOL_DEFINITION ResponseSync */
 
-/* START_OF_SYMBOL_DEFINITION ResponseSync */
 /**
  * @summary ResponseSync
  * @description
@@ -55,9 +50,7 @@ export type ResponseSync = _enum_for_ResponseSync;
  * ```@enum {number}
  */
 export const ResponseSync = _enum_for_ResponseSync;
-/* END_OF_SYMBOL_DEFINITION ResponseSync */
 
-/* START_OF_SYMBOL_DEFINITION ResponseSync_singleCast */
 /**
  * @summary ResponseSync_singleCast
  * @constant
@@ -65,9 +58,7 @@ export const ResponseSync = _enum_for_ResponseSync;
  */
 export const ResponseSync_singleCast: ResponseSync =
     ResponseSync.singleCast; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseSync_singleCast */
 
-/* START_OF_SYMBOL_DEFINITION singleCast */
 /**
  * @summary singleCast
  * @constant
@@ -75,9 +66,7 @@ export const ResponseSync_singleCast: ResponseSync =
  */
 export const singleCast: ResponseSync =
     ResponseSync.singleCast; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION singleCast */
 
-/* START_OF_SYMBOL_DEFINITION ResponseSync_bestEffort */
 /**
  * @summary ResponseSync_bestEffort
  * @constant
@@ -85,9 +74,7 @@ export const singleCast: ResponseSync =
  */
 export const ResponseSync_bestEffort: ResponseSync =
     ResponseSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseSync_bestEffort */
 
-/* START_OF_SYMBOL_DEFINITION bestEffort */
 /**
  * @summary bestEffort
  * @constant
@@ -95,9 +82,7 @@ export const ResponseSync_bestEffort: ResponseSync =
  */
 export const bestEffort: ResponseSync =
     ResponseSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bestEffort */
 
-/* START_OF_SYMBOL_DEFINITION ResponseSync_atomic */
 /**
  * @summary ResponseSync_atomic
  * @constant
@@ -105,9 +90,7 @@ export const bestEffort: ResponseSync =
  */
 export const ResponseSync_atomic: ResponseSync =
     ResponseSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseSync_atomic */
 
-/* START_OF_SYMBOL_DEFINITION atomic */
 /**
  * @summary atomic
  * @constant
@@ -115,21 +98,12 @@ export const ResponseSync_atomic: ResponseSync =
  */
 export const atomic: ResponseSync =
     ResponseSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION atomic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseSync */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseSync */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseSync */
 export const _decode_ResponseSync = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseSync */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseSync */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseSync */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseSync */
 export const _encode_ResponseSync = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseSync */
 
 /* eslint-enable */

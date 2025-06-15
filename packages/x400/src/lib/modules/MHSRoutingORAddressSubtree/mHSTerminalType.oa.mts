@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSTerminalTypeAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalTypeAttribute.oa.mjs';
 import { id_oc_mhs_terminal_type } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-terminal-type.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSTerminalType */
 /**
  * @summary mHSTerminalType
  * @description
@@ -50,6 +49,5 @@ export const mHSTerminalType: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_terminal_type /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSTerminalType */
 
 /* eslint-enable */

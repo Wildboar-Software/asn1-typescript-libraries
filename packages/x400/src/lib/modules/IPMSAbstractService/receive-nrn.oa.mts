@@ -23,7 +23,6 @@ import {
     _encode_receive_nrn_ArgumentType,
 } from '../IPMSAbstractService/receive-nrn-ArgumentType.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION receive_nrn */
 /**
  * @summary receive_nrn
  * @description
@@ -60,6 +59,5 @@ export const receive_nrn: ABSTRACT_OPERATION<receive_nrn_ArgumentType> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION receive_nrn */
 
 /* eslint-enable */

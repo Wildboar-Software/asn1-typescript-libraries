@@ -15,7 +15,7 @@ import {
   _decode_LastReq_Item,
   _encode_LastReq_Item,
 } from '../KerberosV5Spec2/LastReq-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LastReq */
+
 /**
  * @summary LastReq
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type LastReq = LastReq_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION LastReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastReq */
+
 let _cached_decoder_for_LastReq: $.ASN1Decoder<LastReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastReq */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LastReq
  * @function
@@ -51,13 +49,11 @@ export function _decode_LastReq(el: _Element) {
   }
   return _cached_decoder_for_LastReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LastReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastReq */
+
 let _cached_encoder_for_LastReq: $.ASN1Encoder<LastReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastReq */
+
 /**
  * @summary Encodes a(n) LastReq into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_LastReq(
   return _cached_encoder_for_LastReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastReq */
 
 /* eslint-enable */

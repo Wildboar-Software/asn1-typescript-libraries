@@ -16,7 +16,7 @@ import {
   _decode_Pathname,
   _encode_Pathname,
 } from '../ISO8571-FTAM/Pathname.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Operation_Result */
+
 /**
  * @summary Operation_Result
  * @description
@@ -33,13 +33,11 @@ import {
 export type Operation_Result =
   | { success_Object_count: INTEGER } /* CHOICE_ALT_ROOT */
   | { success_Object_names: Pathname[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Operation_Result */
+
 let _cached_decoder_for_Operation_Result: $.ASN1Decoder<Operation_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Operation_Result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Operation_Result
  * @function
@@ -66,13 +64,11 @@ export function _decode_Operation_Result(el: _Element) {
   }
   return _cached_decoder_for_Operation_Result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Operation_Result */
+
 let _cached_encoder_for_Operation_Result: $.ASN1Encoder<Operation_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Operation_Result */
+
 /**
  * @summary Encodes a(n) Operation_Result into an ASN.1 Element.
  * @function
@@ -113,6 +109,5 @@ export function _encode_Operation_Result(
   return _cached_encoder_for_Operation_Result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Operation_Result */
 
 /* eslint-enable */

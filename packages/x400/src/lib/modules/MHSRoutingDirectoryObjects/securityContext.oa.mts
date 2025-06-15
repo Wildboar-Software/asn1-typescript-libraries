@@ -22,7 +22,6 @@ import {
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
 import { id_at_security_context } from '../MHSRoutingObjectIdentifiers/id-at-security-context.va.mjs';
-/* START_OF_SYMBOL_DEFINITION securityContext */
 /**
  * @summary securityContext
  * @description
@@ -58,6 +57,5 @@ export const securityContext: ATTRIBUTE<SecurityContext> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION securityContext */
 
 /* eslint-enable */

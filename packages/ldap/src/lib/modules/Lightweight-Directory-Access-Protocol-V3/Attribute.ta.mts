@@ -15,7 +15,7 @@ import {
   _decode_PartialAttribute,
   _encode_PartialAttribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Attribute */
+
 /**
  * @summary Attribute
  * @description
@@ -30,9 +30,8 @@ import {
  * ```
  */
 export type Attribute = PartialAttribute; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute
  * @function
@@ -42,9 +41,8 @@ export type Attribute = PartialAttribute; // DefinedType
 export function _decode_Attribute(el: _Element) {
   return _decode_PartialAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attribute */
+
 /**
  * @summary Encodes a(n) Attribute into an ASN.1 Element.
  * @function
@@ -59,6 +57,5 @@ export function _encode_Attribute(
   return _encode_PartialAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attribute */
 
 /* eslint-enable */

@@ -27,7 +27,6 @@ import { mhs_deliverable_classes } from '../MHSDirectoryObjectsAndAttributes/mhs
 import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.mjs';
 import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.mjs';
 import { id_oc_mhs_user_agent } from '../MHSObjectIdentifiers/id-oc-mhs-user-agent.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_user_agent */
 /**
  * @summary mhs_user_agent
  * @description
@@ -69,6 +68,5 @@ export const mhs_user_agent: OBJECT_CLASS = {
     '&id': id_oc_mhs_user_agent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_user_agent */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_PremisesAddress,
     _encode_PremisesAddress,
 } from '../X790ASN1Module/PremisesAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PersonLocation */
+
 /**
  * @summary PersonLocation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type PersonLocation = PremisesAddress; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PersonLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonLocation */
+
 let _cached_decoder_for_PersonLocation: $.ASN1Decoder<PersonLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonLocation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PersonLocation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PersonLocation
  * @function
@@ -46,13 +44,11 @@ export function _decode_PersonLocation(el: _Element) {
     }
     return _cached_decoder_for_PersonLocation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PersonLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonLocation */
+
 let _cached_encoder_for_PersonLocation: $.ASN1Encoder<PersonLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonLocation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PersonLocation */
+
 /**
  * @summary Encodes a(n) PersonLocation into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_PersonLocation(
     return _cached_encoder_for_PersonLocation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PersonLocation */
 
 /* eslint-enable */

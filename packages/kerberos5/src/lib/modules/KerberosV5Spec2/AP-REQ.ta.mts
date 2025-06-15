@@ -26,7 +26,7 @@ import {
   _decode_EncryptedData,
   _encode_EncryptedData,
 } from '../KerberosV5Spec2/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AP_REQ */
+
 /**
  * @summary AP_REQ
  * @description
@@ -101,9 +101,8 @@ export class AP_REQ {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AP_REQ */
+
 /**
  * @summary The Leading Root Component Types of AP_REQ
  * @description
@@ -149,9 +148,8 @@ export const _root_component_type_list_1_spec_for_AP_REQ: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AP_REQ */
+
 /**
  * @summary The Trailing Root Component Types of AP_REQ
  * @description
@@ -161,9 +159,8 @@ export const _root_component_type_list_1_spec_for_AP_REQ: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AP_REQ: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AP_REQ */
+
 /**
  * @summary The Extension Addition Component Types of AP_REQ
  * @description
@@ -173,13 +170,11 @@ export const _root_component_type_list_2_spec_for_AP_REQ: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_AP_REQ: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_REQ */
+
 let _cached_decoder_for_AP_REQ: $.ASN1Decoder<AP_REQ> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AP_REQ */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AP_REQ
  * @function
@@ -230,13 +225,11 @@ export function _decode_AP_REQ(el: _Element) {
   }
   return _cached_decoder_for_AP_REQ(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_REQ */
+
 let _cached_encoder_for_AP_REQ: $.ASN1Encoder<AP_REQ> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_REQ */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AP_REQ */
+
 /**
  * @summary Encodes a(n) AP_REQ into an ASN.1 Element.
  * @function
@@ -295,6 +288,5 @@ export function _encode_AP_REQ(value: AP_REQ, elGetter: $.ASN1Encoder<AP_REQ>) {
   return _cached_encoder_for_AP_REQ(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AP_REQ */
 
 /* eslint-enable */

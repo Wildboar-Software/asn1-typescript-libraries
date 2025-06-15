@@ -29,7 +29,6 @@ import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mj
 import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.mjs';
 import { id_aa_ipm_auto_discard } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-discard.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_discard */
 /**
  * @summary ipm_auto_discard
  * @description
@@ -74,6 +73,5 @@ export const ipm_auto_discard: AUTO_ACTION<IPMAutoDiscardRegistrationParameter> 
     '&id': id_aa_ipm_auto_discard /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_discard */
 
 /* eslint-enable */

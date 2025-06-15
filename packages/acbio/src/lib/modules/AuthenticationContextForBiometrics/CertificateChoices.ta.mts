@@ -25,7 +25,7 @@ import {
     _decode_OtherCertificateFormat,
     _encode_OtherCertificateFormat,
 } from '../AuthenticationContextForBiometrics/OtherCertificateFormat.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertificateChoices */
+
 /**
  * @summary CertificateChoices
  * @description
@@ -43,13 +43,11 @@ export type CertificateChoices =
     | { certificate: Certificate } /* CHOICE_ALT_ROOT */
     | { v2AttrCert: AttributeCertificateV2 } /* CHOICE_ALT_ROOT */
     | { other: OtherCertificateFormat } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CertificateChoices */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateChoices */
+
 let _cached_decoder_for_CertificateChoices: $.ASN1Decoder<CertificateChoices> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateChoices */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateChoices */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateChoices
  * @function
@@ -78,13 +76,11 @@ export function _decode_CertificateChoices(el: _Element) {
     }
     return _cached_decoder_for_CertificateChoices(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateChoices */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateChoices */
+
 let _cached_encoder_for_CertificateChoices: $.ASN1Encoder<CertificateChoices> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateChoices */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateChoices */
+
 /**
  * @summary Encodes a(n) CertificateChoices into an ASN.1 Element.
  * @function
@@ -119,6 +115,5 @@ export function _encode_CertificateChoices(
     return _cached_encoder_for_CertificateChoices(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateChoices */
 
 /* eslint-enable */

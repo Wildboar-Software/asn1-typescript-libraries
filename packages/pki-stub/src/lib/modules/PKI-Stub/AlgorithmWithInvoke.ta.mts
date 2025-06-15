@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AlgorithmWithInvoke */
 /**
  * @summary AlgorithmWithInvoke
  * @description
@@ -81,9 +80,7 @@ export class AlgorithmWithInvoke {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AlgorithmWithInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmWithInvoke */
 /**
  * @summary The Leading Root Component Types of AlgorithmWithInvoke
  * @description
@@ -116,9 +113,7 @@ export const _root_component_type_list_1_spec_for_AlgorithmWithInvoke: $.Compone
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmWithInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmWithInvoke */
 /**
  * @summary The Trailing Root Component Types of AlgorithmWithInvoke
  * @description
@@ -129,9 +124,7 @@ export const _root_component_type_list_1_spec_for_AlgorithmWithInvoke: $.Compone
  */
 export const _root_component_type_list_2_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmWithInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmWithInvoke */
 /**
  * @summary The Extension Addition Component Types of AlgorithmWithInvoke
  * @description
@@ -142,9 +135,7 @@ export const _root_component_type_list_2_spec_for_AlgorithmWithInvoke: $.Compone
  */
 export const _extension_additions_list_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmWithInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgorithmWithInvoke */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmWithInvoke
  * @function
@@ -192,9 +183,7 @@ export function _decode_AlgorithmWithInvoke(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgorithmWithInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgorithmWithInvoke */
 /**
  * @summary Encodes a(n) AlgorithmWithInvoke into an ASN.1 Element.
  * @function
@@ -236,6 +225,5 @@ export function _encode_AlgorithmWithInvoke(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgorithmWithInvoke */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION underlayingResourceUnavailable */
+
 /**
  * @summary underlayingResourceUnavailable
  * @description
@@ -30,6 +30,5 @@ import {
 export const underlayingResourceUnavailable: ProbableCause = {
     localValue: 166,
 };
-/* END_OF_SYMBOL_DEFINITION underlayingResourceUnavailable */
 
 /* eslint-enable */

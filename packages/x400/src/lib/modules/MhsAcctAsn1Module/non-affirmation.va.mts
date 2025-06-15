@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION non_affirmation */
 /**
  * @summary non_affirmation
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const non_affirmation: EventTypeId = { localForm: 20 };
-/* END_OF_SYMBOL_DEFINITION non_affirmation */
 
 /* eslint-enable */

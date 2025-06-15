@@ -19,7 +19,6 @@ import {
     _decode_EnforcementAction,
     _encode_EnforcementAction,
 } from '../AccessControl-ASN1Module/EnforcementAction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION denyAll */
 /**
  * @summary denyAll
  * @description
@@ -44,6 +43,5 @@ export const denyAll: DefaultAccess = DefaultAccess._from_object({
     multipleObjectSelection: undefined,
     filter: undefined,
 });
-/* END_OF_SYMBOL_DEFINITION denyAll */
 
 /* eslint-enable */

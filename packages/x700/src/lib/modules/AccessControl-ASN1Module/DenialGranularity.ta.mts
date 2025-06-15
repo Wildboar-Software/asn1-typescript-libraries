@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DenialGranularity */
 /**
  * @summary DenialGranularity
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_DenialGranularity {
     object = 1,
     attribute = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DenialGranularity */
 
-/* START_OF_SYMBOL_DEFINITION DenialGranularity */
 /**
  * @summary DenialGranularity
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_DenialGranularity {
  * ```@enum {number}
  */
 export type DenialGranularity = _enum_for_DenialGranularity;
-/* END_OF_SYMBOL_DEFINITION DenialGranularity */
 
-/* START_OF_SYMBOL_DEFINITION DenialGranularity */
 /**
  * @summary DenialGranularity
  * @description
@@ -55,9 +50,7 @@ export type DenialGranularity = _enum_for_DenialGranularity;
  * ```@enum {number}
  */
 export const DenialGranularity = _enum_for_DenialGranularity;
-/* END_OF_SYMBOL_DEFINITION DenialGranularity */
 
-/* START_OF_SYMBOL_DEFINITION DenialGranularity_request */
 /**
  * @summary DenialGranularity_request
  * @constant
@@ -65,9 +58,7 @@ export const DenialGranularity = _enum_for_DenialGranularity;
  */
 export const DenialGranularity_request: DenialGranularity =
     DenialGranularity.request; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialGranularity_request */
 
-/* START_OF_SYMBOL_DEFINITION request */
 /**
  * @summary request
  * @constant
@@ -75,9 +66,7 @@ export const DenialGranularity_request: DenialGranularity =
  */
 export const request: DenialGranularity =
     DenialGranularity.request; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION request */
 
-/* START_OF_SYMBOL_DEFINITION DenialGranularity_object */
 /**
  * @summary DenialGranularity_object
  * @constant
@@ -85,9 +74,7 @@ export const request: DenialGranularity =
  */
 export const DenialGranularity_object: DenialGranularity =
     DenialGranularity.object; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialGranularity_object */
 
-/* START_OF_SYMBOL_DEFINITION object */
 /**
  * @summary object
  * @constant
@@ -95,9 +82,7 @@ export const DenialGranularity_object: DenialGranularity =
  */
 export const object: DenialGranularity =
     DenialGranularity.object; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION object */
 
-/* START_OF_SYMBOL_DEFINITION DenialGranularity_attribute */
 /**
  * @summary DenialGranularity_attribute
  * @constant
@@ -105,9 +90,7 @@ export const object: DenialGranularity =
  */
 export const DenialGranularity_attribute: DenialGranularity =
     DenialGranularity.attribute; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialGranularity_attribute */
 
-/* START_OF_SYMBOL_DEFINITION attribute */
 /**
  * @summary attribute
  * @constant
@@ -115,21 +98,12 @@ export const DenialGranularity_attribute: DenialGranularity =
  */
 export const attribute: DenialGranularity =
     DenialGranularity.attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialGranularity */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialGranularity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DenialGranularity */
 export const _decode_DenialGranularity = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_DenialGranularity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialGranularity */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialGranularity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DenialGranularity */
 export const _encode_DenialGranularity = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DenialGranularity */
 
 /* eslint-enable */

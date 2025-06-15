@@ -21,7 +21,6 @@ import {
     _decode_OsiRes,
     _encode_OsiRes,
 } from "../OSIProtocolSpecification/OsiRes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiDirectoryOperation */
 /**
  * @summary OsiDirectoryOperation
  * @description
@@ -41,13 +40,9 @@ export type OsiDirectoryOperation =
     | { result: OsiRes } /* CHOICE_ALT_ROOT */
     | { error: OsiErr } /* CHOICE_ALT_ROOT */
     | { reject: OsiRej } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OsiDirectoryOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiDirectoryOperation */
 let _cached_decoder_for_OsiDirectoryOperation: $.ASN1Decoder<OsiDirectoryOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiDirectoryOperation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiDirectoryOperation */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiDirectoryOperation
  * @function
@@ -67,13 +62,9 @@ export function _decode_OsiDirectoryOperation(el: _Element) {
     }
     return _cached_decoder_for_OsiDirectoryOperation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiDirectoryOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiDirectoryOperation */
 let _cached_encoder_for_OsiDirectoryOperation: $.ASN1Encoder<OsiDirectoryOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiDirectoryOperation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiDirectoryOperation */
 /**
  * @summary Encodes a(n) OsiDirectoryOperation into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_OsiDirectoryOperation(
     return _cached_encoder_for_OsiDirectoryOperation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiDirectoryOperation */
 
 /* eslint-enable */

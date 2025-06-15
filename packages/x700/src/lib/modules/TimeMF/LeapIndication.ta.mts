@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_LeapIndication */
 /**
  * @summary LeapIndication
  * @description
@@ -30,9 +29,7 @@ export enum _enum_for_LeapIndication {
     minuteHas59Seconds = 2,
     alarmCondition = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_LeapIndication */
 
-/* START_OF_SYMBOL_DEFINITION LeapIndication */
 /**
  * @summary LeapIndication
  * @description
@@ -46,9 +43,7 @@ export enum _enum_for_LeapIndication {
  * ```@enum {number}
  */
 export type LeapIndication = _enum_for_LeapIndication;
-/* END_OF_SYMBOL_DEFINITION LeapIndication */
 
-/* START_OF_SYMBOL_DEFINITION LeapIndication */
 /**
  * @summary LeapIndication
  * @description
@@ -62,9 +57,7 @@ export type LeapIndication = _enum_for_LeapIndication;
  * ```@enum {number}
  */
 export const LeapIndication = _enum_for_LeapIndication;
-/* END_OF_SYMBOL_DEFINITION LeapIndication */
 
-/* START_OF_SYMBOL_DEFINITION LeapIndication_noWarning */
 /**
  * @summary LeapIndication_noWarning
  * @constant
@@ -72,9 +65,7 @@ export const LeapIndication = _enum_for_LeapIndication;
  */
 export const LeapIndication_noWarning: LeapIndication =
     LeapIndication.noWarning; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LeapIndication_noWarning */
 
-/* START_OF_SYMBOL_DEFINITION noWarning */
 /**
  * @summary noWarning
  * @constant
@@ -82,9 +73,7 @@ export const LeapIndication_noWarning: LeapIndication =
  */
 export const noWarning: LeapIndication =
     LeapIndication.noWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noWarning */
 
-/* START_OF_SYMBOL_DEFINITION LeapIndication_minuteHas61Seconds */
 /**
  * @summary LeapIndication_minuteHas61Seconds
  * @constant
@@ -92,9 +81,7 @@ export const noWarning: LeapIndication =
  */
 export const LeapIndication_minuteHas61Seconds: LeapIndication =
     LeapIndication.minuteHas61Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LeapIndication_minuteHas61Seconds */
 
-/* START_OF_SYMBOL_DEFINITION minuteHas61Seconds */
 /**
  * @summary minuteHas61Seconds
  * @constant
@@ -102,9 +89,7 @@ export const LeapIndication_minuteHas61Seconds: LeapIndication =
  */
 export const minuteHas61Seconds: LeapIndication =
     LeapIndication.minuteHas61Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION minuteHas61Seconds */
 
-/* START_OF_SYMBOL_DEFINITION LeapIndication_minuteHas59Seconds */
 /**
  * @summary LeapIndication_minuteHas59Seconds
  * @constant
@@ -112,9 +97,7 @@ export const minuteHas61Seconds: LeapIndication =
  */
 export const LeapIndication_minuteHas59Seconds: LeapIndication =
     LeapIndication.minuteHas59Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LeapIndication_minuteHas59Seconds */
 
-/* START_OF_SYMBOL_DEFINITION minuteHas59Seconds */
 /**
  * @summary minuteHas59Seconds
  * @constant
@@ -122,9 +105,7 @@ export const LeapIndication_minuteHas59Seconds: LeapIndication =
  */
 export const minuteHas59Seconds: LeapIndication =
     LeapIndication.minuteHas59Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION minuteHas59Seconds */
 
-/* START_OF_SYMBOL_DEFINITION LeapIndication_alarmCondition */
 /**
  * @summary LeapIndication_alarmCondition
  * @constant
@@ -132,9 +113,7 @@ export const minuteHas59Seconds: LeapIndication =
  */
 export const LeapIndication_alarmCondition: LeapIndication =
     LeapIndication.alarmCondition; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LeapIndication_alarmCondition */
 
-/* START_OF_SYMBOL_DEFINITION alarmCondition */
 /**
  * @summary alarmCondition
  * @constant
@@ -142,21 +121,12 @@ export const LeapIndication_alarmCondition: LeapIndication =
  */
 export const alarmCondition: LeapIndication =
     LeapIndication.alarmCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION alarmCondition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LeapIndication */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LeapIndication */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LeapIndication */
 export const _decode_LeapIndication = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_LeapIndication */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LeapIndication */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LeapIndication */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LeapIndication */
 export const _encode_LeapIndication = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LeapIndication */
 
 /* eslint-enable */

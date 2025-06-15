@@ -20,7 +20,7 @@ import {
     _decode_PremisesAddress,
     _encode_PremisesAddress,
 } from '../X790ASN1Module/PremisesAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceLocationList_Item */
+
 /**
  * @summary ServiceLocationList_Item
  * @description
@@ -79,9 +79,8 @@ export class ServiceLocationList_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceLocationList_Item */
+
 /**
  * @summary The Leading Root Component Types of ServiceLocationList_Item
  * @description
@@ -106,9 +105,8 @@ export const _root_component_type_list_1_spec_for_ServiceLocationList_Item: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceLocationList_Item */
+
 /**
  * @summary The Trailing Root Component Types of ServiceLocationList_Item
  * @description
@@ -118,9 +116,8 @@ export const _root_component_type_list_1_spec_for_ServiceLocationList_Item: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceLocationList_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceLocationList_Item */
+
 /**
  * @summary The Extension Addition Component Types of ServiceLocationList_Item
  * @description
@@ -130,13 +127,11 @@ export const _root_component_type_list_2_spec_for_ServiceLocationList_Item: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceLocationList_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceLocationList_Item */
+
 let _cached_decoder_for_ServiceLocationList_Item: $.ASN1Decoder<ServiceLocationList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceLocationList_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceLocationList_Item
  * @function
@@ -171,13 +166,11 @@ export function _decode_ServiceLocationList_Item(el: _Element) {
     }
     return _cached_decoder_for_ServiceLocationList_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceLocationList_Item */
+
 let _cached_encoder_for_ServiceLocationList_Item: $.ASN1Encoder<ServiceLocationList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceLocationList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceLocationList_Item */
+
 /**
  * @summary Encodes a(n) ServiceLocationList_Item into an ASN.1 Element.
  * @function
@@ -217,6 +210,5 @@ export function _encode_ServiceLocationList_Item(
     return _cached_encoder_for_ServiceLocationList_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceLocationList_Item */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
 } from '../Pbact-access/DeleteResult.ta.mjs';
 import { id_deleteResult } from '../Pbact-access/id-deleteResult.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION deleteResult */
+
 /**
  * @summary deleteResult
  * @description
@@ -44,6 +44,5 @@ export const deleteResult: CONTENT_TYPE<DeleteResult> = {
     '&id': id_deleteResult /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION deleteResult */
 
 /* eslint-enable */

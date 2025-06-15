@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AppliedPatches */
 /**
  * @summary AppliedPatches
  * @description
@@ -23,13 +22,9 @@ import { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta.mjs';
  * ```
  */
 export type AppliedPatches = Patch[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AppliedPatches */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AppliedPatches */
 let _cached_decoder_for_AppliedPatches: $.ASN1Decoder<AppliedPatches> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AppliedPatches */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AppliedPatches */
 /**
  * @summary Decodes an ASN.1 element into a(n) AppliedPatches
  * @function
@@ -44,13 +39,9 @@ export function _decode_AppliedPatches(el: _Element) {
     }
     return _cached_decoder_for_AppliedPatches(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AppliedPatches */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AppliedPatches */
 let _cached_encoder_for_AppliedPatches: $.ASN1Encoder<AppliedPatches> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AppliedPatches */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AppliedPatches */
 /**
  * @summary Encodes a(n) AppliedPatches into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_AppliedPatches(
     return _cached_encoder_for_AppliedPatches(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AppliedPatches */
 
 /* eslint-enable */

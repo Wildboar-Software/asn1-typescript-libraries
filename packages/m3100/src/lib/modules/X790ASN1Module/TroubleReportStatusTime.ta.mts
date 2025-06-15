@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TroubleReportStatusTime */
+
 /**
  * @summary TroubleReportStatusTime
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TroubleReportStatusTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION TroubleReportStatusTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatusTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatusTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportStatusTime */
+
+
 export const _decode_TroubleReportStatusTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportStatusTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatusTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatusTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportStatusTime */
+
+
 export const _encode_TroubleReportStatusTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportStatusTime */
 
 /* eslint-enable */

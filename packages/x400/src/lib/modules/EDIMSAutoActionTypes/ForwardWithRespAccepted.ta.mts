@@ -21,7 +21,6 @@ import {
     _decode_NextRecipientFields,
     _encode_NextRecipientFields,
 } from '../EDIMSAutoActionTypes/NextRecipientFields.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardWithRespAccepted */
 /**
  * @summary ForwardWithRespAccepted
  * @description
@@ -77,9 +76,7 @@ export class ForwardWithRespAccepted {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardWithRespAccepted */
 /**
  * @summary The Leading Root Component Types of ForwardWithRespAccepted
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_ForwardWithRespAccepted: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardWithRespAccepted */
 /**
  * @summary The Trailing Root Component Types of ForwardWithRespAccepted
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_ForwardWithRespAccepted: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ForwardWithRespAccepted: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardWithRespAccepted */
 /**
  * @summary The Extension Addition Component Types of ForwardWithRespAccepted
  * @description
@@ -128,13 +121,9 @@ export const _root_component_type_list_2_spec_for_ForwardWithRespAccepted: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_ForwardWithRespAccepted: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardWithRespAccepted */
 let _cached_decoder_for_ForwardWithRespAccepted: $.ASN1Decoder<ForwardWithRespAccepted> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardWithRespAccepted */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardWithRespAccepted
  * @function
@@ -184,13 +173,9 @@ export function _decode_ForwardWithRespAccepted(el: _Element) {
     }
     return _cached_decoder_for_ForwardWithRespAccepted(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardWithRespAccepted */
 let _cached_encoder_for_ForwardWithRespAccepted: $.ASN1Encoder<ForwardWithRespAccepted> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardWithRespAccepted */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardWithRespAccepted */
 /**
  * @summary Encodes a(n) ForwardWithRespAccepted into an ASN.1 Element.
  * @function
@@ -236,6 +221,5 @@ export function _encode_ForwardWithRespAccepted(
     return _cached_encoder_for_ForwardWithRespAccepted(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardWithRespAccepted */
 
 /* eslint-enable */

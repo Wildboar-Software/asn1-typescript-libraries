@@ -5,7 +5,6 @@ import {
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
 } from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION unformatted_postal_address */
 /**
  * @summary unformatted_postal_address
  * @description
@@ -33,6 +32,5 @@ export const unformatted_postal_address: EXTENSION_ATTRIBUTE<UnformattedPostalAd
     "&id": 16 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION unformatted_postal_address */
 
 /* eslint-enable */

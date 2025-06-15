@@ -16,7 +16,6 @@ import {
     _encode_VoiceData,
 } from '../IPMSExtendedVoiceBodyPartType/VoiceData.ta.mjs';
 import { id_et_voice } from '../IPMSObjectIdentifiers/id-et-voice.va.mjs';
-/* START_OF_SYMBOL_DEFINITION voice_body_part_data */
 /**
  * @summary voice_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const voice_body_part_data: TYPE_IDENTIFIER<VoiceData> = {
     '&id': id_et_voice /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION voice_body_part_data */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_PartialAttribute,
   _encode_PartialAttribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModifyRequest_changes_change */
+
 /**
  * @summary ModifyRequest_changes_change
  * @description
@@ -88,9 +88,8 @@ export class ModifyRequest_changes_change {
 
   public static _enum_for_operation = _enum_for_ModifyRequest_changes_change_operation;
 }
-/* END_OF_SYMBOL_DEFINITION ModifyRequest_changes_change */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyRequest_changes_change */
+
 /**
  * @summary The Leading Root Component Types of ModifyRequest_changes_change
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_ModifyRequest_changes_change: 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyRequest_changes_change */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyRequest_changes_change */
+
 /**
  * @summary The Trailing Root Component Types of ModifyRequest_changes_change
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_ModifyRequest_changes_change: 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyRequest_changes_change: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyRequest_changes_change */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyRequest_changes_change */
+
 /**
  * @summary The Extension Addition Component Types of ModifyRequest_changes_change
  * @description
@@ -139,9 +136,8 @@ export const _root_component_type_list_2_spec_for_ModifyRequest_changes_change: 
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyRequest_changes_change: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyRequest_changes_change */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyRequest_changes_change */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyRequest_changes_change
  * @function
@@ -169,9 +165,8 @@ export function _decode_ModifyRequest_changes_change(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyRequest_changes_change */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyRequest_changes_change */
+
 /**
  * @summary Encodes a(n) ModifyRequest_changes_change into an ASN.1 Element.
  * @function
@@ -189,6 +184,5 @@ export function _encode_ModifyRequest_changes_change(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyRequest_changes_change */
 
 /* eslint-enable */

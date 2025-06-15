@@ -17,7 +17,7 @@ import {
   _decode_AnyType_nillable_content,
   _encode_AnyType_nillable_content,
 } from '../XSD/AnyType-nillable-content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AnyType_nillable */
+
 /**
  * @summary AnyType_nillable
  * @description
@@ -83,9 +83,8 @@ export class AnyType_nillable {
     return new AnyType_nillable(_o.embed_values, _o.attr, _o.content);
   }
 }
-/* END_OF_SYMBOL_DEFINITION AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AnyType_nillable */
+
 /**
  * @summary The Leading Root Component Types of AnyType_nillable
  * @description
@@ -117,9 +116,8 @@ export const _root_component_type_list_1_spec_for_AnyType_nillable: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AnyType_nillable */
+
 /**
  * @summary The Trailing Root Component Types of AnyType_nillable
  * @description
@@ -129,9 +127,8 @@ export const _root_component_type_list_1_spec_for_AnyType_nillable: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AnyType_nillable: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AnyType_nillable */
+
 /**
  * @summary The Extension Addition Component Types of AnyType_nillable
  * @description
@@ -141,13 +138,11 @@ export const _root_component_type_list_2_spec_for_AnyType_nillable: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_AnyType_nillable: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyType_nillable */
+
 let _cached_decoder_for_AnyType_nillable: $.ASN1Decoder<AnyType_nillable> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AnyType_nillable */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AnyType_nillable
  * @function
@@ -194,13 +189,11 @@ export function _decode_AnyType_nillable(el: _Element) {
   }
   return _cached_decoder_for_AnyType_nillable(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyType_nillable */
+
 let _cached_encoder_for_AnyType_nillable: $.ASN1Encoder<AnyType_nillable> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyType_nillable */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AnyType_nillable */
+
 /**
  * @summary Encodes a(n) AnyType_nillable into an ASN.1 Element.
  * @function
@@ -238,6 +231,5 @@ export function _encode_AnyType_nillable(
   return _cached_encoder_for_AnyType_nillable(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AnyType_nillable */
 
 /* eslint-enable */

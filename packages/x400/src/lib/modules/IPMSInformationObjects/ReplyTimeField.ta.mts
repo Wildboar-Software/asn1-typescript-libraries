@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyTimeField */
 /**
  * @summary ReplyTimeField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReplyTimeField = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReplyTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyTimeField */
 let _cached_decoder_for_ReplyTimeField: $.ASN1Decoder<ReplyTimeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyTimeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyTimeField
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReplyTimeField(el: _Element) {
     }
     return _cached_decoder_for_ReplyTimeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyTimeField */
 let _cached_encoder_for_ReplyTimeField: $.ASN1Encoder<ReplyTimeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyTimeField */
 /**
  * @summary Encodes a(n) ReplyTimeField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReplyTimeField(
     return _cached_encoder_for_ReplyTimeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyTimeField */
 
 /* eslint-enable */

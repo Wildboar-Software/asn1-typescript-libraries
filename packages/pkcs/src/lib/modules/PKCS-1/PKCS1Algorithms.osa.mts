@@ -14,7 +14,7 @@ import { PKCS1Algorithms_Union8_Intersection0_Element } from "../PKCS-1/PKCS1Alg
 import { PKCS1Algorithms_Union9_Intersection0_Element } from "../PKCS-1/PKCS1Algorithms-Union9-Intersection0-Element.oa.mjs";
 import { PKCS1PSourceAlgorithms } from "../PKCS-1/PKCS1PSourceAlgorithms.osa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCS1Algorithms */
+
 /**
  * @summary PKCS1Algorithms
  * @description
@@ -59,6 +59,5 @@ export const PKCS1Algorithms: ALGORITHM_IDENTIFIER<any>[] = [
     ...PKCS1PSourceAlgorithms,
     PKCS1Algorithms_Union12_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION PKCS1Algorithms */
 
 /* eslint-enable */

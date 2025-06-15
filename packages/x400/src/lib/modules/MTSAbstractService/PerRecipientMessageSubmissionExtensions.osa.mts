@@ -27,7 +27,6 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
 import { originator_requested_alternate_recipient } from "../MTSAbstractService/originator-requested-alternate-recipient.oa.mjs";
 import { physical_forwarding_prohibited } from "../MTSAbstractService/physical-forwarding-prohibited.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PerRecipientMessageSubmissionExtensions */
 /**
  * @summary PerRecipientMessageSubmissionExtensions
  * @description
@@ -68,6 +67,5 @@ export const PerRecipientMessageSubmissionExtensions: EXTENSION[] = [
     ...IPMPerRecipientEnvelopeExtensions,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerRecipientMessageSubmissionExtensions */
 
 /* eslint-enable */

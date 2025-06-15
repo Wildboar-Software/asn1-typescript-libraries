@@ -15,7 +15,6 @@ import {
   _decode_ASOI_tag_Item,
   _encode_ASOI_tag_Item,
 } from '../ACSE-1/ASOI-tag-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ASOI_tag */
 /**
  * @summary ASOI_tag
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type ASOI_tag = ASOI_tag_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ASOI_tag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASOI_tag */
 let _cached_decoder_for_ASOI_tag: $.ASN1Decoder<ASOI_tag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASOI_tag */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ASOI_tag */
 /**
  * @summary Decodes an ASN.1 element into a(n) ASOI_tag
  * @function
@@ -51,13 +46,9 @@ export function _decode_ASOI_tag(el: _Element) {
   }
   return _cached_decoder_for_ASOI_tag(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ASOI_tag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASOI_tag */
 let _cached_encoder_for_ASOI_tag: $.ASN1Encoder<ASOI_tag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASOI_tag */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ASOI_tag */
 /**
  * @summary Encodes a(n) ASOI_tag into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_ASOI_tag(
   return _cached_encoder_for_ASOI_tag(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ASOI_tag */
 
 /* eslint-enable */

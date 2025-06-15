@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfile/ComponentIdentifier.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
 import { Properties, _decode_Properties, _encode_Properties } from "../PlatformCertificateProfile/Properties.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PlatformConfiguration */
 /**
  * @summary PlatformConfiguration
  * @description
@@ -78,9 +77,7 @@ class PlatformConfiguration {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PlatformConfiguration */
 /**
  * @summary The Leading Root Component Types of PlatformConfiguration
  * @description
@@ -96,9 +93,7 @@ const _root_component_type_list_1_spec_for_PlatformConfiguration: $.ComponentSpe
     new $.ComponentSpec("platformProperties", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
     new $.ComponentSpec("platformPropertiesUri", true, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PlatformConfiguration */
 /**
  * @summary The Trailing Root Component Types of PlatformConfiguration
  * @description
@@ -111,9 +106,7 @@ export
 const _root_component_type_list_2_spec_for_PlatformConfiguration: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PlatformConfiguration */
 /**
  * @summary The Extension Addition Component Types of PlatformConfiguration
  * @description
@@ -126,13 +119,9 @@ export
 const _extension_additions_list_spec_for_PlatformConfiguration: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PlatformConfiguration */
 let _cached_decoder_for_PlatformConfiguration: $.ASN1Decoder<PlatformConfiguration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PlatformConfiguration */
 /**
  * @summary Decodes an ASN.1 element into a(n) PlatformConfiguration
  * @function
@@ -171,13 +160,9 @@ function _decode_PlatformConfiguration (el: _Element) {
 }; }
     return _cached_decoder_for_PlatformConfiguration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PlatformConfiguration */
 let _cached_encoder_for_PlatformConfiguration: $.ASN1Encoder<PlatformConfiguration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PlatformConfiguration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PlatformConfiguration */
 /**
  * @summary Encodes a(n) PlatformConfiguration into an ASN.1 Element.
  * @function
@@ -200,6 +185,5 @@ function _encode_PlatformConfiguration (value: PlatformConfiguration, elGetter: 
     return _cached_encoder_for_PlatformConfiguration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PlatformConfiguration */
 
 /* eslint-enable */

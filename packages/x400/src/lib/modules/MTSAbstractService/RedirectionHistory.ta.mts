@@ -15,7 +15,6 @@ import {
     _decode_Redirection,
     _encode_Redirection,
 } from '../MTSAbstractService/Redirection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RedirectionHistory */
 /**
  * @summary RedirectionHistory
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RedirectionHistory = Redirection[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RedirectionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionHistory */
 let _cached_decoder_for_RedirectionHistory: $.ASN1Decoder<RedirectionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RedirectionHistory */
 /**
  * @summary Decodes an ASN.1 element into a(n) RedirectionHistory
  * @function
@@ -48,13 +43,9 @@ export function _decode_RedirectionHistory(el: _Element) {
     }
     return _cached_decoder_for_RedirectionHistory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RedirectionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionHistory */
 let _cached_encoder_for_RedirectionHistory: $.ASN1Encoder<RedirectionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RedirectionHistory */
 /**
  * @summary Encodes a(n) RedirectionHistory into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RedirectionHistory(
     return _cached_encoder_for_RedirectionHistory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RedirectionHistory */
 
 /* eslint-enable */

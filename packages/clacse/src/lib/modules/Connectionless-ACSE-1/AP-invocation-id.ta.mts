@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AP_invocation_id */
+
 /**
  * @summary AP_invocation_id
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AP_invocation_id = INTEGER;
-/* END_OF_SYMBOL_DEFINITION AP_invocation_id */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_invocation_id */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_invocation_id */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AP_invocation_id */
+
+
 export const _decode_AP_invocation_id = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_AP_invocation_id */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_invocation_id */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_invocation_id */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AP_invocation_id */
+
+
 export const _encode_AP_invocation_id = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AP_invocation_id */
 
 /* eslint-enable */

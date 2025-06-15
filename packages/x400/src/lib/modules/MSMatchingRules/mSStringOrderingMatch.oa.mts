@@ -16,7 +16,6 @@ import {
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';
 import { id_mr_msstring_ordering_match } from '../MSObjectIdentifiers/id-mr-msstring-ordering-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mSStringOrderingMatch */
 /**
  * @summary mSStringOrderingMatch
  * @description
@@ -45,6 +44,5 @@ export const mSStringOrderingMatch: MATCHING_RULE<MSString> = {
     '&id': id_mr_msstring_ordering_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mSStringOrderingMatch */
 
 /* eslint-enable */

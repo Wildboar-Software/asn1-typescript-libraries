@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Degree_Of_Overlap */
+
 /**
  * @summary Degree_Of_Overlap
  * @description
@@ -25,67 +25,59 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Degree_Of_Overlap = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Degree_Of_Overlap */
 
-/* START_OF_SYMBOL_DEFINITION Degree_Of_Overlap_normal */
+
 /**
  * @summary Degree_Of_Overlap_normal
  * @constant
  * @type {number}
  */
 export const Degree_Of_Overlap_normal: Degree_Of_Overlap = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Degree_Of_Overlap_normal */
 
-/* START_OF_SYMBOL_DEFINITION normal */
+
 /**
  * @summary Degree_Of_Overlap_normal
  * @constant
  * @type {number}
  */
 export const normal: Degree_Of_Overlap = Degree_Of_Overlap_normal; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION normal */
 
-/* START_OF_SYMBOL_DEFINITION Degree_Of_Overlap_consecutive */
+
 /**
  * @summary Degree_Of_Overlap_consecutive
  * @constant
  * @type {number}
  */
 export const Degree_Of_Overlap_consecutive: Degree_Of_Overlap = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Degree_Of_Overlap_consecutive */
 
-/* START_OF_SYMBOL_DEFINITION consecutive */
+
 /**
  * @summary Degree_Of_Overlap_consecutive
  * @constant
  * @type {number}
  */
 export const consecutive: Degree_Of_Overlap = Degree_Of_Overlap_consecutive; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION consecutive */
 
-/* START_OF_SYMBOL_DEFINITION Degree_Of_Overlap_concurrent */
+
 /**
  * @summary Degree_Of_Overlap_concurrent
  * @constant
  * @type {number}
  */
 export const Degree_Of_Overlap_concurrent: Degree_Of_Overlap = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Degree_Of_Overlap_concurrent */
 
-/* START_OF_SYMBOL_DEFINITION concurrent */
+
 /**
  * @summary Degree_Of_Overlap_concurrent
  * @constant
  * @type {number}
  */
 export const concurrent: Degree_Of_Overlap = Degree_Of_Overlap_concurrent; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION concurrent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Degree_Of_Overlap */
+
 let _cached_decoder_for_Degree_Of_Overlap: $.ASN1Decoder<Degree_Of_Overlap> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Degree_Of_Overlap */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Degree_Of_Overlap */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Degree_Of_Overlap
  * @function
@@ -100,13 +92,11 @@ export function _decode_Degree_Of_Overlap(el: _Element) {
   }
   return _cached_decoder_for_Degree_Of_Overlap(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Degree_Of_Overlap */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Degree_Of_Overlap */
+
 let _cached_encoder_for_Degree_Of_Overlap: $.ASN1Encoder<Degree_Of_Overlap> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Degree_Of_Overlap */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Degree_Of_Overlap */
+
 /**
  * @summary Encodes a(n) Degree_Of_Overlap into an ASN.1 Element.
  * @function
@@ -129,6 +119,5 @@ export function _encode_Degree_Of_Overlap(
   return _cached_encoder_for_Degree_Of_Overlap(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Degree_Of_Overlap */
 
 /* eslint-enable */

@@ -31,7 +31,6 @@ import {
     _decode_TBresponse,
     _encode_TBresponse,
 } from "../TrustBroker/TBresponse.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TBprot */
 /**
  * @summary TBprot
  * @description
@@ -57,13 +56,9 @@ export type TBprot =
     | { tBrequest: TBrequest } /* CHOICE_ALT_ROOT */
     | { tBresponse: TBresponse } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TBprot */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBprot */
 let _cached_decoder_for_TBprot: $.ASN1Decoder<TBprot> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBprot */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBprot */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBprot
  * @function
@@ -109,13 +104,9 @@ export function _decode_TBprot(el: _Element) {
     }
     return _cached_decoder_for_TBprot(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBprot */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBprot */
 let _cached_encoder_for_TBprot: $.ASN1Encoder<TBprot> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBprot */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBprot */
 /**
  * @summary Encodes a(n) TBprot into an ASN.1 Element.
  * @function
@@ -170,6 +161,5 @@ export function _encode_TBprot(value: TBprot, elGetter: $.ASN1Encoder<TBprot>) {
     return _cached_encoder_for_TBprot(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBprot */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_at_enumerated_flag */
 /**
  * @summary id_at_enumerated_flag
  * @description
@@ -29,6 +28,5 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  * @constant
  */
 export const id_at_enumerated_flag: ID = new _OID([4], id_at);
-/* END_OF_SYMBOL_DEFINITION id_at_enumerated_flag */
 
 /* eslint-enable */

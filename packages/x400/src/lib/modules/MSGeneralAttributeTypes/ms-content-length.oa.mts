@@ -23,7 +23,6 @@ import { id_att_content_length } from '../MSObjectIdentifiers/id-att-content-len
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_content_length */
 /**
  * @summary ms_content_length
  * @description
@@ -56,6 +55,5 @@ export const ms_content_length: X413ATTRIBUTE<ContentLength> = {
     '&id': id_att_content_length /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_content_length */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { GeneralizedTime } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_invalidityDate } from "../CertificateExtensions/id-ce-invalidityDate.va.mjs";
-/* START_OF_SYMBOL_DEFINITION invalidityDate */
 /**
  * @summary invalidityDate
  * @description
@@ -31,6 +30,5 @@ export const invalidityDate: EXTENSION<GeneralizedTime> = {
     "&id": id_ce_invalidityDate /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION invalidityDate */
 
 /* eslint-enable */

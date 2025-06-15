@@ -13,7 +13,7 @@ import { _enum_for_ParamOptions, absent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _
 import { id_aes256_wrap } from "../CMSAesRsaesOaep-2009/id-aes256-wrap.va.mjs";
 import { kwa_aes256_wrap_smimeCaps } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap-smimeCaps.oa.mjs";
 import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION kwa_aes256_wrap */
+
 /**
  * @summary kwa_aes256_wrap
  * @description
@@ -46,6 +46,5 @@ const kwa_aes256_wrap: KEY_WRAP = {
     "&smimeCaps": kwa_aes256_wrap_smimeCaps /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kwa_aes256_wrap */
 
 /* eslint-enable */

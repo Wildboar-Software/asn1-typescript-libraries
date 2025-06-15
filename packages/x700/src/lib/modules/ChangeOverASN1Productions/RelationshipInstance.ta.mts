@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelationshipInstance */
 /**
  * @summary RelationshipInstance
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RelationshipInstance = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RelationshipInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelationshipInstance */
 let _cached_decoder_for_RelationshipInstance: $.ASN1Decoder<RelationshipInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelationshipInstance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelationshipInstance */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelationshipInstance
  * @function
@@ -48,13 +43,9 @@ export function _decode_RelationshipInstance(el: _Element) {
     }
     return _cached_decoder_for_RelationshipInstance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelationshipInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelationshipInstance */
 let _cached_encoder_for_RelationshipInstance: $.ASN1Encoder<RelationshipInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelationshipInstance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelationshipInstance */
 /**
  * @summary Encodes a(n) RelationshipInstance into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RelationshipInstance(
     return _cached_encoder_for_RelationshipInstance(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelationshipInstance */
 
 /* eslint-enable */

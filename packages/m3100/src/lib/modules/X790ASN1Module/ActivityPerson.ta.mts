@@ -15,7 +15,7 @@ import {
     _decode_PersonReach,
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActivityPerson */
+
 /**
  * @summary ActivityPerson
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ActivityPerson = PersonReach; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ActivityPerson */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityPerson */
+
 let _cached_decoder_for_ActivityPerson: $.ASN1Decoder<ActivityPerson> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityPerson */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActivityPerson */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActivityPerson
  * @function
@@ -46,13 +44,11 @@ export function _decode_ActivityPerson(el: _Element) {
     }
     return _cached_decoder_for_ActivityPerson(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActivityPerson */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityPerson */
+
 let _cached_encoder_for_ActivityPerson: $.ASN1Encoder<ActivityPerson> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityPerson */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActivityPerson */
+
 /**
  * @summary Encodes a(n) ActivityPerson into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_ActivityPerson(
     return _cached_encoder_for_ActivityPerson(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActivityPerson */
 
 /* eslint-enable */

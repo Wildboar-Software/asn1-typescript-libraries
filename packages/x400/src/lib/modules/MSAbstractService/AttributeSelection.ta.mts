@@ -18,7 +18,6 @@ import {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeSelection */
 /**
  * @summary AttributeSelection
  * @description
@@ -79,9 +78,7 @@ export class AttributeSelection {
         return new AttributeSelection(_o.type_, _o.from_, _o.count);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeSelection */
 /**
  * @summary The Leading Root Component Types of AttributeSelection
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_AttributeSelection: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeSelection */
 /**
  * @summary The Trailing Root Component Types of AttributeSelection
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_AttributeSelection: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeSelection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeSelection */
 /**
  * @summary The Extension Addition Component Types of AttributeSelection
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_AttributeSelection: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeSelection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSelection */
 let _cached_decoder_for_AttributeSelection: $.ASN1Decoder<AttributeSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeSelection */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeSelection
  * @function
@@ -194,13 +183,9 @@ export function _decode_AttributeSelection(el: _Element) {
     }
     return _cached_decoder_for_AttributeSelection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSelection */
 let _cached_encoder_for_AttributeSelection: $.ASN1Encoder<AttributeSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeSelection */
 /**
  * @summary Encodes a(n) AttributeSelection into an ASN.1 Element.
  * @function
@@ -247,6 +232,5 @@ export function _encode_AttributeSelection(
     return _cached_encoder_for_AttributeSelection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeSelection */
 
 /* eslint-enable */

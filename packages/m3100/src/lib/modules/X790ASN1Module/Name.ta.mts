@@ -16,7 +16,7 @@ import {
     _decode_Name_classAndInstance,
     _encode_Name_classAndInstance,
 } from '../X790ASN1Module/Name-classAndInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Name */
+
 /**
  * @summary Name
  * @description
@@ -38,13 +38,11 @@ export type Name =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { classAndInstance: Name_classAndInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Name */
+
 let _cached_decoder_for_Name: $.ASN1Decoder<Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Name
  * @function
@@ -60,13 +58,11 @@ export function _decode_Name(el: _Element) {
     }
     return _cached_decoder_for_Name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Name */
+
 let _cached_encoder_for_Name: $.ASN1Encoder<Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Name */
+
 /**
  * @summary Encodes a(n) Name into an ASN.1 Element.
  * @function
@@ -87,6 +83,5 @@ export function _encode_Name(value: Name, elGetter: $.ASN1Encoder<Name>) {
     return _cached_encoder_for_Name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Name */
 
 /* eslint-enable */

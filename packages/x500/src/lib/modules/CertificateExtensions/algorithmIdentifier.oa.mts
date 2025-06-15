@@ -6,7 +6,6 @@ import {
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION algorithmIdentifier */
 /**
  * @summary algorithmIdentifier
  * @description
@@ -36,6 +35,5 @@ export const algorithmIdentifier: SYNTAX_NAME<AlgorithmIdentifier> = {
     "&id": id_ldx_algorithmIdentifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION algorithmIdentifier */
 
 /* eslint-enable */

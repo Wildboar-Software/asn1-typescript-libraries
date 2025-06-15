@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION dsa_with_sha1 */
+
 /**
  * @summary dsa_with_sha1
  * @description
@@ -23,6 +23,5 @@ export const dsa_with_sha1: OBJECT_IDENTIFIER = new _OID([
     /* x9algorithm */ 4,
     3,
 ]);
-/* END_OF_SYMBOL_DEFINITION dsa_with_sha1 */
 
 /* eslint-enable */

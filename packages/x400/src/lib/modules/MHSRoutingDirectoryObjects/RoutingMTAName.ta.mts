@@ -15,7 +15,6 @@ import {
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
 } from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoutingMTAName */
 /**
  * @summary RoutingMTAName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RoutingMTAName = RoutingCollectiveName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RoutingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingMTAName */
 let _cached_decoder_for_RoutingMTAName: $.ASN1Decoder<RoutingMTAName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoutingMTAName */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoutingMTAName
  * @function
@@ -46,13 +41,9 @@ export function _decode_RoutingMTAName(el: _Element) {
     }
     return _cached_decoder_for_RoutingMTAName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoutingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingMTAName */
 let _cached_encoder_for_RoutingMTAName: $.ASN1Encoder<RoutingMTAName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingMTAName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoutingMTAName */
 /**
  * @summary Encodes a(n) RoutingMTAName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RoutingMTAName(
     return _cached_encoder_for_RoutingMTAName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoutingMTAName */
 
 /* eslint-enable */

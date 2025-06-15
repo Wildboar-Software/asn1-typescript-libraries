@@ -13,7 +13,6 @@ import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { uniqueMember } from "../SelectedAttributeTypes/uniqueMember.oa.mjs";
 import { id_oc_groupOfUniqueNames } from "../SelectedObjectClasses/id-oc-groupOfUniqueNames.va.mjs";
-/* START_OF_SYMBOL_DEFINITION groupOfUniqueNames */
 /**
  * @summary groupOfUniqueNames
  * @description
@@ -60,6 +59,5 @@ export const groupOfUniqueNames: OBJECT_CLASS = {
     "&id": id_oc_groupOfUniqueNames /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION groupOfUniqueNames */
 
 /* eslint-enable */

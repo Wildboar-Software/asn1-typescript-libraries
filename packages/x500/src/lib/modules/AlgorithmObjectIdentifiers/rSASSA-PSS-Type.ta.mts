@@ -11,7 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION rSASSA_PSS_Type */
 /**
  * @summary rSASSA_PSS_Type
  * @description
@@ -87,9 +86,7 @@ export class rSASSA_PSS_Type {
         return 1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_rSASSA_PSS_Type */
 /**
  * @summary The Leading Root Component Types of rSASSA_PSS_Type
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_rSASSA_PSS_Type: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_rSASSA_PSS_Type */
 /**
  * @summary The Trailing Root Component Types of rSASSA_PSS_Type
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_rSASSA_PSS_Type: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_rSASSA_PSS_Type: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_rSASSA_PSS_Type */
 /**
  * @summary The Extension Addition Component Types of rSASSA_PSS_Type
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_rSASSA_PSS_Type: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_rSASSA_PSS_Type: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_rSASSA_PSS_Type */
 let _cached_decoder_for_rSASSA_PSS_Type: $.ASN1Decoder<rSASSA_PSS_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_rSASSA_PSS_Type */
 /**
  * @summary Decodes an ASN.1 element into a(n) rSASSA_PSS_Type
  * @function
@@ -206,13 +195,9 @@ export function _decode_rSASSA_PSS_Type(el: _Element) {
     }
     return _cached_decoder_for_rSASSA_PSS_Type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_rSASSA_PSS_Type */
 let _cached_encoder_for_rSASSA_PSS_Type: $.ASN1Encoder<rSASSA_PSS_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_rSASSA_PSS_Type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_rSASSA_PSS_Type */
 /**
  * @summary Encodes a(n) rSASSA_PSS_Type into an ASN.1 Element.
  * @function
@@ -269,6 +254,5 @@ export function _encode_rSASSA_PSS_Type(
     return _cached_encoder_for_rSASSA_PSS_Type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_rSASSA_PSS_Type */
 
 /* eslint-enable */

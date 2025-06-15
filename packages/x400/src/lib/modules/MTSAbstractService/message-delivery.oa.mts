@@ -33,7 +33,6 @@ import { unsupported_critical_function } from '../MTSAbstractService/unsupported
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_message_delivery } from '../MTSAccessProtocol/op-message-delivery.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION message_delivery */
 /**
  * @summary message_delivery
  * @description
@@ -86,6 +85,5 @@ export const message_delivery: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_delivery */
 
 /* eslint-enable */

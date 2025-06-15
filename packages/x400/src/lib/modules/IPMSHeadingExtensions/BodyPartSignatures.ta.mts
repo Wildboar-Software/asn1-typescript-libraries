@@ -15,7 +15,6 @@ import {
     _decode_BodyPartSignatures_Item,
     _encode_BodyPartSignatures_Item,
 } from '../IPMSHeadingExtensions/BodyPartSignatures-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartSignatures */
 /**
  * @summary BodyPartSignatures
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type BodyPartSignatures = BodyPartSignatures_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION BodyPartSignatures */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSignatures */
 let _cached_decoder_for_BodyPartSignatures: $.ASN1Decoder<BodyPartSignatures> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSignatures */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartSignatures */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartSignatures
  * @function
@@ -54,13 +49,9 @@ export function _decode_BodyPartSignatures(el: _Element) {
     }
     return _cached_decoder_for_BodyPartSignatures(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartSignatures */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSignatures */
 let _cached_encoder_for_BodyPartSignatures: $.ASN1Encoder<BodyPartSignatures> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSignatures */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartSignatures */
 /**
  * @summary Encodes a(n) BodyPartSignatures into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_BodyPartSignatures(
     return _cached_encoder_for_BodyPartSignatures(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartSignatures */
 
 /* eslint-enable */

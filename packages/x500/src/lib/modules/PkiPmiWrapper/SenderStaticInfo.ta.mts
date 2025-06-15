@@ -20,7 +20,6 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../PkiPmiWrapper/UserKeyingMaterial.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SenderStaticInfo */
 /**
  * @summary SenderStaticInfo
  * @description
@@ -88,9 +87,7 @@ export class SenderStaticInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SenderStaticInfo */
 /**
  * @summary The Leading Root Component Types of SenderStaticInfo
  * @description
@@ -116,9 +113,7 @@ export const _root_component_type_list_1_spec_for_SenderStaticInfo: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SenderStaticInfo */
 /**
  * @summary The Trailing Root Component Types of SenderStaticInfo
  * @description
@@ -128,9 +123,7 @@ export const _root_component_type_list_1_spec_for_SenderStaticInfo: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SenderStaticInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SenderStaticInfo */
 /**
  * @summary The Extension Addition Component Types of SenderStaticInfo
  * @description
@@ -140,13 +133,9 @@ export const _root_component_type_list_2_spec_for_SenderStaticInfo: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_SenderStaticInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SenderStaticInfo */
 let _cached_decoder_for_SenderStaticInfo: $.ASN1Decoder<SenderStaticInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SenderStaticInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) SenderStaticInfo
  * @function
@@ -185,13 +174,9 @@ export function _decode_SenderStaticInfo(el: _Element) {
     }
     return _cached_decoder_for_SenderStaticInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SenderStaticInfo */
 let _cached_encoder_for_SenderStaticInfo: $.ASN1Encoder<SenderStaticInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SenderStaticInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SenderStaticInfo */
 /**
  * @summary Encodes a(n) SenderStaticInfo into an ASN.1 Element.
  * @function
@@ -232,6 +217,5 @@ export function _encode_SenderStaticInfo(
     return _cached_encoder_for_SenderStaticInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SenderStaticInfo */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../AttributeCertificateDefinitions/GeneralSubtrees.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HolderNameConstraintsSyntax */
 /**
  * @summary HolderNameConstraintsSyntax
  * @description
@@ -74,9 +73,7 @@ export class HolderNameConstraintsSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HolderNameConstraintsSyntax */
 /**
  * @summary The Leading Root Component Types of HolderNameConstraintsSyntax
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_HolderNameConstraintsSyntax: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HolderNameConstraintsSyntax */
 /**
  * @summary The Trailing Root Component Types of HolderNameConstraintsSyntax
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_HolderNameConstraintsSyntax: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HolderNameConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HolderNameConstraintsSyntax */
 /**
  * @summary The Extension Addition Component Types of HolderNameConstraintsSyntax
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_HolderNameConstraintsSyntax: $
  * @constant
  */
 export const _extension_additions_list_spec_for_HolderNameConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HolderNameConstraintsSyntax */
 let _cached_decoder_for_HolderNameConstraintsSyntax: $.ASN1Decoder<HolderNameConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HolderNameConstraintsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) HolderNameConstraintsSyntax
  * @function
@@ -181,13 +170,9 @@ export function _decode_HolderNameConstraintsSyntax(el: _Element) {
     }
     return _cached_decoder_for_HolderNameConstraintsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HolderNameConstraintsSyntax */
 let _cached_encoder_for_HolderNameConstraintsSyntax: $.ASN1Encoder<HolderNameConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HolderNameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HolderNameConstraintsSyntax */
 /**
  * @summary Encodes a(n) HolderNameConstraintsSyntax into an ASN.1 Element.
  * @function
@@ -234,6 +219,5 @@ export function _encode_HolderNameConstraintsSyntax(
     return _cached_encoder_for_HolderNameConstraintsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HolderNameConstraintsSyntax */
 
 /* eslint-enable */

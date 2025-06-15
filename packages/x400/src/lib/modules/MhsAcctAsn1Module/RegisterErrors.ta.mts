@@ -15,7 +15,6 @@ import {
     _decode_AdministrationError,
     _encode_AdministrationError,
 } from '../MhsAcctAsn1Module/AdministrationError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RegisterErrors */
 /**
  * @summary RegisterErrors
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RegisterErrors = AdministrationError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RegisterErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterErrors */
 let _cached_decoder_for_RegisterErrors: $.ASN1Decoder<RegisterErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegisterErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) RegisterErrors
  * @function
@@ -46,13 +41,9 @@ export function _decode_RegisterErrors(el: _Element) {
     }
     return _cached_decoder_for_RegisterErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegisterErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterErrors */
 let _cached_encoder_for_RegisterErrors: $.ASN1Encoder<RegisterErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegisterErrors */
 /**
  * @summary Encodes a(n) RegisterErrors into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RegisterErrors(
     return _cached_encoder_for_RegisterErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegisterErrors */
 
 /* eslint-enable */

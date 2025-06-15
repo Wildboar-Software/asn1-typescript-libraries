@@ -16,7 +16,7 @@ import {
   _decode_Object_Availability_Attribute_actual_values,
   _encode_Object_Availability_Attribute_actual_values,
 } from '../ISO8571-FTAM/Object-Availability-Attribute-actual-values.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Object_Availability_Attribute */
+
 /**
  * @summary Object_Availability_Attribute
  * @description
@@ -38,13 +38,11 @@ export type Object_Availability_Attribute =
   | {
       actual_values: Object_Availability_Attribute_actual_values;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Object_Availability_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Availability_Attribute */
+
 let _cached_decoder_for_Object_Availability_Attribute: $.ASN1Decoder<Object_Availability_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Availability_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Object_Availability_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Object_Availability_Attribute
  * @function
@@ -70,13 +68,11 @@ export function _decode_Object_Availability_Attribute(el: _Element) {
   }
   return _cached_decoder_for_Object_Availability_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Object_Availability_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Availability_Attribute */
+
 let _cached_encoder_for_Object_Availability_Attribute: $.ASN1Encoder<Object_Availability_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Availability_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Object_Availability_Attribute */
+
 /**
  * @summary Encodes a(n) Object_Availability_Attribute into an ASN.1 Element.
  * @function
@@ -110,6 +106,5 @@ export function _encode_Object_Availability_Attribute(
   return _cached_encoder_for_Object_Availability_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Object_Availability_Attribute */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SubmissionControls,
     _encode_SubmissionControls,
 } from '../MTSAbstractService/SubmissionControls.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubmissionControlArgument */
 /**
  * @summary SubmissionControlArgument
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubmissionControlArgument = SubmissionControls; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubmissionControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionControlArgument */
 let _cached_decoder_for_SubmissionControlArgument: $.ASN1Decoder<SubmissionControlArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmissionControlArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionControlArgument
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubmissionControlArgument(el: _Element) {
     }
     return _cached_decoder_for_SubmissionControlArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubmissionControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionControlArgument */
 let _cached_encoder_for_SubmissionControlArgument: $.ASN1Encoder<SubmissionControlArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmissionControlArgument */
 /**
  * @summary Encodes a(n) SubmissionControlArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubmissionControlArgument(
     return _cached_encoder_for_SubmissionControlArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmissionControlArgument */
 
 /* eslint-enable */

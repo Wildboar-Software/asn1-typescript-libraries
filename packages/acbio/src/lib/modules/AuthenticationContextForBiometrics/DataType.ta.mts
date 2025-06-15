@@ -23,7 +23,7 @@ import {
     _decode_Purpose,
     _encode_Purpose,
 } from '../AuthenticationContextForBiometrics/Purpose.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataType */
+
 /**
  * @summary DataType
  * @description
@@ -87,9 +87,8 @@ export class DataType {
 
     public static _enum_for_purpose = _enum_for_Purpose;
 }
-/* END_OF_SYMBOL_DEFINITION DataType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DataType */
+
 /**
  * @summary The Leading Root Component Types of DataType
  * @description
@@ -114,9 +113,8 @@ export const _root_component_type_list_1_spec_for_DataType: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DataType */
+
 /**
  * @summary The Trailing Root Component Types of DataType
  * @description
@@ -126,9 +124,8 @@ export const _root_component_type_list_1_spec_for_DataType: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DataType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DataType */
+
 /**
  * @summary The Extension Addition Component Types of DataType
  * @description
@@ -138,13 +135,11 @@ export const _root_component_type_list_2_spec_for_DataType: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_DataType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataType */
+
 let _cached_decoder_for_DataType: $.ASN1Decoder<DataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DataType
  * @function
@@ -184,13 +179,11 @@ export function _decode_DataType(el: _Element) {
     }
     return _cached_decoder_for_DataType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataType */
+
 let _cached_encoder_for_DataType: $.ASN1Encoder<DataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataType */
+
 /**
  * @summary Encodes a(n) DataType into an ASN.1 Element.
  * @function
@@ -224,6 +217,5 @@ export function _encode_DataType(
     return _cached_encoder_for_DataType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataType */
 
 /* eslint-enable */

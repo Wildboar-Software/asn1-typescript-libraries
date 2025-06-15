@@ -77,7 +77,6 @@ import {
     _extension_additions_list_spec_for_PerProbeTransferFields,
 } from '../MTAAbstractService/PerProbeTransferFields.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProbeTransferEnvelope */
 /**
  * @summary ProbeTransferEnvelope
  * @description
@@ -217,9 +216,7 @@ export class ProbeTransferEnvelope implements PerProbeTransferFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProbeTransferEnvelope */
 /**
  * @summary The Leading Root Component Types of ProbeTransferEnvelope
  * @description
@@ -238,9 +235,7 @@ export const _root_component_type_list_1_spec_for_ProbeTransferEnvelope: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProbeTransferEnvelope */
 /**
  * @summary The Trailing Root Component Types of ProbeTransferEnvelope
  * @description
@@ -252,9 +247,7 @@ export const _root_component_type_list_1_spec_for_ProbeTransferEnvelope: $.Compo
 export const _root_component_type_list_2_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_PerProbeTransferFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProbeTransferEnvelope */
 /**
  * @summary The Extension Addition Component Types of ProbeTransferEnvelope
  * @description
@@ -266,13 +259,9 @@ export const _root_component_type_list_2_spec_for_ProbeTransferEnvelope: $.Compo
 export const _extension_additions_list_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_PerProbeTransferFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeTransferEnvelope */
 let _cached_decoder_for_ProbeTransferEnvelope: $.ASN1Decoder<ProbeTransferEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeTransferEnvelope */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeTransferEnvelope
  * @function
@@ -383,13 +372,9 @@ export function _decode_ProbeTransferEnvelope(el: _Element) {
     }
     return _cached_decoder_for_ProbeTransferEnvelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeTransferEnvelope */
 let _cached_encoder_for_ProbeTransferEnvelope: $.ASN1Encoder<ProbeTransferEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeTransferEnvelope */
 /**
  * @summary Encodes a(n) ProbeTransferEnvelope into an ASN.1 Element.
  * @function
@@ -505,6 +490,5 @@ export function _encode_ProbeTransferEnvelope(
     return _cached_encoder_for_ProbeTransferEnvelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeTransferEnvelope */
 
 /* eslint-enable */

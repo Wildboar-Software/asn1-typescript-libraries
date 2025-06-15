@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/ResponderID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OcspIdentifier */
 /**
  * @summary OcspIdentifier
  * @description
@@ -63,9 +62,7 @@ class OcspIdentifier {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OcspIdentifier */
 /**
  * @summary The Leading Root Component Types of OcspIdentifier
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_OcspIdentifier: $.ComponentSpec[] = [
     new $.ComponentSpec("ocspResponderID", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("producedAt", false, $.hasTag(_TagClass.universal, 24), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OcspIdentifier */
 /**
  * @summary The Trailing Root Component Types of OcspIdentifier
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_OcspIdentifier: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OcspIdentifier */
 /**
  * @summary The Extension Addition Component Types of OcspIdentifier
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_OcspIdentifier: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OcspIdentifier */
 let _cached_decoder_for_OcspIdentifier: $.ASN1Decoder<OcspIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OcspIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) OcspIdentifier
  * @function
@@ -143,13 +132,9 @@ function _decode_OcspIdentifier (el: _Element) {
 }; }
     return _cached_decoder_for_OcspIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OcspIdentifier */
 let _cached_encoder_for_OcspIdentifier: $.ASN1Encoder<OcspIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OcspIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OcspIdentifier */
 /**
  * @summary Encodes a(n) OcspIdentifier into an ASN.1 Element.
  * @function
@@ -170,6 +155,5 @@ function _encode_OcspIdentifier (value: OcspIdentifier, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_OcspIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OcspIdentifier */
 
 /* eslint-enable */

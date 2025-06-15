@@ -6,7 +6,7 @@ import {
     _encode_HashAlgorithm,
 } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import { id_mgf1 } from "../PKCS-1/id-mgf1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms_Union0_Intersection0_Element */
+
 /**
  * @summary PKCS1MGFAlgorithms_Union0_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PKCS1MGFAlgorithms_Union0_Intersection0_Element: ALGORITHM_IDENTIFI
     "&id": id_mgf1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms_Union0_Intersection0_Element */
 
 /* eslint-enable */

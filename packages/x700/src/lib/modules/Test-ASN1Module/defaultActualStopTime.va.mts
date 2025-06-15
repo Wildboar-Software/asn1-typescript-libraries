@@ -14,7 +14,6 @@ import {
     _decode_ActualStopTime,
     _encode_ActualStopTime,
 } from '../Test-ASN1Module/ActualStopTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultActualStopTime */
 /**
  * @summary defaultActualStopTime
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const defaultActualStopTime: ActualStopTime = { unknown: null };
-/* END_OF_SYMBOL_DEFINITION defaultActualStopTime */
 
 /* eslint-enable */

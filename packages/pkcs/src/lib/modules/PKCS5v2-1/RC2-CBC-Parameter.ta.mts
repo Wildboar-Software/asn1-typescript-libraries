@@ -8,7 +8,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RC2_CBC_Parameter */
+
 /**
  * @summary RC2_CBC_Parameter
  * @description
@@ -58,9 +58,8 @@ export class RC2_CBC_Parameter {
         return new RC2_CBC_Parameter(_o.rc2ParameterVersion, _o.iv);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RC2_CBC_Parameter */
+
 /**
  * @summary The Leading Root Component Types of RC2_CBC_Parameter
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_RC2_CBC_Parameter: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RC2_CBC_Parameter */
+
 /**
  * @summary The Trailing Root Component Types of RC2_CBC_Parameter
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_RC2_CBC_Parameter: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RC2_CBC_Parameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RC2_CBC_Parameter */
+
 /**
  * @summary The Extension Addition Component Types of RC2_CBC_Parameter
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_RC2_CBC_Parameter: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_RC2_CBC_Parameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RC2_CBC_Parameter */
+
 let _cached_decoder_for_RC2_CBC_Parameter: $.ASN1Decoder<RC2_CBC_Parameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RC2_CBC_Parameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RC2_CBC_Parameter
  * @function
@@ -157,13 +152,11 @@ export function _decode_RC2_CBC_Parameter(el: _Element) {
     }
     return _cached_decoder_for_RC2_CBC_Parameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RC2_CBC_Parameter */
+
 let _cached_encoder_for_RC2_CBC_Parameter: $.ASN1Encoder<RC2_CBC_Parameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RC2_CBC_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RC2_CBC_Parameter */
+
 /**
  * @summary Encodes a(n) RC2_CBC_Parameter into an ASN.1 Element.
  * @function
@@ -197,6 +190,5 @@ export function _encode_RC2_CBC_Parameter(
     return _cached_encoder_for_RC2_CBC_Parameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RC2_CBC_Parameter */
 
 /* eslint-enable */

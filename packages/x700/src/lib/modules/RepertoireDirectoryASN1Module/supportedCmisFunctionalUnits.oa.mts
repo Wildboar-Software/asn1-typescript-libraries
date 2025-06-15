@@ -23,7 +23,6 @@ import {
 } from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
 import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION supportedCmisFunctionalUnits */
 /**
  * @summary supportedCmisFunctionalUnits
  * @description
@@ -67,6 +66,5 @@ export const supportedCmisFunctionalUnits: ATTRIBUTE<FunctionalUnits> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedCmisFunctionalUnits */
 
 /* eslint-enable */

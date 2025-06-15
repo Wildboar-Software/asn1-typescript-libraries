@@ -11,7 +11,6 @@ import {
     _get_decoder_for_MULTY_SIGNED_parmeters_sign,
     _get_encoder_for_MULTY_SIGNED_parmeters_sign,
 } from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MULTY_SIGNED */
 /**
  * @summary MULTY_SIGNED
  * @description
@@ -83,9 +82,7 @@ export class MULTY_SIGNED<ToBeSigned> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MULTY_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MULTY_SIGNED */
 /**
  * @summary The Leading Root Component Types of MULTY_SIGNED
  * @description
@@ -111,9 +108,7 @@ export const _root_component_type_list_1_spec_for_MULTY_SIGNED: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MULTY_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MULTY_SIGNED */
 /**
  * @summary The Trailing Root Component Types of MULTY_SIGNED
  * @description
@@ -123,9 +118,7 @@ export const _root_component_type_list_1_spec_for_MULTY_SIGNED: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MULTY_SIGNED: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MULTY_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MULTY_SIGNED */
 /**
  * @summary The Extension Addition Component Types of MULTY_SIGNED
  * @description
@@ -135,9 +128,7 @@ export const _root_component_type_list_2_spec_for_MULTY_SIGNED: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_MULTY_SIGNED: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MULTY_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_MULTY_SIGNED */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) MULTY_SIGNED
  * @function
@@ -179,9 +170,7 @@ export function _get_decoder_for_MULTY_SIGNED<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_MULTY_SIGNED */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_MULTY_SIGNED */
 /**
  * @summary Returns a function that will encode a(n) MULTY_SIGNED into an ASN.1 Element.
  * @function
@@ -223,6 +212,5 @@ export function _get_encoder_for_MULTY_SIGNED<ToBeSigned>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_MULTY_SIGNED */
 
 /* eslint-enable */

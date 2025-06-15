@@ -8,7 +8,6 @@ import {
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_uiiInUrn } from "../SelectedAttributeTypes/id-at-uiiInUrn.va.mjs";
-/* START_OF_SYMBOL_DEFINITION uiiInUrn */
 /**
  * @summary uiiInUrn
  * @description
@@ -49,6 +48,5 @@ export const uiiInUrn: ATTRIBUTE<UTF8String> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uiiInUrn */
 
 /* eslint-enable */

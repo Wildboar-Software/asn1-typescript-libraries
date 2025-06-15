@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION CR_Sequences */
+
 /**
  * @summary CR_Sequences
  * @description
@@ -26,6 +26,5 @@ import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.mjs';
  *
  */
 export const CR_Sequences: CR_SEQUENCE[] = [];
-/* END_OF_SYMBOL_DEFINITION CR_Sequences */
 
 /* eslint-enable */

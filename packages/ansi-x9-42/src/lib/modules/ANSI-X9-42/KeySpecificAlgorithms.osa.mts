@@ -6,7 +6,7 @@ import {
 } from "../ANSI-X9-42/Counter.ta.mjs";
 import { tripleDES } from "../ANSI-X9-42/tripleDES.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeySpecificAlgorithms */
+
 /**
  * @summary KeySpecificAlgorithms
  * @description
@@ -37,6 +37,5 @@ export const KeySpecificAlgorithms: ALGORITHM_ID[] = [
         "&Type": 0 as never,
     },
 ];
-/* END_OF_SYMBOL_DEFINITION KeySpecificAlgorithms */
 
 /* eslint-enable */

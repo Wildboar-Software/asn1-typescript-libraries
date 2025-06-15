@@ -16,7 +16,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CorrelatedDeliveredIPNs */
 /**
  * @summary CorrelatedDeliveredIPNs
  * @description
@@ -33,13 +32,9 @@ import {
 export type CorrelatedDeliveredIPNs =
     | { no_ipn_received: NULL } /* CHOICE_ALT_ROOT */
     | { ipns_received: SequenceNumber[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CorrelatedDeliveredIPNs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CorrelatedDeliveredIPNs */
 let _cached_decoder_for_CorrelatedDeliveredIPNs: $.ASN1Decoder<CorrelatedDeliveredIPNs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CorrelatedDeliveredIPNs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CorrelatedDeliveredIPNs */
 /**
  * @summary Decodes an ASN.1 element into a(n) CorrelatedDeliveredIPNs
  * @function
@@ -67,13 +62,9 @@ export function _decode_CorrelatedDeliveredIPNs(el: _Element) {
     }
     return _cached_decoder_for_CorrelatedDeliveredIPNs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CorrelatedDeliveredIPNs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CorrelatedDeliveredIPNs */
 let _cached_encoder_for_CorrelatedDeliveredIPNs: $.ASN1Encoder<CorrelatedDeliveredIPNs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CorrelatedDeliveredIPNs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CorrelatedDeliveredIPNs */
 /**
  * @summary Encodes a(n) CorrelatedDeliveredIPNs into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_CorrelatedDeliveredIPNs(
     return _cached_encoder_for_CorrelatedDeliveredIPNs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CorrelatedDeliveredIPNs */
 
 /* eslint-enable */

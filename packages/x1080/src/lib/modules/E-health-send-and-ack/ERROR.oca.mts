@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ERROR */
+
 /**
  * @summary ERROR
  * @description
@@ -63,6 +63,5 @@ export interface ERROR<
      */
     readonly '&Parameter': Parameter;
 }
-/* END_OF_SYMBOL_DEFINITION ERROR */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_NameType,
     _encode_NameType,
 } from '../X790ASN1Module/NameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceId */
+
 /**
  * @summary ServiceId
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ServiceId = NameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ServiceId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceId */
+
 let _cached_decoder_for_ServiceId: $.ASN1Decoder<ServiceId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceId
  * @function
@@ -46,13 +44,11 @@ export function _decode_ServiceId(el: _Element) {
     }
     return _cached_decoder_for_ServiceId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceId */
+
 let _cached_encoder_for_ServiceId: $.ASN1Encoder<ServiceId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceId */
+
 /**
  * @summary Encodes a(n) ServiceId into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_ServiceId(
     return _cached_encoder_for_ServiceId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceId */
 
 /* eslint-enable */

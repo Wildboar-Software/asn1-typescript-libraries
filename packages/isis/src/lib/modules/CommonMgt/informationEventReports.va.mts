@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { fupoi } from '../CommonMgt/fupoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION informationEventReports */
 /**
  * @summary informationEventReports
  * @description
@@ -28,6 +27,5 @@ export const informationEventReports: OBJECT_IDENTIFIER = new _OID(
   [/* informationEventReports */ 1000],
   fupoi
 );
-/* END_OF_SYMBOL_DEFINITION informationEventReports */
 
 /* eslint-enable */

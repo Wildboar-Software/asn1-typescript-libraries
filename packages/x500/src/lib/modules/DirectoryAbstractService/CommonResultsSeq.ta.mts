@@ -21,7 +21,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CommonResultsSeq */
 /**
  * @summary CommonResultsSeq
  * @description
@@ -108,9 +107,7 @@ export class CommonResultsSeq {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonResultsSeq */
 /**
  * @summary The Leading Root Component Types of CommonResultsSeq
  * @description
@@ -149,9 +146,7 @@ export const _root_component_type_list_1_spec_for_CommonResultsSeq: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonResultsSeq */
 /**
  * @summary The Trailing Root Component Types of CommonResultsSeq
  * @description
@@ -161,9 +156,7 @@ export const _root_component_type_list_1_spec_for_CommonResultsSeq: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonResultsSeq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonResultsSeq */
 /**
  * @summary The Extension Addition Component Types of CommonResultsSeq
  * @description
@@ -173,13 +166,9 @@ export const _root_component_type_list_2_spec_for_CommonResultsSeq: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_CommonResultsSeq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonResultsSeq */
 let _cached_decoder_for_CommonResultsSeq: $.ASN1Decoder<CommonResultsSeq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonResultsSeq */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonResultsSeq
  * @function
@@ -244,13 +233,9 @@ export function _decode_CommonResultsSeq(el: _Element) {
     }
     return _cached_decoder_for_CommonResultsSeq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonResultsSeq */
 let _cached_encoder_for_CommonResultsSeq: $.ASN1Encoder<CommonResultsSeq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonResultsSeq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonResultsSeq */
 /**
  * @summary Encodes a(n) CommonResultsSeq into an ASN.1 Element.
  * @function
@@ -324,6 +309,5 @@ export function _encode_CommonResultsSeq(
     return _cached_encoder_for_CommonResultsSeq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonResultsSeq */
 
 /* eslint-enable */

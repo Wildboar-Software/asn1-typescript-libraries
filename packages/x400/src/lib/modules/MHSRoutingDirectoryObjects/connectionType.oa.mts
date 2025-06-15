@@ -22,7 +22,6 @@ import {
     _encode_ConnectionInformation,
 } from '../MHSRoutingDirectoryObjects/ConnectionInformation.ta.mjs';
 import { id_at_connection_type } from '../MHSRoutingObjectIdentifiers/id-at-connection-type.va.mjs';
-/* START_OF_SYMBOL_DEFINITION connectionType */
 /**
  * @summary connectionType
  * @description
@@ -58,6 +57,5 @@ export const connectionType: ATTRIBUTE<ConnectionInformation> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION connectionType */
 
 /* eslint-enable */

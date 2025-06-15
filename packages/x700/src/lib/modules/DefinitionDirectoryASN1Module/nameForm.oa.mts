@@ -20,7 +20,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { caseExactMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseExactMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION nameForm */
 /**
  * @summary nameForm
  * @description
@@ -64,6 +63,5 @@ export const nameForm: ATTRIBUTE<PrintableString> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nameForm */
 
 /* eslint-enable */

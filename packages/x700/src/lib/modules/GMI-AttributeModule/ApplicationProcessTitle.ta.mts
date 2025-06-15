@@ -17,7 +17,7 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplicationProcessTitle */
+
 /**
  * @summary ApplicationProcessTitle
  * @description
@@ -36,13 +36,11 @@ export type ApplicationProcessTitle =
     | { directory: RelativeDistinguishedName[] } /* CHOICE_ALT_ROOT */
     | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { notKnown: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ApplicationProcessTitle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationProcessTitle */
+
 let _cached_decoder_for_ApplicationProcessTitle: $.ASN1Decoder<ApplicationProcessTitle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicationProcessTitle */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplicationProcessTitle */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplicationProcessTitle
  * @function
@@ -73,13 +71,11 @@ export function _decode_ApplicationProcessTitle(el: _Element) {
     }
     return _cached_decoder_for_ApplicationProcessTitle(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplicationProcessTitle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationProcessTitle */
+
 let _cached_encoder_for_ApplicationProcessTitle: $.ASN1Encoder<ApplicationProcessTitle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicationProcessTitle */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplicationProcessTitle */
+
 /**
  * @summary Encodes a(n) ApplicationProcessTitle into an ASN.1 Element.
  * @function
@@ -118,6 +114,5 @@ export function _encode_ApplicationProcessTitle(
     return _cached_encoder_for_ApplicationProcessTitle(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplicationProcessTitle */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import {
     _decode_DataUnits,
     _encode_DataUnits,
 } from '../TestCategories-ASN1Module/DataUnits.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataIntegrityTestResults_testResult */
 /**
  * @summary DataIntegrityTestResults_testResult
  * @description
@@ -80,9 +79,7 @@ export class DataIntegrityTestResults_testResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DataIntegrityTestResults_testResult */
 /**
  * @summary The Leading Root Component Types of DataIntegrityTestResults_testResult
  * @description
@@ -114,9 +111,7 @@ export const _root_component_type_list_1_spec_for_DataIntegrityTestResults_testR
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DataIntegrityTestResults_testResult */
 /**
  * @summary The Trailing Root Component Types of DataIntegrityTestResults_testResult
  * @description
@@ -126,9 +121,7 @@ export const _root_component_type_list_1_spec_for_DataIntegrityTestResults_testR
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DataIntegrityTestResults_testResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DataIntegrityTestResults_testResult */
 /**
  * @summary The Extension Addition Component Types of DataIntegrityTestResults_testResult
  * @description
@@ -138,13 +131,9 @@ export const _root_component_type_list_2_spec_for_DataIntegrityTestResults_testR
  * @constant
  */
 export const _extension_additions_list_spec_for_DataIntegrityTestResults_testResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataIntegrityTestResults_testResult */
 let _cached_decoder_for_DataIntegrityTestResults_testResult: $.ASN1Decoder<DataIntegrityTestResults_testResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataIntegrityTestResults_testResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataIntegrityTestResults_testResult
  * @function
@@ -197,13 +186,9 @@ export function _decode_DataIntegrityTestResults_testResult(el: _Element) {
     }
     return _cached_decoder_for_DataIntegrityTestResults_testResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataIntegrityTestResults_testResult */
 let _cached_encoder_for_DataIntegrityTestResults_testResult: $.ASN1Encoder<DataIntegrityTestResults_testResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataIntegrityTestResults_testResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataIntegrityTestResults_testResult */
 /**
  * @summary Encodes a(n) DataIntegrityTestResults_testResult into an ASN.1 Element.
  * @function
@@ -255,6 +240,5 @@ export function _encode_DataIntegrityTestResults_testResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataIntegrityTestResults_testResult */
 
 /* eslint-enable */

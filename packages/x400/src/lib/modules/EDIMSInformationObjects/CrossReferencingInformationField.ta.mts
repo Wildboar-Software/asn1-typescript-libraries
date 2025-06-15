@@ -15,7 +15,6 @@ import {
     _decode_CrossReferencingInformationSubField,
     _encode_CrossReferencingInformationSubField,
 } from '../EDIMSInformationObjects/CrossReferencingInformationSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CrossReferencingInformationField */
 /**
  * @summary CrossReferencingInformationField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CrossReferencingInformationField = CrossReferencingInformationSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CrossReferencingInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossReferencingInformationField */
 let _cached_decoder_for_CrossReferencingInformationField: $.ASN1Decoder<CrossReferencingInformationField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossReferencingInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrossReferencingInformationField */
 /**
  * @summary Decodes an ASN.1 element into a(n) CrossReferencingInformationField
  * @function
@@ -48,13 +43,9 @@ export function _decode_CrossReferencingInformationField(el: _Element) {
     }
     return _cached_decoder_for_CrossReferencingInformationField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrossReferencingInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossReferencingInformationField */
 let _cached_encoder_for_CrossReferencingInformationField: $.ASN1Encoder<CrossReferencingInformationField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossReferencingInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrossReferencingInformationField */
 /**
  * @summary Encodes a(n) CrossReferencingInformationField into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_CrossReferencingInformationField(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrossReferencingInformationField */
 
 /* eslint-enable */

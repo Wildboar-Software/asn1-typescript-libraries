@@ -8,7 +8,6 @@ import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.mjs";
 import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.mjs";
 import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION OrganizationalAttributeSet */
 /**
  * @summary OrganizationalAttributeSet
  * @description
@@ -40,6 +39,5 @@ export const OrganizationalAttributeSet: ATTRIBUTE[] = [
     searchGuide,
     userPassword,
 ];
-/* END_OF_SYMBOL_DEFINITION OrganizationalAttributeSet */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SelectedTypes */
 /**
  * @summary SelectedTypes
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type SelectedTypes = AttributeType[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SelectedTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SelectedTypes */
 let _cached_decoder_for_SelectedTypes: $.ASN1Decoder<SelectedTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SelectedTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SelectedTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) SelectedTypes
  * @function
@@ -39,13 +34,9 @@ export function _decode_SelectedTypes(el: _Element) {
     }
     return _cached_decoder_for_SelectedTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SelectedTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SelectedTypes */
 let _cached_encoder_for_SelectedTypes: $.ASN1Encoder<SelectedTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SelectedTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SelectedTypes */
 /**
  * @summary Encodes a(n) SelectedTypes into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_SelectedTypes(
     return _cached_encoder_for_SelectedTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SelectedTypes */
 
 /* eslint-enable */

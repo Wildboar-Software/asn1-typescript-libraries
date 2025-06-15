@@ -6,7 +6,6 @@ import {
     _decode_AccessDescription,
     _encode_AccessDescription,
 } from "../PkiPmiExternalDataTypes/AccessDescription.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubjectInfoAccessSyntax */
 /**
  * @summary SubjectInfoAccessSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type SubjectInfoAccessSyntax = AccessDescription[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SubjectInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectInfoAccessSyntax */
 let _cached_decoder_for_SubjectInfoAccessSyntax: $.ASN1Decoder<SubjectInfoAccessSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectInfoAccessSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectInfoAccessSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_SubjectInfoAccessSyntax(el: _Element) {
     }
     return _cached_decoder_for_SubjectInfoAccessSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectInfoAccessSyntax */
 let _cached_encoder_for_SubjectInfoAccessSyntax: $.ASN1Encoder<SubjectInfoAccessSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectInfoAccessSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectInfoAccessSyntax */
 /**
  * @summary Encodes a(n) SubjectInfoAccessSyntax into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_SubjectInfoAccessSyntax(
     return _cached_encoder_for_SubjectInfoAccessSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectInfoAccessSyntax */
 
 /* eslint-enable */

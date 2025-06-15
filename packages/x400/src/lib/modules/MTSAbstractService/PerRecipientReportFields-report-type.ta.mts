@@ -20,7 +20,6 @@ import {
     _decode_PerRecipientNonDeliveryReportFields,
     _encode_PerRecipientNonDeliveryReportFields,
 } from '../MTSAbstractService/PerRecipientNonDeliveryReportFields.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientReportFields_report_type */
 /**
  * @summary PerRecipientReportFields_report_type
  * @description
@@ -36,13 +35,9 @@ export type PerRecipientReportFields_report_type =
     | {
           non_delivery: PerRecipientNonDeliveryReportFields;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PerRecipientReportFields_report_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientReportFields_report_type */
 let _cached_decoder_for_PerRecipientReportFields_report_type: $.ASN1Decoder<PerRecipientReportFields_report_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientReportFields_report_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerRecipientReportFields_report_type */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerRecipientReportFields_report_type
  * @function
@@ -70,13 +65,9 @@ export function _decode_PerRecipientReportFields_report_type(el: _Element) {
     }
     return _cached_decoder_for_PerRecipientReportFields_report_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerRecipientReportFields_report_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientReportFields_report_type */
 let _cached_encoder_for_PerRecipientReportFields_report_type: $.ASN1Encoder<PerRecipientReportFields_report_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientReportFields_report_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerRecipientReportFields_report_type */
 /**
  * @summary Encodes a(n) PerRecipientReportFields_report_type into an ASN.1 Element.
  * @function
@@ -113,6 +104,5 @@ export function _encode_PerRecipientReportFields_report_type(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerRecipientReportFields_report_type */
 
 /* eslint-enable */

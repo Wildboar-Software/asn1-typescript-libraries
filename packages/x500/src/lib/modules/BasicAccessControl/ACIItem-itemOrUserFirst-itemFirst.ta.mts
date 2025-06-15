@@ -15,7 +15,6 @@ import {
     _decode_ProtectedItems,
     _encode_ProtectedItems,
 } from "../BasicAccessControl/ProtectedItems.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary ACIItem_itemOrUserFirst_itemFirst
  * @description
@@ -76,9 +75,7 @@ export class ACIItem_itemOrUserFirst_itemFirst {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary The Leading Root Component Types of ACIItem_itemOrUserFirst_itemFirst
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_ACIItem_itemOrUserFirst_itemFi
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary The Trailing Root Component Types of ACIItem_itemOrUserFirst_itemFirst
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_ACIItem_itemOrUserFirst_itemFi
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ACIItem_itemOrUserFirst_itemFirst: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary The Extension Addition Component Types of ACIItem_itemOrUserFirst_itemFirst
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_ACIItem_itemOrUserFirst_itemFi
  * @constant
  */
 export const _extension_additions_list_spec_for_ACIItem_itemOrUserFirst_itemFirst: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACIItem_itemOrUserFirst_itemFirst */
 let _cached_decoder_for_ACIItem_itemOrUserFirst_itemFirst: $.ASN1Decoder<ACIItem_itemOrUserFirst_itemFirst> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary Decodes an ASN.1 element into a(n) ACIItem_itemOrUserFirst_itemFirst
  * @function
@@ -170,13 +159,9 @@ export function _decode_ACIItem_itemOrUserFirst_itemFirst(el: _Element) {
     }
     return _cached_decoder_for_ACIItem_itemOrUserFirst_itemFirst(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACIItem_itemOrUserFirst_itemFirst */
 let _cached_encoder_for_ACIItem_itemOrUserFirst_itemFirst: $.ASN1Encoder<ACIItem_itemOrUserFirst_itemFirst> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACIItem_itemOrUserFirst_itemFirst */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary Encodes a(n) ACIItem_itemOrUserFirst_itemFirst into an ASN.1 Element.
  * @function
@@ -219,6 +204,5 @@ export function _encode_ACIItem_itemOrUserFirst_itemFirst(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ACIItem_itemOrUserFirst_itemFirst */
 
 /* eslint-enable */

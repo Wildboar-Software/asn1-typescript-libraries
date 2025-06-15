@@ -7,7 +7,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DigestEncryptionAlgorithmIdentifier */
+
 /**
  * @summary DigestEncryptionAlgorithmIdentifier
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type DigestEncryptionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DigestEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestEncryptionAlgorithmIdentifier */
+
 let _cached_decoder_for_DigestEncryptionAlgorithmIdentifier: $.ASN1Decoder<DigestEncryptionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DigestEncryptionAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DigestEncryptionAlgorithmIdentifier
  * @function
@@ -38,13 +36,11 @@ export function _decode_DigestEncryptionAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_DigestEncryptionAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DigestEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestEncryptionAlgorithmIdentifier */
+
 let _cached_encoder_for_DigestEncryptionAlgorithmIdentifier: $.ASN1Encoder<DigestEncryptionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DigestEncryptionAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) DigestEncryptionAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -65,6 +61,5 @@ export function _encode_DigestEncryptionAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DigestEncryptionAlgorithmIdentifier */
 
 /* eslint-enable */

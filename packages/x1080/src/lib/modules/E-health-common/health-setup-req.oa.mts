@@ -16,7 +16,7 @@ import {
 } from '../E-health-common/E-setupRequest.ta.mjs';
 import { id_health_setup_req } from '../E-health-common/id-health-setup-req.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION health_setup_req */
+
 /**
  * @summary health_setup_req
  * @description
@@ -44,6 +44,5 @@ export const health_setup_req: CONTENT_TYPE<E_setupRequest> = {
     '&id': id_health_setup_req /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION health_setup_req */
 
 /* eslint-enable */

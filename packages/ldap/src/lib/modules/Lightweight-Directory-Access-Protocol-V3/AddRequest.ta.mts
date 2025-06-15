@@ -20,7 +20,7 @@ import {
   _decode_AttributeList,
   _encode_AttributeList,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddRequest */
+
 /**
  * @summary AddRequest
  * @description
@@ -80,9 +80,8 @@ export class AddRequest {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddRequest */
+
 /**
  * @summary The Leading Root Component Types of AddRequest
  * @description
@@ -107,9 +106,8 @@ export const _root_component_type_list_1_spec_for_AddRequest: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddRequest */
+
 /**
  * @summary The Trailing Root Component Types of AddRequest
  * @description
@@ -119,9 +117,8 @@ export const _root_component_type_list_1_spec_for_AddRequest: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddRequest */
+
 /**
  * @summary The Extension Addition Component Types of AddRequest
  * @description
@@ -131,13 +128,11 @@ export const _root_component_type_list_2_spec_for_AddRequest: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_AddRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddRequest */
+
 let _cached_decoder_for_AddRequest: $.ASN1Decoder<AddRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddRequest
  * @function
@@ -169,13 +164,11 @@ export function _decode_AddRequest(el: _Element) {
   }
   return _cached_decoder_for_AddRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddRequest */
+
 let _cached_encoder_for_AddRequest: $.ASN1Encoder<AddRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddRequest */
+
 /**
  * @summary Encodes a(n) AddRequest into an ASN.1 Element.
  * @function
@@ -218,6 +211,5 @@ export function _encode_AddRequest(
   return _cached_encoder_for_AddRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddRequest */
 
 /* eslint-enable */

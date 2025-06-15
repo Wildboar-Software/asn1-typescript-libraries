@@ -68,7 +68,6 @@ import {
     _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ListArgumentData */
 /**
  * @summary ListArgumentData
  * @description
@@ -295,9 +294,7 @@ export class ListArgumentData implements CommonArguments {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListArgumentData */
 /**
  * @summary The Leading Root Component Types of ListArgumentData
  * @description
@@ -330,9 +327,7 @@ export const _root_component_type_list_1_spec_for_ListArgumentData: $.ComponentS
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListArgumentData */
 /**
  * @summary The Trailing Root Component Types of ListArgumentData
  * @description
@@ -344,9 +339,7 @@ export const _root_component_type_list_1_spec_for_ListArgumentData: $.ComponentS
 export const _root_component_type_list_2_spec_for_ListArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListArgumentData */
 /**
  * @summary The Extension Addition Component Types of ListArgumentData
  * @description
@@ -358,13 +351,9 @@ export const _root_component_type_list_2_spec_for_ListArgumentData: $.ComponentS
 export const _extension_additions_list_spec_for_ListArgumentData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListArgumentData */
 let _cached_decoder_for_ListArgumentData: $.ASN1Decoder<ListArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListArgumentData
  * @function
@@ -509,13 +498,9 @@ export function _decode_ListArgumentData(el: _Element) {
     }
     return _cached_decoder_for_ListArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListArgumentData */
 let _cached_encoder_for_ListArgumentData: $.ASN1Encoder<ListArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListArgumentData */
 /**
  * @summary Encodes a(n) ListArgumentData into an ASN.1 Element.
  * @function
@@ -698,6 +683,5 @@ export function _encode_ListArgumentData(
     return _cached_encoder_for_ListArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListArgumentData */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_Trinomial,
     _encode_Trinomial,
 } from "../ANSI-X9-62/Trinomial.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BasisTypes_Union1_Intersection0_Element */
 /**
  * @summary BasisTypes_Union1_Intersection0_Element
  * @description
@@ -32,6 +31,5 @@ export const BasisTypes_Union1_Intersection0_Element: CHARACTERISTIC_TWO<Trinomi
     "&id": tpBasis /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION BasisTypes_Union1_Intersection0_Element */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
     OCTET_STRING,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION ResponseBytes */
+
 /**
  * @summary ResponseBytes
  * @description
@@ -58,9 +58,8 @@ export class ResponseBytes {
         return new ResponseBytes(_o.responseType, _o.response);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseBytes */
+
 /**
  * @summary The Leading Root Component Types of ResponseBytes
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_ResponseBytes: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseBytes */
+
 /**
  * @summary The Trailing Root Component Types of ResponseBytes
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_ResponseBytes: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResponseBytes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseBytes */
+
 /**
  * @summary The Extension Addition Component Types of ResponseBytes
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_ResponseBytes: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ResponseBytes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseBytes */
+
 let _cached_decoder_for_ResponseBytes: $.ASN1Decoder<ResponseBytes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseBytes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseBytes
  * @function
@@ -146,13 +141,11 @@ export function _decode_ResponseBytes(el: _Element) {
     }
     return _cached_decoder_for_ResponseBytes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseBytes */
+
 let _cached_encoder_for_ResponseBytes: $.ASN1Encoder<ResponseBytes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseBytes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseBytes */
+
 /**
  * @summary Encodes a(n) ResponseBytes into an ASN.1 Element.
  * @function
@@ -187,6 +180,5 @@ export function _encode_ResponseBytes(
     return _cached_encoder_for_ResponseBytes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseBytes */
 
 /* eslint-enable */

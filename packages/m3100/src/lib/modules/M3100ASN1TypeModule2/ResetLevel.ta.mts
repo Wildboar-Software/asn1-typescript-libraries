@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ResetLevel */
+
 /**
  * @summary ResetLevel
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ResetLevel =
     | { completeReset: NULL } /* CHOICE_ALT_ROOT */
     | { partialReset: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ResetLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResetLevel */
+
 let _cached_decoder_for_ResetLevel: $.ASN1Decoder<ResetLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResetLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResetLevel */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResetLevel
  * @function
@@ -53,13 +51,11 @@ export function _decode_ResetLevel(el: _Element) {
     }
     return _cached_decoder_for_ResetLevel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResetLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResetLevel */
+
 let _cached_encoder_for_ResetLevel: $.ASN1Encoder<ResetLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResetLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResetLevel */
+
 /**
  * @summary Encodes a(n) ResetLevel into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_ResetLevel(
     return _cached_encoder_for_ResetLevel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResetLevel */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import { edi_name } from '../EDIMUseOfDirectory/edi-name.oa.mjs';
 import { edi_routing_address } from '../EDIMUseOfDirectory/edi-routing-address.oa.mjs';
 import { edi_capabilities } from '../EDIMUseOfDirectory/edi-capabilities.oa.mjs';
 import { id_doc_edi_user } from '../EDIMUseOfDirectory/id-doc-edi-user.va.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_user */
 /**
  * @summary edi_user
  * @description
@@ -54,6 +53,5 @@ export const edi_user: OBJECT_CLASS = {
     '&id': id_doc_edi_user /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_user */
 
 /* eslint-enable */

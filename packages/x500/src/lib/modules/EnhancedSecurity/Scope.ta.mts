@@ -10,7 +10,6 @@ import {
     _decode_SelectedTypes,
     _encode_SelectedTypes,
 } from "../EnhancedSecurity/SelectedTypes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Scope */
 /**
  * @summary Scope
  * @description
@@ -29,13 +28,9 @@ export type Scope =
     | { wholeEntry: NULL } /* CHOICE_ALT_ROOT */
     | { selectedTypes: SelectedTypes } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Scope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope */
 let _cached_decoder_for_Scope: $.ASN1Decoder<Scope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Scope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Scope */
 /**
  * @summary Decodes an ASN.1 element into a(n) Scope
  * @function
@@ -57,13 +52,9 @@ export function _decode_Scope(el: _Element) {
     }
     return _cached_decoder_for_Scope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Scope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope */
 let _cached_encoder_for_Scope: $.ASN1Encoder<Scope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Scope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Scope */
 /**
  * @summary Encodes a(n) Scope into an ASN.1 Element.
  * @function
@@ -94,6 +85,5 @@ export function _encode_Scope(value: Scope, elGetter: $.ASN1Encoder<Scope>) {
     return _cached_encoder_for_Scope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Scope */
 
 /* eslint-enable */

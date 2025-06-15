@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FNUserDiagnosticField */
 /**
  * @summary FNUserDiagnosticField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FNUserDiagnosticField = INTEGER;
-/* END_OF_SYMBOL_DEFINITION FNUserDiagnosticField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserDiagnosticField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserDiagnosticField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FNUserDiagnosticField */
 export const _decode_FNUserDiagnosticField = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_FNUserDiagnosticField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserDiagnosticField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserDiagnosticField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FNUserDiagnosticField */
 export const _encode_FNUserDiagnosticField = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FNUserDiagnosticField */
 
 /* eslint-enable */

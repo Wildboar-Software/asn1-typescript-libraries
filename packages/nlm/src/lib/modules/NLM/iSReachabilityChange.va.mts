@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { sseoi } from '../NLM/sseoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION iSReachabilityChange */
+
 /**
  * @summary iSReachabilityChange
  * @description
@@ -28,6 +28,5 @@ export const iSReachabilityChange: OBJECT_IDENTIFIER = new _OID(
     [/* informationtype */ 4, /* iSReachabilityChange */ 1],
     sseoi
 );
-/* END_OF_SYMBOL_DEFINITION iSReachabilityChange */
 
 /* eslint-enable */

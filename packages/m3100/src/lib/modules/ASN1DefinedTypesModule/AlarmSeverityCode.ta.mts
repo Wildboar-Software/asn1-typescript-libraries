@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_AlarmSeverityCode */
+
 /**
  * @summary AlarmSeverityCode
  * @description
@@ -30,9 +30,8 @@ export enum _enum_for_AlarmSeverityCode {
     critical = 3,
     warning = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_AlarmSeverityCode */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode */
+
 /**
  * @summary AlarmSeverityCode
  * @description
@@ -45,9 +44,8 @@ export enum _enum_for_AlarmSeverityCode {
  * ```@enum {number}
  */
 export type AlarmSeverityCode = _enum_for_AlarmSeverityCode;
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode */
+
 /**
  * @summary AlarmSeverityCode
  * @description
@@ -60,9 +58,8 @@ export type AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  * ```@enum {number}
  */
 export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode_non_alarmed */
+
 /**
  * @summary AlarmSeverityCode_non_alarmed
  * @constant
@@ -70,9 +67,8 @@ export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  */
 export const AlarmSeverityCode_non_alarmed: AlarmSeverityCode =
     AlarmSeverityCode.non_alarmed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode_non_alarmed */
 
-/* START_OF_SYMBOL_DEFINITION non_alarmed */
+
 /**
  * @summary non_alarmed
  * @constant
@@ -80,9 +76,8 @@ export const AlarmSeverityCode_non_alarmed: AlarmSeverityCode =
  */
 export const non_alarmed: AlarmSeverityCode =
     AlarmSeverityCode.non_alarmed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION non_alarmed */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode_minor */
+
 /**
  * @summary AlarmSeverityCode_minor
  * @constant
@@ -90,9 +85,8 @@ export const non_alarmed: AlarmSeverityCode =
  */
 export const AlarmSeverityCode_minor: AlarmSeverityCode =
     AlarmSeverityCode.minor; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode_minor */
 
-/* START_OF_SYMBOL_DEFINITION minor */
+
 /**
  * @summary minor
  * @constant
@@ -100,9 +94,8 @@ export const AlarmSeverityCode_minor: AlarmSeverityCode =
  */
 export const minor: AlarmSeverityCode =
     AlarmSeverityCode.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION minor */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode_major */
+
 /**
  * @summary AlarmSeverityCode_major
  * @constant
@@ -110,9 +103,8 @@ export const minor: AlarmSeverityCode =
  */
 export const AlarmSeverityCode_major: AlarmSeverityCode =
     AlarmSeverityCode.major; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode_major */
 
-/* START_OF_SYMBOL_DEFINITION major */
+
 /**
  * @summary major
  * @constant
@@ -120,9 +112,8 @@ export const AlarmSeverityCode_major: AlarmSeverityCode =
  */
 export const major: AlarmSeverityCode =
     AlarmSeverityCode.major; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION major */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode_critical */
+
 /**
  * @summary AlarmSeverityCode_critical
  * @constant
@@ -130,9 +121,8 @@ export const major: AlarmSeverityCode =
  */
 export const AlarmSeverityCode_critical: AlarmSeverityCode =
     AlarmSeverityCode.critical; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode_critical */
 
-/* START_OF_SYMBOL_DEFINITION critical */
+
 /**
  * @summary critical
  * @constant
@@ -140,9 +130,8 @@ export const AlarmSeverityCode_critical: AlarmSeverityCode =
  */
 export const critical: AlarmSeverityCode =
     AlarmSeverityCode.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION critical */
 
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityCode_warning */
+
 /**
  * @summary AlarmSeverityCode_warning
  * @constant
@@ -150,9 +139,8 @@ export const critical: AlarmSeverityCode =
  */
 export const AlarmSeverityCode_warning: AlarmSeverityCode =
     AlarmSeverityCode.warning; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityCode_warning */
 
-/* START_OF_SYMBOL_DEFINITION warning */
+
 /**
  * @summary warning
  * @constant
@@ -160,21 +148,16 @@ export const AlarmSeverityCode_warning: AlarmSeverityCode =
  */
 export const warning: AlarmSeverityCode =
     AlarmSeverityCode.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION warning */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmSeverityCode */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmSeverityCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmSeverityCode */
+
+
 export const _decode_AlarmSeverityCode = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmSeverityCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmSeverityCode */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmSeverityCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmSeverityCode */
+
+
 export const _encode_AlarmSeverityCode = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmSeverityCode */
 
 /* eslint-enable */

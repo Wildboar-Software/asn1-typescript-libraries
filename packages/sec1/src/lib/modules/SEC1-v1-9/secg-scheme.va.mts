@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION secg_scheme */
 /**
  * @summary secg_scheme
  * @description
@@ -34,6 +33,5 @@ const secg_scheme: OBJECT_IDENTIFIER = new _OID([
     /* certicom */ 132,
     /* schemes */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION secg_scheme */
 
 /* eslint-enable */

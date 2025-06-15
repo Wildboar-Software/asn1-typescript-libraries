@@ -16,7 +16,7 @@ import {
     _decode_TroubleReportStatus_number,
     _encode_TroubleReportStatus_number,
 } from '../X790ASN1Module/TroubleReportStatus-number.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleReportStatus */
+
 /**
  * @summary TroubleReportStatus
  * @description
@@ -51,13 +51,11 @@ export type TroubleReportStatus =
     | { number_: TroubleReportStatus_number } /* CHOICE_ALT_ROOT */
     | { identifier: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TroubleReportStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatus */
+
 let _cached_decoder_for_TroubleReportStatus: $.ASN1Decoder<TroubleReportStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportStatus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportStatus
  * @function
@@ -75,13 +73,11 @@ export function _decode_TroubleReportStatus(el: _Element) {
     }
     return _cached_decoder_for_TroubleReportStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatus */
+
 let _cached_encoder_for_TroubleReportStatus: $.ASN1Encoder<TroubleReportStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportStatus */
+
 /**
  * @summary Encodes a(n) TroubleReportStatus into an ASN.1 Element.
  * @function
@@ -105,6 +101,5 @@ export function _encode_TroubleReportStatus(
     return _cached_encoder_for_TroubleReportStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportStatus */
 
 /* eslint-enable */

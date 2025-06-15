@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_hat_application_reference */
 /**
  * @summary id_hat_application_reference
  * @description
@@ -25,6 +24,5 @@ import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.mjs';
  * @constant
  */
 export const id_hat_application_reference: ID = new _OID([19], id_hat);
-/* END_OF_SYMBOL_DEFINITION id_hat_application_reference */
 
 /* eslint-enable */

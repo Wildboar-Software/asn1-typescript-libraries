@@ -15,7 +15,6 @@ import {
     _decode_RecipientsSubField,
     _encode_RecipientsSubField,
 } from '../EDIMSInformationObjects/RecipientsSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientsField */
 /**
  * @summary RecipientsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RecipientsField = RecipientsSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientsField */
 let _cached_decoder_for_RecipientsField: $.ASN1Decoder<RecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_RecipientsField(el: _Element) {
     }
     return _cached_decoder_for_RecipientsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientsField */
 let _cached_encoder_for_RecipientsField: $.ASN1Encoder<RecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientsField */
 /**
  * @summary Encodes a(n) RecipientsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RecipientsField(
     return _cached_encoder_for_RecipientsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientsField */
 
 /* eslint-enable */

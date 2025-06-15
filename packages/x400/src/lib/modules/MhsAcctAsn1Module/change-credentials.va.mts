@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION change_credentials */
 /**
  * @summary change_credentials
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const change_credentials: EventTypeId = { localForm: 4 };
-/* END_OF_SYMBOL_DEFINITION change_credentials */
 
 /* eslint-enable */

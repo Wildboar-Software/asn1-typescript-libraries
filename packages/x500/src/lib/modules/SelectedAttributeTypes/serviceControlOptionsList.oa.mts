@@ -9,7 +9,6 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_serviceControlOptionsList } from "../SelectedAttributeTypes/id-not-serviceControlOptionsList.va.mjs";
-/* START_OF_SYMBOL_DEFINITION serviceControlOptionsList */
 /**
  * @summary serviceControlOptionsList
  * @description
@@ -44,6 +43,5 @@ export const serviceControlOptionsList: ATTRIBUTE<ServiceControlOptions> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION serviceControlOptionsList */
 
 /* eslint-enable */

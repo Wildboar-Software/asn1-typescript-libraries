@@ -22,7 +22,6 @@ import { expressionMatches } from '../MHSRoutingORAddressSubtree/expressionMatch
 import { nextLevelComplete } from '../MHSRoutingORAddressSubtree/nextLevelComplete.oa.mjs';
 import { recipientMDAssignedAlternateRecipient } from '../MHSRoutingORAddressSubtree/recipientMDAssignedAlternateRecipient.oa.mjs';
 import { id_oc_mhs_or_address_element } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-or-address-element.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRAddressElement */
 /**
  * @summary oRAddressElement
  * @description
@@ -58,6 +57,5 @@ export const oRAddressElement: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_or_address_element /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRAddressElement */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RecipientIdentifier */
+
 /**
  * @summary RecipientIdentifier
  * @description
@@ -31,13 +31,11 @@ export type RecipientIdentifier =
           subjectKeyIdentifier: SubjectKeyIdentifier;
       } /* CHOICE_ALT_EXT CHOICE_ALT_VERSION 2 */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientIdentifier */
+
 let _cached_decoder_for_RecipientIdentifier: $.ASN1Decoder<RecipientIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientIdentifier
  * @function
@@ -63,13 +61,11 @@ export function _decode_RecipientIdentifier(el: _Element) {
     }
     return _cached_decoder_for_RecipientIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientIdentifier */
+
 let _cached_encoder_for_RecipientIdentifier: $.ASN1Encoder<RecipientIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientIdentifier */
+
 /**
  * @summary Encodes a(n) RecipientIdentifier into an ASN.1 Element.
  * @function
@@ -98,6 +94,5 @@ export function _encode_RecipientIdentifier(
     return _cached_encoder_for_RecipientIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientIdentifier */
 
 /* eslint-enable */

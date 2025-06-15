@@ -18,7 +18,6 @@ import {
     _encode_AVMPversion,
     _enum_for_AVMPversion,
 } from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AVMPcommonComponents */
 /**
  * @summary AVMPcommonComponents
  * @description
@@ -103,9 +102,7 @@ export class AVMPcommonComponents {
 
     public static _enum_for_version = _enum_for_AVMPversion;
 }
-/* END_OF_SYMBOL_DEFINITION AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AVMPcommonComponents */
 /**
  * @summary The Leading Root Component Types of AVMPcommonComponents
  * @description
@@ -137,9 +134,7 @@ export const _root_component_type_list_1_spec_for_AVMPcommonComponents: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AVMPcommonComponents */
 /**
  * @summary The Trailing Root Component Types of AVMPcommonComponents
  * @description
@@ -149,9 +144,7 @@ export const _root_component_type_list_1_spec_for_AVMPcommonComponents: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AVMPcommonComponents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AVMPcommonComponents */
 /**
  * @summary The Extension Addition Component Types of AVMPcommonComponents
  * @description
@@ -161,13 +154,9 @@ export const _root_component_type_list_2_spec_for_AVMPcommonComponents: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_AVMPcommonComponents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMPcommonComponents */
 let _cached_decoder_for_AVMPcommonComponents: $.ASN1Decoder<AVMPcommonComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AVMPcommonComponents */
 /**
  * @summary Decodes an ASN.1 element into a(n) AVMPcommonComponents
  * @function
@@ -219,13 +208,9 @@ export function _decode_AVMPcommonComponents(el: _Element) {
     }
     return _cached_decoder_for_AVMPcommonComponents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMPcommonComponents */
 let _cached_encoder_for_AVMPcommonComponents: $.ASN1Encoder<AVMPcommonComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AVMPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AVMPcommonComponents */
 /**
  * @summary Encodes a(n) AVMPcommonComponents into an ASN.1 Element.
  * @function
@@ -272,6 +257,5 @@ export function _encode_AVMPcommonComponents(
     return _cached_encoder_for_AVMPcommonComponents(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AVMPcommonComponents */
 
 /* eslint-enable */

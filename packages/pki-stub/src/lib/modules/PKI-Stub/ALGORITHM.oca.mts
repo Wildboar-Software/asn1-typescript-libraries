@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ALGORITHM */
 /**
  * @summary ALGORITHM
  * @description
@@ -75,6 +74,5 @@ export interface ALGORITHM<
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION ALGORITHM */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_TONotCreated,
     _encode_TONotCreated,
 } from '../Test-ASN1Module/TONotCreated.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IndependentTestInvocationError_Item */
 /**
  * @summary IndependentTestInvocationError_Item
  * @description
@@ -34,13 +33,9 @@ import {
 export type IndependentTestInvocationError_Item =
     | { testInstanceCreated: IndependentTestResponse } /* CHOICE_ALT_ROOT */
     | { tONotCreated: TONotCreated } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION IndependentTestInvocationError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IndependentTestInvocationError_Item */
 let _cached_decoder_for_IndependentTestInvocationError_Item: $.ASN1Decoder<IndependentTestInvocationError_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IndependentTestInvocationError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IndependentTestInvocationError_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) IndependentTestInvocationError_Item
  * @function
@@ -64,13 +59,9 @@ export function _decode_IndependentTestInvocationError_Item(el: _Element) {
     }
     return _cached_decoder_for_IndependentTestInvocationError_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IndependentTestInvocationError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IndependentTestInvocationError_Item */
 let _cached_encoder_for_IndependentTestInvocationError_Item: $.ASN1Encoder<IndependentTestInvocationError_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IndependentTestInvocationError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IndependentTestInvocationError_Item */
 /**
  * @summary Encodes a(n) IndependentTestInvocationError_Item into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_IndependentTestInvocationError_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IndependentTestInvocationError_Item */
 
 /* eslint-enable */

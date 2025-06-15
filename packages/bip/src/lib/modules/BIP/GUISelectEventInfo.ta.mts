@@ -64,7 +64,7 @@ import {
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
 } from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUISelectEventInfo */
+
 /**
  * @summary GUISelectEventInfo
  * @description
@@ -228,9 +228,8 @@ export class GUISelectEventInfo {
 
   public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
 }
-/* END_OF_SYMBOL_DEFINITION GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUISelectEventInfo */
+
 /**
  * @summary The Leading Root Component Types of GUISelectEventInfo
  * @description
@@ -339,9 +338,8 @@ export const _root_component_type_list_1_spec_for_GUISelectEventInfo: $.Componen
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUISelectEventInfo */
+
 /**
  * @summary The Trailing Root Component Types of GUISelectEventInfo
  * @description
@@ -351,9 +349,8 @@ export const _root_component_type_list_1_spec_for_GUISelectEventInfo: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUISelectEventInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUISelectEventInfo */
+
 /**
  * @summary The Extension Addition Component Types of GUISelectEventInfo
  * @description
@@ -363,13 +360,11 @@ export const _root_component_type_list_2_spec_for_GUISelectEventInfo: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_GUISelectEventInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUISelectEventInfo */
+
 let _cached_decoder_for_GUISelectEventInfo: $.ASN1Decoder<GUISelectEventInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUISelectEventInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUISelectEventInfo
  * @function
@@ -471,13 +466,11 @@ export function _decode_GUISelectEventInfo(el: _Element) {
   }
   return _cached_decoder_for_GUISelectEventInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUISelectEventInfo */
+
 let _cached_encoder_for_GUISelectEventInfo: $.ASN1Encoder<GUISelectEventInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUISelectEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUISelectEventInfo */
+
 /**
  * @summary Encodes a(n) GUISelectEventInfo into an ASN.1 Element.
  * @function
@@ -545,6 +538,5 @@ export function _encode_GUISelectEventInfo(
   return _cached_encoder_for_GUISelectEventInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUISelectEventInfo */
 
 /* eslint-enable */

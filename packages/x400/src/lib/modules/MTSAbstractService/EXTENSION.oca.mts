@@ -20,7 +20,6 @@ import {
     _decode_Criticality,
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EXTENSION */
 /**
  * @summary EXTENSION
  * @description
@@ -84,6 +83,5 @@ export interface EXTENSION<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
      */
     readonly '&recommended'?: Criticality;
 }
-/* END_OF_SYMBOL_DEFINITION EXTENSION */
 
 /* eslint-enable */

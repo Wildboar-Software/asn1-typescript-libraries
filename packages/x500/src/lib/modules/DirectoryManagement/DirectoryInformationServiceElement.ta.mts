@@ -20,7 +20,6 @@ import {
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../InformationFramework/AttributeValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DirectoryInformationServiceElement */
 /**
  * @summary DirectoryInformationServiceElement
  * @description
@@ -88,9 +87,7 @@ export class DirectoryInformationServiceElement {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DirectoryInformationServiceElement */
 /**
  * @summary The Leading Root Component Types of DirectoryInformationServiceElement
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_DirectoryInformationServiceEle
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DirectoryInformationServiceElement */
 /**
  * @summary The Trailing Root Component Types of DirectoryInformationServiceElement
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_DirectoryInformationServiceEle
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DirectoryInformationServiceElement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DirectoryInformationServiceElement */
 /**
  * @summary The Extension Addition Component Types of DirectoryInformationServiceElement
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_DirectoryInformationServiceEle
  * @constant
  */
 export const _extension_additions_list_spec_for_DirectoryInformationServiceElement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryInformationServiceElement */
 let _cached_decoder_for_DirectoryInformationServiceElement: $.ASN1Decoder<DirectoryInformationServiceElement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DirectoryInformationServiceElement */
 /**
  * @summary Decodes an ASN.1 element into a(n) DirectoryInformationServiceElement
  * @function
@@ -203,13 +192,9 @@ export function _decode_DirectoryInformationServiceElement(el: _Element) {
     }
     return _cached_decoder_for_DirectoryInformationServiceElement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryInformationServiceElement */
 let _cached_encoder_for_DirectoryInformationServiceElement: $.ASN1Encoder<DirectoryInformationServiceElement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryInformationServiceElement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DirectoryInformationServiceElement */
 /**
  * @summary Encodes a(n) DirectoryInformationServiceElement into an ASN.1 Element.
  * @function
@@ -256,6 +241,5 @@ export function _encode_DirectoryInformationServiceElement(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DirectoryInformationServiceElement */
 
 /* eslint-enable */

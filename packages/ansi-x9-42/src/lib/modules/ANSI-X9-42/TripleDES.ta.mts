@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TripleDES */
+
 /**
  * @summary TripleDES
  * @description
@@ -14,13 +14,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type TripleDES = INTEGER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TripleDES */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TripleDES */
+
 let _cached_decoder_for_TripleDES: $.ASN1Decoder<TripleDES> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TripleDES */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TripleDES */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TripleDES
  * @function
@@ -35,13 +33,11 @@ export function _decode_TripleDES(el: _Element) {
     }
     return _cached_decoder_for_TripleDES(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TripleDES */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TripleDES */
+
 let _cached_encoder_for_TripleDES: $.ASN1Encoder<TripleDES> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TripleDES */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TripleDES */
+
 /**
  * @summary Encodes a(n) TripleDES into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_TripleDES(
     return _cached_encoder_for_TripleDES(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TripleDES */
 
 /* eslint-enable */

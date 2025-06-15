@@ -26,7 +26,6 @@ import {
     _decode_NumericMeasure,
     _encode_NumericMeasure,
 } from '../SummarizationASN1Productions/NumericMeasure.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObservationScan */
 /**
  * @summary ObservationScan
  * @description
@@ -87,9 +86,7 @@ export class ObservationScan {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObservationScan */
 /**
  * @summary The Leading Root Component Types of ObservationScan
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_ObservationScan: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObservationScan */
 /**
  * @summary The Trailing Root Component Types of ObservationScan
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_ObservationScan: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObservationScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObservationScan */
 /**
  * @summary The Extension Addition Component Types of ObservationScan
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_ObservationScan: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ObservationScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservationScan */
 let _cached_decoder_for_ObservationScan: $.ASN1Decoder<ObservationScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObservationScan */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObservationScan
  * @function
@@ -209,13 +198,9 @@ export function _decode_ObservationScan(el: _Element) {
     }
     return _cached_decoder_for_ObservationScan(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservationScan */
 let _cached_encoder_for_ObservationScan: $.ASN1Encoder<ObservationScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObservationScan */
 /**
  * @summary Encodes a(n) ObservationScan into an ASN.1 Element.
  * @function
@@ -274,6 +259,5 @@ export function _encode_ObservationScan(
     return _cached_encoder_for_ObservationScan(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObservationScan */
 
 /* eslint-enable */

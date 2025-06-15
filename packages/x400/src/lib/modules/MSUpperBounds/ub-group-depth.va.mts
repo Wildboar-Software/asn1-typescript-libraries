@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_group_depth */
 /**
  * @summary ub_group_depth
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_group_depth: INTEGER = 64;
-/* END_OF_SYMBOL_DEFINITION ub_group_depth */
 
 /* eslint-enable */

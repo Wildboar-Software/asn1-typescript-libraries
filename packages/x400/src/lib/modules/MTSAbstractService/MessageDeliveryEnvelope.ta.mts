@@ -25,7 +25,6 @@ import {
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
 } from '../MTSAbstractService/OtherMessageDeliveryFields.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryEnvelope */
 /**
  * @summary MessageDeliveryEnvelope
  * @description
@@ -88,9 +87,7 @@ export class MessageDeliveryEnvelope {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageDeliveryEnvelope */
 /**
  * @summary The Leading Root Component Types of MessageDeliveryEnvelope
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_MessageDeliveryEnvelope: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageDeliveryEnvelope */
 /**
  * @summary The Trailing Root Component Types of MessageDeliveryEnvelope
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_MessageDeliveryEnvelope: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageDeliveryEnvelope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageDeliveryEnvelope */
 /**
  * @summary The Extension Addition Component Types of MessageDeliveryEnvelope
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_MessageDeliveryEnvelope: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageDeliveryEnvelope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryEnvelope */
 let _cached_decoder_for_MessageDeliveryEnvelope: $.ASN1Decoder<MessageDeliveryEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageDeliveryEnvelope */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryEnvelope
  * @function
@@ -192,13 +181,9 @@ export function _decode_MessageDeliveryEnvelope(el: _Element) {
     }
     return _cached_decoder_for_MessageDeliveryEnvelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryEnvelope */
 let _cached_encoder_for_MessageDeliveryEnvelope: $.ASN1Encoder<MessageDeliveryEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageDeliveryEnvelope */
 /**
  * @summary Encodes a(n) MessageDeliveryEnvelope into an ASN.1 Element.
  * @function
@@ -237,6 +222,5 @@ export function _encode_MessageDeliveryEnvelope(
     return _cached_encoder_for_MessageDeliveryEnvelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageDeliveryEnvelope */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION securityAuditTrail_Attribute */
 /**
  * @summary securityAuditTrail_Attribute
  * @description
@@ -29,6 +28,5 @@ export const securityAuditTrail_Attribute: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part8 */ 8, /* attribute */ 7],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION securityAuditTrail_Attribute */
 
 /* eslint-enable */

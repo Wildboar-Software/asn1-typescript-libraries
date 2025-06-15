@@ -31,7 +31,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MTSBindResult */
 /**
  * @summary MTSBindResult
  * @description
@@ -119,9 +118,7 @@ export class MTSBindResult {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MTSBindResult */
 /**
  * @summary The Leading Root Component Types of MTSBindResult
  * @description
@@ -153,9 +150,7 @@ export const _root_component_type_list_1_spec_for_MTSBindResult: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MTSBindResult */
 /**
  * @summary The Trailing Root Component Types of MTSBindResult
  * @description
@@ -165,9 +160,7 @@ export const _root_component_type_list_1_spec_for_MTSBindResult: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MTSBindResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MTSBindResult */
 /**
  * @summary The Extension Addition Component Types of MTSBindResult
  * @description
@@ -185,13 +178,9 @@ export const _extension_additions_list_spec_for_MTSBindResult: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTSBindResult */
 let _cached_decoder_for_MTSBindResult: $.ASN1Decoder<MTSBindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTSBindResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTSBindResult
  * @function
@@ -256,13 +245,9 @@ export function _decode_MTSBindResult(el: _Element) {
     }
     return _cached_decoder_for_MTSBindResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTSBindResult */
 let _cached_encoder_for_MTSBindResult: $.ASN1Encoder<MTSBindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTSBindResult */
 /**
  * @summary Encodes a(n) MTSBindResult into an ASN.1 Element.
  * @function
@@ -331,6 +316,5 @@ export function _encode_MTSBindResult(
     return _cached_encoder_for_MTSBindResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTSBindResult */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { usgov } from "../AlgorithmObjectIdentifiers/usgov.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dodAlgorithms */
 /**
  * @summary dodAlgorithms
  * @description
@@ -19,6 +18,5 @@ export const dodAlgorithms: ID = new _OID(
     [/* dod */ 2, /* infosec */ 1, /* algorithms */ 1],
     usgov
 );
-/* END_OF_SYMBOL_DEFINITION dodAlgorithms */
 
 /* eslint-enable */

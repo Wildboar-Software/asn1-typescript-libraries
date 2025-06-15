@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardPathNotAcceptable */
+
 /**
  * @summary pDUDiscardPathNotAcceptable
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardPathNotAcceptable: OBJECT_IDENTIFIER = new _OID(
     [/* pathNotAcceptable */ 147],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardPathNotAcceptable */
 
 /* eslint-enable */

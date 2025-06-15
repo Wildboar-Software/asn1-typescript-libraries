@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
-/* START_OF_SYMBOL_DEFINITION protocolResetActionOID */
 /**
  * @summary protocolResetActionOID
  * @description
@@ -28,6 +27,5 @@ export const protocolResetActionOID: OBJECT_IDENTIFIER = new _OID(
     [/* action */ 9, /* protocolResetAction */ 3],
     timeManagement
 );
-/* END_OF_SYMBOL_DEFINITION protocolResetActionOID */
 
 /* eslint-enable */

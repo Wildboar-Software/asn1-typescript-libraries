@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_et_report */
 /**
  * @summary id_et_report
  * @description
@@ -25,6 +24,5 @@ import { id_et } from '../IPMSObjectIdentifiers/id-et.va.mjs';
  * @constant
  */
 export const id_et_report: ID = new _OID([14], id_et);
-/* END_OF_SYMBOL_DEFINITION id_et_report */
 
 /* eslint-enable */

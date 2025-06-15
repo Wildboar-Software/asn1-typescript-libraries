@@ -9,7 +9,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va.mjs";
-/* START_OF_SYMBOL_DEFINITION certificationAuthority */
 /**
  * @summary certificationAuthority
  * @description
@@ -49,6 +48,5 @@ export const certificationAuthority: OBJECT_CLASS = {
     "&ldapDesc": "X.509 certificate authority",
     "&id": id_oc_certificationAuthority /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certificationAuthority */
 
 /* eslint-enable */

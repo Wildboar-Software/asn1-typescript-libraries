@@ -12,7 +12,6 @@ import {
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { GeneralAttributes } from '../MSGeneralAttributeTypes/GeneralAttributes.osa.mjs';
 import { ContentSpecificAttributes } from '../MSGeneralAttributeTypes/ContentSpecificAttributes.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeTable */
 /**
  * @summary AttributeTable
  * @description
@@ -31,6 +30,5 @@ export const AttributeTable: X413ATTRIBUTE[] = [
     ...GeneralAttributes,
     ...ContentSpecificAttributes,
 ];
-/* END_OF_SYMBOL_DEFINITION AttributeTable */
 
 /* eslint-enable */

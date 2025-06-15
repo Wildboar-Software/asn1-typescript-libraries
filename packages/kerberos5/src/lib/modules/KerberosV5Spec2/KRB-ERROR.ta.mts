@@ -43,7 +43,7 @@ import {
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION KRB_ERROR */
+
 /**
  * @summary KRB_ERROR
  * @description
@@ -184,9 +184,8 @@ export class KRB_ERROR {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_ERROR */
+
 /**
  * @summary The Leading Root Component Types of KRB_ERROR
  * @description
@@ -288,9 +287,8 @@ export const _root_component_type_list_1_spec_for_KRB_ERROR: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_ERROR */
+
 /**
  * @summary The Trailing Root Component Types of KRB_ERROR
  * @description
@@ -300,9 +298,8 @@ export const _root_component_type_list_1_spec_for_KRB_ERROR: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KRB_ERROR: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_ERROR */
+
 /**
  * @summary The Extension Addition Component Types of KRB_ERROR
  * @description
@@ -312,13 +309,11 @@ export const _root_component_type_list_2_spec_for_KRB_ERROR: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_KRB_ERROR: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_ERROR */
+
 let _cached_decoder_for_KRB_ERROR: $.ASN1Decoder<KRB_ERROR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KRB_ERROR */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KRB_ERROR
  * @function
@@ -434,13 +429,11 @@ export function _decode_KRB_ERROR(el: _Element) {
   }
   return _cached_decoder_for_KRB_ERROR(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_ERROR */
+
 let _cached_encoder_for_KRB_ERROR: $.ASN1Encoder<KRB_ERROR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_ERROR */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KRB_ERROR */
+
 /**
  * @summary Encodes a(n) KRB_ERROR into an ASN.1 Element.
  * @function
@@ -563,6 +556,5 @@ export function _encode_KRB_ERROR(
   return _cached_encoder_for_KRB_ERROR(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KRB_ERROR */
 
 /* eslint-enable */

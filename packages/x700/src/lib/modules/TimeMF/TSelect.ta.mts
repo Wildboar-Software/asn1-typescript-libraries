@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TSelect */
 /**
  * @summary TSelect
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TSelect = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION TSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TSelect */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TSelect */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TSelect */
 export const _decode_TSelect = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_TSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TSelect */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TSelect */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TSelect */
 export const _encode_TSelect = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TSelect */
 
 /* eslint-enable */

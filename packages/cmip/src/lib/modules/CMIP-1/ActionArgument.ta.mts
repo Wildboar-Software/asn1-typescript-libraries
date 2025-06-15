@@ -56,7 +56,7 @@ import {
     Scope_namedNumbers_baseObject,
 } from '../CMIP-1/Scope-namedNumbers.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActionArgument */
+
 /**
  * @summary ActionArgument
  * @description
@@ -191,9 +191,8 @@ export class ActionArgument implements BaseManagedObjectId {
 
   public static _enum_for_synchronization = _enum_for_CMISSync;
 }
-/* END_OF_SYMBOL_DEFINITION ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ActionArgument */
+
 /**
  * @summary The Leading Root Component Types of ActionArgument
  * @description
@@ -234,9 +233,8 @@ export const _root_component_type_list_1_spec_for_ActionArgument: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ActionArgument */
+
 /**
  * @summary The Trailing Root Component Types of ActionArgument
  * @description
@@ -246,9 +244,8 @@ export const _root_component_type_list_1_spec_for_ActionArgument: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ActionArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ActionArgument */
+
 /**
  * @summary The Extension Addition Component Types of ActionArgument
  * @description
@@ -258,13 +255,11 @@ export const _root_component_type_list_2_spec_for_ActionArgument: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_ActionArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionArgument */
+
 let _cached_decoder_for_ActionArgument: $.ASN1Decoder<ActionArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionArgument */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionArgument
  * @function
@@ -343,13 +338,11 @@ export function _decode_ActionArgument(el: _Element) {
   }
   return _cached_decoder_for_ActionArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionArgument */
+
 let _cached_encoder_for_ActionArgument: $.ASN1Encoder<ActionArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionArgument */
+
 /**
  * @summary Encodes a(n) ActionArgument into an ASN.1 Element.
  * @function
@@ -428,6 +421,5 @@ export function _encode_ActionArgument(
   return _cached_encoder_for_ActionArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionArgument */
 
 /* eslint-enable */

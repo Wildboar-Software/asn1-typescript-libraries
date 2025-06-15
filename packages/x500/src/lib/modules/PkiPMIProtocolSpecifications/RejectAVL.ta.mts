@@ -29,7 +29,6 @@ import {
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RejectAVL */
 /**
  * @summary RejectAVL
  * @description
@@ -127,9 +126,7 @@ export class RejectAVL implements AVMPcommonComponents {
 
     public static _enum_for_reason = _enum_for_AVMP_error;
 }
-/* END_OF_SYMBOL_DEFINITION RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RejectAVL */
 /**
  * @summary The Leading Root Component Types of RejectAVL
  * @description
@@ -148,9 +145,7 @@ export const _root_component_type_list_1_spec_for_RejectAVL: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RejectAVL */
 /**
  * @summary The Trailing Root Component Types of RejectAVL
  * @description
@@ -160,9 +155,7 @@ export const _root_component_type_list_1_spec_for_RejectAVL: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RejectAVL: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RejectAVL */
 /**
  * @summary The Extension Addition Component Types of RejectAVL
  * @description
@@ -172,13 +165,9 @@ export const _root_component_type_list_2_spec_for_RejectAVL: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_RejectAVL: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RejectAVL */
 let _cached_decoder_for_RejectAVL: $.ASN1Decoder<RejectAVL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RejectAVL */
 /**
  * @summary Decodes an ASN.1 element into a(n) RejectAVL
  * @function
@@ -233,13 +222,9 @@ export function _decode_RejectAVL(el: _Element) {
     }
     return _cached_decoder_for_RejectAVL(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RejectAVL */
 let _cached_encoder_for_RejectAVL: $.ASN1Encoder<RejectAVL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RejectAVL */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RejectAVL */
 /**
  * @summary Encodes a(n) RejectAVL into an ASN.1 Element.
  * @function
@@ -290,6 +275,5 @@ export function _encode_RejectAVL(
     return _cached_encoder_for_RejectAVL(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RejectAVL */
 
 /* eslint-enable */

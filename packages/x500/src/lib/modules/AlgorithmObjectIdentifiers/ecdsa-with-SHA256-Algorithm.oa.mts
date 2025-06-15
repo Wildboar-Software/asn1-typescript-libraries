@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ecdsa_with_SHA256 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA256.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ecdsa_with_SHA256_Algorithm */
 /**
  * @summary ecdsa_with_SHA256_Algorithm
  * @description
@@ -28,6 +27,5 @@ export const ecdsa_with_SHA256_Algorithm: ALGORITHM = {
     "&id": ecdsa_with_SHA256 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecdsa_with_SHA256_Algorithm */
 
 /* eslint-enable */

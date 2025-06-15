@@ -20,7 +20,7 @@ import {
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ExtendedCertificate */
+
 /**
  * @summary ExtendedCertificate
  * @description
@@ -81,9 +81,8 @@ export class ExtendedCertificate {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedCertificate */
+
 /**
  * @summary The Leading Root Component Types of ExtendedCertificate
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_ExtendedCertificate: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedCertificate */
+
 /**
  * @summary The Trailing Root Component Types of ExtendedCertificate
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_ExtendedCertificate: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtendedCertificate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedCertificate */
+
 /**
  * @summary The Extension Addition Component Types of ExtendedCertificate
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_ExtendedCertificate: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtendedCertificate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificate */
+
 let _cached_decoder_for_ExtendedCertificate: $.ASN1Decoder<ExtendedCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedCertificate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedCertificate
  * @function
@@ -187,13 +182,11 @@ export function _decode_ExtendedCertificate(el: _Element) {
     }
     return _cached_decoder_for_ExtendedCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificate */
+
 let _cached_encoder_for_ExtendedCertificate: $.ASN1Encoder<ExtendedCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedCertificate */
+
 /**
  * @summary Encodes a(n) ExtendedCertificate into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_ExtendedCertificate(
     return _cached_encoder_for_ExtendedCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedCertificate */
 
 /* eslint-enable */

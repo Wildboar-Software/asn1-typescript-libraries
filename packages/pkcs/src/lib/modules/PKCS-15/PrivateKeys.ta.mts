@@ -11,7 +11,7 @@ import {
     _decode_PrivateKeyType,
     _encode_PrivateKeyType,
 } from "../PKCS-15/PrivateKeyType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrivateKeys */
+
 /**
  * @summary PrivateKeys
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type PrivateKeys = PathOrObjects<PrivateKeyType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PrivateKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeys */
+
 let _cached_decoder_for_PrivateKeys: $.ASN1Decoder<PrivateKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeys */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateKeys */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateKeys
  * @function
@@ -44,13 +42,11 @@ export function _decode_PrivateKeys(el: _Element) {
     }
     return _cached_decoder_for_PrivateKeys(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeys */
+
 let _cached_encoder_for_PrivateKeys: $.ASN1Encoder<PrivateKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeys */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateKeys */
+
 /**
  * @summary Encodes a(n) PrivateKeys into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_PrivateKeys(
     return _cached_encoder_for_PrivateKeys(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateKeys */
 
 /* eslint-enable */

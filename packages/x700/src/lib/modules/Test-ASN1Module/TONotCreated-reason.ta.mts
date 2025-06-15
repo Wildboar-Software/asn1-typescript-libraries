@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_TONotCreated_reason */
 /**
  * @summary TONotCreated_reason
  * @description
@@ -30,9 +29,7 @@ export enum _enum_for_TONotCreated_reason {
     mORTNotAvailable = 4,
     associatedObjectNotAvailable = 5,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_TONotCreated_reason */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason */
 /**
  * @summary TONotCreated_reason
  * @description
@@ -44,9 +41,7 @@ export enum _enum_for_TONotCreated_reason {
  * ```@enum {number}
  */
 export type TONotCreated_reason = _enum_for_TONotCreated_reason;
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason */
 /**
  * @summary TONotCreated_reason
  * @description
@@ -58,9 +53,7 @@ export type TONotCreated_reason = _enum_for_TONotCreated_reason;
  * ```@enum {number}
  */
 export const TONotCreated_reason = _enum_for_TONotCreated_reason;
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason_invalidTOclass */
 /**
  * @summary TONotCreated_reason_invalidTOclass
  * @constant
@@ -68,9 +61,7 @@ export const TONotCreated_reason = _enum_for_TONotCreated_reason;
  */
 export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
     TONotCreated_reason.invalidTOclass; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason_invalidTOclass */
 
-/* START_OF_SYMBOL_DEFINITION invalidTOclass */
 /**
  * @summary invalidTOclass
  * @constant
@@ -78,9 +69,7 @@ export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
  */
 export const invalidTOclass: TONotCreated_reason =
     TONotCreated_reason.invalidTOclass; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidTOclass */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason_duplicateTOInstance */
 /**
  * @summary TONotCreated_reason_duplicateTOInstance
  * @constant
@@ -88,9 +77,7 @@ export const invalidTOclass: TONotCreated_reason =
  */
 export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
     TONotCreated_reason.duplicateTOInstance; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason_duplicateTOInstance */
 
-/* START_OF_SYMBOL_DEFINITION duplicateTOInstance */
 /**
  * @summary duplicateTOInstance
  * @constant
@@ -98,9 +85,7 @@ export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
  */
 export const duplicateTOInstance: TONotCreated_reason =
     TONotCreated_reason.duplicateTOInstance; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION duplicateTOInstance */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason_invalidMORTClass */
 /**
  * @summary TONotCreated_reason_invalidMORTClass
  * @constant
@@ -108,9 +93,7 @@ export const duplicateTOInstance: TONotCreated_reason =
  */
 export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
     TONotCreated_reason.invalidMORTClass; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason_invalidMORTClass */
 
-/* START_OF_SYMBOL_DEFINITION invalidMORTClass */
 /**
  * @summary invalidMORTClass
  * @constant
@@ -118,9 +101,7 @@ export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
  */
 export const invalidMORTClass: TONotCreated_reason =
     TONotCreated_reason.invalidMORTClass; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidMORTClass */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason_invalidAssociatedObjectClass */
 /**
  * @summary TONotCreated_reason_invalidAssociatedObjectClass
  * @constant
@@ -128,9 +109,7 @@ export const invalidMORTClass: TONotCreated_reason =
  */
 export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reason =
     TONotCreated_reason.invalidAssociatedObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason_invalidAssociatedObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION invalidAssociatedObjectClass */
 /**
  * @summary invalidAssociatedObjectClass
  * @constant
@@ -138,9 +117,7 @@ export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reas
  */
 export const invalidAssociatedObjectClass: TONotCreated_reason =
     TONotCreated_reason.invalidAssociatedObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidAssociatedObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason_mORTNotAvailable */
 /**
  * @summary TONotCreated_reason_mORTNotAvailable
  * @constant
@@ -148,9 +125,7 @@ export const invalidAssociatedObjectClass: TONotCreated_reason =
  */
 export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
     TONotCreated_reason.mORTNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason_mORTNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION mORTNotAvailable */
 /**
  * @summary mORTNotAvailable
  * @constant
@@ -158,9 +133,7 @@ export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
  */
 export const mORTNotAvailable: TONotCreated_reason =
     TONotCreated_reason.mORTNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mORTNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION TONotCreated_reason_associatedObjectNotAvailable */
 /**
  * @summary TONotCreated_reason_associatedObjectNotAvailable
  * @constant
@@ -168,9 +141,7 @@ export const mORTNotAvailable: TONotCreated_reason =
  */
 export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reason =
     TONotCreated_reason.associatedObjectNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TONotCreated_reason_associatedObjectNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION associatedObjectNotAvailable */
 /**
  * @summary associatedObjectNotAvailable
  * @constant
@@ -178,21 +149,12 @@ export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reas
  */
 export const associatedObjectNotAvailable: TONotCreated_reason =
     TONotCreated_reason.associatedObjectNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION associatedObjectNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TONotCreated_reason */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TONotCreated_reason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TONotCreated_reason */
 export const _decode_TONotCreated_reason = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_TONotCreated_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TONotCreated_reason */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TONotCreated_reason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TONotCreated_reason */
 export const _encode_TONotCreated_reason = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TONotCreated_reason */
 
 /* eslint-enable */

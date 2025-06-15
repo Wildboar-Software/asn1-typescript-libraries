@@ -3,7 +3,6 @@ import { avlProt } from "../ProtProtocols/avlProt.oa.mjs";
 import { casubProt } from "../ProtProtocols/casubProt.oa.mjs";
 import { tbprot } from "../ProtProtocols/tbprot.oa.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedProtSet */
 /**
  * @summary SupportedProtSet
  * @description
@@ -19,6 +18,5 @@ import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
  *
  */
 export const SupportedProtSet: WRAPPED_PROT[] = [avlProt, casubProt, tbprot];
-/* END_OF_SYMBOL_DEFINITION SupportedProtSet */
 
 /* eslint-enable */

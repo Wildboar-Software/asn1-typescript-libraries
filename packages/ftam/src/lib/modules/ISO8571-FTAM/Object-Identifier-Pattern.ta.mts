@@ -16,7 +16,7 @@ import {
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Object_Identifier_Pattern */
+
 /**
  * @summary Object_Identifier_Pattern
  * @description
@@ -71,9 +71,8 @@ export class Object_Identifier_Pattern {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Object_Identifier_Pattern */
+
 /**
  * @summary The Leading Root Component Types of Object_Identifier_Pattern
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_Object_Identifier_Pattern: $.C
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Object_Identifier_Pattern */
+
 /**
  * @summary The Trailing Root Component Types of Object_Identifier_Pattern
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_Object_Identifier_Pattern: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Object_Identifier_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Object_Identifier_Pattern */
+
 /**
  * @summary The Extension Addition Component Types of Object_Identifier_Pattern
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_Object_Identifier_Pattern: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_Object_Identifier_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Identifier_Pattern */
+
 let _cached_decoder_for_Object_Identifier_Pattern: $.ASN1Decoder<Object_Identifier_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Object_Identifier_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Object_Identifier_Pattern
  * @function
@@ -166,13 +161,11 @@ export function _decode_Object_Identifier_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Object_Identifier_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Identifier_Pattern */
+
 let _cached_encoder_for_Object_Identifier_Pattern: $.ASN1Encoder<Object_Identifier_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Identifier_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Object_Identifier_Pattern */
+
 /**
  * @summary Encodes a(n) Object_Identifier_Pattern into an ASN.1 Element.
  * @function
@@ -211,6 +204,5 @@ export function _encode_Object_Identifier_Pattern(
   return _cached_encoder_for_Object_Identifier_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Object_Identifier_Pattern */
 
 /* eslint-enable */

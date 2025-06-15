@@ -24,7 +24,6 @@ import {
 } from '../MTSAbstractService/RefusedOperation.ta.mjs';
 import { err_operation_refused } from '../MTSAccessProtocol/err-operation-refused.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION operation_refused */
 /**
  * @summary operation_refused
  * @description
@@ -54,6 +53,5 @@ export const operation_refused: ABSTRACT_ERROR<RefusedOperation> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION operation_refused */
 
 /* eslint-enable */

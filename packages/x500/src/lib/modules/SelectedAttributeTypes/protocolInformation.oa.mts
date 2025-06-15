@@ -10,7 +10,6 @@ import {
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import { protocolInformationMatch } from "../SelectedAttributeTypes/protocolInformationMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION protocolInformation */
 /**
  * @summary protocolInformation
  * @description
@@ -46,6 +45,5 @@ export const protocolInformation: ATTRIBUTE<ProtocolInformation> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION protocolInformation */
 
 /* eslint-enable */

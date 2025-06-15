@@ -25,7 +25,7 @@ import {
   _decode_SubsequentPdv,
   _encode_SubsequentPdv,
 } from '../GenericProtectingTransferSyntax/SubsequentPdv.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SyntaxStructure */
+
 /**
  * @summary SyntaxStructure
  * @description
@@ -54,13 +54,11 @@ export type SyntaxStructure =
   | { firstPdvExplicit: FirstPdvExplicit } /* CHOICE_ALT_ROOT */
   | { firstPdvExternal: FirstPdvExternal } /* CHOICE_ALT_ROOT */
   | { subsequentPdv: SubsequentPdv } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SyntaxStructure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxStructure */
+
 let _cached_decoder_for_SyntaxStructure: $.ASN1Decoder<SyntaxStructure> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxStructure */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SyntaxStructure */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SyntaxStructure
  * @function
@@ -79,13 +77,11 @@ export function _decode_SyntaxStructure(el: _Element) {
   }
   return _cached_decoder_for_SyntaxStructure(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SyntaxStructure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxStructure */
+
 let _cached_encoder_for_SyntaxStructure: $.ASN1Encoder<SyntaxStructure> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxStructure */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SyntaxStructure */
+
 /**
  * @summary Encodes a(n) SyntaxStructure into an ASN.1 Element.
  * @function
@@ -110,6 +106,5 @@ export function _encode_SyntaxStructure(
   return _cached_encoder_for_SyntaxStructure(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SyntaxStructure */
 
 /* eslint-enable */

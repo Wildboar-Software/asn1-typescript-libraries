@@ -20,7 +20,7 @@ import {
   _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER */
+
 /**
  * @summary ATOMIC_ACTION_IDENTIFIER
  * @description
@@ -80,9 +80,8 @@ export class ATOMIC_ACTION_IDENTIFIER {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ATOMIC_ACTION_IDENTIFIER */
+
 /**
  * @summary The Leading Root Component Types of ATOMIC_ACTION_IDENTIFIER
  * @description
@@ -101,9 +100,8 @@ export const _root_component_type_list_1_spec_for_ATOMIC_ACTION_IDENTIFIER: $.Co
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ATOMIC_ACTION_IDENTIFIER */
+
 /**
  * @summary The Trailing Root Component Types of ATOMIC_ACTION_IDENTIFIER
  * @description
@@ -113,9 +111,8 @@ export const _root_component_type_list_1_spec_for_ATOMIC_ACTION_IDENTIFIER: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ATOMIC_ACTION_IDENTIFIER: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ATOMIC_ACTION_IDENTIFIER */
+
 /**
  * @summary The Extension Addition Component Types of ATOMIC_ACTION_IDENTIFIER
  * @description
@@ -125,13 +122,11 @@ export const _root_component_type_list_2_spec_for_ATOMIC_ACTION_IDENTIFIER: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_ATOMIC_ACTION_IDENTIFIER: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER */
+
 let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER: $.ASN1Decoder<ATOMIC_ACTION_IDENTIFIER> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ATOMIC_ACTION_IDENTIFIER */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ATOMIC_ACTION_IDENTIFIER
  * @function
@@ -164,13 +159,11 @@ export function _decode_ATOMIC_ACTION_IDENTIFIER(el: _Element) {
   }
   return _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER */
+
 let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ATOMIC_ACTION_IDENTIFIER */
+
 /**
  * @summary Encodes a(n) ATOMIC_ACTION_IDENTIFIER into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_ATOMIC_ACTION_IDENTIFIER(
   return _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ATOMIC_ACTION_IDENTIFIER */
 
 /* eslint-enable */

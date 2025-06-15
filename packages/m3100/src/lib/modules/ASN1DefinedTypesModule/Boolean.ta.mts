@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Boolean */
+
 /**
  * @summary Boolean
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Boolean = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION Boolean */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Boolean */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Boolean */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Boolean */
+
+
 export const _decode_Boolean = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_Boolean */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Boolean */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Boolean */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Boolean */
+
+
 export const _encode_Boolean = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Boolean */
 
 /* eslint-enable */

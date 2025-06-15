@@ -6,7 +6,6 @@ import {
 } from "../PkiPMIProtocolSpecifications/CertReq.ta.mjs";
 import { id_certReq } from "../PkiPMIProtocolSpecifications/id-certReq.va.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION certReq */
 /**
  * @summary certReq
  * @description
@@ -34,6 +33,5 @@ export const certReq: WRAPPED_PDU = {
     "&id": id_certReq /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certReq */
 
 /* eslint-enable */

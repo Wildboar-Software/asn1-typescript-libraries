@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_kp_PlatformKeyCertificate */
 /**
  * @summary tcg_kp_PlatformKeyCertificate
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_kp_PlatformKeyCertificate: OBJECT_IDENTIFIER = new _OID([
     4,
 ], tcg_kp);
-/* END_OF_SYMBOL_DEFINITION tcg_kp_PlatformKeyCertificate */
 
 /* eslint-enable */

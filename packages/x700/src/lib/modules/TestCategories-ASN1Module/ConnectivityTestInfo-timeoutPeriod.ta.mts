@@ -20,7 +20,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectivityTestInfo_timeoutPeriod */
 /**
  * @summary ConnectivityTestInfo_timeoutPeriod
  * @description
@@ -34,13 +33,9 @@ import {
 export type ConnectivityTestInfo_timeoutPeriod =
     | { timeUnits: Timespec } /* CHOICE_ALT_ROOT */
     | { attributeId: AttributeId } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectivityTestInfo_timeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityTestInfo_timeoutPeriod */
 let _cached_decoder_for_ConnectivityTestInfo_timeoutPeriod: $.ASN1Decoder<ConnectivityTestInfo_timeoutPeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityTestInfo_timeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectivityTestInfo_timeoutPeriod */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectivityTestInfo_timeoutPeriod
  * @function
@@ -65,13 +60,9 @@ export function _decode_ConnectivityTestInfo_timeoutPeriod(el: _Element) {
     }
     return _cached_decoder_for_ConnectivityTestInfo_timeoutPeriod(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectivityTestInfo_timeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityTestInfo_timeoutPeriod */
 let _cached_encoder_for_ConnectivityTestInfo_timeoutPeriod: $.ASN1Encoder<ConnectivityTestInfo_timeoutPeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityTestInfo_timeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectivityTestInfo_timeoutPeriod */
 /**
  * @summary Encodes a(n) ConnectivityTestInfo_timeoutPeriod into an ASN.1 Element.
  * @function
@@ -98,6 +89,5 @@ export function _encode_ConnectivityTestInfo_timeoutPeriod(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectivityTestInfo_timeoutPeriod */
 
 /* eslint-enable */

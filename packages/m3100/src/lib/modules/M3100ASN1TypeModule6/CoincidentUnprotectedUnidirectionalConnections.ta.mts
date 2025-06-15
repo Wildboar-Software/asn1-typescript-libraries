@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CoincidentUnprotectedUnidirectionalConnections */
+
 /**
  * @summary CoincidentUnprotectedUnidirectionalConnections
  * @description
@@ -70,9 +70,8 @@ export class CoincidentUnprotectedUnidirectionalConnections {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CoincidentUnprotectedUnidirectionalConnections */
+
 /**
  * @summary The Leading Root Component Types of CoincidentUnprotectedUnidirectionalConnections
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_CoincidentUnprotectedUnidirect
     new $.ComponentSpec('xcA', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('xcB', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CoincidentUnprotectedUnidirectionalConnections */
+
 /**
  * @summary The Trailing Root Component Types of CoincidentUnprotectedUnidirectionalConnections
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_CoincidentUnprotectedUnidirect
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CoincidentUnprotectedUnidirectionalConnections: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CoincidentUnprotectedUnidirectionalConnections */
+
 /**
  * @summary The Extension Addition Component Types of CoincidentUnprotectedUnidirectionalConnections
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_CoincidentUnprotectedUnidirect
  * @constant
  */
 export const _extension_additions_list_spec_for_CoincidentUnprotectedUnidirectionalConnections: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CoincidentUnprotectedUnidirectionalConnections */
+
 let _cached_decoder_for_CoincidentUnprotectedUnidirectionalConnections: $.ASN1Decoder<CoincidentUnprotectedUnidirectionalConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CoincidentUnprotectedUnidirectionalConnections */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CoincidentUnprotectedUnidirectionalConnections
  * @function
@@ -150,13 +145,11 @@ export function _decode_CoincidentUnprotectedUnidirectionalConnections(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CoincidentUnprotectedUnidirectionalConnections */
+
 let _cached_encoder_for_CoincidentUnprotectedUnidirectionalConnections: $.ASN1Encoder<CoincidentUnprotectedUnidirectionalConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CoincidentUnprotectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CoincidentUnprotectedUnidirectionalConnections */
+
 /**
  * @summary Encodes a(n) CoincidentUnprotectedUnidirectionalConnections into an ASN.1 Element.
  * @function
@@ -194,6 +187,5 @@ export function _encode_CoincidentUnprotectedUnidirectionalConnections(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CoincidentUnprotectedUnidirectionalConnections */
 
 /* eslint-enable */

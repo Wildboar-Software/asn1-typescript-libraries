@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { country } from "../SelectedObjectClasses/country.oa.mjs";
 import { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION countryNameForm */
 /**
  * @summary countryNameForm
  * @description
@@ -29,6 +28,5 @@ export const countryNameForm: NAME_FORM = {
     "&MandatoryAttributes": [countryName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_countryNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION countryNameForm */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
 } from '../BIP/BioAPI-GUI-RESPONSE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotifyGUISelectEvent_ResponseParams */
+
 /**
  * @summary NotifyGUISelectEvent_ResponseParams
  * @description
@@ -84,9 +84,8 @@ export class NotifyGUISelectEvent_ResponseParams {
 
   public static _enum_for_response = _enum_for_BioAPI_GUI_RESPONSE;
 }
-/* END_OF_SYMBOL_DEFINITION NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyGUISelectEvent_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of NotifyGUISelectEvent_ResponseParams
  * @description
@@ -111,9 +110,8 @@ export const _root_component_type_list_1_spec_for_NotifyGUISelectEvent_ResponseP
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyGUISelectEvent_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of NotifyGUISelectEvent_ResponseParams
  * @description
@@ -123,9 +121,8 @@ export const _root_component_type_list_1_spec_for_NotifyGUISelectEvent_ResponseP
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NotifyGUISelectEvent_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyGUISelectEvent_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of NotifyGUISelectEvent_ResponseParams
  * @description
@@ -135,13 +132,11 @@ export const _root_component_type_list_2_spec_for_NotifyGUISelectEvent_ResponseP
  * @constant
  */
 export const _extension_additions_list_spec_for_NotifyGUISelectEvent_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyGUISelectEvent_ResponseParams */
+
 let _cached_decoder_for_NotifyGUISelectEvent_ResponseParams: $.ASN1Decoder<NotifyGUISelectEvent_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotifyGUISelectEvent_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NotifyGUISelectEvent_ResponseParams
  * @function
@@ -175,13 +170,11 @@ export function _decode_NotifyGUISelectEvent_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_NotifyGUISelectEvent_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyGUISelectEvent_ResponseParams */
+
 let _cached_encoder_for_NotifyGUISelectEvent_ResponseParams: $.ASN1Encoder<NotifyGUISelectEvent_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyGUISelectEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotifyGUISelectEvent_ResponseParams */
+
 /**
  * @summary Encodes a(n) NotifyGUISelectEvent_ResponseParams into an ASN.1 Element.
  * @function
@@ -216,6 +209,5 @@ export function _encode_NotifyGUISelectEvent_ResponseParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotifyGUISelectEvent_ResponseParams */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LocalReference */
 /**
  * @summary LocalReference
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LocalReference = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION LocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalReference */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocalReference */
 export const _decode_LocalReference = $._decodePrintableString;
-/* END_OF_SYMBOL_DEFINITION _decode_LocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalReference */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocalReference */
 export const _encode_LocalReference = $._encodePrintableString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocalReference */
 
 /* eslint-enable */

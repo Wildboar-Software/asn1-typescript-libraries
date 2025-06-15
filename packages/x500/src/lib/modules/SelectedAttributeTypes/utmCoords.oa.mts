@@ -6,7 +6,6 @@ import {
     _decode_UtmCoordinates,
     _encode_UtmCoordinates,
 } from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION utmCoords */
 /**
  * @summary utmCoords
  * @description
@@ -36,6 +35,5 @@ export const utmCoords: SYNTAX_NAME<UtmCoordinates> = {
     "&id": id_asx_utmCoords /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION utmCoords */
 
 /* eslint-enable */

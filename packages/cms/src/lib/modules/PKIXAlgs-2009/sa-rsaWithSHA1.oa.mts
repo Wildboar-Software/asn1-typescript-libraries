@@ -8,7 +8,7 @@ import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGO
 import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
 import { sha1WithRSAEncryption } from "../PKIXAlgs-2009/sha1WithRSAEncryption.va.mjs";
-/* START_OF_SYMBOL_DEFINITION sa_rsaWithSHA1 */
+
 /**
  * @summary sa_rsaWithSHA1
  * @description
@@ -46,6 +46,5 @@ export const sa_rsaWithSHA1: SIGNATURE_ALGORITHM<NULL> = {
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sa_rsaWithSHA1 */
 
 /* eslint-enable */

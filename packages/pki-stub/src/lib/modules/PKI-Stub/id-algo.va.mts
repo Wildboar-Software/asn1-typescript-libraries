@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import { algorithms } from "../PKI-Stub/algorithms.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION id_algo */
 /**
  * @summary id_algo
  * @description
@@ -26,6 +25,5 @@ import { algorithms } from "../PKI-Stub/algorithms.va.mjs";
  * @constant
  */
 export const id_algo: OBJECT_IDENTIFIER = algorithms;
-/* END_OF_SYMBOL_DEFINITION id_algo */
 
 /* eslint-enable */

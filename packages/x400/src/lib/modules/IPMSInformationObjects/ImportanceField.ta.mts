@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ImportanceField */
 /**
  * @summary ImportanceField
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_ImportanceField {
     normal = 1,
     high = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ImportanceField */
 
-/* START_OF_SYMBOL_DEFINITION ImportanceField */
 /**
  * @summary ImportanceField
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_ImportanceField {
  * ```@enum {number}
  */
 export type ImportanceField = _enum_for_ImportanceField;
-/* END_OF_SYMBOL_DEFINITION ImportanceField */
 
-/* START_OF_SYMBOL_DEFINITION ImportanceField */
 /**
  * @summary ImportanceField
  * @description
@@ -55,9 +50,7 @@ export type ImportanceField = _enum_for_ImportanceField;
  * ```@enum {number}
  */
 export const ImportanceField = _enum_for_ImportanceField;
-/* END_OF_SYMBOL_DEFINITION ImportanceField */
 
-/* START_OF_SYMBOL_DEFINITION ImportanceField_low */
 /**
  * @summary ImportanceField_low
  * @constant
@@ -65,9 +58,7 @@ export const ImportanceField = _enum_for_ImportanceField;
  */
 export const ImportanceField_low: ImportanceField =
     ImportanceField.low; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ImportanceField_low */
 
-/* START_OF_SYMBOL_DEFINITION low */
 /**
  * @summary low
  * @constant
@@ -75,9 +66,7 @@ export const ImportanceField_low: ImportanceField =
  */
 export const low: ImportanceField =
     ImportanceField.low; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION low */
 
-/* START_OF_SYMBOL_DEFINITION ImportanceField_normal */
 /**
  * @summary ImportanceField_normal
  * @constant
@@ -85,9 +74,7 @@ export const low: ImportanceField =
  */
 export const ImportanceField_normal: ImportanceField =
     ImportanceField.normal; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ImportanceField_normal */
 
-/* START_OF_SYMBOL_DEFINITION normal */
 /**
  * @summary normal
  * @constant
@@ -95,9 +82,7 @@ export const ImportanceField_normal: ImportanceField =
  */
 export const normal: ImportanceField =
     ImportanceField.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION normal */
 
-/* START_OF_SYMBOL_DEFINITION ImportanceField_high */
 /**
  * @summary ImportanceField_high
  * @constant
@@ -105,9 +90,7 @@ export const normal: ImportanceField =
  */
 export const ImportanceField_high: ImportanceField =
     ImportanceField.high; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ImportanceField_high */
 
-/* START_OF_SYMBOL_DEFINITION high */
 /**
  * @summary high
  * @constant
@@ -115,21 +98,12 @@ export const ImportanceField_high: ImportanceField =
  */
 export const high: ImportanceField =
     ImportanceField.high; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION high */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ImportanceField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ImportanceField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ImportanceField */
 export const _decode_ImportanceField = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ImportanceField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ImportanceField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ImportanceField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ImportanceField */
 export const _encode_ImportanceField = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ImportanceField */
 
 /* eslint-enable */

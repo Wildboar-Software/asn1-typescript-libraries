@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION op_ms_message_submission */
 /**
  * @summary op_ms_message_submission
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const op_ms_message_submission: Code = { local: 3 };
-/* END_OF_SYMBOL_DEFINITION op_ms_message_submission */
 
 /* eslint-enable */

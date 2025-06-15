@@ -15,7 +15,7 @@ import {
   _decode_URI,
   _encode_URI,
 } from '../Lightweight-Directory-Access-Protocol-V3/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SearchResultReference */
+
 /**
  * @summary SearchResultReference
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SearchResultReference = URI[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SearchResultReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultReference */
+
 let _cached_decoder_for_SearchResultReference: $.ASN1Decoder<SearchResultReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchResultReference */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchResultReference
  * @function
@@ -48,13 +46,11 @@ export function _decode_SearchResultReference(el: _Element) {
   }
   return _cached_decoder_for_SearchResultReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchResultReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultReference */
+
 let _cached_encoder_for_SearchResultReference: $.ASN1Encoder<SearchResultReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchResultReference */
+
 /**
  * @summary Encodes a(n) SearchResultReference into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_SearchResultReference(
   return _cached_encoder_for_SearchResultReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchResultReference */
 
 /* eslint-enable */

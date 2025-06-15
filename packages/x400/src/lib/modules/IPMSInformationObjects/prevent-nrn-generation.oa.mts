@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_mst_prevent_nrn_generation } from '../IPMSObjectIdentifiers/id-mst-prevent-nrn-generation.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION prevent_nrn_generation */
 /**
  * @summary prevent_nrn_generation
  * @description
@@ -42,6 +41,5 @@ export const prevent_nrn_generation: MS_EXTENSION<NULL> = {
     '&id': id_mst_prevent_nrn_generation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION prevent_nrn_generation */
 
 /* eslint-enable */

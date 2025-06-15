@@ -15,7 +15,6 @@ import {
   _decode_Default_Context_List_Item,
   _encode_Default_Context_List_Item,
 } from '../ACSE-1/Default-Context-List-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Default_Context_List */
 /**
  * @summary Default_Context_List
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type Default_Context_List = Default_Context_List_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Default_Context_List */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_Context_List */
 let _cached_decoder_for_Default_Context_List: $.ASN1Decoder<Default_Context_List> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_Context_List */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Default_Context_List */
 /**
  * @summary Decodes an ASN.1 element into a(n) Default_Context_List
  * @function
@@ -52,13 +47,9 @@ export function _decode_Default_Context_List(el: _Element) {
   }
   return _cached_decoder_for_Default_Context_List(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Default_Context_List */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_Context_List */
 let _cached_encoder_for_Default_Context_List: $.ASN1Encoder<Default_Context_List> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_Context_List */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Default_Context_List */
 /**
  * @summary Encodes a(n) Default_Context_List into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_Default_Context_List(
   return _cached_encoder_for_Default_Context_List(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Default_Context_List */
 
 /* eslint-enable */

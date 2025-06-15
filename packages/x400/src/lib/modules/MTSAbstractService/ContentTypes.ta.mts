@@ -15,7 +15,6 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentTypes */
 /**
  * @summary ContentTypes
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ContentTypes = ContentType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentTypes */
 let _cached_decoder_for_ContentTypes: $.ASN1Decoder<ContentTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentTypes
  * @function
@@ -48,13 +43,9 @@ export function _decode_ContentTypes(el: _Element) {
     }
     return _cached_decoder_for_ContentTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentTypes */
 let _cached_encoder_for_ContentTypes: $.ASN1Encoder<ContentTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentTypes */
 /**
  * @summary Encodes a(n) ContentTypes into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ContentTypes(
     return _cached_encoder_for_ContentTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentTypes */
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import {
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NamingObjectClass */
+
 /**
  * @summary NamingObjectClass
  * @description
@@ -77,9 +77,8 @@ export class NamingObjectClass {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NamingObjectClass */
+
 /**
  * @summary The Leading Root Component Types of NamingObjectClass
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_NamingObjectClass: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NamingObjectClass */
+
 /**
  * @summary The Trailing Root Component Types of NamingObjectClass
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_NamingObjectClass: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NamingObjectClass: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NamingObjectClass */
+
 /**
  * @summary The Extension Addition Component Types of NamingObjectClass
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_NamingObjectClass: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_NamingObjectClass: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NamingObjectClass */
+
 let _cached_decoder_for_NamingObjectClass: $.ASN1Decoder<NamingObjectClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NamingObjectClass */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NamingObjectClass
  * @function
@@ -177,13 +172,11 @@ export function _decode_NamingObjectClass(el: _Element) {
     }
     return _cached_decoder_for_NamingObjectClass(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NamingObjectClass */
+
 let _cached_encoder_for_NamingObjectClass: $.ASN1Encoder<NamingObjectClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NamingObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NamingObjectClass */
+
 /**
  * @summary Encodes a(n) NamingObjectClass into an ASN.1 Element.
  * @function
@@ -221,6 +214,5 @@ export function _encode_NamingObjectClass(
     return _cached_encoder_for_NamingObjectClass(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NamingObjectClass */
 
 /* eslint-enable */

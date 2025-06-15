@@ -11,7 +11,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { id_at_pseudonym } from "../PKCS-9/id-at-pseudonym.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pseudonym */
+
 /**
  * @summary pseudonym
  * @description
@@ -46,6 +46,5 @@ export const pseudonym: ATTRIBUTE<DirectoryString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pseudonym */
 
 /* eslint-enable */

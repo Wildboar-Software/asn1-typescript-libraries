@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectedXC */
+
 /**
  * @summary ProtectedXC
  * @description
@@ -72,9 +72,8 @@ export class ProtectedXC {
         return new ProtectedXC(_o.conProtGroup, _o.conProtA, _o.conProtB);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedXC */
+
 /**
  * @summary The Leading Root Component Types of ProtectedXC
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_ProtectedXC: $.ComponentSpec[]
     new $.ComponentSpec('conProtA', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('conProtB', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectedXC */
+
 /**
  * @summary The Trailing Root Component Types of ProtectedXC
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_ProtectedXC: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectedXC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectedXC */
+
 /**
  * @summary The Extension Addition Component Types of ProtectedXC
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_ProtectedXC: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectedXC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectedXC */
+
 let _cached_decoder_for_ProtectedXC: $.ASN1Decoder<ProtectedXC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectedXC */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectedXC
  * @function
@@ -156,13 +151,11 @@ export function _decode_ProtectedXC(el: _Element) {
     }
     return _cached_decoder_for_ProtectedXC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectedXC */
+
 let _cached_encoder_for_ProtectedXC: $.ASN1Encoder<ProtectedXC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectedXC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectedXC */
+
 /**
  * @summary Encodes a(n) ProtectedXC into an ASN.1 Element.
  * @function
@@ -201,6 +194,5 @@ export function _encode_ProtectedXC(
     return _cached_encoder_for_ProtectedXC(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectedXC */
 
 /* eslint-enable */

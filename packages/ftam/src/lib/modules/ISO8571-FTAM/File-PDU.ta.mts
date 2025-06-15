@@ -140,7 +140,7 @@ import {
   _decode_F_ERASE_response,
   _encode_F_ERASE_response,
 } from '../ISO8571-FTAM/F-ERASE-response.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION File_PDU */
+
 /**
  * @summary File_PDU
  * @description
@@ -205,13 +205,11 @@ export type File_PDU =
   | { f_locate_response: F_LOCATE_response } /* CHOICE_ALT_ROOT */
   | { f_erase_request: F_ERASE_request } /* CHOICE_ALT_ROOT */
   | { f_erase_response: F_ERASE_response } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION File_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_File_PDU */
+
 let _cached_decoder_for_File_PDU: $.ASN1Decoder<File_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_File_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_File_PDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) File_PDU
  * @function
@@ -351,13 +349,11 @@ export function _decode_File_PDU(el: _Element) {
   }
   return _cached_decoder_for_File_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_File_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_File_PDU */
+
 let _cached_encoder_for_File_PDU: $.ASN1Encoder<File_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_File_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_File_PDU */
+
 /**
  * @summary Encodes a(n) File_PDU into an ASN.1 Element.
  * @function
@@ -535,6 +531,5 @@ export function _encode_File_PDU(
   return _cached_encoder_for_File_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_File_PDU */
 
 /* eslint-enable */

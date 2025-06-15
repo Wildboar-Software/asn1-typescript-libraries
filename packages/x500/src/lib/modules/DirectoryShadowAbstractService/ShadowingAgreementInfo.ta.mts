@@ -21,7 +21,6 @@ import {
     _decode_AccessPoint,
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ShadowingAgreementInfo */
 /**
  * @summary ShadowingAgreementInfo
  * @description
@@ -108,9 +107,7 @@ export class ShadowingAgreementInfo {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ShadowingAgreementInfo */
 /**
  * @summary The Leading Root Component Types of ShadowingAgreementInfo
  * @description
@@ -143,9 +140,7 @@ export const _root_component_type_list_1_spec_for_ShadowingAgreementInfo: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ShadowingAgreementInfo */
 /**
  * @summary The Trailing Root Component Types of ShadowingAgreementInfo
  * @description
@@ -155,9 +150,7 @@ export const _root_component_type_list_1_spec_for_ShadowingAgreementInfo: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ShadowingAgreementInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ShadowingAgreementInfo */
 /**
  * @summary The Extension Addition Component Types of ShadowingAgreementInfo
  * @description
@@ -167,13 +160,9 @@ export const _root_component_type_list_2_spec_for_ShadowingAgreementInfo: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_ShadowingAgreementInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowingAgreementInfo */
 let _cached_decoder_for_ShadowingAgreementInfo: $.ASN1Decoder<ShadowingAgreementInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ShadowingAgreementInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ShadowingAgreementInfo
  * @function
@@ -229,13 +218,9 @@ export function _decode_ShadowingAgreementInfo(el: _Element) {
     }
     return _cached_decoder_for_ShadowingAgreementInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowingAgreementInfo */
 let _cached_encoder_for_ShadowingAgreementInfo: $.ASN1Encoder<ShadowingAgreementInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ShadowingAgreementInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ShadowingAgreementInfo */
 /**
  * @summary Encodes a(n) ShadowingAgreementInfo into an ASN.1 Element.
  * @function
@@ -288,6 +273,5 @@ export function _encode_ShadowingAgreementInfo(
     return _cached_encoder_for_ShadowingAgreementInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ShadowingAgreementInfo */
 
 /* eslint-enable */

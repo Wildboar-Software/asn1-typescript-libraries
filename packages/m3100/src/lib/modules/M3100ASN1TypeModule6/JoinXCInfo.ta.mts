@@ -15,7 +15,7 @@ import {
     _decode_CoincidentUnidirectionalConnections,
     _encode_CoincidentUnidirectionalConnections,
 } from '../M3100ASN1TypeModule6/CoincidentUnidirectionalConnections.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION JoinXCInfo */
+
 /**
  * @summary JoinXCInfo
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type JoinXCInfo = CoincidentUnidirectionalConnections[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION JoinXCInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCInfo */
+
 let _cached_decoder_for_JoinXCInfo: $.ASN1Decoder<JoinXCInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_JoinXCInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) JoinXCInfo
  * @function
@@ -48,13 +46,11 @@ export function _decode_JoinXCInfo(el: _Element) {
     }
     return _cached_decoder_for_JoinXCInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_JoinXCInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCInfo */
+
 let _cached_encoder_for_JoinXCInfo: $.ASN1Encoder<JoinXCInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_JoinXCInfo */
+
 /**
  * @summary Encodes a(n) JoinXCInfo into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_JoinXCInfo(
     return _cached_encoder_for_JoinXCInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_JoinXCInfo */
 
 /* eslint-enable */

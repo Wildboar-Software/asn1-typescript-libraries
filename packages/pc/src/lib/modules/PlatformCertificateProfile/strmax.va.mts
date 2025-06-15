@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION strmax */
 /**
  * @summary strmax
  * @description
@@ -28,6 +27,5 @@ import {
  */
 export
 const strmax: INTEGER = 256;
-/* END_OF_SYMBOL_DEFINITION strmax */
 
 /* eslint-enable */

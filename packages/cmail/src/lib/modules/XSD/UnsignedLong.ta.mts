@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UnsignedLong */
+
 /**
  * @summary UnsignedLong
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type UnsignedLong = INTEGER;
-/* END_OF_SYMBOL_DEFINITION UnsignedLong */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnsignedLong */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnsignedLong */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnsignedLong */
+
+
 export const _decode_UnsignedLong = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_UnsignedLong */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnsignedLong */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnsignedLong */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnsignedLong */
+
+
 export const _encode_UnsignedLong = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnsignedLong */
 
 /* eslint-enable */

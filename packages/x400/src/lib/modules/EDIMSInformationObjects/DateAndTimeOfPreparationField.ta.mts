@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DateAndTimeOfPreparationField */
 /**
  * @summary DateAndTimeOfPreparationField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DateAndTimeOfPreparationField = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION DateAndTimeOfPreparationField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DateAndTimeOfPreparationField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DateAndTimeOfPreparationField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DateAndTimeOfPreparationField */
 export const _decode_DateAndTimeOfPreparationField = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_DateAndTimeOfPreparationField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DateAndTimeOfPreparationField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DateAndTimeOfPreparationField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DateAndTimeOfPreparationField */
 export const _encode_DateAndTimeOfPreparationField = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DateAndTimeOfPreparationField */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION rsadsi */
 /**
  * @summary rsadsi
  * @description
@@ -20,6 +19,5 @@ export const rsadsi: ID = new _OID([
     /* us */ 840,
     /* rsadsi */ 113549,
 ]);
-/* END_OF_SYMBOL_DEFINITION rsadsi */
 
 /* eslint-enable */

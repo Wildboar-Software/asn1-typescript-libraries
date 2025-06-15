@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedSignatureAlgorithms */
 /**
  * @summary SupportedSignatureAlgorithms
  * @description
@@ -16,6 +15,5 @@ import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
  *
  */
 export const SupportedSignatureAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedSignatureAlgorithms */
 
 /* eslint-enable */

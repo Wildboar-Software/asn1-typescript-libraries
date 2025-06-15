@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Child_Objects_Attribute */
+
 /**
  * @summary Child_Objects_Attribute
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Child_Objects_Attribute = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Child_Objects_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Child_Objects_Attribute */
+
 let _cached_decoder_for_Child_Objects_Attribute: $.ASN1Decoder<Child_Objects_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Child_Objects_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Child_Objects_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Child_Objects_Attribute
  * @function
@@ -45,13 +43,11 @@ export function _decode_Child_Objects_Attribute(el: _Element) {
   }
   return _cached_decoder_for_Child_Objects_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Child_Objects_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Child_Objects_Attribute */
+
 let _cached_encoder_for_Child_Objects_Attribute: $.ASN1Encoder<Child_Objects_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Child_Objects_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Child_Objects_Attribute */
+
 /**
  * @summary Encodes a(n) Child_Objects_Attribute into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_Child_Objects_Attribute(
   return _cached_encoder_for_Child_Objects_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Child_Objects_Attribute */
 
 /* eslint-enable */

@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oat_supportedFeatures } from "../LdapSystemSchema/id-oat-supportedFeatures.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION supportedFeatures */
 /**
  * @summary supportedFeatures
  * @description
@@ -46,6 +45,5 @@ export const supportedFeatures: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedFeatures */
 
 /* eslint-enable */

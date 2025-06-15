@@ -12,7 +12,6 @@ import { ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.mjs";
 import { RelaxationPolicy } from "../ServiceAdministration/RelaxationPolicy.ta.mjs";
 import { REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.mjs";
 import { RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SEARCH_RULE */
 /**
  * @summary SEARCH_RULE
  * @description
@@ -152,6 +151,5 @@ export interface SEARCH_RULE {
      */
     readonly "&id"?: INTEGER;
 }
-/* END_OF_SYMBOL_DEFINITION SEARCH_RULE */
 
 /* eslint-enable */

@@ -18,7 +18,6 @@ import {
   _decode_Authentication_value_other,
   _encode_Authentication_value_other,
 } from '../ACSE-1/Authentication-value-other.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Authentication_value */
 /**
  * @summary Authentication_value
  * @description
@@ -44,13 +43,9 @@ export type Authentication_value =
   | { bitstring: BIT_STRING } /* CHOICE_ALT_ROOT */
   | { external: EXTERNAL } /* CHOICE_ALT_ROOT */
   | { other: Authentication_value_other } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Authentication_value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Authentication_value */
 let _cached_decoder_for_Authentication_value: $.ASN1Decoder<Authentication_value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Authentication_value */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Authentication_value */
 /**
  * @summary Decodes an ASN.1 element into a(n) Authentication_value
  * @function
@@ -84,13 +79,9 @@ export function _decode_Authentication_value(el: _Element) {
   }
   return _cached_decoder_for_Authentication_value(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Authentication_value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Authentication_value */
 let _cached_encoder_for_Authentication_value: $.ASN1Encoder<Authentication_value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Authentication_value */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Authentication_value */
 /**
  * @summary Encodes a(n) Authentication_value into an ASN.1 Element.
  * @function
@@ -136,6 +127,5 @@ export function _encode_Authentication_value(
   return _cached_encoder_for_Authentication_value(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Authentication_value */
 
 /* eslint-enable */

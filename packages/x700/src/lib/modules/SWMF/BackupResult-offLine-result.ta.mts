@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BackupResult_offLine_result */
 /**
  * @summary BackupResult_offLine_result
  * @description
@@ -27,13 +26,9 @@ export type BackupResult_offLine_result =
     | { success: NULL } /* CHOICE_ALT_ROOT */
     | { fail_securityLicensing: NULL } /* CHOICE_ALT_ROOT */
     | { fail_unknown: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BackupResult_offLine_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_offLine_result */
 let _cached_decoder_for_BackupResult_offLine_result: $.ASN1Decoder<BackupResult_offLine_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_offLine_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackupResult_offLine_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackupResult_offLine_result
  * @function
@@ -61,13 +56,9 @@ export function _decode_BackupResult_offLine_result(el: _Element) {
     }
     return _cached_decoder_for_BackupResult_offLine_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackupResult_offLine_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_offLine_result */
 let _cached_encoder_for_BackupResult_offLine_result: $.ASN1Encoder<BackupResult_offLine_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_offLine_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackupResult_offLine_result */
 /**
  * @summary Encodes a(n) BackupResult_offLine_result into an ASN.1 Element.
  * @function
@@ -107,6 +98,5 @@ export function _encode_BackupResult_offLine_result(
     return _cached_encoder_for_BackupResult_offLine_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackupResult_offLine_result */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_OriginatorAndDLExpansion,
     _encode_OriginatorAndDLExpansion,
 } from '../MTSAbstractService/OriginatorAndDLExpansion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorAndDLExpansionHistory */
 /**
  * @summary OriginatorAndDLExpansionHistory
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type OriginatorAndDLExpansionHistory = OriginatorAndDLExpansion[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION OriginatorAndDLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorAndDLExpansionHistory */
 let _cached_decoder_for_OriginatorAndDLExpansionHistory: $.ASN1Decoder<OriginatorAndDLExpansionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorAndDLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorAndDLExpansionHistory */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorAndDLExpansionHistory
  * @function
@@ -49,13 +44,9 @@ export function _decode_OriginatorAndDLExpansionHistory(el: _Element) {
     }
     return _cached_decoder_for_OriginatorAndDLExpansionHistory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorAndDLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorAndDLExpansionHistory */
 let _cached_encoder_for_OriginatorAndDLExpansionHistory: $.ASN1Encoder<OriginatorAndDLExpansionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorAndDLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorAndDLExpansionHistory */
 /**
  * @summary Encodes a(n) OriginatorAndDLExpansionHistory into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_OriginatorAndDLExpansionHistory(
     return _cached_encoder_for_OriginatorAndDLExpansionHistory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorAndDLExpansionHistory */
 
 /* eslint-enable */

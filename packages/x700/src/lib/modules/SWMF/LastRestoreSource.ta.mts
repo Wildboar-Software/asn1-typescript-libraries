@@ -23,7 +23,6 @@ import {
     _encode_AE_title,
 } from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LastRestoreSource */
 /**
  * @summary LastRestoreSource
  * @description
@@ -44,13 +43,9 @@ export type LastRestoreSource =
     | { localObject: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { managingSystem: AE_title } /* CHOICE_ALT_ROOT */
     | { remoteSystem: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION LastRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastRestoreSource */
 let _cached_decoder_for_LastRestoreSource: $.ASN1Decoder<LastRestoreSource> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastRestoreSource */
 /**
  * @summary Decodes an ASN.1 element into a(n) LastRestoreSource
  * @function
@@ -72,13 +67,9 @@ export function _decode_LastRestoreSource(el: _Element) {
     }
     return _cached_decoder_for_LastRestoreSource(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LastRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastRestoreSource */
 let _cached_encoder_for_LastRestoreSource: $.ASN1Encoder<LastRestoreSource> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastRestoreSource */
 /**
  * @summary Encodes a(n) LastRestoreSource into an ASN.1 Element.
  * @function
@@ -104,6 +95,5 @@ export function _encode_LastRestoreSource(
     return _cached_encoder_for_LastRestoreSource(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastRestoreSource */
 
 /* eslint-enable */

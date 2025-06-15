@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION DMI_TYPE_IDENTIFIER */
 /**
  * @summary DMI_TYPE_IDENTIFIER
  * @description
@@ -61,6 +60,5 @@ interface DMI_TYPE_IDENTIFIER<
      */
     readonly "&Value": Value;
 };
-/* END_OF_SYMBOL_DEFINITION DMI_TYPE_IDENTIFIER */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _encode_AAIssuingDistPointSyntax,
 } from "../CertificateExtensions/AAIssuingDistPointSyntax.ta.mjs";
 import { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va.mjs";
-/* START_OF_SYMBOL_DEFINITION aAissuingDistributionPoint */
 /**
  * @summary aAissuingDistributionPoint
  * @description
@@ -34,6 +33,5 @@ export const aAissuingDistributionPoint: EXTENSION<AAIssuingDistPointSyntax> = {
     "&id": id_ce_aAissuingDistributionPoint /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aAissuingDistributionPoint */
 
 /* eslint-enable */

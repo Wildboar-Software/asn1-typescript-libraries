@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION TransferInfo */
 /**
  * @summary TransferInfo
  * @description
@@ -62,9 +61,7 @@ export class TransferInfo {
         return new TransferInfo(_o.transferProtocol, _o.protocolSpecificInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TransferInfo */
 /**
  * @summary The Leading Root Component Types of TransferInfo
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_TransferInfo: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TransferInfo */
 /**
  * @summary The Trailing Root Component Types of TransferInfo
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_TransferInfo: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TransferInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TransferInfo */
 /**
  * @summary The Extension Addition Component Types of TransferInfo
  * @description
@@ -113,13 +106,9 @@ export const _root_component_type_list_2_spec_for_TransferInfo: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_TransferInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferInfo */
 let _cached_decoder_for_TransferInfo: $.ASN1Decoder<TransferInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransferInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TransferInfo
  * @function
@@ -150,13 +139,9 @@ export function _decode_TransferInfo(el: _Element) {
     }
     return _cached_decoder_for_TransferInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferInfo */
 let _cached_encoder_for_TransferInfo: $.ASN1Encoder<TransferInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransferInfo */
 /**
  * @summary Encodes a(n) TransferInfo into an ASN.1 Element.
  * @function
@@ -191,6 +176,5 @@ export function _encode_TransferInfo(
     return _cached_encoder_for_TransferInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransferInfo */
 
 /* eslint-enable */

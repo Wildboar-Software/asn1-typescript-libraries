@@ -17,7 +17,6 @@ import {
     _decode_ServiceProblem,
     _encode_ServiceProblem,
 } from '../MSAbstractService/ServiceProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceErrorParameter */
 /**
  * @summary ServiceErrorParameter
  * @description
@@ -72,9 +71,7 @@ export class ServiceErrorParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceErrorParameter */
 /**
  * @summary The Leading Root Component Types of ServiceErrorParameter
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_ServiceErrorParameter: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceErrorParameter */
 /**
  * @summary The Trailing Root Component Types of ServiceErrorParameter
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_ServiceErrorParameter: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceErrorParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceErrorParameter */
 /**
  * @summary The Extension Addition Component Types of ServiceErrorParameter
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_ServiceErrorParameter: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceErrorParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceErrorParameter */
 let _cached_decoder_for_ServiceErrorParameter: $.ASN1Decoder<ServiceErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceErrorParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceErrorParameter
  * @function
@@ -175,13 +164,9 @@ export function _decode_ServiceErrorParameter(el: _Element) {
     }
     return _cached_decoder_for_ServiceErrorParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceErrorParameter */
 let _cached_encoder_for_ServiceErrorParameter: $.ASN1Encoder<ServiceErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceErrorParameter */
 /**
  * @summary Encodes a(n) ServiceErrorParameter into an ASN.1 Element.
  * @function
@@ -223,6 +208,5 @@ export function _encode_ServiceErrorParameter(
     return _cached_encoder_for_ServiceErrorParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceErrorParameter */
 
 /* eslint-enable */

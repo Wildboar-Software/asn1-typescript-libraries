@@ -16,7 +16,6 @@ import {
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';
 import { id_mr_or_descriptor_single_element } from '../IPMSObjectIdentifiers/id-mr-or-descriptor-single-element.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRDescriptorSingleElementMatch */
 /**
  * @summary oRDescriptorSingleElementMatch
  * @description
@@ -45,6 +44,5 @@ export const oRDescriptorSingleElementMatch: MATCHING_RULE<MSString> = {
     '&id': id_mr_or_descriptor_single_element /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRDescriptorSingleElementMatch */
 
 /* eslint-enable */

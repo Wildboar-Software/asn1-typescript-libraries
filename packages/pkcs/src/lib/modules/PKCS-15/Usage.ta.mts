@@ -12,7 +12,7 @@ import {
     _encode_KeyUsage,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Usage */
+
 /**
  * @summary Usage
  * @description
@@ -60,9 +60,8 @@ export class Usage {
         return new Usage(_o.keyUsage, _o.extKeyUsage);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Usage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Usage */
+
 /**
  * @summary The Leading Root Component Types of Usage
  * @description
@@ -87,9 +86,8 @@ export const _root_component_type_list_1_spec_for_Usage: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Usage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Usage */
+
 /**
  * @summary The Trailing Root Component Types of Usage
  * @description
@@ -99,9 +97,8 @@ export const _root_component_type_list_1_spec_for_Usage: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Usage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Usage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Usage */
+
 /**
  * @summary The Extension Addition Component Types of Usage
  * @description
@@ -111,13 +108,11 @@ export const _root_component_type_list_2_spec_for_Usage: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Usage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Usage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Usage */
+
 let _cached_decoder_for_Usage: $.ASN1Decoder<Usage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Usage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Usage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Usage
  * @function
@@ -159,13 +154,11 @@ export function _decode_Usage(el: _Element) {
     }
     return _cached_decoder_for_Usage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Usage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Usage */
+
 let _cached_encoder_for_Usage: $.ASN1Encoder<Usage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Usage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Usage */
+
 /**
  * @summary Encodes a(n) Usage into an ASN.1 Element.
  * @function
@@ -198,6 +191,5 @@ export function _encode_Usage(value: Usage, elGetter: $.ASN1Encoder<Usage>) {
     return _cached_encoder_for_Usage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Usage */
 
 /* eslint-enable */

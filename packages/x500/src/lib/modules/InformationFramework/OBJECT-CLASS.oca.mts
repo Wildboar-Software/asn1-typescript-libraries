@@ -3,7 +3,6 @@ import { OBJECT_IDENTIFIER, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OBJECT_CLASS */
 /**
  * @summary OBJECT_CLASS
  * @description
@@ -83,6 +82,5 @@ export interface OBJECT_CLASS {
      */
     readonly "&id": OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION OBJECT_CLASS */
 
 /* eslint-enable */

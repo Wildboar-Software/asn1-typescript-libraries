@@ -27,7 +27,6 @@ import { id_hat_circulation_list_recipients } from '../IPMSObjectIdentifiers/id-
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION circulation_list_recipients */
 /**
  * @summary circulation_list_recipients
  * @description
@@ -70,6 +69,5 @@ export const circulation_list_recipients: X413ATTRIBUTE<CirculationMember> = {
     '&id': id_hat_circulation_list_recipients /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION circulation_list_recipients */
 
 /* eslint-enable */

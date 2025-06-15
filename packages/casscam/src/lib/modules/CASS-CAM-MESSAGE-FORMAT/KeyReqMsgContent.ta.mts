@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION KeyReqMsgContent */
+
 /**
  * @summary KeyReqMsgContent
  * @description
@@ -74,9 +74,8 @@ class KeyReqMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyReqMsgContent */
+
 /**
  * @summary The Leading Root Component Types of KeyReqMsgContent
  * @description
@@ -91,9 +90,8 @@ const _root_component_type_list_1_spec_for_KeyReqMsgContent: $.ComponentSpec[] =
     new $.ComponentSpec("keyParingID", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("cAMCertificate", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyReqMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of KeyReqMsgContent
  * @description
@@ -106,9 +104,8 @@ export
 const _root_component_type_list_2_spec_for_KeyReqMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyReqMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of KeyReqMsgContent
  * @description
@@ -121,13 +118,11 @@ export
 const _extension_additions_list_spec_for_KeyReqMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyReqMsgContent */
+
 let _cached_decoder_for_KeyReqMsgContent: $.ASN1Decoder<KeyReqMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyReqMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyReqMsgContent
  * @function
@@ -159,13 +154,11 @@ function _decode_KeyReqMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_KeyReqMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyReqMsgContent */
+
 let _cached_encoder_for_KeyReqMsgContent: $.ASN1Encoder<KeyReqMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyReqMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyReqMsgContent */
+
 /**
  * @summary Encodes a(n) KeyReqMsgContent into an ASN.1 Element.
  * @function
@@ -187,6 +180,5 @@ function _encode_KeyReqMsgContent (value: KeyReqMsgContent, elGetter: $.ASN1Enco
     return _cached_encoder_for_KeyReqMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyReqMsgContent */
 
 /* eslint-enable */

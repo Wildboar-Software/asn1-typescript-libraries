@@ -11,7 +11,7 @@ import {
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MLReceiptPolicy */
+
 /**
  * @summary MLReceiptPolicy
  * @description
@@ -30,13 +30,11 @@ export type MLReceiptPolicy =
     | { none: NULL } /* CHOICE_ALT_ROOT */
     | { insteadOf: GeneralNames[] } /* CHOICE_ALT_ROOT */
     | { inAdditionTo: GeneralNames[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MLReceiptPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MLReceiptPolicy */
+
 let _cached_decoder_for_MLReceiptPolicy: $.ASN1Decoder<MLReceiptPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MLReceiptPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MLReceiptPolicy */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MLReceiptPolicy
  * @function
@@ -72,13 +70,11 @@ export function _decode_MLReceiptPolicy(el: _Element) {
     }
     return _cached_decoder_for_MLReceiptPolicy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MLReceiptPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MLReceiptPolicy */
+
 let _cached_encoder_for_MLReceiptPolicy: $.ASN1Encoder<MLReceiptPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MLReceiptPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MLReceiptPolicy */
+
 /**
  * @summary Encodes a(n) MLReceiptPolicy into an ASN.1 Element.
  * @function
@@ -126,6 +122,5 @@ export function _encode_MLReceiptPolicy(
     return _cached_encoder_for_MLReceiptPolicy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MLReceiptPolicy */
 
 /* eslint-enable */

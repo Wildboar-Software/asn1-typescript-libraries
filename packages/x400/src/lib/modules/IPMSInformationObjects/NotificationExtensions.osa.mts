@@ -12,7 +12,6 @@ import {
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { ipn_security_response } from '../IPMSSecurityExtensions/ipn-security-response.oa.mjs';
 import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION NotificationExtensions */
 /**
  * @summary NotificationExtensions
  * @description
@@ -31,6 +30,5 @@ export const NotificationExtensions: IPMS_EXTENSION[] = [
     ipn_security_response,
     ...PrivateIPMSExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION NotificationExtensions */
 
 /* eslint-enable */

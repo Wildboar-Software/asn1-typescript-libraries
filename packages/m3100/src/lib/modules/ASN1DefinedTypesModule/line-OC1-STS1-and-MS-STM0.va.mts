@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION line_OC1_STS1_and_MS_STM0 */
+
 /**
  * @summary line_OC1_STS1_and_MS_STM0
  * @description
@@ -32,6 +32,5 @@ export const line_OC1_STS1_and_MS_STM0: CharacteristicInformation = new _OID(
     [31],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION line_OC1_STS1_and_MS_STM0 */
 
 /* eslint-enable */

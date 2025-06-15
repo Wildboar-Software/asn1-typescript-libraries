@@ -15,7 +15,6 @@ import { modify_error } from '../MSAbstractService/modify-error.oa.mjs';
 import { service_error } from '../MSAbstractService/service-error.oa.mjs';
 import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { message_group_error } from '../MSAbstractService/message-group-error.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION GeneralAutoActionErrors */
 /**
  * @summary GeneralAutoActionErrors
  * @description
@@ -38,6 +37,5 @@ export const GeneralAutoActionErrors: AUTO_ACTION_ERROR[] = [
     security_error,
     message_group_error,
 ];
-/* END_OF_SYMBOL_DEFINITION GeneralAutoActionErrors */
 
 /* eslint-enable */

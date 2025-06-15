@@ -19,7 +19,6 @@ import {
     _decode_BindProblem,
     _encode_BindProblem,
 } from '../MSAbstractService/BindProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_bind_error_ParameterType_qualified_error */
 /**
  * @summary ms_bind_error_ParameterType_qualified_error
  * @description
@@ -86,9 +85,7 @@ export class ms_bind_error_ParameterType_qualified_error {
 
     public static _enum_for_bind_problem = _enum_for_BindProblem;
 }
-/* END_OF_SYMBOL_DEFINITION ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ms_bind_error_ParameterType_qualified_error */
 /**
  * @summary The Leading Root Component Types of ms_bind_error_ParameterType_qualified_error
  * @description
@@ -120,9 +117,7 @@ export const _root_component_type_list_1_spec_for_ms_bind_error_ParameterType_qu
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ms_bind_error_ParameterType_qualified_error */
 /**
  * @summary The Trailing Root Component Types of ms_bind_error_ParameterType_qualified_error
  * @description
@@ -132,9 +127,7 @@ export const _root_component_type_list_1_spec_for_ms_bind_error_ParameterType_qu
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ms_bind_error_ParameterType_qualified_error: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ms_bind_error_ParameterType_qualified_error */
 /**
  * @summary The Extension Addition Component Types of ms_bind_error_ParameterType_qualified_error
  * @description
@@ -144,13 +137,9 @@ export const _root_component_type_list_2_spec_for_ms_bind_error_ParameterType_qu
  * @constant
  */
 export const _extension_additions_list_spec_for_ms_bind_error_ParameterType_qualified_error: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ms_bind_error_ParameterType_qualified_error */
 let _cached_decoder_for_ms_bind_error_ParameterType_qualified_error: $.ASN1Decoder<ms_bind_error_ParameterType_qualified_error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ms_bind_error_ParameterType_qualified_error */
 /**
  * @summary Decodes an ASN.1 element into a(n) ms_bind_error_ParameterType_qualified_error
  * @function
@@ -209,13 +198,9 @@ export function _decode_ms_bind_error_ParameterType_qualified_error(
     }
     return _cached_decoder_for_ms_bind_error_ParameterType_qualified_error(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ms_bind_error_ParameterType_qualified_error */
 let _cached_encoder_for_ms_bind_error_ParameterType_qualified_error: $.ASN1Encoder<ms_bind_error_ParameterType_qualified_error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ms_bind_error_ParameterType_qualified_error */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ms_bind_error_ParameterType_qualified_error */
 /**
  * @summary Encodes a(n) ms_bind_error_ParameterType_qualified_error into an ASN.1 Element.
  * @function
@@ -273,6 +258,5 @@ export function _encode_ms_bind_error_ParameterType_qualified_error(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ms_bind_error_ParameterType_qualified_error */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_mst_assembly_capability } from '../IPMSObjectIdentifiers/id-mst-assembly-capability.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION assembly_capability */
 /**
  * @summary assembly_capability
  * @description
@@ -42,6 +41,5 @@ export const assembly_capability: MS_EXTENSION<NULL> = {
     '&id': id_mst_assembly_capability /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION assembly_capability */
 
 /* eslint-enable */

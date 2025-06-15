@@ -35,7 +35,7 @@ import { processingFailure } from '../CMIP-1/processingFailure.oa.mjs';
 import { invalidArgumentValue } from '../CMIP-1/invalidArgumentValue.oa.mjs';
 import { noSuchArgument } from '../CMIP-1/noSuchArgument.oa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION m_EventReport_Confirmed */
+
 /**
  * @summary m_EventReport_Confirmed
  * @description
@@ -92,6 +92,5 @@ export const m_EventReport_Confirmed: OPERATION<
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_EventReport_Confirmed */
 
 /* eslint-enable */

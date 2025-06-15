@@ -20,7 +20,7 @@ import {
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AD_AND_OR */
+
 /**
  * @summary AD_AND_OR
  * @description
@@ -70,9 +70,8 @@ export class AD_AND_OR {
     return new AD_AND_OR(_o.condition_count, _o.elements);
   }
 }
-/* END_OF_SYMBOL_DEFINITION AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AD_AND_OR */
+
 /**
  * @summary The Leading Root Component Types of AD_AND_OR
  * @description
@@ -97,9 +96,8 @@ export const _root_component_type_list_1_spec_for_AD_AND_OR: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AD_AND_OR */
+
 /**
  * @summary The Trailing Root Component Types of AD_AND_OR
  * @description
@@ -109,9 +107,8 @@ export const _root_component_type_list_1_spec_for_AD_AND_OR: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AD_AND_OR: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AD_AND_OR */
+
 /**
  * @summary The Extension Addition Component Types of AD_AND_OR
  * @description
@@ -121,13 +118,11 @@ export const _root_component_type_list_2_spec_for_AD_AND_OR: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_AD_AND_OR: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_AND_OR */
+
 let _cached_decoder_for_AD_AND_OR: $.ASN1Decoder<AD_AND_OR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AD_AND_OR */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AD_AND_OR
  * @function
@@ -160,13 +155,11 @@ export function _decode_AD_AND_OR(el: _Element) {
   }
   return _cached_decoder_for_AD_AND_OR(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_AND_OR */
+
 let _cached_encoder_for_AD_AND_OR: $.ASN1Encoder<AD_AND_OR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_AND_OR */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AD_AND_OR */
+
 /**
  * @summary Encodes a(n) AD_AND_OR into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_AD_AND_OR(
   return _cached_encoder_for_AD_AND_OR(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AD_AND_OR */
 
 /* eslint-enable */

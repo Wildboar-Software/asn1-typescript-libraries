@@ -42,7 +42,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BufferedScanReportInformation */
 /**
  * @summary BufferedScanReportInformation
  * @description
@@ -151,9 +150,7 @@ export class BufferedScanReportInformation {
         return 0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BufferedScanReportInformation */
 /**
  * @summary The Leading Root Component Types of BufferedScanReportInformation
  * @description
@@ -213,9 +210,7 @@ export const _root_component_type_list_1_spec_for_BufferedScanReportInformation:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BufferedScanReportInformation */
 /**
  * @summary The Trailing Root Component Types of BufferedScanReportInformation
  * @description
@@ -225,9 +220,7 @@ export const _root_component_type_list_1_spec_for_BufferedScanReportInformation:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BufferedScanReportInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BufferedScanReportInformation */
 /**
  * @summary The Extension Addition Component Types of BufferedScanReportInformation
  * @description
@@ -237,13 +230,9 @@ export const _root_component_type_list_2_spec_for_BufferedScanReportInformation:
  * @constant
  */
 export const _extension_additions_list_spec_for_BufferedScanReportInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedScanReportInformation */
 let _cached_decoder_for_BufferedScanReportInformation: $.ASN1Decoder<BufferedScanReportInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BufferedScanReportInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) BufferedScanReportInformation
  * @function
@@ -323,13 +312,9 @@ export function _decode_BufferedScanReportInformation(el: _Element) {
     }
     return _cached_decoder_for_BufferedScanReportInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedScanReportInformation */
 let _cached_encoder_for_BufferedScanReportInformation: $.ASN1Encoder<BufferedScanReportInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedScanReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BufferedScanReportInformation */
 /**
  * @summary Encodes a(n) BufferedScanReportInformation into an ASN.1 Element.
  * @function
@@ -412,6 +397,5 @@ export function _encode_BufferedScanReportInformation(
     return _cached_encoder_for_BufferedScanReportInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BufferedScanReportInformation */
 
 /* eslint-enable */

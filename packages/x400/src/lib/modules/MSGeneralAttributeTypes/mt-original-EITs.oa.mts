@@ -23,7 +23,6 @@ import { id_att_original_EITs } from '../MSObjectIdentifiers/id-att-original-EIT
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_original_EITs */
 /**
  * @summary mt_original_EITs
  * @description
@@ -56,6 +55,5 @@ export const mt_original_EITs: X413ATTRIBUTE<MS_EIT> = {
     '&id': id_att_original_EITs /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_original_EITs */
 
 /* eslint-enable */

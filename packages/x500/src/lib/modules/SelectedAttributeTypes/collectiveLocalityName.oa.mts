@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectiveLocalityName } from "../SelectedAttributeTypes/id-at-collectiveLocalityName.va.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveLocalityName */
 /**
  * @summary collectiveLocalityName
  * @description
@@ -46,6 +45,5 @@ export const collectiveLocalityName: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveLocalityName */
 
 /* eslint-enable */

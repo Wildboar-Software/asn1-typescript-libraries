@@ -16,7 +16,6 @@ import {
     _decode_RequestedDeliveryMethod,
     _encode_RequestedDeliveryMethod,
 } from '../MTSAbstractService/RequestedDeliveryMethod.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DLPolicy_requested_delivery_method */
 /**
  * @summary DLPolicy_requested_delivery_method
  * @description
@@ -31,13 +30,9 @@ export type DLPolicy_requested_delivery_method =
     | { unchanged: NULL } /* CHOICE_ALT_ROOT */
     | { removed: NULL } /* CHOICE_ALT_ROOT */
     | { replaced: RequestedDeliveryMethod } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_requested_delivery_method */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_requested_delivery_method */
 let _cached_decoder_for_DLPolicy_requested_delivery_method: $.ASN1Decoder<DLPolicy_requested_delivery_method> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_requested_delivery_method */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_requested_delivery_method */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLPolicy_requested_delivery_method
  * @function
@@ -62,13 +57,9 @@ export function _decode_DLPolicy_requested_delivery_method(el: _Element) {
     }
     return _cached_decoder_for_DLPolicy_requested_delivery_method(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_requested_delivery_method */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_requested_delivery_method */
 let _cached_encoder_for_DLPolicy_requested_delivery_method: $.ASN1Encoder<DLPolicy_requested_delivery_method> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_requested_delivery_method */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_requested_delivery_method */
 /**
  * @summary Encodes a(n) DLPolicy_requested_delivery_method into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_DLPolicy_requested_delivery_method(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_requested_delivery_method */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_aa_msgSigDigest */
+
 /**
  * @summary id_aa_msgSigDigest
  * @description
@@ -26,6 +26,5 @@ export const id_aa_msgSigDigest: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     5,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_msgSigDigest */
 
 /* eslint-enable */

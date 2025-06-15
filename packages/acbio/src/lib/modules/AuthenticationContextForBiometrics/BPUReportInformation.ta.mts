@@ -20,7 +20,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BPUReportInformation */
+
 /**
  * @summary BPUReportInformation
  * @description
@@ -36,13 +36,11 @@ import {
 export type BPUReportInformation =
     | { bpuReport: BPUReport } /* CHOICE_ALT_ROOT */
     | { bpuReportReferrer: URI } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BPUReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUReportInformation */
+
 let _cached_decoder_for_BPUReportInformation: $.ASN1Decoder<BPUReportInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BPUReportInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BPUReportInformation
  * @function
@@ -60,13 +58,11 @@ export function _decode_BPUReportInformation(el: _Element) {
     }
     return _cached_decoder_for_BPUReportInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BPUReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUReportInformation */
+
 let _cached_encoder_for_BPUReportInformation: $.ASN1Encoder<BPUReportInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BPUReportInformation */
+
 /**
  * @summary Encodes a(n) BPUReportInformation into an ASN.1 Element.
  * @function
@@ -90,6 +86,5 @@ export function _encode_BPUReportInformation(
     return _cached_encoder_for_BPUReportInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BPUReportInformation */
 
 /* eslint-enable */

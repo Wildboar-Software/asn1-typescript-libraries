@@ -33,7 +33,7 @@ import {
     _decode_ReachabilityChangeSyntax_reason,
     _encode_ReachabilityChangeSyntax_reason,
 } from '../NLM/ReachabilityChangeSyntax-reason.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax */
+
 /**
  * @summary ReachabilityChangeSyntax
  * @description
@@ -120,9 +120,8 @@ export class ReachabilityChangeSyntax {
 
     public static _enum_for_reason = _enum_for_ReachabilityChangeSyntax_reason;
 }
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReachabilityChangeSyntax */
+
 /**
  * @summary The Leading Root Component Types of ReachabilityChangeSyntax
  * @description
@@ -161,9 +160,8 @@ export const _root_component_type_list_1_spec_for_ReachabilityChangeSyntax: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReachabilityChangeSyntax */
+
 /**
  * @summary The Trailing Root Component Types of ReachabilityChangeSyntax
  * @description
@@ -173,9 +171,8 @@ export const _root_component_type_list_1_spec_for_ReachabilityChangeSyntax: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReachabilityChangeSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReachabilityChangeSyntax */
+
 /**
  * @summary The Extension Addition Component Types of ReachabilityChangeSyntax
  * @description
@@ -185,13 +182,11 @@ export const _root_component_type_list_2_spec_for_ReachabilityChangeSyntax: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_ReachabilityChangeSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReachabilityChangeSyntax */
+
 let _cached_decoder_for_ReachabilityChangeSyntax: $.ASN1Decoder<ReachabilityChangeSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReachabilityChangeSyntax */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReachabilityChangeSyntax
  * @function
@@ -251,13 +246,11 @@ export function _decode_ReachabilityChangeSyntax(el: _Element) {
     }
     return _cached_decoder_for_ReachabilityChangeSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReachabilityChangeSyntax */
+
 let _cached_encoder_for_ReachabilityChangeSyntax: $.ASN1Encoder<ReachabilityChangeSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReachabilityChangeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReachabilityChangeSyntax */
+
 /**
  * @summary Encodes a(n) ReachabilityChangeSyntax into an ASN.1 Element.
  * @function
@@ -316,6 +309,5 @@ export function _encode_ReachabilityChangeSyntax(
     return _cached_encoder_for_ReachabilityChangeSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReachabilityChangeSyntax */
 
 /* eslint-enable */

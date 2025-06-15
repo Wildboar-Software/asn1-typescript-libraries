@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_not_ldapDiagnosticMsg */
 /**
  * @summary id_not_ldapDiagnosticMsg
  * @description
@@ -18,6 +17,5 @@ export const id_not_ldapDiagnosticMsg: OBJECT_IDENTIFIER = new _OID(
     [17],
     id_not
 );
-/* END_OF_SYMBOL_DEFINITION id_not_ldapDiagnosticMsg */
 
 /* eslint-enable */

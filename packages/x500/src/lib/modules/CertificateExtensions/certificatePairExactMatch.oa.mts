@@ -7,7 +7,6 @@ import {
 import { certPairExactAssertion } from "../CertificateExtensions/certPairExactAssertion.oa.mjs";
 import { id_mr_certificatePairExactMatch } from "../CertificateExtensions/id-mr-certificatePairExactMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION certificatePairExactMatch */
 /**
  * @summary certificatePairExactMatch
  * @description
@@ -42,6 +41,5 @@ export const certificatePairExactMatch: MATCHING_RULE<CertificatePairExactAssert
     "&id": id_mr_certificatePairExactMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certificatePairExactMatch */
 
 /* eslint-enable */

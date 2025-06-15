@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION defaultStopTime */
 /**
  * @summary defaultStopTime
  * @description
@@ -25,6 +24,5 @@ import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1M
  */
 export
 const defaultStopTime: StopTime = { continual: null };
-/* END_OF_SYMBOL_DEFINITION defaultStopTime */
 
 /* eslint-enable */

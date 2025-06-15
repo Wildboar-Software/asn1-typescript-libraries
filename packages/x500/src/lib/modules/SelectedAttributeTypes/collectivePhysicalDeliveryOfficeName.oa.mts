@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectivePhysicalDeliveryOfficeName } from "../SelectedAttributeTypes/id-at-collectivePhysicalDeliveryOfficeName.va.mjs";
 import { physicalDeliveryOfficeName } from "../SelectedAttributeTypes/physicalDeliveryOfficeName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectivePhysicalDeliveryOfficeName */
 /**
  * @summary collectivePhysicalDeliveryOfficeName
  * @description
@@ -46,6 +45,5 @@ export const collectivePhysicalDeliveryOfficeName: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectivePhysicalDeliveryOfficeName */
 
 /* eslint-enable */

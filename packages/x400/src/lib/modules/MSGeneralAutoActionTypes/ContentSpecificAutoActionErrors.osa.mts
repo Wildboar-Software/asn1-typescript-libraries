@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentSpecificAutoActionErrors */
 /**
  * @summary ContentSpecificAutoActionErrors
  * @description
@@ -26,6 +25,5 @@ import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mj
  *
  */
 export const ContentSpecificAutoActionErrors: AUTO_ACTION_ERROR[] = [];
-/* END_OF_SYMBOL_DEFINITION ContentSpecificAutoActionErrors */
 
 /* eslint-enable */

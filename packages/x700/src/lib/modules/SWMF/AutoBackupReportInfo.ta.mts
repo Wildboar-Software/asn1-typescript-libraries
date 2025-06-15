@@ -21,7 +21,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoBackupReportInfo */
 /**
  * @summary AutoBackupReportInfo
  * @description
@@ -71,9 +70,7 @@ export class AutoBackupReportInfo {
         return new AutoBackupReportInfo(_o.backupResult, _o.additionalInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoBackupReportInfo */
 /**
  * @summary The Leading Root Component Types of AutoBackupReportInfo
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_AutoBackupReportInfo: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoBackupReportInfo */
 /**
  * @summary The Trailing Root Component Types of AutoBackupReportInfo
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_AutoBackupReportInfo: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AutoBackupReportInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoBackupReportInfo */
 /**
  * @summary The Extension Addition Component Types of AutoBackupReportInfo
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_AutoBackupReportInfo: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_AutoBackupReportInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoBackupReportInfo */
 let _cached_decoder_for_AutoBackupReportInfo: $.ASN1Decoder<AutoBackupReportInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoBackupReportInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoBackupReportInfo
  * @function
@@ -177,13 +166,9 @@ export function _decode_AutoBackupReportInfo(el: _Element) {
     }
     return _cached_decoder_for_AutoBackupReportInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoBackupReportInfo */
 let _cached_encoder_for_AutoBackupReportInfo: $.ASN1Encoder<AutoBackupReportInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoBackupReportInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoBackupReportInfo */
 /**
  * @summary Encodes a(n) AutoBackupReportInfo into an ASN.1 Element.
  * @function
@@ -228,6 +213,5 @@ export function _encode_AutoBackupReportInfo(
     return _cached_encoder_for_AutoBackupReportInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoBackupReportInfo */
 
 /* eslint-enable */

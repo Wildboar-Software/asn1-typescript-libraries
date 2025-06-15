@@ -47,7 +47,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeValueChangeInfo */
 /**
  * @summary AttributeValueChangeInfo
  * @description
@@ -150,9 +149,7 @@ export class AttributeValueChangeInfo {
 
     public static _enum_for_sourceIndicator = _enum_for_SourceIndicator;
 }
-/* END_OF_SYMBOL_DEFINITION AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeValueChangeInfo */
 /**
  * @summary The Leading Root Component Types of AttributeValueChangeInfo
  * @description
@@ -212,9 +209,7 @@ export const _root_component_type_list_1_spec_for_AttributeValueChangeInfo: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeValueChangeInfo */
 /**
  * @summary The Trailing Root Component Types of AttributeValueChangeInfo
  * @description
@@ -224,9 +219,7 @@ export const _root_component_type_list_1_spec_for_AttributeValueChangeInfo: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeValueChangeInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueChangeInfo */
 /**
  * @summary The Extension Addition Component Types of AttributeValueChangeInfo
  * @description
@@ -236,13 +229,9 @@ export const _root_component_type_list_2_spec_for_AttributeValueChangeInfo: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeValueChangeInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueChangeInfo */
 let _cached_decoder_for_AttributeValueChangeInfo: $.ASN1Decoder<AttributeValueChangeInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeValueChangeInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValueChangeInfo
  * @function
@@ -319,13 +308,9 @@ export function _decode_AttributeValueChangeInfo(el: _Element) {
     }
     return _cached_decoder_for_AttributeValueChangeInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueChangeInfo */
 let _cached_encoder_for_AttributeValueChangeInfo: $.ASN1Encoder<AttributeValueChangeInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueChangeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeValueChangeInfo */
 /**
  * @summary Encodes a(n) AttributeValueChangeInfo into an ASN.1 Element.
  * @function
@@ -402,6 +387,5 @@ export function _encode_AttributeValueChangeInfo(
     return _cached_encoder_for_AttributeValueChangeInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeValueChangeInfo */
 
 /* eslint-enable */

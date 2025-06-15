@@ -7,7 +7,7 @@ import {
     _decode_PKCS8ShroudedKeyBag,
     _encode_PKCS8ShroudedKeyBag,
 } from "../PKCS-12/PKCS8ShroudedKeyBag.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pkcs8ShroudedKeyBag */
+
 /**
  * @summary pkcs8ShroudedKeyBag
  * @description
@@ -36,6 +36,5 @@ export const pkcs8ShroudedKeyBag: BAG_TYPE<PKCS8ShroudedKeyBag> = {
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pkcs8ShroudedKeyBag */
 
 /* eslint-enable */

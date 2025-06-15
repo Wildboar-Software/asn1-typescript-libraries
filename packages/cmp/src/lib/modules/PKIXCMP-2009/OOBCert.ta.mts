@@ -15,7 +15,7 @@ import {
   _decode_CMPCertificate,
   _encode_CMPCertificate,
 } from '../PKIXCMP-2009/CMPCertificate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OOBCert */
+
 /**
  * @summary OOBCert
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type OOBCert = CMPCertificate; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OOBCert */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OOBCert */
+
 let _cached_decoder_for_OOBCert: $.ASN1Decoder<OOBCert> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OOBCert */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OOBCert */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OOBCert
  * @function
@@ -46,13 +44,11 @@ export function _decode_OOBCert(el: _Element) {
   }
   return _cached_decoder_for_OOBCert(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OOBCert */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OOBCert */
+
 let _cached_encoder_for_OOBCert: $.ASN1Encoder<OOBCert> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OOBCert */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OOBCert */
+
 /**
  * @summary Encodes a(n) OOBCert into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_OOBCert(
   return _cached_encoder_for_OOBCert(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OOBCert */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_DisconnectResult_Item,
     _encode_DisconnectResult_Item,
 } from '../ASN1DefinedTypesModule/DisconnectResult-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DisconnectResult */
+
 /**
  * @summary DisconnectResult
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type DisconnectResult = DisconnectResult_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DisconnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DisconnectResult */
+
 let _cached_decoder_for_DisconnectResult: $.ASN1Decoder<DisconnectResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DisconnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DisconnectResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DisconnectResult
  * @function
@@ -50,13 +48,11 @@ export function _decode_DisconnectResult(el: _Element) {
     }
     return _cached_decoder_for_DisconnectResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DisconnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DisconnectResult */
+
 let _cached_encoder_for_DisconnectResult: $.ASN1Encoder<DisconnectResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DisconnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DisconnectResult */
+
 /**
  * @summary Encodes a(n) DisconnectResult into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_DisconnectResult(
     return _cached_encoder_for_DisconnectResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DisconnectResult */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_nf_locNameForm */
 /**
  * @summary id_nf_locNameForm
  * @description
@@ -15,6 +14,5 @@ import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
  * @constant
  */
 export const id_nf_locNameForm: OBJECT_IDENTIFIER = new _OID([1], id_nf);
-/* END_OF_SYMBOL_DEFINITION id_nf_locNameForm */
 
 /* eslint-enable */

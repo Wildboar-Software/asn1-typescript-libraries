@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_ecMQV */
+
 /**
  * @summary id_ecMQV
  * @description
@@ -22,6 +22,5 @@ export const id_ecMQV: OBJECT_IDENTIFIER = new _OID([
     /* schemes */ 1,
     /* ecmqv */ 13,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_ecMQV */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_ReferenceClockType,
     _encode_ReferenceClockType,
 } from '../TimeMF/ReferenceClockType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CurrSynchSourceAddress */
 /**
  * @summary CurrSynchSourceAddress
  * @description
@@ -37,13 +36,9 @@ import {
 export type CurrSynchSourceAddress =
     | { refPeerAssoc: ClockAddress } /* CHOICE_ALT_ROOT */
     | { refClockID: ReferenceClockType } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CurrSynchSourceAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrSynchSourceAddress */
 let _cached_decoder_for_CurrSynchSourceAddress: $.ASN1Decoder<CurrSynchSourceAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrSynchSourceAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CurrSynchSourceAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) CurrSynchSourceAddress
  * @function
@@ -71,13 +66,9 @@ export function _decode_CurrSynchSourceAddress(el: _Element) {
     }
     return _cached_decoder_for_CurrSynchSourceAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CurrSynchSourceAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrSynchSourceAddress */
 let _cached_encoder_for_CurrSynchSourceAddress: $.ASN1Encoder<CurrSynchSourceAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrSynchSourceAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CurrSynchSourceAddress */
 /**
  * @summary Encodes a(n) CurrSynchSourceAddress into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_CurrSynchSourceAddress(
     return _cached_encoder_for_CurrSynchSourceAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CurrSynchSourceAddress */
 
 /* eslint-enable */

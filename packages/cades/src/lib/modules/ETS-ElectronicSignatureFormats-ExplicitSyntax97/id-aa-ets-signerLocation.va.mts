@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_signerLocation */
 /**
  * @summary id_aa_ets_signerLocation
  * @description
@@ -47,6 +46,5 @@ const id_aa_ets_signerLocation: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     17,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_signerLocation */
 
 /* eslint-enable */

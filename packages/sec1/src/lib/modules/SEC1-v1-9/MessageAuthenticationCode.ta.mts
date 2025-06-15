@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../SEC1-v1-9/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MessageAuthenticationCode */
 /**
  * @summary MessageAuthenticationCode
  * @description
@@ -24,13 +23,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 type MessageAuthenticationCode = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageAuthenticationCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageAuthenticationCode */
 let _cached_decoder_for_MessageAuthenticationCode: $.ASN1Decoder<MessageAuthenticationCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageAuthenticationCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageAuthenticationCode */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAuthenticationCode
  * @function
@@ -42,13 +37,9 @@ function _decode_MessageAuthenticationCode (el: _Element) {
     if (!_cached_decoder_for_MessageAuthenticationCode) { _cached_decoder_for_MessageAuthenticationCode = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_MessageAuthenticationCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageAuthenticationCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageAuthenticationCode */
 let _cached_encoder_for_MessageAuthenticationCode: $.ASN1Encoder<MessageAuthenticationCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageAuthenticationCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageAuthenticationCode */
 /**
  * @summary Encodes a(n) MessageAuthenticationCode into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_MessageAuthenticationCode (value: MessageAuthenticationCode, el
     return _cached_encoder_for_MessageAuthenticationCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageAuthenticationCode */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_TbsReleaseRsp,
     _encode_TbsReleaseRsp,
 } from "../Wrapper/TbsReleaseRsp.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReleaseRsp */
 /**
  * @summary ReleaseRsp
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ReleaseRsp = Signed<TbsReleaseRsp>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseRsp */
 let _cached_decoder_for_ReleaseRsp: $.ASN1Decoder<ReleaseRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReleaseRsp */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReleaseRsp
  * @function
@@ -44,13 +39,9 @@ export function _decode_ReleaseRsp(el: _Element) {
     }
     return _cached_decoder_for_ReleaseRsp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseRsp */
 let _cached_encoder_for_ReleaseRsp: $.ASN1Encoder<ReleaseRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseRsp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReleaseRsp */
 /**
  * @summary Encodes a(n) ReleaseRsp into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReleaseRsp(
     return _cached_encoder_for_ReleaseRsp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReleaseRsp */
 
 /* eslint-enable */

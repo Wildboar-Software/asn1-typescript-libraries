@@ -15,7 +15,6 @@ import {
     _decode_ORName,
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FirstRecipientField */
 /**
  * @summary FirstRecipientField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type FirstRecipientField = ORName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION FirstRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FirstRecipientField */
 let _cached_decoder_for_FirstRecipientField: $.ASN1Decoder<FirstRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FirstRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FirstRecipientField */
 /**
  * @summary Decodes an ASN.1 element into a(n) FirstRecipientField
  * @function
@@ -46,13 +41,9 @@ export function _decode_FirstRecipientField(el: _Element) {
     }
     return _cached_decoder_for_FirstRecipientField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FirstRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FirstRecipientField */
 let _cached_encoder_for_FirstRecipientField: $.ASN1Encoder<FirstRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FirstRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FirstRecipientField */
 /**
  * @summary Encodes a(n) FirstRecipientField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_FirstRecipientField(
     return _cached_encoder_for_FirstRecipientField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FirstRecipientField */
 
 /* eslint-enable */

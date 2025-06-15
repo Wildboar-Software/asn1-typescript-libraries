@@ -19,7 +19,6 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { id_at_mhs_next_level_complete } from '../MHSRoutingObjectIdentifiers/id-at-mhs-next-level-complete.va.mjs';
-/* START_OF_SYMBOL_DEFINITION nextLevelComplete */
 /**
  * @summary nextLevelComplete
  * @description
@@ -55,6 +54,5 @@ export const nextLevelComplete: ATTRIBUTE<NULL> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nextLevelComplete */
 
 /* eslint-enable */

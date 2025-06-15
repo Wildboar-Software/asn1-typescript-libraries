@@ -14,7 +14,7 @@ import { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va.mjs";
 import { pk_Ed25519 } from "../Safecurves-pkix-18/pk-Ed25519.oa.mjs";
 import { sa_Ed25519_smimeCaps } from "../Safecurves-pkix-18/sa-Ed25519-smimeCaps.oa.mjs";
 import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION sa_Ed25519 */
+
 /**
  * @summary sa_Ed25519
  * @description
@@ -52,6 +52,5 @@ const sa_Ed25519: SIGNATURE_ALGORITHM = {
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sa_Ed25519 */
 
 /* eslint-enable */

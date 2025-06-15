@@ -15,7 +15,7 @@ import {
   _decode_KerberosFlags,
   _encode_KerberosFlags,
 } from '../KerberosV5Spec2/KerberosFlags.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION KDCOptions */
+
 /**
  * @summary KDCOptions
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type KDCOptions = KerberosFlags; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KDCOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KDCOptions */
+
 let _cached_decoder_for_KDCOptions: $.ASN1Decoder<KDCOptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KDCOptions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KDCOptions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KDCOptions
  * @function
@@ -46,13 +44,11 @@ export function _decode_KDCOptions(el: _Element) {
   }
   return _cached_decoder_for_KDCOptions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KDCOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KDCOptions */
+
 let _cached_encoder_for_KDCOptions: $.ASN1Encoder<KDCOptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KDCOptions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KDCOptions */
+
 /**
  * @summary Encodes a(n) KDCOptions into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_KDCOptions(
   return _cached_encoder_for_KDCOptions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KDCOptions */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_NamedDay,
     _encode_NamedDay,
 } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION XDayOf */
 /**
  * @summary XDayOf
  * @description
@@ -28,13 +27,9 @@ export type XDayOf =
     | { third: NamedDay } /* CHOICE_ALT_ROOT */
     | { fourth: NamedDay } /* CHOICE_ALT_ROOT */
     | { fifth: NamedDay } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION XDayOf */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XDayOf */
 let _cached_decoder_for_XDayOf: $.ASN1Decoder<XDayOf> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XDayOf */
 
-/* START_OF_SYMBOL_DEFINITION _decode_XDayOf */
 /**
  * @summary Decodes an ASN.1 element into a(n) XDayOf
  * @function
@@ -68,13 +63,9 @@ export function _decode_XDayOf(el: _Element) {
     }
     return _cached_decoder_for_XDayOf(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_XDayOf */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XDayOf */
 let _cached_encoder_for_XDayOf: $.ASN1Encoder<XDayOf> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XDayOf */
 
-/* START_OF_SYMBOL_DEFINITION _encode_XDayOf */
 /**
  * @summary Encodes a(n) XDayOf into an ASN.1 Element.
  * @function
@@ -123,6 +114,5 @@ export function _encode_XDayOf(value: XDayOf, elGetter: $.ASN1Encoder<XDayOf>) {
     return _cached_encoder_for_XDayOf(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_XDayOf */
 
 /* eslint-enable */

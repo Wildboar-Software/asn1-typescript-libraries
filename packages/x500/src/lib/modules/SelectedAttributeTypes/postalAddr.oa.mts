@@ -6,7 +6,6 @@ import {
     _decode_PostalAddress,
     _encode_PostalAddress,
 } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION postalAddr */
 /**
  * @summary postalAddr
  * @description
@@ -36,6 +35,5 @@ export const postalAddr: SYNTAX_NAME<PostalAddress> = {
     "&id": id_lsx_postalAddr /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION postalAddr */
 
 /* eslint-enable */

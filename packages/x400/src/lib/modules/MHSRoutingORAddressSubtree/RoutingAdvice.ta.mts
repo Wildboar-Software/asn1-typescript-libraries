@@ -35,7 +35,6 @@ import {
     _decode_DoubleEnvelopeInformation,
     _encode_DoubleEnvelopeInformation,
 } from '../MHSRoutingORAddressSubtree/DoubleEnvelopeInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoutingAdvice */
 /**
  * @summary RoutingAdvice
  * @description
@@ -64,13 +63,9 @@ export type RoutingAdvice =
           double_envelope_information: DoubleEnvelopeInformation;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RoutingAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAdvice */
 let _cached_decoder_for_RoutingAdvice: $.ASN1Decoder<RoutingAdvice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoutingAdvice */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoutingAdvice
  * @function
@@ -116,13 +111,9 @@ export function _decode_RoutingAdvice(el: _Element) {
     }
     return _cached_decoder_for_RoutingAdvice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoutingAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAdvice */
 let _cached_encoder_for_RoutingAdvice: $.ASN1Encoder<RoutingAdvice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoutingAdvice */
 /**
  * @summary Encodes a(n) RoutingAdvice into an ASN.1 Element.
  * @function
@@ -174,6 +165,5 @@ export function _encode_RoutingAdvice(
     return _cached_encoder_for_RoutingAdvice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoutingAdvice */
 
 /* eslint-enable */

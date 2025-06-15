@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
 import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } from "../SEC1-v1-9/KeyWrapFunction.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECWKTParameters */
 /**
  * @summary ECWKTParameters
  * @description
@@ -64,9 +63,7 @@ class ECWKTParameters {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECWKTParameters */
 /**
  * @summary The Leading Root Component Types of ECWKTParameters
  * @description
@@ -80,9 +77,7 @@ const _root_component_type_list_1_spec_for_ECWKTParameters: $.ComponentSpec[] = 
     new $.ComponentSpec("kdf", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("wrap", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECWKTParameters */
 /**
  * @summary The Trailing Root Component Types of ECWKTParameters
  * @description
@@ -95,9 +90,7 @@ export
 const _root_component_type_list_2_spec_for_ECWKTParameters: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECWKTParameters */
 /**
  * @summary The Extension Addition Component Types of ECWKTParameters
  * @description
@@ -110,13 +103,9 @@ export
 const _extension_additions_list_spec_for_ECWKTParameters: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECWKTParameters */
 let _cached_decoder_for_ECWKTParameters: $.ASN1Decoder<ECWKTParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECWKTParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECWKTParameters
  * @function
@@ -149,13 +138,9 @@ function _decode_ECWKTParameters (el: _Element) {
 }; }
     return _cached_decoder_for_ECWKTParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECWKTParameters */
 let _cached_encoder_for_ECWKTParameters: $.ASN1Encoder<ECWKTParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECWKTParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECWKTParameters */
 /**
  * @summary Encodes a(n) ECWKTParameters into an ASN.1 Element.
  * @function
@@ -176,6 +161,5 @@ function _encode_ECWKTParameters (value: ECWKTParameters, elGetter: $.ASN1Encode
     return _cached_encoder_for_ECWKTParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECWKTParameters */
 
 /* eslint-enable */

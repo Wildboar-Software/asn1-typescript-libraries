@@ -6,7 +6,6 @@ import {
     _decode_OsiBindError_normal_mode_parameters,
     _encode_OsiBindError_normal_mode_parameters,
 } from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiBindError */
 /**
  * @summary OsiBindError
  * @description
@@ -35,13 +34,9 @@ import {
 export type OsiBindError = {
     normal_mode_parameters: OsiBindError_normal_mode_parameters;
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OsiBindError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBindError */
 let _cached_decoder_for_OsiBindError: $.ASN1Decoder<OsiBindError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBindError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiBindError */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiBindError
  * @function
@@ -61,13 +56,9 @@ export function _decode_OsiBindError(el: _Element) {
     }
     return _cached_decoder_for_OsiBindError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiBindError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBindError */
 let _cached_encoder_for_OsiBindError: $.ASN1Encoder<OsiBindError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBindError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiBindError */
 /**
  * @summary Encodes a(n) OsiBindError into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_OsiBindError(
     return _cached_encoder_for_OsiBindError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiBindError */
 
 /* eslint-enable */

@@ -38,7 +38,6 @@ import {
     _extension_additions_list_spec_for_SupplierOrConsumer,
 } from "../DSAOperationalAttributeTypes/SupplierOrConsumer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SupplierInformation */
 /**
  * @summary SupplierInformation
  * @description
@@ -139,9 +138,7 @@ export class SupplierInformation implements SupplierOrConsumer {
         return true;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupplierInformation */
 /**
  * @summary The Leading Root Component Types of SupplierInformation
  * @description
@@ -167,9 +164,7 @@ export const _root_component_type_list_1_spec_for_SupplierInformation: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierInformation */
 /**
  * @summary The Trailing Root Component Types of SupplierInformation
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_SupplierInformation: $.Compone
 export const _root_component_type_list_2_spec_for_SupplierInformation: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_SupplierOrConsumer,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierInformation */
 /**
  * @summary The Extension Addition Component Types of SupplierInformation
  * @description
@@ -195,13 +188,9 @@ export const _root_component_type_list_2_spec_for_SupplierInformation: $.Compone
 export const _extension_additions_list_spec_for_SupplierInformation: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_SupplierOrConsumer,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierInformation */
 let _cached_decoder_for_SupplierInformation: $.ASN1Decoder<SupplierInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupplierInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupplierInformation
  * @function
@@ -284,13 +273,9 @@ export function _decode_SupplierInformation(el: _Element) {
     }
     return _cached_decoder_for_SupplierInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplierInformation */
 let _cached_encoder_for_SupplierInformation: $.ASN1Encoder<SupplierInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplierInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupplierInformation */
 /**
  * @summary Encodes a(n) SupplierInformation into an ASN.1 Element.
  * @function
@@ -375,6 +360,5 @@ export function _encode_SupplierInformation(
     return _cached_encoder_for_SupplierInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupplierInformation */
 
 /* eslint-enable */

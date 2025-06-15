@@ -6,7 +6,7 @@ import {
     _decode_RC2ParameterVersion,
     _encode_RC2ParameterVersion,
 } from "../CryptographicMessageSyntax/RC2ParameterVersion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RC2wrapParameter */
+
 /**
  * @summary RC2wrapParameter
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type RC2wrapParameter = RC2ParameterVersion; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RC2wrapParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RC2wrapParameter */
+
 let _cached_decoder_for_RC2wrapParameter: $.ASN1Decoder<RC2wrapParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RC2wrapParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RC2wrapParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RC2wrapParameter
  * @function
@@ -37,13 +35,11 @@ export function _decode_RC2wrapParameter(el: _Element) {
     }
     return _cached_decoder_for_RC2wrapParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RC2wrapParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RC2wrapParameter */
+
 let _cached_encoder_for_RC2wrapParameter: $.ASN1Encoder<RC2wrapParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RC2wrapParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RC2wrapParameter */
+
 /**
  * @summary Encodes a(n) RC2wrapParameter into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_RC2wrapParameter(
     return _cached_encoder_for_RC2wrapParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RC2wrapParameter */
 
 /* eslint-enable */

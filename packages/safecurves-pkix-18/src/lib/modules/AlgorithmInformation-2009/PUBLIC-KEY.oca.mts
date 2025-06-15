@@ -15,7 +15,7 @@ import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_Par
 import { KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION PUBLIC_KEY */
+
 /**
  * @summary PUBLIC_KEY
  * @description
@@ -88,6 +88,5 @@ interface PUBLIC_KEY<
      */
     readonly "&PrivateKey": PrivateKey;
 };
-/* END_OF_SYMBOL_DEFINITION PUBLIC_KEY */
 
 /* eslint-enable */

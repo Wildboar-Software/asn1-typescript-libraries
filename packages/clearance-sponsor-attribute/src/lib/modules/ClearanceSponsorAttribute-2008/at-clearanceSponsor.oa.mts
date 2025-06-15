@@ -25,7 +25,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION at_clearanceSponsor */
+
 /**
  * @summary at_clearanceSponsor
  * @description
@@ -54,6 +54,5 @@ const at_clearanceSponsor: ATTRIBUTE<DirectoryString> = {
     "&Type": 0 as never,
     "&equality-match": caseIgnoreMatch,
 };
-/* END_OF_SYMBOL_DEFINITION at_clearanceSponsor */
 
 /* eslint-enable */

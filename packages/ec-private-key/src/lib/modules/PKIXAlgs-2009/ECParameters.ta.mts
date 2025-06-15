@@ -12,7 +12,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ECParameters */
+
 /**
  * @summary ECParameters
  * @description
@@ -35,13 +35,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export
 type ECParameters =
     { namedCurve: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ECParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECParameters */
+
 let _cached_decoder_for_ECParameters: $.ASN1Decoder<ECParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECParameters */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ECParameters
  * @function
@@ -55,13 +53,11 @@ function _decode_ECParameters (el: _Element) {
 }); }
     return _cached_decoder_for_ECParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECParameters */
+
 let _cached_encoder_for_ECParameters: $.ASN1Encoder<ECParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECParameters */
+
 /**
  * @summary Encodes a(n) ECParameters into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ function _encode_ECParameters (value: ECParameters, elGetter: $.ASN1Encoder<ECPa
     return _cached_encoder_for_ECParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECParameters */
 
 /* eslint-enable */

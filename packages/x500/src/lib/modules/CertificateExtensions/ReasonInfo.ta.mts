@@ -16,7 +16,6 @@ import {
     _decode_HoldInstruction,
     _encode_HoldInstruction,
 } from "../CertificateExtensions/HoldInstruction.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReasonInfo */
 /**
  * @summary ReasonInfo
  * @description
@@ -84,9 +83,7 @@ export class ReasonInfo {
 
     public static _enum_for_reasonCode = _enum_for_CRLReason;
 }
-/* END_OF_SYMBOL_DEFINITION ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReasonInfo */
 /**
  * @summary The Leading Root Component Types of ReasonInfo
  * @description
@@ -111,9 +108,7 @@ export const _root_component_type_list_1_spec_for_ReasonInfo: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReasonInfo */
 /**
  * @summary The Trailing Root Component Types of ReasonInfo
  * @description
@@ -123,9 +118,7 @@ export const _root_component_type_list_1_spec_for_ReasonInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReasonInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReasonInfo */
 /**
  * @summary The Extension Addition Component Types of ReasonInfo
  * @description
@@ -135,13 +128,9 @@ export const _root_component_type_list_2_spec_for_ReasonInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ReasonInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReasonInfo */
 let _cached_decoder_for_ReasonInfo: $.ASN1Decoder<ReasonInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReasonInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReasonInfo
  * @function
@@ -185,13 +174,9 @@ export function _decode_ReasonInfo(el: _Element) {
     }
     return _cached_decoder_for_ReasonInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReasonInfo */
 let _cached_encoder_for_ReasonInfo: $.ASN1Encoder<ReasonInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReasonInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReasonInfo */
 /**
  * @summary Encodes a(n) ReasonInfo into an ASN.1 Element.
  * @function
@@ -234,6 +219,5 @@ export function _encode_ReasonInfo(
     return _cached_encoder_for_ReasonInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReasonInfo */
 
 /* eslint-enable */

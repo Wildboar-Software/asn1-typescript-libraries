@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_attribute_authenticationGeneration */
 /**
  * @summary id_attribute_authenticationGeneration
  * @description
@@ -28,6 +27,5 @@ export const id_attribute_authenticationGeneration: ID = new _OID(
     [6],
     id_attribute
 );
-/* END_OF_SYMBOL_DEFINITION id_attribute_authenticationGeneration */
 
 /* eslint-enable */

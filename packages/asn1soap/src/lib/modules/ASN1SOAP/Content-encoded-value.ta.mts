@@ -17,7 +17,7 @@ import {
   _decode_Identifier,
   _encode_Identifier,
 } from '../ASN1SOAP/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Content_encoded_value */
+
 /**
  * @summary Content_encoded_value
  * @description
@@ -70,9 +70,8 @@ export class Content_encoded_value {
     return new Content_encoded_value(_o.schema_identifier, _o.id, _o.encoding);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Content_encoded_value */
+
 /**
  * @summary The Leading Root Component Types of Content_encoded_value
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_Content_encoded_value: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Content_encoded_value */
+
 /**
  * @summary The Trailing Root Component Types of Content_encoded_value
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_Content_encoded_value: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Content_encoded_value: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Content_encoded_value */
+
 /**
  * @summary The Extension Addition Component Types of Content_encoded_value
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_Content_encoded_value: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_Content_encoded_value: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Content_encoded_value */
+
 let _cached_decoder_for_Content_encoded_value: $.ASN1Decoder<Content_encoded_value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Content_encoded_value */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Content_encoded_value
  * @function
@@ -181,13 +176,11 @@ export function _decode_Content_encoded_value(el: _Element) {
   }
   return _cached_decoder_for_Content_encoded_value(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Content_encoded_value */
+
 let _cached_encoder_for_Content_encoded_value: $.ASN1Encoder<Content_encoded_value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Content_encoded_value */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Content_encoded_value */
+
 /**
  * @summary Encodes a(n) Content_encoded_value into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_Content_encoded_value(
   return _cached_encoder_for_Content_encoded_value(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Content_encoded_value */
 
 /* eslint-enable */

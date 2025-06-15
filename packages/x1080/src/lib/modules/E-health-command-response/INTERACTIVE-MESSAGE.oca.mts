@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION INTERACTIVE_MESSAGE */
+
 /**
  * @summary INTERACTIVE_MESSAGE
  * @description
@@ -86,6 +86,5 @@ export interface INTERACTIVE_MESSAGE<
      */
     readonly '&next'?: INTEGER[];
 }
-/* END_OF_SYMBOL_DEFINITION INTERACTIVE_MESSAGE */
 
 /* eslint-enable */

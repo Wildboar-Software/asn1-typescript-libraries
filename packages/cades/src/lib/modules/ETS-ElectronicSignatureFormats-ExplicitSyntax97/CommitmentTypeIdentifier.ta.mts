@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CommitmentTypeIdentifier */
 /**
  * @summary CommitmentTypeIdentifier
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type CommitmentTypeIdentifier = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION CommitmentTypeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommitmentTypeIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommitmentTypeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommitmentTypeIdentifier */
 export const _decode_CommitmentTypeIdentifier = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_CommitmentTypeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommitmentTypeIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommitmentTypeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommitmentTypeIdentifier */
 export const _encode_CommitmentTypeIdentifier = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommitmentTypeIdentifier */
 
 /* eslint-enable */

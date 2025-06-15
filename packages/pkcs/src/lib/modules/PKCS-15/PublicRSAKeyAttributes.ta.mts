@@ -27,7 +27,7 @@ import {
     _decode_RSAPublicKeyChoice,
     _encode_RSAPublicKeyChoice,
 } from "../PKCS-15/RSAPublicKeyChoice.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PublicRSAKeyAttributes */
+
 /**
  * @summary PublicRSAKeyAttributes
  * @description
@@ -96,9 +96,8 @@ export class PublicRSAKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicRSAKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PublicRSAKeyAttributes
  * @description
@@ -118,9 +117,8 @@ export const _root_component_type_list_1_spec_for_PublicRSAKeyAttributes: $.Comp
     ),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicRSAKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PublicRSAKeyAttributes
  * @description
@@ -130,9 +128,8 @@ export const _root_component_type_list_1_spec_for_PublicRSAKeyAttributes: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PublicRSAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicRSAKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PublicRSAKeyAttributes
  * @description
@@ -142,13 +139,11 @@ export const _root_component_type_list_2_spec_for_PublicRSAKeyAttributes: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_PublicRSAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicRSAKeyAttributes */
+
 let _cached_decoder_for_PublicRSAKeyAttributes: $.ASN1Decoder<PublicRSAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicRSAKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicRSAKeyAttributes
  * @function
@@ -207,13 +202,11 @@ export function _decode_PublicRSAKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PublicRSAKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicRSAKeyAttributes */
+
 let _cached_encoder_for_PublicRSAKeyAttributes: $.ASN1Encoder<PublicRSAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicRSAKeyAttributes */
+
 /**
  * @summary Encodes a(n) PublicRSAKeyAttributes into an ASN.1 Element.
  * @function
@@ -261,6 +254,5 @@ export function _encode_PublicRSAKeyAttributes(
     return _cached_encoder_for_PublicRSAKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicRSAKeyAttributes */
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SMIME_CAPS */
+
 /**
  * @summary SMIME_CAPS
  * @description
@@ -53,6 +53,5 @@ export interface SMIME_CAPS<
      */
     readonly "&Type": Type;
 }
-/* END_OF_SYMBOL_DEFINITION SMIME_CAPS */
 
 /* eslint-enable */

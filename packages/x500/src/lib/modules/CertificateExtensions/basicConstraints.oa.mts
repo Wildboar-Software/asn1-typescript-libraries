@@ -6,7 +6,6 @@ import {
     _encode_BasicConstraintsSyntax,
 } from "../CertificateExtensions/BasicConstraintsSyntax.ta.mjs";
 import { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va.mjs";
-/* START_OF_SYMBOL_DEFINITION basicConstraints */
 /**
  * @summary basicConstraints
  * @description
@@ -34,6 +33,5 @@ export const basicConstraints: EXTENSION<BasicConstraintsSyntax> = {
     "&id": id_ce_basicConstraints /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION basicConstraints */
 
 /* eslint-enable */

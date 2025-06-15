@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GaugeThresholdValue */
 /**
  * @summary GaugeThresholdValue
  * @description
@@ -24,13 +23,9 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  */
 export
 type GaugeThresholdValue = ObservedValue; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GaugeThresholdValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GaugeThresholdValue */
 let _cached_decoder_for_GaugeThresholdValue: $.ASN1Decoder<GaugeThresholdValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GaugeThresholdValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GaugeThresholdValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) GaugeThresholdValue
  * @function
@@ -42,13 +37,9 @@ function _decode_GaugeThresholdValue (el: _Element) {
     if (!_cached_decoder_for_GaugeThresholdValue) { _cached_decoder_for_GaugeThresholdValue = _decode_ObservedValue; }
     return _cached_decoder_for_GaugeThresholdValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GaugeThresholdValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GaugeThresholdValue */
 let _cached_encoder_for_GaugeThresholdValue: $.ASN1Encoder<GaugeThresholdValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GaugeThresholdValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GaugeThresholdValue */
 /**
  * @summary Encodes a(n) GaugeThresholdValue into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_GaugeThresholdValue (value: GaugeThresholdValue, elGetter: $.AS
     return _cached_encoder_for_GaugeThresholdValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GaugeThresholdValue */
 
 /* eslint-enable */

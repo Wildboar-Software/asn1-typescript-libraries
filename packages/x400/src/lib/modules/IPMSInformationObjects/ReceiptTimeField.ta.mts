@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReceiptTimeField */
 /**
  * @summary ReceiptTimeField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReceiptTimeField = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReceiptTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptTimeField */
 let _cached_decoder_for_ReceiptTimeField: $.ASN1Decoder<ReceiptTimeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReceiptTimeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReceiptTimeField
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReceiptTimeField(el: _Element) {
     }
     return _cached_decoder_for_ReceiptTimeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReceiptTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptTimeField */
 let _cached_encoder_for_ReceiptTimeField: $.ASN1Encoder<ReceiptTimeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptTimeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReceiptTimeField */
 /**
  * @summary Encodes a(n) ReceiptTimeField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReceiptTimeField(
     return _cached_encoder_for_ReceiptTimeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReceiptTimeField */
 
 /* eslint-enable */

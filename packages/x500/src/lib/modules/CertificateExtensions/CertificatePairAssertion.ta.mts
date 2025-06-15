@@ -10,7 +10,6 @@ import {
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
 } from "../CertificateExtensions/CertificateAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificatePairAssertion */
 /**
  * @summary CertificatePairAssertion
  * @description
@@ -76,9 +75,7 @@ export class CertificatePairAssertion {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificatePairAssertion */
 /**
  * @summary The Leading Root Component Types of CertificatePairAssertion
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_CertificatePairAssertion: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificatePairAssertion */
 /**
  * @summary The Trailing Root Component Types of CertificatePairAssertion
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_CertificatePairAssertion: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificatePairAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificatePairAssertion */
 /**
  * @summary The Extension Addition Component Types of CertificatePairAssertion
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_CertificatePairAssertion: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificatePairAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificatePairAssertion */
 let _cached_decoder_for_CertificatePairAssertion: $.ASN1Decoder<CertificatePairAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificatePairAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificatePairAssertion
  * @function
@@ -183,13 +172,9 @@ export function _decode_CertificatePairAssertion(el: _Element) {
     }
     return _cached_decoder_for_CertificatePairAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificatePairAssertion */
 let _cached_encoder_for_CertificatePairAssertion: $.ASN1Encoder<CertificatePairAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificatePairAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificatePairAssertion */
 /**
  * @summary Encodes a(n) CertificatePairAssertion into an ASN.1 Element.
  * @function
@@ -239,6 +224,5 @@ export function _encode_CertificatePairAssertion(
     return _cached_encoder_for_CertificatePairAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificatePairAssertion */
 
 /* eslint-enable */

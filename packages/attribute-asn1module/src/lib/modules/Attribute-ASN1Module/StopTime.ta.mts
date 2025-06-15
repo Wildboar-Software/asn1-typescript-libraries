@@ -15,7 +15,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION StopTime */
 /**
  * @summary StopTime
  * @description
@@ -32,13 +31,9 @@ export
 type StopTime =
     { specific: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | { continual: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION StopTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StopTime */
 let _cached_decoder_for_StopTime: $.ASN1Decoder<StopTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StopTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StopTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) StopTime
  * @function
@@ -53,13 +48,9 @@ function _decode_StopTime (el: _Element) {
 }); }
     return _cached_decoder_for_StopTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StopTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StopTime */
 let _cached_encoder_for_StopTime: $.ASN1Encoder<StopTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StopTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StopTime */
 /**
  * @summary Encodes a(n) StopTime into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_StopTime (value: StopTime, elGetter: $.ASN1Encoder<StopTime>) {
     return _cached_encoder_for_StopTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StopTime */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import { mqvFull_specifiedKDF } from "../SEC1-v1-9/mqvFull-specifiedKDF.va.mjs";
 import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet_Union5_Intersection0_Element */
 /**
  * @summary ECMQVAlgorithmSet_Union5_Intersection0_Element
  * @description
@@ -39,6 +38,5 @@ const ECMQVAlgorithmSet_Union5_Intersection0_Element: ALGORITHM<KeyDerivationFun
     "&id": mqvFull_specifiedKDF /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet_Union5_Intersection0_Element */
 
 /* eslint-enable */

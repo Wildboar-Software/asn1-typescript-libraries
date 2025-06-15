@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TpsAddedToTpPool */
+
 /**
  * @summary TpsAddedToTpPool
  * @description
@@ -65,9 +65,8 @@ export class TpsAddedToTpPool {
         return new TpsAddedToTpPool(_o.tpPool, _o.tps);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TpsAddedToTpPool */
+
 /**
  * @summary The Leading Root Component Types of TpsAddedToTpPool
  * @description
@@ -86,9 +85,8 @@ export const _root_component_type_list_1_spec_for_TpsAddedToTpPool: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TpsAddedToTpPool */
+
 /**
  * @summary The Trailing Root Component Types of TpsAddedToTpPool
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_1_spec_for_TpsAddedToTpPool: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TpsAddedToTpPool: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TpsAddedToTpPool */
+
 /**
  * @summary The Extension Addition Component Types of TpsAddedToTpPool
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_TpsAddedToTpPool: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_TpsAddedToTpPool: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TpsAddedToTpPool */
+
 let _cached_decoder_for_TpsAddedToTpPool: $.ASN1Decoder<TpsAddedToTpPool> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TpsAddedToTpPool */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TpsAddedToTpPool
  * @function
@@ -149,13 +144,11 @@ export function _decode_TpsAddedToTpPool(el: _Element) {
     }
     return _cached_decoder_for_TpsAddedToTpPool(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TpsAddedToTpPool */
+
 let _cached_encoder_for_TpsAddedToTpPool: $.ASN1Encoder<TpsAddedToTpPool> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TpsAddedToTpPool */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TpsAddedToTpPool */
+
 /**
  * @summary Encodes a(n) TpsAddedToTpPool into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_TpsAddedToTpPool(
     return _cached_encoder_for_TpsAddedToTpPool(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TpsAddedToTpPool */
 
 /* eslint-enable */

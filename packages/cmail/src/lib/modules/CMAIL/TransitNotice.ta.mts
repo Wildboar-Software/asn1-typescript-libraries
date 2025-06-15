@@ -15,7 +15,7 @@ import {
   _decode_TransitNoticeType,
   _encode_TransitNoticeType,
 } from '../CMAIL/TransitNoticeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TransitNotice */
+
 /**
  * @summary TransitNotice
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TransitNotice = TransitNoticeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitNotice */
+
 let _cached_decoder_for_TransitNotice: $.ASN1Decoder<TransitNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransitNotice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TransitNotice
  * @function
@@ -46,13 +44,11 @@ export function _decode_TransitNotice(el: _Element) {
   }
   return _cached_decoder_for_TransitNotice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitNotice */
+
 let _cached_encoder_for_TransitNotice: $.ASN1Encoder<TransitNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitNotice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransitNotice */
+
 /**
  * @summary Encodes a(n) TransitNotice into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TransitNotice(
   return _cached_encoder_for_TransitNotice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransitNotice */
 
 /* eslint-enable */

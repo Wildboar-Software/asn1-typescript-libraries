@@ -6,7 +6,7 @@ import {
     _encode_EnvelopedData,
 } from "../CryptographicMessageSyntax-2010/EnvelopedData.ta.mjs";
 import { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ct_EnvelopedData */
+
 /**
  * @summary ct_EnvelopedData
  * @description
@@ -32,6 +32,5 @@ export const ct_EnvelopedData: CONTENT_TYPE<EnvelopedData> = {
     "&id": id_envelopedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_EnvelopedData */
 
 /* eslint-enable */

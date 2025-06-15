@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { id_sha224 } from "../AlgorithmObjectIdentifiers/id-sha224.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION sha224 */
 /**
  * @summary sha224
  * @description
@@ -28,6 +27,5 @@ export const sha224: ALGORITHM = {
     "&id": id_sha224 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sha224 */
 
 /* eslint-enable */

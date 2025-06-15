@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExplicitTP */
+
 /**
  * @summary ExplicitTP
  * @description
@@ -32,13 +32,11 @@ import {
 export type ExplicitTP =
     | { oneTPorGTP: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { listofTPs: ObjectInstance[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ExplicitTP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitTP */
+
 let _cached_decoder_for_ExplicitTP: $.ASN1Decoder<ExplicitTP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitTP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExplicitTP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExplicitTP
  * @function
@@ -63,13 +61,11 @@ export function _decode_ExplicitTP(el: _Element) {
     }
     return _cached_decoder_for_ExplicitTP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExplicitTP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitTP */
+
 let _cached_encoder_for_ExplicitTP: $.ASN1Encoder<ExplicitTP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitTP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExplicitTP */
+
 /**
  * @summary Encodes a(n) ExplicitTP into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_ExplicitTP(
     return _cached_encoder_for_ExplicitTP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExplicitTP */
 
 /* eslint-enable */

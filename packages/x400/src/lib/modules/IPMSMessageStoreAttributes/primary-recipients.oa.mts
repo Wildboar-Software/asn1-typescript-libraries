@@ -26,7 +26,6 @@ import { id_hat_primary_recipients } from '../IPMSObjectIdentifiers/id-hat-prima
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION primary_recipients */
 /**
  * @summary primary_recipients
  * @description
@@ -67,6 +66,5 @@ export const primary_recipients: X413ATTRIBUTE<PrimaryRecipientsSubfield> = {
     '&id': id_hat_primary_recipients /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION primary_recipients */
 
 /* eslint-enable */

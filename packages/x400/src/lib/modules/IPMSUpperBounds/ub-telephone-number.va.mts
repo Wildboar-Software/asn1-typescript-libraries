@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_telephone_number */
 /**
  * @summary ub_telephone_number
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_telephone_number: INTEGER = 32;
-/* END_OF_SYMBOL_DEFINITION ub_telephone_number */
 
 /* eslint-enable */

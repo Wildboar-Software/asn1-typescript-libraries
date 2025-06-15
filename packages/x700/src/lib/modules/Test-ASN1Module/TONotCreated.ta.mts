@@ -21,7 +21,6 @@ import {
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TONotCreated */
 /**
  * @summary TONotCreated
  * @description
@@ -41,13 +40,9 @@ import {
 export type TONotCreated =
     | { reason: TONotCreated_reason } /* CHOICE_ALT_ROOT */
     | { inappropriateAttributeValue: AttributeList } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TONotCreated */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TONotCreated */
 let _cached_decoder_for_TONotCreated: $.ASN1Decoder<TONotCreated> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TONotCreated */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TONotCreated */
 /**
  * @summary Decodes an ASN.1 element into a(n) TONotCreated
  * @function
@@ -68,13 +63,9 @@ export function _decode_TONotCreated(el: _Element) {
     }
     return _cached_decoder_for_TONotCreated(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TONotCreated */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TONotCreated */
 let _cached_encoder_for_TONotCreated: $.ASN1Encoder<TONotCreated> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TONotCreated */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TONotCreated */
 /**
  * @summary Encodes a(n) TONotCreated into an ASN.1 Element.
  * @function
@@ -98,6 +89,5 @@ export function _encode_TONotCreated(
     return _cached_encoder_for_TONotCreated(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TONotCreated */
 
 /* eslint-enable */

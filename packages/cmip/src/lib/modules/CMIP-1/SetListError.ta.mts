@@ -27,7 +27,7 @@ import {
   _decode_SetInfoStatus,
   _encode_SetInfoStatus,
 } from '../CMIP-1/SetInfoStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SetListError */
+
 /**
  * @summary SetListError
  * @description
@@ -104,9 +104,8 @@ export class SetListError {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetListError */
+
 /**
  * @summary The Leading Root Component Types of SetListError
  * @description
@@ -145,9 +144,8 @@ export const _root_component_type_list_1_spec_for_SetListError: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetListError */
+
 /**
  * @summary The Trailing Root Component Types of SetListError
  * @description
@@ -157,9 +155,8 @@ export const _root_component_type_list_1_spec_for_SetListError: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SetListError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetListError */
+
 /**
  * @summary The Extension Addition Component Types of SetListError
  * @description
@@ -169,13 +166,11 @@ export const _root_component_type_list_2_spec_for_SetListError: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_SetListError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SetListError */
+
 let _cached_decoder_for_SetListError: $.ASN1Decoder<SetListError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SetListError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SetListError
  * @function
@@ -233,13 +228,11 @@ export function _decode_SetListError(el: _Element) {
   }
   return _cached_decoder_for_SetListError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SetListError */
+
 let _cached_encoder_for_SetListError: $.ASN1Encoder<SetListError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SetListError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SetListError */
+
 /**
  * @summary Encodes a(n) SetListError into an ASN.1 Element.
  * @function
@@ -295,6 +288,5 @@ export function _encode_SetListError(
   return _cached_encoder_for_SetListError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SetListError */
 
 /* eslint-enable */

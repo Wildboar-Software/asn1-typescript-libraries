@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_aae } from '../EDIMSObjectIdentifiers/id-aae.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_aae_duplicate_edin */
 /**
  * @summary id_aae_duplicate_edin
  * @description
@@ -25,6 +24,5 @@ import { id_aae } from '../EDIMSObjectIdentifiers/id-aae.va.mjs';
  * @constant
  */
 export const id_aae_duplicate_edin: ID = new _OID([1], id_aae);
-/* END_OF_SYMBOL_DEFINITION id_aae_duplicate_edin */
 
 /* eslint-enable */

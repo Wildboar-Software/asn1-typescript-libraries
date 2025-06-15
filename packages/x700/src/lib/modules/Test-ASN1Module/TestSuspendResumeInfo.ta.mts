@@ -21,7 +21,6 @@ import {
     _decode_SuspendResumeChoice,
     _encode_SuspendResumeChoice,
 } from '../Test-ASN1Module/SuspendResumeChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestSuspendResumeInfo */
 /**
  * @summary TestSuspendResumeInfo
  * @description
@@ -82,9 +81,7 @@ export class TestSuspendResumeInfo {
 
     public static _enum_for_suspendResumeChoice = _enum_for_SuspendResumeChoice;
 }
-/* END_OF_SYMBOL_DEFINITION TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestSuspendResumeInfo */
 /**
  * @summary The Leading Root Component Types of TestSuspendResumeInfo
  * @description
@@ -109,9 +106,7 @@ export const _root_component_type_list_1_spec_for_TestSuspendResumeInfo: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestSuspendResumeInfo */
 /**
  * @summary The Trailing Root Component Types of TestSuspendResumeInfo
  * @description
@@ -121,9 +116,7 @@ export const _root_component_type_list_1_spec_for_TestSuspendResumeInfo: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestSuspendResumeInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestSuspendResumeInfo */
 /**
  * @summary The Extension Addition Component Types of TestSuspendResumeInfo
  * @description
@@ -133,13 +126,9 @@ export const _root_component_type_list_2_spec_for_TestSuspendResumeInfo: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_TestSuspendResumeInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSuspendResumeInfo */
 let _cached_decoder_for_TestSuspendResumeInfo: $.ASN1Decoder<TestSuspendResumeInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestSuspendResumeInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestSuspendResumeInfo
  * @function
@@ -173,13 +162,9 @@ export function _decode_TestSuspendResumeInfo(el: _Element) {
     }
     return _cached_decoder_for_TestSuspendResumeInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSuspendResumeInfo */
 let _cached_encoder_for_TestSuspendResumeInfo: $.ASN1Encoder<TestSuspendResumeInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSuspendResumeInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestSuspendResumeInfo */
 /**
  * @summary Encodes a(n) TestSuspendResumeInfo into an ASN.1 Element.
  * @function
@@ -214,6 +199,5 @@ export function _encode_TestSuspendResumeInfo(
     return _cached_encoder_for_TestSuspendResumeInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestSuspendResumeInfo */
 
 /* eslint-enable */

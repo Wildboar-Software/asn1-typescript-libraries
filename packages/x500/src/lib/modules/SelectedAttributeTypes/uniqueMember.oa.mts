@@ -11,7 +11,6 @@ import {
     _encode_NameAndOptionalUID,
 } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import { uniqueMemberMatch } from "../SelectedAttributeTypes/uniqueMemberMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION uniqueMember */
 /**
  * @summary uniqueMember
  * @description
@@ -51,6 +50,5 @@ export const uniqueMember: ATTRIBUTE<NameAndOptionalUID> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uniqueMember */
 
 /* eslint-enable */

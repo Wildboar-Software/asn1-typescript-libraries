@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { rsadsi } from "../PKCS5v2-1/rsadsi.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pkcs */
+
 /**
  * @summary pkcs
  * @description
@@ -15,6 +15,5 @@ import { rsadsi } from "../PKCS5v2-1/rsadsi.va.mjs";
  * @constant
  */
 export const pkcs: OBJECT_IDENTIFIER = new _OID([1], rsadsi);
-/* END_OF_SYMBOL_DEFINITION pkcs */
 
 /* eslint-enable */

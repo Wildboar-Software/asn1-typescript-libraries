@@ -15,7 +15,6 @@ import {
     _decode_DeliveredRecipientField,
     _encode_DeliveredRecipientField,
 } from '../MhsAcctAsn1Module/DeliveredRecipientField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DestinationDomainDeliveryList */
 /**
  * @summary DestinationDomainDeliveryList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DestinationDomainDeliveryList = DeliveredRecipientField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION DestinationDomainDeliveryList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DestinationDomainDeliveryList */
 let _cached_decoder_for_DestinationDomainDeliveryList: $.ASN1Decoder<DestinationDomainDeliveryList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DestinationDomainDeliveryList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DestinationDomainDeliveryList */
 /**
  * @summary Decodes an ASN.1 element into a(n) DestinationDomainDeliveryList
  * @function
@@ -48,13 +43,9 @@ export function _decode_DestinationDomainDeliveryList(el: _Element) {
     }
     return _cached_decoder_for_DestinationDomainDeliveryList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DestinationDomainDeliveryList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DestinationDomainDeliveryList */
 let _cached_encoder_for_DestinationDomainDeliveryList: $.ASN1Encoder<DestinationDomainDeliveryList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DestinationDomainDeliveryList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DestinationDomainDeliveryList */
 /**
  * @summary Encodes a(n) DestinationDomainDeliveryList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_DestinationDomainDeliveryList(
     return _cached_encoder_for_DestinationDomainDeliveryList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DestinationDomainDeliveryList */
 
 /* eslint-enable */

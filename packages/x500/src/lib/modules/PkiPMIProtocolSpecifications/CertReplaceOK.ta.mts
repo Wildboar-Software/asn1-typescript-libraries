@@ -6,7 +6,6 @@ import {
     _decode_CertReplaceOK_Item,
     _encode_CertReplaceOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertReplaceOK */
 /**
  * @summary CertReplaceOK
  * @description
@@ -26,13 +25,9 @@ import {
  * ```
  */
 export type CertReplaceOK = CertReplaceOK_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertReplaceOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceOK */
 let _cached_decoder_for_CertReplaceOK: $.ASN1Decoder<CertReplaceOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReplaceOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReplaceOK
  * @function
@@ -47,13 +42,9 @@ export function _decode_CertReplaceOK(el: _Element) {
     }
     return _cached_decoder_for_CertReplaceOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReplaceOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceOK */
 let _cached_encoder_for_CertReplaceOK: $.ASN1Encoder<CertReplaceOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReplaceOK */
 /**
  * @summary Encodes a(n) CertReplaceOK into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_CertReplaceOK(
     return _cached_encoder_for_CertReplaceOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReplaceOK */
 
 /* eslint-enable */

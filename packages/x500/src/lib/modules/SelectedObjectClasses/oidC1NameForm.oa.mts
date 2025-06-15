@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_nf_oidC1NameForm } from "../SelectedObjectClasses/id-nf-oidC1NameForm.va.mjs";
 import { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION oidC1NameForm */
 /**
  * @summary oidC1NameForm
  * @description
@@ -29,6 +28,5 @@ export const oidC1NameForm: NAME_FORM = {
     "&MandatoryAttributes": [oidC] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_oidC1NameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oidC1NameForm */
 
 /* eslint-enable */

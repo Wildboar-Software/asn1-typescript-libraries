@@ -5,7 +5,6 @@ import {
     _decode_PDSName,
     _encode_PDSName,
 } from "../MTSAbstractService/PDSName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pds_name */
 /**
  * @summary pds_name
  * @description
@@ -33,6 +32,5 @@ export const pds_name: EXTENSION_ATTRIBUTE<PDSName> = {
     "&id": 7 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pds_name */
 
 /* eslint-enable */

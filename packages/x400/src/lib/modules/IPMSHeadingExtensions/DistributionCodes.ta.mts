@@ -15,7 +15,6 @@ import {
     _decode_DistributionCode,
     _encode_DistributionCode,
 } from '../IPMSHeadingExtensions/DistributionCode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DistributionCodes */
 /**
  * @summary DistributionCodes
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type DistributionCodes = DistributionCode[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DistributionCodes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributionCodes */
 let _cached_decoder_for_DistributionCodes: $.ASN1Decoder<DistributionCodes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributionCodes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DistributionCodes */
 /**
  * @summary Decodes an ASN.1 element into a(n) DistributionCodes
  * @function
@@ -49,13 +44,9 @@ export function _decode_DistributionCodes(el: _Element) {
     }
     return _cached_decoder_for_DistributionCodes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DistributionCodes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributionCodes */
 let _cached_encoder_for_DistributionCodes: $.ASN1Encoder<DistributionCodes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributionCodes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DistributionCodes */
 /**
  * @summary Encodes a(n) DistributionCodes into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_DistributionCodes(
     return _cached_encoder_for_DistributionCodes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DistributionCodes */
 
 /* eslint-enable */

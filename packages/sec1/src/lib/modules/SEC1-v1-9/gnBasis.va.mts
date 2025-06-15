@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_characteristic_two_basis } from "../SEC1-v1-9/id-characteristic-two-basis.va.mjs";
-/* START_OF_SYMBOL_DEFINITION gnBasis */
 /**
  * @summary gnBasis
  * @description
@@ -28,6 +27,5 @@ export
 const gnBasis: OBJECT_IDENTIFIER = new _OID([
     1,
 ], id_characteristic_two_basis);
-/* END_OF_SYMBOL_DEFINITION gnBasis */
 
 /* eslint-enable */

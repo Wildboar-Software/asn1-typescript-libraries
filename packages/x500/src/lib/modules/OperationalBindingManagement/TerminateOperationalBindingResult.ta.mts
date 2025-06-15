@@ -15,7 +15,6 @@ import {
     _decode_TerminateOperationalBindingResultData,
     _encode_TerminateOperationalBindingResultData,
 } from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingResult */
 /**
  * @summary TerminateOperationalBindingResult
  * @description
@@ -35,13 +34,9 @@ export type TerminateOperationalBindingResult =
           protected_: OPTIONALLY_PROTECTED_SEQ<TerminateOperationalBindingResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TerminateOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingResult */
 let _cached_decoder_for_TerminateOperationalBindingResult: $.ASN1Decoder<TerminateOperationalBindingResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminateOperationalBindingResult
  * @function
@@ -68,13 +63,9 @@ export function _decode_TerminateOperationalBindingResult(el: _Element) {
     }
     return _cached_decoder_for_TerminateOperationalBindingResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingResult */
 let _cached_encoder_for_TerminateOperationalBindingResult: $.ASN1Encoder<TerminateOperationalBindingResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingResult */
 /**
  * @summary Encodes a(n) TerminateOperationalBindingResult into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_TerminateOperationalBindingResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingResult */
 
 /* eslint-enable */

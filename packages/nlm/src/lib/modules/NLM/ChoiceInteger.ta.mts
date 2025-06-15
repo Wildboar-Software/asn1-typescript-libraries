@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ChoiceInteger */
+
 /**
  * @summary ChoiceInteger
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ChoiceInteger =
     | { dontCare: NULL } /* CHOICE_ALT_ROOT */
     | { integer: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ChoiceInteger */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChoiceInteger */
+
 let _cached_decoder_for_ChoiceInteger: $.ASN1Decoder<ChoiceInteger> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChoiceInteger */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChoiceInteger */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ChoiceInteger
  * @function
@@ -60,13 +58,11 @@ export function _decode_ChoiceInteger(el: _Element) {
     }
     return _cached_decoder_for_ChoiceInteger(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChoiceInteger */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChoiceInteger */
+
 let _cached_encoder_for_ChoiceInteger: $.ASN1Encoder<ChoiceInteger> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChoiceInteger */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChoiceInteger */
+
 /**
  * @summary Encodes a(n) ChoiceInteger into an ASN.1 Element.
  * @function
@@ -100,6 +96,5 @@ export function _encode_ChoiceInteger(
     return _cached_encoder_for_ChoiceInteger(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChoiceInteger */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { digestAlgorithm } from "../PKCS5v2-1/digestAlgorithm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_hmacWithSHA512_224 */
+
 /**
  * @summary id_hmacWithSHA512_224
  * @description
@@ -18,6 +18,5 @@ export const id_hmacWithSHA512_224: OBJECT_IDENTIFIER = new _OID(
     [12],
     digestAlgorithm
 );
-/* END_OF_SYMBOL_DEFINITION id_hmacWithSHA512_224 */
 
 /* eslint-enable */

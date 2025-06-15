@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION InteractiveOperations */
+
 /**
  * @summary InteractiveOperations
  * @description
@@ -26,6 +26,5 @@ import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.
  *
  */
 export const InteractiveOperations: INTERACTIVE_OPERATION[] = [];
-/* END_OF_SYMBOL_DEFINITION InteractiveOperations */
 
 /* eslint-enable */

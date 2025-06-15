@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ClockID */
 /**
  * @summary ClockID
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ClockID = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ClockID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockID */
 let _cached_decoder_for_ClockID: $.ASN1Decoder<ClockID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockID */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockID
  * @function
@@ -46,13 +41,9 @@ export function _decode_ClockID(el: _Element) {
     }
     return _cached_decoder_for_ClockID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClockID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockID */
 let _cached_encoder_for_ClockID: $.ASN1Encoder<ClockID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockID */
 /**
  * @summary Encodes a(n) ClockID into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ClockID(
     return _cached_encoder_for_ClockID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockID */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_UNIT_SCHEMA,
   _encode_BioAPI_UNIT_SCHEMA,
 } from '../BIP/BioAPI-UNIT-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QueryUnits_ResponseParams */
+
 /**
  * @summary QueryUnits_ResponseParams
  * @description
@@ -61,9 +61,8 @@ export class QueryUnits_ResponseParams {
     return new QueryUnits_ResponseParams(_o.unitSchemas);
   }
 }
-/* END_OF_SYMBOL_DEFINITION QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QueryUnits_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of QueryUnits_ResponseParams
  * @description
@@ -81,9 +80,8 @@ export const _root_component_type_list_1_spec_for_QueryUnits_ResponseParams: $.C
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QueryUnits_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of QueryUnits_ResponseParams
  * @description
@@ -93,9 +91,8 @@ export const _root_component_type_list_1_spec_for_QueryUnits_ResponseParams: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_QueryUnits_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QueryUnits_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of QueryUnits_ResponseParams
  * @description
@@ -105,13 +102,11 @@ export const _root_component_type_list_2_spec_for_QueryUnits_ResponseParams: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_QueryUnits_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QueryUnits_ResponseParams */
+
 let _cached_decoder_for_QueryUnits_ResponseParams: $.ASN1Decoder<QueryUnits_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QueryUnits_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QueryUnits_ResponseParams
  * @function
@@ -141,13 +136,11 @@ export function _decode_QueryUnits_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_QueryUnits_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QueryUnits_ResponseParams */
+
 let _cached_encoder_for_QueryUnits_ResponseParams: $.ASN1Encoder<QueryUnits_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QueryUnits_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QueryUnits_ResponseParams */
+
 /**
  * @summary Encodes a(n) QueryUnits_ResponseParams into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ export function _encode_QueryUnits_ResponseParams(
   return _cached_encoder_for_QueryUnits_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QueryUnits_ResponseParams */
 
 /* eslint-enable */

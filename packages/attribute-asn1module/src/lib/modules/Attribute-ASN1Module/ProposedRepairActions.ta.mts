@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SpecificIdentifier, _decode_SpecificIdentifier, _encode_SpecificIdentifier } from "../Attribute-ASN1Module/SpecificIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ProposedRepairActions */
 /**
  * @summary ProposedRepairActions
  * @description
@@ -24,13 +23,9 @@ import { SpecificIdentifier, _decode_SpecificIdentifier, _encode_SpecificIdentif
  */
 export
 type ProposedRepairActions = SpecificIdentifier[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ProposedRepairActions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProposedRepairActions */
 let _cached_decoder_for_ProposedRepairActions: $.ASN1Decoder<ProposedRepairActions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProposedRepairActions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProposedRepairActions */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProposedRepairActions
  * @function
@@ -42,13 +37,9 @@ function _decode_ProposedRepairActions (el: _Element) {
     if (!_cached_decoder_for_ProposedRepairActions) { _cached_decoder_for_ProposedRepairActions = $._decodeSetOf<SpecificIdentifier>(() => _decode_SpecificIdentifier); }
     return _cached_decoder_for_ProposedRepairActions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProposedRepairActions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProposedRepairActions */
 let _cached_encoder_for_ProposedRepairActions: $.ASN1Encoder<ProposedRepairActions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProposedRepairActions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProposedRepairActions */
 /**
  * @summary Encodes a(n) ProposedRepairActions into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_ProposedRepairActions (value: ProposedRepairActions, elGetter: 
     return _cached_encoder_for_ProposedRepairActions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProposedRepairActions */
 
 /* eslint-enable */

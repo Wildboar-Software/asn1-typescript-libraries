@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SequenceOfObjectInstance */
+
 /**
  * @summary SequenceOfObjectInstance
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SequenceOfObjectInstance = ObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SequenceOfObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfObjectInstance */
+
 let _cached_decoder_for_SequenceOfObjectInstance: $.ASN1Decoder<SequenceOfObjectInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SequenceOfObjectInstance */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SequenceOfObjectInstance
  * @function
@@ -48,13 +46,11 @@ export function _decode_SequenceOfObjectInstance(el: _Element) {
     }
     return _cached_decoder_for_SequenceOfObjectInstance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SequenceOfObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfObjectInstance */
+
 let _cached_encoder_for_SequenceOfObjectInstance: $.ASN1Encoder<SequenceOfObjectInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SequenceOfObjectInstance */
+
 /**
  * @summary Encodes a(n) SequenceOfObjectInstance into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SequenceOfObjectInstance(
     return _cached_encoder_for_SequenceOfObjectInstance(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SequenceOfObjectInstance */
 
 /* eslint-enable */

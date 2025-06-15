@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ManagementExtensionSet */
 /**
  * @summary ManagementExtensionSet
  * @description
@@ -27,6 +26,5 @@ import { DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca.mjs";
  */
 export
 const ManagementExtensionSet: (DMI_EXTENSION)[] = [];
-/* END_OF_SYMBOL_DEFINITION ManagementExtensionSet */
 
 /* eslint-enable */

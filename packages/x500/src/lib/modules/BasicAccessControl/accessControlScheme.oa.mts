@@ -7,7 +7,6 @@ import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION accessControlScheme */
 /**
  * @summary accessControlScheme
  * @description
@@ -45,6 +44,5 @@ export const accessControlScheme: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION accessControlScheme */
 
 /* eslint-enable */

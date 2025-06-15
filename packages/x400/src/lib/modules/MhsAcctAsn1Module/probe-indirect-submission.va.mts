@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION probe_indirect_submission */
 /**
  * @summary probe_indirect_submission
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const probe_indirect_submission: EventTypeId = { localForm: 22 };
-/* END_OF_SYMBOL_DEFINITION probe_indirect_submission */
 
 /* eslint-enable */

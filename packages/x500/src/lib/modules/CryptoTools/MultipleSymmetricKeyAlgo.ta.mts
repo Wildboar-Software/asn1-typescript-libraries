@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultipleSymmetricKeyAlgo */
 /**
  * @summary MultipleSymmetricKeyAlgo
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type MultipleSymmetricKeyAlgo = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MultipleSymmetricKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleSymmetricKeyAlgo */
 let _cached_decoder_for_MultipleSymmetricKeyAlgo: $.ASN1Decoder<MultipleSymmetricKeyAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleSymmetricKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleSymmetricKeyAlgo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleSymmetricKeyAlgo
  * @function
@@ -40,13 +35,9 @@ export function _decode_MultipleSymmetricKeyAlgo(el: _Element) {
     }
     return _cached_decoder_for_MultipleSymmetricKeyAlgo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleSymmetricKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleSymmetricKeyAlgo */
 let _cached_encoder_for_MultipleSymmetricKeyAlgo: $.ASN1Encoder<MultipleSymmetricKeyAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleSymmetricKeyAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleSymmetricKeyAlgo */
 /**
  * @summary Encodes a(n) MultipleSymmetricKeyAlgo into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_MultipleSymmetricKeyAlgo(
     return _cached_encoder_for_MultipleSymmetricKeyAlgo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleSymmetricKeyAlgo */
 
 /* eslint-enable */

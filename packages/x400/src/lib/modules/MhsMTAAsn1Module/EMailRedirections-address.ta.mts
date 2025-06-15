@@ -16,7 +16,6 @@ import {
     _decode_EMailMtsUserName,
     _encode_EMailMtsUserName,
 } from '../MhsMTAAsn1Module/EMailMtsUserName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailRedirections_address */
 /**
  * @summary EMailRedirections_address
  * @description
@@ -30,13 +29,9 @@ import {
 export type EMailRedirections_address =
     | { none: NULL } /* CHOICE_ALT_ROOT */
     | { email_addr: EMailMtsUserName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailRedirections_address */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailRedirections_address */
 let _cached_decoder_for_EMailRedirections_address: $.ASN1Decoder<EMailRedirections_address> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailRedirections_address */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailRedirections_address */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailRedirections_address
  * @function
@@ -55,13 +50,9 @@ export function _decode_EMailRedirections_address(el: _Element) {
     }
     return _cached_decoder_for_EMailRedirections_address(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailRedirections_address */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailRedirections_address */
 let _cached_encoder_for_EMailRedirections_address: $.ASN1Encoder<EMailRedirections_address> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailRedirections_address */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailRedirections_address */
 /**
  * @summary Encodes a(n) EMailRedirections_address into an ASN.1 Element.
  * @function
@@ -85,6 +76,5 @@ export function _encode_EMailRedirections_address(
     return _cached_encoder_for_EMailRedirections_address(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailRedirections_address */
 
 /* eslint-enable */

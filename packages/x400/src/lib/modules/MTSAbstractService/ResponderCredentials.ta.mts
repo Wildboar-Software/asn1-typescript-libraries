@@ -15,7 +15,6 @@ import {
     _decode_Credentials,
     _encode_Credentials,
 } from '../MTSAbstractService/Credentials.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResponderCredentials */
 /**
  * @summary ResponderCredentials
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ResponderCredentials = Credentials; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ResponderCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponderCredentials */
 let _cached_decoder_for_ResponderCredentials: $.ASN1Decoder<ResponderCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponderCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponderCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponderCredentials
  * @function
@@ -46,13 +41,9 @@ export function _decode_ResponderCredentials(el: _Element) {
     }
     return _cached_decoder_for_ResponderCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponderCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponderCredentials */
 let _cached_encoder_for_ResponderCredentials: $.ASN1Encoder<ResponderCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponderCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponderCredentials */
 /**
  * @summary Encodes a(n) ResponderCredentials into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ResponderCredentials(
     return _cached_encoder_for_ResponderCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponderCredentials */
 
 /* eslint-enable */

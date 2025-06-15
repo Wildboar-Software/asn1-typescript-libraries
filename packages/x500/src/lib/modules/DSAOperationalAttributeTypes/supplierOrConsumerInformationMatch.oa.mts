@@ -6,7 +6,6 @@ import {
     _encode_supplierOrConsumerInformationMatch_AssertionType,
 } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch */
 /**
  * @summary supplierOrConsumerInformationMatch
  * @description
@@ -36,6 +35,5 @@ export const supplierOrConsumerInformationMatch: MATCHING_RULE<supplierOrConsume
     "&id": id_kmr_supplierConsumerMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch */
 
 /* eslint-enable */

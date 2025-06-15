@@ -15,7 +15,7 @@ import {
     _decode_Time24,
     _encode_Time24,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Time24.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WeekMask_intervalsOfDay_Item */
+
 /**
  * @summary WeekMask_intervalsOfDay_Item
  * @description
@@ -67,9 +67,8 @@ export class WeekMask_intervalsOfDay_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_WeekMask_intervalsOfDay_Item */
+
 /**
  * @summary The Leading Root Component Types of WeekMask_intervalsOfDay_Item
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_WeekMask_intervalsOfDay_Item: 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_WeekMask_intervalsOfDay_Item */
+
 /**
  * @summary The Trailing Root Component Types of WeekMask_intervalsOfDay_Item
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_WeekMask_intervalsOfDay_Item: 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_WeekMask_intervalsOfDay_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_WeekMask_intervalsOfDay_Item */
+
 /**
  * @summary The Extension Addition Component Types of WeekMask_intervalsOfDay_Item
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_WeekMask_intervalsOfDay_Item: 
  * @constant
  */
 export const _extension_additions_list_spec_for_WeekMask_intervalsOfDay_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask_intervalsOfDay_Item */
+
 let _cached_decoder_for_WeekMask_intervalsOfDay_Item: $.ASN1Decoder<WeekMask_intervalsOfDay_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WeekMask_intervalsOfDay_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) WeekMask_intervalsOfDay_Item
  * @function
@@ -155,13 +150,11 @@ export function _decode_WeekMask_intervalsOfDay_Item(el: _Element) {
     }
     return _cached_decoder_for_WeekMask_intervalsOfDay_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask_intervalsOfDay_Item */
+
 let _cached_encoder_for_WeekMask_intervalsOfDay_Item: $.ASN1Encoder<WeekMask_intervalsOfDay_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask_intervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WeekMask_intervalsOfDay_Item */
+
 /**
  * @summary Encodes a(n) WeekMask_intervalsOfDay_Item into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_WeekMask_intervalsOfDay_Item(
     return _cached_encoder_for_WeekMask_intervalsOfDay_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WeekMask_intervalsOfDay_Item */
 
 /* eslint-enable */

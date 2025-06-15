@@ -16,7 +16,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DefinedValue */
 /**
  * @summary DefinedValue
  * @description
@@ -66,9 +65,7 @@ export class DefinedValue {
         return new DefinedValue(_o.module_, _o.reference);
     }
 }
-/* END_OF_SYMBOL_DEFINITION DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DefinedValue */
 /**
  * @summary The Leading Root Component Types of DefinedValue
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_DefinedValue: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DefinedValue */
 /**
  * @summary The Trailing Root Component Types of DefinedValue
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_DefinedValue: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DefinedValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DefinedValue */
 /**
  * @summary The Extension Addition Component Types of DefinedValue
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_DefinedValue: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_DefinedValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefinedValue */
 let _cached_decoder_for_DefinedValue: $.ASN1Decoder<DefinedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DefinedValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) DefinedValue
  * @function
@@ -169,13 +158,9 @@ export function _decode_DefinedValue(el: _Element) {
     }
     return _cached_decoder_for_DefinedValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefinedValue */
 let _cached_encoder_for_DefinedValue: $.ASN1Encoder<DefinedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefinedValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DefinedValue */
 /**
  * @summary Encodes a(n) DefinedValue into an ASN.1 Element.
  * @function
@@ -216,6 +201,5 @@ export function _encode_DefinedValue(
     return _cached_encoder_for_DefinedValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DefinedValue */
 
 /* eslint-enable */

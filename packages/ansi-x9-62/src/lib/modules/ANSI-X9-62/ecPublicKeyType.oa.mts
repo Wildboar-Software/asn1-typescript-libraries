@@ -8,7 +8,6 @@ import {
 } from "./ECDomainParameters.ta.mjs";
 // ECDomainParameters used to be DomainParameters. I think this is a mistake.
 
-/* START_OF_SYMBOL_DEFINITION ecPublicKeyType */
 /**
  * @summary ecPublicKeyType
  * @description
@@ -36,6 +35,5 @@ export const ecPublicKeyType: ALGORITHM<ECDomainParameters> = {
     "&id": id_ecPublicKey /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecPublicKeyType */
 
 /* eslint-enable */

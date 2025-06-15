@@ -11,7 +11,7 @@ import {
     DERElement,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION sha1Identifier */
+
 /**
  * @summary sha1Identifier
  * @description
@@ -37,6 +37,5 @@ export const sha1Identifier: HashAlgorithm = new AlgorithmIdentifier(
     ),
 );
 
-/* END_OF_SYMBOL_DEFINITION sha1Identifier */
 
 /* eslint-enable */

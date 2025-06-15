@@ -19,7 +19,7 @@ import { UNIT } from '../E-health-quantities-and-units/UNIT.oca.mjs';
 // Because of a mistake in the specification.
 type RELATIVE_IRI = RELATIVE_OID_IRI;
 
-/* START_OF_SYMBOL_DEFINITION QUANTITY */
+
 /**
  * @summary QUANTITY
  * @description
@@ -104,6 +104,5 @@ export interface QUANTITY {
      */
     readonly '&relative-oid-iri'?: RELATIVE_IRI;
 }
-/* END_OF_SYMBOL_DEFINITION QUANTITY */
 
 /* eslint-enable */

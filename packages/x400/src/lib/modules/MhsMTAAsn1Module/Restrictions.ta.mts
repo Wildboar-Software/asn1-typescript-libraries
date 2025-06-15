@@ -15,7 +15,6 @@ import {
     _decode_Restriction,
     _encode_Restriction,
 } from '../MTSAbstractService/Restriction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Restrictions */
 /**
  * @summary Restrictions
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Restrictions = Restriction[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Restrictions */
 let _cached_decoder_for_Restrictions: $.ASN1Decoder<Restrictions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Restrictions */
 /**
  * @summary Decodes an ASN.1 element into a(n) Restrictions
  * @function
@@ -48,13 +43,9 @@ export function _decode_Restrictions(el: _Element) {
     }
     return _cached_decoder_for_Restrictions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Restrictions */
 let _cached_encoder_for_Restrictions: $.ASN1Encoder<Restrictions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Restrictions */
 /**
  * @summary Encodes a(n) Restrictions into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Restrictions(
     return _cached_encoder_for_Restrictions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Restrictions */
 
 /* eslint-enable */

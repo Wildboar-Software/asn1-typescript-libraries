@@ -22,7 +22,6 @@ import {
     _decode_ORName,
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RedirectionProcessingInfo */
 /**
  * @summary RedirectionProcessingInfo
  * @description
@@ -93,9 +92,7 @@ export class RedirectionProcessingInfo {
 
     public static _enum_for_redirection_reason = _enum_for_RedirectionReason;
 }
-/* END_OF_SYMBOL_DEFINITION RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RedirectionProcessingInfo */
 /**
  * @summary The Leading Root Component Types of RedirectionProcessingInfo
  * @description
@@ -127,9 +124,7 @@ export const _root_component_type_list_1_spec_for_RedirectionProcessingInfo: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RedirectionProcessingInfo */
 /**
  * @summary The Trailing Root Component Types of RedirectionProcessingInfo
  * @description
@@ -139,9 +134,7 @@ export const _root_component_type_list_1_spec_for_RedirectionProcessingInfo: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RedirectionProcessingInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RedirectionProcessingInfo */
 /**
  * @summary The Extension Addition Component Types of RedirectionProcessingInfo
  * @description
@@ -151,13 +144,9 @@ export const _root_component_type_list_2_spec_for_RedirectionProcessingInfo: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_RedirectionProcessingInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionProcessingInfo */
 let _cached_decoder_for_RedirectionProcessingInfo: $.ASN1Decoder<RedirectionProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RedirectionProcessingInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) RedirectionProcessingInfo
  * @function
@@ -210,13 +199,9 @@ export function _decode_RedirectionProcessingInfo(el: _Element) {
     }
     return _cached_decoder_for_RedirectionProcessingInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionProcessingInfo */
 let _cached_encoder_for_RedirectionProcessingInfo: $.ASN1Encoder<RedirectionProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RedirectionProcessingInfo */
 /**
  * @summary Encodes a(n) RedirectionProcessingInfo into an ASN.1 Element.
  * @function
@@ -265,6 +250,5 @@ export function _encode_RedirectionProcessingInfo(
     return _cached_encoder_for_RedirectionProcessingInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RedirectionProcessingInfo */
 
 /* eslint-enable */

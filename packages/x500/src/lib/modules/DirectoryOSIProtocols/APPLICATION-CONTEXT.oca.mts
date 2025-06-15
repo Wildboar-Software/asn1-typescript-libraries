@@ -2,7 +2,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 /**
  * @summary APPLICATION_CONTEXT
  * @description
@@ -62,6 +61,5 @@ export interface APPLICATION_CONTEXT {
      */
     readonly "&applicationContextName"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 
 /* eslint-enable */

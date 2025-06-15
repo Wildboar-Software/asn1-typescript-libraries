@@ -14,7 +14,7 @@ import {
   _decode_InvocationId,
   _encode_InvocationId,
 } from '../SeseAPDUs/InvocationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION noInvocationId */
+
 /**
  * @summary noInvocationId
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const noInvocationId: InvocationId = { absent: null };
-/* END_OF_SYMBOL_DEFINITION noInvocationId */
 
 /* eslint-enable */

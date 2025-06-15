@@ -27,7 +27,6 @@ import { report_body_part } from '../IPMSForwardedReportBodyPartType/report-body
 import { notification_body_part } from '../IPMSForwardedReportBodyPartType/notification-body-part.oa.mjs';
 // import { content_body_part } from '../IPMSForwardedContentBodyPartType/content-body-part.oa.mjs';
 import { pkcs7_body_part } from '../PKCS7BodyPartType/pkcs7-body-part.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION StandardBodyParts */
 /**
  * @summary StandardBodyParts
  * @description
@@ -68,6 +67,5 @@ export const StandardBodyParts: EXTENDED_BODY_PART_TYPE[] = [
     // content_body_part,
     pkcs7_body_part,
 ];
-/* END_OF_SYMBOL_DEFINITION StandardBodyParts */
 
 /* eslint-enable */

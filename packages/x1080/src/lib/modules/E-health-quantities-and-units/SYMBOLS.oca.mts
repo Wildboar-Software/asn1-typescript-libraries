@@ -21,7 +21,7 @@ import {
 // Because of a mistake in the specification.
 type RELATIVE_IRI = RELATIVE_OID_IRI;
 
-/* START_OF_SYMBOL_DEFINITION SYMBOLS */
+
 /**
  * @summary SYMBOLS
  * @description
@@ -85,6 +85,5 @@ export interface SYMBOLS {
      */
     readonly '&relative-oid-iri'?: RELATIVE_IRI;
 }
-/* END_OF_SYMBOL_DEFINITION SYMBOLS */
 
 /* eslint-enable */

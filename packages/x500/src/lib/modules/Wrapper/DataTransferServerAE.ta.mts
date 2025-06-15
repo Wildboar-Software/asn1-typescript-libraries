@@ -11,7 +11,6 @@ import {
     _decode_AadServerAE,
     _encode_AadServerAE,
 } from "../Wrapper/AadServerAE.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataTransferServerAE */
 /**
  * @summary DataTransferServerAE
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type DataTransferServerAE = AUTHEN_ENCRYPT<AadServerAE, _Element>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DataTransferServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferServerAE */
 let _cached_decoder_for_DataTransferServerAE: $.ASN1Decoder<DataTransferServerAE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataTransferServerAE */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataTransferServerAE
  * @function
@@ -45,13 +40,9 @@ export function _decode_DataTransferServerAE(el: _Element) {
     }
     return _cached_decoder_for_DataTransferServerAE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataTransferServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferServerAE */
 let _cached_encoder_for_DataTransferServerAE: $.ASN1Encoder<DataTransferServerAE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataTransferServerAE */
 /**
  * @summary Encodes a(n) DataTransferServerAE into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_DataTransferServerAE(
     return _cached_encoder_for_DataTransferServerAE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataTransferServerAE */
 
 /* eslint-enable */

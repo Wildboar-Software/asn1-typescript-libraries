@@ -33,7 +33,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Rep_ti_contents */
 /**
  * @summary Rep_ti_contents
  * @description
@@ -166,9 +165,7 @@ export class Rep_ti_contents {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Rep_ti_contents */
 /**
  * @summary The Leading Root Component Types of Rep_ti_contents
  * @description
@@ -257,9 +254,7 @@ export const _root_component_type_list_1_spec_for_Rep_ti_contents: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Rep_ti_contents */
 /**
  * @summary The Trailing Root Component Types of Rep_ti_contents
  * @description
@@ -269,9 +264,7 @@ export const _root_component_type_list_1_spec_for_Rep_ti_contents: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Rep_ti_contents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Rep_ti_contents */
 /**
  * @summary The Extension Addition Component Types of Rep_ti_contents
  * @description
@@ -281,13 +274,9 @@ export const _root_component_type_list_2_spec_for_Rep_ti_contents: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_Rep_ti_contents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Rep_ti_contents */
 let _cached_decoder_for_Rep_ti_contents: $.ASN1Decoder<Rep_ti_contents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Rep_ti_contents */
 /**
  * @summary Decodes an ASN.1 element into a(n) Rep_ti_contents
  * @function
@@ -385,13 +374,9 @@ export function _decode_Rep_ti_contents(el: _Element) {
     }
     return _cached_decoder_for_Rep_ti_contents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Rep_ti_contents */
 let _cached_encoder_for_Rep_ti_contents: $.ASN1Encoder<Rep_ti_contents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Rep_ti_contents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Rep_ti_contents */
 /**
  * @summary Encodes a(n) Rep_ti_contents into an ASN.1 Element.
  * @function
@@ -472,6 +457,5 @@ export function _encode_Rep_ti_contents(
     return _cached_encoder_for_Rep_ti_contents(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Rep_ti_contents */
 
 /* eslint-enable */

@@ -37,7 +37,6 @@ import {
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIAutoForwardRegistrationParameter */
 /**
  * @summary EDIAutoForwardRegistrationParameter
  * @description
@@ -137,9 +136,7 @@ export class EDIAutoForwardRegistrationParameter {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIAutoForwardRegistrationParameter */
 /**
  * @summary The Leading Root Component Types of EDIAutoForwardRegistrationParameter
  * @description
@@ -192,9 +189,7 @@ export const _root_component_type_list_1_spec_for_EDIAutoForwardRegistrationPara
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIAutoForwardRegistrationParameter */
 /**
  * @summary The Trailing Root Component Types of EDIAutoForwardRegistrationParameter
  * @description
@@ -204,9 +199,7 @@ export const _root_component_type_list_1_spec_for_EDIAutoForwardRegistrationPara
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIAutoForwardRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIAutoForwardRegistrationParameter */
 /**
  * @summary The Extension Addition Component Types of EDIAutoForwardRegistrationParameter
  * @description
@@ -216,13 +209,9 @@ export const _root_component_type_list_2_spec_for_EDIAutoForwardRegistrationPara
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIAutoForwardRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIAutoForwardRegistrationParameter */
 let _cached_decoder_for_EDIAutoForwardRegistrationParameter: $.ASN1Decoder<EDIAutoForwardRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIAutoForwardRegistrationParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIAutoForwardRegistrationParameter
  * @function
@@ -297,13 +286,9 @@ export function _decode_EDIAutoForwardRegistrationParameter(el: _Element) {
     }
     return _cached_decoder_for_EDIAutoForwardRegistrationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIAutoForwardRegistrationParameter */
 let _cached_encoder_for_EDIAutoForwardRegistrationParameter: $.ASN1Encoder<EDIAutoForwardRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIAutoForwardRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIAutoForwardRegistrationParameter */
 /**
  * @summary Encodes a(n) EDIAutoForwardRegistrationParameter into an ASN.1 Element.
  * @function
@@ -381,6 +366,5 @@ export function _encode_EDIAutoForwardRegistrationParameter(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIAutoForwardRegistrationParameter */
 
 /* eslint-enable */

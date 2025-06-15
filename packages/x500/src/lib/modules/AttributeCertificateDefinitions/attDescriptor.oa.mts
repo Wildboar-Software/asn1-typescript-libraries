@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
 import { id_mr_attDescriptorMatch } from "../AttributeCertificateDefinitions/id-mr-attDescriptorMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION attDescriptor */
 /**
  * @summary attDescriptor
  * @description
@@ -34,6 +33,5 @@ export const attDescriptor: MATCHING_RULE<AttributeDescriptorSyntax> = {
     "&id": id_mr_attDescriptorMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attDescriptor */
 
 /* eslint-enable */

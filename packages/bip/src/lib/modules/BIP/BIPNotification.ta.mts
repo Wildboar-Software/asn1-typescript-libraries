@@ -25,7 +25,7 @@ import {
   _decode_BIPNotification_params,
   _encode_BIPNotification_params,
 } from '../BIP/BIPNotification-params.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPNotification */
+
 /**
  * @summary BIPNotification
  * @description
@@ -112,9 +112,8 @@ export class BIPNotification {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPNotification */
+
 /**
  * @summary The Leading Root Component Types of BIPNotification
  * @description
@@ -160,9 +159,8 @@ export const _root_component_type_list_1_spec_for_BIPNotification: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPNotification */
+
 /**
  * @summary The Trailing Root Component Types of BIPNotification
  * @description
@@ -172,9 +170,8 @@ export const _root_component_type_list_1_spec_for_BIPNotification: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BIPNotification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPNotification */
+
 /**
  * @summary The Extension Addition Component Types of BIPNotification
  * @description
@@ -184,13 +181,11 @@ export const _root_component_type_list_2_spec_for_BIPNotification: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_BIPNotification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPNotification */
+
 let _cached_decoder_for_BIPNotification: $.ASN1Decoder<BIPNotification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPNotification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPNotification
  * @function
@@ -236,13 +231,11 @@ export function _decode_BIPNotification(el: _Element) {
   }
   return _cached_decoder_for_BIPNotification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPNotification */
+
 let _cached_encoder_for_BIPNotification: $.ASN1Encoder<BIPNotification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPNotification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPNotification */
+
 /**
  * @summary Encodes a(n) BIPNotification into an ASN.1 Element.
  * @function
@@ -280,6 +273,5 @@ export function _encode_BIPNotification(
   return _cached_encoder_for_BIPNotification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPNotification */
 
 /* eslint-enable */

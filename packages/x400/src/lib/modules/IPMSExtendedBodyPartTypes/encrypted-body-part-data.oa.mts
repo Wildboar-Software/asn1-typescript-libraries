@@ -16,7 +16,6 @@ import {
     _encode_EncryptedData,
 } from '../IPMSInformationObjects/EncryptedData.ta.mjs';
 import { id_et_encrypted } from '../IPMSObjectIdentifiers/id-et-encrypted.va.mjs';
-/* START_OF_SYMBOL_DEFINITION encrypted_body_part_data */
 /**
  * @summary encrypted_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const encrypted_body_part_data: TYPE_IDENTIFIER<EncryptedData> = {
     '&id': id_et_encrypted /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION encrypted_body_part_data */
 
 /* eslint-enable */

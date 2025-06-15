@@ -20,7 +20,7 @@ import {
     _decode_PtoTPPool,
     _encode_PtoTPPool,
 } from '../ASN1DefinedTypesModule/PtoTPPool.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectionTypeBi */
+
 /**
  * @summary ConnectionTypeBi
  * @description
@@ -37,13 +37,11 @@ import {
 export type ConnectionTypeBi =
     | { explicitPToP: ExplicitPtoP } /* CHOICE_ALT_ROOT */
     | { ptoTpPool: PtoTPPool } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectionTypeBi */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionTypeBi */
+
 let _cached_decoder_for_ConnectionTypeBi: $.ASN1Decoder<ConnectionTypeBi> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionTypeBi */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionTypeBi */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectionTypeBi
  * @function
@@ -69,13 +67,11 @@ export function _decode_ConnectionTypeBi(el: _Element) {
     }
     return _cached_decoder_for_ConnectionTypeBi(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionTypeBi */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionTypeBi */
+
 let _cached_encoder_for_ConnectionTypeBi: $.ASN1Encoder<ConnectionTypeBi> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionTypeBi */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionTypeBi */
+
 /**
  * @summary Encodes a(n) ConnectionTypeBi into an ASN.1 Element.
  * @function
@@ -109,6 +105,5 @@ export function _encode_ConnectionTypeBi(
     return _cached_encoder_for_ConnectionTypeBi(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionTypeBi */
 
 /* eslint-enable */

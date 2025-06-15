@@ -17,7 +17,6 @@ import { message_transfer_abstract_syntax } from '../MTSTransferProtocol/message
 import { mta_bind_unbind_rtse_abstract_syntax } from '../MTSTransferProtocol/mta-bind-unbind-rtse-abstract-syntax.oa.mjs';
 import { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va.mjs';
 import { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_transfer */
 /**
  * @summary mts_transfer
  * @description
@@ -56,6 +55,5 @@ export const mts_transfer: APPLICATION_CONTEXT = {
     '&probe': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&acknowledge': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mts_transfer */
 
 /* eslint-enable */

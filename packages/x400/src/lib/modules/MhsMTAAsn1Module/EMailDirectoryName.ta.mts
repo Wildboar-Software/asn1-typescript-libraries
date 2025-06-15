@@ -20,7 +20,6 @@ import {
     _decode_GenericName,
     _encode_GenericName,
 } from '../MhsMTAAsn1Module/GenericName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailDirectoryName */
 /**
  * @summary EMailDirectoryName
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailDirectoryName =
     | { x500DirectoryName: Name } /* CHOICE_ALT_ROOT */
     | { genericNames: GenericName[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailDirectoryName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailDirectoryName */
 let _cached_decoder_for_EMailDirectoryName: $.ASN1Decoder<EMailDirectoryName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailDirectoryName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailDirectoryName */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailDirectoryName
  * @function
@@ -69,13 +64,9 @@ export function _decode_EMailDirectoryName(el: _Element) {
     }
     return _cached_decoder_for_EMailDirectoryName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailDirectoryName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailDirectoryName */
 let _cached_encoder_for_EMailDirectoryName: $.ASN1Encoder<EMailDirectoryName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailDirectoryName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailDirectoryName */
 /**
  * @summary Encodes a(n) EMailDirectoryName into an ASN.1 Element.
  * @function
@@ -113,6 +104,5 @@ export function _encode_EMailDirectoryName(
     return _cached_encoder_for_EMailDirectoryName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailDirectoryName */
 
 /* eslint-enable */

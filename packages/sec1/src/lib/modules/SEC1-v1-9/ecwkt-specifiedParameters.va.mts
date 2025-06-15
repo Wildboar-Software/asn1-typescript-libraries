@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ecwkt_specifiedParameters */
 /**
  * @summary ecwkt_specifiedParameters
  * @description
@@ -28,6 +27,5 @@ export
 const ecwkt_specifiedParameters: OBJECT_IDENTIFIER = new _OID([
     10,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION ecwkt_specifiedParameters */
 
 /* eslint-enable */

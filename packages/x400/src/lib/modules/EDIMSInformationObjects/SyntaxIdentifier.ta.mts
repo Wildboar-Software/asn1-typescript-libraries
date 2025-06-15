@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SyntaxIdentifier */
 /**
  * @summary SyntaxIdentifier
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SyntaxIdentifier = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION SyntaxIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SyntaxIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SyntaxIdentifier */
 export const _decode_SyntaxIdentifier = $._decodeTeletexString;
-/* END_OF_SYMBOL_DEFINITION _decode_SyntaxIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SyntaxIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SyntaxIdentifier */
 export const _encode_SyntaxIdentifier = $._encodeTeletexString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SyntaxIdentifier */
 
 /* eslint-enable */

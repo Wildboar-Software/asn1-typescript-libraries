@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MaintenanceOrgContactTime */
+
 /**
  * @summary MaintenanceOrgContactTime
  * @description
@@ -32,13 +32,11 @@ export type MaintenanceOrgContactTime =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { contact: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION MaintenanceOrgContactTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaintenanceOrgContactTime */
+
 let _cached_decoder_for_MaintenanceOrgContactTime: $.ASN1Decoder<MaintenanceOrgContactTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaintenanceOrgContactTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaintenanceOrgContactTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MaintenanceOrgContactTime
  * @function
@@ -56,13 +54,11 @@ export function _decode_MaintenanceOrgContactTime(el: _Element) {
     }
     return _cached_decoder_for_MaintenanceOrgContactTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaintenanceOrgContactTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaintenanceOrgContactTime */
+
 let _cached_encoder_for_MaintenanceOrgContactTime: $.ASN1Encoder<MaintenanceOrgContactTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaintenanceOrgContactTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaintenanceOrgContactTime */
+
 /**
  * @summary Encodes a(n) MaintenanceOrgContactTime into an ASN.1 Element.
  * @function
@@ -86,6 +82,5 @@ export function _encode_MaintenanceOrgContactTime(
     return _cached_encoder_for_MaintenanceOrgContactTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaintenanceOrgContactTime */
 
 /* eslint-enable */

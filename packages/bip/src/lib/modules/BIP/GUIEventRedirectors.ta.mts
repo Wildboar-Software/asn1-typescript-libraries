@@ -15,7 +15,7 @@ import {
   _decode_GUIEventRedirector,
   _encode_GUIEventRedirector,
 } from '../BIP/GUIEventRedirector.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIEventRedirectors */
+
 /**
  * @summary GUIEventRedirectors
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GUIEventRedirectors = GUIEventRedirector[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GUIEventRedirectors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventRedirectors */
+
 let _cached_decoder_for_GUIEventRedirectors: $.ASN1Decoder<GUIEventRedirectors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventRedirectors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIEventRedirectors */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIEventRedirectors
  * @function
@@ -48,13 +46,11 @@ export function _decode_GUIEventRedirectors(el: _Element) {
   }
   return _cached_decoder_for_GUIEventRedirectors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIEventRedirectors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventRedirectors */
+
 let _cached_encoder_for_GUIEventRedirectors: $.ASN1Encoder<GUIEventRedirectors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventRedirectors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIEventRedirectors */
+
 /**
  * @summary Encodes a(n) GUIEventRedirectors into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_GUIEventRedirectors(
   return _cached_encoder_for_GUIEventRedirectors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIEventRedirectors */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ID */
+
 /**
  * @summary ID
  * @description
@@ -23,13 +23,11 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  * ```
  */
 export type ID = NCName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ID */
+
 let _cached_decoder_for_ID: $.ASN1Decoder<ID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ID
  * @function
@@ -42,13 +40,11 @@ export function _decode_ID(el: _Element) {
   }
   return _cached_decoder_for_ID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ID */
+
 let _cached_encoder_for_ID: $.ASN1Encoder<ID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ID */
+
 /**
  * @summary Encodes a(n) ID into an ASN.1 Element.
  * @function
@@ -63,6 +59,5 @@ export function _encode_ID(value: ID, elGetter: $.ASN1Encoder<ID>) {
   return _cached_encoder_for_ID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ID */
 
 /* eslint-enable */

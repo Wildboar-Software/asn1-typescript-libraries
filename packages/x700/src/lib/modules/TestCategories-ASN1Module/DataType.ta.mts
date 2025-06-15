@@ -16,7 +16,6 @@ import {
     _decode_IntegerDataType,
     _encode_IntegerDataType,
 } from '../TestCategories-ASN1Module/IntegerDataType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataType */
 /**
  * @summary DataType
  * @description
@@ -33,13 +32,9 @@ import {
 export type DataType =
     | { integerDataType: IntegerDataType } /* CHOICE_ALT_ROOT */
     | { objectIdentifierDataType: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataType */
 let _cached_decoder_for_DataType: $.ASN1Decoder<DataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataType */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataType
  * @function
@@ -58,13 +53,9 @@ export function _decode_DataType(el: _Element) {
     }
     return _cached_decoder_for_DataType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataType */
 let _cached_encoder_for_DataType: $.ASN1Encoder<DataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataType */
 /**
  * @summary Encodes a(n) DataType into an ASN.1 Element.
  * @function
@@ -88,6 +79,5 @@ export function _encode_DataType(
     return _cached_encoder_for_DataType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataType */
 
 /* eslint-enable */

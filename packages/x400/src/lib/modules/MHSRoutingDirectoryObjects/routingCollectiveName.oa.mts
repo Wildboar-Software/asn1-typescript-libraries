@@ -18,7 +18,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { id_at_routing_collective_name } from '../MHSRoutingObjectIdentifiers/id-at-routing-collective-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION routingCollectiveName */
 /**
  * @summary routingCollectiveName
  * @description
@@ -55,6 +54,5 @@ export const routingCollectiveName: ATTRIBUTE = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION routingCollectiveName */
 
 /* eslint-enable */

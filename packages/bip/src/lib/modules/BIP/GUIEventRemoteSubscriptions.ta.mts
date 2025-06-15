@@ -15,7 +15,7 @@ import {
   _decode_GUIEventRemoteSubscription,
   _encode_GUIEventRemoteSubscription,
 } from '../BIP/GUIEventRemoteSubscription.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIEventRemoteSubscriptions */
+
 /**
  * @summary GUIEventRemoteSubscriptions
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GUIEventRemoteSubscriptions = GUIEventRemoteSubscription[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GUIEventRemoteSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventRemoteSubscriptions */
+
 let _cached_decoder_for_GUIEventRemoteSubscriptions: $.ASN1Decoder<GUIEventRemoteSubscriptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventRemoteSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIEventRemoteSubscriptions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIEventRemoteSubscriptions
  * @function
@@ -48,13 +46,11 @@ export function _decode_GUIEventRemoteSubscriptions(el: _Element) {
   }
   return _cached_decoder_for_GUIEventRemoteSubscriptions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIEventRemoteSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventRemoteSubscriptions */
+
 let _cached_encoder_for_GUIEventRemoteSubscriptions: $.ASN1Encoder<GUIEventRemoteSubscriptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventRemoteSubscriptions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIEventRemoteSubscriptions */
+
 /**
  * @summary Encodes a(n) GUIEventRemoteSubscriptions into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_GUIEventRemoteSubscriptions(
   return _cached_encoder_for_GUIEventRemoteSubscriptions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIEventRemoteSubscriptions */
 
 /* eslint-enable */

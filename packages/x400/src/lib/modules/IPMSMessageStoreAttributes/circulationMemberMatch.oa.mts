@@ -16,7 +16,6 @@ import {
     _encode_CirculationMember,
 } from '../IPMSHeadingExtensions/CirculationMember.ta.mjs';
 import { id_mr_circulation_member } from '../IPMSObjectIdentifiers/id-mr-circulation-member.va.mjs';
-/* START_OF_SYMBOL_DEFINITION circulationMemberMatch */
 /**
  * @summary circulationMemberMatch
  * @description
@@ -45,6 +44,5 @@ export const circulationMemberMatch: MATCHING_RULE<CirculationMember> = {
     '&id': id_mr_circulation_member /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION circulationMemberMatch */
 
 /* eslint-enable */

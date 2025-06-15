@@ -15,7 +15,6 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from '../MhsAcctAsn1Module/TelephoneNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TelephoneNumberList */
 /**
  * @summary TelephoneNumberList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TelephoneNumberList = TelephoneNumber[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TelephoneNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TelephoneNumberList */
 let _cached_decoder_for_TelephoneNumberList: $.ASN1Decoder<TelephoneNumberList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TelephoneNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TelephoneNumberList */
 /**
  * @summary Decodes an ASN.1 element into a(n) TelephoneNumberList
  * @function
@@ -48,13 +43,9 @@ export function _decode_TelephoneNumberList(el: _Element) {
     }
     return _cached_decoder_for_TelephoneNumberList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TelephoneNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TelephoneNumberList */
 let _cached_encoder_for_TelephoneNumberList: $.ASN1Encoder<TelephoneNumberList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TelephoneNumberList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TelephoneNumberList */
 /**
  * @summary Encodes a(n) TelephoneNumberList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TelephoneNumberList(
     return _cached_encoder_for_TelephoneNumberList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TelephoneNumberList */
 
 /* eslint-enable */

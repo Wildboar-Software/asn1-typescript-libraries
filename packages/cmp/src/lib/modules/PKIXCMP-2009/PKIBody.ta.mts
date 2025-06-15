@@ -110,7 +110,7 @@ import {
   _decode_PollRepContent,
   _encode_PollRepContent,
 } from '../PKIXCMP-2009/PollRepContent.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PKIBody */
+
 /**
  * @summary PKIBody
  * @description
@@ -178,13 +178,11 @@ export type PKIBody =
   | { certConf: CertConfirmContent } /* CHOICE_ALT_ROOT */
   | { pollReq: PollReqContent } /* CHOICE_ALT_ROOT */
   | { pollRep: PollRepContent } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PKIBody */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIBody */
+
 let _cached_decoder_for_PKIBody: $.ASN1Decoder<PKIBody> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIBody */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIBody */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIBody
  * @function
@@ -318,13 +316,11 @@ export function _decode_PKIBody(el: _Element) {
   }
   return _cached_decoder_for_PKIBody(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIBody */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIBody */
+
 let _cached_encoder_for_PKIBody: $.ASN1Encoder<PKIBody> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIBody */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIBody */
+
 /**
  * @summary Encodes a(n) PKIBody into an ASN.1 Element.
  * @function
@@ -508,6 +504,5 @@ export function _encode_PKIBody(
   return _cached_encoder_for_PKIBody(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIBody */
 
 /* eslint-enable */

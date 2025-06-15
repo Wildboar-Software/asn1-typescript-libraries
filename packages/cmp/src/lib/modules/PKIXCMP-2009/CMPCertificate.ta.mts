@@ -16,7 +16,7 @@ import {
   _encode_Certificate,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CMPCertificate */
+
 /**
  * @summary CMPCertificate
  * @description
@@ -30,13 +30,11 @@ import {
 export type CMPCertificate =
   | { x509v3PKCert: Certificate } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CMPCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMPCertificate */
+
 let _cached_decoder_for_CMPCertificate: $.ASN1Decoder<CMPCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMPCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CMPCertificate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CMPCertificate
  * @function
@@ -53,13 +51,11 @@ export function _decode_CMPCertificate(el: _Element) {
   }
   return _cached_decoder_for_CMPCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CMPCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMPCertificate */
+
 let _cached_encoder_for_CMPCertificate: $.ASN1Encoder<CMPCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMPCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CMPCertificate */
+
 /**
  * @summary Encodes a(n) CMPCertificate into an ASN.1 Element.
  * @function
@@ -82,6 +78,5 @@ export function _encode_CMPCertificate(
   return _cached_encoder_for_CMPCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CMPCertificate */
 
 /* eslint-enable */

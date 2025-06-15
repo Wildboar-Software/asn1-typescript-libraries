@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION AdditionalInformation */
 /**
  * @summary AdditionalInformation
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AdditionalInformation = _Element; // ObjectClassFieldType
-/* END_OF_SYMBOL_DEFINITION AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 export const _decode_AdditionalInformation = $._decodeAny;
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */
 export const _encode_AdditionalInformation = $._encodeAny;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */
 
 /* eslint-enable */

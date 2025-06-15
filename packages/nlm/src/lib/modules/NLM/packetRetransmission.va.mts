@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { aoi } from '../NLM/aoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION packetRetransmission */
+
 /**
  * @summary packetRetransmission
  * @description
@@ -25,6 +25,5 @@ import { aoi } from '../NLM/aoi.va.mjs';
  * @constant
  */
 export const packetRetransmission: OBJECT_IDENTIFIER = new _OID([161], aoi);
-/* END_OF_SYMBOL_DEFINITION packetRetransmission */
 
 /* eslint-enable */

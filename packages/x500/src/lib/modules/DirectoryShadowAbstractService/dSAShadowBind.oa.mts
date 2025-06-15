@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION dSAShadowBind */
 /**
  * @summary dSAShadowBind
  * @description
@@ -17,6 +16,5 @@ import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
  * @implements {OPERATION}
  */
 export const dSAShadowBind: OPERATION = dSABind;
-/* END_OF_SYMBOL_DEFINITION dSAShadowBind */
 
 /* eslint-enable */

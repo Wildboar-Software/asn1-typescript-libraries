@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_BFP_SCHEMA,
   _encode_BioAPI_BFP_SCHEMA,
 } from '../BIP/BioAPI-BFP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EnumBFPsCallOutputParams */
+
 /**
  * @summary EnumBFPsCallOutputParams
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type EnumBFPsCallOutputParams = BioAPI_BFP_SCHEMA[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION EnumBFPsCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnumBFPsCallOutputParams */
+
 let _cached_decoder_for_EnumBFPsCallOutputParams: $.ASN1Decoder<EnumBFPsCallOutputParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnumBFPsCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EnumBFPsCallOutputParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EnumBFPsCallOutputParams
  * @function
@@ -48,13 +46,11 @@ export function _decode_EnumBFPsCallOutputParams(el: _Element) {
   }
   return _cached_decoder_for_EnumBFPsCallOutputParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EnumBFPsCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnumBFPsCallOutputParams */
+
 let _cached_encoder_for_EnumBFPsCallOutputParams: $.ASN1Encoder<EnumBFPsCallOutputParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnumBFPsCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EnumBFPsCallOutputParams */
+
 /**
  * @summary Encodes a(n) EnumBFPsCallOutputParams into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_EnumBFPsCallOutputParams(
   return _cached_encoder_for_EnumBFPsCallOutputParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EnumBFPsCallOutputParams */
 
 /* eslint-enable */

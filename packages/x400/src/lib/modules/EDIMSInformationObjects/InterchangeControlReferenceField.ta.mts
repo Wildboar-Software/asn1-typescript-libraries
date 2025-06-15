@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InterchangeControlReferenceField */
 /**
  * @summary InterchangeControlReferenceField
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type InterchangeControlReferenceField = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION InterchangeControlReferenceField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InterchangeControlReferenceField */
 let _cached_decoder_for_InterchangeControlReferenceField: $.ASN1Decoder<InterchangeControlReferenceField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InterchangeControlReferenceField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InterchangeControlReferenceField */
 /**
  * @summary Decodes an ASN.1 element into a(n) InterchangeControlReferenceField
  * @function
@@ -45,13 +40,9 @@ export function _decode_InterchangeControlReferenceField(el: _Element) {
     }
     return _cached_decoder_for_InterchangeControlReferenceField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InterchangeControlReferenceField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InterchangeControlReferenceField */
 let _cached_encoder_for_InterchangeControlReferenceField: $.ASN1Encoder<InterchangeControlReferenceField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InterchangeControlReferenceField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InterchangeControlReferenceField */
 /**
  * @summary Encodes a(n) InterchangeControlReferenceField into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_InterchangeControlReferenceField(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InterchangeControlReferenceField */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import {
     _decode_RelationshipInstance,
     _encode_RelationshipInstance,
 } from '../ChangeOverASN1Productions/RelationshipInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchRelationship */
 /**
  * @summary NoSuchRelationship
  * @description
@@ -78,9 +77,7 @@ export class NoSuchRelationship {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NoSuchRelationship */
 /**
  * @summary The Leading Root Component Types of NoSuchRelationship
  * @description
@@ -112,9 +109,7 @@ export const _root_component_type_list_1_spec_for_NoSuchRelationship: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NoSuchRelationship */
 /**
  * @summary The Trailing Root Component Types of NoSuchRelationship
  * @description
@@ -124,9 +119,7 @@ export const _root_component_type_list_1_spec_for_NoSuchRelationship: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NoSuchRelationship: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NoSuchRelationship */
 /**
  * @summary The Extension Addition Component Types of NoSuchRelationship
  * @description
@@ -136,13 +129,9 @@ export const _root_component_type_list_2_spec_for_NoSuchRelationship: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_NoSuchRelationship: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchRelationship */
 let _cached_decoder_for_NoSuchRelationship: $.ASN1Decoder<NoSuchRelationship> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchRelationship */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchRelationship
  * @function
@@ -191,13 +180,9 @@ export function _decode_NoSuchRelationship(el: _Element) {
     }
     return _cached_decoder_for_NoSuchRelationship(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchRelationship */
 let _cached_encoder_for_NoSuchRelationship: $.ASN1Encoder<NoSuchRelationship> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchRelationship */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchRelationship */
 /**
  * @summary Encodes a(n) NoSuchRelationship into an ASN.1 Element.
  * @function
@@ -243,6 +228,5 @@ export function _encode_NoSuchRelationship(
     return _cached_encoder_for_NoSuchRelationship(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchRelationship */
 
 /* eslint-enable */

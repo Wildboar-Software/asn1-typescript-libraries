@@ -48,7 +48,6 @@ import {
     _extension_additions_list_spec_for_PerReportDeliveryFields,
 } from '../MTSAbstractService/PerReportDeliveryFields.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ReportDeliveryEnvelope */
 /**
  * @summary ReportDeliveryEnvelope
  * @description
@@ -142,9 +141,7 @@ export class ReportDeliveryEnvelope implements PerReportDeliveryFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportDeliveryEnvelope */
 /**
  * @summary The Leading Root Component Types of ReportDeliveryEnvelope
  * @description
@@ -163,9 +160,7 @@ export const _root_component_type_list_1_spec_for_ReportDeliveryEnvelope: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportDeliveryEnvelope */
 /**
  * @summary The Trailing Root Component Types of ReportDeliveryEnvelope
  * @description
@@ -177,9 +172,7 @@ export const _root_component_type_list_1_spec_for_ReportDeliveryEnvelope: $.Comp
 export const _root_component_type_list_2_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_PerReportDeliveryFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryEnvelope */
 /**
  * @summary The Extension Addition Component Types of ReportDeliveryEnvelope
  * @description
@@ -191,13 +184,9 @@ export const _root_component_type_list_2_spec_for_ReportDeliveryEnvelope: $.Comp
 export const _extension_additions_list_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_PerReportDeliveryFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryEnvelope */
 let _cached_decoder_for_ReportDeliveryEnvelope: $.ASN1Decoder<ReportDeliveryEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportDeliveryEnvelope */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportDeliveryEnvelope
  * @function
@@ -270,13 +259,9 @@ export function _decode_ReportDeliveryEnvelope(el: _Element) {
     }
     return _cached_decoder_for_ReportDeliveryEnvelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryEnvelope */
 let _cached_encoder_for_ReportDeliveryEnvelope: $.ASN1Encoder<ReportDeliveryEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportDeliveryEnvelope */
 /**
  * @summary Encodes a(n) ReportDeliveryEnvelope into an ASN.1 Element.
  * @function
@@ -343,6 +328,5 @@ export function _encode_ReportDeliveryEnvelope(
     return _cached_encoder_for_ReportDeliveryEnvelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportDeliveryEnvelope */
 
 /* eslint-enable */

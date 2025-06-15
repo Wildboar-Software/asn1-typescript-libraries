@@ -24,7 +24,6 @@ import {
 } from '../MTSAbstractService/RecipientReassignmentProhibited.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION recipient_reassignment_prohibited */
 /**
  * @summary recipient_reassignment_prohibited
  * @description
@@ -63,6 +62,5 @@ export const recipient_reassignment_prohibited: EXTENSION<RecipientReassignmentP
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipient_reassignment_prohibited */
 
 /* eslint-enable */

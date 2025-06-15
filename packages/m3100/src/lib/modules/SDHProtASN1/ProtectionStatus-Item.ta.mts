@@ -32,7 +32,7 @@ import {
     _decode_ProtectionStatus_Item_lockout,
     _encode_ProtectionStatus_Item_lockout,
 } from '../SDHProtASN1/ProtectionStatus-Item-lockout.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatus_Item */
+
 /**
  * @summary ProtectionStatus_Item
  * @description
@@ -53,13 +53,11 @@ export type ProtectionStatus_Item =
     | { releaseFailed: NULL } /* CHOICE_ALT_ROOT */
     | { protectionFailCondApsInvalid: BOOLEAN } /* CHOICE_ALT_ROOT */
     | { protectionFailCondChannelMismatch: BOOLEAN } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProtectionStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus_Item */
+
 let _cached_decoder_for_ProtectionStatus_Item: $.ASN1Decoder<ProtectionStatus_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatus_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatus_Item
  * @function
@@ -119,13 +117,11 @@ export function _decode_ProtectionStatus_Item(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatus_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus_Item */
+
 let _cached_encoder_for_ProtectionStatus_Item: $.ASN1Encoder<ProtectionStatus_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatus_Item */
+
 /**
  * @summary Encodes a(n) ProtectionStatus_Item into an ASN.1 Element.
  * @function
@@ -201,6 +197,5 @@ export function _encode_ProtectionStatus_Item(
     return _cached_encoder_for_ProtectionStatus_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatus_Item */
 
 /* eslint-enable */

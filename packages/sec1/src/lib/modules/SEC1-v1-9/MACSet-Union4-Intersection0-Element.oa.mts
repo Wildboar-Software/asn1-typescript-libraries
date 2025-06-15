@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { cmac_aes256_ecies } from "../SEC1-v1-9/cmac-aes256-ecies.va.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION MACSet_Union4_Intersection0_Element */
 /**
  * @summary MACSet_Union4_Intersection0_Element
  * @description
@@ -38,6 +37,5 @@ const MACSet_Union4_Intersection0_Element: ALGORITHM = {
     "&id": cmac_aes256_ecies /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION MACSet_Union4_Intersection0_Element */
 
 /* eslint-enable */

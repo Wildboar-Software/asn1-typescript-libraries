@@ -15,7 +15,6 @@ import {
     _decode_OptionalObject,
     _encode_OptionalObject,
 } from '../ChangeOverASN1Productions/OptionalObject.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrimaryObjectSpecified */
 /**
  * @summary PrimaryObjectSpecified
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PrimaryObjectSpecified = OptionalObject; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PrimaryObjectSpecified */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryObjectSpecified */
 let _cached_decoder_for_PrimaryObjectSpecified: $.ASN1Decoder<PrimaryObjectSpecified> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryObjectSpecified */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrimaryObjectSpecified */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryObjectSpecified
  * @function
@@ -46,13 +41,9 @@ export function _decode_PrimaryObjectSpecified(el: _Element) {
     }
     return _cached_decoder_for_PrimaryObjectSpecified(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrimaryObjectSpecified */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryObjectSpecified */
 let _cached_encoder_for_PrimaryObjectSpecified: $.ASN1Encoder<PrimaryObjectSpecified> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryObjectSpecified */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrimaryObjectSpecified */
 /**
  * @summary Encodes a(n) PrimaryObjectSpecified into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PrimaryObjectSpecified(
     return _cached_encoder_for_PrimaryObjectSpecified(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrimaryObjectSpecified */
 
 /* eslint-enable */

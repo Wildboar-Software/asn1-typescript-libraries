@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_STRING */
+
 /**
  * @summary BioAPI_STRING
  * @description
@@ -28,21 +28,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BioAPI_STRING = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION BioAPI_STRING */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_STRING */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_STRING */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_STRING */
+
+
 export const _decode_BioAPI_STRING = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_STRING */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_STRING */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_STRING */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_STRING */
+
+
 export const _encode_BioAPI_STRING = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_STRING */
 
 /* eslint-enable */

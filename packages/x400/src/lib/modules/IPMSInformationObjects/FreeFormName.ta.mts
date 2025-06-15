@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FreeFormName */
 /**
  * @summary FreeFormName
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FreeFormName = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION FreeFormName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FreeFormName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FreeFormName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FreeFormName */
 export const _decode_FreeFormName = $._decodeTeletexString;
-/* END_OF_SYMBOL_DEFINITION _decode_FreeFormName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FreeFormName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FreeFormName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FreeFormName */
 export const _encode_FreeFormName = $._encodeTeletexString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FreeFormName */
 
 /* eslint-enable */

@@ -36,7 +36,6 @@ import {
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoleSpecifier */
 /**
  * @summary RoleSpecifier
  * @description
@@ -137,9 +136,7 @@ export class RoleSpecifier {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleSpecifier */
 /**
  * @summary The Leading Root Component Types of RoleSpecifier
  * @description
@@ -206,9 +203,7 @@ export const _root_component_type_list_1_spec_for_RoleSpecifier: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleSpecifier */
 /**
  * @summary The Trailing Root Component Types of RoleSpecifier
  * @description
@@ -218,9 +213,7 @@ export const _root_component_type_list_1_spec_for_RoleSpecifier: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RoleSpecifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleSpecifier */
 /**
  * @summary The Extension Addition Component Types of RoleSpecifier
  * @description
@@ -230,13 +223,9 @@ export const _root_component_type_list_2_spec_for_RoleSpecifier: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_RoleSpecifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSpecifier */
 let _cached_decoder_for_RoleSpecifier: $.ASN1Decoder<RoleSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleSpecifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleSpecifier
  * @function
@@ -320,13 +309,9 @@ export function _decode_RoleSpecifier(el: _Element) {
     }
     return _cached_decoder_for_RoleSpecifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSpecifier */
 let _cached_encoder_for_RoleSpecifier: $.ASN1Encoder<RoleSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleSpecifier */
 /**
  * @summary Encodes a(n) RoleSpecifier into an ASN.1 Element.
  * @function
@@ -409,6 +394,5 @@ export function _encode_RoleSpecifier(
     return _cached_encoder_for_RoleSpecifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleSpecifier */
 
 /* eslint-enable */

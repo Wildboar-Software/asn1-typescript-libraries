@@ -5,7 +5,6 @@ import {
     _encode_ExtendedNetworkAddress,
 } from "../MTSAbstractService/ExtendedNetworkAddress.ta.mjs";
 import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION extended_network_address */
 /**
  * @summary extended_network_address
  * @description
@@ -34,6 +33,5 @@ export const extended_network_address: EXTENSION_ATTRIBUTE<ExtendedNetworkAddres
     "&id": 22 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION extended_network_address */
 
 /* eslint-enable */

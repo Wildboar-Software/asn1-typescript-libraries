@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TideMarkInfo */
 /**
  * @summary TideMarkInfo
  * @description
@@ -70,9 +69,7 @@ class TideMarkInfo {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TideMarkInfo */
 /**
  * @summary The Leading Root Component Types of TideMarkInfo
  * @description
@@ -87,9 +84,7 @@ const _root_component_type_list_1_spec_for_TideMarkInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("previousTideMark", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("resetTime", false, $.hasTag(_TagClass.universal, 24), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TideMarkInfo */
 /**
  * @summary The Trailing Root Component Types of TideMarkInfo
  * @description
@@ -102,9 +97,7 @@ export
 const _root_component_type_list_2_spec_for_TideMarkInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TideMarkInfo */
 /**
  * @summary The Extension Addition Component Types of TideMarkInfo
  * @description
@@ -117,13 +110,9 @@ export
 const _extension_additions_list_spec_for_TideMarkInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TideMarkInfo */
 let _cached_decoder_for_TideMarkInfo: $.ASN1Decoder<TideMarkInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TideMarkInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TideMarkInfo
  * @function
@@ -155,13 +144,9 @@ function _decode_TideMarkInfo (el: _Element) {
 }; }
     return _cached_decoder_for_TideMarkInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TideMarkInfo */
 let _cached_encoder_for_TideMarkInfo: $.ASN1Encoder<TideMarkInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TideMarkInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TideMarkInfo */
 /**
  * @summary Encodes a(n) TideMarkInfo into an ASN.1 Element.
  * @function
@@ -183,6 +168,5 @@ function _encode_TideMarkInfo (value: TideMarkInfo, elGetter: $.ASN1Encoder<Tide
     return _cached_encoder_for_TideMarkInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TideMarkInfo */
 
 /* eslint-enable */

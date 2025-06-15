@@ -6,7 +6,6 @@ import {
     _encode_BaseCRLNumber,
 } from "../CertificateExtensions/BaseCRLNumber.ta.mjs";
 import { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va.mjs";
-/* START_OF_SYMBOL_DEFINITION deltaCRLIndicator */
 /**
  * @summary deltaCRLIndicator
  * @description
@@ -34,6 +33,5 @@ export const deltaCRLIndicator: EXTENSION<BaseCRLNumber> = {
     "&id": id_ce_deltaCRLIndicator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION deltaCRLIndicator */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_MessageClass,
     _encode_MessageClass,
 } from '../MTSAbstractService/MessageClass.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RedirectionClass */
 /**
  * @summary RedirectionClass
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RedirectionClass = MessageClass; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RedirectionClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionClass */
 let _cached_decoder_for_RedirectionClass: $.ASN1Decoder<RedirectionClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RedirectionClass */
 /**
  * @summary Decodes an ASN.1 element into a(n) RedirectionClass
  * @function
@@ -46,13 +41,9 @@ export function _decode_RedirectionClass(el: _Element) {
     }
     return _cached_decoder_for_RedirectionClass(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RedirectionClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionClass */
 let _cached_encoder_for_RedirectionClass: $.ASN1Encoder<RedirectionClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RedirectionClass */
 /**
  * @summary Encodes a(n) RedirectionClass into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RedirectionClass(
     return _cached_encoder_for_RedirectionClass(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RedirectionClass */
 
 /* eslint-enable */

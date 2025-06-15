@@ -37,7 +37,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION JoinArgument */
 /**
  * @summary JoinArgument
  * @description
@@ -150,9 +149,7 @@ export class JoinArgument {
 
     public static _enum_for_joinSubset = _enum_for_JoinArgument_joinSubset;
 }
-/* END_OF_SYMBOL_DEFINITION JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_JoinArgument */
 /**
  * @summary The Leading Root Component Types of JoinArgument
  * @description
@@ -205,9 +202,7 @@ export const _root_component_type_list_1_spec_for_JoinArgument: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_JoinArgument */
 /**
  * @summary The Trailing Root Component Types of JoinArgument
  * @description
@@ -217,9 +212,7 @@ export const _root_component_type_list_1_spec_for_JoinArgument: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_JoinArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_JoinArgument */
 /**
  * @summary The Extension Addition Component Types of JoinArgument
  * @description
@@ -229,13 +222,9 @@ export const _root_component_type_list_2_spec_for_JoinArgument: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_JoinArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinArgument */
 let _cached_decoder_for_JoinArgument: $.ASN1Decoder<JoinArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_JoinArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) JoinArgument
  * @function
@@ -316,13 +305,9 @@ export function _decode_JoinArgument(el: _Element) {
     }
     return _cached_decoder_for_JoinArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinArgument */
 let _cached_encoder_for_JoinArgument: $.ASN1Encoder<JoinArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_JoinArgument */
 /**
  * @summary Encodes a(n) JoinArgument into an ASN.1 Element.
  * @function
@@ -406,6 +391,5 @@ export function _encode_JoinArgument(
     return _cached_encoder_for_JoinArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_JoinArgument */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
     _decode_QualityEvaluation,
     _encode_QualityEvaluation,
 } from '../AuthenticationContextForBiometrics/QualityEvaluation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BPUSubprocessInformation */
+
 /**
  * @summary BPUSubprocessInformation
  * @description
@@ -75,9 +75,8 @@ export class BPUSubprocessInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BPUSubprocessInformation */
+
 /**
  * @summary The Leading Root Component Types of BPUSubprocessInformation
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_BPUSubprocessInformation: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BPUSubprocessInformation */
+
 /**
  * @summary The Trailing Root Component Types of BPUSubprocessInformation
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_BPUSubprocessInformation: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BPUSubprocessInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BPUSubprocessInformation */
+
 /**
  * @summary The Extension Addition Component Types of BPUSubprocessInformation
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_BPUSubprocessInformation: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_BPUSubprocessInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUSubprocessInformation */
+
 let _cached_decoder_for_BPUSubprocessInformation: $.ASN1Decoder<BPUSubprocessInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BPUSubprocessInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BPUSubprocessInformation
  * @function
@@ -174,13 +169,11 @@ export function _decode_BPUSubprocessInformation(el: _Element) {
     }
     return _cached_decoder_for_BPUSubprocessInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUSubprocessInformation */
+
 let _cached_encoder_for_BPUSubprocessInformation: $.ASN1Encoder<BPUSubprocessInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUSubprocessInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BPUSubprocessInformation */
+
 /**
  * @summary Encodes a(n) BPUSubprocessInformation into an ASN.1 Element.
  * @function
@@ -217,6 +210,5 @@ export function _encode_BPUSubprocessInformation(
     return _cached_encoder_for_BPUSubprocessInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BPUSubprocessInformation */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION DIT_CONTEXT_USE_RULE */
 /**
  * @summary DIT_CONTEXT_USE_RULE
  * @description
@@ -62,6 +61,5 @@ export interface DIT_CONTEXT_USE_RULE {
      */
     readonly "&Optional"?: CONTEXT[];
 }
-/* END_OF_SYMBOL_DEFINITION DIT_CONTEXT_USE_RULE */
 
 /* eslint-enable */

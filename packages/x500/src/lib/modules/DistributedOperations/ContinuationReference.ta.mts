@@ -33,7 +33,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContinuationReference */
 /**
  * @summary ContinuationReference
  * @description
@@ -192,9 +191,7 @@ export class ContinuationReference {
 
     public static _enum_for_referenceType = _enum_for_ReferenceType;
 }
-/* END_OF_SYMBOL_DEFINITION ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContinuationReference */
 /**
  * @summary The Leading Root Component Types of ContinuationReference
  * @description
@@ -275,9 +272,7 @@ export const _root_component_type_list_1_spec_for_ContinuationReference: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContinuationReference */
 /**
  * @summary The Trailing Root Component Types of ContinuationReference
  * @description
@@ -287,9 +282,7 @@ export const _root_component_type_list_1_spec_for_ContinuationReference: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ContinuationReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContinuationReference */
 /**
  * @summary The Extension Addition Component Types of ContinuationReference
  * @description
@@ -299,13 +292,9 @@ export const _root_component_type_list_2_spec_for_ContinuationReference: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_ContinuationReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContinuationReference */
 let _cached_decoder_for_ContinuationReference: $.ASN1Decoder<ContinuationReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContinuationReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContinuationReference
  * @function
@@ -417,13 +406,9 @@ export function _decode_ContinuationReference(el: _Element) {
     }
     return _cached_decoder_for_ContinuationReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContinuationReference */
 let _cached_encoder_for_ContinuationReference: $.ASN1Encoder<ContinuationReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContinuationReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContinuationReference */
 /**
  * @summary Encodes a(n) ContinuationReference into an ASN.1 Element.
  * @function
@@ -544,6 +529,5 @@ export function _encode_ContinuationReference(
     return _cached_encoder_for_ContinuationReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContinuationReference */
 
 /* eslint-enable */

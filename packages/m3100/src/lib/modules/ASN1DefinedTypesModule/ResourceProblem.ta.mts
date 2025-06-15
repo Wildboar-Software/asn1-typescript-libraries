@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ResourceProblem */
+
 /**
  * @summary ResourceProblem
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ResourceProblem =
     | { unknown: NULL } /* CHOICE_ALT_ROOT */
     | { integerValue: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ResourceProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceProblem */
+
 let _cached_decoder_for_ResourceProblem: $.ASN1Decoder<ResourceProblem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResourceProblem */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceProblem
  * @function
@@ -53,13 +51,11 @@ export function _decode_ResourceProblem(el: _Element) {
     }
     return _cached_decoder_for_ResourceProblem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResourceProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceProblem */
+
 let _cached_encoder_for_ResourceProblem: $.ASN1Encoder<ResourceProblem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResourceProblem */
+
 /**
  * @summary Encodes a(n) ResourceProblem into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_ResourceProblem(
     return _cached_encoder_for_ResourceProblem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResourceProblem */
 
 /* eslint-enable */

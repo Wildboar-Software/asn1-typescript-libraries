@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CertChecks */
 /**
  * @summary CertChecks
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CertChecks = OBJECT_IDENTIFIER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertChecks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertChecks */
 let _cached_decoder_for_CertChecks: $.ASN1Decoder<CertChecks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertChecks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertChecks */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertChecks
  * @function
@@ -46,13 +41,9 @@ export function _decode_CertChecks(el: _Element) {
   }
   return _cached_decoder_for_CertChecks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertChecks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertChecks */
 let _cached_encoder_for_CertChecks: $.ASN1Encoder<CertChecks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertChecks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertChecks */
 /**
  * @summary Encodes a(n) CertChecks into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_CertChecks(
   return _cached_encoder_for_CertChecks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertChecks */
 
 /* eslint-enable */

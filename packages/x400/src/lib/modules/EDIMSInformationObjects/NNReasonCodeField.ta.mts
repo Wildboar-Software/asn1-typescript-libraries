@@ -25,7 +25,6 @@ import {
     _decode_NNPDAUReasonCodeField,
     _encode_NNPDAUReasonCodeField,
 } from '../EDIMSInformationObjects/NNPDAUReasonCodeField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NNReasonCodeField */
 /**
  * @summary NNReasonCodeField
  * @description
@@ -44,13 +43,9 @@ export type NNReasonCodeField =
     | { nn_ua_ms_reason_code: NNUAMSReasonCodeField } /* CHOICE_ALT_ROOT */
     | { nn_user_reason_code: NNUserReasonCodeField } /* CHOICE_ALT_ROOT */
     | { nn_pdau_reason_code: NNPDAUReasonCodeField } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNReasonCodeField */
 let _cached_decoder_for_NNReasonCodeField: $.ASN1Decoder<NNReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NNReasonCodeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) NNReasonCodeField
  * @function
@@ -84,13 +79,9 @@ export function _decode_NNReasonCodeField(el: _Element) {
     }
     return _cached_decoder_for_NNReasonCodeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNReasonCodeField */
 let _cached_encoder_for_NNReasonCodeField: $.ASN1Encoder<NNReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NNReasonCodeField */
 /**
  * @summary Encodes a(n) NNReasonCodeField into an ASN.1 Element.
  * @function
@@ -130,6 +121,5 @@ export function _encode_NNReasonCodeField(
     return _cached_encoder_for_NNReasonCodeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NNReasonCodeField */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContactId */
 /**
  * @summary ContactId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ContactId = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContactId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactId */
 let _cached_decoder_for_ContactId: $.ASN1Decoder<ContactId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContactId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContactId
  * @function
@@ -46,13 +41,9 @@ export function _decode_ContactId(el: _Element) {
     }
     return _cached_decoder_for_ContactId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContactId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactId */
 let _cached_encoder_for_ContactId: $.ASN1Encoder<ContactId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContactId */
 /**
  * @summary Encodes a(n) ContactId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ContactId(
     return _cached_encoder_for_ContactId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContactId */
 
 /* eslint-enable */

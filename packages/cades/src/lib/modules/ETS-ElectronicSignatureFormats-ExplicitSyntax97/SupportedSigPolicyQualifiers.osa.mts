@@ -12,7 +12,6 @@ import {
 import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
 import { noticeToUser } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/noticeToUser.oa.mjs";
 import { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/pointerToSigPolSpec.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedSigPolicyQualifiers */
 /**
  * @summary SupportedSigPolicyQualifiers
  * @description
@@ -31,6 +30,5 @@ import { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitS
  */
 export
 const SupportedSigPolicyQualifiers: (SIG_POLICY_QUALIFIER)[] = [ noticeToUser, pointerToSigPolSpec, ];
-/* END_OF_SYMBOL_DEFINITION SupportedSigPolicyQualifiers */
 
 /* eslint-enable */

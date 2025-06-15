@@ -11,7 +11,6 @@ import {
     _decode_DelAvlOK,
     _encode_DelAvlOK,
 } from "../AVL-management/DelAvlOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DeleteAvlRsp_result */
 /**
  * @summary DeleteAvlRsp_result
  * @description
@@ -26,13 +25,9 @@ export type DeleteAvlRsp_result =
     | { success: DelAvlOK } /* CHOICE_ALT_ROOT */
     | { failure: DelAvlErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DeleteAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteAvlRsp_result */
 let _cached_decoder_for_DeleteAvlRsp_result: $.ASN1Decoder<DeleteAvlRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteAvlRsp_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteAvlRsp_result
  * @function
@@ -56,13 +51,9 @@ export function _decode_DeleteAvlRsp_result(el: _Element) {
     }
     return _cached_decoder_for_DeleteAvlRsp_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteAvlRsp_result */
 let _cached_encoder_for_DeleteAvlRsp_result: $.ASN1Encoder<DeleteAvlRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteAvlRsp_result */
 /**
  * @summary Encodes a(n) DeleteAvlRsp_result into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_DeleteAvlRsp_result(
     return _cached_encoder_for_DeleteAvlRsp_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteAvlRsp_result */
 
 /* eslint-enable */

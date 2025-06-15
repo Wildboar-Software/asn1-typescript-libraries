@@ -16,7 +16,7 @@ import {
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION INSURANCE_SCHEME */
+
 /**
  * @summary INSURANCE_SCHEME
  * @description
@@ -97,6 +97,5 @@ export interface INSURANCE_SCHEME<
      */
     readonly '&Certification': Certification;
 }
-/* END_OF_SYMBOL_DEFINITION INSURANCE_SCHEME */
 
 /* eslint-enable */

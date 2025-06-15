@@ -11,7 +11,6 @@ import {
     _decode_RepAvlOK,
     _encode_RepAvlOK,
 } from "../PkiPMIProtocolSpecifications/RepAvlOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReplaceAvlRsp_result */
 /**
  * @summary ReplaceAvlRsp_result
  * @description
@@ -26,13 +25,9 @@ export type ReplaceAvlRsp_result =
     | { success: RepAvlOK } /* CHOICE_ALT_ROOT */
     | { failure: RepAvlErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ReplaceAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplaceAvlRsp_result */
 let _cached_decoder_for_ReplaceAvlRsp_result: $.ASN1Decoder<ReplaceAvlRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplaceAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplaceAvlRsp_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplaceAvlRsp_result
  * @function
@@ -56,13 +51,9 @@ export function _decode_ReplaceAvlRsp_result(el: _Element) {
     }
     return _cached_decoder_for_ReplaceAvlRsp_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplaceAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplaceAvlRsp_result */
 let _cached_encoder_for_ReplaceAvlRsp_result: $.ASN1Encoder<ReplaceAvlRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplaceAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplaceAvlRsp_result */
 /**
  * @summary Encodes a(n) ReplaceAvlRsp_result into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_ReplaceAvlRsp_result(
     return _cached_encoder_for_ReplaceAvlRsp_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplaceAvlRsp_result */
 
 /* eslint-enable */

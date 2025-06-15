@@ -15,7 +15,7 @@ import {
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_FMR */
+
 /**
  * @summary BioAPI_FMR
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BioAPI_FMR = SignedInt; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BioAPI_FMR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_FMR */
+
 let _cached_decoder_for_BioAPI_FMR: $.ASN1Decoder<BioAPI_FMR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_FMR */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_FMR */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_FMR
  * @function
@@ -46,13 +44,11 @@ export function _decode_BioAPI_FMR(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_FMR(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_FMR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_FMR */
+
 let _cached_encoder_for_BioAPI_FMR: $.ASN1Encoder<BioAPI_FMR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_FMR */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_FMR */
+
 /**
  * @summary Encodes a(n) BioAPI_FMR into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_BioAPI_FMR(
   return _cached_encoder_for_BioAPI_FMR(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_FMR */
 
 /* eslint-enable */

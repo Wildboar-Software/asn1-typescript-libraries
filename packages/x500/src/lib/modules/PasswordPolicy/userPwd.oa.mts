@@ -11,7 +11,6 @@ import {
 } from "../PasswordPolicy/UserPwd.ta.mjs";
 import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.mjs";
 import { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION userPwd */
 /**
  * @summary userPwd
  * @description
@@ -52,6 +51,5 @@ export const userPwd: ATTRIBUTE<UserPwd> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userPwd */
 
 /* eslint-enable */

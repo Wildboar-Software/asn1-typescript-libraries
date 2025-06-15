@@ -7,7 +7,7 @@ import {
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ClassificationName */
+
 /**
  * @summary ClassificationName
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type ClassificationName = DirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ClassificationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassificationName */
+
 let _cached_decoder_for_ClassificationName: $.ASN1Decoder<ClassificationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClassificationName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClassificationName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ClassificationName
  * @function
@@ -38,13 +36,11 @@ export function _decode_ClassificationName(el: _Element) {
     }
     return _cached_decoder_for_ClassificationName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClassificationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassificationName */
+
 let _cached_encoder_for_ClassificationName: $.ASN1Encoder<ClassificationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClassificationName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClassificationName */
+
 /**
  * @summary Encodes a(n) ClassificationName into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_ClassificationName(
     return _cached_encoder_for_ClassificationName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClassificationName */
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ import {
   _decode_PKIFailureInfo,
   _encode_PKIFailureInfo,
 } from '../PKIXCMP-2009/PKIFailureInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PKIStatusInfo */
+
 /**
  * @summary PKIStatusInfo
  * @description
@@ -82,9 +82,8 @@ export class PKIStatusInfo {
     return new PKIStatusInfo(_o.status, _o.statusString, _o.failInfo);
   }
 }
-/* END_OF_SYMBOL_DEFINITION PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKIStatusInfo */
+
 /**
  * @summary The Leading Root Component Types of PKIStatusInfo
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_PKIStatusInfo: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKIStatusInfo */
+
 /**
  * @summary The Trailing Root Component Types of PKIStatusInfo
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_PKIStatusInfo: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PKIStatusInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKIStatusInfo */
+
 /**
  * @summary The Extension Addition Component Types of PKIStatusInfo
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_PKIStatusInfo: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_PKIStatusInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIStatusInfo */
+
 let _cached_decoder_for_PKIStatusInfo: $.ASN1Decoder<PKIStatusInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIStatusInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIStatusInfo
  * @function
@@ -191,13 +186,11 @@ export function _decode_PKIStatusInfo(el: _Element) {
   }
   return _cached_decoder_for_PKIStatusInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIStatusInfo */
+
 let _cached_encoder_for_PKIStatusInfo: $.ASN1Encoder<PKIStatusInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIStatusInfo */
+
 /**
  * @summary Encodes a(n) PKIStatusInfo into an ASN.1 Element.
  * @function
@@ -231,6 +224,5 @@ export function _encode_PKIStatusInfo(
   return _cached_encoder_for_PKIStatusInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIStatusInfo */
 
 /* eslint-enable */

@@ -22,7 +22,7 @@ import {
   _decode_Type_of_msg_t30_data,
   _encode_Type_of_msg_t30_data,
 } from '../T38/Type-of-msg-t30-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Type_of_msg */
+
 /**
  * @summary Type_of_msg
  * @description
@@ -50,13 +50,11 @@ import {
 export type Type_of_msg =
   | { t30_indicator: Type_of_msg_t30_indicator } /* CHOICE_ALT_ROOT */
   | { t30_data: Type_of_msg_t30_data } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Type_of_msg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Type_of_msg */
+
 let _cached_decoder_for_Type_of_msg: $.ASN1Decoder<Type_of_msg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Type_of_msg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Type_of_msg */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Type_of_msg
  * @function
@@ -74,13 +72,11 @@ export function _decode_Type_of_msg(el: _Element) {
   }
   return _cached_decoder_for_Type_of_msg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Type_of_msg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Type_of_msg */
+
 let _cached_encoder_for_Type_of_msg: $.ASN1Encoder<Type_of_msg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Type_of_msg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Type_of_msg */
+
 /**
  * @summary Encodes a(n) Type_of_msg into an ASN.1 Element.
  * @function
@@ -104,6 +100,5 @@ export function _encode_Type_of_msg(
   return _cached_encoder_for_Type_of_msg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Type_of_msg */
 
 /* eslint-enable */

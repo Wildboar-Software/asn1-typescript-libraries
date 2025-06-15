@@ -13,7 +13,6 @@ import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.
 import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { id_oc_groupOfNames } from "../SelectedObjectClasses/id-oc-groupOfNames.va.mjs";
-/* START_OF_SYMBOL_DEFINITION groupOfNames */
 /**
  * @summary groupOfNames
  * @description
@@ -56,6 +55,5 @@ export const groupOfNames: OBJECT_CLASS = {
     "&id": id_oc_groupOfNames /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION groupOfNames */
 
 /* eslint-enable */

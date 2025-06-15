@@ -15,7 +15,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportTimeAttributeIdList */
 /**
  * @summary ReportTimeAttributeIdList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportTimeAttributeIdList = AttributeId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ReportTimeAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportTimeAttributeIdList */
 let _cached_decoder_for_ReportTimeAttributeIdList: $.ASN1Decoder<ReportTimeAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportTimeAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportTimeAttributeIdList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportTimeAttributeIdList
  * @function
@@ -48,13 +43,9 @@ export function _decode_ReportTimeAttributeIdList(el: _Element) {
     }
     return _cached_decoder_for_ReportTimeAttributeIdList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportTimeAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportTimeAttributeIdList */
 let _cached_encoder_for_ReportTimeAttributeIdList: $.ASN1Encoder<ReportTimeAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportTimeAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportTimeAttributeIdList */
 /**
  * @summary Encodes a(n) ReportTimeAttributeIdList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ReportTimeAttributeIdList(
     return _cached_encoder_for_ReportTimeAttributeIdList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportTimeAttributeIdList */
 
 /* eslint-enable */

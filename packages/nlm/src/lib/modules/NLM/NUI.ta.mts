@@ -15,7 +15,7 @@ import {
     _decode_OctetString,
     _encode_OctetString,
 } from '../NLM/OctetString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NUI */
+
 /**
  * @summary NUI
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type NUI = OctetString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NUI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NUI */
+
 let _cached_decoder_for_NUI: $.ASN1Decoder<NUI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NUI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NUI */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NUI
  * @function
@@ -46,13 +44,11 @@ export function _decode_NUI(el: _Element) {
     }
     return _cached_decoder_for_NUI(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NUI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NUI */
+
 let _cached_encoder_for_NUI: $.ASN1Encoder<NUI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NUI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NUI */
+
 /**
  * @summary Encodes a(n) NUI into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_NUI(value: NUI, elGetter: $.ASN1Encoder<NUI>) {
     return _cached_encoder_for_NUI(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NUI */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-
 import { submission_control } from '../MTSAbstractService/submission-control.oa.mjs';
 import { id_pt_submission } from '../MTSObjectIdentifiers/id-pt-submission.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION submission */
 /**
  * @summary submission
  * @description
@@ -50,6 +49,5 @@ export const submission: PORT = {
     '&Consumer': [submission_control] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_submission /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION submission */
 
 /* eslint-enable */

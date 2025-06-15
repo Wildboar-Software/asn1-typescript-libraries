@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BSPUnregistrationEvent_NotificationParams */
+
 /**
  * @summary BSPUnregistrationEvent_NotificationParams
  * @description
@@ -60,9 +60,8 @@ export class BSPUnregistrationEvent_NotificationParams {
     return new BSPUnregistrationEvent_NotificationParams(_o.bspProductUuid);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPUnregistrationEvent_NotificationParams */
+
 /**
  * @summary The Leading Root Component Types of BSPUnregistrationEvent_NotificationParams
  * @description
@@ -80,9 +79,8 @@ export const _root_component_type_list_1_spec_for_BSPUnregistrationEvent_Notific
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPUnregistrationEvent_NotificationParams */
+
 /**
  * @summary The Trailing Root Component Types of BSPUnregistrationEvent_NotificationParams
  * @description
@@ -92,9 +90,8 @@ export const _root_component_type_list_1_spec_for_BSPUnregistrationEvent_Notific
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BSPUnregistrationEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPUnregistrationEvent_NotificationParams */
+
 /**
  * @summary The Extension Addition Component Types of BSPUnregistrationEvent_NotificationParams
  * @description
@@ -104,13 +101,11 @@ export const _root_component_type_list_2_spec_for_BSPUnregistrationEvent_Notific
  * @constant
  */
 export const _extension_additions_list_spec_for_BSPUnregistrationEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPUnregistrationEvent_NotificationParams */
+
 let _cached_decoder_for_BSPUnregistrationEvent_NotificationParams: $.ASN1Decoder<BSPUnregistrationEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BSPUnregistrationEvent_NotificationParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BSPUnregistrationEvent_NotificationParams
  * @function
@@ -140,13 +135,11 @@ export function _decode_BSPUnregistrationEvent_NotificationParams(
   }
   return _cached_decoder_for_BSPUnregistrationEvent_NotificationParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPUnregistrationEvent_NotificationParams */
+
 let _cached_encoder_for_BSPUnregistrationEvent_NotificationParams: $.ASN1Encoder<BSPUnregistrationEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPUnregistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BSPUnregistrationEvent_NotificationParams */
+
 /**
  * @summary Encodes a(n) BSPUnregistrationEvent_NotificationParams into an ASN.1 Element.
  * @function
@@ -177,6 +170,5 @@ export function _encode_BSPUnregistrationEvent_NotificationParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BSPUnregistrationEvent_NotificationParams */
 
 /* eslint-enable */

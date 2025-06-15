@@ -26,7 +26,6 @@ import {
     _encode_RegisteredMailType,
 } from '../MTSAbstractService/RegisteredMailType.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION registered_mail_type */
 /**
  * @summary registered_mail_type
  * @description
@@ -65,6 +64,5 @@ export const registered_mail_type: EXTENSION<RegisteredMailType> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION registered_mail_type */
 
 /* eslint-enable */

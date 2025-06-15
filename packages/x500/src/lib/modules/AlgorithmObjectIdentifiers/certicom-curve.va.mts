@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { certicom } from "../AlgorithmObjectIdentifiers/certicom.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION certicom_curve */
 /**
  * @summary certicom_curve
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const certicom_curve: ID = new _OID([/* curve */ 0], certicom);
-/* END_OF_SYMBOL_DEFINITION certicom_curve */
 
 /* eslint-enable */

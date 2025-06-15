@@ -22,7 +22,6 @@ import {
     _encode_PresentationAddress,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta.mjs';
 import { id_at_calling_psaps } from '../MHSRoutingObjectIdentifiers/id-at-calling-psaps.va.mjs';
-/* START_OF_SYMBOL_DEFINITION callingPSAPs */
 /**
  * @summary callingPSAPs
  * @description
@@ -58,6 +57,5 @@ export const callingPSAPs: ATTRIBUTE<PresentationAddress> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION callingPSAPs */
 
 /* eslint-enable */

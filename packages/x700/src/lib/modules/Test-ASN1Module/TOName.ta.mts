@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TOName */
 /**
  * @summary TOName
  * @description
@@ -33,13 +32,9 @@ import {
 export type TOName =
     | { conductorProvidedName: NULL } /* CHOICE_ALT_ROOT */
     | { performerProvidedName: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TOName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TOName */
 let _cached_decoder_for_TOName: $.ASN1Decoder<TOName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TOName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TOName */
 /**
  * @summary Decodes an ASN.1 element into a(n) TOName
  * @function
@@ -57,13 +52,9 @@ export function _decode_TOName(el: _Element) {
     }
     return _cached_decoder_for_TOName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TOName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TOName */
 let _cached_encoder_for_TOName: $.ASN1Encoder<TOName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TOName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TOName */
 /**
  * @summary Encodes a(n) TOName into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_TOName(value: TOName, elGetter: $.ASN1Encoder<TOName>) {
     return _cached_encoder_for_TOName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TOName */
 
 /* eslint-enable */

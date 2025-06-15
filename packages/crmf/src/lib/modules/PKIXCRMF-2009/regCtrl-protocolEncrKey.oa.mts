@@ -7,7 +7,7 @@ import {
     _encode_ProtocolEncrKey,
 } from "../PKIXCRMF-2009/ProtocolEncrKey.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regCtrl_protocolEncrKey */
+
 /**
  * @summary regCtrl_protocolEncrKey
  * @description
@@ -33,6 +33,5 @@ export const regCtrl_protocolEncrKey: ATTRIBUTE<ProtocolEncrKey> = {
     "&id": id_regCtrl_protocolEncrKey /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regCtrl_protocolEncrKey */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { module_ } from "../UsefulDefinitions/module.va.mjs";
-/* START_OF_SYMBOL_DEFINITION enhancedSecurity */
 /**
  * @summary enhancedSecurity
  * @description
@@ -19,6 +18,5 @@ export const enhancedSecurity: ID = new _OID(
     [/* enhancedSecurity */ 28, 9],
     module_
 );
-/* END_OF_SYMBOL_DEFINITION enhancedSecurity */
 
 /* eslint-enable */

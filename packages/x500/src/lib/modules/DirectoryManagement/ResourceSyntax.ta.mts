@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ResourceSyntax */
 /**
  * @summary ResourceSyntax
  * @description
@@ -16,93 +15,68 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type ResourceSyntax = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ResourceSyntax */
 
-/* START_OF_SYMBOL_DEFINITION ResourceSyntax_insufficientMemory */
 /**
  * @summary ResourceSyntax_insufficientMemory
  * @constant
  * @type {number}
  */
 export const ResourceSyntax_insufficientMemory: ResourceSyntax = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResourceSyntax_insufficientMemory */
 
-/* START_OF_SYMBOL_DEFINITION insufficientMemory */
 /**
  * @summary ResourceSyntax_insufficientMemory
  * @constant
  * @type {number}
  */
 export const insufficientMemory: ResourceSyntax = ResourceSyntax_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION insufficientMemory */
 
-/* START_OF_SYMBOL_DEFINITION ResourceSyntax_insufficientAssociations */
 /**
  * @summary ResourceSyntax_insufficientAssociations
  * @constant
  * @type {number}
  */
 export const ResourceSyntax_insufficientAssociations: ResourceSyntax = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResourceSyntax_insufficientAssociations */
 
-/* START_OF_SYMBOL_DEFINITION insufficientAssociations */
 /**
  * @summary ResourceSyntax_insufficientAssociations
  * @constant
  * @type {number}
  */
 export const insufficientAssociations: ResourceSyntax = ResourceSyntax_insufficientAssociations; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION insufficientAssociations */
 
-/* START_OF_SYMBOL_DEFINITION ResourceSyntax_insufficientDiskSpace */
 /**
  * @summary ResourceSyntax_insufficientDiskSpace
  * @constant
  * @type {number}
  */
 export const ResourceSyntax_insufficientDiskSpace: ResourceSyntax = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResourceSyntax_insufficientDiskSpace */
 
-/* START_OF_SYMBOL_DEFINITION insufficientDiskSpace */
 /**
  * @summary ResourceSyntax_insufficientDiskSpace
  * @constant
  * @type {number}
  */
 export const insufficientDiskSpace: ResourceSyntax = ResourceSyntax_insufficientDiskSpace; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION insufficientDiskSpace */
 
-/* START_OF_SYMBOL_DEFINITION ResourceSyntax_miscellaneousResourceExhausted */
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
  * @constant
  * @type {number}
  */
 export const ResourceSyntax_miscellaneousResourceExhausted: ResourceSyntax = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResourceSyntax_miscellaneousResourceExhausted */
 
-/* START_OF_SYMBOL_DEFINITION miscellaneousResourceExhausted */
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
  * @constant
  * @type {number}
  */
 export const miscellaneousResourceExhausted: ResourceSyntax = ResourceSyntax_miscellaneousResourceExhausted; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION miscellaneousResourceExhausted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSyntax */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResourceSyntax */
 export const _decode_ResourceSyntax = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ResourceSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSyntax */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResourceSyntax */
 export const _encode_ResourceSyntax = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResourceSyntax */
 
 /* eslint-enable */

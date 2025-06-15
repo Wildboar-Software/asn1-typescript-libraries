@@ -55,7 +55,7 @@ import {
   _decode_BFPUnregistrationEvent_NotificationParams,
   _encode_BFPUnregistrationEvent_NotificationParams,
 } from '../BIP/BFPUnregistrationEvent-NotificationParams.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPNotification_params */
+
 /**
  * @summary BIPNotification_params
  * @description
@@ -89,13 +89,11 @@ export type BIPNotification_params =
       bfpUnregistrationEvent: BFPUnregistrationEvent_NotificationParams;
     } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BIPNotification_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPNotification_params */
+
 let _cached_decoder_for_BIPNotification_params: $.ASN1Decoder<BIPNotification_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPNotification_params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPNotification_params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPNotification_params
  * @function
@@ -144,13 +142,11 @@ export function _decode_BIPNotification_params(el: _Element) {
   }
   return _cached_decoder_for_BIPNotification_params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPNotification_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPNotification_params */
+
 let _cached_encoder_for_BIPNotification_params: $.ASN1Encoder<BIPNotification_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPNotification_params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPNotification_params */
+
 /**
  * @summary Encodes a(n) BIPNotification_params into an ASN.1 Element.
  * @function
@@ -181,6 +177,5 @@ export function _encode_BIPNotification_params(
   return _cached_encoder_for_BIPNotification_params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPNotification_params */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Properties */
 /**
  * @summary Properties
  * @description
@@ -76,9 +75,7 @@ class Properties {
 
     public static _enum_for_status = _enum_for_AttributeStatus;
 }
-/* END_OF_SYMBOL_DEFINITION Properties */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Properties */
 /**
  * @summary The Leading Root Component Types of Properties
  * @description
@@ -93,9 +90,7 @@ const _root_component_type_list_1_spec_for_Properties: $.ComponentSpec[] = [
     new $.ComponentSpec("propertyValue", false, $.hasTag(_TagClass.universal, 12), undefined, undefined),
     new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 0), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Properties */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Properties */
 /**
  * @summary The Trailing Root Component Types of Properties
  * @description
@@ -108,9 +103,7 @@ export
 const _root_component_type_list_2_spec_for_Properties: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Properties */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Properties */
 /**
  * @summary The Extension Addition Component Types of Properties
  * @description
@@ -123,13 +116,9 @@ export
 const _extension_additions_list_spec_for_Properties: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Properties */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Properties */
 let _cached_decoder_for_Properties: $.ASN1Decoder<Properties> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Properties */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Properties */
 /**
  * @summary Decodes an ASN.1 element into a(n) Properties
  * @function
@@ -165,13 +154,9 @@ function _decode_Properties (el: _Element) {
 }; }
     return _cached_decoder_for_Properties(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Properties */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Properties */
 let _cached_encoder_for_Properties: $.ASN1Encoder<Properties> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Properties */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Properties */
 /**
  * @summary Encodes a(n) Properties into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ function _encode_Properties (value: Properties, elGetter: $.ASN1Encoder<Properti
     return _cached_encoder_for_Properties(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Properties */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_fax } from "../SelectedAttributeTypes/id-lsx-fax.va.mjs";
-/* START_OF_SYMBOL_DEFINITION fax */
 /**
  * @summary fax
  * @description
@@ -33,6 +32,5 @@ export const fax: SYNTAX_NAME<NULL> = {
     "&id": id_lsx_fax /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION fax */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BasicValidationErrorSet */
 /**
  * @summary BasicValidationErrorSet
  * @description
@@ -32,26 +31,18 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * @type {OBJECT_IDENTIFIER}
  */
 export type BasicValidationErrorSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION BasicValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicValidationErrorSet */
 let _cached_decoder_for_BasicValidationErrorSet: $.ASN1Decoder<BasicValidationErrorSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BasicValidationErrorSet */
 export function _decode_BasicValidationErrorSet(el: _Element) {
   if (!_cached_decoder_for_BasicValidationErrorSet) {
     _cached_decoder_for_BasicValidationErrorSet = $._decodeObjectIdentifier;
   }
   return _cached_decoder_for_BasicValidationErrorSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BasicValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicValidationErrorSet */
 let _cached_encoder_for_BasicValidationErrorSet: $.ASN1Encoder<BasicValidationErrorSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicValidationErrorSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BasicValidationErrorSet */
 export function _encode_BasicValidationErrorSet(
   value: BasicValidationErrorSet,
   elGetter: $.ASN1Encoder<BasicValidationErrorSet>
@@ -61,6 +52,5 @@ export function _encode_BasicValidationErrorSet(
   }
   return _cached_encoder_for_BasicValidationErrorSet(value, elGetter);
 }
-/* END_OF_SYMBOL_DEFINITION _encode_BasicValidationErrorSet */
 
 /* eslint-enable */

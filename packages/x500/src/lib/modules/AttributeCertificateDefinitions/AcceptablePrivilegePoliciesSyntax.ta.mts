@@ -6,7 +6,6 @@ import {
     _decode_PrivilegePolicy,
     _encode_PrivilegePolicy,
 } from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AcceptablePrivilegePoliciesSyntax */
 /**
  * @summary AcceptablePrivilegePoliciesSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AcceptablePrivilegePoliciesSyntax = PrivilegePolicy[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AcceptablePrivilegePoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptablePrivilegePoliciesSyntax */
 let _cached_decoder_for_AcceptablePrivilegePoliciesSyntax: $.ASN1Decoder<AcceptablePrivilegePoliciesSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptablePrivilegePoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AcceptablePrivilegePoliciesSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) AcceptablePrivilegePoliciesSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_AcceptablePrivilegePoliciesSyntax(el: _Element) {
     }
     return _cached_decoder_for_AcceptablePrivilegePoliciesSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AcceptablePrivilegePoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptablePrivilegePoliciesSyntax */
 let _cached_encoder_for_AcceptablePrivilegePoliciesSyntax: $.ASN1Encoder<AcceptablePrivilegePoliciesSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptablePrivilegePoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AcceptablePrivilegePoliciesSyntax */
 /**
  * @summary Encodes a(n) AcceptablePrivilegePoliciesSyntax into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_AcceptablePrivilegePoliciesSyntax(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AcceptablePrivilegePoliciesSyntax */
 
 /* eslint-enable */

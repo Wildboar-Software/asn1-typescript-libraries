@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { rsadsi } from "../AlgorithmObjectIdentifiers/rsadsi.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pkcs_1 */
 /**
  * @summary pkcs_1
  * @description
@@ -16,6 +15,5 @@ import { rsadsi } from "../AlgorithmObjectIdentifiers/rsadsi.va.mjs";
  * @constant
  */
 export const pkcs_1: ID = new _OID([/* pkcs */ 1, /* pkcs-1 */ 1], rsadsi);
-/* END_OF_SYMBOL_DEFINITION pkcs_1 */
 
 /* eslint-enable */

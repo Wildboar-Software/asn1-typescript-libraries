@@ -2,7 +2,6 @@
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 import { c2tnb191v3 } from "./c2tnb191v3.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CurveNames_Union6_Intersection0_Element */
 /**
  * @summary CurveNames_Union6_Intersection0_Element
  * @description
@@ -23,6 +22,5 @@ export const CurveNames_Union6_Intersection0_Element: CURVES = {
     encoderFor: {},
     "&id": c2tnb191v3 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION CurveNames_Union6_Intersection0_Element */
 
 /* eslint-enable */

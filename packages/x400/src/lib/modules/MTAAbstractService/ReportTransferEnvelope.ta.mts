@@ -31,7 +31,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportTransferEnvelope */
 /**
  * @summary ReportTransferEnvelope
  * @description
@@ -111,9 +110,7 @@ export class ReportTransferEnvelope {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportTransferEnvelope */
 /**
  * @summary The Leading Root Component Types of ReportTransferEnvelope
  * @description
@@ -152,9 +149,7 @@ export const _root_component_type_list_1_spec_for_ReportTransferEnvelope: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportTransferEnvelope */
 /**
  * @summary The Trailing Root Component Types of ReportTransferEnvelope
  * @description
@@ -164,9 +159,7 @@ export const _root_component_type_list_1_spec_for_ReportTransferEnvelope: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReportTransferEnvelope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportTransferEnvelope */
 /**
  * @summary The Extension Addition Component Types of ReportTransferEnvelope
  * @description
@@ -176,13 +169,9 @@ export const _root_component_type_list_2_spec_for_ReportTransferEnvelope: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_ReportTransferEnvelope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportTransferEnvelope */
 let _cached_decoder_for_ReportTransferEnvelope: $.ASN1Decoder<ReportTransferEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportTransferEnvelope */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportTransferEnvelope
  * @function
@@ -241,13 +230,9 @@ export function _decode_ReportTransferEnvelope(el: _Element) {
     }
     return _cached_decoder_for_ReportTransferEnvelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportTransferEnvelope */
 let _cached_encoder_for_ReportTransferEnvelope: $.ASN1Encoder<ReportTransferEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportTransferEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportTransferEnvelope */
 /**
  * @summary Encodes a(n) ReportTransferEnvelope into an ASN.1 Element.
  * @function
@@ -302,6 +287,5 @@ export function _encode_ReportTransferEnvelope(
     return _cached_encoder_for_ReportTransferEnvelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportTransferEnvelope */
 
 /* eslint-enable */

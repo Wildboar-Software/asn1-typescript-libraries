@@ -21,7 +21,7 @@ import {
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
 } from '../E-health-setup/IntegrityOptions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Command */
+
 /**
  * @summary Command
  * @description
@@ -86,9 +86,8 @@ export class Command {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Command */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Command */
+
 /**
  * @summary The Leading Root Component Types of Command
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_Command: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Command */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Command */
+
 /**
  * @summary The Trailing Root Component Types of Command
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_Command: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Command: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Command */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Command */
+
 /**
  * @summary The Extension Addition Component Types of Command
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_Command: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Command: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Command */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Command */
+
 let _cached_decoder_for_Command: $.ASN1Decoder<Command> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Command */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Command */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Command
  * @function
@@ -182,13 +177,11 @@ export function _decode_Command(el: _Element) {
     }
     return _cached_decoder_for_Command(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Command */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Command */
+
 let _cached_encoder_for_Command: $.ASN1Encoder<Command> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Command */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Command */
+
 /**
  * @summary Encodes a(n) Command into an ASN.1 Element.
  * @function
@@ -227,6 +220,5 @@ export function _encode_Command(
     return _cached_encoder_for_Command(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Command */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSp
 import { tcg_at_tcgCredentialSpecification } from "../PlatformCertificateProfile/tcg-at-tcgCredentialSpecification.va.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION tCGCredentialSpecification */
 /**
  * @summary tCGCredentialSpecification
  * @description
@@ -50,6 +49,5 @@ const tCGCredentialSpecification: ATTRIBUTE<TCGSpecificationVersion> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION tCGCredentialSpecification */
 
 /* eslint-enable */

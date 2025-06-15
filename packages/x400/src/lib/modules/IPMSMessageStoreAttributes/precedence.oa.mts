@@ -23,7 +23,6 @@ import { id_hat_precedence } from '../IPMSObjectIdentifiers/id-hat-precedence.va
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION precedence */
 /**
  * @summary precedence
  * @description
@@ -56,6 +55,5 @@ export const precedence: X413ATTRIBUTE<Precedence> = {
     '&id': id_hat_precedence /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION precedence */
 
 /* eslint-enable */

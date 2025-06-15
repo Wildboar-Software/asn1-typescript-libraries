@@ -6,7 +6,7 @@ import {
     INTEGER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION CredentialIdentifier */
+
 /**
  * @summary CredentialIdentifier
  * @description
@@ -56,9 +56,8 @@ export class CredentialIdentifier {
         return new CredentialIdentifier(_o.idType, _o.idValue);
     }
 }
-/* END_OF_SYMBOL_DEFINITION CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CredentialIdentifier */
+
 /**
  * @summary The Leading Root Component Types of CredentialIdentifier
  * @description
@@ -77,9 +76,8 @@ export const _root_component_type_list_1_spec_for_CredentialIdentifier: $.Compon
     ),
     new $.ComponentSpec("idValue", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CredentialIdentifier */
+
 /**
  * @summary The Trailing Root Component Types of CredentialIdentifier
  * @description
@@ -89,9 +87,8 @@ export const _root_component_type_list_1_spec_for_CredentialIdentifier: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CredentialIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CredentialIdentifier */
+
 /**
  * @summary The Extension Addition Component Types of CredentialIdentifier
  * @description
@@ -101,13 +98,11 @@ export const _root_component_type_list_2_spec_for_CredentialIdentifier: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_CredentialIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CredentialIdentifier */
+
 let _cached_decoder_for_CredentialIdentifier: $.ASN1Decoder<CredentialIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CredentialIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CredentialIdentifier
  * @function
@@ -138,13 +133,11 @@ export function _decode_CredentialIdentifier(el: _Element) {
     }
     return _cached_decoder_for_CredentialIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CredentialIdentifier */
+
 let _cached_encoder_for_CredentialIdentifier: $.ASN1Encoder<CredentialIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CredentialIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CredentialIdentifier */
+
 /**
  * @summary Encodes a(n) CredentialIdentifier into an ASN.1 Element.
  * @function
@@ -173,6 +166,5 @@ export function _encode_CredentialIdentifier(
     return _cached_encoder_for_CredentialIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CredentialIdentifier */
 
 /* eslint-enable */

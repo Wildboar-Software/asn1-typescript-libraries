@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_mst_suspend_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-mst-suspend-auto-acknowledgement.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION suspend_auto_acknowledgement */
 /**
  * @summary suspend_auto_acknowledgement
  * @description
@@ -42,6 +41,5 @@ export const suspend_auto_acknowledgement: MS_EXTENSION<NULL> = {
     '&id': id_mst_suspend_auto_acknowledgement /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION suspend_auto_acknowledgement */
 
 /* eslint-enable */

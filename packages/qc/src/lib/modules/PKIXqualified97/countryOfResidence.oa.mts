@@ -7,7 +7,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { id_pda_countryOfResidence } from "../PKIXqualified97/id-pda-countryOfResidence.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION countryOfResidence */
+
 /**
  * @summary countryOfResidence
  * @description
@@ -42,6 +42,5 @@ export const countryOfResidence: ATTRIBUTE<PrintableString> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION countryOfResidence */
 
 /* eslint-enable */

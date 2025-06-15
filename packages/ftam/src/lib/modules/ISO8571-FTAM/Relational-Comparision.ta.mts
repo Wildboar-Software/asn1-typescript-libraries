@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Relational_Comparision */
+
 /**
  * @summary Relational_Comparision
  * @description
@@ -38,85 +38,72 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Relational_Comparision = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Relational_Comparision */
 
-/* START_OF_SYMBOL_DEFINITION Relational_Comparision_no_value_available_matches */
+
 /**
  * @summary Relational_Comparision_no_value_available_matches
  * @constant
  */
 export const Relational_Comparision_no_value_available_matches: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Relational_Comparision_no_value_available_matches */
 
-/* START_OF_SYMBOL_DEFINITION no_value_available_matches */
+
 /**
  * @summary no_value_available_matches
  * @constant
  */
 export const no_value_available_matches: number = Relational_Comparision_no_value_available_matches; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION no_value_available_matches */
 
-/* START_OF_SYMBOL_DEFINITION Relational_Comparision_equals_matches */
+
 /**
  * @summary Relational_Comparision_equals_matches
  * @constant
  */
 export const Relational_Comparision_equals_matches: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Relational_Comparision_equals_matches */
 
-/* START_OF_SYMBOL_DEFINITION equals_matches */
+
 /**
  * @summary equals_matches
  * @constant
  */
 export const equals_matches: number = Relational_Comparision_equals_matches; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION equals_matches */
 
-/* START_OF_SYMBOL_DEFINITION Relational_Comparision_less_than_matches */
+
 /**
  * @summary Relational_Comparision_less_than_matches
  * @constant
  */
 export const Relational_Comparision_less_than_matches: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Relational_Comparision_less_than_matches */
 
-/* START_OF_SYMBOL_DEFINITION less_than_matches */
+
 /**
  * @summary less_than_matches
  * @constant
  */
 export const less_than_matches: number = Relational_Comparision_less_than_matches; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION less_than_matches */
 
-/* START_OF_SYMBOL_DEFINITION Relational_Comparision_greater_than_matches */
+
 /**
  * @summary Relational_Comparision_greater_than_matches
  * @constant
  */
 export const Relational_Comparision_greater_than_matches: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Relational_Comparision_greater_than_matches */
 
-/* START_OF_SYMBOL_DEFINITION greater_than_matches */
+
 /**
  * @summary greater_than_matches
  * @constant
  */
 export const greater_than_matches: number = Relational_Comparision_greater_than_matches; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION greater_than_matches */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Relational_Comparision */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Relational_Comparision */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Relational_Comparision */
+
+
 export const _decode_Relational_Comparision = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_Relational_Comparision */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Relational_Comparision */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Relational_Comparision */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Relational_Comparision */
+
+
 export const _encode_Relational_Comparision = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Relational_Comparision */
 
 /* eslint-enable */

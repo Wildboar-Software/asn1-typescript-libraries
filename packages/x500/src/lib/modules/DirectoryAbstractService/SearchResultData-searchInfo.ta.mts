@@ -43,7 +43,6 @@ import {
     _extension_additions_list_spec_for_CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SearchResultData_searchInfo */
 /**
  * @summary SearchResultData_searchInfo
  * @description
@@ -165,9 +164,7 @@ export class SearchResultData_searchInfo implements CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchResultData_searchInfo */
 /**
  * @summary The Leading Root Component Types of SearchResultData_searchInfo
  * @description
@@ -207,9 +204,7 @@ export const _root_component_type_list_1_spec_for_SearchResultData_searchInfo: $
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchResultData_searchInfo */
 /**
  * @summary The Trailing Root Component Types of SearchResultData_searchInfo
  * @description
@@ -221,9 +216,7 @@ export const _root_component_type_list_1_spec_for_SearchResultData_searchInfo: $
 export const _root_component_type_list_2_spec_for_SearchResultData_searchInfo: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchResultData_searchInfo */
 /**
  * @summary The Extension Addition Component Types of SearchResultData_searchInfo
  * @description
@@ -235,13 +228,9 @@ export const _root_component_type_list_2_spec_for_SearchResultData_searchInfo: $
 export const _extension_additions_list_spec_for_SearchResultData_searchInfo: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultData_searchInfo */
 let _cached_decoder_for_SearchResultData_searchInfo: $.ASN1Decoder<SearchResultData_searchInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchResultData_searchInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchResultData_searchInfo
  * @function
@@ -335,13 +324,9 @@ export function _decode_SearchResultData_searchInfo(el: _Element) {
     }
     return _cached_decoder_for_SearchResultData_searchInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultData_searchInfo */
 let _cached_encoder_for_SearchResultData_searchInfo: $.ASN1Encoder<SearchResultData_searchInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultData_searchInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchResultData_searchInfo */
 /**
  * @summary Encodes a(n) SearchResultData_searchInfo into an ASN.1 Element.
  * @function
@@ -451,6 +436,5 @@ export function _encode_SearchResultData_searchInfo(
     return _cached_encoder_for_SearchResultData_searchInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchResultData_searchInfo */
 
 /* eslint-enable */

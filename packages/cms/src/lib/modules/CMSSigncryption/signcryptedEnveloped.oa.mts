@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.mjs";
 import { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION signcryptedEnveloped */
+
 /**
  * @summary signcryptedEnveloped
  * @description
@@ -27,6 +27,5 @@ export const signcryptedEnveloped: MODE = {
     "&id": signcrypted_envelope /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signcryptedEnveloped */
 
 /* eslint-enable */

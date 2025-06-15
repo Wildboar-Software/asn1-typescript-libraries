@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
-/* START_OF_SYMBOL_DEFINITION maximumDistanceOID */
 /**
  * @summary maximumDistanceOID
  * @description
@@ -28,6 +27,5 @@ export const maximumDistanceOID: OBJECT_IDENTIFIER = new _OID(
     [/* attribute */ 7, /* maximumDistance */ 19],
     timeManagement
 );
-/* END_OF_SYMBOL_DEFINITION maximumDistanceOID */
 
 /* eslint-enable */

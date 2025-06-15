@@ -16,7 +16,7 @@ import {
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SOFTWARE_SCHEME */
+
 /**
  * @summary SOFTWARE_SCHEME
  * @description
@@ -85,6 +85,5 @@ export interface SOFTWARE_SCHEME<
      */
     readonly '&Software': Software;
 }
-/* END_OF_SYMBOL_DEFINITION SOFTWARE_SCHEME */
 
 /* eslint-enable */

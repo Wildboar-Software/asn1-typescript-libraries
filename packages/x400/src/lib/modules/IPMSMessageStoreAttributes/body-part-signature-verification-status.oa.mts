@@ -22,7 +22,6 @@ import { id_hat_body_part_signature_verification_status } from '../IPMSObjectIde
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION body_part_signature_verification_status */
 /**
  * @summary body_part_signature_verification_status
  * @description
@@ -53,6 +52,5 @@ export const body_part_signature_verification_status: X413ATTRIBUTE<BodyPartSign
     '&id': id_hat_body_part_signature_verification_status /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION body_part_signature_verification_status */
 
 /* eslint-enable */

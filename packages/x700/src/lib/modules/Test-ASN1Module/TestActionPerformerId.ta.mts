@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestActionPerformerId */
 /**
  * @summary TestActionPerformerId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TestActionPerformerId = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TestActionPerformerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestActionPerformerId */
 let _cached_decoder_for_TestActionPerformerId: $.ASN1Decoder<TestActionPerformerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestActionPerformerId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestActionPerformerId */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestActionPerformerId
  * @function
@@ -46,13 +41,9 @@ export function _decode_TestActionPerformerId(el: _Element) {
     }
     return _cached_decoder_for_TestActionPerformerId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestActionPerformerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestActionPerformerId */
 let _cached_encoder_for_TestActionPerformerId: $.ASN1Encoder<TestActionPerformerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestActionPerformerId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestActionPerformerId */
 /**
  * @summary Encodes a(n) TestActionPerformerId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TestActionPerformerId(
     return _cached_encoder_for_TestActionPerformerId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestActionPerformerId */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _encode_Delete,
 } from '../DefinitionASN1Module/Delete.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION delete_ */
 /**
  * @summary delete_
  * @description
@@ -64,6 +63,5 @@ export const delete_: ATTRIBUTE<Delete> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delete_ */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_PartialAttribute,
   _encode_PartialAttribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PartialAttributeList */
+
 /**
  * @summary PartialAttributeList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type PartialAttributeList = PartialAttribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PartialAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialAttributeList */
+
 let _cached_decoder_for_PartialAttributeList: $.ASN1Decoder<PartialAttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PartialAttributeList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PartialAttributeList
  * @function
@@ -48,13 +46,11 @@ export function _decode_PartialAttributeList(el: _Element) {
   }
   return _cached_decoder_for_PartialAttributeList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PartialAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialAttributeList */
+
 let _cached_encoder_for_PartialAttributeList: $.ASN1Encoder<PartialAttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PartialAttributeList */
+
 /**
  * @summary Encodes a(n) PartialAttributeList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_PartialAttributeList(
   return _cached_encoder_for_PartialAttributeList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PartialAttributeList */
 
 /* eslint-enable */

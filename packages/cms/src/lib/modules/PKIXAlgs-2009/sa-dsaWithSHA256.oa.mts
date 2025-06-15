@@ -13,7 +13,7 @@ import {
 } from "../PKIXAlgs-2009/DSA-Sig-Value.ta.mjs";
 import { dsa_with_sha256 } from "../PKIXAlgs-2009/dsa-with-sha256.va.mjs";
 import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION sa_dsaWithSHA256 */
+
 /**
  * @summary sa_dsaWithSHA256
  * @description
@@ -52,6 +52,5 @@ export const sa_dsaWithSHA256: SIGNATURE_ALGORITHM<DSA_Sig_Value, NULL> = {
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sa_dsaWithSHA256 */
 
 /* eslint-enable */

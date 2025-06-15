@@ -15,7 +15,7 @@ import {
     _decode_NWTPList,
     _encode_NWTPList,
 } from '../M3100ASN1TypeModule2/NWTPList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CTPList */
+
 /**
  * @summary CTPList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type CTPList = NWTPList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CTPList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CTPList */
+
 let _cached_decoder_for_CTPList: $.ASN1Decoder<CTPList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CTPList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CTPList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CTPList
  * @function
@@ -46,13 +44,11 @@ export function _decode_CTPList(el: _Element) {
     }
     return _cached_decoder_for_CTPList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CTPList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CTPList */
+
 let _cached_encoder_for_CTPList: $.ASN1Encoder<CTPList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CTPList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CTPList */
+
 /**
  * @summary Encodes a(n) CTPList into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_CTPList(
     return _cached_encoder_for_CTPList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CTPList */
 
 /* eslint-enable */

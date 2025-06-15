@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { DMI_TYPE_IDENTIFIER } from "../Attribute-ASN1Module/DMI-TYPE-IDENTIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION DMI_SERVICEUSER */
 /**
  * @summary DMI_SERVICEUSER
  * @description
@@ -25,6 +24,5 @@ import { DMI_TYPE_IDENTIFIER } from "../Attribute-ASN1Module/DMI-TYPE-IDENTIFIER
  */
 export
 type DMI_SERVICEUSER = DMI_TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION DMI_SERVICEUSER */
 
 /* eslint-enable */

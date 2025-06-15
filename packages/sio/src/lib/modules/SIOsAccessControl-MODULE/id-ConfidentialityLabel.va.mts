@@ -5,7 +5,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_ConfidentialityLabel */
+
 /**
  * @summary id_ConfidentialityLabel
  * @description
@@ -28,6 +28,5 @@ export const id_ConfidentialityLabel: OBJECT_IDENTIFIER = new _OID(
     ],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_ConfidentialityLabel */
 
 /* eslint-enable */

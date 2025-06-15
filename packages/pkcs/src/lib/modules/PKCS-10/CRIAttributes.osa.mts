@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CRIAttributes */
+
 /**
  * @summary CRIAttributes
  * @description
@@ -18,6 +18,5 @@ import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramew
  *
  */
 export const CRIAttributes: ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION CRIAttributes */
 
 /* eslint-enable */

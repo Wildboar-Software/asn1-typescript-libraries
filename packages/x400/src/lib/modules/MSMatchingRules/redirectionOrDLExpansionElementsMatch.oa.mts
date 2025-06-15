@@ -16,7 +16,6 @@ import {
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
 import { id_mr_redirection_or_dl_expansion_elements_match } from '../MSObjectIdentifiers/id-mr-redirection-or-dl-expansion-elements-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION redirectionOrDLExpansionElementsMatch */
 /**
  * @summary redirectionOrDLExpansionElementsMatch
  * @description
@@ -45,6 +44,5 @@ export const redirectionOrDLExpansionElementsMatch: MATCHING_RULE<ORAddressAndOp
     '&id': id_mr_redirection_or_dl_expansion_elements_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION redirectionOrDLExpansionElementsMatch */
 
 /* eslint-enable */

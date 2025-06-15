@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TimeAssertion_between */
 /**
  * @summary TimeAssertion_between
  * @description
@@ -82,9 +81,7 @@ export class TimeAssertion_between {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeAssertion_between */
 /**
  * @summary The Leading Root Component Types of TimeAssertion_between
  * @description
@@ -116,9 +113,7 @@ export const _root_component_type_list_1_spec_for_TimeAssertion_between: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeAssertion_between */
 /**
  * @summary The Trailing Root Component Types of TimeAssertion_between
  * @description
@@ -128,9 +123,7 @@ export const _root_component_type_list_1_spec_for_TimeAssertion_between: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeAssertion_between: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeAssertion_between */
 /**
  * @summary The Extension Addition Component Types of TimeAssertion_between
  * @description
@@ -140,13 +133,9 @@ export const _root_component_type_list_2_spec_for_TimeAssertion_between: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeAssertion_between: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeAssertion_between */
 let _cached_decoder_for_TimeAssertion_between: $.ASN1Decoder<TimeAssertion_between> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeAssertion_between */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeAssertion_between
  * @function
@@ -202,13 +191,9 @@ export function _decode_TimeAssertion_between(el: _Element) {
     }
     return _cached_decoder_for_TimeAssertion_between(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeAssertion_between */
 let _cached_encoder_for_TimeAssertion_between: $.ASN1Encoder<TimeAssertion_between> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeAssertion_between */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeAssertion_between */
 /**
  * @summary Encodes a(n) TimeAssertion_between into an ASN.1 Element.
  * @function
@@ -261,6 +246,5 @@ export function _encode_TimeAssertion_between(
     return _cached_encoder_for_TimeAssertion_between(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeAssertion_between */
 
 /* eslint-enable */

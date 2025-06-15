@@ -16,7 +16,6 @@ import {
     _decode_Notifications,
     _encode_Notifications,
 } from "../AVL-management/Notifications.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertErr */
 /**
  * @summary CertErr
  * @description
@@ -80,9 +79,7 @@ export class CertErr {
 
     public static _enum_for_notOK = _enum_for_AVMP_error;
 }
-/* END_OF_SYMBOL_DEFINITION CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertErr */
 /**
  * @summary The Leading Root Component Types of CertErr
  * @description
@@ -107,9 +104,7 @@ export const _root_component_type_list_1_spec_for_CertErr: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertErr */
 /**
  * @summary The Trailing Root Component Types of CertErr
  * @description
@@ -119,9 +114,7 @@ export const _root_component_type_list_1_spec_for_CertErr: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertErr */
 /**
  * @summary The Extension Addition Component Types of CertErr
  * @description
@@ -131,13 +124,9 @@ export const _root_component_type_list_2_spec_for_CertErr: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_CertErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertErr */
 let _cached_decoder_for_CertErr: $.ASN1Decoder<CertErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertErr
  * @function
@@ -181,13 +170,9 @@ export function _decode_CertErr(el: _Element) {
     }
     return _cached_decoder_for_CertErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertErr */
 let _cached_encoder_for_CertErr: $.ASN1Encoder<CertErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertErr */
 /**
  * @summary Encodes a(n) CertErr into an ASN.1 Element.
  * @function
@@ -226,6 +211,5 @@ export function _encode_CertErr(
     return _cached_encoder_for_CertErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertErr */
 
 /* eslint-enable */

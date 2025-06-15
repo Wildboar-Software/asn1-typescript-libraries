@@ -15,7 +15,6 @@ import {
     _decode_NonStatisticalScan,
     _encode_NonStatisticalScan,
 } from '../SummarizationASN1Productions/NonStatisticalScan.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NonStatisticalReportInformation */
 /**
  * @summary NonStatisticalReportInformation
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NonStatisticalReportInformation = NonStatisticalScan[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NonStatisticalReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonStatisticalReportInformation */
 let _cached_decoder_for_NonStatisticalReportInformation: $.ASN1Decoder<NonStatisticalReportInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonStatisticalReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonStatisticalReportInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) NonStatisticalReportInformation
  * @function
@@ -48,13 +43,9 @@ export function _decode_NonStatisticalReportInformation(el: _Element) {
     }
     return _cached_decoder_for_NonStatisticalReportInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NonStatisticalReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonStatisticalReportInformation */
 let _cached_encoder_for_NonStatisticalReportInformation: $.ASN1Encoder<NonStatisticalReportInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonStatisticalReportInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonStatisticalReportInformation */
 /**
  * @summary Encodes a(n) NonStatisticalReportInformation into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_NonStatisticalReportInformation(
     return _cached_encoder_for_NonStatisticalReportInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonStatisticalReportInformation */
 
 /* eslint-enable */

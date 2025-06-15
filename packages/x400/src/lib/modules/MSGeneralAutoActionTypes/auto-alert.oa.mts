@@ -21,7 +21,6 @@ import {
 import { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa.mjs';
 import { id_act_auto_alert } from '../MSObjectIdentifiers/id-act-auto-alert.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_alert */
 /**
  * @summary auto_alert
  * @description
@@ -52,6 +51,5 @@ export const auto_alert: AUTO_ACTION<AutoAlertRegistrationParameter> = {
     '&id': id_act_auto_alert /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_alert */
 
 /* eslint-enable */

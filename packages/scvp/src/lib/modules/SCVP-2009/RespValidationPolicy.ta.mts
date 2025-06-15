@@ -15,7 +15,6 @@ import {
   _decode_ValidationPolicy,
   _encode_ValidationPolicy,
 } from '../SCVP-2009/ValidationPolicy.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RespValidationPolicy */
 /**
  * @summary RespValidationPolicy
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RespValidationPolicy = ValidationPolicy; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RespValidationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RespValidationPolicy */
 let _cached_decoder_for_RespValidationPolicy: $.ASN1Decoder<RespValidationPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RespValidationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RespValidationPolicy */
 /**
  * @summary Decodes an ASN.1 element into a(n) RespValidationPolicy
  * @function
@@ -46,13 +41,9 @@ export function _decode_RespValidationPolicy(el: _Element) {
   }
   return _cached_decoder_for_RespValidationPolicy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RespValidationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RespValidationPolicy */
 let _cached_encoder_for_RespValidationPolicy: $.ASN1Encoder<RespValidationPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RespValidationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RespValidationPolicy */
 /**
  * @summary Encodes a(n) RespValidationPolicy into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RespValidationPolicy(
   return _cached_encoder_for_RespValidationPolicy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RespValidationPolicy */
 
 /* eslint-enable */

@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/ModifyErrorParameter.ta.mjs';
 import { err_modify_error } from '../MSAccessProtocol/err-modify-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION modify_error */
 /**
  * @summary modify_error
  * @description
@@ -54,6 +53,5 @@ export const modify_error: ABSTRACT_ERROR<ModifyErrorParameter> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION modify_error */
 
 /* eslint-enable */

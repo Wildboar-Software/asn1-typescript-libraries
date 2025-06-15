@@ -6,7 +6,6 @@ import {
     _encode_rSASSA_PSS_Type,
 } from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION rSASSA_PSS */
 /**
  * @summary rSASSA_PSS
  * @description
@@ -38,6 +37,5 @@ export const rSASSA_PSS: ALGORITHM<rSASSA_PSS_Type> = {
     "&id": id_RSASSA_PSS /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION rSASSA_PSS */
 
 /* eslint-enable */

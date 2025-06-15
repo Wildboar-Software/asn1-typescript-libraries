@@ -25,7 +25,6 @@ import {
     _decode_MTASuppliedInformation,
     _encode_MTASuppliedInformation,
 } from '../MTAAbstractService/MTASuppliedInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InternalTraceInformationElement */
 /**
  * @summary InternalTraceInformationElement
  * @description
@@ -88,9 +87,7 @@ export class InternalTraceInformationElement {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InternalTraceInformationElement */
 /**
  * @summary The Leading Root Component Types of InternalTraceInformationElement
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_InternalTraceInformationElemen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InternalTraceInformationElement */
 /**
  * @summary The Trailing Root Component Types of InternalTraceInformationElement
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_InternalTraceInformationElemen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InternalTraceInformationElement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InternalTraceInformationElement */
 /**
  * @summary The Extension Addition Component Types of InternalTraceInformationElement
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_InternalTraceInformationElemen
  * @constant
  */
 export const _extension_additions_list_spec_for_InternalTraceInformationElement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalTraceInformationElement */
 let _cached_decoder_for_InternalTraceInformationElement: $.ASN1Decoder<InternalTraceInformationElement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InternalTraceInformationElement */
 /**
  * @summary Decodes an ASN.1 element into a(n) InternalTraceInformationElement
  * @function
@@ -194,13 +183,9 @@ export function _decode_InternalTraceInformationElement(el: _Element) {
     }
     return _cached_decoder_for_InternalTraceInformationElement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalTraceInformationElement */
 let _cached_encoder_for_InternalTraceInformationElement: $.ASN1Encoder<InternalTraceInformationElement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalTraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InternalTraceInformationElement */
 /**
  * @summary Encodes a(n) InternalTraceInformationElement into an ASN.1 Element.
  * @function
@@ -236,6 +221,5 @@ export function _encode_InternalTraceInformationElement(
     return _cached_encoder_for_InternalTraceInformationElement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InternalTraceInformationElement */
 
 /* eslint-enable */

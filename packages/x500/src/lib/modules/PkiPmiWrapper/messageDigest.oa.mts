@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_messageDigest } from "../PkiPmiWrapper/id-messageDigest.va.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION messageDigest */
 /**
  * @summary messageDigest
  * @description
@@ -44,6 +43,5 @@ export const messageDigest: ATTRIBUTE<OCTET_STRING> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION messageDigest */
 
 /* eslint-enable */

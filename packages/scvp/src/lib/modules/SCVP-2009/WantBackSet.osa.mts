@@ -17,7 +17,6 @@ import { swb_pkc_public_key_info } from '../SCVP-2009/swb-pkc-public-key-info.oa
 import { swb_pkc_all_cert_paths } from '../SCVP-2009/swb-pkc-all-cert-paths.oa.mjs';
 import { swb_pkc_ee_revocation_info } from '../SCVP-2009/swb-pkc-ee-revocation-info.oa.mjs';
 import { swb_pkc_CAs_revocation_info } from '../SCVP-2009/swb-pkc-CAs-revocation-info.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION WantBackSet */
 /**
  * @summary WantBackSet
  * @description
@@ -46,6 +45,5 @@ export const WantBackSet: WANT_BACK<any>[] = [
   swb_pkc_ee_revocation_info,
   swb_pkc_CAs_revocation_info,
 ];
-/* END_OF_SYMBOL_DEFINITION WantBackSet */
 
 /* eslint-enable */

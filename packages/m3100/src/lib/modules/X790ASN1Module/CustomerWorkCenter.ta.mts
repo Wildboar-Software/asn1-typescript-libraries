@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CustomerWorkCenter */
+
 /**
  * @summary CustomerWorkCenter
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CustomerWorkCenter = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION CustomerWorkCenter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerWorkCenter */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerWorkCenter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CustomerWorkCenter */
+
+
 export const _decode_CustomerWorkCenter = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_CustomerWorkCenter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerWorkCenter */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerWorkCenter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CustomerWorkCenter */
+
+
 export const _encode_CustomerWorkCenter = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CustomerWorkCenter */
 
 /* eslint-enable */

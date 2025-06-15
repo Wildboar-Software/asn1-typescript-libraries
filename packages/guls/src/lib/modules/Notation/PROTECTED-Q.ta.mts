@@ -15,7 +15,7 @@ import {
   _get_decoder_for_PROTECTED,
   _get_encoder_for_PROTECTED,
 } from '../Notation/PROTECTED.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PROTECTED_Q */
+
 /**
  * @summary PROTECTED_Q
  * @description
@@ -35,9 +35,8 @@ import {
  * ```
  */
 export type PROTECTED_Q<BaseType> = PROTECTED<BaseType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PROTECTED_Q */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PROTECTED_Q */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PROTECTED_Q
  * @function
@@ -49,9 +48,8 @@ export function _get_decoder_for_PROTECTED_Q<BaseType>(
 ) {
   return _get_decoder_for_PROTECTED<BaseType>(_decode_BaseType);
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PROTECTED_Q */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PROTECTED_Q */
+
 /**
  * @summary Returns a function that will encode a(n) PROTECTED_Q into an ASN.1 Element.
  * @function
@@ -62,6 +60,5 @@ export function _get_encoder_for_PROTECTED_Q<BaseType>(
 ) {
   return _get_encoder_for_PROTECTED<BaseType>(_encode_BaseType);
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PROTECTED_Q */
 
 /* eslint-enable */

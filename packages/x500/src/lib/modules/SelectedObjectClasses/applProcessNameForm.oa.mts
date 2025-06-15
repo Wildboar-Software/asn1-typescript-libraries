@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa.mjs";
 import { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION applProcessNameForm */
 /**
  * @summary applProcessNameForm
  * @description
@@ -29,6 +28,5 @@ export const applProcessNameForm: NAME_FORM = {
     "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_applProcessNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION applProcessNameForm */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_nvae } from '../SCVP-2009/id-nvae.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_nvae_bad_name_type */
 /**
  * @summary id_nvae_bad_name_type
  * @description
@@ -25,6 +24,5 @@ import { id_nvae } from '../SCVP-2009/id-nvae.va.mjs';
  * @constant
  */
 export const id_nvae_bad_name_type: OBJECT_IDENTIFIER = new _OID([5], id_nvae);
-/* END_OF_SYMBOL_DEFINITION id_nvae_bad_name_type */
 
 /* eslint-enable */

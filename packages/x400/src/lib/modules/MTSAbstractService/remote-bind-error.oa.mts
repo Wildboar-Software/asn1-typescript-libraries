@@ -21,7 +21,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { err_remote_bind_error } from '../MTSAccessProtocol/err-remote-bind-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION remote_bind_error */
 /**
  * @summary remote_bind_error
  * @description
@@ -51,6 +50,5 @@ export const remote_bind_error: ABSTRACT_ERROR<NULL> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION remote_bind_error */
 
 /* eslint-enable */

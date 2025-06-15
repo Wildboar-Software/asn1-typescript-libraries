@@ -22,7 +22,6 @@ import {
     _decode_ModifyProblem,
     _encode_ModifyProblem,
 } from '../MSAbstractService/ModifyProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModifyErrorParameter */
 /**
  * @summary ModifyErrorParameter
  * @description
@@ -92,9 +91,7 @@ export class ModifyErrorParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyErrorParameter */
 /**
  * @summary The Leading Root Component Types of ModifyErrorParameter
  * @description
@@ -133,9 +130,7 @@ export const _root_component_type_list_1_spec_for_ModifyErrorParameter: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyErrorParameter */
 /**
  * @summary The Trailing Root Component Types of ModifyErrorParameter
  * @description
@@ -145,9 +140,7 @@ export const _root_component_type_list_1_spec_for_ModifyErrorParameter: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyErrorParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyErrorParameter */
 /**
  * @summary The Extension Addition Component Types of ModifyErrorParameter
  * @description
@@ -157,13 +150,9 @@ export const _root_component_type_list_2_spec_for_ModifyErrorParameter: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyErrorParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyErrorParameter */
 let _cached_decoder_for_ModifyErrorParameter: $.ASN1Decoder<ModifyErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyErrorParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyErrorParameter
  * @function
@@ -226,13 +215,9 @@ export function _decode_ModifyErrorParameter(el: _Element) {
     }
     return _cached_decoder_for_ModifyErrorParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyErrorParameter */
 let _cached_encoder_for_ModifyErrorParameter: $.ASN1Encoder<ModifyErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyErrorParameter */
 /**
  * @summary Encodes a(n) ModifyErrorParameter into an ASN.1 Element.
  * @function
@@ -289,6 +274,5 @@ export function _encode_ModifyErrorParameter(
     return _cached_encoder_for_ModifyErrorParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyErrorParameter */
 
 /* eslint-enable */

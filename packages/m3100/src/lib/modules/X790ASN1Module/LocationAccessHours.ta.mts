@@ -15,7 +15,7 @@ import {
     _decode_WeekMask,
     _encode_WeekMask,
 } from '../X790ASN1Module/WeekMask.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LocationAccessHours */
+
 /**
  * @summary LocationAccessHours
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type LocationAccessHours = WeekMask[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION LocationAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocationAccessHours */
+
 let _cached_decoder_for_LocationAccessHours: $.ASN1Decoder<LocationAccessHours> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocationAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocationAccessHours */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LocationAccessHours
  * @function
@@ -48,13 +46,11 @@ export function _decode_LocationAccessHours(el: _Element) {
     }
     return _cached_decoder_for_LocationAccessHours(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LocationAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocationAccessHours */
+
 let _cached_encoder_for_LocationAccessHours: $.ASN1Encoder<LocationAccessHours> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocationAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocationAccessHours */
+
 /**
  * @summary Encodes a(n) LocationAccessHours into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_LocationAccessHours(
     return _cached_encoder_for_LocationAccessHours(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocationAccessHours */
 
 /* eslint-enable */

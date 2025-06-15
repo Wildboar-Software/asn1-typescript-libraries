@@ -23,7 +23,6 @@ import {
     _encode_OriginatingMTACertificate,
 } from '../MTSAbstractService/OriginatingMTACertificate.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originating_MTA_certificate */
 /**
  * @summary originating_MTA_certificate
  * @description
@@ -57,6 +56,5 @@ export const originating_MTA_certificate: EXTENSION<OriginatingMTACertificate> =
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originating_MTA_certificate */
 
 /* eslint-enable */

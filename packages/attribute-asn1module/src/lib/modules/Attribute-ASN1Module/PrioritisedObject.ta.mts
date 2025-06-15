@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrioritisedObject */
 /**
  * @summary PrioritisedObject
  * @description
@@ -27,13 +26,9 @@ import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_Priorit
  */
 export
 type PrioritisedObject = PrioritisedObject_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION PrioritisedObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrioritisedObject */
 let _cached_decoder_for_PrioritisedObject: $.ASN1Decoder<PrioritisedObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrioritisedObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrioritisedObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrioritisedObject
  * @function
@@ -45,13 +40,9 @@ function _decode_PrioritisedObject (el: _Element) {
     if (!_cached_decoder_for_PrioritisedObject) { _cached_decoder_for_PrioritisedObject = $._decodeSetOf<PrioritisedObject_Item>(() => _decode_PrioritisedObject_Item); }
     return _cached_decoder_for_PrioritisedObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrioritisedObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrioritisedObject */
 let _cached_encoder_for_PrioritisedObject: $.ASN1Encoder<PrioritisedObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrioritisedObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrioritisedObject */
 /**
  * @summary Encodes a(n) PrioritisedObject into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_PrioritisedObject (value: PrioritisedObject, elGetter: $.ASN1En
     return _cached_encoder_for_PrioritisedObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrioritisedObject */
 
 /* eslint-enable */

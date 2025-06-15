@@ -13,7 +13,6 @@ import { mHSGenerationQualifier } from '../MHSRoutingORAddressSubtree/mHSGenerat
 import { mHSGenerationQualifierAttribute } from '../MHSRoutingORAddressSubtree/mHSGenerationQualifierAttribute.oa.mjs';
 import { id_nf_mhs_generation_qualifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-generation-qualifier.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSGenerationQualifierNameForm */
 /**
  * @summary mHSGenerationQualifierNameForm
  * @description
@@ -42,6 +41,5 @@ export const mHSGenerationQualifierNameForm: NAME_FORM = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_generation_qualifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSGenerationQualifierNameForm */
 
 /* eslint-enable */

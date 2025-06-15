@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { nloi } from '../NLM/nloi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION moi */
+
 /**
  * @summary moi
  * @description
@@ -28,6 +28,5 @@ export const moi: OBJECT_IDENTIFIER = new _OID(
     [/* managedObjectClass */ 3],
     nloi
 );
-/* END_OF_SYMBOL_DEFINITION moi */
 
 /* eslint-enable */

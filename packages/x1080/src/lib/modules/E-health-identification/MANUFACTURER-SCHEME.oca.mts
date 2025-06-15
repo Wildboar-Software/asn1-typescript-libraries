@@ -16,7 +16,7 @@ import {
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MANUFACTURER_SCHEME */
+
 /**
  * @summary MANUFACTURER_SCHEME
  * @description
@@ -85,6 +85,5 @@ export interface MANUFACTURER_SCHEME<
      */
     readonly '&Drug': Drug;
 }
-/* END_OF_SYMBOL_DEFINITION MANUFACTURER_SCHEME */
 
 /* eslint-enable */

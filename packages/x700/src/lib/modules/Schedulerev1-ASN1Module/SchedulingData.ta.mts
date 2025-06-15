@@ -15,7 +15,7 @@ import {
     _decode_SchedulingData_Item,
     _encode_SchedulingData_Item,
 } from '../Schedulerev1-ASN1Module/SchedulingData-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SchedulingData */
+
 /**
  * @summary SchedulingData
  * @description
@@ -31,13 +31,11 @@ import {
  * ```
  */
 export type SchedulingData = SchedulingData_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SchedulingData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchedulingData */
+
 let _cached_decoder_for_SchedulingData: $.ASN1Decoder<SchedulingData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchedulingData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchedulingData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SchedulingData
  * @function
@@ -52,13 +50,11 @@ export function _decode_SchedulingData(el: _Element) {
     }
     return _cached_decoder_for_SchedulingData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SchedulingData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchedulingData */
+
 let _cached_encoder_for_SchedulingData: $.ASN1Encoder<SchedulingData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchedulingData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchedulingData */
+
 /**
  * @summary Encodes a(n) SchedulingData into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_SchedulingData(
     return _cached_encoder_for_SchedulingData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchedulingData */
 
 /* eslint-enable */

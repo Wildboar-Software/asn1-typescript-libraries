@@ -15,7 +15,6 @@ import {
     _decode_MprInfo_Item,
     _encode_MprInfo_Item,
 } from '../MhsMTAAsn1Module/MprInfo-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MprInfo */
 /**
  * @summary MprInfo
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type MprInfo = MprInfo_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MprInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MprInfo */
 let _cached_decoder_for_MprInfo: $.ASN1Decoder<MprInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MprInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MprInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MprInfo
  * @function
@@ -52,13 +47,9 @@ export function _decode_MprInfo(el: _Element) {
     }
     return _cached_decoder_for_MprInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MprInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MprInfo */
 let _cached_encoder_for_MprInfo: $.ASN1Encoder<MprInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MprInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MprInfo */
 /**
  * @summary Encodes a(n) MprInfo into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_MprInfo(
     return _cached_encoder_for_MprInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MprInfo */
 
 /* eslint-enable */

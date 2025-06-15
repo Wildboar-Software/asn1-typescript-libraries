@@ -37,7 +37,7 @@ import {
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnitEventInfo */
+
 /**
  * @summary UnitEventInfo
  * @description
@@ -122,9 +122,8 @@ export class UnitEventInfo {
 
   public static _enum_for_unitEventType = _enum_for_BioAPI_UNIT_EVENT_TYPE;
 }
-/* END_OF_SYMBOL_DEFINITION UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnitEventInfo */
+
 /**
  * @summary The Leading Root Component Types of UnitEventInfo
  * @description
@@ -170,9 +169,8 @@ export const _root_component_type_list_1_spec_for_UnitEventInfo: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnitEventInfo */
+
 /**
  * @summary The Trailing Root Component Types of UnitEventInfo
  * @description
@@ -182,9 +180,8 @@ export const _root_component_type_list_1_spec_for_UnitEventInfo: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnitEventInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnitEventInfo */
+
 /**
  * @summary The Extension Addition Component Types of UnitEventInfo
  * @description
@@ -194,13 +191,11 @@ export const _root_component_type_list_2_spec_for_UnitEventInfo: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_UnitEventInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventInfo */
+
 let _cached_decoder_for_UnitEventInfo: $.ASN1Decoder<UnitEventInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnitEventInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitEventInfo
  * @function
@@ -255,13 +250,11 @@ export function _decode_UnitEventInfo(el: _Element) {
   }
   return _cached_decoder_for_UnitEventInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventInfo */
+
 let _cached_encoder_for_UnitEventInfo: $.ASN1Encoder<UnitEventInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnitEventInfo */
+
 /**
  * @summary Encodes a(n) UnitEventInfo into an ASN.1 Element.
  * @function
@@ -301,6 +294,5 @@ export function _encode_UnitEventInfo(
   return _cached_encoder_for_UnitEventInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnitEventInfo */
 
 /* eslint-enable */

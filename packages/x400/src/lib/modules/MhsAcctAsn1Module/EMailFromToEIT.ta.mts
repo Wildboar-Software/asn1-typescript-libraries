@@ -20,7 +20,6 @@ import {
     _decode_GenericConversion,
     _encode_GenericConversion,
 } from '../MhsAcctAsn1Module/GenericConversion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailFromToEIT */
 /**
  * @summary EMailFromToEIT
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailFromToEIT =
     | { explicitConversion: ExplicitConversion } /* CHOICE_ALT_ROOT */
     | { genericConversion: GenericConversion } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailFromToEIT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailFromToEIT */
 let _cached_decoder_for_EMailFromToEIT: $.ASN1Decoder<EMailFromToEIT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailFromToEIT */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailFromToEIT */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailFromToEIT
  * @function
@@ -71,13 +66,9 @@ export function _decode_EMailFromToEIT(el: _Element) {
     }
     return _cached_decoder_for_EMailFromToEIT(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailFromToEIT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailFromToEIT */
 let _cached_encoder_for_EMailFromToEIT: $.ASN1Encoder<EMailFromToEIT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailFromToEIT */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailFromToEIT */
 /**
  * @summary Encodes a(n) EMailFromToEIT into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_EMailFromToEIT(
     return _cached_encoder_for_EMailFromToEIT(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailFromToEIT */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_BilateralDomain_domain_private_domain,
     _encode_BilateralDomain_domain_private_domain,
 } from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BilateralDomain_domain */
 /**
  * @summary BilateralDomain_domain
  * @description
@@ -38,13 +37,9 @@ export type BilateralDomain_domain =
     | {
           private_domain: BilateralDomain_domain_private_domain;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BilateralDomain_domain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BilateralDomain_domain */
 let _cached_decoder_for_BilateralDomain_domain: $.ASN1Decoder<BilateralDomain_domain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BilateralDomain_domain */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BilateralDomain_domain */
 /**
  * @summary Decodes an ASN.1 element into a(n) BilateralDomain_domain
  * @function
@@ -68,13 +63,9 @@ export function _decode_BilateralDomain_domain(el: _Element) {
     }
     return _cached_decoder_for_BilateralDomain_domain(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BilateralDomain_domain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BilateralDomain_domain */
 let _cached_encoder_for_BilateralDomain_domain: $.ASN1Encoder<BilateralDomain_domain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BilateralDomain_domain */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BilateralDomain_domain */
 /**
  * @summary Encodes a(n) BilateralDomain_domain into an ASN.1 Element.
  * @function
@@ -98,6 +89,5 @@ export function _encode_BilateralDomain_domain(
     return _cached_encoder_for_BilateralDomain_domain(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BilateralDomain_domain */
 
 /* eslint-enable */

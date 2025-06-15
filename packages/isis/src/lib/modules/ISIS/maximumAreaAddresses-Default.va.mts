@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maximumAreaAddresses_Default */
 /**
  * @summary maximumAreaAddresses_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const maximumAreaAddresses_Default: INTEGER = 3;
-/* END_OF_SYMBOL_DEFINITION maximumAreaAddresses_Default */
 
 /* eslint-enable */

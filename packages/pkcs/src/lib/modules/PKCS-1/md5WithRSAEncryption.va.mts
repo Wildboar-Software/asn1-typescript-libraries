@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION md5WithRSAEncryption */
+
 /**
  * @summary md5WithRSAEncryption
  * @description
@@ -15,6 +15,5 @@ import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
  * @constant
  */
 export const md5WithRSAEncryption: OBJECT_IDENTIFIER = new _OID([4], pkcs_1);
-/* END_OF_SYMBOL_DEFINITION md5WithRSAEncryption */
 
 /* eslint-enable */

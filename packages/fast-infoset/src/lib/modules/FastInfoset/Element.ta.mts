@@ -31,7 +31,6 @@ import {
   _decode_Element_children_Item,
   _encode_Element_children_Item,
 } from '../FastInfoset/Element-children-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Element */
 /**
  * @summary Element
  * @description
@@ -106,9 +105,7 @@ export class Element {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Element */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Element */
 /**
  * @summary The Leading Root Component Types of Element
  * @description
@@ -147,9 +144,7 @@ export const _root_component_type_list_1_spec_for_Element: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Element */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Element */
 /**
  * @summary The Trailing Root Component Types of Element
  * @description
@@ -159,9 +154,7 @@ export const _root_component_type_list_1_spec_for_Element: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Element: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Element */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Element */
 /**
  * @summary The Extension Addition Component Types of Element
  * @description
@@ -171,13 +164,9 @@ export const _root_component_type_list_2_spec_for_Element: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Element: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Element */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Element */
 let _cached_decoder_for_Element: $.ASN1Decoder<Element> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Element */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Element */
 /**
  * @summary Decodes an ASN.1 element into a(n) Element
  * @function
@@ -233,13 +222,9 @@ export function _decode_Element(el: _Element) {
   }
   return _cached_decoder_for_Element(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Element */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Element */
 let _cached_encoder_for_Element: $.ASN1Encoder<Element> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Element */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Element */
 /**
  * @summary Encodes a(n) Element into an ASN.1 Element.
  * @function
@@ -286,6 +271,5 @@ export function _encode_Element(
   return _cached_encoder_for_Element(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Element */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union7_Intersection0_Element */
 /**
  * @summary ECCAlgorithmSet_Union7_Intersection0_Element
  * @description
@@ -27,6 +26,5 @@ export const ECCAlgorithmSet_Union7_Intersection0_Element: ALGORITHM = {
     "&id": ecdsa_with_Sha384 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union7_Intersection0_Element */
 
 /* eslint-enable */

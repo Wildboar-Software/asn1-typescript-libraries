@@ -11,7 +11,7 @@ import {
     _encode_TimeStamp,
 } from "../CMSProfileAttributes/TimeStamp.ta.mjs";
 import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TimeStamped */
+
 /**
  * @summary TimeStamped
  * @description
@@ -61,9 +61,8 @@ export class TimeStamped {
         return new TimeStamped(_o.timeStampValue, _o.timeStampService);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeStamped */
+
 /**
  * @summary The Leading Root Component Types of TimeStamped
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_TimeStamped: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeStamped */
+
 /**
  * @summary The Trailing Root Component Types of TimeStamped
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_TimeStamped: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeStamped: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeStamped */
+
 /**
  * @summary The Extension Addition Component Types of TimeStamped
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_TimeStamped: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeStamped: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeStamped */
+
 let _cached_decoder_for_TimeStamped: $.ASN1Decoder<TimeStamped> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeStamped */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeStamped
  * @function
@@ -158,13 +153,11 @@ export function _decode_TimeStamped(el: _Element) {
     }
     return _cached_decoder_for_TimeStamped(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeStamped */
+
 let _cached_encoder_for_TimeStamped: $.ASN1Encoder<TimeStamped> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeStamped */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeStamped */
+
 /**
  * @summary Encodes a(n) TimeStamped into an ASN.1 Element.
  * @function
@@ -198,6 +191,5 @@ export function _encode_TimeStamped(
     return _cached_encoder_for_TimeStamped(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeStamped */
 
 /* eslint-enable */

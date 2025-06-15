@@ -6,7 +6,6 @@ import {
     _decode_SuperiorToSubordinate,
     _encode_SuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NHOBSuperiorToSubordinate */
 /**
  * @summary NHOBSuperiorToSubordinate
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type NHOBSuperiorToSubordinate = SuperiorToSubordinate; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NHOBSuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NHOBSuperiorToSubordinate */
 let _cached_decoder_for_NHOBSuperiorToSubordinate: $.ASN1Decoder<NHOBSuperiorToSubordinate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NHOBSuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NHOBSuperiorToSubordinate */
 /**
  * @summary Decodes an ASN.1 element into a(n) NHOBSuperiorToSubordinate
  * @function
@@ -38,13 +33,9 @@ export function _decode_NHOBSuperiorToSubordinate(el: _Element) {
     }
     return _cached_decoder_for_NHOBSuperiorToSubordinate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NHOBSuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NHOBSuperiorToSubordinate */
 let _cached_encoder_for_NHOBSuperiorToSubordinate: $.ASN1Encoder<NHOBSuperiorToSubordinate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NHOBSuperiorToSubordinate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NHOBSuperiorToSubordinate */
 /**
  * @summary Encodes a(n) NHOBSuperiorToSubordinate into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ export function _encode_NHOBSuperiorToSubordinate(
     return _cached_encoder_for_NHOBSuperiorToSubordinate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NHOBSuperiorToSubordinate */
 
 /* eslint-enable */

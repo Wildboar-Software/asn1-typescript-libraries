@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { cmoi } from '../CommonMgt/cmoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION fupoi */
 /**
  * @summary fupoi
  * @description
@@ -28,6 +27,5 @@ export const fupoi: OBJECT_IDENTIFIER = new _OID(
   [/* functionalUnitPackage */ 1],
   cmoi
 );
-/* END_OF_SYMBOL_DEFINITION fupoi */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta.mjs";
 import { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION holderNameConstraints */
 /**
  * @summary holderNameConstraints
  * @description
@@ -34,6 +33,5 @@ export const holderNameConstraints: EXTENSION<HolderNameConstraintsSyntax> = {
     "&id": id_ce_holderNameConstraints /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION holderNameConstraints */
 
 /* eslint-enable */

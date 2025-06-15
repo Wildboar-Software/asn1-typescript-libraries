@@ -16,7 +16,6 @@ import {
     _encode_MessageRetrievalPDUs,
 } from '../MSAccessProtocol/MessageRetrievalPDUs.ta.mjs';
 import { id_as_mrse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-94.va.mjs';
-/* START_OF_SYMBOL_DEFINITION message_retrieval_abstract_syntax_94 */
 /**
  * @summary message_retrieval_abstract_syntax_94
  * @description
@@ -46,6 +45,5 @@ export const message_retrieval_abstract_syntax_94: ABSTRACT_SYNTAX<MessageRetrie
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION message_retrieval_abstract_syntax_94 */
 
 /* eslint-enable */

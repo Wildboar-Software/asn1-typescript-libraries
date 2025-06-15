@@ -15,7 +15,6 @@ import {
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIApplicationSecurityExtensions */
 /**
  * @summary EDIApplicationSecurityExtensions
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EDIApplicationSecurityExtensions = EDIApplicationSecurityExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION EDIApplicationSecurityExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityExtensions */
 let _cached_decoder_for_EDIApplicationSecurityExtensions: $.ASN1Decoder<EDIApplicationSecurityExtensions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityExtensions */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIApplicationSecurityExtensions
  * @function
@@ -48,13 +43,9 @@ export function _decode_EDIApplicationSecurityExtensions(el: _Element) {
     }
     return _cached_decoder_for_EDIApplicationSecurityExtensions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityExtensions */
 let _cached_encoder_for_EDIApplicationSecurityExtensions: $.ASN1Encoder<EDIApplicationSecurityExtensions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityExtensions */
 /**
  * @summary Encodes a(n) EDIApplicationSecurityExtensions into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_EDIApplicationSecurityExtensions(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityExtensions */
 
 /* eslint-enable */

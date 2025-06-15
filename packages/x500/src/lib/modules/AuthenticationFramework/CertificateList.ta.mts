@@ -11,7 +11,6 @@ import {
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
 } from "../AuthenticationFramework/SIGNED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateList */
 /**
  * @summary CertificateList
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type CertificateList = SIGNED<CertificateListContent>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateList */
 let _cached_decoder_for_CertificateList: $.ASN1Decoder<CertificateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateList */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateList
  * @function
@@ -44,13 +39,9 @@ export function _decode_CertificateList(el: _Element) {
     }
     return _cached_decoder_for_CertificateList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateList */
 let _cached_encoder_for_CertificateList: $.ASN1Encoder<CertificateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateList */
 /**
  * @summary Encodes a(n) CertificateList into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CertificateList(
     return _cached_encoder_for_CertificateList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateList */
 
 /* eslint-enable */

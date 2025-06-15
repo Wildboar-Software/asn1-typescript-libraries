@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DLPolicy_disclosure_of_other_recipients */
 /**
  * @summary DLPolicy_disclosure_of_other_recipients
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_DLPolicy_disclosure_of_other_recipients {
     disclosure_of_other_recipients_prohibited = 1,
     disclosure_of_other_recipients_allowed = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DLPolicy_disclosure_of_other_recipients */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients */
 /**
  * @summary DLPolicy_disclosure_of_other_recipients
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_DLPolicy_disclosure_of_other_recipients {
  * ```@enum {number}
  */
 export type DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients */
 /**
  * @summary DLPolicy_disclosure_of_other_recipients
  * @description
@@ -55,9 +50,7 @@ export type DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclos
  * ```@enum {number}
  */
 export const DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients_unchanged */
 /**
  * @summary DLPolicy_disclosure_of_other_recipients_unchanged
  * @constant
@@ -65,9 +58,7 @@ export const DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclo
  */
 export const DLPolicy_disclosure_of_other_recipients_unchanged: DLPolicy_disclosure_of_other_recipients =
     DLPolicy_disclosure_of_other_recipients.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients_unchanged */
 
-/* START_OF_SYMBOL_DEFINITION unchanged */
 /**
  * @summary unchanged
  * @constant
@@ -75,9 +66,7 @@ export const DLPolicy_disclosure_of_other_recipients_unchanged: DLPolicy_disclos
  */
 export const unchanged: DLPolicy_disclosure_of_other_recipients =
     DLPolicy_disclosure_of_other_recipients.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unchanged */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited */
 /**
  * @summary DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited
  * @constant
@@ -85,9 +74,7 @@ export const unchanged: DLPolicy_disclosure_of_other_recipients =
  */
 export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_other_recipients =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION disclosure_of_other_recipients_prohibited */
 /**
  * @summary disclosure_of_other_recipients_prohibited
  * @constant
@@ -95,9 +82,7 @@ export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipie
  */
 export const disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_other_recipients =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION disclosure_of_other_recipients_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed */
 /**
  * @summary DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed
  * @constant
@@ -105,9 +90,7 @@ export const disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_o
  */
 export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed: DLPolicy_disclosure_of_other_recipients =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed */
 
-/* START_OF_SYMBOL_DEFINITION disclosure_of_other_recipients_allowed */
 /**
  * @summary disclosure_of_other_recipients_allowed
  * @constant
@@ -115,13 +98,9 @@ export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipie
  */
 export const disclosure_of_other_recipients_allowed: DLPolicy_disclosure_of_other_recipients =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION disclosure_of_other_recipients_allowed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_disclosure_of_other_recipients */
 let _cached_decoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Decoder<DLPolicy_disclosure_of_other_recipients> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_disclosure_of_other_recipients */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_disclosure_of_other_recipients */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLPolicy_disclosure_of_other_recipients
  * @function
@@ -135,13 +114,9 @@ export function _decode_DLPolicy_disclosure_of_other_recipients(el: _Element) {
     }
     return _cached_decoder_for_DLPolicy_disclosure_of_other_recipients(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_disclosure_of_other_recipients */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_disclosure_of_other_recipients */
 let _cached_encoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Encoder<DLPolicy_disclosure_of_other_recipients> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_disclosure_of_other_recipients */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_disclosure_of_other_recipients */
 /**
  * @summary Encodes a(n) DLPolicy_disclosure_of_other_recipients into an ASN.1 Element.
  * @function
@@ -163,6 +138,5 @@ export function _encode_DLPolicy_disclosure_of_other_recipients(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_disclosure_of_other_recipients */
 
 /* eslint-enable */

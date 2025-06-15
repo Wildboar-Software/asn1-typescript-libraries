@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MORTNotAvailable */
 /**
  * @summary MORTNotAvailable
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MORTNotAvailable = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MORTNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MORTNotAvailable */
 let _cached_decoder_for_MORTNotAvailable: $.ASN1Decoder<MORTNotAvailable> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MORTNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MORTNotAvailable */
 /**
  * @summary Decodes an ASN.1 element into a(n) MORTNotAvailable
  * @function
@@ -48,13 +43,9 @@ export function _decode_MORTNotAvailable(el: _Element) {
     }
     return _cached_decoder_for_MORTNotAvailable(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MORTNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MORTNotAvailable */
 let _cached_encoder_for_MORTNotAvailable: $.ASN1Encoder<MORTNotAvailable> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MORTNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MORTNotAvailable */
 /**
  * @summary Encodes a(n) MORTNotAvailable into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_MORTNotAvailable(
     return _cached_encoder_for_MORTNotAvailable(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MORTNotAvailable */
 
 /* eslint-enable */

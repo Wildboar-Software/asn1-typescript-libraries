@@ -15,7 +15,7 @@ import {
   _decode_XMLStringWithNoCRLFHT,
   _encode_XMLStringWithNoCRLFHT,
 } from '../XSD/XMLStringWithNoCRLFHT.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AnyURI */
+
 /**
  * @summary AnyURI
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type AnyURI = XMLStringWithNoCRLFHT; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AnyURI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyURI */
+
 let _cached_decoder_for_AnyURI: $.ASN1Decoder<AnyURI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AnyURI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AnyURI */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AnyURI
  * @function
@@ -51,13 +49,11 @@ export function _decode_AnyURI(el: _Element) {
   }
   return _cached_decoder_for_AnyURI(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AnyURI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyURI */
+
 let _cached_encoder_for_AnyURI: $.ASN1Encoder<AnyURI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AnyURI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AnyURI */
+
 /**
  * @summary Encodes a(n) AnyURI into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_AnyURI(value: AnyURI, elGetter: $.ASN1Encoder<AnyURI>) {
   return _cached_encoder_for_AnyURI(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AnyURI */
 
 /* eslint-enable */

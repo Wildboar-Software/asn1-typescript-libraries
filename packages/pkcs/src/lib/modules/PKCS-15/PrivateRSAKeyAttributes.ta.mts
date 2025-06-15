@@ -27,7 +27,7 @@ import {
     _decode_RSAPrivateKeyObject,
     _encode_RSAPrivateKeyObject,
 } from "../PKCS-15/RSAPrivateKeyObject.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrivateRSAKeyAttributes */
+
 /**
  * @summary PrivateRSAKeyAttributes
  * @description
@@ -98,9 +98,8 @@ export class PrivateRSAKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateRSAKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PrivateRSAKeyAttributes
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_PrivateRSAKeyAttributes: $.Com
     ),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateRSAKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PrivateRSAKeyAttributes
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_PrivateRSAKeyAttributes: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PrivateRSAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateRSAKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PrivateRSAKeyAttributes
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_PrivateRSAKeyAttributes: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_PrivateRSAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateRSAKeyAttributes */
+
 let _cached_decoder_for_PrivateRSAKeyAttributes: $.ASN1Decoder<PrivateRSAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateRSAKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateRSAKeyAttributes
  * @function
@@ -209,13 +204,11 @@ export function _decode_PrivateRSAKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PrivateRSAKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateRSAKeyAttributes */
+
 let _cached_encoder_for_PrivateRSAKeyAttributes: $.ASN1Encoder<PrivateRSAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateRSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateRSAKeyAttributes */
+
 /**
  * @summary Encodes a(n) PrivateRSAKeyAttributes into an ASN.1 Element.
  * @function
@@ -263,6 +256,5 @@ export function _encode_PrivateRSAKeyAttributes(
     return _cached_encoder_for_PrivateRSAKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateRSAKeyAttributes */
 
 /* eslint-enable */

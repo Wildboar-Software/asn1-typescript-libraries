@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilityStatus } from "../Attribute-ASN1Module/AvailabilityStatus.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UnscheduledLogAvailability */
 /**
  * @summary UnscheduledLogAvailability
  * @description
@@ -24,13 +23,9 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
  */
 export
 type UnscheduledLogAvailability = AvailabilityStatus; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UnscheduledLogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnscheduledLogAvailability */
 let _cached_decoder_for_UnscheduledLogAvailability: $.ASN1Decoder<UnscheduledLogAvailability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnscheduledLogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnscheduledLogAvailability */
 /**
  * @summary Decodes an ASN.1 element into a(n) UnscheduledLogAvailability
  * @function
@@ -42,13 +37,9 @@ function _decode_UnscheduledLogAvailability (el: _Element) {
     if (!_cached_decoder_for_UnscheduledLogAvailability) { _cached_decoder_for_UnscheduledLogAvailability = _decode_AvailabilityStatus; }
     return _cached_decoder_for_UnscheduledLogAvailability(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnscheduledLogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnscheduledLogAvailability */
 let _cached_encoder_for_UnscheduledLogAvailability: $.ASN1Encoder<UnscheduledLogAvailability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnscheduledLogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnscheduledLogAvailability */
 /**
  * @summary Encodes a(n) UnscheduledLogAvailability into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_UnscheduledLogAvailability (value: UnscheduledLogAvailability, 
     return _cached_encoder_for_UnscheduledLogAvailability(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnscheduledLogAvailability */
 
 /* eslint-enable */

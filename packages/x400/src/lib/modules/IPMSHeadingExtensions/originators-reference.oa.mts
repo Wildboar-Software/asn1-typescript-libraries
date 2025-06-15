@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/OriginatorsReference.ta.mjs';
 import { id_hex_originators_reference } from '../IPMSObjectIdentifiers/id-hex-originators-reference.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originators_reference */
 /**
  * @summary originators_reference
  * @description
@@ -45,6 +44,5 @@ export const originators_reference: IPMS_EXTENSION<OriginatorsReference> = {
     '&id': id_hex_originators_reference /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originators_reference */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
   _decode_RelativeDistinguishedName,
   _encode_RelativeDistinguishedName,
 } from '../InformationFramework/RelativeDistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ASO_qualifier_form1 */
 /**
  * @summary ASO_qualifier_form1
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type ASO_qualifier_form1 = RelativeDistinguishedName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ASO_qualifier_form1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_qualifier_form1 */
 let _cached_decoder_for_ASO_qualifier_form1: $.ASN1Decoder<ASO_qualifier_form1> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_qualifier_form1 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ASO_qualifier_form1 */
 /**
  * @summary Decodes an ASN.1 element into a(n) ASO_qualifier_form1
  * @function
@@ -47,13 +42,9 @@ export function _decode_ASO_qualifier_form1(el: _Element) {
   }
   return _cached_decoder_for_ASO_qualifier_form1(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ASO_qualifier_form1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_qualifier_form1 */
 let _cached_encoder_for_ASO_qualifier_form1: $.ASN1Encoder<ASO_qualifier_form1> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_qualifier_form1 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ASO_qualifier_form1 */
 /**
  * @summary Encodes a(n) ASO_qualifier_form1 into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_ASO_qualifier_form1(
   return _cached_encoder_for_ASO_qualifier_form1(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ASO_qualifier_form1 */
 
 /* eslint-enable */

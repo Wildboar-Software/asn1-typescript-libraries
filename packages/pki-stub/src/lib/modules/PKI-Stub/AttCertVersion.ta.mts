@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttCertVersion */
 /**
  * @summary AttCertVersion
  * @description
@@ -24,18 +23,14 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AttCertVersion = INTEGER;
-/* END_OF_SYMBOL_DEFINITION AttCertVersion */
 
-/* START_OF_SYMBOL_DEFINITION AttCertVersion_v2 */
 /**
  * @summary AttCertVersion_v2
  * @constant
  * @type {number}
  */
 export const AttCertVersion_v2: AttCertVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttCertVersion_v2 */
 
-/* START_OF_SYMBOL_DEFINITION v2 */
 /**
  * @summary AttCertVersion_v2
  * @constant
@@ -43,9 +38,7 @@ export const AttCertVersion_v2: AttCertVersion = 1; /* LONG_NAMED_INTEGER_VALUE 
  */
 export const v2: AttCertVersion =
     AttCertVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION v2 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttCertVersion */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttCertVersion
  * @function
@@ -55,9 +48,7 @@ export const v2: AttCertVersion =
 export function _decode_AttCertVersion(el: _Element) {
     return $._decodeInteger(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttCertVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttCertVersion */
 /**
  * @summary Encodes a(n) AttCertVersion into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_AttCertVersion(
     return $._encodeInteger(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttCertVersion */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION IPMS_EXTENSION */
 /**
  * @summary IPMS_EXTENSION
  * @description
@@ -68,6 +67,5 @@ export interface IPMS_EXTENSION<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION IPMS_EXTENSION */
 
 /* eslint-enable */

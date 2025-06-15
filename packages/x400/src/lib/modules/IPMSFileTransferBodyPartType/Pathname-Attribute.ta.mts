@@ -15,7 +15,6 @@ import {
     _decode_Pathname,
     _encode_Pathname,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Pathname.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Pathname_Attribute */
 /**
  * @summary Pathname_Attribute
  * @description
@@ -32,13 +31,9 @@ import {
 export type Pathname_Attribute =
     | { incomplete_pathname: Pathname } /* CHOICE_ALT_ROOT */
     | { complete_pathname: Pathname } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Pathname_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname_Attribute */
 let _cached_decoder_for_Pathname_Attribute: $.ASN1Decoder<Pathname_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pathname_Attribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) Pathname_Attribute
  * @function
@@ -62,13 +57,9 @@ export function _decode_Pathname_Attribute(el: _Element) {
     }
     return _cached_decoder_for_Pathname_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pathname_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname_Attribute */
 let _cached_encoder_for_Pathname_Attribute: $.ASN1Encoder<Pathname_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pathname_Attribute */
 /**
  * @summary Encodes a(n) Pathname_Attribute into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_Pathname_Attribute(
     return _cached_encoder_for_Pathname_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pathname_Attribute */
 
 /* eslint-enable */

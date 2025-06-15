@@ -27,7 +27,7 @@ import {
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateDSAKeyAttributes */
+
 /**
  * @summary PrivateDSAKeyAttributes
  * @description
@@ -92,9 +92,8 @@ export class PrivateDSAKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateDSAKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PrivateDSAKeyAttributes
  * @description
@@ -107,9 +106,8 @@ export const _root_component_type_list_1_spec_for_PrivateDSAKeyAttributes: $.Com
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateDSAKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PrivateDSAKeyAttributes
  * @description
@@ -119,9 +117,8 @@ export const _root_component_type_list_1_spec_for_PrivateDSAKeyAttributes: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PrivateDSAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateDSAKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PrivateDSAKeyAttributes
  * @description
@@ -131,13 +128,11 @@ export const _root_component_type_list_2_spec_for_PrivateDSAKeyAttributes: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_PrivateDSAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDSAKeyAttributes */
+
 let _cached_decoder_for_PrivateDSAKeyAttributes: $.ASN1Decoder<PrivateDSAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateDSAKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateDSAKeyAttributes
  * @function
@@ -193,13 +188,11 @@ export function _decode_PrivateDSAKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PrivateDSAKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDSAKeyAttributes */
+
 let _cached_encoder_for_PrivateDSAKeyAttributes: $.ASN1Encoder<PrivateDSAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDSAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateDSAKeyAttributes */
+
 /**
  * @summary Encodes a(n) PrivateDSAKeyAttributes into an ASN.1 Element.
  * @function
@@ -243,6 +236,5 @@ export function _encode_PrivateDSAKeyAttributes(
     return _cached_encoder_for_PrivateDSAKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateDSAKeyAttributes */
 
 /* eslint-enable */

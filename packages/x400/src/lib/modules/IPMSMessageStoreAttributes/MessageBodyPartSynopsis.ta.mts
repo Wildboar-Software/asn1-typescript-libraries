@@ -20,7 +20,6 @@ import {
     _decode_IPMSynopsis,
     _encode_IPMSynopsis,
 } from '../IPMSMessageStoreAttributes/IPMSynopsis.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageBodyPartSynopsis */
 /**
  * @summary MessageBodyPartSynopsis
  * @description
@@ -72,9 +71,7 @@ export class MessageBodyPartSynopsis {
         return new MessageBodyPartSynopsis(_o.number_, _o.synopsis);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageBodyPartSynopsis */
 /**
  * @summary The Leading Root Component Types of MessageBodyPartSynopsis
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_MessageBodyPartSynopsis: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageBodyPartSynopsis */
 /**
  * @summary The Trailing Root Component Types of MessageBodyPartSynopsis
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_MessageBodyPartSynopsis: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageBodyPartSynopsis: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageBodyPartSynopsis */
 /**
  * @summary The Extension Addition Component Types of MessageBodyPartSynopsis
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_MessageBodyPartSynopsis: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageBodyPartSynopsis: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageBodyPartSynopsis */
 let _cached_decoder_for_MessageBodyPartSynopsis: $.ASN1Decoder<MessageBodyPartSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageBodyPartSynopsis */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageBodyPartSynopsis
  * @function
@@ -164,13 +153,9 @@ export function _decode_MessageBodyPartSynopsis(el: _Element) {
     }
     return _cached_decoder_for_MessageBodyPartSynopsis(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageBodyPartSynopsis */
 let _cached_encoder_for_MessageBodyPartSynopsis: $.ASN1Encoder<MessageBodyPartSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageBodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageBodyPartSynopsis */
 /**
  * @summary Encodes a(n) MessageBodyPartSynopsis into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_MessageBodyPartSynopsis(
     return _cached_encoder_for_MessageBodyPartSynopsis(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageBodyPartSynopsis */
 
 /* eslint-enable */

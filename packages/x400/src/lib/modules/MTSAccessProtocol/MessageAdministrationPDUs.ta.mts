@@ -15,7 +15,6 @@ import {
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageAdministrationPDUs */
 /**
  * @summary MessageAdministrationPDUs
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageAdministrationPDUs = ROS_SingleAS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageAdministrationPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageAdministrationPDUs */
 let _cached_decoder_for_MessageAdministrationPDUs: $.ASN1Decoder<MessageAdministrationPDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageAdministrationPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageAdministrationPDUs */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAdministrationPDUs
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageAdministrationPDUs(el: _Element) {
     }
     return _cached_decoder_for_MessageAdministrationPDUs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageAdministrationPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageAdministrationPDUs */
 let _cached_encoder_for_MessageAdministrationPDUs: $.ASN1Encoder<MessageAdministrationPDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageAdministrationPDUs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageAdministrationPDUs */
 /**
  * @summary Encodes a(n) MessageAdministrationPDUs into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageAdministrationPDUs(
     return _cached_encoder_for_MessageAdministrationPDUs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageAdministrationPDUs */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION mqvSinglePass_sha224kdf_scheme */
 /**
  * @summary mqvSinglePass_sha224kdf_scheme
  * @description
@@ -29,6 +28,5 @@ const mqvSinglePass_sha224kdf_scheme: OBJECT_IDENTIFIER = new _OID([
     15,
     0,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION mqvSinglePass_sha224kdf_scheme */
 
 /* eslint-enable */

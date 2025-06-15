@@ -9,7 +9,6 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_hierarchySelectList } from "../SelectedAttributeTypes/id-not-hierarchySelectList.va.mjs";
-/* START_OF_SYMBOL_DEFINITION hierarchySelectList */
 /**
  * @summary hierarchySelectList
  * @description
@@ -44,6 +43,5 @@ export const hierarchySelectList: ATTRIBUTE<HierarchySelections> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION hierarchySelectList */
 
 /* eslint-enable */

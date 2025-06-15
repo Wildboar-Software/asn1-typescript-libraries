@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliveryControlResultExtensions */
 /**
  * @summary DeliveryControlResultExtensions
  * @description
@@ -29,6 +28,5 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
 export const DeliveryControlResultExtensions: EXTENSION[] = [
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION DeliveryControlResultExtensions */
 
 /* eslint-enable */

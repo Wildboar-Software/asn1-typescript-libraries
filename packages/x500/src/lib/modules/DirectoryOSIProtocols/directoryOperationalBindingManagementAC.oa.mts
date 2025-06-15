@@ -5,7 +5,6 @@ import { dSAOperationalBindingManagementBind } from "../OperationalBindingManage
 import { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa.mjs";
 import { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa.mjs";
 import { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION directoryOperationalBindingManagementAC */
 /**
  * @summary directoryOperationalBindingManagementAC
  * @description
@@ -37,6 +36,5 @@ export const directoryOperationalBindingManagementAC: APPLICATION_CONTEXT = {
     ] /* OBJECT_FIELD_SETTING */,
     "&applicationContextName": id_ac_directoryOperationalBindingManagementAC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION directoryOperationalBindingManagementAC */
 
 /* eslint-enable */

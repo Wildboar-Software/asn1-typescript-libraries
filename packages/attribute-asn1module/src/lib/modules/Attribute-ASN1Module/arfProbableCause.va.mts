@@ -14,7 +14,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION arfProbableCause */
 /**
  * @summary arfProbableCause
  * @description
@@ -35,6 +34,5 @@ const arfProbableCause: OBJECT_IDENTIFIER = new _OID([
     /* standardSpecificExtension */ 0,
     /* arf */ 0,
 ], joint_iso_ccitt);
-/* END_OF_SYMBOL_DEFINITION arfProbableCause */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LastUpdateTime */
+
 /**
  * @summary LastUpdateTime
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LastUpdateTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION LastUpdateTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastUpdateTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastUpdateTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastUpdateTime */
+
+
 export const _decode_LastUpdateTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_LastUpdateTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastUpdateTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastUpdateTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastUpdateTime */
+
+
 export const _encode_LastUpdateTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastUpdateTime */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION CRLBag */
+
 /**
  * @summary CRLBag
  * @description
@@ -56,9 +56,8 @@ export class CRLBag {
         return new CRLBag(_o.crlId, _o.crltValue);
     }
 }
-/* END_OF_SYMBOL_DEFINITION CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CRLBag */
+
 /**
  * @summary The Leading Root Component Types of CRLBag
  * @description
@@ -83,9 +82,8 @@ export const _root_component_type_list_1_spec_for_CRLBag: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CRLBag */
+
 /**
  * @summary The Trailing Root Component Types of CRLBag
  * @description
@@ -95,9 +93,8 @@ export const _root_component_type_list_1_spec_for_CRLBag: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CRLBag: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CRLBag */
+
 /**
  * @summary The Extension Addition Component Types of CRLBag
  * @description
@@ -107,13 +104,11 @@ export const _root_component_type_list_2_spec_for_CRLBag: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_CRLBag: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLBag */
+
 let _cached_decoder_for_CRLBag: $.ASN1Decoder<CRLBag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CRLBag */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CRLBag
  * @function
@@ -144,13 +139,11 @@ export function _decode_CRLBag(el: _Element) {
     }
     return _cached_decoder_for_CRLBag(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLBag */
+
 let _cached_encoder_for_CRLBag: $.ASN1Encoder<CRLBag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLBag */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CRLBag */
+
 /**
  * @summary Encodes a(n) CRLBag into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_CRLBag(value: CRLBag, elGetter: $.ASN1Encoder<CRLBag>) {
     return _cached_encoder_for_CRLBag(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CRLBag */
 
 /* eslint-enable */

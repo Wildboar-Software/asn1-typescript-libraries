@@ -25,7 +25,7 @@ import {
     _decode_AddLeg,
     _encode_AddLeg,
 } from '../ASN1DefinedTypesModule/AddLeg.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectInformation_Item_itemType */
+
 /**
  * @summary ConnectInformation_Item_itemType
  * @description
@@ -40,13 +40,11 @@ export type ConnectInformation_Item_itemType =
     | { unidirectional: ConnectionType } /* CHOICE_ALT_ROOT */
     | { bidirectional: ConnectionTypeBi } /* CHOICE_ALT_ROOT */
     | { addleg: AddLeg } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectInformation_Item_itemType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectInformation_Item_itemType */
+
 let _cached_decoder_for_ConnectInformation_Item_itemType: $.ASN1Decoder<ConnectInformation_Item_itemType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectInformation_Item_itemType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectInformation_Item_itemType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectInformation_Item_itemType
  * @function
@@ -78,13 +76,11 @@ export function _decode_ConnectInformation_Item_itemType(el: _Element) {
     }
     return _cached_decoder_for_ConnectInformation_Item_itemType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectInformation_Item_itemType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectInformation_Item_itemType */
+
 let _cached_encoder_for_ConnectInformation_Item_itemType: $.ASN1Encoder<ConnectInformation_Item_itemType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectInformation_Item_itemType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectInformation_Item_itemType */
+
 /**
  * @summary Encodes a(n) ConnectInformation_Item_itemType into an ASN.1 Element.
  * @function
@@ -127,6 +123,5 @@ export function _encode_ConnectInformation_Item_itemType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectInformation_Item_itemType */
 
 /* eslint-enable */

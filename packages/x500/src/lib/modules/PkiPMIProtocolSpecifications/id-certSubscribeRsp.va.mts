@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_certSubscribeRsp */
 /**
  * @summary id_certSubscribeRsp
  * @description
@@ -15,6 +14,5 @@ import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
  * @constant
  */
 export const id_certSubscribeRsp: OBJECT_IDENTIFIER = new _OID([12], id_cmsct);
-/* END_OF_SYMBOL_DEFINITION id_certSubscribeRsp */
 
 /* eslint-enable */

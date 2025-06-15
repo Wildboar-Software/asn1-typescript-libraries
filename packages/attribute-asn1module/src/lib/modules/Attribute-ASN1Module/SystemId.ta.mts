@@ -16,7 +16,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION SystemId */
 /**
  * @summary SystemId
  * @description
@@ -35,13 +34,9 @@ type SystemId =
     { name: GraphicString } /* CHOICE_ALT_ROOT */
     | { number_: INTEGER } /* CHOICE_ALT_ROOT */
     | { nothing: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemId */
 let _cached_decoder_for_SystemId: $.ASN1Decoder<SystemId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SystemId */
 /**
  * @summary Decodes an ASN.1 element into a(n) SystemId
  * @function
@@ -57,13 +52,9 @@ function _decode_SystemId (el: _Element) {
 }); }
     return _cached_decoder_for_SystemId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemId */
 let _cached_encoder_for_SystemId: $.ASN1Encoder<SystemId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SystemId */
 /**
  * @summary Encodes a(n) SystemId into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ function _encode_SystemId (value: SystemId, elGetter: $.ASN1Encoder<SystemId>) {
     return _cached_encoder_for_SystemId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SystemId */
 
 /* eslint-enable */

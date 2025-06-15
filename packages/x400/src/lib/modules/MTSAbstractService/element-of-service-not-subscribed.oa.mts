@@ -21,7 +21,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { err_element_of_service_not_subscribed } from '../MTSAccessProtocol/err-element-of-service-not-subscribed.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION element_of_service_not_subscribed */
 /**
  * @summary element_of_service_not_subscribed
  * @description
@@ -51,6 +50,5 @@ export const element_of_service_not_subscribed: ABSTRACT_ERROR<NULL> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION element_of_service_not_subscribed */
 
 /* eslint-enable */

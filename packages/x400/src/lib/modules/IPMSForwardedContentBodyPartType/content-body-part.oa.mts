@@ -28,7 +28,6 @@ import {
     content_body_part_parameters,
 } from './content-body-part-parameters.oa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION content_body_part */
 /**
  * @summary content_body_part
  * @description
@@ -59,6 +58,5 @@ export function content_body_part (content_type: ExtendedContentType): EXTENDED_
         '&parameters': content_body_part_parameters(content_type),
     };
 };
-/* END_OF_SYMBOL_DEFINITION content_body_part */
 
 /* eslint-enable */

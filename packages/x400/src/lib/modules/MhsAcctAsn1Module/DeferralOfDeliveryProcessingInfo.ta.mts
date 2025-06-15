@@ -15,7 +15,6 @@ import {
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
 } from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeferralOfDeliveryProcessingInfo */
 /**
  * @summary DeferralOfDeliveryProcessingInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DeferralOfDeliveryProcessingInfo = DeferredDeliveryTime; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeferralOfDeliveryProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeferralOfDeliveryProcessingInfo */
 let _cached_decoder_for_DeferralOfDeliveryProcessingInfo: $.ASN1Decoder<DeferralOfDeliveryProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeferralOfDeliveryProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeferralOfDeliveryProcessingInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeferralOfDeliveryProcessingInfo
  * @function
@@ -46,13 +41,9 @@ export function _decode_DeferralOfDeliveryProcessingInfo(el: _Element) {
     }
     return _cached_decoder_for_DeferralOfDeliveryProcessingInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeferralOfDeliveryProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeferralOfDeliveryProcessingInfo */
 let _cached_encoder_for_DeferralOfDeliveryProcessingInfo: $.ASN1Encoder<DeferralOfDeliveryProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeferralOfDeliveryProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeferralOfDeliveryProcessingInfo */
 /**
  * @summary Encodes a(n) DeferralOfDeliveryProcessingInfo into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_DeferralOfDeliveryProcessingInfo(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeferralOfDeliveryProcessingInfo */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION Condition */
+
 /**
  * @summary Condition
  * @description
@@ -61,9 +61,8 @@ export class Condition {
         return new Condition(_o.id, _o.value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Condition */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Condition */
+
 /**
  * @summary The Leading Root Component Types of Condition
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_Condition: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Condition */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Condition */
+
 /**
  * @summary The Trailing Root Component Types of Condition
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_Condition: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Condition: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Condition */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Condition */
+
 /**
  * @summary The Extension Addition Component Types of Condition
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_Condition: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Condition: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Condition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Condition */
+
 let _cached_decoder_for_Condition: $.ASN1Decoder<Condition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Condition */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Condition */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Condition
  * @function
@@ -147,13 +142,11 @@ export function _decode_Condition(el: _Element) {
     }
     return _cached_decoder_for_Condition(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Condition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Condition */
+
 let _cached_encoder_for_Condition: $.ASN1Encoder<Condition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Condition */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Condition */
+
 /**
  * @summary Encodes a(n) Condition into an ASN.1 Element.
  * @function
@@ -185,6 +178,5 @@ export function _encode_Condition(
     return _cached_encoder_for_Condition(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Condition */
 
 /* eslint-enable */

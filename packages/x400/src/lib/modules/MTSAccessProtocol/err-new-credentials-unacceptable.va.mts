@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_new_credentials_unacceptable */
 /**
  * @summary err_new_credentials_unacceptable
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_new_credentials_unacceptable: Code = { local: 6 };
-/* END_OF_SYMBOL_DEFINITION err_new_credentials_unacceptable */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_StrongCredentials,
     _encode_StrongCredentials,
 } from "../DirectoryAbstractService/StrongCredentials.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DSACredentials */
 /**
  * @summary DSACredentials
  * @description
@@ -42,13 +41,9 @@ export type DSACredentials =
     | { externalProcedure: EXTERNAL } /* CHOICE_ALT_ROOT */
     | { spkm: SpkmCredentials } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DSACredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSACredentials */
 let _cached_decoder_for_DSACredentials: $.ASN1Decoder<DSACredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSACredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DSACredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) DSACredentials
  * @function
@@ -86,13 +81,9 @@ export function _decode_DSACredentials(el: _Element) {
     }
     return _cached_decoder_for_DSACredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DSACredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSACredentials */
 let _cached_encoder_for_DSACredentials: $.ASN1Encoder<DSACredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSACredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DSACredentials */
 /**
  * @summary Encodes a(n) DSACredentials into an ASN.1 Element.
  * @function
@@ -138,6 +129,5 @@ export function _encode_DSACredentials(
     return _cached_encoder_for_DSACredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DSACredentials */
 
 /* eslint-enable */

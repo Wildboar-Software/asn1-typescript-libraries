@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AbortReason */
 /**
  * @summary AbortReason
  * @description
@@ -33,165 +32,124 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AbortReason = INTEGER;
-/* END_OF_SYMBOL_DEFINITION AbortReason */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_localSystemProblem */
 /**
  * @summary AbortReason_localSystemProblem
  * @constant
  * @type {number}
  */
 export const AbortReason_localSystemProblem: AbortReason = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_localSystemProblem */
 
-/* START_OF_SYMBOL_DEFINITION localSystemProblem */
 /**
  * @summary AbortReason_localSystemProblem
  * @constant
  * @type {number}
  */
 export const localSystemProblem: AbortReason = AbortReason_localSystemProblem; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION localSystemProblem */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_invalidParameter */
 /**
  * @summary AbortReason_invalidParameter
  * @constant
  * @type {number}
  */
 export const AbortReason_invalidParameter: AbortReason = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_invalidParameter */
 
-/* START_OF_SYMBOL_DEFINITION invalidParameter */
 /**
  * @summary AbortReason_invalidParameter
  * @constant
  * @type {number}
  */
 export const invalidParameter: AbortReason = AbortReason_invalidParameter; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidParameter */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_unrecognizedActivity */
 /**
  * @summary AbortReason_unrecognizedActivity
  * @constant
  * @type {number}
  */
 export const AbortReason_unrecognizedActivity: AbortReason = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_unrecognizedActivity */
 
-/* START_OF_SYMBOL_DEFINITION unrecognizedActivity */
 /**
  * @summary AbortReason_unrecognizedActivity
  * @constant
  * @type {number}
  */
 export const unrecognizedActivity: AbortReason = AbortReason_unrecognizedActivity; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION unrecognizedActivity */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_temporaryProblem */
 /**
  * @summary AbortReason_temporaryProblem
  * @constant
  * @type {number}
  */
 export const AbortReason_temporaryProblem: AbortReason = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_temporaryProblem */
 
-/* START_OF_SYMBOL_DEFINITION temporaryProblem */
 /**
  * @summary AbortReason_temporaryProblem
  * @constant
  * @type {number}
  */
 export const temporaryProblem: AbortReason = AbortReason_temporaryProblem; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION temporaryProblem */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_protocolError */
 /**
  * @summary AbortReason_protocolError
  * @constant
  * @type {number}
  */
 export const AbortReason_protocolError: AbortReason = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_protocolError */
 
-/* START_OF_SYMBOL_DEFINITION protocolError */
 /**
  * @summary AbortReason_protocolError
  * @constant
  * @type {number}
  */
 export const protocolError: AbortReason = AbortReason_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION protocolError */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_permanentProblem */
 /**
  * @summary AbortReason_permanentProblem
  * @constant
  * @type {number}
  */
 export const AbortReason_permanentProblem: AbortReason = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_permanentProblem */
 
-/* START_OF_SYMBOL_DEFINITION permanentProblem */
 /**
  * @summary AbortReason_permanentProblem
  * @constant
  * @type {number}
  */
 export const permanentProblem: AbortReason = AbortReason_permanentProblem; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION permanentProblem */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_userError */
 /**
  * @summary AbortReason_userError
  * @constant
  * @type {number}
  */
 export const AbortReason_userError: AbortReason = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_userError */
 
-/* START_OF_SYMBOL_DEFINITION userError */
 /**
  * @summary AbortReason_userError
  * @constant
  * @type {number}
  */
 export const userError: AbortReason = AbortReason_userError; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION userError */
 
-/* START_OF_SYMBOL_DEFINITION AbortReason_transferCompleted */
 /**
  * @summary AbortReason_transferCompleted
  * @constant
  * @type {number}
  */
 export const AbortReason_transferCompleted: AbortReason = 7; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortReason_transferCompleted */
 
-/* START_OF_SYMBOL_DEFINITION transferCompleted */
 /**
  * @summary AbortReason_transferCompleted
  * @constant
  * @type {number}
  */
 export const transferCompleted: AbortReason = AbortReason_transferCompleted; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION transferCompleted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortReason */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortReason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbortReason */
 export const _decode_AbortReason = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_AbortReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortReason */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortReason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbortReason */
 export const _encode_AbortReason = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbortReason */
 
 /* eslint-enable */

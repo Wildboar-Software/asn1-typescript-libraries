@@ -15,7 +15,6 @@ import {
   _decode_RevocationInfo,
   _encode_RevocationInfo,
 } from '../SCVP-2009/RevocationInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevocationInfos */
 /**
  * @summary RevocationInfos
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RevocationInfos = RevocationInfo[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RevocationInfos */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfos */
 let _cached_decoder_for_RevocationInfos: $.ASN1Decoder<RevocationInfos> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfos */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevocationInfos */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevocationInfos
  * @function
@@ -48,13 +43,9 @@ export function _decode_RevocationInfos(el: _Element) {
   }
   return _cached_decoder_for_RevocationInfos(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevocationInfos */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfos */
 let _cached_encoder_for_RevocationInfos: $.ASN1Encoder<RevocationInfos> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfos */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevocationInfos */
 /**
  * @summary Encodes a(n) RevocationInfos into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RevocationInfos(
   return _cached_encoder_for_RevocationInfos(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevocationInfos */
 
 /* eslint-enable */

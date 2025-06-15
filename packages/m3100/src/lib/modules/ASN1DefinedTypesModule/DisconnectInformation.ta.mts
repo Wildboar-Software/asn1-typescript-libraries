@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DisconnectInformation */
+
 /**
  * @summary DisconnectInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DisconnectInformation = ObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DisconnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DisconnectInformation */
+
 let _cached_decoder_for_DisconnectInformation: $.ASN1Decoder<DisconnectInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DisconnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DisconnectInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DisconnectInformation
  * @function
@@ -48,13 +46,11 @@ export function _decode_DisconnectInformation(el: _Element) {
     }
     return _cached_decoder_for_DisconnectInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DisconnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DisconnectInformation */
+
 let _cached_encoder_for_DisconnectInformation: $.ASN1Encoder<DisconnectInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DisconnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DisconnectInformation */
+
 /**
  * @summary Encodes a(n) DisconnectInformation into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_DisconnectInformation(
     return _cached_encoder_for_DisconnectInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DisconnectInformation */
 
 /* eslint-enable */

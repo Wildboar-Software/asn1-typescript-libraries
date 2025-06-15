@@ -15,7 +15,7 @@ import {
     _decode_ErrorId,
     _encode_ErrorId,
 } from '../Schedulerev1-ASN1Module/ErrorId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SCHED_ERROR */
+
 /**
  * @summary SCHED_ERROR
  * @description
@@ -68,6 +68,5 @@ export interface SCHED_ERROR<
      */
     readonly '&Value': Value;
 }
-/* END_OF_SYMBOL_DEFINITION SCHED_ERROR */
 
 /* eslint-enable */

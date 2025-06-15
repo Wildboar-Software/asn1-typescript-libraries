@@ -41,7 +41,6 @@ import {
     _extension_additions_list_spec_for_MessageDeliveryEnvelope,
 } from '../MTSAbstractService/MessageDeliveryEnvelope.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryArgument */
 /**
  * @summary MessageDeliveryArgument
  * @description
@@ -110,9 +109,7 @@ export class MessageDeliveryArgument implements MessageDeliveryEnvelope {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageDeliveryArgument */
 /**
  * @summary The Leading Root Component Types of MessageDeliveryArgument
  * @description
@@ -131,9 +128,7 @@ export const _root_component_type_list_1_spec_for_MessageDeliveryArgument: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageDeliveryArgument */
 /**
  * @summary The Trailing Root Component Types of MessageDeliveryArgument
  * @description
@@ -143,9 +138,7 @@ export const _root_component_type_list_1_spec_for_MessageDeliveryArgument: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageDeliveryArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageDeliveryArgument */
 /**
  * @summary The Extension Addition Component Types of MessageDeliveryArgument
  * @description
@@ -155,13 +148,9 @@ export const _root_component_type_list_2_spec_for_MessageDeliveryArgument: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageDeliveryArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryArgument */
 let _cached_decoder_for_MessageDeliveryArgument: $.ASN1Decoder<MessageDeliveryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageDeliveryArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryArgument
  * @function
@@ -215,13 +204,9 @@ export function _decode_MessageDeliveryArgument(el: _Element) {
     }
     return _cached_decoder_for_MessageDeliveryArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryArgument */
 let _cached_encoder_for_MessageDeliveryArgument: $.ASN1Encoder<MessageDeliveryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageDeliveryArgument */
 /**
  * @summary Encodes a(n) MessageDeliveryArgument into an ASN.1 Element.
  * @function
@@ -261,6 +246,5 @@ export function _encode_MessageDeliveryArgument(
     return _cached_encoder_for_MessageDeliveryArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageDeliveryArgument */
 
 /* eslint-enable */

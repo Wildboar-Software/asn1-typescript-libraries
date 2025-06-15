@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION redirectHoldingTime_Default */
+
 /**
  * @summary redirectHoldingTime_Default
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const redirectHoldingTime_Default: INTEGER = 600;
-/* END_OF_SYMBOL_DEFINITION redirectHoldingTime_Default */
 
 /* eslint-enable */

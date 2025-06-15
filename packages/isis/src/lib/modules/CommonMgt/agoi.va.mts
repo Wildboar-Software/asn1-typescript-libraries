@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { cmoi } from '../CommonMgt/cmoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION agoi */
 /**
  * @summary agoi
  * @description
@@ -25,6 +24,5 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @constant
  */
 export const agoi: OBJECT_IDENTIFIER = new _OID([/* attributeGroup */ 8], cmoi);
-/* END_OF_SYMBOL_DEFINITION agoi */
 
 /* eslint-enable */

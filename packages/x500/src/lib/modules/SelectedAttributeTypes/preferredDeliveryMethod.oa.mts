@@ -10,7 +10,6 @@ import {
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
 } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION preferredDeliveryMethod */
 /**
  * @summary preferredDeliveryMethod
  * @description
@@ -49,6 +48,5 @@ export const preferredDeliveryMethod: ATTRIBUTE<PreferredDeliveryMethod> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION preferredDeliveryMethod */
 
 /* eslint-enable */

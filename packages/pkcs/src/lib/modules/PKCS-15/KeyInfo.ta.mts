@@ -11,7 +11,7 @@ import {
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyInfo */
+
 /**
  * @summary KeyInfo
  * @description
@@ -33,9 +33,8 @@ export type KeyInfo<ParameterType, OperationsType> =
     | {
           paramsAndOps: KeyInfo_paramsAndOps<ParameterType, OperationsType>;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION KeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_KeyInfo */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) KeyInfo
  * @function
@@ -59,9 +58,8 @@ export function _get_decoder_for_KeyInfo<ParameterType, OperationsType>(
         ],
     });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_KeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_KeyInfo */
+
 /**
  * @summary Returns a function that will encode a(n) KeyInfo into an ASN.1 Element.
  * @function
@@ -82,6 +80,5 @@ export function _get_encoder_for_KeyInfo<ParameterType, OperationsType>(
         $.BER
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_KeyInfo */
 
 /* eslint-enable */

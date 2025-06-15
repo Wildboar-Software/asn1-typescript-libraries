@@ -14,7 +14,7 @@ import type {
     CONTENT_TYPE,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ContentTypeBRTCertificate */
+
 /**
  * @summary ContentTypeBRTCertificate
  * @description
@@ -30,6 +30,5 @@ import type {
  *
  */
 export const ContentTypeBRTCertificate: CONTENT_TYPE[] = [brtCertificate];
-/* END_OF_SYMBOL_DEFINITION ContentTypeBRTCertificate */
 
 /* eslint-enable */

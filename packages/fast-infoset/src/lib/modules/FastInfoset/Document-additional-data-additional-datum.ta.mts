@@ -16,7 +16,6 @@ import {
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Document_additional_data_additional_datum */
 /**
  * @summary Document_additional_data_additional_datum
  * @description
@@ -65,9 +64,7 @@ export class Document_additional_data_additional_datum {
     return new Document_additional_data_additional_datum(_o.id, _o.data);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Document_additional_data_additional_datum */
 /**
  * @summary The Leading Root Component Types of Document_additional_data_additional_datum
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_Document_additional_data_addit
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Document_additional_data_additional_datum */
 /**
  * @summary The Trailing Root Component Types of Document_additional_data_additional_datum
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_Document_additional_data_addit
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Document_additional_data_additional_datum: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Document_additional_data_additional_datum */
 /**
  * @summary The Extension Addition Component Types of Document_additional_data_additional_datum
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_Document_additional_data_addit
  * @constant
  */
 export const _extension_additions_list_spec_for_Document_additional_data_additional_datum: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_additional_data_additional_datum */
 let _cached_decoder_for_Document_additional_data_additional_datum: $.ASN1Decoder<Document_additional_data_additional_datum> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Document_additional_data_additional_datum */
 /**
  * @summary Decodes an ASN.1 element into a(n) Document_additional_data_additional_datum
  * @function
@@ -155,13 +144,9 @@ export function _decode_Document_additional_data_additional_datum(
   }
   return _cached_decoder_for_Document_additional_data_additional_datum(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_additional_data_additional_datum */
 let _cached_encoder_for_Document_additional_data_additional_datum: $.ASN1Encoder<Document_additional_data_additional_datum> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_additional_data_additional_datum */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Document_additional_data_additional_datum */
 /**
  * @summary Encodes a(n) Document_additional_data_additional_datum into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_Document_additional_data_additional_datum(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Document_additional_data_additional_datum */
 
 /* eslint-enable */

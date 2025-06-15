@@ -7,7 +7,6 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 import { id_oc_organization } from "../SelectedObjectClasses/id-oc-organization.va.mjs";
 import { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION organization */
 /**
  * @summary organization
  * @description
@@ -40,6 +39,5 @@ export const organization: OBJECT_CLASS = {
     "&id": id_oc_organization /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION organization */
 
 /* eslint-enable */

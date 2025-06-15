@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LabelName */
 /**
  * @summary LabelName
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LabelName = INTEGER;
-/* END_OF_SYMBOL_DEFINITION LabelName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LabelName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LabelName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LabelName */
 export const _decode_LabelName = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_LabelName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LabelName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LabelName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LabelName */
 export const _encode_LabelName = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LabelName */
 
 /* eslint-enable */

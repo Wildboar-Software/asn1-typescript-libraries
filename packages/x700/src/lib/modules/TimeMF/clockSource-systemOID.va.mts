@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
-/* START_OF_SYMBOL_DEFINITION clockSource_systemOID */
 /**
  * @summary clockSource_systemOID
  * @description
@@ -28,6 +27,5 @@ export const clockSource_systemOID: OBJECT_IDENTIFIER = new _OID(
     [/* nameBinding */ 6, /* clockSource-system */ 2],
     timeManagement
 );
-/* END_OF_SYMBOL_DEFINITION clockSource_systemOID */
 
 /* eslint-enable */

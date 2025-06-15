@@ -31,7 +31,7 @@ import {
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AD_KDCIssued */
+
 /**
  * @summary AD_KDCIssued
  * @description
@@ -100,9 +100,8 @@ export class AD_KDCIssued {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AD_KDCIssued */
+
 /**
  * @summary The Leading Root Component Types of AD_KDCIssued
  * @description
@@ -141,9 +140,8 @@ export const _root_component_type_list_1_spec_for_AD_KDCIssued: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AD_KDCIssued */
+
 /**
  * @summary The Trailing Root Component Types of AD_KDCIssued
  * @description
@@ -153,9 +151,8 @@ export const _root_component_type_list_1_spec_for_AD_KDCIssued: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AD_KDCIssued: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AD_KDCIssued */
+
 /**
  * @summary The Extension Addition Component Types of AD_KDCIssued
  * @description
@@ -165,13 +162,11 @@ export const _root_component_type_list_2_spec_for_AD_KDCIssued: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_AD_KDCIssued: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_KDCIssued */
+
 let _cached_decoder_for_AD_KDCIssued: $.ASN1Decoder<AD_KDCIssued> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AD_KDCIssued */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AD_KDCIssued
  * @function
@@ -227,13 +222,11 @@ export function _decode_AD_KDCIssued(el: _Element) {
   }
   return _cached_decoder_for_AD_KDCIssued(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_KDCIssued */
+
 let _cached_encoder_for_AD_KDCIssued: $.ASN1Encoder<AD_KDCIssued> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_KDCIssued */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AD_KDCIssued */
+
 /**
  * @summary Encodes a(n) AD_KDCIssued into an ASN.1 Element.
  * @function
@@ -288,6 +281,5 @@ export function _encode_AD_KDCIssued(
   return _cached_encoder_for_AD_KDCIssued(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AD_KDCIssued */
 
 /* eslint-enable */

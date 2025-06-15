@@ -14,7 +14,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UserAddress_x121 */
 /**
  * @summary UserAddress_x121
  * @description
@@ -61,9 +60,7 @@ export class UserAddress_x121 {
         return new UserAddress_x121(_o.x121_address, _o.tsap_id);
     }
 }
-/* END_OF_SYMBOL_DEFINITION UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UserAddress_x121 */
 /**
  * @summary The Leading Root Component Types of UserAddress_x121
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_UserAddress_x121: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UserAddress_x121 */
 /**
  * @summary The Trailing Root Component Types of UserAddress_x121
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_UserAddress_x121: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UserAddress_x121: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UserAddress_x121 */
 /**
  * @summary The Extension Addition Component Types of UserAddress_x121
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_UserAddress_x121: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_UserAddress_x121: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserAddress_x121 */
 let _cached_decoder_for_UserAddress_x121: $.ASN1Decoder<UserAddress_x121> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserAddress_x121 */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserAddress_x121
  * @function
@@ -160,13 +149,9 @@ export function _decode_UserAddress_x121(el: _Element) {
     }
     return _cached_decoder_for_UserAddress_x121(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserAddress_x121 */
 let _cached_encoder_for_UserAddress_x121: $.ASN1Encoder<UserAddress_x121> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserAddress_x121 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserAddress_x121 */
 /**
  * @summary Encodes a(n) UserAddress_x121 into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_UserAddress_x121(
     return _cached_encoder_for_UserAddress_x121(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserAddress_x121 */
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ import {
   _decode_AdditionalReferenceInformation,
   _encode_AdditionalReferenceInformation,
 } from '../Reliable-Transfer-APDU/AdditionalReferenceInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SessionConnectionIdentifier */
+
 /**
  * @summary SessionConnectionIdentifier
  * @description
@@ -90,9 +90,8 @@ export class SessionConnectionIdentifier {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SessionConnectionIdentifier */
+
 /**
  * @summary The Leading Root Component Types of SessionConnectionIdentifier
  * @description
@@ -124,9 +123,8 @@ export const _root_component_type_list_1_spec_for_SessionConnectionIdentifier: $
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SessionConnectionIdentifier */
+
 /**
  * @summary The Trailing Root Component Types of SessionConnectionIdentifier
  * @description
@@ -136,9 +134,8 @@ export const _root_component_type_list_1_spec_for_SessionConnectionIdentifier: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SessionConnectionIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SessionConnectionIdentifier */
+
 /**
  * @summary The Extension Addition Component Types of SessionConnectionIdentifier
  * @description
@@ -148,13 +145,11 @@ export const _root_component_type_list_2_spec_for_SessionConnectionIdentifier: $
  * @constant
  */
 export const _extension_additions_list_spec_for_SessionConnectionIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SessionConnectionIdentifier */
+
 let _cached_decoder_for_SessionConnectionIdentifier: $.ASN1Decoder<SessionConnectionIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SessionConnectionIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SessionConnectionIdentifier
  * @function
@@ -203,13 +198,11 @@ export function _decode_SessionConnectionIdentifier(el: _Element) {
   }
   return _cached_decoder_for_SessionConnectionIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SessionConnectionIdentifier */
+
 let _cached_encoder_for_SessionConnectionIdentifier: $.ASN1Encoder<SessionConnectionIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SessionConnectionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SessionConnectionIdentifier */
+
 /**
  * @summary Encodes a(n) SessionConnectionIdentifier into an ASN.1 Element.
  * @function
@@ -252,6 +245,5 @@ export function _encode_SessionConnectionIdentifier(
   return _cached_encoder_for_SessionConnectionIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SessionConnectionIdentifier */
 
 /* eslint-enable */

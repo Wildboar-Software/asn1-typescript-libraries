@@ -6,7 +6,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CaseIgnoreList */
 /**
  * @summary CaseIgnoreList
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type CaseIgnoreList = UnboundedDirectoryString[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CaseIgnoreList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CaseIgnoreList */
 let _cached_decoder_for_CaseIgnoreList: $.ASN1Decoder<CaseIgnoreList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CaseIgnoreList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CaseIgnoreList */
 /**
  * @summary Decodes an ASN.1 element into a(n) CaseIgnoreList
  * @function
@@ -39,13 +34,9 @@ export function _decode_CaseIgnoreList(el: _Element) {
     }
     return _cached_decoder_for_CaseIgnoreList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CaseIgnoreList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CaseIgnoreList */
 let _cached_encoder_for_CaseIgnoreList: $.ASN1Encoder<CaseIgnoreList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CaseIgnoreList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CaseIgnoreList */
 /**
  * @summary Encodes a(n) CaseIgnoreList into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_CaseIgnoreList(
     return _cached_encoder_for_CaseIgnoreList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CaseIgnoreList */
 
 /* eslint-enable */

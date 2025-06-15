@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_methods } from '../Telebiometrics/id-methods.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_methods_physics */
+
 /**
  * @summary id_methods_physics
  * @description
@@ -28,6 +28,5 @@ export const id_methods_physics: OBJECT_IDENTIFIER = new _OID(
     [/* physics */ 1],
     id_methods
 );
-/* END_OF_SYMBOL_DEFINITION id_methods_physics */
 
 /* eslint-enable */

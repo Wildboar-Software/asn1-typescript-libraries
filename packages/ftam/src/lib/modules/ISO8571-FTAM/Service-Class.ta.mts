@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Service_Class */
+
 /**
  * @summary Service_Class
  * @description
@@ -26,93 +26,81 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Service_Class = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Service_Class */
 
-/* START_OF_SYMBOL_DEFINITION Service_Class_unconstrained_class */
+
 /**
  * @summary Service_Class_unconstrained_class
  * @constant
  */
 export const Service_Class_unconstrained_class: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Service_Class_unconstrained_class */
 
-/* START_OF_SYMBOL_DEFINITION unconstrained_class */
+
 /**
  * @summary unconstrained_class
  * @constant
  */
 export const unconstrained_class: number = Service_Class_unconstrained_class; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION unconstrained_class */
 
-/* START_OF_SYMBOL_DEFINITION Service_Class_management_class */
+
 /**
  * @summary Service_Class_management_class
  * @constant
  */
 export const Service_Class_management_class: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Service_Class_management_class */
 
-/* START_OF_SYMBOL_DEFINITION management_class */
+
 /**
  * @summary management_class
  * @constant
  */
 export const management_class: number = Service_Class_management_class; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION management_class */
 
-/* START_OF_SYMBOL_DEFINITION Service_Class_transfer_class */
+
 /**
  * @summary Service_Class_transfer_class
  * @constant
  */
 export const Service_Class_transfer_class: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Service_Class_transfer_class */
 
-/* START_OF_SYMBOL_DEFINITION transfer_class */
+
 /**
  * @summary transfer_class
  * @constant
  */
 export const transfer_class: number = Service_Class_transfer_class; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION transfer_class */
 
-/* START_OF_SYMBOL_DEFINITION Service_Class_transfer_and_management_class */
+
 /**
  * @summary Service_Class_transfer_and_management_class
  * @constant
  */
 export const Service_Class_transfer_and_management_class: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Service_Class_transfer_and_management_class */
 
-/* START_OF_SYMBOL_DEFINITION transfer_and_management_class */
+
 /**
  * @summary transfer_and_management_class
  * @constant
  */
 export const transfer_and_management_class: number = Service_Class_transfer_and_management_class; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION transfer_and_management_class */
 
-/* START_OF_SYMBOL_DEFINITION Service_Class_access_class */
+
 /**
  * @summary Service_Class_access_class
  * @constant
  */
 export const Service_Class_access_class: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Service_Class_access_class */
 
-/* START_OF_SYMBOL_DEFINITION access_class */
+
 /**
  * @summary access_class
  * @constant
  */
 export const access_class: number = Service_Class_access_class; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION access_class */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Service_Class */
+
 let _cached_decoder_for_Service_Class: $.ASN1Decoder<Service_Class> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Service_Class */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Service_Class */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Service_Class
  * @function
@@ -127,13 +115,11 @@ export function _decode_Service_Class(el: _Element) {
   }
   return _cached_decoder_for_Service_Class(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Service_Class */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Service_Class */
+
 let _cached_encoder_for_Service_Class: $.ASN1Encoder<Service_Class> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Service_Class */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Service_Class */
+
 /**
  * @summary Encodes a(n) Service_Class into an ASN.1 Element.
  * @function
@@ -156,6 +142,5 @@ export function _encode_Service_Class(
   return _cached_encoder_for_Service_Class(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Service_Class */
 
 /* eslint-enable */

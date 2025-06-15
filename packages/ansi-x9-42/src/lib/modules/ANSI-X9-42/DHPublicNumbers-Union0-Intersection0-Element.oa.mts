@@ -6,7 +6,7 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "../ANSI-X9-42/DomainParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DHPublicNumbers_Union0_Intersection0_Element */
+
 /**
  * @summary DHPublicNumbers_Union0_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const DHPublicNumbers_Union0_Intersection0_Element: ALGORITHM_ID<DomainPa
     "&id": dhPublicNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION DHPublicNumbers_Union0_Intersection0_Element */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import { id_att_content_integrity_check } from '../MSObjectIdentifiers/id-att-co
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_content_integrity_check */
 /**
  * @summary mt_content_integrity_check
  * @description
@@ -53,6 +52,5 @@ export const mt_content_integrity_check: X413ATTRIBUTE<ContentIntegrityCheck> = 
     '&id': id_att_content_integrity_check /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_content_integrity_check */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AssociatedObjects_Item,
     _encode_AssociatedObjects_Item,
 } from '../Test-ASN1Module/AssociatedObjects-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AssociatedObjects */
 /**
  * @summary AssociatedObjects
  * @description
@@ -36,13 +35,9 @@ import {
  * ```
  */
 export type AssociatedObjects = AssociatedObjects_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AssociatedObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociatedObjects */
 let _cached_decoder_for_AssociatedObjects: $.ASN1Decoder<AssociatedObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssociatedObjects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssociatedObjects */
 /**
  * @summary Decodes an ASN.1 element into a(n) AssociatedObjects
  * @function
@@ -57,13 +52,9 @@ export function _decode_AssociatedObjects(el: _Element) {
     }
     return _cached_decoder_for_AssociatedObjects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssociatedObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociatedObjects */
 let _cached_encoder_for_AssociatedObjects: $.ASN1Encoder<AssociatedObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssociatedObjects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssociatedObjects */
 /**
  * @summary Encodes a(n) AssociatedObjects into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_AssociatedObjects(
     return _cached_encoder_for_AssociatedObjects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssociatedObjects */
 
 /* eslint-enable */

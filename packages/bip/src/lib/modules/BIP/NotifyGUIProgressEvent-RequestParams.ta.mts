@@ -61,7 +61,7 @@ import {
   _decode_BioAPI_GUI_BITMAP_ARRAY,
   _encode_BioAPI_GUI_BITMAP_ARRAY,
 } from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotifyGUIProgressEvent_RequestParams */
+
 /**
  * @summary NotifyGUIProgressEvent_RequestParams
  * @description
@@ -217,9 +217,8 @@ export class NotifyGUIProgressEvent_RequestParams {
 
   public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
 }
-/* END_OF_SYMBOL_DEFINITION NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyGUIProgressEvent_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of NotifyGUIProgressEvent_RequestParams
  * @description
@@ -307,9 +306,8 @@ export const _root_component_type_list_1_spec_for_NotifyGUIProgressEvent_Request
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyGUIProgressEvent_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of NotifyGUIProgressEvent_RequestParams
  * @description
@@ -319,9 +317,8 @@ export const _root_component_type_list_1_spec_for_NotifyGUIProgressEvent_Request
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NotifyGUIProgressEvent_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyGUIProgressEvent_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of NotifyGUIProgressEvent_RequestParams
  * @description
@@ -331,13 +328,11 @@ export const _root_component_type_list_2_spec_for_NotifyGUIProgressEvent_Request
  * @constant
  */
 export const _extension_additions_list_spec_for_NotifyGUIProgressEvent_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyGUIProgressEvent_RequestParams */
+
 let _cached_decoder_for_NotifyGUIProgressEvent_RequestParams: $.ASN1Decoder<NotifyGUIProgressEvent_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotifyGUIProgressEvent_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NotifyGUIProgressEvent_RequestParams
  * @function
@@ -424,13 +419,11 @@ export function _decode_NotifyGUIProgressEvent_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_NotifyGUIProgressEvent_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyGUIProgressEvent_RequestParams */
+
 let _cached_encoder_for_NotifyGUIProgressEvent_RequestParams: $.ASN1Encoder<NotifyGUIProgressEvent_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyGUIProgressEvent_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotifyGUIProgressEvent_RequestParams */
+
 /**
  * @summary Encodes a(n) NotifyGUIProgressEvent_RequestParams into an ASN.1 Element.
  * @function
@@ -490,6 +483,5 @@ export function _encode_NotifyGUIProgressEvent_RequestParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotifyGUIProgressEvent_RequestParams */
 
 /* eslint-enable */

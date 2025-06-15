@@ -73,7 +73,6 @@ import {
     _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AddEntryArgumentData */
 /**
  * @summary AddEntryArgumentData
  * @description
@@ -290,9 +289,7 @@ export class AddEntryArgumentData implements CommonArguments {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddEntryArgumentData */
 /**
  * @summary The Leading Root Component Types of AddEntryArgumentData
  * @description
@@ -325,9 +322,7 @@ export const _root_component_type_list_1_spec_for_AddEntryArgumentData: $.Compon
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddEntryArgumentData */
 /**
  * @summary The Trailing Root Component Types of AddEntryArgumentData
  * @description
@@ -339,9 +334,7 @@ export const _root_component_type_list_1_spec_for_AddEntryArgumentData: $.Compon
 export const _root_component_type_list_2_spec_for_AddEntryArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddEntryArgumentData */
 /**
  * @summary The Extension Addition Component Types of AddEntryArgumentData
  * @description
@@ -353,13 +346,9 @@ export const _root_component_type_list_2_spec_for_AddEntryArgumentData: $.Compon
 export const _extension_additions_list_spec_for_AddEntryArgumentData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddEntryArgumentData */
 let _cached_decoder_for_AddEntryArgumentData: $.ASN1Decoder<AddEntryArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddEntryArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) AddEntryArgumentData
  * @function
@@ -503,13 +492,9 @@ export function _decode_AddEntryArgumentData(el: _Element) {
     }
     return _cached_decoder_for_AddEntryArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddEntryArgumentData */
 let _cached_encoder_for_AddEntryArgumentData: $.ASN1Encoder<AddEntryArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddEntryArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddEntryArgumentData */
 /**
  * @summary Encodes a(n) AddEntryArgumentData into an ASN.1 Element.
  * @function
@@ -690,6 +675,5 @@ export function _encode_AddEntryArgumentData(
     return _cached_encoder_for_AddEntryArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddEntryArgumentData */
 
 /* eslint-enable */

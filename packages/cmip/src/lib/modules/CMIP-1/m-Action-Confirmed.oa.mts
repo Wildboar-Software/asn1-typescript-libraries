@@ -42,7 +42,7 @@ import { invalidArgumentValue } from '../CMIP-1/invalidArgumentValue.oa.mjs';
 import { noSuchAction } from '../CMIP-1/noSuchAction.oa.mjs';
 import { noSuchArgument } from '../CMIP-1/noSuchArgument.oa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION m_Action_Confirmed */
+
 /**
  * @summary m_Action_Confirmed
  * @description
@@ -107,6 +107,5 @@ export const m_Action_Confirmed: OPERATION<ActionArgument, ActionResult> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Action_Confirmed */
 
 /* eslint-enable */

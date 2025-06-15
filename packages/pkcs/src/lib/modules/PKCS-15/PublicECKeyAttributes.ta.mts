@@ -27,7 +27,7 @@ import {
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PublicECKeyAttributes */
+
 /**
  * @summary PublicECKeyAttributes
  * @description
@@ -88,9 +88,8 @@ export class PublicECKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicECKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PublicECKeyAttributes
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_PublicECKeyAttributes: $.Compo
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicECKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PublicECKeyAttributes
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_PublicECKeyAttributes: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PublicECKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicECKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PublicECKeyAttributes
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_PublicECKeyAttributes: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_PublicECKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicECKeyAttributes */
+
 let _cached_decoder_for_PublicECKeyAttributes: $.ASN1Decoder<PublicECKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicECKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicECKeyAttributes
  * @function
@@ -187,13 +182,11 @@ export function _decode_PublicECKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PublicECKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicECKeyAttributes */
+
 let _cached_encoder_for_PublicECKeyAttributes: $.ASN1Encoder<PublicECKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicECKeyAttributes */
+
 /**
  * @summary Encodes a(n) PublicECKeyAttributes into an ASN.1 Element.
  * @function
@@ -237,6 +230,5 @@ export function _encode_PublicECKeyAttributes(
     return _cached_encoder_for_PublicECKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicECKeyAttributes */
 
 /* eslint-enable */

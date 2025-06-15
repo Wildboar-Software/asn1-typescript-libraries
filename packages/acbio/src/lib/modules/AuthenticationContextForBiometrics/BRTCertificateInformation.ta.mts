@@ -20,7 +20,7 @@ import {
     _decode_BRTCertificateReferrerList,
     _encode_BRTCertificateReferrerList,
 } from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BRTCertificateInformation */
+
 /**
  * @summary BRTCertificateInformation
  * @description
@@ -38,13 +38,11 @@ export type BRTCertificateInformation =
     | {
           brtCertificateReferrerList: BRTCertificateReferrerList;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BRTCertificateInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificateInformation */
+
 let _cached_decoder_for_BRTCertificateInformation: $.ASN1Decoder<BRTCertificateInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificateInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRTCertificateInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRTCertificateInformation
  * @function
@@ -65,13 +63,11 @@ export function _decode_BRTCertificateInformation(el: _Element) {
     }
     return _cached_decoder_for_BRTCertificateInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRTCertificateInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificateInformation */
+
 let _cached_encoder_for_BRTCertificateInformation: $.ASN1Encoder<BRTCertificateInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificateInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRTCertificateInformation */
+
 /**
  * @summary Encodes a(n) BRTCertificateInformation into an ASN.1 Element.
  * @function
@@ -95,6 +91,5 @@ export function _encode_BRTCertificateInformation(
     return _cached_encoder_for_BRTCertificateInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRTCertificateInformation */
 
 /* eslint-enable */

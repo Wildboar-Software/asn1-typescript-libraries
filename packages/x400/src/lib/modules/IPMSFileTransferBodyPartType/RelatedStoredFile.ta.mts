@@ -15,7 +15,6 @@ import {
     _decode_RelatedStoredFile_Item,
     _encode_RelatedStoredFile_Item,
 } from '../IPMSFileTransferBodyPartType/RelatedStoredFile-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedStoredFile */
 /**
  * @summary RelatedStoredFile
  * @description
@@ -32,13 +31,9 @@ import {
  * ```
  */
 export type RelatedStoredFile = RelatedStoredFile_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RelatedStoredFile */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedStoredFile */
 let _cached_decoder_for_RelatedStoredFile: $.ASN1Decoder<RelatedStoredFile> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedStoredFile */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedStoredFile */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedStoredFile
  * @function
@@ -53,13 +48,9 @@ export function _decode_RelatedStoredFile(el: _Element) {
     }
     return _cached_decoder_for_RelatedStoredFile(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedStoredFile */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedStoredFile */
 let _cached_encoder_for_RelatedStoredFile: $.ASN1Encoder<RelatedStoredFile> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedStoredFile */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedStoredFile */
 /**
  * @summary Encodes a(n) RelatedStoredFile into an ASN.1 Element.
  * @function
@@ -80,6 +71,5 @@ export function _encode_RelatedStoredFile(
     return _cached_encoder_for_RelatedStoredFile(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedStoredFile */
 
 /* eslint-enable */

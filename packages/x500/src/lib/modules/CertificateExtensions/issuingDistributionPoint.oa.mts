@@ -6,7 +6,6 @@ import {
     _decode_IssuingDistPointSyntax,
     _encode_IssuingDistPointSyntax,
 } from "../CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION issuingDistributionPoint */
 /**
  * @summary issuingDistributionPoint
  * @description
@@ -34,6 +33,5 @@ export const issuingDistributionPoint: EXTENSION<IssuingDistPointSyntax> = {
     "&id": id_ce_issuingDistributionPoint /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION issuingDistributionPoint */
 
 /* eslint-enable */

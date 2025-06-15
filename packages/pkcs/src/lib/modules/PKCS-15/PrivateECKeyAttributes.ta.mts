@@ -27,7 +27,7 @@ import {
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateECKeyAttributes */
+
 /**
  * @summary PrivateECKeyAttributes
  * @description
@@ -88,9 +88,8 @@ export class PrivateECKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateECKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PrivateECKeyAttributes
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_PrivateECKeyAttributes: $.Comp
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateECKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PrivateECKeyAttributes
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_PrivateECKeyAttributes: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PrivateECKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateECKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PrivateECKeyAttributes
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_PrivateECKeyAttributes: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_PrivateECKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateECKeyAttributes */
+
 let _cached_decoder_for_PrivateECKeyAttributes: $.ASN1Decoder<PrivateECKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateECKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateECKeyAttributes
  * @function
@@ -187,13 +182,11 @@ export function _decode_PrivateECKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PrivateECKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateECKeyAttributes */
+
 let _cached_encoder_for_PrivateECKeyAttributes: $.ASN1Encoder<PrivateECKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateECKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateECKeyAttributes */
+
 /**
  * @summary Encodes a(n) PrivateECKeyAttributes into an ASN.1 Element.
  * @function
@@ -237,6 +230,5 @@ export function _encode_PrivateECKeyAttributes(
     return _cached_encoder_for_PrivateECKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateECKeyAttributes */
 
 /* eslint-enable */

@@ -30,7 +30,7 @@ import {
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
 } from '../BIP/BioAPI-RETURN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPAcknowledgement */
+
 /**
  * @summary BIPAcknowledgement
  * @description
@@ -119,9 +119,8 @@ export class BIPAcknowledgement {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPAcknowledgement */
+
 /**
  * @summary The Leading Root Component Types of BIPAcknowledgement
  * @description
@@ -174,9 +173,8 @@ export const _root_component_type_list_1_spec_for_BIPAcknowledgement: $.Componen
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPAcknowledgement */
+
 /**
  * @summary The Trailing Root Component Types of BIPAcknowledgement
  * @description
@@ -186,9 +184,8 @@ export const _root_component_type_list_1_spec_for_BIPAcknowledgement: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BIPAcknowledgement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPAcknowledgement */
+
 /**
  * @summary The Extension Addition Component Types of BIPAcknowledgement
  * @description
@@ -198,13 +195,11 @@ export const _root_component_type_list_2_spec_for_BIPAcknowledgement: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_BIPAcknowledgement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPAcknowledgement */
+
 let _cached_decoder_for_BIPAcknowledgement: $.ASN1Decoder<BIPAcknowledgement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPAcknowledgement */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPAcknowledgement
  * @function
@@ -254,13 +249,11 @@ export function _decode_BIPAcknowledgement(el: _Element) {
   }
   return _cached_decoder_for_BIPAcknowledgement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPAcknowledgement */
+
 let _cached_encoder_for_BIPAcknowledgement: $.ASN1Encoder<BIPAcknowledgement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPAcknowledgement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPAcknowledgement */
+
 /**
  * @summary Encodes a(n) BIPAcknowledgement into an ASN.1 Element.
  * @function
@@ -299,6 +292,5 @@ export function _encode_BIPAcknowledgement(
   return _cached_encoder_for_BIPAcknowledgement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPAcknowledgement */
 
 /* eslint-enable */

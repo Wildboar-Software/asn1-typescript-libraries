@@ -7,7 +7,6 @@ import {
     _encode_ScopeRestriction,
 } from "../AuthenticationFramework/ScopeRestriction.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ScopeRestrictions */
 /**
  * @summary ScopeRestrictions
  * @description
@@ -19,14 +18,10 @@ import {
  * ```
  */
 export type ScopeRestrictions = ScopeRestriction[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ScopeRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestrictions */
 let _cached_decoder_for_ScopeRestrictions: $.ASN1Decoder<ScopeRestrictions> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScopeRestrictions */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScopeRestrictions
  * @function
@@ -42,14 +37,10 @@ export function _decode_ScopeRestrictions(el: _Element) {
     }
     return _cached_decoder_for_ScopeRestrictions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScopeRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestrictions */
 let _cached_encoder_for_ScopeRestrictions: $.ASN1Encoder<ScopeRestrictions> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScopeRestrictions */
 /**
  * @summary Encodes a(n) ScopeRestrictions into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_ScopeRestrictions(
     return _cached_encoder_for_ScopeRestrictions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScopeRestrictions */
 
 /* eslint-enable */

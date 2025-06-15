@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION electricalSTM1SPICI */
+
 /**
  * @summary electricalSTM1SPICI
  * @description
@@ -32,6 +32,5 @@ export const electricalSTM1SPICI: CharacteristicInformation = new _OID(
     [4],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION electricalSTM1SPICI */
 
 /* eslint-enable */

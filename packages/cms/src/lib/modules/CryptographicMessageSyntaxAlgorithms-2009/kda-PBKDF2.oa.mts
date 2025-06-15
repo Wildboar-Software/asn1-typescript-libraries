@@ -9,7 +9,7 @@ import {
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION kda_PBKDF2 */
+
 /**
  * @summary kda_PBKDF2
  * @description
@@ -40,6 +40,5 @@ export const kda_PBKDF2: KEY_DERIVATION<PBKDF2_params> = {
     "&paramPresence": required /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kda_PBKDF2 */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs';
 import { id_swb_pkc_cert } from '../SCVP-2009/id-swb-pkc-cert.va.mjs';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION swb_pkc_cert */
 /**
  * @summary swb_pkc_cert
  * @description
@@ -42,6 +41,5 @@ export const swb_pkc_cert: WANT_BACK<Certificate> = {
   '&id': id_swb_pkc_cert /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION swb_pkc_cert */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
 } from "../PKCS-9/MessageDigest.ta.mjs";
 import { pkcs_9_at_messageDigest } from "../PKCS-9/pkcs-9-at-messageDigest.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION messageDigest */
+
 /**
  * @summary messageDigest
  * @description
@@ -47,6 +47,5 @@ export const messageDigest: ATTRIBUTE<MessageDigest> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION messageDigest */
 
 /* eslint-enable */

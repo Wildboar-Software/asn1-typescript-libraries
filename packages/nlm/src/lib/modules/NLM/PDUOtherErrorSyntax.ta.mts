@@ -16,7 +16,7 @@ import {
     _decode_PDUHeader,
     _encode_PDUHeader,
 } from '../NLM/PDUHeader.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PDUOtherErrorSyntax */
+
 /**
  * @summary PDUOtherErrorSyntax
  * @description
@@ -66,9 +66,8 @@ export class PDUOtherErrorSyntax {
         return new PDUOtherErrorSyntax(_o.errorCode, _o.header);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDUOtherErrorSyntax */
+
 /**
  * @summary The Leading Root Component Types of PDUOtherErrorSyntax
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_PDUOtherErrorSyntax: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDUOtherErrorSyntax */
+
 /**
  * @summary The Trailing Root Component Types of PDUOtherErrorSyntax
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_PDUOtherErrorSyntax: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PDUOtherErrorSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDUOtherErrorSyntax */
+
 /**
  * @summary The Extension Addition Component Types of PDUOtherErrorSyntax
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_PDUOtherErrorSyntax: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_PDUOtherErrorSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUOtherErrorSyntax */
+
 let _cached_decoder_for_PDUOtherErrorSyntax: $.ASN1Decoder<PDUOtherErrorSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDUOtherErrorSyntax */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PDUOtherErrorSyntax
  * @function
@@ -158,13 +153,11 @@ export function _decode_PDUOtherErrorSyntax(el: _Element) {
     }
     return _cached_decoder_for_PDUOtherErrorSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUOtherErrorSyntax */
+
 let _cached_encoder_for_PDUOtherErrorSyntax: $.ASN1Encoder<PDUOtherErrorSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUOtherErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDUOtherErrorSyntax */
+
 /**
  * @summary Encodes a(n) PDUOtherErrorSyntax into an ASN.1 Element.
  * @function
@@ -203,6 +196,5 @@ export function _encode_PDUOtherErrorSyntax(
     return _cached_encoder_for_PDUOtherErrorSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDUOtherErrorSyntax */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
     _encode_Time,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Time.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SigningTime */
+
 /**
  * @summary SigningTime
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type SigningTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SigningTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SigningTime */
+
 let _cached_decoder_for_SigningTime: $.ASN1Decoder<SigningTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SigningTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SigningTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SigningTime
  * @function
@@ -38,13 +36,11 @@ export function _decode_SigningTime(el: _Element) {
     }
     return _cached_decoder_for_SigningTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SigningTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SigningTime */
+
 let _cached_encoder_for_SigningTime: $.ASN1Encoder<SigningTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SigningTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SigningTime */
+
 /**
  * @summary Encodes a(n) SigningTime into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_SigningTime(
     return _cached_encoder_for_SigningTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SigningTime */
 
 /* eslint-enable */

@@ -36,7 +36,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityParameters */
 /**
  * @summary SecurityParameters
  * @description
@@ -148,9 +147,7 @@ export class SecurityParameters {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityParameters */
 /**
  * @summary The Leading Root Component Types of SecurityParameters
  * @description
@@ -217,9 +214,7 @@ export const _root_component_type_list_1_spec_for_SecurityParameters: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityParameters */
 /**
  * @summary The Trailing Root Component Types of SecurityParameters
  * @description
@@ -229,9 +224,7 @@ export const _root_component_type_list_1_spec_for_SecurityParameters: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityParameters */
 /**
  * @summary The Extension Addition Component Types of SecurityParameters
  * @description
@@ -241,13 +234,9 @@ export const _root_component_type_list_2_spec_for_SecurityParameters: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_SecurityParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityParameters */
 let _cached_decoder_for_SecurityParameters: $.ASN1Decoder<SecurityParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityParameters
  * @function
@@ -337,13 +326,9 @@ export function _decode_SecurityParameters(el: _Element) {
     }
     return _cached_decoder_for_SecurityParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityParameters */
 let _cached_encoder_for_SecurityParameters: $.ASN1Encoder<SecurityParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityParameters */
 /**
  * @summary Encodes a(n) SecurityParameters into an ASN.1 Element.
  * @function
@@ -440,6 +425,5 @@ export function _encode_SecurityParameters(
     return _cached_encoder_for_SecurityParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityParameters */
 
 /* eslint-enable */

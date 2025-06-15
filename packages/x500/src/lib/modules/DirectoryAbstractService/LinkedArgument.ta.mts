@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LinkedArgument */
 /**
  * @summary LinkedArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type LinkedArgument = OPTIONALLY_PROTECTED_SEQ<LinkedArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LinkedArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkedArgument */
 let _cached_decoder_for_LinkedArgument: $.ASN1Decoder<LinkedArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkedArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkedArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) LinkedArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_LinkedArgument(el: _Element) {
     }
     return _cached_decoder_for_LinkedArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LinkedArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkedArgument */
 let _cached_encoder_for_LinkedArgument: $.ASN1Encoder<LinkedArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkedArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkedArgument */
 /**
  * @summary Encodes a(n) LinkedArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_LinkedArgument(
     return _cached_encoder_for_LinkedArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkedArgument */
 
 /* eslint-enable */

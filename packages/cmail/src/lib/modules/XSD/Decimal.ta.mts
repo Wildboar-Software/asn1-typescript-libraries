@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Decimal */
+
 /**
  * @summary Decimal
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Decimal = REAL; // RealType
-/* END_OF_SYMBOL_DEFINITION Decimal */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Decimal */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Decimal */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Decimal */
+
+
 export const _decode_Decimal = $._decodeReal;
-/* END_OF_SYMBOL_DEFINITION _decode_Decimal */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Decimal */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Decimal */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Decimal */
+
+
 export const _encode_Decimal = $._encodeReal;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Decimal */
 
 /* eslint-enable */

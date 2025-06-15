@@ -22,7 +22,6 @@ import { id_nat_returned_ipm } from '../IPMSObjectIdentifiers/id-nat-returned-ip
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION returned_ipm */
 /**
  * @summary returned_ipm
  * @description
@@ -53,6 +52,5 @@ export const returned_ipm: X413ATTRIBUTE<ReturnedIPMField> = {
     '&id': id_nat_returned_ipm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION returned_ipm */
 
 /* eslint-enable */

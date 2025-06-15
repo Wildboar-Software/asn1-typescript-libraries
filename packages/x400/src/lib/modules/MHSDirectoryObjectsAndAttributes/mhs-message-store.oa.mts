@@ -24,7 +24,6 @@ import { mhs_supported_matching_rules } from '../MHSDirectoryObjectsAndAttribute
 import { mhs_supported_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-content-types.oa.mjs';
 import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.mjs';
 import { id_oc_mhs_message_store } from '../MHSObjectIdentifiers/id-oc-mhs-message-store.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_message_store */
 /**
  * @summary mhs_message_store
  * @description
@@ -62,6 +61,5 @@ export const mhs_message_store: OBJECT_CLASS = {
     '&id': id_oc_mhs_message_store /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_message_store */
 
 /* eslint-enable */

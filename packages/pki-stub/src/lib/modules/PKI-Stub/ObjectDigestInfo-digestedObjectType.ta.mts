@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ObjectDigestInfo_digestedObjectType */
 /**
  * @summary ObjectDigestInfo_digestedObjectType
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_ObjectDigestInfo_digestedObjectType {
     publicKeyCert = 1,
     otherObjectTypes = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ObjectDigestInfo_digestedObjectType */
 
-/* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
 /**
  * @summary ObjectDigestInfo_digestedObjectType
  * @description
@@ -42,9 +39,7 @@ export enum _enum_for_ObjectDigestInfo_digestedObjectType {
  */
 export type ObjectDigestInfo_digestedObjectType =
     _enum_for_ObjectDigestInfo_digestedObjectType;
-/* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
 
-/* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
 /**
  * @summary ObjectDigestInfo_digestedObjectType
  * @description
@@ -57,9 +52,7 @@ export type ObjectDigestInfo_digestedObjectType =
  */
 export const ObjectDigestInfo_digestedObjectType =
     _enum_for_ObjectDigestInfo_digestedObjectType;
-/* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
 
-/* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_publicKey */
 /**
  * @summary ObjectDigestInfo_digestedObjectType_publicKey
  * @constant
@@ -67,9 +60,7 @@ export const ObjectDigestInfo_digestedObjectType =
  */
 export const ObjectDigestInfo_digestedObjectType_publicKey: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.publicKey; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_publicKey */
 
-/* START_OF_SYMBOL_DEFINITION publicKey */
 /**
  * @summary publicKey
  * @constant
@@ -77,9 +68,7 @@ export const ObjectDigestInfo_digestedObjectType_publicKey: ObjectDigestInfo_dig
  */
 export const publicKey: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.publicKey; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION publicKey */
 
-/* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_publicKeyCert */
 /**
  * @summary ObjectDigestInfo_digestedObjectType_publicKeyCert
  * @constant
@@ -87,9 +76,7 @@ export const publicKey: ObjectDigestInfo_digestedObjectType =
  */
 export const ObjectDigestInfo_digestedObjectType_publicKeyCert: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.publicKeyCert; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_publicKeyCert */
 
-/* START_OF_SYMBOL_DEFINITION publicKeyCert */
 /**
  * @summary publicKeyCert
  * @constant
@@ -97,9 +84,7 @@ export const ObjectDigestInfo_digestedObjectType_publicKeyCert: ObjectDigestInfo
  */
 export const publicKeyCert: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.publicKeyCert; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION publicKeyCert */
 
-/* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_otherObjectTypes */
 /**
  * @summary ObjectDigestInfo_digestedObjectType_otherObjectTypes
  * @constant
@@ -107,9 +92,7 @@ export const publicKeyCert: ObjectDigestInfo_digestedObjectType =
  */
 export const ObjectDigestInfo_digestedObjectType_otherObjectTypes: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_otherObjectTypes */
 
-/* START_OF_SYMBOL_DEFINITION otherObjectTypes */
 /**
  * @summary otherObjectTypes
  * @constant
@@ -117,14 +100,10 @@ export const ObjectDigestInfo_digestedObjectType_otherObjectTypes: ObjectDigestI
  */
 export const otherObjectTypes: ObjectDigestInfo_digestedObjectType =
     ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION otherObjectTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectDigestInfo_digestedObjectType */
 let _cached_decoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectDigestInfo_digestedObjectType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo_digestedObjectType */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectDigestInfo_digestedObjectType
  * @function
@@ -138,14 +117,10 @@ export function _decode_ObjectDigestInfo_digestedObjectType(el: _Element) {
     }
     return _cached_decoder_for_ObjectDigestInfo_digestedObjectType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo_digestedObjectType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectDigestInfo_digestedObjectType */
 let _cached_encoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectDigestInfo_digestedObjectType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo_digestedObjectType */
 /**
  * @summary Encodes a(n) ObjectDigestInfo_digestedObjectType into an ASN.1 Element.
  * @function
@@ -167,6 +142,5 @@ export function _encode_ObjectDigestInfo_digestedObjectType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo_digestedObjectType */
 
 /* eslint-enable */

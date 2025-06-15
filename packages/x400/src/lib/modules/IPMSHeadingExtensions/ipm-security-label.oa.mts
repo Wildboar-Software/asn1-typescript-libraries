@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/IPMSecurityLabel.ta.mjs';
 import { id_hex_ipm_security_label } from '../IPMSObjectIdentifiers/id-hex-ipm-security-label.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_security_label */
 /**
  * @summary ipm_security_label
  * @description
@@ -45,6 +44,5 @@ export const ipm_security_label: IPMS_EXTENSION<IPMSecurityLabel> = {
     '&id': id_hex_ipm_security_label /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_security_label */
 
 /* eslint-enable */

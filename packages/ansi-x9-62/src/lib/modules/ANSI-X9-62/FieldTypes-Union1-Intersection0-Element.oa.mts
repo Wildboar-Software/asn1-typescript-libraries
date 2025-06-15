@@ -6,7 +6,6 @@ import {
     _encode_Characteristic_two,
 } from "../ANSI-X9-62/Characteristic-two.ta.mjs";
 import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */
 /**
  * @summary FieldTypes_Union1_Intersection0_Element
  * @description
@@ -32,6 +31,5 @@ export const FieldTypes_Union1_Intersection0_Element: FIELD_ID<Characteristic_tw
     "&id": characteristic_two_field /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */
 
 /* eslint-enable */

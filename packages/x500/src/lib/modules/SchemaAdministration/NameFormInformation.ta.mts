@@ -6,7 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION NameFormInformation */
 /**
  * @summary NameFormInformation
  * @description
@@ -74,9 +73,7 @@ export class NameFormInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameFormInformation */
 /**
  * @summary The Leading Root Component Types of NameFormInformation
  * @description
@@ -108,9 +105,7 @@ export const _root_component_type_list_1_spec_for_NameFormInformation: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameFormInformation */
 /**
  * @summary The Trailing Root Component Types of NameFormInformation
  * @description
@@ -120,9 +115,7 @@ export const _root_component_type_list_1_spec_for_NameFormInformation: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameFormInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameFormInformation */
 /**
  * @summary The Extension Addition Component Types of NameFormInformation
  * @description
@@ -132,13 +125,9 @@ export const _root_component_type_list_2_spec_for_NameFormInformation: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_NameFormInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameFormInformation */
 let _cached_decoder_for_NameFormInformation: $.ASN1Decoder<NameFormInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameFormInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameFormInformation
  * @function
@@ -193,13 +182,9 @@ export function _decode_NameFormInformation(el: _Element) {
     }
     return _cached_decoder_for_NameFormInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameFormInformation */
 let _cached_encoder_for_NameFormInformation: $.ASN1Encoder<NameFormInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameFormInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameFormInformation */
 /**
  * @summary Encodes a(n) NameFormInformation into an ASN.1 Element.
  * @function
@@ -245,6 +230,5 @@ export function _encode_NameFormInformation(
     return _cached_encoder_for_NameFormInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameFormInformation */
 
 /* eslint-enable */

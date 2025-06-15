@@ -22,7 +22,6 @@ import {
     _encode_MitMo,
 } from '../RepertoireDirectoryASN1Module/MitMo.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mitMoList */
 /**
  * @summary mitMoList
  * @description
@@ -64,6 +63,5 @@ export const mitMoList: ATTRIBUTE<MitMo> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mitMoList */
 
 /* eslint-enable */

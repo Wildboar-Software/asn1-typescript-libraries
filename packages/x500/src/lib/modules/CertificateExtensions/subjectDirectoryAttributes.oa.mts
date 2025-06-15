@@ -6,7 +6,6 @@ import {
     _encode_AttributesSyntax,
 } from "../CertificateExtensions/AttributesSyntax.ta.mjs";
 import { id_ce_subjectDirectoryAttributes } from "../CertificateExtensions/id-ce-subjectDirectoryAttributes.va.mjs";
-/* START_OF_SYMBOL_DEFINITION subjectDirectoryAttributes */
 /**
  * @summary subjectDirectoryAttributes
  * @description
@@ -34,6 +33,5 @@ export const subjectDirectoryAttributes: EXTENSION<AttributesSyntax> = {
     "&id": id_ce_subjectDirectoryAttributes /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subjectDirectoryAttributes */
 
 /* eslint-enable */

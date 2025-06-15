@@ -36,7 +36,6 @@ import {
     _root_component_type_list_1_spec_for_AadClient,
 } from "../Wrapper/AadClient.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TbpDataTransferClient */
 /**
  * @summary TbpDataTransferClient
  * @description
@@ -137,9 +136,7 @@ export class TbpDataTransferClient extends AadClient {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbpDataTransferClient */
 /**
  * @summary The Leading Root Component Types of TbpDataTransferClient
  * @description
@@ -159,9 +156,7 @@ export const _root_component_type_list_1_spec_for_TbpDataTransferClient: $.Compo
     ),
     new $.ComponentSpec("conf", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbpDataTransferClient */
 /**
  * @summary The Trailing Root Component Types of TbpDataTransferClient
  * @description
@@ -171,9 +166,7 @@ export const _root_component_type_list_1_spec_for_TbpDataTransferClient: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbpDataTransferClient: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbpDataTransferClient */
 /**
  * @summary The Extension Addition Component Types of TbpDataTransferClient
  * @description
@@ -183,13 +176,9 @@ export const _root_component_type_list_2_spec_for_TbpDataTransferClient: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_TbpDataTransferClient: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbpDataTransferClient */
 let _cached_decoder_for_TbpDataTransferClient: $.ASN1Decoder<TbpDataTransferClient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbpDataTransferClient */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbpDataTransferClient
  * @function
@@ -266,13 +255,9 @@ export function _decode_TbpDataTransferClient(el: _Element) {
     }
     return _cached_decoder_for_TbpDataTransferClient(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbpDataTransferClient */
 let _cached_encoder_for_TbpDataTransferClient: $.ASN1Encoder<TbpDataTransferClient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbpDataTransferClient */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbpDataTransferClient */
 /**
  * @summary Encodes a(n) TbpDataTransferClient into an ASN.1 Element.
  * @function
@@ -344,6 +329,5 @@ export function _encode_TbpDataTransferClient(
     return _cached_encoder_for_TbpDataTransferClient(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbpDataTransferClient */
 
 /* eslint-enable */

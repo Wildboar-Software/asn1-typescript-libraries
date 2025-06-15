@@ -23,7 +23,7 @@ import {
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BiometricAttributes */
+
 /**
  * @summary BiometricAttributes
  * @description
@@ -126,9 +126,8 @@ export class BiometricAttributes {
         return 0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricAttributes */
+
 /**
  * @summary The Leading Root Component Types of BiometricAttributes
  * @description
@@ -175,9 +174,8 @@ export const _root_component_type_list_1_spec_for_BiometricAttributes: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricAttributes */
+
 /**
  * @summary The Trailing Root Component Types of BiometricAttributes
  * @description
@@ -187,9 +185,8 @@ export const _root_component_type_list_1_spec_for_BiometricAttributes: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BiometricAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricAttributes */
+
 /**
  * @summary The Extension Addition Component Types of BiometricAttributes
  * @description
@@ -199,13 +196,11 @@ export const _root_component_type_list_2_spec_for_BiometricAttributes: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_BiometricAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricAttributes */
+
 let _cached_decoder_for_BiometricAttributes: $.ASN1Decoder<BiometricAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricAttributes
  * @function
@@ -272,13 +267,11 @@ export function _decode_BiometricAttributes(el: _Element) {
     }
     return _cached_decoder_for_BiometricAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricAttributes */
+
 let _cached_encoder_for_BiometricAttributes: $.ASN1Encoder<BiometricAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricAttributes */
+
 /**
  * @summary Encodes a(n) BiometricAttributes into an ASN.1 Element.
  * @function
@@ -338,6 +331,5 @@ export function _encode_BiometricAttributes(
     return _cached_encoder_for_BiometricAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricAttributes */
 
 /* eslint-enable */

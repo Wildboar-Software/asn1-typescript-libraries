@@ -20,7 +20,6 @@ import { supportedCmipVersion } from '../RepertoireDirectoryASN1Module/supported
 import { supportedCmipProfiles } from '../RepertoireDirectoryASN1Module/supportedCmipProfiles.oa.mjs';
 import { supportedCmisFunctionalUnits } from '../RepertoireDirectoryASN1Module/supportedCmisFunctionalUnits.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION cMISE */
 /**
  * @summary cMISE
  * @description
@@ -56,6 +55,5 @@ export const cMISE: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cMISE */
 
 /* eslint-enable */

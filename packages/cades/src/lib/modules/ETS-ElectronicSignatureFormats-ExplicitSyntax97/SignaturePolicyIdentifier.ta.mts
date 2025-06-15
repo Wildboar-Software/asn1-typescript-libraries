@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta.mjs";
 import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignaturePolicyIdentifier */
 /**
  * @summary SignaturePolicyIdentifier
  * @description
@@ -31,13 +30,9 @@ export
 type SignaturePolicyIdentifier =
     { signaturePolicyId: SignaturePolicyId } /* CHOICE_ALT_ROOT */
     | { signaturePolicyImplied: SignaturePolicyImplied } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SignaturePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignaturePolicyIdentifier */
 let _cached_decoder_for_SignaturePolicyIdentifier: $.ASN1Decoder<SignaturePolicyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignaturePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignaturePolicyIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignaturePolicyIdentifier
  * @function
@@ -52,13 +47,9 @@ function _decode_SignaturePolicyIdentifier (el: _Element) {
 }); }
     return _cached_decoder_for_SignaturePolicyIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignaturePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignaturePolicyIdentifier */
 let _cached_encoder_for_SignaturePolicyIdentifier: $.ASN1Encoder<SignaturePolicyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignaturePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignaturePolicyIdentifier */
 /**
  * @summary Encodes a(n) SignaturePolicyIdentifier into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ function _encode_SignaturePolicyIdentifier (value: SignaturePolicyIdentifier, el
     return _cached_encoder_for_SignaturePolicyIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignaturePolicyIdentifier */
 
 /* eslint-enable */

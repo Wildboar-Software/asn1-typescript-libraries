@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION State_Result */
+
 /**
  * @summary State_Result
  * @description
@@ -25,49 +25,43 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type State_Result = INTEGER;
-/* END_OF_SYMBOL_DEFINITION State_Result */
 
-/* START_OF_SYMBOL_DEFINITION State_Result_success */
+
 /**
  * @summary State_Result_success
  * @constant
  * @type {number}
  */
 export const State_Result_success: State_Result = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION State_Result_success */
 
-/* START_OF_SYMBOL_DEFINITION success */
+
 /**
  * @summary State_Result_success
  * @constant
  * @type {number}
  */
 export const success: State_Result = State_Result_success; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION success */
 
-/* START_OF_SYMBOL_DEFINITION State_Result_failure */
+
 /**
  * @summary State_Result_failure
  * @constant
  * @type {number}
  */
 export const State_Result_failure: State_Result = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION State_Result_failure */
 
-/* START_OF_SYMBOL_DEFINITION failure */
+
 /**
  * @summary State_Result_failure
  * @constant
  * @type {number}
  */
 export const failure: State_Result = State_Result_failure; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION failure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_State_Result */
+
 let _cached_decoder_for_State_Result: $.ASN1Decoder<State_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_State_Result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_State_Result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) State_Result
  * @function
@@ -82,13 +76,11 @@ export function _decode_State_Result(el: _Element) {
   }
   return _cached_decoder_for_State_Result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_State_Result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_State_Result */
+
 let _cached_encoder_for_State_Result: $.ASN1Encoder<State_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_State_Result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_State_Result */
+
 /**
  * @summary Encodes a(n) State_Result into an ASN.1 Element.
  * @function
@@ -111,6 +103,5 @@ export function _encode_State_Result(
   return _cached_encoder_for_State_Result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_State_Result */
 
 /* eslint-enable */

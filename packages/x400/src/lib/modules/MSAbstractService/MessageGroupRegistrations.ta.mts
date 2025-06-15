@@ -15,7 +15,6 @@ import {
     _decode_MessageGroupRegistrations_Item,
     _encode_MessageGroupRegistrations_Item,
 } from '../MSAbstractService/MessageGroupRegistrations-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageGroupRegistrations */
 /**
  * @summary MessageGroupRegistrations
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type MessageGroupRegistrations = MessageGroupRegistrations_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MessageGroupRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupRegistrations */
 let _cached_decoder_for_MessageGroupRegistrations: $.ASN1Decoder<MessageGroupRegistrations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageGroupRegistrations */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageGroupRegistrations
  * @function
@@ -52,13 +47,9 @@ export function _decode_MessageGroupRegistrations(el: _Element) {
     }
     return _cached_decoder_for_MessageGroupRegistrations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageGroupRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupRegistrations */
 let _cached_encoder_for_MessageGroupRegistrations: $.ASN1Encoder<MessageGroupRegistrations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageGroupRegistrations */
 /**
  * @summary Encodes a(n) MessageGroupRegistrations into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_MessageGroupRegistrations(
     return _cached_encoder_for_MessageGroupRegistrations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageGroupRegistrations */
 
 /* eslint-enable */

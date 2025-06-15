@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION VoiceData */
 /**
  * @summary VoiceData
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type VoiceData = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION VoiceData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceData */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VoiceData */
 export const _decode_VoiceData = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_VoiceData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceData */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VoiceData */
 export const _encode_VoiceData = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_VoiceData */
 
 /* eslint-enable */

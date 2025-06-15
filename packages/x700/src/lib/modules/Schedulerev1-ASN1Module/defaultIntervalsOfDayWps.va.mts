@@ -21,7 +21,6 @@ import {
 } from '../Schedulerev1-ASN1Module/Time24Wps.ta.mjs';
 import { IntervalsOfDayWps_Item } from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION defaultIntervalsOfDayWps */
 /**
  * @summary defaultIntervalsOfDayWps
  * @description
@@ -43,6 +42,5 @@ export const defaultIntervalsOfDayWps: IntervalsOfDayWps = [
         new Time24Wps(0, 0, 0, undefined, undefined, undefined, undefined),
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION defaultIntervalsOfDayWps */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_GeneralProblem */
+
 /**
  * @summary GeneralProblem
  * @description
@@ -25,9 +25,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export enum _enum_for_GeneralProblem {
   invalidAPDU = 0,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_GeneralProblem */
 
-/* START_OF_SYMBOL_DEFINITION GeneralProblem */
+
 /**
  * @summary GeneralProblem
  * @description
@@ -39,9 +38,8 @@ export enum _enum_for_GeneralProblem {
  * ```@enum {number}
  */
 export type GeneralProblem = _enum_for_GeneralProblem;
-/* END_OF_SYMBOL_DEFINITION GeneralProblem */
 
-/* START_OF_SYMBOL_DEFINITION GeneralProblem */
+
 /**
  * @summary GeneralProblem
  * @description
@@ -53,9 +51,8 @@ export type GeneralProblem = _enum_for_GeneralProblem;
  * ```@enum {number}
  */
 export const GeneralProblem = _enum_for_GeneralProblem;
-/* END_OF_SYMBOL_DEFINITION GeneralProblem */
 
-/* START_OF_SYMBOL_DEFINITION GeneralProblem_invalidAPDU */
+
 /**
  * @summary GeneralProblem_invalidAPDU
  * @constant
@@ -63,9 +60,8 @@ export const GeneralProblem = _enum_for_GeneralProblem;
  */
 export const GeneralProblem_invalidAPDU: GeneralProblem =
   GeneralProblem.invalidAPDU; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION GeneralProblem_invalidAPDU */
 
-/* START_OF_SYMBOL_DEFINITION invalidAPDU */
+
 /**
  * @summary invalidAPDU
  * @constant
@@ -73,21 +69,16 @@ export const GeneralProblem_invalidAPDU: GeneralProblem =
  */
 export const invalidAPDU: GeneralProblem =
   GeneralProblem.invalidAPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidAPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralProblem */
+
+
 export const _decode_GeneralProblem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralProblem */
+
+
 export const _encode_GeneralProblem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralProblem */
 
 /* eslint-enable */

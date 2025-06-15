@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_operation_refused */
 /**
  * @summary err_operation_refused
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_operation_refused: Code = { local: 16 };
-/* END_OF_SYMBOL_DEFINITION err_operation_refused */
 
 /* eslint-enable */

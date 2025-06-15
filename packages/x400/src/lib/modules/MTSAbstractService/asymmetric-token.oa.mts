@@ -16,7 +16,6 @@ import {
 } from '../MTSAbstractService/AsymmetricToken.ta.mjs';
 import { id_tok_asymmetricToken } from '../MTSObjectIdentifiers/id-tok-asymmetricToken.va.mjs';
 import { TOKEN } from '../MTSAbstractService/TOKEN.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION asymmetric_token */
 /**
  * @summary asymmetric_token
  * @description
@@ -45,6 +44,5 @@ export const asymmetric_token: TOKEN<AsymmetricToken> = {
     '&id': id_tok_asymmetricToken /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION asymmetric_token */
 
 /* eslint-enable */

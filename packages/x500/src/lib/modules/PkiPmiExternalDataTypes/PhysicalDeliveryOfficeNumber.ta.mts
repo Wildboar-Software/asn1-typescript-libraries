@@ -6,7 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../PkiPmiExternalDataTypes/PDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryOfficeNumber */
 /**
  * @summary PhysicalDeliveryOfficeNumber
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type PhysicalDeliveryOfficeNumber = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryOfficeNumber */
 let _cached_decoder_for_PhysicalDeliveryOfficeNumber: $.ASN1Decoder<PhysicalDeliveryOfficeNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryOfficeNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryOfficeNumber
  * @function
@@ -37,13 +32,9 @@ export function _decode_PhysicalDeliveryOfficeNumber(el: _Element) {
     }
     return _cached_decoder_for_PhysicalDeliveryOfficeNumber(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryOfficeNumber */
 let _cached_encoder_for_PhysicalDeliveryOfficeNumber: $.ASN1Encoder<PhysicalDeliveryOfficeNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryOfficeNumber */
 /**
  * @summary Encodes a(n) PhysicalDeliveryOfficeNumber into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_PhysicalDeliveryOfficeNumber(
     return _cached_encoder_for_PhysicalDeliveryOfficeNumber(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryOfficeNumber */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PollInterval */
 /**
  * @summary PollInterval
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PollInterval = INTEGER;
-/* END_OF_SYMBOL_DEFINITION PollInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PollInterval */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PollInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PollInterval */
 export const _decode_PollInterval = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_PollInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PollInterval */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PollInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PollInterval */
 export const _encode_PollInterval = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PollInterval */
 
 /* eslint-enable */

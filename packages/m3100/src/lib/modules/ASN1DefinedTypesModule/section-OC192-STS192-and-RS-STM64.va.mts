@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION section_OC192_STS192_and_RS_STM64 */
+
 /**
  * @summary section_OC192_STS192_and_RS_STM64
  * @description
@@ -32,6 +32,5 @@ export const section_OC192_STS192_and_RS_STM64: CharacteristicInformation = new 
     [30],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION section_OC192_STS192_and_RS_STM64 */
 
 /* eslint-enable */

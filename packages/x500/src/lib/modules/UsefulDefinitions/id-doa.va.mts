@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { dsaOperationalAttribute } from "../UsefulDefinitions/dsaOperationalAttribute.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_doa */
 /**
  * @summary id_doa
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_doa: ID = dsaOperationalAttribute;
-/* END_OF_SYMBOL_DEFINITION id_doa */
 
 /* eslint-enable */

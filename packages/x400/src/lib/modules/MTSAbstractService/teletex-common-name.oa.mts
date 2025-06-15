@@ -15,7 +15,6 @@ import {
     _encode_TeletexCommonName,
 } from '../MTSAbstractService/TeletexCommonName.ta.mjs';
 import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION teletex_common_name */
 /**
  * @summary teletex_common_name
  * @description
@@ -43,6 +42,5 @@ export const teletex_common_name: EXTENSION_ATTRIBUTE<TeletexCommonName> = {
     '&id': 2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_common_name */
 
 /* eslint-enable */

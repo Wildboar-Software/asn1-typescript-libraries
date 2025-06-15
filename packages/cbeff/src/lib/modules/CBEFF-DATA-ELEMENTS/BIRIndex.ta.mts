@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BIRIndex */
 /**
  * @summary BIRIndex
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BIRIndex = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION BIRIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIRIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIRIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIRIndex */
 export const _decode_BIRIndex = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_BIRIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIRIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIRIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIRIndex */
 export const _encode_BIRIndex = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIRIndex */
 
 /* eslint-enable */

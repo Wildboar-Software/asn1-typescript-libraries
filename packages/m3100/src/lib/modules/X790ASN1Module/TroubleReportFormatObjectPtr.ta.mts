@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleReportFormatObjectPtr */
+
 /**
  * @summary TroubleReportFormatObjectPtr
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TroubleReportFormatObjectPtr = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TroubleReportFormatObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportFormatObjectPtr */
+
 let _cached_decoder_for_TroubleReportFormatObjectPtr: $.ASN1Decoder<TroubleReportFormatObjectPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportFormatObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportFormatObjectPtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportFormatObjectPtr
  * @function
@@ -46,13 +44,11 @@ export function _decode_TroubleReportFormatObjectPtr(el: _Element) {
     }
     return _cached_decoder_for_TroubleReportFormatObjectPtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportFormatObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportFormatObjectPtr */
+
 let _cached_encoder_for_TroubleReportFormatObjectPtr: $.ASN1Encoder<TroubleReportFormatObjectPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportFormatObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportFormatObjectPtr */
+
 /**
  * @summary Encodes a(n) TroubleReportFormatObjectPtr into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TroubleReportFormatObjectPtr(
     return _cached_encoder_for_TroubleReportFormatObjectPtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportFormatObjectPtr */
 
 /* eslint-enable */

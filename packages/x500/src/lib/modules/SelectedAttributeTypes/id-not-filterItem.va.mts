@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_not_filterItem */
 /**
  * @summary id_not_filterItem
  * @description
@@ -15,6 +14,5 @@ import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
  * @constant
  */
 export const id_not_filterItem: OBJECT_IDENTIFIER = new _OID([5], id_not);
-/* END_OF_SYMBOL_DEFINITION id_not_filterItem */
 
 /* eslint-enable */

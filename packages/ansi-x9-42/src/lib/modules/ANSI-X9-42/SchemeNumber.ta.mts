@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_SchemeNumber */
+
 export enum _enum_for_SchemeNumber {
     dhStatic_sha1 = 0,
     dhEphem_sha1 = 1,
@@ -13,9 +13,8 @@ export enum _enum_for_SchemeNumber {
     mqv2_sha1 = 6,
     mqv1_sha1 = 7,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_SchemeNumber */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber */
+
 /**
  * @summary SchemeNumber
  * @description
@@ -37,165 +36,144 @@ export enum _enum_for_SchemeNumber {
  * ```@enum {number}
  */
 export type SchemeNumber = _enum_for_SchemeNumber | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION SchemeNumber */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_dhStatic_sha1 */
+
 /**
  * @summary SchemeNumber_dhStatic_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_dhStatic_sha1: SchemeNumber = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_dhStatic_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION dhStatic_sha1 */
+
 /**
  * @summary dhStatic_sha1
  * @constant
  * @type {number}
  */
 export const dhStatic_sha1: SchemeNumber = SchemeNumber_dhStatic_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dhStatic_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_dhEphem_sha1 */
+
 /**
  * @summary SchemeNumber_dhEphem_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_dhEphem_sha1: SchemeNumber = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_dhEphem_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION dhEphem_sha1 */
+
 /**
  * @summary dhEphem_sha1
  * @constant
  * @type {number}
  */
 export const dhEphem_sha1: SchemeNumber = SchemeNumber_dhEphem_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dhEphem_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_dhOneFlow_sha1 */
+
 /**
  * @summary SchemeNumber_dhOneFlow_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_dhOneFlow_sha1: SchemeNumber = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_dhOneFlow_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION dhOneFlow_sha1 */
+
 /**
  * @summary dhOneFlow_sha1
  * @constant
  * @type {number}
  */
 export const dhOneFlow_sha1: SchemeNumber = SchemeNumber_dhOneFlow_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dhOneFlow_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_dhHybrid1_sha1 */
+
 /**
  * @summary SchemeNumber_dhHybrid1_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_dhHybrid1_sha1: SchemeNumber = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_dhHybrid1_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION dhHybrid1_sha1 */
+
 /**
  * @summary dhHybrid1_sha1
  * @constant
  * @type {number}
  */
 export const dhHybrid1_sha1: SchemeNumber = SchemeNumber_dhHybrid1_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dhHybrid1_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_dhHybrid2_sha1 */
+
 /**
  * @summary SchemeNumber_dhHybrid2_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_dhHybrid2_sha1: SchemeNumber = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_dhHybrid2_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION dhHybrid2_sha1 */
+
 /**
  * @summary dhHybrid2_sha1
  * @constant
  * @type {number}
  */
 export const dhHybrid2_sha1: SchemeNumber = SchemeNumber_dhHybrid2_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dhHybrid2_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_dhHybridOneFlow_sha1 */
+
 /**
  * @summary SchemeNumber_dhHybridOneFlow_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_dhHybridOneFlow_sha1: SchemeNumber = 5; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_dhHybridOneFlow_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION dhHybridOneFlow_sha1 */
+
 /**
  * @summary dhHybridOneFlow_sha1
  * @constant
  * @type {number}
  */
 export const dhHybridOneFlow_sha1: SchemeNumber = SchemeNumber_dhHybridOneFlow_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION dhHybridOneFlow_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_mqv2_sha1 */
+
 /**
  * @summary SchemeNumber_mqv2_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_mqv2_sha1: SchemeNumber = 6; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_mqv2_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION mqv2_sha1 */
+
 /**
  * @summary mqv2_sha1
  * @constant
  * @type {number}
  */
 export const mqv2_sha1: SchemeNumber = SchemeNumber_mqv2_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mqv2_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION SchemeNumber_mqv1_sha1 */
+
 /**
  * @summary SchemeNumber_mqv1_sha1
  * @constant
  * @type {number}
  */
 export const SchemeNumber_mqv1_sha1: SchemeNumber = 7; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SchemeNumber_mqv1_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION mqv1_sha1 */
+
 /**
  * @summary mqv1_sha1
  * @constant
  * @type {number}
  */
 export const mqv1_sha1: SchemeNumber = SchemeNumber_mqv1_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mqv1_sha1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchemeNumber */
+
+
 export const _decode_SchemeNumber = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_SchemeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchemeNumber */
+
+
 export const _encode_SchemeNumber = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchemeNumber */
 
 /* eslint-enable */

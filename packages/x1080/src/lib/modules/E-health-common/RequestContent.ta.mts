@@ -16,7 +16,7 @@ import {
     _decode_RequestContent_content,
     _encode_RequestContent_content,
 } from '../E-health-common/RequestContent-content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RequestContent */
+
 /**
  * @summary RequestContent
  * @description
@@ -85,9 +85,8 @@ export class RequestContent {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestContent */
+
 /**
  * @summary The Leading Root Component Types of RequestContent
  * @description
@@ -112,9 +111,8 @@ export const _root_component_type_list_1_spec_for_RequestContent: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestContent */
+
 /**
  * @summary The Trailing Root Component Types of RequestContent
  * @description
@@ -124,9 +122,8 @@ export const _root_component_type_list_1_spec_for_RequestContent: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RequestContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestContent */
+
 /**
  * @summary The Extension Addition Component Types of RequestContent
  * @description
@@ -136,13 +133,11 @@ export const _root_component_type_list_2_spec_for_RequestContent: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_RequestContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestContent */
+
 let _cached_decoder_for_RequestContent: $.ASN1Decoder<RequestContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestContent
  * @function
@@ -173,13 +168,11 @@ export function _decode_RequestContent(el: _Element) {
     }
     return _cached_decoder_for_RequestContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestContent */
+
 let _cached_encoder_for_RequestContent: $.ASN1Encoder<RequestContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestContent */
+
 /**
  * @summary Encodes a(n) RequestContent into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_RequestContent(
     return _cached_encoder_for_RequestContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestContent */
 
 /* eslint-enable */

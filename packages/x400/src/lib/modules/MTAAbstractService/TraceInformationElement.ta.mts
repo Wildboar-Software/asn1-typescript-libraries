@@ -20,7 +20,6 @@ import {
     _decode_DomainSuppliedInformation,
     _encode_DomainSuppliedInformation,
 } from '../MTAAbstractService/DomainSuppliedInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TraceInformationElement */
 /**
  * @summary TraceInformationElement
  * @description
@@ -75,9 +74,7 @@ export class TraceInformationElement {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TraceInformationElement */
 /**
  * @summary The Leading Root Component Types of TraceInformationElement
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_TraceInformationElement: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TraceInformationElement */
 /**
  * @summary The Trailing Root Component Types of TraceInformationElement
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_TraceInformationElement: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TraceInformationElement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TraceInformationElement */
 /**
  * @summary The Extension Addition Component Types of TraceInformationElement
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_TraceInformationElement: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_TraceInformationElement: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TraceInformationElement */
 let _cached_decoder_for_TraceInformationElement: $.ASN1Decoder<TraceInformationElement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TraceInformationElement */
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceInformationElement
  * @function
@@ -170,13 +159,9 @@ export function _decode_TraceInformationElement(el: _Element) {
     }
     return _cached_decoder_for_TraceInformationElement(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TraceInformationElement */
 let _cached_encoder_for_TraceInformationElement: $.ASN1Encoder<TraceInformationElement> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TraceInformationElement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TraceInformationElement */
 /**
  * @summary Encodes a(n) TraceInformationElement into an ASN.1 Element.
  * @function
@@ -211,6 +196,5 @@ export function _encode_TraceInformationElement(
     return _cached_encoder_for_TraceInformationElement(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TraceInformationElement */
 
 /* eslint-enable */

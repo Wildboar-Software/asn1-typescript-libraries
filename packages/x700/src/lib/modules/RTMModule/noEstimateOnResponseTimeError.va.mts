@@ -14,7 +14,6 @@ import {
     _decode_ResponseTime,
     _encode_ResponseTime,
 } from '../RTMModule/ResponseTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION noEstimateOnResponseTimeError */
 /**
  * @summary noEstimateOnResponseTimeError
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const noEstimateOnResponseTimeError: ResponseTime = { seconds: -1 };
-/* END_OF_SYMBOL_DEFINITION noEstimateOnResponseTimeError */
 
 /* eslint-enable */

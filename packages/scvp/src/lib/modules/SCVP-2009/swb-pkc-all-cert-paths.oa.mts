@@ -16,7 +16,6 @@ import {
 } from '../SCVP-2009/CertBundles.ta.mjs';
 import { id_swb_pkc_all_cert_paths } from '../SCVP-2009/id-swb-pkc-all-cert-paths.va.mjs';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION swb_pkc_all_cert_paths */
 /**
  * @summary swb_pkc_all_cert_paths
  * @description
@@ -42,6 +41,5 @@ export const swb_pkc_all_cert_paths: WANT_BACK<CertBundles> = {
   '&id': id_swb_pkc_all_cert_paths /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION swb_pkc_all_cert_paths */
 
 /* eslint-enable */

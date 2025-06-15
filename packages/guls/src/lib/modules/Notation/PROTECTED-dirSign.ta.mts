@@ -18,7 +18,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PROTECTED_dirSign */
+
 /**
  * @summary PROTECTED_dirSign
  * @description
@@ -75,9 +75,8 @@ export class PROTECTED_dirSign<BaseType> {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION PROTECTED_dirSign */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PROTECTED_dirSign */
+
 /**
  * @summary The Leading Root Component Types of PROTECTED_dirSign
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_PROTECTED_dirSign: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PROTECTED_dirSign */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PROTECTED_dirSign */
+
 /**
  * @summary The Trailing Root Component Types of PROTECTED_dirSign
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_PROTECTED_dirSign: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PROTECTED_dirSign: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PROTECTED_dirSign */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PROTECTED_dirSign */
+
 /**
  * @summary The Extension Addition Component Types of PROTECTED_dirSign
  * @description
@@ -127,9 +124,8 @@ export const _root_component_type_list_2_spec_for_PROTECTED_dirSign: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_PROTECTED_dirSign: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PROTECTED_dirSign */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PROTECTED_dirSign */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PROTECTED_dirSign
  * @function
@@ -173,9 +169,8 @@ export function _get_decoder_for_PROTECTED_dirSign<BaseType>(
     );
   };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PROTECTED_dirSign */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PROTECTED_dirSign */
+
 /**
  * @summary Returns a function that will encode a(n) PROTECTED_dirSign into an ASN.1 Element.
  * @function
@@ -203,6 +198,5 @@ export function _get_encoder_for_PROTECTED_dirSign<BaseType>(
     );
   };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PROTECTED_dirSign */
 
 /* eslint-enable */

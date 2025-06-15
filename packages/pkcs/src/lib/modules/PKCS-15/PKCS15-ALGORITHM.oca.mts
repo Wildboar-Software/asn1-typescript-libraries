@@ -2,7 +2,7 @@
 import { INTEGER, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Operations } from "../PKCS-15/Operations.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS15_ALGORITHM */
+
 /**
  * @summary PKCS15_ALGORITHM
  * @description
@@ -71,6 +71,5 @@ export interface PKCS15_ALGORITHM<
      */
     readonly "&objectIdentifier"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION PKCS15_ALGORITHM */
 
 /* eslint-enable */

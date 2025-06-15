@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DeletionTime */
 /**
  * @summary DeletionTime
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DeletionTime = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION DeletionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeletionTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeletionTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeletionTime */
 export const _decode_DeletionTime = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_DeletionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeletionTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeletionTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeletionTime */
 export const _encode_DeletionTime = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeletionTime */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
 } from "../AlgorithmInformation-2009/SMIMECapabilities.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 import { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va.mjs";
-/* START_OF_SYMBOL_DEFINITION aa_smimeCapabilities */
+
 /**
  * @summary aa_smimeCapabilities
  * @description
@@ -34,6 +34,5 @@ export const aa_smimeCapabilities: ATTRIBUTE<SMIMECapabilities> = {
     "&id": smimeCapabilities /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aa_smimeCapabilities */
 
 /* eslint-enable */

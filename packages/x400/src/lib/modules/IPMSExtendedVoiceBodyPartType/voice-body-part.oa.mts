@@ -12,7 +12,6 @@ import {
 import { voice_body_part_parameters } from '../IPMSExtendedVoiceBodyPartType/voice-body-part-parameters.oa.mjs';
 import { voice_body_part_data } from '../IPMSExtendedVoiceBodyPartType/voice-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION voice_body_part */
 /**
  * @summary voice_body_part
  * @description
@@ -39,6 +38,5 @@ export const voice_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': voice_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': voice_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION voice_body_part */
 
 /* eslint-enable */

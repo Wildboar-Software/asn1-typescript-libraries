@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION IDENTIFICATION */
+
 /**
  * @summary IDENTIFICATION
  * @description
@@ -68,6 +68,5 @@ export interface IDENTIFICATION<
      */
     readonly '&Identification': Identification;
 }
-/* END_OF_SYMBOL_DEFINITION IDENTIFICATION */
 
 /* eslint-enable */

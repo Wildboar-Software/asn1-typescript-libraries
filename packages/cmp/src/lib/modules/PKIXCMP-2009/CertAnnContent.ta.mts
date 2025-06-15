@@ -15,7 +15,7 @@ import {
   _decode_CMPCertificate,
   _encode_CMPCertificate,
 } from '../PKIXCMP-2009/CMPCertificate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertAnnContent */
+
 /**
  * @summary CertAnnContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type CertAnnContent = CMPCertificate; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CertAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertAnnContent */
+
 let _cached_decoder_for_CertAnnContent: $.ASN1Decoder<CertAnnContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertAnnContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertAnnContent
  * @function
@@ -46,13 +44,11 @@ export function _decode_CertAnnContent(el: _Element) {
   }
   return _cached_decoder_for_CertAnnContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertAnnContent */
+
 let _cached_encoder_for_CertAnnContent: $.ASN1Encoder<CertAnnContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertAnnContent */
+
 /**
  * @summary Encodes a(n) CertAnnContent into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_CertAnnContent(
   return _cached_encoder_for_CertAnnContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertAnnContent */
 
 /* eslint-enable */

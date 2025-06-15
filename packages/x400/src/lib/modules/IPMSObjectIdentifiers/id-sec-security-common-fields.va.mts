@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_sec } from '../IPMSObjectIdentifiers/id-sec.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_sec_security_common_fields */
 /**
  * @summary id_sec_security_common_fields
  * @description
@@ -25,6 +24,5 @@ import { id_sec } from '../IPMSObjectIdentifiers/id-sec.va.mjs';
  * @constant
  */
 export const id_sec_security_common_fields: ID = new _OID([1], id_sec);
-/* END_OF_SYMBOL_DEFINITION id_sec_security_common_fields */
 
 /* eslint-enable */

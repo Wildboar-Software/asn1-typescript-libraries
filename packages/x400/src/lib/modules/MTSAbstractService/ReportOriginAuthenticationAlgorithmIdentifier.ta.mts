@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary ReportOriginAuthenticationAlgorithmIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportOriginAuthenticationAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportOriginAuthenticationAlgorithmIdentifier */
 let _cached_decoder_for_ReportOriginAuthenticationAlgorithmIdentifier: $.ASN1Decoder<ReportOriginAuthenticationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportOriginAuthenticationAlgorithmIdentifier
  * @function
@@ -50,13 +45,9 @@ export function _decode_ReportOriginAuthenticationAlgorithmIdentifier(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportOriginAuthenticationAlgorithmIdentifier */
 let _cached_encoder_for_ReportOriginAuthenticationAlgorithmIdentifier: $.ASN1Encoder<ReportOriginAuthenticationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary Encodes a(n) ReportOriginAuthenticationAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_ReportOriginAuthenticationAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportOriginAuthenticationAlgorithmIdentifier */
 
 /* eslint-enable */

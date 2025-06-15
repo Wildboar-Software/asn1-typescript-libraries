@@ -23,7 +23,6 @@ import {
 } from '../MHSDirectoryObjectsAndAttributes/Capability.ta.mjs';
 import { capabilityMatch } from '../MHSDirectoryObjectsAndAttributes/capabilityMatch.oa.mjs';
 import { id_at_mhs_deliverable_classes } from '../MHSObjectIdentifiers/id-at-mhs-deliverable-classes.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_deliverable_classes */
 /**
  * @summary mhs_deliverable_classes
  * @description
@@ -60,6 +59,5 @@ export const mhs_deliverable_classes: ATTRIBUTE<Capability> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_deliverable_classes */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
   _decode_Component,
   _encode_Component,
 } from '../TCAPMessages/Component.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ComponentPortion */
 /**
  * @summary ComponentPortion
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type ComponentPortion = Component[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ComponentPortion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentPortion */
 let _cached_decoder_for_ComponentPortion: $.ASN1Decoder<ComponentPortion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentPortion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentPortion */
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentPortion
  * @function
@@ -50,13 +45,9 @@ export function _decode_ComponentPortion(el: _Element) {
   }
   return _cached_decoder_for_ComponentPortion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentPortion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentPortion */
 let _cached_encoder_for_ComponentPortion: $.ASN1Encoder<ComponentPortion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentPortion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentPortion */
 /**
  * @summary Encodes a(n) ComponentPortion into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_ComponentPortion(
   return _cached_encoder_for_ComponentPortion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentPortion */
 
 /* eslint-enable */

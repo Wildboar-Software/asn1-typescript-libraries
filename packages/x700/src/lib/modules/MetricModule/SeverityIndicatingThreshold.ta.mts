@@ -23,7 +23,6 @@ import {
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SeverityIndicatingThreshold */
 /**
  * @summary SeverityIndicatingThreshold
  * @description
@@ -94,9 +93,7 @@ export class SeverityIndicatingThreshold {
 
     public static _enum_for_severityIndication = _enum_for_PerceivedSeverity;
 }
-/* END_OF_SYMBOL_DEFINITION SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SeverityIndicatingThreshold */
 /**
  * @summary The Leading Root Component Types of SeverityIndicatingThreshold
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_SeverityIndicatingThreshold: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SeverityIndicatingThreshold */
 /**
  * @summary The Trailing Root Component Types of SeverityIndicatingThreshold
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_SeverityIndicatingThreshold: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SeverityIndicatingThreshold: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SeverityIndicatingThreshold */
 /**
  * @summary The Extension Addition Component Types of SeverityIndicatingThreshold
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_SeverityIndicatingThreshold: $
  * @constant
  */
 export const _extension_additions_list_spec_for_SeverityIndicatingThreshold: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SeverityIndicatingThreshold */
 let _cached_decoder_for_SeverityIndicatingThreshold: $.ASN1Decoder<SeverityIndicatingThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SeverityIndicatingThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) SeverityIndicatingThreshold
  * @function
@@ -199,13 +188,9 @@ export function _decode_SeverityIndicatingThreshold(el: _Element) {
     }
     return _cached_decoder_for_SeverityIndicatingThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SeverityIndicatingThreshold */
 let _cached_encoder_for_SeverityIndicatingThreshold: $.ASN1Encoder<SeverityIndicatingThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SeverityIndicatingThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SeverityIndicatingThreshold */
 /**
  * @summary Encodes a(n) SeverityIndicatingThreshold into an ASN.1 Element.
  * @function
@@ -246,6 +231,5 @@ export function _encode_SeverityIndicatingThreshold(
     return _cached_encoder_for_SeverityIndicatingThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SeverityIndicatingThreshold */
 
 /* eslint-enable */

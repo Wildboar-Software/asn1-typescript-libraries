@@ -20,7 +20,6 @@ import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mj
 import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.mjs';
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIAutoActionErrorTable */
 /**
  * @summary EDIAutoActionErrorTable
  * @description
@@ -50,6 +49,5 @@ export const EDIAutoActionErrorTable: AUTO_ACTION_ERROR[] = [
     submission_control_violated,
     unsupported_critical_function,
 ];
-/* END_OF_SYMBOL_DEFINITION EDIAutoActionErrorTable */
 
 /* eslint-enable */

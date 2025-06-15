@@ -15,7 +15,6 @@ import {
     _encode_UniversalPhysicalDeliveryOfficeNumber,
 } from '../MTSAbstractService/UniversalPhysicalDeliveryOfficeNumber.ta.mjs';
 import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION universal_physical_delivery_office_number */
 /**
  * @summary universal_physical_delivery_office_number
  * @description
@@ -44,6 +43,5 @@ export const universal_physical_delivery_office_number: EXTENSION_ATTRIBUTE<Univ
     '&id': 30 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_physical_delivery_office_number */
 
 /* eslint-enable */

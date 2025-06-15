@@ -13,7 +13,7 @@ import {
     _encode_DigestInfo,
 } from "../PKCS7/DigestInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MacData */
+
 /**
  * @summary MacData
  * @description
@@ -82,9 +82,8 @@ export class MacData {
         return 1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION MacData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MacData */
+
 /**
  * @summary The Leading Root Component Types of MacData
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_MacData: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MacData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MacData */
+
 /**
  * @summary The Trailing Root Component Types of MacData
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_MacData: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MacData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MacData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MacData */
+
 /**
  * @summary The Extension Addition Component Types of MacData
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_MacData: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_MacData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MacData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MacData */
+
 let _cached_decoder_for_MacData: $.ASN1Decoder<MacData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MacData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MacData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MacData
  * @function
@@ -192,13 +187,11 @@ export function _decode_MacData(el: _Element) {
     }
     return _cached_decoder_for_MacData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MacData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MacData */
+
 let _cached_encoder_for_MacData: $.ASN1Encoder<MacData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MacData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MacData */
+
 /**
  * @summary Encodes a(n) MacData into an ASN.1 Element.
  * @function
@@ -237,6 +230,5 @@ export function _encode_MacData(
     return _cached_encoder_for_MacData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MacData */
 
 /* eslint-enable */

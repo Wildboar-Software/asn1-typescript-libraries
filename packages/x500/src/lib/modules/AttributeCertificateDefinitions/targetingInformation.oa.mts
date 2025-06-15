@@ -7,7 +7,6 @@ import {
     _encode_Targets,
 } from "../AttributeCertificateDefinitions/Targets.ta.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION targetingInformation */
 /**
  * @summary targetingInformation
  * @description
@@ -35,6 +34,5 @@ export const targetingInformation: EXTENSION<Targets[]> = {
     "&id": id_ce_targetingInformation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION targetingInformation */
 
 /* eslint-enable */

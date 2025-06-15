@@ -15,7 +15,7 @@ import {
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Destination_File_Directory */
+
 /**
  * @summary Destination_File_Directory
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Destination_File_Directory = Pathname_Attribute; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Destination_File_Directory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Destination_File_Directory */
+
 let _cached_decoder_for_Destination_File_Directory: $.ASN1Decoder<Destination_File_Directory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Destination_File_Directory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Destination_File_Directory */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Destination_File_Directory
  * @function
@@ -48,13 +46,11 @@ export function _decode_Destination_File_Directory(el: _Element) {
   }
   return _cached_decoder_for_Destination_File_Directory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Destination_File_Directory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Destination_File_Directory */
+
 let _cached_encoder_for_Destination_File_Directory: $.ASN1Encoder<Destination_File_Directory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Destination_File_Directory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Destination_File_Directory */
+
 /**
  * @summary Encodes a(n) Destination_File_Directory into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_Destination_File_Directory(
   return _cached_encoder_for_Destination_File_Directory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Destination_File_Directory */
 
 /* eslint-enable */

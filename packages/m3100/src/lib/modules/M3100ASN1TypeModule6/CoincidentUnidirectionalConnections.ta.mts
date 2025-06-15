@@ -20,7 +20,7 @@ import {
     _decode_CoincidentProtectedUnidirectionalConnections,
     _encode_CoincidentProtectedUnidirectionalConnections,
 } from '../M3100ASN1TypeModule6/CoincidentProtectedUnidirectionalConnections.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CoincidentUnidirectionalConnections */
+
 /**
  * @summary CoincidentUnidirectionalConnections
  * @description
@@ -41,13 +41,11 @@ export type CoincidentUnidirectionalConnections =
     | {
           protected_: CoincidentProtectedUnidirectionalConnections;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CoincidentUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CoincidentUnidirectionalConnections */
+
 let _cached_decoder_for_CoincidentUnidirectionalConnections: $.ASN1Decoder<CoincidentUnidirectionalConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CoincidentUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CoincidentUnidirectionalConnections */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CoincidentUnidirectionalConnections
  * @function
@@ -77,13 +75,11 @@ export function _decode_CoincidentUnidirectionalConnections(el: _Element) {
     }
     return _cached_decoder_for_CoincidentUnidirectionalConnections(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CoincidentUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CoincidentUnidirectionalConnections */
+
 let _cached_encoder_for_CoincidentUnidirectionalConnections: $.ASN1Encoder<CoincidentUnidirectionalConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CoincidentUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CoincidentUnidirectionalConnections */
+
 /**
  * @summary Encodes a(n) CoincidentUnidirectionalConnections into an ASN.1 Element.
  * @function
@@ -121,6 +117,5 @@ export function _encode_CoincidentUnidirectionalConnections(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CoincidentUnidirectionalConnections */
 
 /* eslint-enable */

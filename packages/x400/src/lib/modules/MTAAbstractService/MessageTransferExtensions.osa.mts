@@ -26,7 +26,6 @@ import { multiple_originator_certificates } from '../MTSAbstractService/multiple
 import { dl_expansion_history } from '../MTSAbstractService/dl-expansion-history.oa.mjs';
 import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageTransferExtensions */
 /**
  * @summary MessageTransferExtensions
  * @description
@@ -68,6 +67,5 @@ export const MessageTransferExtensions: EXTENSION[] = [
     internal_trace_information,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION MessageTransferExtensions */
 
 /* eslint-enable */

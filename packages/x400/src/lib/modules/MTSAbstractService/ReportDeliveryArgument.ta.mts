@@ -57,7 +57,6 @@ import {
     _extension_additions_list_spec_for_ReportDeliveryEnvelope,
 } from '../MTSAbstractService/ReportDeliveryEnvelope.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ReportDeliveryArgument */
 /**
  * @summary ReportDeliveryArgument
  * @description
@@ -157,9 +156,7 @@ export class ReportDeliveryArgument implements ReportDeliveryEnvelope {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportDeliveryArgument */
 /**
  * @summary The Leading Root Component Types of ReportDeliveryArgument
  * @description
@@ -178,9 +175,7 @@ export const _root_component_type_list_1_spec_for_ReportDeliveryArgument: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportDeliveryArgument */
 /**
  * @summary The Trailing Root Component Types of ReportDeliveryArgument
  * @description
@@ -192,9 +187,7 @@ export const _root_component_type_list_1_spec_for_ReportDeliveryArgument: $.Comp
 export const _root_component_type_list_2_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_ReportDeliveryEnvelope,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryArgument */
 /**
  * @summary The Extension Addition Component Types of ReportDeliveryArgument
  * @description
@@ -206,13 +199,9 @@ export const _root_component_type_list_2_spec_for_ReportDeliveryArgument: $.Comp
 export const _extension_additions_list_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_ReportDeliveryEnvelope,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryArgument */
 let _cached_decoder_for_ReportDeliveryArgument: $.ASN1Decoder<ReportDeliveryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportDeliveryArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportDeliveryArgument
  * @function
@@ -292,13 +281,9 @@ export function _decode_ReportDeliveryArgument(el: _Element) {
     }
     return _cached_decoder_for_ReportDeliveryArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryArgument */
 let _cached_encoder_for_ReportDeliveryArgument: $.ASN1Encoder<ReportDeliveryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportDeliveryArgument */
 /**
  * @summary Encodes a(n) ReportDeliveryArgument into an ASN.1 Element.
  * @function
@@ -373,6 +358,5 @@ export function _encode_ReportDeliveryArgument(
     return _cached_encoder_for_ReportDeliveryArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportDeliveryArgument */
 
 /* eslint-enable */

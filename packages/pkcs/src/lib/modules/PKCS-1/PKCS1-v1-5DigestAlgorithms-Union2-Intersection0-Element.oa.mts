@@ -3,7 +3,7 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { id_sha1 } from "../PKCS-1/id-sha1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS1_v1_5DigestAlgorithms_Union2_Intersection0_Element */
+
 /**
  * @summary PKCS1_v1_5DigestAlgorithms_Union2_Intersection0_Element
  * @description
@@ -29,6 +29,5 @@ export const PKCS1_v1_5DigestAlgorithms_Union2_Intersection0_Element: ALGORITHM_
     "&id": id_sha1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PKCS1_v1_5DigestAlgorithms_Union2_Intersection0_Element */
 
 /* eslint-enable */

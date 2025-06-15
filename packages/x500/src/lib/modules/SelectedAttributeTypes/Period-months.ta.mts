@@ -6,7 +6,6 @@ import {
     _decode_Period_months_bitMonth,
     _encode_Period_months_bitMonth,
 } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Period_months */
 /**
  * @summary Period_months
  * @description
@@ -22,13 +21,9 @@ export type Period_months =
     | { intMonth: INTEGER[] } /* CHOICE_ALT_ROOT */
     | { bitMonth: Period_months_bitMonth } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Period_months */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_months */
 let _cached_decoder_for_Period_months: $.ASN1Decoder<Period_months> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_months */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Period_months */
 /**
  * @summary Decodes an ASN.1 element into a(n) Period_months
  * @function
@@ -50,13 +45,9 @@ export function _decode_Period_months(el: _Element) {
     }
     return _cached_decoder_for_Period_months(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Period_months */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_months */
 let _cached_encoder_for_Period_months: $.ASN1Encoder<Period_months> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_months */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Period_months */
 /**
  * @summary Encodes a(n) Period_months into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_Period_months(
     return _cached_encoder_for_Period_months(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Period_months */
 
 /* eslint-enable */

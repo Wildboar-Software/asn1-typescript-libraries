@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/BodyPartSignatures.ta.mjs';
 import { id_hex_body_part_signatures } from '../IPMSObjectIdentifiers/id-hex-body-part-signatures.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION body_part_signatures */
 /**
  * @summary body_part_signatures
  * @description
@@ -45,6 +44,5 @@ export const body_part_signatures: IPMS_EXTENSION<BodyPartSignatures> = {
     '&id': id_hex_body_part_signatures /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION body_part_signatures */
 
 /* eslint-enable */

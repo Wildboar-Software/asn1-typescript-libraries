@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/IncompleteCopy.ta.mjs';
 import { id_hex_incomplete_copy } from '../IPMSObjectIdentifiers/id-hex-incomplete-copy.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION incomplete_copy */
 /**
  * @summary incomplete_copy
  * @description
@@ -45,6 +44,5 @@ export const incomplete_copy: IPMS_EXTENSION<IncompleteCopy> = {
     '&id': id_hex_incomplete_copy /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION incomplete_copy */
 
 /* eslint-enable */

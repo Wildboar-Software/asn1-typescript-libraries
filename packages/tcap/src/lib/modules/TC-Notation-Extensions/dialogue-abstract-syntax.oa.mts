@@ -16,7 +16,6 @@ import {
     _encode_DialoguePDU,
 } from '../DialoguePDUs/DialoguePDU.ta.mjs';
 import { dialogue_as_id } from '../DialoguePDUs/dialogue-as-id.va.mjs';
-/* START_OF_SYMBOL_DEFINITION dialogue_abstract_syntax */
 /**
  * @summary dialogue_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const dialogue_abstract_syntax: ABSTRACT_SYNTAX<DialoguePDU> = {
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION dialogue_abstract_syntax */
 
 /* eslint-enable */

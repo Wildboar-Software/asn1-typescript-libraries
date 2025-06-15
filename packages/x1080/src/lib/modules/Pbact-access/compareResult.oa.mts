@@ -16,7 +16,7 @@ import {
 } from '../Pbact-access/CompareResult.ta.mjs';
 import { id_compareResult } from '../Pbact-access/id-compareResult.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION compareResult */
+
 /**
  * @summary compareResult
  * @description
@@ -44,6 +44,5 @@ export const compareResult: CONTENT_TYPE<CompareResult> = {
     '&id': id_compareResult /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION compareResult */
 
 /* eslint-enable */

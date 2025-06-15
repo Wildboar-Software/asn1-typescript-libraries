@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RawData */
 /**
  * @summary RawData
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RawData = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION RawData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RawData */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RawData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RawData */
 export const _decode_RawData = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_RawData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RawData */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RawData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RawData */
 export const _encode_RawData = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RawData */
 
 /* eslint-enable */

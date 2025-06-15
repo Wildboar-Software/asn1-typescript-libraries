@@ -16,7 +16,6 @@ import {
     _encode_MessageParameters,
 } from '../IPMSInformationObjects/MessageParameters.ta.mjs';
 import { id_ep_message } from '../IPMSObjectIdentifiers/id-ep-message.va.mjs';
-/* START_OF_SYMBOL_DEFINITION message_body_part_parameters */
 /**
  * @summary message_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const message_body_part_parameters: TYPE_IDENTIFIER<MessageParameters> = 
     '&id': id_ep_message /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_body_part_parameters */
 
 /* eslint-enable */

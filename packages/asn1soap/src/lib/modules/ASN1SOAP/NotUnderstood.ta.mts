@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotUnderstood */
+
 /**
  * @summary NotUnderstood
  * @description
@@ -23,13 +23,11 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  * ```
  */
 export type NotUnderstood = QName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NotUnderstood */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotUnderstood */
+
 let _cached_decoder_for_NotUnderstood: $.ASN1Decoder<NotUnderstood> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotUnderstood */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotUnderstood */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NotUnderstood
  * @function
@@ -42,13 +40,11 @@ export function _decode_NotUnderstood(el: _Element) {
   }
   return _cached_decoder_for_NotUnderstood(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotUnderstood */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotUnderstood */
+
 let _cached_encoder_for_NotUnderstood: $.ASN1Encoder<NotUnderstood> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotUnderstood */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotUnderstood */
+
 /**
  * @summary Encodes a(n) NotUnderstood into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_NotUnderstood(
   return _cached_encoder_for_NotUnderstood(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotUnderstood */
 
 /* eslint-enable */

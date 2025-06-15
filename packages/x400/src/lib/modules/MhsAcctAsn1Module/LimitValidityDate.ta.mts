@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LimitValidityDate */
 /**
  * @summary LimitValidityDate
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type LimitValidityDate = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LimitValidityDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LimitValidityDate */
 let _cached_decoder_for_LimitValidityDate: $.ASN1Decoder<LimitValidityDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LimitValidityDate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LimitValidityDate */
 /**
  * @summary Decodes an ASN.1 element into a(n) LimitValidityDate
  * @function
@@ -46,13 +41,9 @@ export function _decode_LimitValidityDate(el: _Element) {
     }
     return _cached_decoder_for_LimitValidityDate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LimitValidityDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LimitValidityDate */
 let _cached_encoder_for_LimitValidityDate: $.ASN1Encoder<LimitValidityDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LimitValidityDate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LimitValidityDate */
 /**
  * @summary Encodes a(n) LimitValidityDate into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_LimitValidityDate(
     return _cached_encoder_for_LimitValidityDate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LimitValidityDate */
 
 /* eslint-enable */

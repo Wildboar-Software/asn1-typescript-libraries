@@ -11,7 +11,6 @@ import {
     _decode_TbpDataTransferServer,
     _encode_TbpDataTransferServer,
 } from "../Wrapper/TbpDataTransferServer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataTransferServerNEA */
 /**
  * @summary DataTransferServerNEA
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type DataTransferServerNEA = ICV_Invoke<TbpDataTransferServer>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DataTransferServerNEA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferServerNEA */
 let _cached_decoder_for_DataTransferServerNEA: $.ASN1Decoder<DataTransferServerNEA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferServerNEA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataTransferServerNEA */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataTransferServerNEA
  * @function
@@ -44,13 +39,9 @@ export function _decode_DataTransferServerNEA(el: _Element) {
     }
     return _cached_decoder_for_DataTransferServerNEA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataTransferServerNEA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferServerNEA */
 let _cached_encoder_for_DataTransferServerNEA: $.ASN1Encoder<DataTransferServerNEA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferServerNEA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataTransferServerNEA */
 /**
  * @summary Encodes a(n) DataTransferServerNEA into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DataTransferServerNEA(
     return _cached_encoder_for_DataTransferServerNEA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataTransferServerNEA */
 
 /* eslint-enable */

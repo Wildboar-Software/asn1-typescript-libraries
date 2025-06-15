@@ -16,7 +16,7 @@ import {
     _encode_CredentialIdentifier,
 } from "../PKCS-15/CredentialIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CommonPrivateKeyAttributes */
+
 /**
  * @summary CommonPrivateKeyAttributes
  * @description
@@ -79,9 +79,8 @@ export class CommonPrivateKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonPrivateKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of CommonPrivateKeyAttributes
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_CommonPrivateKeyAttributes: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonPrivateKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of CommonPrivateKeyAttributes
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_CommonPrivateKeyAttributes: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonPrivateKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonPrivateKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of CommonPrivateKeyAttributes
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_CommonPrivateKeyAttributes: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_CommonPrivateKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonPrivateKeyAttributes */
+
 let _cached_decoder_for_CommonPrivateKeyAttributes: $.ASN1Decoder<CommonPrivateKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonPrivateKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonPrivateKeyAttributes
  * @function
@@ -181,13 +176,11 @@ export function _decode_CommonPrivateKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_CommonPrivateKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonPrivateKeyAttributes */
+
 let _cached_encoder_for_CommonPrivateKeyAttributes: $.ASN1Encoder<CommonPrivateKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonPrivateKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonPrivateKeyAttributes */
+
 /**
  * @summary Encodes a(n) CommonPrivateKeyAttributes into an ASN.1 Element.
  * @function
@@ -235,6 +228,5 @@ export function _encode_CommonPrivateKeyAttributes(
     return _cached_encoder_for_CommonPrivateKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonPrivateKeyAttributes */
 
 /* eslint-enable */

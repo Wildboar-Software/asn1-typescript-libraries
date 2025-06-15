@@ -5,7 +5,6 @@ import {
     _decode_TeletexPersonalName,
     _encode_TeletexPersonalName,
 } from "../PkiPmiExternalDataTypes/TeletexPersonalName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION teletex_personal_name */
 /**
  * @summary teletex_personal_name
  * @description
@@ -33,6 +32,5 @@ export const teletex_personal_name: EXTENSION_ATTRIBUTE<TeletexPersonalName> = {
     "&id": 4 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_personal_name */
 
 /* eslint-enable */

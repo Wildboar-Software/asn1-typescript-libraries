@@ -15,7 +15,7 @@ import {
   _decode_ReceiptNoticeType,
   _encode_ReceiptNoticeType,
 } from '../CMAIL/ReceiptNoticeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReceiptNotice */
+
 /**
  * @summary ReceiptNotice
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ReceiptNotice = ReceiptNoticeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptNotice */
+
 let _cached_decoder_for_ReceiptNotice: $.ASN1Decoder<ReceiptNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReceiptNotice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReceiptNotice
  * @function
@@ -46,13 +44,11 @@ export function _decode_ReceiptNotice(el: _Element) {
   }
   return _cached_decoder_for_ReceiptNotice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptNotice */
+
 let _cached_encoder_for_ReceiptNotice: $.ASN1Encoder<ReceiptNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReceiptNotice */
+
 /**
  * @summary Encodes a(n) ReceiptNotice into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_ReceiptNotice(
   return _cached_encoder_for_ReceiptNotice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReceiptNotice */
 
 /* eslint-enable */

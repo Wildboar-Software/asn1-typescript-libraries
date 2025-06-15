@@ -13,7 +13,6 @@ import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 import { ipm_assembly_instructions } from '../IPMSInformationObjects/ipm-assembly-instructions.oa.mjs';
 import { originator_body_part_encryption_token } from '../IPMSInformationObjects/originator-body-part-encryption-token.oa.mjs';
 import { originator_forwarded_content_token } from '../IPMSInformationObjects/originator-forwarded-content-token.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMSubmissionOptions */
 /**
  * @summary IPMSubmissionOptions
  * @description
@@ -34,6 +33,5 @@ export const IPMSubmissionOptions: MS_EXTENSION[] = [
     originator_body_part_encryption_token,
     originator_forwarded_content_token,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMSubmissionOptions */
 
 /* eslint-enable */

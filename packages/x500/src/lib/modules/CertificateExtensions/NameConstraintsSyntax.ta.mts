@@ -10,7 +10,6 @@ import {
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NameConstraintsSyntax */
 /**
  * @summary NameConstraintsSyntax
  * @description
@@ -72,9 +71,7 @@ export class NameConstraintsSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameConstraintsSyntax */
 /**
  * @summary The Leading Root Component Types of NameConstraintsSyntax
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_NameConstraintsSyntax: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameConstraintsSyntax */
 /**
  * @summary The Trailing Root Component Types of NameConstraintsSyntax
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_NameConstraintsSyntax: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameConstraintsSyntax */
 /**
  * @summary The Extension Addition Component Types of NameConstraintsSyntax
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_NameConstraintsSyntax: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_NameConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameConstraintsSyntax */
 let _cached_decoder_for_NameConstraintsSyntax: $.ASN1Decoder<NameConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameConstraintsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameConstraintsSyntax
  * @function
@@ -179,13 +168,9 @@ export function _decode_NameConstraintsSyntax(el: _Element) {
     }
     return _cached_decoder_for_NameConstraintsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameConstraintsSyntax */
 let _cached_encoder_for_NameConstraintsSyntax: $.ASN1Encoder<NameConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameConstraintsSyntax */
 /**
  * @summary Encodes a(n) NameConstraintsSyntax into an ASN.1 Element.
  * @function
@@ -235,6 +220,5 @@ export function _encode_NameConstraintsSyntax(
     return _cached_encoder_for_NameConstraintsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameConstraintsSyntax */
 
 /* eslint-enable */

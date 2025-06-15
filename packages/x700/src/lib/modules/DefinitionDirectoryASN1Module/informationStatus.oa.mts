@@ -24,7 +24,6 @@ import {
 } from '../DefinitionDirectoryASN1Module/InformationStatus.ta.mjs';
 import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION informationStatus */
 /**
  * @summary informationStatus
  * @description
@@ -68,6 +67,5 @@ export const informationStatus: ATTRIBUTE<InformationStatus> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION informationStatus */
 
 /* eslint-enable */

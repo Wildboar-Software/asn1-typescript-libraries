@@ -6,7 +6,7 @@ import {
     _decode_SignedAndEnvelopedData,
     _encode_SignedAndEnvelopedData,
 } from "../PKCS7/SignedAndEnvelopedData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION signed_and_enveloped_data */
+
 /**
  * @summary signed_and_enveloped_data
  * @description
@@ -35,6 +35,5 @@ export const signed_and_enveloped_data: PKCS7_CONTENT_TYPE<SignedAndEnvelopedDat
     "&id": id_signed_and_enveloped_data /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signed_and_enveloped_data */
 
 /* eslint-enable */

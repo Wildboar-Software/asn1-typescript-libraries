@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_eit_voice } from '../IPMSObjectIdentifiers/id-eit-voice.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_voice_cd_quality */
 /**
  * @summary id_voice_cd_quality
  * @description
@@ -25,6 +24,5 @@ import { id_eit_voice } from '../IPMSObjectIdentifiers/id-eit-voice.va.mjs';
  * @constant
  */
 export const id_voice_cd_quality: ID = new _OID([2], id_eit_voice);
-/* END_OF_SYMBOL_DEFINITION id_voice_cd_quality */
 
 /* eslint-enable */

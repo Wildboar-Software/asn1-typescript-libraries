@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EDIMessageTypeFieldSubField */
 /**
  * @summary EDIMessageTypeFieldSubField
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EDIMessageTypeFieldSubField = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION EDIMessageTypeFieldSubField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMessageTypeFieldSubField */
 let _cached_decoder_for_EDIMessageTypeFieldSubField: $.ASN1Decoder<EDIMessageTypeFieldSubField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMessageTypeFieldSubField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIMessageTypeFieldSubField */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIMessageTypeFieldSubField
  * @function
@@ -44,13 +39,9 @@ export function _decode_EDIMessageTypeFieldSubField(el: _Element) {
     }
     return _cached_decoder_for_EDIMessageTypeFieldSubField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIMessageTypeFieldSubField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMessageTypeFieldSubField */
 let _cached_encoder_for_EDIMessageTypeFieldSubField: $.ASN1Encoder<EDIMessageTypeFieldSubField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMessageTypeFieldSubField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIMessageTypeFieldSubField */
 /**
  * @summary Encodes a(n) EDIMessageTypeFieldSubField into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_EDIMessageTypeFieldSubField(
     return _cached_encoder_for_EDIMessageTypeFieldSubField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIMessageTypeFieldSubField */
 
 /* eslint-enable */

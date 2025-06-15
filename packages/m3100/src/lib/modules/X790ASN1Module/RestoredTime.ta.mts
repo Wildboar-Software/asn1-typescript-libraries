@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RestoredTime */
+
 /**
  * @summary RestoredTime
  * @description
@@ -31,13 +31,11 @@ export type RestoredTime =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { time: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RestoredTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RestoredTime */
+
 let _cached_decoder_for_RestoredTime: $.ASN1Decoder<RestoredTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RestoredTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RestoredTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RestoredTime
  * @function
@@ -55,13 +53,11 @@ export function _decode_RestoredTime(el: _Element) {
     }
     return _cached_decoder_for_RestoredTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RestoredTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RestoredTime */
+
 let _cached_encoder_for_RestoredTime: $.ASN1Encoder<RestoredTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RestoredTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RestoredTime */
+
 /**
  * @summary Encodes a(n) RestoredTime into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_RestoredTime(
     return _cached_encoder_for_RestoredTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RestoredTime */
 
 /* eslint-enable */

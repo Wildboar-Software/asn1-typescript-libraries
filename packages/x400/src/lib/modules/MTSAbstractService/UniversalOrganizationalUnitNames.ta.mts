@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrganizationalUnitName,
     _encode_UniversalOrganizationalUnitName,
 } from '../MTSAbstractService/UniversalOrganizationalUnitName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniversalOrganizationalUnitNames */
 /**
  * @summary UniversalOrganizationalUnitNames
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type UniversalOrganizationalUnitNames = UniversalOrganizationalUnitName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION UniversalOrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalOrganizationalUnitNames */
 let _cached_decoder_for_UniversalOrganizationalUnitNames: $.ASN1Decoder<UniversalOrganizationalUnitNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalOrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalOrganizationalUnitNames */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalOrganizationalUnitNames
  * @function
@@ -49,13 +44,9 @@ export function _decode_UniversalOrganizationalUnitNames(el: _Element) {
     }
     return _cached_decoder_for_UniversalOrganizationalUnitNames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalOrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalOrganizationalUnitNames */
 let _cached_encoder_for_UniversalOrganizationalUnitNames: $.ASN1Encoder<UniversalOrganizationalUnitNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalOrganizationalUnitNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalOrganizationalUnitNames */
 /**
  * @summary Encodes a(n) UniversalOrganizationalUnitNames into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_UniversalOrganizationalUnitNames(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalOrganizationalUnitNames */
 
 /* eslint-enable */

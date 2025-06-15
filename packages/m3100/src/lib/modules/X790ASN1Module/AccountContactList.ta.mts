@@ -15,7 +15,7 @@ import {
     _decode_PersonReach,
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AccountContactList */
+
 /**
  * @summary AccountContactList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AccountContactList = PersonReach[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AccountContactList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccountContactList */
+
 let _cached_decoder_for_AccountContactList: $.ASN1Decoder<AccountContactList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccountContactList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccountContactList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AccountContactList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AccountContactList(el: _Element) {
     }
     return _cached_decoder_for_AccountContactList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccountContactList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccountContactList */
+
 let _cached_encoder_for_AccountContactList: $.ASN1Encoder<AccountContactList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccountContactList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccountContactList */
+
 /**
  * @summary Encodes a(n) AccountContactList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AccountContactList(
     return _cached_encoder_for_AccountContactList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccountContactList */
 
 /* eslint-enable */

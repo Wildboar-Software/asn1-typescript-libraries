@@ -15,7 +15,6 @@ import {
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SimpleCredentials_password */
 /**
  * @summary SimpleCredentials_password
  * @description
@@ -31,13 +30,9 @@ export type SimpleCredentials_password =
     | { protected_: HASH<OCTET_STRING> } /* CHOICE_ALT_ROOT */
     | { userPwd: UserPwd } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SimpleCredentials_password */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleCredentials_password */
 let _cached_decoder_for_SimpleCredentials_password: $.ASN1Decoder<SimpleCredentials_password> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SimpleCredentials_password */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SimpleCredentials_password */
 /**
  * @summary Decodes an ASN.1 element into a(n) SimpleCredentials_password
  * @function
@@ -62,13 +57,9 @@ export function _decode_SimpleCredentials_password(el: _Element) {
     }
     return _cached_decoder_for_SimpleCredentials_password(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SimpleCredentials_password */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleCredentials_password */
 let _cached_encoder_for_SimpleCredentials_password: $.ASN1Encoder<SimpleCredentials_password> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SimpleCredentials_password */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SimpleCredentials_password */
 /**
  * @summary Encodes a(n) SimpleCredentials_password into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_SimpleCredentials_password(
     return _cached_encoder_for_SimpleCredentials_password(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SimpleCredentials_password */
 
 /* eslint-enable */

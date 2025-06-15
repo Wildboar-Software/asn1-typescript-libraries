@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 import { prime256v1 } from "../ANSI-X9-62/prime256v1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION CurveNames_Union26_Intersection0_Element */
 /**
  * @summary CurveNames_Union26_Intersection0_Element
  * @description
@@ -22,6 +21,5 @@ export const CurveNames_Union26_Intersection0_Element: CURVES = {
     encoderFor: {},
     "&id": prime256v1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION CurveNames_Union26_Intersection0_Element */
 
 /* eslint-enable */

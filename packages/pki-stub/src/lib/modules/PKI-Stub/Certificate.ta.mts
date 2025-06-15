@@ -21,7 +21,6 @@ import {
     _encode_TBSCertificate,
 } from "../PKI-Stub/TBSCertificate.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Certificate */
 /**
  * @summary Certificate
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type Certificate = SIGNED<TBSCertificate>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Certificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Certificate */
 let _cached_decoder_for_Certificate: $.ASN1Decoder<Certificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Certificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Certificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) Certificate
  * @function
@@ -53,13 +48,9 @@ export function _decode_Certificate(el: _Element) {
     }
     return _cached_decoder_for_Certificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Certificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Certificate */
 let _cached_encoder_for_Certificate: $.ASN1Encoder<Certificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Certificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Certificate */
 /**
  * @summary Encodes a(n) Certificate into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_Certificate(
     return _cached_encoder_for_Certificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Certificate */
 
 /* eslint-enable */

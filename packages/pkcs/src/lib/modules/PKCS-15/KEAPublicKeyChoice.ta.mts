@@ -7,7 +7,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KEAPublicKeyChoice */
+
 /**
  * @summary KEAPublicKeyChoice
  * @description
@@ -26,13 +26,11 @@ export type KEAPublicKeyChoice =
     | { raw: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { spki: SubjectPublicKeyInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION KEAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KEAPublicKeyChoice */
+
 let _cached_decoder_for_KEAPublicKeyChoice: $.ASN1Decoder<KEAPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KEAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KEAPublicKeyChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KEAPublicKeyChoice
  * @function
@@ -50,13 +48,11 @@ export function _decode_KEAPublicKeyChoice(el: _Element) {
     }
     return _cached_decoder_for_KEAPublicKeyChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KEAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KEAPublicKeyChoice */
+
 let _cached_encoder_for_KEAPublicKeyChoice: $.ASN1Encoder<KEAPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KEAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KEAPublicKeyChoice */
+
 /**
  * @summary Encodes a(n) KEAPublicKeyChoice into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_KEAPublicKeyChoice(
     return _cached_encoder_for_KEAPublicKeyChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KEAPublicKeyChoice */
 
 /* eslint-enable */

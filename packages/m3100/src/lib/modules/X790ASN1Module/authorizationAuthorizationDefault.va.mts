@@ -34,7 +34,7 @@ import {
 } from '../X790ASN1Module/PersonReach.ta.mjs';
 import { AuthorizationList_Item } from '../X790ASN1Module/AuthorizationList-Item.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION authorizationAuthorizationDefault */
+
 /**
  * @summary authorizationAuthorizationDefault
  * @description
@@ -55,6 +55,5 @@ export const authorizationAuthorizationDefault: AuthorizationList = [
         undefined,
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION authorizationAuthorizationDefault */
 
 /* eslint-enable */

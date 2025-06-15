@@ -13,7 +13,6 @@ import {
     KEY_AGREE,
 } from '../AlgorithmInformation-2009/KEY-AGREE.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupportedKeyAgreePublicKeys */
 /**
  * @summary SupportedKeyAgreePublicKeys
  * @description
@@ -29,6 +28,5 @@ import {
  *
  */
 export const SupportedKeyAgreePublicKeys: KEY_AGREE[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedKeyAgreePublicKeys */
 
 /* eslint-enable */

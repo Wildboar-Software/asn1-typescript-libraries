@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ar } from "../UsefulDefinitions/id-ar.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ar_autonomousArea */
 /**
  * @summary id_ar_autonomousArea
  * @description
@@ -15,6 +14,5 @@ import { id_ar } from "../UsefulDefinitions/id-ar.va.mjs";
  * @constant
  */
 export const id_ar_autonomousArea: OBJECT_IDENTIFIER = new _OID([1], id_ar);
-/* END_OF_SYMBOL_DEFINITION id_ar_autonomousArea */
 
 /* eslint-enable */

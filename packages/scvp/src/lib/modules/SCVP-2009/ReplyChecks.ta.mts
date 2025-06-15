@@ -15,7 +15,6 @@ import {
   _decode_ReplyCheck,
   _encode_ReplyCheck,
 } from '../SCVP-2009/ReplyCheck.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyChecks */
 /**
  * @summary ReplyChecks
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReplyChecks = ReplyCheck[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ReplyChecks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyChecks */
 let _cached_decoder_for_ReplyChecks: $.ASN1Decoder<ReplyChecks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyChecks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyChecks */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyChecks
  * @function
@@ -48,13 +43,9 @@ export function _decode_ReplyChecks(el: _Element) {
   }
   return _cached_decoder_for_ReplyChecks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyChecks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyChecks */
 let _cached_encoder_for_ReplyChecks: $.ASN1Encoder<ReplyChecks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyChecks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyChecks */
 /**
  * @summary Encodes a(n) ReplyChecks into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ReplyChecks(
   return _cached_encoder_for_ReplyChecks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyChecks */
 
 /* eslint-enable */

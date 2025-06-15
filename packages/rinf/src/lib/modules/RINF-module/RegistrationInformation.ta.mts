@@ -16,7 +16,6 @@ import {
   _decode_Information,
   _encode_Information,
 } from '../RINF-module/Information.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RegistrationInformation */
 /**
  * @summary RegistrationInformation
  * @description
@@ -33,13 +32,9 @@ import {
 export type RegistrationInformation =
   | { noDisclosure: NULL } /* CHOICE_ALT_ROOT */
   | { disclosure: Information } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RegistrationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationInformation */
 let _cached_decoder_for_RegistrationInformation: $.ASN1Decoder<RegistrationInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegistrationInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) RegistrationInformation
  * @function
@@ -57,13 +52,9 @@ export function _decode_RegistrationInformation(el: _Element) {
   }
   return _cached_decoder_for_RegistrationInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegistrationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationInformation */
 let _cached_encoder_for_RegistrationInformation: $.ASN1Encoder<RegistrationInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegistrationInformation */
 /**
  * @summary Encodes a(n) RegistrationInformation into an ASN.1 Element.
  * @function
@@ -87,6 +78,5 @@ export function _encode_RegistrationInformation(
   return _cached_encoder_for_RegistrationInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegistrationInformation */
 
 /* eslint-enable */

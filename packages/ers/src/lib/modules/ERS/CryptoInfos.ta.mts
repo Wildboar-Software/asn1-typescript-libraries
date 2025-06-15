@@ -16,7 +16,7 @@ import {
     _encode_Attribute,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CryptoInfos */
+
 /**
  * @summary CryptoInfos
  * @description
@@ -33,13 +33,11 @@ import {
  */
 export
 type CryptoInfos = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CryptoInfos */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoInfos */
+
 let _cached_decoder_for_CryptoInfos: $.ASN1Decoder<CryptoInfos> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoInfos */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CryptoInfos */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CryptoInfos
  * @function
@@ -51,13 +49,11 @@ function _decode_CryptoInfos (el: _Element) {
     if (!_cached_decoder_for_CryptoInfos) { _cached_decoder_for_CryptoInfos = $._decodeSequenceOf<Attribute>(() => _decode_Attribute); }
     return _cached_decoder_for_CryptoInfos(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CryptoInfos */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoInfos */
+
 let _cached_encoder_for_CryptoInfos: $.ASN1Encoder<CryptoInfos> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoInfos */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CryptoInfos */
+
 /**
  * @summary Encodes a(n) CryptoInfos into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ function _encode_CryptoInfos (value: CryptoInfos, elGetter: $.ASN1Encoder<Crypto
     return _cached_encoder_for_CryptoInfos(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CryptoInfos */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../CryptographicMessageSyntax/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignedAttributes */
+
 /**
  * @summary SignedAttributes
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SignedAttributes = Attribute[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SignedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedAttributes */
+
 let _cached_decoder_for_SignedAttributes: $.ASN1Decoder<SignedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedAttributes
  * @function
@@ -39,13 +37,11 @@ export function _decode_SignedAttributes(el: _Element) {
     }
     return _cached_decoder_for_SignedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedAttributes */
+
 let _cached_encoder_for_SignedAttributes: $.ASN1Encoder<SignedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedAttributes */
+
 /**
  * @summary Encodes a(n) SignedAttributes into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_SignedAttributes(
     return _cached_encoder_for_SignedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedAttributes */
 
 /* eslint-enable */

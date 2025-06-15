@@ -21,7 +21,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LabelAndParameters */
 /**
  * @summary LabelAndParameters
  * @description
@@ -71,9 +70,7 @@ export class LabelAndParameters {
         return new LabelAndParameters(_o.label, _o.parameters);
     }
 }
-/* END_OF_SYMBOL_DEFINITION LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LabelAndParameters */
 /**
  * @summary The Leading Root Component Types of LabelAndParameters
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_LabelAndParameters: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LabelAndParameters */
 /**
  * @summary The Trailing Root Component Types of LabelAndParameters
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_LabelAndParameters: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LabelAndParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LabelAndParameters */
 /**
  * @summary The Extension Addition Component Types of LabelAndParameters
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_LabelAndParameters: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_LabelAndParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LabelAndParameters */
 let _cached_decoder_for_LabelAndParameters: $.ASN1Decoder<LabelAndParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LabelAndParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) LabelAndParameters
  * @function
@@ -170,13 +159,9 @@ export function _decode_LabelAndParameters(el: _Element) {
     }
     return _cached_decoder_for_LabelAndParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LabelAndParameters */
 let _cached_encoder_for_LabelAndParameters: $.ASN1Encoder<LabelAndParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LabelAndParameters */
 /**
  * @summary Encodes a(n) LabelAndParameters into an ASN.1 Element.
  * @function
@@ -210,6 +195,5 @@ export function _encode_LabelAndParameters(
     return _cached_encoder_for_LabelAndParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LabelAndParameters */
 
 /* eslint-enable */

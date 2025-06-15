@@ -15,7 +15,6 @@ import {
     _decode_InvokeId,
     _encode_InvokeId,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MTSInvokeIds */
 /**
  * @summary MTSInvokeIds
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MTSInvokeIds = InvokeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MTSInvokeIds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTSInvokeIds */
 let _cached_decoder_for_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTSInvokeIds */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTSInvokeIds */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTSInvokeIds
  * @function
@@ -46,13 +41,9 @@ export function _decode_MTSInvokeIds(el: _Element) {
     }
     return _cached_decoder_for_MTSInvokeIds(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTSInvokeIds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTSInvokeIds */
 let _cached_encoder_for_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTSInvokeIds */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTSInvokeIds */
 /**
  * @summary Encodes a(n) MTSInvokeIds into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MTSInvokeIds(
     return _cached_encoder_for_MTSInvokeIds(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTSInvokeIds */
 
 /* eslint-enable */

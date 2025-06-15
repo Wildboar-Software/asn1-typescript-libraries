@@ -6,7 +6,6 @@ import {
 } from "../CertificateExtensions/CertificatePairAssertion.ta.mjs";
 import { id_ldx_certPairAssertion } from "../CertificateExtensions/id-ldx-certPairAssertion.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION certPairAssertion */
 /**
  * @summary certPairAssertion
  * @description
@@ -36,6 +35,5 @@ export const certPairAssertion: SYNTAX_NAME<CertificatePairAssertion> = {
     "&id": id_ldx_certPairAssertion /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certPairAssertion */
 
 /* eslint-enable */

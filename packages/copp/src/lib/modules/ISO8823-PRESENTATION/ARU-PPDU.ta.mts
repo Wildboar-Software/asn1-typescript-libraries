@@ -20,7 +20,7 @@ import {
     _decode_ARU_PPDU_normal_mode_parameters,
     _encode_ARU_PPDU_normal_mode_parameters,
 } from '../ISO8823-PRESENTATION/ARU-PPDU-normal-mode-parameters.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ARU_PPDU */
+
 /**
  * @summary ARU_PPDU
  * @description
@@ -49,13 +49,11 @@ export type ARU_PPDU =
     | {
           normal_mode_parameters: ARU_PPDU_normal_mode_parameters;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ARU_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ARU_PPDU */
+
 let _cached_decoder_for_ARU_PPDU: $.ASN1Decoder<ARU_PPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ARU_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ARU_PPDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ARU_PPDU
  * @function
@@ -79,13 +77,11 @@ export function _decode_ARU_PPDU(el: _Element) {
     }
     return _cached_decoder_for_ARU_PPDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ARU_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ARU_PPDU */
+
 let _cached_encoder_for_ARU_PPDU: $.ASN1Encoder<ARU_PPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ARU_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ARU_PPDU */
+
 /**
  * @summary Encodes a(n) ARU_PPDU into an ASN.1 Element.
  * @function
@@ -114,6 +110,5 @@ export function _encode_ARU_PPDU(
     return _cached_encoder_for_ARU_PPDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ARU_PPDU */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
 import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION originate_on_ArgumentType */
 /**
  * @summary originate_on_ArgumentType
  * @description
@@ -65,9 +64,7 @@ export class originate_on_ArgumentType {
         return new originate_on_ArgumentType(_o.envelope, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_originate_on_ArgumentType */
 /**
  * @summary The Leading Root Component Types of originate_on_ArgumentType
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_originate_on_ArgumentType: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_originate_on_ArgumentType */
 /**
  * @summary The Trailing Root Component Types of originate_on_ArgumentType
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_originate_on_ArgumentType: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_originate_on_ArgumentType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_originate_on_ArgumentType */
 /**
  * @summary The Extension Addition Component Types of originate_on_ArgumentType
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_originate_on_ArgumentType: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_originate_on_ArgumentType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_originate_on_ArgumentType */
 let _cached_decoder_for_originate_on_ArgumentType: $.ASN1Decoder<originate_on_ArgumentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_originate_on_ArgumentType */
 /**
  * @summary Decodes an ASN.1 element into a(n) originate_on_ArgumentType
  * @function
@@ -166,13 +155,9 @@ export function _decode_originate_on_ArgumentType(el: _Element) {
     }
     return _cached_decoder_for_originate_on_ArgumentType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_originate_on_ArgumentType */
 let _cached_encoder_for_originate_on_ArgumentType: $.ASN1Encoder<originate_on_ArgumentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_originate_on_ArgumentType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_originate_on_ArgumentType */
 /**
  * @summary Encodes a(n) originate_on_ArgumentType into an ASN.1 Element.
  * @function
@@ -211,6 +196,5 @@ export function _encode_originate_on_ArgumentType(
     return _cached_encoder_for_originate_on_ArgumentType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_originate_on_ArgumentType */
 
 /* eslint-enable */

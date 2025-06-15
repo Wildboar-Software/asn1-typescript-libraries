@@ -15,7 +15,6 @@ import {
     _decode_MSExtensionItem,
     _encode_MSExtensionItem,
 } from '../MSAbstractService/MSExtensionItem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MSExtensions */
 /**
  * @summary MSExtensions
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MSExtensions = MSExtensionItem[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MSExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSExtensions */
 let _cached_decoder_for_MSExtensions: $.ASN1Decoder<MSExtensions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSExtensions */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSExtensions
  * @function
@@ -48,13 +43,9 @@ export function _decode_MSExtensions(el: _Element) {
     }
     return _cached_decoder_for_MSExtensions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSExtensions */
 let _cached_encoder_for_MSExtensions: $.ASN1Encoder<MSExtensions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSExtensions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSExtensions */
 /**
  * @summary Encodes a(n) MSExtensions into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_MSExtensions(
     return _cached_encoder_for_MSExtensions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSExtensions */
 
 /* eslint-enable */

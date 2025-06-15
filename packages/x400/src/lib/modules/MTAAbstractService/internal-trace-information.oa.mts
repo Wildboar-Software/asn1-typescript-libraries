@@ -23,7 +23,6 @@ import {
     _encode_InternalTraceInformation,
 } from '../MTAAbstractService/InternalTraceInformation.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION internal_trace_information */
 /**
  * @summary internal_trace_information
  * @description
@@ -57,6 +56,5 @@ export const internal_trace_information: EXTENSION<InternalTraceInformation> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION internal_trace_information */
 
 /* eslint-enable */

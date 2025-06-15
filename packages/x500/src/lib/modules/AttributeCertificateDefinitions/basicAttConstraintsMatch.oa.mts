@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.mjs";
 import { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION basicAttConstraintsMatch */
 /**
  * @summary basicAttConstraintsMatch
  * @description
@@ -34,6 +33,5 @@ export const basicAttConstraintsMatch: MATCHING_RULE<BasicAttConstraintsSyntax> 
     "&id": id_mr_basicAttConstraintsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION basicAttConstraintsMatch */
 
 /* eslint-enable */

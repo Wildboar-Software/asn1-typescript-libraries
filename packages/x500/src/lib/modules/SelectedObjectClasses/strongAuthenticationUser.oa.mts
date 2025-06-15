@@ -6,7 +6,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_strongAuthenticationUser } from "../SelectedObjectClasses/id-oc-strongAuthenticationUser.va.mjs";
-/* START_OF_SYMBOL_DEFINITION strongAuthenticationUser */
 /**
  * @summary strongAuthenticationUser
  * @description
@@ -38,6 +37,5 @@ export const strongAuthenticationUser: OBJECT_CLASS = {
     "&ldapDesc": "X.521 strong authentication user",
     "&id": id_oc_strongAuthenticationUser /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION strongAuthenticationUser */
 
 /* eslint-enable */

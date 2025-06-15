@@ -16,7 +16,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoleOrRelationshipObject */
 /**
  * @summary RoleOrRelationshipObject
  * @description
@@ -33,13 +32,9 @@ import {
 export type RoleOrRelationshipObject =
     | { role: Identifier } /* CHOICE_ALT_ROOT */
     | { relationshipObject: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RoleOrRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleOrRelationshipObject */
 let _cached_decoder_for_RoleOrRelationshipObject: $.ASN1Decoder<RoleOrRelationshipObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleOrRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleOrRelationshipObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleOrRelationshipObject
  * @function
@@ -57,13 +52,9 @@ export function _decode_RoleOrRelationshipObject(el: _Element) {
     }
     return _cached_decoder_for_RoleOrRelationshipObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleOrRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleOrRelationshipObject */
 let _cached_encoder_for_RoleOrRelationshipObject: $.ASN1Encoder<RoleOrRelationshipObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleOrRelationshipObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleOrRelationshipObject */
 /**
  * @summary Encodes a(n) RoleOrRelationshipObject into an ASN.1 Element.
  * @function
@@ -87,6 +78,5 @@ export function _encode_RoleOrRelationshipObject(
     return _cached_encoder_for_RoleOrRelationshipObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleOrRelationshipObject */
 
 /* eslint-enable */

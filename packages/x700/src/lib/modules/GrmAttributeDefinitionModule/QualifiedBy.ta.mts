@@ -15,7 +15,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QualifiedBy */
 /**
  * @summary QualifiedBy
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type QualifiedBy = TemplateList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION QualifiedBy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QualifiedBy */
 let _cached_decoder_for_QualifiedBy: $.ASN1Decoder<QualifiedBy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QualifiedBy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QualifiedBy */
 /**
  * @summary Decodes an ASN.1 element into a(n) QualifiedBy
  * @function
@@ -46,13 +41,9 @@ export function _decode_QualifiedBy(el: _Element) {
     }
     return _cached_decoder_for_QualifiedBy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QualifiedBy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QualifiedBy */
 let _cached_encoder_for_QualifiedBy: $.ASN1Encoder<QualifiedBy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QualifiedBy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QualifiedBy */
 /**
  * @summary Encodes a(n) QualifiedBy into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_QualifiedBy(
     return _cached_encoder_for_QualifiedBy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QualifiedBy */
 
 /* eslint-enable */

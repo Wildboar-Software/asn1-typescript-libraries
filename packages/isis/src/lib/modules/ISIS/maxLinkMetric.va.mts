@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maxLinkMetric */
 /**
  * @summary maxLinkMetric
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const maxLinkMetric: INTEGER = 63;
-/* END_OF_SYMBOL_DEFINITION maxLinkMetric */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { urnC } from "../SelectedAttributeTypes/urnC.oa.mjs";
 import { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.mjs";
 import { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION urnCNameForm */
 /**
  * @summary urnCNameForm
  * @description
@@ -29,6 +28,5 @@ export const urnCNameForm: NAME_FORM = {
     "&MandatoryAttributes": [urnC] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_urnCNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION urnCNameForm */
 
 /* eslint-enable */

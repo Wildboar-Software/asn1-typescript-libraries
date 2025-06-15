@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_terminal_type_length */
 /**
  * @summary ub_terminal_type_length
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_terminal_type_length: INTEGER = 5;
-/* END_OF_SYMBOL_DEFINITION ub_terminal_type_length */
 
 /* eslint-enable */

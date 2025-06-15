@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GenericMessageId */
 /**
  * @summary GenericMessageId
  * @description
@@ -63,9 +62,7 @@ export class GenericMessageId {
         return new GenericMessageId(_o.displayFormat, _o.typedFormat);
     }
 }
-/* END_OF_SYMBOL_DEFINITION GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GenericMessageId */
 /**
  * @summary The Leading Root Component Types of GenericMessageId
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_GenericMessageId: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GenericMessageId */
 /**
  * @summary The Trailing Root Component Types of GenericMessageId
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_GenericMessageId: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GenericMessageId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GenericMessageId */
 /**
  * @summary The Extension Addition Component Types of GenericMessageId
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_GenericMessageId: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_GenericMessageId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GenericMessageId */
 let _cached_decoder_for_GenericMessageId: $.ASN1Decoder<GenericMessageId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GenericMessageId */
 /**
  * @summary Decodes an ASN.1 element into a(n) GenericMessageId
  * @function
@@ -151,13 +140,9 @@ export function _decode_GenericMessageId(el: _Element) {
     }
     return _cached_decoder_for_GenericMessageId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GenericMessageId */
 let _cached_encoder_for_GenericMessageId: $.ASN1Encoder<GenericMessageId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GenericMessageId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GenericMessageId */
 /**
  * @summary Encodes a(n) GenericMessageId into an ASN.1 Element.
  * @function
@@ -192,6 +177,5 @@ export function _encode_GenericMessageId(
     return _cached_encoder_for_GenericMessageId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GenericMessageId */
 
 /* eslint-enable */

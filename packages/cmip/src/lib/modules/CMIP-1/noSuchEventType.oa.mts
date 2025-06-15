@@ -23,7 +23,7 @@ import {
   _encode_NoSuchEventType,
 } from '../CMIP-1/NoSuchEventType.ta.mjs';
 import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION noSuchEventType */
+
 /**
  * @summary noSuchEventType
  * @description
@@ -56,6 +56,5 @@ export const noSuchEventType: ERROR<NoSuchEventType> = {
   '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION noSuchEventType */
 
 /* eslint-enable */

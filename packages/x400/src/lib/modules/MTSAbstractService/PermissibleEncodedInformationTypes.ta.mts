@@ -15,7 +15,6 @@ import {
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
 } from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PermissibleEncodedInformationTypes */
 /**
  * @summary PermissibleEncodedInformationTypes
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type PermissibleEncodedInformationTypes = EncodedInformationTypesConstraints; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PermissibleEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PermissibleEncodedInformationTypes */
 let _cached_decoder_for_PermissibleEncodedInformationTypes: $.ASN1Decoder<PermissibleEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PermissibleEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PermissibleEncodedInformationTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) PermissibleEncodedInformationTypes
  * @function
@@ -47,13 +42,9 @@ export function _decode_PermissibleEncodedInformationTypes(el: _Element) {
     }
     return _cached_decoder_for_PermissibleEncodedInformationTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PermissibleEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PermissibleEncodedInformationTypes */
 let _cached_encoder_for_PermissibleEncodedInformationTypes: $.ASN1Encoder<PermissibleEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PermissibleEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PermissibleEncodedInformationTypes */
 /**
  * @summary Encodes a(n) PermissibleEncodedInformationTypes into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_PermissibleEncodedInformationTypes(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PermissibleEncodedInformationTypes */
 
 /* eslint-enable */

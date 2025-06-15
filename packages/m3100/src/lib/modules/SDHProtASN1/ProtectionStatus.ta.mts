@@ -15,7 +15,7 @@ import {
     _decode_ProtectionStatus_Item,
     _encode_ProtectionStatus_Item,
 } from '../SDHProtASN1/ProtectionStatus-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatus */
+
 /**
  * @summary ProtectionStatus
  * @description
@@ -51,13 +51,11 @@ import {
  * ```
  */
 export type ProtectionStatus = ProtectionStatus_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ProtectionStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus */
+
 let _cached_decoder_for_ProtectionStatus: $.ASN1Decoder<ProtectionStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatus
  * @function
@@ -72,13 +70,11 @@ export function _decode_ProtectionStatus(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus */
+
 let _cached_encoder_for_ProtectionStatus: $.ASN1Encoder<ProtectionStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatus */
+
 /**
  * @summary Encodes a(n) ProtectionStatus into an ASN.1 Element.
  * @function
@@ -99,6 +95,5 @@ export function _encode_ProtectionStatus(
     return _cached_encoder_for_ProtectionStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatus */
 
 /* eslint-enable */

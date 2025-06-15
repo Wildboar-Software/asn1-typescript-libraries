@@ -20,7 +20,7 @@ import {
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EntityChallengeType */
+
 /**
  * @summary EntityChallengeType
  * @description
@@ -70,9 +70,8 @@ export class EntityChallengeType {
     return new EntityChallengeType(_o.secretQuestion, _o.signature);
   }
 }
-/* END_OF_SYMBOL_DEFINITION EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntityChallengeType */
+
 /**
  * @summary The Leading Root Component Types of EntityChallengeType
  * @description
@@ -91,9 +90,8 @@ export const _root_component_type_list_1_spec_for_EntityChallengeType: $.Compone
   ),
   /* FIXME: signature COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntityChallengeType */
+
 /**
  * @summary The Trailing Root Component Types of EntityChallengeType
  * @description
@@ -103,9 +101,8 @@ export const _root_component_type_list_1_spec_for_EntityChallengeType: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EntityChallengeType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntityChallengeType */
+
 /**
  * @summary The Extension Addition Component Types of EntityChallengeType
  * @description
@@ -115,13 +112,11 @@ export const _root_component_type_list_2_spec_for_EntityChallengeType: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_EntityChallengeType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityChallengeType */
+
 let _cached_decoder_for_EntityChallengeType: $.ASN1Decoder<EntityChallengeType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntityChallengeType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EntityChallengeType
  * @function
@@ -152,13 +147,11 @@ export function _decode_EntityChallengeType(el: _Element) {
   }
   return _cached_decoder_for_EntityChallengeType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityChallengeType */
+
 let _cached_encoder_for_EntityChallengeType: $.ASN1Encoder<EntityChallengeType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntityChallengeType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntityChallengeType */
+
 /**
  * @summary Encodes a(n) EntityChallengeType into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_EntityChallengeType(
   return _cached_encoder_for_EntityChallengeType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntityChallengeType */
 
 /* eslint-enable */

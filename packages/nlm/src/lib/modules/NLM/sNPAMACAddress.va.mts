@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { sseoi } from '../NLM/sseoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION sNPAMACAddress */
+
 /**
  * @summary sNPAMACAddress
  * @description
@@ -28,6 +28,5 @@ export const sNPAMACAddress: OBJECT_IDENTIFIER = new _OID(
     [/* sNPAAddressType */ 5, /* mACAddress */ 2],
     sseoi
 );
-/* END_OF_SYMBOL_DEFINITION sNPAMACAddress */
 
 /* eslint-enable */

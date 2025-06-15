@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UsageMeteringDataObjectId */
 /**
  * @summary UsageMeteringDataObjectId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UsageMeteringDataObjectId = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UsageMeteringDataObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageMeteringDataObjectId */
 let _cached_decoder_for_UsageMeteringDataObjectId: $.ASN1Decoder<UsageMeteringDataObjectId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageMeteringDataObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UsageMeteringDataObjectId */
 /**
  * @summary Decodes an ASN.1 element into a(n) UsageMeteringDataObjectId
  * @function
@@ -46,13 +41,9 @@ export function _decode_UsageMeteringDataObjectId(el: _Element) {
     }
     return _cached_decoder_for_UsageMeteringDataObjectId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UsageMeteringDataObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageMeteringDataObjectId */
 let _cached_encoder_for_UsageMeteringDataObjectId: $.ASN1Encoder<UsageMeteringDataObjectId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageMeteringDataObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UsageMeteringDataObjectId */
 /**
  * @summary Encodes a(n) UsageMeteringDataObjectId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_UsageMeteringDataObjectId(
     return _cached_encoder_for_UsageMeteringDataObjectId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UsageMeteringDataObjectId */
 
 /* eslint-enable */

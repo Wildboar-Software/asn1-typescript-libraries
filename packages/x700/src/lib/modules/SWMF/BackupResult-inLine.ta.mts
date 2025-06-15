@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BackupResult_inLine */
 /**
  * @summary BackupResult_inLine
  * @description
@@ -29,13 +28,9 @@ export type BackupResult_inLine =
     | { fail_pduSizeLimitation: NULL } /* CHOICE_ALT_ROOT */
     | { fail_securityLicensing: NULL } /* CHOICE_ALT_ROOT */
     | { fail_unknown: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BackupResult_inLine */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_inLine */
 let _cached_decoder_for_BackupResult_inLine: $.ASN1Decoder<BackupResult_inLine> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_inLine */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackupResult_inLine */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackupResult_inLine
  * @function
@@ -64,13 +59,9 @@ export function _decode_BackupResult_inLine(el: _Element) {
     }
     return _cached_decoder_for_BackupResult_inLine(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackupResult_inLine */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_inLine */
 let _cached_encoder_for_BackupResult_inLine: $.ASN1Encoder<BackupResult_inLine> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_inLine */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackupResult_inLine */
 /**
  * @summary Encodes a(n) BackupResult_inLine into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_BackupResult_inLine(
     return _cached_encoder_for_BackupResult_inLine(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackupResult_inLine */
 
 /* eslint-enable */

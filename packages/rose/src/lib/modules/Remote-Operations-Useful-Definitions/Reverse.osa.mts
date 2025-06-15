@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { Forward } from './Forward.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION Reverse */
+
 /**
  * @summary Reverse
  * @description

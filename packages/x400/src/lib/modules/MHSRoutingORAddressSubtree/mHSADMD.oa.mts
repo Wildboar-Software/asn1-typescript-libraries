@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSADMDName } from '../MHSRoutingORAddressSubtree/mHSADMDName.oa.mjs';
 import { id_oc_mhs_admd } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-admd.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSADMD */
 /**
  * @summary mHSADMD
  * @description
@@ -48,6 +47,5 @@ export const mHSADMD: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSADMDName] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_admd /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSADMD */
 
 /* eslint-enable */

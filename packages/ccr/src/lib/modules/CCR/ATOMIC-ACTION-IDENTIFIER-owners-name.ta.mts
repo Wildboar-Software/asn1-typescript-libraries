@@ -21,7 +21,7 @@ import {
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name-side.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER_owners_name */
+
 /**
  * @summary ATOMIC_ACTION_IDENTIFIER_owners_name
  * @description
@@ -36,13 +36,11 @@ export type ATOMIC_ACTION_IDENTIFIER_owners_name =
   | { name: AE_title } /* CHOICE_ALT_ROOT */
   | { side: ATOMIC_ACTION_IDENTIFIER_owners_name_side } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER_owners_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name */
+
 let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name: $.ASN1Decoder<ATOMIC_ACTION_IDENTIFIER_owners_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ATOMIC_ACTION_IDENTIFIER_owners_name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ATOMIC_ACTION_IDENTIFIER_owners_name
  * @function
@@ -68,13 +66,11 @@ export function _decode_ATOMIC_ACTION_IDENTIFIER_owners_name(el: _Element) {
   }
   return _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ATOMIC_ACTION_IDENTIFIER_owners_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name */
+
 let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER_owners_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ATOMIC_ACTION_IDENTIFIER_owners_name */
+
 /**
  * @summary Encodes a(n) ATOMIC_ACTION_IDENTIFIER_owners_name into an ASN.1 Element.
  * @function
@@ -111,6 +107,5 @@ export function _encode_ATOMIC_ACTION_IDENTIFIER_owners_name(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ATOMIC_ACTION_IDENTIFIER_owners_name */
 
 /* eslint-enable */

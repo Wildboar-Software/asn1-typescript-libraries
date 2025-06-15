@@ -30,7 +30,6 @@ import {
   _decode_ASO_qualifier_form4,
   _encode_ASO_qualifier_form4,
 } from '../ACSE-1/ASO-qualifier-form4.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ASO_qualifier */
 /**
  * @summary ASO_qualifier
  * @description
@@ -53,13 +52,9 @@ export type ASO_qualifier =
   | { aso_qualifier_form3: ASO_qualifier_form3 } /* CHOICE_ALT_EXT */
   | { aso_qualifier_form4: ASO_qualifier_form4 } /* CHOICE_ALT_EXT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ASO_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_qualifier */
 let _cached_decoder_for_ASO_qualifier: $.ASN1Decoder<ASO_qualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASO_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ASO_qualifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ASO_qualifier
  * @function
@@ -79,13 +74,9 @@ export function _decode_ASO_qualifier(el: _Element) {
   }
   return _cached_decoder_for_ASO_qualifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ASO_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_qualifier */
 let _cached_encoder_for_ASO_qualifier: $.ASN1Encoder<ASO_qualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASO_qualifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ASO_qualifier */
 /**
  * @summary Encodes a(n) ASO_qualifier into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_ASO_qualifier(
   return _cached_encoder_for_ASO_qualifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ASO_qualifier */
 
 /* eslint-enable */

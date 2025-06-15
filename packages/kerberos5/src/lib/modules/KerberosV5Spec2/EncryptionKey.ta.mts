@@ -16,7 +16,7 @@ import {
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncryptionKey */
+
 /**
  * @summary EncryptionKey
  * @description
@@ -66,9 +66,8 @@ export class EncryptionKey {
     return new EncryptionKey(_o.keytype, _o.keyvalue);
   }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptionKey */
+
 /**
  * @summary The Leading Root Component Types of EncryptionKey
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_EncryptionKey: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptionKey */
+
 /**
  * @summary The Trailing Root Component Types of EncryptionKey
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_EncryptionKey: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptionKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptionKey */
+
 /**
  * @summary The Extension Addition Component Types of EncryptionKey
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_EncryptionKey: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptionKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionKey */
+
 let _cached_decoder_for_EncryptionKey: $.ASN1Decoder<EncryptionKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptionKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptionKey
  * @function
@@ -154,13 +149,11 @@ export function _decode_EncryptionKey(el: _Element) {
   }
   return _cached_decoder_for_EncryptionKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionKey */
+
 let _cached_encoder_for_EncryptionKey: $.ASN1Encoder<EncryptionKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptionKey */
+
 /**
  * @summary Encodes a(n) EncryptionKey into an ASN.1 Element.
  * @function
@@ -199,6 +192,5 @@ export function _encode_EncryptionKey(
   return _cached_encoder_for_EncryptionKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptionKey */
 
 /* eslint-enable */

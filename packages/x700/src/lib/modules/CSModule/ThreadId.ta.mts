@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ThreadId */
 /**
  * @summary ThreadId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ThreadId = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ThreadId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ThreadId */
 let _cached_decoder_for_ThreadId: $.ASN1Decoder<ThreadId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ThreadId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ThreadId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ThreadId
  * @function
@@ -46,13 +41,9 @@ export function _decode_ThreadId(el: _Element) {
     }
     return _cached_decoder_for_ThreadId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ThreadId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ThreadId */
 let _cached_encoder_for_ThreadId: $.ASN1Encoder<ThreadId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ThreadId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ThreadId */
 /**
  * @summary Encodes a(n) ThreadId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ThreadId(
     return _cached_encoder_for_ThreadId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ThreadId */
 
 /* eslint-enable */

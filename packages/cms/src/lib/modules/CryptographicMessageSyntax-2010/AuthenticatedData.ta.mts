@@ -50,7 +50,7 @@ import {
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthenticatedData */
+
 /**
  * @summary AuthenticatedData
  * @description
@@ -158,9 +158,8 @@ export class AuthenticatedData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuthenticatedData */
+
 /**
  * @summary The Leading Root Component Types of AuthenticatedData
  * @description
@@ -234,9 +233,8 @@ export const _root_component_type_list_1_spec_for_AuthenticatedData: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuthenticatedData */
+
 /**
  * @summary The Trailing Root Component Types of AuthenticatedData
  * @description
@@ -246,9 +244,8 @@ export const _root_component_type_list_1_spec_for_AuthenticatedData: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AuthenticatedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuthenticatedData */
+
 /**
  * @summary The Extension Addition Component Types of AuthenticatedData
  * @description
@@ -258,13 +255,11 @@ export const _root_component_type_list_2_spec_for_AuthenticatedData: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_AuthenticatedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticatedData */
+
 let _cached_decoder_for_AuthenticatedData: $.ASN1Decoder<AuthenticatedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthenticatedData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticatedData
  * @function
@@ -351,13 +346,11 @@ export function _decode_AuthenticatedData(el: _Element) {
     }
     return _cached_decoder_for_AuthenticatedData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticatedData */
+
 let _cached_encoder_for_AuthenticatedData: $.ASN1Encoder<AuthenticatedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticatedData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthenticatedData */
+
 /**
  * @summary Encodes a(n) AuthenticatedData into an ASN.1 Element.
  * @function
@@ -436,6 +429,5 @@ export function _encode_AuthenticatedData(
     return _cached_encoder_for_AuthenticatedData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthenticatedData */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IssuingDistPointSyntax */
 /**
  * @summary IssuingDistPointSyntax
  * @description
@@ -138,9 +137,7 @@ export class IssuingDistPointSyntax {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuingDistPointSyntax */
 /**
  * @summary The Leading Root Component Types of IssuingDistPointSyntax
  * @description
@@ -193,9 +190,7 @@ export const _root_component_type_list_1_spec_for_IssuingDistPointSyntax: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuingDistPointSyntax */
 /**
  * @summary The Trailing Root Component Types of IssuingDistPointSyntax
  * @description
@@ -205,9 +200,7 @@ export const _root_component_type_list_1_spec_for_IssuingDistPointSyntax: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IssuingDistPointSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuingDistPointSyntax */
 /**
  * @summary The Extension Addition Component Types of IssuingDistPointSyntax
  * @description
@@ -217,13 +210,9 @@ export const _root_component_type_list_2_spec_for_IssuingDistPointSyntax: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_IssuingDistPointSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuingDistPointSyntax */
 let _cached_decoder_for_IssuingDistPointSyntax: $.ASN1Decoder<IssuingDistPointSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IssuingDistPointSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) IssuingDistPointSyntax
  * @function
@@ -304,13 +293,9 @@ export function _decode_IssuingDistPointSyntax(el: _Element) {
     }
     return _cached_decoder_for_IssuingDistPointSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IssuingDistPointSyntax */
 let _cached_encoder_for_IssuingDistPointSyntax: $.ASN1Encoder<IssuingDistPointSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IssuingDistPointSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IssuingDistPointSyntax */
 /**
  * @summary Encodes a(n) IssuingDistPointSyntax into an ASN.1 Element.
  * @function
@@ -409,6 +394,5 @@ export function _encode_IssuingDistPointSyntax(
     return _cached_encoder_for_IssuingDistPointSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IssuingDistPointSyntax */
 
 /* eslint-enable */

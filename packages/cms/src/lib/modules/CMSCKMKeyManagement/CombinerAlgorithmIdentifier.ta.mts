@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CombinerAlgorithmIdentifier */
+
 /**
  * @summary CombinerAlgorithmIdentifier
  * @description
@@ -15,13 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type CombinerAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CombinerAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CombinerAlgorithmIdentifier */
+
 let _cached_decoder_for_CombinerAlgorithmIdentifier: $.ASN1Decoder<CombinerAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CombinerAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CombinerAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CombinerAlgorithmIdentifier
  * @function
@@ -34,13 +32,11 @@ export function _decode_CombinerAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_CombinerAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CombinerAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CombinerAlgorithmIdentifier */
+
 let _cached_encoder_for_CombinerAlgorithmIdentifier: $.ASN1Encoder<CombinerAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CombinerAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CombinerAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) CombinerAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -58,6 +54,5 @@ export function _encode_CombinerAlgorithmIdentifier(
     return _cached_encoder_for_CombinerAlgorithmIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CombinerAlgorithmIdentifier */
 
 /* eslint-enable */

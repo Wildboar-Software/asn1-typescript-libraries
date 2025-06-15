@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION sect163r2 */
+
 /**
  * @summary sect163r2
  * @description
@@ -22,6 +22,5 @@ export const sect163r2: OBJECT_IDENTIFIER = new _OID([
     /* curve */ 0,
     15,
 ]);
-/* END_OF_SYMBOL_DEFINITION sect163r2 */
 
 /* eslint-enable */

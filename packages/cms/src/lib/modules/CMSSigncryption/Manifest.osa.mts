@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
 import { xPathManifest } from "../CMSSigncryption/xPathManifest.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION Manifest */
+
 /**
  * @summary Manifest
  * @description
@@ -20,6 +20,5 @@ import { xPathManifest } from "../CMSSigncryption/xPathManifest.oa.mjs";
  *
  */
 export const Manifest: SIGNCRYPTED[] = [xPathManifest];
-/* END_OF_SYMBOL_DEFINITION Manifest */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_GenericName,
     _encode_GenericName,
 } from '../MhsMTAAsn1Module/GenericName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailGlobalDomainId */
 /**
  * @summary EMailGlobalDomainId
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailGlobalDomainId =
     | { x400GlobalDomainId: GlobalDomainIdentifier } /* CHOICE_ALT_ROOT */
     | { genericGlobalDomainId: GenericName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailGlobalDomainId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailGlobalDomainId */
 let _cached_decoder_for_EMailGlobalDomainId: $.ASN1Decoder<EMailGlobalDomainId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailGlobalDomainId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailGlobalDomainId */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailGlobalDomainId
  * @function
@@ -69,13 +64,9 @@ export function _decode_EMailGlobalDomainId(el: _Element) {
     }
     return _cached_decoder_for_EMailGlobalDomainId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailGlobalDomainId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailGlobalDomainId */
 let _cached_encoder_for_EMailGlobalDomainId: $.ASN1Encoder<EMailGlobalDomainId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailGlobalDomainId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailGlobalDomainId */
 /**
  * @summary Encodes a(n) EMailGlobalDomainId into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_EMailGlobalDomainId(
     return _cached_encoder_for_EMailGlobalDomainId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailGlobalDomainId */
 
 /* eslint-enable */

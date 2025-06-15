@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
+
 /**
  * @summary ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix
  * @description
@@ -28,13 +28,11 @@ export type ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix =
   | { form1: OCTET_STRING } /* CHOICE_ALT_ROOT */
   | { form2: INTEGER } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
+
 let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix: $.ASN1Decoder<ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix
  * @function
@@ -60,13 +58,11 @@ export function _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix(
   }
   return _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
+
 let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
+
 /**
  * @summary Encodes a(n) ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix */
 
 /* eslint-enable */

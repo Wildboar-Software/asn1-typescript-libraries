@@ -114,7 +114,6 @@ import {
     _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SearchArgumentData */
 /**
  * @summary SearchArgumentData
  * @description
@@ -529,9 +528,7 @@ export class SearchArgumentData implements CommonArguments {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchArgumentData */
 /**
  * @summary The Leading Root Component Types of SearchArgumentData
  * @description
@@ -648,9 +645,7 @@ export const _root_component_type_list_1_spec_for_SearchArgumentData: $.Componen
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchArgumentData */
 /**
  * @summary The Trailing Root Component Types of SearchArgumentData
  * @description
@@ -662,9 +657,7 @@ export const _root_component_type_list_1_spec_for_SearchArgumentData: $.Componen
 export const _root_component_type_list_2_spec_for_SearchArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchArgumentData */
 /**
  * @summary The Extension Addition Component Types of SearchArgumentData
  * @description
@@ -676,13 +669,9 @@ export const _root_component_type_list_2_spec_for_SearchArgumentData: $.Componen
 export const _extension_additions_list_spec_for_SearchArgumentData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData */
 let _cached_decoder_for_SearchArgumentData: $.ASN1Decoder<SearchArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchArgumentData
  * @function
@@ -923,13 +912,9 @@ export function _decode_SearchArgumentData(el: _Element) {
     }
     return _cached_decoder_for_SearchArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData */
 let _cached_encoder_for_SearchArgumentData: $.ASN1Encoder<SearchArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchArgumentData */
 /**
  * @summary Encodes a(n) SearchArgumentData into an ASN.1 Element.
  * @function
@@ -1249,6 +1234,5 @@ export function _encode_SearchArgumentData(
     return _cached_encoder_for_SearchArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchArgumentData */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
     _encode_KeyEncryptionKeyIdentifier,
 } from "../PKCS7/KeyEncryptionKeyIdentifier.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyEncryptionKeyRecipientInfo */
+
 /**
  * @summary KeyEncryptionKeyRecipientInfo
  * @description
@@ -92,9 +92,8 @@ export class KeyEncryptionKeyRecipientInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyEncryptionKeyRecipientInfo */
+
 /**
  * @summary The Leading Root Component Types of KeyEncryptionKeyRecipientInfo
  * @description
@@ -133,9 +132,8 @@ export const _root_component_type_list_1_spec_for_KeyEncryptionKeyRecipientInfo:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyEncryptionKeyRecipientInfo */
+
 /**
  * @summary The Trailing Root Component Types of KeyEncryptionKeyRecipientInfo
  * @description
@@ -145,9 +143,8 @@ export const _root_component_type_list_1_spec_for_KeyEncryptionKeyRecipientInfo:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyEncryptionKeyRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyEncryptionKeyRecipientInfo */
+
 /**
  * @summary The Extension Addition Component Types of KeyEncryptionKeyRecipientInfo
  * @description
@@ -157,13 +154,11 @@ export const _root_component_type_list_2_spec_for_KeyEncryptionKeyRecipientInfo:
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyEncryptionKeyRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyEncryptionKeyRecipientInfo */
+
 let _cached_decoder_for_KeyEncryptionKeyRecipientInfo: $.ASN1Decoder<KeyEncryptionKeyRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyEncryptionKeyRecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyEncryptionKeyRecipientInfo
  * @function
@@ -209,13 +204,11 @@ export function _decode_KeyEncryptionKeyRecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_KeyEncryptionKeyRecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyEncryptionKeyRecipientInfo */
+
 let _cached_encoder_for_KeyEncryptionKeyRecipientInfo: $.ASN1Encoder<KeyEncryptionKeyRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyEncryptionKeyRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyEncryptionKeyRecipientInfo */
+
 /**
  * @summary Encodes a(n) KeyEncryptionKeyRecipientInfo into an ASN.1 Element.
  * @function
@@ -255,6 +248,5 @@ export function _encode_KeyEncryptionKeyRecipientInfo(
     return _cached_encoder_for_KeyEncryptionKeyRecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyEncryptionKeyRecipientInfo */
 
 /* eslint-enable */

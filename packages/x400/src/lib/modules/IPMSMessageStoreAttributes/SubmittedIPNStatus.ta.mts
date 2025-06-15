@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus */
 /**
  * @summary SubmittedIPNStatus
  * @description
@@ -27,165 +26,124 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SubmittedIPNStatus = INTEGER;
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_no_ipn_requested */
 /**
  * @summary SubmittedIPNStatus_no_ipn_requested
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_no_ipn_requested: SubmittedIPNStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_no_ipn_requested */
 
-/* START_OF_SYMBOL_DEFINITION no_ipn_requested */
 /**
  * @summary SubmittedIPNStatus_no_ipn_requested
  * @constant
  * @type {number}
  */
 export const no_ipn_requested: SubmittedIPNStatus = SubmittedIPNStatus_no_ipn_requested; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_ipn_requested */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_nrn_requested */
 /**
  * @summary SubmittedIPNStatus_nrn_requested
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_nrn_requested: SubmittedIPNStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_nrn_requested */
 
-/* START_OF_SYMBOL_DEFINITION nrn_requested */
 /**
  * @summary SubmittedIPNStatus_nrn_requested
  * @constant
  * @type {number}
  */
 export const nrn_requested: SubmittedIPNStatus = SubmittedIPNStatus_nrn_requested; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION nrn_requested */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_nrn_with_ipm_return_requested */
 /**
  * @summary SubmittedIPNStatus_nrn_with_ipm_return_requested
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_nrn_with_ipm_return_requested: SubmittedIPNStatus = 10; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_nrn_with_ipm_return_requested */
 
-/* START_OF_SYMBOL_DEFINITION nrn_with_ipm_return_requested */
 /**
  * @summary SubmittedIPNStatus_nrn_with_ipm_return_requested
  * @constant
  * @type {number}
  */
 export const nrn_with_ipm_return_requested: SubmittedIPNStatus = SubmittedIPNStatus_nrn_with_ipm_return_requested; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION nrn_with_ipm_return_requested */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_rn_requested */
 /**
  * @summary SubmittedIPNStatus_rn_requested
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_rn_requested: SubmittedIPNStatus = 15; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_rn_requested */
 
-/* START_OF_SYMBOL_DEFINITION rn_requested */
 /**
  * @summary SubmittedIPNStatus_rn_requested
  * @constant
  * @type {number}
  */
 export const rn_requested: SubmittedIPNStatus = SubmittedIPNStatus_rn_requested; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION rn_requested */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_rn_with_ipm_return_requested */
 /**
  * @summary SubmittedIPNStatus_rn_with_ipm_return_requested
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_rn_with_ipm_return_requested: SubmittedIPNStatus = 20; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_rn_with_ipm_return_requested */
 
-/* START_OF_SYMBOL_DEFINITION rn_with_ipm_return_requested */
 /**
  * @summary SubmittedIPNStatus_rn_with_ipm_return_requested
  * @constant
  * @type {number}
  */
 export const rn_with_ipm_return_requested: SubmittedIPNStatus = SubmittedIPNStatus_rn_with_ipm_return_requested; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION rn_with_ipm_return_requested */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_ipm_auto_forwarded */
 /**
  * @summary SubmittedIPNStatus_ipm_auto_forwarded
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_ipm_auto_forwarded: SubmittedIPNStatus = 25; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_ipm_auto_forwarded */
 
-/* START_OF_SYMBOL_DEFINITION ipm_auto_forwarded */
 /**
  * @summary SubmittedIPNStatus_ipm_auto_forwarded
  * @constant
  * @type {number}
  */
 export const ipm_auto_forwarded: SubmittedIPNStatus = SubmittedIPNStatus_ipm_auto_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ipm_auto_forwarded */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_ipm_discarded */
 /**
  * @summary SubmittedIPNStatus_ipm_discarded
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_ipm_discarded: SubmittedIPNStatus = 30; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_ipm_discarded */
 
-/* START_OF_SYMBOL_DEFINITION ipm_discarded */
 /**
  * @summary SubmittedIPNStatus_ipm_discarded
  * @constant
  * @type {number}
  */
 export const ipm_discarded: SubmittedIPNStatus = SubmittedIPNStatus_ipm_discarded; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ipm_discarded */
 
-/* START_OF_SYMBOL_DEFINITION SubmittedIPNStatus_rn_sent */
 /**
  * @summary SubmittedIPNStatus_rn_sent
  * @constant
  * @type {number}
  */
 export const SubmittedIPNStatus_rn_sent: SubmittedIPNStatus = 35; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubmittedIPNStatus_rn_sent */
 
-/* START_OF_SYMBOL_DEFINITION rn_sent */
 /**
  * @summary SubmittedIPNStatus_rn_sent
  * @constant
  * @type {number}
  */
 export const rn_sent: SubmittedIPNStatus = SubmittedIPNStatus_rn_sent; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION rn_sent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmittedIPNStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmittedIPNStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmittedIPNStatus */
 export const _decode_SubmittedIPNStatus = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_SubmittedIPNStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmittedIPNStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmittedIPNStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmittedIPNStatus */
 export const _encode_SubmittedIPNStatus = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmittedIPNStatus */
 
 /* eslint-enable */

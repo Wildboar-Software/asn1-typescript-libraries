@@ -12,14 +12,13 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_InformationSelection_infoTypes */
+
 export enum _enum_for_InformationSelection_infoTypes {
     attributeTypesOnly = 0,
     attributeTypeAndValue = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_InformationSelection_infoTypes */
 
-/* START_OF_SYMBOL_DEFINITION InformationSelection_infoTypes */
+
 /**
  * @summary InformationSelection_infoTypes
  * @description
@@ -33,49 +32,43 @@ export enum _enum_for_InformationSelection_infoTypes {
 export type InformationSelection_infoTypes =
     | _enum_for_InformationSelection_infoTypes
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION InformationSelection_infoTypes */
 
-/* START_OF_SYMBOL_DEFINITION InformationSelection_infoTypes_attributeTypesOnly */
+
 /**
  * @summary InformationSelection_infoTypes_attributeTypesOnly
  * @constant
  * @type {number}
  */
 export const InformationSelection_infoTypes_attributeTypesOnly: InformationSelection_infoTypes = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationSelection_infoTypes_attributeTypesOnly */
 
-/* START_OF_SYMBOL_DEFINITION attributeTypesOnly */
+
 /**
  * @summary attributeTypesOnly
  * @constant
  * @type {number}
  */
 export const attributeTypesOnly: InformationSelection_infoTypes = InformationSelection_infoTypes_attributeTypesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION attributeTypesOnly */
 
-/* START_OF_SYMBOL_DEFINITION InformationSelection_infoTypes_attributeTypeAndValue */
+
 /**
  * @summary InformationSelection_infoTypes_attributeTypeAndValue
  * @constant
  * @type {number}
  */
 export const InformationSelection_infoTypes_attributeTypeAndValue: InformationSelection_infoTypes = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION InformationSelection_infoTypes_attributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION attributeTypeAndValue */
+
 /**
  * @summary attributeTypeAndValue
  * @constant
  * @type {number}
  */
 export const attributeTypeAndValue: InformationSelection_infoTypes = InformationSelection_infoTypes_attributeTypeAndValue; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION attributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationSelection_infoTypes */
+
 let _cached_decoder_for_InformationSelection_infoTypes: $.ASN1Decoder<InformationSelection_infoTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationSelection_infoTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationSelection_infoTypes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InformationSelection_infoTypes
  * @function
@@ -89,13 +82,11 @@ export function _decode_InformationSelection_infoTypes(el: _Element) {
     }
     return _cached_decoder_for_InformationSelection_infoTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InformationSelection_infoTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationSelection_infoTypes */
+
 let _cached_encoder_for_InformationSelection_infoTypes: $.ASN1Encoder<InformationSelection_infoTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationSelection_infoTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationSelection_infoTypes */
+
 /**
  * @summary Encodes a(n) InformationSelection_infoTypes into an ASN.1 Element.
  * @function
@@ -114,6 +105,5 @@ export function _encode_InformationSelection_infoTypes(
     return _cached_encoder_for_InformationSelection_infoTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationSelection_infoTypes */
 
 /* eslint-enable */

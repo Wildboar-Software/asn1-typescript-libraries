@@ -6,7 +6,6 @@ import {
     _decode_GeneralSubtree,
     _encode_GeneralSubtree,
 } from "../AttributeCertificateDefinitions/GeneralSubtree.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GeneralSubtrees */
 /**
  * @summary GeneralSubtrees
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type GeneralSubtrees = GeneralSubtree[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION GeneralSubtrees */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralSubtrees */
 let _cached_decoder_for_GeneralSubtrees: $.ASN1Decoder<GeneralSubtrees> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralSubtrees */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralSubtrees */
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralSubtrees
  * @function
@@ -39,13 +34,9 @@ export function _decode_GeneralSubtrees(el: _Element) {
     }
     return _cached_decoder_for_GeneralSubtrees(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralSubtrees */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralSubtrees */
 let _cached_encoder_for_GeneralSubtrees: $.ASN1Encoder<GeneralSubtrees> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralSubtrees */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralSubtrees */
 /**
  * @summary Encodes a(n) GeneralSubtrees into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_GeneralSubtrees(
     return _cached_encoder_for_GeneralSubtrees(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralSubtrees */
 
 /* eslint-enable */

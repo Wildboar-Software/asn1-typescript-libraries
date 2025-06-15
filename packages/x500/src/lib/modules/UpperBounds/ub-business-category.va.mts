@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_business_category */
 /**
  * @summary ub_business_category
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_business_category: INTEGER = 128;
-/* END_OF_SYMBOL_DEFINITION ub_business_category */
 
 /* eslint-enable */

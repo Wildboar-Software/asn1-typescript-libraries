@@ -27,7 +27,7 @@ import {
     _encode_Version,
 } from "../OCSP-2013-08/Version.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TBSRequest */
+
 /**
  * @summary TBSRequest
  * @description
@@ -107,9 +107,8 @@ export class TBSRequest {
         return v1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSRequest */
+
 /**
  * @summary The Leading Root Component Types of TBSRequest
  * @description
@@ -148,9 +147,8 @@ export const _root_component_type_list_1_spec_for_TBSRequest: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSRequest */
+
 /**
  * @summary The Trailing Root Component Types of TBSRequest
  * @description
@@ -160,9 +158,8 @@ export const _root_component_type_list_1_spec_for_TBSRequest: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TBSRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSRequest */
+
 /**
  * @summary The Extension Addition Component Types of TBSRequest
  * @description
@@ -172,13 +169,11 @@ export const _root_component_type_list_2_spec_for_TBSRequest: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_TBSRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSRequest */
+
 let _cached_decoder_for_TBSRequest: $.ASN1Decoder<TBSRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSRequest
  * @function
@@ -237,13 +232,11 @@ export function _decode_TBSRequest(el: _Element) {
     }
     return _cached_decoder_for_TBSRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSRequest */
+
 let _cached_encoder_for_TBSRequest: $.ASN1Encoder<TBSRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSRequest */
+
 /**
  * @summary Encodes a(n) TBSRequest into an ASN.1 Element.
  * @function
@@ -302,6 +295,5 @@ export function _encode_TBSRequest(
     return _cached_encoder_for_TBSRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSRequest */
 
 /* eslint-enable */

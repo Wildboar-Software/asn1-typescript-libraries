@@ -15,7 +15,6 @@ import {
   _encode_NAddress,
 } from '@wildboar/nlm/src/lib/modules/NLM/NAddress.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION sNPAMask_Default */
 /**
  * @summary sNPAMask_Default
  * @description
@@ -29,6 +28,5 @@ import {
  * @constant
  */
 export const sNPAMask_Default: NAddress = new Uint8Array(0);
-/* END_OF_SYMBOL_DEFINITION sNPAMask_Default */
 
 /* eslint-enable */

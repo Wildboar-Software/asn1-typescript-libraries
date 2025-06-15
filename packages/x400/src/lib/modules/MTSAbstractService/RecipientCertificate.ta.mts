@@ -15,7 +15,6 @@ import {
     _decode_Certificates,
     _encode_Certificates,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientCertificate */
 /**
  * @summary RecipientCertificate
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RecipientCertificate = Certificates; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RecipientCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientCertificate */
 let _cached_decoder_for_RecipientCertificate: $.ASN1Decoder<RecipientCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientCertificate
  * @function
@@ -46,13 +41,9 @@ export function _decode_RecipientCertificate(el: _Element) {
     }
     return _cached_decoder_for_RecipientCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientCertificate */
 let _cached_encoder_for_RecipientCertificate: $.ASN1Encoder<RecipientCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientCertificate */
 /**
  * @summary Encodes a(n) RecipientCertificate into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RecipientCertificate(
     return _cached_encoder_for_RecipientCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientCertificate */
 
 /* eslint-enable */

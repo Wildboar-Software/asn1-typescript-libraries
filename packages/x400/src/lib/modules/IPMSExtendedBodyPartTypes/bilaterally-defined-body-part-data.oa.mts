@@ -16,7 +16,6 @@ import {
     _encode_BilaterallyDefinedBodyPart,
 } from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.mjs';
 import { id_et_bilaterally_defined } from '../IPMSObjectIdentifiers/id-et-bilaterally-defined.va.mjs';
-/* START_OF_SYMBOL_DEFINITION bilaterally_defined_body_part_data */
 /**
  * @summary bilaterally_defined_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const bilaterally_defined_body_part_data: TYPE_IDENTIFIER<BilaterallyDefi
     '&id': id_et_bilaterally_defined /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION bilaterally_defined_body_part_data */
 
 /* eslint-enable */

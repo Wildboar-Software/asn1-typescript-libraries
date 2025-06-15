@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_BSP_SCHEMA,
   _encode_BioAPI_BSP_SCHEMA,
 } from '../BIP/BioAPI-BSP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VisibleBSPRegistration */
+
 /**
  * @summary VisibleBSPRegistration
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type VisibleBSPRegistration = BioAPI_BSP_SCHEMA; // DefinedType
-/* END_OF_SYMBOL_DEFINITION VisibleBSPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBSPRegistration */
+
 let _cached_decoder_for_VisibleBSPRegistration: $.ASN1Decoder<VisibleBSPRegistration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBSPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VisibleBSPRegistration */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleBSPRegistration
  * @function
@@ -46,13 +44,11 @@ export function _decode_VisibleBSPRegistration(el: _Element) {
   }
   return _cached_decoder_for_VisibleBSPRegistration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VisibleBSPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBSPRegistration */
+
 let _cached_encoder_for_VisibleBSPRegistration: $.ASN1Encoder<VisibleBSPRegistration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBSPRegistration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VisibleBSPRegistration */
+
 /**
  * @summary Encodes a(n) VisibleBSPRegistration into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_VisibleBSPRegistration(
   return _cached_encoder_for_VisibleBSPRegistration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VisibleBSPRegistration */
 
 /* eslint-enable */

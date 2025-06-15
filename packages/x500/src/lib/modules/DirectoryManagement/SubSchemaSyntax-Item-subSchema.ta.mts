@@ -40,7 +40,6 @@ import {
     _decode_ObjectClassDescription,
     _encode_ObjectClassDescription,
 } from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubSchemaSyntax_Item_subSchema */
 /**
  * @summary SubSchemaSyntax_Item_subSchema
  * @description
@@ -129,9 +128,7 @@ export class SubSchemaSyntax_Item_subSchema {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubSchemaSyntax_Item_subSchema */
 /**
  * @summary The Leading Root Component Types of SubSchemaSyntax_Item_subSchema
  * @description
@@ -191,9 +188,7 @@ export const _root_component_type_list_1_spec_for_SubSchemaSyntax_Item_subSchema
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubSchemaSyntax_Item_subSchema */
 /**
  * @summary The Trailing Root Component Types of SubSchemaSyntax_Item_subSchema
  * @description
@@ -203,9 +198,7 @@ export const _root_component_type_list_1_spec_for_SubSchemaSyntax_Item_subSchema
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubSchemaSyntax_Item_subSchema: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubSchemaSyntax_Item_subSchema */
 /**
  * @summary The Extension Addition Component Types of SubSchemaSyntax_Item_subSchema
  * @description
@@ -215,13 +208,9 @@ export const _root_component_type_list_2_spec_for_SubSchemaSyntax_Item_subSchema
  * @constant
  */
 export const _extension_additions_list_spec_for_SubSchemaSyntax_Item_subSchema: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubSchemaSyntax_Item_subSchema */
 let _cached_decoder_for_SubSchemaSyntax_Item_subSchema: $.ASN1Decoder<SubSchemaSyntax_Item_subSchema> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubSchemaSyntax_Item_subSchema */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubSchemaSyntax_Item_subSchema
  * @function
@@ -328,13 +317,9 @@ export function _decode_SubSchemaSyntax_Item_subSchema(el: _Element) {
     }
     return _cached_decoder_for_SubSchemaSyntax_Item_subSchema(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubSchemaSyntax_Item_subSchema */
 let _cached_encoder_for_SubSchemaSyntax_Item_subSchema: $.ASN1Encoder<SubSchemaSyntax_Item_subSchema> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubSchemaSyntax_Item_subSchema */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubSchemaSyntax_Item_subSchema */
 /**
  * @summary Encodes a(n) SubSchemaSyntax_Item_subSchema into an ASN.1 Element.
  * @function
@@ -449,6 +434,5 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
     return _cached_encoder_for_SubSchemaSyntax_Item_subSchema(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubSchemaSyntax_Item_subSchema */
 
 /* eslint-enable */

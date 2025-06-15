@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DLPolicy_conversion_with_loss_prohibited */
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_DLPolicy_conversion_with_loss_prohibited {
     conversion_with_loss_allowed = 1,
     conversion_with_loss_prohibited = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DLPolicy_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited */
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited
  * @description
@@ -41,9 +38,7 @@ export enum _enum_for_DLPolicy_conversion_with_loss_prohibited {
  * ```@enum {number}
  */
 export type DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited */
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited
  * @description
@@ -55,9 +50,7 @@ export type DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conver
  * ```@enum {number}
  */
 export const DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
-/* END_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited_unchanged */
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited_unchanged
  * @constant
@@ -65,9 +58,7 @@ export const DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conve
  */
 export const DLPolicy_conversion_with_loss_prohibited_unchanged: DLPolicy_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited_unchanged */
 
-/* START_OF_SYMBOL_DEFINITION unchanged */
 /**
  * @summary unchanged
  * @constant
@@ -75,9 +66,7 @@ export const DLPolicy_conversion_with_loss_prohibited_unchanged: DLPolicy_conver
  */
 export const unchanged: DLPolicy_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unchanged */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed */
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed
  * @constant
@@ -85,9 +74,7 @@ export const unchanged: DLPolicy_conversion_with_loss_prohibited =
  */
 export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed */
 
-/* START_OF_SYMBOL_DEFINITION conversion_with_loss_allowed */
 /**
  * @summary conversion_with_loss_allowed
  * @constant
@@ -95,9 +82,7 @@ export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allow
  */
 export const conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION conversion_with_loss_allowed */
 
-/* START_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited */
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited
  * @constant
@@ -105,9 +90,7 @@ export const conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibi
  */
 export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited: DLPolicy_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION conversion_with_loss_prohibited */
 /**
  * @summary conversion_with_loss_prohibited
  * @constant
@@ -115,13 +98,9 @@ export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohi
  */
 export const conversion_with_loss_prohibited: DLPolicy_conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited */
 let _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Decoder<DLPolicy_conversion_with_loss_prohibited> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLPolicy_conversion_with_loss_prohibited */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLPolicy_conversion_with_loss_prohibited
  * @function
@@ -135,13 +114,9 @@ export function _decode_DLPolicy_conversion_with_loss_prohibited(el: _Element) {
     }
     return _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLPolicy_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited */
 let _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Encoder<DLPolicy_conversion_with_loss_prohibited> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLPolicy_conversion_with_loss_prohibited */
 /**
  * @summary Encodes a(n) DLPolicy_conversion_with_loss_prohibited into an ASN.1 Element.
  * @function
@@ -163,6 +138,5 @@ export function _encode_DLPolicy_conversion_with_loss_prohibited(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLPolicy_conversion_with_loss_prohibited */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { aoi } from '../NLM/aoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION dBitModification */
+
 /**
  * @summary dBitModification
  * @description
@@ -25,6 +25,5 @@ import { aoi } from '../NLM/aoi.va.mjs';
  * @constant
  */
 export const dBitModification: OBJECT_IDENTIFIER = new _OID([139], aoi);
-/* END_OF_SYMBOL_DEFINITION dBitModification */
 
 /* eslint-enable */

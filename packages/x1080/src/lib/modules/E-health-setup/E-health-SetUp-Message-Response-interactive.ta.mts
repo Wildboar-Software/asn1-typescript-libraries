@@ -16,7 +16,7 @@ import {
     _decode_E_health_SetUp_Message_Response_interactive_conditional_accept,
     _encode_E_health_SetUp_Message_Response_interactive_conditional_accept,
 } from '../E-health-setup/E-health-SetUp-Message-Response-interactive-conditional-accept.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Response_interactive */
+
 /**
  * @summary E_health_SetUp_Message_Response_interactive
  * @description
@@ -33,13 +33,11 @@ export type E_health_SetUp_Message_Response_interactive =
           conditional_accept: E_health_SetUp_Message_Response_interactive_conditional_accept;
       } /* CHOICE_ALT_ROOT */
     | { reject: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Response_interactive */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_health_SetUp_Message_Response_interactive */
+
 let _cached_decoder_for_E_health_SetUp_Message_Response_interactive: $.ASN1Decoder<E_health_SetUp_Message_Response_interactive> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_health_SetUp_Message_Response_interactive */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_health_SetUp_Message_Response_interactive */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_health_SetUp_Message_Response_interactive
  * @function
@@ -63,13 +61,11 @@ export function _decode_E_health_SetUp_Message_Response_interactive(
     }
     return _cached_decoder_for_E_health_SetUp_Message_Response_interactive(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_health_SetUp_Message_Response_interactive */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_health_SetUp_Message_Response_interactive */
+
 let _cached_encoder_for_E_health_SetUp_Message_Response_interactive: $.ASN1Encoder<E_health_SetUp_Message_Response_interactive> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_health_SetUp_Message_Response_interactive */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_health_SetUp_Message_Response_interactive */
+
 /**
  * @summary Encodes a(n) E_health_SetUp_Message_Response_interactive into an ASN.1 Element.
  * @function
@@ -112,6 +108,5 @@ export function _encode_E_health_SetUp_Message_Response_interactive(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_health_SetUp_Message_Response_interactive */
 
 /* eslint-enable */

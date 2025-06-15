@@ -6,7 +6,6 @@ import {
     _decode_DSEType,
     _encode_DSEType,
 } from "../DSAOperationalAttributeTypes/DSEType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SDSEType */
 /**
  * @summary SDSEType
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type SDSEType = DSEType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SDSEType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SDSEType */
 let _cached_decoder_for_SDSEType: $.ASN1Decoder<SDSEType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SDSEType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SDSEType */
 /**
  * @summary Decodes an ASN.1 element into a(n) SDSEType
  * @function
@@ -37,13 +32,9 @@ export function _decode_SDSEType(el: _Element) {
     }
     return _cached_decoder_for_SDSEType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SDSEType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SDSEType */
 let _cached_encoder_for_SDSEType: $.ASN1Encoder<SDSEType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SDSEType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SDSEType */
 /**
  * @summary Encodes a(n) SDSEType into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_SDSEType(
     return _cached_encoder_for_SDSEType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SDSEType */
 
 /* eslint-enable */

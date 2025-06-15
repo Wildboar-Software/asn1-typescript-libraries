@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AddAvlOK */
 /**
  * @summary AddAvlOK
  * @description
@@ -56,9 +55,7 @@ export class AddAvlOK {
         return new AddAvlOK(_o.ok, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddAvlOK */
 /**
  * @summary The Leading Root Component Types of AddAvlOK
  * @description
@@ -76,9 +73,7 @@ export const _root_component_type_list_1_spec_for_AddAvlOK: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddAvlOK */
 /**
  * @summary The Trailing Root Component Types of AddAvlOK
  * @description
@@ -88,9 +83,7 @@ export const _root_component_type_list_1_spec_for_AddAvlOK: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddAvlOK: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddAvlOK */
 /**
  * @summary The Extension Addition Component Types of AddAvlOK
  * @description
@@ -100,13 +93,9 @@ export const _root_component_type_list_2_spec_for_AddAvlOK: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_AddAvlOK: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlOK */
 let _cached_decoder_for_AddAvlOK: $.ASN1Decoder<AddAvlOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddAvlOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) AddAvlOK
  * @function
@@ -132,13 +121,9 @@ export function _decode_AddAvlOK(el: _Element) {
     }
     return _cached_decoder_for_AddAvlOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlOK */
 let _cached_encoder_for_AddAvlOK: $.ASN1Encoder<AddAvlOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddAvlOK */
 /**
  * @summary Encodes a(n) AddAvlOK into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ export function _encode_AddAvlOK(
     return _cached_encoder_for_AddAvlOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddAvlOK */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityLabels */
 /**
  * @summary SecurityLabels
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SecurityLabels = SecurityLabel[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SecurityLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabels */
 let _cached_decoder_for_SecurityLabels: $.ASN1Decoder<SecurityLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabels */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityLabels */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityLabels
  * @function
@@ -48,13 +43,9 @@ export function _decode_SecurityLabels(el: _Element) {
     }
     return _cached_decoder_for_SecurityLabels(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabels */
 let _cached_encoder_for_SecurityLabels: $.ASN1Encoder<SecurityLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabels */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityLabels */
 /**
  * @summary Encodes a(n) SecurityLabels into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SecurityLabels(
     return _cached_encoder_for_SecurityLabels(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityLabels */
 
 /* eslint-enable */

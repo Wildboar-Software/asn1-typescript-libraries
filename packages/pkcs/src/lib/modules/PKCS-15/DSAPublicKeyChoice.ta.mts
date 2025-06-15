@@ -7,7 +7,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DSAPublicKeyChoice */
+
 /**
  * @summary DSAPublicKeyChoice
  * @description
@@ -26,13 +26,11 @@ export type DSAPublicKeyChoice =
     | { raw: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { spki: SubjectPublicKeyInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSAPublicKeyChoice */
+
 let _cached_decoder_for_DSAPublicKeyChoice: $.ASN1Decoder<DSAPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DSAPublicKeyChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DSAPublicKeyChoice
  * @function
@@ -50,13 +48,11 @@ export function _decode_DSAPublicKeyChoice(el: _Element) {
     }
     return _cached_decoder_for_DSAPublicKeyChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSAPublicKeyChoice */
+
 let _cached_encoder_for_DSAPublicKeyChoice: $.ASN1Encoder<DSAPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSAPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DSAPublicKeyChoice */
+
 /**
  * @summary Encodes a(n) DSAPublicKeyChoice into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_DSAPublicKeyChoice(
     return _cached_encoder_for_DSAPublicKeyChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DSAPublicKeyChoice */
 
 /* eslint-enable */

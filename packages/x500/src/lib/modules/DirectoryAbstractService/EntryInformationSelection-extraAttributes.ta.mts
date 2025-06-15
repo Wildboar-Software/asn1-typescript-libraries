@@ -10,7 +10,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EntryInformationSelection_extraAttributes */
 /**
  * @summary EntryInformationSelection_extraAttributes
  * @description
@@ -24,13 +23,9 @@ import {
 export type EntryInformationSelection_extraAttributes =
     | { allOperationalAttributes: NULL } /* CHOICE_ALT_ROOT */
     | { select: AttributeType[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EntryInformationSelection_extraAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformationSelection_extraAttributes */
 let _cached_decoder_for_EntryInformationSelection_extraAttributes: $.ASN1Decoder<EntryInformationSelection_extraAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformationSelection_extraAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryInformationSelection_extraAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryInformationSelection_extraAttributes
  * @function
@@ -60,13 +55,9 @@ export function _decode_EntryInformationSelection_extraAttributes(
     }
     return _cached_decoder_for_EntryInformationSelection_extraAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryInformationSelection_extraAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformationSelection_extraAttributes */
 let _cached_encoder_for_EntryInformationSelection_extraAttributes: $.ASN1Encoder<EntryInformationSelection_extraAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformationSelection_extraAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryInformationSelection_extraAttributes */
 /**
  * @summary Encodes a(n) EntryInformationSelection_extraAttributes into an ASN.1 Element.
  * @function
@@ -107,6 +98,5 @@ export function _encode_EntryInformationSelection_extraAttributes(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryInformationSelection_extraAttributes */
 
 /* eslint-enable */

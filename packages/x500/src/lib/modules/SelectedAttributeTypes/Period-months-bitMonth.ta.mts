@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, BIT_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth */
 /**
  * @summary Period_months_bitMonth
  * @description
@@ -14,213 +13,156 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type Period_months_bitMonth = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_january */
 /**
  * @summary Period_months_bitMonth_january
  * @constant
  */
 export const Period_months_bitMonth_january: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_january */
 
-/* START_OF_SYMBOL_DEFINITION january */
 /**
  * @summary january
  * @constant
  */
 export const january: number = Period_months_bitMonth_january; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION january */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_february */
 /**
  * @summary Period_months_bitMonth_february
  * @constant
  */
 export const Period_months_bitMonth_february: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_february */
 
-/* START_OF_SYMBOL_DEFINITION february */
 /**
  * @summary february
  * @constant
  */
 export const february: number = Period_months_bitMonth_february; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION february */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_march */
 /**
  * @summary Period_months_bitMonth_march
  * @constant
  */
 export const Period_months_bitMonth_march: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_march */
 
-/* START_OF_SYMBOL_DEFINITION march */
 /**
  * @summary march
  * @constant
  */
 export const march: number = Period_months_bitMonth_march; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION march */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_april */
 /**
  * @summary Period_months_bitMonth_april
  * @constant
  */
 export const Period_months_bitMonth_april: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_april */
 
-/* START_OF_SYMBOL_DEFINITION april */
 /**
  * @summary april
  * @constant
  */
 export const april: number = Period_months_bitMonth_april; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION april */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_may */
 /**
  * @summary Period_months_bitMonth_may
  * @constant
  */
 export const Period_months_bitMonth_may: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_may */
 
-/* START_OF_SYMBOL_DEFINITION may */
 /**
  * @summary may
  * @constant
  */
 export const may: number = Period_months_bitMonth_may; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION may */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_june */
 /**
  * @summary Period_months_bitMonth_june
  * @constant
  */
 export const Period_months_bitMonth_june: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_june */
 
-/* START_OF_SYMBOL_DEFINITION june */
 /**
  * @summary june
  * @constant
  */
 export const june: number = Period_months_bitMonth_june; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION june */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_july */
 /**
  * @summary Period_months_bitMonth_july
  * @constant
  */
 export const Period_months_bitMonth_july: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_july */
 
-/* START_OF_SYMBOL_DEFINITION july */
 /**
  * @summary july
  * @constant
  */
 export const july: number = Period_months_bitMonth_july; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION july */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_august */
 /**
  * @summary Period_months_bitMonth_august
  * @constant
  */
 export const Period_months_bitMonth_august: number = 7; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_august */
 
-/* START_OF_SYMBOL_DEFINITION august */
 /**
  * @summary august
  * @constant
  */
 export const august: number = Period_months_bitMonth_august; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION august */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_september */
 /**
  * @summary Period_months_bitMonth_september
  * @constant
  */
 export const Period_months_bitMonth_september: number = 8; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_september */
 
-/* START_OF_SYMBOL_DEFINITION september */
 /**
  * @summary september
  * @constant
  */
 export const september: number = Period_months_bitMonth_september; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION september */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_october */
 /**
  * @summary Period_months_bitMonth_october
  * @constant
  */
 export const Period_months_bitMonth_october: number = 9; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_october */
 
-/* START_OF_SYMBOL_DEFINITION october */
 /**
  * @summary october
  * @constant
  */
 export const october: number = Period_months_bitMonth_october; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION october */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_november */
 /**
  * @summary Period_months_bitMonth_november
  * @constant
  */
 export const Period_months_bitMonth_november: number = 10; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_november */
 
-/* START_OF_SYMBOL_DEFINITION november */
 /**
  * @summary november
  * @constant
  */
 export const november: number = Period_months_bitMonth_november; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION november */
 
-/* START_OF_SYMBOL_DEFINITION Period_months_bitMonth_december */
 /**
  * @summary Period_months_bitMonth_december
  * @constant
  */
 export const Period_months_bitMonth_december: number = 11; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Period_months_bitMonth_december */
 
-/* START_OF_SYMBOL_DEFINITION december */
 /**
  * @summary december
  * @constant
  */
 export const december: number = Period_months_bitMonth_december; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION december */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_months_bitMonth */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_months_bitMonth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Period_months_bitMonth */
 export const _decode_Period_months_bitMonth = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_Period_months_bitMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_months_bitMonth */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_months_bitMonth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Period_months_bitMonth */
 export const _encode_Period_months_bitMonth = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Period_months_bitMonth */
 
 /* eslint-enable */

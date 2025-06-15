@@ -26,7 +26,6 @@ import {
     _decode_OriginalMessageToken,
     _encode_OriginalMessageToken,
 } from '../IPMSSecurityExtensions/OriginalMessageToken.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**
  * @summary IpnSecurityResponse_content_or_arguments_original_security_arguments
  * @description
@@ -85,9 +84,7 @@ export class IpnSecurityResponse_content_or_arguments_original_security_argument
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**
  * @summary The Leading Root Component Types of IpnSecurityResponse_content_or_arguments_original_security_arguments
  * @description
@@ -119,9 +116,7 @@ export const _root_component_type_list_1_spec_for_IpnSecurityResponse_content_or
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**
  * @summary The Trailing Root Component Types of IpnSecurityResponse_content_or_arguments_original_security_arguments
  * @description
@@ -131,9 +126,7 @@ export const _root_component_type_list_1_spec_for_IpnSecurityResponse_content_or
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**
  * @summary The Extension Addition Component Types of IpnSecurityResponse_content_or_arguments_original_security_arguments
  * @description
@@ -143,13 +136,9 @@ export const _root_component_type_list_2_spec_for_IpnSecurityResponse_content_or
  * @constant
  */
 export const _extension_additions_list_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 let _cached_decoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments: $.ASN1Decoder<IpnSecurityResponse_content_or_arguments_original_security_arguments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**
  * @summary Decodes an ASN.1 element into a(n) IpnSecurityResponse_content_or_arguments_original_security_arguments
  * @function
@@ -210,13 +199,9 @@ export function _decode_IpnSecurityResponse_content_or_arguments_original_securi
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 let _cached_encoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments: $.ASN1Encoder<IpnSecurityResponse_content_or_arguments_original_security_arguments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**
  * @summary Encodes a(n) IpnSecurityResponse_content_or_arguments_original_security_arguments into an ASN.1 Element.
  * @function
@@ -279,6 +264,5 @@ export function _encode_IpnSecurityResponse_content_or_arguments_original_securi
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IpnSecurityResponse_content_or_arguments_original_security_arguments */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
 } from '../MSAbstractService/OriginatorToken.ta.mjs';
 import { id_ext_originator_token } from '../MSObjectIdentifiers/id-ext-originator-token.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originator_token */
 /**
  * @summary originator_token
  * @description
@@ -45,6 +44,5 @@ export const originator_token: MS_EXTENSION<OriginatorToken> = {
     '&id': id_ext_originator_token /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originator_token */
 
 /* eslint-enable */

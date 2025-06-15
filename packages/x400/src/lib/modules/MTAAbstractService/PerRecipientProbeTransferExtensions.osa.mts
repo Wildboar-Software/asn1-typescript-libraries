@@ -15,7 +15,6 @@ import { requested_delivery_method } from '../MTSAbstractService/requested-deliv
 import { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa.mjs';
 import { redirection_history } from '../MTSAbstractService/redirection-history.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientProbeTransferExtensions */
 /**
  * @summary PerRecipientProbeTransferExtensions
  * @description
@@ -41,6 +40,5 @@ export const PerRecipientProbeTransferExtensions: EXTENSION[] = [
     redirection_history,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerRecipientProbeTransferExtensions */
 
 /* eslint-enable */

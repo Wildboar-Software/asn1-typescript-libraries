@@ -6,7 +6,6 @@ import {
 import { id_at_collectiveTelexNumber } from "../SelectedAttributeTypes/id-at-collectiveTelexNumber.va.mjs";
 import { telexNr } from "../SelectedAttributeTypes/telexNr.oa.mjs";
 import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveTelexNumber */
 /**
  * @summary collectiveTelexNumber
  * @description
@@ -46,6 +45,5 @@ export const collectiveTelexNumber: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveTelexNumber */
 
 /* eslint-enable */

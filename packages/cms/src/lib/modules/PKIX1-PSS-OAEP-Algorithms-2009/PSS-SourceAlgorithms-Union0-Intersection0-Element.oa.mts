@@ -6,7 +6,7 @@ import {
     _encode_EncodingParameters,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.mjs";
 import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PSS_SourceAlgorithms_Union0_Intersection0_Element */
+
 /**
  * @summary PSS_SourceAlgorithms_Union0_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PSS_SourceAlgorithms_Union0_Intersection0_Element: ALGORITHM<Encodi
     "&id": id_pSpecified /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PSS_SourceAlgorithms_Union0_Intersection0_Element */
 
 /* eslint-enable */

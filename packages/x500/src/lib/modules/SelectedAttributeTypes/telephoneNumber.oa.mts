@@ -12,7 +12,6 @@ import {
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 import { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa.mjs";
 import { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION telephoneNumber */
 /**
  * @summary telephoneNumber
  * @description
@@ -54,6 +53,5 @@ export const telephoneNumber: ATTRIBUTE<TelephoneNumber> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION telephoneNumber */
 
 /* eslint-enable */

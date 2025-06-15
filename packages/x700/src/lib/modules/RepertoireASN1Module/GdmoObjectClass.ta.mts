@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GdmoObjectClass */
+
 /**
  * @summary GdmoObjectClass
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type GdmoObjectClass = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION GdmoObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GdmoObjectClass */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GdmoObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GdmoObjectClass */
+
+
 export const _decode_GdmoObjectClass = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_GdmoObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GdmoObjectClass */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GdmoObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GdmoObjectClass */
+
+
 export const _encode_GdmoObjectClass = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_GdmoObjectClass */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_NamedDay_intNamedDays,
     _encode_NamedDay_intNamedDays,
 } from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NamedDay */
 /**
  * @summary NamedDay
  * @description
@@ -41,13 +40,9 @@ import {
 export type NamedDay =
     | { intNamedDays: NamedDay_intNamedDays } /* CHOICE_ALT_ROOT */
     | { bitNamedDays: NamedDay_bitNamedDays } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NamedDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedDay */
 let _cached_decoder_for_NamedDay: $.ASN1Decoder<NamedDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedDay */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NamedDay */
 /**
  * @summary Decodes an ASN.1 element into a(n) NamedDay
  * @function
@@ -63,13 +58,9 @@ export function _decode_NamedDay(el: _Element) {
     }
     return _cached_decoder_for_NamedDay(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NamedDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedDay */
 let _cached_encoder_for_NamedDay: $.ASN1Encoder<NamedDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedDay */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NamedDay */
 /**
  * @summary Encodes a(n) NamedDay into an ASN.1 Element.
  * @function
@@ -93,6 +84,5 @@ export function _encode_NamedDay(
     return _cached_encoder_for_NamedDay(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NamedDay */
 
 /* eslint-enable */

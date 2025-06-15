@@ -23,7 +23,6 @@ import {
 } from '../EDIMUseOfDirectory/EDIUserCapability.ta.mjs';
 import { objectIdentifierFirstComponentMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs';
 import { id_dat_edi_capabilities } from '../EDIMUseOfDirectory/id-dat-edi-capabilities.va.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_capabilities */
 /**
  * @summary edi_capabilities
  * @description
@@ -60,6 +59,5 @@ export const edi_capabilities: ATTRIBUTE<EDIUserCapability> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_capabilities */
 
 /* eslint-enable */

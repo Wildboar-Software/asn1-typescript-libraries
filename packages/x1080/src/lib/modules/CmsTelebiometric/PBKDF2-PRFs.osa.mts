@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs */
+
 /**
  * @summary PBKDF2_PRFs
  * @description
@@ -26,6 +26,5 @@ import { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramewor
  *
  */
 export const PBKDF2_PRFs: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION PBKDF2_PRFs */
 
 /* eslint-enable */

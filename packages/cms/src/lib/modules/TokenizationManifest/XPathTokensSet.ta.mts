@@ -15,7 +15,7 @@ import {
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../TokenizationManifest/XPathSet.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION XPathTokensSet */
+
 /**
  * @summary XPathTokensSet
  * @description
@@ -65,9 +65,8 @@ export class XPathTokensSet {
         return new XPathTokensSet(_o.tSP, _o.xPathSet);
     }
 }
-/* END_OF_SYMBOL_DEFINITION XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_XPathTokensSet */
+
 /**
  * @summary The Leading Root Component Types of XPathTokensSet
  * @description
@@ -92,9 +91,8 @@ export const _root_component_type_list_1_spec_for_XPathTokensSet: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_XPathTokensSet */
+
 /**
  * @summary The Trailing Root Component Types of XPathTokensSet
  * @description
@@ -104,9 +102,8 @@ export const _root_component_type_list_1_spec_for_XPathTokensSet: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_XPathTokensSet: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_XPathTokensSet */
+
 /**
  * @summary The Extension Addition Component Types of XPathTokensSet
  * @description
@@ -116,13 +113,11 @@ export const _root_component_type_list_2_spec_for_XPathTokensSet: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_XPathTokensSet: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XPathTokensSet */
+
 let _cached_decoder_for_XPathTokensSet: $.ASN1Decoder<XPathTokensSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_XPathTokensSet */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) XPathTokensSet
  * @function
@@ -164,13 +159,11 @@ export function _decode_XPathTokensSet(el: _Element) {
     }
     return _cached_decoder_for_XPathTokensSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XPathTokensSet */
+
 let _cached_encoder_for_XPathTokensSet: $.ASN1Encoder<XPathTokensSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XPathTokensSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_XPathTokensSet */
+
 /**
  * @summary Encodes a(n) XPathTokensSet into an ASN.1 Element.
  * @function
@@ -204,6 +197,5 @@ export function _encode_XPathTokensSet(
     return _cached_encoder_for_XPathTokensSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_XPathTokensSet */
 
 /* eslint-enable */

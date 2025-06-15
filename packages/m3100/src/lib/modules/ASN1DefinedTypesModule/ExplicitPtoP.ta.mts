@@ -15,7 +15,7 @@ import {
     _decode_ExplicitTP,
     _encode_ExplicitTP,
 } from '../ASN1DefinedTypesModule/ExplicitTP.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExplicitPtoP */
+
 /**
  * @summary ExplicitPtoP
  * @description
@@ -64,9 +64,8 @@ export class ExplicitPtoP {
         return new ExplicitPtoP(_o.fromTp, _o.toTp);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExplicitPtoP */
+
 /**
  * @summary The Leading Root Component Types of ExplicitPtoP
  * @description
@@ -79,9 +78,8 @@ export const _root_component_type_list_1_spec_for_ExplicitPtoP: $.ComponentSpec[
     new $.ComponentSpec('fromTp', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('toTp', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExplicitPtoP */
+
 /**
  * @summary The Trailing Root Component Types of ExplicitPtoP
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_ExplicitPtoP: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExplicitPtoP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExplicitPtoP */
+
 /**
  * @summary The Extension Addition Component Types of ExplicitPtoP
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_ExplicitPtoP: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ExplicitPtoP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitPtoP */
+
 let _cached_decoder_for_ExplicitPtoP: $.ASN1Decoder<ExplicitPtoP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExplicitPtoP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExplicitPtoP
  * @function
@@ -140,13 +135,11 @@ export function _decode_ExplicitPtoP(el: _Element) {
     }
     return _cached_decoder_for_ExplicitPtoP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitPtoP */
+
 let _cached_encoder_for_ExplicitPtoP: $.ASN1Encoder<ExplicitPtoP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitPtoP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExplicitPtoP */
+
 /**
  * @summary Encodes a(n) ExplicitPtoP into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ export function _encode_ExplicitPtoP(
     return _cached_encoder_for_ExplicitPtoP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExplicitPtoP */
 
 /* eslint-enable */

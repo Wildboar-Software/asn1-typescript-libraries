@@ -25,7 +25,7 @@ import {
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnitEventNotificationDisabler */
+
 /**
  * @summary UnitEventNotificationDisabler
  * @description
@@ -88,9 +88,8 @@ export class UnitEventNotificationDisabler {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnitEventNotificationDisabler */
+
 /**
  * @summary The Leading Root Component Types of UnitEventNotificationDisabler
  * @description
@@ -122,9 +121,8 @@ export const _root_component_type_list_1_spec_for_UnitEventNotificationDisabler:
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnitEventNotificationDisabler */
+
 /**
  * @summary The Trailing Root Component Types of UnitEventNotificationDisabler
  * @description
@@ -134,9 +132,8 @@ export const _root_component_type_list_1_spec_for_UnitEventNotificationDisabler:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnitEventNotificationDisabler: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnitEventNotificationDisabler */
+
 /**
  * @summary The Extension Addition Component Types of UnitEventNotificationDisabler
  * @description
@@ -146,13 +143,11 @@ export const _root_component_type_list_2_spec_for_UnitEventNotificationDisabler:
  * @constant
  */
 export const _extension_additions_list_spec_for_UnitEventNotificationDisabler: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventNotificationDisabler */
+
 let _cached_decoder_for_UnitEventNotificationDisabler: $.ASN1Decoder<UnitEventNotificationDisabler> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnitEventNotificationDisabler */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitEventNotificationDisabler
  * @function
@@ -190,13 +185,11 @@ export function _decode_UnitEventNotificationDisabler(el: _Element) {
   }
   return _cached_decoder_for_UnitEventNotificationDisabler(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventNotificationDisabler */
+
 let _cached_encoder_for_UnitEventNotificationDisabler: $.ASN1Encoder<UnitEventNotificationDisabler> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventNotificationDisabler */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnitEventNotificationDisabler */
+
 /**
  * @summary Encodes a(n) UnitEventNotificationDisabler into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_UnitEventNotificationDisabler(
   return _cached_encoder_for_UnitEventNotificationDisabler(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnitEventNotificationDisabler */
 
 /* eslint-enable */

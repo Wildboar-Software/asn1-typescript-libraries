@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RangeFromZeroToMax */
 /**
  * @summary RangeFromZeroToMax
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RangeFromZeroToMax = INTEGER;
-/* END_OF_SYMBOL_DEFINITION RangeFromZeroToMax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RangeFromZeroToMax */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RangeFromZeroToMax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RangeFromZeroToMax */
 export const _decode_RangeFromZeroToMax = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_RangeFromZeroToMax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RangeFromZeroToMax */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RangeFromZeroToMax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RangeFromZeroToMax */
 export const _encode_RangeFromZeroToMax = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RangeFromZeroToMax */
 
 /* eslint-enable */

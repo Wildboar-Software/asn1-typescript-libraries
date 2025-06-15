@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_tokenization_manifest */
+
 /**
  * @summary id_tokenization_manifest
  * @description
@@ -25,6 +25,5 @@ export const id_tokenization_manifest: OID = new _OID([
     /* x9-73 */ 73,
     /* tokenization */ 3,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_tokenization_manifest */
 
 /* eslint-enable */

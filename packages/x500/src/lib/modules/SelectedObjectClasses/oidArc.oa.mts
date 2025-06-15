@@ -6,7 +6,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION oidArc */
 /**
  * @summary oidArc
  * @description
@@ -35,6 +34,5 @@ export const oidArc: OBJECT_CLASS = {
     "&id": id_oidArc /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oidArc */
 
 /* eslint-enable */

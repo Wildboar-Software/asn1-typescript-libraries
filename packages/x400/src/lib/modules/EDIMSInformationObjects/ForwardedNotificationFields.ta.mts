@@ -36,7 +36,6 @@ import {
     _decode_FNExtensionsField,
     _encode_FNExtensionsField,
 } from '../EDIMSInformationObjects/FNExtensionsField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardedNotificationFields */
 /**
  * @summary ForwardedNotificationFields
  * @description
@@ -115,9 +114,7 @@ export class ForwardedNotificationFields {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardedNotificationFields */
 /**
  * @summary The Leading Root Component Types of ForwardedNotificationFields
  * @description
@@ -163,9 +160,7 @@ export const _root_component_type_list_1_spec_for_ForwardedNotificationFields: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardedNotificationFields */
 /**
  * @summary The Trailing Root Component Types of ForwardedNotificationFields
  * @description
@@ -175,9 +170,7 @@ export const _root_component_type_list_1_spec_for_ForwardedNotificationFields: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ForwardedNotificationFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardedNotificationFields */
 /**
  * @summary The Extension Addition Component Types of ForwardedNotificationFields
  * @description
@@ -187,13 +180,9 @@ export const _root_component_type_list_2_spec_for_ForwardedNotificationFields: $
  * @constant
  */
 export const _extension_additions_list_spec_for_ForwardedNotificationFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedNotificationFields */
 let _cached_decoder_for_ForwardedNotificationFields: $.ASN1Decoder<ForwardedNotificationFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardedNotificationFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardedNotificationFields
  * @function
@@ -260,13 +249,9 @@ export function _decode_ForwardedNotificationFields(el: _Element) {
     }
     return _cached_decoder_for_ForwardedNotificationFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedNotificationFields */
 let _cached_encoder_for_ForwardedNotificationFields: $.ASN1Encoder<ForwardedNotificationFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedNotificationFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardedNotificationFields */
 /**
  * @summary Encodes a(n) ForwardedNotificationFields into an ASN.1 Element.
  * @function
@@ -328,6 +313,5 @@ export function _encode_ForwardedNotificationFields(
     return _cached_encoder_for_ForwardedNotificationFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardedNotificationFields */
 
 /* eslint-enable */

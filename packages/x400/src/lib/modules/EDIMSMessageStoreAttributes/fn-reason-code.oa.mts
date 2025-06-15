@@ -22,7 +22,6 @@ import { id_nat_fn_reason_code } from '../EDIMSObjectIdentifiers/id-nat-fn-reaso
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION fn_reason_code */
 /**
  * @summary fn_reason_code
  * @description
@@ -55,6 +54,5 @@ export const fn_reason_code: X413ATTRIBUTE<FNReasonCodeField> = {
     '&id': id_nat_fn_reason_code /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION fn_reason_code */
 
 /* eslint-enable */

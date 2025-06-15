@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dualStringMatch */
 /**
  * @summary dualStringMatch
  * @description
@@ -34,6 +33,5 @@ export const dualStringMatch: MATCHING_RULE<DualStringSyntax> = {
     "&id": id_mr_dualStringMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dualStringMatch */
 
 /* eslint-enable */

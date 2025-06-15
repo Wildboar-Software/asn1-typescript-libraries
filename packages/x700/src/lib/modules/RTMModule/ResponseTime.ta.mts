@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ResponseTime */
 /**
  * @summary ResponseTime
  * @description
@@ -38,13 +37,9 @@ export type ResponseTime =
     | { nanoSeconds: INTEGER } /* CHOICE_ALT_ROOT */
     | { picoSeconds: INTEGER } /* CHOICE_ALT_ROOT */
     | { secondsPerBit: REAL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ResponseTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTime */
 let _cached_decoder_for_ResponseTime: $.ASN1Decoder<ResponseTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseTime
  * @function
@@ -84,13 +79,9 @@ export function _decode_ResponseTime(el: _Element) {
     }
     return _cached_decoder_for_ResponseTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTime */
 let _cached_encoder_for_ResponseTime: $.ASN1Encoder<ResponseTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseTime */
 /**
  * @summary Encodes a(n) ResponseTime into an ASN.1 Element.
  * @function
@@ -148,6 +139,5 @@ export function _encode_ResponseTime(
     return _cached_encoder_for_ResponseTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseTime */
 
 /* eslint-enable */

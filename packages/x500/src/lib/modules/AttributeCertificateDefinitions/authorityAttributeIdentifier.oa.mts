@@ -7,7 +7,6 @@ import {
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_authorityAttributeIdentifier } from "./id-ce-authorityAttributeIdentifier.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION authorityAttributeIdentifier */
 /**
  * @summary authorityAttributeIdentifier
  * @description
@@ -35,6 +34,5 @@ export const authorityAttributeIdentifier: EXTENSION<AuthorityAttributeIdentifie
     "&id": id_ce_authorityAttributeIdentifier,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authorityAttributeIdentifier */
 
 /* eslint-enable */

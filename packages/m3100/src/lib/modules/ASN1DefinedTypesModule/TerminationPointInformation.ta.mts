@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TerminationPointInformation */
+
 /**
  * @summary TerminationPointInformation
  * @description
@@ -34,13 +34,11 @@ export type TerminationPointInformation =
     | { tPOrGTP: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { sourceTP: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { sinkTP: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TerminationPointInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminationPointInformation */
+
 let _cached_decoder_for_TerminationPointInformation: $.ASN1Decoder<TerminationPointInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminationPointInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminationPointInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminationPointInformation
  * @function
@@ -74,13 +72,11 @@ export function _decode_TerminationPointInformation(el: _Element) {
     }
     return _cached_decoder_for_TerminationPointInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminationPointInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminationPointInformation */
+
 let _cached_encoder_for_TerminationPointInformation: $.ASN1Encoder<TerminationPointInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminationPointInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminationPointInformation */
+
 /**
  * @summary Encodes a(n) TerminationPointInformation into an ASN.1 Element.
  * @function
@@ -120,6 +116,5 @@ export function _encode_TerminationPointInformation(
     return _cached_encoder_for_TerminationPointInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminationPointInformation */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_MRMapping,
     _encode_MRMapping,
 } from "../ServiceAdministration/MRMapping.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RelaxationPolicy */
 /**
  * @summary RelaxationPolicy
  * @description
@@ -114,9 +113,7 @@ export class RelaxationPolicy {
         return 1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RelaxationPolicy */
 /**
  * @summary The Leading Root Component Types of RelaxationPolicy
  * @description
@@ -162,9 +159,7 @@ export const _root_component_type_list_1_spec_for_RelaxationPolicy: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RelaxationPolicy */
 /**
  * @summary The Trailing Root Component Types of RelaxationPolicy
  * @description
@@ -174,9 +169,7 @@ export const _root_component_type_list_1_spec_for_RelaxationPolicy: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RelaxationPolicy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RelaxationPolicy */
 /**
  * @summary The Extension Addition Component Types of RelaxationPolicy
  * @description
@@ -186,13 +179,9 @@ export const _root_component_type_list_2_spec_for_RelaxationPolicy: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_RelaxationPolicy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelaxationPolicy */
 let _cached_decoder_for_RelaxationPolicy: $.ASN1Decoder<RelaxationPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelaxationPolicy */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelaxationPolicy
  * @function
@@ -265,13 +254,9 @@ export function _decode_RelaxationPolicy(el: _Element) {
     }
     return _cached_decoder_for_RelaxationPolicy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelaxationPolicy */
 let _cached_encoder_for_RelaxationPolicy: $.ASN1Encoder<RelaxationPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelaxationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelaxationPolicy */
 /**
  * @summary Encodes a(n) RelaxationPolicy into an ASN.1 Element.
  * @function
@@ -359,6 +344,5 @@ export function _encode_RelaxationPolicy(
     return _cached_encoder_for_RelaxationPolicy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelaxationPolicy */
 
 /* eslint-enable */

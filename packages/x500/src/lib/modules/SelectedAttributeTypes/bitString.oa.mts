@@ -3,7 +3,6 @@ import { BIT_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_bitString } from "../SelectedAttributeTypes/id-lsx-bitString.va.mjs";
-/* START_OF_SYMBOL_DEFINITION bitString */
 /**
  * @summary bitString
  * @description
@@ -33,6 +32,5 @@ export const bitString: SYNTAX_NAME<BIT_STRING> = {
     "&id": id_lsx_bitString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION bitString */
 
 /* eslint-enable */

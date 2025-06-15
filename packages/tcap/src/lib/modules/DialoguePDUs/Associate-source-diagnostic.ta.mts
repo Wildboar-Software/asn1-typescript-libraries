@@ -21,7 +21,6 @@ import {
     _encode_Associate_source_diagnostic_dialogue_service_provider,
 } from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-provider.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Associate_source_diagnostic */
 /**
  * @summary Associate_source_diagnostic
  * @description
@@ -45,13 +44,9 @@ export type Associate_source_diagnostic =
     | {
           dialogue_service_provider: Associate_source_diagnostic_dialogue_service_provider;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Associate_source_diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Associate_source_diagnostic */
 let _cached_decoder_for_Associate_source_diagnostic: $.ASN1Decoder<Associate_source_diagnostic> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Associate_source_diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Associate_source_diagnostic */
 /**
  * @summary Decodes an ASN.1 element into a(n) Associate_source_diagnostic
  * @function
@@ -81,13 +76,9 @@ export function _decode_Associate_source_diagnostic(el: _Element) {
     }
     return _cached_decoder_for_Associate_source_diagnostic(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Associate_source_diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Associate_source_diagnostic */
 let _cached_encoder_for_Associate_source_diagnostic: $.ASN1Encoder<Associate_source_diagnostic> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Associate_source_diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Associate_source_diagnostic */
 /**
  * @summary Encodes a(n) Associate_source_diagnostic into an ASN.1 Element.
  * @function
@@ -123,6 +114,5 @@ export function _encode_Associate_source_diagnostic(
     return _cached_encoder_for_Associate_source_diagnostic(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Associate_source_diagnostic */
 
 /* eslint-enable */

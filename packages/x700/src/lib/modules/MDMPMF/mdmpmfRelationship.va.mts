@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION mdmpmfRelationship */
 /**
  * @summary mdmpmfRelationship
  * @description
@@ -29,6 +28,5 @@ export const mdmpmfRelationship: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part19 */ 19, /* relationship */ 11],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION mdmpmfRelationship */
 
 /* eslint-enable */

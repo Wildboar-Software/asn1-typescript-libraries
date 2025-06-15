@@ -15,7 +15,7 @@ import {
     _decode_ManagerSearchKeyList_Item,
     _encode_ManagerSearchKeyList_Item,
 } from '../X790ASN1Module/ManagerSearchKeyList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagerSearchKeyList */
+
 /**
  * @summary ManagerSearchKeyList
  * @description
@@ -31,13 +31,11 @@ import {
  * ```
  */
 export type ManagerSearchKeyList = ManagerSearchKeyList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ManagerSearchKeyList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerSearchKeyList */
+
 let _cached_decoder_for_ManagerSearchKeyList: $.ASN1Decoder<ManagerSearchKeyList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerSearchKeyList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagerSearchKeyList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagerSearchKeyList
  * @function
@@ -52,13 +50,11 @@ export function _decode_ManagerSearchKeyList(el: _Element) {
     }
     return _cached_decoder_for_ManagerSearchKeyList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagerSearchKeyList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerSearchKeyList */
+
 let _cached_encoder_for_ManagerSearchKeyList: $.ASN1Encoder<ManagerSearchKeyList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerSearchKeyList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagerSearchKeyList */
+
 /**
  * @summary Encodes a(n) ManagerSearchKeyList into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_ManagerSearchKeyList(
     return _cached_encoder_for_ManagerSearchKeyList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagerSearchKeyList */
 
 /* eslint-enable */

@@ -19,7 +19,7 @@ import {
 } from "./SessionType.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION ResponseContent_content */
+
 /**
  * @summary ResponseContent_content
  * @description
@@ -92,9 +92,8 @@ export class ResponseContent_content {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseContent_content */
+
 /**
  * @summary The Leading Root Component Types of ResponseContent_content
  * @description
@@ -127,9 +126,8 @@ export const _root_component_type_list_1_spec_for_ResponseContent_content: $.Com
     ),
     new $.ComponentSpec('response', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseContent_content */
+
 /**
  * @summary The Trailing Root Component Types of ResponseContent_content
  * @description
@@ -139,9 +137,8 @@ export const _root_component_type_list_1_spec_for_ResponseContent_content: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResponseContent_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseContent_content */
+
 /**
  * @summary The Extension Addition Component Types of ResponseContent_content
  * @description
@@ -151,13 +148,11 @@ export const _root_component_type_list_2_spec_for_ResponseContent_content: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_ResponseContent_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseContent_content */
+
 let _cached_decoder_for_ResponseContent_content: $.ASN1Decoder<ResponseContent_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseContent_content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseContent_content
  * @function
@@ -213,13 +208,11 @@ export function _decode_ResponseContent_content(el: _Element) {
     }
     return _cached_decoder_for_ResponseContent_content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseContent_content */
+
 let _cached_encoder_for_ResponseContent_content: $.ASN1Encoder<ResponseContent_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseContent_content */
+
 /**
  * @summary Encodes a(n) ResponseContent_content into an ASN.1 Element.
  * @function
@@ -266,6 +259,5 @@ export function _encode_ResponseContent_content(
     return _cached_encoder_for_ResponseContent_content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseContent_content */
 
 /* eslint-enable */

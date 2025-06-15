@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/NoticeReference.ta.mjs";
 import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPUserNotice */
 /**
  * @summary SPUserNotice
  * @description
@@ -63,9 +62,7 @@ class SPUserNotice {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPUserNotice */
 /**
  * @summary The Leading Root Component Types of SPUserNotice
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_SPUserNotice: $.ComponentSpec[] = [
     new $.ComponentSpec("noticeRef", true, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("explicitText", true, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPUserNotice */
 /**
  * @summary The Trailing Root Component Types of SPUserNotice
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_SPUserNotice: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPUserNotice */
 /**
  * @summary The Extension Addition Component Types of SPUserNotice
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_SPUserNotice: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPUserNotice */
 let _cached_decoder_for_SPUserNotice: $.ASN1Decoder<SPUserNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPUserNotice */
 /**
  * @summary Decodes an ASN.1 element into a(n) SPUserNotice
  * @function
@@ -148,13 +137,9 @@ function _decode_SPUserNotice (el: _Element) {
 }; }
     return _cached_decoder_for_SPUserNotice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPUserNotice */
 let _cached_encoder_for_SPUserNotice: $.ASN1Encoder<SPUserNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPUserNotice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPUserNotice */
 /**
  * @summary Encodes a(n) SPUserNotice into an ASN.1 Element.
  * @function
@@ -175,6 +160,5 @@ function _encode_SPUserNotice (value: SPUserNotice, elGetter: $.ASN1Encoder<SPUs
     return _cached_encoder_for_SPUserNotice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPUserNotice */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_NumberRange,
     _encode_NumberRange,
 } from "../CertificateExtensions/NumberRange.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RevokedCertificateGroup */
 /**
  * @summary RevokedCertificateGroup
  * @description
@@ -27,13 +26,9 @@ import {
 export type RevokedCertificateGroup =
     | { serialNumberRange: NumberRange } /* CHOICE_ALT_ROOT */
     | { nameSubtree: GeneralName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RevokedCertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevokedCertificateGroup */
 let _cached_decoder_for_RevokedCertificateGroup: $.ASN1Decoder<RevokedCertificateGroup> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevokedCertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevokedCertificateGroup */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevokedCertificateGroup
  * @function
@@ -59,13 +54,9 @@ export function _decode_RevokedCertificateGroup(el: _Element) {
     }
     return _cached_decoder_for_RevokedCertificateGroup(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevokedCertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevokedCertificateGroup */
 let _cached_encoder_for_RevokedCertificateGroup: $.ASN1Encoder<RevokedCertificateGroup> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevokedCertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevokedCertificateGroup */
 /**
  * @summary Encodes a(n) RevokedCertificateGroup into an ASN.1 Element.
  * @function
@@ -89,6 +80,5 @@ export function _encode_RevokedCertificateGroup(
     return _cached_encoder_for_RevokedCertificateGroup(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevokedCertificateGroup */
 
 /* eslint-enable */

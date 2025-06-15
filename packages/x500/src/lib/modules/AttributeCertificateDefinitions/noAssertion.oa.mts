@@ -3,7 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { id_ce_noAssertion } from "../AttributeCertificateDefinitions/id-ce-noAssertion.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION noAssertion */
 /**
  * @summary noAssertion
  * @description
@@ -31,6 +30,5 @@ export const noAssertion: EXTENSION<NULL> = {
     "&id": id_ce_noAssertion /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION noAssertion */
 
 /* eslint-enable */

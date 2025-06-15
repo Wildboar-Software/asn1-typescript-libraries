@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagerContactObjectPtr */
+
 /**
  * @summary ManagerContactObjectPtr
  * @description
@@ -34,13 +34,11 @@ export type ManagerContactObjectPtr =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { contact: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ManagerContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerContactObjectPtr */
+
 let _cached_decoder_for_ManagerContactObjectPtr: $.ASN1Decoder<ManagerContactObjectPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagerContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagerContactObjectPtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagerContactObjectPtr
  * @function
@@ -60,13 +58,11 @@ export function _decode_ManagerContactObjectPtr(el: _Element) {
     }
     return _cached_decoder_for_ManagerContactObjectPtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagerContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerContactObjectPtr */
+
 let _cached_encoder_for_ManagerContactObjectPtr: $.ASN1Encoder<ManagerContactObjectPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagerContactObjectPtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagerContactObjectPtr */
+
 /**
  * @summary Encodes a(n) ManagerContactObjectPtr into an ASN.1 Element.
  * @function
@@ -90,6 +86,5 @@ export function _encode_ManagerContactObjectPtr(
     return _cached_encoder_for_ManagerContactObjectPtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagerContactObjectPtr */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
   _decode_Association_data,
   _encode_Association_data,
 } from '../ACSE-1/Association-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION User_information */
 /**
  * @summary User_information
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type User_information = Association_data; // DefinedType
-/* END_OF_SYMBOL_DEFINITION User_information */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_information */
 let _cached_decoder_for_User_information: $.ASN1Decoder<User_information> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_information */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_information */
 /**
  * @summary Decodes an ASN.1 element into a(n) User_information
  * @function
@@ -46,13 +41,9 @@ export function _decode_User_information(el: _Element) {
   }
   return _cached_decoder_for_User_information(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_User_information */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_information */
 let _cached_encoder_for_User_information: $.ASN1Encoder<User_information> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_information */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_information */
 /**
  * @summary Encodes a(n) User_information into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_User_information(
   return _cached_encoder_for_User_information(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_information */
 
 /* eslint-enable */

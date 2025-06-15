@@ -20,7 +20,6 @@ import {
     _decode_MessageData,
     _encode_MessageData,
 } from '../IPMSInformationObjects/MessageData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageBodyPart */
 /**
  * @summary MessageBodyPart
  * @description
@@ -70,9 +69,7 @@ export class MessageBodyPart {
         return new MessageBodyPart(_o.parameters, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageBodyPart */
 /**
  * @summary The Leading Root Component Types of MessageBodyPart
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_MessageBodyPart: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageBodyPart */
 /**
  * @summary The Trailing Root Component Types of MessageBodyPart
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_MessageBodyPart: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageBodyPart */
 /**
  * @summary The Extension Addition Component Types of MessageBodyPart
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_MessageBodyPart: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageBodyPart */
 let _cached_decoder_for_MessageBodyPart: $.ASN1Decoder<MessageBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageBodyPart
  * @function
@@ -158,13 +147,9 @@ export function _decode_MessageBodyPart(el: _Element) {
     }
     return _cached_decoder_for_MessageBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageBodyPart */
 let _cached_encoder_for_MessageBodyPart: $.ASN1Encoder<MessageBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageBodyPart */
 /**
  * @summary Encodes a(n) MessageBodyPart into an ASN.1 Element.
  * @function
@@ -196,6 +181,5 @@ export function _encode_MessageBodyPart(
     return _cached_encoder_for_MessageBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageBodyPart */
 
 /* eslint-enable */

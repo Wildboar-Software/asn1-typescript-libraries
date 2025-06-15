@@ -13,7 +13,6 @@ import { ms_bind } from '../MSAbstractService/ms-bind.oa.mjs';
 import { ms_unbind } from '../MSAbstractService/ms-unbind.oa.mjs';
 import { id_cp_ms_connection } from '../MSObjectIdentifiers/id-cp-ms-connection.va.mjs';
 import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_connect */
 /**
  * @summary ms_connect
  * @description
@@ -42,6 +41,5 @@ export const ms_connect: CONNECTION_PACKAGE = {
     '&responderCanUnbind': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&unbindCanFail': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_connect */
 
 /* eslint-enable */

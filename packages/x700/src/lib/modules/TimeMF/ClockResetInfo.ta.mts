@@ -15,7 +15,6 @@ import {
     _decode_ClockValue,
     _encode_ClockValue,
 } from '../TimeMF/ClockValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ClockResetInfo */
 /**
  * @summary ClockResetInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ClockResetInfo = ClockValue; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ClockResetInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockResetInfo */
 let _cached_decoder_for_ClockResetInfo: $.ASN1Decoder<ClockResetInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockResetInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockResetInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockResetInfo
  * @function
@@ -46,13 +41,9 @@ export function _decode_ClockResetInfo(el: _Element) {
     }
     return _cached_decoder_for_ClockResetInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClockResetInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockResetInfo */
 let _cached_encoder_for_ClockResetInfo: $.ASN1Encoder<ClockResetInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockResetInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockResetInfo */
 /**
  * @summary Encodes a(n) ClockResetInfo into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ClockResetInfo(
     return _cached_encoder_for_ClockResetInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockResetInfo */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION COMMITMENT_QUALIFIER */
 /**
  * @summary COMMITMENT_QUALIFIER
  * @description
@@ -61,6 +60,5 @@ interface COMMITMENT_QUALIFIER<
      */
     readonly "&Qualifier": Qualifier;
 };
-/* END_OF_SYMBOL_DEFINITION COMMITMENT_QUALIFIER */
 
 /* eslint-enable */

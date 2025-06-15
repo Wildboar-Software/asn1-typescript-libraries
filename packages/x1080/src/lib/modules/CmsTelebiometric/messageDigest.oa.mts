@@ -20,7 +20,7 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { octetStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.mjs';
 import { id_messageDigest } from '../CmsTelebiometric/id-messageDigest.va.mjs';
-/* START_OF_SYMBOL_DEFINITION messageDigest */
+
 /**
  * @summary messageDigest
  * @description
@@ -57,6 +57,5 @@ export const messageDigest: ATTRIBUTE<OCTET_STRING> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION messageDigest */
 
 /* eslint-enable */

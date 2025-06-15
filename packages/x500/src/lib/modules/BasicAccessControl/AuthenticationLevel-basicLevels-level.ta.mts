@@ -2,15 +2,12 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_AuthenticationLevel_basicLevels_level */
 export enum _enum_for_AuthenticationLevel_basicLevels_level {
     none = 0,
     simple = 1,
     strong = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_AuthenticationLevel_basicLevels_level */
 
-/* START_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level */
 /**
  * @summary AuthenticationLevel_basicLevels_level
  * @description
@@ -24,67 +21,51 @@ export enum _enum_for_AuthenticationLevel_basicLevels_level {
 export type AuthenticationLevel_basicLevels_level =
     | _enum_for_AuthenticationLevel_basicLevels_level
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level */
 
-/* START_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level_none */
 /**
  * @summary AuthenticationLevel_basicLevels_level_none
  * @constant
  * @type {number}
  */
 export const AuthenticationLevel_basicLevels_level_none: AuthenticationLevel_basicLevels_level = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level_none */
 
-/* START_OF_SYMBOL_DEFINITION none */
 /**
  * @summary none
  * @constant
  * @type {number}
  */
 export const none: AuthenticationLevel_basicLevels_level = AuthenticationLevel_basicLevels_level_none; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION none */
 
-/* START_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level_simple */
 /**
  * @summary AuthenticationLevel_basicLevels_level_simple
  * @constant
  * @type {number}
  */
 export const AuthenticationLevel_basicLevels_level_simple: AuthenticationLevel_basicLevels_level = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level_simple */
 
-/* START_OF_SYMBOL_DEFINITION simple */
 /**
  * @summary simple
  * @constant
  * @type {number}
  */
 export const simple: AuthenticationLevel_basicLevels_level = AuthenticationLevel_basicLevels_level_simple; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION simple */
 
-/* START_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level_strong */
 /**
  * @summary AuthenticationLevel_basicLevels_level_strong
  * @constant
  * @type {number}
  */
 export const AuthenticationLevel_basicLevels_level_strong: AuthenticationLevel_basicLevels_level = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels_level_strong */
 
-/* START_OF_SYMBOL_DEFINITION strong */
 /**
  * @summary strong
  * @constant
  * @type {number}
  */
 export const strong: AuthenticationLevel_basicLevels_level = AuthenticationLevel_basicLevels_level_strong; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION strong */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationLevel_basicLevels_level */
 let _cached_decoder_for_AuthenticationLevel_basicLevels_level: $.ASN1Decoder<AuthenticationLevel_basicLevels_level> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationLevel_basicLevels_level */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthenticationLevel_basicLevels_level */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticationLevel_basicLevels_level
  * @function
@@ -98,13 +79,9 @@ export function _decode_AuthenticationLevel_basicLevels_level(el: _Element) {
     }
     return _cached_decoder_for_AuthenticationLevel_basicLevels_level(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthenticationLevel_basicLevels_level */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationLevel_basicLevels_level */
 let _cached_encoder_for_AuthenticationLevel_basicLevels_level: $.ASN1Encoder<AuthenticationLevel_basicLevels_level> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationLevel_basicLevels_level */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthenticationLevel_basicLevels_level */
 /**
  * @summary Encodes a(n) AuthenticationLevel_basicLevels_level into an ASN.1 Element.
  * @function
@@ -126,6 +103,5 @@ export function _encode_AuthenticationLevel_basicLevels_level(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthenticationLevel_basicLevels_level */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import {
     _encode_change_auto_discard_ArgumentType,
 } from '../IPMSAbstractService/change-auto-discard-ArgumentType.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION change_auto_discard */
 /**
  * @summary change_auto_discard
  * @description
@@ -61,6 +60,5 @@ export const change_auto_discard: ABSTRACT_OPERATION<change_auto_discard_Argumen
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION change_auto_discard */
 
 /* eslint-enable */

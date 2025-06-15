@@ -21,7 +21,7 @@ import {
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PA_ENC_TS_ENC */
+
 /**
  * @summary PA_ENC_TS_ENC
  * @description
@@ -71,9 +71,8 @@ export class PA_ENC_TS_ENC {
     return new PA_ENC_TS_ENC(_o.patimestamp, _o.pausec);
   }
 }
-/* END_OF_SYMBOL_DEFINITION PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PA_ENC_TS_ENC */
+
 /**
  * @summary The Leading Root Component Types of PA_ENC_TS_ENC
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_PA_ENC_TS_ENC: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PA_ENC_TS_ENC */
+
 /**
  * @summary The Trailing Root Component Types of PA_ENC_TS_ENC
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_PA_ENC_TS_ENC: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PA_ENC_TS_ENC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PA_ENC_TS_ENC */
+
 /**
  * @summary The Extension Addition Component Types of PA_ENC_TS_ENC
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_PA_ENC_TS_ENC: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_PA_ENC_TS_ENC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PA_ENC_TS_ENC */
+
 let _cached_decoder_for_PA_ENC_TS_ENC: $.ASN1Decoder<PA_ENC_TS_ENC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PA_ENC_TS_ENC */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PA_ENC_TS_ENC
  * @function
@@ -172,13 +167,11 @@ export function _decode_PA_ENC_TS_ENC(el: _Element) {
   }
   return _cached_decoder_for_PA_ENC_TS_ENC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PA_ENC_TS_ENC */
+
 let _cached_encoder_for_PA_ENC_TS_ENC: $.ASN1Encoder<PA_ENC_TS_ENC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PA_ENC_TS_ENC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PA_ENC_TS_ENC */
+
 /**
  * @summary Encodes a(n) PA_ENC_TS_ENC into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_PA_ENC_TS_ENC(
   return _cached_encoder_for_PA_ENC_TS_ENC(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PA_ENC_TS_ENC */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION noInvokeId */
+
 /**
  * @summary noInvokeId
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const noInvokeId: InvokeId = { absent: null };
-/* END_OF_SYMBOL_DEFINITION noInvokeId */
 
 /* eslint-enable */

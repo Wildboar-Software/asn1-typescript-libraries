@@ -6,7 +6,7 @@ import {
     _decode_MLData,
     _encode_MLData,
 } from "../ExtendedSecurityServices-2006/MLData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MLExpansionHistory */
+
 /**
  * @summary MLExpansionHistory
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type MLExpansionHistory = MLData[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MLExpansionHistory */
+
 let _cached_decoder_for_MLExpansionHistory: $.ASN1Decoder<MLExpansionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MLExpansionHistory */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MLExpansionHistory
  * @function
@@ -39,13 +37,11 @@ export function _decode_MLExpansionHistory(el: _Element) {
     }
     return _cached_decoder_for_MLExpansionHistory(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MLExpansionHistory */
+
 let _cached_encoder_for_MLExpansionHistory: $.ASN1Encoder<MLExpansionHistory> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MLExpansionHistory */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MLExpansionHistory */
+
 /**
  * @summary Encodes a(n) MLExpansionHistory into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_MLExpansionHistory(
     return _cached_encoder_for_MLExpansionHistory(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MLExpansionHistory */
 
 /* eslint-enable */

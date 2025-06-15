@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ErrorId */
+
 /**
  * @summary ErrorId
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ErrorId =
     | { localValue: INTEGER } /* CHOICE_ALT_ROOT */
     | { globalValue: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ErrorId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorId */
+
 let _cached_decoder_for_ErrorId: $.ASN1Decoder<ErrorId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ErrorId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorId
  * @function
@@ -51,13 +49,11 @@ export function _decode_ErrorId(el: _Element) {
     }
     return _cached_decoder_for_ErrorId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ErrorId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorId */
+
 let _cached_encoder_for_ErrorId: $.ASN1Encoder<ErrorId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ErrorId */
+
 /**
  * @summary Encodes a(n) ErrorId into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_ErrorId(
     return _cached_encoder_for_ErrorId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ErrorId */
 
 /* eslint-enable */

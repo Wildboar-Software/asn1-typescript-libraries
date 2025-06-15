@@ -14,7 +14,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import { CONNECTION_PACKAGE } from '../Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.mjs';
 import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CONTRACT */
+
 /**
  * @summary CONTRACT
  * @description
@@ -84,6 +84,5 @@ export interface CONTRACT {
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION CONTRACT */
 
 /* eslint-enable */

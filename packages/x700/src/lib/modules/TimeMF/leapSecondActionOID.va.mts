@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
-/* START_OF_SYMBOL_DEFINITION leapSecondActionOID */
 /**
  * @summary leapSecondActionOID
  * @description
@@ -28,6 +27,5 @@ export const leapSecondActionOID: OBJECT_IDENTIFIER = new _OID(
     [/* action */ 9, /* leapSecondAction */ 2],
     timeManagement
 );
-/* END_OF_SYMBOL_DEFINITION leapSecondActionOID */
 
 /* eslint-enable */

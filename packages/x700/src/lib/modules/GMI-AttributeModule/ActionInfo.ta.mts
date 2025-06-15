@@ -15,7 +15,7 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActionInfo */
+
 /**
  * @summary ActionInfo
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ActionInfo = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionInfo */
+
 let _cached_decoder_for_ActionInfo: $.ASN1Decoder<ActionInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionInfo
  * @function
@@ -48,13 +46,11 @@ export function _decode_ActionInfo(el: _Element) {
     }
     return _cached_decoder_for_ActionInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionInfo */
+
 let _cached_encoder_for_ActionInfo: $.ASN1Encoder<ActionInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionInfo */
+
 /**
  * @summary Encodes a(n) ActionInfo into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ActionInfo(
     return _cached_encoder_for_ActionInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionInfo */
 
 /* eslint-enable */

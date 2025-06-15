@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DurationInSeconds */
 /**
  * @summary DurationInSeconds
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DurationInSeconds = INTEGER;
-/* END_OF_SYMBOL_DEFINITION DurationInSeconds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DurationInSeconds */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DurationInSeconds */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DurationInSeconds */
 export const _decode_DurationInSeconds = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_DurationInSeconds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DurationInSeconds */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DurationInSeconds */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DurationInSeconds */
 export const _encode_DurationInSeconds = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DurationInSeconds */
 
 /* eslint-enable */

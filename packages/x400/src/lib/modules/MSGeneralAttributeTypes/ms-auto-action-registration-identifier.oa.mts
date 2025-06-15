@@ -21,7 +21,6 @@ import { id_att_auto_action_registration_identifier } from '../MSObjectIdentifie
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_auto_action_registration_identifier */
 /**
  * @summary ms_auto_action_registration_identifier
  * @description
@@ -56,6 +55,5 @@ export const ms_auto_action_registration_identifier: X413ATTRIBUTE<INTEGER> = {
     '&id': id_att_auto_action_registration_identifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_auto_action_registration_identifier */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION TrustAnchorInfoVersion */
 /**
  * @summary TrustAnchorInfoVersion
  * @description
@@ -27,9 +26,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type TrustAnchorInfoVersion = INTEGER;
-/* END_OF_SYMBOL_DEFINITION TrustAnchorInfoVersion */
 
-/* START_OF_SYMBOL_DEFINITION TrustAnchorInfoVersion_v1 */
 /**
  * @summary TrustAnchorInfoVersion_v1
  * @constant
@@ -37,9 +34,7 @@ type TrustAnchorInfoVersion = INTEGER;
  */
 export
 const TrustAnchorInfoVersion_v1: TrustAnchorInfoVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TrustAnchorInfoVersion_v1 */
 
-/* START_OF_SYMBOL_DEFINITION v1 */
 /**
  * @summary TrustAnchorInfoVersion_v1
  * @constant
@@ -47,9 +42,7 @@ const TrustAnchorInfoVersion_v1: TrustAnchorInfoVersion = 1; /* LONG_NAMED_INTEG
  */
 export
 const v1: TrustAnchorInfoVersion = TrustAnchorInfoVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION v1 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorInfoVersion */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorInfoVersion
  * @function
@@ -60,9 +53,7 @@ export
 function _decode_TrustAnchorInfoVersion (el: _Element) {
     return $._decodeInteger(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorInfoVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorInfoVersion */
 /**
  * @summary Encodes a(n) TrustAnchorInfoVersion into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ function _encode_TrustAnchorInfoVersion (value: TrustAnchorInfoVersion, elGetter
     return $._encodeInteger(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorInfoVersion */
 
 /* eslint-enable */

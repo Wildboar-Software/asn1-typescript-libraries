@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y } from "../SEC1-v1-9/ECDSA-Sig-Value-y.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDSA_Sig_Value */
 /**
  * @summary ECDSA_Sig_Value
  * @description
@@ -78,9 +77,7 @@ class ECDSA_Sig_Value {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECDSA_Sig_Value */
 /**
  * @summary The Leading Root Component Types of ECDSA_Sig_Value
  * @description
@@ -96,9 +93,7 @@ const _root_component_type_list_1_spec_for_ECDSA_Sig_Value: $.ComponentSpec[] = 
     new $.ComponentSpec("a", true, $.hasTag(_TagClass.universal, 2), undefined, undefined),
     new $.ComponentSpec("y", true, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECDSA_Sig_Value */
 /**
  * @summary The Trailing Root Component Types of ECDSA_Sig_Value
  * @description
@@ -111,9 +106,7 @@ export
 const _root_component_type_list_2_spec_for_ECDSA_Sig_Value: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECDSA_Sig_Value */
 /**
  * @summary The Extension Addition Component Types of ECDSA_Sig_Value
  * @description
@@ -126,13 +119,9 @@ export
 const _extension_additions_list_spec_for_ECDSA_Sig_Value: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Sig_Value */
 let _cached_decoder_for_ECDSA_Sig_Value: $.ASN1Decoder<ECDSA_Sig_Value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECDSA_Sig_Value */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECDSA_Sig_Value
  * @function
@@ -171,13 +160,9 @@ function _decode_ECDSA_Sig_Value (el: _Element) {
 }; }
     return _cached_decoder_for_ECDSA_Sig_Value(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Sig_Value */
 let _cached_encoder_for_ECDSA_Sig_Value: $.ASN1Encoder<ECDSA_Sig_Value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Sig_Value */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECDSA_Sig_Value */
 /**
  * @summary Encodes a(n) ECDSA_Sig_Value into an ASN.1 Element.
  * @function
@@ -200,6 +185,5 @@ function _encode_ECDSA_Sig_Value (value: ECDSA_Sig_Value, elGetter: $.ASN1Encode
     return _cached_encoder_for_ECDSA_Sig_Value(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECDSA_Sig_Value */
 
 /* eslint-enable */

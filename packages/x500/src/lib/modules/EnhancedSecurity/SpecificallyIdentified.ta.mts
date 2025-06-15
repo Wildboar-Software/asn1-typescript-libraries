@@ -15,7 +15,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SpecificallyIdentified */
 /**
  * @summary SpecificallyIdentified
  * @description
@@ -73,9 +72,7 @@ export class SpecificallyIdentified {
         return new SpecificallyIdentified(_o.name, _o.issuer, _o.serial);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecificallyIdentified */
 /**
  * @summary The Leading Root Component Types of SpecificallyIdentified
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_SpecificallyIdentified: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecificallyIdentified */
 /**
  * @summary The Trailing Root Component Types of SpecificallyIdentified
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_SpecificallyIdentified: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SpecificallyIdentified: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecificallyIdentified */
 /**
  * @summary The Extension Addition Component Types of SpecificallyIdentified
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_SpecificallyIdentified: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_SpecificallyIdentified: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificallyIdentified */
 let _cached_decoder_for_SpecificallyIdentified: $.ASN1Decoder<SpecificallyIdentified> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpecificallyIdentified */
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecificallyIdentified
  * @function
@@ -172,13 +161,9 @@ export function _decode_SpecificallyIdentified(el: _Element) {
     }
     return _cached_decoder_for_SpecificallyIdentified(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificallyIdentified */
 let _cached_encoder_for_SpecificallyIdentified: $.ASN1Encoder<SpecificallyIdentified> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificallyIdentified */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpecificallyIdentified */
 /**
  * @summary Encodes a(n) SpecificallyIdentified into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_SpecificallyIdentified(
     return _cached_encoder_for_SpecificallyIdentified(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpecificallyIdentified */
 
 /* eslint-enable */

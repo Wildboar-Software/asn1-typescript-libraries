@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PersonFax */
+
 /**
  * @summary PersonFax
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PersonFax = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION PersonFax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonFax */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonFax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PersonFax */
+
+
 export const _decode_PersonFax = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_PersonFax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonFax */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonFax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PersonFax */
+
+
 export const _encode_PersonFax = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PersonFax */
 
 /* eslint-enable */

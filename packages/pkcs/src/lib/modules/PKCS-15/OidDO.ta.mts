@@ -11,7 +11,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OidDO */
+
 /**
  * @summary OidDO
  * @description
@@ -59,9 +59,8 @@ export class OidDO {
         return new OidDO(_o.id, _o.value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OidDO */
+
 /**
  * @summary The Leading Root Component Types of OidDO
  * @description
@@ -80,9 +79,8 @@ export const _root_component_type_list_1_spec_for_OidDO: $.ComponentSpec[] = [
     ),
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OidDO */
+
 /**
  * @summary The Trailing Root Component Types of OidDO
  * @description
@@ -92,9 +90,8 @@ export const _root_component_type_list_1_spec_for_OidDO: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OidDO: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OidDO */
+
 /**
  * @summary The Extension Addition Component Types of OidDO
  * @description
@@ -104,13 +101,11 @@ export const _root_component_type_list_2_spec_for_OidDO: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_OidDO: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OidDO */
+
 let _cached_decoder_for_OidDO: $.ASN1Decoder<OidDO> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OidDO */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OidDO
  * @function
@@ -141,13 +136,11 @@ export function _decode_OidDO(el: _Element) {
     }
     return _cached_decoder_for_OidDO(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OidDO */
+
 let _cached_encoder_for_OidDO: $.ASN1Encoder<OidDO> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OidDO */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OidDO */
+
 /**
  * @summary Encodes a(n) OidDO into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ export function _encode_OidDO(value: OidDO, elGetter: $.ASN1Encoder<OidDO>) {
     return _cached_encoder_for_OidDO(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OidDO */
 
 /* eslint-enable */

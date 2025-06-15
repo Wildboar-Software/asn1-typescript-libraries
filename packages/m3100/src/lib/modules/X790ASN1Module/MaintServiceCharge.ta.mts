@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MaintServiceCharge */
+
 /**
  * @summary MaintServiceCharge
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MaintServiceCharge = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION MaintServiceCharge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaintServiceCharge */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaintServiceCharge */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaintServiceCharge */
+
+
 export const _decode_MaintServiceCharge = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_MaintServiceCharge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaintServiceCharge */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaintServiceCharge */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaintServiceCharge */
+
+
 export const _encode_MaintServiceCharge = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaintServiceCharge */
 
 /* eslint-enable */

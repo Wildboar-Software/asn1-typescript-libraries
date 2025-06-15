@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION SpecificErrorInfo */
+
 /**
  * @summary SpecificErrorInfo
  * @description
@@ -61,9 +61,8 @@ export class SpecificErrorInfo {
     return new SpecificErrorInfo(_o.errorId, _o.errorInfo);
   }
 }
-/* END_OF_SYMBOL_DEFINITION SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecificErrorInfo */
+
 /**
  * @summary The Leading Root Component Types of SpecificErrorInfo
  * @description
@@ -82,9 +81,8 @@ export const _root_component_type_list_1_spec_for_SpecificErrorInfo: $.Component
   ),
   new $.ComponentSpec('errorInfo', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecificErrorInfo */
+
 /**
  * @summary The Trailing Root Component Types of SpecificErrorInfo
  * @description
@@ -94,9 +92,8 @@ export const _root_component_type_list_1_spec_for_SpecificErrorInfo: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SpecificErrorInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecificErrorInfo */
+
 /**
  * @summary The Extension Addition Component Types of SpecificErrorInfo
  * @description
@@ -106,13 +103,11 @@ export const _root_component_type_list_2_spec_for_SpecificErrorInfo: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_SpecificErrorInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificErrorInfo */
+
 let _cached_decoder_for_SpecificErrorInfo: $.ASN1Decoder<SpecificErrorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpecificErrorInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecificErrorInfo
  * @function
@@ -143,13 +138,11 @@ export function _decode_SpecificErrorInfo(el: _Element) {
   }
   return _cached_decoder_for_SpecificErrorInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificErrorInfo */
+
 let _cached_encoder_for_SpecificErrorInfo: $.ASN1Encoder<SpecificErrorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpecificErrorInfo */
+
 /**
  * @summary Encodes a(n) SpecificErrorInfo into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ export function _encode_SpecificErrorInfo(
   return _cached_encoder_for_SpecificErrorInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpecificErrorInfo */
 
 /* eslint-enable */

@@ -28,7 +28,6 @@ import {
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertRsp */
 /**
  * @summary CertRsp
  * @description
@@ -122,9 +121,7 @@ export class CertRsp implements AVMPcommonComponents {
 
     public static _enum_for_version = _enum_for_AVMPversion;
 }
-/* END_OF_SYMBOL_DEFINITION CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertRsp */
 /**
  * @summary The Leading Root Component Types of CertRsp
  * @description
@@ -137,9 +134,7 @@ export const _root_component_type_list_1_spec_for_CertRsp: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_AVMPcommonComponents,
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertRsp */
 /**
  * @summary The Trailing Root Component Types of CertRsp
  * @description
@@ -149,9 +144,7 @@ export const _root_component_type_list_1_spec_for_CertRsp: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertRsp */
 /**
  * @summary The Extension Addition Component Types of CertRsp
  * @description
@@ -161,13 +154,9 @@ export const _root_component_type_list_2_spec_for_CertRsp: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_CertRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRsp */
 let _cached_decoder_for_CertRsp: $.ASN1Decoder<CertRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertRsp */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertRsp
  * @function
@@ -222,13 +211,9 @@ export function _decode_CertRsp(el: _Element) {
     }
     return _cached_decoder_for_CertRsp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRsp */
 let _cached_encoder_for_CertRsp: $.ASN1Encoder<CertRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertRsp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertRsp */
 /**
  * @summary Encodes a(n) CertRsp into an ASN.1 Element.
  * @function
@@ -279,6 +264,5 @@ export function _encode_CertRsp(
     return _cached_encoder_for_CertRsp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertRsp */
 
 /* eslint-enable */

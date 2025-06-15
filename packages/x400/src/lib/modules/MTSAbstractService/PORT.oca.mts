@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION PORT */
 /**
  * @summary PORT
  * @description
@@ -24,6 +23,5 @@ import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operati
  * @interface
  */
 export type PORT = OPERATION_PACKAGE;
-/* END_OF_SYMBOL_DEFINITION PORT */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_BindTokenEncryptedData,
     _encode_BindTokenEncryptedData,
 } from '../MTSAbstractService/BindTokenEncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BindToken */
 /**
  * @summary BindToken
  * @description
@@ -37,13 +36,9 @@ import {
 export type BindToken =
     | { signed: BindTokenSignedData } /* CHOICE_ALT_ROOT */
     | { encrypted: BindTokenEncryptedData } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BindToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindToken */
 let _cached_decoder_for_BindToken: $.ASN1Decoder<BindToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) BindToken
  * @function
@@ -71,13 +66,9 @@ export function _decode_BindToken(el: _Element) {
     }
     return _cached_decoder_for_BindToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindToken */
 let _cached_encoder_for_BindToken: $.ASN1Encoder<BindToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindToken */
 /**
  * @summary Encodes a(n) BindToken into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_BindToken(
     return _cached_encoder_for_BindToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindToken */
 
 /* eslint-enable */

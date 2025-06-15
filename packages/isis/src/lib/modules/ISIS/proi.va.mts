@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { isisoi } from '../ISIS/isisoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION proi */
 /**
  * @summary proi
  * @description
@@ -25,6 +24,5 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  * @constant
  */
 export const proi: OBJECT_IDENTIFIER = new _OID([/* parameter */ 5], isisoi);
-/* END_OF_SYMBOL_DEFINITION proi */
 
 /* eslint-enable */

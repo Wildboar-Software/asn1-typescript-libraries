@@ -13,7 +13,6 @@ import { mHSSurname } from '../MHSRoutingORAddressSubtree/mHSSurname.oa.mjs';
 import { mHSSurnameAttribute } from '../MHSRoutingORAddressSubtree/mHSSurnameAttribute.oa.mjs';
 import { id_nf_mhs_surname } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-surname.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSSurnameNameForm */
 /**
  * @summary mHSSurnameNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSSurnameNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSSurnameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_surname /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSSurnameNameForm */
 
 /* eslint-enable */

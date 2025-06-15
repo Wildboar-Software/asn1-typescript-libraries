@@ -14,7 +14,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ServiceType */
+
 /**
  * @summary ServiceType
  * @description
@@ -35,13 +35,11 @@ export type ServiceType =
     | { string_: PrintableString } /* CHOICE_ALT_ROOT */
     | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceType */
+
 let _cached_decoder_for_ServiceType: $.ASN1Decoder<ServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceType
  * @function
@@ -60,13 +58,11 @@ export function _decode_ServiceType(el: _Element) {
     }
     return _cached_decoder_for_ServiceType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceType */
+
 let _cached_encoder_for_ServiceType: $.ASN1Encoder<ServiceType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceType */
+
 /**
  * @summary Encodes a(n) ServiceType into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_ServiceType(
     return _cached_encoder_for_ServiceType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceType */
 
 /* eslint-enable */

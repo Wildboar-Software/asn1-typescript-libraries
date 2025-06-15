@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SubscribeToGUIEvents_ResponseParams */
+
 /**
  * @summary SubscribeToGUIEvents_ResponseParams
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SubscribeToGUIEvents_ResponseParams = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION SubscribeToGUIEvents_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscribeToGUIEvents_ResponseParams */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscribeToGUIEvents_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubscribeToGUIEvents_ResponseParams */
+
+
 export const _decode_SubscribeToGUIEvents_ResponseParams = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_SubscribeToGUIEvents_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscribeToGUIEvents_ResponseParams */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscribeToGUIEvents_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubscribeToGUIEvents_ResponseParams */
+
+
 export const _encode_SubscribeToGUIEvents_ResponseParams = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubscribeToGUIEvents_ResponseParams */
 
 /* eslint-enable */

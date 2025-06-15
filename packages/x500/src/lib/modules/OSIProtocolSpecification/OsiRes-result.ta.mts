@@ -9,7 +9,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiRes_result */
 /**
  * @summary OsiRes_result
  * @description
@@ -56,9 +55,7 @@ export class OsiRes_result {
         return new OsiRes_result(_o.opcode, _o.result);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiRes_result */
 /**
  * @summary The Leading Root Component Types of OsiRes_result
  * @description
@@ -71,9 +68,7 @@ export const _root_component_type_list_1_spec_for_OsiRes_result: $.ComponentSpec
     new $.ComponentSpec("opcode", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiRes_result */
 /**
  * @summary The Trailing Root Component Types of OsiRes_result
  * @description
@@ -83,9 +78,7 @@ export const _root_component_type_list_1_spec_for_OsiRes_result: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiRes_result: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiRes_result */
 /**
  * @summary The Extension Addition Component Types of OsiRes_result
  * @description
@@ -95,13 +88,9 @@ export const _root_component_type_list_2_spec_for_OsiRes_result: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiRes_result: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRes_result */
 let _cached_decoder_for_OsiRes_result: $.ASN1Decoder<OsiRes_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiRes_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiRes_result
  * @function
@@ -132,13 +121,9 @@ export function _decode_OsiRes_result(el: _Element) {
     }
     return _cached_decoder_for_OsiRes_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRes_result */
 let _cached_encoder_for_OsiRes_result: $.ASN1Encoder<OsiRes_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRes_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiRes_result */
 /**
  * @summary Encodes a(n) OsiRes_result into an ASN.1 Element.
  * @function
@@ -167,6 +152,5 @@ export function _encode_OsiRes_result(
     return _cached_encoder_for_OsiRes_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiRes_result */
 
 /* eslint-enable */

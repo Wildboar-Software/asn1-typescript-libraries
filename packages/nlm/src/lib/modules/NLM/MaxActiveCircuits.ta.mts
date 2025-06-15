@@ -15,7 +15,7 @@ import {
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MaxActiveCircuits */
+
 /**
  * @summary MaxActiveCircuits
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type MaxActiveCircuits = ChoiceInteger; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MaxActiveCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxActiveCircuits */
+
 let _cached_decoder_for_MaxActiveCircuits: $.ASN1Decoder<MaxActiveCircuits> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxActiveCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaxActiveCircuits */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxActiveCircuits
  * @function
@@ -46,13 +44,11 @@ export function _decode_MaxActiveCircuits(el: _Element) {
     }
     return _cached_decoder_for_MaxActiveCircuits(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaxActiveCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxActiveCircuits */
+
 let _cached_encoder_for_MaxActiveCircuits: $.ASN1Encoder<MaxActiveCircuits> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxActiveCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaxActiveCircuits */
+
 /**
  * @summary Encodes a(n) MaxActiveCircuits into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_MaxActiveCircuits(
     return _cached_encoder_for_MaxActiveCircuits(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaxActiveCircuits */
 
 /* eslint-enable */

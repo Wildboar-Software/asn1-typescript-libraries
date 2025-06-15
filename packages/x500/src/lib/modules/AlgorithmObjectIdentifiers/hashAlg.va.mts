@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION hashAlg */
 /**
  * @summary hashAlg
  * @description
@@ -27,6 +26,5 @@ export const hashAlg: ID = new _OID([
     /* cryptography */ 12,
     2,
 ]);
-/* END_OF_SYMBOL_DEFINITION hashAlg */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_Presentation_selector,
     _encode_Presentation_selector,
 } from '../ISO8823-PRESENTATION/Presentation-selector.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Calling_presentation_selector */
+
 /**
  * @summary Calling_presentation_selector
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Calling_presentation_selector = Presentation_selector; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Calling_presentation_selector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Calling_presentation_selector */
+
 let _cached_decoder_for_Calling_presentation_selector: $.ASN1Decoder<Calling_presentation_selector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Calling_presentation_selector */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Calling_presentation_selector */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Calling_presentation_selector
  * @function
@@ -46,13 +44,11 @@ export function _decode_Calling_presentation_selector(el: _Element) {
     }
     return _cached_decoder_for_Calling_presentation_selector(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Calling_presentation_selector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Calling_presentation_selector */
+
 let _cached_encoder_for_Calling_presentation_selector: $.ASN1Encoder<Calling_presentation_selector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Calling_presentation_selector */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Calling_presentation_selector */
+
 /**
  * @summary Encodes a(n) Calling_presentation_selector into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Calling_presentation_selector(
     return _cached_encoder_for_Calling_presentation_selector(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Calling_presentation_selector */
 
 /* eslint-enable */

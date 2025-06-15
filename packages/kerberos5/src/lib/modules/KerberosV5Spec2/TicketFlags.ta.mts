@@ -15,7 +15,7 @@ import {
   _decode_KerberosFlags,
   _encode_KerberosFlags,
 } from '../KerberosV5Spec2/KerberosFlags.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TicketFlags */
+
 /**
  * @summary TicketFlags
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TicketFlags = KerberosFlags; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TicketFlags */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TicketFlags */
+
 let _cached_decoder_for_TicketFlags: $.ASN1Decoder<TicketFlags> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TicketFlags */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TicketFlags */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TicketFlags
  * @function
@@ -46,13 +44,11 @@ export function _decode_TicketFlags(el: _Element) {
   }
   return _cached_decoder_for_TicketFlags(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TicketFlags */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TicketFlags */
+
 let _cached_encoder_for_TicketFlags: $.ASN1Encoder<TicketFlags> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TicketFlags */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TicketFlags */
+
 /**
  * @summary Encodes a(n) TicketFlags into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TicketFlags(
   return _cached_encoder_for_TicketFlags(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TicketFlags */
 
 /* eslint-enable */

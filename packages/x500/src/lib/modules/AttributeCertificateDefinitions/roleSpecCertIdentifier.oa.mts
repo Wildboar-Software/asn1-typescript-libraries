@@ -7,7 +7,6 @@ import {
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_roleSpecCertIdentifier } from "./id-ce-roleSpecCertIdentifier.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION roleSpecCertIdentifier */
 /**
  * @summary roleSpecCertIdentifier
  * @description
@@ -35,6 +34,5 @@ export const roleSpecCertIdentifier: EXTENSION<RoleSpecCertIdentifierSyntax> = {
     "&id": id_ce_roleSpecCertIdentifier,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION roleSpecCertIdentifier */
 
 /* eslint-enable */

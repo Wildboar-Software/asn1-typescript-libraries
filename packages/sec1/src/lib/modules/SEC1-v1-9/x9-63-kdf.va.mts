@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION x9_63_kdf */
 /**
  * @summary x9_63_kdf
  * @description
@@ -29,6 +28,5 @@ const x9_63_kdf: OBJECT_IDENTIFIER = new _OID([
     17,
     0,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION x9_63_kdf */
 
 /* eslint-enable */

@@ -28,7 +28,6 @@ import {
     _decode_LoopbackError,
     _encode_LoopbackError,
 } from '../TestCategories-ASN1Module/LoopbackError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LoopbackTestInfo */
 /**
  * @summary LoopbackTestInfo
  * @description
@@ -121,9 +120,7 @@ export class LoopbackTestInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LoopbackTestInfo */
 /**
  * @summary The Leading Root Component Types of LoopbackTestInfo
  * @description
@@ -183,9 +180,7 @@ export const _root_component_type_list_1_spec_for_LoopbackTestInfo: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LoopbackTestInfo */
 /**
  * @summary The Trailing Root Component Types of LoopbackTestInfo
  * @description
@@ -195,9 +190,7 @@ export const _root_component_type_list_1_spec_for_LoopbackTestInfo: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LoopbackTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LoopbackTestInfo */
 /**
  * @summary The Extension Addition Component Types of LoopbackTestInfo
  * @description
@@ -207,13 +200,9 @@ export const _root_component_type_list_2_spec_for_LoopbackTestInfo: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_LoopbackTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackTestInfo */
 let _cached_decoder_for_LoopbackTestInfo: $.ASN1Decoder<LoopbackTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoopbackTestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) LoopbackTestInfo
  * @function
@@ -286,13 +275,9 @@ export function _decode_LoopbackTestInfo(el: _Element) {
     }
     return _cached_decoder_for_LoopbackTestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackTestInfo */
 let _cached_encoder_for_LoopbackTestInfo: $.ASN1Encoder<LoopbackTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoopbackTestInfo */
 /**
  * @summary Encodes a(n) LoopbackTestInfo into an ASN.1 Element.
  * @function
@@ -369,6 +354,5 @@ export function _encode_LoopbackTestInfo(
     return _cached_encoder_for_LoopbackTestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoopbackTestInfo */
 
 /* eslint-enable */

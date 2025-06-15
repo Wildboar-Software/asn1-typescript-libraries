@@ -27,7 +27,6 @@ import { oRDescriptorSubstringElementsMatch } from '../IPMSMessageStoreAttribute
 import { recipientSpecifierElementsMatch } from '../IPMSMessageStoreAttributes/recipientSpecifierElementsMatch.oa.mjs';
 import { recipientSpecifierSingleElementMatch } from '../IPMSMessageStoreAttributes/recipientSpecifierSingleElementMatch.oa.mjs';
 import { recipientSpecifierSubstringElementsMatch } from '../IPMSMessageStoreAttributes/recipientSpecifierSubstringElementsMatch.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMMatchingRuleTable */
 /**
  * @summary IPMMatchingRuleTable
  * @description
@@ -69,6 +68,5 @@ export const IPMMatchingRuleTable: MATCHING_RULE[] = [
     recipientSpecifierSingleElementMatch,
     recipientSpecifierSubstringElementsMatch,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMMatchingRuleTable */
 
 /* eslint-enable */

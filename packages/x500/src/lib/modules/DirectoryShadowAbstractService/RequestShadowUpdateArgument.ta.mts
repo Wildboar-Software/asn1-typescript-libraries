@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RequestShadowUpdateArgument */
 /**
  * @summary RequestShadowUpdateArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type RequestShadowUpdateArgument = OPTIONALLY_PROTECTED<RequestShadowUpdateArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RequestShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestShadowUpdateArgument */
 let _cached_decoder_for_RequestShadowUpdateArgument: $.ASN1Decoder<RequestShadowUpdateArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestShadowUpdateArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestShadowUpdateArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_RequestShadowUpdateArgument(el: _Element) {
     }
     return _cached_decoder_for_RequestShadowUpdateArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestShadowUpdateArgument */
 let _cached_encoder_for_RequestShadowUpdateArgument: $.ASN1Encoder<RequestShadowUpdateArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestShadowUpdateArgument */
 /**
  * @summary Encodes a(n) RequestShadowUpdateArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RequestShadowUpdateArgument(
     return _cached_encoder_for_RequestShadowUpdateArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestShadowUpdateArgument */
 
 /* eslint-enable */

@@ -27,7 +27,7 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InvokeProtectionArg */
+
 /**
  * @summary InvokeProtectionArg
  * @description
@@ -96,9 +96,8 @@ export class InvokeProtectionArg {
 
     public static _enum_for_switchType = _enum_for_SwitchType;
 }
-/* END_OF_SYMBOL_DEFINITION InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvokeProtectionArg */
+
 /**
  * @summary The Leading Root Component Types of InvokeProtectionArg
  * @description
@@ -130,9 +129,8 @@ export const _root_component_type_list_1_spec_for_InvokeProtectionArg: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvokeProtectionArg */
+
 /**
  * @summary The Trailing Root Component Types of InvokeProtectionArg
  * @description
@@ -142,9 +140,8 @@ export const _root_component_type_list_1_spec_for_InvokeProtectionArg: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InvokeProtectionArg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvokeProtectionArg */
+
 /**
  * @summary The Extension Addition Component Types of InvokeProtectionArg
  * @description
@@ -154,13 +151,11 @@ export const _root_component_type_list_2_spec_for_InvokeProtectionArg: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_InvokeProtectionArg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeProtectionArg */
+
 let _cached_decoder_for_InvokeProtectionArg: $.ASN1Decoder<InvokeProtectionArg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvokeProtectionArg */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeProtectionArg
  * @function
@@ -209,13 +204,11 @@ export function _decode_InvokeProtectionArg(el: _Element) {
     }
     return _cached_decoder_for_InvokeProtectionArg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeProtectionArg */
+
 let _cached_encoder_for_InvokeProtectionArg: $.ASN1Encoder<InvokeProtectionArg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeProtectionArg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvokeProtectionArg */
+
 /**
  * @summary Encodes a(n) InvokeProtectionArg into an ASN.1 Element.
  * @function
@@ -258,6 +251,5 @@ export function _encode_InvokeProtectionArg(
     return _cached_encoder_for_InvokeProtectionArg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvokeProtectionArg */
 
 /* eslint-enable */

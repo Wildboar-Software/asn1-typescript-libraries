@@ -14,7 +14,7 @@ import {
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION noValidRelatedObject */
+
 /**
  * @summary noValidRelatedObject
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const noValidRelatedObject: GeneralErrorCause = { localValue: 2 };
-/* END_OF_SYMBOL_DEFINITION noValidRelatedObject */
 
 /* eslint-enable */

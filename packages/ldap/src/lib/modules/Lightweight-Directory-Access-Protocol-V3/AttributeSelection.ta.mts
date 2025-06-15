@@ -15,7 +15,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeSelection */
+
 /**
  * @summary AttributeSelection
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AttributeSelection = LDAPString[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSelection */
+
 let _cached_decoder_for_AttributeSelection: $.ASN1Decoder<AttributeSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeSelection */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeSelection
  * @function
@@ -48,13 +46,11 @@ export function _decode_AttributeSelection(el: _Element) {
   }
   return _cached_decoder_for_AttributeSelection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSelection */
+
 let _cached_encoder_for_AttributeSelection: $.ASN1Encoder<AttributeSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeSelection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeSelection */
+
 /**
  * @summary Encodes a(n) AttributeSelection into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AttributeSelection(
   return _cached_encoder_for_AttributeSelection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeSelection */
 
 /* eslint-enable */

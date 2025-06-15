@@ -15,7 +15,6 @@ import {
     _decode_OperationResult,
     _encode_OperationResult,
 } from '../Schedulerev1-ASN1Module/OperationResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplyOperationToMembershipReply */
 /**
  * @summary ApplyOperationToMembershipReply
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ApplyOperationToMembershipReply = OperationResult[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ApplyOperationToMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplyOperationToMembershipReply */
 let _cached_decoder_for_ApplyOperationToMembershipReply: $.ASN1Decoder<ApplyOperationToMembershipReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplyOperationToMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplyOperationToMembershipReply */
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplyOperationToMembershipReply
  * @function
@@ -48,13 +43,9 @@ export function _decode_ApplyOperationToMembershipReply(el: _Element) {
     }
     return _cached_decoder_for_ApplyOperationToMembershipReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplyOperationToMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplyOperationToMembershipReply */
 let _cached_encoder_for_ApplyOperationToMembershipReply: $.ASN1Encoder<ApplyOperationToMembershipReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplyOperationToMembershipReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplyOperationToMembershipReply */
 /**
  * @summary Encodes a(n) ApplyOperationToMembershipReply into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ApplyOperationToMembershipReply(
     return _cached_encoder_for_ApplyOperationToMembershipReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplyOperationToMembershipReply */
 
 /* eslint-enable */

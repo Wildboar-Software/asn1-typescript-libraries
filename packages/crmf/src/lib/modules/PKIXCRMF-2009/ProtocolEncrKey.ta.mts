@@ -7,7 +7,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ProtocolEncrKey */
+
 /**
  * @summary ProtocolEncrKey
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type ProtocolEncrKey = SubjectPublicKeyInfo; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProtocolEncrKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolEncrKey */
+
 let _cached_decoder_for_ProtocolEncrKey: $.ASN1Decoder<ProtocolEncrKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolEncrKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtocolEncrKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolEncrKey
  * @function
@@ -38,13 +36,11 @@ export function _decode_ProtocolEncrKey(el: _Element) {
     }
     return _cached_decoder_for_ProtocolEncrKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtocolEncrKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolEncrKey */
+
 let _cached_encoder_for_ProtocolEncrKey: $.ASN1Encoder<ProtocolEncrKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolEncrKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtocolEncrKey */
+
 /**
  * @summary Encodes a(n) ProtocolEncrKey into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_ProtocolEncrKey(
     return _cached_encoder_for_ProtocolEncrKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtocolEncrKey */
 
 /* eslint-enable */

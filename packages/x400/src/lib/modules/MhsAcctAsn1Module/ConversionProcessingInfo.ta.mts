@@ -15,7 +15,6 @@ import {
     _decode_EMailFromToEIT,
     _encode_EMailFromToEIT,
 } from '../MhsAcctAsn1Module/EMailFromToEIT.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConversionProcessingInfo */
 /**
  * @summary ConversionProcessingInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ConversionProcessingInfo = EMailFromToEIT[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ConversionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionProcessingInfo */
 let _cached_decoder_for_ConversionProcessingInfo: $.ASN1Decoder<ConversionProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConversionProcessingInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConversionProcessingInfo
  * @function
@@ -48,13 +43,9 @@ export function _decode_ConversionProcessingInfo(el: _Element) {
     }
     return _cached_decoder_for_ConversionProcessingInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConversionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionProcessingInfo */
 let _cached_encoder_for_ConversionProcessingInfo: $.ASN1Encoder<ConversionProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConversionProcessingInfo */
 /**
  * @summary Encodes a(n) ConversionProcessingInfo into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ConversionProcessingInfo(
     return _cached_encoder_for_ConversionProcessingInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConversionProcessingInfo */
 
 /* eslint-enable */

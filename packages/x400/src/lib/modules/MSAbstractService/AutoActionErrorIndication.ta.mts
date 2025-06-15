@@ -16,7 +16,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoActionErrorIndication */
 /**
  * @summary AutoActionErrorIndication
  * @description
@@ -33,13 +32,9 @@ import {
 export type AutoActionErrorIndication =
     | { indication_only: NULL } /* CHOICE_ALT_ROOT */
     | { auto_action_log_entry: SequenceNumber } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AutoActionErrorIndication */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoActionErrorIndication */
 let _cached_decoder_for_AutoActionErrorIndication: $.ASN1Decoder<AutoActionErrorIndication> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoActionErrorIndication */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoActionErrorIndication */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoActionErrorIndication
  * @function
@@ -65,13 +60,9 @@ export function _decode_AutoActionErrorIndication(el: _Element) {
     }
     return _cached_decoder_for_AutoActionErrorIndication(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoActionErrorIndication */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoActionErrorIndication */
 let _cached_encoder_for_AutoActionErrorIndication: $.ASN1Encoder<AutoActionErrorIndication> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoActionErrorIndication */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoActionErrorIndication */
 /**
  * @summary Encodes a(n) AutoActionErrorIndication into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_AutoActionErrorIndication(
     return _cached_encoder_for_AutoActionErrorIndication(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoActionErrorIndication */
 
 /* eslint-enable */

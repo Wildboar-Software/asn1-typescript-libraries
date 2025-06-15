@@ -30,7 +30,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResultInfoFromThread */
 /**
  * @summary ResultInfoFromThread
  * @description
@@ -99,9 +98,7 @@ export class ResultInfoFromThread {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResultInfoFromThread */
 /**
  * @summary The Leading Root Component Types of ResultInfoFromThread
  * @description
@@ -140,9 +137,7 @@ export const _root_component_type_list_1_spec_for_ResultInfoFromThread: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResultInfoFromThread */
 /**
  * @summary The Trailing Root Component Types of ResultInfoFromThread
  * @description
@@ -152,9 +147,7 @@ export const _root_component_type_list_1_spec_for_ResultInfoFromThread: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResultInfoFromThread: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResultInfoFromThread */
 /**
  * @summary The Extension Addition Component Types of ResultInfoFromThread
  * @description
@@ -164,13 +157,9 @@ export const _root_component_type_list_2_spec_for_ResultInfoFromThread: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ResultInfoFromThread: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultInfoFromThread */
 let _cached_decoder_for_ResultInfoFromThread: $.ASN1Decoder<ResultInfoFromThread> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResultInfoFromThread */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResultInfoFromThread
  * @function
@@ -214,13 +203,9 @@ export function _decode_ResultInfoFromThread(el: _Element) {
     }
     return _cached_decoder_for_ResultInfoFromThread(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultInfoFromThread */
 let _cached_encoder_for_ResultInfoFromThread: $.ASN1Encoder<ResultInfoFromThread> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultInfoFromThread */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResultInfoFromThread */
 /**
  * @summary Encodes a(n) ResultInfoFromThread into an ASN.1 Element.
  * @function
@@ -263,6 +248,5 @@ export function _encode_ResultInfoFromThread(
     return _cached_encoder_for_ResultInfoFromThread(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResultInfoFromThread */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { id_att_delivery_flags } from '../MSObjectIdentifiers/id-att-delivery-fl
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_delivery_flags */
 /**
  * @summary mt_delivery_flags
  * @description
@@ -56,6 +55,5 @@ export const mt_delivery_flags: X413ATTRIBUTE<DeliveryFlags> = {
     '&id': id_att_delivery_flags /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_delivery_flags */
 
 /* eslint-enable */

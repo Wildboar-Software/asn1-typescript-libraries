@@ -6,7 +6,6 @@ import {
     _decode_BuiltInDomainDefinedAttribute,
     _encode_BuiltInDomainDefinedAttribute,
 } from "../MTSAbstractService/BuiltInDomainDefinedAttribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BuiltInDomainDefinedAttributes */
 /**
  * @summary BuiltInDomainDefinedAttributes
  * @description
@@ -20,13 +19,9 @@ import {
  * ```
  */
 export type BuiltInDomainDefinedAttributes = BuiltInDomainDefinedAttribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BuiltInDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInDomainDefinedAttributes */
 let _cached_decoder_for_BuiltInDomainDefinedAttributes: $.ASN1Decoder<BuiltInDomainDefinedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) BuiltInDomainDefinedAttributes
  * @function
@@ -41,13 +36,9 @@ export function _decode_BuiltInDomainDefinedAttributes(el: _Element) {
     }
     return _cached_decoder_for_BuiltInDomainDefinedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInDomainDefinedAttributes */
 let _cached_encoder_for_BuiltInDomainDefinedAttributes: $.ASN1Encoder<BuiltInDomainDefinedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttributes */
 /**
  * @summary Encodes a(n) BuiltInDomainDefinedAttributes into an ASN.1 Element.
  * @function
@@ -68,6 +59,5 @@ export function _encode_BuiltInDomainDefinedAttributes(
     return _cached_encoder_for_BuiltInDomainDefinedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttributes */
 
 /* eslint-enable */

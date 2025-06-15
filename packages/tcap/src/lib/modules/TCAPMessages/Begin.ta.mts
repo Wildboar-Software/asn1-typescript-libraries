@@ -26,7 +26,6 @@ import {
   _decode_ComponentPortion,
   _encode_ComponentPortion,
 } from '../TCAPMessages/ComponentPortion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Begin */
 /**
  * @summary Begin
  * @description
@@ -81,9 +80,7 @@ export class Begin {
     return new Begin(_o.otid, _o.dialoguePortion, _o.components);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Begin */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Begin */
 /**
  * @summary The Leading Root Component Types of Begin
  * @description
@@ -115,9 +112,7 @@ export const _root_component_type_list_1_spec_for_Begin: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Begin */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Begin */
 /**
  * @summary The Trailing Root Component Types of Begin
  * @description
@@ -127,9 +122,7 @@ export const _root_component_type_list_1_spec_for_Begin: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Begin: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Begin */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Begin */
 /**
  * @summary The Extension Addition Component Types of Begin
  * @description
@@ -139,13 +132,9 @@ export const _root_component_type_list_2_spec_for_Begin: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Begin: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Begin */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Begin */
 let _cached_decoder_for_Begin: $.ASN1Decoder<Begin> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Begin */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Begin */
 /**
  * @summary Decodes an ASN.1 element into a(n) Begin
  * @function
@@ -190,13 +179,9 @@ export function _decode_Begin(el: _Element) {
   }
   return _cached_decoder_for_Begin(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Begin */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Begin */
 let _cached_encoder_for_Begin: $.ASN1Encoder<Begin> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Begin */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Begin */
 /**
  * @summary Encodes a(n) Begin into an ASN.1 Element.
  * @function
@@ -227,6 +212,5 @@ export function _encode_Begin(value: Begin, elGetter: $.ASN1Encoder<Begin>) {
   return _cached_encoder_for_Begin(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Begin */
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ import {
     _decode_TerminateError,
     _encode_TerminateError,
 } from '../E-health-common/TerminateError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION E_terminateError */
+
 /**
  * @summary E_terminateError
  * @description
@@ -102,9 +102,8 @@ export class E_terminateError {
 
     public static _enum_for_error = _enum_for_TerminateError;
 }
-/* END_OF_SYMBOL_DEFINITION E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_terminateError */
+
 /**
  * @summary The Leading Root Component Types of E_terminateError
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_E_terminateError: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_terminateError */
+
 /**
  * @summary The Trailing Root Component Types of E_terminateError
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_E_terminateError: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_E_terminateError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_terminateError */
+
 /**
  * @summary The Extension Addition Component Types of E_terminateError
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_E_terminateError: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_E_terminateError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_terminateError */
+
 let _cached_decoder_for_E_terminateError: $.ASN1Decoder<E_terminateError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_terminateError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_terminateError
  * @function
@@ -205,13 +200,11 @@ export function _decode_E_terminateError(el: _Element) {
     }
     return _cached_decoder_for_E_terminateError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_terminateError */
+
 let _cached_encoder_for_E_terminateError: $.ASN1Encoder<E_terminateError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_terminateError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_terminateError */
+
 /**
  * @summary Encodes a(n) E_terminateError into an ASN.1 Element.
  * @function
@@ -255,6 +248,5 @@ export function _encode_E_terminateError(
     return _cached_encoder_for_E_terminateError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_terminateError */
 
 /* eslint-enable */

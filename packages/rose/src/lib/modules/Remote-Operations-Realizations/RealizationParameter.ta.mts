@@ -18,7 +18,7 @@ import {
   _decode_RealizationParameter_realization_type,
   _encode_RealizationParameter_realization_type,
 } from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RealizationParameter */
+
 /**
  * @summary RealizationParameter
  * @description
@@ -85,9 +85,8 @@ export class RealizationParameter {
 
   public static _enum_for_realization_type = _enum_for_RealizationParameter_realization_type;
 }
-/* END_OF_SYMBOL_DEFINITION RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RealizationParameter */
+
 /**
  * @summary The Leading Root Component Types of RealizationParameter
  * @description
@@ -112,9 +111,8 @@ export const _root_component_type_list_1_spec_for_RealizationParameter: $.Compon
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RealizationParameter */
+
 /**
  * @summary The Trailing Root Component Types of RealizationParameter
  * @description
@@ -124,9 +122,8 @@ export const _root_component_type_list_1_spec_for_RealizationParameter: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RealizationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RealizationParameter */
+
 /**
  * @summary The Extension Addition Component Types of RealizationParameter
  * @description
@@ -136,13 +133,11 @@ export const _root_component_type_list_2_spec_for_RealizationParameter: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_RealizationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RealizationParameter */
+
 let _cached_decoder_for_RealizationParameter: $.ASN1Decoder<RealizationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RealizationParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RealizationParameter
  * @function
@@ -185,13 +180,11 @@ export function _decode_RealizationParameter(el: _Element) {
   }
   return _cached_decoder_for_RealizationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RealizationParameter */
+
 let _cached_encoder_for_RealizationParameter: $.ASN1Encoder<RealizationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RealizationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RealizationParameter */
+
 /**
  * @summary Encodes a(n) RealizationParameter into an ASN.1 Element.
  * @function
@@ -229,6 +222,5 @@ export function _encode_RealizationParameter(
   return _cached_encoder_for_RealizationParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RealizationParameter */
 
 /* eslint-enable */

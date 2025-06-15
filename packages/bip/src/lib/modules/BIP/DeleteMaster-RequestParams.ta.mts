@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DeleteMaster_RequestParams */
+
 /**
  * @summary DeleteMaster_RequestParams
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DeleteMaster_RequestParams = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION DeleteMaster_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteMaster_RequestParams */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteMaster_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteMaster_RequestParams */
+
+
 export const _decode_DeleteMaster_RequestParams = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteMaster_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteMaster_RequestParams */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteMaster_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteMaster_RequestParams */
+
+
 export const _encode_DeleteMaster_RequestParams = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteMaster_RequestParams */
 
 /* eslint-enable */

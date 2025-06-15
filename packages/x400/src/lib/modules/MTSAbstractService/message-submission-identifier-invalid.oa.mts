@@ -21,7 +21,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { err_message_submission_identifier_invalid } from '../MTSAccessProtocol/err-message-submission-identifier-invalid.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION message_submission_identifier_invalid */
 /**
  * @summary message_submission_identifier_invalid
  * @description
@@ -51,6 +50,5 @@ export const message_submission_identifier_invalid: ABSTRACT_ERROR<NULL> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_submission_identifier_invalid */
 
 /* eslint-enable */

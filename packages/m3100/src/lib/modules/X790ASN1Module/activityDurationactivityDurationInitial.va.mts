@@ -22,7 +22,7 @@ import {
     _decode_ActivityType,
     _encode_ActivityType,
 } from '../X790ASN1Module/ActivityType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION activityDurationactivityDurationInitial */
+
 /**
  * @summary activityDurationactivityDurationInitial
  * @description
@@ -36,6 +36,5 @@ import {
  * @constant
  */
 export const activityDurationactivityDurationInitial: ActivityDuration = [];
-/* END_OF_SYMBOL_DEFINITION activityDurationactivityDurationInitial */
 
 /* eslint-enable */

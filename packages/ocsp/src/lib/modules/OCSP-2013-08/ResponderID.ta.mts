@@ -12,7 +12,7 @@ import {
     _encode_KeyHash,
 } from "../OCSP-2013-08/KeyHash.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ResponderID */
+
 /**
  * @summary ResponderID
  * @description
@@ -28,13 +28,11 @@ import {
 export type ResponderID =
     | { byName: Name } /* CHOICE_ALT_ROOT */
     | { byKey: KeyHash } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ResponderID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponderID */
+
 let _cached_decoder_for_ResponderID: $.ASN1Decoder<ResponderID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponderID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponderID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponderID
  * @function
@@ -58,13 +56,11 @@ export function _decode_ResponderID(el: _Element) {
     }
     return _cached_decoder_for_ResponderID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponderID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponderID */
+
 let _cached_encoder_for_ResponderID: $.ASN1Encoder<ResponderID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponderID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponderID */
+
 /**
  * @summary Encodes a(n) ResponderID into an ASN.1 Element.
  * @function
@@ -98,6 +94,5 @@ export function _encode_ResponderID(
     return _cached_encoder_for_ResponderID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponderID */
 
 /* eslint-enable */

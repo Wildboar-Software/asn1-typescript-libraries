@@ -6,7 +6,6 @@ import {
     _decode_IDM_PDU,
     _encode_IDM_PDU,
 } from "../IDMProtocolSpecification/IDM-PDU.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DSP_IDM_PDUs */
 /**
  * @summary DSP_IDM_PDUs
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type DSP_IDM_PDUs = IDM_PDU; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DSP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSP_IDM_PDUs */
 let _cached_decoder_for_DSP_IDM_PDUs: $.ASN1Decoder<DSP_IDM_PDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DSP_IDM_PDUs */
 /**
  * @summary Decodes an ASN.1 element into a(n) DSP_IDM_PDUs
  * @function
@@ -37,13 +32,9 @@ export function _decode_DSP_IDM_PDUs(el: _Element) {
     }
     return _cached_decoder_for_DSP_IDM_PDUs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DSP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSP_IDM_PDUs */
 let _cached_encoder_for_DSP_IDM_PDUs: $.ASN1Encoder<DSP_IDM_PDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DSP_IDM_PDUs */
 /**
  * @summary Encodes a(n) DSP_IDM_PDUs into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_DSP_IDM_PDUs(
     return _cached_encoder_for_DSP_IDM_PDUs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DSP_IDM_PDUs */
 
 /* eslint-enable */

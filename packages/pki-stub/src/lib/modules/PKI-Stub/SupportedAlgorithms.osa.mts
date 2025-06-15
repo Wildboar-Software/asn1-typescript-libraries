@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SupportedAlgorithms */
 /**
  * @summary SupportedAlgorithms
  * @description
@@ -27,6 +26,5 @@ import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
  *
  */
 export const SupportedAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedAlgorithms */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_Bandwidth,
     _encode_Bandwidth,
 } from '../M3100ASN1TypeModule2/Bandwidth.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PointCapacity */
+
 /**
  * @summary PointCapacity
  * @description
@@ -33,13 +33,11 @@ import {
 export type PointCapacity =
     | { numberOfTPs: INTEGER } /* CHOICE_ALT_ROOT */
     | { bandwidth: Bandwidth } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PointCapacity */
+
 let _cached_decoder_for_PointCapacity: $.ASN1Decoder<PointCapacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PointCapacity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PointCapacity
  * @function
@@ -63,13 +61,11 @@ export function _decode_PointCapacity(el: _Element) {
     }
     return _cached_decoder_for_PointCapacity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PointCapacity */
+
 let _cached_encoder_for_PointCapacity: $.ASN1Encoder<PointCapacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PointCapacity */
+
 /**
  * @summary Encodes a(n) PointCapacity into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_PointCapacity(
     return _cached_encoder_for_PointCapacity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PointCapacity */
 
 /* eslint-enable */

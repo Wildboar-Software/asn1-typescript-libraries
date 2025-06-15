@@ -6,7 +6,6 @@ import {
 import { id_oa_pwdDictionaries } from "../PasswordPolicy/id-oa-pwdDictionaries.va.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { uri } from "../SelectedAttributeTypes/uri.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdDictionaries */
 /**
  * @summary pwdDictionaries
  * @description
@@ -46,6 +45,5 @@ export const pwdDictionaries: ATTRIBUTE = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdDictionaries */
 
 /* eslint-enable */

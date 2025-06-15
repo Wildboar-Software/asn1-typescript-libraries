@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ContentSpecificAttributes */
 /**
  * @summary ContentSpecificAttributes
  * @description
@@ -27,6 +26,5 @@ import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
  *
  */
 export const ContentSpecificAttributes: X413ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION ContentSpecificAttributes */
 
 /* eslint-enable */

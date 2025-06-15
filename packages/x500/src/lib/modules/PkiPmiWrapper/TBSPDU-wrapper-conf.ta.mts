@@ -11,7 +11,6 @@ import {
     _decode_WrappedPDUInfo,
     _encode_WrappedPDUInfo,
 } from "../PkiPmiWrapper/WrappedPDUInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TBSPDU_wrapper_conf */
 /**
  * @summary TBSPDU_wrapper_conf
  * @description
@@ -26,13 +25,9 @@ export type TBSPDU_wrapper_conf =
     | { clear: WrappedPDUInfo } /* CHOICE_ALT_ROOT */
     | { protected_: EncryptedInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TBSPDU_wrapper_conf */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSPDU_wrapper_conf */
 let _cached_decoder_for_TBSPDU_wrapper_conf: $.ASN1Decoder<TBSPDU_wrapper_conf> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSPDU_wrapper_conf */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSPDU_wrapper_conf */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSPDU_wrapper_conf
  * @function
@@ -60,13 +55,9 @@ export function _decode_TBSPDU_wrapper_conf(el: _Element) {
     }
     return _cached_decoder_for_TBSPDU_wrapper_conf(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSPDU_wrapper_conf */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSPDU_wrapper_conf */
 let _cached_encoder_for_TBSPDU_wrapper_conf: $.ASN1Encoder<TBSPDU_wrapper_conf> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSPDU_wrapper_conf */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSPDU_wrapper_conf */
 /**
  * @summary Encodes a(n) TBSPDU_wrapper_conf into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_TBSPDU_wrapper_conf(
     return _cached_encoder_for_TBSPDU_wrapper_conf(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSPDU_wrapper_conf */
 
 /* eslint-enable */

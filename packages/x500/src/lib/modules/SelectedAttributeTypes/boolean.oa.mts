@@ -3,7 +3,6 @@ import { BOOLEAN } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_boolean } from "../SelectedAttributeTypes/id-lsx-boolean.va.mjs";
-/* START_OF_SYMBOL_DEFINITION boolean_ */
 /**
  * @summary boolean_
  * @description
@@ -33,6 +32,5 @@ export const boolean_: SYNTAX_NAME<BOOLEAN> = {
     "&id": id_lsx_boolean /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION boolean_ */
 
 /* eslint-enable */

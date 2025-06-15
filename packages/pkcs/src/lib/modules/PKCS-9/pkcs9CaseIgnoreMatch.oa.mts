@@ -7,7 +7,7 @@ import {
     _encode_PKCS9String,
 } from "../PKCS-9/PKCS9String.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pkcs9CaseIgnoreMatch */
+
 /**
  * @summary pkcs9CaseIgnoreMatch
  * @description
@@ -37,6 +37,5 @@ export const pkcs9CaseIgnoreMatch: MATCHING_RULE<PKCS9String> = {
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ParentMatchingRules": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pkcs9CaseIgnoreMatch */
 
 /* eslint-enable */

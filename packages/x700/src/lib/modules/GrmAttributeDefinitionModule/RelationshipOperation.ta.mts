@@ -20,7 +20,6 @@ import {
     _decode_OptionalIdentifierAndRole,
     _encode_OptionalIdentifierAndRole,
 } from '../GrmAttributeDefinitionModule/OptionalIdentifierAndRole.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelationshipOperation */
 /**
  * @summary RelationshipOperation
  * @description
@@ -47,13 +46,9 @@ export type RelationshipOperation =
     | { userDefined: OptionalIdentifier } /* CHOICE_ALT_ROOT */
     | { bind: OptionalIdentifierAndRole } /* CHOICE_ALT_ROOT */
     | { unbind: OptionalIdentifierAndRole } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RelationshipOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelationshipOperation */
 let _cached_decoder_for_RelationshipOperation: $.ASN1Decoder<RelationshipOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelationshipOperation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelationshipOperation */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelationshipOperation
  * @function
@@ -111,13 +106,9 @@ export function _decode_RelationshipOperation(el: _Element) {
     }
     return _cached_decoder_for_RelationshipOperation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelationshipOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelationshipOperation */
 let _cached_encoder_for_RelationshipOperation: $.ASN1Encoder<RelationshipOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelationshipOperation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelationshipOperation */
 /**
  * @summary Encodes a(n) RelationshipOperation into an ASN.1 Element.
  * @function
@@ -181,6 +172,5 @@ export function _encode_RelationshipOperation(
     return _cached_encoder_for_RelationshipOperation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelationshipOperation */
 
 /* eslint-enable */

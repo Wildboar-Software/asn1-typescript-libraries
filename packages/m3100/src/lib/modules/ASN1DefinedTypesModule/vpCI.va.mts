@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION vpCI */
+
 /**
  * @summary vpCI
  * @description
@@ -32,6 +32,5 @@ export const vpCI: CharacteristicInformation = new _OID(
     [17],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION vpCI */
 
 /* eslint-enable */

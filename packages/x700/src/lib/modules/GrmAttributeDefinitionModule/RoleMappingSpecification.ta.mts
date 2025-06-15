@@ -26,7 +26,6 @@ import {
     _decode_Representation,
     _encode_Representation,
 } from '../GrmAttributeDefinitionModule/Representation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoleMappingSpecification */
 /**
  * @summary RoleMappingSpecification
  * @description
@@ -97,9 +96,7 @@ export class RoleMappingSpecification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleMappingSpecification */
 /**
  * @summary The Leading Root Component Types of RoleMappingSpecification
  * @description
@@ -138,9 +135,7 @@ export const _root_component_type_list_1_spec_for_RoleMappingSpecification: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleMappingSpecification */
 /**
  * @summary The Trailing Root Component Types of RoleMappingSpecification
  * @description
@@ -150,9 +145,7 @@ export const _root_component_type_list_1_spec_for_RoleMappingSpecification: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RoleMappingSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleMappingSpecification */
 /**
  * @summary The Extension Addition Component Types of RoleMappingSpecification
  * @description
@@ -162,13 +155,9 @@ export const _root_component_type_list_2_spec_for_RoleMappingSpecification: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_RoleMappingSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleMappingSpecification */
 let _cached_decoder_for_RoleMappingSpecification: $.ASN1Decoder<RoleMappingSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleMappingSpecification */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleMappingSpecification
  * @function
@@ -224,13 +213,9 @@ export function _decode_RoleMappingSpecification(el: _Element) {
     }
     return _cached_decoder_for_RoleMappingSpecification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleMappingSpecification */
 let _cached_encoder_for_RoleMappingSpecification: $.ASN1Encoder<RoleMappingSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleMappingSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleMappingSpecification */
 /**
  * @summary Encodes a(n) RoleMappingSpecification into an ASN.1 Element.
  * @function
@@ -278,6 +263,5 @@ export function _encode_RoleMappingSpecification(
     return _cached_encoder_for_RoleMappingSpecification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleMappingSpecification */
 
 /* eslint-enable */

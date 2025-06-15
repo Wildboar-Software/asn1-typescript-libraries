@@ -15,7 +15,7 @@ import {
   _decode_XMLCompatibleString,
   _encode_XMLCompatibleString,
 } from '../XSD/XMLCompatibleString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION String */
+
 /**
  * @summary String
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type String = XMLCompatibleString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION String */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_String */
+
 let _cached_decoder_for_String: $.ASN1Decoder<String> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_String */
 
-/* START_OF_SYMBOL_DEFINITION _decode_String */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) String
  * @function
@@ -46,13 +44,11 @@ export function _decode_String(el: _Element) {
   }
   return _cached_decoder_for_String(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_String */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_String */
+
 let _cached_encoder_for_String: $.ASN1Encoder<String> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_String */
 
-/* START_OF_SYMBOL_DEFINITION _encode_String */
+
 /**
  * @summary Encodes a(n) String into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_String(value: String, elGetter: $.ASN1Encoder<String>) {
   return _cached_encoder_for_String(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_String */
 
 /* eslint-enable */

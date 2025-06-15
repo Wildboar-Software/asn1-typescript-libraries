@@ -26,7 +26,6 @@ import {
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FetchResult */
 /**
  * @summary FetchResult
  * @description
@@ -98,9 +97,7 @@ export class FetchResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FetchResult */
 /**
  * @summary The Leading Root Component Types of FetchResult
  * @description
@@ -139,9 +136,7 @@ export const _root_component_type_list_1_spec_for_FetchResult: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FetchResult */
 /**
  * @summary The Trailing Root Component Types of FetchResult
  * @description
@@ -151,9 +146,7 @@ export const _root_component_type_list_1_spec_for_FetchResult: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FetchResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FetchResult */
 /**
  * @summary The Extension Addition Component Types of FetchResult
  * @description
@@ -163,13 +156,9 @@ export const _root_component_type_list_2_spec_for_FetchResult: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_FetchResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchResult */
 let _cached_decoder_for_FetchResult: $.ASN1Decoder<FetchResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FetchResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) FetchResult
  * @function
@@ -229,13 +218,9 @@ export function _decode_FetchResult(el: _Element) {
     }
     return _cached_decoder_for_FetchResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchResult */
 let _cached_encoder_for_FetchResult: $.ASN1Encoder<FetchResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FetchResult */
 /**
  * @summary Encodes a(n) FetchResult into an ASN.1 Element.
  * @function
@@ -299,6 +284,5 @@ export function _encode_FetchResult(
     return _cached_encoder_for_FetchResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FetchResult */
 
 /* eslint-enable */

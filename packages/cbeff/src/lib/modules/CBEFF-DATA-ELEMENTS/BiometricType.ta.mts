@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BiometricType */
 /**
  * @summary BiometricType
  * @description
@@ -28,293 +27,216 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BiometricType = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_no_value_available */
 /**
  * @summary BiometricType_no_value_available
  * @constant
  */
 export const BiometricType_no_value_available: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_no_value_available */
 
-/* START_OF_SYMBOL_DEFINITION no_value_available */
 /**
  * @summary no_value_available
  * @constant
  */
 export const no_value_available: number = BiometricType_no_value_available; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION no_value_available */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_multiple_biometric_types */
 /**
  * @summary BiometricType_multiple_biometric_types
  * @constant
  */
 export const BiometricType_multiple_biometric_types: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_multiple_biometric_types */
 
-/* START_OF_SYMBOL_DEFINITION multiple_biometric_types */
 /**
  * @summary multiple_biometric_types
  * @constant
  */
 export const multiple_biometric_types: number = BiometricType_multiple_biometric_types; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION multiple_biometric_types */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_scent */
 /**
  * @summary BiometricType_scent
  * @constant
  */
 export const BiometricType_scent: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_scent */
 
-/* START_OF_SYMBOL_DEFINITION scent */
 /**
  * @summary scent
  * @constant
  */
 export const scent: number = BiometricType_scent; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION scent */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_dna */
 /**
  * @summary BiometricType_dna
  * @constant
  */
 export const BiometricType_dna: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_dna */
 
-/* START_OF_SYMBOL_DEFINITION dna */
 /**
  * @summary dna
  * @constant
  */
 export const dna: number = BiometricType_dna; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION dna */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_ear */
 /**
  * @summary BiometricType_ear
  * @constant
  */
 export const BiometricType_ear: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_ear */
 
-/* START_OF_SYMBOL_DEFINITION ear */
 /**
  * @summary ear
  * @constant
  */
 export const ear: number = BiometricType_ear; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION ear */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_face */
 /**
  * @summary BiometricType_face
  * @constant
  */
 export const BiometricType_face: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_face */
 
-/* START_OF_SYMBOL_DEFINITION face */
 /**
  * @summary face
  * @constant
  */
 export const face: number = BiometricType_face; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION face */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_finger */
 /**
  * @summary BiometricType_finger
  * @constant
  */
 export const BiometricType_finger: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_finger */
 
-/* START_OF_SYMBOL_DEFINITION finger */
 /**
  * @summary finger
  * @constant
  */
 export const finger: number = BiometricType_finger; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION finger */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_foot */
 /**
  * @summary BiometricType_foot
  * @constant
  */
 export const BiometricType_foot: number = 7; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_foot */
 
-/* START_OF_SYMBOL_DEFINITION foot */
 /**
  * @summary foot
  * @constant
  */
 export const foot: number = BiometricType_foot; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION foot */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_hand_geometry */
 /**
  * @summary BiometricType_hand_geometry
  * @constant
  */
 export const BiometricType_hand_geometry: number = 8; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_hand_geometry */
 
-/* START_OF_SYMBOL_DEFINITION hand_geometry */
 /**
  * @summary hand_geometry
  * @constant
  */
 export const hand_geometry: number = BiometricType_hand_geometry; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION hand_geometry */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_vein */
 /**
  * @summary BiometricType_vein
  * @constant
  */
 export const BiometricType_vein: number = 9; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_vein */
 
-/* START_OF_SYMBOL_DEFINITION vein */
 /**
  * @summary vein
  * @constant
  */
 export const vein: number = BiometricType_vein; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION vein */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_iris */
 /**
  * @summary BiometricType_iris
  * @constant
  */
 export const BiometricType_iris: number = 10; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_iris */
 
-/* START_OF_SYMBOL_DEFINITION iris */
 /**
  * @summary iris
  * @constant
  */
 export const iris: number = BiometricType_iris; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION iris */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_retina */
 /**
  * @summary BiometricType_retina
  * @constant
  */
 export const BiometricType_retina: number = 11; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_retina */
 
-/* START_OF_SYMBOL_DEFINITION retina */
 /**
  * @summary retina
  * @constant
  */
 export const retina: number = BiometricType_retina; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION retina */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_voice */
 /**
  * @summary BiometricType_voice
  * @constant
  */
 export const BiometricType_voice: number = 12; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_voice */
 
-/* START_OF_SYMBOL_DEFINITION voice */
 /**
  * @summary voice
  * @constant
  */
 export const voice: number = BiometricType_voice; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION voice */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_gait */
 /**
  * @summary BiometricType_gait
  * @constant
  */
 export const BiometricType_gait: number = 13; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_gait */
 
-/* START_OF_SYMBOL_DEFINITION gait */
 /**
  * @summary gait
  * @constant
  */
 export const gait: number = BiometricType_gait; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION gait */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_keystroke */
 /**
  * @summary BiometricType_keystroke
  * @constant
  */
 export const BiometricType_keystroke: number = 14; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_keystroke */
 
-/* START_OF_SYMBOL_DEFINITION keystroke */
 /**
  * @summary keystroke
  * @constant
  */
 export const keystroke: number = BiometricType_keystroke; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION keystroke */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_lip_movement */
 /**
  * @summary BiometricType_lip_movement
  * @constant
  */
 export const BiometricType_lip_movement: number = 15; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_lip_movement */
 
-/* START_OF_SYMBOL_DEFINITION lip_movement */
 /**
  * @summary lip_movement
  * @constant
  */
 export const lip_movement: number = BiometricType_lip_movement; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION lip_movement */
 
-/* START_OF_SYMBOL_DEFINITION BiometricType_signature_sign */
 /**
  * @summary BiometricType_signature_sign
  * @constant
  */
 export const BiometricType_signature_sign: number = 16; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION BiometricType_signature_sign */
 
-/* START_OF_SYMBOL_DEFINITION signature_sign */
 /**
  * @summary signature_sign
  * @constant
  */
 export const signature_sign: number = BiometricType_signature_sign; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION signature_sign */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricType */
 export const _decode_BiometricType = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricType */
 export const _encode_BiometricType = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricType */
 
 /* eslint-enable */

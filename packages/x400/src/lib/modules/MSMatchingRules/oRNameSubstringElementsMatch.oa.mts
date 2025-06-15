@@ -16,7 +16,6 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import { id_mr_orname_substring_elements_match } from '../MSObjectIdentifiers/id-mr-orname-substring-elements-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRNameSubstringElementsMatch */
 /**
  * @summary oRNameSubstringElementsMatch
  * @description
@@ -45,6 +44,5 @@ export const oRNameSubstringElementsMatch: MATCHING_RULE<ORName> = {
     '&id': id_mr_orname_substring_elements_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRNameSubstringElementsMatch */
 
 /* eslint-enable */

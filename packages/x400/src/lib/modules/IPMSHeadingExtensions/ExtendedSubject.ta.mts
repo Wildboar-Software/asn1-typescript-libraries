@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtendedSubject */
 /**
  * @summary ExtendedSubject
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExtendedSubject = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ExtendedSubject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedSubject */
 let _cached_decoder_for_ExtendedSubject: $.ASN1Decoder<ExtendedSubject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedSubject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedSubject */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedSubject
  * @function
@@ -46,13 +41,9 @@ export function _decode_ExtendedSubject(el: _Element) {
     }
     return _cached_decoder_for_ExtendedSubject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedSubject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedSubject */
 let _cached_encoder_for_ExtendedSubject: $.ASN1Encoder<ExtendedSubject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedSubject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedSubject */
 /**
  * @summary Encodes a(n) ExtendedSubject into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ExtendedSubject(
     return _cached_encoder_for_ExtendedSubject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedSubject */
 
 /* eslint-enable */

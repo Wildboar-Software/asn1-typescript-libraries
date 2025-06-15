@@ -11,7 +11,7 @@ import {
     _decode_DigestAlgorithm,
     _encode_DigestAlgorithm,
 } from "../PKCS-1/DigestAlgorithm.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DigestInfo */
+
 /**
  * @summary DigestInfo
  * @description
@@ -61,9 +61,8 @@ export class DigestInfo {
         return new DigestInfo(_o.digestAlgorithm, _o.digest);
     }
 }
-/* END_OF_SYMBOL_DEFINITION DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DigestInfo */
+
 /**
  * @summary The Leading Root Component Types of DigestInfo
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_DigestInfo: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DigestInfo */
+
 /**
  * @summary The Trailing Root Component Types of DigestInfo
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_DigestInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DigestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DigestInfo */
+
 /**
  * @summary The Extension Addition Component Types of DigestInfo
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_DigestInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_DigestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestInfo */
+
 let _cached_decoder_for_DigestInfo: $.ASN1Decoder<DigestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DigestInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DigestInfo
  * @function
@@ -147,13 +142,11 @@ export function _decode_DigestInfo(el: _Element) {
     }
     return _cached_decoder_for_DigestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestInfo */
+
 let _cached_encoder_for_DigestInfo: $.ASN1Encoder<DigestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DigestInfo */
+
 /**
  * @summary Encodes a(n) DigestInfo into an ASN.1 Element.
  * @function
@@ -188,6 +181,5 @@ export function _encode_DigestInfo(
     return _cached_encoder_for_DigestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DigestInfo */
 
 /* eslint-enable */

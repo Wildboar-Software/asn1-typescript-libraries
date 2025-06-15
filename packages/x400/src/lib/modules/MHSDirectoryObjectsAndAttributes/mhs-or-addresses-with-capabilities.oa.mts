@@ -23,7 +23,6 @@ import {
 } from '../MHSDirectoryObjectsAndAttributes/AddressCapabilities.ta.mjs';
 import { addressCapabilitiesMatch } from '../MHSDirectoryObjectsAndAttributes/addressCapabilitiesMatch.oa.mjs';
 import { id_at_mhs_or_addresses_with_capabilities } from '../MHSObjectIdentifiers/id-at-mhs-or-addresses-with-capabilities.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_or_addresses_with_capabilities */
 /**
  * @summary mhs_or_addresses_with_capabilities
  * @description
@@ -60,6 +59,5 @@ export const mhs_or_addresses_with_capabilities: ATTRIBUTE<AddressCapabilities> 
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_or_addresses_with_capabilities */
 
 /* eslint-enable */

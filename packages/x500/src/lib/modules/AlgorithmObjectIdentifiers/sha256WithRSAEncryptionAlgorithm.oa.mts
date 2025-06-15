@@ -3,7 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { sha256WithRSAEncryption } from "../AlgorithmObjectIdentifiers/sha256WithRSAEncryption.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION sha256WithRSAEncryptionAlgorithm */
 /**
  * @summary sha256WithRSAEncryptionAlgorithm
  * @description
@@ -31,6 +30,5 @@ export const sha256WithRSAEncryptionAlgorithm: ALGORITHM<NULL> = {
     "&id": sha256WithRSAEncryption /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sha256WithRSAEncryptionAlgorithm */
 
 /* eslint-enable */

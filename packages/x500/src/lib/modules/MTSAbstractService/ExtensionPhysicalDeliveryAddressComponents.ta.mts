@@ -6,7 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../MTSAbstractService/PDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ExtensionPhysicalDeliveryAddressComponents */
 /**
  * @summary ExtensionPhysicalDeliveryAddressComponents
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ExtensionPhysicalDeliveryAddressComponents = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents */
 let _cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents: $.ASN1Decoder<ExtensionPhysicalDeliveryAddressComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtensionPhysicalDeliveryAddressComponents */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionPhysicalDeliveryAddressComponents
  * @function
@@ -39,13 +34,9 @@ export function _decode_ExtensionPhysicalDeliveryAddressComponents(
     }
     return _cached_decoder_for_ExtensionPhysicalDeliveryAddressComponents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionPhysicalDeliveryAddressComponents */
 let _cached_encoder_for_ExtensionPhysicalDeliveryAddressComponents: $.ASN1Encoder<ExtensionPhysicalDeliveryAddressComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtensionPhysicalDeliveryAddressComponents */
 /**
  * @summary Encodes a(n) ExtensionPhysicalDeliveryAddressComponents into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_ExtensionPhysicalDeliveryAddressComponents(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtensionPhysicalDeliveryAddressComponents */
 
 /* eslint-enable */

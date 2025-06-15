@@ -11,7 +11,7 @@ import {
 } from "asn1-ts";
 import { id_aes256_wrap } from "../CMSAesRsaesOaep-2009/id-aes256-wrap.va.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION kwa_aes256_wrap_smimeCaps */
+
 /**
  * @summary kwa_aes256_wrap_smimeCaps
  * @description
@@ -38,6 +38,5 @@ const kwa_aes256_wrap_smimeCaps: SMIME_CAPS = {
     "&id": id_aes256_wrap /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kwa_aes256_wrap_smimeCaps */
 
 /* eslint-enable */

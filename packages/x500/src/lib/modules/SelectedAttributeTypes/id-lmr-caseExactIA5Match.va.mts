@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_lmr } from "../UsefulDefinitions/id-lmr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_lmr_caseExactIA5Match */
 /**
  * @summary id_lmr_caseExactIA5Match
  * @description
@@ -18,6 +17,5 @@ export const id_lmr_caseExactIA5Match: OBJECT_IDENTIFIER = new _OID(
     [1],
     id_lmr
 );
-/* END_OF_SYMBOL_DEFINITION id_lmr_caseExactIA5Match */
 
 /* eslint-enable */

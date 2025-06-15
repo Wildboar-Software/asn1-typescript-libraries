@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DiscardReason */
+
 /**
  * @summary DiscardReason
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DiscardReason = INTEGER;
-/* END_OF_SYMBOL_DEFINITION DiscardReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardReason */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardReason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DiscardReason */
+
+
 export const _decode_DiscardReason = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_DiscardReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardReason */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardReason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DiscardReason */
+
+
 export const _encode_DiscardReason = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DiscardReason */
 
 /* eslint-enable */

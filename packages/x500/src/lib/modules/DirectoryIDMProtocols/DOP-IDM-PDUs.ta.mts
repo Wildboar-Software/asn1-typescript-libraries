@@ -6,7 +6,6 @@ import {
     _decode_IDM_PDU,
     _encode_IDM_PDU,
 } from "../IDMProtocolSpecification/IDM-PDU.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DOP_IDM_PDUs */
 /**
  * @summary DOP_IDM_PDUs
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type DOP_IDM_PDUs = IDM_PDU; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DOP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DOP_IDM_PDUs */
 let _cached_decoder_for_DOP_IDM_PDUs: $.ASN1Decoder<DOP_IDM_PDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DOP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DOP_IDM_PDUs */
 /**
  * @summary Decodes an ASN.1 element into a(n) DOP_IDM_PDUs
  * @function
@@ -37,13 +32,9 @@ export function _decode_DOP_IDM_PDUs(el: _Element) {
     }
     return _cached_decoder_for_DOP_IDM_PDUs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DOP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DOP_IDM_PDUs */
 let _cached_encoder_for_DOP_IDM_PDUs: $.ASN1Encoder<DOP_IDM_PDUs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DOP_IDM_PDUs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DOP_IDM_PDUs */
 /**
  * @summary Encodes a(n) DOP_IDM_PDUs into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_DOP_IDM_PDUs(
     return _cached_encoder_for_DOP_IDM_PDUs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DOP_IDM_PDUs */
 
 /* eslint-enable */

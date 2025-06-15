@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ObjectClass */
+
 /**
  * @summary ObjectClass
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ObjectClass =
   | { globalForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
   | { localForm: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClass */
+
 let _cached_decoder_for_ObjectClass: $.ASN1Decoder<ObjectClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectClass */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectClass
  * @function
@@ -62,13 +60,11 @@ export function _decode_ObjectClass(el: _Element) {
   }
   return _cached_decoder_for_ObjectClass(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClass */
+
 let _cached_encoder_for_ObjectClass: $.ASN1Encoder<ObjectClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectClass */
+
 /**
  * @summary Encodes a(n) ObjectClass into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_ObjectClass(
   return _cached_encoder_for_ObjectClass(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectClass */
 
 /* eslint-enable */

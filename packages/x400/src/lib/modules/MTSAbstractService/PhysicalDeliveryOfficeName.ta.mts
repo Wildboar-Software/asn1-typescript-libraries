@@ -15,7 +15,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from '../MTSAbstractService/PDSParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryOfficeName */
 /**
  * @summary PhysicalDeliveryOfficeName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PhysicalDeliveryOfficeName = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryOfficeName */
 let _cached_decoder_for_PhysicalDeliveryOfficeName: $.ASN1Decoder<PhysicalDeliveryOfficeName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryOfficeName */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryOfficeName
  * @function
@@ -46,13 +41,9 @@ export function _decode_PhysicalDeliveryOfficeName(el: _Element) {
     }
     return _cached_decoder_for_PhysicalDeliveryOfficeName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryOfficeName */
 let _cached_encoder_for_PhysicalDeliveryOfficeName: $.ASN1Encoder<PhysicalDeliveryOfficeName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryOfficeName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryOfficeName */
 /**
  * @summary Encodes a(n) PhysicalDeliveryOfficeName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PhysicalDeliveryOfficeName(
     return _cached_encoder_for_PhysicalDeliveryOfficeName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryOfficeName */
 
 /* eslint-enable */

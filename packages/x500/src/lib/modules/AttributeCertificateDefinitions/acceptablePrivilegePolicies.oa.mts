@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.mjs";
 import { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION acceptablePrivilegePolicies */
 /**
  * @summary acceptablePrivilegePolicies
  * @description
@@ -34,6 +33,5 @@ export const acceptablePrivilegePolicies: EXTENSION<AcceptablePrivilegePoliciesS
     "&id": id_ce_acceptablePrivilegePolicies /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION acceptablePrivilegePolicies */
 
 /* eslint-enable */

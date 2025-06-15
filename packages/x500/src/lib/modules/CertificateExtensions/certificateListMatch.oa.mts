@@ -7,7 +7,6 @@ import {
 import { certListAssertion } from "../CertificateExtensions/certListAssertion.oa.mjs";
 import { id_mr_certificateListMatch } from "../CertificateExtensions/id-mr-certificateListMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION certificateListMatch */
 /**
  * @summary certificateListMatch
  * @description
@@ -41,6 +40,5 @@ export const certificateListMatch: MATCHING_RULE<CertificateListAssertion> = {
     "&id": id_mr_certificateListMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certificateListMatch */
 
 /* eslint-enable */

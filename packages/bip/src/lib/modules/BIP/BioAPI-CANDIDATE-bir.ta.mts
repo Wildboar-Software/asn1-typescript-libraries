@@ -20,7 +20,7 @@ import {
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_CANDIDATE_bir */
+
 /**
  * @summary BioAPI_CANDIDATE_bir
  * @description
@@ -35,13 +35,11 @@ export type BioAPI_CANDIDATE_bir =
   | { birInDatabase: BioAPI_UUID } /* CHOICE_ALT_ROOT */
   | { birInArray: UnsignedInt } /* CHOICE_ALT_ROOT */
   | { birInPresetArray: UnsignedInt } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BioAPI_CANDIDATE_bir */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_CANDIDATE_bir */
+
 let _cached_decoder_for_BioAPI_CANDIDATE_bir: $.ASN1Decoder<BioAPI_CANDIDATE_bir> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_CANDIDATE_bir */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_CANDIDATE_bir */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_CANDIDATE_bir
  * @function
@@ -60,13 +58,11 @@ export function _decode_BioAPI_CANDIDATE_bir(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_CANDIDATE_bir(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_CANDIDATE_bir */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_CANDIDATE_bir */
+
 let _cached_encoder_for_BioAPI_CANDIDATE_bir: $.ASN1Encoder<BioAPI_CANDIDATE_bir> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_CANDIDATE_bir */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_CANDIDATE_bir */
+
 /**
  * @summary Encodes a(n) BioAPI_CANDIDATE_bir into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_BioAPI_CANDIDATE_bir(
   return _cached_encoder_for_BioAPI_CANDIDATE_bir(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_CANDIDATE_bir */
 
 /* eslint-enable */

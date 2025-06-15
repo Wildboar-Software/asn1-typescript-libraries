@@ -21,7 +21,6 @@ import {
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TBSAsymmetricToken_name_mta */
 /**
  * @summary TBSAsymmetricToken_name_mta
  * @description
@@ -75,9 +74,7 @@ export class TBSAsymmetricToken_name_mta {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAsymmetricToken_name_mta */
 /**
  * @summary The Leading Root Component Types of TBSAsymmetricToken_name_mta
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_TBSAsymmetricToken_name_mta: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAsymmetricToken_name_mta */
 /**
  * @summary The Trailing Root Component Types of TBSAsymmetricToken_name_mta
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_TBSAsymmetricToken_name_mta: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TBSAsymmetricToken_name_mta: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAsymmetricToken_name_mta */
 /**
  * @summary The Extension Addition Component Types of TBSAsymmetricToken_name_mta
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_TBSAsymmetricToken_name_mta: $
  * @constant
  */
 export const _extension_additions_list_spec_for_TBSAsymmetricToken_name_mta: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAsymmetricToken_name_mta */
 let _cached_decoder_for_TBSAsymmetricToken_name_mta: $.ASN1Decoder<TBSAsymmetricToken_name_mta> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSAsymmetricToken_name_mta */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSAsymmetricToken_name_mta
  * @function
@@ -176,13 +165,9 @@ export function _decode_TBSAsymmetricToken_name_mta(el: _Element) {
     }
     return _cached_decoder_for_TBSAsymmetricToken_name_mta(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAsymmetricToken_name_mta */
 let _cached_encoder_for_TBSAsymmetricToken_name_mta: $.ASN1Encoder<TBSAsymmetricToken_name_mta> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAsymmetricToken_name_mta */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSAsymmetricToken_name_mta */
 /**
  * @summary Encodes a(n) TBSAsymmetricToken_name_mta into an ASN.1 Element.
  * @function
@@ -217,6 +202,5 @@ export function _encode_TBSAsymmetricToken_name_mta(
     return _cached_encoder_for_TBSAsymmetricToken_name_mta(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSAsymmetricToken_name_mta */
 
 /* eslint-enable */

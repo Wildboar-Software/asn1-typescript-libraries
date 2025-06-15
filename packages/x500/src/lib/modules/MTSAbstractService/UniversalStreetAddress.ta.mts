@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../MTSAbstractService/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalStreetAddress */
 /**
  * @summary UniversalStreetAddress
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalStreetAddress = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalStreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalStreetAddress */
 let _cached_decoder_for_UniversalStreetAddress: $.ASN1Decoder<UniversalStreetAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalStreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalStreetAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalStreetAddress
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalStreetAddress(el: _Element) {
     }
     return _cached_decoder_for_UniversalStreetAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalStreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalStreetAddress */
 let _cached_encoder_for_UniversalStreetAddress: $.ASN1Encoder<UniversalStreetAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalStreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalStreetAddress */
 /**
  * @summary Encodes a(n) UniversalStreetAddress into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_UniversalStreetAddress(
     return _cached_encoder_for_UniversalStreetAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalStreetAddress */
 
 /* eslint-enable */

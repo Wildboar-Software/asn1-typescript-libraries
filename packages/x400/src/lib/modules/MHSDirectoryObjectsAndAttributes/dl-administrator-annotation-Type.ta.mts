@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION dl_administrator_annotation_Type */
 /**
  * @summary dl_administrator_annotation_Type
  * @description
@@ -27,13 +26,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type dl_administrator_annotation_Type =
     | { bmpstring: BMPString } /* CHOICE_ALT_ROOT */
     | { universalstring: UniversalString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION dl_administrator_annotation_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_dl_administrator_annotation_Type */
 let _cached_decoder_for_dl_administrator_annotation_Type: $.ASN1Decoder<dl_administrator_annotation_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_dl_administrator_annotation_Type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_dl_administrator_annotation_Type */
 /**
  * @summary Decodes an ASN.1 element into a(n) dl_administrator_annotation_Type
  * @function
@@ -51,13 +46,9 @@ export function _decode_dl_administrator_annotation_Type(el: _Element) {
     }
     return _cached_decoder_for_dl_administrator_annotation_Type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_dl_administrator_annotation_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_dl_administrator_annotation_Type */
 let _cached_encoder_for_dl_administrator_annotation_Type: $.ASN1Encoder<dl_administrator_annotation_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_dl_administrator_annotation_Type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_dl_administrator_annotation_Type */
 /**
  * @summary Encodes a(n) dl_administrator_annotation_Type into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_dl_administrator_annotation_Type(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_dl_administrator_annotation_Type */
 
 /* eslint-enable */

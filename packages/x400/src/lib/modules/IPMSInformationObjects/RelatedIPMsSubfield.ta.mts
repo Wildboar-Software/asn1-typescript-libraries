@@ -15,7 +15,6 @@ import {
     _decode_IPMIdentifier,
     _encode_IPMIdentifier,
 } from '../IPMSInformationObjects/IPMIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedIPMsSubfield */
 /**
  * @summary RelatedIPMsSubfield
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RelatedIPMsSubfield = IPMIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RelatedIPMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedIPMsSubfield */
 let _cached_decoder_for_RelatedIPMsSubfield: $.ASN1Decoder<RelatedIPMsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedIPMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedIPMsSubfield */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedIPMsSubfield
  * @function
@@ -46,13 +41,9 @@ export function _decode_RelatedIPMsSubfield(el: _Element) {
     }
     return _cached_decoder_for_RelatedIPMsSubfield(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedIPMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedIPMsSubfield */
 let _cached_encoder_for_RelatedIPMsSubfield: $.ASN1Encoder<RelatedIPMsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedIPMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedIPMsSubfield */
 /**
  * @summary Encodes a(n) RelatedIPMsSubfield into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RelatedIPMsSubfield(
     return _cached_encoder_for_RelatedIPMsSubfield(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedIPMsSubfield */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_sha512 */
+
 /**
  * @summary id_sha512
  * @description
@@ -40,6 +40,5 @@ const id_sha512: OBJECT_IDENTIFIER = new _OID([
     /* hashalgs */ 2,
     3,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_sha512 */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _encode_ShakeOutputLen,
 } from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION shake128_len */
 /**
  * @summary shake128_len
  * @description
@@ -34,6 +33,5 @@ export const shake128_len: ALGORITHM<ShakeOutputLen> = {
     "&id": id_shake128_len /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shake128_len */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion */
 /**
  * @summary ExplicitConversion
  * @description
@@ -32,201 +31,152 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ExplicitConversion = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_teletex */
 /**
  * @summary ExplicitConversion_ia5_text_to_teletex
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_ia5_text_to_teletex: ExplicitConversion = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_teletex */
 
-/* START_OF_SYMBOL_DEFINITION ia5_text_to_teletex */
 /**
  * @summary ExplicitConversion_ia5_text_to_teletex
  * @constant
  * @type {number}
  */
 export const ia5_text_to_teletex: ExplicitConversion = ExplicitConversion_ia5_text_to_teletex; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ia5_text_to_teletex */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_g3_facsimile */
 /**
  * @summary ExplicitConversion_ia5_text_to_g3_facsimile
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_ia5_text_to_g3_facsimile: ExplicitConversion = 8; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_g3_facsimile */
 
-/* START_OF_SYMBOL_DEFINITION ia5_text_to_g3_facsimile */
 /**
  * @summary ExplicitConversion_ia5_text_to_g3_facsimile
  * @constant
  * @type {number}
  */
 export const ia5_text_to_g3_facsimile: ExplicitConversion = ExplicitConversion_ia5_text_to_g3_facsimile; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ia5_text_to_g3_facsimile */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_g4_class_1 */
 /**
  * @summary ExplicitConversion_ia5_text_to_g4_class_1
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_ia5_text_to_g4_class_1: ExplicitConversion = 9; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_g4_class_1 */
 
-/* START_OF_SYMBOL_DEFINITION ia5_text_to_g4_class_1 */
 /**
  * @summary ExplicitConversion_ia5_text_to_g4_class_1
  * @constant
  * @type {number}
  */
 export const ia5_text_to_g4_class_1: ExplicitConversion = ExplicitConversion_ia5_text_to_g4_class_1; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ia5_text_to_g4_class_1 */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_videotex */
 /**
  * @summary ExplicitConversion_ia5_text_to_videotex
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_ia5_text_to_videotex: ExplicitConversion = 10; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_ia5_text_to_videotex */
 
-/* START_OF_SYMBOL_DEFINITION ia5_text_to_videotex */
 /**
  * @summary ExplicitConversion_ia5_text_to_videotex
  * @constant
  * @type {number}
  */
 export const ia5_text_to_videotex: ExplicitConversion = ExplicitConversion_ia5_text_to_videotex; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ia5_text_to_videotex */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_ia5_text */
 /**
  * @summary ExplicitConversion_teletex_to_ia5_text
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_teletex_to_ia5_text: ExplicitConversion = 11; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_ia5_text */
 
-/* START_OF_SYMBOL_DEFINITION teletex_to_ia5_text */
 /**
  * @summary ExplicitConversion_teletex_to_ia5_text
  * @constant
  * @type {number}
  */
 export const teletex_to_ia5_text: ExplicitConversion = ExplicitConversion_teletex_to_ia5_text; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION teletex_to_ia5_text */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_g3_facsimile */
 /**
  * @summary ExplicitConversion_teletex_to_g3_facsimile
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_teletex_to_g3_facsimile: ExplicitConversion = 12; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_g3_facsimile */
 
-/* START_OF_SYMBOL_DEFINITION teletex_to_g3_facsimile */
 /**
  * @summary ExplicitConversion_teletex_to_g3_facsimile
  * @constant
  * @type {number}
  */
 export const teletex_to_g3_facsimile: ExplicitConversion = ExplicitConversion_teletex_to_g3_facsimile; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION teletex_to_g3_facsimile */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_g4_class_1 */
 /**
  * @summary ExplicitConversion_teletex_to_g4_class_1
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_teletex_to_g4_class_1: ExplicitConversion = 13; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_g4_class_1 */
 
-/* START_OF_SYMBOL_DEFINITION teletex_to_g4_class_1 */
 /**
  * @summary ExplicitConversion_teletex_to_g4_class_1
  * @constant
  * @type {number}
  */
 export const teletex_to_g4_class_1: ExplicitConversion = ExplicitConversion_teletex_to_g4_class_1; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION teletex_to_g4_class_1 */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_videotex */
 /**
  * @summary ExplicitConversion_teletex_to_videotex
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_teletex_to_videotex: ExplicitConversion = 14; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_teletex_to_videotex */
 
-/* START_OF_SYMBOL_DEFINITION teletex_to_videotex */
 /**
  * @summary ExplicitConversion_teletex_to_videotex
  * @constant
  * @type {number}
  */
 export const teletex_to_videotex: ExplicitConversion = ExplicitConversion_teletex_to_videotex; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION teletex_to_videotex */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_videotex_to_ia5_text */
 /**
  * @summary ExplicitConversion_videotex_to_ia5_text
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_videotex_to_ia5_text: ExplicitConversion = 16; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_videotex_to_ia5_text */
 
-/* START_OF_SYMBOL_DEFINITION videotex_to_ia5_text */
 /**
  * @summary ExplicitConversion_videotex_to_ia5_text
  * @constant
  * @type {number}
  */
 export const videotex_to_ia5_text: ExplicitConversion = ExplicitConversion_videotex_to_ia5_text; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION videotex_to_ia5_text */
 
-/* START_OF_SYMBOL_DEFINITION ExplicitConversion_videotex_to_teletex */
 /**
  * @summary ExplicitConversion_videotex_to_teletex
  * @constant
  * @type {number}
  */
 export const ExplicitConversion_videotex_to_teletex: ExplicitConversion = 17; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ExplicitConversion_videotex_to_teletex */
 
-/* START_OF_SYMBOL_DEFINITION videotex_to_teletex */
 /**
  * @summary ExplicitConversion_videotex_to_teletex
  * @constant
  * @type {number}
  */
 export const videotex_to_teletex: ExplicitConversion = ExplicitConversion_videotex_to_teletex; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION videotex_to_teletex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitConversion */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExplicitConversion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExplicitConversion */
 export const _decode_ExplicitConversion = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ExplicitConversion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitConversion */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExplicitConversion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExplicitConversion */
 export const _encode_ExplicitConversion = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExplicitConversion */
 
 /* eslint-enable */

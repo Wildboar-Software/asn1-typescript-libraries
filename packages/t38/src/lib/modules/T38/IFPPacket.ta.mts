@@ -21,7 +21,7 @@ import {
   _decode_Data_Field,
   _encode_Data_Field,
 } from '../T38/Data-Field.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IFPPacket */
+
 /**
  * @summary IFPPacket
  * @description
@@ -71,9 +71,8 @@ export class IFPPacket {
     return new IFPPacket(_o.type_of_msg, _o.data_field);
   }
 }
-/* END_OF_SYMBOL_DEFINITION IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IFPPacket */
+
 /**
  * @summary The Leading Root Component Types of IFPPacket
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_IFPPacket: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IFPPacket */
+
 /**
  * @summary The Trailing Root Component Types of IFPPacket
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_IFPPacket: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IFPPacket: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IFPPacket */
+
 /**
  * @summary The Extension Addition Component Types of IFPPacket
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_IFPPacket: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_IFPPacket: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IFPPacket */
+
 let _cached_decoder_for_IFPPacket: $.ASN1Decoder<IFPPacket> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IFPPacket */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IFPPacket
  * @function
@@ -168,13 +163,11 @@ export function _decode_IFPPacket(el: _Element) {
   }
   return _cached_decoder_for_IFPPacket(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IFPPacket */
+
 let _cached_encoder_for_IFPPacket: $.ASN1Encoder<IFPPacket> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IFPPacket */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IFPPacket */
+
 /**
  * @summary Encodes a(n) IFPPacket into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_IFPPacket(
   return _cached_encoder_for_IFPPacket(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IFPPacket */
 
 /* eslint-enable */

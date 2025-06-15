@@ -20,7 +20,6 @@ import {
   _decode_CVRequest,
   _encode_CVRequest,
 } from '../SCVP-2009/CVRequest.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RequestReference */
 /**
  * @summary RequestReference
  * @description
@@ -36,13 +35,9 @@ import {
 export type RequestReference =
   | { requestHash: HashValue } /* CHOICE_ALT_ROOT */
   | { fullRequest: CVRequest } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RequestReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestReference */
 let _cached_decoder_for_RequestReference: $.ASN1Decoder<RequestReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestReference
  * @function
@@ -66,13 +61,9 @@ export function _decode_RequestReference(el: _Element) {
   }
   return _cached_decoder_for_RequestReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestReference */
 let _cached_encoder_for_RequestReference: $.ASN1Encoder<RequestReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestReference */
 /**
  * @summary Encodes a(n) RequestReference into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_RequestReference(
   return _cached_encoder_for_RequestReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestReference */
 
 /* eslint-enable */

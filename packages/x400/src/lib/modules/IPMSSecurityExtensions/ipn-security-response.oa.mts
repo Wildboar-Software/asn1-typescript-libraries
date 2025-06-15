@@ -16,7 +16,6 @@ import {
 } from '../IPMSSecurityExtensions/IpnSecurityResponse.ta.mjs';
 import { id_sec_security_common_fields } from '../IPMSObjectIdentifiers/id-sec-security-common-fields.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipn_security_response */
 /**
  * @summary ipn_security_response
  * @description
@@ -45,6 +44,5 @@ export const ipn_security_response: IPMS_EXTENSION<IpnSecurityResponse> = {
     '&id': id_sec_security_common_fields /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipn_security_response */
 
 /* eslint-enable */

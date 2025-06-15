@@ -20,7 +20,6 @@ import {
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectName */
 /**
  * @summary ObjectName
  * @description
@@ -41,13 +40,9 @@ export type ObjectName =
     | {
           message_store: ORAddressAndOptionalDirectoryName;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectName */
 let _cached_decoder_for_ObjectName: $.ASN1Decoder<ObjectName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectName */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectName
  * @function
@@ -77,13 +72,9 @@ export function _decode_ObjectName(el: _Element) {
     }
     return _cached_decoder_for_ObjectName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectName */
 let _cached_encoder_for_ObjectName: $.ASN1Encoder<ObjectName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectName */
 /**
  * @summary Encodes a(n) ObjectName into an ASN.1 Element.
  * @function
@@ -118,6 +109,5 @@ export function _encode_ObjectName(
     return _cached_encoder_for_ObjectName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectName */
 
 /* eslint-enable */

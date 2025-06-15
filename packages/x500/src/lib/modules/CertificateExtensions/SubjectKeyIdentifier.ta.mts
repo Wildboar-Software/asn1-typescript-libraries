@@ -6,7 +6,6 @@ import {
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
 } from "../CertificateExtensions/KeyIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubjectKeyIdentifier */
 /**
  * @summary SubjectKeyIdentifier
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type SubjectKeyIdentifier = KeyIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubjectKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectKeyIdentifier */
 let _cached_decoder_for_SubjectKeyIdentifier: $.ASN1Decoder<SubjectKeyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectKeyIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectKeyIdentifier
  * @function
@@ -37,13 +32,9 @@ export function _decode_SubjectKeyIdentifier(el: _Element) {
     }
     return _cached_decoder_for_SubjectKeyIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectKeyIdentifier */
 let _cached_encoder_for_SubjectKeyIdentifier: $.ASN1Encoder<SubjectKeyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectKeyIdentifier */
 /**
  * @summary Encodes a(n) SubjectKeyIdentifier into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_SubjectKeyIdentifier(
     return _cached_encoder_for_SubjectKeyIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectKeyIdentifier */
 
 /* eslint-enable */

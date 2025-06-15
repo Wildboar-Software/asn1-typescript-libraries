@@ -6,7 +6,7 @@ import {
     _decode_XPathTokensSet,
     _encode_XPathTokensSet,
 } from "../TokenizationManifest/XPathTokensSet.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION xPathTokensManifest */
+
 /**
  * @summary xPathTokensManifest
  * @description
@@ -34,6 +34,5 @@ export const xPathTokensManifest: TOKENIZED<XPathTokensSet> = {
     "&id": id_XPathTokensSet /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION xPathTokensManifest */
 
 /* eslint-enable */

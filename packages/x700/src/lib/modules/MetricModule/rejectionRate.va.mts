@@ -15,7 +15,6 @@ import {
     _encode_SpecificIdentifier,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta.mjs';
 import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs';
-/* START_OF_SYMBOL_DEFINITION rejectionRate */
 /**
  * @summary rejectionRate
  * @description
@@ -31,6 +30,5 @@ import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.mjs'
 export const rejectionRate: SpecificIdentifier = {
     oi: new _OID([3], moaSpecificProblems),
 };
-/* END_OF_SYMBOL_DEFINITION rejectionRate */
 
 /* eslint-enable */

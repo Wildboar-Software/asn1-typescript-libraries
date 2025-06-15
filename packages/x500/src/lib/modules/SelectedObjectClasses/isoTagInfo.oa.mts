@@ -11,7 +11,6 @@ import { tagOid } from "../SelectedAttributeTypes/tagOid.oa.mjs";
 import { uii } from "../SelectedAttributeTypes/uii.oa.mjs";
 import { uiiInUrn } from "../SelectedAttributeTypes/uiiInUrn.oa.mjs";
 import { id_oc_isoTagInfo } from "../SelectedObjectClasses/id-oc-isoTagInfo.va.mjs";
-/* START_OF_SYMBOL_DEFINITION isoTagInfo */
 /**
  * @summary isoTagInfo
  * @description
@@ -53,6 +52,5 @@ export const isoTagInfo: OBJECT_CLASS = {
     "&ldapName": ["isoTagInfo"],
     "&id": id_oc_isoTagInfo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION isoTagInfo */
 
 /* eslint-enable */

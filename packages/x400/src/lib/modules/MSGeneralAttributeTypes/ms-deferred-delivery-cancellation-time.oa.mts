@@ -24,7 +24,6 @@ import { id_att_deferred_delivery_cancellation_time } from '../MSObjectIdentifie
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_deferred_delivery_cancellation_time */
 /**
  * @summary ms_deferred_delivery_cancellation_time
  * @description
@@ -59,6 +58,5 @@ export const ms_deferred_delivery_cancellation_time: X413ATTRIBUTE<DeferredDeliv
     '&id': id_att_deferred_delivery_cancellation_time /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_deferred_delivery_cancellation_time */
 
 /* eslint-enable */

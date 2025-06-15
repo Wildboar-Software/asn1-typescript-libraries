@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_PasswordBasedMac */
+
 /**
  * @summary id_PasswordBasedMac
  * @description
@@ -34,6 +34,5 @@ export const id_PasswordBasedMac: OBJECT_IDENTIFIER = new _OID([
   /* algorithms */ 66,
   13,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_PasswordBasedMac */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION dbEKM */
+
 /**
  * @summary dbEKM
  * @description
@@ -26,6 +26,5 @@ export const dbEKM: OID = new _OID([
     /* techniques */ 2,
     /* dbEKM */ 0,
 ]);
-/* END_OF_SYMBOL_DEFINITION dbEKM */
 
 /* eslint-enable */

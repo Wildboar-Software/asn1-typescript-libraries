@@ -3,7 +3,6 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
 import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION LocaleAttributeSet */
 /**
  * @summary LocaleAttributeSet
  * @description
@@ -25,6 +24,5 @@ export const LocaleAttributeSet: ATTRIBUTE[] = [
     stateOrProvinceName,
     streetAddress,
 ];
-/* END_OF_SYMBOL_DEFINITION LocaleAttributeSet */
 
 /* eslint-enable */

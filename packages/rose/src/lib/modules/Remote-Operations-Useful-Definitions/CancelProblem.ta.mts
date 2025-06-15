@@ -12,15 +12,14 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_CancelProblem */
+
 export enum _enum_for_CancelProblem {
   unknownOperation = 0,
   tooLate = 1,
   operationNotCancellable = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_CancelProblem */
 
-/* START_OF_SYMBOL_DEFINITION CancelProblem */
+
 /**
  * @summary CancelProblem
  * @description
@@ -34,75 +33,64 @@ export enum _enum_for_CancelProblem {
  * ```@enum {number}
  */
 export type CancelProblem = _enum_for_CancelProblem | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION CancelProblem */
 
-/* START_OF_SYMBOL_DEFINITION CancelProblem_unknownOperation */
+
 /**
  * @summary CancelProblem_unknownOperation
  * @constant
  * @type {number}
  */
 export const CancelProblem_unknownOperation: CancelProblem = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CancelProblem_unknownOperation */
 
-/* START_OF_SYMBOL_DEFINITION unknownOperation */
+
 /**
  * @summary unknownOperation
  * @constant
  * @type {number}
  */
 export const unknownOperation: CancelProblem = CancelProblem_unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unknownOperation */
 
-/* START_OF_SYMBOL_DEFINITION CancelProblem_tooLate */
+
 /**
  * @summary CancelProblem_tooLate
  * @constant
  * @type {number}
  */
 export const CancelProblem_tooLate: CancelProblem = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CancelProblem_tooLate */
 
-/* START_OF_SYMBOL_DEFINITION tooLate */
+
 /**
  * @summary tooLate
  * @constant
  * @type {number}
  */
 export const tooLate: CancelProblem = CancelProblem_tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION tooLate */
 
-/* START_OF_SYMBOL_DEFINITION CancelProblem_operationNotCancellable */
+
 /**
  * @summary CancelProblem_operationNotCancellable
  * @constant
  * @type {number}
  */
 export const CancelProblem_operationNotCancellable: CancelProblem = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CancelProblem_operationNotCancellable */
 
-/* START_OF_SYMBOL_DEFINITION operationNotCancellable */
+
 /**
  * @summary operationNotCancellable
  * @constant
  * @type {number}
  */
 export const operationNotCancellable: CancelProblem = CancelProblem_operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION operationNotCancellable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CancelProblem */
+
+
 export const _decode_CancelProblem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_CancelProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CancelProblem */
+
+
 export const _encode_CancelProblem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CancelProblem */
 
 /* eslint-enable */

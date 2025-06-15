@@ -18,7 +18,7 @@ import {
     _decode_NormalValues,
     _encode_NormalValues,
 } from '../E-health-Data-Message/NormalValues.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataMessage */
+
 /**
  * @summary DataMessage
  * @description
@@ -111,9 +111,8 @@ export class DataMessage {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DataMessage */
+
 /**
  * @summary The Leading Root Component Types of DataMessage
  * @description
@@ -166,9 +165,8 @@ export const _root_component_type_list_1_spec_for_DataMessage: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DataMessage */
+
 /**
  * @summary The Trailing Root Component Types of DataMessage
  * @description
@@ -178,9 +176,8 @@ export const _root_component_type_list_1_spec_for_DataMessage: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DataMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DataMessage */
+
 /**
  * @summary The Extension Addition Component Types of DataMessage
  * @description
@@ -190,13 +187,11 @@ export const _root_component_type_list_2_spec_for_DataMessage: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_DataMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataMessage */
+
 let _cached_decoder_for_DataMessage: $.ASN1Decoder<DataMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataMessage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DataMessage
  * @function
@@ -260,13 +255,11 @@ export function _decode_DataMessage(el: _Element) {
     }
     return _cached_decoder_for_DataMessage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataMessage */
+
 let _cached_encoder_for_DataMessage: $.ASN1Encoder<DataMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataMessage */
+
 /**
  * @summary Encodes a(n) DataMessage into an ASN.1 Element.
  * @function
@@ -322,6 +315,5 @@ export function _encode_DataMessage(
     return _cached_encoder_for_DataMessage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataMessage */
 
 /* eslint-enable */

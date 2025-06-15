@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_at_collectivePhysicalDeliveryOfficeName */
 /**
  * @summary id_at_collectivePhysicalDeliveryOfficeName
  * @description
@@ -19,6 +18,5 @@ export const id_at_collectivePhysicalDeliveryOfficeName: OBJECT_IDENTIFIER = new
     [19, 1],
     id_at
 );
-/* END_OF_SYMBOL_DEFINITION id_at_collectivePhysicalDeliveryOfficeName */
 
 /* eslint-enable */

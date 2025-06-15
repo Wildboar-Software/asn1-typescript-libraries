@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION Content */
+
 /**
  * @summary Content
  * @description
@@ -92,9 +92,8 @@ class Content {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION Content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Content */
+
 /**
  * @summary The Leading Root Component Types of Content
  * @description
@@ -112,9 +111,8 @@ const _root_component_type_list_1_spec_for_Content: $.ComponentSpec[] = [
     new $.ComponentSpec("rAND-AC-3", false, $.hasTag(_TagClass.context, 4), undefined, undefined),
     new $.ComponentSpec("kPK", false, $.hasTag(_TagClass.context, 5), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Content */
+
 /**
  * @summary The Trailing Root Component Types of Content
  * @description
@@ -127,9 +125,8 @@ export
 const _root_component_type_list_2_spec_for_Content: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Content */
+
 /**
  * @summary The Extension Addition Component Types of Content
  * @description
@@ -142,13 +139,11 @@ export
 const _extension_additions_list_spec_for_Content: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Content */
+
 let _cached_decoder_for_Content: $.ASN1Decoder<Content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Content
  * @function
@@ -192,13 +187,11 @@ function _decode_Content (el: _Element) {
 }; }
     return _cached_decoder_for_Content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Content */
+
 let _cached_encoder_for_Content: $.ASN1Encoder<Content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Content */
+
 /**
  * @summary Encodes a(n) Content into an ASN.1 Element.
  * @function
@@ -223,6 +216,5 @@ function _encode_Content (value: Content, elGetter: $.ASN1Encoder<Content>) {
     return _cached_encoder_for_Content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Content */
 
 /* eslint-enable */

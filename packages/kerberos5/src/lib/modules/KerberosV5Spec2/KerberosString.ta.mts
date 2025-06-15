@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION KerberosString */
+
 /**
  * @summary KerberosString
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type KerberosString = GeneralString; // GeneralString
-/* END_OF_SYMBOL_DEFINITION KerberosString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KerberosString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KerberosString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KerberosString */
+
+
 export const _decode_KerberosString = $._decodeGeneralString;
-/* END_OF_SYMBOL_DEFINITION _decode_KerberosString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KerberosString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KerberosString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KerberosString */
+
+
 export const _encode_KerberosString = $._encodeGeneralString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_KerberosString */
 
 /* eslint-enable */

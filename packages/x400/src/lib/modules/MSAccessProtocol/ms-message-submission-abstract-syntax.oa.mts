@@ -16,7 +16,6 @@ import {
     _encode_MSMessageSubmissionPDUs,
 } from '../MSAccessProtocol/MSMessageSubmissionPDUs.ta.mjs';
 import { id_as_ms_msse } from '../MHSProtocolObjectIdentifiers/id-as-ms-msse.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_message_submission_abstract_syntax */
 /**
  * @summary ms_message_submission_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const ms_message_submission_abstract_syntax: ABSTRACT_SYNTAX<MSMessageSub
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION ms_message_submission_abstract_syntax */
 
 /* eslint-enable */

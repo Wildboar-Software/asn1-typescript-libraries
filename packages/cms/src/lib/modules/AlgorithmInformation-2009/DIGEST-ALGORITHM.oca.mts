@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DIGEST_ALGORITHM */
+
 /**
  * @summary DIGEST_ALGORITHM
  * @description
@@ -64,6 +64,5 @@ export interface DIGEST_ALGORITHM<
      */
     readonly "&paramPresence"?: ParamOptions;
 }
-/* END_OF_SYMBOL_DEFINITION DIGEST_ALGORITHM */
 
 /* eslint-enable */

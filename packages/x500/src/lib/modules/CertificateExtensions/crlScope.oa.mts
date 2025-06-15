@@ -6,7 +6,6 @@ import {
     _encode_CRLScopeSyntax,
 } from "../CertificateExtensions/CRLScopeSyntax.ta.mjs";
 import { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va.mjs";
-/* START_OF_SYMBOL_DEFINITION crlScope */
 /**
  * @summary crlScope
  * @description
@@ -34,6 +33,5 @@ export const crlScope: EXTENSION<CRLScopeSyntax> = {
     "&id": id_ce_cRLScope /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION crlScope */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
 import { invalid_assembly_instructions } from '../EDIMSInformationObjects/invalid-assembly-instructions.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION EDISubmissionErrors */
 /**
  * @summary EDISubmissionErrors
  * @description
@@ -29,6 +28,5 @@ import { invalid_assembly_instructions } from '../EDIMSInformationObjects/invali
 export const EDISubmissionErrors: EDIM_EXTENSION[] = [
     invalid_assembly_instructions,
 ];
-/* END_OF_SYMBOL_DEFINITION EDISubmissionErrors */
 
 /* eslint-enable */

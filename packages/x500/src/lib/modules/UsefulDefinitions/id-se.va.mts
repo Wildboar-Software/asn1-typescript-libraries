@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { securityExchange } from "../UsefulDefinitions/securityExchange.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_se */
 /**
  * @summary id_se
  * @description
@@ -15,6 +14,5 @@ import { securityExchange } from "../UsefulDefinitions/securityExchange.va.mjs";
  * @constant
  */
 export const id_se: ID = securityExchange;
-/* END_OF_SYMBOL_DEFINITION id_se */
 
 /* eslint-enable */

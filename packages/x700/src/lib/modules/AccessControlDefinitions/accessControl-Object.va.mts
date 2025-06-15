@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION accessControl_Object */
 /**
  * @summary accessControl_Object
  * @description
@@ -31,6 +30,5 @@ export const accessControl_Object: OBJECT_IDENTIFIER = new _OID([
     /* part9 */ 9,
     /* managedObjectClass */ 3,
 ]);
-/* END_OF_SYMBOL_DEFINITION accessControl_Object */
 
 /* eslint-enable */

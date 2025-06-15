@@ -22,7 +22,6 @@ import { id_rat_recipient_extensions_for_this_recipient } from '../EDIMSObjectId
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION recipient_extensions_for_this_recipient */
 /**
  * @summary recipient_extensions_for_this_recipient
  * @description
@@ -55,6 +54,5 @@ export const recipient_extensions_for_this_recipient: X413ATTRIBUTE<RecipientExt
     '&id': id_rat_recipient_extensions_for_this_recipient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipient_extensions_for_this_recipient */
 
 /* eslint-enable */

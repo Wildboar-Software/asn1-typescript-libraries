@@ -16,7 +16,6 @@ import {
     _decode_User_Identity,
     _encode_User_Identity,
 } from '../IPMSFileTransferBodyPartType/User-Identity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION User_Identity_Attribute */
 /**
  * @summary User_Identity_Attribute
  * @description
@@ -34,13 +33,9 @@ import {
 export type User_Identity_Attribute =
     | { no_value_available: NULL } /* CHOICE_ALT_ROOT */
     | { actual_values: User_Identity } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION User_Identity_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity_Attribute */
 let _cached_decoder_for_User_Identity_Attribute: $.ASN1Decoder<User_Identity_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_Identity_Attribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) User_Identity_Attribute
  * @function
@@ -61,13 +56,9 @@ export function _decode_User_Identity_Attribute(el: _Element) {
     }
     return _cached_decoder_for_User_Identity_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_User_Identity_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity_Attribute */
 let _cached_encoder_for_User_Identity_Attribute: $.ASN1Encoder<User_Identity_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_Identity_Attribute */
 /**
  * @summary Encodes a(n) User_Identity_Attribute into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_User_Identity_Attribute(
     return _cached_encoder_for_User_Identity_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_Identity_Attribute */
 
 /* eslint-enable */

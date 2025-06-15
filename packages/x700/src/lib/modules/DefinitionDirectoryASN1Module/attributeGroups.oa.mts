@@ -22,7 +22,6 @@ import {
     _encode_AttributeGroups,
 } from '../DefinitionASN1Module/AttributeGroups.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION attributeGroups */
 /**
  * @summary attributeGroups
  * @description
@@ -64,6 +63,5 @@ export const attributeGroups: ATTRIBUTE<AttributeGroups> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeGroups */
 
 /* eslint-enable */

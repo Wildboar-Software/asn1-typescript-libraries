@@ -20,7 +20,7 @@ import {
     _decode_Connected,
     _encode_Connected,
 } from '../ASN1DefinedTypesModule/Connected.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IndividualResult */
+
 /**
  * @summary IndividualResult
  * @description
@@ -36,13 +36,11 @@ import {
 export type IndividualResult =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { pass: Connected } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION IndividualResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IndividualResult */
+
 let _cached_decoder_for_IndividualResult: $.ASN1Decoder<IndividualResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IndividualResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IndividualResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IndividualResult
  * @function
@@ -66,13 +64,11 @@ export function _decode_IndividualResult(el: _Element) {
     }
     return _cached_decoder_for_IndividualResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IndividualResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IndividualResult */
+
 let _cached_encoder_for_IndividualResult: $.ASN1Encoder<IndividualResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IndividualResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IndividualResult */
+
 /**
  * @summary Encodes a(n) IndividualResult into an ASN.1 Element.
  * @function
@@ -106,6 +102,5 @@ export function _encode_IndividualResult(
     return _cached_encoder_for_IndividualResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IndividualResult */
 
 /* eslint-enable */

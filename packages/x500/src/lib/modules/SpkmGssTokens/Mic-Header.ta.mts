@@ -21,7 +21,6 @@ import {
     _decode_SeqNum,
     _encode_SeqNum,
 } from "../SpkmGssTokens/SeqNum.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Mic_Header */
 /**
  * @summary Mic_Header
  * @description
@@ -85,9 +84,7 @@ export class Mic_Header {
         return new Mic_Header(_o.tok_id, _o.context_id, _o.int_alg, _o.snd_seq);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Mic_Header */
 /**
  * @summary The Leading Root Component Types of Mic_Header
  * @description
@@ -126,9 +123,7 @@ export const _root_component_type_list_1_spec_for_Mic_Header: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Mic_Header */
 /**
  * @summary The Trailing Root Component Types of Mic_Header
  * @description
@@ -138,9 +133,7 @@ export const _root_component_type_list_1_spec_for_Mic_Header: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Mic_Header: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Mic_Header */
 /**
  * @summary The Extension Addition Component Types of Mic_Header
  * @description
@@ -150,13 +143,9 @@ export const _root_component_type_list_2_spec_for_Mic_Header: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_Mic_Header: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Mic_Header */
 let _cached_decoder_for_Mic_Header: $.ASN1Decoder<Mic_Header> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Mic_Header */
 /**
  * @summary Decodes an ASN.1 element into a(n) Mic_Header
  * @function
@@ -210,13 +199,9 @@ export function _decode_Mic_Header(el: _Element) {
     }
     return _cached_decoder_for_Mic_Header(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Mic_Header */
 let _cached_encoder_for_Mic_Header: $.ASN1Encoder<Mic_Header> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Mic_Header */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Mic_Header */
 /**
  * @summary Encodes a(n) Mic_Header into an ASN.1 Element.
  * @function
@@ -264,6 +249,5 @@ export function _encode_Mic_Header(
     return _cached_encoder_for_Mic_Header(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Mic_Header */
 
 /* eslint-enable */

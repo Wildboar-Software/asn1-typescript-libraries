@@ -8,7 +8,6 @@ import { tagAfi } from "../SelectedAttributeTypes/tagAfi.oa.mjs";
 import { tagOid } from "../SelectedAttributeTypes/tagOid.oa.mjs";
 import { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa.mjs";
 import { id_oc_isoTagType } from "../SelectedObjectClasses/id-oc-isoTagType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION isoTagType */
 /**
  * @summary isoTagType
  * @description
@@ -44,6 +43,5 @@ export const isoTagType: OBJECT_CLASS = {
     "&ldapName": ["isoTagType"],
     "&id": id_oc_isoTagType /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION isoTagType */
 
 /* eslint-enable */

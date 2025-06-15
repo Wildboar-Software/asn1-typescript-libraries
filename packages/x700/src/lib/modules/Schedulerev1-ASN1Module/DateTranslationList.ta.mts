@@ -15,7 +15,6 @@ import {
     _decode_DateTranslationList_Item,
     _encode_DateTranslationList_Item,
 } from '../Schedulerev1-ASN1Module/DateTranslationList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DateTranslationList */
 /**
  * @summary DateTranslationList
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type DateTranslationList = DateTranslationList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION DateTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DateTranslationList */
 let _cached_decoder_for_DateTranslationList: $.ASN1Decoder<DateTranslationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DateTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DateTranslationList */
 /**
  * @summary Decodes an ASN.1 element into a(n) DateTranslationList
  * @function
@@ -50,13 +45,9 @@ export function _decode_DateTranslationList(el: _Element) {
     }
     return _cached_decoder_for_DateTranslationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DateTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DateTranslationList */
 let _cached_encoder_for_DateTranslationList: $.ASN1Encoder<DateTranslationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DateTranslationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DateTranslationList */
 /**
  * @summary Encodes a(n) DateTranslationList into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_DateTranslationList(
     return _cached_encoder_for_DateTranslationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DateTranslationList */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../PKCS7/ENCRYPTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptedDigest */
+
 /**
  * @summary EncryptedDigest
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type EncryptedDigest = ENCRYPTED<DigestInfo>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EncryptedDigest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedDigest */
+
 let _cached_decoder_for_EncryptedDigest: $.ASN1Decoder<EncryptedDigest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedDigest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedDigest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedDigest
  * @function
@@ -44,13 +42,11 @@ export function _decode_EncryptedDigest(el: _Element) {
     }
     return _cached_decoder_for_EncryptedDigest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedDigest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedDigest */
+
 let _cached_encoder_for_EncryptedDigest: $.ASN1Encoder<EncryptedDigest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedDigest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedDigest */
+
 /**
  * @summary Encodes a(n) EncryptedDigest into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_EncryptedDigest(
     return _cached_encoder_for_EncryptedDigest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedDigest */
 
 /* eslint-enable */

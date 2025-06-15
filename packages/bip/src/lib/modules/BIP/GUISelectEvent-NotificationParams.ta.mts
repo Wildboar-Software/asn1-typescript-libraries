@@ -59,7 +59,7 @@ import {
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
 } from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUISelectEvent_NotificationParams */
+
 /**
  * @summary GUISelectEvent_NotificationParams
  * @description
@@ -209,9 +209,8 @@ export class GUISelectEvent_NotificationParams {
 
   public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
 }
-/* END_OF_SYMBOL_DEFINITION GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUISelectEvent_NotificationParams */
+
 /**
  * @summary The Leading Root Component Types of GUISelectEvent_NotificationParams
  * @description
@@ -306,9 +305,8 @@ export const _root_component_type_list_1_spec_for_GUISelectEvent_NotificationPar
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUISelectEvent_NotificationParams */
+
 /**
  * @summary The Trailing Root Component Types of GUISelectEvent_NotificationParams
  * @description
@@ -318,9 +316,8 @@ export const _root_component_type_list_1_spec_for_GUISelectEvent_NotificationPar
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUISelectEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUISelectEvent_NotificationParams */
+
 /**
  * @summary The Extension Addition Component Types of GUISelectEvent_NotificationParams
  * @description
@@ -330,13 +327,11 @@ export const _root_component_type_list_2_spec_for_GUISelectEvent_NotificationPar
  * @constant
  */
 export const _extension_additions_list_spec_for_GUISelectEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUISelectEvent_NotificationParams */
+
 let _cached_decoder_for_GUISelectEvent_NotificationParams: $.ASN1Decoder<GUISelectEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUISelectEvent_NotificationParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUISelectEvent_NotificationParams
  * @function
@@ -428,13 +423,11 @@ export function _decode_GUISelectEvent_NotificationParams(el: _Element) {
   }
   return _cached_decoder_for_GUISelectEvent_NotificationParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUISelectEvent_NotificationParams */
+
 let _cached_encoder_for_GUISelectEvent_NotificationParams: $.ASN1Encoder<GUISelectEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUISelectEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUISelectEvent_NotificationParams */
+
 /**
  * @summary Encodes a(n) GUISelectEvent_NotificationParams into an ASN.1 Element.
  * @function
@@ -494,6 +487,5 @@ export function _encode_GUISelectEvent_NotificationParams(
   return _cached_encoder_for_GUISelectEvent_NotificationParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUISelectEvent_NotificationParams */
 
 /* eslint-enable */

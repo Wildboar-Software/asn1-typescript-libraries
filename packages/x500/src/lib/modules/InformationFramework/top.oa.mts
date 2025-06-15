@@ -5,7 +5,6 @@ import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION top */
 /**
  * @summary top
  * @description
@@ -33,6 +32,5 @@ export const top: OBJECT_CLASS = {
     "&ldapName": ["top"],
     "&id": id_oc_top /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION top */
 
 /* eslint-enable */

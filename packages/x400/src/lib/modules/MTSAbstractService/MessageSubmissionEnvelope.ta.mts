@@ -68,7 +68,6 @@ import {
     _extension_additions_list_spec_for_PerMessageSubmissionFields,
 } from '../MTSAbstractService/PerMessageSubmissionFields.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MessageSubmissionEnvelope */
 /**
  * @summary MessageSubmissionEnvelope
  * @description
@@ -204,9 +203,7 @@ export class MessageSubmissionEnvelope implements PerMessageSubmissionFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageSubmissionEnvelope */
 /**
  * @summary The Leading Root Component Types of MessageSubmissionEnvelope
  * @description
@@ -225,9 +222,7 @@ export const _root_component_type_list_1_spec_for_MessageSubmissionEnvelope: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageSubmissionEnvelope */
 /**
  * @summary The Trailing Root Component Types of MessageSubmissionEnvelope
  * @description
@@ -239,9 +234,7 @@ export const _root_component_type_list_1_spec_for_MessageSubmissionEnvelope: $.C
 export const _root_component_type_list_2_spec_for_MessageSubmissionEnvelope: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_PerMessageSubmissionFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageSubmissionEnvelope */
 /**
  * @summary The Extension Addition Component Types of MessageSubmissionEnvelope
  * @description
@@ -253,13 +246,9 @@ export const _root_component_type_list_2_spec_for_MessageSubmissionEnvelope: $.C
 export const _extension_additions_list_spec_for_MessageSubmissionEnvelope: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_PerMessageSubmissionFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSubmissionEnvelope */
 let _cached_decoder_for_MessageSubmissionEnvelope: $.ASN1Decoder<MessageSubmissionEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageSubmissionEnvelope */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSubmissionEnvelope
  * @function
@@ -353,13 +342,9 @@ export function _decode_MessageSubmissionEnvelope(el: _Element) {
     }
     return _cached_decoder_for_MessageSubmissionEnvelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSubmissionEnvelope */
 let _cached_encoder_for_MessageSubmissionEnvelope: $.ASN1Encoder<MessageSubmissionEnvelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSubmissionEnvelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageSubmissionEnvelope */
 /**
  * @summary Encodes a(n) MessageSubmissionEnvelope into an ASN.1 Element.
  * @function
@@ -461,6 +446,5 @@ export function _encode_MessageSubmissionEnvelope(
     return _cached_encoder_for_MessageSubmissionEnvelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageSubmissionEnvelope */
 
 /* eslint-enable */

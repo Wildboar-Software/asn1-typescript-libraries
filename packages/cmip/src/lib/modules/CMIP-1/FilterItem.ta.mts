@@ -25,7 +25,7 @@ import {
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FilterItem */
+
 /**
  * @summary FilterItem
  * @description
@@ -58,13 +58,11 @@ export type FilterItem =
   | { subsetOf: Attribute } /* CHOICE_ALT_ROOT */
   | { supersetOf: Attribute } /* CHOICE_ALT_ROOT */
   | { nonNullSetIntersection: Attribute } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FilterItem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterItem */
+
 let _cached_decoder_for_FilterItem: $.ASN1Decoder<FilterItem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterItem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FilterItem */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FilterItem
  * @function
@@ -114,13 +112,11 @@ export function _decode_FilterItem(el: _Element) {
   }
   return _cached_decoder_for_FilterItem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FilterItem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterItem */
+
 let _cached_encoder_for_FilterItem: $.ASN1Encoder<FilterItem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterItem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FilterItem */
+
 /**
  * @summary Encodes a(n) FilterItem into an ASN.1 Element.
  * @function
@@ -194,6 +190,5 @@ export function _encode_FilterItem(
   return _cached_encoder_for_FilterItem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FilterItem */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION ResultAttribute_outputValues */
 /**
  * @summary ResultAttribute_outputValues
  * @description
@@ -15,13 +14,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type ResultAttribute_outputValues =
     | { selectedValues: _Element[] } /* CHOICE_ALT_ROOT */
     | { matchedValuesOnly: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ResultAttribute_outputValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultAttribute_outputValues */
 let _cached_decoder_for_ResultAttribute_outputValues: $.ASN1Decoder<ResultAttribute_outputValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultAttribute_outputValues */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResultAttribute_outputValues */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResultAttribute_outputValues
  * @function
@@ -42,13 +37,9 @@ export function _decode_ResultAttribute_outputValues(el: _Element) {
     }
     return _cached_decoder_for_ResultAttribute_outputValues(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResultAttribute_outputValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultAttribute_outputValues */
 let _cached_encoder_for_ResultAttribute_outputValues: $.ASN1Encoder<ResultAttribute_outputValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultAttribute_outputValues */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResultAttribute_outputValues */
 /**
  * @summary Encodes a(n) ResultAttribute_outputValues into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ResultAttribute_outputValues(
     return _cached_encoder_for_ResultAttribute_outputValues(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResultAttribute_outputValues */
 
 /* eslint-enable */

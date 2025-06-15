@@ -15,7 +15,6 @@ import {
     _decode_NameBinding,
     _encode_NameBinding,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NameBinding.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SupportedNameBindingList */
 /**
  * @summary SupportedNameBindingList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SupportedNameBindingList = NameBinding[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedNameBindingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedNameBindingList */
 let _cached_decoder_for_SupportedNameBindingList: $.ASN1Decoder<SupportedNameBindingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedNameBindingList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedNameBindingList */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedNameBindingList
  * @function
@@ -48,13 +43,9 @@ export function _decode_SupportedNameBindingList(el: _Element) {
     }
     return _cached_decoder_for_SupportedNameBindingList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedNameBindingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedNameBindingList */
 let _cached_encoder_for_SupportedNameBindingList: $.ASN1Encoder<SupportedNameBindingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedNameBindingList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedNameBindingList */
 /**
  * @summary Encodes a(n) SupportedNameBindingList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SupportedNameBindingList(
     return _cached_encoder_for_SupportedNameBindingList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedNameBindingList */
 
 /* eslint-enable */

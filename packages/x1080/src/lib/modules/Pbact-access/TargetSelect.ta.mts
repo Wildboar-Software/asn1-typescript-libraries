@@ -21,7 +21,7 @@ import {
     _decode_AttributeSel,
     _encode_AttributeSel,
 } from '../Pbact-access/AttributeSel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TargetSelect */
+
 /**
  * @summary TargetSelect
  * @description
@@ -83,9 +83,8 @@ export class TargetSelect {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TargetSelect */
+
 /**
  * @summary The Leading Root Component Types of TargetSelect
  * @description
@@ -110,9 +109,8 @@ export const _root_component_type_list_1_spec_for_TargetSelect: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TargetSelect */
+
 /**
  * @summary The Trailing Root Component Types of TargetSelect
  * @description
@@ -122,9 +120,8 @@ export const _root_component_type_list_1_spec_for_TargetSelect: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TargetSelect: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TargetSelect */
+
 /**
  * @summary The Extension Addition Component Types of TargetSelect
  * @description
@@ -134,13 +131,11 @@ export const _root_component_type_list_2_spec_for_TargetSelect: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_TargetSelect: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TargetSelect */
+
 let _cached_decoder_for_TargetSelect: $.ASN1Decoder<TargetSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TargetSelect */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TargetSelect
  * @function
@@ -186,13 +181,11 @@ export function _decode_TargetSelect(el: _Element) {
     }
     return _cached_decoder_for_TargetSelect(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TargetSelect */
+
 let _cached_encoder_for_TargetSelect: $.ASN1Encoder<TargetSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TargetSelect */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TargetSelect */
+
 /**
  * @summary Encodes a(n) TargetSelect into an ASN.1 Element.
  * @function
@@ -233,6 +226,5 @@ export function _encode_TargetSelect(
     return _cached_encoder_for_TargetSelect(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TargetSelect */
 
 /* eslint-enable */

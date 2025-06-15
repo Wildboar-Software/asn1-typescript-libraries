@@ -15,7 +15,6 @@ import {
     _decode_TCMessage,
     _encode_TCMessage,
 } from '../TCAPMessages/TCMessage.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCSupplierAS */
 /**
  * @summary TCSupplierAS
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type TCSupplierAS = TCMessage; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TCSupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCSupplierAS */
 let _cached_decoder_for_TCSupplierAS: $.ASN1Decoder<TCSupplierAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCSupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCSupplierAS */
 /**
  * @summary Decodes an ASN.1 element into a(n) TCSupplierAS
  * @function
@@ -47,13 +42,9 @@ export function _decode_TCSupplierAS(el: _Element) {
     }
     return _cached_decoder_for_TCSupplierAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCSupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCSupplierAS */
 let _cached_encoder_for_TCSupplierAS: $.ASN1Encoder<TCSupplierAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCSupplierAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCSupplierAS */
 /**
  * @summary Encodes a(n) TCSupplierAS into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_TCSupplierAS(
     return _cached_encoder_for_TCSupplierAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCSupplierAS */
 
 /* eslint-enable */

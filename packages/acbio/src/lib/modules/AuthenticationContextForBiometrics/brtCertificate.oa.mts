@@ -19,7 +19,7 @@ import type {
     CONTENT_TYPE,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION brtCertificate */
+
 /**
  * @summary brtCertificate
  * @description
@@ -47,6 +47,5 @@ export const brtCertificate: CONTENT_TYPE<BRTCertificate> = {
     '&id': id_brtCertificate /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION brtCertificate */
 
 /* eslint-enable */

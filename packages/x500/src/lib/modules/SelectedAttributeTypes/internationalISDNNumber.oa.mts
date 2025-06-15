@@ -12,7 +12,6 @@ import {
 import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
 import { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
 import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION internationalISDNNumber */
 /**
  * @summary internationalISDNNumber
  * @description
@@ -54,6 +53,5 @@ export const internationalISDNNumber: ATTRIBUTE<InternationalISDNNumber> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION internationalISDNNumber */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ORAddressSubtreeNames */
 /**
  * @summary ORAddressSubtreeNames
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ORAddressSubtreeNames = DistinguishedName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ORAddressSubtreeNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddressSubtreeNames */
 let _cached_decoder_for_ORAddressSubtreeNames: $.ASN1Decoder<ORAddressSubtreeNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddressSubtreeNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORAddressSubtreeNames */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddressSubtreeNames
  * @function
@@ -48,13 +43,9 @@ export function _decode_ORAddressSubtreeNames(el: _Element) {
     }
     return _cached_decoder_for_ORAddressSubtreeNames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORAddressSubtreeNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddressSubtreeNames */
 let _cached_encoder_for_ORAddressSubtreeNames: $.ASN1Encoder<ORAddressSubtreeNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddressSubtreeNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORAddressSubtreeNames */
 /**
  * @summary Encodes a(n) ORAddressSubtreeNames into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ORAddressSubtreeNames(
     return _cached_encoder_for_ORAddressSubtreeNames(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORAddressSubtreeNames */
 
 /* eslint-enable */

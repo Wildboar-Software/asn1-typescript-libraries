@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CommandSequencerId */
 /**
  * @summary CommandSequencerId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CommandSequencerId = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CommandSequencerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommandSequencerId */
 let _cached_decoder_for_CommandSequencerId: $.ASN1Decoder<CommandSequencerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommandSequencerId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommandSequencerId */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommandSequencerId
  * @function
@@ -46,13 +41,9 @@ export function _decode_CommandSequencerId(el: _Element) {
     }
     return _cached_decoder_for_CommandSequencerId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommandSequencerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommandSequencerId */
 let _cached_encoder_for_CommandSequencerId: $.ASN1Encoder<CommandSequencerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommandSequencerId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommandSequencerId */
 /**
  * @summary Encodes a(n) CommandSequencerId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CommandSequencerId(
     return _cached_encoder_for_CommandSequencerId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommandSequencerId */
 
 /* eslint-enable */

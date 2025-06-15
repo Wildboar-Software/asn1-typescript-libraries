@@ -6,7 +6,6 @@ import {
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
 } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION deliveryMethod */
 /**
  * @summary deliveryMethod
  * @description
@@ -36,6 +35,5 @@ export const deliveryMethod: SYNTAX_NAME<PreferredDeliveryMethod> = {
     "&id": id_lsx_deliveryMethod /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION deliveryMethod */
 
 /* eslint-enable */

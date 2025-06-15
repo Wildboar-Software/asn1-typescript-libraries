@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION BuiltInDomainDefinedAttribute */
 /**
  * @summary BuiltInDomainDefinedAttribute
  * @description
@@ -60,9 +59,7 @@ export class BuiltInDomainDefinedAttribute {
         return new BuiltInDomainDefinedAttribute(_o.type_, _o.value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION BuiltInDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute */
 /**
  * @summary The Leading Root Component Types of BuiltInDomainDefinedAttribute
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute:
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute */
 /**
  * @summary The Trailing Root Component Types of BuiltInDomainDefinedAttribute
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute:
  */
 export const _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute */
 /**
  * @summary The Extension Addition Component Types of BuiltInDomainDefinedAttribute
  * @description
@@ -114,9 +107,7 @@ export const _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute:
  */
 export const _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) BuiltInDomainDefinedAttribute
  * @function
@@ -140,9 +131,7 @@ export function _decode_BuiltInDomainDefinedAttribute(el: _Element) {
     value = $._decodePrintableString(sequence[1]);
     return new BuiltInDomainDefinedAttribute(type_, value);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttribute */
 /**
  * @summary Encodes a(n) BuiltInDomainDefinedAttribute into an ASN.1 Element.
  * @function
@@ -159,6 +148,5 @@ export function _encode_BuiltInDomainDefinedAttribute(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttribute */
 
 /* eslint-enable */

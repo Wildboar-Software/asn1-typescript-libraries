@@ -21,7 +21,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddTpsToTpPoolInformation_Item */
+
 /**
  * @summary AddTpsToTpPoolInformation_Item
  * @description
@@ -70,9 +70,8 @@ export class AddTpsToTpPoolInformation_Item {
         return new AddTpsToTpPoolInformation_Item(_o.tps, _o.toTpPool);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddTpsToTpPoolInformation_Item */
+
 /**
  * @summary The Leading Root Component Types of AddTpsToTpPoolInformation_Item
  * @description
@@ -91,9 +90,8 @@ export const _root_component_type_list_1_spec_for_AddTpsToTpPoolInformation_Item
     ),
     new $.ComponentSpec('toTpPool', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddTpsToTpPoolInformation_Item */
+
 /**
  * @summary The Trailing Root Component Types of AddTpsToTpPoolInformation_Item
  * @description
@@ -103,9 +101,8 @@ export const _root_component_type_list_1_spec_for_AddTpsToTpPoolInformation_Item
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddTpsToTpPoolInformation_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddTpsToTpPoolInformation_Item */
+
 /**
  * @summary The Extension Addition Component Types of AddTpsToTpPoolInformation_Item
  * @description
@@ -115,13 +112,11 @@ export const _root_component_type_list_2_spec_for_AddTpsToTpPoolInformation_Item
  * @constant
  */
 export const _extension_additions_list_spec_for_AddTpsToTpPoolInformation_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToTpPoolInformation_Item */
+
 let _cached_decoder_for_AddTpsToTpPoolInformation_Item: $.ASN1Decoder<AddTpsToTpPoolInformation_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddTpsToTpPoolInformation_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddTpsToTpPoolInformation_Item
  * @function
@@ -165,13 +160,11 @@ export function _decode_AddTpsToTpPoolInformation_Item(el: _Element) {
     }
     return _cached_decoder_for_AddTpsToTpPoolInformation_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToTpPoolInformation_Item */
+
 let _cached_encoder_for_AddTpsToTpPoolInformation_Item: $.ASN1Encoder<AddTpsToTpPoolInformation_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToTpPoolInformation_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddTpsToTpPoolInformation_Item */
+
 /**
  * @summary Encodes a(n) AddTpsToTpPoolInformation_Item into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_AddTpsToTpPoolInformation_Item(
     return _cached_encoder_for_AddTpsToTpPoolInformation_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddTpsToTpPoolInformation_Item */
 
 /* eslint-enable */

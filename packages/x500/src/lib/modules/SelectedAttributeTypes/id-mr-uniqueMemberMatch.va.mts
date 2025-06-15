@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mr_uniqueMemberMatch */
 /**
  * @summary id_mr_uniqueMemberMatch
  * @description
@@ -15,6 +14,5 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  * @constant
  */
 export const id_mr_uniqueMemberMatch: OBJECT_IDENTIFIER = new _OID([23], id_mr);
-/* END_OF_SYMBOL_DEFINITION id_mr_uniqueMemberMatch */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_Integer,
     _encode_Integer,
 } from '../SDHProtASN1/Integer.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SDHMSPriority */
+
 /**
  * @summary SDHMSPriority
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SDHMSPriority = Integer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SDHMSPriority */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SDHMSPriority */
+
 let _cached_decoder_for_SDHMSPriority: $.ASN1Decoder<SDHMSPriority> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SDHMSPriority */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SDHMSPriority */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SDHMSPriority
  * @function
@@ -46,13 +44,11 @@ export function _decode_SDHMSPriority(el: _Element) {
     }
     return _cached_decoder_for_SDHMSPriority(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SDHMSPriority */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SDHMSPriority */
+
 let _cached_encoder_for_SDHMSPriority: $.ASN1Encoder<SDHMSPriority> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SDHMSPriority */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SDHMSPriority */
+
 /**
  * @summary Encodes a(n) SDHMSPriority into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_SDHMSPriority(
     return _cached_encoder_for_SDHMSPriority(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SDHMSPriority */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_SubSchemaSyntax_Item,
     _encode_SubSchemaSyntax_Item,
 } from "../DirectoryManagement/SubSchemaSyntax-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubSchemaSyntax */
 /**
  * @summary SubSchemaSyntax
  * @description
@@ -41,13 +40,9 @@ import {
  * ```
  */
 export type SubSchemaSyntax = SubSchemaSyntax_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SubSchemaSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubSchemaSyntax */
 let _cached_decoder_for_SubSchemaSyntax: $.ASN1Decoder<SubSchemaSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubSchemaSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubSchemaSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubSchemaSyntax
  * @function
@@ -62,13 +57,9 @@ export function _decode_SubSchemaSyntax(el: _Element) {
     }
     return _cached_decoder_for_SubSchemaSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubSchemaSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubSchemaSyntax */
 let _cached_encoder_for_SubSchemaSyntax: $.ASN1Encoder<SubSchemaSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubSchemaSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubSchemaSyntax */
 /**
  * @summary Encodes a(n) SubSchemaSyntax into an ASN.1 Element.
  * @function
@@ -89,6 +80,5 @@ export function _encode_SubSchemaSyntax(
     return _cached_encoder_for_SubSchemaSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubSchemaSyntax */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
 } from "../SIOsAccessControl-MODULE/SIGNED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityPolicyInformationFile */
+
 /**
  * @summary SecurityPolicyInformationFile
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type SecurityPolicyInformationFile = SIGNED<EncodedSPIF>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SecurityPolicyInformationFile */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityPolicyInformationFile */
+
 let _cached_decoder_for_SecurityPolicyInformationFile: $.ASN1Decoder<SecurityPolicyInformationFile> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityPolicyInformationFile */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityPolicyInformationFile */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityPolicyInformationFile
  * @function
@@ -44,13 +42,11 @@ export function _decode_SecurityPolicyInformationFile(el: _Element) {
     }
     return _cached_decoder_for_SecurityPolicyInformationFile(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityPolicyInformationFile */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityPolicyInformationFile */
+
 let _cached_encoder_for_SecurityPolicyInformationFile: $.ASN1Encoder<SecurityPolicyInformationFile> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityPolicyInformationFile */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityPolicyInformationFile */
+
 /**
  * @summary Encodes a(n) SecurityPolicyInformationFile into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_SecurityPolicyInformationFile(
     return _cached_encoder_for_SecurityPolicyInformationFile(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityPolicyInformationFile */
 
 /* eslint-enable */

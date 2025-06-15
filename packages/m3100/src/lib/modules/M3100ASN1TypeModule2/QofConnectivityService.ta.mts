@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QofConnectivityService */
+
 /**
  * @summary QofConnectivityService
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type QofConnectivityService = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION QofConnectivityService */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QofConnectivityService */
+
 let _cached_decoder_for_QofConnectivityService: $.ASN1Decoder<QofConnectivityService> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QofConnectivityService */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QofConnectivityService */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) QofConnectivityService
  * @function
@@ -46,13 +44,11 @@ export function _decode_QofConnectivityService(el: _Element) {
     }
     return _cached_decoder_for_QofConnectivityService(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_QofConnectivityService */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QofConnectivityService */
+
 let _cached_encoder_for_QofConnectivityService: $.ASN1Encoder<QofConnectivityService> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QofConnectivityService */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QofConnectivityService */
+
 /**
  * @summary Encodes a(n) QofConnectivityService into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_QofConnectivityService(
     return _cached_encoder_for_QofConnectivityService(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_QofConnectivityService */
 
 /* eslint-enable */

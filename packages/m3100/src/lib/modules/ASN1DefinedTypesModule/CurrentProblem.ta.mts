@@ -21,7 +21,7 @@ import {
     _decode_AlarmStatus,
     _encode_AlarmStatus,
 } from '../ASN1DefinedTypesModule/AlarmStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CurrentProblem */
+
 /**
  * @summary CurrentProblem
  * @description
@@ -79,9 +79,8 @@ export class CurrentProblem {
 
     public static _enum_for_alarmStatus = _enum_for_AlarmStatus;
 }
-/* END_OF_SYMBOL_DEFINITION CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CurrentProblem */
+
 /**
  * @summary The Leading Root Component Types of CurrentProblem
  * @description
@@ -106,9 +105,8 @@ export const _root_component_type_list_1_spec_for_CurrentProblem: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CurrentProblem */
+
 /**
  * @summary The Trailing Root Component Types of CurrentProblem
  * @description
@@ -118,9 +116,8 @@ export const _root_component_type_list_1_spec_for_CurrentProblem: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CurrentProblem: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CurrentProblem */
+
 /**
  * @summary The Extension Addition Component Types of CurrentProblem
  * @description
@@ -130,13 +127,11 @@ export const _root_component_type_list_2_spec_for_CurrentProblem: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CurrentProblem: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrentProblem */
+
 let _cached_decoder_for_CurrentProblem: $.ASN1Decoder<CurrentProblem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CurrentProblem */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CurrentProblem
  * @function
@@ -171,13 +166,11 @@ export function _decode_CurrentProblem(el: _Element) {
     }
     return _cached_decoder_for_CurrentProblem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrentProblem */
+
 let _cached_encoder_for_CurrentProblem: $.ASN1Encoder<CurrentProblem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrentProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CurrentProblem */
+
 /**
  * @summary Encodes a(n) CurrentProblem into an ASN.1 Element.
  * @function
@@ -216,6 +209,5 @@ export function _encode_CurrentProblem(
     return _cached_encoder_for_CurrentProblem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CurrentProblem */
 
 /* eslint-enable */

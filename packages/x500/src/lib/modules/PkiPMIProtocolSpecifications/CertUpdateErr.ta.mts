@@ -11,7 +11,6 @@ import {
     _encode_CASP_error,
     _enum_for_CASP_error,
 } from "../PkiPMIProtocolSpecifications/CASP-error.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUpdateErr */
 /**
  * @summary CertUpdateErr
  * @description
@@ -68,9 +67,7 @@ export class CertUpdateErr {
 
     public static _enum_for_code = _enum_for_CASP_error;
 }
-/* END_OF_SYMBOL_DEFINITION CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateErr */
 /**
  * @summary The Leading Root Component Types of CertUpdateErr
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateErr: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateErr */
 /**
  * @summary The Trailing Root Component Types of CertUpdateErr
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateErr: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertUpdateErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateErr */
 /**
  * @summary The Extension Addition Component Types of CertUpdateErr
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_CertUpdateErr: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_CertUpdateErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateErr */
 let _cached_decoder_for_CertUpdateErr: $.ASN1Decoder<CertUpdateErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUpdateErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUpdateErr
  * @function
@@ -146,13 +135,9 @@ export function _decode_CertUpdateErr(el: _Element) {
     }
     return _cached_decoder_for_CertUpdateErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateErr */
 let _cached_encoder_for_CertUpdateErr: $.ASN1Encoder<CertUpdateErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUpdateErr */
 /**
  * @summary Encodes a(n) CertUpdateErr into an ASN.1 Element.
  * @function
@@ -188,6 +173,5 @@ export function _encode_CertUpdateErr(
     return _cached_encoder_for_CertUpdateErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUpdateErr */
 
 /* eslint-enable */

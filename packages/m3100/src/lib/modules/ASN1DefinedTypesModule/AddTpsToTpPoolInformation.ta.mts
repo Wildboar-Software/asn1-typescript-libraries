@@ -15,7 +15,7 @@ import {
     _decode_AddTpsToTpPoolInformation_Item,
     _encode_AddTpsToTpPoolInformation_Item,
 } from '../ASN1DefinedTypesModule/AddTpsToTpPoolInformation-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddTpsToTpPoolInformation */
+
 /**
  * @summary AddTpsToTpPoolInformation
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type AddTpsToTpPoolInformation = AddTpsToTpPoolInformation_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AddTpsToTpPoolInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToTpPoolInformation */
+
 let _cached_decoder_for_AddTpsToTpPoolInformation: $.ASN1Decoder<AddTpsToTpPoolInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToTpPoolInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddTpsToTpPoolInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddTpsToTpPoolInformation
  * @function
@@ -51,13 +49,11 @@ export function _decode_AddTpsToTpPoolInformation(el: _Element) {
     }
     return _cached_decoder_for_AddTpsToTpPoolInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddTpsToTpPoolInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToTpPoolInformation */
+
 let _cached_encoder_for_AddTpsToTpPoolInformation: $.ASN1Encoder<AddTpsToTpPoolInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToTpPoolInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddTpsToTpPoolInformation */
+
 /**
  * @summary Encodes a(n) AddTpsToTpPoolInformation into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_AddTpsToTpPoolInformation(
     return _cached_encoder_for_AddTpsToTpPoolInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddTpsToTpPoolInformation */
 
 /* eslint-enable */

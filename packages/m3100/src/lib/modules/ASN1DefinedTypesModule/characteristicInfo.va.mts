@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { m3100standardSpecificExtension } from '../ASN1DefinedTypesModule/m3100standardSpecificExtension.va.mjs';
-/* START_OF_SYMBOL_DEFINITION characteristicInfo */
+
 /**
  * @summary characteristicInfo
  * @description
@@ -28,6 +28,5 @@ export const characteristicInfo: OBJECT_IDENTIFIER = new _OID(
     [0],
     m3100standardSpecificExtension
 );
-/* END_OF_SYMBOL_DEFINITION characteristicInfo */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import {
     _decode_BodyPartSpecifier_stored_body_part,
     _encode_BodyPartSpecifier_stored_body_part,
 } from '../EDIMSInformationObjects/BodyPartSpecifier-stored-body-part.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartSpecifier */
 /**
  * @summary BodyPartSpecifier
  * @description
@@ -44,13 +43,9 @@ export type BodyPartSpecifier =
     | {
           stored_body_part: BodyPartSpecifier_stored_body_part;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPartSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSpecifier */
 let _cached_decoder_for_BodyPartSpecifier: $.ASN1Decoder<BodyPartSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartSpecifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartSpecifier
  * @function
@@ -82,13 +77,9 @@ export function _decode_BodyPartSpecifier(el: _Element) {
     }
     return _cached_decoder_for_BodyPartSpecifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSpecifier */
 let _cached_encoder_for_BodyPartSpecifier: $.ASN1Encoder<BodyPartSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartSpecifier */
 /**
  * @summary Encodes a(n) BodyPartSpecifier into an ASN.1 Element.
  * @function
@@ -128,6 +119,5 @@ export function _encode_BodyPartSpecifier(
     return _cached_encoder_for_BodyPartSpecifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartSpecifier */
 
 /* eslint-enable */

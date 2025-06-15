@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Reach */
+
 /**
  * @summary Reach
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Reach = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Reach */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Reach */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Reach */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Reach */
+
+
 export const _decode_Reach = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Reach */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Reach */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Reach */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Reach */
+
+
 export const _encode_Reach = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Reach */
 
 /* eslint-enable */

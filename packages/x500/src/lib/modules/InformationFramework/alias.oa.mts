@@ -6,7 +6,6 @@ import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION alias */
 /**
  * @summary alias
  * @description
@@ -35,6 +34,5 @@ export const alias: OBJECT_CLASS = {
     "&id": id_oc_alias /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION alias */
 
 /* eslint-enable */

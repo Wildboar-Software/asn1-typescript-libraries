@@ -16,7 +16,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ImageInfo */
+
 /**
  * @summary ImageInfo
  * @description
@@ -83,9 +83,8 @@ class ImageInfo {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ImageInfo */
+
 /**
  * @summary The Leading Root Component Types of ImageInfo
  * @description
@@ -100,9 +99,8 @@ const _root_component_type_list_1_spec_for_ImageInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("tm", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("fn", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ImageInfo */
+
 /**
  * @summary The Trailing Root Component Types of ImageInfo
  * @description
@@ -115,9 +113,8 @@ export
 const _root_component_type_list_2_spec_for_ImageInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ImageInfo */
+
 /**
  * @summary The Extension Addition Component Types of ImageInfo
  * @description
@@ -130,13 +127,11 @@ export
 const _extension_additions_list_spec_for_ImageInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ImageInfo */
+
 let _cached_decoder_for_ImageInfo: $.ASN1Decoder<ImageInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ImageInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ImageInfo
  * @function
@@ -172,13 +167,11 @@ function _decode_ImageInfo (el: _Element) {
 }; }
     return _cached_decoder_for_ImageInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ImageInfo */
+
 let _cached_encoder_for_ImageInfo: $.ASN1Encoder<ImageInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ImageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ImageInfo */
+
 /**
  * @summary Encodes a(n) ImageInfo into an ASN.1 Element.
  * @function
@@ -200,6 +193,5 @@ function _encode_ImageInfo (value: ImageInfo, elGetter: $.ASN1Encoder<ImageInfo>
     return _cached_encoder_for_ImageInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ImageInfo */
 
 /* eslint-enable */

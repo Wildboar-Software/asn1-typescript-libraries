@@ -6,7 +6,6 @@ import {
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
 } from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION nameConstraints */
 /**
  * @summary nameConstraints
  * @description
@@ -34,6 +33,5 @@ export const nameConstraints: EXTENSION<NameConstraintsSyntax> = {
     "&id": id_ce_nameConstraints /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nameConstraints */
 
 /* eslint-enable */

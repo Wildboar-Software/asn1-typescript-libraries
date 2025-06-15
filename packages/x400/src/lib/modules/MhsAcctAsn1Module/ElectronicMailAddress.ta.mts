@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ElectronicMailAddress */
 /**
  * @summary ElectronicMailAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ElectronicMailAddress = ORAddressAndOptionalDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ElectronicMailAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ElectronicMailAddress */
 let _cached_decoder_for_ElectronicMailAddress: $.ASN1Decoder<ElectronicMailAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ElectronicMailAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ElectronicMailAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ElectronicMailAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_ElectronicMailAddress(el: _Element) {
     }
     return _cached_decoder_for_ElectronicMailAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ElectronicMailAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ElectronicMailAddress */
 let _cached_encoder_for_ElectronicMailAddress: $.ASN1Encoder<ElectronicMailAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ElectronicMailAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ElectronicMailAddress */
 /**
  * @summary Encodes a(n) ElectronicMailAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ElectronicMailAddress(
     return _cached_encoder_for_ElectronicMailAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ElectronicMailAddress */
 
 /* eslint-enable */

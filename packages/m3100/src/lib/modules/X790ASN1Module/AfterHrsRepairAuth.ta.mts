@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AfterHrsRepairAuth */
+
 /**
  * @summary AfterHrsRepairAuth
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AfterHrsRepairAuth = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION AfterHrsRepairAuth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AfterHrsRepairAuth */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AfterHrsRepairAuth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AfterHrsRepairAuth */
+
+
 export const _decode_AfterHrsRepairAuth = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_AfterHrsRepairAuth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AfterHrsRepairAuth */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AfterHrsRepairAuth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AfterHrsRepairAuth */
+
+
 export const _encode_AfterHrsRepairAuth = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AfterHrsRepairAuth */
 
 /* eslint-enable */

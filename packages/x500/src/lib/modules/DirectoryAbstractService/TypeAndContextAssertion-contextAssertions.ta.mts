@@ -6,7 +6,6 @@ import {
     _decode_ContextAssertion,
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TypeAndContextAssertion_contextAssertions */
 /**
  * @summary TypeAndContextAssertion_contextAssertions
  * @description
@@ -21,13 +20,9 @@ export type TypeAndContextAssertion_contextAssertions =
     | { preference: ContextAssertion[] } /* CHOICE_ALT_ROOT */
     | { all: ContextAssertion[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TypeAndContextAssertion_contextAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeAndContextAssertion_contextAssertions */
 let _cached_decoder_for_TypeAndContextAssertion_contextAssertions: $.ASN1Decoder<TypeAndContextAssertion_contextAssertions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeAndContextAssertion_contextAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeAndContextAssertion_contextAssertions */
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeAndContextAssertion_contextAssertions
  * @function
@@ -57,13 +52,9 @@ export function _decode_TypeAndContextAssertion_contextAssertions(
     }
     return _cached_decoder_for_TypeAndContextAssertion_contextAssertions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TypeAndContextAssertion_contextAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeAndContextAssertion_contextAssertions */
 let _cached_encoder_for_TypeAndContextAssertion_contextAssertions: $.ASN1Encoder<TypeAndContextAssertion_contextAssertions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeAndContextAssertion_contextAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeAndContextAssertion_contextAssertions */
 /**
  * @summary Encodes a(n) TypeAndContextAssertion_contextAssertions into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_TypeAndContextAssertion_contextAssertions(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeAndContextAssertion_contextAssertions */
 
 /* eslint-enable */

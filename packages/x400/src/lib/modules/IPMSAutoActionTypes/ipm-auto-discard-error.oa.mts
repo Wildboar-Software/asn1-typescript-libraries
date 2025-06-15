@@ -24,7 +24,6 @@ import {
 } from '../IPMSAutoActionTypes/ipm-auto-discard-error-ParameterType.ta.mjs';
 import { id_aae_auto_discard_error } from '../IPMSObjectIdentifiers/id-aae-auto-discard-error.va.mjs';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_discard_error */
 /**
  * @summary ipm_auto_discard_error
  * @description
@@ -56,6 +55,5 @@ export const ipm_auto_discard_error: AUTO_ACTION_ERROR<ipm_auto_discard_error_Pa
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_discard_error */
 
 /* eslint-enable */

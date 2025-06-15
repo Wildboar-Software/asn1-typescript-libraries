@@ -18,7 +18,7 @@ import {
   _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PBMParameter */
+
 /**
  * @summary PBMParameter
  * @description
@@ -93,9 +93,8 @@ export class PBMParameter {
     return new PBMParameter(_o.salt, _o.owf, _o.iterationCount, _o.mac);
   }
 }
-/* END_OF_SYMBOL_DEFINITION PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PBMParameter */
+
 /**
  * @summary The Leading Root Component Types of PBMParameter
  * @description
@@ -134,9 +133,8 @@ export const _root_component_type_list_1_spec_for_PBMParameter: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PBMParameter */
+
 /**
  * @summary The Trailing Root Component Types of PBMParameter
  * @description
@@ -146,9 +144,8 @@ export const _root_component_type_list_1_spec_for_PBMParameter: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PBMParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PBMParameter */
+
 /**
  * @summary The Extension Addition Component Types of PBMParameter
  * @description
@@ -158,13 +155,11 @@ export const _root_component_type_list_2_spec_for_PBMParameter: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PBMParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PBMParameter */
+
 let _cached_decoder_for_PBMParameter: $.ASN1Decoder<PBMParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PBMParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PBMParameter
  * @function
@@ -199,13 +194,11 @@ export function _decode_PBMParameter(el: _Element) {
   }
   return _cached_decoder_for_PBMParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PBMParameter */
+
 let _cached_encoder_for_PBMParameter: $.ASN1Encoder<PBMParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PBMParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PBMParameter */
+
 /**
  * @summary Encodes a(n) PBMParameter into an ASN.1 Element.
  * @function
@@ -236,6 +229,5 @@ export function _encode_PBMParameter(
   return _cached_encoder_for_PBMParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PBMParameter */
 
 /* eslint-enable */

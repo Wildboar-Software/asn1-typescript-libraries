@@ -16,7 +16,6 @@ import {
     _encode_InformationCategory,
 } from '../IPMSHeadingExtensions/InformationCategory.ta.mjs';
 import { id_mr_information_category } from '../IPMSObjectIdentifiers/id-mr-information-category.va.mjs';
-/* START_OF_SYMBOL_DEFINITION informationCategoryMatch */
 /**
  * @summary informationCategoryMatch
  * @description
@@ -45,6 +44,5 @@ export const informationCategoryMatch: MATCHING_RULE<InformationCategory> = {
     '&id': id_mr_information_category /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION informationCategoryMatch */
 
 /* eslint-enable */

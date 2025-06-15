@@ -10,7 +10,6 @@ import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/directoryStringFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION subentryACI */
 /**
  * @summary subentryACI
  * @description
@@ -47,6 +46,5 @@ export const subentryACI: ATTRIBUTE<ACIItem> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subentryACI */
 
 /* eslint-enable */

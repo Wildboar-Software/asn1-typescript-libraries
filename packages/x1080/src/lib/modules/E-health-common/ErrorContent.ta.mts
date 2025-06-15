@@ -16,7 +16,7 @@ import {
     _decode_ErrorContent_content,
     _encode_ErrorContent_content,
 } from '../E-health-common/ErrorContent-content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ErrorContent */
+
 /**
  * @summary ErrorContent
  * @description
@@ -81,9 +81,8 @@ export class ErrorContent {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorContent */
+
 /**
  * @summary The Leading Root Component Types of ErrorContent
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_ErrorContent: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorContent */
+
 /**
  * @summary The Trailing Root Component Types of ErrorContent
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_ErrorContent: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ErrorContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorContent */
+
 /**
  * @summary The Extension Addition Component Types of ErrorContent
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_ErrorContent: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ErrorContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorContent */
+
 let _cached_decoder_for_ErrorContent: $.ASN1Decoder<ErrorContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ErrorContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorContent
  * @function
@@ -169,13 +164,11 @@ export function _decode_ErrorContent(el: _Element) {
     }
     return _cached_decoder_for_ErrorContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorContent */
+
 let _cached_encoder_for_ErrorContent: $.ASN1Encoder<ErrorContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ErrorContent */
+
 /**
  * @summary Encodes a(n) ErrorContent into an ASN.1 Element.
  * @function
@@ -215,6 +208,5 @@ export function _encode_ErrorContent(
     return _cached_encoder_for_ErrorContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ErrorContent */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
 } from "../OCSP-2013-08/AcceptableResponses.ta.mjs";
 import { id_pkix_ocsp_response } from "../OCSP-2013-08/id-pkix-ocsp-response.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION re_ocsp_response */
+
 /**
  * @summary re_ocsp_response
  * @description
@@ -34,6 +34,5 @@ export const re_ocsp_response: EXTENSION<AcceptableResponses> = {
     "&id": id_pkix_ocsp_response /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION re_ocsp_response */
 
 /* eslint-enable */

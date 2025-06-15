@@ -22,7 +22,6 @@ import { id_hat_edin_receiver } from '../EDIMSObjectIdentifiers/id-hat-edin-rece
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION edin_receiver */
 /**
  * @summary edin_receiver
  * @description
@@ -55,6 +54,5 @@ export const edin_receiver: X413ATTRIBUTE<EDINReceiverField> = {
     '&id': id_hat_edin_receiver /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edin_receiver */
 
 /* eslint-enable */

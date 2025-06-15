@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CapacityAlarmThreshold */
 /**
  * @summary CapacityAlarmThreshold
  * @description
@@ -27,13 +26,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type CapacityAlarmThreshold = INTEGER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CapacityAlarmThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CapacityAlarmThreshold */
 let _cached_decoder_for_CapacityAlarmThreshold: $.ASN1Decoder<CapacityAlarmThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CapacityAlarmThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CapacityAlarmThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) CapacityAlarmThreshold
  * @function
@@ -45,13 +40,9 @@ function _decode_CapacityAlarmThreshold (el: _Element) {
     if (!_cached_decoder_for_CapacityAlarmThreshold) { _cached_decoder_for_CapacityAlarmThreshold = $._decodeSetOf<INTEGER>(() => $._decodeInteger); }
     return _cached_decoder_for_CapacityAlarmThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CapacityAlarmThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CapacityAlarmThreshold */
 let _cached_encoder_for_CapacityAlarmThreshold: $.ASN1Encoder<CapacityAlarmThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CapacityAlarmThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CapacityAlarmThreshold */
 /**
  * @summary Encodes a(n) CapacityAlarmThreshold into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_CapacityAlarmThreshold (value: CapacityAlarmThreshold, elGetter
     return _cached_encoder_for_CapacityAlarmThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CapacityAlarmThreshold */
 
 /* eslint-enable */

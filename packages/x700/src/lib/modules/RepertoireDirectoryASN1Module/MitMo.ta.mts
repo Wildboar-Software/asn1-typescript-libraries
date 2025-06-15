@@ -21,7 +21,6 @@ import {
     _decode_InstanceIdList,
     _encode_InstanceIdList,
 } from '../RepertoireDirectoryASN1Module/InstanceIdList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MitMo */
 /**
  * @summary MitMo
  * @description
@@ -69,9 +68,7 @@ export class MitMo {
         return new MitMo(_o.objectClass, _o.instances);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MitMo */
 /**
  * @summary The Leading Root Component Types of MitMo
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_MitMo: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MitMo */
 /**
  * @summary The Trailing Root Component Types of MitMo
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_MitMo: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MitMo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MitMo */
 /**
  * @summary The Extension Addition Component Types of MitMo
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_MitMo: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_MitMo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MitMo */
 let _cached_decoder_for_MitMo: $.ASN1Decoder<MitMo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MitMo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MitMo
  * @function
@@ -166,13 +155,9 @@ export function _decode_MitMo(el: _Element) {
     }
     return _cached_decoder_for_MitMo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MitMo */
 let _cached_encoder_for_MitMo: $.ASN1Encoder<MitMo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MitMo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MitMo */
 /**
  * @summary Encodes a(n) MitMo into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_MitMo(value: MitMo, elGetter: $.ASN1Encoder<MitMo>) {
     return _cached_encoder_for_MitMo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MitMo */
 
 /* eslint-enable */

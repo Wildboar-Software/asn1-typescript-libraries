@@ -20,7 +20,6 @@ import {
     _decode_RelatedTestResponse,
     _encode_RelatedTestResponse,
 } from '../Test-ASN1Module/RelatedTestResponse.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestRequestControlledResponse */
 /**
  * @summary TestRequestControlledResponse
  * @description
@@ -39,13 +38,9 @@ export type TestRequestControlledResponse =
           independentTestResponseList: IndependentTestResponse[];
       } /* CHOICE_ALT_ROOT */
     | { relatedTestResponse: RelatedTestResponse } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestRequestControlledResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestRequestControlledResponse */
 let _cached_decoder_for_TestRequestControlledResponse: $.ASN1Decoder<TestRequestControlledResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestRequestControlledResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestRequestControlledResponse */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestRequestControlledResponse
  * @function
@@ -75,13 +70,9 @@ export function _decode_TestRequestControlledResponse(el: _Element) {
     }
     return _cached_decoder_for_TestRequestControlledResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestRequestControlledResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestRequestControlledResponse */
 let _cached_encoder_for_TestRequestControlledResponse: $.ASN1Encoder<TestRequestControlledResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestRequestControlledResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestRequestControlledResponse */
 /**
  * @summary Encodes a(n) TestRequestControlledResponse into an ASN.1 Element.
  * @function
@@ -119,6 +110,5 @@ export function _encode_TestRequestControlledResponse(
     return _cached_encoder_for_TestRequestControlledResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestRequestControlledResponse */
 
 /* eslint-enable */

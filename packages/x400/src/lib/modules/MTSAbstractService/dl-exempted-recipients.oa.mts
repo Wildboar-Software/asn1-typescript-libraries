@@ -23,7 +23,6 @@ import {
     _encode_DLExemptedRecipients,
 } from '../MTSAbstractService/DLExemptedRecipients.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_exempted_recipients */
 /**
  * @summary dl_exempted_recipients
  * @description
@@ -57,6 +56,5 @@ export const dl_exempted_recipients: EXTENSION<DLExemptedRecipients> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_exempted_recipients */
 
 /* eslint-enable */

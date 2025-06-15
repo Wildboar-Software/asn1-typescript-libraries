@@ -16,7 +16,6 @@ import {
     _decode_ClockAddress,
     _encode_ClockAddress,
 } from '../TimeMF/ClockAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SinglePeerClock */
 /**
  * @summary SinglePeerClock
  * @description
@@ -66,9 +65,7 @@ export class SinglePeerClock {
         return new SinglePeerClock(_o.assocNum, _o.assocClock);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SinglePeerClock */
 /**
  * @summary The Leading Root Component Types of SinglePeerClock
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_SinglePeerClock: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SinglePeerClock */
 /**
  * @summary The Trailing Root Component Types of SinglePeerClock
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_SinglePeerClock: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SinglePeerClock: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SinglePeerClock */
 /**
  * @summary The Extension Addition Component Types of SinglePeerClock
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_SinglePeerClock: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SinglePeerClock: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SinglePeerClock */
 let _cached_decoder_for_SinglePeerClock: $.ASN1Decoder<SinglePeerClock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SinglePeerClock */
 /**
  * @summary Decodes an ASN.1 element into a(n) SinglePeerClock
  * @function
@@ -158,13 +147,9 @@ export function _decode_SinglePeerClock(el: _Element) {
     }
     return _cached_decoder_for_SinglePeerClock(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SinglePeerClock */
 let _cached_encoder_for_SinglePeerClock: $.ASN1Encoder<SinglePeerClock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SinglePeerClock */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SinglePeerClock */
 /**
  * @summary Encodes a(n) SinglePeerClock into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_SinglePeerClock(
     return _cached_encoder_for_SinglePeerClock(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SinglePeerClock */
 
 /* eslint-enable */

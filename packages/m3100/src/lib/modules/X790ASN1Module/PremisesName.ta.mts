@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PremisesName */
+
 /**
  * @summary PremisesName
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PremisesName = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION PremisesName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PremisesName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PremisesName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PremisesName */
+
+
 export const _decode_PremisesName = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_PremisesName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PremisesName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PremisesName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PremisesName */
+
+
 export const _encode_PremisesName = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PremisesName */
 
 /* eslint-enable */

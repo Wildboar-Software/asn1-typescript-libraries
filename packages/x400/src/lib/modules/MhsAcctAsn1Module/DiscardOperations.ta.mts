@@ -15,7 +15,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DiscardOperations */
 /**
  * @summary DiscardOperations
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DiscardOperations = EventTypeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DiscardOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardOperations */
 let _cached_decoder_for_DiscardOperations: $.ASN1Decoder<DiscardOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscardOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DiscardOperations */
 /**
  * @summary Decodes an ASN.1 element into a(n) DiscardOperations
  * @function
@@ -46,13 +41,9 @@ export function _decode_DiscardOperations(el: _Element) {
     }
     return _cached_decoder_for_DiscardOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DiscardOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardOperations */
 let _cached_encoder_for_DiscardOperations: $.ASN1Encoder<DiscardOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscardOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DiscardOperations */
 /**
  * @summary Encodes a(n) DiscardOperations into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DiscardOperations(
     return _cached_encoder_for_DiscardOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DiscardOperations */
 
 /* eslint-enable */

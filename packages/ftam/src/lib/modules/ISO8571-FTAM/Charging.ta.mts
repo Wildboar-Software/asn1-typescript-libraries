@@ -15,7 +15,7 @@ import {
   _decode_Charging_Item,
   _encode_Charging_Item,
 } from '../ISO8571-FTAM/Charging-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Charging */
+
 /**
  * @summary Charging
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type Charging = Charging_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Charging */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Charging */
+
 let _cached_decoder_for_Charging: $.ASN1Decoder<Charging> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Charging */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Charging */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Charging
  * @function
@@ -53,13 +51,11 @@ export function _decode_Charging(el: _Element) {
   }
   return _cached_decoder_for_Charging(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Charging */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Charging */
+
 let _cached_encoder_for_Charging: $.ASN1Encoder<Charging> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Charging */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Charging */
+
 /**
  * @summary Encodes a(n) Charging into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_Charging(
   return _cached_encoder_for_Charging(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Charging */
 
 /* eslint-enable */

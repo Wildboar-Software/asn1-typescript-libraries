@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION OtherKeyAttributeTable */
+
 /**
  * @summary OtherKeyAttributeTable
  * @description
@@ -16,6 +16,5 @@ import { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATT
  *
  */
 export const OtherKeyAttributeTable: OTHER_KEY_ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION OtherKeyAttributeTable */
 
 /* eslint-enable */

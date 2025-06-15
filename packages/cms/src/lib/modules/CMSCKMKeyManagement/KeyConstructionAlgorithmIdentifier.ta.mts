@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyConstructionAlgorithmIdentifier */
+
 /**
  * @summary KeyConstructionAlgorithmIdentifier
  * @description
@@ -15,13 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type KeyConstructionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyConstructionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructionAlgorithmIdentifier */
+
 let _cached_decoder_for_KeyConstructionAlgorithmIdentifier: $.ASN1Decoder<KeyConstructionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyConstructionAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyConstructionAlgorithmIdentifier
  * @function
@@ -34,13 +32,11 @@ export function _decode_KeyConstructionAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KeyConstructionAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyConstructionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructionAlgorithmIdentifier */
+
 let _cached_encoder_for_KeyConstructionAlgorithmIdentifier: $.ASN1Encoder<KeyConstructionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyConstructionAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) KeyConstructionAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_KeyConstructionAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyConstructionAlgorithmIdentifier */
 
 /* eslint-enable */

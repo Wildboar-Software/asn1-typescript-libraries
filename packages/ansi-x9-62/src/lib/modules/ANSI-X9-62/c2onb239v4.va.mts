@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va.mjs";
-/* START_OF_SYMBOL_DEFINITION c2onb239v4 */
 /**
  * @summary c2onb239v4
  * @description
@@ -15,6 +14,5 @@ import { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va.mjs";
  * @constant
  */
 export const c2onb239v4: OBJECT_IDENTIFIER = new _OID([14], c_TwoCurve);
-/* END_OF_SYMBOL_DEFINITION c2onb239v4 */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 import { signedData } from '../CmsTelebiometric/signedData.oa.mjs';
 import { envelopedData } from '../CmsTelebiometric/envelopedData.oa.mjs';
 import { ct_authEnvelopedData } from '../CmsTelebiometric/ct-authEnvelopedData.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION TelebSupportedcontentTypes */
+
 /**
  * @summary TelebSupportedcontentTypes
  * @description
@@ -33,6 +33,5 @@ export const TelebSupportedcontentTypes: CONTENT_TYPE[] = [
     envelopedData,
     ct_authEnvelopedData,
 ];
-/* END_OF_SYMBOL_DEFINITION TelebSupportedcontentTypes */
 
 /* eslint-enable */

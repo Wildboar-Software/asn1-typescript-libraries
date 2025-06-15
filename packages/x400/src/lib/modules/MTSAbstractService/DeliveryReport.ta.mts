@@ -22,7 +22,6 @@ import {
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,
 } from '../MTSAbstractService/TypeOfMTSUser.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliveryReport */
 /**
  * @summary DeliveryReport
  * @description
@@ -85,9 +84,7 @@ export class DeliveryReport {
         return public_;
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryReport */
 /**
  * @summary The Leading Root Component Types of DeliveryReport
  * @description
@@ -112,9 +109,7 @@ export const _root_component_type_list_1_spec_for_DeliveryReport: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryReport */
 /**
  * @summary The Trailing Root Component Types of DeliveryReport
  * @description
@@ -124,9 +119,7 @@ export const _root_component_type_list_1_spec_for_DeliveryReport: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeliveryReport: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryReport */
 /**
  * @summary The Extension Addition Component Types of DeliveryReport
  * @description
@@ -136,13 +129,9 @@ export const _root_component_type_list_2_spec_for_DeliveryReport: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_DeliveryReport: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryReport */
 let _cached_decoder_for_DeliveryReport: $.ASN1Decoder<DeliveryReport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveryReport */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryReport
  * @function
@@ -189,13 +178,9 @@ export function _decode_DeliveryReport(el: _Element) {
     }
     return _cached_decoder_for_DeliveryReport(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryReport */
 let _cached_encoder_for_DeliveryReport: $.ASN1Encoder<DeliveryReport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveryReport */
 /**
  * @summary Encodes a(n) DeliveryReport into an ASN.1 Element.
  * @function
@@ -240,6 +225,5 @@ export function _encode_DeliveryReport(
     return _cached_encoder_for_DeliveryReport(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveryReport */
 
 /* eslint-enable */

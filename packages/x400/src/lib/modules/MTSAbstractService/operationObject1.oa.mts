@@ -19,7 +19,6 @@ import {
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { operationObject2 } from '../MTSAbstractService/operationObject2.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION operationObject1 */
 /**
  * @summary operationObject1
  * @description
@@ -55,6 +54,5 @@ export const operationObject1: OPERATION = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION operationObject1 */
 
 /* eslint-enable */

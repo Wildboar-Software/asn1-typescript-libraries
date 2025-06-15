@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_precedence */
 /**
  * @summary ub_precedence
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_precedence: INTEGER = 127;
-/* END_OF_SYMBOL_DEFINITION ub_precedence */
 
 /* eslint-enable */

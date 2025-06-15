@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ar } from "../UsefulDefinitions/id-ar.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ar_subschemaAdminSpecificArea */
 /**
  * @summary id_ar_subschemaAdminSpecificArea
  * @description
@@ -18,6 +17,5 @@ export const id_ar_subschemaAdminSpecificArea: OBJECT_IDENTIFIER = new _OID(
     [4],
     id_ar
 );
-/* END_OF_SYMBOL_DEFINITION id_ar_subschemaAdminSpecificArea */
 
 /* eslint-enable */

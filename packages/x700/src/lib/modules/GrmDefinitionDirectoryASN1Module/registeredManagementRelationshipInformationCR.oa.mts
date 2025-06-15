@@ -13,7 +13,6 @@ import { registeredInformation } from '../DefinitionDirectoryASN1Module/register
 import { managementRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipClass.oa.mjs';
 import { managementRelationshipMapping } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipMapping.oa.mjs';
 import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION registeredManagementRelationshipInformationCR */
 /**
  * @summary registeredManagementRelationshipInformationCR
  * @description
@@ -45,6 +44,5 @@ export const registeredManagementRelationshipInformationCR: CONTENT_RULE = {
         managementRelationshipMapping,
     ] /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION registeredManagementRelationshipInformationCR */
 
 /* eslint-enable */

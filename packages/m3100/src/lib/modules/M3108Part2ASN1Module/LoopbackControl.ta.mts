@@ -17,7 +17,7 @@ import {
     _decode_LoopbackControl_status,
     _encode_LoopbackControl_status,
 } from '../M3108Part2ASN1Module/LoopbackControl-status.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LoopbackControl */
+
 /**
  * @summary LoopbackControl
  * @description
@@ -87,9 +87,8 @@ export class LoopbackControl {
 
     public static _enum_for_status = _enum_for_LoopbackControl_status;
 }
-/* END_OF_SYMBOL_DEFINITION LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LoopbackControl */
+
 /**
  * @summary The Leading Root Component Types of LoopbackControl
  * @description
@@ -114,9 +113,8 @@ export const _root_component_type_list_1_spec_for_LoopbackControl: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LoopbackControl */
+
 /**
  * @summary The Trailing Root Component Types of LoopbackControl
  * @description
@@ -126,9 +124,8 @@ export const _root_component_type_list_1_spec_for_LoopbackControl: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LoopbackControl: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LoopbackControl */
+
 /**
  * @summary The Extension Addition Component Types of LoopbackControl
  * @description
@@ -138,13 +135,11 @@ export const _root_component_type_list_2_spec_for_LoopbackControl: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_LoopbackControl: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackControl */
+
 let _cached_decoder_for_LoopbackControl: $.ASN1Decoder<LoopbackControl> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoopbackControl */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LoopbackControl
  * @function
@@ -183,13 +178,11 @@ export function _decode_LoopbackControl(el: _Element) {
     }
     return _cached_decoder_for_LoopbackControl(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackControl */
+
 let _cached_encoder_for_LoopbackControl: $.ASN1Encoder<LoopbackControl> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackControl */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoopbackControl */
+
 /**
  * @summary Encodes a(n) LoopbackControl into an ASN.1 Element.
  * @function
@@ -233,6 +226,5 @@ export function _encode_LoopbackControl(
     return _cached_encoder_for_LoopbackControl(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoopbackControl */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import {
     _encode_ProbeOriginAuthenticationCheck,
 } from '../MTSAbstractService/ProbeOriginAuthenticationCheck.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION probe_origin_authentication_check */
 /**
  * @summary probe_origin_authentication_check
  * @description
@@ -62,6 +61,5 @@ export const probe_origin_authentication_check: EXTENSION<ProbeOriginAuthenticat
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION probe_origin_authentication_check */
 
 /* eslint-enable */

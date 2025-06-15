@@ -17,7 +17,6 @@ import {
     _decode_EnhancedGuide_subset,
     _encode_EnhancedGuide_subset,
 } from "../SelectedAttributeTypes/EnhancedGuide-subset.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EnhancedGuide */
 /**
  * @summary EnhancedGuide
  * @description
@@ -98,9 +97,7 @@ export class EnhancedGuide {
         return oneLevel;
     }
 }
-/* END_OF_SYMBOL_DEFINITION EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnhancedGuide */
 /**
  * @summary The Leading Root Component Types of EnhancedGuide
  * @description
@@ -132,9 +129,7 @@ export const _root_component_type_list_1_spec_for_EnhancedGuide: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnhancedGuide */
 /**
  * @summary The Trailing Root Component Types of EnhancedGuide
  * @description
@@ -144,9 +139,7 @@ export const _root_component_type_list_1_spec_for_EnhancedGuide: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EnhancedGuide: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnhancedGuide */
 /**
  * @summary The Extension Addition Component Types of EnhancedGuide
  * @description
@@ -156,13 +149,9 @@ export const _root_component_type_list_2_spec_for_EnhancedGuide: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_EnhancedGuide: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnhancedGuide */
 let _cached_decoder_for_EnhancedGuide: $.ASN1Decoder<EnhancedGuide> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EnhancedGuide */
 /**
  * @summary Decodes an ASN.1 element into a(n) EnhancedGuide
  * @function
@@ -220,13 +209,9 @@ export function _decode_EnhancedGuide(el: _Element) {
     }
     return _cached_decoder_for_EnhancedGuide(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnhancedGuide */
 let _cached_encoder_for_EnhancedGuide: $.ASN1Encoder<EnhancedGuide> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnhancedGuide */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EnhancedGuide */
 /**
  * @summary Encodes a(n) EnhancedGuide into an ASN.1 Element.
  * @function
@@ -282,6 +267,5 @@ export function _encode_EnhancedGuide(
     return _cached_encoder_for_EnhancedGuide(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EnhancedGuide */
 
 /* eslint-enable */

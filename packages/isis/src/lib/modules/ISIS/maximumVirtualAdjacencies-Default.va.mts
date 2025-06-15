@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maximumVirtualAdjacencies_Default */
 /**
  * @summary maximumVirtualAdjacencies_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const maximumVirtualAdjacencies_Default: INTEGER = 2;
-/* END_OF_SYMBOL_DEFINITION maximumVirtualAdjacencies_Default */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SupportedApplicationContexts */
 /**
  * @summary SupportedApplicationContexts
  * @description
@@ -14,13 +13,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type SupportedApplicationContexts = OBJECT_IDENTIFIER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedApplicationContexts */
 let _cached_decoder_for_SupportedApplicationContexts: $.ASN1Decoder<SupportedApplicationContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedApplicationContexts */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedApplicationContexts
  * @function
@@ -35,13 +30,9 @@ export function _decode_SupportedApplicationContexts(el: _Element) {
     }
     return _cached_decoder_for_SupportedApplicationContexts(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedApplicationContexts */
 let _cached_encoder_for_SupportedApplicationContexts: $.ASN1Encoder<SupportedApplicationContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedApplicationContexts */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedApplicationContexts */
 /**
  * @summary Encodes a(n) SupportedApplicationContexts into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ export function _encode_SupportedApplicationContexts(
     return _cached_encoder_for_SupportedApplicationContexts(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedApplicationContexts */
 
 /* eslint-enable */

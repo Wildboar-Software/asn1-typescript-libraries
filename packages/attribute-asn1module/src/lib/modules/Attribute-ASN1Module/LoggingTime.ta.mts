@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION LoggingTime */
 /**
  * @summary LoggingTime
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type LoggingTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION LoggingTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoggingTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoggingTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoggingTime */
 export const _decode_LoggingTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_LoggingTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoggingTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoggingTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoggingTime */
 export const _encode_LoggingTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoggingTime */
 
 /* eslint-enable */

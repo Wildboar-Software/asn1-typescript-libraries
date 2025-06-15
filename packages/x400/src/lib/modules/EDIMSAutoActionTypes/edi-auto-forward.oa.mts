@@ -29,7 +29,6 @@ import { submission_control_violated } from '../MTSAbstractService/submission-co
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { id_act_edi_auto_forward_v2 } from '../EDIMSObjectIdentifiers/id-act-edi-auto-forward-v2.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_auto_forward */
 /**
  * @summary edi_auto_forward
  * @description
@@ -74,6 +73,5 @@ export const edi_auto_forward: AUTO_ACTION<EDIAutoForwardRegistrationParameter> 
     '&id': id_act_edi_auto_forward_v2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_auto_forward */
 
 /* eslint-enable */

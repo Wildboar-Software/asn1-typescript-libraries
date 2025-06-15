@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_aae_duplicate_ipn */
 /**
  * @summary id_aae_duplicate_ipn
  * @description
@@ -25,6 +24,5 @@ import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
  * @constant
  */
 export const id_aae_duplicate_ipn: ID = new _OID([2], id_aae);
-/* END_OF_SYMBOL_DEFINITION id_aae_duplicate_ipn */
 
 /* eslint-enable */

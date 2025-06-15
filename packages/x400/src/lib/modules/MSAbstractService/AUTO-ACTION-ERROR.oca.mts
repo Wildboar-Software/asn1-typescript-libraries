@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AUTO_ACTION_ERROR */
 /**
  * @summary AUTO_ACTION_ERROR
  * @description
@@ -24,6 +23,5 @@ import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
  * @interface
  */
 export type AUTO_ACTION_ERROR <Type = any> = ABSTRACT_ERROR <Type>;
-/* END_OF_SYMBOL_DEFINITION AUTO_ACTION_ERROR */
 
 /* eslint-enable */

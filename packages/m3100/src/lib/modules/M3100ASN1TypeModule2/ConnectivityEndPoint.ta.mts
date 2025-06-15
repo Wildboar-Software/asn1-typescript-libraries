@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectivityEndPoint */
+
 /**
  * @summary ConnectivityEndPoint
  * @description
@@ -34,13 +34,11 @@ export type ConnectivityEndPoint =
     | { sncTp: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { linkEnd: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { accessGroup: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectivityEndPoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityEndPoint */
+
 let _cached_decoder_for_ConnectivityEndPoint: $.ASN1Decoder<ConnectivityEndPoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityEndPoint */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectivityEndPoint */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectivityEndPoint
  * @function
@@ -74,13 +72,11 @@ export function _decode_ConnectivityEndPoint(el: _Element) {
     }
     return _cached_decoder_for_ConnectivityEndPoint(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectivityEndPoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityEndPoint */
+
 let _cached_encoder_for_ConnectivityEndPoint: $.ASN1Encoder<ConnectivityEndPoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityEndPoint */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectivityEndPoint */
+
 /**
  * @summary Encodes a(n) ConnectivityEndPoint into an ASN.1 Element.
  * @function
@@ -120,6 +116,5 @@ export function _encode_ConnectivityEndPoint(
     return _cached_encoder_for_ConnectivityEndPoint(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectivityEndPoint */
 
 /* eslint-enable */

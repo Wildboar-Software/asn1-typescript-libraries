@@ -15,7 +15,6 @@ import {
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SimpleNameType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CustomerId */
 /**
  * @summary CustomerId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CustomerId = SimpleNameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CustomerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerId */
 let _cached_decoder_for_CustomerId: $.ASN1Decoder<CustomerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CustomerId */
 /**
  * @summary Decodes an ASN.1 element into a(n) CustomerId
  * @function
@@ -46,13 +41,9 @@ export function _decode_CustomerId(el: _Element) {
     }
     return _cached_decoder_for_CustomerId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CustomerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerId */
 let _cached_encoder_for_CustomerId: $.ASN1Encoder<CustomerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CustomerId */
 /**
  * @summary Encodes a(n) CustomerId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CustomerId(
     return _cached_encoder_for_CustomerId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CustomerId */
 
 /* eslint-enable */

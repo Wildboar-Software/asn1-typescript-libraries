@@ -7,7 +7,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ContentEncryptionAlgorithmIdentifier */
+
 /**
  * @summary ContentEncryptionAlgorithmIdentifier
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type ContentEncryptionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContentEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentEncryptionAlgorithmIdentifier */
+
 let _cached_decoder_for_ContentEncryptionAlgorithmIdentifier: $.ASN1Decoder<ContentEncryptionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentEncryptionAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentEncryptionAlgorithmIdentifier
  * @function
@@ -38,13 +36,11 @@ export function _decode_ContentEncryptionAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ContentEncryptionAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentEncryptionAlgorithmIdentifier */
+
 let _cached_encoder_for_ContentEncryptionAlgorithmIdentifier: $.ASN1Encoder<ContentEncryptionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentEncryptionAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) ContentEncryptionAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -65,6 +61,5 @@ export function _encode_ContentEncryptionAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentEncryptionAlgorithmIdentifier */
 
 /* eslint-enable */

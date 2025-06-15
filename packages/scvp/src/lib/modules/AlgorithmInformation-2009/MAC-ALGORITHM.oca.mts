@@ -3,7 +3,6 @@ import { BOOLEAN, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION MAC_ALGORITHM */
 /**
  * @summary MAC_ALGORITHM
  * @description
@@ -77,6 +76,5 @@ export interface MAC_ALGORITHM<
      */
     readonly "&smimeCaps"?: SMIME_CAPS;
 }
-/* END_OF_SYMBOL_DEFINITION MAC_ALGORITHM */
 
 /* eslint-enable */

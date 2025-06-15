@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_at_recipient_md_assigned_alternate_recipient */
 /**
  * @summary id_at_recipient_md_assigned_alternate_recipient
  * @description
@@ -32,6 +31,5 @@ export const id_at_recipient_md_assigned_alternate_recipient: ID = new _OID(
     [34],
     id_at
 );
-/* END_OF_SYMBOL_DEFINITION id_at_recipient_md_assigned_alternate_recipient */
 
 /* eslint-enable */

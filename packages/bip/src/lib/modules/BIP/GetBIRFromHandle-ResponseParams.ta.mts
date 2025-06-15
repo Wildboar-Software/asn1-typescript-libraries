@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_BIR,
   _encode_BioAPI_BIR,
 } from '../BIP/BioAPI-BIR.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GetBIRFromHandle_ResponseParams */
+
 /**
  * @summary GetBIRFromHandle_ResponseParams
  * @description
@@ -59,9 +59,8 @@ export class GetBIRFromHandle_ResponseParams {
     return new GetBIRFromHandle_ResponseParams(_o.bir);
   }
 }
-/* END_OF_SYMBOL_DEFINITION GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GetBIRFromHandle_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of GetBIRFromHandle_ResponseParams
  * @description
@@ -79,9 +78,8 @@ export const _root_component_type_list_1_spec_for_GetBIRFromHandle_ResponseParam
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GetBIRFromHandle_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of GetBIRFromHandle_ResponseParams
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_GetBIRFromHandle_ResponseParam
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GetBIRFromHandle_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GetBIRFromHandle_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of GetBIRFromHandle_ResponseParams
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_GetBIRFromHandle_ResponseParam
  * @constant
  */
 export const _extension_additions_list_spec_for_GetBIRFromHandle_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GetBIRFromHandle_ResponseParams */
+
 let _cached_decoder_for_GetBIRFromHandle_ResponseParams: $.ASN1Decoder<GetBIRFromHandle_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GetBIRFromHandle_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GetBIRFromHandle_ResponseParams
  * @function
@@ -137,13 +132,11 @@ export function _decode_GetBIRFromHandle_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_GetBIRFromHandle_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GetBIRFromHandle_ResponseParams */
+
 let _cached_encoder_for_GetBIRFromHandle_ResponseParams: $.ASN1Encoder<GetBIRFromHandle_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GetBIRFromHandle_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GetBIRFromHandle_ResponseParams */
+
 /**
  * @summary Encodes a(n) GetBIRFromHandle_ResponseParams into an ASN.1 Element.
  * @function
@@ -169,6 +162,5 @@ export function _encode_GetBIRFromHandle_ResponseParams(
   return _cached_encoder_for_GetBIRFromHandle_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GetBIRFromHandle_ResponseParams */
 
 /* eslint-enable */

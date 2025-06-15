@@ -20,7 +20,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityEvaluationExtensionInformation */
+
 /**
  * @summary SecurityEvaluationExtensionInformation
  * @description
@@ -38,13 +38,11 @@ export type SecurityEvaluationExtensionInformation =
           securityEvaluationExtension: SecurityEvaluationExtension;
       } /* CHOICE_ALT_ROOT */
     | { securityEvaluationExtensionReferrer: URI } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SecurityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEvaluationExtensionInformation */
+
 let _cached_decoder_for_SecurityEvaluationExtensionInformation: $.ASN1Decoder<SecurityEvaluationExtensionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityEvaluationExtensionInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityEvaluationExtensionInformation
  * @function
@@ -68,13 +66,11 @@ export function _decode_SecurityEvaluationExtensionInformation(el: _Element) {
     }
     return _cached_decoder_for_SecurityEvaluationExtensionInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEvaluationExtensionInformation */
+
 let _cached_encoder_for_SecurityEvaluationExtensionInformation: $.ASN1Encoder<SecurityEvaluationExtensionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEvaluationExtensionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityEvaluationExtensionInformation */
+
 /**
  * @summary Encodes a(n) SecurityEvaluationExtensionInformation into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_SecurityEvaluationExtensionInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityEvaluationExtensionInformation */
 
 /* eslint-enable */

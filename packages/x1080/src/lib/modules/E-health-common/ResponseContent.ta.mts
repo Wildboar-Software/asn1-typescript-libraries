@@ -16,7 +16,7 @@ import {
     _decode_ResponseContent_content,
     _encode_ResponseContent_content,
 } from '../E-health-common/ResponseContent-content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResponseContent */
+
 /**
  * @summary ResponseContent
  * @description
@@ -81,9 +81,8 @@ export class ResponseContent {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseContent */
+
 /**
  * @summary The Leading Root Component Types of ResponseContent
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_ResponseContent: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseContent */
+
 /**
  * @summary The Trailing Root Component Types of ResponseContent
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_ResponseContent: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResponseContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseContent */
+
 /**
  * @summary The Extension Addition Component Types of ResponseContent
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_ResponseContent: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ResponseContent: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseContent */
+
 let _cached_decoder_for_ResponseContent: $.ASN1Decoder<ResponseContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseContent
  * @function
@@ -169,13 +164,11 @@ export function _decode_ResponseContent(el: _Element) {
     }
     return _cached_decoder_for_ResponseContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseContent */
+
 let _cached_encoder_for_ResponseContent: $.ASN1Encoder<ResponseContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseContent */
+
 /**
  * @summary Encodes a(n) ResponseContent into an ASN.1 Element.
  * @function
@@ -215,6 +208,5 @@ export function _encode_ResponseContent(
     return _cached_encoder_for_ResponseContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseContent */
 
 /* eslint-enable */

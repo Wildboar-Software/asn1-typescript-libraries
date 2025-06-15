@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SpecificIdentifier, _decode_SpecificIdentifier, _encode_SpecificIdentifier } from "../Attribute-ASN1Module/SpecificIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SpecificProblems */
 /**
  * @summary SpecificProblems
  * @description
@@ -24,13 +23,9 @@ import { SpecificIdentifier, _decode_SpecificIdentifier, _encode_SpecificIdentif
  */
 export
 type SpecificProblems = SpecificIdentifier[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SpecificProblems */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificProblems */
 let _cached_decoder_for_SpecificProblems: $.ASN1Decoder<SpecificProblems> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificProblems */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpecificProblems */
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecificProblems
  * @function
@@ -42,13 +37,9 @@ function _decode_SpecificProblems (el: _Element) {
     if (!_cached_decoder_for_SpecificProblems) { _cached_decoder_for_SpecificProblems = $._decodeSetOf<SpecificIdentifier>(() => _decode_SpecificIdentifier); }
     return _cached_decoder_for_SpecificProblems(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpecificProblems */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificProblems */
 let _cached_encoder_for_SpecificProblems: $.ASN1Encoder<SpecificProblems> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificProblems */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpecificProblems */
 /**
  * @summary Encodes a(n) SpecificProblems into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_SpecificProblems (value: SpecificProblems, elGetter: $.ASN1Enco
     return _cached_encoder_for_SpecificProblems(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpecificProblems */
 
 /* eslint-enable */

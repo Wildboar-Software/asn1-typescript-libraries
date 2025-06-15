@@ -26,7 +26,6 @@ import { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-u
 import { mhs_or_addresses_with_capabilities } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses-with-capabilities.oa.mjs';
 import { mhs_message_store_dn } from '../MHSDirectoryObjectsAndAttributes/mhs-message-store-dn.oa.mjs';
 import { id_oc_mhs_user } from '../MHSObjectIdentifiers/id-oc-mhs-user.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_user */
 /**
  * @summary mhs_user
  * @description
@@ -69,6 +68,5 @@ export const mhs_user: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_user /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_user */
 
 /* eslint-enable */

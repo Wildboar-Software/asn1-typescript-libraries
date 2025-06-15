@@ -11,7 +11,6 @@ import {
     _decode_ThisEntry,
     _encode_ThisEntry,
 } from "../EnhancedSecurity/ThisEntry.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Signer */
 /**
  * @summary Signer
  * @description
@@ -29,13 +28,9 @@ export type Signer =
     | { thisEntry: ThisEntry } /* CHOICE_ALT_ROOT */
     | { thirdParty: SpecificallyIdentified } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Signer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Signer */
 let _cached_decoder_for_Signer: $.ASN1Decoder<Signer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Signer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Signer */
 /**
  * @summary Decodes an ASN.1 element into a(n) Signer
  * @function
@@ -59,13 +54,9 @@ export function _decode_Signer(el: _Element) {
     }
     return _cached_decoder_for_Signer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Signer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Signer */
 let _cached_encoder_for_Signer: $.ASN1Encoder<Signer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Signer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Signer */
 /**
  * @summary Encodes a(n) Signer into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_Signer(value: Signer, elGetter: $.ASN1Encoder<Signer>) {
     return _cached_encoder_for_Signer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Signer */
 
 /* eslint-enable */

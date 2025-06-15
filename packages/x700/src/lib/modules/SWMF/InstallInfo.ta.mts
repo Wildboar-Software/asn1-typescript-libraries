@@ -20,7 +20,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InstallInfo */
 /**
  * @summary InstallInfo
  * @description
@@ -70,9 +69,7 @@ export class InstallInfo {
         return new InstallInfo(_o.targetSoftware, _o.installInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InstallInfo */
 /**
  * @summary The Leading Root Component Types of InstallInfo
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_InstallInfo: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InstallInfo */
 /**
  * @summary The Trailing Root Component Types of InstallInfo
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_InstallInfo: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InstallInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InstallInfo */
 /**
  * @summary The Extension Addition Component Types of InstallInfo
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_InstallInfo: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_InstallInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InstallInfo */
 let _cached_decoder_for_InstallInfo: $.ASN1Decoder<InstallInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InstallInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) InstallInfo
  * @function
@@ -160,13 +149,9 @@ export function _decode_InstallInfo(el: _Element) {
     }
     return _cached_decoder_for_InstallInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InstallInfo */
 let _cached_encoder_for_InstallInfo: $.ASN1Encoder<InstallInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InstallInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InstallInfo */
 /**
  * @summary Encodes a(n) InstallInfo into an ASN.1 Element.
  * @function
@@ -201,6 +186,5 @@ export function _encode_InstallInfo(
     return _cached_encoder_for_InstallInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InstallInfo */
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
     _decode_TeletexOrganizationName,
     _encode_TeletexOrganizationName,
 } from "../MTSAbstractService/TeletexOrganizationName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION teletex_organization_name */
 /**
  * @summary teletex_organization_name
  * @description
@@ -34,6 +33,5 @@ export const teletex_organization_name: EXTENSION_ATTRIBUTE<TeletexOrganizationN
     "&id": 3 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION teletex_organization_name */
 
 /* eslint-enable */

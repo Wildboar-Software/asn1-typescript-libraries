@@ -6,7 +6,6 @@ import {
     _decode_SchedulingParameters,
     _encode_SchedulingParameters,
 } from "../DirectoryShadowAbstractService/SchedulingParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ConsumerUpdateMode */
 /**
  * @summary ConsumerUpdateMode
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ConsumerUpdateMode = SchedulingParameters; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ConsumerUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConsumerUpdateMode */
 let _cached_decoder_for_ConsumerUpdateMode: $.ASN1Decoder<ConsumerUpdateMode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConsumerUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConsumerUpdateMode */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConsumerUpdateMode
  * @function
@@ -37,13 +32,9 @@ export function _decode_ConsumerUpdateMode(el: _Element) {
     }
     return _cached_decoder_for_ConsumerUpdateMode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConsumerUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConsumerUpdateMode */
 let _cached_encoder_for_ConsumerUpdateMode: $.ASN1Encoder<ConsumerUpdateMode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConsumerUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConsumerUpdateMode */
 /**
  * @summary Encodes a(n) ConsumerUpdateMode into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_ConsumerUpdateMode(
     return _cached_encoder_for_ConsumerUpdateMode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConsumerUpdateMode */
 
 /* eslint-enable */

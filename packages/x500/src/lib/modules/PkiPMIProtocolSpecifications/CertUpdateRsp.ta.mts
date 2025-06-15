@@ -27,7 +27,6 @@ import {
     _root_component_type_list_1_spec_for_CASPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertUpdateRsp */
 /**
  * @summary CertUpdateRsp
  * @description
@@ -114,9 +113,7 @@ export class CertUpdateRsp implements CASPcommonComponents {
 
     public static _enum_for_version = _enum_for_CASPversion;
 }
-/* END_OF_SYMBOL_DEFINITION CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateRsp */
 /**
  * @summary The Leading Root Component Types of CertUpdateRsp
  * @description
@@ -129,9 +126,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateRsp: $.ComponentSpec
     ..._root_component_type_list_1_spec_for_CASPcommonComponents,
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateRsp */
 /**
  * @summary The Trailing Root Component Types of CertUpdateRsp
  * @description
@@ -141,9 +136,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateRsp: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertUpdateRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateRsp */
 /**
  * @summary The Extension Addition Component Types of CertUpdateRsp
  * @description
@@ -153,13 +146,9 @@ export const _root_component_type_list_2_spec_for_CertUpdateRsp: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_CertUpdateRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateRsp */
 let _cached_decoder_for_CertUpdateRsp: $.ASN1Decoder<CertUpdateRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUpdateRsp */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUpdateRsp
  * @function
@@ -211,13 +200,9 @@ export function _decode_CertUpdateRsp(el: _Element) {
     }
     return _cached_decoder_for_CertUpdateRsp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateRsp */
 let _cached_encoder_for_CertUpdateRsp: $.ASN1Encoder<CertUpdateRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateRsp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUpdateRsp */
 /**
  * @summary Encodes a(n) CertUpdateRsp into an ASN.1 Element.
  * @function
@@ -264,6 +249,5 @@ export function _encode_CertUpdateRsp(
     return _cached_encoder_for_CertUpdateRsp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUpdateRsp */
 
 /* eslint-enable */

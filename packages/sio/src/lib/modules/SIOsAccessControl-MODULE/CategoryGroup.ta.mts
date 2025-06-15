@@ -6,7 +6,7 @@ import {
     _decode_OptionalCategoryData,
     _encode_OptionalCategoryData,
 } from "../SIOsAccessControl-MODULE/OptionalCategoryData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CategoryGroup */
+
 /**
  * @summary CategoryGroup
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type CategoryGroup = OptionalCategoryData[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CategoryGroup */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CategoryGroup */
+
 let _cached_decoder_for_CategoryGroup: $.ASN1Decoder<CategoryGroup> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CategoryGroup */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CategoryGroup */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CategoryGroup
  * @function
@@ -39,13 +37,11 @@ export function _decode_CategoryGroup(el: _Element) {
     }
     return _cached_decoder_for_CategoryGroup(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CategoryGroup */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CategoryGroup */
+
 let _cached_encoder_for_CategoryGroup: $.ASN1Encoder<CategoryGroup> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CategoryGroup */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CategoryGroup */
+
 /**
  * @summary Encodes a(n) CategoryGroup into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_CategoryGroup(
     return _cached_encoder_for_CategoryGroup(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CategoryGroup */
 
 /* eslint-enable */

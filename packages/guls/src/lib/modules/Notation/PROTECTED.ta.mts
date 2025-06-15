@@ -22,7 +22,7 @@ import {
   _decode_SyntaxStructure,
   _encode_SyntaxStructure,
 } from '../GenericProtectingTransferSyntax/SyntaxStructure.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PROTECTED */
+
 /**
  * @summary PROTECTED
  * @description
@@ -98,9 +98,8 @@ export type PROTECTED<BaseType> =
   | { noTransform: BaseType } /* CHOICE_ALT_ROOT */
   | { direct: SyntaxStructure } /* CHOICE_ALT_ROOT */
   | { embedded: EMBEDDED_PDV } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PROTECTED */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PROTECTED */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PROTECTED
  * @function
@@ -130,9 +129,8 @@ export function _get_decoder_for_PROTECTED<BaseType>(
     ],
   });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PROTECTED */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PROTECTED */
+
 /**
  * @summary Returns a function that will encode a(n) PROTECTED into an ASN.1 Element.
  * @function
@@ -167,6 +165,5 @@ export function _get_encoder_for_PROTECTED<BaseType>(
     $.BER
   );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PROTECTED */
 
 /* eslint-enable */

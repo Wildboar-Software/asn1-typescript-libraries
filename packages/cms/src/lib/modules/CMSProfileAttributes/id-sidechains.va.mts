@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_sidechains */
+
 /**
  * @summary id_sidechains
  * @description
@@ -25,6 +25,5 @@ export const id_sidechains: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_sidechains */
 
 /* eslint-enable */

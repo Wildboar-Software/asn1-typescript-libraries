@@ -12,7 +12,7 @@ import {
 import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
 import { contentType } from '../CmsTelebiometric/contentType.oa.mjs';
 import { messageDigest } from '../CmsTelebiometric/messageDigest.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION SignedAttributes */
+
 /**
  * @summary SignedAttributes
  * @description
@@ -28,6 +28,5 @@ import { messageDigest } from '../CmsTelebiometric/messageDigest.oa.mjs';
  *
  */
 export const SignedAttributes: ATTRIBUTE[] = [contentType, messageDigest];
-/* END_OF_SYMBOL_DEFINITION SignedAttributes */
 
 /* eslint-enable */

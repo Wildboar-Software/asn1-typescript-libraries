@@ -8,7 +8,6 @@ import {
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { id_soa_structuralObjectClass } from "../SchemaAdministration/id-soa-structuralObjectClass.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION structuralObjectClass */
 /**
  * @summary structuralObjectClass
  * @description
@@ -51,6 +50,5 @@ export const structuralObjectClass: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION structuralObjectClass */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import {
     _encode_ProofOfSubmission,
 } from '../MTSAbstractService/ProofOfSubmission.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION proof_of_submission */
 /**
  * @summary proof_of_submission
  * @description
@@ -57,6 +56,5 @@ export const proof_of_submission: EXTENSION<ProofOfSubmission> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION proof_of_submission */
 
 /* eslint-enable */

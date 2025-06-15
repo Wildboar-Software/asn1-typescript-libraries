@@ -40,7 +40,7 @@ import {
   _decode_F_P_ABORT_request,
   _encode_F_P_ABORT_request,
 } from '../ISO8571-FTAM/F-P-ABORT-request.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FTAM_Regime_PDU */
+
 /**
  * @summary FTAM_Regime_PDU
  * @description
@@ -65,13 +65,11 @@ export type FTAM_Regime_PDU =
   | { f_terminate_response: F_TERMINATE_response } /* CHOICE_ALT_ROOT */
   | { f_u_abort_request: F_U_ABORT_request } /* CHOICE_ALT_ROOT */
   | { f_p_abort_request: F_P_ABORT_request } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FTAM_Regime_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FTAM_Regime_PDU */
+
 let _cached_decoder_for_FTAM_Regime_PDU: $.ASN1Decoder<FTAM_Regime_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FTAM_Regime_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FTAM_Regime_PDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FTAM_Regime_PDU
  * @function
@@ -123,13 +121,11 @@ export function _decode_FTAM_Regime_PDU(el: _Element) {
   }
   return _cached_decoder_for_FTAM_Regime_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FTAM_Regime_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FTAM_Regime_PDU */
+
 let _cached_encoder_for_FTAM_Regime_PDU: $.ASN1Encoder<FTAM_Regime_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FTAM_Regime_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FTAM_Regime_PDU */
+
 /**
  * @summary Encodes a(n) FTAM_Regime_PDU into an ASN.1 Element.
  * @function
@@ -187,6 +183,5 @@ export function _encode_FTAM_Regime_PDU(
   return _cached_encoder_for_FTAM_Regime_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FTAM_Regime_PDU */
 
 /* eslint-enable */

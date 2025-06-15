@@ -12,7 +12,6 @@ import {
     _encode_FacsimileTelephoneNumber,
 } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va.mjs";
-/* START_OF_SYMBOL_DEFINITION facsimileTelephoneNumber */
 /**
  * @summary facsimileTelephoneNumber
  * @description
@@ -54,6 +53,5 @@ export const facsimileTelephoneNumber: ATTRIBUTE<FacsimileTelephoneNumber> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION facsimileTelephoneNumber */
 
 /* eslint-enable */

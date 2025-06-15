@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TimeInterval */
 /**
  * @summary TimeInterval
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TimeInterval = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeInterval */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeInterval */
 export const _decode_TimeInterval = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeInterval */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeInterval */
 export const _encode_TimeInterval = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeInterval */
 
 /* eslint-enable */

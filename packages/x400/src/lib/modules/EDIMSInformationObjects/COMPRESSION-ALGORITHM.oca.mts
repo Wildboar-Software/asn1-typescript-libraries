@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION COMPRESSION_ALGORITHM */
 /**
  * @summary COMPRESSION_ALGORITHM
  * @description
@@ -68,6 +67,5 @@ export interface COMPRESSION_ALGORITHM<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION COMPRESSION_ALGORITHM */
 
 /* eslint-enable */

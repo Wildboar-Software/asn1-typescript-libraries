@@ -15,7 +15,6 @@ import { delivery } from '../MTSAbstractService/delivery.oa.mjs';
 import { administration } from '../MTSAbstractService/administration.oa.mjs';
 import { id_ct_mts_access } from '../MTSObjectIdentifiers/id-ct-mts-access.va.mjs';
 import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_access_contract */
 /**
  * @summary mts_access_contract
  * @description
@@ -46,6 +45,5 @@ export const mts_access_contract: CONTRACT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_ct_mts_access /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mts_access_contract */
 
 /* eslint-enable */

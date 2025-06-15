@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertificateSerialNumber */
 /**
  * @summary CertificateSerialNumber
  * @description
@@ -14,9 +13,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type CertificateSerialNumber = OCTET_STRING;
-/* END_OF_SYMBOL_DEFINITION CertificateSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateSerialNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateSerialNumber
  * @function
@@ -26,9 +23,7 @@ export type CertificateSerialNumber = OCTET_STRING;
 export function _decode_CertificateSerialNumber(el: _Element) {
     return $._decodeBigInt(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateSerialNumber */
 /**
  * @summary Encodes a(n) CertificateSerialNumber into an ASN.1 Element.
  * @function
@@ -43,6 +38,5 @@ export function _encode_CertificateSerialNumber(
     return $._encodeBigInt(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateSerialNumber */
 
 /* eslint-enable */

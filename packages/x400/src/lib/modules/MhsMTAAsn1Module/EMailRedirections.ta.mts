@@ -20,7 +20,6 @@ import {
     _decode_EMailRedirections_address,
     _encode_EMailRedirections_address,
 } from '../MhsMTAAsn1Module/EMailRedirections-address.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailRedirections */
 /**
  * @summary EMailRedirections
  * @description
@@ -71,9 +70,7 @@ export class EMailRedirections {
         return new EMailRedirections(_o.label, _o.address);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EMailRedirections */
 /**
  * @summary The Leading Root Component Types of EMailRedirections
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_EMailRedirections: $.Component
     ),
     new $.ComponentSpec('address', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EMailRedirections */
 /**
  * @summary The Trailing Root Component Types of EMailRedirections
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_EMailRedirections: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EMailRedirections: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EMailRedirections */
 /**
  * @summary The Extension Addition Component Types of EMailRedirections
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_EMailRedirections: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_EMailRedirections: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailRedirections */
 let _cached_decoder_for_EMailRedirections: $.ASN1Decoder<EMailRedirections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailRedirections */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailRedirections
  * @function
@@ -164,13 +153,9 @@ export function _decode_EMailRedirections(el: _Element) {
     }
     return _cached_decoder_for_EMailRedirections(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailRedirections */
 let _cached_encoder_for_EMailRedirections: $.ASN1Encoder<EMailRedirections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailRedirections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailRedirections */
 /**
  * @summary Encodes a(n) EMailRedirections into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ export function _encode_EMailRedirections(
     return _cached_encoder_for_EMailRedirections(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailRedirections */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../CryptographicMessageSyntax/AttributeValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Attribute */
+
 /**
  * @summary Attribute
  * @description
@@ -61,9 +61,8 @@ export class Attribute {
         return new Attribute(_o.attrType, _o.attrValues);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute */
+
 /**
  * @summary The Leading Root Component Types of Attribute
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_Attribute: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute */
+
 /**
  * @summary The Trailing Root Component Types of Attribute
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_Attribute: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Attribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute */
+
 /**
  * @summary The Extension Addition Component Types of Attribute
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_Attribute: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Attribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute */
+
 let _cached_decoder_for_Attribute: $.ASN1Decoder<Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute
  * @function
@@ -149,13 +144,11 @@ export function _decode_Attribute(el: _Element) {
     }
     return _cached_decoder_for_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute */
+
 let _cached_encoder_for_Attribute: $.ASN1Encoder<Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attribute */
+
 /**
  * @summary Encodes a(n) Attribute into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_Attribute(
     return _cached_encoder_for_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attribute */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import {
     _decode_StrongCredentials,
     _encode_StrongCredentials,
 } from "../DirectoryAbstractService/StrongCredentials.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Credentials */
 /**
  * @summary Credentials
  * @description
@@ -49,13 +48,9 @@ export type Credentials =
     | { spkm: SpkmCredentials } /* CHOICE_ALT_ROOT */
     | { sasl: SaslCredentials } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Credentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Credentials */
 let _cached_decoder_for_Credentials: $.ASN1Decoder<Credentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Credentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Credentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) Credentials
  * @function
@@ -99,13 +94,9 @@ export function _decode_Credentials(el: _Element) {
     }
     return _cached_decoder_for_Credentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Credentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Credentials */
 let _cached_encoder_for_Credentials: $.ASN1Encoder<Credentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Credentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Credentials */
 /**
  * @summary Encodes a(n) Credentials into an ASN.1 Element.
  * @function
@@ -157,6 +148,5 @@ export function _encode_Credentials(
     return _cached_encoder_for_Credentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Credentials */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DomainIdentity */
 /**
  * @summary DomainIdentity
  * @description
@@ -33,13 +32,9 @@ import {
 export type DomainIdentity =
     | { domainName: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { privateName: OCTET_STRING } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DomainIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainIdentity */
 let _cached_decoder_for_DomainIdentity: $.ASN1Decoder<DomainIdentity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DomainIdentity */
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainIdentity
  * @function
@@ -57,13 +52,9 @@ export function _decode_DomainIdentity(el: _Element) {
     }
     return _cached_decoder_for_DomainIdentity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DomainIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainIdentity */
 let _cached_encoder_for_DomainIdentity: $.ASN1Encoder<DomainIdentity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DomainIdentity */
 /**
  * @summary Encodes a(n) DomainIdentity into an ASN.1 Element.
  * @function
@@ -87,6 +78,5 @@ export function _encode_DomainIdentity(
     return _cached_encoder_for_DomainIdentity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DomainIdentity */
 
 /* eslint-enable */

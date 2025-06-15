@@ -30,7 +30,6 @@ import {
   _decode_DocumentTypeDeclaration,
   _encode_DocumentTypeDeclaration,
 } from '../FastInfoset/DocumentTypeDeclaration.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Document_children_Item */
 /**
  * @summary Document_children_Item
  * @description
@@ -48,12 +47,8 @@ export type Document_children_Item =
   | {
       document_type_declaration: DocumentTypeDeclaration;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Document_children_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_children_Item */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Document_children_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Document_children_Item */
 export const _decode_Document_children_Item = $._decode_inextensible_choice<Document_children_Item>(
   {
     'CONTEXT 0': ['element', _decode_Element],
@@ -65,12 +60,8 @@ export const _decode_Document_children_Item = $._decode_inextensible_choice<Docu
     ],
   }
 );
-/* END_OF_SYMBOL_DEFINITION _decode_Document_children_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_children_Item */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Document_children_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Document_children_Item */
 export const _encode_Document_children_Item = $._encode_choice<Document_children_Item>(
   {
     element: _encode_Element,
@@ -81,6 +72,5 @@ export const _encode_Document_children_Item = $._encode_choice<Document_children
   $.BER
 );
 
-/* END_OF_SYMBOL_DEFINITION _encode_Document_children_Item */
 
 /* eslint-enable */

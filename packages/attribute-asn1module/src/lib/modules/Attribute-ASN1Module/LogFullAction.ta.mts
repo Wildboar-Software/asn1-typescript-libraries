@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_LogFullAction */
 /**
  * @summary LogFullAction
  * @description
@@ -29,9 +28,7 @@ enum _enum_for_LogFullAction {
     wrap = 0,
     halt = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_LogFullAction */
 
-/* START_OF_SYMBOL_DEFINITION LogFullAction */
 /**
  * @summary LogFullAction
  * @description
@@ -44,9 +41,7 @@ enum _enum_for_LogFullAction {
  */
 export
 type LogFullAction = _enum_for_LogFullAction;
-/* END_OF_SYMBOL_DEFINITION LogFullAction */
 
-/* START_OF_SYMBOL_DEFINITION LogFullAction */
 /**
  * @summary LogFullAction
  * @description
@@ -59,9 +54,7 @@ type LogFullAction = _enum_for_LogFullAction;
  */
 export
 const LogFullAction = _enum_for_LogFullAction;
-/* END_OF_SYMBOL_DEFINITION LogFullAction */
 
-/* START_OF_SYMBOL_DEFINITION LogFullAction_wrap */
 /**
  * @summary LogFullAction_wrap
  * @constant
@@ -69,9 +62,7 @@ const LogFullAction = _enum_for_LogFullAction;
  */
 export
 const LogFullAction_wrap: LogFullAction = LogFullAction.wrap; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LogFullAction_wrap */
 
-/* START_OF_SYMBOL_DEFINITION wrap */
 /**
  * @summary wrap
  * @constant
@@ -79,9 +70,7 @@ const LogFullAction_wrap: LogFullAction = LogFullAction.wrap; /* LONG_NAMED_ENUM
  */
 export
 const wrap: LogFullAction = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION wrap */
 
-/* START_OF_SYMBOL_DEFINITION LogFullAction_halt */
 /**
  * @summary LogFullAction_halt
  * @constant
@@ -89,9 +78,7 @@ const wrap: LogFullAction = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE 
  */
 export
 const LogFullAction_halt: LogFullAction = LogFullAction.halt; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LogFullAction_halt */
 
-/* START_OF_SYMBOL_DEFINITION halt */
 /**
  * @summary halt
  * @constant
@@ -99,21 +86,12 @@ const LogFullAction_halt: LogFullAction = LogFullAction.halt; /* LONG_NAMED_ENUM
  */
 export
 const halt: LogFullAction = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION halt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LogFullAction */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LogFullAction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LogFullAction */
 export const _decode_LogFullAction = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_LogFullAction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LogFullAction */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LogFullAction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LogFullAction */
 export const _encode_LogFullAction = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LogFullAction */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultipleIcvAlgo */
 /**
  * @summary MultipleIcvAlgo
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type MultipleIcvAlgo = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MultipleIcvAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleIcvAlgo */
 let _cached_decoder_for_MultipleIcvAlgo: $.ASN1Decoder<MultipleIcvAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleIcvAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleIcvAlgo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleIcvAlgo
  * @function
@@ -40,13 +35,9 @@ export function _decode_MultipleIcvAlgo(el: _Element) {
     }
     return _cached_decoder_for_MultipleIcvAlgo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleIcvAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleIcvAlgo */
 let _cached_encoder_for_MultipleIcvAlgo: $.ASN1Encoder<MultipleIcvAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleIcvAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleIcvAlgo */
 /**
  * @summary Encodes a(n) MultipleIcvAlgo into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_MultipleIcvAlgo(
     return _cached_encoder_for_MultipleIcvAlgo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleIcvAlgo */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION x9_63_scheme */
 /**
  * @summary x9_63_scheme
  * @description
@@ -35,6 +34,5 @@ const x9_63_scheme: OBJECT_IDENTIFIER = new _OID([
     /* ansi-x9-63 */ 63,
     /* schemes */ 0,
 ]);
-/* END_OF_SYMBOL_DEFINITION x9_63_scheme */
 
 /* eslint-enable */

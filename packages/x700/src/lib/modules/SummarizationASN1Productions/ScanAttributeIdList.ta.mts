@@ -15,7 +15,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScanAttributeIdList */
 /**
  * @summary ScanAttributeIdList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ScanAttributeIdList = AttributeId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ScanAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScanAttributeIdList */
 let _cached_decoder_for_ScanAttributeIdList: $.ASN1Decoder<ScanAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScanAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScanAttributeIdList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScanAttributeIdList
  * @function
@@ -48,13 +43,9 @@ export function _decode_ScanAttributeIdList(el: _Element) {
     }
     return _cached_decoder_for_ScanAttributeIdList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScanAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScanAttributeIdList */
 let _cached_encoder_for_ScanAttributeIdList: $.ASN1Encoder<ScanAttributeIdList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScanAttributeIdList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScanAttributeIdList */
 /**
  * @summary Encodes a(n) ScanAttributeIdList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ScanAttributeIdList(
     return _cached_encoder_for_ScanAttributeIdList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScanAttributeIdList */
 
 /* eslint-enable */

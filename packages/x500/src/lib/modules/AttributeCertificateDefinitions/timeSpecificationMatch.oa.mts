@@ -6,7 +6,6 @@ import {
     _decode_TimeSpecification,
     _encode_TimeSpecification,
 } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION timeSpecificationMatch */
 /**
  * @summary timeSpecificationMatch
  * @description
@@ -34,6 +33,5 @@ export const timeSpecificationMatch: MATCHING_RULE<TimeSpecification> = {
     "&id": id_mr_timeSpecMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION timeSpecificationMatch */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import {
   _decode_PDV_list,
   _encode_PDV_list,
 } from '../ACSE-1/PDV-list.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION User_Data */
 /**
  * @summary User_Data
  * @description
@@ -44,13 +43,9 @@ export type User_Data =
   | { user_information: User_information } /* CHOICE_ALT_ROOT */
   | { simply_encoded_data: Simply_encoded_data } /* CHOICE_ALT_ROOT */
   | { fully_encoded_data: PDV_list } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION User_Data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Data */
 let _cached_decoder_for_User_Data: $.ASN1Decoder<User_Data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Data */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_Data */
 /**
  * @summary Decodes an ASN.1 element into a(n) User_Data
  * @function
@@ -70,13 +65,9 @@ export function _decode_User_Data(el: _Element) {
   }
   return _cached_decoder_for_User_Data(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_User_Data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Data */
 let _cached_encoder_for_User_Data: $.ASN1Encoder<User_Data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Data */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_Data */
 /**
  * @summary Encodes a(n) User_Data into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_User_Data(
   return _cached_encoder_for_User_Data(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_Data */
 
 /* eslint-enable */

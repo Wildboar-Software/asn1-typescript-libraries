@@ -20,7 +20,6 @@ import {
     _decode_InvocationId,
     _encode_InvocationId,
 } from '../Test-ASN1Module/InvocationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestInvocationId */
 /**
  * @summary TestInvocationId
  * @description
@@ -37,13 +36,9 @@ import {
 export type TestInvocationId =
     | { tOName: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { invocationId: InvocationId } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestInvocationId */
 let _cached_decoder_for_TestInvocationId: $.ASN1Decoder<TestInvocationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestInvocationId */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestInvocationId
  * @function
@@ -71,13 +66,9 @@ export function _decode_TestInvocationId(el: _Element) {
     }
     return _cached_decoder_for_TestInvocationId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestInvocationId */
 let _cached_encoder_for_TestInvocationId: $.ASN1Encoder<TestInvocationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestInvocationId */
 /**
  * @summary Encodes a(n) TestInvocationId into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_TestInvocationId(
     return _cached_encoder_for_TestInvocationId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestInvocationId */
 
 /* eslint-enable */

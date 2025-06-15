@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION Simple_Messages */
+
 /**
  * @summary Simple_Messages
  * @description
@@ -26,6 +26,5 @@ import { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca.mjs'
  *
  */
 export const Simple_Messages: SIMPLE_MESSAGE[] = [];
-/* END_OF_SYMBOL_DEFINITION Simple_Messages */
 
 /* eslint-enable */

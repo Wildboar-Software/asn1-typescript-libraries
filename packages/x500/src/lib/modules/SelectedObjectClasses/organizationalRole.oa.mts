@@ -14,7 +14,6 @@ import { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organiz
 import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.mjs";
 import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.mjs";
 import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION organizationalRole */
 /**
  * @summary organizationalRole
  * @description
@@ -61,6 +60,5 @@ export const organizationalRole: OBJECT_CLASS = {
     "&id": id_oc_organizationalRole /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION organizationalRole */
 
 /* eslint-enable */

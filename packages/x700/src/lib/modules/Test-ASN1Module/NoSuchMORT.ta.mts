@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchMORT */
 /**
  * @summary NoSuchMORT
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NoSuchMORT = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NoSuchMORT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchMORT */
 let _cached_decoder_for_NoSuchMORT: $.ASN1Decoder<NoSuchMORT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchMORT */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchMORT */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchMORT
  * @function
@@ -48,13 +43,9 @@ export function _decode_NoSuchMORT(el: _Element) {
     }
     return _cached_decoder_for_NoSuchMORT(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchMORT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchMORT */
 let _cached_encoder_for_NoSuchMORT: $.ASN1Encoder<NoSuchMORT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchMORT */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchMORT */
 /**
  * @summary Encodes a(n) NoSuchMORT into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_NoSuchMORT(
     return _cached_encoder_for_NoSuchMORT(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchMORT */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_PwdResponseValue_warning,
     _encode_PwdResponseValue_warning,
 } from "../DirectoryAbstractService/PwdResponseValue-warning.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PwdResponseValue */
 /**
  * @summary PwdResponseValue
  * @description
@@ -79,9 +78,7 @@ export class PwdResponseValue {
 
     public static _enum_for_error = _enum_for_PwdResponseValue_error;
 }
-/* END_OF_SYMBOL_DEFINITION PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PwdResponseValue */
 /**
  * @summary The Leading Root Component Types of PwdResponseValue
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_PwdResponseValue: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PwdResponseValue */
 /**
  * @summary The Trailing Root Component Types of PwdResponseValue
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_PwdResponseValue: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PwdResponseValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PwdResponseValue */
 /**
  * @summary The Extension Addition Component Types of PwdResponseValue
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_PwdResponseValue: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_PwdResponseValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponseValue */
 let _cached_decoder_for_PwdResponseValue: $.ASN1Decoder<PwdResponseValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PwdResponseValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdResponseValue
  * @function
@@ -172,13 +161,9 @@ export function _decode_PwdResponseValue(el: _Element) {
     }
     return _cached_decoder_for_PwdResponseValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponseValue */
 let _cached_encoder_for_PwdResponseValue: $.ASN1Encoder<PwdResponseValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdResponseValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PwdResponseValue */
 /**
  * @summary Encodes a(n) PwdResponseValue into an ASN.1 Element.
  * @function
@@ -217,6 +202,5 @@ export function _encode_PwdResponseValue(
     return _cached_encoder_for_PwdResponseValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PwdResponseValue */
 
 /* eslint-enable */

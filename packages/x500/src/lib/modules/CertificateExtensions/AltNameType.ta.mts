@@ -6,7 +6,6 @@ import {
     _decode_AltNameType_builtinNameForm,
     _encode_AltNameType_builtinNameForm,
 } from "../CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AltNameType */
 /**
  * @summary AltNameType
  * @description
@@ -33,13 +32,9 @@ export type AltNameType =
     | { builtinNameForm: AltNameType_builtinNameForm } /* CHOICE_ALT_ROOT */
     | { otherNameForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AltNameType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AltNameType */
 let _cached_decoder_for_AltNameType: $.ASN1Decoder<AltNameType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AltNameType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AltNameType */
 /**
  * @summary Decodes an ASN.1 element into a(n) AltNameType
  * @function
@@ -60,13 +55,9 @@ export function _decode_AltNameType(el: _Element) {
     }
     return _cached_decoder_for_AltNameType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AltNameType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AltNameType */
 let _cached_encoder_for_AltNameType: $.ASN1Encoder<AltNameType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AltNameType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AltNameType */
 /**
  * @summary Encodes a(n) AltNameType into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_AltNameType(
     return _cached_encoder_for_AltNameType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AltNameType */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { id_at_aliasedEntryName } from "../InformationFramework/id-at-aliasedEntryName.va.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION aliasedEntryName */
 /**
  * @summary aliasedEntryName
  * @description
@@ -52,6 +51,5 @@ export const aliasedEntryName: ATTRIBUTE<DistinguishedName> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION aliasedEntryName */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_ResynchronizeMode,
     _encode_ResynchronizeMode,
 } from '../Schedulerev1-ASN1Module/ResynchronizeMode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultResynchronizeMode */
+
 /**
  * @summary defaultResynchronizeMode
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const defaultResynchronizeMode: ResynchronizeMode = false;
-/* END_OF_SYMBOL_DEFINITION defaultResynchronizeMode */
 
 /* eslint-enable */

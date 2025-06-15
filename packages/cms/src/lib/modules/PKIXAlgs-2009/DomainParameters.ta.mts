@@ -11,7 +11,7 @@ import {
     _decode_ValidationParams,
     _encode_ValidationParams,
 } from "../PKIXAlgs-2009/ValidationParams.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DomainParameters */
+
 /**
  * @summary DomainParameters
  * @description
@@ -88,9 +88,8 @@ export class DomainParameters {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DomainParameters */
+
 /**
  * @summary The Leading Root Component Types of DomainParameters
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_DomainParameters: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DomainParameters */
+
 /**
  * @summary The Trailing Root Component Types of DomainParameters
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_DomainParameters: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DomainParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DomainParameters */
+
 /**
  * @summary The Extension Addition Component Types of DomainParameters
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_DomainParameters: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_DomainParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainParameters */
+
 let _cached_decoder_for_DomainParameters: $.ASN1Decoder<DomainParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DomainParameters */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainParameters
  * @function
@@ -223,13 +218,11 @@ export function _decode_DomainParameters(el: _Element) {
     }
     return _cached_decoder_for_DomainParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainParameters */
+
 let _cached_encoder_for_DomainParameters: $.ASN1Encoder<DomainParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DomainParameters */
+
 /**
  * @summary Encodes a(n) DomainParameters into an ASN.1 Element.
  * @function
@@ -268,6 +261,5 @@ export function _encode_DomainParameters(
     return _cached_encoder_for_DomainParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DomainParameters */
 
 /* eslint-enable */

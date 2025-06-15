@@ -12,15 +12,14 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel */
+
 export enum _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel {
   raw = 0,
   intermediate = 1,
   processed = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel */
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel */
+
 /**
  * @summary BioAPI_BIR_DATA_TYPE_processedLevel
  * @description
@@ -34,67 +33,59 @@ export enum _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel {
 export type BioAPI_BIR_DATA_TYPE_processedLevel =
   | _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel
   | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel */
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel_raw */
+
 /**
  * @summary BioAPI_BIR_DATA_TYPE_processedLevel_raw
  * @constant
  * @type {number}
  */
 export const BioAPI_BIR_DATA_TYPE_processedLevel_raw: BioAPI_BIR_DATA_TYPE_processedLevel = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel_raw */
 
-/* START_OF_SYMBOL_DEFINITION raw */
+
 /**
  * @summary raw
  * @constant
  * @type {number}
  */
 export const raw: BioAPI_BIR_DATA_TYPE_processedLevel = BioAPI_BIR_DATA_TYPE_processedLevel_raw; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION raw */
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel_intermediate */
+
 /**
  * @summary BioAPI_BIR_DATA_TYPE_processedLevel_intermediate
  * @constant
  * @type {number}
  */
 export const BioAPI_BIR_DATA_TYPE_processedLevel_intermediate: BioAPI_BIR_DATA_TYPE_processedLevel = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel_intermediate */
 
-/* START_OF_SYMBOL_DEFINITION intermediate */
+
 /**
  * @summary intermediate
  * @constant
  * @type {number}
  */
 export const intermediate: BioAPI_BIR_DATA_TYPE_processedLevel = BioAPI_BIR_DATA_TYPE_processedLevel_intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION intermediate */
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel_processed */
+
 /**
  * @summary BioAPI_BIR_DATA_TYPE_processedLevel_processed
  * @constant
  * @type {number}
  */
 export const BioAPI_BIR_DATA_TYPE_processedLevel_processed: BioAPI_BIR_DATA_TYPE_processedLevel = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE_processedLevel_processed */
 
-/* START_OF_SYMBOL_DEFINITION processed */
+
 /**
  * @summary processed
  * @constant
  * @type {number}
  */
 export const processed: BioAPI_BIR_DATA_TYPE_processedLevel = BioAPI_BIR_DATA_TYPE_processedLevel_processed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION processed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel */
+
 let _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel: $.ASN1Decoder<BioAPI_BIR_DATA_TYPE_processedLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_DATA_TYPE_processedLevel */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_DATA_TYPE_processedLevel
  * @function
@@ -108,13 +99,11 @@ export function _decode_BioAPI_BIR_DATA_TYPE_processedLevel(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_DATA_TYPE_processedLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_DATA_TYPE_processedLevel */
+
 let _cached_encoder_for_BioAPI_BIR_DATA_TYPE_processedLevel: $.ASN1Encoder<BioAPI_BIR_DATA_TYPE_processedLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_DATA_TYPE_processedLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_DATA_TYPE_processedLevel */
+
 /**
  * @summary Encodes a(n) BioAPI_BIR_DATA_TYPE_processedLevel into an ASN.1 Element.
  * @function
@@ -136,6 +125,5 @@ export function _encode_BioAPI_BIR_DATA_TYPE_processedLevel(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_DATA_TYPE_processedLevel */
 
 /* eslint-enable */

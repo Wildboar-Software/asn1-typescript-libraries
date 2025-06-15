@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeOptionList */
 /**
  * @summary AttributeOptionList
  * @description
@@ -14,13 +13,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AttributeOptionList = UTF8String[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AttributeOptionList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeOptionList */
 let _cached_decoder_for_AttributeOptionList: $.ASN1Decoder<AttributeOptionList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeOptionList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeOptionList */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeOptionList
  * @function
@@ -35,13 +30,9 @@ export function _decode_AttributeOptionList(el: _Element) {
     }
     return _cached_decoder_for_AttributeOptionList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeOptionList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeOptionList */
 let _cached_encoder_for_AttributeOptionList: $.ASN1Encoder<AttributeOptionList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeOptionList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeOptionList */
 /**
  * @summary Encodes a(n) AttributeOptionList into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ export function _encode_AttributeOptionList(
     return _cached_encoder_for_AttributeOptionList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeOptionList */
 
 /* eslint-enable */

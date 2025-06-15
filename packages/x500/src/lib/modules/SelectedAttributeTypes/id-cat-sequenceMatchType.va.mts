@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_cat } from "../UsefulDefinitions/id-cat.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_cat_sequenceMatchType */
 /**
  * @summary id_cat_sequenceMatchType
  * @description
@@ -18,6 +17,5 @@ export const id_cat_sequenceMatchType: OBJECT_IDENTIFIER = new _OID(
     [1],
     id_cat
 );
-/* END_OF_SYMBOL_DEFINITION id_cat_sequenceMatchType */
 
 /* eslint-enable */

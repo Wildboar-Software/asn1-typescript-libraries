@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION F_CHECK_response */
+
 /**
  * @summary F_CHECK_response
  * @description
@@ -62,9 +62,8 @@ export class F_CHECK_response {
     return new F_CHECK_response(_o.checkpoint_identifier, _o.transfer_number);
   }
 }
-/* END_OF_SYMBOL_DEFINITION F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_F_CHECK_response */
+
 /**
  * @summary The Leading Root Component Types of F_CHECK_response
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_F_CHECK_response: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_F_CHECK_response */
+
 /**
  * @summary The Trailing Root Component Types of F_CHECK_response
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_F_CHECK_response: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_F_CHECK_response: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_F_CHECK_response */
+
 /**
  * @summary The Extension Addition Component Types of F_CHECK_response
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_F_CHECK_response: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_F_CHECK_response: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_F_CHECK_response */
+
 let _cached_decoder_for_F_CHECK_response: $.ASN1Decoder<F_CHECK_response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _decode_F_CHECK_response */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) F_CHECK_response
  * @function
@@ -154,13 +149,11 @@ export function _decode_F_CHECK_response(el: _Element) {
   }
   return _cached_decoder_for_F_CHECK_response(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_F_CHECK_response */
+
 let _cached_encoder_for_F_CHECK_response: $.ASN1Encoder<F_CHECK_response> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_F_CHECK_response */
 
-/* START_OF_SYMBOL_DEFINITION _encode_F_CHECK_response */
+
 /**
  * @summary Encodes a(n) F_CHECK_response into an ASN.1 Element.
  * @function
@@ -199,6 +192,5 @@ export function _encode_F_CHECK_response(
   return _cached_encoder_for_F_CHECK_response(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_F_CHECK_response */
 
 /* eslint-enable */

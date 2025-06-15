@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maxInt */
+
 /**
  * @summary maxInt
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const maxInt: INTEGER = 2147483647;
-/* END_OF_SYMBOL_DEFINITION maxInt */
 
 /* eslint-enable */

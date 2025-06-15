@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_oc_oraddress_subtree_base */
 /**
  * @summary id_oc_oraddress_subtree_base
  * @description
@@ -29,6 +28,5 @@ import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.mjs';
  * @constant
  */
 export const id_oc_oraddress_subtree_base: ID = new _OID([21], id_oc);
-/* END_OF_SYMBOL_DEFINITION id_oc_oraddress_subtree_base */
 
 /* eslint-enable */

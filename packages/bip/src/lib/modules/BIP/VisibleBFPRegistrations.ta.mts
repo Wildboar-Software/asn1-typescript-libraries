@@ -15,7 +15,7 @@ import {
   _decode_VisibleBFPRegistration,
   _encode_VisibleBFPRegistration,
 } from '../BIP/VisibleBFPRegistration.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VisibleBFPRegistrations */
+
 /**
  * @summary VisibleBFPRegistrations
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type VisibleBFPRegistrations = VisibleBFPRegistration[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION VisibleBFPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBFPRegistrations */
+
 let _cached_decoder_for_VisibleBFPRegistrations: $.ASN1Decoder<VisibleBFPRegistrations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleBFPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VisibleBFPRegistrations */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleBFPRegistrations
  * @function
@@ -48,13 +46,11 @@ export function _decode_VisibleBFPRegistrations(el: _Element) {
   }
   return _cached_decoder_for_VisibleBFPRegistrations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VisibleBFPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBFPRegistrations */
+
 let _cached_encoder_for_VisibleBFPRegistrations: $.ASN1Encoder<VisibleBFPRegistrations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleBFPRegistrations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VisibleBFPRegistrations */
+
 /**
  * @summary Encodes a(n) VisibleBFPRegistrations into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_VisibleBFPRegistrations(
   return _cached_encoder_for_VisibleBFPRegistrations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VisibleBFPRegistrations */
 
 /* eslint-enable */

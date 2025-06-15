@@ -16,7 +16,6 @@ import {
     _decode_RDNInfo,
     _encode_RDNInfo,
 } from '../DiscoveryASN1Module/RDNInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NameTree */
 // TODO: CHECK_RECURSIVE_DEFINITION
 /**
  * @summary NameTree
@@ -67,9 +66,7 @@ export class NameTree {
         return new NameTree(_o.rdnInfo, _o.subordinates);
     }
 }
-/* END_OF_SYMBOL_DEFINITION NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameTree */
 /**
  * @summary The Leading Root Component Types of NameTree
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_NameTree: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameTree */
 /**
  * @summary The Trailing Root Component Types of NameTree
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_NameTree: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameTree: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameTree */
 /**
  * @summary The Extension Addition Component Types of NameTree
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_NameTree: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_NameTree: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameTree */
 let _cached_decoder_for_NameTree: $.ASN1Decoder<NameTree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameTree */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameTree
  * @function
@@ -166,13 +155,9 @@ export function _decode_NameTree(el: _Element) {
     }
     return _cached_decoder_for_NameTree(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameTree */
 let _cached_encoder_for_NameTree: $.ASN1Encoder<NameTree> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameTree */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameTree */
 /**
  * @summary Encodes a(n) NameTree into an ASN.1 Element.
  * @function
@@ -206,6 +191,5 @@ export function _encode_NameTree(
     return _cached_encoder_for_NameTree(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameTree */
 
 /* eslint-enable */

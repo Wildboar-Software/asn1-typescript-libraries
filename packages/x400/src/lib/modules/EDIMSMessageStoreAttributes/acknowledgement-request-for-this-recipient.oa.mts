@@ -23,7 +23,6 @@ import { id_rat_acknowledgement_request_for_this_recipient } from '../EDIMSObjec
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION acknowledgement_request_for_this_recipient */
 /**
  * @summary acknowledgement_request_for_this_recipient
  * @description
@@ -56,6 +55,5 @@ export const acknowledgement_request_for_this_recipient: X413ATTRIBUTE<Acknowled
     '&id': id_rat_acknowledgement_request_for_this_recipient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION acknowledgement_request_for_this_recipient */
 
 /* eslint-enable */

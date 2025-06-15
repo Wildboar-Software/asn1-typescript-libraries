@@ -6,7 +6,6 @@ import {
     _decode_OsiUnbindResult_fully_encoded_data_Item,
     _encode_OsiUnbindResult_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/OsiUnbindResult-fully-encoded-data-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiUnbindResult */
 /**
  * @summary OsiUnbindResult
  * @description
@@ -24,13 +23,9 @@ import {
 export type OsiUnbindResult = {
     fully_encoded_data: OsiUnbindResult_fully_encoded_data_Item[];
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OsiUnbindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiUnbindResult */
 let _cached_decoder_for_OsiUnbindResult: $.ASN1Decoder<OsiUnbindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiUnbindResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiUnbindResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiUnbindResult
  * @function
@@ -57,13 +52,9 @@ export function _decode_OsiUnbindResult(el: _Element) {
     }
     return _cached_decoder_for_OsiUnbindResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiUnbindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiUnbindResult */
 let _cached_encoder_for_OsiUnbindResult: $.ASN1Encoder<OsiUnbindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiUnbindResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiUnbindResult */
 /**
  * @summary Encodes a(n) OsiUnbindResult into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_OsiUnbindResult(
     return _cached_encoder_for_OsiUnbindResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiUnbindResult */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
 import { OP_BINDING_COOP } from "../OperationalBindingManagement/OP-BINDING-COOP.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION OPERATIONAL_BINDING */
 /**
  * @summary OPERATIONAL_BINDING
  * @description
@@ -84,6 +83,5 @@ export interface OPERATIONAL_BINDING<
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION OPERATIONAL_BINDING */
 
 /* eslint-enable */

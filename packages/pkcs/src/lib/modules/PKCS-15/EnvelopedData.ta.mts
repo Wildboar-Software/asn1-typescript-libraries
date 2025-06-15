@@ -31,7 +31,7 @@ import {
     _get_encoder_for_EnvelopedData_version,
 } from "../PKCS-15/EnvelopedData-version.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EnvelopedData */
+
 /**
  * @summary EnvelopedData
  * @description
@@ -108,9 +108,8 @@ export class EnvelopedData<Type> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EnvelopedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnvelopedData */
+
 /**
  * @summary The Leading Root Component Types of EnvelopedData
  * @description
@@ -156,9 +155,8 @@ export const _root_component_type_list_1_spec_for_EnvelopedData: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnvelopedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnvelopedData */
+
 /**
  * @summary The Trailing Root Component Types of EnvelopedData
  * @description
@@ -168,9 +166,8 @@ export const _root_component_type_list_1_spec_for_EnvelopedData: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EnvelopedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnvelopedData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnvelopedData */
+
 /**
  * @summary The Extension Addition Component Types of EnvelopedData
  * @description
@@ -180,9 +177,8 @@ export const _root_component_type_list_2_spec_for_EnvelopedData: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_EnvelopedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnvelopedData */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_EnvelopedData */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) EnvelopedData
  * @function
@@ -244,9 +240,8 @@ export function _get_decoder_for_EnvelopedData<Type>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_EnvelopedData */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_EnvelopedData */
+
 /**
  * @summary Returns a function that will encode a(n) EnvelopedData into an ASN.1 Element.
  * @function
@@ -296,6 +291,5 @@ export function _get_encoder_for_EnvelopedData<Type>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_EnvelopedData */
 
 /* eslint-enable */

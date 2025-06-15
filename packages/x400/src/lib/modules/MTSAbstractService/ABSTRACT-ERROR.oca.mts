@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ABSTRACT_ERROR */
 /**
  * @summary ABSTRACT_ERROR
  * @description
@@ -24,6 +23,5 @@ import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Informat
  * @interface
  */
 export type ABSTRACT_ERROR <ParameterType> = ERROR <ParameterType>;
-/* END_OF_SYMBOL_DEFINITION ABSTRACT_ERROR */
 
 /* eslint-enable */

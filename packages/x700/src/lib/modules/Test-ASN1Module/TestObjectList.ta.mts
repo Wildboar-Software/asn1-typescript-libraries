@@ -15,7 +15,6 @@ import {
     _decode_TestObjectList_Item,
     _encode_TestObjectList_Item,
 } from '../Test-ASN1Module/TestObjectList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestObjectList */
 /**
  * @summary TestObjectList
  * @description
@@ -32,13 +31,9 @@ import {
  * ```
  */
 export type TestObjectList = TestObjectList_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TestObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestObjectList */
 let _cached_decoder_for_TestObjectList: $.ASN1Decoder<TestObjectList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestObjectList */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestObjectList
  * @function
@@ -53,13 +48,9 @@ export function _decode_TestObjectList(el: _Element) {
     }
     return _cached_decoder_for_TestObjectList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestObjectList */
 let _cached_encoder_for_TestObjectList: $.ASN1Encoder<TestObjectList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestObjectList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestObjectList */
 /**
  * @summary Encodes a(n) TestObjectList into an ASN.1 Element.
  * @function
@@ -80,6 +71,5 @@ export function _encode_TestObjectList(
     return _cached_encoder_for_TestObjectList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestObjectList */
 
 /* eslint-enable */

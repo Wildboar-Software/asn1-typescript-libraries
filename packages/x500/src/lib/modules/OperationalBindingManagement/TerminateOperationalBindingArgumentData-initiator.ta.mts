@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingArgumentData_initiator */
 /**
  * @summary TerminateOperationalBindingArgumentData_initiator
  * @description
@@ -16,13 +15,9 @@ export type TerminateOperationalBindingArgumentData_initiator =
     | { symmetric: _Element } /* CHOICE_ALT_ROOT */
     | { roleA_initiates: _Element } /* CHOICE_ALT_ROOT */
     | { roleB_initiates: _Element } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TerminateOperationalBindingArgumentData_initiator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingArgumentData_initiator */
 let _cached_decoder_for_TerminateOperationalBindingArgumentData_initiator: $.ASN1Decoder<TerminateOperationalBindingArgumentData_initiator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingArgumentData_initiator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingArgumentData_initiator */
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminateOperationalBindingArgumentData_initiator
  * @function
@@ -56,13 +51,9 @@ export function _decode_TerminateOperationalBindingArgumentData_initiator(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingArgumentData_initiator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingArgumentData_initiator */
 let _cached_encoder_for_TerminateOperationalBindingArgumentData_initiator: $.ASN1Encoder<TerminateOperationalBindingArgumentData_initiator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingArgumentData_initiator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingArgumentData_initiator */
 /**
  * @summary Encodes a(n) TerminateOperationalBindingArgumentData_initiator into an ASN.1 Element.
  * @function
@@ -107,6 +98,5 @@ export function _encode_TerminateOperationalBindingArgumentData_initiator(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingArgumentData_initiator */
 
 /* eslint-enable */

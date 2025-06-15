@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION maximumPathSplits_Default */
 /**
  * @summary maximumPathSplits_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const maximumPathSplits_Default: INTEGER = 2;
-/* END_OF_SYMBOL_DEFINITION maximumPathSplits_Default */
 
 /* eslint-enable */

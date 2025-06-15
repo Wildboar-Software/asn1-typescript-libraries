@@ -10,7 +10,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificatePair */
 /**
  * @summary CertificatePair
  * @description
@@ -72,9 +71,7 @@ export class CertificatePair {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificatePair */
 /**
  * @summary The Leading Root Component Types of CertificatePair
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_CertificatePair: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificatePair */
 /**
  * @summary The Trailing Root Component Types of CertificatePair
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_CertificatePair: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificatePair: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificatePair */
 /**
  * @summary The Extension Addition Component Types of CertificatePair
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_CertificatePair: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificatePair: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificatePair */
 let _cached_decoder_for_CertificatePair: $.ASN1Decoder<CertificatePair> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificatePair */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificatePair
  * @function
@@ -179,13 +168,9 @@ export function _decode_CertificatePair(el: _Element) {
     }
     return _cached_decoder_for_CertificatePair(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificatePair */
 let _cached_encoder_for_CertificatePair: $.ASN1Encoder<CertificatePair> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificatePair */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificatePair */
 /**
  * @summary Encodes a(n) CertificatePair into an ASN.1 Element.
  * @function
@@ -233,6 +218,5 @@ export function _encode_CertificatePair(
     return _cached_encoder_for_CertificatePair(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificatePair */
 
 /* eslint-enable */

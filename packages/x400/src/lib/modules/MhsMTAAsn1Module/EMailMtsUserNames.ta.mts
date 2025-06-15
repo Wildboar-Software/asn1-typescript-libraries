@@ -15,7 +15,6 @@ import {
     _decode_EMailMtsUserName,
     _encode_EMailMtsUserName,
 } from '../MhsMTAAsn1Module/EMailMtsUserName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailMtsUserNames */
 /**
  * @summary EMailMtsUserNames
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EMailMtsUserNames = EMailMtsUserName[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION EMailMtsUserNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailMtsUserNames */
 let _cached_decoder_for_EMailMtsUserNames: $.ASN1Decoder<EMailMtsUserNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailMtsUserNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailMtsUserNames */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailMtsUserNames
  * @function
@@ -48,13 +43,9 @@ export function _decode_EMailMtsUserNames(el: _Element) {
     }
     return _cached_decoder_for_EMailMtsUserNames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailMtsUserNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailMtsUserNames */
 let _cached_encoder_for_EMailMtsUserNames: $.ASN1Encoder<EMailMtsUserNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailMtsUserNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailMtsUserNames */
 /**
  * @summary Encodes a(n) EMailMtsUserNames into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_EMailMtsUserNames(
     return _cached_encoder_for_EMailMtsUserNames(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailMtsUserNames */
 
 /* eslint-enable */

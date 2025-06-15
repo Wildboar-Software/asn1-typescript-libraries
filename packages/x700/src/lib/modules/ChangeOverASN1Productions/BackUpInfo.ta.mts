@@ -16,7 +16,6 @@ import {
     _decode_OptionalObject,
     _encode_OptionalObject,
 } from '../ChangeOverASN1Productions/OptionalObject.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BackUpInfo */
 /**
  * @summary BackUpInfo
  * @description
@@ -122,9 +121,7 @@ export class BackUpInfo {
         return { noObject: null };
     }
 }
-/* END_OF_SYMBOL_DEFINITION BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BackUpInfo */
 /**
  * @summary The Leading Root Component Types of BackUpInfo
  * @description
@@ -163,9 +160,7 @@ export const _root_component_type_list_1_spec_for_BackUpInfo: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BackUpInfo */
 /**
  * @summary The Trailing Root Component Types of BackUpInfo
  * @description
@@ -175,9 +170,7 @@ export const _root_component_type_list_1_spec_for_BackUpInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BackUpInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BackUpInfo */
 /**
  * @summary The Extension Addition Component Types of BackUpInfo
  * @description
@@ -187,13 +180,9 @@ export const _root_component_type_list_2_spec_for_BackUpInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_BackUpInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpInfo */
 let _cached_decoder_for_BackUpInfo: $.ASN1Decoder<BackUpInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackUpInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackUpInfo
  * @function
@@ -255,13 +244,9 @@ export function _decode_BackUpInfo(el: _Element) {
     }
     return _cached_decoder_for_BackUpInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpInfo */
 let _cached_encoder_for_BackUpInfo: $.ASN1Encoder<BackUpInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackUpInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackUpInfo */
 /**
  * @summary Encodes a(n) BackUpInfo into an ASN.1 Element.
  * @function
@@ -340,6 +325,5 @@ export function _encode_BackUpInfo(
     return _cached_encoder_for_BackUpInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackUpInfo */
 
 /* eslint-enable */

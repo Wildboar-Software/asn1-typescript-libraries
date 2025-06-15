@@ -11,7 +11,7 @@ import {
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataObjects */
+
 /**
  * @summary DataObjects
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type DataObjects = PathOrObjects<DataType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DataObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataObjects */
+
 let _cached_decoder_for_DataObjects: $.ASN1Decoder<DataObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataObjects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataObjects */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DataObjects
  * @function
@@ -44,13 +42,11 @@ export function _decode_DataObjects(el: _Element) {
     }
     return _cached_decoder_for_DataObjects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataObjects */
+
 let _cached_encoder_for_DataObjects: $.ASN1Encoder<DataObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataObjects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataObjects */
+
 /**
  * @summary Encodes a(n) DataObjects into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_DataObjects(
     return _cached_encoder_for_DataObjects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataObjects */
 
 /* eslint-enable */

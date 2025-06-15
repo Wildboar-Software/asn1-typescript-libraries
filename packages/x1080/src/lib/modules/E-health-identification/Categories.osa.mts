@@ -20,7 +20,7 @@ import { deviceIdentification } from '../E-health-identification/deviceIdentific
 import { softwareIdentification } from '../E-health-identification/softwareIdentification.oa.mjs';
 import { insuranceIdentification } from '../E-health-identification/insuranceIdentification.oa.mjs';
 import { medicalRecordIdentification } from '../E-health-identification/medicalRecordIdentification.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION Categories */
+
 /**
  * @summary Categories
  * @description
@@ -58,6 +58,5 @@ export const Categories: IDENTIFICATION[] = [
     insuranceIdentification,
     medicalRecordIdentification,
 ];
-/* END_OF_SYMBOL_DEFINITION Categories */
 
 /* eslint-enable */

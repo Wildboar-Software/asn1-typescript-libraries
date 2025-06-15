@@ -11,7 +11,6 @@ import {
     _decode_TbsDtSecAbort,
     _encode_TbsDtSecAbort,
 } from "../Wrapper/TbsDtSecAbort.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DtSecAbort */
 /**
  * @summary DtSecAbort
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type DtSecAbort = Signed<TbsDtSecAbort>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DtSecAbort */
 let _cached_decoder_for_DtSecAbort: $.ASN1Decoder<DtSecAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DtSecAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) DtSecAbort
  * @function
@@ -44,13 +39,9 @@ export function _decode_DtSecAbort(el: _Element) {
     }
     return _cached_decoder_for_DtSecAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DtSecAbort */
 let _cached_encoder_for_DtSecAbort: $.ASN1Encoder<DtSecAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DtSecAbort */
 /**
  * @summary Encodes a(n) DtSecAbort into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DtSecAbort(
     return _cached_encoder_for_DtSecAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DtSecAbort */
 
 /* eslint-enable */

@@ -8,7 +8,7 @@ import { kt_rsa } from "../CryptographicMessageSyntaxAlgorithms-2009/kt-rsa.oa.m
 import { kwa_3DESWrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-3DESWrap.oa.mjs";
 import { kwa_RC2Wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-RC2Wrap.oa.mjs";
 import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/maca-hMAC-SHA1.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION SMimeCaps */
+
 /**
  * @summary SMimeCaps
  * @description
@@ -42,6 +42,5 @@ export const SMimeCaps: SMIME_CAPS[] = [
     cea_RC2_cbc["&smimeCaps"],
     maca_hMAC_SHA1["&smimeCaps"],
 ];
-/* END_OF_SYMBOL_DEFINITION SMimeCaps */
 
 /* eslint-enable */

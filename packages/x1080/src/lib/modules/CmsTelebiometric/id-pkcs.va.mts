@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_pkcs */
+
 /**
  * @summary id_pkcs
  * @description
@@ -31,6 +31,5 @@ export const id_pkcs: OBJECT_IDENTIFIER = new _OID([
     /* rsadsi */ 113549,
     /* pkcs */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_pkcs */
 
 /* eslint-enable */

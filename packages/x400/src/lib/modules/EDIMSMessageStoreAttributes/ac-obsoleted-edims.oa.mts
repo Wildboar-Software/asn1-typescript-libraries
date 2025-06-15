@@ -23,7 +23,6 @@ import { id_cat_obsoleted_edims } from '../EDIMSObjectIdentifiers/id-cat-obsolet
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ac_obsoleted_edims */
 /**
  * @summary ac_obsoleted_edims
  * @description
@@ -58,6 +57,5 @@ export const ac_obsoleted_edims: X413ATTRIBUTE<EDIMLocation> = {
     '&id': id_cat_obsoleted_edims /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ac_obsoleted_edims */
 
 /* eslint-enable */

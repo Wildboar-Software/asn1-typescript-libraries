@@ -42,7 +42,6 @@ import { service_error } from '../MSAbstractService/service-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_ms_probe_submission } from '../MSAccessProtocol/op-ms-probe-submission.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_probe_submission */
 /**
  * @summary ms_probe_submission
  * @description
@@ -106,6 +105,5 @@ export const ms_probe_submission: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_probe_submission */
 
 /* eslint-enable */

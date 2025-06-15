@@ -16,7 +16,7 @@ import {
 } from '../E-health-common/E-setupError.ta.mjs';
 import { id_health_setup_err } from '../E-health-common/id-health-setup-err.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION health_setup_err */
+
 /**
  * @summary health_setup_err
  * @description
@@ -44,6 +44,5 @@ export const health_setup_err: CONTENT_TYPE<E_setupError> = {
     '&id': id_health_setup_err /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION health_setup_err */
 
 /* eslint-enable */

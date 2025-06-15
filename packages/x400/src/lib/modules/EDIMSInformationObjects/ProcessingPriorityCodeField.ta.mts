@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProcessingPriorityCodeField */
 /**
  * @summary ProcessingPriorityCodeField
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ProcessingPriorityCodeField = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION ProcessingPriorityCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingPriorityCodeField */
 let _cached_decoder_for_ProcessingPriorityCodeField: $.ASN1Decoder<ProcessingPriorityCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingPriorityCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProcessingPriorityCodeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProcessingPriorityCodeField
  * @function
@@ -45,13 +40,9 @@ export function _decode_ProcessingPriorityCodeField(el: _Element) {
     }
     return _cached_decoder_for_ProcessingPriorityCodeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProcessingPriorityCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingPriorityCodeField */
 let _cached_encoder_for_ProcessingPriorityCodeField: $.ASN1Encoder<ProcessingPriorityCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingPriorityCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProcessingPriorityCodeField */
 /**
  * @summary Encodes a(n) ProcessingPriorityCodeField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProcessingPriorityCodeField(
     return _cached_encoder_for_ProcessingPriorityCodeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProcessingPriorityCodeField */
 
 /* eslint-enable */

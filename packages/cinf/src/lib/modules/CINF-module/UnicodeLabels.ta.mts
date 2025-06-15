@@ -16,7 +16,7 @@ import {
   _decode_Non_numericUnicodeLabel,
   _encode_Non_numericUnicodeLabel,
 } from '../CINF-module/Non-numericUnicodeLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnicodeLabels */
+
 /**
  * @summary UnicodeLabels
  * @description
@@ -66,9 +66,8 @@ export class UnicodeLabels {
     return new UnicodeLabels(_o.numericLabel, _o.non_numeric);
   }
 }
-/* END_OF_SYMBOL_DEFINITION UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnicodeLabels */
+
 /**
  * @summary The Leading Root Component Types of UnicodeLabels
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_UnicodeLabels: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnicodeLabels */
+
 /**
  * @summary The Trailing Root Component Types of UnicodeLabels
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_UnicodeLabels: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnicodeLabels: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnicodeLabels */
+
 /**
  * @summary The Extension Addition Component Types of UnicodeLabels
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_UnicodeLabels: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_UnicodeLabels: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnicodeLabels */
+
 let _cached_decoder_for_UnicodeLabels: $.ASN1Decoder<UnicodeLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnicodeLabels */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnicodeLabels
  * @function
@@ -154,13 +149,11 @@ export function _decode_UnicodeLabels(el: _Element) {
   }
   return _cached_decoder_for_UnicodeLabels(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnicodeLabels */
+
 let _cached_encoder_for_UnicodeLabels: $.ASN1Encoder<UnicodeLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnicodeLabels */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnicodeLabels */
+
 /**
  * @summary Encodes a(n) UnicodeLabels into an ASN.1 Element.
  * @function
@@ -192,6 +185,5 @@ export function _encode_UnicodeLabels(
   return _cached_encoder_for_UnicodeLabels(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnicodeLabels */
 
 /* eslint-enable */

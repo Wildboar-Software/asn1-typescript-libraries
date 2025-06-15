@@ -16,7 +16,7 @@ import {
     _encode_MedicalRecordIdentification,
 } from '../E-health-identification/MedicalRecordIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION medicalRecordIdentification */
+
 /**
  * @summary medicalRecordIdentification
  * @description
@@ -44,6 +44,5 @@ export const medicalRecordIdentification: IDENTIFICATION<MedicalRecordIdentifica
     '&category': id_med_rec /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION medicalRecordIdentification */
 
 /* eslint-enable */

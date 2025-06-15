@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_pds_parameter_length */
 /**
  * @summary ub_pds_parameter_length
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_pds_parameter_length: INTEGER = 30;
-/* END_OF_SYMBOL_DEFINITION ub_pds_parameter_length */
 
 /* eslint-enable */

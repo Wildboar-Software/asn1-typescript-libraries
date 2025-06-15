@@ -25,7 +25,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RequestShadowUpdateArgumentData */
 /**
  * @summary RequestShadowUpdateArgumentData
  * @description
@@ -111,9 +110,7 @@ export class RequestShadowUpdateArgumentData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestShadowUpdateArgumentData */
 /**
  * @summary The Leading Root Component Types of RequestShadowUpdateArgumentData
  * @description
@@ -152,9 +149,7 @@ export const _root_component_type_list_1_spec_for_RequestShadowUpdateArgumentDat
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestShadowUpdateArgumentData */
 /**
  * @summary The Trailing Root Component Types of RequestShadowUpdateArgumentData
  * @description
@@ -164,9 +159,7 @@ export const _root_component_type_list_1_spec_for_RequestShadowUpdateArgumentDat
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RequestShadowUpdateArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestShadowUpdateArgumentData */
 /**
  * @summary The Extension Addition Component Types of RequestShadowUpdateArgumentData
  * @description
@@ -176,13 +169,9 @@ export const _root_component_type_list_2_spec_for_RequestShadowUpdateArgumentDat
  * @constant
  */
 export const _extension_additions_list_spec_for_RequestShadowUpdateArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestShadowUpdateArgumentData */
 let _cached_decoder_for_RequestShadowUpdateArgumentData: $.ASN1Decoder<RequestShadowUpdateArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestShadowUpdateArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestShadowUpdateArgumentData
  * @function
@@ -243,13 +232,9 @@ export function _decode_RequestShadowUpdateArgumentData(el: _Element) {
     }
     return _cached_decoder_for_RequestShadowUpdateArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestShadowUpdateArgumentData */
 let _cached_encoder_for_RequestShadowUpdateArgumentData: $.ASN1Encoder<RequestShadowUpdateArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestShadowUpdateArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestShadowUpdateArgumentData */
 /**
  * @summary Encodes a(n) RequestShadowUpdateArgumentData into an ASN.1 Element.
  * @function
@@ -308,6 +293,5 @@ export function _encode_RequestShadowUpdateArgumentData(
     return _cached_encoder_for_RequestShadowUpdateArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestShadowUpdateArgumentData */
 
 /* eslint-enable */

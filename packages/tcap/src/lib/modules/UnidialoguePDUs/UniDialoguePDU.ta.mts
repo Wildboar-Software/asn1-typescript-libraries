@@ -15,7 +15,6 @@ import {
     _decode_AUDT_apdu,
     _encode_AUDT_apdu,
 } from '../UnidialoguePDUs/AUDT-apdu.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniDialoguePDU */
 /**
  * @summary UniDialoguePDU
  * @description
@@ -30,13 +29,9 @@ import {
 export type UniDialoguePDU = {
     unidialoguePDU: AUDT_apdu;
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UniDialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniDialoguePDU */
 let _cached_decoder_for_UniDialoguePDU: $.ASN1Decoder<UniDialoguePDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniDialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniDialoguePDU */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniDialoguePDU
  * @function
@@ -53,13 +48,9 @@ export function _decode_UniDialoguePDU(el: _Element) {
     }
     return _cached_decoder_for_UniDialoguePDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniDialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniDialoguePDU */
 let _cached_encoder_for_UniDialoguePDU: $.ASN1Encoder<UniDialoguePDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniDialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniDialoguePDU */
 /**
  * @summary Encodes a(n) UniDialoguePDU into an ASN.1 Element.
  * @function
@@ -82,6 +73,5 @@ export function _encode_UniDialoguePDU(
     return _cached_encoder_for_UniDialoguePDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniDialoguePDU */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_Hash,
     _encode_Hash,
 } from '../AuthenticationContextForBiometrics/Hash.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HashList */
+
 /**
  * @summary HashList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type HashList = Hash[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION HashList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HashList */
+
 let _cached_decoder_for_HashList: $.ASN1Decoder<HashList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HashList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HashList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HashList
  * @function
@@ -48,13 +46,11 @@ export function _decode_HashList(el: _Element) {
     }
     return _cached_decoder_for_HashList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HashList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HashList */
+
 let _cached_encoder_for_HashList: $.ASN1Encoder<HashList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HashList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HashList */
+
 /**
  * @summary Encodes a(n) HashList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_HashList(
     return _cached_encoder_for_HashList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HashList */
 
 /* eslint-enable */

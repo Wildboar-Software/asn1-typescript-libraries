@@ -8,7 +8,6 @@ import {
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { id_at_supportedApplicationContext } from "../SelectedAttributeTypes/id-at-supportedApplicationContext.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION supportedApplicationContext */
 /**
  * @summary supportedApplicationContext
  * @description
@@ -48,6 +47,5 @@ export const supportedApplicationContext: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedApplicationContext */
 
 /* eslint-enable */

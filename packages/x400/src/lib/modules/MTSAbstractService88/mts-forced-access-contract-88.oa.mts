@@ -15,7 +15,6 @@ import { delivery_88 } from '../MTSAbstractService88/delivery-88.oa.mjs';
 import { administration_88 } from '../MTSAbstractService88/administration-88.oa.mjs';
 import { id_ct_mts_forced_access } from '../MTSObjectIdentifiers/id-ct-mts-forced-access.va.mjs';
 import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_forced_access_contract_88 */
 /**
  * @summary mts_forced_access_contract_88
  * @description
@@ -49,6 +48,5 @@ export const mts_forced_access_contract_88: CONTRACT = {
         id_ct_mts_forced_access
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mts_forced_access_contract_88 */
 
 /* eslint-enable */

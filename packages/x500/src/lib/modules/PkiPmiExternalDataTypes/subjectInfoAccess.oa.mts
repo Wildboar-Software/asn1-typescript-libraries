@@ -6,7 +6,6 @@ import {
     _decode_SubjectInfoAccessSyntax,
     _encode_SubjectInfoAccessSyntax,
 } from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION subjectInfoAccess */
 /**
  * @summary subjectInfoAccess
  * @description
@@ -34,6 +33,5 @@ export const subjectInfoAccess: EXTENSION<SubjectInfoAccessSyntax> = {
     "&id": id_pe_subjectInfoAccess /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subjectInfoAccess */
 
 /* eslint-enable */

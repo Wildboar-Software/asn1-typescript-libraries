@@ -15,7 +15,6 @@ import {
     _encode_ServiceReportCause,
 } from '../SecurityAuditTrail-ASN1Module/ServiceReportCause.ta.mjs';
 import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceReportCause.va.mjs';
-/* START_OF_SYMBOL_DEFINITION otherReason */
 /**
  * @summary otherReason
  * @description
@@ -32,6 +31,5 @@ export const otherReason: ServiceReportCause = new _OID(
     [6],
     serviceReportCause
 );
-/* END_OF_SYMBOL_DEFINITION otherReason */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 import { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va.mjs";
-/* START_OF_SYMBOL_DEFINITION device */
 /**
  * @summary device
  * @description
@@ -58,6 +57,5 @@ export const device: OBJECT_CLASS = {
     "&id": id_oc_device /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION device */
 
 /* eslint-enable */

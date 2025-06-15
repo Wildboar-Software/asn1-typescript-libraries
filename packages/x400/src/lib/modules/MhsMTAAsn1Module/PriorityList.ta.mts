@@ -15,7 +15,6 @@ import {
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PriorityList */
 /**
  * @summary PriorityList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PriorityList = Priority[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION PriorityList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PriorityList */
 let _cached_decoder_for_PriorityList: $.ASN1Decoder<PriorityList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PriorityList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PriorityList */
 /**
  * @summary Decodes an ASN.1 element into a(n) PriorityList
  * @function
@@ -48,13 +43,9 @@ export function _decode_PriorityList(el: _Element) {
     }
     return _cached_decoder_for_PriorityList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PriorityList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PriorityList */
 let _cached_encoder_for_PriorityList: $.ASN1Encoder<PriorityList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PriorityList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PriorityList */
 /**
  * @summary Encodes a(n) PriorityList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_PriorityList(
     return _cached_encoder_for_PriorityList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PriorityList */
 
 /* eslint-enable */

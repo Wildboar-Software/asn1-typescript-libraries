@@ -21,7 +21,6 @@ import {
   _decode_ComponentPortion,
   _encode_ComponentPortion,
 } from '../TCAPMessages/ComponentPortion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Unidirectional */
 /**
  * @summary Unidirectional
  * @description
@@ -71,9 +70,7 @@ export class Unidirectional {
     return new Unidirectional(_o.dialoguePortion, _o.components);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Unidirectional */
 /**
  * @summary The Leading Root Component Types of Unidirectional
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_Unidirectional: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Unidirectional */
 /**
  * @summary The Trailing Root Component Types of Unidirectional
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_Unidirectional: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Unidirectional: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Unidirectional */
 /**
  * @summary The Extension Addition Component Types of Unidirectional
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_Unidirectional: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_Unidirectional: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Unidirectional */
 let _cached_decoder_for_Unidirectional: $.ASN1Decoder<Unidirectional> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Unidirectional */
 /**
  * @summary Decodes an ASN.1 element into a(n) Unidirectional
  * @function
@@ -170,13 +159,9 @@ export function _decode_Unidirectional(el: _Element) {
   }
   return _cached_decoder_for_Unidirectional(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Unidirectional */
 let _cached_encoder_for_Unidirectional: $.ASN1Encoder<Unidirectional> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Unidirectional */
 /**
  * @summary Encodes a(n) Unidirectional into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_Unidirectional(
   return _cached_encoder_for_Unidirectional(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Unidirectional */
 
 /* eslint-enable */

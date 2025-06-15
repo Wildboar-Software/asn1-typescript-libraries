@@ -11,7 +11,6 @@ import {
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { id_oa_creatorsName } from "../InformationFramework/id-oa-creatorsName.va.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION creatorsName */
 /**
  * @summary creatorsName
  * @description
@@ -54,6 +53,5 @@ export const creatorsName: ATTRIBUTE<DistinguishedName> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION creatorsName */
 
 /* eslint-enable */

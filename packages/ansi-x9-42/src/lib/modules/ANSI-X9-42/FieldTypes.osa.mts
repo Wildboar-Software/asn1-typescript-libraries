@@ -6,7 +6,7 @@ import {
 } from "../ANSI-X9-42/DomainParameters.ta.mjs";
 import { gfPrime } from "../ANSI-X9-42/gfPrime.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION FieldTypes */
+
 /**
  * @summary FieldTypes
  * @description
@@ -37,6 +37,5 @@ export const FieldTypes: FIELD_ID[] = [
         "&Type": 0 as never,
     },
 ];
-/* END_OF_SYMBOL_DEFINITION FieldTypes */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_ExtendedBodyPart,
     _encode_ExtendedBodyPart,
 } from '../IPMSInformationObjects/ExtendedBodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPart */
 /**
  * @summary BodyPart
  * @description
@@ -47,13 +46,9 @@ import {
 export type BodyPart =
     | { basic: BodyPart_basic } /* CHOICE_ALT_ROOT */
     | { extended: ExtendedBodyPart } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPart */
 let _cached_decoder_for_BodyPart: $.ASN1Decoder<BodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPart
  * @function
@@ -83,13 +78,9 @@ export function _decode_BodyPart(el: _Element) {
     }
     return _cached_decoder_for_BodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPart */
 let _cached_encoder_for_BodyPart: $.ASN1Encoder<BodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPart */
 /**
  * @summary Encodes a(n) BodyPart into an ASN.1 Element.
  * @function
@@ -118,6 +109,5 @@ export function _encode_BodyPart(
     return _cached_encoder_for_BodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPart */
 
 /* eslint-enable */

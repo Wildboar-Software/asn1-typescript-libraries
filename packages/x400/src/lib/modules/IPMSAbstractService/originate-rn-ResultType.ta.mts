@@ -20,7 +20,6 @@ import {
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from '../MTSAbstractService/MessageSubmissionTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION originate_rn_ResultType */
 /**
  * @summary originate_rn_ResultType
  * @description
@@ -72,9 +71,7 @@ export class originate_rn_ResultType {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_originate_rn_ResultType */
 /**
  * @summary The Leading Root Component Types of originate_rn_ResultType
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_originate_rn_ResultType: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_originate_rn_ResultType */
 /**
  * @summary The Trailing Root Component Types of originate_rn_ResultType
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_originate_rn_ResultType: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_originate_rn_ResultType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_originate_rn_ResultType */
 /**
  * @summary The Extension Addition Component Types of originate_rn_ResultType
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_originate_rn_ResultType: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_originate_rn_ResultType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_originate_rn_ResultType */
 let _cached_decoder_for_originate_rn_ResultType: $.ASN1Decoder<originate_rn_ResultType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_originate_rn_ResultType */
 /**
  * @summary Decodes an ASN.1 element into a(n) originate_rn_ResultType
  * @function
@@ -175,13 +164,9 @@ export function _decode_originate_rn_ResultType(el: _Element) {
     }
     return _cached_decoder_for_originate_rn_ResultType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_originate_rn_ResultType */
 let _cached_encoder_for_originate_rn_ResultType: $.ASN1Encoder<originate_rn_ResultType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_originate_rn_ResultType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_originate_rn_ResultType */
 /**
  * @summary Encodes a(n) originate_rn_ResultType into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_originate_rn_ResultType(
     return _cached_encoder_for_originate_rn_ResultType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_originate_rn_ResultType */
 
 /* eslint-enable */

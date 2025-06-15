@@ -27,7 +27,6 @@ import {
     _root_component_type_list_1_spec_for_CASPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertReplaceReq */
 /**
  * @summary CertReplaceReq
  * @description
@@ -114,9 +113,7 @@ export class CertReplaceReq implements CASPcommonComponents {
 
     public static _enum_for_version = _enum_for_CASPversion;
 }
-/* END_OF_SYMBOL_DEFINITION CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReplaceReq */
 /**
  * @summary The Leading Root Component Types of CertReplaceReq
  * @description
@@ -135,9 +132,7 @@ export const _root_component_type_list_1_spec_for_CertReplaceReq: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReplaceReq */
 /**
  * @summary The Trailing Root Component Types of CertReplaceReq
  * @description
@@ -147,9 +142,7 @@ export const _root_component_type_list_1_spec_for_CertReplaceReq: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertReplaceReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReplaceReq */
 /**
  * @summary The Extension Addition Component Types of CertReplaceReq
  * @description
@@ -159,13 +152,9 @@ export const _root_component_type_list_2_spec_for_CertReplaceReq: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CertReplaceReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceReq */
 let _cached_decoder_for_CertReplaceReq: $.ASN1Decoder<CertReplaceReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReplaceReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReplaceReq
  * @function
@@ -219,13 +208,9 @@ export function _decode_CertReplaceReq(el: _Element) {
     }
     return _cached_decoder_for_CertReplaceReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceReq */
 let _cached_encoder_for_CertReplaceReq: $.ASN1Encoder<CertReplaceReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReplaceReq */
 /**
  * @summary Encodes a(n) CertReplaceReq into an ASN.1 Element.
  * @function
@@ -272,6 +257,5 @@ export function _encode_CertReplaceReq(
     return _cached_encoder_for_CertReplaceReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReplaceReq */
 
 /* eslint-enable */

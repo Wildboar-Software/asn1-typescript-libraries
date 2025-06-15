@@ -6,7 +6,6 @@ import {
 import { top } from "../InformationFramework/top.oa.mjs";
 import { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa.mjs";
 import { id_oc_epcTagTypeObj } from "../SelectedObjectClasses/id-oc-epcTagTypeObj.va.mjs";
-/* START_OF_SYMBOL_DEFINITION epcTagTypeObj */
 /**
  * @summary epcTagTypeObj
  * @description
@@ -36,6 +35,5 @@ export const epcTagTypeObj: OBJECT_CLASS = {
     "&ldapName": ["epcTagTypeObj"],
     "&id": id_oc_epcTagTypeObj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION epcTagTypeObj */
 
 /* eslint-enable */

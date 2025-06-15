@@ -15,7 +15,7 @@ import {
   _decode_AND_Set_Item,
   _encode_AND_Set_Item,
 } from '../ISO8571-FTAM/AND-Set-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AND_Set */
+
 /**
  * @summary AND_Set
  * @description
@@ -77,13 +77,11 @@ import {
  * ```
  */
 export type AND_Set = AND_Set_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AND_Set */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AND_Set */
+
 let _cached_decoder_for_AND_Set: $.ASN1Decoder<AND_Set> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AND_Set */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AND_Set */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AND_Set
  * @function
@@ -98,13 +96,11 @@ export function _decode_AND_Set(el: _Element) {
   }
   return _cached_decoder_for_AND_Set(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AND_Set */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AND_Set */
+
 let _cached_encoder_for_AND_Set: $.ASN1Encoder<AND_Set> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AND_Set */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AND_Set */
+
 /**
  * @summary Encodes a(n) AND_Set into an ASN.1 Element.
  * @function
@@ -125,6 +121,5 @@ export function _encode_AND_Set(
   return _cached_encoder_for_AND_Set(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AND_Set */
 
 /* eslint-enable */

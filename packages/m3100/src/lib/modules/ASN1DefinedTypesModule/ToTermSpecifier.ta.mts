@@ -20,7 +20,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ToTermSpecifier */
+
 /**
  * @summary ToTermSpecifier
  * @description
@@ -37,13 +37,11 @@ import {
 export type ToTermSpecifier =
     | { toTpOrGTP: ExplicitTP } /* CHOICE_ALT_ROOT */
     | { toPool: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ToTermSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ToTermSpecifier */
+
 let _cached_decoder_for_ToTermSpecifier: $.ASN1Decoder<ToTermSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ToTermSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ToTermSpecifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ToTermSpecifier
  * @function
@@ -69,13 +67,11 @@ export function _decode_ToTermSpecifier(el: _Element) {
     }
     return _cached_decoder_for_ToTermSpecifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ToTermSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ToTermSpecifier */
+
 let _cached_encoder_for_ToTermSpecifier: $.ASN1Encoder<ToTermSpecifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ToTermSpecifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ToTermSpecifier */
+
 /**
  * @summary Encodes a(n) ToTermSpecifier into an ASN.1 Element.
  * @function
@@ -109,6 +105,5 @@ export function _encode_ToTermSpecifier(
     return _cached_encoder_for_ToTermSpecifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ToTermSpecifier */
 
 /* eslint-enable */

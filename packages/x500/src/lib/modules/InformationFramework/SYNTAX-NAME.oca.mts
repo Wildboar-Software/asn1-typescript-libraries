@@ -2,7 +2,6 @@
 import { OBJECT_IDENTIFIER, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SYNTAX_NAME */
 /**
  * @summary SYNTAX_NAME
  * @description
@@ -64,6 +63,5 @@ export interface SYNTAX_NAME<
      */
     readonly "&id": OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION SYNTAX_NAME */
 
 /* eslint-enable */

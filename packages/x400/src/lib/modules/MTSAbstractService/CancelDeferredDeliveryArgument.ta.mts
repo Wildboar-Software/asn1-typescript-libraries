@@ -15,7 +15,6 @@ import {
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
 } from '../MTSAbstractService/MessageSubmissionIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CancelDeferredDeliveryArgument */
 /**
  * @summary CancelDeferredDeliveryArgument
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CancelDeferredDeliveryArgument = MessageSubmissionIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CancelDeferredDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliveryArgument */
 let _cached_decoder_for_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDeferredDeliveryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliveryArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) CancelDeferredDeliveryArgument
  * @function
@@ -46,13 +41,9 @@ export function _decode_CancelDeferredDeliveryArgument(el: _Element) {
     }
     return _cached_decoder_for_CancelDeferredDeliveryArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliveryArgument */
 let _cached_encoder_for_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDeferredDeliveryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliveryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliveryArgument */
 /**
  * @summary Encodes a(n) CancelDeferredDeliveryArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CancelDeferredDeliveryArgument(
     return _cached_encoder_for_CancelDeferredDeliveryArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliveryArgument */
 
 /* eslint-enable */

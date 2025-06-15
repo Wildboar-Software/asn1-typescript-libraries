@@ -6,7 +6,6 @@ import {
     _decode_CrossCertificates,
     _encode_CrossCertificates,
 } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ForwardCertificationPath */
 /**
  * @summary ForwardCertificationPath
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ForwardCertificationPath = CrossCertificates[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ForwardCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardCertificationPath */
 let _cached_decoder_for_ForwardCertificationPath: $.ASN1Decoder<ForwardCertificationPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardCertificationPath */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardCertificationPath
  * @function
@@ -39,13 +34,9 @@ export function _decode_ForwardCertificationPath(el: _Element) {
     }
     return _cached_decoder_for_ForwardCertificationPath(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardCertificationPath */
 let _cached_encoder_for_ForwardCertificationPath: $.ASN1Encoder<ForwardCertificationPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardCertificationPath */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardCertificationPath */
 /**
  * @summary Encodes a(n) ForwardCertificationPath into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_ForwardCertificationPath(
     return _cached_encoder_for_ForwardCertificationPath(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardCertificationPath */
 
 /* eslint-enable */

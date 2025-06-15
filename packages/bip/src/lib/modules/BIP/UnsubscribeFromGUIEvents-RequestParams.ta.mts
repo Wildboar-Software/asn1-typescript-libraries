@@ -22,7 +22,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnsubscribeFromGUIEvents_RequestParams */
+
 /**
  * @summary UnsubscribeFromGUIEvents_RequestParams
  * @description
@@ -109,9 +109,8 @@ export class UnsubscribeFromGUIEvents_RequestParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnsubscribeFromGUIEvents_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of UnsubscribeFromGUIEvents_RequestParams
  * @description
@@ -164,9 +163,8 @@ export const _root_component_type_list_1_spec_for_UnsubscribeFromGUIEvents_Reque
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnsubscribeFromGUIEvents_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of UnsubscribeFromGUIEvents_RequestParams
  * @description
@@ -176,9 +174,8 @@ export const _root_component_type_list_1_spec_for_UnsubscribeFromGUIEvents_Reque
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnsubscribeFromGUIEvents_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnsubscribeFromGUIEvents_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of UnsubscribeFromGUIEvents_RequestParams
  * @description
@@ -188,13 +185,11 @@ export const _root_component_type_list_2_spec_for_UnsubscribeFromGUIEvents_Reque
  * @constant
  */
 export const _extension_additions_list_spec_for_UnsubscribeFromGUIEvents_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnsubscribeFromGUIEvents_RequestParams */
+
 let _cached_decoder_for_UnsubscribeFromGUIEvents_RequestParams: $.ASN1Decoder<UnsubscribeFromGUIEvents_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnsubscribeFromGUIEvents_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnsubscribeFromGUIEvents_RequestParams
  * @function
@@ -256,13 +251,11 @@ export function _decode_UnsubscribeFromGUIEvents_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_UnsubscribeFromGUIEvents_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnsubscribeFromGUIEvents_RequestParams */
+
 let _cached_encoder_for_UnsubscribeFromGUIEvents_RequestParams: $.ASN1Encoder<UnsubscribeFromGUIEvents_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnsubscribeFromGUIEvents_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnsubscribeFromGUIEvents_RequestParams */
+
 /**
  * @summary Encodes a(n) UnsubscribeFromGUIEvents_RequestParams into an ASN.1 Element.
  * @function
@@ -313,6 +306,5 @@ export function _encode_UnsubscribeFromGUIEvents_RequestParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnsubscribeFromGUIEvents_RequestParams */
 
 /* eslint-enable */

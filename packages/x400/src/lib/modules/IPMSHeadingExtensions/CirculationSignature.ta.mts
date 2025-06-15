@@ -21,7 +21,6 @@ import {
     _encode_TBSCirculationSignature,
 } from '../IPMSHeadingExtensions/TBSCirculationSignature.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CirculationSignature */
 /**
  * @summary CirculationSignature
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type CirculationSignature = SIGNED<TBSCirculationSignature>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationSignature */
 let _cached_decoder_for_CirculationSignature: $.ASN1Decoder<CirculationSignature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CirculationSignature */
 /**
  * @summary Decodes an ASN.1 element into a(n) CirculationSignature
  * @function
@@ -54,13 +49,9 @@ export function _decode_CirculationSignature(el: _Element) {
     }
     return _cached_decoder_for_CirculationSignature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationSignature */
 let _cached_encoder_for_CirculationSignature: $.ASN1Encoder<CirculationSignature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CirculationSignature */
 /**
  * @summary Encodes a(n) CirculationSignature into an ASN.1 Element.
  * @function
@@ -80,6 +71,5 @@ export function _encode_CirculationSignature(
     return _cached_encoder_for_CirculationSignature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CirculationSignature */
 
 /* eslint-enable */

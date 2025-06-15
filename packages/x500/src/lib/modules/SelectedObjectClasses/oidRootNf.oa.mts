@@ -5,7 +5,6 @@ import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
 import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
 import { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.mjs";
 import { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION oidRootNf */
 /**
  * @summary oidRootNf
  * @description
@@ -31,6 +30,5 @@ export const oidRootNf: NAME_FORM = {
     "&MandatoryAttributes": [oidC1, oidC2, oidC] /* OBJECT_FIELD_SETTING */,
     "&id": id_oidRootNf /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oidRootNf */
 
 /* eslint-enable */

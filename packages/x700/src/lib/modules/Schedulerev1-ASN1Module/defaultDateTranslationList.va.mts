@@ -22,7 +22,6 @@ import {
     _decode_TypeOfDay,
     _encode_TypeOfDay,
 } from '../Schedulerev1-ASN1Module/TypeOfDay.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultDateTranslationList */
 /**
  * @summary defaultDateTranslationList
  * @description
@@ -36,6 +35,5 @@ import {
  * @constant
  */
 export const defaultDateTranslationList: DateTranslationList = [];
-/* END_OF_SYMBOL_DEFINITION defaultDateTranslationList */
 
 /* eslint-enable */

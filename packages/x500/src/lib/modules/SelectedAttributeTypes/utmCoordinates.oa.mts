@@ -10,7 +10,6 @@ import {
     _encode_UtmCoordinates,
 } from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
 import { utmCoords } from "../SelectedAttributeTypes/utmCoords.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION utmCoordinates */
 /**
  * @summary utmCoordinates
  * @description
@@ -49,6 +48,5 @@ export const utmCoordinates: ATTRIBUTE<UtmCoordinates> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION utmCoordinates */
 
 /* eslint-enable */

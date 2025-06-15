@@ -12,7 +12,6 @@ import {
 import { file_transfer_body_part_parameters } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-parameters.oa.mjs';
 import { file_transfer_body_part_data } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION file_transfer_body_part */
 /**
  * @summary file_transfer_body_part
  * @description
@@ -39,6 +38,5 @@ export const file_transfer_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': file_transfer_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': file_transfer_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION file_transfer_body_part */
 
 /* eslint-enable */

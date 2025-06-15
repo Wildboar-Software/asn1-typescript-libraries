@@ -280,7 +280,7 @@ import {
   _decode_UnregisterBFP_RequestParams,
   _encode_UnregisterBFP_RequestParams,
 } from '../BIP/UnregisterBFP-RequestParams.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPRequest_params */
+
 /**
  * @summary BIPRequest_params
  * @description
@@ -371,13 +371,11 @@ export type BIPRequest_params =
   | { registerBFP: RegisterBFP_RequestParams } /* CHOICE_ALT_ROOT */
   | { unregisterBFP: UnregisterBFP_RequestParams } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BIPRequest_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPRequest_params */
+
 let _cached_decoder_for_BIPRequest_params: $.ASN1Decoder<BIPRequest_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPRequest_params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPRequest_params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPRequest_params
  * @function
@@ -498,13 +496,11 @@ export function _decode_BIPRequest_params(el: _Element) {
   }
   return _cached_decoder_for_BIPRequest_params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPRequest_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPRequest_params */
+
 let _cached_encoder_for_BIPRequest_params: $.ASN1Encoder<BIPRequest_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPRequest_params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPRequest_params */
+
 /**
  * @summary Encodes a(n) BIPRequest_params into an ASN.1 Element.
  * @function
@@ -580,6 +576,5 @@ export function _encode_BIPRequest_params(
   return _cached_encoder_for_BIPRequest_params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPRequest_params */
 
 /* eslint-enable */

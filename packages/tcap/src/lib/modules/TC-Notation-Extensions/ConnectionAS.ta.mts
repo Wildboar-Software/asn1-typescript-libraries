@@ -20,7 +20,6 @@ import {
     _decode_Unbind,
     _encode_Unbind,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectionAS */
 /**
  * @summary ConnectionAS
  * @description
@@ -37,13 +36,9 @@ import {
 export type ConnectionAS =
     | { bind: Bind } /* CHOICE_ALT_ROOT */
     | { unbind: Unbind } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectionAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionAS */
 let _cached_decoder_for_ConnectionAS: $.ASN1Decoder<ConnectionAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionAS */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectionAS
  * @function
@@ -65,13 +60,9 @@ export function _decode_ConnectionAS(el: _Element) {
     }
     return _cached_decoder_for_ConnectionAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionAS */
 let _cached_encoder_for_ConnectionAS: $.ASN1Encoder<ConnectionAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionAS */
 /**
  * @summary Encodes a(n) ConnectionAS into an ASN.1 Element.
  * @function
@@ -95,6 +86,5 @@ export function _encode_ConnectionAS(
     return _cached_encoder_for_ConnectionAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionAS */
 
 /* eslint-enable */

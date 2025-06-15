@@ -20,7 +20,7 @@ import {
   _decode_BioAPI_TIME,
   _encode_BioAPI_TIME,
 } from '../BIP/BioAPI-TIME.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_DTG */
+
 /**
  * @summary BioAPI_DTG
  * @description
@@ -69,9 +69,8 @@ export class BioAPI_DTG {
     return new BioAPI_DTG(_o.date, _o.time);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_DTG */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_DTG
  * @description
@@ -96,9 +95,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_DTG: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_DTG */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_DTG
  * @description
@@ -108,9 +106,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_DTG: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_DTG: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_DTG */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_DTG
  * @description
@@ -120,13 +117,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_DTG: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_DTG: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_DTG */
+
 let _cached_decoder_for_BioAPI_DTG: $.ASN1Decoder<BioAPI_DTG> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_DTG */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_DTG
  * @function
@@ -155,13 +150,11 @@ export function _decode_BioAPI_DTG(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_DTG(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_DTG */
+
 let _cached_encoder_for_BioAPI_DTG: $.ASN1Encoder<BioAPI_DTG> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_DTG */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_DTG */
+
 /**
  * @summary Encodes a(n) BioAPI_DTG into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_BioAPI_DTG(
   return _cached_encoder_for_BioAPI_DTG(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_DTG */
 
 /* eslint-enable */

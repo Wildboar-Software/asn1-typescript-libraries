@@ -6,7 +6,7 @@ import {
     _encode_SigncryptedData,
 } from "../CMSSigncryption/SigncryptedData.ta.mjs";
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ct_SigncryptedData */
+
 /**
  * @summary ct_SigncryptedData
  * @description
@@ -33,6 +33,5 @@ export const ct_SigncryptedData: CONTENT_TYPE<SigncryptedData> = {
     "&id": id_signcryptedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_SigncryptedData */
 
 /* eslint-enable */

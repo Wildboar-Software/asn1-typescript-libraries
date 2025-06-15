@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION rc2_cbc */
+
 /**
  * @summary rc2_cbc
  * @description
@@ -22,6 +22,5 @@ export const rc2_cbc: OBJECT_IDENTIFIER = new _OID([
     /* encryptionAlgorithm */ 3,
     2,
 ]);
-/* END_OF_SYMBOL_DEFINITION rc2_cbc */
 
 /* eslint-enable */

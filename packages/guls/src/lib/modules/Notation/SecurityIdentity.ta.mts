@@ -17,7 +17,7 @@ import {
   _encode_Name,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SecurityIdentity */
+
 /**
  * @summary SecurityIdentity
  * @description
@@ -34,13 +34,11 @@ import {
 export type SecurityIdentity =
   | { directoryName: Name } /* CHOICE_ALT_ROOT */
   | { objectIdentifier: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SecurityIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityIdentity */
+
 let _cached_decoder_for_SecurityIdentity: $.ASN1Decoder<SecurityIdentity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityIdentity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityIdentity
  * @function
@@ -58,13 +56,11 @@ export function _decode_SecurityIdentity(el: _Element) {
   }
   return _cached_decoder_for_SecurityIdentity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityIdentity */
+
 let _cached_encoder_for_SecurityIdentity: $.ASN1Encoder<SecurityIdentity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityIdentity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityIdentity */
+
 /**
  * @summary Encodes a(n) SecurityIdentity into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_SecurityIdentity(
   return _cached_encoder_for_SecurityIdentity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityIdentity */
 
 /* eslint-enable */

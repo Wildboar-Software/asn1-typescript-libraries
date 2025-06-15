@@ -16,7 +16,6 @@ import {
   _decode_NonIdentifyingStringOrIndex_literal_character_string,
   _encode_NonIdentifyingStringOrIndex_literal_character_string,
 } from '../FastInfoset/NonIdentifyingStringOrIndex-literal-character-string.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NonIdentifyingStringOrIndex */
 /**
  * @summary NonIdentifyingStringOrIndex
  * @description
@@ -37,12 +36,8 @@ export type NonIdentifyingStringOrIndex =
       literal_character_string: NonIdentifyingStringOrIndex_literal_character_string;
     } /* CHOICE_ALT_ROOT */
   | { string_index: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NonIdentifyingStringOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonIdentifyingStringOrIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonIdentifyingStringOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonIdentifyingStringOrIndex */
 export const _decode_NonIdentifyingStringOrIndex = $._decode_inextensible_choice<NonIdentifyingStringOrIndex>(
   {
     'CONTEXT 0': [
@@ -52,12 +47,8 @@ export const _decode_NonIdentifyingStringOrIndex = $._decode_inextensible_choice
     'CONTEXT 1': ['string_index', $._decodeInteger],
   }
 );
-/* END_OF_SYMBOL_DEFINITION _decode_NonIdentifyingStringOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonIdentifyingStringOrIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonIdentifyingStringOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonIdentifyingStringOrIndex */
 export const _encode_NonIdentifyingStringOrIndex = $._encode_choice<NonIdentifyingStringOrIndex>(
   {
     literal_character_string: _encode_NonIdentifyingStringOrIndex_literal_character_string,
@@ -66,6 +57,5 @@ export const _encode_NonIdentifyingStringOrIndex = $._encode_choice<NonIdentifyi
   $.BER
 );
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonIdentifyingStringOrIndex */
 
 /* eslint-enable */

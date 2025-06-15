@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RelatedObject */
+
 /**
  * @summary RelatedObject
  * @description
@@ -34,13 +34,11 @@ export type RelatedObject =
     | { noObject: NULL } /* CHOICE_ALT_ROOT */
     | { object: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RelatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedObject */
+
 let _cached_decoder_for_RelatedObject: $.ASN1Decoder<RelatedObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RelatedObject */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedObject
  * @function
@@ -60,13 +58,11 @@ export function _decode_RelatedObject(el: _Element) {
     }
     return _cached_decoder_for_RelatedObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RelatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedObject */
+
 let _cached_encoder_for_RelatedObject: $.ASN1Encoder<RelatedObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelatedObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RelatedObject */
+
 /**
  * @summary Encodes a(n) RelatedObject into an ASN.1 Element.
  * @function
@@ -90,6 +86,5 @@ export function _encode_RelatedObject(
     return _cached_encoder_for_RelatedObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RelatedObject */
 
 /* eslint-enable */

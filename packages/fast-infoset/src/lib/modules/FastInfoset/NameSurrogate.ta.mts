@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NameSurrogate */
 /**
  * @summary NameSurrogate
  * @description
@@ -74,9 +73,7 @@ export class NameSurrogate {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameSurrogate */
 /**
  * @summary The Leading Root Component Types of NameSurrogate
  * @description
@@ -108,9 +105,7 @@ export const _root_component_type_list_1_spec_for_NameSurrogate: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameSurrogate */
 /**
  * @summary The Trailing Root Component Types of NameSurrogate
  * @description
@@ -120,9 +115,7 @@ export const _root_component_type_list_1_spec_for_NameSurrogate: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameSurrogate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameSurrogate */
 /**
  * @summary The Extension Addition Component Types of NameSurrogate
  * @description
@@ -132,13 +125,9 @@ export const _root_component_type_list_2_spec_for_NameSurrogate: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_NameSurrogate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameSurrogate */
 let _cached_decoder_for_NameSurrogate: $.ASN1Decoder<NameSurrogate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameSurrogate */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameSurrogate
  * @function
@@ -183,13 +172,9 @@ export function _decode_NameSurrogate(el: _Element) {
   }
   return _cached_decoder_for_NameSurrogate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameSurrogate */
 let _cached_encoder_for_NameSurrogate: $.ASN1Encoder<NameSurrogate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameSurrogate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameSurrogate */
 /**
  * @summary Encodes a(n) NameSurrogate into an ASN.1 Element.
  * @function
@@ -226,6 +211,5 @@ export function _encode_NameSurrogate(
   return _cached_encoder_for_NameSurrogate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameSurrogate */
 
 /* eslint-enable */

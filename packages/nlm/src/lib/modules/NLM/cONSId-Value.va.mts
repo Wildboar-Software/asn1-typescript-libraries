@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION cONSId_Value */
+
 /**
  * @summary cONSId_Value
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const cONSId_Value: GraphicString = 'CONS';
-/* END_OF_SYMBOL_DEFINITION cONSId_Value */
 
 /* eslint-enable */

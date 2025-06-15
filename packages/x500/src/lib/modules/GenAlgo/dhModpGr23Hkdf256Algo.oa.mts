@@ -11,7 +11,6 @@ import {
     _encode_Payload23,
 } from "../GenAlgo/Payload23.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dhModpGr23Hkdf256Algo */
 /**
  * @summary dhModpGr23Hkdf256Algo
  * @description
@@ -43,6 +42,5 @@ export const dhModpGr23Hkdf256Algo: ALGORITHM<Group23, Payload23> = {
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&DynParms": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dhModpGr23Hkdf256Algo */
 
 /* eslint-enable */

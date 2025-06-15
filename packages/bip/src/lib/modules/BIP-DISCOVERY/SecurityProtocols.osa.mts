@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityProtocols */
+
 /**
  * @summary SecurityProtocols
  * @description
@@ -26,6 +26,5 @@ import { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.mjs';
  *
  */
 export const SecurityProtocols: SECURITY_PROTOCOL[] = [];
-/* END_OF_SYMBOL_DEFINITION SecurityProtocols */
 
 /* eslint-enable */

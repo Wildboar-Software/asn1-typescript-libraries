@@ -11,7 +11,7 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataObject */
+
 /**
  * @summary DataObject
  * @description
@@ -27,9 +27,8 @@ export type DataObject<DataObjectAttributes> = PKCS15Object<
     NULL,
     DataObjectAttributes
 >; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DataObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_DataObject */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) DataObject
  * @function
@@ -49,9 +48,8 @@ export function _get_decoder_for_DataObject<DataObjectAttributes>(
         _decode_DataObjectAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_DataObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_DataObject */
+
 /**
  * @summary Returns a function that will encode a(n) DataObject into an ASN.1 Element.
  * @function
@@ -70,6 +68,5 @@ export function _get_encoder_for_DataObject<DataObjectAttributes>(
         _encode_DataObjectAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_DataObject */
 
 /* eslint-enable */

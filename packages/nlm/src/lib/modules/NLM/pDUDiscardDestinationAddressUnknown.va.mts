@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardDestinationAddressUnknown */
+
 /**
  * @summary pDUDiscardDestinationAddressUnknown
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardDestinationAddressUnknown: OBJECT_IDENTIFIER = new _OID(
     [/* destinationAddressUnknown */ 129],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardDestinationAddressUnknown */
 
 /* eslint-enable */

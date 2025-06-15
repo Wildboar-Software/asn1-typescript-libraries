@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ListOfSLCsUsed */
+
 /**
  * @summary ListOfSLCsUsed
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ListOfSLCsUsed = ObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ListOfSLCsUsed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListOfSLCsUsed */
+
 let _cached_decoder_for_ListOfSLCsUsed: $.ASN1Decoder<ListOfSLCsUsed> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListOfSLCsUsed */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListOfSLCsUsed */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ListOfSLCsUsed
  * @function
@@ -48,13 +46,11 @@ export function _decode_ListOfSLCsUsed(el: _Element) {
     }
     return _cached_decoder_for_ListOfSLCsUsed(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListOfSLCsUsed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListOfSLCsUsed */
+
 let _cached_encoder_for_ListOfSLCsUsed: $.ASN1Encoder<ListOfSLCsUsed> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListOfSLCsUsed */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListOfSLCsUsed */
+
 /**
  * @summary Encodes a(n) ListOfSLCsUsed into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ListOfSLCsUsed(
     return _cached_encoder_for_ListOfSLCsUsed(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListOfSLCsUsed */
 
 /* eslint-enable */

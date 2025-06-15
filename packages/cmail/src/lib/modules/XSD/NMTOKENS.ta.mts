@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { NMTOKEN, _decode_NMTOKEN, _encode_NMTOKEN } from '../XSD/NMTOKEN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NMTOKENS */
+
 /**
  * @summary NMTOKENS
  * @description
@@ -23,13 +23,11 @@ import { NMTOKEN, _decode_NMTOKEN, _encode_NMTOKEN } from '../XSD/NMTOKEN.ta.mjs
  * ```
  */
 export type NMTOKENS = NMTOKEN[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION NMTOKENS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NMTOKENS */
+
 let _cached_decoder_for_NMTOKENS: $.ASN1Decoder<NMTOKENS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NMTOKENS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NMTOKENS */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NMTOKENS
  * @function
@@ -44,13 +42,11 @@ export function _decode_NMTOKENS(el: _Element) {
   }
   return _cached_decoder_for_NMTOKENS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NMTOKENS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NMTOKENS */
+
 let _cached_encoder_for_NMTOKENS: $.ASN1Encoder<NMTOKENS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NMTOKENS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NMTOKENS */
+
 /**
  * @summary Encodes a(n) NMTOKENS into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_NMTOKENS(
   return _cached_encoder_for_NMTOKENS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NMTOKENS */
 
 /* eslint-enable */

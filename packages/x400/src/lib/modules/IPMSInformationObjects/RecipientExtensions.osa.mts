@@ -14,7 +14,6 @@ import { circulation_list_indicator } from '../IPMSHeadingExtensions/circulation
 import { precedence } from '../IPMSHeadingExtensions/precedence.oa.mjs';
 import { recipient_security_request } from '../IPMSSecurityExtensions/recipient-security-request.oa.mjs';
 import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientExtensions */
 /**
  * @summary RecipientExtensions
  * @description
@@ -36,6 +35,5 @@ export const RecipientExtensions: IPMS_EXTENSION[] = [
     recipient_security_request,
     ...PrivateIPMSExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION RecipientExtensions */
 
 /* eslint-enable */

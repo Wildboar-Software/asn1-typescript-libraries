@@ -14,7 +14,6 @@ import { probe_transfer } from '../MTAAbstractService/probe-transfer.oa.mjs';
 import { report_transfer } from '../MTAAbstractService/report-transfer.oa.mjs';
 import { id_pt_transfer } from '../MTSObjectIdentifiers/id-pt-transfer.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION transfer */
 /**
  * @summary transfer
  * @description
@@ -43,6 +42,5 @@ export const transfer: PORT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_transfer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION transfer */
 
 /* eslint-enable */

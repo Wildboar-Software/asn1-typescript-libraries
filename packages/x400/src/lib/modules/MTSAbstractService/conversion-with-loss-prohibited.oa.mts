@@ -27,7 +27,6 @@ import {
     _encode_ConversionWithLossProhibited,
 } from '../MTSAbstractService/ConversionWithLossProhibited.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION conversion_with_loss_prohibited */
 /**
  * @summary conversion_with_loss_prohibited
  * @description
@@ -66,6 +65,5 @@ export const conversion_with_loss_prohibited: EXTENSION<ConversionWithLossProhib
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION conversion_with_loss_prohibited */
 
 /* eslint-enable */

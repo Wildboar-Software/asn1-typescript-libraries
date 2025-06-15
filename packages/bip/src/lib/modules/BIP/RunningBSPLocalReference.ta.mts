@@ -26,7 +26,7 @@ import {
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RunningBSPLocalReference */
+
 /**
  * @summary RunningBSPLocalReference
  * @description
@@ -103,9 +103,8 @@ export class RunningBSPLocalReference {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RunningBSPLocalReference */
+
 /**
  * @summary The Leading Root Component Types of RunningBSPLocalReference
  * @description
@@ -151,9 +150,8 @@ export const _root_component_type_list_1_spec_for_RunningBSPLocalReference: $.Co
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RunningBSPLocalReference */
+
 /**
  * @summary The Trailing Root Component Types of RunningBSPLocalReference
  * @description
@@ -163,9 +161,8 @@ export const _root_component_type_list_1_spec_for_RunningBSPLocalReference: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RunningBSPLocalReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RunningBSPLocalReference */
+
 /**
  * @summary The Extension Addition Component Types of RunningBSPLocalReference
  * @description
@@ -175,13 +172,11 @@ export const _root_component_type_list_2_spec_for_RunningBSPLocalReference: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_RunningBSPLocalReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RunningBSPLocalReference */
+
 let _cached_decoder_for_RunningBSPLocalReference: $.ASN1Decoder<RunningBSPLocalReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RunningBSPLocalReference */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RunningBSPLocalReference
  * @function
@@ -227,13 +222,11 @@ export function _decode_RunningBSPLocalReference(el: _Element) {
   }
   return _cached_decoder_for_RunningBSPLocalReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RunningBSPLocalReference */
+
 let _cached_encoder_for_RunningBSPLocalReference: $.ASN1Encoder<RunningBSPLocalReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RunningBSPLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RunningBSPLocalReference */
+
 /**
  * @summary Encodes a(n) RunningBSPLocalReference into an ASN.1 Element.
  * @function
@@ -274,6 +267,5 @@ export function _encode_RunningBSPLocalReference(
   return _cached_encoder_for_RunningBSPLocalReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RunningBSPLocalReference */
 
 /* eslint-enable */

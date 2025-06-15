@@ -2,7 +2,7 @@
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { PBKDF2Algorithms } from "../PKCS5v2-1/PBKDF2Algorithms.osa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyDerivationAlgorithms */
+
 /**
  * @summary KeyDerivationAlgorithms
  * @description
@@ -23,6 +23,5 @@ import { PBKDF2Algorithms } from "../PKCS5v2-1/PBKDF2Algorithms.osa.mjs";
 export const KeyDerivationAlgorithms: ALGORITHM_IDENTIFIER<any>[] = [
     ...PBKDF2Algorithms,
 ];
-/* END_OF_SYMBOL_DEFINITION KeyDerivationAlgorithms */
 
 /* eslint-enable */

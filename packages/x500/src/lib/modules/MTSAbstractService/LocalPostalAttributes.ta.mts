@@ -6,7 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../MTSAbstractService/PDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LocalPostalAttributes */
 /**
  * @summary LocalPostalAttributes
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type LocalPostalAttributes = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalPostalAttributes */
 let _cached_decoder_for_LocalPostalAttributes: $.ASN1Decoder<LocalPostalAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocalPostalAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalPostalAttributes
  * @function
@@ -37,13 +32,9 @@ export function _decode_LocalPostalAttributes(el: _Element) {
     }
     return _cached_decoder_for_LocalPostalAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalPostalAttributes */
 let _cached_encoder_for_LocalPostalAttributes: $.ASN1Encoder<LocalPostalAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocalPostalAttributes */
 /**
  * @summary Encodes a(n) LocalPostalAttributes into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_LocalPostalAttributes(
     return _cached_encoder_for_LocalPostalAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocalPostalAttributes */
 
 /* eslint-enable */

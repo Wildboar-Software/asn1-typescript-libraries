@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrimaryObject */
 /**
  * @summary PrimaryObject
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PrimaryObject = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PrimaryObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryObject */
 let _cached_decoder_for_PrimaryObject: $.ASN1Decoder<PrimaryObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrimaryObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryObject
  * @function
@@ -46,13 +41,9 @@ export function _decode_PrimaryObject(el: _Element) {
     }
     return _cached_decoder_for_PrimaryObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrimaryObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryObject */
 let _cached_encoder_for_PrimaryObject: $.ASN1Encoder<PrimaryObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrimaryObject */
 /**
  * @summary Encodes a(n) PrimaryObject into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PrimaryObject(
     return _cached_encoder_for_PrimaryObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrimaryObject */
 
 /* eslint-enable */

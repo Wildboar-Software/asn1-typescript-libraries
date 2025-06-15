@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_3 } from "../PKCS-3/pkcs-3.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dhKeyAgreement */
+
 /**
  * @summary dhKeyAgreement
  * @description
@@ -15,6 +15,5 @@ import { pkcs_3 } from "../PKCS-3/pkcs-3.va.mjs";
  * @constant
  */
 export const dhKeyAgreement: OBJECT_IDENTIFIER = new _OID([1], pkcs_3);
-/* END_OF_SYMBOL_DEFINITION dhKeyAgreement */
 
 /* eslint-enable */

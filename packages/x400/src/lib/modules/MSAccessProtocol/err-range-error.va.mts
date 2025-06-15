@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_range_error */
 /**
  * @summary err_range_error
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_range_error: Code = { local: 25 };
-/* END_OF_SYMBOL_DEFINITION err_range_error */
 
 /* eslint-enable */

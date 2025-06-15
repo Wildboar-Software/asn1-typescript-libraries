@@ -21,7 +21,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScheduledManagedObjectsList_Item */
 /**
  * @summary ScheduledManagedObjectsList_Item
  * @description
@@ -73,9 +72,7 @@ export class ScheduledManagedObjectsList_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScheduledManagedObjectsList_Item */
 /**
  * @summary The Leading Root Component Types of ScheduledManagedObjectsList_Item
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_ScheduledManagedObjectsList_It
     ),
     new $.ComponentSpec('activity', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScheduledManagedObjectsList_Item */
 /**
  * @summary The Trailing Root Component Types of ScheduledManagedObjectsList_Item
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_ScheduledManagedObjectsList_It
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ScheduledManagedObjectsList_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScheduledManagedObjectsList_Item */
 /**
  * @summary The Extension Addition Component Types of ScheduledManagedObjectsList_Item
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_ScheduledManagedObjectsList_It
  * @constant
  */
 export const _extension_additions_list_spec_for_ScheduledManagedObjectsList_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScheduledManagedObjectsList_Item */
 let _cached_decoder_for_ScheduledManagedObjectsList_Item: $.ASN1Decoder<ScheduledManagedObjectsList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScheduledManagedObjectsList_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScheduledManagedObjectsList_Item
  * @function
@@ -166,13 +155,9 @@ export function _decode_ScheduledManagedObjectsList_Item(el: _Element) {
     }
     return _cached_decoder_for_ScheduledManagedObjectsList_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScheduledManagedObjectsList_Item */
 let _cached_encoder_for_ScheduledManagedObjectsList_Item: $.ASN1Encoder<ScheduledManagedObjectsList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScheduledManagedObjectsList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScheduledManagedObjectsList_Item */
 /**
  * @summary Encodes a(n) ScheduledManagedObjectsList_Item into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_ScheduledManagedObjectsList_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScheduledManagedObjectsList_Item */
 
 /* eslint-enable */

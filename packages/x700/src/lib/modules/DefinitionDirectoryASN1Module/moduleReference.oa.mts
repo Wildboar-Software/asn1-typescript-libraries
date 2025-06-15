@@ -22,7 +22,6 @@ import {
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION moduleReference */
 /**
  * @summary moduleReference
  * @description
@@ -64,6 +63,5 @@ export const moduleReference: ATTRIBUTE<Identifier> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION moduleReference */
 
 /* eslint-enable */

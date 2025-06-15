@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultipleAuthenEncryptAlgo */
 /**
  * @summary MultipleAuthenEncryptAlgo
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type MultipleAuthenEncryptAlgo = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MultipleAuthenEncryptAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleAuthenEncryptAlgo */
 let _cached_decoder_for_MultipleAuthenEncryptAlgo: $.ASN1Decoder<MultipleAuthenEncryptAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleAuthenEncryptAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleAuthenEncryptAlgo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleAuthenEncryptAlgo
  * @function
@@ -40,13 +35,9 @@ export function _decode_MultipleAuthenEncryptAlgo(el: _Element) {
     }
     return _cached_decoder_for_MultipleAuthenEncryptAlgo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleAuthenEncryptAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleAuthenEncryptAlgo */
 let _cached_encoder_for_MultipleAuthenEncryptAlgo: $.ASN1Encoder<MultipleAuthenEncryptAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleAuthenEncryptAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleAuthenEncryptAlgo */
 /**
  * @summary Encodes a(n) MultipleAuthenEncryptAlgo into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_MultipleAuthenEncryptAlgo(
     return _cached_encoder_for_MultipleAuthenEncryptAlgo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleAuthenEncryptAlgo */
 
 /* eslint-enable */

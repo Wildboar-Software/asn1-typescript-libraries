@@ -6,7 +6,7 @@ import { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedD
 import { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa.mjs";
 import { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa.mjs";
 import { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentSet */
+
 /**
  * @summary ContentSet
  * @description
@@ -32,6 +32,5 @@ export const ContentSet: CONTENT_TYPE[] = [
     ct_AuthenticatedData,
     ct_DigestedData,
 ];
-/* END_OF_SYMBOL_DEFINITION ContentSet */
 
 /* eslint-enable */

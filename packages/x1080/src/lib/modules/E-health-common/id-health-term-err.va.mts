@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_x1080_1_cms_content } from '../E-health-common/id-x1080-1-cms-content.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_health_term_err */
+
 /**
  * @summary id_health_term_err
  * @description
@@ -28,6 +28,5 @@ export const id_health_term_err: OBJECT_IDENTIFIER = new _OID(
     [/* health-term-err */ 6],
     id_x1080_1_cms_content
 );
-/* END_OF_SYMBOL_DEFINITION id_health_term_err */
 
 /* eslint-enable */

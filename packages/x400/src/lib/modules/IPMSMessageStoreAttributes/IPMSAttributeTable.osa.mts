@@ -111,7 +111,6 @@ import { precedence_policy_identifier } from '../IPMSMessageStoreAttributes/prec
 import { recipient_category } from '../IPMSMessageStoreAttributes/recipient-category.oa.mjs';
 import { revised_reply_time } from '../IPMSMessageStoreAttributes/revised-reply-time.oa.mjs';
 import { rn_extensions } from '../IPMSMessageStoreAttributes/rn-extensions.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMSAttributeTable */
 /**
  * @summary IPMSAttributeTable
  * @description
@@ -260,6 +259,5 @@ export const IPMSAttributeTable: X413ATTRIBUTE[] = [
     revised_reply_time,
     rn_extensions,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMSAttributeTable */
 
 /* eslint-enable */

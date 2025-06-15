@@ -21,7 +21,6 @@ import {
     _encode_ExtensionAttributes,
 } from "../PkiPmiExternalDataTypes/ExtensionAttributes.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ORAddress */
 /**
  * @summary ORAddress
  * @description
@@ -82,9 +81,7 @@ export class ORAddress {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddress */
 /**
  * @summary The Leading Root Component Types of ORAddress
  * @description
@@ -117,9 +114,7 @@ export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] =
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddress */
 /**
  * @summary The Trailing Root Component Types of ORAddress
  * @description
@@ -130,9 +125,7 @@ export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] =
  */
 export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
 /**
  * @summary The Extension Addition Component Types of ORAddress
  * @description
@@ -143,9 +136,7 @@ export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] =
  */
 export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddress
  * @function
@@ -187,9 +178,7 @@ export function _decode_ORAddress(el: _Element) {
         extension_attributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORAddress */
 /**
  * @summary Encodes a(n) ORAddress into an ASN.1 Element.
  * @function
@@ -224,6 +213,5 @@ export function _encode_ORAddress(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORAddress */
 
 /* eslint-enable */

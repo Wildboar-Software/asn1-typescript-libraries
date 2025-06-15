@@ -16,7 +16,7 @@ import {
   _encode_CertificateList,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CRLAnnContent */
+
 /**
  * @summary CRLAnnContent
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type CRLAnnContent = CertificateList[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CRLAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLAnnContent */
+
 let _cached_decoder_for_CRLAnnContent: $.ASN1Decoder<CRLAnnContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CRLAnnContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CRLAnnContent
  * @function
@@ -49,13 +47,11 @@ export function _decode_CRLAnnContent(el: _Element) {
   }
   return _cached_decoder_for_CRLAnnContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CRLAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLAnnContent */
+
 let _cached_encoder_for_CRLAnnContent: $.ASN1Encoder<CRLAnnContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLAnnContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CRLAnnContent */
+
 /**
  * @summary Encodes a(n) CRLAnnContent into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_CRLAnnContent(
   return _cached_encoder_for_CRLAnnContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CRLAnnContent */
 
 /* eslint-enable */

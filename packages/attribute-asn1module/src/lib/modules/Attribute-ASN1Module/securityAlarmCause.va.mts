@@ -14,7 +14,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION securityAlarmCause */
 /**
  * @summary securityAlarmCause
  * @description
@@ -35,6 +34,5 @@ const securityAlarmCause: OBJECT_IDENTIFIER = new _OID([
     /* standardSpecificExtension */ 0,
     /* sarf */ 1,
 ], joint_iso_ccitt);
-/* END_OF_SYMBOL_DEFINITION securityAlarmCause */
 
 /* eslint-enable */

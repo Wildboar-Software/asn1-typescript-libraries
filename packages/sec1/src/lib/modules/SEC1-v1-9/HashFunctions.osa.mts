@@ -15,7 +15,6 @@ import { HashFunctions_Union1_Intersection0_Element } from "../SEC1-v1-9/HashFun
 import { HashFunctions_Union2_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union2-Intersection0-Element.oa.mjs";
 import { HashFunctions_Union3_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union3-Intersection0-Element.oa.mjs";
 import { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union4-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION HashFunctions */
 /**
  * @summary HashFunctions
  * @description
@@ -39,6 +38,5 @@ import { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFun
  */
 export
 const HashFunctions: (ALGORITHM)[] = [ HashFunctions_Union0_Intersection0_Element, HashFunctions_Union1_Intersection0_Element, HashFunctions_Union2_Intersection0_Element, HashFunctions_Union3_Intersection0_Element, HashFunctions_Union4_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION HashFunctions */
 
 /* eslint-enable */

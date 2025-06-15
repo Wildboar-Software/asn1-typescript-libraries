@@ -15,7 +15,7 @@ import {
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplicableManagedObjectClassList */
+
 /**
  * @summary ApplicableManagedObjectClassList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ApplicableManagedObjectClassList = ObjectClass[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ApplicableManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicableManagedObjectClassList */
+
 let _cached_decoder_for_ApplicableManagedObjectClassList: $.ASN1Decoder<ApplicableManagedObjectClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplicableManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplicableManagedObjectClassList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplicableManagedObjectClassList
  * @function
@@ -48,13 +46,11 @@ export function _decode_ApplicableManagedObjectClassList(el: _Element) {
     }
     return _cached_decoder_for_ApplicableManagedObjectClassList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplicableManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicableManagedObjectClassList */
+
 let _cached_encoder_for_ApplicableManagedObjectClassList: $.ASN1Encoder<ApplicableManagedObjectClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplicableManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplicableManagedObjectClassList */
+
 /**
  * @summary Encodes a(n) ApplicableManagedObjectClassList into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_ApplicableManagedObjectClassList(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplicableManagedObjectClassList */
 
 /* eslint-enable */

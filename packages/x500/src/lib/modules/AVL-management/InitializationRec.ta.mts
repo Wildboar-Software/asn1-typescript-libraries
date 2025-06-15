@@ -10,7 +10,6 @@ import {
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION InitializationRec */
 /**
  * @summary InitializationRec
  * @description
@@ -62,9 +61,7 @@ export class InitializationRec {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InitializationRec */
 /**
  * @summary The Leading Root Component Types of InitializationRec
  * @description
@@ -82,9 +79,7 @@ export const _root_component_type_list_1_spec_for_InitializationRec: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InitializationRec */
 /**
  * @summary The Trailing Root Component Types of InitializationRec
  * @description
@@ -94,9 +89,7 @@ export const _root_component_type_list_1_spec_for_InitializationRec: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InitializationRec: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InitializationRec */
 /**
  * @summary The Extension Addition Component Types of InitializationRec
  * @description
@@ -106,13 +99,9 @@ export const _root_component_type_list_2_spec_for_InitializationRec: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_InitializationRec: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationRec */
 let _cached_decoder_for_InitializationRec: $.ASN1Decoder<InitializationRec> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InitializationRec */
 /**
  * @summary Decodes an ASN.1 element into a(n) InitializationRec
  * @function
@@ -140,13 +129,9 @@ export function _decode_InitializationRec(el: _Element) {
     }
     return _cached_decoder_for_InitializationRec(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationRec */
 let _cached_encoder_for_InitializationRec: $.ASN1Encoder<InitializationRec> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitializationRec */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InitializationRec */
 /**
  * @summary Encodes a(n) InitializationRec into an ASN.1 Element.
  * @function
@@ -182,6 +167,5 @@ export function _encode_InitializationRec(
     return _cached_encoder_for_InitializationRec(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InitializationRec */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartTokens_Item_body_part_choice */
 /**
  * @summary BodyPartTokens_Item_body_part_choice
  * @description
@@ -34,13 +33,9 @@ import {
 export type BodyPartTokens_Item_body_part_choice =
     | { encryption_token: EncryptionToken } /* CHOICE_ALT_ROOT */
     | { message_or_content_body_part: BodyPartTokens } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPartTokens_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartTokens_Item_body_part_choice */
 let _cached_decoder_for_BodyPartTokens_Item_body_part_choice: $.ASN1Decoder<BodyPartTokens_Item_body_part_choice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartTokens_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartTokens_Item_body_part_choice */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartTokens_Item_body_part_choice
  * @function
@@ -63,13 +58,9 @@ export function _decode_BodyPartTokens_Item_body_part_choice(el: _Element) {
     }
     return _cached_decoder_for_BodyPartTokens_Item_body_part_choice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartTokens_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartTokens_Item_body_part_choice */
 let _cached_encoder_for_BodyPartTokens_Item_body_part_choice: $.ASN1Encoder<BodyPartTokens_Item_body_part_choice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartTokens_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartTokens_Item_body_part_choice */
 /**
  * @summary Encodes a(n) BodyPartTokens_Item_body_part_choice into an ASN.1 Element.
  * @function
@@ -101,6 +92,5 @@ export function _encode_BodyPartTokens_Item_body_part_choice(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartTokens_Item_body_part_choice */
 
 /* eslint-enable */

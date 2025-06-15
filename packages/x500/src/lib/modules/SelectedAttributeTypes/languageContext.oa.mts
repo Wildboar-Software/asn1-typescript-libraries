@@ -7,7 +7,6 @@ import {
     _decode_LanguageContextSyntax,
     _encode_LanguageContextSyntax,
 } from "../SelectedAttributeTypes/LanguageContextSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION languageContext */
 /**
  * @summary languageContext
  * @description
@@ -39,6 +38,5 @@ export const languageContext: CONTEXT<LanguageContextSyntax> = {
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&absentMatch": TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION languageContext */
 
 /* eslint-enable */

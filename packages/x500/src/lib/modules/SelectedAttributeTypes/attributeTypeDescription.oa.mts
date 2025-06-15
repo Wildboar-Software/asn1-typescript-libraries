@@ -6,7 +6,6 @@ import {
     _encode_AttributeTypeDescription,
 } from "../SchemaAdministration/AttributeTypeDescription.ta.mjs";
 import { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeTypeDescription */
 /**
  * @summary attributeTypeDescription
  * @description
@@ -36,6 +35,5 @@ export const attributeTypeDescription: SYNTAX_NAME<AttributeTypeDescription> = {
     "&id": id_lsx_attributeTypeDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeTypeDescription */
 
 /* eslint-enable */

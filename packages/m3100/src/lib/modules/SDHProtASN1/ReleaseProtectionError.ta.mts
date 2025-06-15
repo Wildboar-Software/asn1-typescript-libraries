@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ReleaseProtectionError */
+
 /**
  * @summary ReleaseProtectionError
  * @description
@@ -26,9 +26,8 @@ export enum _enum_for_ReleaseProtectionError {
     failure = 0,
     timeout = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ReleaseProtectionError */
 
-/* START_OF_SYMBOL_DEFINITION ReleaseProtectionError */
+
 /**
  * @summary ReleaseProtectionError
  * @description
@@ -40,9 +39,8 @@ export enum _enum_for_ReleaseProtectionError {
  * ```@enum {number}
  */
 export type ReleaseProtectionError = _enum_for_ReleaseProtectionError;
-/* END_OF_SYMBOL_DEFINITION ReleaseProtectionError */
 
-/* START_OF_SYMBOL_DEFINITION ReleaseProtectionError */
+
 /**
  * @summary ReleaseProtectionError
  * @description
@@ -54,9 +52,8 @@ export type ReleaseProtectionError = _enum_for_ReleaseProtectionError;
  * ```@enum {number}
  */
 export const ReleaseProtectionError = _enum_for_ReleaseProtectionError;
-/* END_OF_SYMBOL_DEFINITION ReleaseProtectionError */
 
-/* START_OF_SYMBOL_DEFINITION ReleaseProtectionError_failure */
+
 /**
  * @summary ReleaseProtectionError_failure
  * @constant
@@ -64,9 +61,8 @@ export const ReleaseProtectionError = _enum_for_ReleaseProtectionError;
  */
 export const ReleaseProtectionError_failure: ReleaseProtectionError =
     ReleaseProtectionError.failure; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReleaseProtectionError_failure */
 
-/* START_OF_SYMBOL_DEFINITION failure */
+
 /**
  * @summary failure
  * @constant
@@ -74,9 +70,8 @@ export const ReleaseProtectionError_failure: ReleaseProtectionError =
  */
 export const failure: ReleaseProtectionError =
     ReleaseProtectionError.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION failure */
 
-/* START_OF_SYMBOL_DEFINITION ReleaseProtectionError_timeout */
+
 /**
  * @summary ReleaseProtectionError_timeout
  * @constant
@@ -84,9 +79,8 @@ export const failure: ReleaseProtectionError =
  */
 export const ReleaseProtectionError_timeout: ReleaseProtectionError =
     ReleaseProtectionError.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReleaseProtectionError_timeout */
 
-/* START_OF_SYMBOL_DEFINITION timeout */
+
 /**
  * @summary timeout
  * @constant
@@ -94,21 +88,16 @@ export const ReleaseProtectionError_timeout: ReleaseProtectionError =
  */
 export const timeout: ReleaseProtectionError =
     ReleaseProtectionError.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION timeout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseProtectionError */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseProtectionError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReleaseProtectionError */
+
+
 export const _decode_ReleaseProtectionError = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ReleaseProtectionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseProtectionError */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseProtectionError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReleaseProtectionError */
+
+
 export const _encode_ReleaseProtectionError = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReleaseProtectionError */
 
 /* eslint-enable */

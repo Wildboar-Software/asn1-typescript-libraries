@@ -3,7 +3,7 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { id_sha512_256 } from "../NIST-SHA2/id-sha512-256.va.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element */
+
 /**
  * @summary OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element
  * @description
@@ -29,6 +29,5 @@ export const OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element: ALGORITHM_ID
     "&id": id_sha512_256 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element */
 
 /* eslint-enable */

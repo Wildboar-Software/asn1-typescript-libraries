@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActionArgument */
 /**
  * @summary ActionArgument
  * @description
@@ -37,13 +36,9 @@ import {
 export type ActionArgument =
     | { selectedObjects: ObjectInstance[] } /* CHOICE_ALT_ROOT */
     | { allObjects: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionArgument */
 let _cached_decoder_for_ActionArgument: $.ASN1Decoder<ActionArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionArgument
  * @function
@@ -66,13 +61,9 @@ export function _decode_ActionArgument(el: _Element) {
     }
     return _cached_decoder_for_ActionArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionArgument */
 let _cached_encoder_for_ActionArgument: $.ASN1Encoder<ActionArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionArgument */
 /**
  * @summary Encodes a(n) ActionArgument into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_ActionArgument(
     return _cached_encoder_for_ActionArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionArgument */
 
 /* eslint-enable */

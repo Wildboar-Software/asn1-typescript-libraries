@@ -13,7 +13,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyRspMsgContent */
+
 /**
  * @summary KeyRspMsgContent
  * @description
@@ -79,9 +79,8 @@ class KeyRspMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyRspMsgContent */
+
 /**
  * @summary The Leading Root Component Types of KeyRspMsgContent
  * @description
@@ -97,9 +96,8 @@ const _root_component_type_list_1_spec_for_KeyRspMsgContent: $.ComponentSpec[] =
     new $.ComponentSpec("rSAEncryptedContent", false, $.hasTag(_TagClass.context, 2), undefined, undefined),
     new $.ComponentSpec("sIGN-kpk", false, $.hasTag(_TagClass.context, 3), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyRspMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of KeyRspMsgContent
  * @description
@@ -112,9 +110,8 @@ export
 const _root_component_type_list_2_spec_for_KeyRspMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyRspMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of KeyRspMsgContent
  * @description
@@ -127,13 +124,11 @@ export
 const _extension_additions_list_spec_for_KeyRspMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyRspMsgContent */
+
 let _cached_decoder_for_KeyRspMsgContent: $.ASN1Decoder<KeyRspMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyRspMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyRspMsgContent
  * @function
@@ -169,13 +164,11 @@ function _decode_KeyRspMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_KeyRspMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyRspMsgContent */
+
 let _cached_encoder_for_KeyRspMsgContent: $.ASN1Encoder<KeyRspMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyRspMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyRspMsgContent */
+
 /**
  * @summary Encodes a(n) KeyRspMsgContent into an ASN.1 Element.
  * @function
@@ -198,6 +191,5 @@ function _encode_KeyRspMsgContent (value: KeyRspMsgContent, elGetter: $.ASN1Enco
     return _cached_encoder_for_KeyRspMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyRspMsgContent */
 
 /* eslint-enable */

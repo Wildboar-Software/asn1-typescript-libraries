@@ -24,7 +24,6 @@ import {
 } from '../IPMSAbstractService/change-auto-acknowledgment-ArgumentType.ta.mjs';
 import { subscription_error } from '../IPMSAbstractService/subscription-error.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION change_auto_acknowledgment */
 /**
  * @summary change_auto_acknowledgment
  * @description
@@ -65,6 +64,5 @@ export const change_auto_acknowledgment: ABSTRACT_OPERATION<change_auto_acknowle
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION change_auto_acknowledgment */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import {
   _decode_NonWrappingCounter,
   _encode_NonWrappingCounter,
 } from '../CommonMgt/NonWrappingCounter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION counterInitialValue */
 /**
  * @summary counterInitialValue
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const counterInitialValue: NonWrappingCounter = 0;
-/* END_OF_SYMBOL_DEFINITION counterInitialValue */
 
 /* eslint-enable */

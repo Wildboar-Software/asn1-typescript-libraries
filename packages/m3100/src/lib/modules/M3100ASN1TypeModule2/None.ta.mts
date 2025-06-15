@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION None */
+
 /**
  * @summary None
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type None = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION None */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_None */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_None */
 
-/* START_OF_SYMBOL_DEFINITION _decode_None */
+
+
 export const _decode_None = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_None */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_None */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_None */
 
-/* START_OF_SYMBOL_DEFINITION _encode_None */
+
+
 export const _encode_None = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_None */
 
 /* eslint-enable */

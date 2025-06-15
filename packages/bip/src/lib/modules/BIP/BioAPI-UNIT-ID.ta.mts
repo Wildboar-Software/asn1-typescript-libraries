@@ -15,7 +15,7 @@ import {
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_UNIT_ID */
+
 /**
  * @summary BioAPI_UNIT_ID
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BioAPI_UNIT_ID = UnsignedInt; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BioAPI_UNIT_ID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_UNIT_ID */
+
 let _cached_decoder_for_BioAPI_UNIT_ID: $.ASN1Decoder<BioAPI_UNIT_ID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_UNIT_ID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_UNIT_ID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_UNIT_ID
  * @function
@@ -46,13 +44,11 @@ export function _decode_BioAPI_UNIT_ID(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_UNIT_ID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_UNIT_ID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_UNIT_ID */
+
 let _cached_encoder_for_BioAPI_UNIT_ID: $.ASN1Encoder<BioAPI_UNIT_ID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_UNIT_ID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_UNIT_ID */
+
 /**
  * @summary Encodes a(n) BioAPI_UNIT_ID into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_BioAPI_UNIT_ID(
   return _cached_encoder_for_BioAPI_UNIT_ID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_UNIT_ID */
 
 /* eslint-enable */

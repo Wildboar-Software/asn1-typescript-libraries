@@ -18,7 +18,7 @@ import {
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Control */
+
 /**
  * @summary Control
  * @description
@@ -96,9 +96,8 @@ export class Control {
     return false;
   }
 }
-/* END_OF_SYMBOL_DEFINITION Control */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Control */
+
 /**
  * @summary The Leading Root Component Types of Control
  * @description
@@ -130,9 +129,8 @@ export const _root_component_type_list_1_spec_for_Control: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Control */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Control */
+
 /**
  * @summary The Trailing Root Component Types of Control
  * @description
@@ -142,9 +140,8 @@ export const _root_component_type_list_1_spec_for_Control: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Control: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Control */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Control */
+
 /**
  * @summary The Extension Addition Component Types of Control
  * @description
@@ -154,9 +151,8 @@ export const _root_component_type_list_2_spec_for_Control: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Control: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Control */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Control */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Control
  * @function
@@ -200,12 +196,10 @@ export function _decode_Control(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Control */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Control */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Control */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Control */
+
+
 /**
  * @summary Encodes a(n) Control into an ASN.1 Element.
  * @function
@@ -227,6 +221,5 @@ export function _encode_Control(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Control */
 
 /* eslint-enable */

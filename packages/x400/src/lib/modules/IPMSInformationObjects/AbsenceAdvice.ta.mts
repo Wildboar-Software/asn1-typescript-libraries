@@ -21,7 +21,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AbsenceAdvice */
 /**
  * @summary AbsenceAdvice
  * @description
@@ -71,9 +70,7 @@ export class AbsenceAdvice {
         return new AbsenceAdvice(_o.advice, _o.next_available);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AbsenceAdvice */
 /**
  * @summary The Leading Root Component Types of AbsenceAdvice
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_AbsenceAdvice: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AbsenceAdvice */
 /**
  * @summary The Trailing Root Component Types of AbsenceAdvice
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_AbsenceAdvice: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AbsenceAdvice: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AbsenceAdvice */
 /**
  * @summary The Extension Addition Component Types of AbsenceAdvice
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_AbsenceAdvice: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_AbsenceAdvice: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbsenceAdvice */
 let _cached_decoder_for_AbsenceAdvice: $.ASN1Decoder<AbsenceAdvice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbsenceAdvice */
 /**
  * @summary Decodes an ASN.1 element into a(n) AbsenceAdvice
  * @function
@@ -164,13 +153,9 @@ export function _decode_AbsenceAdvice(el: _Element) {
     }
     return _cached_decoder_for_AbsenceAdvice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbsenceAdvice */
 let _cached_encoder_for_AbsenceAdvice: $.ASN1Encoder<AbsenceAdvice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbsenceAdvice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbsenceAdvice */
 /**
  * @summary Encodes a(n) AbsenceAdvice into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_AbsenceAdvice(
     return _cached_encoder_for_AbsenceAdvice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbsenceAdvice */
 
 /* eslint-enable */

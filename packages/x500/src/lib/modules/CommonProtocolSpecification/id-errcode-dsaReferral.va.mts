@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_errcode_dsaReferral */
 /**
  * @summary id_errcode_dsaReferral
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_errcode_dsaReferral: Code = { local: 9 };
-/* END_OF_SYMBOL_DEFINITION id_errcode_dsaReferral */
 
 /* eslint-enable */

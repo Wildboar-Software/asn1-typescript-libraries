@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { subentry } from "../UsefulDefinitions/subentry.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_sc */
 /**
  * @summary id_sc
  * @description
@@ -15,6 +14,5 @@ import { subentry } from "../UsefulDefinitions/subentry.va.mjs";
  * @constant
  */
 export const id_sc: ID = subentry;
-/* END_OF_SYMBOL_DEFINITION id_sc */
 
 /* eslint-enable */

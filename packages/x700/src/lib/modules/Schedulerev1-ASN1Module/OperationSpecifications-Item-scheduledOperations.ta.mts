@@ -25,7 +25,7 @@ import {
     _decode_GetArgument,
     _encode_GetArgument,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OperationSpecifications_Item_scheduledOperations */
+
 /**
  * @summary OperationSpecifications_Item_scheduledOperations
  * @description
@@ -40,13 +40,11 @@ export type OperationSpecifications_Item_scheduledOperations =
     | { set_: ModificationList } /* CHOICE_ALT_ROOT */
     | { action: ActionInfo } /* CHOICE_ALT_ROOT */
     | { get_: GetArgument } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OperationSpecifications_Item_scheduledOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationSpecifications_Item_scheduledOperations */
+
 let _cached_decoder_for_OperationSpecifications_Item_scheduledOperations: $.ASN1Decoder<OperationSpecifications_Item_scheduledOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationSpecifications_Item_scheduledOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationSpecifications_Item_scheduledOperations */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationSpecifications_Item_scheduledOperations
  * @function
@@ -80,13 +78,11 @@ export function _decode_OperationSpecifications_Item_scheduledOperations(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationSpecifications_Item_scheduledOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationSpecifications_Item_scheduledOperations */
+
 let _cached_encoder_for_OperationSpecifications_Item_scheduledOperations: $.ASN1Encoder<OperationSpecifications_Item_scheduledOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationSpecifications_Item_scheduledOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationSpecifications_Item_scheduledOperations */
+
 /**
  * @summary Encodes a(n) OperationSpecifications_Item_scheduledOperations into an ASN.1 Element.
  * @function
@@ -129,6 +125,5 @@ export function _encode_OperationSpecifications_Item_scheduledOperations(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationSpecifications_Item_scheduledOperations */
 
 /* eslint-enable */

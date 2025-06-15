@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SapId */
 /**
  * @summary SapId
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SapId = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION SapId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SapId */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SapId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SapId */
 export const _decode_SapId = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_SapId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SapId */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SapId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SapId */
 export const _encode_SapId = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SapId */
 
 /* eslint-enable */

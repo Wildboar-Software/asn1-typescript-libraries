@@ -15,7 +15,6 @@ import {
     _decode_ImplementedValues_Item,
     _encode_ImplementedValues_Item,
 } from '../RepertoireASN1Module/ImplementedValues-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ImplementedValues */
 /**
  * @summary ImplementedValues
  * @description
@@ -42,13 +41,9 @@ import {
  * ```
  */
 export type ImplementedValues = ImplementedValues_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ImplementedValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ImplementedValues */
 let _cached_decoder_for_ImplementedValues: $.ASN1Decoder<ImplementedValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ImplementedValues */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ImplementedValues */
 /**
  * @summary Decodes an ASN.1 element into a(n) ImplementedValues
  * @function
@@ -63,13 +58,9 @@ export function _decode_ImplementedValues(el: _Element) {
     }
     return _cached_decoder_for_ImplementedValues(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ImplementedValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ImplementedValues */
 let _cached_encoder_for_ImplementedValues: $.ASN1Encoder<ImplementedValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ImplementedValues */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ImplementedValues */
 /**
  * @summary Encodes a(n) ImplementedValues into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_ImplementedValues(
     return _cached_encoder_for_ImplementedValues(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ImplementedValues */
 
 /* eslint-enable */

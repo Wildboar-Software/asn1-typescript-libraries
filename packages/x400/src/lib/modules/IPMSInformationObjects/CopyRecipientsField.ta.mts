@@ -15,7 +15,6 @@ import {
     _decode_CopyRecipientsSubfield,
     _encode_CopyRecipientsSubfield,
 } from '../IPMSInformationObjects/CopyRecipientsSubfield.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CopyRecipientsField */
 /**
  * @summary CopyRecipientsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CopyRecipientsField = CopyRecipientsSubfield[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CopyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CopyRecipientsField */
 let _cached_decoder_for_CopyRecipientsField: $.ASN1Decoder<CopyRecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CopyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CopyRecipientsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) CopyRecipientsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_CopyRecipientsField(el: _Element) {
     }
     return _cached_decoder_for_CopyRecipientsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CopyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CopyRecipientsField */
 let _cached_encoder_for_CopyRecipientsField: $.ASN1Encoder<CopyRecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CopyRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CopyRecipientsField */
 /**
  * @summary Encodes a(n) CopyRecipientsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_CopyRecipientsField(
     return _cached_encoder_for_CopyRecipientsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CopyRecipientsField */
 
 /* eslint-enable */

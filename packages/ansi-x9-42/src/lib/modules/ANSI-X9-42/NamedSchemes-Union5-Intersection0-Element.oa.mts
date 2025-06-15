@@ -2,7 +2,7 @@
 import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
 import { dhHybridOneFlow_sha1 } from "./dhHybridOneFlow-sha1.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION NamedSchemes_Union5_Intersection0_Element */
+
 /**
  * @summary NamedSchemes_Union5_Intersection0_Element
  * @description
@@ -28,6 +28,5 @@ export const NamedSchemes_Union5_Intersection0_Element: KEY_AGREEMENT<undefined>
     "&id": dhHybridOneFlow_sha1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION NamedSchemes_Union5_Intersection0_Element */
 
 /* eslint-enable */

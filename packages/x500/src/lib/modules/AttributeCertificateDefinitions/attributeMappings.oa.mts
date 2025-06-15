@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AttributeMappings.ta.mjs";
 import { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeMappings */
 /**
  * @summary attributeMappings
  * @description
@@ -34,6 +33,5 @@ export const attributeMappings: EXTENSION<AttributeMappings> = {
     "&id": id_ce_attributeMappings /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeMappings */
 
 /* eslint-enable */

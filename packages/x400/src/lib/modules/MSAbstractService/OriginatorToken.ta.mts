@@ -15,7 +15,6 @@ import {
     _decode_MessageToken,
     _encode_MessageToken,
 } from '../MTSAbstractService/MessageToken.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorToken */
 /**
  * @summary OriginatorToken
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type OriginatorToken = MessageToken; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorToken */
 let _cached_decoder_for_OriginatorToken: $.ASN1Decoder<OriginatorToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorToken
  * @function
@@ -50,13 +45,9 @@ export function _decode_OriginatorToken(el: _Element) {
     }
     return _cached_decoder_for_OriginatorToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorToken */
 let _cached_encoder_for_OriginatorToken: $.ASN1Encoder<OriginatorToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorToken */
 /**
  * @summary Encodes a(n) OriginatorToken into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_OriginatorToken(
     return _cached_encoder_for_OriginatorToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorToken */
 
 /* eslint-enable */

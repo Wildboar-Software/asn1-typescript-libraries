@@ -18,7 +18,6 @@ import {
     _decode_ExecutionParameter,
     _encode_ExecutionParameter,
 } from '../CSModule/ExecutionParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION emptyExecutionParameterList */
 /**
  * @summary emptyExecutionParameterList
  * @description
@@ -34,6 +33,5 @@ import {
 export const emptyExecutionParameterList: ExecutionParameterList = {
     sequentialExecutionList: [],
 };
-/* END_OF_SYMBOL_DEFINITION emptyExecutionParameterList */
 
 /* eslint-enable */

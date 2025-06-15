@@ -20,7 +20,7 @@ import {
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RemoveCapacityFromTopLinkEndResult */
+
 /**
  * @summary RemoveCapacityFromTopLinkEndResult
  * @description
@@ -75,9 +75,8 @@ export class RemoveCapacityFromTopLinkEndResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RemoveCapacityFromTopLinkEndResult */
+
 /**
  * @summary The Leading Root Component Types of RemoveCapacityFromTopLinkEndResult
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_RemoveCapacityFromTopLinkEndRe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RemoveCapacityFromTopLinkEndResult */
+
 /**
  * @summary The Trailing Root Component Types of RemoveCapacityFromTopLinkEndResult
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_RemoveCapacityFromTopLinkEndRe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RemoveCapacityFromTopLinkEndResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RemoveCapacityFromTopLinkEndResult */
+
 /**
  * @summary The Extension Addition Component Types of RemoveCapacityFromTopLinkEndResult
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_RemoveCapacityFromTopLinkEndRe
  * @constant
  */
 export const _extension_additions_list_spec_for_RemoveCapacityFromTopLinkEndResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopLinkEndResult */
+
 let _cached_decoder_for_RemoveCapacityFromTopLinkEndResult: $.ASN1Decoder<RemoveCapacityFromTopLinkEndResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopLinkEndResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopLinkEndResult
  * @function
@@ -166,13 +161,11 @@ export function _decode_RemoveCapacityFromTopLinkEndResult(el: _Element) {
     }
     return _cached_decoder_for_RemoveCapacityFromTopLinkEndResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopLinkEndResult */
+
 let _cached_encoder_for_RemoveCapacityFromTopLinkEndResult: $.ASN1Encoder<RemoveCapacityFromTopLinkEndResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopLinkEndResult */
+
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopLinkEndResult into an ASN.1 Element.
  * @function
@@ -210,6 +203,5 @@ export function _encode_RemoveCapacityFromTopLinkEndResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopLinkEndResult */
 
 /* eslint-enable */

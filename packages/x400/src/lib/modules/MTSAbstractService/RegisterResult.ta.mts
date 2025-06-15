@@ -16,7 +16,6 @@ import {
     _decode_RegisterResult_non_empty_result,
     _encode_RegisterResult_non_empty_result,
 } from '../MTSAbstractService/RegisterResult-non-empty-result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RegisterResult */
 /**
  * @summary RegisterResult
  * @description
@@ -44,13 +43,9 @@ export type RegisterResult =
     | {
           non_empty_result: RegisterResult_non_empty_result;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RegisterResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterResult */
 let _cached_decoder_for_RegisterResult: $.ASN1Decoder<RegisterResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegisterResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegisterResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) RegisterResult
  * @function
@@ -71,13 +66,9 @@ export function _decode_RegisterResult(el: _Element) {
     }
     return _cached_decoder_for_RegisterResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegisterResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterResult */
 let _cached_encoder_for_RegisterResult: $.ASN1Encoder<RegisterResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegisterResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegisterResult */
 /**
  * @summary Encodes a(n) RegisterResult into an ASN.1 Element.
  * @function
@@ -101,6 +92,5 @@ export function _encode_RegisterResult(
     return _cached_encoder_for_RegisterResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegisterResult */
 
 /* eslint-enable */

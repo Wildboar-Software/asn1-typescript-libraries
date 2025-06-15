@@ -17,7 +17,7 @@ import {
 } from "../PKCS7/Attributes.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ExtendedCertificateInfo */
+
 /**
  * @summary ExtendedCertificateInfo
  * @description
@@ -80,9 +80,8 @@ export class ExtendedCertificateInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedCertificateInfo */
+
 /**
  * @summary The Leading Root Component Types of ExtendedCertificateInfo
  * @description
@@ -114,9 +113,8 @@ export const _root_component_type_list_1_spec_for_ExtendedCertificateInfo: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedCertificateInfo */
+
 /**
  * @summary The Trailing Root Component Types of ExtendedCertificateInfo
  * @description
@@ -126,9 +124,8 @@ export const _root_component_type_list_1_spec_for_ExtendedCertificateInfo: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtendedCertificateInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedCertificateInfo */
+
 /**
  * @summary The Extension Addition Component Types of ExtendedCertificateInfo
  * @description
@@ -138,13 +135,11 @@ export const _root_component_type_list_2_spec_for_ExtendedCertificateInfo: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtendedCertificateInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificateInfo */
+
 let _cached_decoder_for_ExtendedCertificateInfo: $.ASN1Decoder<ExtendedCertificateInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedCertificateInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedCertificateInfo
  * @function
@@ -182,13 +177,11 @@ export function _decode_ExtendedCertificateInfo(el: _Element) {
     }
     return _cached_decoder_for_ExtendedCertificateInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificateInfo */
+
 let _cached_encoder_for_ExtendedCertificateInfo: $.ASN1Encoder<ExtendedCertificateInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificateInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedCertificateInfo */
+
 /**
  * @summary Encodes a(n) ExtendedCertificateInfo into an ASN.1 Element.
  * @function
@@ -224,6 +217,5 @@ export function _encode_ExtendedCertificateInfo(
     return _cached_encoder_for_ExtendedCertificateInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedCertificateInfo */
 
 /* eslint-enable */

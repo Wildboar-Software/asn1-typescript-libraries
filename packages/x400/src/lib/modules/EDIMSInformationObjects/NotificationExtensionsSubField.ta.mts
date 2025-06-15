@@ -15,7 +15,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../EDIMSInformationObjects/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotificationExtensionsSubField */
 /**
  * @summary NotificationExtensionsSubField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NotificationExtensionsSubField = ExtensionField; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NotificationExtensionsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationExtensionsSubField */
 let _cached_decoder_for_NotificationExtensionsSubField: $.ASN1Decoder<NotificationExtensionsSubField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationExtensionsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotificationExtensionsSubField */
 /**
  * @summary Decodes an ASN.1 element into a(n) NotificationExtensionsSubField
  * @function
@@ -46,13 +41,9 @@ export function _decode_NotificationExtensionsSubField(el: _Element) {
     }
     return _cached_decoder_for_NotificationExtensionsSubField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotificationExtensionsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationExtensionsSubField */
 let _cached_encoder_for_NotificationExtensionsSubField: $.ASN1Encoder<NotificationExtensionsSubField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationExtensionsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotificationExtensionsSubField */
 /**
  * @summary Encodes a(n) NotificationExtensionsSubField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_NotificationExtensionsSubField(
     return _cached_encoder_for_NotificationExtensionsSubField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotificationExtensionsSubField */
 
 /* eslint-enable */

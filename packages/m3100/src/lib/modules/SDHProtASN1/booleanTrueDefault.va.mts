@@ -14,7 +14,7 @@ import {
     _decode_Boolean,
     _encode_Boolean,
 } from '../SDHProtASN1/Boolean.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION booleanTrueDefault */
+
 /**
  * @summary booleanTrueDefault
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const booleanTrueDefault: Boolean = false;
-/* END_OF_SYMBOL_DEFINITION booleanTrueDefault */
 
 /* eslint-enable */

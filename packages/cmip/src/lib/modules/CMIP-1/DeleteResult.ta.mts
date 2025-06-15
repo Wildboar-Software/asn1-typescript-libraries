@@ -22,7 +22,7 @@ import {
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeleteResult */
+
 /**
  * @summary DeleteResult
  * @description
@@ -91,9 +91,8 @@ export class DeleteResult {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteResult */
+
 /**
  * @summary The Leading Root Component Types of DeleteResult
  * @description
@@ -125,9 +124,8 @@ export const _root_component_type_list_1_spec_for_DeleteResult: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteResult */
+
 /**
  * @summary The Trailing Root Component Types of DeleteResult
  * @description
@@ -137,9 +135,8 @@ export const _root_component_type_list_1_spec_for_DeleteResult: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeleteResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteResult */
+
 /**
  * @summary The Extension Addition Component Types of DeleteResult
  * @description
@@ -149,13 +146,11 @@ export const _root_component_type_list_2_spec_for_DeleteResult: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_DeleteResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteResult */
+
 let _cached_decoder_for_DeleteResult: $.ASN1Decoder<DeleteResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteResult
  * @function
@@ -206,13 +201,11 @@ export function _decode_DeleteResult(el: _Element) {
   }
   return _cached_decoder_for_DeleteResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteResult */
+
 let _cached_encoder_for_DeleteResult: $.ASN1Encoder<DeleteResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteResult */
+
 /**
  * @summary Encodes a(n) DeleteResult into an ASN.1 Element.
  * @function
@@ -258,6 +251,5 @@ export function _encode_DeleteResult(
   return _cached_encoder_for_DeleteResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteResult */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
   _decode_InvokeId,
   _encode_InvokeId,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCInvokeIdSet */
 /**
  * @summary TCInvokeIdSet
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type TCInvokeIdSet = InvokeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TCInvokeIdSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCInvokeIdSet */
 let _cached_decoder_for_TCInvokeIdSet: $.ASN1Decoder<TCInvokeIdSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCInvokeIdSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCInvokeIdSet */
 /**
  * @summary Decodes an ASN.1 element into a(n) TCInvokeIdSet
  * @function
@@ -48,13 +43,9 @@ export function _decode_TCInvokeIdSet(el: _Element) {
   }
   return _cached_decoder_for_TCInvokeIdSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCInvokeIdSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCInvokeIdSet */
 let _cached_encoder_for_TCInvokeIdSet: $.ASN1Encoder<TCInvokeIdSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCInvokeIdSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCInvokeIdSet */
 /**
  * @summary Encodes a(n) TCInvokeIdSet into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_TCInvokeIdSet(
   return _cached_encoder_for_TCInvokeIdSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCInvokeIdSet */
 
 /* eslint-enable */

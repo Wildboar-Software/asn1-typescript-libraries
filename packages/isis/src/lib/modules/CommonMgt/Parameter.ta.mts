@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION Parameter */
 /**
  * @summary Parameter
  * @description
@@ -61,9 +60,7 @@ export class Parameter {
     return new Parameter(_o.paramId, _o.paramInfo);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Parameter */
 /**
  * @summary The Leading Root Component Types of Parameter
  * @description
@@ -82,9 +79,7 @@ export const _root_component_type_list_1_spec_for_Parameter: $.ComponentSpec[] =
   ),
   new $.ComponentSpec('paramInfo', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Parameter */
 /**
  * @summary The Trailing Root Component Types of Parameter
  * @description
@@ -94,9 +89,7 @@ export const _root_component_type_list_1_spec_for_Parameter: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Parameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Parameter */
 /**
  * @summary The Extension Addition Component Types of Parameter
  * @description
@@ -106,13 +99,9 @@ export const _root_component_type_list_2_spec_for_Parameter: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Parameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Parameter */
 let _cached_decoder_for_Parameter: $.ASN1Decoder<Parameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Parameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) Parameter
  * @function
@@ -141,13 +130,9 @@ export function _decode_Parameter(el: _Element) {
   }
   return _cached_decoder_for_Parameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Parameter */
 let _cached_encoder_for_Parameter: $.ASN1Encoder<Parameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Parameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Parameter */
 /**
  * @summary Encodes a(n) Parameter into an ASN.1 Element.
  * @function
@@ -176,6 +161,5 @@ export function _encode_Parameter(
   return _cached_encoder_for_Parameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Parameter */
 
 /* eslint-enable */

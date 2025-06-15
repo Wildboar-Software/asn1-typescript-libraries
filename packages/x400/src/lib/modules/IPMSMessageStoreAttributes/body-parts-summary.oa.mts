@@ -22,7 +22,6 @@ import { id_sat_body_parts_summary } from '../IPMSObjectIdentifiers/id-sat-body-
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION body_parts_summary */
 /**
  * @summary body_parts_summary
  * @description
@@ -53,6 +52,5 @@ export const body_parts_summary: X413ATTRIBUTE<BodyPartDescriptor> = {
     '&id': id_sat_body_parts_summary /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION body_parts_summary */
 
 /* eslint-enable */

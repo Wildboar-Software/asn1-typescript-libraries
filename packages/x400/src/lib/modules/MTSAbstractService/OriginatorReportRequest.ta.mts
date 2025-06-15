@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OriginatorReportRequest */
 /**
  * @summary OriginatorReportRequest
  * @description
@@ -29,53 +28,36 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type OriginatorReportRequest = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION OriginatorReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION OriginatorReportRequest_report */
 /**
  * @summary OriginatorReportRequest_report
  * @constant
  */
 export const OriginatorReportRequest_report: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION OriginatorReportRequest_report */
 
-/* START_OF_SYMBOL_DEFINITION report */
 /**
  * @summary report
  * @constant
  */
 export const report: number = OriginatorReportRequest_report; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION report */
 
-/* START_OF_SYMBOL_DEFINITION OriginatorReportRequest_non_delivery_report */
 /**
  * @summary OriginatorReportRequest_non_delivery_report
  * @constant
  */
 export const OriginatorReportRequest_non_delivery_report: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION OriginatorReportRequest_non_delivery_report */
 
-/* START_OF_SYMBOL_DEFINITION non_delivery_report */
 /**
  * @summary non_delivery_report
  * @constant
  */
 export const non_delivery_report: number = OriginatorReportRequest_non_delivery_report; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION non_delivery_report */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorReportRequest */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorReportRequest */
 export const _decode_OriginatorReportRequest = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorReportRequest */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorReportRequest */
 export const _encode_OriginatorReportRequest = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorReportRequest */
 
 /* eslint-enable */

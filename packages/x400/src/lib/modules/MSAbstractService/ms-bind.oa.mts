@@ -29,7 +29,6 @@ import {
 } from '../MSAbstractService/MSBindResult.ta.mjs';
 import { ms_bind_error } from '../MSAbstractService/ms-bind-error.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_bind */
 /**
  * @summary ms_bind
  * @description
@@ -68,6 +67,5 @@ export const ms_bind: ABSTRACT_OPERATION<MSBindArgument, MSBindResult> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_bind */
 
 /* eslint-enable */

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION PatientSchemes */
+
 /**
  * @summary PatientSchemes
  * @description
@@ -26,6 +26,5 @@ import { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca.mj
  *
  */
 export const PatientSchemes: PATIENT_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION PatientSchemes */
 
 /* eslint-enable */

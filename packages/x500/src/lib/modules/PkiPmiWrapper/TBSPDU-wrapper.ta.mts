@@ -31,7 +31,6 @@ import {
     _decode_TBSPDU_wrapper_conf,
     _encode_TBSPDU_wrapper_conf,
 } from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TBSPDU_wrapper */
 /**
  * @summary TBSPDU_wrapper
  * @description
@@ -128,9 +127,7 @@ export class TBSPDU_wrapper {
         return v1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSPDU_wrapper */
 /**
  * @summary The Leading Root Component Types of TBSPDU_wrapper
  * @description
@@ -170,9 +167,7 @@ export const _root_component_type_list_1_spec_for_TBSPDU_wrapper: $.ComponentSpe
     ),
     new $.ComponentSpec("conf", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSPDU_wrapper */
 /**
  * @summary The Trailing Root Component Types of TBSPDU_wrapper
  * @description
@@ -182,9 +177,7 @@ export const _root_component_type_list_1_spec_for_TBSPDU_wrapper: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TBSPDU_wrapper: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSPDU_wrapper */
 /**
  * @summary The Extension Addition Component Types of TBSPDU_wrapper
  * @description
@@ -194,13 +187,9 @@ export const _root_component_type_list_2_spec_for_TBSPDU_wrapper: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_TBSPDU_wrapper: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSPDU_wrapper */
 let _cached_decoder_for_TBSPDU_wrapper: $.ASN1Decoder<TBSPDU_wrapper> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSPDU_wrapper */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSPDU_wrapper
  * @function
@@ -266,13 +255,9 @@ export function _decode_TBSPDU_wrapper(el: _Element) {
     }
     return _cached_decoder_for_TBSPDU_wrapper(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSPDU_wrapper */
 let _cached_encoder_for_TBSPDU_wrapper: $.ASN1Encoder<TBSPDU_wrapper> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSPDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSPDU_wrapper */
 /**
  * @summary Encodes a(n) TBSPDU_wrapper into an ASN.1 Element.
  * @function
@@ -333,6 +318,5 @@ export function _encode_TBSPDU_wrapper(
     return _cached_encoder_for_TBSPDU_wrapper(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSPDU_wrapper */
 
 /* eslint-enable */

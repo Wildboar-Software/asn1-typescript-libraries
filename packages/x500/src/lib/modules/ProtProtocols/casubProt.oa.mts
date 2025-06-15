@@ -6,7 +6,6 @@ import {
 } from "../CaSubscription/CasubProt.ta.mjs";
 import { id_casubprot } from "../ProtProtocols/id-casubprot.va.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION casubProt */
 /**
  * @summary casubProt
  * @description
@@ -34,6 +33,5 @@ export const casubProt: WRAPPED_PROT = {
     "&id": id_casubprot /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION casubProt */
 
 /* eslint-enable */

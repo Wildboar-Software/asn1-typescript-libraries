@@ -15,7 +15,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubordinateChanges */
 /**
  * @summary SubordinateChanges
  * @description
@@ -75,9 +74,7 @@ export class SubordinateChanges {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubordinateChanges */
 /**
  * @summary The Leading Root Component Types of SubordinateChanges
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_SubordinateChanges: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubordinateChanges */
 /**
  * @summary The Trailing Root Component Types of SubordinateChanges
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_SubordinateChanges: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubordinateChanges: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubordinateChanges */
 /**
  * @summary The Extension Addition Component Types of SubordinateChanges
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_SubordinateChanges: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_SubordinateChanges: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubordinateChanges */
 let _cached_decoder_for_SubordinateChanges: $.ASN1Decoder<SubordinateChanges> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubordinateChanges */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubordinateChanges
  * @function
@@ -167,13 +156,9 @@ export function _decode_SubordinateChanges(el: _Element) {
     }
     return _cached_decoder_for_SubordinateChanges(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubordinateChanges */
 let _cached_encoder_for_SubordinateChanges: $.ASN1Encoder<SubordinateChanges> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubordinateChanges */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubordinateChanges */
 /**
  * @summary Encodes a(n) SubordinateChanges into an ASN.1 Element.
  * @function
@@ -213,6 +198,5 @@ export function _encode_SubordinateChanges(
     return _cached_encoder_for_SubordinateChanges(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubordinateChanges */
 
 /* eslint-enable */

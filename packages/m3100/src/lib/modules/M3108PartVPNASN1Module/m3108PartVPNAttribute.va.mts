@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { m3108PartVPNInformationModel } from '../M3108PartVPNASN1Module/m3108PartVPNInformationModel.va.mjs';
-/* START_OF_SYMBOL_DEFINITION m3108PartVPNAttribute */
+
 /**
  * @summary m3108PartVPNAttribute
  * @description
@@ -28,6 +28,5 @@ export const m3108PartVPNAttribute: OBJECT_IDENTIFIER = new _OID(
     [/* attribute */ 3],
     m3108PartVPNInformationModel
 );
-/* END_OF_SYMBOL_DEFINITION m3108PartVPNAttribute */
 
 /* eslint-enable */

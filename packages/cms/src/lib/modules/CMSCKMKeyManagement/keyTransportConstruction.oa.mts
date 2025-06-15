@@ -6,7 +6,7 @@ import {
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 import { id_ckm_key_transport } from "../CMSObjectIdentifiers/id-ckm-key-transport.va.mjs";
-/* START_OF_SYMBOL_DEFINITION keyTransportConstruction */
+
 /**
  * @summary keyTransportConstruction
  * @description
@@ -35,6 +35,5 @@ export const keyTransportConstruction: ALGORITHM<KeyEncryptionAlgorithmIdentifie
     "&id": id_ckm_key_transport /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION keyTransportConstruction */
 
 /* eslint-enable */

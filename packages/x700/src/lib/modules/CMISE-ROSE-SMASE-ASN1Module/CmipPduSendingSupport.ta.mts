@@ -15,7 +15,6 @@ import {
     _decode_CmipPduType,
     _encode_CmipPduType,
 } from '../CMISE-ROSE-SMASE-ASN1Module/CmipPduType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CmipPduSendingSupport */
 /**
  * @summary CmipPduSendingSupport
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CmipPduSendingSupport = CmipPduType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CmipPduSendingSupport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CmipPduSendingSupport */
 let _cached_decoder_for_CmipPduSendingSupport: $.ASN1Decoder<CmipPduSendingSupport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CmipPduSendingSupport */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CmipPduSendingSupport */
 /**
  * @summary Decodes an ASN.1 element into a(n) CmipPduSendingSupport
  * @function
@@ -46,13 +41,9 @@ export function _decode_CmipPduSendingSupport(el: _Element) {
     }
     return _cached_decoder_for_CmipPduSendingSupport(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CmipPduSendingSupport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CmipPduSendingSupport */
 let _cached_encoder_for_CmipPduSendingSupport: $.ASN1Encoder<CmipPduSendingSupport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CmipPduSendingSupport */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CmipPduSendingSupport */
 /**
  * @summary Encodes a(n) CmipPduSendingSupport into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CmipPduSendingSupport(
     return _cached_encoder_for_CmipPduSendingSupport(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CmipPduSendingSupport */
 
 /* eslint-enable */

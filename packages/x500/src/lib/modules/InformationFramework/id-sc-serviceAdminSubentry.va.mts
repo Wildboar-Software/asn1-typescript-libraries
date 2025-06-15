@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_sc_serviceAdminSubentry */
 /**
  * @summary id_sc_serviceAdminSubentry
  * @description
@@ -18,6 +17,5 @@ export const id_sc_serviceAdminSubentry: OBJECT_IDENTIFIER = new _OID(
     [4],
     id_sc
 );
-/* END_OF_SYMBOL_DEFINITION id_sc_serviceAdminSubentry */
 
 /* eslint-enable */

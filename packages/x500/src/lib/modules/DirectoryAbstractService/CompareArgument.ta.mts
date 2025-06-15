@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CompareArgument */
 /**
  * @summary CompareArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type CompareArgument = OPTIONALLY_PROTECTED<CompareArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CompareArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareArgument */
 let _cached_decoder_for_CompareArgument: $.ASN1Decoder<CompareArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_CompareArgument(el: _Element) {
     }
     return _cached_decoder_for_CompareArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareArgument */
 let _cached_encoder_for_CompareArgument: $.ASN1Encoder<CompareArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareArgument */
 /**
  * @summary Encodes a(n) CompareArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CompareArgument(
     return _cached_encoder_for_CompareArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareArgument */
 
 /* eslint-enable */

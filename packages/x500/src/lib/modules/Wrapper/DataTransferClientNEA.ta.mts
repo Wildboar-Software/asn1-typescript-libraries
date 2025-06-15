@@ -11,7 +11,6 @@ import {
     _decode_TbpDataTransferClient,
     _encode_TbpDataTransferClient,
 } from "../Wrapper/TbpDataTransferClient.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataTransferClientNEA */
 /**
  * @summary DataTransferClientNEA
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type DataTransferClientNEA = ICV_Invoke<TbpDataTransferClient>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DataTransferClientNEA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferClientNEA */
 let _cached_decoder_for_DataTransferClientNEA: $.ASN1Decoder<DataTransferClientNEA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferClientNEA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataTransferClientNEA */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataTransferClientNEA
  * @function
@@ -44,13 +39,9 @@ export function _decode_DataTransferClientNEA(el: _Element) {
     }
     return _cached_decoder_for_DataTransferClientNEA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataTransferClientNEA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferClientNEA */
 let _cached_encoder_for_DataTransferClientNEA: $.ASN1Encoder<DataTransferClientNEA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferClientNEA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataTransferClientNEA */
 /**
  * @summary Encodes a(n) DataTransferClientNEA into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DataTransferClientNEA(
     return _cached_encoder_for_DataTransferClientNEA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataTransferClientNEA */
 
 /* eslint-enable */

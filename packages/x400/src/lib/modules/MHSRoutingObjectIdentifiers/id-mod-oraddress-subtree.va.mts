@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_mod } from '../MHSRoutingObjectIdentifiers/id-mod.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_mod_oraddress_subtree */
 /**
  * @summary id_mod_oraddress_subtree
  * @description
@@ -29,6 +28,5 @@ import { id_mod } from '../MHSRoutingObjectIdentifiers/id-mod.va.mjs';
  * @constant
  */
 export const id_mod_oraddress_subtree: ID = new _OID([2], id_mod);
-/* END_OF_SYMBOL_DEFINITION id_mod_oraddress_subtree */
 
 /* eslint-enable */

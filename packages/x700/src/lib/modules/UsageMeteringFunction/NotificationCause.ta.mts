@@ -29,7 +29,6 @@ import {
     _encode_ReportingEvent,
 } from '../UsageMeteringFunction/ReportingEvent.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NotificationCause */
 /**
  * @summary NotificationCause
  * @description
@@ -50,13 +49,9 @@ export type NotificationCause =
     | { induced: Induced } /* CHOICE_ALT_ROOT */
     | { event: ReportingEvent } /* CHOICE_ALT_ROOT */
     | { stimulus: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NotificationCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationCause */
 let _cached_decoder_for_NotificationCause: $.ASN1Decoder<NotificationCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationCause */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotificationCause */
 /**
  * @summary Decodes an ASN.1 element into a(n) NotificationCause
  * @function
@@ -92,13 +87,9 @@ export function _decode_NotificationCause(el: _Element) {
     }
     return _cached_decoder_for_NotificationCause(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotificationCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationCause */
 let _cached_encoder_for_NotificationCause: $.ASN1Encoder<NotificationCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationCause */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotificationCause */
 /**
  * @summary Encodes a(n) NotificationCause into an ASN.1 Element.
  * @function
@@ -144,6 +135,5 @@ export function _encode_NotificationCause(
     return _cached_encoder_for_NotificationCause(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotificationCause */
 
 /* eslint-enable */

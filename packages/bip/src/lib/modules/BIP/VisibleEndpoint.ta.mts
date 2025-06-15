@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_FRAMEWORK_SCHEMA,
   _encode_BioAPI_FRAMEWORK_SCHEMA,
 } from '../BIP/BioAPI-FRAMEWORK-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VisibleEndpoint */
+
 /**
  * @summary VisibleEndpoint
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type VisibleEndpoint = BioAPI_FRAMEWORK_SCHEMA; // DefinedType
-/* END_OF_SYMBOL_DEFINITION VisibleEndpoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleEndpoint */
+
 let _cached_decoder_for_VisibleEndpoint: $.ASN1Decoder<VisibleEndpoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VisibleEndpoint */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VisibleEndpoint */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleEndpoint
  * @function
@@ -46,13 +44,11 @@ export function _decode_VisibleEndpoint(el: _Element) {
   }
   return _cached_decoder_for_VisibleEndpoint(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VisibleEndpoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleEndpoint */
+
 let _cached_encoder_for_VisibleEndpoint: $.ASN1Encoder<VisibleEndpoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VisibleEndpoint */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VisibleEndpoint */
+
 /**
  * @summary Encodes a(n) VisibleEndpoint into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_VisibleEndpoint(
   return _cached_encoder_for_VisibleEndpoint(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VisibleEndpoint */
 
 /* eslint-enable */

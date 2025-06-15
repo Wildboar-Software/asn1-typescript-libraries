@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION UniqueIdentifier */
 /**
  * @summary UniqueIdentifier
  * @description
@@ -24,9 +23,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type UniqueIdentifier = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION UniqueIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniqueIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniqueIdentifier
  * @function
@@ -36,9 +33,7 @@ export type UniqueIdentifier = BIT_STRING;
 export function _decode_UniqueIdentifier(el: _Element) {
     return $._decodeBitString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniqueIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniqueIdentifier */
 /**
  * @summary Encodes a(n) UniqueIdentifier into an ASN.1 Element.
  * @function
@@ -53,6 +48,5 @@ export function _encode_UniqueIdentifier(
     return $._encodeBitString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniqueIdentifier */
 
 /* eslint-enable */

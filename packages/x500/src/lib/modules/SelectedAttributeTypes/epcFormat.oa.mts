@@ -10,7 +10,6 @@ import {
     _encode_EpcFormat,
 } from "../SelectedAttributeTypes/EpcFormat.ta.mjs";
 import { id_at_epcFormat } from "../SelectedAttributeTypes/id-at-epcFormat.va.mjs";
-/* START_OF_SYMBOL_DEFINITION epcFormat */
 /**
  * @summary epcFormat
  * @description
@@ -49,6 +48,5 @@ export const epcFormat: ATTRIBUTE<EpcFormat> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION epcFormat */
 
 /* eslint-enable */

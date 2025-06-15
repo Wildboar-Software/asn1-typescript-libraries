@@ -17,7 +17,6 @@ import {
 } from '../IPMSHeadingExtensions/Language.ta.mjs';
 import { id_hex_languages } from '../IPMSObjectIdentifiers/id-hex-languages.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION languages */
 /**
  * @summary languages
  * @description
@@ -46,6 +45,5 @@ export const languages: IPMS_EXTENSION<Language[]> = {
     '&id': id_hex_languages /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION languages */
 
 /* eslint-enable */

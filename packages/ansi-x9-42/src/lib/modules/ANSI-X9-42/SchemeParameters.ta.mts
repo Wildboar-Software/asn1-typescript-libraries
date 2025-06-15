@@ -6,7 +6,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../ANSI-X9-42/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SchemeParameters */
+
 /**
  * @summary SchemeParameters
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SchemeParameters = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SchemeParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeParameters */
+
 let _cached_decoder_for_SchemeParameters: $.ASN1Decoder<SchemeParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchemeParameters */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SchemeParameters
  * @function
@@ -37,13 +35,11 @@ export function _decode_SchemeParameters(el: _Element) {
     }
     return _cached_decoder_for_SchemeParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SchemeParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeParameters */
+
 let _cached_encoder_for_SchemeParameters: $.ASN1Encoder<SchemeParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchemeParameters */
+
 /**
  * @summary Encodes a(n) SchemeParameters into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_SchemeParameters(
     return _cached_encoder_for_SchemeParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchemeParameters */
 
 /* eslint-enable */

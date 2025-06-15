@@ -23,7 +23,6 @@ import {
     _encode_receive_on_ArgumentType,
 } from '../IPMSAbstractService/receive-on-ArgumentType.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION receive_on */
 /**
  * @summary receive_on
  * @description
@@ -60,6 +59,5 @@ export const receive_on: ABSTRACT_OPERATION<receive_on_ArgumentType> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION receive_on */
 
 /* eslint-enable */

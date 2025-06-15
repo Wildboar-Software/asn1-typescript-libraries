@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_address } from "../PlatformCertificateProfile/tcg-address.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_address_bluetoothmac */
 /**
  * @summary tcg_address_bluetoothmac
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_address_bluetoothmac: OBJECT_IDENTIFIER = new _OID([
     3,
 ], tcg_address);
-/* END_OF_SYMBOL_DEFINITION tcg_address_bluetoothmac */
 
 /* eslint-enable */

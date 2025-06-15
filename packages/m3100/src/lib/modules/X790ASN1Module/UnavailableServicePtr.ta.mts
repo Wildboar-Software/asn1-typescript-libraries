@@ -15,7 +15,7 @@ import {
     _decode_RelatedObject,
     _encode_RelatedObject,
 } from '../X790ASN1Module/RelatedObject.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnavailableServicePtr */
+
 /**
  * @summary UnavailableServicePtr
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type UnavailableServicePtr = RelatedObject; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UnavailableServicePtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnavailableServicePtr */
+
 let _cached_decoder_for_UnavailableServicePtr: $.ASN1Decoder<UnavailableServicePtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnavailableServicePtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnavailableServicePtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnavailableServicePtr
  * @function
@@ -46,13 +44,11 @@ export function _decode_UnavailableServicePtr(el: _Element) {
     }
     return _cached_decoder_for_UnavailableServicePtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnavailableServicePtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnavailableServicePtr */
+
 let _cached_encoder_for_UnavailableServicePtr: $.ASN1Encoder<UnavailableServicePtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnavailableServicePtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnavailableServicePtr */
+
 /**
  * @summary Encodes a(n) UnavailableServicePtr into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_UnavailableServicePtr(
     return _cached_encoder_for_UnavailableServicePtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnavailableServicePtr */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_TCPIPBIPMessage_content,
   _encode_TCPIPBIPMessage_content,
 } from '../BIP-TCPIP/TCPIPBIPMessage-content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCPIPBIPMessage */
+
 /**
  * @summary TCPIPBIPMessage
  * @description
@@ -83,9 +83,8 @@ export class TCPIPBIPMessage {
     return new TCPIPBIPMessage(_o.magicNumber, _o.version, _o.content);
   }
 }
-/* END_OF_SYMBOL_DEFINITION TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TCPIPBIPMessage */
+
 /**
  * @summary The Leading Root Component Types of TCPIPBIPMessage
  * @description
@@ -117,9 +116,8 @@ export const _root_component_type_list_1_spec_for_TCPIPBIPMessage: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TCPIPBIPMessage */
+
 /**
  * @summary The Trailing Root Component Types of TCPIPBIPMessage
  * @description
@@ -129,9 +127,8 @@ export const _root_component_type_list_1_spec_for_TCPIPBIPMessage: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TCPIPBIPMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TCPIPBIPMessage */
+
 /**
  * @summary The Extension Addition Component Types of TCPIPBIPMessage
  * @description
@@ -141,13 +138,11 @@ export const _root_component_type_list_2_spec_for_TCPIPBIPMessage: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_TCPIPBIPMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCPIPBIPMessage */
+
 let _cached_decoder_for_TCPIPBIPMessage: $.ASN1Decoder<TCPIPBIPMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCPIPBIPMessage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TCPIPBIPMessage
  * @function
@@ -181,13 +176,11 @@ export function _decode_TCPIPBIPMessage(el: _Element) {
   }
   return _cached_decoder_for_TCPIPBIPMessage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCPIPBIPMessage */
+
 let _cached_encoder_for_TCPIPBIPMessage: $.ASN1Encoder<TCPIPBIPMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCPIPBIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCPIPBIPMessage */
+
 /**
  * @summary Encodes a(n) TCPIPBIPMessage into an ASN.1 Element.
  * @function
@@ -223,6 +216,5 @@ export function _encode_TCPIPBIPMessage(
   return _cached_encoder_for_TCPIPBIPMessage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCPIPBIPMessage */
 
 /* eslint-enable */

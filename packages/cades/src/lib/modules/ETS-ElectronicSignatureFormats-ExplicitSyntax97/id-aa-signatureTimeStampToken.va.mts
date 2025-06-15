@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_signatureTimeStampToken */
 /**
  * @summary id_aa_signatureTimeStampToken
  * @description
@@ -47,6 +46,5 @@ const id_aa_signatureTimeStampToken: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     14,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_signatureTimeStampToken */
 
 /* eslint-enable */

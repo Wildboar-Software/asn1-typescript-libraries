@@ -6,7 +6,7 @@ import {
     _encode_SigncryptedKey,
 } from "../CMSSigncryption/SigncryptedKey.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION signcryptedEnvelope */
+
 /**
  * @summary signcryptedEnvelope
  * @description
@@ -34,6 +34,5 @@ export const signcryptedEnvelope: ATTRIBUTE<SigncryptedKey> = {
     "&id": signcrypted_envelope /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signcryptedEnvelope */
 
 /* eslint-enable */

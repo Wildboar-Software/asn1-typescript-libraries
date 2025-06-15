@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { pkcs15_alg_null } from "../PKCS-15/pkcs15-alg-null.oa.mjs";
 import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION AlgorithmSet */
+
 /**
  * @summary AlgorithmSet
  * @description
@@ -20,6 +20,5 @@ import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
  *
  */
 export const AlgorithmSet: PKCS15_ALGORITHM[] = [pkcs15_alg_null];
-/* END_OF_SYMBOL_DEFINITION AlgorithmSet */
 
 /* eslint-enable */

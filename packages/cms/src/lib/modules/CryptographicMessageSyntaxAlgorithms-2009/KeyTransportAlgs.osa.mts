@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
 import { kt_rsa } from "../CryptographicMessageSyntaxAlgorithms-2009/kt-rsa.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyTransportAlgs */
+
 /**
  * @summary KeyTransportAlgs
  * @description
@@ -17,6 +17,5 @@ import { kt_rsa } from "../CryptographicMessageSyntaxAlgorithms-2009/kt-rsa.oa.m
  *
  */
 export const KeyTransportAlgs: KEY_TRANSPORT[] = [kt_rsa];
-/* END_OF_SYMBOL_DEFINITION KeyTransportAlgs */
 
 /* eslint-enable */

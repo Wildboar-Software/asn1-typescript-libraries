@@ -15,7 +15,6 @@ import { ipm_auto_acknowledgement } from '../IPMSAutoActionTypes/ipm-auto-acknow
 import { ipm_auto_correlate } from '../IPMSAutoActionTypes/ipm-auto-correlate.oa.mjs';
 import { ipm_auto_discard } from '../IPMSAutoActionTypes/ipm-auto-discard.oa.mjs';
 import { ipm_auto_advise } from '../IPMSAutoActionTypes/ipm-auto-advise.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMAutoActions */
 /**
  * @summary IPMAutoActions
  * @description
@@ -39,6 +38,5 @@ export const IPMAutoActions: AUTO_ACTION[] = [
     ipm_auto_discard,
     ipm_auto_advise,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMAutoActions */
 
 /* eslint-enable */

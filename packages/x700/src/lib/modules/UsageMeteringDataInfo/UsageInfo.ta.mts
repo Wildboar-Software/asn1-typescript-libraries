@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION UsageInfo */
 /**
  * @summary UsageInfo
  * @description
@@ -61,9 +60,7 @@ export class UsageInfo {
         return new UsageInfo(_o.serviceType, _o.usageData);
     }
 }
-/* END_OF_SYMBOL_DEFINITION UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UsageInfo */
 /**
  * @summary The Leading Root Component Types of UsageInfo
  * @description
@@ -82,9 +79,7 @@ export const _root_component_type_list_1_spec_for_UsageInfo: $.ComponentSpec[] =
     ),
     new $.ComponentSpec('usageData', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UsageInfo */
 /**
  * @summary The Trailing Root Component Types of UsageInfo
  * @description
@@ -94,9 +89,7 @@ export const _root_component_type_list_1_spec_for_UsageInfo: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UsageInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UsageInfo */
 /**
  * @summary The Extension Addition Component Types of UsageInfo
  * @description
@@ -106,13 +99,9 @@ export const _root_component_type_list_2_spec_for_UsageInfo: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_UsageInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageInfo */
 let _cached_decoder_for_UsageInfo: $.ASN1Decoder<UsageInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UsageInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) UsageInfo
  * @function
@@ -141,13 +130,9 @@ export function _decode_UsageInfo(el: _Element) {
     }
     return _cached_decoder_for_UsageInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageInfo */
 let _cached_encoder_for_UsageInfo: $.ASN1Encoder<UsageInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UsageInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UsageInfo */
 /**
  * @summary Encodes a(n) UsageInfo into an ASN.1 Element.
  * @function
@@ -179,6 +164,5 @@ export function _encode_UsageInfo(
     return _cached_encoder_for_UsageInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UsageInfo */
 
 /* eslint-enable */

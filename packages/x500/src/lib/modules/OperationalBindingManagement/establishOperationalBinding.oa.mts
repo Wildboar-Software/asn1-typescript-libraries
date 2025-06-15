@@ -13,7 +13,6 @@ import {
     _encode_EstablishOperationalBindingResult,
 } from "../OperationalBindingManagement/EstablishOperationalBindingResult.ta.mjs";
 import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION establishOperationalBinding */
 /**
  * @summary establishOperationalBinding
  * @description
@@ -53,6 +52,5 @@ export const establishOperationalBinding: OPERATION<
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION establishOperationalBinding */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mgt } from "../UsefulDefinitions/id-mgt.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mp */
 /**
  * @summary id_mp
  * @description
@@ -15,6 +14,5 @@ import { id_mgt } from "../UsefulDefinitions/id-mgt.va.mjs";
  * @constant
  */
 export const id_mp: OBJECT_IDENTIFIER = new _OID([4], id_mgt);
-/* END_OF_SYMBOL_DEFINITION id_mp */
 
 /* eslint-enable */

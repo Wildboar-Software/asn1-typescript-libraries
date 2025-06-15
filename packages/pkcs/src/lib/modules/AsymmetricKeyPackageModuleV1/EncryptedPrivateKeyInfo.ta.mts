@@ -15,7 +15,7 @@ import {
     _decode_EncryptionAlgorithmIdentifier,
     _encode_EncryptionAlgorithmIdentifier,
 } from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptedPrivateKeyInfo */
+
 /**
  * @summary EncryptedPrivateKeyInfo
  * @description
@@ -69,9 +69,8 @@ export class EncryptedPrivateKeyInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedPrivateKeyInfo */
+
 /**
  * @summary The Leading Root Component Types of EncryptedPrivateKeyInfo
  * @description
@@ -96,9 +95,8 @@ export const _root_component_type_list_1_spec_for_EncryptedPrivateKeyInfo: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedPrivateKeyInfo */
+
 /**
  * @summary The Trailing Root Component Types of EncryptedPrivateKeyInfo
  * @description
@@ -108,9 +106,8 @@ export const _root_component_type_list_1_spec_for_EncryptedPrivateKeyInfo: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedPrivateKeyInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedPrivateKeyInfo */
+
 /**
  * @summary The Extension Addition Component Types of EncryptedPrivateKeyInfo
  * @description
@@ -120,13 +117,11 @@ export const _root_component_type_list_2_spec_for_EncryptedPrivateKeyInfo: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedPrivateKeyInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedPrivateKeyInfo */
+
 let _cached_decoder_for_EncryptedPrivateKeyInfo: $.ASN1Decoder<EncryptedPrivateKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedPrivateKeyInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedPrivateKeyInfo
  * @function
@@ -162,13 +157,11 @@ export function _decode_EncryptedPrivateKeyInfo(el: _Element) {
     }
     return _cached_decoder_for_EncryptedPrivateKeyInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedPrivateKeyInfo */
+
 let _cached_encoder_for_EncryptedPrivateKeyInfo: $.ASN1Encoder<EncryptedPrivateKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedPrivateKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedPrivateKeyInfo */
+
 /**
  * @summary Encodes a(n) EncryptedPrivateKeyInfo into an ASN.1 Element.
  * @function
@@ -203,6 +196,5 @@ export function _encode_EncryptedPrivateKeyInfo(
     return _cached_encoder_for_EncryptedPrivateKeyInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedPrivateKeyInfo */
 
 /* eslint-enable */

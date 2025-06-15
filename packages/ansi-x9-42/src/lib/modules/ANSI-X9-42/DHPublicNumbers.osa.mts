@@ -6,7 +6,7 @@ import {
     _encode_DomainParameters,
 } from "../ANSI-X9-42/DomainParameters.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DHPublicNumbers */
+
 /**
  * @summary DHPublicNumbers
  * @description
@@ -37,6 +37,5 @@ export const DHPublicNumbers: ALGORITHM_ID[] = [
         "&Type": 0 as never,
     },
 ];
-/* END_OF_SYMBOL_DEFINITION DHPublicNumbers */
 
 /* eslint-enable */

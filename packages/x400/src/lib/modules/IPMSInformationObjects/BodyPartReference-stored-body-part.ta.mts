@@ -16,7 +16,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartReference_stored_body_part */
 /**
  * @summary BodyPartReference_stored_body_part
  * @description
@@ -68,9 +67,7 @@ export class BodyPartReference_stored_body_part {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BodyPartReference_stored_body_part */
 /**
  * @summary The Leading Root Component Types of BodyPartReference_stored_body_part
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_BodyPartReference_stored_body_
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BodyPartReference_stored_body_part */
 /**
  * @summary The Trailing Root Component Types of BodyPartReference_stored_body_part
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_BodyPartReference_stored_body_
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BodyPartReference_stored_body_part: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BodyPartReference_stored_body_part */
 /**
  * @summary The Extension Addition Component Types of BodyPartReference_stored_body_part
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_BodyPartReference_stored_body_
  * @constant
  */
 export const _extension_additions_list_spec_for_BodyPartReference_stored_body_part: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartReference_stored_body_part */
 let _cached_decoder_for_BodyPartReference_stored_body_part: $.ASN1Decoder<BodyPartReference_stored_body_part> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartReference_stored_body_part */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartReference_stored_body_part
  * @function
@@ -159,13 +148,9 @@ export function _decode_BodyPartReference_stored_body_part(el: _Element) {
     }
     return _cached_decoder_for_BodyPartReference_stored_body_part(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartReference_stored_body_part */
 let _cached_encoder_for_BodyPartReference_stored_body_part: $.ASN1Encoder<BodyPartReference_stored_body_part> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartReference_stored_body_part */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartReference_stored_body_part */
 /**
  * @summary Encodes a(n) BodyPartReference_stored_body_part into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_BodyPartReference_stored_body_part(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartReference_stored_body_part */
 
 /* eslint-enable */

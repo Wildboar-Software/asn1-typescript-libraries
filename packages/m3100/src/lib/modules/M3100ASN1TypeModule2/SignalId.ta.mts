@@ -21,7 +21,7 @@ import {
     _encode_Bundle,
 } from '../ASN1DefinedTypesModule/Bundle.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SignalId */
+
 /**
  * @summary SignalId
  * @description
@@ -40,13 +40,11 @@ export type SignalId =
     | { simple: CharacteristicInformation } /* CHOICE_ALT_ROOT */
     | { bundle: Bundle } /* CHOICE_ALT_ROOT */
     | { complex: Bundle[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SignalId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalId */
+
 let _cached_decoder_for_SignalId: $.ASN1Decoder<SignalId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignalId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalId
  * @function
@@ -76,13 +74,11 @@ export function _decode_SignalId(el: _Element) {
     }
     return _cached_decoder_for_SignalId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignalId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalId */
+
 let _cached_encoder_for_SignalId: $.ASN1Encoder<SignalId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignalId */
+
 /**
  * @summary Encodes a(n) SignalId into an ASN.1 Element.
  * @function
@@ -126,6 +122,5 @@ export function _encode_SignalId(
     return _cached_encoder_for_SignalId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignalId */
 
 /* eslint-enable */

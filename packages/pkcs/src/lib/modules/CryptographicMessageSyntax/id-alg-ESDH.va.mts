@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_alg_ESDH */
+
 /**
  * @summary id_alg_ESDH
  * @description
@@ -26,6 +26,5 @@ export const id_alg_ESDH: OBJECT_IDENTIFIER = new _OID([
     /* alg */ 3,
     5,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_alg_ESDH */
 
 /* eslint-enable */

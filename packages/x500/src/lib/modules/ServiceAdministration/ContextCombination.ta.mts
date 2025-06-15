@@ -5,7 +5,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION ContextCombination */
 /**
  * @summary ContextCombination
  * @description
@@ -27,13 +26,9 @@ export type ContextCombination =
     | { or: ContextCombination[] } /* CHOICE_ALT_ROOT */
     | { not: ContextCombination } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ContextCombination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContextCombination */
 let _cached_decoder_for_ContextCombination: $.ASN1Decoder<ContextCombination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContextCombination */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContextCombination */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContextCombination
  * @function
@@ -77,13 +72,9 @@ export function _decode_ContextCombination(el: _Element) {
     }
     return _cached_decoder_for_ContextCombination(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContextCombination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContextCombination */
 let _cached_encoder_for_ContextCombination: $.ASN1Encoder<ContextCombination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContextCombination */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContextCombination */
 /**
  * @summary Encodes a(n) ContextCombination into an ASN.1 Element.
  * @function
@@ -137,6 +128,5 @@ export function _encode_ContextCombination(
     return _cached_encoder_for_ContextCombination(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContextCombination */
 
 /* eslint-enable */

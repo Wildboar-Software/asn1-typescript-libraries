@@ -13,7 +13,6 @@ import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { originating_MTA_certificate } from '../MTSAbstractService/originating-MTA-certificate.oa.mjs';
 import { proof_of_submission } from '../MTSAbstractService/proof-of-submission.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageSubmissionResultExtensions */
 /**
  * @summary MessageSubmissionResultExtensions
  * @description
@@ -36,6 +35,5 @@ export const MessageSubmissionResultExtensions: EXTENSION[] = [
     proof_of_submission,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION MessageSubmissionResultExtensions */
 
 /* eslint-enable */

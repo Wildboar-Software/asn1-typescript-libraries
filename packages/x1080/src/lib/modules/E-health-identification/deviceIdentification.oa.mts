@@ -16,7 +16,7 @@ import {
     _encode_DeviceIdentification,
 } from '../E-health-identification/DeviceIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION deviceIdentification */
+
 /**
  * @summary deviceIdentification
  * @description
@@ -44,6 +44,5 @@ export const deviceIdentification: IDENTIFICATION<DeviceIdentification> = {
     '&category': id_med_device /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION deviceIdentification */
 
 /* eslint-enable */

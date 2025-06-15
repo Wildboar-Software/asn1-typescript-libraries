@@ -17,7 +17,6 @@ import {
     _encode_CertificateSerialNumber,
 } from "../PKI-Stub/CertificateSerialNumber.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION IssuerSerialNumber */
 /**
  * @summary IssuerSerialNumber
  * @description
@@ -77,9 +76,7 @@ export class IssuerSerialNumber {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION IssuerSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuerSerialNumber */
 /**
  * @summary The Leading Root Component Types of IssuerSerialNumber
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_IssuerSerialNumber: $.Componen
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuerSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerialNumber */
 /**
  * @summary The Trailing Root Component Types of IssuerSerialNumber
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_IssuerSerialNumber: $.Componen
  */
 export const _root_component_type_list_2_spec_for_IssuerSerialNumber: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerialNumber */
 /**
  * @summary The Extension Addition Component Types of IssuerSerialNumber
  * @description
@@ -125,9 +118,7 @@ export const _root_component_type_list_2_spec_for_IssuerSerialNumber: $.Componen
  */
 export const _extension_additions_list_spec_for_IssuerSerialNumber: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IssuerSerialNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) IssuerSerialNumber
  * @function
@@ -155,9 +146,7 @@ export function _decode_IssuerSerialNumber(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IssuerSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IssuerSerialNumber */
 /**
  * @summary Encodes a(n) IssuerSerialNumber into an ASN.1 Element.
  * @function
@@ -175,6 +164,5 @@ export function _encode_IssuerSerialNumber(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IssuerSerialNumber */
 
 /* eslint-enable */

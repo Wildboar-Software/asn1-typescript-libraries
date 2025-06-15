@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ControlledTestRequestType */
 /**
  * @summary ControlledTestRequestType
  * @description
@@ -26,9 +25,7 @@ export enum _enum_for_ControlledTestRequestType {
     independent = 0,
     related = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ControlledTestRequestType */
 
-/* START_OF_SYMBOL_DEFINITION ControlledTestRequestType */
 /**
  * @summary ControlledTestRequestType
  * @description
@@ -40,9 +37,7 @@ export enum _enum_for_ControlledTestRequestType {
  * ```@enum {number}
  */
 export type ControlledTestRequestType = _enum_for_ControlledTestRequestType;
-/* END_OF_SYMBOL_DEFINITION ControlledTestRequestType */
 
-/* START_OF_SYMBOL_DEFINITION ControlledTestRequestType */
 /**
  * @summary ControlledTestRequestType
  * @description
@@ -54,9 +49,7 @@ export type ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  * ```@enum {number}
  */
 export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
-/* END_OF_SYMBOL_DEFINITION ControlledTestRequestType */
 
-/* START_OF_SYMBOL_DEFINITION ControlledTestRequestType_independent */
 /**
  * @summary ControlledTestRequestType_independent
  * @constant
@@ -64,9 +57,7 @@ export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  */
 export const ControlledTestRequestType_independent: ControlledTestRequestType =
     ControlledTestRequestType.independent; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlledTestRequestType_independent */
 
-/* START_OF_SYMBOL_DEFINITION independent */
 /**
  * @summary independent
  * @constant
@@ -74,9 +65,7 @@ export const ControlledTestRequestType_independent: ControlledTestRequestType =
  */
 export const independent: ControlledTestRequestType =
     ControlledTestRequestType.independent; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION independent */
 
-/* START_OF_SYMBOL_DEFINITION ControlledTestRequestType_related */
 /**
  * @summary ControlledTestRequestType_related
  * @constant
@@ -84,9 +73,7 @@ export const independent: ControlledTestRequestType =
  */
 export const ControlledTestRequestType_related: ControlledTestRequestType =
     ControlledTestRequestType.related; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlledTestRequestType_related */
 
-/* START_OF_SYMBOL_DEFINITION related */
 /**
  * @summary related
  * @constant
@@ -94,21 +81,12 @@ export const ControlledTestRequestType_related: ControlledTestRequestType =
  */
 export const related: ControlledTestRequestType =
     ControlledTestRequestType.related; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION related */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlledTestRequestType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlledTestRequestType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ControlledTestRequestType */
 export const _decode_ControlledTestRequestType = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ControlledTestRequestType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlledTestRequestType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlledTestRequestType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ControlledTestRequestType */
 export const _encode_ControlledTestRequestType = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ControlledTestRequestType */
 
 /* eslint-enable */

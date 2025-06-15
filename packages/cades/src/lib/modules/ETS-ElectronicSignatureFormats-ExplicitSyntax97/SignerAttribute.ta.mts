@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttribute_Item } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignerAttribute-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignerAttribute */
 /**
  * @summary SignerAttribute
  * @description
@@ -26,13 +25,9 @@ import { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttri
  */
 export
 type SignerAttribute = SignerAttribute_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SignerAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerAttribute */
 let _cached_decoder_for_SignerAttribute: $.ASN1Decoder<SignerAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignerAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignerAttribute
  * @function
@@ -44,13 +39,9 @@ function _decode_SignerAttribute (el: _Element) {
     if (!_cached_decoder_for_SignerAttribute) { _cached_decoder_for_SignerAttribute = $._decodeSequenceOf<SignerAttribute_Item>(() => _decode_SignerAttribute_Item); }
     return _cached_decoder_for_SignerAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignerAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerAttribute */
 let _cached_encoder_for_SignerAttribute: $.ASN1Encoder<SignerAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignerAttribute */
 /**
  * @summary Encodes a(n) SignerAttribute into an ASN.1 Element.
  * @function
@@ -64,6 +55,5 @@ function _encode_SignerAttribute (value: SignerAttribute, elGetter: $.ASN1Encode
     return _cached_encoder_for_SignerAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignerAttribute */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _encode_DomainName,
 } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 import { id_at_dnsName } from "../SelectedAttributeTypes/id-at-dnsName.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dnsName */
 /**
  * @summary dnsName
  * @description
@@ -51,6 +50,5 @@ export const dnsName: ATTRIBUTE<DomainName> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dnsName */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PreferredSignatureAlgorithm */
+
 /**
  * @summary PreferredSignatureAlgorithm
  * @description
@@ -66,9 +66,8 @@ export class PreferredSignatureAlgorithm {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PreferredSignatureAlgorithm */
+
 /**
  * @summary The Leading Root Component Types of PreferredSignatureAlgorithm
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_PreferredSignatureAlgorithm: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PreferredSignatureAlgorithm */
+
 /**
  * @summary The Trailing Root Component Types of PreferredSignatureAlgorithm
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_PreferredSignatureAlgorithm: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PreferredSignatureAlgorithm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PreferredSignatureAlgorithm */
+
 /**
  * @summary The Extension Addition Component Types of PreferredSignatureAlgorithm
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_PreferredSignatureAlgorithm: $
  * @constant
  */
 export const _extension_additions_list_spec_for_PreferredSignatureAlgorithm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredSignatureAlgorithm */
+
 let _cached_decoder_for_PreferredSignatureAlgorithm: $.ASN1Decoder<PreferredSignatureAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PreferredSignatureAlgorithm */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PreferredSignatureAlgorithm
  * @function
@@ -165,13 +160,11 @@ export function _decode_PreferredSignatureAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_PreferredSignatureAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredSignatureAlgorithm */
+
 let _cached_encoder_for_PreferredSignatureAlgorithm: $.ASN1Encoder<PreferredSignatureAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PreferredSignatureAlgorithm */
+
 /**
  * @summary Encodes a(n) PreferredSignatureAlgorithm into an ASN.1 Element.
  * @function
@@ -208,6 +201,5 @@ export function _encode_PreferredSignatureAlgorithm(
     return _cached_encoder_for_PreferredSignatureAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PreferredSignatureAlgorithm */
 
 /* eslint-enable */

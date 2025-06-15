@@ -6,7 +6,6 @@ import {
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION userPwdDescription */
 /**
  * @summary userPwdDescription
  * @description
@@ -36,6 +35,5 @@ export const userPwdDescription: SYNTAX_NAME<UserPwd> = {
     "&id": id_asx_userPwdDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userPwdDescription */
 
 /* eslint-enable */

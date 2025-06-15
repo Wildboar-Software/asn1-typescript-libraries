@@ -6,7 +6,6 @@ import {
     _encode_RejectAVL,
 } from "../PkiPMIProtocolSpecifications/RejectAVL.ta.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION rejectAVL */
 /**
  * @summary rejectAVL
  * @description
@@ -34,6 +33,5 @@ export const rejectAVL: WRAPPED_PDU = {
     "&id": id_rejectAVL /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION rejectAVL */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION iSConfigurationTimerDefault */
+
 /**
  * @summary iSConfigurationTimerDefault
  * @description
@@ -32,6 +32,5 @@ export const iSConfigurationTimerDefault: Timer = Timer._from_object({
     exponent: 0,
     mantissa: 10,
 });
-/* END_OF_SYMBOL_DEFINITION iSConfigurationTimerDefault */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_OctetSubstringAssertion,
     _encode_OctetSubstringAssertion,
 } from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION octetStringSubstringsMatch */
 /**
  * @summary octetStringSubstringsMatch
  * @description
@@ -34,6 +33,5 @@ export const octetStringSubstringsMatch: MATCHING_RULE<OctetSubstringAssertion> 
     "&id": id_mr_octetStringSubstringsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION octetStringSubstringsMatch */
 
 /* eslint-enable */

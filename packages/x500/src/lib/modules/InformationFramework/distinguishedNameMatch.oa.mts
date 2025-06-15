@@ -7,7 +7,6 @@ import {
 import { id_mr_distinguishedNameMatch } from "../InformationFramework/id-mr-distinguishedNameMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION distinguishedNameMatch */
 /**
  * @summary distinguishedNameMatch
  * @description
@@ -39,6 +38,5 @@ export const distinguishedNameMatch: MATCHING_RULE<DistinguishedName> = {
     "&id": id_mr_distinguishedNameMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION distinguishedNameMatch */
 
 /* eslint-enable */

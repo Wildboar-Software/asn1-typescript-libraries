@@ -56,7 +56,6 @@ import {
     _decode_Unbind,
     _encode_Unbind,
 } from "../IDMProtocolSpecification/Unbind.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IDM_PDU */
 /**
  * @summary IDM_PDU
  * @description
@@ -92,13 +91,9 @@ export type IDM_PDU =
     | { startTLS: StartTLS } /* CHOICE_ALT_ROOT */
     | { tLSResponse: TLSResponse } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION IDM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IDM_PDU */
 let _cached_decoder_for_IDM_PDU: $.ASN1Decoder<IDM_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IDM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IDM_PDU */
 /**
  * @summary Decodes an ASN.1 element into a(n) IDM_PDU
  * @function
@@ -156,13 +151,9 @@ export function _decode_IDM_PDU(el: _Element) {
     }
     return _cached_decoder_for_IDM_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IDM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IDM_PDU */
 let _cached_encoder_for_IDM_PDU: $.ASN1Encoder<IDM_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IDM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IDM_PDU */
 /**
  * @summary Encodes a(n) IDM_PDU into an ASN.1 Element.
  * @function
@@ -250,6 +241,5 @@ export function _encode_IDM_PDU(
     return _cached_encoder_for_IDM_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IDM_PDU */
 
 /* eslint-enable */

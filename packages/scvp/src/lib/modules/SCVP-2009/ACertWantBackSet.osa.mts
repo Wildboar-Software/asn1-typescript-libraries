@@ -14,7 +14,6 @@ import { swb_ac_cert } from '../SCVP-2009/swb-ac-cert.oa.mjs';
 import { swb_aa_cert_path } from '../SCVP-2009/swb-aa-cert-path.oa.mjs';
 import { swb_aa_revocation_info } from '../SCVP-2009/swb-aa-revocation-info.oa.mjs';
 import { swb_ac_revocation_info } from '../SCVP-2009/swb-ac-revocation-info.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION ACertWantBackSet */
 /**
  * @summary ACertWantBackSet
  * @description
@@ -38,6 +37,5 @@ export const ACertWantBackSet: WANT_BACK<any>[] = [
   swb_aa_revocation_info,
   swb_ac_revocation_info,
 ];
-/* END_OF_SYMBOL_DEFINITION ACertWantBackSet */
 
 /* eslint-enable */

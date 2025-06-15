@@ -15,7 +15,6 @@ import {
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
 } from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SupportedChoice */
 /**
  * @summary SupportedChoice
  * @description
@@ -38,13 +37,9 @@ export type SupportedChoice =
     | { query: OptionalIdentifier } /* CHOICE_ALT_ROOT */
     | { notify: OptionalIdentifier } /* CHOICE_ALT_ROOT */
     | { userDefined: OptionalIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SupportedChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedChoice */
 let _cached_decoder_for_SupportedChoice: $.ASN1Decoder<SupportedChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedChoice */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedChoice
  * @function
@@ -90,13 +85,9 @@ export function _decode_SupportedChoice(el: _Element) {
     }
     return _cached_decoder_for_SupportedChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedChoice */
 let _cached_encoder_for_SupportedChoice: $.ASN1Encoder<SupportedChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedChoice */
 /**
  * @summary Encodes a(n) SupportedChoice into an ASN.1 Element.
  * @function
@@ -148,6 +139,5 @@ export function _encode_SupportedChoice(
     return _cached_encoder_for_SupportedChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedChoice */
 
 /* eslint-enable */

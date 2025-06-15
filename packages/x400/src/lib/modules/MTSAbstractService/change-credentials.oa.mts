@@ -31,7 +31,6 @@ import { security_error } from '../MTSAbstractService/security-error.oa.mjs';
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_change_credentials } from '../MTSAccessProtocol/op-change-credentials.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION change_credentials */
 /**
  * @summary change_credentials
  * @description
@@ -85,6 +84,5 @@ export const change_credentials: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION change_credentials */
 
 /* eslint-enable */

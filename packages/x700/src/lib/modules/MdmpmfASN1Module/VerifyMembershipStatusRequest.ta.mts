@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VerifyMembershipStatusRequest */
 /**
  * @summary VerifyMembershipStatusRequest
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type VerifyMembershipStatusRequest = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION VerifyMembershipStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VerifyMembershipStatusRequest */
 let _cached_decoder_for_VerifyMembershipStatusRequest: $.ASN1Decoder<VerifyMembershipStatusRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VerifyMembershipStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VerifyMembershipStatusRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) VerifyMembershipStatusRequest
  * @function
@@ -46,13 +41,9 @@ export function _decode_VerifyMembershipStatusRequest(el: _Element) {
     }
     return _cached_decoder_for_VerifyMembershipStatusRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VerifyMembershipStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VerifyMembershipStatusRequest */
 let _cached_encoder_for_VerifyMembershipStatusRequest: $.ASN1Encoder<VerifyMembershipStatusRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VerifyMembershipStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VerifyMembershipStatusRequest */
 /**
  * @summary Encodes a(n) VerifyMembershipStatusRequest into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_VerifyMembershipStatusRequest(
     return _cached_encoder_for_VerifyMembershipStatusRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VerifyMembershipStatusRequest */
 
 /* eslint-enable */

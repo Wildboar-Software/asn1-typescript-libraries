@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
 import { svp_basicValAlg } from '../SCVP-2009/svp-basicValAlg.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION ValidationAlgSet */
 /**
  * @summary ValidationAlgSet
  * @description
@@ -29,6 +28,5 @@ import { svp_basicValAlg } from '../SCVP-2009/svp-basicValAlg.oa.mjs';
  *
  */
 export const ValidationAlgSet: POLICY[] = [svp_basicValAlg];
-/* END_OF_SYMBOL_DEFINITION ValidationAlgSet */
 
 /* eslint-enable */

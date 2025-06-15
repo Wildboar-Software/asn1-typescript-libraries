@@ -22,7 +22,6 @@ import { id_att_certificate_selectors } from '../MSObjectIdentifiers/id-att-cert
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_certificate_selectors */
 /**
  * @summary mt_certificate_selectors
  * @description
@@ -53,6 +52,5 @@ export const mt_certificate_selectors: X413ATTRIBUTE<CertificateSelectors> = {
     '&id': id_att_certificate_selectors /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_certificate_selectors */
 
 /* eslint-enable */

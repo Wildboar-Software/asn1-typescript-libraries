@@ -15,7 +15,7 @@ import {
     _decode_AlarmReportingControl,
     _encode_AlarmReportingControl,
 } from '../M3100ASN1TypeModule4/AlarmReportingControl.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlarmReportingControlList */
+
 /**
  * @summary AlarmReportingControlList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AlarmReportingControlList = AlarmReportingControl[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AlarmReportingControlList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmReportingControlList */
+
 let _cached_decoder_for_AlarmReportingControlList: $.ASN1Decoder<AlarmReportingControlList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmReportingControlList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmReportingControlList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AlarmReportingControlList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AlarmReportingControlList(el: _Element) {
     }
     return _cached_decoder_for_AlarmReportingControlList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmReportingControlList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmReportingControlList */
+
 let _cached_encoder_for_AlarmReportingControlList: $.ASN1Encoder<AlarmReportingControlList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmReportingControlList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmReportingControlList */
+
 /**
  * @summary Encodes a(n) AlarmReportingControlList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AlarmReportingControlList(
     return _cached_encoder_for_AlarmReportingControlList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmReportingControlList */
 
 /* eslint-enable */

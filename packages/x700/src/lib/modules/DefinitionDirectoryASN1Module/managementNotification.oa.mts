@@ -25,7 +25,6 @@ import { andAttributeIds } from '../DefinitionDirectoryASN1Module/andAttributeId
 import { withReplySyntax } from '../DefinitionDirectoryASN1Module/withReplySyntax.oa.mjs';
 import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementNotification */
 /**
  * @summary managementNotification
  * @description
@@ -67,6 +66,5 @@ export const managementNotification: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementNotification */
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SMIMECapabilitiesParametersForRC2CBC */
+
 /**
  * @summary SMIMECapabilitiesParametersForRC2CBC
  * @description
@@ -14,13 +14,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type SMIMECapabilitiesParametersForRC2CBC = INTEGER;
-/* END_OF_SYMBOL_DEFINITION SMIMECapabilitiesParametersForRC2CBC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC */
+
 let _cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC: $.ASN1Decoder<SMIMECapabilitiesParametersForRC2CBC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SMIMECapabilitiesParametersForRC2CBC */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SMIMECapabilitiesParametersForRC2CBC
  * @function
@@ -34,13 +32,11 @@ export function _decode_SMIMECapabilitiesParametersForRC2CBC(el: _Element) {
     }
     return _cached_decoder_for_SMIMECapabilitiesParametersForRC2CBC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SMIMECapabilitiesParametersForRC2CBC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMECapabilitiesParametersForRC2CBC */
+
 let _cached_encoder_for_SMIMECapabilitiesParametersForRC2CBC: $.ASN1Encoder<SMIMECapabilitiesParametersForRC2CBC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SMIMECapabilitiesParametersForRC2CBC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SMIMECapabilitiesParametersForRC2CBC */
+
 /**
  * @summary Encodes a(n) SMIMECapabilitiesParametersForRC2CBC into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_SMIMECapabilitiesParametersForRC2CBC(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SMIMECapabilitiesParametersForRC2CBC */
 
 /* eslint-enable */

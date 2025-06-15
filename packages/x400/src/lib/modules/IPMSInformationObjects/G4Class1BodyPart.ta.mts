@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION G4Class1BodyPart */
 /**
  * @summary G4Class1BodyPart
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type G4Class1BodyPart = ASN1Element[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION G4Class1BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_G4Class1BodyPart */
 let _cached_decoder_for_G4Class1BodyPart: $.ASN1Decoder<G4Class1BodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_G4Class1BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_G4Class1BodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) G4Class1BodyPart
  * @function
@@ -45,13 +40,9 @@ export function _decode_G4Class1BodyPart(el: _Element) {
     }
     return _cached_decoder_for_G4Class1BodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_G4Class1BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_G4Class1BodyPart */
 let _cached_encoder_for_G4Class1BodyPart: $.ASN1Encoder<G4Class1BodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_G4Class1BodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_G4Class1BodyPart */
 /**
  * @summary Encodes a(n) G4Class1BodyPart into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_G4Class1BodyPart(
     return _cached_encoder_for_G4Class1BodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_G4Class1BodyPart */
 
 /* eslint-enable */

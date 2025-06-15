@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
 import { svp_defaultValPolicy } from '../SCVP-2009/svp-defaultValPolicy.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION ValidationPolRefSet */
 /**
  * @summary ValidationPolRefSet
  * @description
@@ -29,6 +28,5 @@ import { svp_defaultValPolicy } from '../SCVP-2009/svp-defaultValPolicy.oa.mjs';
  *
  */
 export const ValidationPolRefSet: POLICY[] = [svp_defaultValPolicy];
-/* END_OF_SYMBOL_DEFINITION ValidationPolRefSet */
 
 /* eslint-enable */

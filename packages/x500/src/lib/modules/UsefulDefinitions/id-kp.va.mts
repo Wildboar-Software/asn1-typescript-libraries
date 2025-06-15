@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { keyPurposes } from "../UsefulDefinitions/keyPurposes.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_kp */
 /**
  * @summary id_kp
  * @description
@@ -15,6 +14,5 @@ import { keyPurposes } from "../UsefulDefinitions/keyPurposes.va.mjs";
  * @constant
  */
 export const id_kp: ID = keyPurposes;
-/* END_OF_SYMBOL_DEFINITION id_kp */
 
 /* eslint-enable */

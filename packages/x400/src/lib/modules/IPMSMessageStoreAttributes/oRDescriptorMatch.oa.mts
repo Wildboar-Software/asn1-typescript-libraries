@@ -16,7 +16,6 @@ import {
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
 import { id_mr_or_descriptor } from '../IPMSObjectIdentifiers/id-mr-or-descriptor.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRDescriptorMatch */
 /**
  * @summary oRDescriptorMatch
  * @description
@@ -45,6 +44,5 @@ export const oRDescriptorMatch: MATCHING_RULE<ORDescriptor> = {
     '&id': id_mr_or_descriptor /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRDescriptorMatch */
 
 /* eslint-enable */

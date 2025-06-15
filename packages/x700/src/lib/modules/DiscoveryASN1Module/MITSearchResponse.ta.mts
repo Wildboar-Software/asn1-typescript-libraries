@@ -15,7 +15,6 @@ import {
     _decode_RootedNameTree,
     _encode_RootedNameTree,
 } from '../DiscoveryASN1Module/RootedNameTree.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MITSearchResponse */
 /**
  * @summary MITSearchResponse
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MITSearchResponse = RootedNameTree[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MITSearchResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MITSearchResponse */
 let _cached_decoder_for_MITSearchResponse: $.ASN1Decoder<MITSearchResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MITSearchResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MITSearchResponse */
 /**
  * @summary Decodes an ASN.1 element into a(n) MITSearchResponse
  * @function
@@ -48,13 +43,9 @@ export function _decode_MITSearchResponse(el: _Element) {
     }
     return _cached_decoder_for_MITSearchResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MITSearchResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MITSearchResponse */
 let _cached_encoder_for_MITSearchResponse: $.ASN1Encoder<MITSearchResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MITSearchResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MITSearchResponse */
 /**
  * @summary Encodes a(n) MITSearchResponse into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_MITSearchResponse(
     return _cached_encoder_for_MITSearchResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MITSearchResponse */
 
 /* eslint-enable */

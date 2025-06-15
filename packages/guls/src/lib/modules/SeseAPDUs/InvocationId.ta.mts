@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InvocationId */
+
 /**
  * @summary InvocationId
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type InvocationId =
   | { present: INTEGER } /* CHOICE_ALT_ROOT */
   | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION InvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvocationId */
+
 let _cached_decoder_for_InvocationId: $.ASN1Decoder<InvocationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvocationId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvocationId
  * @function
@@ -53,13 +51,11 @@ export function _decode_InvocationId(el: _Element) {
   }
   return _cached_decoder_for_InvocationId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvocationId */
+
 let _cached_encoder_for_InvocationId: $.ASN1Encoder<InvocationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvocationId */
+
 /**
  * @summary Encodes a(n) InvocationId into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_InvocationId(
   return _cached_encoder_for_InvocationId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvocationId */
 
 /* eslint-enable */

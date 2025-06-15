@@ -28,7 +28,6 @@ import { submission_control_violated } from '../MTSAbstractService/submission-co
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { id_aa_ipm_auto_advise } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-advise.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_advise */
 /**
  * @summary ipm_auto_advise
  * @description
@@ -72,6 +71,5 @@ export const ipm_auto_advise: AUTO_ACTION<IPMAutoAdviseRegistrationParameter> = 
     '&id': id_aa_ipm_auto_advise /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_advise */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Timespec */
 /**
  * @summary Timespec
  * @description
@@ -40,13 +39,9 @@ export type Timespec =
     | { millisecs: INTEGER } /* CHOICE_ALT_ROOT */
     | { microsecs: INTEGER } /* CHOICE_ALT_ROOT */
     | { nanosecs: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Timespec */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Timespec */
 let _cached_decoder_for_Timespec: $.ASN1Decoder<Timespec> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Timespec */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Timespec */
 /**
  * @summary Decodes an ASN.1 element into a(n) Timespec
  * @function
@@ -88,13 +83,9 @@ export function _decode_Timespec(el: _Element) {
     }
     return _cached_decoder_for_Timespec(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Timespec */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Timespec */
 let _cached_encoder_for_Timespec: $.ASN1Encoder<Timespec> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Timespec */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Timespec */
 /**
  * @summary Encodes a(n) Timespec into an ASN.1 Element.
  * @function
@@ -158,6 +149,5 @@ export function _encode_Timespec(
     return _cached_encoder_for_Timespec(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Timespec */
 
 /* eslint-enable */

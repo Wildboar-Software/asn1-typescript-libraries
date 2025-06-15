@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem */
 /**
  * @summary MessageGroupProblem
  * @description
@@ -27,147 +26,110 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MessageGroupProblem = INTEGER;
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_name_not_registered */
 /**
  * @summary MessageGroupProblem_name_not_registered
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_name_not_registered: MessageGroupProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_name_not_registered */
 
-/* START_OF_SYMBOL_DEFINITION name_not_registered */
 /**
  * @summary MessageGroupProblem_name_not_registered
  * @constant
  * @type {number}
  */
 export const name_not_registered: MessageGroupProblem = MessageGroupProblem_name_not_registered; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION name_not_registered */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_name_already_registered */
 /**
  * @summary MessageGroupProblem_name_already_registered
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_name_already_registered: MessageGroupProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_name_already_registered */
 
-/* START_OF_SYMBOL_DEFINITION name_already_registered */
 /**
  * @summary MessageGroupProblem_name_already_registered
  * @constant
  * @type {number}
  */
 export const name_already_registered: MessageGroupProblem = MessageGroupProblem_name_already_registered; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION name_already_registered */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_parent_not_registered */
 /**
  * @summary MessageGroupProblem_parent_not_registered
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_parent_not_registered: MessageGroupProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_parent_not_registered */
 
-/* START_OF_SYMBOL_DEFINITION parent_not_registered */
 /**
  * @summary MessageGroupProblem_parent_not_registered
  * @constant
  * @type {number}
  */
 export const parent_not_registered: MessageGroupProblem = MessageGroupProblem_parent_not_registered; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION parent_not_registered */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_group_not_empty */
 /**
  * @summary MessageGroupProblem_group_not_empty
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_group_not_empty: MessageGroupProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_group_not_empty */
 
-/* START_OF_SYMBOL_DEFINITION group_not_empty */
 /**
  * @summary MessageGroupProblem_group_not_empty
  * @constant
  * @type {number}
  */
 export const group_not_empty: MessageGroupProblem = MessageGroupProblem_group_not_empty; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION group_not_empty */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_name_in_use */
 /**
  * @summary MessageGroupProblem_name_in_use
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_name_in_use: MessageGroupProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_name_in_use */
 
-/* START_OF_SYMBOL_DEFINITION name_in_use */
 /**
  * @summary MessageGroupProblem_name_in_use
  * @constant
  * @type {number}
  */
 export const name_in_use: MessageGroupProblem = MessageGroupProblem_name_in_use; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION name_in_use */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_child_group_registered */
 /**
  * @summary MessageGroupProblem_child_group_registered
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_child_group_registered: MessageGroupProblem = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_child_group_registered */
 
-/* START_OF_SYMBOL_DEFINITION child_group_registered */
 /**
  * @summary MessageGroupProblem_child_group_registered
  * @constant
  * @type {number}
  */
 export const child_group_registered: MessageGroupProblem = MessageGroupProblem_child_group_registered; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION child_group_registered */
 
-/* START_OF_SYMBOL_DEFINITION MessageGroupProblem_group_depth_exceeded */
 /**
  * @summary MessageGroupProblem_group_depth_exceeded
  * @constant
  * @type {number}
  */
 export const MessageGroupProblem_group_depth_exceeded: MessageGroupProblem = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MessageGroupProblem_group_depth_exceeded */
 
-/* START_OF_SYMBOL_DEFINITION group_depth_exceeded */
 /**
  * @summary MessageGroupProblem_group_depth_exceeded
  * @constant
  * @type {number}
  */
 export const group_depth_exceeded: MessageGroupProblem = MessageGroupProblem_group_depth_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION group_depth_exceeded */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageGroupProblem */
 export const _decode_MessageGroupProblem = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_MessageGroupProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageGroupProblem */
 export const _encode_MessageGroupProblem = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageGroupProblem */
 
 /* eslint-enable */

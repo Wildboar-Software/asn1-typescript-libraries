@@ -15,7 +15,6 @@ import {
     _decode_MapsToPair,
     _encode_MapsToPair,
 } from '../GrmAttributeDefinitionModule/MapsToPair.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MapsTo */
 /**
  * @summary MapsTo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MapsTo = MapsToPair[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MapsTo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MapsTo */
 let _cached_decoder_for_MapsTo: $.ASN1Decoder<MapsTo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MapsTo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MapsTo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MapsTo
  * @function
@@ -48,13 +43,9 @@ export function _decode_MapsTo(el: _Element) {
     }
     return _cached_decoder_for_MapsTo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MapsTo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MapsTo */
 let _cached_encoder_for_MapsTo: $.ASN1Encoder<MapsTo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MapsTo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MapsTo */
 /**
  * @summary Encodes a(n) MapsTo into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_MapsTo(value: MapsTo, elGetter: $.ASN1Encoder<MapsTo>) {
     return _cached_encoder_for_MapsTo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MapsTo */
 
 /* eslint-enable */

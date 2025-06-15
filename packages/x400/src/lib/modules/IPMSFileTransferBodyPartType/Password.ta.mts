@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Password */
 /**
  * @summary Password
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type Password =
     | { graphic_string: GraphicString } /* CHOICE_ALT_ROOT */
     | { octet_string: OCTET_STRING } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Password */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Password */
 let _cached_decoder_for_Password: $.ASN1Decoder<Password> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Password */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Password */
 /**
  * @summary Decodes an ASN.1 element into a(n) Password
  * @function
@@ -52,13 +47,9 @@ export function _decode_Password(el: _Element) {
     }
     return _cached_decoder_for_Password(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Password */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Password */
 let _cached_encoder_for_Password: $.ASN1Encoder<Password> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Password */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Password */
 /**
  * @summary Encodes a(n) Password into an ASN.1 Element.
  * @function
@@ -82,6 +73,5 @@ export function _encode_Password(
     return _cached_encoder_for_Password(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Password */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ProcessingDetail,
     _encode_ProcessingDetail,
 } from '../MhsAcctAsn1Module/ProcessingDetail.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProcessingDetails */
 /**
  * @summary ProcessingDetails
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProcessingDetails = ProcessingDetail[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ProcessingDetails */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingDetails */
 let _cached_decoder_for_ProcessingDetails: $.ASN1Decoder<ProcessingDetails> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessingDetails */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProcessingDetails */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProcessingDetails
  * @function
@@ -48,13 +43,9 @@ export function _decode_ProcessingDetails(el: _Element) {
     }
     return _cached_decoder_for_ProcessingDetails(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProcessingDetails */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingDetails */
 let _cached_encoder_for_ProcessingDetails: $.ASN1Encoder<ProcessingDetails> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessingDetails */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProcessingDetails */
 /**
  * @summary Encodes a(n) ProcessingDetails into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ProcessingDetails(
     return _cached_encoder_for_ProcessingDetails(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProcessingDetails */
 
 /* eslint-enable */

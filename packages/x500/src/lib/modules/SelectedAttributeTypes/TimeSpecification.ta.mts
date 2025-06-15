@@ -16,7 +16,6 @@ import {
     _decode_TimeZone,
     _encode_TimeZone,
 } from "../SelectedAttributeTypes/TimeZone.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TimeSpecification */
 /**
  * @summary TimeSpecification
  * @description
@@ -99,9 +98,7 @@ export class TimeSpecification {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeSpecification */
 /**
  * @summary The Leading Root Component Types of TimeSpecification
  * @description
@@ -127,9 +124,7 @@ export const _root_component_type_list_1_spec_for_TimeSpecification: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeSpecification */
 /**
  * @summary The Trailing Root Component Types of TimeSpecification
  * @description
@@ -139,9 +134,7 @@ export const _root_component_type_list_1_spec_for_TimeSpecification: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeSpecification */
 /**
  * @summary The Extension Addition Component Types of TimeSpecification
  * @description
@@ -151,13 +144,9 @@ export const _root_component_type_list_2_spec_for_TimeSpecification: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeSpecification */
 let _cached_decoder_for_TimeSpecification: $.ASN1Decoder<TimeSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeSpecification */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeSpecification
  * @function
@@ -209,13 +198,9 @@ export function _decode_TimeSpecification(el: _Element) {
     }
     return _cached_decoder_for_TimeSpecification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeSpecification */
 let _cached_encoder_for_TimeSpecification: $.ASN1Encoder<TimeSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeSpecification */
 /**
  * @summary Encodes a(n) TimeSpecification into an ASN.1 Element.
  * @function
@@ -261,6 +246,5 @@ export function _encode_TimeSpecification(
     return _cached_encoder_for_TimeSpecification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeSpecification */
 
 /* eslint-enable */

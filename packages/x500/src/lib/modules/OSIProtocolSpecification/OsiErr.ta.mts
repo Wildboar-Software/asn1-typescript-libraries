@@ -10,7 +10,6 @@ import {
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiErr */
 /**
  * @summary OsiErr
  * @description
@@ -66,9 +65,7 @@ export class OsiErr {
         return new OsiErr(_o.invokeID, _o.errcode, _o.error);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiErr */
 /**
  * @summary The Leading Root Component Types of OsiErr
  * @description
@@ -82,9 +79,7 @@ export const _root_component_type_list_1_spec_for_OsiErr: $.ComponentSpec[] = [
     new $.ComponentSpec("errcode", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("error", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiErr */
 /**
  * @summary The Trailing Root Component Types of OsiErr
  * @description
@@ -94,9 +89,7 @@ export const _root_component_type_list_1_spec_for_OsiErr: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiErr */
 /**
  * @summary The Extension Addition Component Types of OsiErr
  * @description
@@ -106,13 +99,9 @@ export const _root_component_type_list_2_spec_for_OsiErr: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiErr */
 let _cached_decoder_for_OsiErr: $.ASN1Decoder<OsiErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiErr
  * @function
@@ -147,13 +136,9 @@ export function _decode_OsiErr(el: _Element) {
     }
     return _cached_decoder_for_OsiErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiErr */
 let _cached_encoder_for_OsiErr: $.ASN1Encoder<OsiErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiErr */
 /**
  * @summary Encodes a(n) OsiErr into an ASN.1 Element.
  * @function
@@ -197,6 +182,5 @@ export function _encode_OsiErr(value: OsiErr, elGetter: $.ASN1Encoder<OsiErr>) {
     return _cached_encoder_for_OsiErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiErr */
 
 /* eslint-enable */

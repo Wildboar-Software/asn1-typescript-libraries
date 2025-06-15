@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION grm_RelationshipClass */
 /**
  * @summary grm_RelationshipClass
  * @description
@@ -29,6 +28,5 @@ export const grm_RelationshipClass: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* smi */ 3, /* part7 */ 7, /* relationshipClass */ 11],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION grm_RelationshipClass */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { id_cat_obsoleted_ipms } from '../IPMSObjectIdentifiers/id-cat-obsoleted
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ac_obsoleted_ipms */
 /**
  * @summary ac_obsoleted_ipms
  * @description
@@ -56,6 +55,5 @@ export const ac_obsoleted_ipms: X413ATTRIBUTE<IPMLocation> = {
     '&id': id_cat_obsoleted_ipms /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ac_obsoleted_ipms */
 
 /* eslint-enable */

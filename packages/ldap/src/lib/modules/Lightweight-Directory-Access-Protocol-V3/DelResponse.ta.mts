@@ -15,7 +15,7 @@ import {
   _decode_LDAPResult,
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DelResponse */
+
 /**
  * @summary DelResponse
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DelResponse = LDAPResult; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DelResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DelResponse */
+
 let _cached_decoder_for_DelResponse: $.ASN1Decoder<DelResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DelResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DelResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DelResponse
  * @function
@@ -48,13 +46,11 @@ export function _decode_DelResponse(el: _Element) {
   }
   return _cached_decoder_for_DelResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DelResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DelResponse */
+
 let _cached_encoder_for_DelResponse: $.ASN1Encoder<DelResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DelResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DelResponse */
+
 /**
  * @summary Encodes a(n) DelResponse into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_DelResponse(
   return _cached_encoder_for_DelResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DelResponse */
 
 /* eslint-enable */

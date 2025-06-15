@@ -14,7 +14,6 @@ import { bind_token_signed_data } from '../MTSAbstractService/bind-token-signed-
 import { message_token_signed_data } from '../MTSAbstractService/message-token-signed-data.oa.mjs';
 import { message_token_encrypted_data } from '../MTSAbstractService/message-token-encrypted-data.oa.mjs';
 import { bind_token_encrypted_data } from '../MTSAbstractService/bind-token-encrypted-data.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION TokenDataTable */
 /**
  * @summary TokenDataTable
  * @description
@@ -36,6 +35,5 @@ export const TokenDataTable: TOKEN_DATA[] = [
     message_token_encrypted_data,
     bind_token_encrypted_data,
 ];
-/* END_OF_SYMBOL_DEFINITION TokenDataTable */
 
 /* eslint-enable */

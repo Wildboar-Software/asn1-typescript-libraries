@@ -2,7 +2,7 @@
 import * as asn1 from "asn1-ts";
 import { AlgorithmIdentifier } from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
 import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION algid_hmacWithSHA1 */
+
 /**
  * @summary algid_hmacWithSHA1
  * @description
@@ -26,6 +26,5 @@ export const algid_hmacWithSHA1: AlgorithmIdentifier = AlgorithmIdentifier._from
         ),
     }
 );
-/* END_OF_SYMBOL_DEFINITION algid_hmacWithSHA1 */
 
 /* eslint-enable */

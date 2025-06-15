@@ -12,7 +12,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ECPublicKeyChoice */
+
 /**
  * @summary ECPublicKeyChoice
  * @description
@@ -31,13 +31,11 @@ export type ECPublicKeyChoice =
     | { raw: ECPoint } /* CHOICE_ALT_ROOT */
     | { spki: SubjectPublicKeyInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ECPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPublicKeyChoice */
+
 let _cached_decoder_for_ECPublicKeyChoice: $.ASN1Decoder<ECPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECPublicKeyChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ECPublicKeyChoice
  * @function
@@ -55,13 +53,11 @@ export function _decode_ECPublicKeyChoice(el: _Element) {
     }
     return _cached_decoder_for_ECPublicKeyChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPublicKeyChoice */
+
 let _cached_encoder_for_ECPublicKeyChoice: $.ASN1Encoder<ECPublicKeyChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPublicKeyChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECPublicKeyChoice */
+
 /**
  * @summary Encodes a(n) ECPublicKeyChoice into an ASN.1 Element.
  * @function
@@ -85,6 +81,5 @@ export function _encode_ECPublicKeyChoice(
     return _cached_encoder_for_ECPublicKeyChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECPublicKeyChoice */
 
 /* eslint-enable */

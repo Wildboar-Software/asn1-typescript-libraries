@@ -20,7 +20,7 @@ import {
     _decode_NWTPList,
     _encode_NWTPList,
 } from '../M3100ASN1TypeModule2/NWTPList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkEndResult */
+
 /**
  * @summary AddCapacityToTopologicalLinkEndResult
  * @description
@@ -83,9 +83,8 @@ export class AddCapacityToTopologicalLinkEndResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddCapacityToTopologicalLinkEndResult */
+
 /**
  * @summary The Leading Root Component Types of AddCapacityToTopologicalLinkEndResult
  * @description
@@ -117,9 +116,8 @@ export const _root_component_type_list_1_spec_for_AddCapacityToTopologicalLinkEn
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddCapacityToTopologicalLinkEndResult */
+
 /**
  * @summary The Trailing Root Component Types of AddCapacityToTopologicalLinkEndResult
  * @description
@@ -129,9 +127,8 @@ export const _root_component_type_list_1_spec_for_AddCapacityToTopologicalLinkEn
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddCapacityToTopologicalLinkEndResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddCapacityToTopologicalLinkEndResult */
+
 /**
  * @summary The Extension Addition Component Types of AddCapacityToTopologicalLinkEndResult
  * @description
@@ -141,13 +138,11 @@ export const _root_component_type_list_2_spec_for_AddCapacityToTopologicalLinkEn
  * @constant
  */
 export const _extension_additions_list_spec_for_AddCapacityToTopologicalLinkEndResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddCapacityToTopologicalLinkEndResult */
+
 let _cached_decoder_for_AddCapacityToTopologicalLinkEndResult: $.ASN1Decoder<AddCapacityToTopologicalLinkEndResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddCapacityToTopologicalLinkEndResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddCapacityToTopologicalLinkEndResult
  * @function
@@ -187,13 +182,11 @@ export function _decode_AddCapacityToTopologicalLinkEndResult(el: _Element) {
     }
     return _cached_decoder_for_AddCapacityToTopologicalLinkEndResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddCapacityToTopologicalLinkEndResult */
+
 let _cached_encoder_for_AddCapacityToTopologicalLinkEndResult: $.ASN1Encoder<AddCapacityToTopologicalLinkEndResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddCapacityToTopologicalLinkEndResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddCapacityToTopologicalLinkEndResult */
+
 /**
  * @summary Encodes a(n) AddCapacityToTopologicalLinkEndResult into an ASN.1 Element.
  * @function
@@ -235,6 +228,5 @@ export function _encode_AddCapacityToTopologicalLinkEndResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddCapacityToTopologicalLinkEndResult */
 
 /* eslint-enable */

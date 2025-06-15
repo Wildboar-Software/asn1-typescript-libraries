@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION Generic64BitCounter */
+
 /**
  * @summary Generic64BitCounter
  * @description
@@ -27,21 +27,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type Generic64BitCounter = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Generic64BitCounter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Generic64BitCounter */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Generic64BitCounter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Generic64BitCounter */
+
+
 export const _decode_Generic64BitCounter = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Generic64BitCounter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Generic64BitCounter */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Generic64BitCounter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Generic64BitCounter */
+
+
 export const _encode_Generic64BitCounter = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Generic64BitCounter */
 
 /* eslint-enable */

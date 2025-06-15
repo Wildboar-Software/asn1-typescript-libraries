@@ -11,7 +11,7 @@ import {
 } from "../PKCS-9/ContentType.ta.mjs";
 import { pkcs_9_at_contentType } from "../PKCS-9/pkcs-9-at-contentType.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION contentType */
+
 /**
  * @summary contentType
  * @description
@@ -47,6 +47,5 @@ export const contentType: ATTRIBUTE<ContentType> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contentType */
 
 /* eslint-enable */

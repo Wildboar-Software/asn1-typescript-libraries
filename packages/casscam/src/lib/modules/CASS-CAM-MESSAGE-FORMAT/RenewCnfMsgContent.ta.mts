@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION RenewCnfMsgContent */
+
 /**
  * @summary RenewCnfMsgContent
  * @description
@@ -67,9 +67,8 @@ class RenewCnfMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RenewCnfMsgContent */
+
 /**
  * @summary The Leading Root Component Types of RenewCnfMsgContent
  * @description
@@ -83,9 +82,8 @@ const _root_component_type_list_1_spec_for_RenewCnfMsgContent: $.ComponentSpec[]
     new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("downloadStatus", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RenewCnfMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of RenewCnfMsgContent
  * @description
@@ -98,9 +96,8 @@ export
 const _root_component_type_list_2_spec_for_RenewCnfMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RenewCnfMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of RenewCnfMsgContent
  * @description
@@ -113,13 +110,11 @@ export
 const _extension_additions_list_spec_for_RenewCnfMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RenewCnfMsgContent */
+
 let _cached_decoder_for_RenewCnfMsgContent: $.ASN1Decoder<RenewCnfMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RenewCnfMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RenewCnfMsgContent
  * @function
@@ -147,13 +142,11 @@ function _decode_RenewCnfMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_RenewCnfMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RenewCnfMsgContent */
+
 let _cached_encoder_for_RenewCnfMsgContent: $.ASN1Encoder<RenewCnfMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RenewCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RenewCnfMsgContent */
+
 /**
  * @summary Encodes a(n) RenewCnfMsgContent into an ASN.1 Element.
  * @function
@@ -174,6 +167,5 @@ function _encode_RenewCnfMsgContent (value: RenewCnfMsgContent, elGetter: $.ASN1
     return _cached_encoder_for_RenewCnfMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RenewCnfMsgContent */
 
 /* eslint-enable */

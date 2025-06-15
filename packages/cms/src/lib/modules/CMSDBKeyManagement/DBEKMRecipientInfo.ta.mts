@@ -11,7 +11,7 @@ import {
     _decode_MasterKeyEncryptedHMACkey,
     _encode_MasterKeyEncryptedHMACkey,
 } from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DBEKMRecipientInfo */
+
 /**
  * @summary DBEKMRecipientInfo
  * @description
@@ -28,13 +28,11 @@ import {
 export type DBEKMRecipientInfo =
     | { keyManager: MasterKeyEncryptedHMACkey } /* CHOICE_ALT_ROOT */
     | { server: DatabaseServerToKeyManager } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DBEKMRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DBEKMRecipientInfo */
+
 let _cached_decoder_for_DBEKMRecipientInfo: $.ASN1Decoder<DBEKMRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DBEKMRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DBEKMRecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DBEKMRecipientInfo
  * @function
@@ -52,13 +50,11 @@ export function _decode_DBEKMRecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_DBEKMRecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DBEKMRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DBEKMRecipientInfo */
+
 let _cached_encoder_for_DBEKMRecipientInfo: $.ASN1Encoder<DBEKMRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DBEKMRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DBEKMRecipientInfo */
+
 /**
  * @summary Encodes a(n) DBEKMRecipientInfo into an ASN.1 Element.
  * @function
@@ -82,6 +78,5 @@ export function _encode_DBEKMRecipientInfo(
     return _cached_encoder_for_DBEKMRecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DBEKMRecipientInfo */
 
 /* eslint-enable */

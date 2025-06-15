@@ -11,7 +11,7 @@ import {
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptedRecipientID */
+
 /**
  * @summary EncryptedRecipientID
  * @description
@@ -68,9 +68,8 @@ export class EncryptedRecipientID {
         return new EncryptedRecipientID(_o.algorithm, _o.keyID, _o.ciphertext);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedRecipientID */
+
 /**
  * @summary The Leading Root Component Types of EncryptedRecipientID
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_EncryptedRecipientID: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedRecipientID */
+
 /**
  * @summary The Trailing Root Component Types of EncryptedRecipientID
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_EncryptedRecipientID: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedRecipientID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedRecipientID */
+
 /**
  * @summary The Extension Addition Component Types of EncryptedRecipientID
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_EncryptedRecipientID: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedRecipientID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedRecipientID */
+
 let _cached_decoder_for_EncryptedRecipientID: $.ASN1Decoder<EncryptedRecipientID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedRecipientID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedRecipientID
  * @function
@@ -183,13 +178,11 @@ export function _decode_EncryptedRecipientID(el: _Element) {
     }
     return _cached_decoder_for_EncryptedRecipientID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedRecipientID */
+
 let _cached_encoder_for_EncryptedRecipientID: $.ASN1Encoder<EncryptedRecipientID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedRecipientID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedRecipientID */
+
 /**
  * @summary Encodes a(n) EncryptedRecipientID into an ASN.1 Element.
  * @function
@@ -234,6 +227,5 @@ export function _encode_EncryptedRecipientID(
     return _cached_encoder_for_EncryptedRecipientID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedRecipientID */
 
 /* eslint-enable */

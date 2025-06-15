@@ -14,7 +14,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION arfProposedRepairAction */
 /**
  * @summary arfProposedRepairAction
  * @description
@@ -35,6 +34,5 @@ const arfProposedRepairAction: OBJECT_IDENTIFIER = new _OID([
     /* standardSpecificExtension */ 0,
     /* arfpra */ 2,
 ], joint_iso_ccitt);
-/* END_OF_SYMBOL_DEFINITION arfProposedRepairAction */
 
 /* eslint-enable */

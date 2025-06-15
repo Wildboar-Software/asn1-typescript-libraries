@@ -26,7 +26,7 @@ import {
   _decode_EncryptedData,
   _encode_EncryptedData,
 } from '../KerberosV5Spec2/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Ticket */
+
 /**
  * @summary Ticket
  * @description
@@ -88,9 +88,8 @@ export class Ticket {
     return new Ticket(_o.tkt_vno, _o.realm, _o.sname, _o.enc_part);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Ticket */
+
 /**
  * @summary The Leading Root Component Types of Ticket
  * @description
@@ -129,9 +128,8 @@ export const _root_component_type_list_1_spec_for_Ticket: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Ticket */
+
 /**
  * @summary The Trailing Root Component Types of Ticket
  * @description
@@ -141,9 +139,8 @@ export const _root_component_type_list_1_spec_for_Ticket: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Ticket: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Ticket */
+
 /**
  * @summary The Extension Addition Component Types of Ticket
  * @description
@@ -153,13 +150,11 @@ export const _root_component_type_list_2_spec_for_Ticket: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Ticket: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Ticket */
+
 let _cached_decoder_for_Ticket: $.ASN1Decoder<Ticket> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Ticket */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Ticket
  * @function
@@ -203,13 +198,11 @@ export function _decode_Ticket(el: _Element) {
   }
   return _cached_decoder_for_Ticket(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Ticket */
+
 let _cached_encoder_for_Ticket: $.ASN1Encoder<Ticket> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Ticket */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Ticket */
+
 /**
  * @summary Encodes a(n) Ticket into an ASN.1 Element.
  * @function
@@ -262,6 +255,5 @@ export function _encode_Ticket(value: Ticket, elGetter: $.ASN1Encoder<Ticket>) {
   return _cached_encoder_for_Ticket(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Ticket */
 
 /* eslint-enable */

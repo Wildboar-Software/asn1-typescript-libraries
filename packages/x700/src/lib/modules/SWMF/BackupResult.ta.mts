@@ -25,7 +25,6 @@ import {
     _decode_BackupResult_offLine,
     _encode_BackupResult_offLine,
 } from '../SWMF/BackupResult-offLine.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BackupResult */
 /**
  * @summary BackupResult
  * @description
@@ -55,13 +54,9 @@ export type BackupResult =
     | { inLine: BackupResult_inLine } /* CHOICE_ALT_ROOT */
     | { local: BackupResult_local } /* CHOICE_ALT_ROOT */
     | { offLine: BackupResult_offLine } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BackupResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult */
 let _cached_decoder_for_BackupResult: $.ASN1Decoder<BackupResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackupResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackupResult
  * @function
@@ -95,13 +90,9 @@ export function _decode_BackupResult(el: _Element) {
     }
     return _cached_decoder_for_BackupResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackupResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult */
 let _cached_encoder_for_BackupResult: $.ASN1Encoder<BackupResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackupResult */
 /**
  * @summary Encodes a(n) BackupResult into an ASN.1 Element.
  * @function
@@ -141,6 +132,5 @@ export function _encode_BackupResult(
     return _cached_encoder_for_BackupResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackupResult */
 
 /* eslint-enable */

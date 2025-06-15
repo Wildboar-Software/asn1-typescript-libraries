@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InformationString */
 /**
  * @summary InformationString
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type InformationString = GeneralString; // GeneralString
-/* END_OF_SYMBOL_DEFINITION InformationString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationString */
 export const _decode_InformationString = $._decodeGeneralString;
-/* END_OF_SYMBOL_DEFINITION _decode_InformationString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationString */
 export const _encode_InformationString = $._encodeGeneralString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationString */
 
 /* eslint-enable */

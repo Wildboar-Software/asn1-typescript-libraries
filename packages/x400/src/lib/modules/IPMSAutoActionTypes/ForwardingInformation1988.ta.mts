@@ -22,7 +22,6 @@ import {
     _decode_IA5TextBodyPart,
     _encode_IA5TextBodyPart,
 } from '../IPMSInformationObjects/IA5TextBodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardingInformation1988 */
 /**
  * @summary ForwardingInformation1988
  * @description
@@ -86,9 +85,7 @@ export class ForwardingInformation1988 {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardingInformation1988 */
 /**
  * @summary The Leading Root Component Types of ForwardingInformation1988
  * @description
@@ -120,9 +117,7 @@ export const _root_component_type_list_1_spec_for_ForwardingInformation1988: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardingInformation1988 */
 /**
  * @summary The Trailing Root Component Types of ForwardingInformation1988
  * @description
@@ -132,9 +127,7 @@ export const _root_component_type_list_1_spec_for_ForwardingInformation1988: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ForwardingInformation1988: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardingInformation1988 */
 /**
  * @summary The Extension Addition Component Types of ForwardingInformation1988
  * @description
@@ -144,13 +137,9 @@ export const _root_component_type_list_2_spec_for_ForwardingInformation1988: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_ForwardingInformation1988: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardingInformation1988 */
 let _cached_decoder_for_ForwardingInformation1988: $.ASN1Decoder<ForwardingInformation1988> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardingInformation1988 */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardingInformation1988
  * @function
@@ -203,13 +192,9 @@ export function _decode_ForwardingInformation1988(el: _Element) {
     }
     return _cached_decoder_for_ForwardingInformation1988(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardingInformation1988 */
 let _cached_encoder_for_ForwardingInformation1988: $.ASN1Encoder<ForwardingInformation1988> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardingInformation1988 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardingInformation1988 */
 /**
  * @summary Encodes a(n) ForwardingInformation1988 into an ASN.1 Element.
  * @function
@@ -261,6 +246,5 @@ export function _encode_ForwardingInformation1988(
     return _cached_encoder_for_ForwardingInformation1988(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardingInformation1988 */
 
 /* eslint-enable */

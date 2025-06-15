@@ -12,7 +12,7 @@ import {
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PathOrObjects */
+
 /**
  * @summary PathOrObjects
  * @description
@@ -37,9 +37,8 @@ export type PathOrObjects<ObjectType> =
       } /* CHOICE_ALT_EXT */
     | { direct_protected: EnvelopedData<ObjectType[]> } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PathOrObjects */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PathOrObjects */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PathOrObjects
  * @function
@@ -82,9 +81,8 @@ export function _get_decoder_for_PathOrObjects<ObjectType>(
         ],
     });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PathOrObjects */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PathOrObjects */
+
 /**
  * @summary Returns a function that will encode a(n) PathOrObjects into an ASN.1 Element.
  * @function
@@ -138,6 +136,5 @@ export function _get_encoder_for_PathOrObjects<ObjectType>(
         $.BER
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PathOrObjects */
 
 /* eslint-enable */

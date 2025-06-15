@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.mjs";
 import { OtherHashAlgAndValue, _decode_OtherHashAlgAndValue, _encode_OtherHashAlgAndValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashAlgAndValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OtherHash */
 /**
  * @summary OtherHash
  * @description
@@ -29,13 +28,9 @@ export
 type OtherHash =
     { sha1Hash: OtherHashValue } /* CHOICE_ALT_ROOT */
     | { otherHash: OtherHashAlgAndValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OtherHash */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherHash */
 let _cached_decoder_for_OtherHash: $.ASN1Decoder<OtherHash> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherHash */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherHash */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherHash
  * @function
@@ -50,13 +45,9 @@ function _decode_OtherHash (el: _Element) {
 }); }
     return _cached_decoder_for_OtherHash(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherHash */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherHash */
 let _cached_encoder_for_OtherHash: $.ASN1Encoder<OtherHash> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherHash */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherHash */
 /**
  * @summary Encodes a(n) OtherHash into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ function _encode_OtherHash (value: OtherHash, elGetter: $.ASN1Encoder<OtherHash>
     return _cached_encoder_for_OtherHash(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherHash */
 
 /* eslint-enable */

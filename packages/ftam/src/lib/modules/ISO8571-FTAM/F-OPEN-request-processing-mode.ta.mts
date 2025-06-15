@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode */
+
 /**
  * @summary F_OPEN_request_processing_mode
  * @description
@@ -24,101 +24,86 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type F_OPEN_request_processing_mode = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode */
 
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_read */
+
 /**
  * @summary F_OPEN_request_processing_mode_f_read
  * @constant
  */
 export const F_OPEN_request_processing_mode_f_read: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_read */
 
-/* START_OF_SYMBOL_DEFINITION f_read */
+
 /**
  * @summary f_read
  * @constant
  */
 export const f_read: number = F_OPEN_request_processing_mode_f_read; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION f_read */
 
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_insert */
+
 /**
  * @summary F_OPEN_request_processing_mode_f_insert
  * @constant
  */
 export const F_OPEN_request_processing_mode_f_insert: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_insert */
 
-/* START_OF_SYMBOL_DEFINITION f_insert */
+
 /**
  * @summary f_insert
  * @constant
  */
 export const f_insert: number = F_OPEN_request_processing_mode_f_insert; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION f_insert */
 
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_replace */
+
 /**
  * @summary F_OPEN_request_processing_mode_f_replace
  * @constant
  */
 export const F_OPEN_request_processing_mode_f_replace: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_replace */
 
-/* START_OF_SYMBOL_DEFINITION f_replace */
+
 /**
  * @summary f_replace
  * @constant
  */
 export const f_replace: number = F_OPEN_request_processing_mode_f_replace; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION f_replace */
 
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_extend */
+
 /**
  * @summary F_OPEN_request_processing_mode_f_extend
  * @constant
  */
 export const F_OPEN_request_processing_mode_f_extend: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_extend */
 
-/* START_OF_SYMBOL_DEFINITION f_extend */
+
 /**
  * @summary f_extend
  * @constant
  */
 export const f_extend: number = F_OPEN_request_processing_mode_f_extend; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION f_extend */
 
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_erase */
+
 /**
  * @summary F_OPEN_request_processing_mode_f_erase
  * @constant
  */
 export const F_OPEN_request_processing_mode_f_erase: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_processing_mode_f_erase */
 
-/* START_OF_SYMBOL_DEFINITION f_erase */
+
 /**
  * @summary f_erase
  * @constant
  */
 export const f_erase: number = F_OPEN_request_processing_mode_f_erase; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION f_erase */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_F_OPEN_request_processing_mode */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_F_OPEN_request_processing_mode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_F_OPEN_request_processing_mode */
+
+
 export const _decode_F_OPEN_request_processing_mode = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_F_OPEN_request_processing_mode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_F_OPEN_request_processing_mode */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_F_OPEN_request_processing_mode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_F_OPEN_request_processing_mode */
+
+
 export const _encode_F_OPEN_request_processing_mode = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_F_OPEN_request_processing_mode */
 
 /* eslint-enable */

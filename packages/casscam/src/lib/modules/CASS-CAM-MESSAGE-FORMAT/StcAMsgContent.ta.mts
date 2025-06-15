@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION StcAMsgContent */
+
 /**
  * @summary StcAMsgContent
  * @description
@@ -71,9 +71,8 @@ class StcAMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_StcAMsgContent */
+
 /**
  * @summary The Leading Root Component Types of StcAMsgContent
  * @description
@@ -87,9 +86,8 @@ const _root_component_type_list_1_spec_for_StcAMsgContent: $.ComponentSpec[] = [
     new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("statusInfo", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_StcAMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of StcAMsgContent
  * @description
@@ -102,9 +100,8 @@ export
 const _root_component_type_list_2_spec_for_StcAMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_StcAMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of StcAMsgContent
  * @description
@@ -117,13 +114,11 @@ export
 const _extension_additions_list_spec_for_StcAMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StcAMsgContent */
+
 let _cached_decoder_for_StcAMsgContent: $.ASN1Decoder<StcAMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StcAMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) StcAMsgContent
  * @function
@@ -151,13 +146,11 @@ function _decode_StcAMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_StcAMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StcAMsgContent */
+
 let _cached_encoder_for_StcAMsgContent: $.ASN1Encoder<StcAMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StcAMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StcAMsgContent */
+
 /**
  * @summary Encodes a(n) StcAMsgContent into an ASN.1 Element.
  * @function
@@ -178,6 +171,5 @@ function _encode_StcAMsgContent (value: StcAMsgContent, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_StcAMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StcAMsgContent */
 
 /* eslint-enable */

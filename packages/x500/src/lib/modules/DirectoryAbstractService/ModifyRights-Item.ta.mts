@@ -15,7 +15,6 @@ import {
     _decode_ModifyRights_Item_permission,
     _encode_ModifyRights_Item_permission,
 } from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyRights_Item */
 /**
  * @summary ModifyRights_Item
  * @description
@@ -72,9 +71,7 @@ export class ModifyRights_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyRights_Item */
 /**
  * @summary The Leading Root Component Types of ModifyRights_Item
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_ModifyRights_Item: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyRights_Item */
 /**
  * @summary The Trailing Root Component Types of ModifyRights_Item
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_ModifyRights_Item: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyRights_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyRights_Item */
 /**
  * @summary The Extension Addition Component Types of ModifyRights_Item
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_ModifyRights_Item: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyRights_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights_Item */
 let _cached_decoder_for_ModifyRights_Item: $.ASN1Decoder<ModifyRights_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyRights_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyRights_Item
  * @function
@@ -156,13 +145,9 @@ export function _decode_ModifyRights_Item(el: _Element) {
     }
     return _cached_decoder_for_ModifyRights_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights_Item */
 let _cached_encoder_for_ModifyRights_Item: $.ASN1Encoder<ModifyRights_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyRights_Item */
 /**
  * @summary Encodes a(n) ModifyRights_Item into an ASN.1 Element.
  * @function
@@ -204,6 +189,5 @@ export function _encode_ModifyRights_Item(
     return _cached_encoder_for_ModifyRights_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyRights_Item */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../MTSAbstractService/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalLocalPostalAttributes */
 /**
  * @summary UniversalLocalPostalAttributes
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalLocalPostalAttributes = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalLocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalLocalPostalAttributes */
 let _cached_decoder_for_UniversalLocalPostalAttributes: $.ASN1Decoder<UniversalLocalPostalAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalLocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalLocalPostalAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalLocalPostalAttributes
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalLocalPostalAttributes(el: _Element) {
     }
     return _cached_decoder_for_UniversalLocalPostalAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalLocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalLocalPostalAttributes */
 let _cached_encoder_for_UniversalLocalPostalAttributes: $.ASN1Encoder<UniversalLocalPostalAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalLocalPostalAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalLocalPostalAttributes */
 /**
  * @summary Encodes a(n) UniversalLocalPostalAttributes into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_UniversalLocalPostalAttributes(
     return _cached_encoder_for_UniversalLocalPostalAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalLocalPostalAttributes */
 
 /* eslint-enable */

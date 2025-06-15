@@ -15,7 +15,6 @@ import {
     _decode_FNExtensionsSubField,
     _encode_FNExtensionsSubField,
 } from '../EDIMSInformationObjects/FNExtensionsSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FNExtensionsField */
 /**
  * @summary FNExtensionsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type FNExtensionsField = FNExtensionsSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION FNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNExtensionsField */
 let _cached_decoder_for_FNExtensionsField: $.ASN1Decoder<FNExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FNExtensionsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) FNExtensionsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_FNExtensionsField(el: _Element) {
     }
     return _cached_decoder_for_FNExtensionsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNExtensionsField */
 let _cached_encoder_for_FNExtensionsField: $.ASN1Encoder<FNExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FNExtensionsField */
 /**
  * @summary Encodes a(n) FNExtensionsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_FNExtensionsField(
     return _cached_encoder_for_FNExtensionsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FNExtensionsField */
 
 /* eslint-enable */

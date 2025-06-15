@@ -42,7 +42,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectInfo */
 /**
  * @summary ObjectInfo
  * @description
@@ -135,9 +134,7 @@ export class ObjectInfo {
 
     public static _enum_for_sourceIndicator = _enum_for_SourceIndicator;
 }
-/* END_OF_SYMBOL_DEFINITION ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectInfo */
 /**
  * @summary The Leading Root Component Types of ObjectInfo
  * @description
@@ -190,9 +187,7 @@ export const _root_component_type_list_1_spec_for_ObjectInfo: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectInfo */
 /**
  * @summary The Trailing Root Component Types of ObjectInfo
  * @description
@@ -202,9 +197,7 @@ export const _root_component_type_list_1_spec_for_ObjectInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObjectInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectInfo */
 /**
  * @summary The Extension Addition Component Types of ObjectInfo
  * @description
@@ -214,13 +207,9 @@ export const _root_component_type_list_2_spec_for_ObjectInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ObjectInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectInfo */
 let _cached_decoder_for_ObjectInfo: $.ASN1Decoder<ObjectInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectInfo
  * @function
@@ -286,13 +275,9 @@ export function _decode_ObjectInfo(el: _Element) {
     }
     return _cached_decoder_for_ObjectInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectInfo */
 let _cached_encoder_for_ObjectInfo: $.ASN1Encoder<ObjectInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectInfo */
 /**
  * @summary Encodes a(n) ObjectInfo into an ASN.1 Element.
  * @function
@@ -359,6 +344,5 @@ export function _encode_ObjectInfo(
     return _cached_encoder_for_ObjectInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectInfo */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ExtendedNetworkAddress_e163_4_address */
 /**
  * @summary ExtendedNetworkAddress_e163_4_address
  * @description
@@ -65,9 +64,7 @@ export class ExtendedNetworkAddress_e163_4_address {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedNetworkAddress_e163_4_address */
 /**
  * @summary The Leading Root Component Types of ExtendedNetworkAddress_e163_4_address
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_ExtendedNetworkAddress_e163_4_
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedNetworkAddress_e163_4_address */
 /**
  * @summary The Trailing Root Component Types of ExtendedNetworkAddress_e163_4_address
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_ExtendedNetworkAddress_e163_4_
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtendedNetworkAddress_e163_4_address: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedNetworkAddress_e163_4_address */
 /**
  * @summary The Extension Addition Component Types of ExtendedNetworkAddress_e163_4_address
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_ExtendedNetworkAddress_e163_4_
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtendedNetworkAddress_e163_4_address: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedNetworkAddress_e163_4_address */
 let _cached_decoder_for_ExtendedNetworkAddress_e163_4_address: $.ASN1Decoder<ExtendedNetworkAddress_e163_4_address> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedNetworkAddress_e163_4_address */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedNetworkAddress_e163_4_address
  * @function
@@ -168,13 +157,9 @@ export function _decode_ExtendedNetworkAddress_e163_4_address(el: _Element) {
     }
     return _cached_decoder_for_ExtendedNetworkAddress_e163_4_address(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedNetworkAddress_e163_4_address */
 let _cached_encoder_for_ExtendedNetworkAddress_e163_4_address: $.ASN1Encoder<ExtendedNetworkAddress_e163_4_address> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedNetworkAddress_e163_4_address */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedNetworkAddress_e163_4_address */
 /**
  * @summary Encodes a(n) ExtendedNetworkAddress_e163_4_address into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ export function _encode_ExtendedNetworkAddress_e163_4_address(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedNetworkAddress_e163_4_address */
 
 /* eslint-enable */

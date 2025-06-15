@@ -16,7 +16,6 @@ import {
     _encode_MessageSubmissionPDUs,
 } from '../MTSAccessProtocol/MessageSubmissionPDUs.ta.mjs';
 import { id_as_msse } from '../MHSProtocolObjectIdentifiers/id-as-msse.va.mjs';
-/* START_OF_SYMBOL_DEFINITION message_submission_abstract_syntax */
 /**
  * @summary message_submission_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const message_submission_abstract_syntax: ABSTRACT_SYNTAX<MessageSubmissi
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION message_submission_abstract_syntax */
 
 /* eslint-enable */

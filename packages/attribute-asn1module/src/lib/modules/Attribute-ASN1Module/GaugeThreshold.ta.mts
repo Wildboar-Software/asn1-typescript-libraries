@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshold_Item } from "../Attribute-ASN1Module/GaugeThreshold-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GaugeThreshold */
 /**
  * @summary GaugeThreshold
  * @description
@@ -26,13 +25,9 @@ import { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshol
  */
 export
 type GaugeThreshold = GaugeThreshold_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GaugeThreshold */
 let _cached_decoder_for_GaugeThreshold: $.ASN1Decoder<GaugeThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GaugeThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) GaugeThreshold
  * @function
@@ -44,13 +39,9 @@ function _decode_GaugeThreshold (el: _Element) {
     if (!_cached_decoder_for_GaugeThreshold) { _cached_decoder_for_GaugeThreshold = $._decodeSetOf<GaugeThreshold_Item>(() => _decode_GaugeThreshold_Item); }
     return _cached_decoder_for_GaugeThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GaugeThreshold */
 let _cached_encoder_for_GaugeThreshold: $.ASN1Encoder<GaugeThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GaugeThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GaugeThreshold */
 /**
  * @summary Encodes a(n) GaugeThreshold into an ASN.1 Element.
  * @function
@@ -64,6 +55,5 @@ function _encode_GaugeThreshold (value: GaugeThreshold, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_GaugeThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GaugeThreshold */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Abstract_Syntax_Name */
+
 /**
  * @summary Abstract_Syntax_Name
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Abstract_Syntax_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION Abstract_Syntax_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abstract_Syntax_Name */
+
 let _cached_decoder_for_Abstract_Syntax_Name: $.ASN1Decoder<Abstract_Syntax_Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abstract_Syntax_Name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Abstract_Syntax_Name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Abstract_Syntax_Name
  * @function
@@ -45,13 +43,11 @@ export function _decode_Abstract_Syntax_Name(el: _Element) {
   }
   return _cached_decoder_for_Abstract_Syntax_Name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Abstract_Syntax_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abstract_Syntax_Name */
+
 let _cached_encoder_for_Abstract_Syntax_Name: $.ASN1Encoder<Abstract_Syntax_Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abstract_Syntax_Name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Abstract_Syntax_Name */
+
 /**
  * @summary Encodes a(n) Abstract_Syntax_Name into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Abstract_Syntax_Name(
   return _cached_encoder_for_Abstract_Syntax_Name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Abstract_Syntax_Name */
 
 /* eslint-enable */

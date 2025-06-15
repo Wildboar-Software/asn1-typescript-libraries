@@ -17,7 +17,6 @@ import {
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';
 import { id_mr_msstring_list_elements_match } from '../MSObjectIdentifiers/id-mr-msstring-list-elements-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mSStringListElementsMatch */
 /**
  * @summary mSStringListElementsMatch
  * @description
@@ -49,6 +48,5 @@ export const mSStringListElementsMatch: MATCHING_RULE<MSString[]> = {
     '&id': id_mr_msstring_list_elements_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mSStringListElementsMatch */
 
 /* eslint-enable */

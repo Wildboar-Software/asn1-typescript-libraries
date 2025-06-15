@@ -21,7 +21,6 @@ import {
     _decode_CirculationSignature,
     _encode_CirculationSignature,
 } from '../IPMSHeadingExtensions/CirculationSignature.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Checkmark */
 /**
  * @summary Checkmark
  * @description
@@ -40,13 +39,9 @@ export type Checkmark =
     | { simple: NULL } /* CHOICE_ALT_ROOT */
     | { timestamped: CirculationTime } /* CHOICE_ALT_ROOT */
     | { signed: CirculationSignature } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Checkmark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Checkmark */
 let _cached_decoder_for_Checkmark: $.ASN1Decoder<Checkmark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Checkmark */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Checkmark */
 /**
  * @summary Decodes an ASN.1 element into a(n) Checkmark
  * @function
@@ -65,13 +60,9 @@ export function _decode_Checkmark(el: _Element) {
     }
     return _cached_decoder_for_Checkmark(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Checkmark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Checkmark */
 let _cached_encoder_for_Checkmark: $.ASN1Encoder<Checkmark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Checkmark */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Checkmark */
 /**
  * @summary Encodes a(n) Checkmark into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_Checkmark(
     return _cached_encoder_for_Checkmark(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Checkmark */
 
 /* eslint-enable */

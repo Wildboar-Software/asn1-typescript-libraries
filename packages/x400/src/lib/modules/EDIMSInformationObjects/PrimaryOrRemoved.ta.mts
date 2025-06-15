@@ -16,7 +16,6 @@ import {
     _decode_PrimaryBodyPart,
     _encode_PrimaryBodyPart,
 } from '../EDIMSInformationObjects/PrimaryBodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrimaryOrRemoved */
 /**
  * @summary PrimaryOrRemoved
  * @description
@@ -33,13 +32,9 @@ import {
 export type PrimaryOrRemoved =
     | { removed_edi_body: NULL } /* CHOICE_ALT_ROOT */
     | { primary_body_part: PrimaryBodyPart } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PrimaryOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryOrRemoved */
 let _cached_decoder_for_PrimaryOrRemoved: $.ASN1Decoder<PrimaryOrRemoved> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrimaryOrRemoved */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryOrRemoved
  * @function
@@ -65,13 +60,9 @@ export function _decode_PrimaryOrRemoved(el: _Element) {
     }
     return _cached_decoder_for_PrimaryOrRemoved(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrimaryOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryOrRemoved */
 let _cached_encoder_for_PrimaryOrRemoved: $.ASN1Encoder<PrimaryOrRemoved> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrimaryOrRemoved */
 /**
  * @summary Encodes a(n) PrimaryOrRemoved into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_PrimaryOrRemoved(
     return _cached_encoder_for_PrimaryOrRemoved(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrimaryOrRemoved */
 
 /* eslint-enable */

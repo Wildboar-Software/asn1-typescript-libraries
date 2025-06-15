@@ -19,7 +19,6 @@ import {
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
 } from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultSequenceOfWeeks */
 /**
  * @summary defaultSequenceOfWeeks
  * @description
@@ -33,6 +32,5 @@ import {
  * @constant
  */
 export const defaultSequenceOfWeeks: SequenceOfWeeks = [defaultWeekMaskWps];
-/* END_OF_SYMBOL_DEFINITION defaultSequenceOfWeeks */
 
 /* eslint-enable */

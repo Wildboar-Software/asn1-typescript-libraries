@@ -15,7 +15,6 @@ import {
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageSubmissionErrors */
 /**
  * @summary MessageSubmissionErrors
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type MessageSubmissionErrors = SubmissionError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSubmissionErrors */
 let _cached_decoder_for_MessageSubmissionErrors: $.ASN1Decoder<MessageSubmissionErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageSubmissionErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSubmissionErrors
  * @function
@@ -50,13 +45,9 @@ export function _decode_MessageSubmissionErrors(el: _Element) {
     }
     return _cached_decoder_for_MessageSubmissionErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSubmissionErrors */
 let _cached_encoder_for_MessageSubmissionErrors: $.ASN1Encoder<MessageSubmissionErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageSubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageSubmissionErrors */
 /**
  * @summary Encodes a(n) MessageSubmissionErrors into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_MessageSubmissionErrors(
     return _cached_encoder_for_MessageSubmissionErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageSubmissionErrors */
 
 /* eslint-enable */

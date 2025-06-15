@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AttributeId */
+
 /**
  * @summary AttributeId
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type AttributeId =
   | { globalForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
   | { localForm: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeId */
+
 let _cached_decoder_for_AttributeId: $.ASN1Decoder<AttributeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeId
  * @function
@@ -62,13 +60,11 @@ export function _decode_AttributeId(el: _Element) {
   }
   return _cached_decoder_for_AttributeId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeId */
+
 let _cached_encoder_for_AttributeId: $.ASN1Encoder<AttributeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeId */
+
 /**
  * @summary Encodes a(n) AttributeId into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_AttributeId(
   return _cached_encoder_for_AttributeId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeId */
 
 /* eslint-enable */

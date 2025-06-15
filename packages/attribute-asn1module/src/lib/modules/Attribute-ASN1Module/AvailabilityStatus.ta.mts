@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AvailabilityStatus_Item, _decode_AvailabilityStatus_Item, _encode_AvailabilityStatus_Item } from "../Attribute-ASN1Module/AvailabilityStatus-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AvailabilityStatus */
 /**
  * @summary AvailabilityStatus
  * @description
@@ -27,13 +26,9 @@ import { AvailabilityStatus_Item, _decode_AvailabilityStatus_Item, _encode_Avail
  */
 export
 type AvailabilityStatus = AvailabilityStatus_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailabilityStatus */
 let _cached_decoder_for_AvailabilityStatus: $.ASN1Decoder<AvailabilityStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AvailabilityStatus */
 /**
  * @summary Decodes an ASN.1 element into a(n) AvailabilityStatus
  * @function
@@ -45,13 +40,9 @@ function _decode_AvailabilityStatus (el: _Element) {
     if (!_cached_decoder_for_AvailabilityStatus) { _cached_decoder_for_AvailabilityStatus = $._decodeSetOf<AvailabilityStatus_Item>(() => _decode_AvailabilityStatus_Item); }
     return _cached_decoder_for_AvailabilityStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailabilityStatus */
 let _cached_encoder_for_AvailabilityStatus: $.ASN1Encoder<AvailabilityStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailabilityStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AvailabilityStatus */
 /**
  * @summary Encodes a(n) AvailabilityStatus into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_AvailabilityStatus (value: AvailabilityStatus, elGetter: $.ASN1
     return _cached_encoder_for_AvailabilityStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AvailabilityStatus */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_AttributeTypeValueContexts,
     _encode_AttributeTypeValueContexts,
 } from "../EnhancedSecurity/AttributeTypeValueContexts.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AVIHash */
 /**
  * @summary AVIHash
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type AVIHash = HASH<AttributeTypeValueContexts>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AVIHash */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AVIHash */
 let _cached_decoder_for_AVIHash: $.ASN1Decoder<AVIHash> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AVIHash */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AVIHash */
 /**
  * @summary Decodes an ASN.1 element into a(n) AVIHash
  * @function
@@ -44,13 +39,9 @@ export function _decode_AVIHash(el: _Element) {
     }
     return _cached_decoder_for_AVIHash(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AVIHash */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AVIHash */
 let _cached_encoder_for_AVIHash: $.ASN1Encoder<AVIHash> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AVIHash */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AVIHash */
 /**
  * @summary Encodes a(n) AVIHash into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AVIHash(
     return _cached_encoder_for_AVIHash(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AVIHash */
 
 /* eslint-enable */

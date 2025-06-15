@@ -17,7 +17,6 @@ import {
     _decode_FunctionalUnitPackageId,
     _encode_FunctionalUnitPackageId,
 } from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackageId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FunctionalUnitPackage */
 /**
  * @summary FunctionalUnitPackage
  * @description
@@ -99,9 +98,7 @@ export class FunctionalUnitPackage {
         return new Uint8ClampedArray([]);
     }
 }
-/* END_OF_SYMBOL_DEFINITION FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FunctionalUnitPackage */
 /**
  * @summary The Leading Root Component Types of FunctionalUnitPackage
  * @description
@@ -133,9 +130,7 @@ export const _root_component_type_list_1_spec_for_FunctionalUnitPackage: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FunctionalUnitPackage */
 /**
  * @summary The Trailing Root Component Types of FunctionalUnitPackage
  * @description
@@ -145,9 +140,7 @@ export const _root_component_type_list_1_spec_for_FunctionalUnitPackage: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FunctionalUnitPackage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FunctionalUnitPackage */
 /**
  * @summary The Extension Addition Component Types of FunctionalUnitPackage
  * @description
@@ -157,13 +150,9 @@ export const _root_component_type_list_2_spec_for_FunctionalUnitPackage: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_FunctionalUnitPackage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FunctionalUnitPackage */
 let _cached_decoder_for_FunctionalUnitPackage: $.ASN1Decoder<FunctionalUnitPackage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FunctionalUnitPackage */
 /**
  * @summary Decodes an ASN.1 element into a(n) FunctionalUnitPackage
  * @function
@@ -218,13 +207,9 @@ export function _decode_FunctionalUnitPackage(el: _Element) {
     }
     return _cached_decoder_for_FunctionalUnitPackage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FunctionalUnitPackage */
 let _cached_encoder_for_FunctionalUnitPackage: $.ASN1Encoder<FunctionalUnitPackage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FunctionalUnitPackage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FunctionalUnitPackage */
 /**
  * @summary Encodes a(n) FunctionalUnitPackage into an ASN.1 Element.
  * @function
@@ -281,6 +266,5 @@ export function _encode_FunctionalUnitPackage(
     return _cached_encoder_for_FunctionalUnitPackage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FunctionalUnitPackage */
 
 /* eslint-enable */

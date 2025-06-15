@@ -15,7 +15,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EstablishmentTime */
 /**
  * @summary EstablishmentTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EstablishmentTime = Timespec; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EstablishmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EstablishmentTime */
 let _cached_decoder_for_EstablishmentTime: $.ASN1Decoder<EstablishmentTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EstablishmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EstablishmentTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) EstablishmentTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_EstablishmentTime(el: _Element) {
     }
     return _cached_decoder_for_EstablishmentTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EstablishmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EstablishmentTime */
 let _cached_encoder_for_EstablishmentTime: $.ASN1Encoder<EstablishmentTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EstablishmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EstablishmentTime */
 /**
  * @summary Encodes a(n) EstablishmentTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_EstablishmentTime(
     return _cached_encoder_for_EstablishmentTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EstablishmentTime */
 
 /* eslint-enable */

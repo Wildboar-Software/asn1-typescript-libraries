@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BDBFormat */
 /**
  * @summary BDBFormat
  * @description
@@ -62,9 +61,7 @@ export class BDBFormat {
     return new BDBFormat(_o.format_owner, _o.format_type);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BDBFormat */
 /**
  * @summary The Leading Root Component Types of BDBFormat
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_BDBFormat: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BDBFormat */
 /**
  * @summary The Trailing Root Component Types of BDBFormat
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_BDBFormat: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BDBFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BDBFormat */
 /**
  * @summary The Extension Addition Component Types of BDBFormat
  * @description
@@ -113,13 +106,9 @@ export const _root_component_type_list_2_spec_for_BDBFormat: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_BDBFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBFormat */
 let _cached_decoder_for_BDBFormat: $.ASN1Decoder<BDBFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BDBFormat */
 /**
  * @summary Decodes an ASN.1 element into a(n) BDBFormat
  * @function
@@ -148,13 +137,9 @@ export function _decode_BDBFormat(el: _Element) {
   }
   return _cached_decoder_for_BDBFormat(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBFormat */
 let _cached_encoder_for_BDBFormat: $.ASN1Encoder<BDBFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BDBFormat */
 /**
  * @summary Encodes a(n) BDBFormat into an ASN.1 Element.
  * @function
@@ -183,6 +168,5 @@ export function _encode_BDBFormat(
   return _cached_encoder_for_BDBFormat(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BDBFormat */
 
 /* eslint-enable */

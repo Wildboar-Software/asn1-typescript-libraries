@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ATSHashIndex */
 /**
  * @summary id_aa_ATSHashIndex
  * @description
@@ -41,6 +40,5 @@ const id_aa_ATSHashIndex: OBJECT_IDENTIFIER = new _OID([
     /* attributes */ 2,
     5,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ATSHashIndex */
 
 /* eslint-enable */

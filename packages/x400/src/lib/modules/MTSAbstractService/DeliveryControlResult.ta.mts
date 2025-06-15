@@ -47,7 +47,6 @@ import {
     _extension_additions_list_spec_for_Waiting,
 } from '../MTSAbstractService/Waiting.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DeliveryControlResult */
 /**
  * @summary DeliveryControlResult
  * @description
@@ -161,9 +160,7 @@ export class DeliveryControlResult implements Waiting {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryControlResult */
 /**
  * @summary The Leading Root Component Types of DeliveryControlResult
  * @description
@@ -182,9 +179,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControlResult: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControlResult */
 /**
  * @summary The Trailing Root Component Types of DeliveryControlResult
  * @description
@@ -196,9 +191,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControlResult: $.Compo
 export const _root_component_type_list_2_spec_for_DeliveryControlResult: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_Waiting,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControlResult */
 /**
  * @summary The Extension Addition Component Types of DeliveryControlResult
  * @description
@@ -210,13 +203,9 @@ export const _root_component_type_list_2_spec_for_DeliveryControlResult: $.Compo
 export const _extension_additions_list_spec_for_DeliveryControlResult: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_Waiting,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControlResult */
 let _cached_decoder_for_DeliveryControlResult: $.ASN1Decoder<DeliveryControlResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveryControlResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryControlResult
  * @function
@@ -292,13 +281,9 @@ export function _decode_DeliveryControlResult(el: _Element) {
     }
     return _cached_decoder_for_DeliveryControlResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControlResult */
 let _cached_encoder_for_DeliveryControlResult: $.ASN1Encoder<DeliveryControlResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveryControlResult */
 /**
  * @summary Encodes a(n) DeliveryControlResult into an ASN.1 Element.
  * @function
@@ -390,6 +375,5 @@ export function _encode_DeliveryControlResult(
     return _cached_encoder_for_DeliveryControlResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveryControlResult */
 
 /* eslint-enable */

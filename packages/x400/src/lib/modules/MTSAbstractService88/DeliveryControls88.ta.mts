@@ -58,7 +58,6 @@ import {
     _extension_additions_list_spec_for_Controls,
 } from '../MTSAbstractService/Controls.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DeliveryControls88 */
 /**
  * @summary DeliveryControls88
  * @description
@@ -168,9 +167,7 @@ export class DeliveryControls88 implements Controls {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryControls88 */
 /**
  * @summary The Leading Root Component Types of DeliveryControls88
  * @description
@@ -189,9 +186,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControls88: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControls88 */
 /**
  * @summary The Trailing Root Component Types of DeliveryControls88
  * @description
@@ -203,9 +198,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControls88: $.Componen
 export const _root_component_type_list_2_spec_for_DeliveryControls88: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_Controls,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControls88 */
 /**
  * @summary The Extension Addition Component Types of DeliveryControls88
  * @description
@@ -217,13 +210,9 @@ export const _root_component_type_list_2_spec_for_DeliveryControls88: $.Componen
 export const _extension_additions_list_spec_for_DeliveryControls88: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_Controls,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControls88 */
 let _cached_decoder_for_DeliveryControls88: $.ASN1Decoder<DeliveryControls88> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveryControls88 */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryControls88
  * @function
@@ -314,13 +303,9 @@ export function _decode_DeliveryControls88(el: _Element) {
     }
     return _cached_decoder_for_DeliveryControls88(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControls88 */
 let _cached_encoder_for_DeliveryControls88: $.ASN1Encoder<DeliveryControls88> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControls88 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveryControls88 */
 /**
  * @summary Encodes a(n) DeliveryControls88 into an ASN.1 Element.
  * @function
@@ -419,6 +404,5 @@ export function _encode_DeliveryControls88(
     return _cached_encoder_for_DeliveryControls88(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveryControls88 */
 
 /* eslint-enable */

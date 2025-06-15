@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DialoguePortion */
 /**
  * @summary DialoguePortion
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DialoguePortion = EXTERNAL; // ExternalType
-/* END_OF_SYMBOL_DEFINITION DialoguePortion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DialoguePortion */
 let _cached_decoder_for_DialoguePortion: $.ASN1Decoder<DialoguePortion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DialoguePortion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DialoguePortion */
 /**
  * @summary Decodes an ASN.1 element into a(n) DialoguePortion
  * @function
@@ -45,13 +40,9 @@ export function _decode_DialoguePortion(el: _Element) {
   }
   return _cached_decoder_for_DialoguePortion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DialoguePortion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DialoguePortion */
 let _cached_encoder_for_DialoguePortion: $.ASN1Encoder<DialoguePortion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DialoguePortion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DialoguePortion */
 /**
  * @summary Encodes a(n) DialoguePortion into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_DialoguePortion(
   return _cached_encoder_for_DialoguePortion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DialoguePortion */
 
 /* eslint-enable */

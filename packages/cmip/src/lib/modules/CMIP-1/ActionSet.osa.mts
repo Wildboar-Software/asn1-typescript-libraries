@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ActionSet */
+
 /**
  * @summary ActionSet
  * @description
@@ -26,6 +26,5 @@ import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.mjs';
  *
  */
 export const ActionSet: CMIP_ACTION[] = [];
-/* END_OF_SYMBOL_DEFINITION ActionSet */
 
 /* eslint-enable */

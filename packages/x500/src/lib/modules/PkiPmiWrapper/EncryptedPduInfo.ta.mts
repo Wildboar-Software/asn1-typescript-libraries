@@ -21,7 +21,6 @@ import {
     _decode_EncryptedPduInfo_pduEncryptionAlgorithm,
     _encode_EncryptedPduInfo_pduEncryptionAlgorithm,
 } from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptedPduInfo */
 /**
  * @summary EncryptedPduInfo
  * @description
@@ -100,9 +99,7 @@ export class EncryptedPduInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedPduInfo */
 /**
  * @summary The Leading Root Component Types of EncryptedPduInfo
  * @description
@@ -141,9 +138,7 @@ export const _root_component_type_list_1_spec_for_EncryptedPduInfo: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedPduInfo */
 /**
  * @summary The Trailing Root Component Types of EncryptedPduInfo
  * @description
@@ -153,9 +148,7 @@ export const _root_component_type_list_1_spec_for_EncryptedPduInfo: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedPduInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedPduInfo */
 /**
  * @summary The Extension Addition Component Types of EncryptedPduInfo
  * @description
@@ -165,13 +158,9 @@ export const _root_component_type_list_2_spec_for_EncryptedPduInfo: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedPduInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedPduInfo */
 let _cached_decoder_for_EncryptedPduInfo: $.ASN1Decoder<EncryptedPduInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedPduInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedPduInfo
  * @function
@@ -231,13 +220,9 @@ export function _decode_EncryptedPduInfo(el: _Element) {
     }
     return _cached_decoder_for_EncryptedPduInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedPduInfo */
 let _cached_encoder_for_EncryptedPduInfo: $.ASN1Encoder<EncryptedPduInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedPduInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedPduInfo */
 /**
  * @summary Encodes a(n) EncryptedPduInfo into an ASN.1 Element.
  * @function
@@ -292,6 +277,5 @@ export function _encode_EncryptedPduInfo(
     return _cached_encoder_for_EncryptedPduInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedPduInfo */
 
 /* eslint-enable */

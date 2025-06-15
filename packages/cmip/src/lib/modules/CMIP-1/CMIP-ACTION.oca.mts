@@ -15,7 +15,7 @@ import {
   _decode_ActionTypeId,
   _encode_ActionTypeId,
 } from '../CMIP-1/ActionTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIP_ACTION */
+
 /**
  * @summary CMIP_ACTION
  * @description
@@ -66,6 +66,5 @@ export interface CMIP_ACTION<
    */
   readonly '&Value': Value;
 }
-/* END_OF_SYMBOL_DEFINITION CMIP_ACTION */
 
 /* eslint-enable */

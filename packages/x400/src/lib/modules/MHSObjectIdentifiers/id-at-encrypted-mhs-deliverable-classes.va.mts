@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_at } from '../MHSObjectIdentifiers/id-at.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_at_encrypted_mhs_deliverable_classes */
 /**
  * @summary id_at_encrypted_mhs_deliverable_classes
  * @description
@@ -28,6 +27,5 @@ export const id_at_encrypted_mhs_deliverable_classes: ID = new _OID(
     [19, 2],
     id_at
 );
-/* END_OF_SYMBOL_DEFINITION id_at_encrypted_mhs_deliverable_classes */
 
 /* eslint-enable */

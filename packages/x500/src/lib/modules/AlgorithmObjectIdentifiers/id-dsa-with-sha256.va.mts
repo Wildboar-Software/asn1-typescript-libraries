@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_dsa_with_sha256 */
 /**
  * @summary id_dsa_with_sha256
  * @description
@@ -16,6 +15,5 @@ import { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va.mjs";
  * @constant
  */
 export const id_dsa_with_sha256: ID = new _OID([2], sigAlgs);
-/* END_OF_SYMBOL_DEFINITION id_dsa_with_sha256 */
 
 /* eslint-enable */

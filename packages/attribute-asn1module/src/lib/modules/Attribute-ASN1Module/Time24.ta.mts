@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION Time24 */
 /**
  * @summary Time24
  * @description
@@ -64,9 +63,7 @@ class Time24 {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Time24 */
 /**
  * @summary The Leading Root Component Types of Time24
  * @description
@@ -80,9 +77,7 @@ const _root_component_type_list_1_spec_for_Time24: $.ComponentSpec[] = [
     new $.ComponentSpec("hour", false, $.hasTag(_TagClass.universal, 2), undefined, undefined),
     new $.ComponentSpec("minute", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Time24 */
 /**
  * @summary The Trailing Root Component Types of Time24
  * @description
@@ -95,9 +90,7 @@ export
 const _root_component_type_list_2_spec_for_Time24: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Time24 */
 /**
  * @summary The Extension Addition Component Types of Time24
  * @description
@@ -110,13 +103,9 @@ export
 const _extension_additions_list_spec_for_Time24: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Time24 */
 let _cached_decoder_for_Time24: $.ASN1Decoder<Time24> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Time24 */
 /**
  * @summary Decodes an ASN.1 element into a(n) Time24
  * @function
@@ -144,13 +133,9 @@ function _decode_Time24 (el: _Element) {
 }; }
     return _cached_decoder_for_Time24(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Time24 */
 let _cached_encoder_for_Time24: $.ASN1Encoder<Time24> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Time24 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Time24 */
 /**
  * @summary Encodes a(n) Time24 into an ASN.1 Element.
  * @function
@@ -171,6 +156,5 @@ function _encode_Time24 (value: Time24, elGetter: $.ASN1Encoder<Time24>) {
     return _cached_encoder_for_Time24(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Time24 */
 
 /* eslint-enable */

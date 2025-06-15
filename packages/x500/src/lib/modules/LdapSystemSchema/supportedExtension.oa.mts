@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_lat_supportedExtension } from "../LdapSystemSchema/id-lat-supportedExtension.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION supportedExtension */
 /**
  * @summary supportedExtension
  * @description
@@ -46,6 +45,5 @@ export const supportedExtension: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedExtension */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
-/* START_OF_SYMBOL_DEFINITION modules */
+
 /**
  * @summary modules
  * @description
@@ -25,6 +25,5 @@ import { genericULS } from '../ObjectIdentifiers/genericULS.va.mjs';
  * @constant
  */
 export const modules: OBJECT_IDENTIFIER = new _OID([1], genericULS);
-/* END_OF_SYMBOL_DEFINITION modules */
 
 /* eslint-enable */

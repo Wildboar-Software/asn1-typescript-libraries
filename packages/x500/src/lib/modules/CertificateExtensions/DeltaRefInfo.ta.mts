@@ -11,7 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DeltaRefInfo */
 /**
  * @summary DeltaRefInfo
  * @description
@@ -71,9 +70,7 @@ export class DeltaRefInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeltaRefInfo */
 /**
  * @summary The Leading Root Component Types of DeltaRefInfo
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_DeltaRefInfo: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeltaRefInfo */
 /**
  * @summary The Trailing Root Component Types of DeltaRefInfo
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_DeltaRefInfo: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeltaRefInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeltaRefInfo */
 /**
  * @summary The Extension Addition Component Types of DeltaRefInfo
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_DeltaRefInfo: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_DeltaRefInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeltaRefInfo */
 let _cached_decoder_for_DeltaRefInfo: $.ASN1Decoder<DeltaRefInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeltaRefInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeltaRefInfo
  * @function
@@ -174,13 +163,9 @@ export function _decode_DeltaRefInfo(el: _Element) {
     }
     return _cached_decoder_for_DeltaRefInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeltaRefInfo */
 let _cached_encoder_for_DeltaRefInfo: $.ASN1Encoder<DeltaRefInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeltaRefInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeltaRefInfo */
 /**
  * @summary Encodes a(n) DeltaRefInfo into an ASN.1 Element.
  * @function
@@ -222,6 +207,5 @@ export function _encode_DeltaRefInfo(
     return _cached_encoder_for_DeltaRefInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeltaRefInfo */
 
 /* eslint-enable */

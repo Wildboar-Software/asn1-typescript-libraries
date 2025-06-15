@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION ansi_X9_62 */
 /**
  * @summary ansi_X9_62
  * @description
@@ -33,6 +32,5 @@ const ansi_X9_62: OBJECT_IDENTIFIER = new _OID([
     /* us */ 840,
     10045,
 ]);
-/* END_OF_SYMBOL_DEFINITION ansi_X9_62 */
 
 /* eslint-enable */

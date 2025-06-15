@@ -21,7 +21,6 @@ import {
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMAutoAcknowledgementRegistrationParameter */
 /**
  * @summary IPMAutoAcknowledgementRegistrationParameter
  * @description
@@ -76,9 +75,7 @@ export class IPMAutoAcknowledgementRegistrationParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPMAutoAcknowledgementRegistrationParameter */
 /**
  * @summary The Leading Root Component Types of IPMAutoAcknowledgementRegistrationParameter
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_IPMAutoAcknowledgementRegistra
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPMAutoAcknowledgementRegistrationParameter */
 /**
  * @summary The Trailing Root Component Types of IPMAutoAcknowledgementRegistrationParameter
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_IPMAutoAcknowledgementRegistra
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IPMAutoAcknowledgementRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPMAutoAcknowledgementRegistrationParameter */
 /**
  * @summary The Extension Addition Component Types of IPMAutoAcknowledgementRegistrationParameter
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_IPMAutoAcknowledgementRegistra
  * @constant
  */
 export const _extension_additions_list_spec_for_IPMAutoAcknowledgementRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter */
 let _cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter: $.ASN1Decoder<IPMAutoAcknowledgementRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMAutoAcknowledgementRegistrationParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMAutoAcknowledgementRegistrationParameter
  * @function
@@ -183,13 +172,9 @@ export function _decode_IPMAutoAcknowledgementRegistrationParameter(
     }
     return _cached_decoder_for_IPMAutoAcknowledgementRegistrationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMAutoAcknowledgementRegistrationParameter */
 let _cached_encoder_for_IPMAutoAcknowledgementRegistrationParameter: $.ASN1Encoder<IPMAutoAcknowledgementRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMAutoAcknowledgementRegistrationParameter */
 /**
  * @summary Encodes a(n) IPMAutoAcknowledgementRegistrationParameter into an ASN.1 Element.
  * @function
@@ -239,6 +224,5 @@ export function _encode_IPMAutoAcknowledgementRegistrationParameter(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMAutoAcknowledgementRegistrationParameter */
 
 /* eslint-enable */

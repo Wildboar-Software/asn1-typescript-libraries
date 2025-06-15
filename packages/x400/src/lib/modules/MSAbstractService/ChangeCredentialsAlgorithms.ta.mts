@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ChangeCredentialsAlgorithms */
 /**
  * @summary ChangeCredentialsAlgorithms
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ChangeCredentialsAlgorithms = OBJECT_IDENTIFIER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ChangeCredentialsAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeCredentialsAlgorithms */
 let _cached_decoder_for_ChangeCredentialsAlgorithms: $.ASN1Decoder<ChangeCredentialsAlgorithms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeCredentialsAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChangeCredentialsAlgorithms */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangeCredentialsAlgorithms
  * @function
@@ -45,13 +40,9 @@ export function _decode_ChangeCredentialsAlgorithms(el: _Element) {
     }
     return _cached_decoder_for_ChangeCredentialsAlgorithms(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChangeCredentialsAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeCredentialsAlgorithms */
 let _cached_encoder_for_ChangeCredentialsAlgorithms: $.ASN1Encoder<ChangeCredentialsAlgorithms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeCredentialsAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChangeCredentialsAlgorithms */
 /**
  * @summary Encodes a(n) ChangeCredentialsAlgorithms into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_ChangeCredentialsAlgorithms(
     return _cached_encoder_for_ChangeCredentialsAlgorithms(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChangeCredentialsAlgorithms */
 
 /* eslint-enable */

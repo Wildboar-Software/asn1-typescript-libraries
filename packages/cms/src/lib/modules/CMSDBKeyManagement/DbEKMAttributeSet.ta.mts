@@ -6,7 +6,7 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../CryptographicMessageSyntax-2010/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DbEKMAttributeSet */
+
 /**
  * @summary DbEKMAttributeSet
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type DbEKMAttributeSet = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DbEKMAttributeSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbEKMAttributeSet */
+
 let _cached_decoder_for_DbEKMAttributeSet: $.ASN1Decoder<DbEKMAttributeSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbEKMAttributeSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbEKMAttributeSet */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DbEKMAttributeSet
  * @function
@@ -40,13 +38,11 @@ export function _decode_DbEKMAttributeSet(el: _Element) {
     }
     return _cached_decoder_for_DbEKMAttributeSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DbEKMAttributeSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbEKMAttributeSet */
+
 let _cached_encoder_for_DbEKMAttributeSet: $.ASN1Encoder<DbEKMAttributeSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbEKMAttributeSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbEKMAttributeSet */
+
 /**
  * @summary Encodes a(n) DbEKMAttributeSet into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_DbEKMAttributeSet(
     return _cached_encoder_for_DbEKMAttributeSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbEKMAttributeSet */
 
 /* eslint-enable */

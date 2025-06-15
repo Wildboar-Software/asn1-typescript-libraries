@@ -18,7 +18,7 @@ import {
   _decode_Code,
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION emptyUnbind */
+
 /**
  * @summary emptyUnbind
  * @description
@@ -53,6 +53,5 @@ export const emptyUnbind: OPERATION = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION emptyUnbind */
 
 /* eslint-enable */

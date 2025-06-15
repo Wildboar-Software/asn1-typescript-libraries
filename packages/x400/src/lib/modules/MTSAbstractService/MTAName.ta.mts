@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MTAName */
 /**
  * @summary MTAName
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MTAName = IA5String; // IA5String
-/* END_OF_SYMBOL_DEFINITION MTAName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTAName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTAName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTAName */
 export const _decode_MTAName = $._decodeIA5String;
-/* END_OF_SYMBOL_DEFINITION _decode_MTAName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTAName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTAName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTAName */
 export const _encode_MTAName = $._encodeIA5String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTAName */
 
 /* eslint-enable */

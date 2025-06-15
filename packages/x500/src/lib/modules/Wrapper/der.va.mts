@@ -5,7 +5,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION der */
 /**
  * @summary der
  * @description
@@ -22,6 +21,5 @@ export const der: OBJECT_IDENTIFIER = new _OID(
     [/* asn1 */ 1, /* ber-derived */ 2, /* distinguished-encoding */ 1],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION der */
 
 /* eslint-enable */

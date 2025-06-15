@@ -6,7 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Notifications */
 /**
  * @summary Notifications
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type Notifications = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Notifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Notifications */
 let _cached_decoder_for_Notifications: $.ASN1Decoder<Notifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Notifications */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Notifications */
 /**
  * @summary Decodes an ASN.1 element into a(n) Notifications
  * @function
@@ -39,13 +34,9 @@ export function _decode_Notifications(el: _Element) {
     }
     return _cached_decoder_for_Notifications(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Notifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Notifications */
 let _cached_encoder_for_Notifications: $.ASN1Encoder<Notifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Notifications */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Notifications */
 /**
  * @summary Encodes a(n) Notifications into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_Notifications(
     return _cached_encoder_for_Notifications(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Notifications */
 
 /* eslint-enable */

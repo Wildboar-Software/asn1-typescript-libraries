@@ -20,7 +20,6 @@ import {
     _decode_EDIMBodyPart,
     _encode_EDIMBodyPart,
 } from '../EDIMSInformationObjects/EDIMBodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrimaryBodyPart */
 /**
  * @summary PrimaryBodyPart
  * @description
@@ -37,13 +36,9 @@ import {
 export type PrimaryBodyPart =
     | { edi_body_part: EDIBodyPart } /* CHOICE_ALT_ROOT */
     | { forwarded_EDIM: EDIMBodyPart } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PrimaryBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryBodyPart */
 let _cached_decoder_for_PrimaryBodyPart: $.ASN1Decoder<PrimaryBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrimaryBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryBodyPart
  * @function
@@ -69,13 +64,9 @@ export function _decode_PrimaryBodyPart(el: _Element) {
     }
     return _cached_decoder_for_PrimaryBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrimaryBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryBodyPart */
 let _cached_encoder_for_PrimaryBodyPart: $.ASN1Encoder<PrimaryBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrimaryBodyPart */
 /**
  * @summary Encodes a(n) PrimaryBodyPart into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_PrimaryBodyPart(
     return _cached_encoder_for_PrimaryBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrimaryBodyPart */
 
 /* eslint-enable */

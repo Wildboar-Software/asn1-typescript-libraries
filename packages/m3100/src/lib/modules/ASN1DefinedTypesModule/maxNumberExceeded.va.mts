@@ -14,7 +14,7 @@ import {
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION maxNumberExceeded */
+
 /**
  * @summary maxNumberExceeded
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const maxNumberExceeded: GeneralErrorCause = { localValue: 7 };
-/* END_OF_SYMBOL_DEFINITION maxNumberExceeded */
 
 /* eslint-enable */

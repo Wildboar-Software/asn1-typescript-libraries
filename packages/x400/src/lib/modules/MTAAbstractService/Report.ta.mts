@@ -20,7 +20,6 @@ import {
     _decode_ReportTransferContent,
     _encode_ReportTransferContent,
 } from '../MTAAbstractService/ReportTransferContent.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Report */
 /**
  * @summary Report
  * @description
@@ -70,9 +69,7 @@ export class Report {
         return new Report(_o.envelope, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Report */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Report */
 /**
  * @summary The Leading Root Component Types of Report
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_Report: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Report */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Report */
 /**
  * @summary The Trailing Root Component Types of Report
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_Report: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Report: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Report */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Report */
 /**
  * @summary The Extension Addition Component Types of Report
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_Report: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Report: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Report */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Report */
 let _cached_decoder_for_Report: $.ASN1Decoder<Report> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Report */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Report */
 /**
  * @summary Decodes an ASN.1 element into a(n) Report
  * @function
@@ -156,13 +145,9 @@ export function _decode_Report(el: _Element) {
     }
     return _cached_decoder_for_Report(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Report */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Report */
 let _cached_encoder_for_Report: $.ASN1Encoder<Report> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Report */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Report */
 /**
  * @summary Encodes a(n) Report into an ASN.1 Element.
  * @function
@@ -194,6 +179,5 @@ export function _encode_Report(value: Report, elGetter: $.ASN1Encoder<Report>) {
     return _cached_encoder_for_Report(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Report */
 
 /* eslint-enable */

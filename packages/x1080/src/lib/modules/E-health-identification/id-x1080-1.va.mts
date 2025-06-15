@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_thprot } from '../Telebiometrics/id-thprot.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_x1080_1 */
+
 /**
  * @summary id_x1080_1
  * @description
@@ -28,6 +28,5 @@ export const id_x1080_1: OBJECT_IDENTIFIER = new _OID(
     [/* part1 */ 1],
     id_thprot
 );
-/* END_OF_SYMBOL_DEFINITION id_x1080_1 */
 
 /* eslint-enable */

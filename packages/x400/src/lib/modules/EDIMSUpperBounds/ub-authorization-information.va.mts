@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_authorization_information */
 /**
  * @summary ub_authorization_information
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_authorization_information: INTEGER = 10;
-/* END_OF_SYMBOL_DEFINITION ub_authorization_information */
 
 /* eslint-enable */

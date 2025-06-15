@@ -26,7 +26,6 @@ import {
     _decode_ReportType,
     _encode_ReportType,
 } from '../MTSAbstractService/ReportType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LastTraceInformation */
 /**
  * @summary LastTraceInformation
  * @description
@@ -88,9 +87,7 @@ export class LastTraceInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LastTraceInformation */
 /**
  * @summary The Leading Root Component Types of LastTraceInformation
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_LastTraceInformation: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LastTraceInformation */
 /**
  * @summary The Trailing Root Component Types of LastTraceInformation
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_LastTraceInformation: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LastTraceInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LastTraceInformation */
 /**
  * @summary The Extension Addition Component Types of LastTraceInformation
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_LastTraceInformation: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_LastTraceInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastTraceInformation */
 let _cached_decoder_for_LastTraceInformation: $.ASN1Decoder<LastTraceInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastTraceInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) LastTraceInformation
  * @function
@@ -207,13 +196,9 @@ export function _decode_LastTraceInformation(el: _Element) {
     }
     return _cached_decoder_for_LastTraceInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastTraceInformation */
 let _cached_encoder_for_LastTraceInformation: $.ASN1Encoder<LastTraceInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastTraceInformation */
 /**
  * @summary Encodes a(n) LastTraceInformation into an ASN.1 Element.
  * @function
@@ -259,6 +244,5 @@ export function _encode_LastTraceInformation(
     return _cached_encoder_for_LastTraceInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastTraceInformation */
 
 /* eslint-enable */

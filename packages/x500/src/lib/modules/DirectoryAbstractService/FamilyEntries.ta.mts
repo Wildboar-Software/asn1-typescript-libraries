@@ -11,7 +11,6 @@ import {
     _decode_FamilyEntry,
     _encode_FamilyEntry,
 } from "../DirectoryAbstractService/FamilyEntry.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION FamilyEntries */
 /**
  * @summary FamilyEntries
  * @description
@@ -71,9 +70,7 @@ export class FamilyEntries {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FamilyEntries */
 /**
  * @summary The Leading Root Component Types of FamilyEntries
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_FamilyEntries: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FamilyEntries */
 /**
  * @summary The Trailing Root Component Types of FamilyEntries
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_FamilyEntries: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FamilyEntries: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FamilyEntries */
 /**
  * @summary The Extension Addition Component Types of FamilyEntries
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_FamilyEntries: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_FamilyEntries: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FamilyEntries */
 let _cached_decoder_for_FamilyEntries: $.ASN1Decoder<FamilyEntries> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FamilyEntries */
 /**
  * @summary Decodes an ASN.1 element into a(n) FamilyEntries
  * @function
@@ -165,13 +154,9 @@ export function _decode_FamilyEntries(el: _Element) {
     }
     return _cached_decoder_for_FamilyEntries(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FamilyEntries */
 let _cached_encoder_for_FamilyEntries: $.ASN1Encoder<FamilyEntries> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FamilyEntries */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FamilyEntries */
 /**
  * @summary Encodes a(n) FamilyEntries into an ASN.1 Element.
  * @function
@@ -211,6 +196,5 @@ export function _encode_FamilyEntries(
     return _cached_encoder_for_FamilyEntries(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FamilyEntries */
 
 /* eslint-enable */

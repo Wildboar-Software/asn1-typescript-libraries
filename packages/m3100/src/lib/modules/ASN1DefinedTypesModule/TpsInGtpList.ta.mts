@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TpsInGtpList */
+
 /**
  * @summary TpsInGtpList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TpsInGtpList = ObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TpsInGtpList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TpsInGtpList */
+
 let _cached_decoder_for_TpsInGtpList: $.ASN1Decoder<TpsInGtpList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TpsInGtpList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TpsInGtpList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TpsInGtpList
  * @function
@@ -48,13 +46,11 @@ export function _decode_TpsInGtpList(el: _Element) {
     }
     return _cached_decoder_for_TpsInGtpList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TpsInGtpList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TpsInGtpList */
+
 let _cached_encoder_for_TpsInGtpList: $.ASN1Encoder<TpsInGtpList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TpsInGtpList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TpsInGtpList */
+
 /**
  * @summary Encodes a(n) TpsInGtpList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_TpsInGtpList(
     return _cached_encoder_for_TpsInGtpList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TpsInGtpList */
 
 /* eslint-enable */

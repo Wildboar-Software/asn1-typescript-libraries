@@ -15,7 +15,7 @@ import {
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CPC_type */
+
 /**
  * @summary CPC_type
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type CPC_type = User_data; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CPC_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CPC_type */
+
 let _cached_decoder_for_CPC_type: $.ASN1Decoder<CPC_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CPC_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CPC_type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CPC_type
  * @function
@@ -47,13 +45,11 @@ export function _decode_CPC_type(el: _Element) {
     }
     return _cached_decoder_for_CPC_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CPC_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CPC_type */
+
 let _cached_encoder_for_CPC_type: $.ASN1Encoder<CPC_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CPC_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CPC_type */
+
 /**
  * @summary Encodes a(n) CPC_type into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_CPC_type(
     return _cached_encoder_for_CPC_type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CPC_type */
 
 /* eslint-enable */

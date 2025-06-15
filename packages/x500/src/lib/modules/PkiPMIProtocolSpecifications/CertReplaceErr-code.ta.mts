@@ -16,7 +16,6 @@ import {
     _decode_SignedData_error,
     _encode_SignedData_error,
 } from "../PkiPMIProtocolSpecifications/SignedData-error.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertReplaceErr_code */
 /**
  * @summary CertReplaceErr_code
  * @description
@@ -32,13 +31,9 @@ export type CertReplaceErr_code =
     | { envelopedData: EnvelopedData_error } /* CHOICE_ALT_ROOT */
     | { casp: CASP_error } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertReplaceErr_code */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceErr_code */
 let _cached_decoder_for_CertReplaceErr_code: $.ASN1Decoder<CertReplaceErr_code> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceErr_code */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReplaceErr_code */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReplaceErr_code
  * @function
@@ -70,13 +65,9 @@ export function _decode_CertReplaceErr_code(el: _Element) {
     }
     return _cached_decoder_for_CertReplaceErr_code(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReplaceErr_code */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceErr_code */
 let _cached_encoder_for_CertReplaceErr_code: $.ASN1Encoder<CertReplaceErr_code> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceErr_code */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReplaceErr_code */
 /**
  * @summary Encodes a(n) CertReplaceErr_code into an ASN.1 Element.
  * @function
@@ -116,6 +107,5 @@ export function _encode_CertReplaceErr_code(
     return _cached_encoder_for_CertReplaceErr_code(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReplaceErr_code */
 
 /* eslint-enable */

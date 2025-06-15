@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs';
 import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_package_simpleCredentialsPackage */
 /**
  * @summary id_package_simpleCredentialsPackage
  * @description
@@ -28,6 +27,5 @@ export const id_package_simpleCredentialsPackage: ID = new _OID(
     [32],
     id_package
 );
-/* END_OF_SYMBOL_DEFINITION id_package_simpleCredentialsPackage */
 
 /* eslint-enable */

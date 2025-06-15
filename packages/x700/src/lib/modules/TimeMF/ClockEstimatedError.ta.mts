@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ClockEstimatedError */
 /**
  * @summary ClockEstimatedError
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ClockEstimatedError = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ClockEstimatedError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEstimatedError */
 let _cached_decoder_for_ClockEstimatedError: $.ASN1Decoder<ClockEstimatedError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEstimatedError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockEstimatedError */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockEstimatedError
  * @function
@@ -46,13 +41,9 @@ export function _decode_ClockEstimatedError(el: _Element) {
     }
     return _cached_decoder_for_ClockEstimatedError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClockEstimatedError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEstimatedError */
 let _cached_encoder_for_ClockEstimatedError: $.ASN1Encoder<ClockEstimatedError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEstimatedError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockEstimatedError */
 /**
  * @summary Encodes a(n) ClockEstimatedError into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ClockEstimatedError(
     return _cached_encoder_for_ClockEstimatedError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockEstimatedError */
 
 /* eslint-enable */

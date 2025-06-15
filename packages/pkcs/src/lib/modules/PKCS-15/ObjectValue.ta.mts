@@ -11,7 +11,7 @@ import {
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ObjectValue */
+
 /**
  * @summary ObjectValue
  * @description
@@ -37,9 +37,8 @@ export type ObjectValue<Type> =
           indirect_protected: ReferencedValue<EnvelopedData<Type>>;
       } /* CHOICE_ALT_ROOT */
     | { direct_protected: EnvelopedData<Type> } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ObjectValue */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_ObjectValue */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ObjectValue
  * @function
@@ -79,9 +78,8 @@ export function _get_decoder_for_ObjectValue<Type>(
         ],
     });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_ObjectValue */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_ObjectValue */
+
 /**
  * @summary Returns a function that will encode a(n) ObjectValue into an ASN.1 Element.
  * @function
@@ -118,6 +116,5 @@ export function _get_encoder_for_ObjectValue<Type>(
         $.BER
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_ObjectValue */
 
 /* eslint-enable */

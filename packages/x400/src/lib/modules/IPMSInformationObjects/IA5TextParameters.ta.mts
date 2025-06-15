@@ -18,7 +18,6 @@ import {
     _decode_Repertoire,
     _encode_Repertoire,
 } from '../IPMSInformationObjects/Repertoire.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IA5TextParameters */
 /**
  * @summary IA5TextParameters
  * @description
@@ -77,9 +76,7 @@ export class IA5TextParameters {
 
     public static _enum_for_repertoire = _enum_for_Repertoire;
 }
-/* END_OF_SYMBOL_DEFINITION IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IA5TextParameters */
 /**
  * @summary The Leading Root Component Types of IA5TextParameters
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_IA5TextParameters: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IA5TextParameters */
 /**
  * @summary The Trailing Root Component Types of IA5TextParameters
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_IA5TextParameters: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IA5TextParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IA5TextParameters */
 /**
  * @summary The Extension Addition Component Types of IA5TextParameters
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_IA5TextParameters: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_IA5TextParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IA5TextParameters */
 let _cached_decoder_for_IA5TextParameters: $.ASN1Decoder<IA5TextParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IA5TextParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) IA5TextParameters
  * @function
@@ -165,13 +154,9 @@ export function _decode_IA5TextParameters(el: _Element) {
     }
     return _cached_decoder_for_IA5TextParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IA5TextParameters */
 let _cached_encoder_for_IA5TextParameters: $.ASN1Encoder<IA5TextParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IA5TextParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IA5TextParameters */
 /**
  * @summary Encodes a(n) IA5TextParameters into an ASN.1 Element.
  * @function
@@ -210,6 +195,5 @@ export function _encode_IA5TextParameters(
     return _cached_encoder_for_IA5TextParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IA5TextParameters */
 
 /* eslint-enable */

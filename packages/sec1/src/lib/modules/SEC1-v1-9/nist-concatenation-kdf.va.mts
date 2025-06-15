@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION nist_concatenation_kdf */
 /**
  * @summary nist_concatenation_kdf
  * @description
@@ -29,6 +28,5 @@ const nist_concatenation_kdf: OBJECT_IDENTIFIER = new _OID([
     17,
     1,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION nist_concatenation_kdf */
 
 /* eslint-enable */

@@ -26,7 +26,6 @@ import {
     _decode_NumericMeasure,
     _encode_NumericMeasure,
 } from '../SummarizationASN1Productions/NumericMeasure.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BufferedObservationScan */
 /**
  * @summary BufferedObservationScan
  * @description
@@ -100,9 +99,7 @@ export class BufferedObservationScan {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BufferedObservationScan */
 /**
  * @summary The Leading Root Component Types of BufferedObservationScan
  * @description
@@ -141,9 +138,7 @@ export const _root_component_type_list_1_spec_for_BufferedObservationScan: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BufferedObservationScan */
 /**
  * @summary The Trailing Root Component Types of BufferedObservationScan
  * @description
@@ -153,9 +148,7 @@ export const _root_component_type_list_1_spec_for_BufferedObservationScan: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BufferedObservationScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BufferedObservationScan */
 /**
  * @summary The Extension Addition Component Types of BufferedObservationScan
  * @description
@@ -165,13 +158,9 @@ export const _root_component_type_list_2_spec_for_BufferedObservationScan: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_BufferedObservationScan: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedObservationScan */
 let _cached_decoder_for_BufferedObservationScan: $.ASN1Decoder<BufferedObservationScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BufferedObservationScan */
 /**
  * @summary Decodes an ASN.1 element into a(n) BufferedObservationScan
  * @function
@@ -244,13 +233,9 @@ export function _decode_BufferedObservationScan(el: _Element) {
     }
     return _cached_decoder_for_BufferedObservationScan(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedObservationScan */
 let _cached_encoder_for_BufferedObservationScan: $.ASN1Encoder<BufferedObservationScan> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BufferedObservationScan */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BufferedObservationScan */
 /**
  * @summary Encodes a(n) BufferedObservationScan into an ASN.1 Element.
  * @function
@@ -330,6 +315,5 @@ export function _encode_BufferedObservationScan(
     return _cached_encoder_for_BufferedObservationScan(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BufferedObservationScan */
 
 /* eslint-enable */

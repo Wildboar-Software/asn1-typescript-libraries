@@ -20,7 +20,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RoleSpecCertIdentifier */
 /**
  * @summary RoleSpecCertIdentifier
  * @description
@@ -96,9 +95,7 @@ export class RoleSpecCertIdentifier {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleSpecCertIdentifier */
 /**
  * @summary The Leading Root Component Types of RoleSpecCertIdentifier
  * @description
@@ -137,9 +134,7 @@ export const _root_component_type_list_1_spec_for_RoleSpecCertIdentifier: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleSpecCertIdentifier */
 /**
  * @summary The Trailing Root Component Types of RoleSpecCertIdentifier
  * @description
@@ -149,9 +144,7 @@ export const _root_component_type_list_1_spec_for_RoleSpecCertIdentifier: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RoleSpecCertIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleSpecCertIdentifier */
 /**
  * @summary The Extension Addition Component Types of RoleSpecCertIdentifier
  * @description
@@ -161,13 +154,9 @@ export const _root_component_type_list_2_spec_for_RoleSpecCertIdentifier: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_RoleSpecCertIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSpecCertIdentifier */
 let _cached_decoder_for_RoleSpecCertIdentifier: $.ASN1Decoder<RoleSpecCertIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleSpecCertIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleSpecCertIdentifier
  * @function
@@ -231,13 +220,9 @@ export function _decode_RoleSpecCertIdentifier(el: _Element) {
     }
     return _cached_decoder_for_RoleSpecCertIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSpecCertIdentifier */
 let _cached_encoder_for_RoleSpecCertIdentifier: $.ASN1Encoder<RoleSpecCertIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSpecCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleSpecCertIdentifier */
 /**
  * @summary Encodes a(n) RoleSpecCertIdentifier into an ASN.1 Element.
  * @function
@@ -298,6 +283,5 @@ export function _encode_RoleSpecCertIdentifier(
     return _cached_encoder_for_RoleSpecCertIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleSpecCertIdentifier */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubjectIntermediateTraceInformation */
 /**
  * @summary SubjectIntermediateTraceInformation
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubjectIntermediateTraceInformation = TraceInformation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubjectIntermediateTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectIntermediateTraceInformation */
 let _cached_decoder_for_SubjectIntermediateTraceInformation: $.ASN1Decoder<SubjectIntermediateTraceInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectIntermediateTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectIntermediateTraceInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectIntermediateTraceInformation
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubjectIntermediateTraceInformation(el: _Element) {
     }
     return _cached_decoder_for_SubjectIntermediateTraceInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectIntermediateTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectIntermediateTraceInformation */
 let _cached_encoder_for_SubjectIntermediateTraceInformation: $.ASN1Encoder<SubjectIntermediateTraceInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectIntermediateTraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectIntermediateTraceInformation */
 /**
  * @summary Encodes a(n) SubjectIntermediateTraceInformation into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_SubjectIntermediateTraceInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectIntermediateTraceInformation */
 
 /* eslint-enable */

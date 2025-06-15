@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ENCIPHERED */
 /**
  * @summary ENCIPHERED
  * @description
@@ -16,9 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type ENCIPHERED<_ToBeEnciphered> = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION ENCIPHERED */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_ENCIPHERED */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ENCIPHERED
  * @function
@@ -30,9 +27,7 @@ export function _get_decoder_for_ENCIPHERED<ToBeEnciphered>(
 ) {
     return $._decodeOctetString;
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_ENCIPHERED */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_ENCIPHERED */
 /**
  * @summary Returns a function that will encode a(n) ENCIPHERED into an ASN.1 Element.
  * @function
@@ -43,6 +38,5 @@ export function _get_encoder_for_ENCIPHERED<ToBeEnciphered>(
 ) {
     return $._encodeOctetString;
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_ENCIPHERED */
 
 /* eslint-enable */

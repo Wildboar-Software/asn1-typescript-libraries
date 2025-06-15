@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProofOfSubmissionAlgorithmIdentifier */
 /**
  * @summary ProofOfSubmissionAlgorithmIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProofOfSubmissionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProofOfSubmissionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier */
 let _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Decoder<ProofOfSubmissionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProofOfSubmissionAlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProofOfSubmissionAlgorithmIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProofOfSubmissionAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProofOfSubmissionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier */
 let _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Encoder<ProofOfSubmissionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProofOfSubmissionAlgorithmIdentifier */
 /**
  * @summary Encodes a(n) ProofOfSubmissionAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_ProofOfSubmissionAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProofOfSubmissionAlgorithmIdentifier */
 
 /* eslint-enable */

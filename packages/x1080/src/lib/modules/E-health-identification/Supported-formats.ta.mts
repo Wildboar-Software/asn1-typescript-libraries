@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Supported_formats */
+
 /**
  * @summary Supported_formats
  * @description
@@ -28,13 +28,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type Supported_formats =
     | { oids: OBJECT_IDENTIFIER[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Supported_formats */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Supported_formats */
+
 let _cached_decoder_for_Supported_formats: $.ASN1Decoder<Supported_formats> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Supported_formats */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Supported_formats */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Supported_formats
  * @function
@@ -56,13 +54,11 @@ export function _decode_Supported_formats(el: _Element) {
     }
     return _cached_decoder_for_Supported_formats(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Supported_formats */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Supported_formats */
+
 let _cached_encoder_for_Supported_formats: $.ASN1Encoder<Supported_formats> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Supported_formats */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Supported_formats */
+
 /**
  * @summary Encodes a(n) Supported_formats into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_Supported_formats(
     return _cached_encoder_for_Supported_formats(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Supported_formats */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
     _encode_PKMACValue,
 } from "../PKIXCRMF-2009/PKMACValue.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION POPOSigningKeyInput_authInfo */
+
 /**
  * @summary POPOSigningKeyInput_authInfo
  * @description
@@ -26,13 +26,11 @@ import {
 export type POPOSigningKeyInput_authInfo =
     | { sender: GeneralName } /* CHOICE_ALT_ROOT */
     | { publicKeyMAC: PKMACValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION POPOSigningKeyInput_authInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_POPOSigningKeyInput_authInfo */
+
 let _cached_decoder_for_POPOSigningKeyInput_authInfo: $.ASN1Decoder<POPOSigningKeyInput_authInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_POPOSigningKeyInput_authInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_POPOSigningKeyInput_authInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) POPOSigningKeyInput_authInfo
  * @function
@@ -53,13 +51,11 @@ export function _decode_POPOSigningKeyInput_authInfo(el: _Element) {
     }
     return _cached_decoder_for_POPOSigningKeyInput_authInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_POPOSigningKeyInput_authInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_POPOSigningKeyInput_authInfo */
+
 let _cached_encoder_for_POPOSigningKeyInput_authInfo: $.ASN1Encoder<POPOSigningKeyInput_authInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_POPOSigningKeyInput_authInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_POPOSigningKeyInput_authInfo */
+
 /**
  * @summary Encodes a(n) POPOSigningKeyInput_authInfo into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_POPOSigningKeyInput_authInfo(
     return _cached_encoder_for_POPOSigningKeyInput_authInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_POPOSigningKeyInput_authInfo */
 
 /* eslint-enable */

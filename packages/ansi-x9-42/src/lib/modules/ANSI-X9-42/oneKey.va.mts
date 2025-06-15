@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION oneKey */
+
 /**
  * @summary oneKey
  * @description
@@ -15,6 +15,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const oneKey: INTEGER = 1;
-/* END_OF_SYMBOL_DEFINITION oneKey */
 
 /* eslint-enable */

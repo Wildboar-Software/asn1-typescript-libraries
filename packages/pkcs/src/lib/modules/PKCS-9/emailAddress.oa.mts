@@ -8,7 +8,7 @@ import {
 import { pkcs_9_at_emailAddress } from "../PKCS-9/pkcs-9-at-emailAddress.va.mjs";
 import { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION emailAddress */
+
 /**
  * @summary emailAddress
  * @description
@@ -43,6 +43,5 @@ export const emailAddress: ATTRIBUTE<IA5String> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION emailAddress */
 
 /* eslint-enable */

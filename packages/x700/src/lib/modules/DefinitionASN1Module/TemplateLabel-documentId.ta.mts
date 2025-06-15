@@ -20,7 +20,7 @@ import {
     _decode_DocumentObjectIdentifier,
     _encode_DocumentObjectIdentifier,
 } from '../DefinitionASN1Module/DocumentObjectIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TemplateLabel_documentId */
+
 /**
  * @summary TemplateLabel_documentId
  * @description
@@ -36,13 +36,11 @@ export type TemplateLabel_documentId =
     | {
           documentObjectIdentifier: DocumentObjectIdentifier;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TemplateLabel_documentId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateLabel_documentId */
+
 let _cached_decoder_for_TemplateLabel_documentId: $.ASN1Decoder<TemplateLabel_documentId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateLabel_documentId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TemplateLabel_documentId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TemplateLabel_documentId
  * @function
@@ -67,13 +65,11 @@ export function _decode_TemplateLabel_documentId(el: _Element) {
     }
     return _cached_decoder_for_TemplateLabel_documentId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TemplateLabel_documentId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateLabel_documentId */
+
 let _cached_encoder_for_TemplateLabel_documentId: $.ASN1Encoder<TemplateLabel_documentId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateLabel_documentId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TemplateLabel_documentId */
+
 /**
  * @summary Encodes a(n) TemplateLabel_documentId into an ASN.1 Element.
  * @function
@@ -97,6 +93,5 @@ export function _encode_TemplateLabel_documentId(
     return _cached_encoder_for_TemplateLabel_documentId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TemplateLabel_documentId */
 
 /* eslint-enable */

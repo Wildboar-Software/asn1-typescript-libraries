@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AbandonArgument */
 /**
  * @summary AbandonArgument
  * @description
@@ -24,13 +23,9 @@ import {
  * ```
  */
 export type AbandonArgument = OPTIONALLY_PROTECTED_SEQ<AbandonArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AbandonArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonArgument */
 let _cached_decoder_for_AbandonArgument: $.ASN1Decoder<AbandonArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbandonArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) AbandonArgument
  * @function
@@ -45,13 +40,9 @@ export function _decode_AbandonArgument(el: _Element) {
     }
     return _cached_decoder_for_AbandonArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AbandonArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonArgument */
 let _cached_encoder_for_AbandonArgument: $.ASN1Encoder<AbandonArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbandonArgument */
 /**
  * @summary Encodes a(n) AbandonArgument into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_AbandonArgument(
     return _cached_encoder_for_AbandonArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbandonArgument */
 
 /* eslint-enable */

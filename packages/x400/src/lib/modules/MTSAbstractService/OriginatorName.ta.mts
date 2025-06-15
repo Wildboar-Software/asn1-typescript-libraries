@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOrDirectoryName,
     _encode_ORAddressAndOrDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorName */
 /**
  * @summary OriginatorName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatorName = ORAddressAndOrDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorName */
 let _cached_decoder_for_OriginatorName: $.ASN1Decoder<OriginatorName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorName */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorName
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatorName(el: _Element) {
     }
     return _cached_decoder_for_OriginatorName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorName */
 let _cached_encoder_for_OriginatorName: $.ASN1Encoder<OriginatorName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorName */
 /**
  * @summary Encodes a(n) OriginatorName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginatorName(
     return _cached_encoder_for_OriginatorName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorName */
 
 /* eslint-enable */

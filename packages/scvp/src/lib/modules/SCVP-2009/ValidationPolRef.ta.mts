@@ -12,7 +12,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION ValidationPolRef */
 /**
  * @summary ValidationPolRef
  * @description
@@ -62,9 +61,7 @@ export class ValidationPolRef {
     return new ValidationPolRef(_o.valPolId, _o.valPolParams);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ValidationPolRef */
 /**
  * @summary The Leading Root Component Types of ValidationPolRef
  * @description
@@ -83,9 +80,7 @@ export const _root_component_type_list_1_spec_for_ValidationPolRef: $.ComponentS
   ),
   new $.ComponentSpec('valPolParams', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ValidationPolRef */
 /**
  * @summary The Trailing Root Component Types of ValidationPolRef
  * @description
@@ -95,9 +90,7 @@ export const _root_component_type_list_1_spec_for_ValidationPolRef: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ValidationPolRef: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ValidationPolRef */
 /**
  * @summary The Extension Addition Component Types of ValidationPolRef
  * @description
@@ -107,13 +100,9 @@ export const _root_component_type_list_2_spec_for_ValidationPolRef: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ValidationPolRef: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidationPolRef */
 let _cached_decoder_for_ValidationPolRef: $.ASN1Decoder<ValidationPolRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ValidationPolRef */
 /**
  * @summary Decodes an ASN.1 element into a(n) ValidationPolRef
  * @function
@@ -155,13 +144,9 @@ export function _decode_ValidationPolRef(el: _Element) {
   }
   return _cached_decoder_for_ValidationPolRef(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidationPolRef */
 let _cached_encoder_for_ValidationPolRef: $.ASN1Encoder<ValidationPolRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidationPolRef */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ValidationPolRef */
 /**
  * @summary Encodes a(n) ValidationPolRef into an ASN.1 Element.
  * @function
@@ -192,6 +177,5 @@ export function _encode_ValidationPolRef(
   return _cached_encoder_for_ValidationPolRef(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ValidationPolRef */
 
 /* eslint-enable */

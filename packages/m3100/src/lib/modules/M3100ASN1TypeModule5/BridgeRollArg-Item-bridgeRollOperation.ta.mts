@@ -12,15 +12,14 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_BridgeRollArg_Item_bridgeRollOperation */
+
 export enum _enum_for_BridgeRollArg_Item_bridgeRollOperation {
     bridge = 0,
     roll = 1,
     releaseBridge = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_BridgeRollArg_Item_bridgeRollOperation */
 
-/* START_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation */
+
 /**
  * @summary BridgeRollArg_Item_bridgeRollOperation
  * @description
@@ -34,67 +33,59 @@ export enum _enum_for_BridgeRollArg_Item_bridgeRollOperation {
 export type BridgeRollArg_Item_bridgeRollOperation =
     | _enum_for_BridgeRollArg_Item_bridgeRollOperation
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation */
 
-/* START_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation_bridge */
+
 /**
  * @summary BridgeRollArg_Item_bridgeRollOperation_bridge
  * @constant
  * @type {number}
  */
 export const BridgeRollArg_Item_bridgeRollOperation_bridge: BridgeRollArg_Item_bridgeRollOperation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation_bridge */
 
-/* START_OF_SYMBOL_DEFINITION bridge */
+
 /**
  * @summary bridge
  * @constant
  * @type {number}
  */
 export const bridge: BridgeRollArg_Item_bridgeRollOperation = BridgeRollArg_Item_bridgeRollOperation_bridge; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bridge */
 
-/* START_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation_roll */
+
 /**
  * @summary BridgeRollArg_Item_bridgeRollOperation_roll
  * @constant
  * @type {number}
  */
 export const BridgeRollArg_Item_bridgeRollOperation_roll: BridgeRollArg_Item_bridgeRollOperation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation_roll */
 
-/* START_OF_SYMBOL_DEFINITION roll */
+
 /**
  * @summary roll
  * @constant
  * @type {number}
  */
 export const roll: BridgeRollArg_Item_bridgeRollOperation = BridgeRollArg_Item_bridgeRollOperation_roll; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION roll */
 
-/* START_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation_releaseBridge */
+
 /**
  * @summary BridgeRollArg_Item_bridgeRollOperation_releaseBridge
  * @constant
  * @type {number}
  */
 export const BridgeRollArg_Item_bridgeRollOperation_releaseBridge: BridgeRollArg_Item_bridgeRollOperation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BridgeRollArg_Item_bridgeRollOperation_releaseBridge */
 
-/* START_OF_SYMBOL_DEFINITION releaseBridge */
+
 /**
  * @summary releaseBridge
  * @constant
  * @type {number}
  */
 export const releaseBridge: BridgeRollArg_Item_bridgeRollOperation = BridgeRollArg_Item_bridgeRollOperation_releaseBridge; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION releaseBridge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation */
+
 let _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation: $.ASN1Decoder<BridgeRollArg_Item_bridgeRollOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BridgeRollArg_Item_bridgeRollOperation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BridgeRollArg_Item_bridgeRollOperation
  * @function
@@ -108,13 +99,11 @@ export function _decode_BridgeRollArg_Item_bridgeRollOperation(el: _Element) {
     }
     return _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BridgeRollArg_Item_bridgeRollOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BridgeRollArg_Item_bridgeRollOperation */
+
 let _cached_encoder_for_BridgeRollArg_Item_bridgeRollOperation: $.ASN1Encoder<BridgeRollArg_Item_bridgeRollOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BridgeRollArg_Item_bridgeRollOperation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BridgeRollArg_Item_bridgeRollOperation */
+
 /**
  * @summary Encodes a(n) BridgeRollArg_Item_bridgeRollOperation into an ASN.1 Element.
  * @function
@@ -136,6 +125,5 @@ export function _encode_BridgeRollArg_Item_bridgeRollOperation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BridgeRollArg_Item_bridgeRollOperation */
 
 /* eslint-enable */

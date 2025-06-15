@@ -11,7 +11,6 @@ import {
     _decode_SearchResultData_searchInfo,
     _encode_SearchResultData_searchInfo,
 } from "../DirectoryAbstractService/SearchResultData-searchInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SearchResultData */
 /**
  * @summary SearchResultData
  * @description
@@ -37,13 +36,9 @@ export type SearchResultData =
     | { searchInfo: SearchResultData_searchInfo } /* CHOICE_ALT_ROOT */
     | { uncorrelatedSearchInfo: SearchResult[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SearchResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultData */
 let _cached_decoder_for_SearchResultData: $.ASN1Decoder<SearchResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchResultData
  * @function
@@ -69,13 +64,9 @@ export function _decode_SearchResultData(el: _Element) {
     }
     return _cached_decoder_for_SearchResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultData */
 let _cached_encoder_for_SearchResultData: $.ASN1Encoder<SearchResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchResultData */
 /**
  * @summary Encodes a(n) SearchResultData into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_SearchResultData(
     return _cached_encoder_for_SearchResultData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchResultData */
 
 /* eslint-enable */

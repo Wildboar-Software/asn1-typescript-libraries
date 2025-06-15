@@ -4,7 +4,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.mjs";
 import { id_pkix_ocsp_nonce } from "../OCSP-2013-08/id-pkix-ocsp-nonce.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION re_ocsp_nonce */
+
 /**
  * @summary re_ocsp_nonce
  * @description
@@ -31,6 +31,5 @@ export const re_ocsp_nonce: EXTENSION<OCTET_STRING> = {
     "&id": id_pkix_ocsp_nonce /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION re_ocsp_nonce */
 
 /* eslint-enable */

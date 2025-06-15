@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeSubmissionTime */
 /**
  * @summary ProbeSubmissionTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProbeSubmissionTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionTime */
 let _cached_decoder_for_ProbeSubmissionTime: $.ASN1Decoder<ProbeSubmissionTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProbeSubmissionTime(el: _Element) {
     }
     return _cached_decoder_for_ProbeSubmissionTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionTime */
 let _cached_encoder_for_ProbeSubmissionTime: $.ASN1Encoder<ProbeSubmissionTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionTime */
 /**
  * @summary Encodes a(n) ProbeSubmissionTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProbeSubmissionTime(
     return _cached_encoder_for_ProbeSubmissionTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionTime */
 
 /* eslint-enable */

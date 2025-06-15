@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LoopbackError */
 /**
  * @summary LoopbackError
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type LoopbackError =
     | { errorBitNo: INTEGER } /* CHOICE_ALT_ROOT */
     | { percent: REAL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION LoopbackError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackError */
 let _cached_decoder_for_LoopbackError: $.ASN1Decoder<LoopbackError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoopbackError */
 /**
  * @summary Decodes an ASN.1 element into a(n) LoopbackError
  * @function
@@ -53,13 +48,9 @@ export function _decode_LoopbackError(el: _Element) {
     }
     return _cached_decoder_for_LoopbackError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LoopbackError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackError */
 let _cached_encoder_for_LoopbackError: $.ASN1Encoder<LoopbackError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoopbackError */
 /**
  * @summary Encodes a(n) LoopbackError into an ASN.1 Element.
  * @function
@@ -83,6 +74,5 @@ export function _encode_LoopbackError(
     return _cached_encoder_for_LoopbackError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoopbackError */
 
 /* eslint-enable */

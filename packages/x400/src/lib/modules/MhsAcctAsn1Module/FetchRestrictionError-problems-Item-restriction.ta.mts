@@ -25,7 +25,6 @@ import {
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FetchRestrictionError_problems_Item_restriction */
 /**
  * @summary FetchRestrictionError_problems_Item_restriction
  * @description
@@ -40,13 +39,9 @@ export type FetchRestrictionError_problems_Item_restriction =
     | { content_type: ContentType } /* CHOICE_ALT_ROOT */
     | { eit: MS_EITs } /* CHOICE_ALT_ROOT */
     | { content_length: ContentLength } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FetchRestrictionError_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchRestrictionError_problems_Item_restriction */
 let _cached_decoder_for_FetchRestrictionError_problems_Item_restriction: $.ASN1Decoder<FetchRestrictionError_problems_Item_restriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchRestrictionError_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FetchRestrictionError_problems_Item_restriction */
 /**
  * @summary Decodes an ASN.1 element into a(n) FetchRestrictionError_problems_Item_restriction
  * @function
@@ -80,13 +75,9 @@ export function _decode_FetchRestrictionError_problems_Item_restriction(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FetchRestrictionError_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchRestrictionError_problems_Item_restriction */
 let _cached_encoder_for_FetchRestrictionError_problems_Item_restriction: $.ASN1Encoder<FetchRestrictionError_problems_Item_restriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchRestrictionError_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FetchRestrictionError_problems_Item_restriction */
 /**
  * @summary Encodes a(n) FetchRestrictionError_problems_Item_restriction into an ASN.1 Element.
  * @function
@@ -129,6 +120,5 @@ export function _encode_FetchRestrictionError_problems_Item_restriction(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FetchRestrictionError_problems_Item_restriction */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import { syntaxOrAttribute } from '../DefinitionDirectoryASN1Module/syntaxOrAttr
 import { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa.mjs';
 import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementParameter */
 /**
  * @summary managementParameter
  * @description
@@ -60,6 +59,5 @@ export const managementParameter: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementParameter */
 
 /* eslint-enable */

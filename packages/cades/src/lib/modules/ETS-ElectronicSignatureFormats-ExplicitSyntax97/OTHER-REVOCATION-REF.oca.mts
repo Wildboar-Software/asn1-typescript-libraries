@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION OTHER_REVOCATION_REF */
 /**
  * @summary OTHER_REVOCATION_REF
  * @description
@@ -62,6 +61,5 @@ interface OTHER_REVOCATION_REF<
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 };
-/* END_OF_SYMBOL_DEFINITION OTHER_REVOCATION_REF */
 
 /* eslint-enable */

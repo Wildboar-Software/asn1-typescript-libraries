@@ -3,7 +3,6 @@ import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_userPwdMatch } from "../PasswordPolicy/id-mr-userPwdMatch.va.mjs";
 import { _decode_UserPwd, _encode_UserPwd } from "../PasswordPolicy/UserPwd.ta.mjs";
 import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION userPwdMatch */
 /**
  * @summary userPwdMatch
  * @description
@@ -35,6 +34,5 @@ export const userPwdMatch: MATCHING_RULE = {
     "&id": id_mr_userPwdMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userPwdMatch */
 
 /* eslint-enable */

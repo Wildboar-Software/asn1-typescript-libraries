@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION l1IntermediateSystemPriority_Default */
 /**
  * @summary l1IntermediateSystemPriority_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const l1IntermediateSystemPriority_Default: INTEGER = 64;
-/* END_OF_SYMBOL_DEFINITION l1IntermediateSystemPriority_Default */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_rosObject } from "../UsefulDefinitions/id-rosObject.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_rosObject_respondingConsumerDSA */
 /**
  * @summary id_rosObject_respondingConsumerDSA
  * @description
@@ -18,6 +17,5 @@ export const id_rosObject_respondingConsumerDSA: OBJECT_IDENTIFIER = new _OID(
     [11],
     id_rosObject
 );
-/* END_OF_SYMBOL_DEFINITION id_rosObject_respondingConsumerDSA */
 
 /* eslint-enable */

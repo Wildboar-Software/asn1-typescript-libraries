@@ -14,7 +14,7 @@ import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPER
 import { ConsumerPerforms } from './ConsumerPerforms.osa.mjs';
 import { SupplierPerforms } from './SupplierPerforms.osa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AllOperations */
+
 /**
  * @summary AllOperations
  * @description
@@ -34,6 +34,5 @@ function AllOperations (package_: OPERATION_PACKAGE): OPERATION[] {
         ...SupplierPerforms(package_),
     ];
 }
-/* END_OF_SYMBOL_DEFINITION AllOperations */
 
 /* eslint-enable */

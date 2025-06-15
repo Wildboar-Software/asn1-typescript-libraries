@@ -16,7 +16,7 @@ import {
   _decode_Content,
   _encode_Content,
 } from '../ASN1SOAP/Content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Body */
+
 /**
  * @summary Body
  * @description
@@ -56,9 +56,8 @@ export class Body {
     return new Body(_o.content);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Body */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Body */
+
 /**
  * @summary The Leading Root Component Types of Body
  * @description
@@ -76,9 +75,8 @@ export const _root_component_type_list_1_spec_for_Body: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Body */
+
 /**
  * @summary The Trailing Root Component Types of Body
  * @description
@@ -88,9 +86,8 @@ export const _root_component_type_list_1_spec_for_Body: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Body: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Body */
+
 /**
  * @summary The Extension Addition Component Types of Body
  * @description
@@ -100,13 +97,11 @@ export const _root_component_type_list_2_spec_for_Body: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Body: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Body */
+
 let _cached_decoder_for_Body: $.ASN1Decoder<Body> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Body */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Body
  * @function
@@ -139,13 +134,11 @@ export function _decode_Body(el: _Element) {
   }
   return _cached_decoder_for_Body(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Body */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Body */
+
 let _cached_encoder_for_Body: $.ASN1Encoder<Body> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Body */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Body */
+
 /**
  * @summary Encodes a(n) Body into an ASN.1 Element.
  * @function
@@ -172,6 +165,5 @@ export function _encode_Body(value: Body, elGetter: $.ASN1Encoder<Body>) {
   return _cached_encoder_for_Body(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Body */
 
 /* eslint-enable */

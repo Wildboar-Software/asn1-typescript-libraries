@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BSPUnload_ResponseParams */
+
 /**
  * @summary BSPUnload_ResponseParams
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BSPUnload_ResponseParams = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION BSPUnload_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPUnload_ResponseParams */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPUnload_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BSPUnload_ResponseParams */
+
+
 export const _decode_BSPUnload_ResponseParams = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_BSPUnload_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPUnload_ResponseParams */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPUnload_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BSPUnload_ResponseParams */
+
+
 export const _encode_BSPUnload_ResponseParams = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BSPUnload_ResponseParams */
 
 /* eslint-enable */

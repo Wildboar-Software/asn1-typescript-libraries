@@ -11,7 +11,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS-10/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubjectPublicKeyInfo */
+
 /**
  * @summary SubjectPublicKeyInfo
  * @description
@@ -61,9 +61,8 @@ export class SubjectPublicKeyInfo {
         return new SubjectPublicKeyInfo(_o.algorithm, _o.subjectPublicKey);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectPublicKeyInfo */
+
 /**
  * @summary The Leading Root Component Types of SubjectPublicKeyInfo
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectPublicKeyInfo */
+
 /**
  * @summary The Trailing Root Component Types of SubjectPublicKeyInfo
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectPublicKeyInfo */
+
 /**
  * @summary The Extension Addition Component Types of SubjectPublicKeyInfo
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectPublicKeyInfo */
+
 let _cached_decoder_for_SubjectPublicKeyInfo: $.ASN1Decoder<SubjectPublicKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectPublicKeyInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectPublicKeyInfo
  * @function
@@ -149,13 +144,11 @@ export function _decode_SubjectPublicKeyInfo(el: _Element) {
     }
     return _cached_decoder_for_SubjectPublicKeyInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectPublicKeyInfo */
+
 let _cached_encoder_for_SubjectPublicKeyInfo: $.ASN1Encoder<SubjectPublicKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectPublicKeyInfo */
+
 /**
  * @summary Encodes a(n) SubjectPublicKeyInfo into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_SubjectPublicKeyInfo(
     return _cached_encoder_for_SubjectPublicKeyInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectPublicKeyInfo */
 
 /* eslint-enable */

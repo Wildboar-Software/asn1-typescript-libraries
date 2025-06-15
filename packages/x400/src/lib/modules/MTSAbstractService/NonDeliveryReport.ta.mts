@@ -21,7 +21,6 @@ import {
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
 } from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NonDeliveryReport */
 /**
  * @summary NonDeliveryReport
  * @description
@@ -74,9 +73,7 @@ export class NonDeliveryReport {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonDeliveryReport */
 /**
  * @summary The Leading Root Component Types of NonDeliveryReport
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_NonDeliveryReport: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonDeliveryReport */
 /**
  * @summary The Trailing Root Component Types of NonDeliveryReport
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_NonDeliveryReport: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NonDeliveryReport: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonDeliveryReport */
 /**
  * @summary The Extension Addition Component Types of NonDeliveryReport
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_NonDeliveryReport: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_NonDeliveryReport: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonDeliveryReport */
 let _cached_decoder_for_NonDeliveryReport: $.ASN1Decoder<NonDeliveryReport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonDeliveryReport */
 /**
  * @summary Decodes an ASN.1 element into a(n) NonDeliveryReport
  * @function
@@ -177,13 +166,9 @@ export function _decode_NonDeliveryReport(el: _Element) {
     }
     return _cached_decoder_for_NonDeliveryReport(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonDeliveryReport */
 let _cached_encoder_for_NonDeliveryReport: $.ASN1Encoder<NonDeliveryReport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonDeliveryReport */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonDeliveryReport */
 /**
  * @summary Encodes a(n) NonDeliveryReport into an ASN.1 Element.
  * @function
@@ -225,6 +210,5 @@ export function _encode_NonDeliveryReport(
     return _cached_encoder_for_NonDeliveryReport(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonDeliveryReport */
 
 /* eslint-enable */

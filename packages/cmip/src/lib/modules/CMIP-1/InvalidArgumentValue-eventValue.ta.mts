@@ -17,7 +17,7 @@ import {
     _encode_EventTypeId,
 } from '../CMIP-1/EventTypeId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InvalidArgumentValue_eventValue */
+
 /**
  * @summary InvalidArgumentValue_eventValue
  * @description
@@ -66,9 +66,8 @@ export class InvalidArgumentValue_eventValue {
     return new InvalidArgumentValue_eventValue(_o.eventType, _o.eventInfo);
   }
 }
-/* END_OF_SYMBOL_DEFINITION InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvalidArgumentValue_eventValue */
+
 /**
  * @summary The Leading Root Component Types of InvalidArgumentValue_eventValue
  * @description
@@ -87,9 +86,8 @@ export const _root_component_type_list_1_spec_for_InvalidArgumentValue_eventValu
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvalidArgumentValue_eventValue */
+
 /**
  * @summary The Trailing Root Component Types of InvalidArgumentValue_eventValue
  * @description
@@ -99,9 +97,8 @@ export const _root_component_type_list_1_spec_for_InvalidArgumentValue_eventValu
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InvalidArgumentValue_eventValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvalidArgumentValue_eventValue */
+
 /**
  * @summary The Extension Addition Component Types of InvalidArgumentValue_eventValue
  * @description
@@ -111,13 +108,11 @@ export const _root_component_type_list_2_spec_for_InvalidArgumentValue_eventValu
  * @constant
  */
 export const _extension_additions_list_spec_for_InvalidArgumentValue_eventValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidArgumentValue_eventValue */
+
 let _cached_decoder_for_InvalidArgumentValue_eventValue: $.ASN1Decoder<InvalidArgumentValue_eventValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvalidArgumentValue_eventValue */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvalidArgumentValue_eventValue
  * @function
@@ -159,13 +154,11 @@ export function _decode_InvalidArgumentValue_eventValue(el: _Element) {
   }
   return _cached_decoder_for_InvalidArgumentValue_eventValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidArgumentValue_eventValue */
+
 let _cached_encoder_for_InvalidArgumentValue_eventValue: $.ASN1Encoder<InvalidArgumentValue_eventValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidArgumentValue_eventValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvalidArgumentValue_eventValue */
+
 /**
  * @summary Encodes a(n) InvalidArgumentValue_eventValue into an ASN.1 Element.
  * @function
@@ -201,6 +194,5 @@ export function _encode_InvalidArgumentValue_eventValue(
   return _cached_encoder_for_InvalidArgumentValue_eventValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvalidArgumentValue_eventValue */
 
 /* eslint-enable */

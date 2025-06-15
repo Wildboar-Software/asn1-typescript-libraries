@@ -13,7 +13,6 @@ import { mta_bind } from '../MTAAbstractService/mta-bind.oa.mjs';
 import { mta_unbind } from '../MTAAbstractService/mta-unbind.oa.mjs';
 import { id_cp_mta_connect } from '../MTSObjectIdentifiers/id-cp-mta-connect.va.mjs';
 import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_connect */
 /**
  * @summary mta_connect
  * @description
@@ -42,6 +41,5 @@ export const mta_connect: CONNECTION_PACKAGE = {
     '&responderCanUnbind': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&unbindCanFail': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mta_connect */
 
 /* eslint-enable */

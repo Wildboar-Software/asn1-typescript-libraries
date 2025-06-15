@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_AbortProblem */
+
 /**
  * @summary AbortProblem
  * @description
@@ -31,9 +31,8 @@ export enum _enum_for_AbortProblem {
   unexpectedError = 3,
   mistypedErrorParameter = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_AbortProblem */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem */
+
 /**
  * @summary AbortProblem
  * @description
@@ -47,9 +46,8 @@ export enum _enum_for_AbortProblem {
  * ```@enum {number}
  */
 export type AbortProblem = _enum_for_AbortProblem;
-/* END_OF_SYMBOL_DEFINITION AbortProblem */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem */
+
 /**
  * @summary AbortProblem
  * @description
@@ -63,9 +61,8 @@ export type AbortProblem = _enum_for_AbortProblem;
  * ```@enum {number}
  */
 export const AbortProblem = _enum_for_AbortProblem;
-/* END_OF_SYMBOL_DEFINITION AbortProblem */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem_unrecognizedInvocationId */
+
 /**
  * @summary AbortProblem_unrecognizedInvocationId
  * @constant
@@ -73,9 +70,8 @@ export const AbortProblem = _enum_for_AbortProblem;
  */
 export const AbortProblem_unrecognizedInvocationId: AbortProblem =
   AbortProblem.unrecognizedInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortProblem_unrecognizedInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION unrecognizedInvocationId */
+
 /**
  * @summary unrecognizedInvocationId
  * @constant
@@ -83,9 +79,8 @@ export const AbortProblem_unrecognizedInvocationId: AbortProblem =
  */
 export const unrecognizedInvocationId: AbortProblem =
   AbortProblem.unrecognizedInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unrecognizedInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem_abortUnexpected */
+
 /**
  * @summary AbortProblem_abortUnexpected
  * @constant
@@ -93,9 +88,8 @@ export const unrecognizedInvocationId: AbortProblem =
  */
 export const AbortProblem_abortUnexpected: AbortProblem =
   AbortProblem.abortUnexpected; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortProblem_abortUnexpected */
 
-/* START_OF_SYMBOL_DEFINITION abortUnexpected */
+
 /**
  * @summary abortUnexpected
  * @constant
@@ -103,9 +97,8 @@ export const AbortProblem_abortUnexpected: AbortProblem =
  */
 export const abortUnexpected: AbortProblem =
   AbortProblem.abortUnexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION abortUnexpected */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem_unrecognizedError */
+
 /**
  * @summary AbortProblem_unrecognizedError
  * @constant
@@ -113,9 +106,8 @@ export const abortUnexpected: AbortProblem =
  */
 export const AbortProblem_unrecognizedError: AbortProblem =
   AbortProblem.unrecognizedError; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortProblem_unrecognizedError */
 
-/* START_OF_SYMBOL_DEFINITION unrecognizedError */
+
 /**
  * @summary unrecognizedError
  * @constant
@@ -123,9 +115,8 @@ export const AbortProblem_unrecognizedError: AbortProblem =
  */
 export const unrecognizedError: AbortProblem =
   AbortProblem.unrecognizedError; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unrecognizedError */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem_unexpectedError */
+
 /**
  * @summary AbortProblem_unexpectedError
  * @constant
@@ -133,9 +124,8 @@ export const unrecognizedError: AbortProblem =
  */
 export const AbortProblem_unexpectedError: AbortProblem =
   AbortProblem.unexpectedError; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortProblem_unexpectedError */
 
-/* START_OF_SYMBOL_DEFINITION unexpectedError */
+
 /**
  * @summary unexpectedError
  * @constant
@@ -143,9 +133,8 @@ export const AbortProblem_unexpectedError: AbortProblem =
  */
 export const unexpectedError: AbortProblem =
   AbortProblem.unexpectedError; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unexpectedError */
 
-/* START_OF_SYMBOL_DEFINITION AbortProblem_mistypedErrorParameter */
+
 /**
  * @summary AbortProblem_mistypedErrorParameter
  * @constant
@@ -153,9 +142,8 @@ export const unexpectedError: AbortProblem =
  */
 export const AbortProblem_mistypedErrorParameter: AbortProblem =
   AbortProblem.mistypedErrorParameter; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AbortProblem_mistypedErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION mistypedErrorParameter */
+
 /**
  * @summary mistypedErrorParameter
  * @constant
@@ -163,21 +151,16 @@ export const AbortProblem_mistypedErrorParameter: AbortProblem =
  */
 export const mistypedErrorParameter: AbortProblem =
   AbortProblem.mistypedErrorParameter; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mistypedErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbortProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbortProblem */
+
+
 export const _decode_AbortProblem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_AbortProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbortProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbortProblem */
+
+
 export const _encode_AbortProblem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbortProblem */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_ObjectSel_objSelect_objectNames_Item,
     _encode_ObjectSel_objSelect_objectNames_Item,
 } from '../Pbact-access/ObjectSel-objSelect-objectNames-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectSel_objSelect */
+
 /**
  * @summary ObjectSel_objSelect
  * @description
@@ -37,13 +37,11 @@ export type ObjectSel_objSelect =
           objectNames: ObjectSel_objSelect_objectNames_Item[];
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ObjectSel_objSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectSel_objSelect */
+
 let _cached_decoder_for_ObjectSel_objSelect: $.ASN1Decoder<ObjectSel_objSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectSel_objSelect */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectSel_objSelect */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectSel_objSelect
  * @function
@@ -75,13 +73,11 @@ export function _decode_ObjectSel_objSelect(el: _Element) {
     }
     return _cached_decoder_for_ObjectSel_objSelect(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectSel_objSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectSel_objSelect */
+
 let _cached_encoder_for_ObjectSel_objSelect: $.ASN1Encoder<ObjectSel_objSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectSel_objSelect */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectSel_objSelect */
+
 /**
  * @summary Encodes a(n) ObjectSel_objSelect into an ASN.1 Element.
  * @function
@@ -119,6 +115,5 @@ export function _encode_ObjectSel_objSelect(
     return _cached_encoder_for_ObjectSel_objSelect(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectSel_objSelect */
 
 /* eslint-enable */

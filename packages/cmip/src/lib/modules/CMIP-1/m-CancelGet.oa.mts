@@ -26,7 +26,7 @@ import {
 import { mistypedOperation } from '../CMIP-1/mistypedOperation.oa.mjs';
 import { noSuchInvokeId } from '../CMIP-1/noSuchInvokeId.oa.mjs';
 import { processingFailure } from '../CMIP-1/processingFailure.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION m_CancelGet */
+
 /**
  * @summary m_CancelGet
  * @description
@@ -73,6 +73,5 @@ export const m_CancelGet: OPERATION<InvokeIDType> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_CancelGet */
 
 /* eslint-enable */

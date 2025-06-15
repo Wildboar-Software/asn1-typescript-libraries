@@ -22,7 +22,6 @@ import {
     _encode_Create,
 } from '../DefinitionASN1Module/Create.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION create */
 /**
  * @summary create
  * @description
@@ -64,6 +63,5 @@ export const create: ATTRIBUTE<Create> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION create */
 
 /* eslint-enable */

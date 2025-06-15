@@ -15,7 +15,7 @@ import {
     _decode_PDUHeader,
     _encode_PDUHeader,
 } from '../NLM/PDUHeader.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PDUFormatErrorSyntax */
+
 /**
  * @summary PDUFormatErrorSyntax
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type PDUFormatErrorSyntax = PDUHeader; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PDUFormatErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUFormatErrorSyntax */
+
 let _cached_decoder_for_PDUFormatErrorSyntax: $.ASN1Decoder<PDUFormatErrorSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUFormatErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDUFormatErrorSyntax */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PDUFormatErrorSyntax
  * @function
@@ -46,13 +44,11 @@ export function _decode_PDUFormatErrorSyntax(el: _Element) {
     }
     return _cached_decoder_for_PDUFormatErrorSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDUFormatErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUFormatErrorSyntax */
+
 let _cached_encoder_for_PDUFormatErrorSyntax: $.ASN1Encoder<PDUFormatErrorSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUFormatErrorSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDUFormatErrorSyntax */
+
 /**
  * @summary Encodes a(n) PDUFormatErrorSyntax into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_PDUFormatErrorSyntax(
     return _cached_encoder_for_PDUFormatErrorSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDUFormatErrorSyntax */
 
 /* eslint-enable */

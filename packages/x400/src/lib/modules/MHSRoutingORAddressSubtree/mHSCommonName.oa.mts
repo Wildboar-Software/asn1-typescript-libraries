@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa.mjs';
 import { id_oc_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-common-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSCommonName */
 /**
  * @summary mHSCommonName
  * @description
@@ -48,6 +47,5 @@ export const mHSCommonName: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSCommonNameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_common_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSCommonName */
 
 /* eslint-enable */

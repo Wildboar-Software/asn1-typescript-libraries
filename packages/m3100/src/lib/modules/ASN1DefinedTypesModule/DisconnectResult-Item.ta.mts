@@ -20,7 +20,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DisconnectResult_Item */
+
 /**
  * @summary DisconnectResult_Item
  * @description
@@ -34,13 +34,11 @@ import {
 export type DisconnectResult_Item =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { disconnected: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DisconnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DisconnectResult_Item */
+
 let _cached_decoder_for_DisconnectResult_Item: $.ASN1Decoder<DisconnectResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DisconnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DisconnectResult_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DisconnectResult_Item
  * @function
@@ -62,13 +60,11 @@ export function _decode_DisconnectResult_Item(el: _Element) {
     }
     return _cached_decoder_for_DisconnectResult_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DisconnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DisconnectResult_Item */
+
 let _cached_encoder_for_DisconnectResult_Item: $.ASN1Encoder<DisconnectResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DisconnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DisconnectResult_Item */
+
 /**
  * @summary Encodes a(n) DisconnectResult_Item into an ASN.1 Element.
  * @function
@@ -92,6 +88,5 @@ export function _encode_DisconnectResult_Item(
     return _cached_encoder_for_DisconnectResult_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DisconnectResult_Item */
 
 /* eslint-enable */

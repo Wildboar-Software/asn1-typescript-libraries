@@ -6,7 +6,7 @@ import {
     _decode_SemanticsInformation,
     _encode_SemanticsInformation,
 } from "../PKIXqualified97/SemanticsInformation.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION qcStatement_2 */
+
 /**
  * @summary qcStatement_2
  * @description
@@ -33,6 +33,5 @@ export const qcStatement_2: QC_STATEMENT<SemanticsInformation> = {
     "&id": id_qcs_pkixQCSyntax_v2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION qcStatement_2 */
 
 /* eslint-enable */

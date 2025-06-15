@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pkix } from "../PKIX1Explicit-2009/id-pkix.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_qt */
+
 /**
  * @summary id_qt
  * @description
@@ -15,6 +15,5 @@ import { id_pkix } from "../PKIX1Explicit-2009/id-pkix.va.mjs";
  * @constant
  */
 export const id_qt: OBJECT_IDENTIFIER = new _OID([2], id_pkix);
-/* END_OF_SYMBOL_DEFINITION id_qt */
 
 /* eslint-enable */

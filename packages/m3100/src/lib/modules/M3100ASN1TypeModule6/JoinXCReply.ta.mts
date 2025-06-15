@@ -15,7 +15,7 @@ import {
     _decode_JoinXCReply_Item,
     _encode_JoinXCReply_Item,
 } from '../M3100ASN1TypeModule6/JoinXCReply-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION JoinXCReply */
+
 /**
  * @summary JoinXCReply
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type JoinXCReply = JoinXCReply_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION JoinXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCReply */
+
 let _cached_decoder_for_JoinXCReply: $.ASN1Decoder<JoinXCReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_JoinXCReply */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) JoinXCReply
  * @function
@@ -53,13 +51,11 @@ export function _decode_JoinXCReply(el: _Element) {
     }
     return _cached_decoder_for_JoinXCReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_JoinXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCReply */
+
 let _cached_encoder_for_JoinXCReply: $.ASN1Encoder<JoinXCReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_JoinXCReply */
+
 /**
  * @summary Encodes a(n) JoinXCReply into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_JoinXCReply(
     return _cached_encoder_for_JoinXCReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_JoinXCReply */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_RawData,
     _encode_RawData,
 } from '../TestCategories-ASN1Module/RawData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectivityThreshold */
 /**
  * @summary ConnectivityThreshold
  * @description
@@ -38,13 +37,9 @@ import {
 export type ConnectivityThreshold =
     | { time: ConnectivityThreshold_time } /* CHOICE_ALT_ROOT */
     | { rawData: RawData } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectivityThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityThreshold */
 let _cached_decoder_for_ConnectivityThreshold: $.ASN1Decoder<ConnectivityThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectivityThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectivityThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectivityThreshold
  * @function
@@ -70,13 +65,9 @@ export function _decode_ConnectivityThreshold(el: _Element) {
     }
     return _cached_decoder_for_ConnectivityThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectivityThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityThreshold */
 let _cached_encoder_for_ConnectivityThreshold: $.ASN1Encoder<ConnectivityThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectivityThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectivityThreshold */
 /**
  * @summary Encodes a(n) ConnectivityThreshold into an ASN.1 Element.
  * @function
@@ -110,6 +101,5 @@ export function _encode_ConnectivityThreshold(
     return _cached_encoder_for_ConnectivityThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectivityThreshold */
 
 /* eslint-enable */

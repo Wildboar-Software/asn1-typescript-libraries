@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION Extension_attribute_Patterns */
+
 /**
  * @summary Extension_attribute_Patterns
  * @description
@@ -27,6 +27,5 @@ import {
  *
  */
 export const Extension_attribute_Patterns: TYPE_IDENTIFIER[] = [];
-/* END_OF_SYMBOL_DEFINITION Extension_attribute_Patterns */
 
 /* eslint-enable */

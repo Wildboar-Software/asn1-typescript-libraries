@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { sdhProt } from '../SDHProtASN1/sdhProt.va.mjs';
-/* START_OF_SYMBOL_DEFINITION g774_03MObjectClass */
+
 /**
  * @summary g774_03MObjectClass
  * @description
@@ -28,6 +28,5 @@ export const g774_03MObjectClass: OBJECT_IDENTIFIER = new _OID(
     [/* managedObjectClass */ 3],
     sdhProt
 );
-/* END_OF_SYMBOL_DEFINITION g774_03MObjectClass */
 
 /* eslint-enable */

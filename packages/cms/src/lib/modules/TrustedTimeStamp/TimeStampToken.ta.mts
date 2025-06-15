@@ -6,7 +6,7 @@ import {
     _encode_ContentInfo,
 } from "../CryptographicMessageSyntax-2010/ContentInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TimeStampToken */
+
 /**
  * @summary TimeStampToken
  * @description
@@ -18,9 +18,8 @@ import {
  * ```
  */
 export type TimeStampToken = ContentInfo; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TimeStampToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeStampToken */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeStampToken
  * @function
@@ -28,9 +27,8 @@ export type TimeStampToken = ContentInfo; // DefinedType
  * @returns {TimeStampToken} The decoded data structure.
  */
 export const _decode_TimeStampToken = _decode_ContentInfo;
-/* END_OF_SYMBOL_DEFINITION _decode_TimeStampToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeStampToken */
+
 /**
  * @summary Encodes a(n) TimeStampToken into an ASN.1 Element.
  * @function
@@ -40,6 +38,5 @@ export const _decode_TimeStampToken = _decode_ContentInfo;
  */
 export const _encode_TimeStampToken = _encode_ContentInfo;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeStampToken */
 
 /* eslint-enable */

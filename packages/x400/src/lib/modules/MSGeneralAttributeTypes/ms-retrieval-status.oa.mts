@@ -23,7 +23,6 @@ import { id_att_retrieval_status } from '../MSObjectIdentifiers/id-att-retrieval
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_retrieval_status */
 /**
  * @summary ms_retrieval_status
  * @description
@@ -56,6 +55,5 @@ export const ms_retrieval_status: X413ATTRIBUTE<RetrievalStatus> = {
     '&id': id_att_retrieval_status /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_retrieval_status */
 
 /* eslint-enable */

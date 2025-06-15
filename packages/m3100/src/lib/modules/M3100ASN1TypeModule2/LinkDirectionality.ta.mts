@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_LinkDirectionality */
+
 /**
  * @summary LinkDirectionality
  * @description
@@ -28,9 +28,8 @@ export enum _enum_for_LinkDirectionality {
     bidirectional = 1,
     undefined = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_LinkDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION LinkDirectionality */
+
 /**
  * @summary LinkDirectionality
  * @description
@@ -43,9 +42,8 @@ export enum _enum_for_LinkDirectionality {
  * ```@enum {number}
  */
 export type LinkDirectionality = _enum_for_LinkDirectionality;
-/* END_OF_SYMBOL_DEFINITION LinkDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION LinkDirectionality */
+
 /**
  * @summary LinkDirectionality
  * @description
@@ -58,9 +56,8 @@ export type LinkDirectionality = _enum_for_LinkDirectionality;
  * ```@enum {number}
  */
 export const LinkDirectionality = _enum_for_LinkDirectionality;
-/* END_OF_SYMBOL_DEFINITION LinkDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION LinkDirectionality_unidirectional */
+
 /**
  * @summary LinkDirectionality_unidirectional
  * @constant
@@ -68,9 +65,8 @@ export const LinkDirectionality = _enum_for_LinkDirectionality;
  */
 export const LinkDirectionality_unidirectional: LinkDirectionality =
     LinkDirectionality.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LinkDirectionality_unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION unidirectional */
+
 /**
  * @summary unidirectional
  * @constant
@@ -78,9 +74,8 @@ export const LinkDirectionality_unidirectional: LinkDirectionality =
  */
 export const unidirectional: LinkDirectionality =
     LinkDirectionality.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unidirectional */
 
-/* START_OF_SYMBOL_DEFINITION LinkDirectionality_bidirectional */
+
 /**
  * @summary LinkDirectionality_bidirectional
  * @constant
@@ -88,9 +83,8 @@ export const unidirectional: LinkDirectionality =
  */
 export const LinkDirectionality_bidirectional: LinkDirectionality =
     LinkDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LinkDirectionality_bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION bidirectional */
+
 /**
  * @summary bidirectional
  * @constant
@@ -98,9 +92,8 @@ export const LinkDirectionality_bidirectional: LinkDirectionality =
  */
 export const bidirectional: LinkDirectionality =
     LinkDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION LinkDirectionality_undefined */
+
 /**
  * @summary LinkDirectionality_undefined
  * @constant
@@ -108,9 +101,8 @@ export const bidirectional: LinkDirectionality =
  */
 export const LinkDirectionality_undefined: LinkDirectionality =
     LinkDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LinkDirectionality_undefined */
 
-/* START_OF_SYMBOL_DEFINITION undefined */
+
 /**
  * @summary undefined
  * @constant
@@ -118,21 +110,16 @@ export const LinkDirectionality_undefined: LinkDirectionality =
  */
 export const undefined: LinkDirectionality =
     LinkDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION undefined */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkDirectionality */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LinkDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LinkDirectionality */
+
+
 export const _decode_LinkDirectionality = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_LinkDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkDirectionality */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LinkDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LinkDirectionality */
+
+
 export const _encode_LinkDirectionality = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LinkDirectionality */
 
 /* eslint-enable */

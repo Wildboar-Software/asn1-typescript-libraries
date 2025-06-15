@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_performance */
 /**
  * @summary id_performance
  * @description
@@ -25,6 +24,5 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  * @constant
  */
 export const id_performance: ID = new _OID([7], mhs_management);
-/* END_OF_SYMBOL_DEFINITION id_performance */
 
 /* eslint-enable */

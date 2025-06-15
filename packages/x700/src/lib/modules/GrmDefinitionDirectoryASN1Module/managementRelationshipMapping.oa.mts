@@ -24,7 +24,6 @@ import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.m
 import { relationshipObject } from '../GrmDefinitionDirectoryASN1Module/relationshipObject.oa.mjs';
 import { operationsMapping } from '../GrmDefinitionDirectoryASN1Module/operationsMapping.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementRelationshipMapping */
 /**
  * @summary managementRelationshipMapping
  * @description
@@ -68,6 +67,5 @@ export const managementRelationshipMapping: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementRelationshipMapping */
 
 /* eslint-enable */

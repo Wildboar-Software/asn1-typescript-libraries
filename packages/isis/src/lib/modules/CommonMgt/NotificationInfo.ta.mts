@@ -15,7 +15,6 @@ import {
   _decode_Parameter,
   _encode_Parameter,
 } from '../CommonMgt/Parameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotificationInfo */
 /**
  * @summary NotificationInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NotificationInfo = Parameter[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NotificationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationInfo */
 let _cached_decoder_for_NotificationInfo: $.ASN1Decoder<NotificationInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotificationInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) NotificationInfo
  * @function
@@ -48,13 +43,9 @@ export function _decode_NotificationInfo(el: _Element) {
   }
   return _cached_decoder_for_NotificationInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotificationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationInfo */
 let _cached_encoder_for_NotificationInfo: $.ASN1Encoder<NotificationInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotificationInfo */
 /**
  * @summary Encodes a(n) NotificationInfo into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_NotificationInfo(
   return _cached_encoder_for_NotificationInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotificationInfo */
 
 /* eslint-enable */

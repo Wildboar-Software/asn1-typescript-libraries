@@ -6,7 +6,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EpcFormat_fields_Item_charField */
 /**
  * @summary EpcFormat_fields_Item_charField
  * @description
@@ -20,13 +19,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type EpcFormat_fields_Item_charField =
     | { characters: INTEGER } /* CHOICE_ALT_ROOT */
     | { maxValue: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EpcFormat_fields_Item_charField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EpcFormat_fields_Item_charField */
 let _cached_decoder_for_EpcFormat_fields_Item_charField: $.ASN1Decoder<EpcFormat_fields_Item_charField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EpcFormat_fields_Item_charField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EpcFormat_fields_Item_charField */
 /**
  * @summary Decodes an ASN.1 element into a(n) EpcFormat_fields_Item_charField
  * @function
@@ -50,13 +45,9 @@ export function _decode_EpcFormat_fields_Item_charField(el: _Element) {
     }
     return _cached_decoder_for_EpcFormat_fields_Item_charField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EpcFormat_fields_Item_charField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EpcFormat_fields_Item_charField */
 let _cached_encoder_for_EpcFormat_fields_Item_charField: $.ASN1Encoder<EpcFormat_fields_Item_charField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EpcFormat_fields_Item_charField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EpcFormat_fields_Item_charField */
 /**
  * @summary Encodes a(n) EpcFormat_fields_Item_charField into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_EpcFormat_fields_Item_charField(
     return _cached_encoder_for_EpcFormat_fields_Item_charField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EpcFormat_fields_Item_charField */
 
 /* eslint-enable */

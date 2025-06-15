@@ -20,7 +20,6 @@ import {
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
 } from '../MTSAbstractService/ResponderCredentials.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MTABindResult_authenticated */
 /**
  * @summary MTABindResult_authenticated
  * @description
@@ -72,9 +71,7 @@ export class MTABindResult_authenticated {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MTABindResult_authenticated */
 /**
  * @summary The Leading Root Component Types of MTABindResult_authenticated
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_MTABindResult_authenticated: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MTABindResult_authenticated */
 /**
  * @summary The Trailing Root Component Types of MTABindResult_authenticated
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_MTABindResult_authenticated: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MTABindResult_authenticated: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MTABindResult_authenticated */
 /**
  * @summary The Extension Addition Component Types of MTABindResult_authenticated
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_MTABindResult_authenticated: $
  * @constant
  */
 export const _extension_additions_list_spec_for_MTABindResult_authenticated: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTABindResult_authenticated */
 let _cached_decoder_for_MTABindResult_authenticated: $.ASN1Decoder<MTABindResult_authenticated> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTABindResult_authenticated */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTABindResult_authenticated
  * @function
@@ -175,13 +164,9 @@ export function _decode_MTABindResult_authenticated(el: _Element) {
     }
     return _cached_decoder_for_MTABindResult_authenticated(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTABindResult_authenticated */
 let _cached_encoder_for_MTABindResult_authenticated: $.ASN1Encoder<MTABindResult_authenticated> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTABindResult_authenticated */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTABindResult_authenticated */
 /**
  * @summary Encodes a(n) MTABindResult_authenticated into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_MTABindResult_authenticated(
     return _cached_encoder_for_MTABindResult_authenticated(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTABindResult_authenticated */
 
 /* eslint-enable */

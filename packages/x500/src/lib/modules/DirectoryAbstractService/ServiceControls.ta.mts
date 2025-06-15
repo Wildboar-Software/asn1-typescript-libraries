@@ -28,7 +28,6 @@ import {
     _decode_ServiceControls_scopeOfReferral,
     _encode_ServiceControls_scopeOfReferral,
 } from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ServiceControls */
 /**
  * @summary ServiceControls
  * @description
@@ -166,9 +165,7 @@ export class ServiceControls {
         return medium;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceControls */
 /**
  * @summary The Leading Root Component Types of ServiceControls
  * @description
@@ -242,9 +239,7 @@ export const _root_component_type_list_1_spec_for_ServiceControls: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceControls */
 /**
  * @summary The Trailing Root Component Types of ServiceControls
  * @description
@@ -254,9 +249,7 @@ export const _root_component_type_list_1_spec_for_ServiceControls: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceControls: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceControls */
 /**
  * @summary The Extension Addition Component Types of ServiceControls
  * @description
@@ -266,13 +259,9 @@ export const _root_component_type_list_2_spec_for_ServiceControls: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceControls: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControls */
 let _cached_decoder_for_ServiceControls: $.ASN1Decoder<ServiceControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceControls */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceControls
  * @function
@@ -373,13 +362,9 @@ export function _decode_ServiceControls(el: _Element) {
     }
     return _cached_decoder_for_ServiceControls(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControls */
 let _cached_encoder_for_ServiceControls: $.ASN1Encoder<ServiceControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceControls */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceControls */
 /**
  * @summary Encodes a(n) ServiceControls into an ASN.1 Element.
  * @function
@@ -495,6 +480,5 @@ export function _encode_ServiceControls(
     return _cached_encoder_for_ServiceControls(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceControls */
 
 /* eslint-enable */

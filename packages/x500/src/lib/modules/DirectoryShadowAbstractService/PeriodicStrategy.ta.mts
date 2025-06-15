@@ -11,7 +11,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PeriodicStrategy */
 /**
  * @summary PeriodicStrategy
  * @description
@@ -79,9 +78,7 @@ export class PeriodicStrategy {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PeriodicStrategy */
 /**
  * @summary The Leading Root Component Types of PeriodicStrategy
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_PeriodicStrategy: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PeriodicStrategy */
 /**
  * @summary The Trailing Root Component Types of PeriodicStrategy
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_PeriodicStrategy: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PeriodicStrategy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PeriodicStrategy */
 /**
  * @summary The Extension Addition Component Types of PeriodicStrategy
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_PeriodicStrategy: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_PeriodicStrategy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PeriodicStrategy */
 let _cached_decoder_for_PeriodicStrategy: $.ASN1Decoder<PeriodicStrategy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PeriodicStrategy */
 /**
  * @summary Decodes an ASN.1 element into a(n) PeriodicStrategy
  * @function
@@ -194,13 +183,9 @@ export function _decode_PeriodicStrategy(el: _Element) {
     }
     return _cached_decoder_for_PeriodicStrategy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PeriodicStrategy */
 let _cached_encoder_for_PeriodicStrategy: $.ASN1Encoder<PeriodicStrategy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PeriodicStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PeriodicStrategy */
 /**
  * @summary Encodes a(n) PeriodicStrategy into an ASN.1 Element.
  * @function
@@ -243,6 +228,5 @@ export function _encode_PeriodicStrategy(
     return _cached_encoder_for_PeriodicStrategy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PeriodicStrategy */
 
 /* eslint-enable */

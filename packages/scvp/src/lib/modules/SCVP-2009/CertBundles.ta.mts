@@ -15,7 +15,6 @@ import {
   _decode_CertBundle,
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertBundles */
 /**
  * @summary CertBundles
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CertBundles = CertBundle[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertBundles */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertBundles */
 let _cached_decoder_for_CertBundles: $.ASN1Decoder<CertBundles> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertBundles */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertBundles */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertBundles
  * @function
@@ -48,13 +43,9 @@ export function _decode_CertBundles(el: _Element) {
   }
   return _cached_decoder_for_CertBundles(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertBundles */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertBundles */
 let _cached_encoder_for_CertBundles: $.ASN1Encoder<CertBundles> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertBundles */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertBundles */
 /**
  * @summary Encodes a(n) CertBundles into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_CertBundles(
   return _cached_encoder_for_CertBundles(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertBundles */
 
 /* eslint-enable */

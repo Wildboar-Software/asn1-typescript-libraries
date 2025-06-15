@@ -15,7 +15,7 @@ import {
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Month */
+
 /**
  * @summary Month
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type Month = DateTimeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Month */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Month */
+
 let _cached_decoder_for_Month: $.ASN1Decoder<Month> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Month */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Month */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Month
  * @function
@@ -47,13 +45,11 @@ export function _decode_Month(el: _Element) {
   }
   return _cached_decoder_for_Month(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Month */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Month */
+
 let _cached_encoder_for_Month: $.ASN1Encoder<Month> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Month */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Month */
+
 /**
  * @summary Encodes a(n) Month into an ASN.1 Element.
  * @function
@@ -68,6 +64,5 @@ export function _encode_Month(value: Month, elGetter: $.ASN1Encoder<Month>) {
   return _cached_encoder_for_Month(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Month */
 
 /* eslint-enable */

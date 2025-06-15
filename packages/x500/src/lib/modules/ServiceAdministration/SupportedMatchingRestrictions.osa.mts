@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedMatchingRestrictions */
 /**
  * @summary SupportedMatchingRestrictions
  * @description
@@ -16,6 +15,5 @@ import { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICT
  *
  */
 export const SupportedMatchingRestrictions: MATCHING_RESTRICTION[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedMatchingRestrictions */
 
 /* eslint-enable */

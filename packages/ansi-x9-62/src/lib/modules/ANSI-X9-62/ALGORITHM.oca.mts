@@ -2,7 +2,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ALGORITHM */
 /**
  * @summary ALGORITHM
  * @description
@@ -51,6 +50,5 @@ export interface ALGORITHM<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
      */
     readonly "&Type": Type;
 }
-/* END_OF_SYMBOL_DEFINITION ALGORITHM */
 
 /* eslint-enable */

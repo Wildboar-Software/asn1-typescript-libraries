@@ -20,7 +20,7 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from '../ISO8823-PRESENTATION/Transfer-syntax-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Default_context_name */
+
 /**
  * @summary Default_context_name
  * @description
@@ -73,9 +73,8 @@ export class Default_context_name {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Default_context_name */
+
 /**
  * @summary The Leading Root Component Types of Default_context_name
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_Default_context_name: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Default_context_name */
+
 /**
  * @summary The Trailing Root Component Types of Default_context_name
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_Default_context_name: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Default_context_name: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Default_context_name */
+
 /**
  * @summary The Extension Addition Component Types of Default_context_name
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_Default_context_name: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_Default_context_name: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_context_name */
+
 let _cached_decoder_for_Default_context_name: $.ASN1Decoder<Default_context_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Default_context_name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Default_context_name
  * @function
@@ -168,13 +163,11 @@ export function _decode_Default_context_name(el: _Element) {
     }
     return _cached_decoder_for_Default_context_name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_context_name */
+
 let _cached_encoder_for_Default_context_name: $.ASN1Encoder<Default_context_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Default_context_name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Default_context_name */
+
 /**
  * @summary Encodes a(n) Default_context_name into an ASN.1 Element.
  * @function
@@ -213,6 +206,5 @@ export function _encode_Default_context_name(
     return _cached_encoder_for_Default_context_name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Default_context_name */
 
 /* eslint-enable */

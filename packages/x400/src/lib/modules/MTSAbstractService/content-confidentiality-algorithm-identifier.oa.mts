@@ -25,7 +25,6 @@ import {
     _encode_ContentConfidentialityAlgorithmIdentifier,
 } from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION content_confidentiality_algorithm_identifier */
 /**
  * @summary content_confidentiality_algorithm_identifier
  * @description
@@ -62,6 +61,5 @@ export const content_confidentiality_algorithm_identifier: EXTENSION<ContentConf
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION content_confidentiality_algorithm_identifier */
 
 /* eslint-enable */

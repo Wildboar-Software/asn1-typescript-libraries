@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.mjs";
 import { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.mjs";
 import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignaturePolicyId */
 /**
  * @summary SignaturePolicyId
  * @description
@@ -71,9 +70,7 @@ class SignaturePolicyId {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignaturePolicyId */
 /**
  * @summary The Leading Root Component Types of SignaturePolicyId
  * @description
@@ -88,9 +85,7 @@ const _root_component_type_list_1_spec_for_SignaturePolicyId: $.ComponentSpec[] 
     new $.ComponentSpec("sigPolicyHash", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("sigPolicyQualifiers", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignaturePolicyId */
 /**
  * @summary The Trailing Root Component Types of SignaturePolicyId
  * @description
@@ -103,9 +98,7 @@ export
 const _root_component_type_list_2_spec_for_SignaturePolicyId: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignaturePolicyId */
 /**
  * @summary The Extension Addition Component Types of SignaturePolicyId
  * @description
@@ -118,13 +111,9 @@ export
 const _extension_additions_list_spec_for_SignaturePolicyId: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignaturePolicyId */
 let _cached_decoder_for_SignaturePolicyId: $.ASN1Decoder<SignaturePolicyId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignaturePolicyId */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignaturePolicyId
  * @function
@@ -160,13 +149,9 @@ function _decode_SignaturePolicyId (el: _Element) {
 }; }
     return _cached_decoder_for_SignaturePolicyId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignaturePolicyId */
 let _cached_encoder_for_SignaturePolicyId: $.ASN1Encoder<SignaturePolicyId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignaturePolicyId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignaturePolicyId */
 /**
  * @summary Encodes a(n) SignaturePolicyId into an ASN.1 Element.
  * @function
@@ -188,6 +173,5 @@ function _encode_SignaturePolicyId (value: SignaturePolicyId, elGetter: $.ASN1En
     return _cached_encoder_for_SignaturePolicyId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignaturePolicyId */
 
 /* eslint-enable */

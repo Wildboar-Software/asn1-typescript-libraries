@@ -11,7 +11,7 @@ import {
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Certificates */
+
 /**
  * @summary Certificates
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type Certificates = PathOrObjects<CertificateType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Certificates */
+
 let _cached_decoder_for_Certificates: $.ASN1Decoder<Certificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Certificates */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Certificates
  * @function
@@ -44,13 +42,11 @@ export function _decode_Certificates(el: _Element) {
     }
     return _cached_decoder_for_Certificates(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Certificates */
+
 let _cached_encoder_for_Certificates: $.ASN1Encoder<Certificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Certificates */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Certificates */
+
 /**
  * @summary Encodes a(n) Certificates into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Certificates(
     return _cached_encoder_for_Certificates(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Certificates */
 
 /* eslint-enable */

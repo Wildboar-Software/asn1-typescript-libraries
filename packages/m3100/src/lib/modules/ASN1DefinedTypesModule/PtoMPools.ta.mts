@@ -20,7 +20,7 @@ import {
     _decode_ToTPPools,
     _encode_ToTPPools,
 } from '../ASN1DefinedTypesModule/ToTPPools.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PtoMPools */
+
 /**
  * @summary PtoMPools
  * @description
@@ -69,9 +69,8 @@ export class PtoMPools {
         return new PtoMPools(_o.fromTp, _o.toTPPools);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PtoMPools */
+
 /**
  * @summary The Leading Root Component Types of PtoMPools
  * @description
@@ -90,9 +89,8 @@ export const _root_component_type_list_1_spec_for_PtoMPools: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PtoMPools */
+
 /**
  * @summary The Trailing Root Component Types of PtoMPools
  * @description
@@ -102,9 +100,8 @@ export const _root_component_type_list_1_spec_for_PtoMPools: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PtoMPools: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PtoMPools */
+
 /**
  * @summary The Extension Addition Component Types of PtoMPools
  * @description
@@ -114,13 +111,11 @@ export const _root_component_type_list_2_spec_for_PtoMPools: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_PtoMPools: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PtoMPools */
+
 let _cached_decoder_for_PtoMPools: $.ASN1Decoder<PtoMPools> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PtoMPools */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PtoMPools
  * @function
@@ -149,13 +144,11 @@ export function _decode_PtoMPools(el: _Element) {
     }
     return _cached_decoder_for_PtoMPools(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PtoMPools */
+
 let _cached_encoder_for_PtoMPools: $.ASN1Encoder<PtoMPools> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PtoMPools */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PtoMPools */
+
 /**
  * @summary Encodes a(n) PtoMPools into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_PtoMPools(
     return _cached_encoder_for_PtoMPools(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PtoMPools */
 
 /* eslint-enable */

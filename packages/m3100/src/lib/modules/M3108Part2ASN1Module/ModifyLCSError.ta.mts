@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ModifyLCSError */
+
 export enum _enum_for_ModifyLCSError {
     contractViolation = 0,
     invalidAliasName = 1,
@@ -25,9 +25,8 @@ export enum _enum_for_ModifyLCSError {
     resourceUnavailable = 8,
     scheduleConflicts = 9,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ModifyLCSError */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError */
+
 /**
  * @summary ModifyLCSError
  * @description
@@ -44,201 +43,176 @@ export enum _enum_for_ModifyLCSError {
  * ```@enum {number}
  */
 export type ModifyLCSError = _enum_for_ModifyLCSError | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_contractViolation */
+
 /**
  * @summary ModifyLCSError_contractViolation
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_contractViolation: ModifyLCSError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_contractViolation */
 
-/* START_OF_SYMBOL_DEFINITION contractViolation */
+
 /**
  * @summary contractViolation
  * @constant
  * @type {number}
  */
 export const contractViolation: ModifyLCSError = ModifyLCSError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION contractViolation */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_invalidAliasName */
+
 /**
  * @summary ModifyLCSError_invalidAliasName
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_invalidAliasName: ModifyLCSError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_invalidAliasName */
 
-/* START_OF_SYMBOL_DEFINITION invalidAliasName */
+
 /**
  * @summary invalidAliasName
  * @constant
  * @type {number}
  */
 export const invalidAliasName: ModifyLCSError = ModifyLCSError_invalidAliasName; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidAliasName */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_invalidCircuitNumber */
+
 /**
  * @summary ModifyLCSError_invalidCircuitNumber
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_invalidCircuitNumber: ModifyLCSError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_invalidCircuitNumber */
 
-/* START_OF_SYMBOL_DEFINITION invalidCircuitNumber */
+
 /**
  * @summary invalidCircuitNumber
  * @constant
  * @type {number}
  */
 export const invalidCircuitNumber: ModifyLCSError = ModifyLCSError_invalidCircuitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidCircuitNumber */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_invalidCPEType */
+
 /**
  * @summary ModifyLCSError_invalidCPEType
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_invalidCPEType: ModifyLCSError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_invalidCPEType */
 
-/* START_OF_SYMBOL_DEFINITION invalidCPEType */
+
 /**
  * @summary invalidCPEType
  * @constant
  * @type {number}
  */
 export const invalidCPEType: ModifyLCSError = ModifyLCSError_invalidCPEType; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidCPEType */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_invalidSchedule */
+
 /**
  * @summary ModifyLCSError_invalidSchedule
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_invalidSchedule: ModifyLCSError = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_invalidSchedule */
 
-/* START_OF_SYMBOL_DEFINITION invalidSchedule */
+
 /**
  * @summary invalidSchedule
  * @constant
  * @type {number}
  */
 export const invalidSchedule: ModifyLCSError = ModifyLCSError_invalidSchedule; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidSchedule */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_invalidServiceTerminationDate */
+
 /**
  * @summary ModifyLCSError_invalidServiceTerminationDate
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_invalidServiceTerminationDate: ModifyLCSError = 5; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_invalidServiceTerminationDate */
 
-/* START_OF_SYMBOL_DEFINITION invalidServiceTerminationDate */
+
 /**
  * @summary invalidServiceTerminationDate
  * @constant
  * @type {number}
  */
 export const invalidServiceTerminationDate: ModifyLCSError = ModifyLCSError_invalidServiceTerminationDate; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidServiceTerminationDate */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_invalidValue */
+
 /**
  * @summary ModifyLCSError_invalidValue
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_invalidValue: ModifyLCSError = 6; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_invalidValue */
 
-/* START_OF_SYMBOL_DEFINITION invalidValue */
+
 /**
  * @summary invalidValue
  * @constant
  * @type {number}
  */
 export const invalidValue: ModifyLCSError = ModifyLCSError_invalidValue; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidValue */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_requestedBandwidthNotAvailable */
+
 /**
  * @summary ModifyLCSError_requestedBandwidthNotAvailable
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_requestedBandwidthNotAvailable: ModifyLCSError = 7; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_requestedBandwidthNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION requestedBandwidthNotAvailable */
+
 /**
  * @summary requestedBandwidthNotAvailable
  * @constant
  * @type {number}
  */
 export const requestedBandwidthNotAvailable: ModifyLCSError = ModifyLCSError_requestedBandwidthNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION requestedBandwidthNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_resourceUnavailable */
+
 /**
  * @summary ModifyLCSError_resourceUnavailable
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_resourceUnavailable: ModifyLCSError = 8; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_resourceUnavailable */
 
-/* START_OF_SYMBOL_DEFINITION resourceUnavailable */
+
 /**
  * @summary resourceUnavailable
  * @constant
  * @type {number}
  */
 export const resourceUnavailable: ModifyLCSError = ModifyLCSError_resourceUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION resourceUnavailable */
 
-/* START_OF_SYMBOL_DEFINITION ModifyLCSError_scheduleConflicts */
+
 /**
  * @summary ModifyLCSError_scheduleConflicts
  * @constant
  * @type {number}
  */
 export const ModifyLCSError_scheduleConflicts: ModifyLCSError = 9; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ModifyLCSError_scheduleConflicts */
 
-/* START_OF_SYMBOL_DEFINITION scheduleConflicts */
+
 /**
  * @summary scheduleConflicts
  * @constant
  * @type {number}
  */
 export const scheduleConflicts: ModifyLCSError = ModifyLCSError_scheduleConflicts; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION scheduleConflicts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyLCSError */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyLCSError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyLCSError */
+
+
 export const _decode_ModifyLCSError = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyLCSError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyLCSError */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyLCSError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyLCSError */
+
+
 export const _encode_ModifyLCSError = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyLCSError */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
 import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECPrivateKey */
 /**
  * @summary ECPrivateKey
  * @description
@@ -80,9 +79,7 @@ class ECPrivateKey {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECPrivateKey */
 /**
  * @summary The Leading Root Component Types of ECPrivateKey
  * @description
@@ -98,9 +95,7 @@ const _root_component_type_list_1_spec_for_ECPrivateKey: $.ComponentSpec[] = [
     new $.ComponentSpec("parameters", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("publicKey", true, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECPrivateKey */
 /**
  * @summary The Trailing Root Component Types of ECPrivateKey
  * @description
@@ -113,9 +108,7 @@ export
 const _root_component_type_list_2_spec_for_ECPrivateKey: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECPrivateKey */
 /**
  * @summary The Extension Addition Component Types of ECPrivateKey
  * @description
@@ -128,13 +121,9 @@ export
 const _extension_additions_list_spec_for_ECPrivateKey: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPrivateKey */
 let _cached_decoder_for_ECPrivateKey: $.ASN1Decoder<ECPrivateKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECPrivateKey */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECPrivateKey
  * @function
@@ -173,13 +162,9 @@ function _decode_ECPrivateKey (el: _Element) {
 }; }
     return _cached_decoder_for_ECPrivateKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPrivateKey */
 let _cached_encoder_for_ECPrivateKey: $.ASN1Encoder<ECPrivateKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECPrivateKey */
 /**
  * @summary Encodes a(n) ECPrivateKey into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ function _encode_ECPrivateKey (value: ECPrivateKey, elGetter: $.ASN1Encoder<ECPr
     return _cached_encoder_for_ECPrivateKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECPrivateKey */
 
 /* eslint-enable */

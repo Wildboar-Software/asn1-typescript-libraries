@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION configurationOrCustomisationError */
+
 /**
  * @summary configurationOrCustomisationError
  * @description
@@ -30,6 +30,5 @@ import {
 export const configurationOrCustomisationError: ProbableCause = {
     localValue: 160,
 };
-/* END_OF_SYMBOL_DEFINITION configurationOrCustomisationError */
 
 /* eslint-enable */

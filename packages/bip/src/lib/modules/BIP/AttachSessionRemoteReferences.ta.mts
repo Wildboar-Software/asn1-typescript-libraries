@@ -15,7 +15,7 @@ import {
   _decode_AttachSessionRemoteReference,
   _encode_AttachSessionRemoteReference,
 } from '../BIP/AttachSessionRemoteReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttachSessionRemoteReferences */
+
 /**
  * @summary AttachSessionRemoteReferences
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AttachSessionRemoteReferences = AttachSessionRemoteReference[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AttachSessionRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttachSessionRemoteReferences */
+
 let _cached_decoder_for_AttachSessionRemoteReferences: $.ASN1Decoder<AttachSessionRemoteReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttachSessionRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttachSessionRemoteReferences */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttachSessionRemoteReferences
  * @function
@@ -48,13 +46,11 @@ export function _decode_AttachSessionRemoteReferences(el: _Element) {
   }
   return _cached_decoder_for_AttachSessionRemoteReferences(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttachSessionRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttachSessionRemoteReferences */
+
 let _cached_encoder_for_AttachSessionRemoteReferences: $.ASN1Encoder<AttachSessionRemoteReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttachSessionRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttachSessionRemoteReferences */
+
 /**
  * @summary Encodes a(n) AttachSessionRemoteReferences into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AttachSessionRemoteReferences(
   return _cached_encoder_for_AttachSessionRemoteReferences(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttachSessionRemoteReferences */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_ConnectivityPointer,
     _encode_ConnectivityPointer,
 } from '../ASN1DefinedTypesModule/ConnectivityPointer.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CTPUpstreamPointer */
+
 /**
  * @summary CTPUpstreamPointer
  * @description
@@ -34,13 +34,11 @@ import {
  * ```
  */
 export type CTPUpstreamPointer = ConnectivityPointer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CTPUpstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CTPUpstreamPointer */
+
 let _cached_decoder_for_CTPUpstreamPointer: $.ASN1Decoder<CTPUpstreamPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CTPUpstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CTPUpstreamPointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CTPUpstreamPointer
  * @function
@@ -53,13 +51,11 @@ export function _decode_CTPUpstreamPointer(el: _Element) {
     }
     return _cached_decoder_for_CTPUpstreamPointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CTPUpstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CTPUpstreamPointer */
+
 let _cached_encoder_for_CTPUpstreamPointer: $.ASN1Encoder<CTPUpstreamPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CTPUpstreamPointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CTPUpstreamPointer */
+
 /**
  * @summary Encodes a(n) CTPUpstreamPointer into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_CTPUpstreamPointer(
     return _cached_encoder_for_CTPUpstreamPointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CTPUpstreamPointer */
 
 /* eslint-enable */

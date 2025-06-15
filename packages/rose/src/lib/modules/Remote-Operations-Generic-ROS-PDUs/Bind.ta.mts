@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION Bind */
+
 /**
  * @summary Bind
  * @description
@@ -29,13 +29,11 @@ export type Bind =
   | { bind_invoke: _Element } /* CHOICE_ALT_ROOT */
   | { bind_result: _Element } /* CHOICE_ALT_ROOT */
   | { bind_error: _Element } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Bind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Bind */
+
 let _cached_decoder_for_Bind: $.ASN1Decoder<Bind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Bind */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Bind */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Bind
  * @function
@@ -61,13 +59,11 @@ export function _decode_Bind(el: _Element) {
   }
   return _cached_decoder_for_Bind(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Bind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Bind */
+
 let _cached_encoder_for_Bind: $.ASN1Encoder<Bind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Bind */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Bind */
+
 /**
  * @summary Encodes a(n) Bind into an ASN.1 Element.
  * @function
@@ -104,6 +100,5 @@ export function _encode_Bind(value: Bind, elGetter: $.ASN1Encoder<Bind>) {
   return _cached_encoder_for_Bind(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Bind */
 
 /* eslint-enable */

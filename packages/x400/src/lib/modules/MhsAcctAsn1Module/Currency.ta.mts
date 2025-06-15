@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Currency */
 /**
  * @summary Currency
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Currency = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION Currency */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Currency */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Currency */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Currency */
 export const _decode_Currency = $._decodePrintableString;
-/* END_OF_SYMBOL_DEFINITION _decode_Currency */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Currency */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Currency */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Currency */
 export const _encode_Currency = $._encodePrintableString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Currency */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeassignLinkConnectionFromLogicalLinkInformation */
+
 /**
  * @summary DeassignLinkConnectionFromLogicalLinkInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DeassignLinkConnectionFromLogicalLinkInformation = LinkConnectionList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeassignLinkConnectionFromLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation */
+
 let _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1Decoder<DeassignLinkConnectionFromLogicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeassignLinkConnectionFromLogicalLinkInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeassignLinkConnectionFromLogicalLinkInformation
  * @function
@@ -50,13 +48,11 @@ export function _decode_DeassignLinkConnectionFromLogicalLinkInformation(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeassignLinkConnectionFromLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation */
+
 let _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1Encoder<DeassignLinkConnectionFromLogicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeassignLinkConnectionFromLogicalLinkInformation */
+
 /**
  * @summary Encodes a(n) DeassignLinkConnectionFromLogicalLinkInformation into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_DeassignLinkConnectionFromLogicalLinkInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeassignLinkConnectionFromLogicalLinkInformation */
 
 /* eslint-enable */

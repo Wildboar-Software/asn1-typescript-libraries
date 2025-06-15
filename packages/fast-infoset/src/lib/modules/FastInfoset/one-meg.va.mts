@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION one_meg */
 /**
  * @summary one_meg
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const one_meg: INTEGER = 1048576;
-/* END_OF_SYMBOL_DEFINITION one_meg */
 
 /* eslint-enable */

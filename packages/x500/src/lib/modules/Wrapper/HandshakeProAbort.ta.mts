@@ -11,7 +11,6 @@ import {
     _decode_TbsHandshakeProAbort,
     _encode_TbsHandshakeProAbort,
 } from "../Wrapper/TbsHandshakeProAbort.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HandshakeProAbort */
 /**
  * @summary HandshakeProAbort
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type HandshakeProAbort = Signed<TbsHandshakeProAbort>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION HandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HandshakeProAbort */
 let _cached_decoder_for_HandshakeProAbort: $.ASN1Decoder<HandshakeProAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HandshakeProAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) HandshakeProAbort
  * @function
@@ -44,13 +39,9 @@ export function _decode_HandshakeProAbort(el: _Element) {
     }
     return _cached_decoder_for_HandshakeProAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HandshakeProAbort */
 let _cached_encoder_for_HandshakeProAbort: $.ASN1Encoder<HandshakeProAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HandshakeProAbort */
 /**
  * @summary Encodes a(n) HandshakeProAbort into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_HandshakeProAbort(
     return _cached_encoder_for_HandshakeProAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HandshakeProAbort */
 
 /* eslint-enable */

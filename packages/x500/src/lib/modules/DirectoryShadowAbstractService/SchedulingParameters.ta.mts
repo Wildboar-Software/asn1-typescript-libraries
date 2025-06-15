@@ -11,7 +11,6 @@ import {
     _decode_PeriodicStrategy,
     _encode_PeriodicStrategy,
 } from "../DirectoryShadowAbstractService/PeriodicStrategy.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SchedulingParameters */
 /**
  * @summary SchedulingParameters
  * @description
@@ -82,9 +81,7 @@ export class SchedulingParameters {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SchedulingParameters */
 /**
  * @summary The Leading Root Component Types of SchedulingParameters
  * @description
@@ -109,9 +106,7 @@ export const _root_component_type_list_1_spec_for_SchedulingParameters: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SchedulingParameters */
 /**
  * @summary The Trailing Root Component Types of SchedulingParameters
  * @description
@@ -121,9 +116,7 @@ export const _root_component_type_list_1_spec_for_SchedulingParameters: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SchedulingParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SchedulingParameters */
 /**
  * @summary The Extension Addition Component Types of SchedulingParameters
  * @description
@@ -133,13 +126,9 @@ export const _root_component_type_list_2_spec_for_SchedulingParameters: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_SchedulingParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchedulingParameters */
 let _cached_decoder_for_SchedulingParameters: $.ASN1Decoder<SchedulingParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchedulingParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) SchedulingParameters
  * @function
@@ -186,13 +175,9 @@ export function _decode_SchedulingParameters(el: _Element) {
     }
     return _cached_decoder_for_SchedulingParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchedulingParameters */
 let _cached_encoder_for_SchedulingParameters: $.ASN1Encoder<SchedulingParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchedulingParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchedulingParameters */
 /**
  * @summary Encodes a(n) SchedulingParameters into an ASN.1 Element.
  * @function
@@ -237,6 +222,5 @@ export function _encode_SchedulingParameters(
     return _cached_encoder_for_SchedulingParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchedulingParameters */
 
 /* eslint-enable */

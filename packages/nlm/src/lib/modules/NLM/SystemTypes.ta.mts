@@ -16,7 +16,7 @@ import {
     _decode_SystemType,
     _encode_SystemType,
 } from '../NLM/SystemType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SystemTypes */
+
 /**
  * @summary SystemTypes
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type SystemTypes = SystemType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SystemTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemTypes */
+
 let _cached_decoder_for_SystemTypes: $.ASN1Decoder<SystemTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SystemTypes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SystemTypes
  * @function
@@ -49,13 +47,11 @@ export function _decode_SystemTypes(el: _Element) {
     }
     return _cached_decoder_for_SystemTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SystemTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemTypes */
+
 let _cached_encoder_for_SystemTypes: $.ASN1Encoder<SystemTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SystemTypes */
+
 /**
  * @summary Encodes a(n) SystemTypes into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_SystemTypes(
     return _cached_encoder_for_SystemTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SystemTypes */
 
 /* eslint-enable */

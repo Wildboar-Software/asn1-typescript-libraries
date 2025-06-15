@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mgf1 */
 /**
  * @summary id_mgf1
  * @description
@@ -16,6 +15,5 @@ import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
  * @constant
  */
 export const id_mgf1: ID = new _OID([8], pkcs_1);
-/* END_OF_SYMBOL_DEFINITION id_mgf1 */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_Vertex,
     _encode_Vertex,
 } from "../HierarchicalOperationalBindings/Vertex.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DITcontext */
 /**
  * @summary DITcontext
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type DITcontext = Vertex[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DITcontext */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DITcontext */
 let _cached_decoder_for_DITcontext: $.ASN1Decoder<DITcontext> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DITcontext */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DITcontext */
 /**
  * @summary Decodes an ASN.1 element into a(n) DITcontext
  * @function
@@ -39,13 +34,9 @@ export function _decode_DITcontext(el: _Element) {
     }
     return _cached_decoder_for_DITcontext(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DITcontext */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DITcontext */
 let _cached_encoder_for_DITcontext: $.ASN1Encoder<DITcontext> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DITcontext */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DITcontext */
 /**
  * @summary Encodes a(n) DITcontext into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_DITcontext(
     return _cached_encoder_for_DITcontext(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DITcontext */
 
 /* eslint-enable */

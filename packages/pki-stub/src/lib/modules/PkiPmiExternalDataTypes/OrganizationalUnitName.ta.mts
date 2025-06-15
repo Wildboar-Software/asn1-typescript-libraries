@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, PrintableString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OrganizationalUnitName */
 /**
  * @summary OrganizationalUnitName
  * @description
@@ -15,9 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type OrganizationalUnitName = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION OrganizationalUnitName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OrganizationalUnitName */
 /**
  * @summary Decodes an ASN.1 element into a(n) OrganizationalUnitName
  * @function
@@ -27,9 +24,7 @@ export type OrganizationalUnitName = PrintableString; // PrintableString
 export function _decode_OrganizationalUnitName(el: _Element) {
     return $._decodePrintableString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OrganizationalUnitName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OrganizationalUnitName */
 /**
  * @summary Encodes a(n) OrganizationalUnitName into an ASN.1 Element.
  * @function
@@ -44,6 +39,5 @@ export function _encode_OrganizationalUnitName(
     return $._encodePrintableString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OrganizationalUnitName */
 
 /* eslint-enable */

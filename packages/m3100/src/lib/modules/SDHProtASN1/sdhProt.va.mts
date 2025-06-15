@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION sdhProt */
+
 /**
  * @summary sdhProt
  * @description
@@ -34,6 +34,5 @@ export const sdhProt: OBJECT_IDENTIFIER = new _OID([
     /* prot */ 3,
     /* informationModel */ 0,
 ]);
-/* END_OF_SYMBOL_DEFINITION sdhProt */
 
 /* eslint-enable */

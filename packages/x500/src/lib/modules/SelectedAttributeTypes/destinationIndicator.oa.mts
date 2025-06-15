@@ -12,7 +12,6 @@ import {
 } from "../SelectedAttributeTypes/DestinationIndicator.ta.mjs";
 import { id_at_destinationIndicator } from "../SelectedAttributeTypes/id-at-destinationIndicator.va.mjs";
 import { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION destinationIndicator */
 /**
  * @summary destinationIndicator
  * @description
@@ -54,6 +53,5 @@ export const destinationIndicator: ATTRIBUTE<DestinationIndicator> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION destinationIndicator */
 
 /* eslint-enable */

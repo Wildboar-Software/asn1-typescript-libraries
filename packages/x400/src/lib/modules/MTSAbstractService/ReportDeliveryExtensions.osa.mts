@@ -21,7 +21,6 @@ import { trace_information } from '../MTAAbstractService/trace-information.oa.mj
 import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.mjs';
 import { reporting_MTA_name } from '../MTSAbstractService/reporting-MTA-name.oa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportDeliveryExtensions */
 /**
  * @summary ReportDeliveryExtensions
  * @description
@@ -55,6 +54,5 @@ export const ReportDeliveryExtensions: EXTENSION[] = [
     reporting_MTA_name,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION ReportDeliveryExtensions */
 
 /* eslint-enable */

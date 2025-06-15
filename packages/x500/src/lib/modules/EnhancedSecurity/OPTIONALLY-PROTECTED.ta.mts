@@ -6,7 +6,6 @@ import {
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
 } from "../AuthenticationFramework/SIGNED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OPTIONALLY_PROTECTED */
 /**
  * @summary OPTIONALLY_PROTECTED
  * @description
@@ -22,9 +21,7 @@ import {
 export type OPTIONALLY_PROTECTED<Type> =
     | { unsigned: Type } /* CHOICE_ALT_ROOT */
     | { signed: SIGNED<Type> } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OPTIONALLY_PROTECTED */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_OPTIONALLY_PROTECTED */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) OPTIONALLY_PROTECTED
  * @function
@@ -39,9 +36,7 @@ export function _get_decoder_for_OPTIONALLY_PROTECTED<Type>(
         "UNIVERSAL 16": ["signed", _get_decoder_for_SIGNED<Type>(_decode_Type)],
     });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_OPTIONALLY_PROTECTED */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_OPTIONALLY_PROTECTED */
 /**
  * @summary Returns a function that will encode a(n) OPTIONALLY_PROTECTED into an ASN.1 Element.
  * @function
@@ -58,6 +53,5 @@ export function _get_encoder_for_OPTIONALLY_PROTECTED<Type>(
         $.DER
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_OPTIONALLY_PROTECTED */
 
 /* eslint-enable */

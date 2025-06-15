@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION genericULS */
+
 /**
  * @summary genericULS
  * @description
@@ -29,6 +29,5 @@ export const genericULS: OBJECT_IDENTIFIER = new _OID(
   [/* genericULS */ 20],
   joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION genericULS */
 
 /* eslint-enable */

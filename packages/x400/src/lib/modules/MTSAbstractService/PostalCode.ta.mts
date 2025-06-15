@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PostalCode */
 /**
  * @summary PostalCode
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type PostalCode =
     | { numeric_code: NumericString } /* CHOICE_ALT_ROOT */
     | { printable_code: PrintableString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PostalCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PostalCode */
 let _cached_decoder_for_PostalCode: $.ASN1Decoder<PostalCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PostalCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PostalCode */
 /**
  * @summary Decodes an ASN.1 element into a(n) PostalCode
  * @function
@@ -54,13 +49,9 @@ export function _decode_PostalCode(el: _Element) {
     }
     return _cached_decoder_for_PostalCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PostalCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PostalCode */
 let _cached_encoder_for_PostalCode: $.ASN1Encoder<PostalCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PostalCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PostalCode */
 /**
  * @summary Encodes a(n) PostalCode into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_PostalCode(
     return _cached_encoder_for_PostalCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PostalCode */
 
 /* eslint-enable */

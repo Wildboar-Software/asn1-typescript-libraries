@@ -22,7 +22,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PBKDF2_params */
+
 /**
  * @summary PBKDF2_params
  * @description
@@ -101,9 +101,8 @@ export class PBKDF2_params {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PBKDF2_params */
+
 /**
  * @summary The Leading Root Component Types of PBKDF2_params
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_PBKDF2_params: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PBKDF2_params */
+
 /**
  * @summary The Trailing Root Component Types of PBKDF2_params
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_PBKDF2_params: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PBKDF2_params: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PBKDF2_params */
+
 /**
  * @summary The Extension Addition Component Types of PBKDF2_params
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_PBKDF2_params: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_PBKDF2_params: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PBKDF2_params */
+
 let _cached_decoder_for_PBKDF2_params: $.ASN1Decoder<PBKDF2_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PBKDF2_params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PBKDF2_params
  * @function
@@ -222,13 +217,11 @@ export function _decode_PBKDF2_params(el: _Element) {
     }
     return _cached_decoder_for_PBKDF2_params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PBKDF2_params */
+
 let _cached_encoder_for_PBKDF2_params: $.ASN1Encoder<PBKDF2_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PBKDF2_params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PBKDF2_params */
+
 /**
  * @summary Encodes a(n) PBKDF2_params into an ASN.1 Element.
  * @function
@@ -275,6 +268,5 @@ export function _encode_PBKDF2_params(
     return _cached_encoder_for_PBKDF2_params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PBKDF2_params */
 
 /* eslint-enable */

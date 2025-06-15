@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ReportingEvent */
 /**
  * @summary ReportingEvent
  * @description
@@ -33,9 +32,7 @@ export enum _enum_for_ReportingEvent {
     bulk = 5,
     interruption = 6,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ReportingEvent */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent */
 /**
  * @summary ReportingEvent
  * @description
@@ -49,9 +46,7 @@ export enum _enum_for_ReportingEvent {
  * ```@enum {number}
  */
 export type ReportingEvent = _enum_for_ReportingEvent;
-/* END_OF_SYMBOL_DEFINITION ReportingEvent */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent */
 /**
  * @summary ReportingEvent
  * @description
@@ -65,9 +60,7 @@ export type ReportingEvent = _enum_for_ReportingEvent;
  * ```@enum {number}
  */
 export const ReportingEvent = _enum_for_ReportingEvent;
-/* END_OF_SYMBOL_DEFINITION ReportingEvent */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_registration */
 /**
  * @summary ReportingEvent_registration
  * @constant
@@ -75,9 +68,7 @@ export const ReportingEvent = _enum_for_ReportingEvent;
  */
 export const ReportingEvent_registration: ReportingEvent =
     ReportingEvent.registration; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_registration */
 
-/* START_OF_SYMBOL_DEFINITION registration */
 /**
  * @summary registration
  * @constant
@@ -85,9 +76,7 @@ export const ReportingEvent_registration: ReportingEvent =
  */
 export const registration: ReportingEvent =
     ReportingEvent.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION registration */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_request */
 /**
  * @summary ReportingEvent_request
  * @constant
@@ -95,9 +84,7 @@ export const registration: ReportingEvent =
  */
 export const ReportingEvent_request: ReportingEvent =
     ReportingEvent.request; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_request */
 
-/* START_OF_SYMBOL_DEFINITION request */
 /**
  * @summary request
  * @constant
@@ -105,9 +92,7 @@ export const ReportingEvent_request: ReportingEvent =
  */
 export const request: ReportingEvent =
     ReportingEvent.request; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION request */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_accept */
 /**
  * @summary ReportingEvent_accept
  * @constant
@@ -115,9 +100,7 @@ export const request: ReportingEvent =
  */
 export const ReportingEvent_accept: ReportingEvent =
     ReportingEvent.accept; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_accept */
 
-/* START_OF_SYMBOL_DEFINITION accept */
 /**
  * @summary accept
  * @constant
@@ -125,9 +108,7 @@ export const ReportingEvent_accept: ReportingEvent =
  */
 export const accept: ReportingEvent =
     ReportingEvent.accept; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION accept */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_complete */
 /**
  * @summary ReportingEvent_complete
  * @constant
@@ -135,9 +116,7 @@ export const accept: ReportingEvent =
  */
 export const ReportingEvent_complete: ReportingEvent =
     ReportingEvent.complete; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_complete */
 
-/* START_OF_SYMBOL_DEFINITION complete */
 /**
  * @summary complete
  * @constant
@@ -145,9 +124,7 @@ export const ReportingEvent_complete: ReportingEvent =
  */
 export const complete: ReportingEvent =
     ReportingEvent.complete; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION complete */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_corresponding */
 /**
  * @summary ReportingEvent_corresponding
  * @constant
@@ -155,9 +132,7 @@ export const complete: ReportingEvent =
  */
 export const ReportingEvent_corresponding: ReportingEvent =
     ReportingEvent.corresponding; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_corresponding */
 
-/* START_OF_SYMBOL_DEFINITION corresponding */
 /**
  * @summary corresponding
  * @constant
@@ -165,9 +140,7 @@ export const ReportingEvent_corresponding: ReportingEvent =
  */
 export const corresponding: ReportingEvent =
     ReportingEvent.corresponding; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION corresponding */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_bulk */
 /**
  * @summary ReportingEvent_bulk
  * @constant
@@ -175,9 +148,7 @@ export const corresponding: ReportingEvent =
  */
 export const ReportingEvent_bulk: ReportingEvent =
     ReportingEvent.bulk; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_bulk */
 
-/* START_OF_SYMBOL_DEFINITION bulk */
 /**
  * @summary bulk
  * @constant
@@ -185,9 +156,7 @@ export const ReportingEvent_bulk: ReportingEvent =
  */
 export const bulk: ReportingEvent =
     ReportingEvent.bulk; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bulk */
 
-/* START_OF_SYMBOL_DEFINITION ReportingEvent_interruption */
 /**
  * @summary ReportingEvent_interruption
  * @constant
@@ -195,9 +164,7 @@ export const bulk: ReportingEvent =
  */
 export const ReportingEvent_interruption: ReportingEvent =
     ReportingEvent.interruption; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportingEvent_interruption */
 
-/* START_OF_SYMBOL_DEFINITION interruption */
 /**
  * @summary interruption
  * @constant
@@ -205,21 +172,12 @@ export const ReportingEvent_interruption: ReportingEvent =
  */
 export const interruption: ReportingEvent =
     ReportingEvent.interruption; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION interruption */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingEvent */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingEvent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportingEvent */
 export const _decode_ReportingEvent = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ReportingEvent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingEvent */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingEvent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportingEvent */
 export const _encode_ReportingEvent = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportingEvent */
 
 /* eslint-enable */

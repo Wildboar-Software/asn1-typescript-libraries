@@ -5,7 +5,6 @@ import {
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
 } from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_domain_defined_attributes */
 /**
  * @summary universal_domain_defined_attributes
  * @description
@@ -34,6 +33,5 @@ export const universal_domain_defined_attributes: EXTENSION_ATTRIBUTE<UniversalD
     "&id": 28 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_domain_defined_attributes */
 
 /* eslint-enable */

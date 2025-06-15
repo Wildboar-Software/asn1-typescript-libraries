@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION User_Identity */
+
 /**
  * @summary User_Identity
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type User_Identity = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity */
+
 let _cached_decoder_for_User_Identity: $.ASN1Decoder<User_Identity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_Identity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) User_Identity
  * @function
@@ -45,13 +43,11 @@ export function _decode_User_Identity(el: _Element) {
   }
   return _cached_decoder_for_User_Identity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity */
+
 let _cached_encoder_for_User_Identity: $.ASN1Encoder<User_Identity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_Identity */
+
 /**
  * @summary Encodes a(n) User_Identity into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_User_Identity(
   return _cached_encoder_for_User_Identity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_Identity */
 
 /* eslint-enable */

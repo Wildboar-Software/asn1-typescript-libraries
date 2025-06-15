@@ -11,7 +11,7 @@ import {
     DERElement,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION defaultPBKDF2 */
+
 /**
  * @summary defaultPBKDF2
  * @description
@@ -34,6 +34,5 @@ export const defaultPBKDF2: PBKDF2_PRFsAlgorithmIdentifier = new AlgorithmIdenti
     ),
 );
 
-/* END_OF_SYMBOL_DEFINITION defaultPBKDF2 */
 
 /* eslint-enable */

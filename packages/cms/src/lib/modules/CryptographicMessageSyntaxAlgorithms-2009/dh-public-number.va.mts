@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dh_public_number */
+
 /**
  * @summary dh_public_number
  * @description
@@ -15,6 +15,5 @@ import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.mjs";
  * @constant
  */
 export const dh_public_number: OBJECT_IDENTIFIER = dhpublicnumber;
-/* END_OF_SYMBOL_DEFINITION dh_public_number */
 
 /* eslint-enable */

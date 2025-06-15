@@ -15,7 +15,7 @@ import {
   _decode_XMLCompatibleString,
   _encode_XMLCompatibleString,
 } from '../XSD/XMLCompatibleString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AnySimpleType */
+
 /**
  * @summary AnySimpleType
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AnySimpleType = XMLCompatibleString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AnySimpleType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AnySimpleType */
+
 let _cached_decoder_for_AnySimpleType: $.ASN1Decoder<AnySimpleType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AnySimpleType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AnySimpleType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AnySimpleType
  * @function
@@ -46,13 +44,11 @@ export function _decode_AnySimpleType(el: _Element) {
   }
   return _cached_decoder_for_AnySimpleType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AnySimpleType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AnySimpleType */
+
 let _cached_encoder_for_AnySimpleType: $.ASN1Encoder<AnySimpleType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AnySimpleType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AnySimpleType */
+
 /**
  * @summary Encodes a(n) AnySimpleType into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_AnySimpleType(
   return _cached_encoder_for_AnySimpleType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AnySimpleType */
 
 /* eslint-enable */

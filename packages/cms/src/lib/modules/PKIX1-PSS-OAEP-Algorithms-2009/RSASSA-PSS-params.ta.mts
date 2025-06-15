@@ -18,7 +18,7 @@ import {
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.mjs";
 import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.mjs";
 import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.mjs";
-/* START_OF_SYMBOL_DEFINITION RSASSA_PSS_params */
+
 /**
  * @summary RSASSA_PSS_params
  * @description
@@ -124,9 +124,8 @@ export class RSASSA_PSS_params {
         return 1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RSASSA_PSS_params */
+
 /**
  * @summary The Leading Root Component Types of RSASSA_PSS_params
  * @description
@@ -165,9 +164,8 @@ export const _root_component_type_list_1_spec_for_RSASSA_PSS_params: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RSASSA_PSS_params */
+
 /**
  * @summary The Trailing Root Component Types of RSASSA_PSS_params
  * @description
@@ -177,9 +175,8 @@ export const _root_component_type_list_1_spec_for_RSASSA_PSS_params: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RSASSA_PSS_params: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RSASSA_PSS_params */
+
 /**
  * @summary The Extension Addition Component Types of RSASSA_PSS_params
  * @description
@@ -189,13 +186,11 @@ export const _root_component_type_list_2_spec_for_RSASSA_PSS_params: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_RSASSA_PSS_params: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RSASSA_PSS_params */
+
 let _cached_decoder_for_RSASSA_PSS_params: $.ASN1Decoder<RSASSA_PSS_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RSASSA_PSS_params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RSASSA_PSS_params
  * @function
@@ -259,13 +254,11 @@ export function _decode_RSASSA_PSS_params(el: _Element) {
     }
     return _cached_decoder_for_RSASSA_PSS_params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RSASSA_PSS_params */
+
 let _cached_encoder_for_RSASSA_PSS_params: $.ASN1Encoder<RSASSA_PSS_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RSASSA_PSS_params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RSASSA_PSS_params */
+
 /**
  * @summary Encodes a(n) RSASSA_PSS_params into an ASN.1 Element.
  * @function
@@ -340,6 +333,5 @@ export function _encode_RSASSA_PSS_params(
     return _cached_encoder_for_RSASSA_PSS_params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RSASSA_PSS_params */
 
 /* eslint-enable */

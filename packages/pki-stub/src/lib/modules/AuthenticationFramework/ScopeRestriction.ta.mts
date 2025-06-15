@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ScopeRestriction */
 /**
  * @summary ScopeRestriction
  * @description
@@ -67,9 +66,7 @@ export class ScopeRestriction {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ScopeRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScopeRestriction */
 /**
  * @summary The Leading Root Component Types of ScopeRestriction
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_ScopeRestriction: $.ComponentS
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScopeRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScopeRestriction */
 /**
  * @summary The Trailing Root Component Types of ScopeRestriction
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_ScopeRestriction: $.ComponentS
  */
 export const _root_component_type_list_2_spec_for_ScopeRestriction: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScopeRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScopeRestriction */
 /**
  * @summary The Extension Addition Component Types of ScopeRestriction
  * @description
@@ -121,9 +114,7 @@ export const _root_component_type_list_2_spec_for_ScopeRestriction: $.ComponentS
  */
 export const _extension_additions_list_spec_for_ScopeRestriction: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScopeRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScopeRestriction */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScopeRestriction
  * @function
@@ -147,9 +138,7 @@ export function _decode_ScopeRestriction(el: _Element) {
     restriction = $._decodeAny(sequence[1]);
     return new ScopeRestriction(id, restriction, sequence.slice(2));
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScopeRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScopeRestriction */
 /**
  * @summary Encodes a(n) ScopeRestriction into an ASN.1 Element.
  * @function
@@ -167,6 +156,5 @@ export function _encode_ScopeRestriction(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScopeRestriction */
 
 /* eslint-enable */

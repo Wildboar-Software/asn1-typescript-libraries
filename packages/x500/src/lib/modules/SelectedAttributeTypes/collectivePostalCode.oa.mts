@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectivePostalCode } from "../SelectedAttributeTypes/id-at-collectivePostalCode.va.mjs";
 import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectivePostalCode */
 /**
  * @summary collectivePostalCode
  * @description
@@ -46,6 +45,5 @@ export const collectivePostalCode: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectivePostalCode */
 
 /* eslint-enable */

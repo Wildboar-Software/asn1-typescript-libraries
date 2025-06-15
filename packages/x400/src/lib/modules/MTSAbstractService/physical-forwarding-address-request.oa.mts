@@ -27,7 +27,6 @@ import {
     _encode_PhysicalForwardingAddressRequest,
 } from '../MTSAbstractService/PhysicalForwardingAddressRequest.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION physical_forwarding_address_request */
 /**
  * @summary physical_forwarding_address_request
  * @description
@@ -66,6 +65,5 @@ export const physical_forwarding_address_request: EXTENSION<PhysicalForwardingAd
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION physical_forwarding_address_request */
 
 /* eslint-enable */

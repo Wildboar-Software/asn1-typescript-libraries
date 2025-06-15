@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_modalities } from '../Telebiometrics/id-modalities.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_chemo */
+
 /**
  * @summary id_chemo
  * @description
@@ -28,6 +28,5 @@ export const id_chemo: OBJECT_IDENTIFIER = new _OID(
     [/* chemo */ 4],
     id_modalities
 );
-/* END_OF_SYMBOL_DEFINITION id_chemo */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import {
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
 } from '../MTSAbstractService/TeletexNonBasicParameters.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NonBasicParameters */
 /**
  * @summary NonBasicParameters
  * @description
@@ -96,9 +95,7 @@ export class NonBasicParameters {
         ));
     }
 }
-/* END_OF_SYMBOL_DEFINITION NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonBasicParameters */
 /**
  * @summary The Leading Root Component Types of NonBasicParameters
  * @description
@@ -123,9 +120,7 @@ export const _root_component_type_list_1_spec_for_NonBasicParameters: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonBasicParameters */
 /**
  * @summary The Trailing Root Component Types of NonBasicParameters
  * @description
@@ -135,9 +130,7 @@ export const _root_component_type_list_1_spec_for_NonBasicParameters: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NonBasicParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonBasicParameters */
 /**
  * @summary The Extension Addition Component Types of NonBasicParameters
  * @description
@@ -147,13 +140,9 @@ export const _root_component_type_list_2_spec_for_NonBasicParameters: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_NonBasicParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonBasicParameters */
 let _cached_decoder_for_NonBasicParameters: $.ASN1Decoder<NonBasicParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonBasicParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) NonBasicParameters
  * @function
@@ -201,13 +190,9 @@ export function _decode_NonBasicParameters(el: _Element) {
     }
     return _cached_decoder_for_NonBasicParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonBasicParameters */
 let _cached_encoder_for_NonBasicParameters: $.ASN1Encoder<NonBasicParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonBasicParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonBasicParameters */
 /**
  * @summary Encodes a(n) NonBasicParameters into an ASN.1 Element.
  * @function
@@ -258,6 +243,5 @@ export function _encode_NonBasicParameters(
     return _cached_encoder_for_NonBasicParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonBasicParameters */
 
 /* eslint-enable */

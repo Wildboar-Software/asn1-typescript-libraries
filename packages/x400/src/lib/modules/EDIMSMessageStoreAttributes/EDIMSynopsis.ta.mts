@@ -15,7 +15,6 @@ import {
     _decode_BodyPartSynopsis,
     _encode_BodyPartSynopsis,
 } from '../EDIMSMessageStoreAttributes/BodyPartSynopsis.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIMSynopsis */
 /**
  * @summary EDIMSynopsis
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EDIMSynopsis = BodyPartSynopsis[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION EDIMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMSynopsis */
 let _cached_decoder_for_EDIMSynopsis: $.ASN1Decoder<EDIMSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIMSynopsis */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIMSynopsis
  * @function
@@ -48,13 +43,9 @@ export function _decode_EDIMSynopsis(el: _Element) {
     }
     return _cached_decoder_for_EDIMSynopsis(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMSynopsis */
 let _cached_encoder_for_EDIMSynopsis: $.ASN1Encoder<EDIMSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIMSynopsis */
 /**
  * @summary Encodes a(n) EDIMSynopsis into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_EDIMSynopsis(
     return _cached_encoder_for_EDIMSynopsis(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIMSynopsis */
 
 /* eslint-enable */

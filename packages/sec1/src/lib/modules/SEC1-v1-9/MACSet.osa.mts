@@ -15,7 +15,6 @@ import { MACSet_Union1_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union1-
 import { MACSet_Union2_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union2-Intersection0-Element.oa.mjs";
 import { MACSet_Union3_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union3-Intersection0-Element.oa.mjs";
 import { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION MACSet */
 /**
  * @summary MACSet
  * @description
@@ -39,6 +38,5 @@ import { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-
  */
 export
 const MACSet: (ALGORITHM)[] = [ MACSet_Union0_Intersection0_Element, MACSet_Union1_Intersection0_Element, MACSet_Union2_Intersection0_Element, MACSet_Union3_Intersection0_Element, MACSet_Union4_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION MACSet */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ProceduralStatus_Item, _decode_ProceduralStatus_Item, _encode_ProceduralStatus_Item } from "../Attribute-ASN1Module/ProceduralStatus-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ProceduralStatus */
 /**
  * @summary ProceduralStatus
  * @description
@@ -27,13 +26,9 @@ import { ProceduralStatus_Item, _decode_ProceduralStatus_Item, _encode_Procedura
  */
 export
 type ProceduralStatus = ProceduralStatus_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ProceduralStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProceduralStatus */
 let _cached_decoder_for_ProceduralStatus: $.ASN1Decoder<ProceduralStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProceduralStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProceduralStatus */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProceduralStatus
  * @function
@@ -45,13 +40,9 @@ function _decode_ProceduralStatus (el: _Element) {
     if (!_cached_decoder_for_ProceduralStatus) { _cached_decoder_for_ProceduralStatus = $._decodeSetOf<ProceduralStatus_Item>(() => _decode_ProceduralStatus_Item); }
     return _cached_decoder_for_ProceduralStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProceduralStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProceduralStatus */
 let _cached_encoder_for_ProceduralStatus: $.ASN1Encoder<ProceduralStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProceduralStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProceduralStatus */
 /**
  * @summary Encodes a(n) ProceduralStatus into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_ProceduralStatus (value: ProceduralStatus, elGetter: $.ASN1Enco
     return _cached_encoder_for_ProceduralStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProceduralStatus */
 
 /* eslint-enable */

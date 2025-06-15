@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION NotificationIdentifier */
 /**
  * @summary NotificationIdentifier
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type NotificationIdentifier = INTEGER;
-/* END_OF_SYMBOL_DEFINITION NotificationIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotificationIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotificationIdentifier */
 export const _decode_NotificationIdentifier = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_NotificationIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationIdentifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotificationIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotificationIdentifier */
 export const _encode_NotificationIdentifier = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotificationIdentifier */
 
 /* eslint-enable */

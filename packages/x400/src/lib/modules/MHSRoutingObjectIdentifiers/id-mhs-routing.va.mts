@@ -15,7 +15,6 @@ import {
     _decode_ID,
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION id_mhs_routing */
 /**
  * @summary id_mhs_routing
  * @description
@@ -32,6 +31,5 @@ export const id_mhs_routing: ID = new _OID(
     [/* mhs */ 6, /* routing */ 10],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_mhs_routing */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_IPN,
     _encode_IPN,
 } from '../IPMSInformationObjects/IPN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InformationObject */
 /**
  * @summary InformationObject
  * @description
@@ -36,13 +35,9 @@ import {
 export type InformationObject =
     | { ipm: IPM } /* CHOICE_ALT_ROOT */
     | { ipn: IPN } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION InformationObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationObject */
 let _cached_decoder_for_InformationObject: $.ASN1Decoder<InformationObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) InformationObject
  * @function
@@ -66,13 +61,9 @@ export function _decode_InformationObject(el: _Element) {
     }
     return _cached_decoder_for_InformationObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InformationObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationObject */
 let _cached_encoder_for_InformationObject: $.ASN1Encoder<InformationObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationObject */
 /**
  * @summary Encodes a(n) InformationObject into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_InformationObject(
     return _cached_encoder_for_InformationObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationObject */
 
 /* eslint-enable */

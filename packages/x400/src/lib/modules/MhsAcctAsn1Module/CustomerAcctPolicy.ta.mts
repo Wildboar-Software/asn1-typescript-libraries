@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CustomerAcctPolicy */
 /**
  * @summary CustomerAcctPolicy
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type CustomerAcctPolicy =
     | { globalForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { localForm: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CustomerAcctPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerAcctPolicy */
 let _cached_decoder_for_CustomerAcctPolicy: $.ASN1Decoder<CustomerAcctPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CustomerAcctPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CustomerAcctPolicy */
 /**
  * @summary Decodes an ASN.1 element into a(n) CustomerAcctPolicy
  * @function
@@ -54,13 +49,9 @@ export function _decode_CustomerAcctPolicy(el: _Element) {
     }
     return _cached_decoder_for_CustomerAcctPolicy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CustomerAcctPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerAcctPolicy */
 let _cached_encoder_for_CustomerAcctPolicy: $.ASN1Encoder<CustomerAcctPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CustomerAcctPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CustomerAcctPolicy */
 /**
  * @summary Encodes a(n) CustomerAcctPolicy into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_CustomerAcctPolicy(
     return _cached_encoder_for_CustomerAcctPolicy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CustomerAcctPolicy */
 
 /* eslint-enable */

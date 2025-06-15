@@ -5,7 +5,6 @@ import {
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
 } from "../MTSAbstractService/UniversalPosteRestanteAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_poste_restante_address */
 /**
  * @summary universal_poste_restante_address
  * @description
@@ -34,6 +33,5 @@ export const universal_poste_restante_address: EXTENSION_ATTRIBUTE<UniversalPost
     "&id": 38 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_poste_restante_address */
 
 /* eslint-enable */

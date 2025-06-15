@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION acceptableCertPolicies */
 /**
  * @summary acceptableCertPolicies
  * @description
@@ -34,6 +33,5 @@ export const acceptableCertPolicies: EXTENSION<AcceptableCertPoliciesSyntax> = {
     "&id": id_ce_acceptableCertPolicies /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION acceptableCertPolicies */
 
 /* eslint-enable */

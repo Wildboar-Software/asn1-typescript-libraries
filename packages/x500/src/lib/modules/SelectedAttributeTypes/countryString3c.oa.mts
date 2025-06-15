@@ -6,7 +6,6 @@ import {
     _encode_CountryCode3c,
 } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
 import { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.mjs";
-/* START_OF_SYMBOL_DEFINITION countryString3c */
 /**
  * @summary countryString3c
  * @description
@@ -36,6 +35,5 @@ export const countryString3c: SYNTAX_NAME<CountryCode3c> = {
     "&id": id_asx_countryString3c /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION countryString3c */
 
 /* eslint-enable */

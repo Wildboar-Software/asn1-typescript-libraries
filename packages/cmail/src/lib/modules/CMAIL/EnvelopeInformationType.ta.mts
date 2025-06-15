@@ -25,7 +25,7 @@ import {
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EnvelopeInformationType */
+
 /**
  * @summary EnvelopeInformationType
  * @description
@@ -87,9 +87,8 @@ export class EnvelopeInformationType {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnvelopeInformationType */
+
 /**
  * @summary The Leading Root Component Types of EnvelopeInformationType
  * @description
@@ -121,9 +120,8 @@ export const _root_component_type_list_1_spec_for_EnvelopeInformationType: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnvelopeInformationType */
+
 /**
  * @summary The Trailing Root Component Types of EnvelopeInformationType
  * @description
@@ -133,9 +131,8 @@ export const _root_component_type_list_1_spec_for_EnvelopeInformationType: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EnvelopeInformationType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnvelopeInformationType */
+
 /**
  * @summary The Extension Addition Component Types of EnvelopeInformationType
  * @description
@@ -145,13 +142,11 @@ export const _root_component_type_list_2_spec_for_EnvelopeInformationType: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_EnvelopeInformationType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnvelopeInformationType */
+
 let _cached_decoder_for_EnvelopeInformationType: $.ASN1Decoder<EnvelopeInformationType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EnvelopeInformationType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EnvelopeInformationType
  * @function
@@ -193,13 +188,11 @@ export function _decode_EnvelopeInformationType(el: _Element) {
   }
   return _cached_decoder_for_EnvelopeInformationType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnvelopeInformationType */
+
 let _cached_encoder_for_EnvelopeInformationType: $.ASN1Encoder<EnvelopeInformationType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnvelopeInformationType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EnvelopeInformationType */
+
 /**
  * @summary Encodes a(n) EnvelopeInformationType into an ASN.1 Element.
  * @function
@@ -235,6 +228,5 @@ export function _encode_EnvelopeInformationType(
   return _cached_encoder_for_EnvelopeInformationType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EnvelopeInformationType */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AssignLinkConnectionOnLogicalLinkInformation */
+
 /**
  * @summary AssignLinkConnectionOnLogicalLinkInformation
  * @description
@@ -75,9 +75,8 @@ export class AssignLinkConnectionOnLogicalLinkInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AssignLinkConnectionOnLogicalLinkInformation */
+
 /**
  * @summary The Leading Root Component Types of AssignLinkConnectionOnLogicalLinkInformation
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_AssignLinkConnectionOnLogicalL
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AssignLinkConnectionOnLogicalLinkInformation */
+
 /**
  * @summary The Trailing Root Component Types of AssignLinkConnectionOnLogicalLinkInformation
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_AssignLinkConnectionOnLogicalL
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AssignLinkConnectionOnLogicalLinkInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AssignLinkConnectionOnLogicalLinkInformation */
+
 /**
  * @summary The Extension Addition Component Types of AssignLinkConnectionOnLogicalLinkInformation
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_AssignLinkConnectionOnLogicalL
  * @constant
  */
 export const _extension_additions_list_spec_for_AssignLinkConnectionOnLogicalLinkInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation */
+
 let _cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation: $.ASN1Decoder<AssignLinkConnectionOnLogicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssignLinkConnectionOnLogicalLinkInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AssignLinkConnectionOnLogicalLinkInformation
  * @function
@@ -168,13 +163,11 @@ export function _decode_AssignLinkConnectionOnLogicalLinkInformation(
     }
     return _cached_decoder_for_AssignLinkConnectionOnLogicalLinkInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignLinkConnectionOnLogicalLinkInformation */
+
 let _cached_encoder_for_AssignLinkConnectionOnLogicalLinkInformation: $.ASN1Encoder<AssignLinkConnectionOnLogicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignLinkConnectionOnLogicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssignLinkConnectionOnLogicalLinkInformation */
+
 /**
  * @summary Encodes a(n) AssignLinkConnectionOnLogicalLinkInformation into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_AssignLinkConnectionOnLogicalLinkInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssignLinkConnectionOnLogicalLinkInformation */
 
 /* eslint-enable */

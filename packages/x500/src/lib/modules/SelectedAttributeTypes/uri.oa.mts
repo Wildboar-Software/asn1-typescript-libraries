@@ -11,7 +11,6 @@ import {
     _encode_URI,
 } from "../SelectedAttributeTypes/URI.ta.mjs";
 import { uriMatch } from "../SelectedAttributeTypes/uriMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION uri */
 /**
  * @summary uri
  * @description
@@ -51,6 +50,5 @@ export const uri: ATTRIBUTE<URI> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uri */
 
 /* eslint-enable */

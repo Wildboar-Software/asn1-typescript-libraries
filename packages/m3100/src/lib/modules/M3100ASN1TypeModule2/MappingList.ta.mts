@@ -15,7 +15,7 @@ import {
     _decode_PayloadLevel,
     _encode_PayloadLevel,
 } from '../M3100ASN1TypeModule2/PayloadLevel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MappingList */
+
 /**
  * @summary MappingList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type MappingList = PayloadLevel[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MappingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MappingList */
+
 let _cached_decoder_for_MappingList: $.ASN1Decoder<MappingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MappingList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MappingList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MappingList
  * @function
@@ -48,13 +46,11 @@ export function _decode_MappingList(el: _Element) {
     }
     return _cached_decoder_for_MappingList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MappingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MappingList */
+
 let _cached_encoder_for_MappingList: $.ASN1Encoder<MappingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MappingList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MappingList */
+
 /**
  * @summary Encodes a(n) MappingList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_MappingList(
     return _cached_encoder_for_MappingList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MappingList */
 
 /* eslint-enable */

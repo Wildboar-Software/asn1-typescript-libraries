@@ -20,7 +20,6 @@ import {
     _decode_MessageGroupName,
     _encode_MessageGroupName,
 } from '../MSAbstractService/MessageGroupName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageGroupErrorParameter */
 /**
  * @summary MessageGroupErrorParameter
  * @description
@@ -72,9 +71,7 @@ export class MessageGroupErrorParameter {
         return new MessageGroupErrorParameter(_o.problem, _o.name);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageGroupErrorParameter */
 /**
  * @summary The Leading Root Component Types of MessageGroupErrorParameter
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_MessageGroupErrorParameter: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageGroupErrorParameter */
 /**
  * @summary The Trailing Root Component Types of MessageGroupErrorParameter
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_MessageGroupErrorParameter: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageGroupErrorParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageGroupErrorParameter */
 /**
  * @summary The Extension Addition Component Types of MessageGroupErrorParameter
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_MessageGroupErrorParameter: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageGroupErrorParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupErrorParameter */
 let _cached_decoder_for_MessageGroupErrorParameter: $.ASN1Decoder<MessageGroupErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageGroupErrorParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageGroupErrorParameter
  * @function
@@ -175,13 +164,9 @@ export function _decode_MessageGroupErrorParameter(el: _Element) {
     }
     return _cached_decoder_for_MessageGroupErrorParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupErrorParameter */
 let _cached_encoder_for_MessageGroupErrorParameter: $.ASN1Encoder<MessageGroupErrorParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupErrorParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageGroupErrorParameter */
 /**
  * @summary Encodes a(n) MessageGroupErrorParameter into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_MessageGroupErrorParameter(
     return _cached_encoder_for_MessageGroupErrorParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageGroupErrorParameter */
 
 /* eslint-enable */

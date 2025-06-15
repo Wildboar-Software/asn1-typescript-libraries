@@ -20,7 +20,6 @@ import { id_att_content_type } from '../MSObjectIdentifiers/id-att-content-type.
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_content_type */
 /**
  * @summary mt_content_type
  * @description
@@ -53,6 +52,5 @@ export const mt_content_type: X413ATTRIBUTE<OBJECT_IDENTIFIER> = {
     '&id': id_att_content_type /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_content_type */
 
 /* eslint-enable */

@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InsuranceIdentification */
+
 /**
  * @summary InsuranceIdentification
  * @description
@@ -96,9 +96,8 @@ export class InsuranceIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InsuranceIdentification */
+
 /**
  * @summary The Leading Root Component Types of InsuranceIdentification
  * @description
@@ -144,9 +143,8 @@ export const _root_component_type_list_1_spec_for_InsuranceIdentification: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InsuranceIdentification */
+
 /**
  * @summary The Trailing Root Component Types of InsuranceIdentification
  * @description
@@ -156,9 +154,8 @@ export const _root_component_type_list_1_spec_for_InsuranceIdentification: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InsuranceIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InsuranceIdentification */
+
 /**
  * @summary The Extension Addition Component Types of InsuranceIdentification
  * @description
@@ -168,13 +165,11 @@ export const _root_component_type_list_2_spec_for_InsuranceIdentification: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_InsuranceIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InsuranceIdentification */
+
 let _cached_decoder_for_InsuranceIdentification: $.ASN1Decoder<InsuranceIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InsuranceIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InsuranceIdentification
  * @function
@@ -231,13 +226,11 @@ export function _decode_InsuranceIdentification(el: _Element) {
     }
     return _cached_decoder_for_InsuranceIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InsuranceIdentification */
+
 let _cached_encoder_for_InsuranceIdentification: $.ASN1Encoder<InsuranceIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InsuranceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InsuranceIdentification */
+
 /**
  * @summary Encodes a(n) InsuranceIdentification into an ASN.1 Element.
  * @function
@@ -280,6 +273,5 @@ export function _encode_InsuranceIdentification(
     return _cached_encoder_for_InsuranceIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InsuranceIdentification */
 
 /* eslint-enable */

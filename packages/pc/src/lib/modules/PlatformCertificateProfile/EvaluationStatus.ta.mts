@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_EvaluationStatus */
 /**
  * @summary EvaluationStatus
  * @description
@@ -33,9 +32,7 @@ enum _enum_for_EvaluationStatus {
     evaluationInProgress = 1,
     evaluationCompleted = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_EvaluationStatus */
 
-/* START_OF_SYMBOL_DEFINITION EvaluationStatus */
 /**
  * @summary EvaluationStatus
  * @description
@@ -51,9 +48,7 @@ enum _enum_for_EvaluationStatus {
  */
 export
 type EvaluationStatus = _enum_for_EvaluationStatus;
-/* END_OF_SYMBOL_DEFINITION EvaluationStatus */
 
-/* START_OF_SYMBOL_DEFINITION EvaluationStatus */
 /**
  * @summary EvaluationStatus
  * @description
@@ -69,9 +64,7 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
  */
 export
 const EvaluationStatus = _enum_for_EvaluationStatus;
-/* END_OF_SYMBOL_DEFINITION EvaluationStatus */
 
-/* START_OF_SYMBOL_DEFINITION EvaluationStatus_designedToMeet */
 /**
  * @summary EvaluationStatus_designedToMeet
  * @constant
@@ -79,9 +72,7 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
  */
 export
 const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EvaluationStatus_designedToMeet */
 
-/* START_OF_SYMBOL_DEFINITION designedToMeet */
 /**
  * @summary designedToMeet
  * @constant
@@ -89,9 +80,7 @@ const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.desig
  */
 export
 const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION designedToMeet */
 
-/* START_OF_SYMBOL_DEFINITION EvaluationStatus_evaluationInProgress */
 /**
  * @summary EvaluationStatus_evaluationInProgress
  * @constant
@@ -99,9 +88,7 @@ const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHO
  */
 export
 const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EvaluationStatus_evaluationInProgress */
 
-/* START_OF_SYMBOL_DEFINITION evaluationInProgress */
 /**
  * @summary evaluationInProgress
  * @constant
@@ -109,9 +96,7 @@ const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus
  */
 export
 const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION evaluationInProgress */
 
-/* START_OF_SYMBOL_DEFINITION EvaluationStatus_evaluationCompleted */
 /**
  * @summary EvaluationStatus_evaluationCompleted
  * @constant
@@ -119,9 +104,7 @@ const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProg
  */
 export
 const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION EvaluationStatus_evaluationCompleted */
 
-/* START_OF_SYMBOL_DEFINITION evaluationCompleted */
 /**
  * @summary evaluationCompleted
  * @constant
@@ -129,21 +112,12 @@ const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.
  */
 export
 const evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION evaluationCompleted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EvaluationStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EvaluationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EvaluationStatus */
 export const _decode_EvaluationStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_EvaluationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EvaluationStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EvaluationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EvaluationStatus */
 export const _encode_EvaluationStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EvaluationStatus */
 
 /* eslint-enable */

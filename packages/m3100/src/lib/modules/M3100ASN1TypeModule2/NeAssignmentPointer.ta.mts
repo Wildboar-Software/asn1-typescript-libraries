@@ -17,7 +17,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NeAssignmentPointer */
+
 /**
  * @summary NeAssignmentPointer
  * @description
@@ -36,13 +36,11 @@ export type NeAssignmentPointer =
     | { notAvailable: NULL } /* CHOICE_ALT_ROOT */
     | { relatedObject: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { string_: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NeAssignmentPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NeAssignmentPointer */
+
 let _cached_decoder_for_NeAssignmentPointer: $.ASN1Decoder<NeAssignmentPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NeAssignmentPointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NeAssignmentPointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NeAssignmentPointer
  * @function
@@ -63,13 +61,11 @@ export function _decode_NeAssignmentPointer(el: _Element) {
     }
     return _cached_decoder_for_NeAssignmentPointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NeAssignmentPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NeAssignmentPointer */
+
 let _cached_encoder_for_NeAssignmentPointer: $.ASN1Encoder<NeAssignmentPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NeAssignmentPointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NeAssignmentPointer */
+
 /**
  * @summary Encodes a(n) NeAssignmentPointer into an ASN.1 Element.
  * @function
@@ -94,6 +90,5 @@ export function _encode_NeAssignmentPointer(
     return _cached_encoder_for_NeAssignmentPointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NeAssignmentPointer */
 
 /* eslint-enable */

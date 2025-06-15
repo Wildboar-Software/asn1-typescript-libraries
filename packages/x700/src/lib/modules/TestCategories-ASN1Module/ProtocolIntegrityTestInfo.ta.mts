@@ -36,7 +36,6 @@ import {
     _decode_StopTime,
     _encode_StopTime,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StopTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtocolIntegrityTestInfo */
 /**
  * @summary ProtocolIntegrityTestInfo
  * @description
@@ -115,9 +114,7 @@ export class ProtocolIntegrityTestInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtocolIntegrityTestInfo */
 /**
  * @summary The Leading Root Component Types of ProtocolIntegrityTestInfo
  * @description
@@ -163,9 +160,7 @@ export const _root_component_type_list_1_spec_for_ProtocolIntegrityTestInfo: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtocolIntegrityTestInfo */
 /**
  * @summary The Trailing Root Component Types of ProtocolIntegrityTestInfo
  * @description
@@ -175,9 +170,7 @@ export const _root_component_type_list_1_spec_for_ProtocolIntegrityTestInfo: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtocolIntegrityTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtocolIntegrityTestInfo */
 /**
  * @summary The Extension Addition Component Types of ProtocolIntegrityTestInfo
  * @description
@@ -187,13 +180,9 @@ export const _root_component_type_list_2_spec_for_ProtocolIntegrityTestInfo: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtocolIntegrityTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolIntegrityTestInfo */
 let _cached_decoder_for_ProtocolIntegrityTestInfo: $.ASN1Decoder<ProtocolIntegrityTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtocolIntegrityTestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolIntegrityTestInfo
  * @function
@@ -260,13 +249,9 @@ export function _decode_ProtocolIntegrityTestInfo(el: _Element) {
     }
     return _cached_decoder_for_ProtocolIntegrityTestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolIntegrityTestInfo */
 let _cached_encoder_for_ProtocolIntegrityTestInfo: $.ASN1Encoder<ProtocolIntegrityTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtocolIntegrityTestInfo */
 /**
  * @summary Encodes a(n) ProtocolIntegrityTestInfo into an ASN.1 Element.
  * @function
@@ -331,6 +316,5 @@ export function _encode_ProtocolIntegrityTestInfo(
     return _cached_encoder_for_ProtocolIntegrityTestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtocolIntegrityTestInfo */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_ToBeRevokedSyntax,
     _encode_ToBeRevokedSyntax,
 } from "../CertificateExtensions/ToBeRevokedSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION toBeRevoked */
 /**
  * @summary toBeRevoked
  * @description
@@ -34,6 +33,5 @@ export const toBeRevoked: EXTENSION<ToBeRevokedSyntax> = {
     "&id": id_ce_toBeRevoked /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION toBeRevoked */
 
 /* eslint-enable */

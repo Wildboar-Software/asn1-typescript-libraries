@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION shadowError */
 /**
  * @summary shadowError
  * @description
@@ -43,6 +42,5 @@ export const shadowError: ERROR<OPTIONALLY_PROTECTED_SEQ<ShadowErrorData>> = {
     "&errorCode": id_errcode_shadowError /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ParameterType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shadowError */
 
 /* eslint-enable */

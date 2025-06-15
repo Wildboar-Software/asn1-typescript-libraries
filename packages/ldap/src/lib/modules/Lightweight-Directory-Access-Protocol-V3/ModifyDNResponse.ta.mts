@@ -15,7 +15,7 @@ import {
   _decode_LDAPResult,
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModifyDNResponse */
+
 /**
  * @summary ModifyDNResponse
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ModifyDNResponse = LDAPResult; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ModifyDNResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNResponse */
+
 let _cached_decoder_for_ModifyDNResponse: $.ASN1Decoder<ModifyDNResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyDNResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyDNResponse
  * @function
@@ -48,13 +46,11 @@ export function _decode_ModifyDNResponse(el: _Element) {
   }
   return _cached_decoder_for_ModifyDNResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyDNResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNResponse */
+
 let _cached_encoder_for_ModifyDNResponse: $.ASN1Encoder<ModifyDNResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyDNResponse */
+
 /**
  * @summary Encodes a(n) ModifyDNResponse into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_ModifyDNResponse(
   return _cached_encoder_for_ModifyDNResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyDNResponse */
 
 /* eslint-enable */

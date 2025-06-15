@@ -27,7 +27,6 @@ import { id_att_redirection_history } from '../MSObjectIdentifiers/id-att-redire
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_redirection_history */
 /**
  * @summary mt_redirection_history
  * @description
@@ -70,6 +69,5 @@ export const mt_redirection_history: X413ATTRIBUTE<Redirection> = {
     '&id': id_att_redirection_history /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_redirection_history */
 
 /* eslint-enable */

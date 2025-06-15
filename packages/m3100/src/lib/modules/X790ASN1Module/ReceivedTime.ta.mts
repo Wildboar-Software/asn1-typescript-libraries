@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ReceivedTime */
+
 /**
  * @summary ReceivedTime
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ReceivedTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION ReceivedTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceivedTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceivedTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReceivedTime */
+
+
 export const _decode_ReceivedTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_ReceivedTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceivedTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceivedTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReceivedTime */
+
+
 export const _encode_ReceivedTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReceivedTime */
 
 /* eslint-enable */

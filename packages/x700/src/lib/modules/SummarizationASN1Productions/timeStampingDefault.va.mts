@@ -16,7 +16,6 @@ import {
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
 } from '../SummarizationASN1Productions/TimeStampReportMode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION timeStampingDefault */
 /**
  * @summary timeStampingDefault
  * @description
@@ -30,6 +29,5 @@ import {
  * @constant
  */
 export const timeStampingDefault: TimeStampReportMode = TimeStampReportMode_timeStampingOff;
-/* END_OF_SYMBOL_DEFINITION timeStampingDefault */
 
 /* eslint-enable */

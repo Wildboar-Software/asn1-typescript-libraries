@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_algo } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/id-algo.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_algo_ska */
 /**
  * @summary id_algo_ska
  * @description
@@ -15,6 +14,5 @@ import { id_algo } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/id-algo.va.
  * @constant
  */
 export const id_algo_ska: OBJECT_IDENTIFIER = new _OID([2], id_algo);
-/* END_OF_SYMBOL_DEFINITION id_algo_ska */
 
 /* eslint-enable */

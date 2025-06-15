@@ -18,7 +18,6 @@ import {
     _decode_MessageReference,
     _encode_MessageReference,
 } from '../IPMSFileTransferBodyPartType/MessageReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CrossReference */
 /**
  * @summary CrossReference
  * @description
@@ -79,9 +78,7 @@ export class CrossReference {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrossReference */
 /**
  * @summary The Leading Root Component Types of CrossReference
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_CrossReference: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrossReference */
 /**
  * @summary The Trailing Root Component Types of CrossReference
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_CrossReference: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CrossReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrossReference */
 /**
  * @summary The Extension Addition Component Types of CrossReference
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_CrossReference: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CrossReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossReference */
 let _cached_decoder_for_CrossReference: $.ASN1Decoder<CrossReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrossReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) CrossReference
  * @function
@@ -196,13 +185,9 @@ export function _decode_CrossReference(el: _Element) {
     }
     return _cached_decoder_for_CrossReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossReference */
 let _cached_encoder_for_CrossReference: $.ASN1Encoder<CrossReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrossReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrossReference */
 /**
  * @summary Encodes a(n) CrossReference into an ASN.1 Element.
  * @function
@@ -251,6 +236,5 @@ export function _encode_CrossReference(
     return _cached_encoder_for_CrossReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrossReference */
 
 /* eslint-enable */

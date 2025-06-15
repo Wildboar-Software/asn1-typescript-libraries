@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CirculationTime */
 /**
  * @summary CirculationTime
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CirculationTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION CirculationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CirculationTime */
 export const _decode_CirculationTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_CirculationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CirculationTime */
 export const _encode_CirculationTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CirculationTime */
 
 /* eslint-enable */

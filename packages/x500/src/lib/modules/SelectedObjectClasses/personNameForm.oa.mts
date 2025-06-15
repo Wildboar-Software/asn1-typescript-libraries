@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va.mjs";
 import { person } from "../SelectedObjectClasses/person.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION personNameForm */
 /**
  * @summary personNameForm
  * @description
@@ -29,6 +28,5 @@ export const personNameForm: NAME_FORM = {
     "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_personNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION personNameForm */
 
 /* eslint-enable */

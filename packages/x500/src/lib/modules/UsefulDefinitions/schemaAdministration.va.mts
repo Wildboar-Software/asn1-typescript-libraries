@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { module_ } from "../UsefulDefinitions/module.va.mjs";
-/* START_OF_SYMBOL_DEFINITION schemaAdministration */
 /**
  * @summary schemaAdministration
  * @description
@@ -19,6 +18,5 @@ export const schemaAdministration: ID = new _OID(
     [/* schemaAdministration */ 23, 9],
     module_
 );
-/* END_OF_SYMBOL_DEFINITION schemaAdministration */
 
 /* eslint-enable */

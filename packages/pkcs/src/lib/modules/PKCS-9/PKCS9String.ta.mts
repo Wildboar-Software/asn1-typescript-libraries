@@ -7,7 +7,7 @@ import {
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCS9String */
+
 /**
  * @summary PKCS9String
  * @description
@@ -24,13 +24,11 @@ import {
 export type PKCS9String =
     | { ia5String: IA5String } /* CHOICE_ALT_ROOT */
     | { directoryString: DirectoryString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PKCS9String */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCS9String */
+
 let _cached_decoder_for_PKCS9String: $.ASN1Decoder<PKCS9String> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCS9String */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKCS9String */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKCS9String
  * @function
@@ -52,13 +50,11 @@ export function _decode_PKCS9String(el: _Element) {
     }
     return _cached_decoder_for_PKCS9String(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKCS9String */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCS9String */
+
 let _cached_encoder_for_PKCS9String: $.ASN1Encoder<PKCS9String> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCS9String */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKCS9String */
+
 /**
  * @summary Encodes a(n) PKCS9String into an ASN.1 Element.
  * @function
@@ -82,6 +78,5 @@ export function _encode_PKCS9String(
     return _cached_encoder_for_PKCS9String(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKCS9String */
 
 /* eslint-enable */

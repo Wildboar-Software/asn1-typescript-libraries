@@ -13,7 +13,6 @@ import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObject
 import { sMASE } from '../RepertoireDirectoryASN1Module/sMASE.oa.mjs';
 import { cMISE } from '../RepertoireDirectoryASN1Module/cMISE.oa.mjs';
 import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION managementServiceElementsCR */
 /**
  * @summary managementServiceElementsCR
  * @description
@@ -41,6 +40,5 @@ export const managementServiceElementsCR: CONTENT_RULE = {
         ] /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Auxiliaries': [sMASE, cMISE] /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementServiceElementsCR */
 
 /* eslint-enable */

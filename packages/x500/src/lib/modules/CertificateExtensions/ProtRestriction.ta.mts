@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ProtRestriction */
 /**
  * @summary ProtRestriction
  * @description
@@ -14,13 +13,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type ProtRestriction = OBJECT_IDENTIFIER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ProtRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtRestriction */
 let _cached_decoder_for_ProtRestriction: $.ASN1Decoder<ProtRestriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtRestriction */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtRestriction
  * @function
@@ -35,13 +30,9 @@ export function _decode_ProtRestriction(el: _Element) {
     }
     return _cached_decoder_for_ProtRestriction(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtRestriction */
 let _cached_encoder_for_ProtRestriction: $.ASN1Encoder<ProtRestriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtRestriction */
 /**
  * @summary Encodes a(n) ProtRestriction into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ export function _encode_ProtRestriction(
     return _cached_encoder_for_ProtRestriction(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtRestriction */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _encode_MultiplePublicKeyAlgo,
 } from "../CryptoTools/MultiplePublicKeyAlgo.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION multiplePublicKeyAlgo */
 /**
  * @summary multiplePublicKeyAlgo
  * @description
@@ -37,6 +36,5 @@ export const multiplePublicKeyAlgo: ALGORITHM<MultiplePublicKeyAlgo> = {
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&DynParms": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION multiplePublicKeyAlgo */
 
 /* eslint-enable */

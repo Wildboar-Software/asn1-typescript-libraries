@@ -24,7 +24,6 @@ import { modify_error } from '../MSAbstractService/modify-error.oa.mjs';
 import { message_group_error } from '../MSAbstractService/message-group-error.oa.mjs';
 import { id_act_auto_modify } from '../MSObjectIdentifiers/id-act-auto-modify.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_modify */
 /**
  * @summary auto_modify
  * @description
@@ -61,6 +60,5 @@ export const auto_modify: AUTO_ACTION<AutoModifyRegistrationParameter> = {
     '&id': id_act_auto_modify /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_modify */
 
 /* eslint-enable */

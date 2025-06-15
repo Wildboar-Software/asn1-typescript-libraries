@@ -12,7 +12,6 @@ import {
 import { id_ecPublicKeyTypeRestricted } from "../SEC1-v1-9/id-ecPublicKeyTypeRestricted.va.mjs";
 import { ECPKRestrictions, _decode_ECPKRestrictions, _encode_ECPKRestrictions } from "../SEC1-v1-9/ECPKRestrictions.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ecPublicKeyTypeRestricted */
 /**
  * @summary ecPublicKeyTypeRestricted
  * @description
@@ -41,6 +40,5 @@ const ecPublicKeyTypeRestricted: ALGORITHM<ECPKRestrictions> = {
     "&id": id_ecPublicKeyTypeRestricted /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecPublicKeyTypeRestricted */
 
 /* eslint-enable */

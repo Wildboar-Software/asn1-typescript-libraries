@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION sha224WithRSAEncryptionAlgorithm */
 /**
  * @summary sha224WithRSAEncryptionAlgorithm
  * @description
@@ -47,6 +46,5 @@ export const sha224WithRSAEncryptionAlgorithm: ALGORITHM<NULL> = {
     "&DynParms":
         0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sha224WithRSAEncryptionAlgorithm */
 
 /* eslint-enable */

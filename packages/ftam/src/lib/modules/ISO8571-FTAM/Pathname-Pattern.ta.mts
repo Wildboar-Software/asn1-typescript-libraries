@@ -20,7 +20,7 @@ import {
   _decode_Pathname_Pattern_pathname_value_Item,
   _encode_Pathname_Pattern_pathname_value_Item,
 } from '../ISO8571-FTAM/Pathname-Pattern-pathname-value-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Pathname_Pattern */
+
 /**
  * @summary Pathname_Pattern
  * @description
@@ -73,9 +73,8 @@ export class Pathname_Pattern {
     return new Pathname_Pattern(_o.equality_comparision, _o.pathname_value);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Pathname_Pattern */
+
 /**
  * @summary The Leading Root Component Types of Pathname_Pattern
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_Pathname_Pattern: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Pathname_Pattern */
+
 /**
  * @summary The Trailing Root Component Types of Pathname_Pattern
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_Pathname_Pattern: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Pathname_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Pathname_Pattern */
+
 /**
  * @summary The Extension Addition Component Types of Pathname_Pattern
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_Pathname_Pattern: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_Pathname_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname_Pattern */
+
 let _cached_decoder_for_Pathname_Pattern: $.ASN1Decoder<Pathname_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pathname_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Pathname_Pattern
  * @function
@@ -169,13 +164,11 @@ export function _decode_Pathname_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Pathname_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname_Pattern */
+
 let _cached_encoder_for_Pathname_Pattern: $.ASN1Encoder<Pathname_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pathname_Pattern */
+
 /**
  * @summary Encodes a(n) Pathname_Pattern into an ASN.1 Element.
  * @function
@@ -218,6 +211,5 @@ export function _encode_Pathname_Pattern(
   return _cached_encoder_for_Pathname_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pathname_Pattern */
 
 /* eslint-enable */

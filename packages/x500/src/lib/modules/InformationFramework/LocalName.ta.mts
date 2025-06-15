@@ -6,7 +6,6 @@ import {
     _decode_RDNSequence,
     _encode_RDNSequence,
 } from "../InformationFramework/RDNSequence.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LocalName */
 /**
  * @summary LocalName
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type LocalName = RDNSequence; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LocalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalName */
 let _cached_decoder_for_LocalName: $.ASN1Decoder<LocalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocalName */
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalName
  * @function
@@ -37,13 +32,9 @@ export function _decode_LocalName(el: _Element) {
     }
     return _cached_decoder_for_LocalName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LocalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalName */
 let _cached_encoder_for_LocalName: $.ASN1Encoder<LocalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocalName */
 /**
  * @summary Encodes a(n) LocalName into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_LocalName(
     return _cached_encoder_for_LocalName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocalName */
 
 /* eslint-enable */

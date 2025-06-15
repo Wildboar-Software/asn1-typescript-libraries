@@ -17,7 +17,7 @@ import {
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IntermediateResponse */
+
 /**
  * @summary IntermediateResponse
  * @description
@@ -77,9 +77,8 @@ export class IntermediateResponse {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IntermediateResponse */
+
 /**
  * @summary The Leading Root Component Types of IntermediateResponse
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_IntermediateResponse: $.Compon
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IntermediateResponse */
+
 /**
  * @summary The Trailing Root Component Types of IntermediateResponse
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_IntermediateResponse: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IntermediateResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IntermediateResponse */
+
 /**
  * @summary The Extension Addition Component Types of IntermediateResponse
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_IntermediateResponse: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_IntermediateResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResponse */
+
 let _cached_decoder_for_IntermediateResponse: $.ASN1Decoder<IntermediateResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntermediateResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IntermediateResponse
  * @function
@@ -185,13 +180,11 @@ export function _decode_IntermediateResponse(el: _Element) {
   }
   return _cached_decoder_for_IntermediateResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResponse */
+
 let _cached_encoder_for_IntermediateResponse: $.ASN1Encoder<IntermediateResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntermediateResponse */
+
 /**
  * @summary Encodes a(n) IntermediateResponse into an ASN.1 Element.
  * @function
@@ -245,6 +238,5 @@ export function _encode_IntermediateResponse(
   return _cached_encoder_for_IntermediateResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntermediateResponse */
 
 /* eslint-enable */

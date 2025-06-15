@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Private_Use_Attribute */
+
 /**
  * @summary Private_Use_Attribute
  * @description
@@ -35,13 +35,11 @@ export type Private_Use_Attribute =
   | { no_value_available: NULL } /* CHOICE_ALT_ROOT */
   | { abstract_Syntax_not_supported: NULL } /* CHOICE_ALT_ROOT */
   | { actual_values: EXTERNAL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Private_Use_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Private_Use_Attribute */
+
 let _cached_decoder_for_Private_Use_Attribute: $.ASN1Decoder<Private_Use_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Private_Use_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Private_Use_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Private_Use_Attribute
  * @function
@@ -69,13 +67,11 @@ export function _decode_Private_Use_Attribute(el: _Element) {
   }
   return _cached_decoder_for_Private_Use_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Private_Use_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Private_Use_Attribute */
+
 let _cached_encoder_for_Private_Use_Attribute: $.ASN1Encoder<Private_Use_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Private_Use_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Private_Use_Attribute */
+
 /**
  * @summary Encodes a(n) Private_Use_Attribute into an ASN.1 Element.
  * @function
@@ -115,6 +111,5 @@ export function _encode_Private_Use_Attribute(
   return _cached_encoder_for_Private_Use_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Private_Use_Attribute */
 
 /* eslint-enable */

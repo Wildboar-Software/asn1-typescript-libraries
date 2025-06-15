@@ -9,7 +9,6 @@ import { id_oa_modifyTimestamp } from "../InformationFramework/id-oa-modifyTimes
 import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 import { generalizedTimeMatch } from "../SelectedAttributeTypes/generalizedTimeMatch.oa.mjs";
 import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generalizedTimeOrderingMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION modifyTimestamp */
 /**
  * @summary modifyTimestamp
  * @description
@@ -55,6 +54,5 @@ export const modifyTimestamp: ATTRIBUTE<GeneralizedTime> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION modifyTimestamp */
 
 /* eslint-enable */

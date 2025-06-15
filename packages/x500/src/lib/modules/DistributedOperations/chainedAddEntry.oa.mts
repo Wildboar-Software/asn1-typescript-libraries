@@ -3,7 +3,6 @@ import { addEntry } from "../DirectoryAbstractService/addEntry.oa.mjs";
 import { chained } from "../DistributedOperations/chained.oa.mjs";
 import type { ChainedOperation } from "./chained.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION chainedAddEntry */
 /**
  * @summary chainedAddEntry
  * @description
@@ -19,6 +18,5 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @implements {OPERATION}
  */
 export const chainedAddEntry: ChainedOperation = chained(addEntry);
-/* END_OF_SYMBOL_DEFINITION chainedAddEntry */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax/ContentType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfo */
+
 /**
  * @summary EncapsulatedContentInfo
  * @description
@@ -63,9 +63,8 @@ export class EncapsulatedContentInfo {
         return new EncapsulatedContentInfo(_o.eContentType, _o.eContent);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncapsulatedContentInfo */
+
 /**
  * @summary The Leading Root Component Types of EncapsulatedContentInfo
  * @description
@@ -90,9 +89,8 @@ export const _root_component_type_list_1_spec_for_EncapsulatedContentInfo: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncapsulatedContentInfo */
+
 /**
  * @summary The Trailing Root Component Types of EncapsulatedContentInfo
  * @description
@@ -102,9 +100,8 @@ export const _root_component_type_list_1_spec_for_EncapsulatedContentInfo: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncapsulatedContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncapsulatedContentInfo */
+
 /**
  * @summary The Extension Addition Component Types of EncapsulatedContentInfo
  * @description
@@ -114,13 +111,11 @@ export const _root_component_type_list_2_spec_for_EncapsulatedContentInfo: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_EncapsulatedContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncapsulatedContentInfo */
+
 let _cached_decoder_for_EncapsulatedContentInfo: $.ASN1Decoder<EncapsulatedContentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncapsulatedContentInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncapsulatedContentInfo
  * @function
@@ -164,13 +159,11 @@ export function _decode_EncapsulatedContentInfo(el: _Element) {
     }
     return _cached_decoder_for_EncapsulatedContentInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncapsulatedContentInfo */
+
 let _cached_encoder_for_EncapsulatedContentInfo: $.ASN1Encoder<EncapsulatedContentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncapsulatedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncapsulatedContentInfo */
+
 /**
  * @summary Encodes a(n) EncapsulatedContentInfo into an ASN.1 Element.
  * @function
@@ -209,6 +202,5 @@ export function _encode_EncapsulatedContentInfo(
     return _cached_encoder_for_EncapsulatedContentInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncapsulatedContentInfo */
 
 /* eslint-enable */

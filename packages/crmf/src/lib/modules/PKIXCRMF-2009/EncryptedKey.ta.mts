@@ -12,7 +12,7 @@ import {
     _encode_EncryptedValue,
 } from "../PKIXCRMF-2009/EncryptedValue.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EncryptedKey */
+
 /**
  * @summary EncryptedKey
  * @description
@@ -28,13 +28,11 @@ import {
 export type EncryptedKey =
     | { encryptedValue: EncryptedValue } /* CHOICE_ALT_ROOT */
     | { envelopedData: EnvelopedData } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedKey */
+
 let _cached_decoder_for_EncryptedKey: $.ASN1Decoder<EncryptedKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedKey
  * @function
@@ -57,13 +55,11 @@ export function _decode_EncryptedKey(el: _Element) {
     }
     return _cached_decoder_for_EncryptedKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedKey */
+
 let _cached_encoder_for_EncryptedKey: $.ASN1Encoder<EncryptedKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedKey */
+
 /**
  * @summary Encodes a(n) EncryptedKey into an ASN.1 Element.
  * @function
@@ -92,6 +88,5 @@ export function _encode_EncryptedKey(
     return _cached_encoder_for_EncryptedKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedKey */
 
 /* eslint-enable */

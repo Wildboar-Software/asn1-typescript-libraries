@@ -23,7 +23,6 @@ import {
 } from '../DefinitionASN1Module/RegisteredAs.ta.mjs';
 import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION registeredAs */
 /**
  * @summary registeredAs
  * @description
@@ -67,6 +66,5 @@ export const registeredAs: ATTRIBUTE<RegisteredAs> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION registeredAs */
 
 /* eslint-enable */

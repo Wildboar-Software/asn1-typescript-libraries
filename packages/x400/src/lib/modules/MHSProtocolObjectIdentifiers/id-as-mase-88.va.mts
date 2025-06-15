@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSProtocolObjectIdentifiers/ID.ta.mjs';
 import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_as_mase_88 */
 /**
  * @summary id_as_mase_88
  * @description
@@ -29,6 +28,5 @@ import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.mjs';
  * @constant
  */
 export const id_as_mase_88: ID = new _OID([6], id_as);
-/* END_OF_SYMBOL_DEFINITION id_as_mase_88 */
 
 /* eslint-enable */

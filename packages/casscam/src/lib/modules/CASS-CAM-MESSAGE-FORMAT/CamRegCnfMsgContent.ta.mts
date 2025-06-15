@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CamRegCnfMsgContent */
+
 /**
  * @summary CamRegCnfMsgContent
  * @description
@@ -87,9 +87,8 @@ class CamRegCnfMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CamRegCnfMsgContent */
+
 /**
  * @summary The Leading Root Component Types of CamRegCnfMsgContent
  * @description
@@ -106,9 +105,8 @@ const _root_component_type_list_1_spec_for_CamRegCnfMsgContent: $.ComponentSpec[
     new $.ComponentSpec("cCCIEK-IV", false, $.hasTag(_TagClass.context, 3), undefined, undefined),
     new $.ComponentSpec("cCCIEK", false, $.hasTag(_TagClass.context, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CamRegCnfMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of CamRegCnfMsgContent
  * @description
@@ -121,9 +119,8 @@ export
 const _root_component_type_list_2_spec_for_CamRegCnfMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CamRegCnfMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of CamRegCnfMsgContent
  * @description
@@ -136,13 +133,11 @@ export
 const _extension_additions_list_spec_for_CamRegCnfMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CamRegCnfMsgContent */
+
 let _cached_decoder_for_CamRegCnfMsgContent: $.ASN1Decoder<CamRegCnfMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CamRegCnfMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CamRegCnfMsgContent
  * @function
@@ -182,13 +177,11 @@ function _decode_CamRegCnfMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_CamRegCnfMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CamRegCnfMsgContent */
+
 let _cached_encoder_for_CamRegCnfMsgContent: $.ASN1Encoder<CamRegCnfMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CamRegCnfMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CamRegCnfMsgContent */
+
 /**
  * @summary Encodes a(n) CamRegCnfMsgContent into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ function _encode_CamRegCnfMsgContent (value: CamRegCnfMsgContent, elGetter: $.AS
     return _cached_encoder_for_CamRegCnfMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CamRegCnfMsgContent */
 
 /* eslint-enable */

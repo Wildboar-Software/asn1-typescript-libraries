@@ -28,7 +28,6 @@ import {
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ReplaceAvlRsp */
 /**
  * @summary ReplaceAvlRsp
  * @description
@@ -122,9 +121,7 @@ export class ReplaceAvlRsp implements AVMPcommonComponents {
 
     public static _enum_for_version = _enum_for_AVMPversion;
 }
-/* END_OF_SYMBOL_DEFINITION ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplaceAvlRsp */
 /**
  * @summary The Leading Root Component Types of ReplaceAvlRsp
  * @description
@@ -137,9 +134,7 @@ export const _root_component_type_list_1_spec_for_ReplaceAvlRsp: $.ComponentSpec
     ..._root_component_type_list_1_spec_for_AVMPcommonComponents,
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplaceAvlRsp */
 /**
  * @summary The Trailing Root Component Types of ReplaceAvlRsp
  * @description
@@ -149,9 +144,7 @@ export const _root_component_type_list_1_spec_for_ReplaceAvlRsp: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReplaceAvlRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplaceAvlRsp */
 /**
  * @summary The Extension Addition Component Types of ReplaceAvlRsp
  * @description
@@ -161,13 +154,9 @@ export const _root_component_type_list_2_spec_for_ReplaceAvlRsp: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ReplaceAvlRsp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplaceAvlRsp */
 let _cached_decoder_for_ReplaceAvlRsp: $.ASN1Decoder<ReplaceAvlRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplaceAvlRsp */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplaceAvlRsp
  * @function
@@ -224,13 +213,9 @@ export function _decode_ReplaceAvlRsp(el: _Element) {
     }
     return _cached_decoder_for_ReplaceAvlRsp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplaceAvlRsp */
 let _cached_encoder_for_ReplaceAvlRsp: $.ASN1Encoder<ReplaceAvlRsp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplaceAvlRsp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplaceAvlRsp */
 /**
  * @summary Encodes a(n) ReplaceAvlRsp into an ASN.1 Element.
  * @function
@@ -281,6 +266,5 @@ export function _encode_ReplaceAvlRsp(
     return _cached_encoder_for_ReplaceAvlRsp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplaceAvlRsp */
 
 /* eslint-enable */

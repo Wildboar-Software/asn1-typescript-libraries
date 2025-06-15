@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION TransferInfoSet */
 /**
  * @summary TransferInfoSet
  * @description
@@ -26,6 +25,5 @@ import { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca.mjs';
  *
  */
 export const TransferInfoSet: SWMF_TRANSFER[] = [];
-/* END_OF_SYMBOL_DEFINITION TransferInfoSet */
 
 /* eslint-enable */

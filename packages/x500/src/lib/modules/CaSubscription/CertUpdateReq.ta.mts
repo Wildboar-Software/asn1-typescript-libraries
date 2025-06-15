@@ -15,7 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUpdateReq */
 /**
  * @summary CertUpdateReq
  * @description
@@ -79,9 +78,7 @@ export class CertUpdateReq {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateReq */
 /**
  * @summary The Leading Root Component Types of CertUpdateReq
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateReq: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateReq */
 /**
  * @summary The Trailing Root Component Types of CertUpdateReq
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_CertUpdateReq: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertUpdateReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateReq */
 /**
  * @summary The Extension Addition Component Types of CertUpdateReq
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_CertUpdateReq: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_CertUpdateReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateReq */
 let _cached_decoder_for_CertUpdateReq: $.ASN1Decoder<CertUpdateReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUpdateReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUpdateReq
  * @function
@@ -169,13 +158,9 @@ export function _decode_CertUpdateReq(el: _Element) {
     }
     return _cached_decoder_for_CertUpdateReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateReq */
 let _cached_encoder_for_CertUpdateReq: $.ASN1Encoder<CertUpdateReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUpdateReq */
 /**
  * @summary Encodes a(n) CertUpdateReq into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_CertUpdateReq(
     return _cached_encoder_for_CertUpdateReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUpdateReq */
 
 /* eslint-enable */

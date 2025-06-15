@@ -12,7 +12,7 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { Body, _decode_Body, _encode_Body } from '../ASN1SOAP/Body.ta.mjs';
 import { Fault, _decode_Fault, _encode_Fault } from '../ASN1SOAP/Fault.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Envelope_body_or_fault */
+
 /**
  * @summary Envelope_body_or_fault
  * @description
@@ -26,13 +26,11 @@ import { Fault, _decode_Fault, _encode_Fault } from '../ASN1SOAP/Fault.ta.mjs';
 export type Envelope_body_or_fault =
   | { body: Body } /* CHOICE_ALT_ROOT */
   | { fault: Fault } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Envelope_body_or_fault */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Envelope_body_or_fault */
+
 let _cached_decoder_for_Envelope_body_or_fault: $.ASN1Decoder<Envelope_body_or_fault> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Envelope_body_or_fault */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Envelope_body_or_fault */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Envelope_body_or_fault
  * @function
@@ -50,13 +48,11 @@ export function _decode_Envelope_body_or_fault(el: _Element) {
   }
   return _cached_decoder_for_Envelope_body_or_fault(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Envelope_body_or_fault */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Envelope_body_or_fault */
+
 let _cached_encoder_for_Envelope_body_or_fault: $.ASN1Encoder<Envelope_body_or_fault> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Envelope_body_or_fault */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Envelope_body_or_fault */
+
 /**
  * @summary Encodes a(n) Envelope_body_or_fault into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_Envelope_body_or_fault(
   return _cached_encoder_for_Envelope_body_or_fault(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Envelope_body_or_fault */
 
 /* eslint-enable */

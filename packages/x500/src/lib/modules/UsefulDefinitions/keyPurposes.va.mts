@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ds } from "../UsefulDefinitions/ds.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION keyPurposes */
 /**
  * @summary keyPurposes
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const keyPurposes: ID = new _OID([38], ds);
-/* END_OF_SYMBOL_DEFINITION keyPurposes */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BRTCertificateReferrerList */
+
 /**
  * @summary BRTCertificateReferrerList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BRTCertificateReferrerList = URI[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BRTCertificateReferrerList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificateReferrerList */
+
 let _cached_decoder_for_BRTCertificateReferrerList: $.ASN1Decoder<BRTCertificateReferrerList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificateReferrerList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRTCertificateReferrerList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRTCertificateReferrerList
  * @function
@@ -48,13 +46,11 @@ export function _decode_BRTCertificateReferrerList(el: _Element) {
     }
     return _cached_decoder_for_BRTCertificateReferrerList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRTCertificateReferrerList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificateReferrerList */
+
 let _cached_encoder_for_BRTCertificateReferrerList: $.ASN1Encoder<BRTCertificateReferrerList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificateReferrerList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRTCertificateReferrerList */
+
 /**
  * @summary Encodes a(n) BRTCertificateReferrerList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_BRTCertificateReferrerList(
     return _cached_encoder_for_BRTCertificateReferrerList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRTCertificateReferrerList */
 
 /* eslint-enable */

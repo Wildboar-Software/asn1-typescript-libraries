@@ -15,7 +15,6 @@ import {
     _decode_IPMIdentifier,
     _encode_IPMIdentifier,
 } from '../IPMSInformationObjects/IPMIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubjectIPMField */
 /**
  * @summary SubjectIPMField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubjectIPMField = IPMIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubjectIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectIPMField */
 let _cached_decoder_for_SubjectIPMField: $.ASN1Decoder<SubjectIPMField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectIPMField */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectIPMField
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubjectIPMField(el: _Element) {
     }
     return _cached_decoder_for_SubjectIPMField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectIPMField */
 let _cached_encoder_for_SubjectIPMField: $.ASN1Encoder<SubjectIPMField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectIPMField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectIPMField */
 /**
  * @summary Encodes a(n) SubjectIPMField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubjectIPMField(
     return _cached_encoder_for_SubjectIPMField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectIPMField */
 
 /* eslint-enable */

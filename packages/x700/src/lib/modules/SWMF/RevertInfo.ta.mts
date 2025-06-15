@@ -15,7 +15,6 @@ import {
     _decode_RevertInfo_Item,
     _encode_RevertInfo_Item,
 } from '../SWMF/RevertInfo-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevertInfo */
 /**
  * @summary RevertInfo
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type RevertInfo = RevertInfo_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RevertInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevertInfo */
 let _cached_decoder_for_RevertInfo: $.ASN1Decoder<RevertInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevertInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevertInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevertInfo
  * @function
@@ -51,13 +46,9 @@ export function _decode_RevertInfo(el: _Element) {
     }
     return _cached_decoder_for_RevertInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevertInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevertInfo */
 let _cached_encoder_for_RevertInfo: $.ASN1Encoder<RevertInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevertInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevertInfo */
 /**
  * @summary Encodes a(n) RevertInfo into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_RevertInfo(
     return _cached_encoder_for_RevertInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevertInfo */
 
 /* eslint-enable */

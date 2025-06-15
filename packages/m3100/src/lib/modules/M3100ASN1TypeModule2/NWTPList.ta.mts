@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NWTPList */
+
 /**
  * @summary NWTPList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type NWTPList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NWTPList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NWTPList */
+
 let _cached_decoder_for_NWTPList: $.ASN1Decoder<NWTPList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NWTPList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NWTPList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NWTPList
  * @function
@@ -48,13 +46,11 @@ export function _decode_NWTPList(el: _Element) {
     }
     return _cached_decoder_for_NWTPList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NWTPList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NWTPList */
+
 let _cached_encoder_for_NWTPList: $.ASN1Encoder<NWTPList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NWTPList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NWTPList */
+
 /**
  * @summary Encodes a(n) NWTPList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_NWTPList(
     return _cached_encoder_for_NWTPList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NWTPList */
 
 /* eslint-enable */

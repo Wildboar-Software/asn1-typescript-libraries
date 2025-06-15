@@ -11,7 +11,7 @@ import {
     _decode_RecipientKeyIdentifier,
     _encode_RecipientKeyIdentifier,
 } from "../PKCS7/RecipientKeyIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyAgreementRecipientIdentifier */
+
 /**
  * @summary KeyAgreementRecipientIdentifier
  * @description
@@ -28,13 +28,11 @@ import {
 export type KeyAgreementRecipientIdentifier =
     | { issuerAndSerialNumber: IssuerAndSerialNumber } /* CHOICE_ALT_ROOT */
     | { recipientKeyIdentifier: RecipientKeyIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION KeyAgreementRecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreementRecipientIdentifier */
+
 let _cached_decoder_for_KeyAgreementRecipientIdentifier: $.ASN1Decoder<KeyAgreementRecipientIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyAgreementRecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyAgreementRecipientIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyAgreementRecipientIdentifier
  * @function
@@ -60,13 +58,11 @@ export function _decode_KeyAgreementRecipientIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KeyAgreementRecipientIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyAgreementRecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreementRecipientIdentifier */
+
 let _cached_encoder_for_KeyAgreementRecipientIdentifier: $.ASN1Encoder<KeyAgreementRecipientIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyAgreementRecipientIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyAgreementRecipientIdentifier */
+
 /**
  * @summary Encodes a(n) KeyAgreementRecipientIdentifier into an ASN.1 Element.
  * @function
@@ -95,6 +91,5 @@ export function _encode_KeyAgreementRecipientIdentifier(
     return _cached_encoder_for_KeyAgreementRecipientIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyAgreementRecipientIdentifier */
 
 /* eslint-enable */

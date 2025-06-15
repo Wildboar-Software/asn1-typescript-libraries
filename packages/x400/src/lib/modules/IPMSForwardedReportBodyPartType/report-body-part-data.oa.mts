@@ -16,7 +16,6 @@ import {
     _encode_ReportDeliveryArgument,
 } from '../MTSAbstractService/ReportDeliveryArgument.ta.mjs';
 import { id_et_report } from '../IPMSObjectIdentifiers/id-et-report.va.mjs';
-/* START_OF_SYMBOL_DEFINITION report_body_part_data */
 /**
  * @summary report_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const report_body_part_data: TYPE_IDENTIFIER<ReportDeliveryArgument> = {
     '&id': id_et_report /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION report_body_part_data */
 
 /* eslint-enable */

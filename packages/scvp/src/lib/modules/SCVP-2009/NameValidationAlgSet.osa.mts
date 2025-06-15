@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { POLICY } from '../SCVP-2009/POLICY.oca.mjs';
 import { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION NameValidationAlgSet */
 /**
  * @summary NameValidationAlgSet
  * @description
@@ -29,6 +28,5 @@ import { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa.mjs';
  *
  */
 export const NameValidationAlgSet: POLICY[] = [svp_nameValAlg];
-/* END_OF_SYMBOL_DEFINITION NameValidationAlgSet */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION rejectResponseTimerDefault */
+
 /**
  * @summary rejectResponseTimerDefault
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const rejectResponseTimerDefault: INTEGER = 60;
-/* END_OF_SYMBOL_DEFINITION rejectResponseTimerDefault */
 
 /* eslint-enable */

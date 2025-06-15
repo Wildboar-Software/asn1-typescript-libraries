@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION enterprise */
 /**
  * @summary enterprise
  * @description
@@ -41,6 +40,5 @@ const enterprise: OBJECT_IDENTIFIER = new _OID([
     /* private */ 4,
     /* enterprise */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION enterprise */
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { id_hmacWithSHA512_256 } from "../PKCS5v2-1/id-hmacWithSHA512-256.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs_Union6_Intersection0_Element */
+
 /**
  * @summary PBKDF2_PRFs_Union6_Intersection0_Element
  * @description
@@ -29,6 +29,5 @@ export const PBKDF2_PRFs_Union6_Intersection0_Element: ALGORITHM_IDENTIFIER<NULL
     "&id": id_hmacWithSHA512_256 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PBKDF2_PRFs_Union6_Intersection0_Element */
 
 /* eslint-enable */

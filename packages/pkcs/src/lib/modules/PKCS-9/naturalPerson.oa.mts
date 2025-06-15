@@ -7,7 +7,7 @@ import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.
 import { NaturalPersonAttributeSet } from "../PKCS-9/NaturalPersonAttributeSet.osa.mjs";
 import { pkcs_9_oc_naturalPerson } from "../PKCS-9/pkcs-9-oc-naturalPerson.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION naturalPerson */
+
 /**
  * @summary naturalPerson
  * @description
@@ -38,6 +38,5 @@ export const naturalPerson: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": pkcs_9_oc_naturalPerson /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION naturalPerson */
 
 /* eslint-enable */

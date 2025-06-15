@@ -15,7 +15,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MHSDistributionListName */
 /**
  * @summary MHSDistributionListName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MHSDistributionListName = DistinguishedName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MHSDistributionListName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MHSDistributionListName */
 let _cached_decoder_for_MHSDistributionListName: $.ASN1Decoder<MHSDistributionListName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MHSDistributionListName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MHSDistributionListName */
 /**
  * @summary Decodes an ASN.1 element into a(n) MHSDistributionListName
  * @function
@@ -46,13 +41,9 @@ export function _decode_MHSDistributionListName(el: _Element) {
     }
     return _cached_decoder_for_MHSDistributionListName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MHSDistributionListName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MHSDistributionListName */
 let _cached_encoder_for_MHSDistributionListName: $.ASN1Encoder<MHSDistributionListName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MHSDistributionListName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MHSDistributionListName */
 /**
  * @summary Encodes a(n) MHSDistributionListName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MHSDistributionListName(
     return _cached_encoder_for_MHSDistributionListName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MHSDistributionListName */
 
 /* eslint-enable */

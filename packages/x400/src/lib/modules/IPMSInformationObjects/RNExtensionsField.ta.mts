@@ -15,7 +15,6 @@ import {
     _decode_IPMSExtension,
     _encode_IPMSExtension,
 } from '../IPMSInformationObjects/IPMSExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RNExtensionsField */
 /**
  * @summary RNExtensionsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RNExtensionsField = IPMSExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RNExtensionsField */
 let _cached_decoder_for_RNExtensionsField: $.ASN1Decoder<RNExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RNExtensionsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) RNExtensionsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_RNExtensionsField(el: _Element) {
     }
     return _cached_decoder_for_RNExtensionsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RNExtensionsField */
 let _cached_encoder_for_RNExtensionsField: $.ASN1Encoder<RNExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RNExtensionsField */
 /**
  * @summary Encodes a(n) RNExtensionsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RNExtensionsField(
     return _cached_encoder_for_RNExtensionsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RNExtensionsField */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_InfoTypeAndValue,
   _encode_InfoTypeAndValue,
 } from '../PKIXCMP-2009/InfoTypeAndValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GenRepContent */
+
 /**
  * @summary GenRepContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GenRepContent = InfoTypeAndValue[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION GenRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GenRepContent */
+
 let _cached_decoder_for_GenRepContent: $.ASN1Decoder<GenRepContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GenRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GenRepContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GenRepContent
  * @function
@@ -48,13 +46,11 @@ export function _decode_GenRepContent(el: _Element) {
   }
   return _cached_decoder_for_GenRepContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GenRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GenRepContent */
+
 let _cached_encoder_for_GenRepContent: $.ASN1Encoder<GenRepContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GenRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GenRepContent */
+
 /**
  * @summary Encodes a(n) GenRepContent into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_GenRepContent(
   return _cached_encoder_for_GenRepContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GenRepContent */
 
 /* eslint-enable */

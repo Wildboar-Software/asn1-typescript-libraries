@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_information */
 /**
  * @summary id_information
  * @description
@@ -25,6 +24,5 @@ import { mhs_management } from '../MhsAcctObjectIdentifiers/mhs-management.va.mj
  * @constant
  */
 export const id_information: ID = new _OID([2], mhs_management);
-/* END_OF_SYMBOL_DEFINITION id_information */
 
 /* eslint-enable */

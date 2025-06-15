@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SymmetricEncryptionAlgorithms */
 /**
  * @summary SymmetricEncryptionAlgorithms
  * @description
@@ -16,6 +15,5 @@ import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
  *
  */
 export const SymmetricEncryptionAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SymmetricEncryptionAlgorithms */
 
 /* eslint-enable */

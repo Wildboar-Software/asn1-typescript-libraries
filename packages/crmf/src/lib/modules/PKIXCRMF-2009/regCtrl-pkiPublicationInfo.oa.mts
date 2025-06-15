@@ -7,7 +7,7 @@ import {
     _encode_PKIPublicationInfo,
 } from "../PKIXCRMF-2009/PKIPublicationInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regCtrl_pkiPublicationInfo */
+
 /**
  * @summary regCtrl_pkiPublicationInfo
  * @description
@@ -34,6 +34,5 @@ export const regCtrl_pkiPublicationInfo: ATTRIBUTE<PKIPublicationInfo> = {
     "&id": id_regCtrl_pkiPublicationInfo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regCtrl_pkiPublicationInfo */
 
 /* eslint-enable */

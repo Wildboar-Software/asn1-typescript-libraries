@@ -16,7 +16,6 @@ import {
     _decode_ValidateReply,
     _encode_ValidateReply,
 } from '../SWMF/ValidateReply.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TerminateValidationReply */
 /**
  * @summary TerminateValidationReply
  * @description
@@ -35,12 +34,8 @@ export type TerminateValidationReply =
     | { noOutStandingValidation: NULL } /* CHOICE_ALT_ROOT */
     | { validationCancelled: NULL } /* CHOICE_ALT_ROOT */
     | { resultOfPartialValidation: ValidateReply } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TerminateValidationReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateValidationReply */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateValidationReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminateValidationReply */
 export const _decode_TerminateValidationReply = $._decode_inextensible_choice<TerminateValidationReply>(
         {
             'CONTEXT 0': [
@@ -59,12 +54,8 @@ export const _decode_TerminateValidationReply = $._decode_inextensible_choice<Te
             ],
         }
     );
-/* END_OF_SYMBOL_DEFINITION _decode_TerminateValidationReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateValidationReply */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateValidationReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminateValidationReply */
 export const _encode_TerminateValidationReply = $._encode_choice<TerminateValidationReply>(
         {
             noOutStandingValidation: $._encode_implicit(
@@ -89,6 +80,5 @@ export const _encode_TerminateValidationReply = $._encode_choice<TerminateValida
         $.BER
     );
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminateValidationReply */
 
 /* eslint-enable */

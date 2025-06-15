@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs';
 import { id_mta } from '../MhsMTAObjectIdentifiers/id-mta.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_name_binding */
 /**
  * @summary id_name_binding
  * @description
@@ -25,6 +24,5 @@ import { id_mta } from '../MhsMTAObjectIdentifiers/id-mta.va.mjs';
  * @constant
  */
 export const id_name_binding: ID = new _OID([7], id_mta);
-/* END_OF_SYMBOL_DEFINITION id_name_binding */
 
 /* eslint-enable */

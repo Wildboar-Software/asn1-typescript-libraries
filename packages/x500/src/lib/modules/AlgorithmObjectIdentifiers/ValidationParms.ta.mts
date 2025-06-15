@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ValidationParms */
 /**
  * @summary ValidationParms
  * @description
@@ -68,9 +67,7 @@ export class ValidationParms {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ValidationParms */
 /**
  * @summary The Leading Root Component Types of ValidationParms
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_ValidationParms: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ValidationParms */
 /**
  * @summary The Trailing Root Component Types of ValidationParms
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_ValidationParms: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ValidationParms: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ValidationParms */
 /**
  * @summary The Extension Addition Component Types of ValidationParms
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_ValidationParms: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ValidationParms: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidationParms */
 let _cached_decoder_for_ValidationParms: $.ASN1Decoder<ValidationParms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ValidationParms */
 /**
  * @summary Decodes an ASN.1 element into a(n) ValidationParms
  * @function
@@ -156,13 +145,9 @@ export function _decode_ValidationParms(el: _Element) {
     }
     return _cached_decoder_for_ValidationParms(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidationParms */
 let _cached_encoder_for_ValidationParms: $.ASN1Encoder<ValidationParms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidationParms */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ValidationParms */
 /**
  * @summary Encodes a(n) ValidationParms into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ export function _encode_ValidationParms(
     return _cached_encoder_for_ValidationParms(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ValidationParms */
 
 /* eslint-enable */

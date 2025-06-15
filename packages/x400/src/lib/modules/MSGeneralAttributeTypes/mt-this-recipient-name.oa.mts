@@ -26,7 +26,6 @@ import { id_att_this_recipient_name } from '../MSObjectIdentifiers/id-att-this-r
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_this_recipient_name */
 /**
  * @summary mt_this_recipient_name
  * @description
@@ -67,6 +66,5 @@ export const mt_this_recipient_name: X413ATTRIBUTE<ORName> = {
     '&id': id_att_this_recipient_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_this_recipient_name */
 
 /* eslint-enable */

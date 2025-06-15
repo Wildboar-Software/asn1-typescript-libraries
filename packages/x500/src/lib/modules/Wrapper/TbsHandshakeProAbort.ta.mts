@@ -26,7 +26,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsHandshakeProAbort */
 /**
  * @summary TbsHandshakeProAbort
  * @description
@@ -110,9 +109,7 @@ export class TbsHandshakeProAbort {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsHandshakeProAbort */
 /**
  * @summary The Leading Root Component Types of TbsHandshakeProAbort
  * @description
@@ -158,9 +155,7 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeProAbort: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsHandshakeProAbort */
 /**
  * @summary The Trailing Root Component Types of TbsHandshakeProAbort
  * @description
@@ -170,9 +165,7 @@ export const _root_component_type_list_1_spec_for_TbsHandshakeProAbort: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbsHandshakeProAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsHandshakeProAbort */
 /**
  * @summary The Extension Addition Component Types of TbsHandshakeProAbort
  * @description
@@ -182,13 +175,9 @@ export const _root_component_type_list_2_spec_for_TbsHandshakeProAbort: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_TbsHandshakeProAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeProAbort */
 let _cached_decoder_for_TbsHandshakeProAbort: $.ASN1Decoder<TbsHandshakeProAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsHandshakeProAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsHandshakeProAbort
  * @function
@@ -235,13 +224,9 @@ export function _decode_TbsHandshakeProAbort(el: _Element) {
     }
     return _cached_decoder_for_TbsHandshakeProAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeProAbort */
 let _cached_encoder_for_TbsHandshakeProAbort: $.ASN1Encoder<TbsHandshakeProAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeProAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsHandshakeProAbort */
 /**
  * @summary Encodes a(n) TbsHandshakeProAbort into an ASN.1 Element.
  * @function
@@ -293,6 +278,5 @@ export function _encode_TbsHandshakeProAbort(
     return _cached_encoder_for_TbsHandshakeProAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsHandshakeProAbort */
 
 /* eslint-enable */

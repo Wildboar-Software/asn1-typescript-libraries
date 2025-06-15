@@ -11,7 +11,6 @@ import {
 } from "../SchemaAdministration/NameFormDescription.ta.mjs";
 import { nameFormDescription } from "../SelectedAttributeTypes/nameFormDescription.oa.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION nameForms */
 /**
  * @summary nameForms
  * @description
@@ -52,6 +51,5 @@ export const nameForms: ATTRIBUTE<NameFormDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nameForms */
 
 /* eslint-enable */

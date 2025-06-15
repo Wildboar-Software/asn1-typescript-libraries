@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { tcg_kp } from "../PlatformCertificateProfile/tcg-kp.va.mjs";
-/* START_OF_SYMBOL_DEFINITION tcg_kp_DeltaPlatformAttributeCertificate */
 /**
  * @summary tcg_kp_DeltaPlatformAttributeCertificate
  * @description
@@ -28,6 +27,5 @@ export
 const tcg_kp_DeltaPlatformAttributeCertificate: OBJECT_IDENTIFIER = new _OID([
     5,
 ], tcg_kp);
-/* END_OF_SYMBOL_DEFINITION tcg_kp_DeltaPlatformAttributeCertificate */
 
 /* eslint-enable */

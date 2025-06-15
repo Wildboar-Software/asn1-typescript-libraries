@@ -15,7 +15,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION URI */
+
 /**
  * @summary URI
  * @description
@@ -27,9 +27,8 @@ import {
  * ```
  */
 export type URI = LDAPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION URI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_URI */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) URI
  * @function
@@ -39,9 +38,8 @@ export type URI = LDAPString; // DefinedType
 export function _decode_URI(el: _Element) {
   return _decode_LDAPString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_URI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_URI */
+
 /**
  * @summary Encodes a(n) URI into an ASN.1 Element.
  * @function
@@ -53,6 +51,5 @@ export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>) {
   return _encode_LDAPString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_URI */
 
 /* eslint-enable */

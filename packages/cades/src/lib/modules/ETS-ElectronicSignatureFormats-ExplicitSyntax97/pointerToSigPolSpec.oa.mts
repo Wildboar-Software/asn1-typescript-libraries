@@ -12,7 +12,6 @@ import {
 import { id_spq_ets_uri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-uri.va.mjs";
 import { SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta.mjs";
 import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION pointerToSigPolSpec */
 /**
  * @summary pointerToSigPolSpec
  * @description
@@ -41,6 +40,5 @@ const pointerToSigPolSpec: SIG_POLICY_QUALIFIER<SPuri> = {
     "&id": id_spq_ets_uri /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Qualifier": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pointerToSigPolSpec */
 
 /* eslint-enable */

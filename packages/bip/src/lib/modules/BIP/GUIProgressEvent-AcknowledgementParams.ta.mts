@@ -16,7 +16,7 @@ import {
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
 } from '../BIP/BioAPI-GUI-RESPONSE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIProgressEvent_AcknowledgementParams */
+
 /**
  * @summary GUIProgressEvent_AcknowledgementParams
  * @description
@@ -69,9 +69,8 @@ export class GUIProgressEvent_AcknowledgementParams {
 
   public static _enum_for_response = _enum_for_BioAPI_GUI_RESPONSE;
 }
-/* END_OF_SYMBOL_DEFINITION GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIProgressEvent_AcknowledgementParams */
+
 /**
  * @summary The Leading Root Component Types of GUIProgressEvent_AcknowledgementParams
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_GUIProgressEvent_Acknowledgeme
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIProgressEvent_AcknowledgementParams */
+
 /**
  * @summary The Trailing Root Component Types of GUIProgressEvent_AcknowledgementParams
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_GUIProgressEvent_Acknowledgeme
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUIProgressEvent_AcknowledgementParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIProgressEvent_AcknowledgementParams */
+
 /**
  * @summary The Extension Addition Component Types of GUIProgressEvent_AcknowledgementParams
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_GUIProgressEvent_Acknowledgeme
  * @constant
  */
 export const _extension_additions_list_spec_for_GUIProgressEvent_AcknowledgementParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIProgressEvent_AcknowledgementParams */
+
 let _cached_decoder_for_GUIProgressEvent_AcknowledgementParams: $.ASN1Decoder<GUIProgressEvent_AcknowledgementParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIProgressEvent_AcknowledgementParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIProgressEvent_AcknowledgementParams
  * @function
@@ -147,13 +142,11 @@ export function _decode_GUIProgressEvent_AcknowledgementParams(el: _Element) {
   }
   return _cached_decoder_for_GUIProgressEvent_AcknowledgementParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIProgressEvent_AcknowledgementParams */
+
 let _cached_encoder_for_GUIProgressEvent_AcknowledgementParams: $.ASN1Encoder<GUIProgressEvent_AcknowledgementParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIProgressEvent_AcknowledgementParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIProgressEvent_AcknowledgementParams */
+
 /**
  * @summary Encodes a(n) GUIProgressEvent_AcknowledgementParams into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_GUIProgressEvent_AcknowledgementParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIProgressEvent_AcknowledgementParams */
 
 /* eslint-enable */

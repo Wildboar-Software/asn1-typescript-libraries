@@ -36,7 +36,6 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TBSAsymmetricToken */
 /**
  * @summary TBSAsymmetricToken
  * @description
@@ -120,9 +119,7 @@ export class TBSAsymmetricToken {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAsymmetricToken */
 /**
  * @summary The Leading Root Component Types of TBSAsymmetricToken
  * @description
@@ -169,9 +166,7 @@ export const _root_component_type_list_1_spec_for_TBSAsymmetricToken: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAsymmetricToken */
 /**
  * @summary The Trailing Root Component Types of TBSAsymmetricToken
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_TBSAsymmetricToken: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TBSAsymmetricToken: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAsymmetricToken */
 /**
  * @summary The Extension Addition Component Types of TBSAsymmetricToken
  * @description
@@ -193,13 +186,9 @@ export const _root_component_type_list_2_spec_for_TBSAsymmetricToken: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_TBSAsymmetricToken: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAsymmetricToken */
 let _cached_decoder_for_TBSAsymmetricToken: $.ASN1Decoder<TBSAsymmetricToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSAsymmetricToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSAsymmetricToken
  * @function
@@ -272,13 +261,9 @@ export function _decode_TBSAsymmetricToken(el: _Element) {
     }
     return _cached_decoder_for_TBSAsymmetricToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAsymmetricToken */
 let _cached_encoder_for_TBSAsymmetricToken: $.ASN1Encoder<TBSAsymmetricToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAsymmetricToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSAsymmetricToken */
 /**
  * @summary Encodes a(n) TBSAsymmetricToken into an ASN.1 Element.
  * @function
@@ -342,6 +327,5 @@ export function _encode_TBSAsymmetricToken(
     return _cached_encoder_for_TBSAsymmetricToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSAsymmetricToken */
 
 /* eslint-enable */

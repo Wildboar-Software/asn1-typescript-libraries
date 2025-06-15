@@ -30,7 +30,7 @@ import {
     _decode_SequenceOfTypeOfDays,
     _encode_SequenceOfTypeOfDays,
 } from '../Schedulerev1-ASN1Module/SequenceOfTypeOfDays.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Schedule */
+
 /**
  * @summary Schedule
  * @description
@@ -51,13 +51,11 @@ export type Schedule =
     | { weekly: SequenceOfWeeks } /* CHOICE_ALT_ROOT */
     | { monthly: SequenceOfMonths } /* CHOICE_ALT_ROOT */
     | { typeOfDay: SequenceOfTypeOfDays } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Schedule */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Schedule */
+
 let _cached_decoder_for_Schedule: $.ASN1Decoder<Schedule> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Schedule */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Schedule */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Schedule
  * @function
@@ -95,13 +93,11 @@ export function _decode_Schedule(el: _Element) {
     }
     return _cached_decoder_for_Schedule(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Schedule */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Schedule */
+
 let _cached_encoder_for_Schedule: $.ASN1Encoder<Schedule> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Schedule */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Schedule */
+
 /**
  * @summary Encodes a(n) Schedule into an ASN.1 Element.
  * @function
@@ -147,6 +143,5 @@ export function _encode_Schedule(
     return _cached_encoder_for_Schedule(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Schedule */
 
 /* eslint-enable */

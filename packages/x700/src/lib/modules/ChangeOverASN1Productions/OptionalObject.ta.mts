@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OptionalObject */
 /**
  * @summary OptionalObject
  * @description
@@ -32,13 +31,9 @@ import {
 export type OptionalObject =
     | { noObject: NULL } /* CHOICE_ALT_ROOT */
     | { object: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OptionalObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalObject */
 let _cached_decoder_for_OptionalObject: $.ASN1Decoder<OptionalObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalObject */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalObject */
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalObject
  * @function
@@ -58,13 +53,9 @@ export function _decode_OptionalObject(el: _Element) {
     }
     return _cached_decoder_for_OptionalObject(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalObject */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalObject */
 let _cached_encoder_for_OptionalObject: $.ASN1Encoder<OptionalObject> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalObject */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalObject */
 /**
  * @summary Encodes a(n) OptionalObject into an ASN.1 Element.
  * @function
@@ -88,6 +79,5 @@ export function _encode_OptionalObject(
     return _cached_encoder_for_OptionalObject(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalObject */
 
 /* eslint-enable */

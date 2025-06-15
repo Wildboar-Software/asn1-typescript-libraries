@@ -2,7 +2,6 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_SearchArgumentData_joinType */
 /**
  * @summary SearchArgumentData_joinType
  * @description
@@ -18,9 +17,7 @@ export enum _enum_for_SearchArgumentData_joinType {
     leftOuterJoin = 1,
     fullOuterJoin = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_SearchArgumentData_joinType */
 
-/* START_OF_SYMBOL_DEFINITION SearchArgumentData_joinType */
 /**
  * @summary SearchArgumentData_joinType
  * @description
@@ -32,9 +29,7 @@ export enum _enum_for_SearchArgumentData_joinType {
  * ```@enum {number}
  */
 export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
-/* END_OF_SYMBOL_DEFINITION SearchArgumentData_joinType */
 
-/* START_OF_SYMBOL_DEFINITION SearchArgumentData_joinType */
 /**
  * @summary SearchArgumentData_joinType
  * @description
@@ -46,9 +41,7 @@ export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
  * ```@enum {number}
  */
 export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
-/* END_OF_SYMBOL_DEFINITION SearchArgumentData_joinType */
 
-/* START_OF_SYMBOL_DEFINITION SearchArgumentData_joinType_innerJoin */
 /**
  * @summary SearchArgumentData_joinType_innerJoin
  * @constant
@@ -56,9 +49,7 @@ export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType
  */
 export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.innerJoin; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SearchArgumentData_joinType_innerJoin */
 
-/* START_OF_SYMBOL_DEFINITION innerJoin */
 /**
  * @summary innerJoin
  * @constant
@@ -66,9 +57,7 @@ export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType 
  */
 export const innerJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.innerJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION innerJoin */
 
-/* START_OF_SYMBOL_DEFINITION SearchArgumentData_joinType_leftOuterJoin */
 /**
  * @summary SearchArgumentData_joinType_leftOuterJoin
  * @constant
@@ -76,9 +65,7 @@ export const innerJoin: SearchArgumentData_joinType =
  */
 export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.leftOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SearchArgumentData_joinType_leftOuterJoin */
 
-/* START_OF_SYMBOL_DEFINITION leftOuterJoin */
 /**
  * @summary leftOuterJoin
  * @constant
@@ -86,9 +73,7 @@ export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinT
  */
 export const leftOuterJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.leftOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION leftOuterJoin */
 
-/* START_OF_SYMBOL_DEFINITION SearchArgumentData_joinType_fullOuterJoin */
 /**
  * @summary SearchArgumentData_joinType_fullOuterJoin
  * @constant
@@ -96,9 +81,7 @@ export const leftOuterJoin: SearchArgumentData_joinType =
  */
 export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.fullOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SearchArgumentData_joinType_fullOuterJoin */
 
-/* START_OF_SYMBOL_DEFINITION fullOuterJoin */
 /**
  * @summary fullOuterJoin
  * @constant
@@ -106,21 +89,12 @@ export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinT
  */
 export const fullOuterJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.fullOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION fullOuterJoin */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData_joinType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchArgumentData_joinType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchArgumentData_joinType */
 export const _decode_SearchArgumentData_joinType = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_SearchArgumentData_joinType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData_joinType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchArgumentData_joinType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchArgumentData_joinType */
 export const _encode_SearchArgumentData_joinType = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchArgumentData_joinType */
 
 /* eslint-enable */

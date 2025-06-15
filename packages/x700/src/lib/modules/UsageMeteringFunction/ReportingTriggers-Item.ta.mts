@@ -28,7 +28,6 @@ import {
     _decode_ReportingEvent,
     _encode_ReportingEvent,
 } from '../UsageMeteringFunction/ReportingEvent.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportingTriggers_Item */
 /**
  * @summary ReportingTriggers_Item
  * @description
@@ -44,13 +43,9 @@ export type ReportingTriggers_Item =
     | { induced: Induced } /* CHOICE_ALT_ROOT */
     | { event: ReportingEvent } /* CHOICE_ALT_ROOT */
     | { stimulus: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ReportingTriggers_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingTriggers_Item */
 let _cached_decoder_for_ReportingTriggers_Item: $.ASN1Decoder<ReportingTriggers_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingTriggers_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportingTriggers_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingTriggers_Item
  * @function
@@ -86,13 +81,9 @@ export function _decode_ReportingTriggers_Item(el: _Element) {
     }
     return _cached_decoder_for_ReportingTriggers_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportingTriggers_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingTriggers_Item */
 let _cached_encoder_for_ReportingTriggers_Item: $.ASN1Encoder<ReportingTriggers_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingTriggers_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportingTriggers_Item */
 /**
  * @summary Encodes a(n) ReportingTriggers_Item into an ASN.1 Element.
  * @function
@@ -138,6 +129,5 @@ export function _encode_ReportingTriggers_Item(
     return _cached_encoder_for_ReportingTriggers_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportingTriggers_Item */
 
 /* eslint-enable */

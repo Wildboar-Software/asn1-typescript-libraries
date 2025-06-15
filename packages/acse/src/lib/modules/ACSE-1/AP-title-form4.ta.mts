@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AP_title_form4 */
 /**
  * @summary AP_title_form4
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AP_title_form4 = RELATIVE_OID; // RelativeOIDType
-/* END_OF_SYMBOL_DEFINITION AP_title_form4 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_title_form4 */
 let _cached_decoder_for_AP_title_form4: $.ASN1Decoder<AP_title_form4> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_title_form4 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AP_title_form4 */
 /**
  * @summary Decodes an ASN.1 element into a(n) AP_title_form4
  * @function
@@ -45,13 +40,9 @@ export function _decode_AP_title_form4(el: _Element) {
   }
   return _cached_decoder_for_AP_title_form4(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AP_title_form4 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_title_form4 */
 let _cached_encoder_for_AP_title_form4: $.ASN1Encoder<AP_title_form4> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_title_form4 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AP_title_form4 */
 /**
  * @summary Encodes a(n) AP_title_form4 into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_AP_title_form4(
   return _cached_encoder_for_AP_title_form4(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AP_title_form4 */
 
 /* eslint-enable */

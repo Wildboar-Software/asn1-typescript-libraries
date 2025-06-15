@@ -6,7 +6,7 @@ import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-sha256.va.mjs";
-/* START_OF_SYMBOL_DEFINITION mda_sha256 */
+
 /**
  * @summary mda_sha256
  * @description
@@ -36,6 +36,5 @@ export const mda_sha256: DIGEST_ALGORITHM<NULL> = {
     "&paramPresence": preferredAbsent /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mda_sha256 */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION externalDomain_Default */
 /**
  * @summary externalDomain_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const externalDomain_Default: BOOLEAN = false;
-/* END_OF_SYMBOL_DEFINITION externalDomain_Default */
 
 /* eslint-enable */

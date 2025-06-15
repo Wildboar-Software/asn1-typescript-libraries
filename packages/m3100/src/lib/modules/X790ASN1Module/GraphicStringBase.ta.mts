@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GraphicStringBase */
+
 /**
  * @summary GraphicStringBase
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type GraphicStringBase = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION GraphicStringBase */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicStringBase */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GraphicStringBase */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GraphicStringBase */
+
+
 export const _decode_GraphicStringBase = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_GraphicStringBase */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicStringBase */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GraphicStringBase */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GraphicStringBase */
+
+
 export const _encode_GraphicStringBase = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_GraphicStringBase */
 
 /* eslint-enable */

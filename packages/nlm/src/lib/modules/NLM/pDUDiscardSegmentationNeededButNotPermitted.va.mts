@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardSegmentationNeededButNotPermitted */
+
 /**
  * @summary pDUDiscardSegmentationNeededButNotPermitted
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardSegmentationNeededButNotPermitted: OBJECT_IDENTIFIER = ne
     [/* segmentationNeededButNotPermitted */ 5],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardSegmentationNeededButNotPermitted */
 
 /* eslint-enable */

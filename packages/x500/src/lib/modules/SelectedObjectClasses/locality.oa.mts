@@ -9,7 +9,6 @@ import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { id_oc_locality } from "../SelectedObjectClasses/id-oc-locality.va.mjs";
 import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION locality */
 /**
  * @summary locality
  * @description
@@ -46,6 +45,5 @@ export const locality: OBJECT_CLASS = {
     "&id": id_oc_locality /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION locality */
 
 /* eslint-enable */

@@ -36,7 +36,7 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityAuditInfo */
+
 /**
  * @summary SecurityAuditInfo
  * @description
@@ -113,9 +113,8 @@ export class SecurityAuditInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityAuditInfo */
+
 /**
  * @summary The Leading Root Component Types of SecurityAuditInfo
  * @description
@@ -161,9 +160,8 @@ export const _root_component_type_list_1_spec_for_SecurityAuditInfo: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityAuditInfo */
+
 /**
  * @summary The Trailing Root Component Types of SecurityAuditInfo
  * @description
@@ -173,9 +171,8 @@ export const _root_component_type_list_1_spec_for_SecurityAuditInfo: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityAuditInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityAuditInfo */
+
 /**
  * @summary The Extension Addition Component Types of SecurityAuditInfo
  * @description
@@ -185,13 +182,11 @@ export const _root_component_type_list_2_spec_for_SecurityAuditInfo: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_SecurityAuditInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityAuditInfo */
+
 let _cached_decoder_for_SecurityAuditInfo: $.ASN1Decoder<SecurityAuditInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityAuditInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityAuditInfo
  * @function
@@ -254,13 +249,11 @@ export function _decode_SecurityAuditInfo(el: _Element) {
     }
     return _cached_decoder_for_SecurityAuditInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityAuditInfo */
+
 let _cached_encoder_for_SecurityAuditInfo: $.ASN1Encoder<SecurityAuditInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityAuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityAuditInfo */
+
 /**
  * @summary Encodes a(n) SecurityAuditInfo into an ASN.1 Element.
  * @function
@@ -324,6 +317,5 @@ export function _encode_SecurityAuditInfo(
     return _cached_encoder_for_SecurityAuditInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityAuditInfo */
 
 /* eslint-enable */

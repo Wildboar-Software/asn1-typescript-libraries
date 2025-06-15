@@ -15,7 +15,6 @@ import {
     _decode_DataUnits,
     _encode_DataUnits,
 } from '../TestCategories-ASN1Module/DataUnits.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataIntegrityTestInfo */
 /**
  * @summary DataIntegrityTestInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DataIntegrityTestInfo = DataUnits[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION DataIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataIntegrityTestInfo */
 let _cached_decoder_for_DataIntegrityTestInfo: $.ASN1Decoder<DataIntegrityTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataIntegrityTestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataIntegrityTestInfo
  * @function
@@ -48,13 +43,9 @@ export function _decode_DataIntegrityTestInfo(el: _Element) {
     }
     return _cached_decoder_for_DataIntegrityTestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataIntegrityTestInfo */
 let _cached_encoder_for_DataIntegrityTestInfo: $.ASN1Encoder<DataIntegrityTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataIntegrityTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataIntegrityTestInfo */
 /**
  * @summary Encodes a(n) DataIntegrityTestInfo into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_DataIntegrityTestInfo(
     return _cached_encoder_for_DataIntegrityTestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataIntegrityTestInfo */
 
 /* eslint-enable */

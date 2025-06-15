@@ -19,7 +19,6 @@ import {
   _decode_CVStatusCode,
   _encode_CVStatusCode,
 } from '../SCVP-2009/CVStatusCode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResponseStatus */
 /**
  * @summary ResponseStatus
  * @description
@@ -86,9 +85,7 @@ export class ResponseStatus {
 
   public static _enum_for_statusCode = _enum_for_CVStatusCode;
 }
-/* END_OF_SYMBOL_DEFINITION ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseStatus */
 /**
  * @summary The Leading Root Component Types of ResponseStatus
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_ResponseStatus: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseStatus */
 /**
  * @summary The Trailing Root Component Types of ResponseStatus
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_ResponseStatus: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResponseStatus: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseStatus */
 /**
  * @summary The Extension Addition Component Types of ResponseStatus
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_ResponseStatus: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_ResponseStatus: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseStatus */
 let _cached_decoder_for_ResponseStatus: $.ASN1Decoder<ResponseStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseStatus */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseStatus
  * @function
@@ -186,13 +175,9 @@ export function _decode_ResponseStatus(el: _Element) {
   }
   return _cached_decoder_for_ResponseStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseStatus */
 let _cached_encoder_for_ResponseStatus: $.ASN1Encoder<ResponseStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseStatus */
 /**
  * @summary Encodes a(n) ResponseStatus into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_ResponseStatus(
   return _cached_encoder_for_ResponseStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseStatus */
 
 /* eslint-enable */

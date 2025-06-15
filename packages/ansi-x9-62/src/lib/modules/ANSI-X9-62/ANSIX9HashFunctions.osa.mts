@@ -11,7 +11,6 @@ import { ANSIX9HashFunctions_Union7_Intersection0_Element } from "./ANSIX9HashFu
 import { ANSIX9HashFunctions_Union8_Intersection0_Element } from "./ANSIX9HashFunctions-Union8-Intersection0-Element.oa.mjs";
 import { ANSIX9HashFunctions_Union9_Intersection0_Element } from "./ANSIX9HashFunctions-Union9-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions */
 /**
  * @summary ANSIX9HashFunctions
  * @description
@@ -50,6 +49,5 @@ export const ANSIX9HashFunctions: ALGORITHM[] = [
     ANSIX9HashFunctions_Union8_Intersection0_Element,
     ANSIX9HashFunctions_Union9_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION ANSIX9HashFunctions */
 
 /* eslint-enable */

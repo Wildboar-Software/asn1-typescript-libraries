@@ -15,7 +15,6 @@ import {
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
 } from '../MTSAbstractService/AdministrationDomainName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatingADMD */
 /**
  * @summary OriginatingADMD
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatingADMD = AdministrationDomainName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatingADMD */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatingADMD */
 let _cached_decoder_for_OriginatingADMD: $.ASN1Decoder<OriginatingADMD> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatingADMD */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatingADMD */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatingADMD
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatingADMD(el: _Element) {
     }
     return _cached_decoder_for_OriginatingADMD(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatingADMD */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatingADMD */
 let _cached_encoder_for_OriginatingADMD: $.ASN1Encoder<OriginatingADMD> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatingADMD */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatingADMD */
 /**
  * @summary Encodes a(n) OriginatingADMD into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginatingADMD(
     return _cached_encoder_for_OriginatingADMD(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatingADMD */
 
 /* eslint-enable */

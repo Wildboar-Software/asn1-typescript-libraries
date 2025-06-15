@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca.mjs";
 import { ContentEncryptionAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/ContentEncryptionAlgs.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION ContentEncryptionAlgorithmSet */
+
 /**
  * @summary ContentEncryptionAlgorithmSet
  * @description
@@ -19,6 +19,5 @@ import { ContentEncryptionAlgs } from "../CryptographicMessageSyntaxAlgorithms-2
 export const ContentEncryptionAlgorithmSet: CONTENT_ENCRYPTION[] = [
     ...ContentEncryptionAlgs,
 ];
-/* END_OF_SYMBOL_DEFINITION ContentEncryptionAlgorithmSet */
 
 /* eslint-enable */

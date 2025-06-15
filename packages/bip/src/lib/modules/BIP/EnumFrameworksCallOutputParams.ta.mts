@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_FRAMEWORK_SCHEMA,
   _encode_BioAPI_FRAMEWORK_SCHEMA,
 } from '../BIP/BioAPI-FRAMEWORK-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EnumFrameworksCallOutputParams */
+
 /**
  * @summary EnumFrameworksCallOutputParams
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type EnumFrameworksCallOutputParams = BioAPI_FRAMEWORK_SCHEMA[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION EnumFrameworksCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnumFrameworksCallOutputParams */
+
 let _cached_decoder_for_EnumFrameworksCallOutputParams: $.ASN1Decoder<EnumFrameworksCallOutputParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnumFrameworksCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EnumFrameworksCallOutputParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EnumFrameworksCallOutputParams
  * @function
@@ -48,13 +46,11 @@ export function _decode_EnumFrameworksCallOutputParams(el: _Element) {
   }
   return _cached_decoder_for_EnumFrameworksCallOutputParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EnumFrameworksCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnumFrameworksCallOutputParams */
+
 let _cached_encoder_for_EnumFrameworksCallOutputParams: $.ASN1Encoder<EnumFrameworksCallOutputParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnumFrameworksCallOutputParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EnumFrameworksCallOutputParams */
+
 /**
  * @summary Encodes a(n) EnumFrameworksCallOutputParams into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_EnumFrameworksCallOutputParams(
   return _cached_encoder_for_EnumFrameworksCallOutputParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EnumFrameworksCallOutputParams */
 
 /* eslint-enable */

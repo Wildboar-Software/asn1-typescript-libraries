@@ -20,7 +20,7 @@ import {
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BaseManagedObjectId */
+
 /**
  * @summary BaseManagedObjectId
  * @description
@@ -73,9 +73,8 @@ export class BaseManagedObjectId {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BaseManagedObjectId */
+
 /**
  * @summary The Leading Root Component Types of BaseManagedObjectId
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_BaseManagedObjectId: $.Compone
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BaseManagedObjectId */
+
 /**
  * @summary The Trailing Root Component Types of BaseManagedObjectId
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_BaseManagedObjectId: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BaseManagedObjectId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BaseManagedObjectId */
+
 /**
  * @summary The Extension Addition Component Types of BaseManagedObjectId
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_BaseManagedObjectId: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_BaseManagedObjectId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BaseManagedObjectId */
+
 let _cached_decoder_for_BaseManagedObjectId: $.ASN1Decoder<BaseManagedObjectId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BaseManagedObjectId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BaseManagedObjectId
  * @function
@@ -164,13 +159,11 @@ export function _decode_BaseManagedObjectId(el: _Element) {
   }
   return _cached_decoder_for_BaseManagedObjectId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BaseManagedObjectId */
+
 let _cached_encoder_for_BaseManagedObjectId: $.ASN1Encoder<BaseManagedObjectId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BaseManagedObjectId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BaseManagedObjectId */
+
 /**
  * @summary Encodes a(n) BaseManagedObjectId into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_BaseManagedObjectId(
   return _cached_encoder_for_BaseManagedObjectId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BaseManagedObjectId */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _encode_GeneralName,
 } from "../PKI-Stub/GeneralName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION GeneralNames */
 /**
  * @summary GeneralNames
  * @description
@@ -28,9 +27,7 @@ import {
  * ```
  */
 export type GeneralNames = GeneralName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION GeneralNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralNames */
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralNames
  * @function
@@ -42,9 +39,7 @@ export function _decode_GeneralNames(el: _Element) {
         () => _decode_GeneralName
     )(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralNames */
 /**
  * @summary Encodes a(n) GeneralNames into an ASN.1 Element.
  * @function
@@ -62,6 +57,5 @@ export function _encode_GeneralNames(
     )(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralNames */
 
 /* eslint-enable */

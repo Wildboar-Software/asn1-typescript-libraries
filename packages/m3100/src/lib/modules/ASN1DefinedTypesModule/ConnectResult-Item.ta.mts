@@ -20,7 +20,7 @@ import {
     _decode_Connected,
     _encode_Connected,
 } from '../ASN1DefinedTypesModule/Connected.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectResult_Item */
+
 /**
  * @summary ConnectResult_Item
  * @description
@@ -34,13 +34,11 @@ import {
 export type ConnectResult_Item =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { connected: Connected } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectResult_Item */
+
 let _cached_decoder_for_ConnectResult_Item: $.ASN1Decoder<ConnectResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectResult_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectResult_Item
  * @function
@@ -61,13 +59,11 @@ export function _decode_ConnectResult_Item(el: _Element) {
     }
     return _cached_decoder_for_ConnectResult_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectResult_Item */
+
 let _cached_encoder_for_ConnectResult_Item: $.ASN1Encoder<ConnectResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectResult_Item */
+
 /**
  * @summary Encodes a(n) ConnectResult_Item into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_ConnectResult_Item(
     return _cached_encoder_for_ConnectResult_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectResult_Item */
 
 /* eslint-enable */

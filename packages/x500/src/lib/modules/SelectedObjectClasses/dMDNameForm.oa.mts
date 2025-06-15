@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
 import { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
 import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dMDNameForm */
 /**
  * @summary dMDNameForm
  * @description
@@ -29,6 +28,5 @@ export const dMDNameForm: NAME_FORM = {
     "&MandatoryAttributes": [dmdName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_dMDNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dMDNameForm */
 
 /* eslint-enable */

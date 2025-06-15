@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, PrintableString, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ESSPrivacyMark */
+
 /**
  * @summary ESSPrivacyMark
  * @description
@@ -19,13 +19,11 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type ESSPrivacyMark =
     | { pString: PrintableString } /* CHOICE_ALT_ROOT */
     | { utf8String: UTF8String } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ESSPrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSPrivacyMark */
+
 let _cached_decoder_for_ESSPrivacyMark: $.ASN1Decoder<ESSPrivacyMark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSPrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ESSPrivacyMark */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ESSPrivacyMark
  * @function
@@ -43,13 +41,11 @@ export function _decode_ESSPrivacyMark(el: _Element) {
     }
     return _cached_decoder_for_ESSPrivacyMark(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ESSPrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSPrivacyMark */
+
 let _cached_encoder_for_ESSPrivacyMark: $.ASN1Encoder<ESSPrivacyMark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSPrivacyMark */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ESSPrivacyMark */
+
 /**
  * @summary Encodes a(n) ESSPrivacyMark into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_ESSPrivacyMark(
     return _cached_encoder_for_ESSPrivacyMark(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ESSPrivacyMark */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_BilateralDomain_domain,
     _encode_BilateralDomain_domain,
 } from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BilateralDomain */
 /**
  * @summary BilateralDomain
  * @description
@@ -76,9 +75,7 @@ export class BilateralDomain {
         return new BilateralDomain(_o.country_name, _o.domain);
     }
 }
-/* END_OF_SYMBOL_DEFINITION BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BilateralDomain */
 /**
  * @summary The Leading Root Component Types of BilateralDomain
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_BilateralDomain: $.ComponentSp
     ),
     new $.ComponentSpec('domain', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BilateralDomain */
 /**
  * @summary The Trailing Root Component Types of BilateralDomain
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_BilateralDomain: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BilateralDomain: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BilateralDomain */
 /**
  * @summary The Extension Addition Component Types of BilateralDomain
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_BilateralDomain: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_BilateralDomain: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BilateralDomain */
 let _cached_decoder_for_BilateralDomain: $.ASN1Decoder<BilateralDomain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BilateralDomain */
 /**
  * @summary Decodes an ASN.1 element into a(n) BilateralDomain
  * @function
@@ -158,13 +147,9 @@ export function _decode_BilateralDomain(el: _Element) {
     }
     return _cached_decoder_for_BilateralDomain(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BilateralDomain */
 let _cached_encoder_for_BilateralDomain: $.ASN1Encoder<BilateralDomain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BilateralDomain */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BilateralDomain */
 /**
  * @summary Encodes a(n) BilateralDomain into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_BilateralDomain(
     return _cached_encoder_for_BilateralDomain(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BilateralDomain */
 
 /* eslint-enable */

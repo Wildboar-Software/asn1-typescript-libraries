@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Vein_only */
 /**
  * @summary Vein_only
  * @description
@@ -26,133 +25,96 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Vein_only = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Vein_only */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_left */
 /**
  * @summary Vein_only_left
  * @constant
  */
 export const Vein_only_left: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_left */
 
-/* START_OF_SYMBOL_DEFINITION left */
 /**
  * @summary left
  * @constant
  */
 export const left: number = Vein_only_left; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION left */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_right */
 /**
  * @summary Vein_only_right
  * @constant
  */
 export const Vein_only_right: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_right */
 
-/* START_OF_SYMBOL_DEFINITION right */
 /**
  * @summary right
  * @constant
  */
 export const right: number = Vein_only_right; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION right */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_palm */
 /**
  * @summary Vein_only_palm
  * @constant
  */
 export const Vein_only_palm: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_palm */
 
-/* START_OF_SYMBOL_DEFINITION palm */
 /**
  * @summary palm
  * @constant
  */
 export const palm: number = Vein_only_palm; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION palm */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_back_of_hand */
 /**
  * @summary Vein_only_back_of_hand
  * @constant
  */
 export const Vein_only_back_of_hand: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_back_of_hand */
 
-/* START_OF_SYMBOL_DEFINITION back_of_hand */
 /**
  * @summary back_of_hand
  * @constant
  */
 export const back_of_hand: number = Vein_only_back_of_hand; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION back_of_hand */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_wrist */
 /**
  * @summary Vein_only_wrist
  * @constant
  */
 export const Vein_only_wrist: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_wrist */
 
-/* START_OF_SYMBOL_DEFINITION wrist */
 /**
  * @summary wrist
  * @constant
  */
 export const wrist: number = Vein_only_wrist; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION wrist */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_reserved1 */
 /**
  * @summary Vein_only_reserved1
  * @constant
  */
 export const Vein_only_reserved1: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_reserved1 */
 
-/* START_OF_SYMBOL_DEFINITION reserved1 */
 /**
  * @summary reserved1
  * @constant
  */
 export const reserved1: number = Vein_only_reserved1; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION reserved1 */
 
-/* START_OF_SYMBOL_DEFINITION Vein_only_reserved2 */
 /**
  * @summary Vein_only_reserved2
  * @constant
  */
 export const Vein_only_reserved2: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Vein_only_reserved2 */
 
-/* START_OF_SYMBOL_DEFINITION reserved2 */
 /**
  * @summary reserved2
  * @constant
  */
 export const reserved2: number = Vein_only_reserved2; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION reserved2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Vein_only */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Vein_only */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Vein_only */
 export const _decode_Vein_only = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_Vein_only */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Vein_only */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Vein_only */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Vein_only */
 export const _encode_Vein_only = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Vein_only */
 
 /* eslint-enable */

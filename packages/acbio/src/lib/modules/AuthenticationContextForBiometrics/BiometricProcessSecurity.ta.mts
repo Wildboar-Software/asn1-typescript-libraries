@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BiometricProcessSecurity */
+
 /**
  * @summary BiometricProcessSecurity
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BiometricProcessSecurity = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION BiometricProcessSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessSecurity */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricProcessSecurity */
+
+
 export const _decode_BiometricProcessSecurity = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricProcessSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessSecurity */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricProcessSecurity */
+
+
 export const _encode_BiometricProcessSecurity = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricProcessSecurity */
 
 /* eslint-enable */

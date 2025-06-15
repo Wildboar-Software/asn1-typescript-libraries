@@ -15,7 +15,7 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeIDList */
+
 /**
  * @summary AttributeIDList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AttributeIDList = AttributeId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AttributeIDList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIDList */
+
 let _cached_decoder_for_AttributeIDList: $.ASN1Decoder<AttributeIDList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIDList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeIDList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeIDList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AttributeIDList(el: _Element) {
     }
     return _cached_decoder_for_AttributeIDList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeIDList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIDList */
+
 let _cached_encoder_for_AttributeIDList: $.ASN1Encoder<AttributeIDList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIDList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeIDList */
+
 /**
  * @summary Encodes a(n) AttributeIDList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AttributeIDList(
     return _cached_encoder_for_AttributeIDList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeIDList */
 
 /* eslint-enable */

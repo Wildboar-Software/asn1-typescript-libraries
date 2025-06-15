@@ -26,7 +26,6 @@ import { id_nat_ipn_originator } from '../IPMSObjectIdentifiers/id-nat-ipn-origi
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ipn_originator */
 /**
  * @summary ipn_originator
  * @description
@@ -67,6 +66,5 @@ export const ipn_originator: X413ATTRIBUTE<IPNOriginatorField> = {
     '&id': id_nat_ipn_originator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipn_originator */
 
 /* eslint-enable */

@@ -32,7 +32,6 @@ import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.mj
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_submission_control } from '../MTSAccessProtocol/op-submission-control.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION submission_control */
 /**
  * @summary submission_control
  * @description
@@ -79,6 +78,5 @@ export const submission_control: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION submission_control */
 
 /* eslint-enable */

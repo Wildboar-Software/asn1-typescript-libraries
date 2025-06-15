@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TRFormatID */
+
 /**
  * @summary TRFormatID
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TRFormatID = INTEGER;
-/* END_OF_SYMBOL_DEFINITION TRFormatID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TRFormatID */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TRFormatID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TRFormatID */
+
+
 export const _decode_TRFormatID = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_TRFormatID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TRFormatID */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TRFormatID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TRFormatID */
+
+
 export const _encode_TRFormatID = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TRFormatID */
 
 /* eslint-enable */

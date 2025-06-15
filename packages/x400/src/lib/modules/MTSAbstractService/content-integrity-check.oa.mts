@@ -25,7 +25,6 @@ import {
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION content_integrity_check */
 /**
  * @summary content_integrity_check
  * @description
@@ -62,6 +61,5 @@ export const content_integrity_check: EXTENSION<ContentIntegrityCheck> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION content_integrity_check */
 
 /* eslint-enable */

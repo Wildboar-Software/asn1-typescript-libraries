@@ -11,7 +11,7 @@ import {
     _decode_PasswordInfo,
     _encode_PasswordInfo,
 } from "../PKCS-15/PasswordInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyManagementInfo_Item_keyInfo */
+
 /**
  * @summary KeyManagementInfo_Item_keyInfo
  * @description
@@ -25,13 +25,11 @@ import {
 export type KeyManagementInfo_Item_keyInfo =
     | { recipientInfo: RecipientInfo } /* CHOICE_ALT_ROOT */
     | { passwordInfo: PasswordInfo } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION KeyManagementInfo_Item_keyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyManagementInfo_Item_keyInfo */
+
 let _cached_decoder_for_KeyManagementInfo_Item_keyInfo: $.ASN1Decoder<KeyManagementInfo_Item_keyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyManagementInfo_Item_keyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyManagementInfo_Item_keyInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyManagementInfo_Item_keyInfo
  * @function
@@ -56,13 +54,11 @@ export function _decode_KeyManagementInfo_Item_keyInfo(el: _Element) {
     }
     return _cached_decoder_for_KeyManagementInfo_Item_keyInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyManagementInfo_Item_keyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyManagementInfo_Item_keyInfo */
+
 let _cached_encoder_for_KeyManagementInfo_Item_keyInfo: $.ASN1Encoder<KeyManagementInfo_Item_keyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyManagementInfo_Item_keyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyManagementInfo_Item_keyInfo */
+
 /**
  * @summary Encodes a(n) KeyManagementInfo_Item_keyInfo into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_KeyManagementInfo_Item_keyInfo(
     return _cached_encoder_for_KeyManagementInfo_Item_keyInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyManagementInfo_Item_keyInfo */
 
 /* eslint-enable */

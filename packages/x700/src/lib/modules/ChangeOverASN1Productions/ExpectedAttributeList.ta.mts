@@ -15,7 +15,6 @@ import {
     _decode_ExpectedAttributeList_Item,
     _encode_ExpectedAttributeList_Item,
 } from '../ChangeOverASN1Productions/ExpectedAttributeList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExpectedAttributeList */
 /**
  * @summary ExpectedAttributeList
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type ExpectedAttributeList = ExpectedAttributeList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExpectedAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpectedAttributeList */
 let _cached_decoder_for_ExpectedAttributeList: $.ASN1Decoder<ExpectedAttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpectedAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExpectedAttributeList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExpectedAttributeList
  * @function
@@ -54,13 +49,9 @@ export function _decode_ExpectedAttributeList(el: _Element) {
     }
     return _cached_decoder_for_ExpectedAttributeList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExpectedAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpectedAttributeList */
 let _cached_encoder_for_ExpectedAttributeList: $.ASN1Encoder<ExpectedAttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpectedAttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExpectedAttributeList */
 /**
  * @summary Encodes a(n) ExpectedAttributeList into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_ExpectedAttributeList(
     return _cached_encoder_for_ExpectedAttributeList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExpectedAttributeList */
 
 /* eslint-enable */

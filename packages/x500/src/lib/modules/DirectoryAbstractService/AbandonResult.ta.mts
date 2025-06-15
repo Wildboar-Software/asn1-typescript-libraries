@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AbandonResult */
 /**
  * @summary AbandonResult
  * @description
@@ -31,13 +30,9 @@ export type AbandonResult =
           information: OPTIONALLY_PROTECTED_SEQ<AbandonResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AbandonResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonResult */
 let _cached_decoder_for_AbandonResult: $.ASN1Decoder<AbandonResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbandonResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) AbandonResult
  * @function
@@ -65,13 +60,9 @@ export function _decode_AbandonResult(el: _Element) {
     }
     return _cached_decoder_for_AbandonResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AbandonResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonResult */
 let _cached_encoder_for_AbandonResult: $.ASN1Encoder<AbandonResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbandonResult */
 /**
  * @summary Encodes a(n) AbandonResult into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_AbandonResult(
     return _cached_encoder_for_AbandonResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbandonResult */
 
 /* eslint-enable */

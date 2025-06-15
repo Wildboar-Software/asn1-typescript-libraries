@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeType */
 /**
  * @summary AttributeType
  * @description
@@ -13,9 +12,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AttributeType = OBJECT_IDENTIFIER; // ObjectClassFieldType
-/* END_OF_SYMBOL_DEFINITION AttributeType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeType */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeType
  * @function
@@ -23,9 +20,7 @@ export type AttributeType = OBJECT_IDENTIFIER; // ObjectClassFieldType
  * @returns {AttributeType} The decoded data structure.
  */
 export const _decode_AttributeType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeType */
 /**
  * @summary Encodes a(n) AttributeType into an ASN.1 Element.
  * @function
@@ -35,6 +30,5 @@ export const _decode_AttributeType = $._decodeObjectIdentifier;
  */
 export const _encode_AttributeType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeType */
 
 /* eslint-enable */

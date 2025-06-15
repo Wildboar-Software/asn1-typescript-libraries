@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ArcQIStatus */
+
 /**
  * @summary ArcQIStatus
  * @description
@@ -28,9 +28,8 @@ export enum _enum_for_ArcQIStatus {
     nalmNotReported = 1,
     nalmCountDown = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ArcQIStatus */
 
-/* START_OF_SYMBOL_DEFINITION ArcQIStatus */
+
 /**
  * @summary ArcQIStatus
  * @description
@@ -43,9 +42,8 @@ export enum _enum_for_ArcQIStatus {
  * ```@enum {number}
  */
 export type ArcQIStatus = _enum_for_ArcQIStatus;
-/* END_OF_SYMBOL_DEFINITION ArcQIStatus */
 
-/* START_OF_SYMBOL_DEFINITION ArcQIStatus */
+
 /**
  * @summary ArcQIStatus
  * @description
@@ -58,9 +56,8 @@ export type ArcQIStatus = _enum_for_ArcQIStatus;
  * ```@enum {number}
  */
 export const ArcQIStatus = _enum_for_ArcQIStatus;
-/* END_OF_SYMBOL_DEFINITION ArcQIStatus */
 
-/* START_OF_SYMBOL_DEFINITION ArcQIStatus_notApplicable */
+
 /**
  * @summary ArcQIStatus_notApplicable
  * @constant
@@ -68,9 +65,8 @@ export const ArcQIStatus = _enum_for_ArcQIStatus;
  */
 export const ArcQIStatus_notApplicable: ArcQIStatus =
     ArcQIStatus.notApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcQIStatus_notApplicable */
 
-/* START_OF_SYMBOL_DEFINITION notApplicable */
+
 /**
  * @summary notApplicable
  * @constant
@@ -78,9 +74,8 @@ export const ArcQIStatus_notApplicable: ArcQIStatus =
  */
 export const notApplicable: ArcQIStatus =
     ArcQIStatus.notApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION notApplicable */
 
-/* START_OF_SYMBOL_DEFINITION ArcQIStatus_nalmNotReported */
+
 /**
  * @summary ArcQIStatus_nalmNotReported
  * @constant
@@ -88,9 +83,8 @@ export const notApplicable: ArcQIStatus =
  */
 export const ArcQIStatus_nalmNotReported: ArcQIStatus =
     ArcQIStatus.nalmNotReported; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcQIStatus_nalmNotReported */
 
-/* START_OF_SYMBOL_DEFINITION nalmNotReported */
+
 /**
  * @summary nalmNotReported
  * @constant
@@ -98,9 +92,8 @@ export const ArcQIStatus_nalmNotReported: ArcQIStatus =
  */
 export const nalmNotReported: ArcQIStatus =
     ArcQIStatus.nalmNotReported; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nalmNotReported */
 
-/* START_OF_SYMBOL_DEFINITION ArcQIStatus_nalmCountDown */
+
 /**
  * @summary ArcQIStatus_nalmCountDown
  * @constant
@@ -108,9 +101,8 @@ export const nalmNotReported: ArcQIStatus =
  */
 export const ArcQIStatus_nalmCountDown: ArcQIStatus =
     ArcQIStatus.nalmCountDown; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcQIStatus_nalmCountDown */
 
-/* START_OF_SYMBOL_DEFINITION nalmCountDown */
+
 /**
  * @summary nalmCountDown
  * @constant
@@ -118,21 +110,16 @@ export const ArcQIStatus_nalmCountDown: ArcQIStatus =
  */
 export const nalmCountDown: ArcQIStatus =
     ArcQIStatus.nalmCountDown; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nalmCountDown */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcQIStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcQIStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArcQIStatus */
+
+
 export const _decode_ArcQIStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ArcQIStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcQIStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcQIStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArcQIStatus */
+
+
 export const _encode_ArcQIStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArcQIStatus */
 
 /* eslint-enable */

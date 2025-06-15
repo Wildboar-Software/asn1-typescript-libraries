@@ -15,7 +15,7 @@ import {
     _decode_ServiceLocationList_Item,
     _encode_ServiceLocationList_Item,
 } from '../X790ASN1Module/ServiceLocationList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceLocationList */
+
 /**
  * @summary ServiceLocationList
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type ServiceLocationList = ServiceLocationList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ServiceLocationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceLocationList */
+
 let _cached_decoder_for_ServiceLocationList: $.ASN1Decoder<ServiceLocationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceLocationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceLocationList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceLocationList
  * @function
@@ -51,13 +49,11 @@ export function _decode_ServiceLocationList(el: _Element) {
     }
     return _cached_decoder_for_ServiceLocationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceLocationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceLocationList */
+
 let _cached_encoder_for_ServiceLocationList: $.ASN1Encoder<ServiceLocationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceLocationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceLocationList */
+
 /**
  * @summary Encodes a(n) ServiceLocationList into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_ServiceLocationList(
     return _cached_encoder_for_ServiceLocationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceLocationList */
 
 /* eslint-enable */

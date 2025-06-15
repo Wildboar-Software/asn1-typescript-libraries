@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_regCtrl_pkiArchiveOptions */
+
 /**
  * @summary id_regCtrl_pkiArchiveOptions
  * @description
@@ -18,6 +18,5 @@ export const id_regCtrl_pkiArchiveOptions: OBJECT_IDENTIFIER = new _OID(
     [4],
     id_regCtrl
 );
-/* END_OF_SYMBOL_DEFINITION id_regCtrl_pkiArchiveOptions */
 
 /* eslint-enable */

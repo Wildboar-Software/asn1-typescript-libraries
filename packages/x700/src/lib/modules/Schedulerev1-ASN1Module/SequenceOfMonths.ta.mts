@@ -15,7 +15,7 @@ import {
     _decode_MonthMask,
     _encode_MonthMask,
 } from '../Schedulerev1-ASN1Module/MonthMask.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SequenceOfMonths */
+
 /**
  * @summary SequenceOfMonths
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SequenceOfMonths = MonthMask[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SequenceOfMonths */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfMonths */
+
 let _cached_decoder_for_SequenceOfMonths: $.ASN1Decoder<SequenceOfMonths> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfMonths */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SequenceOfMonths */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SequenceOfMonths
  * @function
@@ -48,13 +46,11 @@ export function _decode_SequenceOfMonths(el: _Element) {
     }
     return _cached_decoder_for_SequenceOfMonths(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SequenceOfMonths */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfMonths */
+
 let _cached_encoder_for_SequenceOfMonths: $.ASN1Encoder<SequenceOfMonths> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfMonths */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SequenceOfMonths */
+
 /**
  * @summary Encodes a(n) SequenceOfMonths into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SequenceOfMonths(
     return _cached_encoder_for_SequenceOfMonths(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SequenceOfMonths */
 
 /* eslint-enable */

@@ -18,7 +18,6 @@ import {
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
 } from '../MTSAbstractService/TeletexNonBasicParameters.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TeletexParameters */
 /**
  * @summary TeletexParameters
  * @description
@@ -89,9 +88,7 @@ export class TeletexParameters {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TeletexParameters */
 /**
  * @summary The Leading Root Component Types of TeletexParameters
  * @description
@@ -123,9 +120,7 @@ export const _root_component_type_list_1_spec_for_TeletexParameters: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TeletexParameters */
 /**
  * @summary The Trailing Root Component Types of TeletexParameters
  * @description
@@ -135,9 +130,7 @@ export const _root_component_type_list_1_spec_for_TeletexParameters: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TeletexParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TeletexParameters */
 /**
  * @summary The Extension Addition Component Types of TeletexParameters
  * @description
@@ -147,13 +140,9 @@ export const _root_component_type_list_2_spec_for_TeletexParameters: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_TeletexParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TeletexParameters */
 let _cached_decoder_for_TeletexParameters: $.ASN1Decoder<TeletexParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TeletexParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) TeletexParameters
  * @function
@@ -207,13 +196,9 @@ export function _decode_TeletexParameters(el: _Element) {
     }
     return _cached_decoder_for_TeletexParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TeletexParameters */
 let _cached_encoder_for_TeletexParameters: $.ASN1Encoder<TeletexParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TeletexParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TeletexParameters */
 /**
  * @summary Encodes a(n) TeletexParameters into an ASN.1 Element.
  * @function
@@ -269,6 +254,5 @@ export function _encode_TeletexParameters(
     return _cached_encoder_for_TeletexParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TeletexParameters */
 
 /* eslint-enable */

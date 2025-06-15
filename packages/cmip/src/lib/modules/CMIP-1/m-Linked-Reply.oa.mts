@@ -23,7 +23,7 @@ import {
   _decode_LinkedReplyArgument,
   _encode_LinkedReplyArgument,
 } from '../CMIP-1/LinkedReplyArgument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION m_Linked_Reply */
+
 /**
  * @summary m_Linked_Reply
  * @description
@@ -62,6 +62,5 @@ export const m_Linked_Reply: OPERATION<LinkedReplyArgument> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Linked_Reply */
 
 /* eslint-enable */

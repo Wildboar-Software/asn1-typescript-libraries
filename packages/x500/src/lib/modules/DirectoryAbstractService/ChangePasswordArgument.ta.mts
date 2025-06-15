@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ChangePasswordArgument */
 /**
  * @summary ChangePasswordArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ChangePasswordArgument = OPTIONALLY_PROTECTED_SEQ<ChangePasswordArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ChangePasswordArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangePasswordArgument */
 let _cached_decoder_for_ChangePasswordArgument: $.ASN1Decoder<ChangePasswordArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangePasswordArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChangePasswordArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangePasswordArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_ChangePasswordArgument(el: _Element) {
     }
     return _cached_decoder_for_ChangePasswordArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChangePasswordArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangePasswordArgument */
 let _cached_encoder_for_ChangePasswordArgument: $.ASN1Encoder<ChangePasswordArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangePasswordArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChangePasswordArgument */
 /**
  * @summary Encodes a(n) ChangePasswordArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ChangePasswordArgument(
     return _cached_encoder_for_ChangePasswordArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChangePasswordArgument */
 
 /* eslint-enable */

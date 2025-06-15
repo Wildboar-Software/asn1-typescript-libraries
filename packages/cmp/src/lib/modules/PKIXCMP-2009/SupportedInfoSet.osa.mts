@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SupportedInfoSet */
+
 /**
  * @summary SupportedInfoSet
  * @description
@@ -26,6 +26,5 @@ import { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.mjs
  *
  */
 export const SupportedInfoSet: INFO_TYPE_AND_VALUE[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedInfoSet */
 
 /* eslint-enable */

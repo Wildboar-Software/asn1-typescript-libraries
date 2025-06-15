@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../SEC1-v1-9/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyWrapFunction */
 /**
  * @summary KeyWrapFunction
  * @description
@@ -24,13 +23,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 type KeyWrapFunction = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyWrapFunction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyWrapFunction */
 let _cached_decoder_for_KeyWrapFunction: $.ASN1Decoder<KeyWrapFunction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyWrapFunction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyWrapFunction */
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyWrapFunction
  * @function
@@ -42,13 +37,9 @@ function _decode_KeyWrapFunction (el: _Element) {
     if (!_cached_decoder_for_KeyWrapFunction) { _cached_decoder_for_KeyWrapFunction = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_KeyWrapFunction(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyWrapFunction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyWrapFunction */
 let _cached_encoder_for_KeyWrapFunction: $.ASN1Encoder<KeyWrapFunction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyWrapFunction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyWrapFunction */
 /**
  * @summary Encodes a(n) KeyWrapFunction into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_KeyWrapFunction (value: KeyWrapFunction, elGetter: $.ASN1Encode
     return _cached_encoder_for_KeyWrapFunction(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyWrapFunction */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
   _decode_Date_Time,
   _encode_Date_Time,
 } from '../CBEFF-DATA-ELEMENTS/Date-Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BDBCreationDate */
 /**
  * @summary BDBCreationDate
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type BDBCreationDate = Date_Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BDBCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBCreationDate */
 let _cached_decoder_for_BDBCreationDate: $.ASN1Decoder<BDBCreationDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BDBCreationDate */
 /**
  * @summary Decodes an ASN.1 element into a(n) BDBCreationDate
  * @function
@@ -47,13 +42,9 @@ export function _decode_BDBCreationDate(el: _Element) {
   }
   return _cached_decoder_for_BDBCreationDate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BDBCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBCreationDate */
 let _cached_encoder_for_BDBCreationDate: $.ASN1Encoder<BDBCreationDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BDBCreationDate */
 /**
  * @summary Encodes a(n) BDBCreationDate into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_BDBCreationDate(
   return _cached_encoder_for_BDBCreationDate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BDBCreationDate */
 
 /* eslint-enable */

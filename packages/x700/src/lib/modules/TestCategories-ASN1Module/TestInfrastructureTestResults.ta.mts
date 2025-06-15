@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TestInfrastructureTestResults */
 /**
  * @summary TestInfrastructureTestResults
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TestInfrastructureTestResults = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION TestInfrastructureTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestInfrastructureTestResults */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestInfrastructureTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestInfrastructureTestResults */
 export const _decode_TestInfrastructureTestResults = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_TestInfrastructureTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestInfrastructureTestResults */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestInfrastructureTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestInfrastructureTestResults */
 export const _encode_TestInfrastructureTestResults = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestInfrastructureTestResults */
 
 /* eslint-enable */

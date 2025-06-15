@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION umf_att */
 /**
  * @summary umf_att
  * @description
@@ -29,6 +28,5 @@ export const umf_att: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part10 */ 10, /* attribute */ 7],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION umf_att */
 
 /* eslint-enable */

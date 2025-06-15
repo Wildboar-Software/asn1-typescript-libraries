@@ -21,7 +21,7 @@ import {
   _decode_Checksum,
   _encode_Checksum,
 } from '../KerberosV5Spec2/Checksum.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION KRB_SAFE */
+
 /**
  * @summary KRB_SAFE
  * @description
@@ -85,9 +85,8 @@ export class KRB_SAFE {
     return new KRB_SAFE(_o.pvno, _o.msg_type, _o.safe_body, _o.cksum);
   }
 }
-/* END_OF_SYMBOL_DEFINITION KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_SAFE */
+
 /**
  * @summary The Leading Root Component Types of KRB_SAFE
  * @description
@@ -126,9 +125,8 @@ export const _root_component_type_list_1_spec_for_KRB_SAFE: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_SAFE */
+
 /**
  * @summary The Trailing Root Component Types of KRB_SAFE
  * @description
@@ -138,9 +136,8 @@ export const _root_component_type_list_1_spec_for_KRB_SAFE: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KRB_SAFE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_SAFE */
+
 /**
  * @summary The Extension Addition Component Types of KRB_SAFE
  * @description
@@ -150,13 +147,11 @@ export const _root_component_type_list_2_spec_for_KRB_SAFE: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_KRB_SAFE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_SAFE */
+
 let _cached_decoder_for_KRB_SAFE: $.ASN1Decoder<KRB_SAFE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KRB_SAFE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KRB_SAFE
  * @function
@@ -202,13 +197,11 @@ export function _decode_KRB_SAFE(el: _Element) {
   }
   return _cached_decoder_for_KRB_SAFE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_SAFE */
+
 let _cached_encoder_for_KRB_SAFE: $.ASN1Encoder<KRB_SAFE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_SAFE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KRB_SAFE */
+
 /**
  * @summary Encodes a(n) KRB_SAFE into an ASN.1 Element.
  * @function
@@ -265,6 +258,5 @@ export function _encode_KRB_SAFE(
   return _cached_encoder_for_KRB_SAFE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KRB_SAFE */
 
 /* eslint-enable */

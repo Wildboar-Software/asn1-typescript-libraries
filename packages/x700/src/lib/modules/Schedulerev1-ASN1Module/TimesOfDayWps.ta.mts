@@ -20,7 +20,6 @@ import {
     _decode_TriggerTimes,
     _encode_TriggerTimes,
 } from '../Schedulerev1-ASN1Module/TriggerTimes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TimesOfDayWps */
 /**
  * @summary TimesOfDayWps
  * @description
@@ -37,13 +36,9 @@ import {
 export type TimesOfDayWps =
     | { intervalsOfDayWps: IntervalsOfDayWps } /* CHOICE_ALT_ROOT */
     | { triggerTimes: TriggerTimes } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TimesOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimesOfDayWps */
 let _cached_decoder_for_TimesOfDayWps: $.ASN1Decoder<TimesOfDayWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimesOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimesOfDayWps */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimesOfDayWps
  * @function
@@ -71,13 +66,9 @@ export function _decode_TimesOfDayWps(el: _Element) {
     }
     return _cached_decoder_for_TimesOfDayWps(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimesOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimesOfDayWps */
 let _cached_encoder_for_TimesOfDayWps: $.ASN1Encoder<TimesOfDayWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimesOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimesOfDayWps */
 /**
  * @summary Encodes a(n) TimesOfDayWps into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_TimesOfDayWps(
     return _cached_encoder_for_TimesOfDayWps(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimesOfDayWps */
 
 /* eslint-enable */

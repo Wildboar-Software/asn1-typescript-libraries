@@ -14,7 +14,7 @@ import { id_X448 } from "../Safecurves-pkix-18/id-X448.va.mjs";
 import { pk_X448 } from "../Safecurves-pkix-18/pk-X448.oa.mjs";
 import { kaa_X448_smimeCaps } from "../Safecurves-pkix-18/kaa-X448-smimeCaps.oa.mjs";
 import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION kaa_X448 */
+
 /**
  * @summary kaa_X448
  * @description
@@ -56,6 +56,5 @@ const kaa_X448: KEY_AGREE = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Ukm": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kaa_X448 */
 
 /* eslint-enable */

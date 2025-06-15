@@ -48,7 +48,7 @@ import {
     _decode_SequenceOfACBioInstances,
     _encode_SequenceOfACBioInstances,
 } from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BDBForBRTC */
+
 /**
  * @summary BDBForBRTC
  * @description
@@ -158,9 +158,8 @@ export class BDBForBRTC {
         return v0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BDBForBRTC */
+
 /**
  * @summary The Leading Root Component Types of BDBForBRTC
  * @description
@@ -227,9 +226,8 @@ export const _root_component_type_list_1_spec_for_BDBForBRTC: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BDBForBRTC */
+
 /**
  * @summary The Trailing Root Component Types of BDBForBRTC
  * @description
@@ -239,9 +237,8 @@ export const _root_component_type_list_1_spec_for_BDBForBRTC: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BDBForBRTC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BDBForBRTC */
+
 /**
  * @summary The Extension Addition Component Types of BDBForBRTC
  * @description
@@ -251,13 +248,11 @@ export const _root_component_type_list_2_spec_for_BDBForBRTC: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_BDBForBRTC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBForBRTC */
+
 let _cached_decoder_for_BDBForBRTC: $.ASN1Decoder<BDBForBRTC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BDBForBRTC */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BDBForBRTC
  * @function
@@ -332,13 +327,11 @@ export function _decode_BDBForBRTC(el: _Element) {
     }
     return _cached_decoder_for_BDBForBRTC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBForBRTC */
+
 let _cached_encoder_for_BDBForBRTC: $.ASN1Encoder<BDBForBRTC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBForBRTC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BDBForBRTC */
+
 /**
  * @summary Encodes a(n) BDBForBRTC into an ASN.1 Element.
  * @function
@@ -407,6 +400,5 @@ export function _encode_BDBForBRTC(
     return _cached_encoder_for_BDBForBRTC(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BDBForBRTC */
 
 /* eslint-enable */

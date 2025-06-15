@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { device } from "../SelectedObjectClasses/device.oa.mjs";
 import { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION deviceNameForm */
 /**
  * @summary deviceNameForm
  * @description
@@ -29,6 +28,5 @@ export const deviceNameForm: NAME_FORM = {
     "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_deviceNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION deviceNameForm */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { schemaObjectClass } from "../UsefulDefinitions/schemaObjectClass.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_soc */
 /**
  * @summary id_soc
  * @description
@@ -15,6 +14,5 @@ import { schemaObjectClass } from "../UsefulDefinitions/schemaObjectClass.va.mjs
  * @constant
  */
 export const id_soc: ID = schemaObjectClass;
-/* END_OF_SYMBOL_DEFINITION id_soc */
 
 /* eslint-enable */

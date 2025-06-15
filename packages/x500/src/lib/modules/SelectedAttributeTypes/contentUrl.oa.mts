@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_contentUrl } from "../SelectedAttributeTypes/id-at-contentUrl.va.mjs";
 import { url } from "../SelectedAttributeTypes/url.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION contentUrl */
 /**
  * @summary contentUrl
  * @description
@@ -45,6 +44,5 @@ export const contentUrl: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contentUrl */
 
 /* eslint-enable */

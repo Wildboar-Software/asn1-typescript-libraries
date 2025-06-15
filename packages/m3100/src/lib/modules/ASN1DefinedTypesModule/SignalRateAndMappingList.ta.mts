@@ -15,7 +15,7 @@ import {
     _decode_SignalRateAndMappingList_Item,
     _encode_SignalRateAndMappingList_Item,
 } from '../ASN1DefinedTypesModule/SignalRateAndMappingList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignalRateAndMappingList */
+
 /**
  * @summary SignalRateAndMappingList
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type SignalRateAndMappingList = SignalRateAndMappingList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalRateAndMappingList */
+
 let _cached_decoder_for_SignalRateAndMappingList: $.ASN1Decoder<SignalRateAndMappingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignalRateAndMappingList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalRateAndMappingList
  * @function
@@ -53,13 +51,11 @@ export function _decode_SignalRateAndMappingList(el: _Element) {
     }
     return _cached_decoder_for_SignalRateAndMappingList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalRateAndMappingList */
+
 let _cached_encoder_for_SignalRateAndMappingList: $.ASN1Encoder<SignalRateAndMappingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignalRateAndMappingList */
+
 /**
  * @summary Encodes a(n) SignalRateAndMappingList into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_SignalRateAndMappingList(
     return _cached_encoder_for_SignalRateAndMappingList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignalRateAndMappingList */
 
 /* eslint-enable */

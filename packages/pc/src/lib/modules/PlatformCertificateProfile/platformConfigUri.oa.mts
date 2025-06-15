@@ -13,7 +13,6 @@ import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/A
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
 import { tcg_at_platformConfigUri } from "../PlatformCertificateProfile/tcg-at-platformConfigUri.va.mjs";
-/* START_OF_SYMBOL_DEFINITION platformConfigUri */
 /**
  * @summary platformConfigUri
  * @description
@@ -48,6 +47,5 @@ const platformConfigUri: ATTRIBUTE<URIReference> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION platformConfigUri */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMS3DESwrap.va.mjs";
-/* START_OF_SYMBOL_DEFINITION cap_3DESwrap */
+
 /**
  * @summary cap_3DESwrap
  * @description
@@ -27,6 +27,5 @@ export const cap_3DESwrap: SMIME_CAPS = {
     "&id": id_alg_CMS3DESwrap /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cap_3DESwrap */
 
 /* eslint-enable */

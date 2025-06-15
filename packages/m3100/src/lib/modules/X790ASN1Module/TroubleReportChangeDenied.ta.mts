@@ -27,7 +27,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleReportChangeDenied */
+
 /**
  * @summary TroubleReportChangeDenied
  * @description
@@ -114,9 +114,8 @@ export class TroubleReportChangeDenied {
 
     public static _enum_for_changeDeniedReason = _enum_for_ChangeDeniedReason;
 }
-/* END_OF_SYMBOL_DEFINITION TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TroubleReportChangeDenied */
+
 /**
  * @summary The Leading Root Component Types of TroubleReportChangeDenied
  * @description
@@ -155,9 +154,8 @@ export const _root_component_type_list_1_spec_for_TroubleReportChangeDenied: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TroubleReportChangeDenied */
+
 /**
  * @summary The Trailing Root Component Types of TroubleReportChangeDenied
  * @description
@@ -167,9 +165,8 @@ export const _root_component_type_list_1_spec_for_TroubleReportChangeDenied: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TroubleReportChangeDenied: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TroubleReportChangeDenied */
+
 /**
  * @summary The Extension Addition Component Types of TroubleReportChangeDenied
  * @description
@@ -179,13 +176,11 @@ export const _root_component_type_list_2_spec_for_TroubleReportChangeDenied: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_TroubleReportChangeDenied: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportChangeDenied */
+
 let _cached_decoder_for_TroubleReportChangeDenied: $.ASN1Decoder<TroubleReportChangeDenied> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportChangeDenied */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportChangeDenied
  * @function
@@ -241,13 +236,11 @@ export function _decode_TroubleReportChangeDenied(el: _Element) {
     }
     return _cached_decoder_for_TroubleReportChangeDenied(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportChangeDenied */
+
 let _cached_encoder_for_TroubleReportChangeDenied: $.ASN1Encoder<TroubleReportChangeDenied> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportChangeDenied */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportChangeDenied */
+
 /**
  * @summary Encodes a(n) TroubleReportChangeDenied into an ASN.1 Element.
  * @function
@@ -298,6 +291,5 @@ export function _encode_TroubleReportChangeDenied(
     return _cached_encoder_for_TroubleReportChangeDenied(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportChangeDenied */
 
 /* eslint-enable */

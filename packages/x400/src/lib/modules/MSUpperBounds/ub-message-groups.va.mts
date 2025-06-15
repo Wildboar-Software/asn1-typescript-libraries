@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_message_groups */
 /**
  * @summary ub_message_groups
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_message_groups: INTEGER = 8192;
-/* END_OF_SYMBOL_DEFINITION ub_message_groups */
 
 /* eslint-enable */

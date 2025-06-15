@@ -21,7 +21,6 @@ import {
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
 } from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlgorithmInformation */
 /**
  * @summary AlgorithmInformation
  * @description
@@ -82,9 +81,7 @@ export class AlgorithmInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmInformation */
 /**
  * @summary The Leading Root Component Types of AlgorithmInformation
  * @description
@@ -116,9 +113,7 @@ export const _root_component_type_list_1_spec_for_AlgorithmInformation: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmInformation */
 /**
  * @summary The Trailing Root Component Types of AlgorithmInformation
  * @description
@@ -128,9 +123,7 @@ export const _root_component_type_list_1_spec_for_AlgorithmInformation: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AlgorithmInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmInformation */
 /**
  * @summary The Extension Addition Component Types of AlgorithmInformation
  * @description
@@ -140,13 +133,9 @@ export const _root_component_type_list_2_spec_for_AlgorithmInformation: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_AlgorithmInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmInformation */
 let _cached_decoder_for_AlgorithmInformation: $.ASN1Decoder<AlgorithmInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgorithmInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmInformation
  * @function
@@ -199,13 +188,9 @@ export function _decode_AlgorithmInformation(el: _Element) {
     }
     return _cached_decoder_for_AlgorithmInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmInformation */
 let _cached_encoder_for_AlgorithmInformation: $.ASN1Encoder<AlgorithmInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgorithmInformation */
 /**
  * @summary Encodes a(n) AlgorithmInformation into an ASN.1 Element.
  * @function
@@ -256,6 +241,5 @@ export function _encode_AlgorithmInformation(
     return _cached_encoder_for_AlgorithmInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgorithmInformation */
 
 /* eslint-enable */

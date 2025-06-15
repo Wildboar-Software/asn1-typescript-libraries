@@ -5,7 +5,6 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { pwdAttribute } from "../InformationFramework/pwdAttribute.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdAdminSubentry */
 /**
  * @summary pwdAdminSubentry
  * @description
@@ -33,6 +32,5 @@ export const pwdAdminSubentry: OBJECT_CLASS = {
     "&ldapName": ["pwdAdminSubentry"],
     "&id": id_sc_pwdAdminSubentry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdAdminSubentry */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Controls,
     _encode_Controls,
 } from '../MTSAbstractService/Controls.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliveryControls */
 /**
  * @summary DeliveryControls
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DeliveryControls = Controls; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControls */
 let _cached_decoder_for_DeliveryControls: $.ASN1Decoder<DeliveryControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveryControls */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryControls
  * @function
@@ -46,13 +41,9 @@ export function _decode_DeliveryControls(el: _Element) {
     }
     return _cached_decoder_for_DeliveryControls(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControls */
 let _cached_encoder_for_DeliveryControls: $.ASN1Encoder<DeliveryControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveryControls */
 /**
  * @summary Encodes a(n) DeliveryControls into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DeliveryControls(
     return _cached_encoder_for_DeliveryControls(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveryControls */
 
 /* eslint-enable */

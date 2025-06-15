@@ -15,7 +15,7 @@ import {
     _decode_Mode_selector_mode_value,
     _encode_Mode_selector_mode_value,
 } from '../ISO8823-PRESENTATION/Mode-selector-mode-value.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Mode_selector */
+
 /**
  * @summary Mode_selector
  * @description
@@ -58,9 +58,8 @@ export class Mode_selector {
         return new Mode_selector(_o.mode_value);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Mode_selector */
+
 /**
  * @summary The Leading Root Component Types of Mode_selector
  * @description
@@ -78,9 +77,8 @@ export const _root_component_type_list_1_spec_for_Mode_selector: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Mode_selector */
+
 /**
  * @summary The Trailing Root Component Types of Mode_selector
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_Mode_selector: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Mode_selector: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Mode_selector */
+
 /**
  * @summary The Extension Addition Component Types of Mode_selector
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_Mode_selector: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_Mode_selector: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Mode_selector */
+
 let _cached_decoder_for_Mode_selector: $.ASN1Decoder<Mode_selector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Mode_selector */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Mode_selector
  * @function
@@ -145,13 +140,11 @@ export function _decode_Mode_selector(el: _Element) {
     }
     return _cached_decoder_for_Mode_selector(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Mode_selector */
+
 let _cached_encoder_for_Mode_selector: $.ASN1Encoder<Mode_selector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Mode_selector */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Mode_selector */
+
 /**
  * @summary Encodes a(n) Mode_selector into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_Mode_selector(
     return _cached_encoder_for_Mode_selector(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Mode_selector */
 
 /* eslint-enable */

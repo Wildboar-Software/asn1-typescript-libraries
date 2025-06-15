@@ -23,7 +23,6 @@ export {
     _encode_SIGNATURE as _encode_MessageOriginAuthenticationCheck,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MessageOriginAuthenticationCheck */
 /**
  * @summary MessageOriginAuthenticationCheck
  * @description
@@ -41,6 +40,5 @@ export {
  * ```
  */
 export type MessageOriginAuthenticationCheck = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageOriginAuthenticationCheck */
 
 /* eslint-enable */

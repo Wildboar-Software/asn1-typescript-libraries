@@ -28,7 +28,6 @@ import {
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SummarizeResult */
 /**
  * @summary SummarizeResult
  * @description
@@ -108,9 +107,7 @@ export class SummarizeResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SummarizeResult */
 /**
  * @summary The Leading Root Component Types of SummarizeResult
  * @description
@@ -156,9 +153,7 @@ export const _root_component_type_list_1_spec_for_SummarizeResult: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SummarizeResult */
 /**
  * @summary The Trailing Root Component Types of SummarizeResult
  * @description
@@ -168,9 +163,7 @@ export const _root_component_type_list_1_spec_for_SummarizeResult: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SummarizeResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SummarizeResult */
 /**
  * @summary The Extension Addition Component Types of SummarizeResult
  * @description
@@ -180,13 +173,9 @@ export const _root_component_type_list_2_spec_for_SummarizeResult: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SummarizeResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SummarizeResult */
 let _cached_decoder_for_SummarizeResult: $.ASN1Decoder<SummarizeResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SummarizeResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) SummarizeResult
  * @function
@@ -251,13 +240,9 @@ export function _decode_SummarizeResult(el: _Element) {
     }
     return _cached_decoder_for_SummarizeResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SummarizeResult */
 let _cached_encoder_for_SummarizeResult: $.ASN1Encoder<SummarizeResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SummarizeResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SummarizeResult */
 /**
  * @summary Encodes a(n) SummarizeResult into an ASN.1 Element.
  * @function
@@ -327,6 +312,5 @@ export function _encode_SummarizeResult(
     return _cached_encoder_for_SummarizeResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SummarizeResult */
 
 /* eslint-enable */

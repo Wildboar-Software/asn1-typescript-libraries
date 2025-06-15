@@ -11,7 +11,6 @@ import {
     _decode_PkiWaError,
     _encode_PkiWaError,
 } from "../PkiPmiWrapper/PkiWaError.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertErr_notOK */
 /**
  * @summary CertErr_notOK
  * @description
@@ -26,13 +25,9 @@ export type CertErr_notOK =
     | { wrErr: PkiWaError } /* CHOICE_ALT_ROOT */
     | { avmpErr: AVMP_error } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertErr_notOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertErr_notOK */
 let _cached_decoder_for_CertErr_notOK: $.ASN1Decoder<CertErr_notOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertErr_notOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertErr_notOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertErr_notOK
  * @function
@@ -56,13 +51,9 @@ export function _decode_CertErr_notOK(el: _Element) {
     }
     return _cached_decoder_for_CertErr_notOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertErr_notOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertErr_notOK */
 let _cached_encoder_for_CertErr_notOK: $.ASN1Encoder<CertErr_notOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertErr_notOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertErr_notOK */
 /**
  * @summary Encodes a(n) CertErr_notOK into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_CertErr_notOK(
     return _cached_encoder_for_CertErr_notOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertErr_notOK */
 
 /* eslint-enable */

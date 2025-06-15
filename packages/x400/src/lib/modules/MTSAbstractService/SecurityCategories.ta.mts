@@ -15,7 +15,6 @@ import {
     _decode_SecurityCategory,
     _encode_SecurityCategory,
 } from '../MTSAbstractService/SecurityCategory.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityCategories */
 /**
  * @summary SecurityCategories
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SecurityCategories = SecurityCategory[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityCategories */
 let _cached_decoder_for_SecurityCategories: $.ASN1Decoder<SecurityCategories> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityCategories */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityCategories
  * @function
@@ -48,13 +43,9 @@ export function _decode_SecurityCategories(el: _Element) {
     }
     return _cached_decoder_for_SecurityCategories(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityCategories */
 let _cached_encoder_for_SecurityCategories: $.ASN1Encoder<SecurityCategories> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityCategories */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityCategories */
 /**
  * @summary Encodes a(n) SecurityCategories into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SecurityCategories(
     return _cached_encoder_for_SecurityCategories(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityCategories */
 
 /* eslint-enable */

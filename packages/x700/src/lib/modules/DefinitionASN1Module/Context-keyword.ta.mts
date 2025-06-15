@@ -20,7 +20,7 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Context_keyword */
+
 /**
  * @summary Context_keyword
  * @description
@@ -67,9 +67,8 @@ export class Context_keyword {
         return new Context_keyword(_o.type_reference, _o.field);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Context_keyword */
+
 /**
  * @summary The Leading Root Component Types of Context_keyword
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_Context_keyword: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context_keyword */
+
 /**
  * @summary The Trailing Root Component Types of Context_keyword
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_Context_keyword: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Context_keyword: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context_keyword */
+
 /**
  * @summary The Extension Addition Component Types of Context_keyword
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_Context_keyword: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_Context_keyword: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_keyword */
+
 let _cached_decoder_for_Context_keyword: $.ASN1Decoder<Context_keyword> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Context_keyword */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Context_keyword
  * @function
@@ -155,13 +150,11 @@ export function _decode_Context_keyword(el: _Element) {
     }
     return _cached_decoder_for_Context_keyword(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_keyword */
+
 let _cached_encoder_for_Context_keyword: $.ASN1Encoder<Context_keyword> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_keyword */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Context_keyword */
+
 /**
  * @summary Encodes a(n) Context_keyword into an ASN.1 Element.
  * @function
@@ -193,6 +186,5 @@ export function _encode_Context_keyword(
     return _cached_encoder_for_Context_keyword(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Context_keyword */
 
 /* eslint-enable */

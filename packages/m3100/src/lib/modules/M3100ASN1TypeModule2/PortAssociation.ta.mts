@@ -21,7 +21,7 @@ import {
     _encode_PointerOrNull,
 } from '../ASN1DefinedTypesModule/PointerOrNull.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PortAssociation */
+
 /**
  * @summary PortAssociation
  * @description
@@ -71,9 +71,8 @@ export class PortAssociation {
         return new PortAssociation(_o.portId, _o.portTrail);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PortAssociation */
+
 /**
  * @summary The Leading Root Component Types of PortAssociation
  * @description
@@ -86,9 +85,8 @@ export const _root_component_type_list_1_spec_for_PortAssociation: $.ComponentSp
     ,/* FIXME: portId COULD_NOT_RESOLVE_TYPE_DEF */
 /* FIXME: portTrail COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PortAssociation */
+
 /**
  * @summary The Trailing Root Component Types of PortAssociation
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_1_spec_for_PortAssociation: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PortAssociation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PortAssociation */
+
 /**
  * @summary The Extension Addition Component Types of PortAssociation
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_PortAssociation: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_PortAssociation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PortAssociation */
+
 let _cached_decoder_for_PortAssociation: $.ASN1Decoder<PortAssociation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PortAssociation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PortAssociation
  * @function
@@ -147,13 +142,11 @@ export function _decode_PortAssociation(el: _Element) {
     }
     return _cached_decoder_for_PortAssociation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PortAssociation */
+
 let _cached_encoder_for_PortAssociation: $.ASN1Encoder<PortAssociation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PortAssociation */
+
 /**
  * @summary Encodes a(n) PortAssociation into an ASN.1 Element.
  * @function
@@ -185,6 +178,5 @@ export function _encode_PortAssociation(
     return _cached_encoder_for_PortAssociation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PortAssociation */
 
 /* eslint-enable */

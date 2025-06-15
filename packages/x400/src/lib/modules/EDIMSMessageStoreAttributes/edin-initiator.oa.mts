@@ -24,7 +24,6 @@ import { id_nat_edin_initiator } from '../EDIMSObjectIdentifiers/id-nat-edin-ini
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION edin_initiator */
 /**
  * @summary edin_initiator
  * @description
@@ -57,6 +56,5 @@ export const edin_initiator: X413ATTRIBUTE<EDINInitiatorField> = {
     '&id': id_nat_edin_initiator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edin_initiator */
 
 /* eslint-enable */

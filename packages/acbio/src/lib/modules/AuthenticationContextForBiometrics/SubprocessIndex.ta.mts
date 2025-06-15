@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SubprocessIndex */
+
 /**
  * @summary SubprocessIndex
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SubprocessIndex = INTEGER;
-/* END_OF_SYMBOL_DEFINITION SubprocessIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubprocessIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubprocessIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubprocessIndex */
+
+
 export const _decode_SubprocessIndex = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_SubprocessIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubprocessIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubprocessIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubprocessIndex */
+
+
 export const _encode_SubprocessIndex = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubprocessIndex */
 
 /* eslint-enable */

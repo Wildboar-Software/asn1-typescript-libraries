@@ -24,7 +24,6 @@ import { id_att_conversion_with_loss_prohibited } from '../MSObjectIdentifiers/i
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_conversion_with_loss_prohibited */
 /**
  * @summary mt_conversion_with_loss_prohibited
  * @description
@@ -57,6 +56,5 @@ export const mt_conversion_with_loss_prohibited: X413ATTRIBUTE<ConversionWithLos
     '&id': id_att_conversion_with_loss_prohibited /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_conversion_with_loss_prohibited */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../PkiPmiExternalDataTypes/PDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION StreetAddress */
 /**
  * @summary StreetAddress
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type StreetAddress = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION StreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StreetAddress */
 let _cached_decoder_for_StreetAddress: $.ASN1Decoder<StreetAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StreetAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) StreetAddress
  * @function
@@ -37,13 +32,9 @@ export function _decode_StreetAddress(el: _Element) {
     }
     return _cached_decoder_for_StreetAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StreetAddress */
 let _cached_encoder_for_StreetAddress: $.ASN1Encoder<StreetAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StreetAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StreetAddress */
 /**
  * @summary Encodes a(n) StreetAddress into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_StreetAddress(
     return _cached_encoder_for_StreetAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StreetAddress */
 
 /* eslint-enable */

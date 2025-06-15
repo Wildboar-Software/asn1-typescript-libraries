@@ -15,7 +15,6 @@ import {
     _decode_Waiting,
     _encode_Waiting,
 } from '../MTSAbstractService/Waiting.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubmissionControlResult */
 /**
  * @summary SubmissionControlResult
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubmissionControlResult = Waiting; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubmissionControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionControlResult */
 let _cached_decoder_for_SubmissionControlResult: $.ASN1Decoder<SubmissionControlResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmissionControlResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionControlResult
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubmissionControlResult(el: _Element) {
     }
     return _cached_decoder_for_SubmissionControlResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubmissionControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionControlResult */
 let _cached_encoder_for_SubmissionControlResult: $.ASN1Encoder<SubmissionControlResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionControlResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmissionControlResult */
 /**
  * @summary Encodes a(n) SubmissionControlResult into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubmissionControlResult(
     return _cached_encoder_for_SubmissionControlResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmissionControlResult */
 
 /* eslint-enable */

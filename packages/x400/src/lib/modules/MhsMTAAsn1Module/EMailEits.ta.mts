@@ -16,7 +16,6 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailEits */
 /**
  * @summary EMailEits
  * @description
@@ -33,13 +32,9 @@ import {
 export type EMailEits =
     | { x400EIT: EncodedInformationTypes } /* CHOICE_ALT_ROOT */
     | { genericEITs: OBJECT_IDENTIFIER[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailEits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailEits */
 let _cached_decoder_for_EMailEits: $.ASN1Decoder<EMailEits> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailEits */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailEits */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailEits
  * @function
@@ -69,13 +64,9 @@ export function _decode_EMailEits(el: _Element) {
     }
     return _cached_decoder_for_EMailEits(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailEits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailEits */
 let _cached_encoder_for_EMailEits: $.ASN1Encoder<EMailEits> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailEits */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailEits */
 /**
  * @summary Encodes a(n) EMailEits into an ASN.1 Element.
  * @function
@@ -113,6 +104,5 @@ export function _encode_EMailEits(
     return _cached_encoder_for_EMailEits(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailEits */
 
 /* eslint-enable */

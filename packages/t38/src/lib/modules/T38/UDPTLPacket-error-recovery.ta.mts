@@ -15,7 +15,7 @@ import {
   _decode_UDPTLPacket_error_recovery_fec_info,
   _encode_UDPTLPacket_error_recovery_fec_info,
 } from '../T38/UDPTLPacket-error-recovery-fec-info.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UDPTLPacket_error_recovery */
+
 /**
  * @summary UDPTLPacket_error_recovery
  * @description
@@ -29,13 +29,11 @@ import {
 export type UDPTLPacket_error_recovery =
   | { secondary_ifp_packets: _Element[] } /* CHOICE_ALT_ROOT */
   | { fec_info: UDPTLPacket_error_recovery_fec_info } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UDPTLPacket_error_recovery */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UDPTLPacket_error_recovery */
+
 let _cached_decoder_for_UDPTLPacket_error_recovery: $.ASN1Decoder<UDPTLPacket_error_recovery> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UDPTLPacket_error_recovery */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UDPTLPacket_error_recovery */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UDPTLPacket_error_recovery
  * @function
@@ -56,13 +54,11 @@ export function _decode_UDPTLPacket_error_recovery(el: _Element) {
   }
   return _cached_decoder_for_UDPTLPacket_error_recovery(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UDPTLPacket_error_recovery */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UDPTLPacket_error_recovery */
+
 let _cached_encoder_for_UDPTLPacket_error_recovery: $.ASN1Encoder<UDPTLPacket_error_recovery> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UDPTLPacket_error_recovery */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UDPTLPacket_error_recovery */
+
 /**
  * @summary Encodes a(n) UDPTLPacket_error_recovery into an ASN.1 Element.
  * @function
@@ -89,6 +85,5 @@ export function _encode_UDPTLPacket_error_recovery(
   return _cached_encoder_for_UDPTLPacket_error_recovery(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UDPTLPacket_error_recovery */
 
 /* eslint-enable */

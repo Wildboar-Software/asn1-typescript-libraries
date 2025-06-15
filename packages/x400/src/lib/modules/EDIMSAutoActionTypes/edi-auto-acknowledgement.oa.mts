@@ -29,7 +29,6 @@ import { unsupported_critical_function } from '../MTSAbstractService/unsupported
 import { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa.mjs';
 import { id_act_edi_auto_acknowledgement } from '../EDIMSObjectIdentifiers/id-act-edi-auto-acknowledgement.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_auto_acknowledgement */
 /**
  * @summary edi_auto_acknowledgement
  * @description
@@ -74,6 +73,5 @@ export const edi_auto_acknowledgement: AUTO_ACTION<EDIAutoAcknowledgementRegistr
     '&id': id_act_edi_auto_acknowledgement /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_auto_acknowledgement */
 
 /* eslint-enable */

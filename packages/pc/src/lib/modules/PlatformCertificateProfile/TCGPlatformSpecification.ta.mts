@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TCGPlatformSpecification */
 /**
  * @summary TCGPlatformSpecification
  * @description
@@ -62,9 +61,7 @@ class TCGPlatformSpecification {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TCGPlatformSpecification */
 /**
  * @summary The Leading Root Component Types of TCGPlatformSpecification
  * @description
@@ -78,9 +75,7 @@ const _root_component_type_list_1_spec_for_TCGPlatformSpecification: $.Component
     new $.ComponentSpec("version", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("platformClass", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TCGPlatformSpecification */
 /**
  * @summary The Trailing Root Component Types of TCGPlatformSpecification
  * @description
@@ -93,9 +88,7 @@ export
 const _root_component_type_list_2_spec_for_TCGPlatformSpecification: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TCGPlatformSpecification */
 /**
  * @summary The Extension Addition Component Types of TCGPlatformSpecification
  * @description
@@ -108,13 +101,9 @@ export
 const _extension_additions_list_spec_for_TCGPlatformSpecification: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCGPlatformSpecification */
 let _cached_decoder_for_TCGPlatformSpecification: $.ASN1Decoder<TCGPlatformSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCGPlatformSpecification */
 /**
  * @summary Decodes an ASN.1 element into a(n) TCGPlatformSpecification
  * @function
@@ -142,13 +131,9 @@ function _decode_TCGPlatformSpecification (el: _Element) {
 }; }
     return _cached_decoder_for_TCGPlatformSpecification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCGPlatformSpecification */
 let _cached_encoder_for_TCGPlatformSpecification: $.ASN1Encoder<TCGPlatformSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCGPlatformSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCGPlatformSpecification */
 /**
  * @summary Encodes a(n) TCGPlatformSpecification into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ function _encode_TCGPlatformSpecification (value: TCGPlatformSpecification, elGe
     return _cached_encoder_for_TCGPlatformSpecification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCGPlatformSpecification */
 
 /* eslint-enable */

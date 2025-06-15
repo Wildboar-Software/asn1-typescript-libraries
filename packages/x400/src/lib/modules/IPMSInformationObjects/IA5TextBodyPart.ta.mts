@@ -20,7 +20,6 @@ import {
     _decode_IA5TextData,
     _encode_IA5TextData,
 } from '../IPMSInformationObjects/IA5TextData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IA5TextBodyPart */
 /**
  * @summary IA5TextBodyPart
  * @description
@@ -70,9 +69,7 @@ export class IA5TextBodyPart {
         return new IA5TextBodyPart(_o.parameters, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IA5TextBodyPart */
 /**
  * @summary The Leading Root Component Types of IA5TextBodyPart
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_IA5TextBodyPart: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IA5TextBodyPart */
 /**
  * @summary The Trailing Root Component Types of IA5TextBodyPart
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_IA5TextBodyPart: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IA5TextBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IA5TextBodyPart */
 /**
  * @summary The Extension Addition Component Types of IA5TextBodyPart
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_IA5TextBodyPart: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_IA5TextBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IA5TextBodyPart */
 let _cached_decoder_for_IA5TextBodyPart: $.ASN1Decoder<IA5TextBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IA5TextBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) IA5TextBodyPart
  * @function
@@ -158,13 +147,9 @@ export function _decode_IA5TextBodyPart(el: _Element) {
     }
     return _cached_decoder_for_IA5TextBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IA5TextBodyPart */
 let _cached_encoder_for_IA5TextBodyPart: $.ASN1Encoder<IA5TextBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IA5TextBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IA5TextBodyPart */
 /**
  * @summary Encodes a(n) IA5TextBodyPart into an ASN.1 Element.
  * @function
@@ -196,6 +181,5 @@ export function _encode_IA5TextBodyPart(
     return _cached_encoder_for_IA5TextBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IA5TextBodyPart */
 
 /* eslint-enable */

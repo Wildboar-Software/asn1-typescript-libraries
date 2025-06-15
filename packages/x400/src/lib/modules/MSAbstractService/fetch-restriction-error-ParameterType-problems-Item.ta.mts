@@ -20,7 +20,6 @@ import {
     _decode_fetch_restriction_error_ParameterType_problems_Item_restriction,
     _encode_fetch_restriction_error_ParameterType_problems_Item_restriction,
 } from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item-restriction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType_problems_Item */
 /**
  * @summary fetch_restriction_error_ParameterType_problems_Item
  * @description
@@ -72,9 +71,7 @@ export class fetch_restriction_error_ParameterType_problems_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_fetch_restriction_error_ParameterType_problems_Item */
 /**
  * @summary The Leading Root Component Types of fetch_restriction_error_ParameterType_problems_Item
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_fetch_restriction_error_Parame
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_fetch_restriction_error_ParameterType_problems_Item */
 /**
  * @summary The Trailing Root Component Types of fetch_restriction_error_ParameterType_problems_Item
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_fetch_restriction_error_Parame
  * @constant
  */
 export const _root_component_type_list_2_spec_for_fetch_restriction_error_ParameterType_problems_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_fetch_restriction_error_ParameterType_problems_Item */
 /**
  * @summary The Extension Addition Component Types of fetch_restriction_error_ParameterType_problems_Item
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_fetch_restriction_error_Parame
  * @constant
  */
 export const _extension_additions_list_spec_for_fetch_restriction_error_ParameterType_problems_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item */
 let _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item: $.ASN1Decoder<fetch_restriction_error_ParameterType_problems_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_fetch_restriction_error_ParameterType_problems_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) fetch_restriction_error_ParameterType_problems_Item
  * @function
@@ -181,13 +170,9 @@ export function _decode_fetch_restriction_error_ParameterType_problems_Item(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item */
 let _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item: $.ASN1Encoder<fetch_restriction_error_ParameterType_problems_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_fetch_restriction_error_ParameterType_problems_Item */
 /**
  * @summary Encodes a(n) fetch_restriction_error_ParameterType_problems_Item into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_fetch_restriction_error_ParameterType_problems_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_fetch_restriction_error_ParameterType_problems_Item */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _encode_SequenceNumber,
 } from "../PKCS-9/SequenceNumber.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION sequenceNumber */
+
 /**
  * @summary sequenceNumber
  * @description
@@ -47,6 +47,5 @@ export const sequenceNumber: ATTRIBUTE<SequenceNumber> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sequenceNumber */
 
 /* eslint-enable */

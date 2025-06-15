@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CMIP_SPECIFICERROR } from '../CMIP-1/CMIP-SPECIFICERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SpecificErrorSet */
+
 /**
  * @summary SpecificErrorSet
  * @description
@@ -26,6 +26,5 @@ import { CMIP_SPECIFICERROR } from '../CMIP-1/CMIP-SPECIFICERROR.oca.mjs';
  *
  */
 export const SpecificErrorSet: CMIP_SPECIFICERROR[] = [];
-/* END_OF_SYMBOL_DEFINITION SpecificErrorSet */
 
 /* eslint-enable */

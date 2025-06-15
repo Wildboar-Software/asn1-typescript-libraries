@@ -17,7 +17,6 @@ import {
     _encode_Code,
 } from "@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AutoActionError */
 /**
  * @summary AutoActionError
  * @description
@@ -70,9 +69,7 @@ export class AutoActionError {
         return new AutoActionError(_o.error_code, _o.error_parameter);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoActionError */
 /**
  * @summary The Leading Root Component Types of AutoActionError
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_AutoActionError: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoActionError */
 /**
  * @summary The Trailing Root Component Types of AutoActionError
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_AutoActionError: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AutoActionError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoActionError */
 /**
  * @summary The Extension Addition Component Types of AutoActionError
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_AutoActionError: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_AutoActionError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoActionError */
 let _cached_decoder_for_AutoActionError: $.ASN1Decoder<AutoActionError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoActionError */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoActionError
  * @function
@@ -173,13 +162,9 @@ export function _decode_AutoActionError(el: _Element) {
     }
     return _cached_decoder_for_AutoActionError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoActionError */
 let _cached_encoder_for_AutoActionError: $.ASN1Encoder<AutoActionError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoActionError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoActionError */
 /**
  * @summary Encodes a(n) AutoActionError into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_AutoActionError(
     return _cached_encoder_for_AutoActionError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoActionError */
 
 /* eslint-enable */

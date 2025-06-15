@@ -23,7 +23,6 @@ import {
     _encode_DirectoryString,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs';
 import { id_at_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-at-mhs-postal-code.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSPostalCodeAttribute */
 /**
  * @summary mHSPostalCodeAttribute
  * @description
@@ -60,6 +59,5 @@ export const mHSPostalCodeAttribute: ATTRIBUTE<DirectoryString> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSPostalCodeAttribute */
 
 /* eslint-enable */

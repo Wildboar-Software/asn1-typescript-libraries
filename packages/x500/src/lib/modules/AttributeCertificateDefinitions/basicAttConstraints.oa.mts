@@ -7,7 +7,6 @@ import {
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_basicAttConstraints } from "./id-ce-basicAttConstraints.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION basicAttConstraints */
 /**
  * @summary basicAttConstraints
  * @description
@@ -35,6 +34,5 @@ export const basicAttConstraints: EXTENSION<BasicAttConstraintsSyntax> = {
     "&id": id_ce_basicAttConstraints,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION basicAttConstraints */
 
 /* eslint-enable */

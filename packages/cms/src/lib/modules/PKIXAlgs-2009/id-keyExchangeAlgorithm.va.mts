@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_keyExchangeAlgorithm */
+
 /**
  * @summary id_keyExchangeAlgorithm
  * @description
@@ -27,6 +27,5 @@ export const id_keyExchangeAlgorithm: OBJECT_IDENTIFIER = new _OID([
     /* algorithms */ 1,
     22,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_keyExchangeAlgorithm */
 
 /* eslint-enable */

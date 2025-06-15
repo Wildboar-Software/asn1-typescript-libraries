@@ -24,7 +24,6 @@ import { id_att_parent_sequence_number } from '../MSObjectIdentifiers/id-att-par
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_parent_sequence_number */
 /**
  * @summary ms_parent_sequence_number
  * @description
@@ -59,6 +58,5 @@ export const ms_parent_sequence_number: X413ATTRIBUTE<SequenceNumber> = {
     '&id': id_att_parent_sequence_number /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_parent_sequence_number */
 
 /* eslint-enable */

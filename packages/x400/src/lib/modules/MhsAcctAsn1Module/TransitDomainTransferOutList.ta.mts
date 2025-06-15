@@ -15,7 +15,6 @@ import {
     _decode_TransferRecipientField,
     _encode_TransferRecipientField,
 } from '../MhsAcctAsn1Module/TransferRecipientField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TransitDomainTransferOutList */
 /**
  * @summary TransitDomainTransferOutList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TransitDomainTransferOutList = TransferRecipientField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TransitDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitDomainTransferOutList */
 let _cached_decoder_for_TransitDomainTransferOutList: $.ASN1Decoder<TransitDomainTransferOutList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransitDomainTransferOutList */
 /**
  * @summary Decodes an ASN.1 element into a(n) TransitDomainTransferOutList
  * @function
@@ -48,13 +43,9 @@ export function _decode_TransitDomainTransferOutList(el: _Element) {
     }
     return _cached_decoder_for_TransitDomainTransferOutList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TransitDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitDomainTransferOutList */
 let _cached_encoder_for_TransitDomainTransferOutList: $.ASN1Encoder<TransitDomainTransferOutList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitDomainTransferOutList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransitDomainTransferOutList */
 /**
  * @summary Encodes a(n) TransitDomainTransferOutList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TransitDomainTransferOutList(
     return _cached_encoder_for_TransitDomainTransferOutList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransitDomainTransferOutList */
 
 /* eslint-enable */

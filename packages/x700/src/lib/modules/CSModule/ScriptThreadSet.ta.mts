@@ -20,7 +20,6 @@ import {
     _decode_ThreadId,
     _encode_ThreadId,
 } from '../CSModule/ThreadId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScriptThreadSet */
 /**
  * @summary ScriptThreadSet
  * @description
@@ -69,9 +68,7 @@ export class ScriptThreadSet {
         return new ScriptThreadSet(_o.scriptId, _o.threadId);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScriptThreadSet */
 /**
  * @summary The Leading Root Component Types of ScriptThreadSet
  * @description
@@ -84,9 +81,7 @@ export const _root_component_type_list_1_spec_for_ScriptThreadSet: $.ComponentSp
     new $.ComponentSpec('scriptId', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('threadId', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScriptThreadSet */
 /**
  * @summary The Trailing Root Component Types of ScriptThreadSet
  * @description
@@ -96,9 +91,7 @@ export const _root_component_type_list_1_spec_for_ScriptThreadSet: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ScriptThreadSet: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScriptThreadSet */
 /**
  * @summary The Extension Addition Component Types of ScriptThreadSet
  * @description
@@ -108,13 +101,9 @@ export const _root_component_type_list_2_spec_for_ScriptThreadSet: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ScriptThreadSet: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptThreadSet */
 let _cached_decoder_for_ScriptThreadSet: $.ASN1Decoder<ScriptThreadSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScriptThreadSet */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScriptThreadSet
  * @function
@@ -145,13 +134,9 @@ export function _decode_ScriptThreadSet(el: _Element) {
     }
     return _cached_decoder_for_ScriptThreadSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptThreadSet */
 let _cached_encoder_for_ScriptThreadSet: $.ASN1Encoder<ScriptThreadSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptThreadSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScriptThreadSet */
 /**
  * @summary Encodes a(n) ScriptThreadSet into an ASN.1 Element.
  * @function
@@ -186,6 +171,5 @@ export function _encode_ScriptThreadSet(
     return _cached_encoder_for_ScriptThreadSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScriptThreadSet */
 
 /* eslint-enable */

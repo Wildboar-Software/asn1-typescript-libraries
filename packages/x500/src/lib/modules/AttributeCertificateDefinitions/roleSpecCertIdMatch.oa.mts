@@ -6,7 +6,6 @@ import {
     _encode_RoleSpecCertIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION roleSpecCertIdMatch */
 /**
  * @summary roleSpecCertIdMatch
  * @description
@@ -34,6 +33,5 @@ export const roleSpecCertIdMatch: MATCHING_RULE<RoleSpecCertIdentifierSyntax> = 
     "&id": id_mr_roleSpecCertIdMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION roleSpecCertIdMatch */
 
 /* eslint-enable */

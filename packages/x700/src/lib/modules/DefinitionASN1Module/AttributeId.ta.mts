@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AttributeId */
 /**
  * @summary AttributeId
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AttributeId = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeId */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeId */
 export const _decode_AttributeId = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeId */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeId */
 export const _encode_AttributeId = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeId */
 
 /* eslint-enable */

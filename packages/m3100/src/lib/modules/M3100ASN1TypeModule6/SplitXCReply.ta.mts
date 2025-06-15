@@ -15,7 +15,7 @@ import {
     _decode_SplitXCReply_Item,
     _encode_SplitXCReply_Item,
 } from '../M3100ASN1TypeModule6/SplitXCReply-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SplitXCReply */
+
 /**
  * @summary SplitXCReply
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type SplitXCReply = SplitXCReply_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SplitXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SplitXCReply */
+
 let _cached_decoder_for_SplitXCReply: $.ASN1Decoder<SplitXCReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SplitXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SplitXCReply */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SplitXCReply
  * @function
@@ -51,13 +49,11 @@ export function _decode_SplitXCReply(el: _Element) {
     }
     return _cached_decoder_for_SplitXCReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SplitXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SplitXCReply */
+
 let _cached_encoder_for_SplitXCReply: $.ASN1Encoder<SplitXCReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SplitXCReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SplitXCReply */
+
 /**
  * @summary Encodes a(n) SplitXCReply into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_SplitXCReply(
     return _cached_encoder_for_SplitXCReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SplitXCReply */
 
 /* eslint-enable */

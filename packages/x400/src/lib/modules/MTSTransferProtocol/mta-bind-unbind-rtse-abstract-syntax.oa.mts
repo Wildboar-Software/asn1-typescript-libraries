@@ -16,7 +16,6 @@ import {
     _encode_RTSE_apdus,
 } from '../MTSTransferProtocol/RTSE-apdus.ta.mjs';
 import { id_as_mta_rtse } from '../MHSProtocolObjectIdentifiers/id-as-mta-rtse.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_bind_unbind_rtse_abstract_syntax */
 /**
  * @summary mta_bind_unbind_rtse_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const mta_bind_unbind_rtse_abstract_syntax: ABSTRACT_SYNTAX<RTSE_apdus> =
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION mta_bind_unbind_rtse_abstract_syntax */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _encode_MessageTokenSignedData,
 } from '../MTSAbstractService/MessageTokenSignedData.ta.mjs';
 import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION message_token_signed_data */
 /**
  * @summary message_token_signed_data
  * @description
@@ -44,6 +43,5 @@ export const message_token_signed_data: TOKEN_DATA<MessageTokenSignedData> = {
     '&id': 2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_token_signed_data */
 
 /* eslint-enable */

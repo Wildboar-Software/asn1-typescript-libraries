@@ -10,7 +10,6 @@ import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.
 import { person } from "../SelectedObjectClasses/person.oa.mjs";
 import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.mjs";
 import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION organizationalPerson */
 /**
  * @summary organizationalPerson
  * @description
@@ -49,6 +48,5 @@ export const organizationalPerson: OBJECT_CLASS = {
     "&id": id_oc_organizationalPerson /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION organizationalPerson */
 
 /* eslint-enable */

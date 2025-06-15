@@ -15,7 +15,7 @@ import {
     _decode_BPUIOExecutionInformation,
     _encode_BPUIOExecutionInformation,
 } from '../AuthenticationContextForBiometrics/BPUIOExecutionInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BPUIOExecutionInformationList */
+
 /**
  * @summary BPUIOExecutionInformationList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BPUIOExecutionInformationList = BPUIOExecutionInformation[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BPUIOExecutionInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUIOExecutionInformationList */
+
 let _cached_decoder_for_BPUIOExecutionInformationList: $.ASN1Decoder<BPUIOExecutionInformationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUIOExecutionInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BPUIOExecutionInformationList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BPUIOExecutionInformationList
  * @function
@@ -48,13 +46,11 @@ export function _decode_BPUIOExecutionInformationList(el: _Element) {
     }
     return _cached_decoder_for_BPUIOExecutionInformationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BPUIOExecutionInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUIOExecutionInformationList */
+
 let _cached_encoder_for_BPUIOExecutionInformationList: $.ASN1Encoder<BPUIOExecutionInformationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUIOExecutionInformationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BPUIOExecutionInformationList */
+
 /**
  * @summary Encodes a(n) BPUIOExecutionInformationList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_BPUIOExecutionInformationList(
     return _cached_encoder_for_BPUIOExecutionInformationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BPUIOExecutionInformationList */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
 } from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.mjs";
 import { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va.mjs";
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ct_asymmetric_key_package */
+
 /**
  * @summary ct_asymmetric_key_package
  * @description
@@ -32,6 +32,5 @@ export const ct_asymmetric_key_package: CONTENT_TYPE<AsymmetricKeyPackage> = {
     "&id": id_ct_KP_aKeyPackage /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_asymmetric_key_package */
 
 /* eslint-enable */

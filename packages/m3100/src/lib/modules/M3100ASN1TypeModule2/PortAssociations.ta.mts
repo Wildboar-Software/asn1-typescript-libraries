@@ -15,7 +15,7 @@ import {
     _decode_PortAssociation,
     _encode_PortAssociation,
 } from '../M3100ASN1TypeModule2/PortAssociation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PortAssociations */
+
 /**
  * @summary PortAssociations
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type PortAssociations = PortAssociation[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION PortAssociations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PortAssociations */
+
 let _cached_decoder_for_PortAssociations: $.ASN1Decoder<PortAssociations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PortAssociations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PortAssociations */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PortAssociations
  * @function
@@ -48,13 +46,11 @@ export function _decode_PortAssociations(el: _Element) {
     }
     return _cached_decoder_for_PortAssociations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PortAssociations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PortAssociations */
+
 let _cached_encoder_for_PortAssociations: $.ASN1Encoder<PortAssociations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PortAssociations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PortAssociations */
+
 /**
  * @summary Encodes a(n) PortAssociations into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_PortAssociations(
     return _cached_encoder_for_PortAssociations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PortAssociations */
 
 /* eslint-enable */

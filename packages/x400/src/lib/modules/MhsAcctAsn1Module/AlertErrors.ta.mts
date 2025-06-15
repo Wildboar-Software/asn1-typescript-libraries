@@ -15,7 +15,6 @@ import {
     _decode_RetrievalError,
     _encode_RetrievalError,
 } from '../MhsAcctAsn1Module/RetrievalError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlertErrors */
 /**
  * @summary AlertErrors
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AlertErrors = RetrievalError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AlertErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertErrors */
 let _cached_decoder_for_AlertErrors: $.ASN1Decoder<AlertErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlertErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertErrors
  * @function
@@ -46,13 +41,9 @@ export function _decode_AlertErrors(el: _Element) {
     }
     return _cached_decoder_for_AlertErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlertErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertErrors */
 let _cached_encoder_for_AlertErrors: $.ASN1Encoder<AlertErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlertErrors */
 /**
  * @summary Encodes a(n) AlertErrors into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AlertErrors(
     return _cached_encoder_for_AlertErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlertErrors */
 
 /* eslint-enable */

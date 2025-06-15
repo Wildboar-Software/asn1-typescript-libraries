@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TypeText */
+
 /**
  * @summary TypeText
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TypeText = IA5String; // IA5String
-/* END_OF_SYMBOL_DEFINITION TypeText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeText */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeText */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeText */
+
+
 export const _decode_TypeText = $._decodeIA5String;
-/* END_OF_SYMBOL_DEFINITION _decode_TypeText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeText */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeText */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeText */
+
+
 export const _encode_TypeText = $._encodeIA5String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeText */
 
 /* eslint-enable */

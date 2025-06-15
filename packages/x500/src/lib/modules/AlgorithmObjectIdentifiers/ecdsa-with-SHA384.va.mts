@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ansi_x9_62 } from "../AlgorithmObjectIdentifiers/ansi-x9-62.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ecdsa_with_SHA384 */
 /**
  * @summary ecdsa_with_SHA384
  * @description
@@ -20,6 +19,5 @@ export const ecdsa_with_SHA384: ID = new _OID(
     [/* signatures */ 4, /* ecdsa-with-SHA2 */ 3, 3],
     ansi_x9_62
 );
-/* END_OF_SYMBOL_DEFINITION ecdsa_with_SHA384 */
 
 /* eslint-enable */

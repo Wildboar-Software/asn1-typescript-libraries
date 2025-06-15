@@ -21,7 +21,6 @@ import {
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestObjectResponse */
 /**
  * @summary TestObjectResponse
  * @description
@@ -71,9 +70,7 @@ export class TestObjectResponse {
         return new TestObjectResponse(_o.tOName, _o.tOAttributeList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestObjectResponse */
 /**
  * @summary The Leading Root Component Types of TestObjectResponse
  * @description
@@ -92,9 +89,7 @@ export const _root_component_type_list_1_spec_for_TestObjectResponse: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestObjectResponse */
 /**
  * @summary The Trailing Root Component Types of TestObjectResponse
  * @description
@@ -104,9 +99,7 @@ export const _root_component_type_list_1_spec_for_TestObjectResponse: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestObjectResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestObjectResponse */
 /**
  * @summary The Extension Addition Component Types of TestObjectResponse
  * @description
@@ -116,13 +109,9 @@ export const _root_component_type_list_2_spec_for_TestObjectResponse: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_TestObjectResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestObjectResponse */
 let _cached_decoder_for_TestObjectResponse: $.ASN1Decoder<TestObjectResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestObjectResponse */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestObjectResponse
  * @function
@@ -164,13 +153,9 @@ export function _decode_TestObjectResponse(el: _Element) {
     }
     return _cached_decoder_for_TestObjectResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestObjectResponse */
 let _cached_encoder_for_TestObjectResponse: $.ASN1Encoder<TestObjectResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestObjectResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestObjectResponse */
 /**
  * @summary Encodes a(n) TestObjectResponse into an ASN.1 Element.
  * @function
@@ -204,6 +189,5 @@ export function _encode_TestObjectResponse(
     return _cached_encoder_for_TestObjectResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestObjectResponse */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { csor } from "../AlgorithmObjectIdentifiers/csor.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION nistAlgorithms */
 /**
  * @summary nistAlgorithms
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const nistAlgorithms: ID = new _OID([/* nistAlgorithm */ 4], csor);
-/* END_OF_SYMBOL_DEFINITION nistAlgorithms */
 
 /* eslint-enable */

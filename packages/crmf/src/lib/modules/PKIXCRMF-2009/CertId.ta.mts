@@ -12,7 +12,7 @@ import {
     _encode_GeneralName,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertId */
+
 /**
  * @summary CertId
  * @description
@@ -61,9 +61,8 @@ export class CertId {
         return new CertId(_o.issuer, _o.serialNumber);
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertId */
+
 /**
  * @summary The Leading Root Component Types of CertId
  * @description
@@ -82,9 +81,8 @@ export const _root_component_type_list_1_spec_for_CertId: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertId */
+
 /**
  * @summary The Trailing Root Component Types of CertId
  * @description
@@ -94,9 +92,8 @@ export const _root_component_type_list_1_spec_for_CertId: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertId */
+
 /**
  * @summary The Extension Addition Component Types of CertId
  * @description
@@ -106,13 +103,11 @@ export const _root_component_type_list_2_spec_for_CertId: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_CertId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertId */
+
 let _cached_decoder_for_CertId: $.ASN1Decoder<CertId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertId
  * @function
@@ -141,13 +136,11 @@ export function _decode_CertId(el: _Element) {
     }
     return _cached_decoder_for_CertId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertId */
+
 let _cached_encoder_for_CertId: $.ASN1Encoder<CertId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertId */
+
 /**
  * @summary Encodes a(n) CertId into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_CertId(value: CertId, elGetter: $.ASN1Encoder<CertId>) {
     return _cached_encoder_for_CertId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertId */
 
 /* eslint-enable */

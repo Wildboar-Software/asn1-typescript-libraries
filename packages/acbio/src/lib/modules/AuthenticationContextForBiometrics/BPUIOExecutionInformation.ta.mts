@@ -25,7 +25,7 @@ import {
     _decode_Hash,
     _encode_Hash,
 } from '../AuthenticationContextForBiometrics/Hash.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BPUIOExecutionInformation */
+
 /**
  * @summary BPUIOExecutionInformation
  * @description
@@ -95,9 +95,8 @@ export class BPUIOExecutionInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BPUIOExecutionInformation */
+
 /**
  * @summary The Leading Root Component Types of BPUIOExecutionInformation
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_BPUIOExecutionInformation: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BPUIOExecutionInformation */
+
 /**
  * @summary The Trailing Root Component Types of BPUIOExecutionInformation
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_BPUIOExecutionInformation: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BPUIOExecutionInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BPUIOExecutionInformation */
+
 /**
  * @summary The Extension Addition Component Types of BPUIOExecutionInformation
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_BPUIOExecutionInformation: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_BPUIOExecutionInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUIOExecutionInformation */
+
 let _cached_decoder_for_BPUIOExecutionInformation: $.ASN1Decoder<BPUIOExecutionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BPUIOExecutionInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BPUIOExecutionInformation
  * @function
@@ -208,13 +203,11 @@ export function _decode_BPUIOExecutionInformation(el: _Element) {
     }
     return _cached_decoder_for_BPUIOExecutionInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUIOExecutionInformation */
+
 let _cached_encoder_for_BPUIOExecutionInformation: $.ASN1Encoder<BPUIOExecutionInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BPUIOExecutionInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BPUIOExecutionInformation */
+
 /**
  * @summary Encodes a(n) BPUIOExecutionInformation into an ASN.1 Element.
  * @function
@@ -254,6 +247,5 @@ export function _encode_BPUIOExecutionInformation(
     return _cached_encoder_for_BPUIOExecutionInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BPUIOExecutionInformation */
 
 /* eslint-enable */

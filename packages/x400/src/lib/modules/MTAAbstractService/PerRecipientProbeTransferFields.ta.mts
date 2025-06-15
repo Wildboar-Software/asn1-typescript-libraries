@@ -36,7 +36,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerRecipientProbeTransferFields */
 /**
  * @summary PerRecipientProbeTransferFields
  * @description
@@ -128,9 +127,7 @@ export class PerRecipientProbeTransferFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientProbeTransferFields */
 /**
  * @summary The Leading Root Component Types of PerRecipientProbeTransferFields
  * @description
@@ -176,9 +173,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientProbeTransferField
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientProbeTransferFields */
 /**
  * @summary The Trailing Root Component Types of PerRecipientProbeTransferFields
  * @description
@@ -188,9 +183,7 @@ export const _root_component_type_list_1_spec_for_PerRecipientProbeTransferField
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerRecipientProbeTransferFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientProbeTransferFields */
 /**
  * @summary The Extension Addition Component Types of PerRecipientProbeTransferFields
  * @description
@@ -200,13 +193,9 @@ export const _root_component_type_list_2_spec_for_PerRecipientProbeTransferField
  * @constant
  */
 export const _extension_additions_list_spec_for_PerRecipientProbeTransferFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientProbeTransferFields */
 let _cached_decoder_for_PerRecipientProbeTransferFields: $.ASN1Decoder<PerRecipientProbeTransferFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerRecipientProbeTransferFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerRecipientProbeTransferFields
  * @function
@@ -276,13 +265,9 @@ export function _decode_PerRecipientProbeTransferFields(el: _Element) {
     }
     return _cached_decoder_for_PerRecipientProbeTransferFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientProbeTransferFields */
 let _cached_encoder_for_PerRecipientProbeTransferFields: $.ASN1Encoder<PerRecipientProbeTransferFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerRecipientProbeTransferFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerRecipientProbeTransferFields */
 /**
  * @summary Encodes a(n) PerRecipientProbeTransferFields into an ASN.1 Element.
  * @function
@@ -349,6 +334,5 @@ export function _encode_PerRecipientProbeTransferFields(
     return _cached_encoder_for_PerRecipientProbeTransferFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerRecipientProbeTransferFields */
 
 /* eslint-enable */

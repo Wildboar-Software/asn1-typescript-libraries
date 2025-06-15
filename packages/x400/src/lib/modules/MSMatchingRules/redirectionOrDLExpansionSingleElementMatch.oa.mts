@@ -16,7 +16,6 @@ import {
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';
 import { id_mr_redirection_or_dl_expansion_single_element_match } from '../MSObjectIdentifiers/id-mr-redirection-or-dl-expansion-single-element-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION redirectionOrDLExpansionSingleElementMatch */
 /**
  * @summary redirectionOrDLExpansionSingleElementMatch
  * @description
@@ -45,6 +44,5 @@ export const redirectionOrDLExpansionSingleElementMatch: MATCHING_RULE<MSString>
     '&id': id_mr_redirection_or_dl_expansion_single_element_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION redirectionOrDLExpansionSingleElementMatch */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { DMI_SERVICEUSER } from "../Attribute-ASN1Module/DMI-SERVICEUSER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ServiceUserSet */
 /**
  * @summary ServiceUserSet
  * @description
@@ -27,6 +26,5 @@ import { DMI_SERVICEUSER } from "../Attribute-ASN1Module/DMI-SERVICEUSER.oca.mjs
  */
 export
 const ServiceUserSet: (DMI_SERVICEUSER)[] = [];
-/* END_OF_SYMBOL_DEFINITION ServiceUserSet */
 
 /* eslint-enable */

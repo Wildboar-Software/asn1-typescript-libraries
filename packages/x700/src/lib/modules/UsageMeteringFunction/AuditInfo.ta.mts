@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION AuditInfo */
 /**
  * @summary AuditInfo
  * @description
@@ -61,9 +60,7 @@ export class AuditInfo {
         return new AuditInfo(_o.service, _o.auditDetails);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuditInfo */
 /**
  * @summary The Leading Root Component Types of AuditInfo
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_AuditInfo: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuditInfo */
 /**
  * @summary The Trailing Root Component Types of AuditInfo
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_AuditInfo: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AuditInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuditInfo */
 /**
  * @summary The Extension Addition Component Types of AuditInfo
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_AuditInfo: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_AuditInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuditInfo */
 let _cached_decoder_for_AuditInfo: $.ASN1Decoder<AuditInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuditInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuditInfo
  * @function
@@ -147,13 +136,9 @@ export function _decode_AuditInfo(el: _Element) {
     }
     return _cached_decoder_for_AuditInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuditInfo */
 let _cached_encoder_for_AuditInfo: $.ASN1Encoder<AuditInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuditInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuditInfo */
 /**
  * @summary Encodes a(n) AuditInfo into an ASN.1 Element.
  * @function
@@ -188,6 +173,5 @@ export function _encode_AuditInfo(
     return _cached_encoder_for_AuditInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuditInfo */
 
 /* eslint-enable */

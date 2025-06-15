@@ -21,7 +21,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OptionalIdentifierAndRole */
 /**
  * @summary OptionalIdentifierAndRole
  * @description
@@ -76,9 +75,7 @@ export class OptionalIdentifierAndRole {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalIdentifierAndRole */
 /**
  * @summary The Leading Root Component Types of OptionalIdentifierAndRole
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_OptionalIdentifierAndRole: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalIdentifierAndRole */
 /**
  * @summary The Trailing Root Component Types of OptionalIdentifierAndRole
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_OptionalIdentifierAndRole: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OptionalIdentifierAndRole: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalIdentifierAndRole */
 /**
  * @summary The Extension Addition Component Types of OptionalIdentifierAndRole
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_OptionalIdentifierAndRole: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_OptionalIdentifierAndRole: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalIdentifierAndRole */
 let _cached_decoder_for_OptionalIdentifierAndRole: $.ASN1Decoder<OptionalIdentifierAndRole> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalIdentifierAndRole */
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalIdentifierAndRole
  * @function
@@ -175,13 +164,9 @@ export function _decode_OptionalIdentifierAndRole(el: _Element) {
     }
     return _cached_decoder_for_OptionalIdentifierAndRole(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalIdentifierAndRole */
 let _cached_encoder_for_OptionalIdentifierAndRole: $.ASN1Encoder<OptionalIdentifierAndRole> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalIdentifierAndRole */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalIdentifierAndRole */
 /**
  * @summary Encodes a(n) OptionalIdentifierAndRole into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_OptionalIdentifierAndRole(
     return _cached_encoder_for_OptionalIdentifierAndRole(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalIdentifierAndRole */
 
 /* eslint-enable */

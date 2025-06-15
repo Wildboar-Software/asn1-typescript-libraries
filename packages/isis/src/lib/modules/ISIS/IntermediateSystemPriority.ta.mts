@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION IntermediateSystemPriority */
 /**
  * @summary IntermediateSystemPriority
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type IntermediateSystemPriority = INTEGER;
-/* END_OF_SYMBOL_DEFINITION IntermediateSystemPriority */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateSystemPriority */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateSystemPriority */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntermediateSystemPriority */
 export const _decode_IntermediateSystemPriority = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_IntermediateSystemPriority */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateSystemPriority */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateSystemPriority */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntermediateSystemPriority */
 export const _encode_IntermediateSystemPriority = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntermediateSystemPriority */
 
 /* eslint-enable */

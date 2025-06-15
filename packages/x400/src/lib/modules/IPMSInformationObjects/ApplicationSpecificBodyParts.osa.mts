@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ApplicationSpecificBodyParts */
 /**
  * @summary ApplicationSpecificBodyParts
  * @description
@@ -27,6 +26,5 @@ import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY
  *
  */
 export const ApplicationSpecificBodyParts: EXTENDED_BODY_PART_TYPE[] = [];
-/* END_OF_SYMBOL_DEFINITION ApplicationSpecificBodyParts */
 
 /* eslint-enable */

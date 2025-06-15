@@ -25,7 +25,6 @@ import {
 } from '../MSGeneralAutoActionTypes/AutoAlertErrorIndication.ta.mjs';
 import { id_aae_auto_alert_error } from '../MSObjectIdentifiers/id-aae-auto-alert-error.va.mjs';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_alert_error */
 /**
  * @summary auto_alert_error
  * @description
@@ -62,6 +61,5 @@ export const auto_alert_error: AUTO_ACTION_ERROR<AutoAlertErrorIndication[]> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_alert_error */
 
 /* eslint-enable */

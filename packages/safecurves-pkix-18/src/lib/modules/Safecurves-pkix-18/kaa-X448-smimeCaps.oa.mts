@@ -12,7 +12,7 @@ import {
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AlgorithmInformation-2009/AlgorithmIdentifier.ta.mjs";
 import { id_X448 } from "../Safecurves-pkix-18/id-X448.va.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION kaa_X448_smimeCaps */
+
 /**
  * @summary kaa_X448_smimeCaps
  * @description
@@ -39,6 +39,5 @@ const kaa_X448_smimeCaps: SMIME_CAPS<AlgorithmIdentifier> = {
     "&id": id_X448 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kaa_X448_smimeCaps */
 
 /* eslint-enable */

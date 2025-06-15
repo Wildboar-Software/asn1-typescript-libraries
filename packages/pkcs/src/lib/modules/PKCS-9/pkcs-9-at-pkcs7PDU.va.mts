@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_9_at } from "../PKCS-9/pkcs-9-at.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pkcs_9_at_pkcs7PDU */
+
 /**
  * @summary pkcs_9_at_pkcs7PDU
  * @description
@@ -15,6 +15,5 @@ import { pkcs_9_at } from "../PKCS-9/pkcs-9-at.va.mjs";
  * @constant
  */
 export const pkcs_9_at_pkcs7PDU: OBJECT_IDENTIFIER = new _OID([5], pkcs_9_at);
-/* END_OF_SYMBOL_DEFINITION pkcs_9_at_pkcs7PDU */
 
 /* eslint-enable */

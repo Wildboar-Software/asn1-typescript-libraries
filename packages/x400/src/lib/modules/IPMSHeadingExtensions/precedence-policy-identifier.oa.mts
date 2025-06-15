@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.mjs';
 import { id_hex_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hex-precedence-policy-id.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION precedence_policy_identifier */
 /**
  * @summary precedence_policy_identifier
  * @description
@@ -45,6 +44,5 @@ export const precedence_policy_identifier: IPMS_EXTENSION<PrecedencePolicyIdenti
     '&id': id_hex_precedence_policy_id /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION precedence_policy_identifier */
 
 /* eslint-enable */

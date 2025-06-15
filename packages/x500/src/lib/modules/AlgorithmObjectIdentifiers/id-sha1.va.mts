@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_sha1 */
 /**
  * @summary id_sha1
  * @description
@@ -23,6 +22,5 @@ export const id_sha1: ID = new _OID([
     /* algorithms */ 2,
     26,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_sha1 */
 
 /* eslint-enable */

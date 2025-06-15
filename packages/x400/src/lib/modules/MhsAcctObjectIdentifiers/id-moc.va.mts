@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_accounting } from '../MhsAcctObjectIdentifiers/id-accounting.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_moc */
 /**
  * @summary id_moc
  * @description
@@ -25,6 +24,5 @@ import { id_accounting } from '../MhsAcctObjectIdentifiers/id-accounting.va.mjs'
  * @constant
  */
 export const id_moc: ID = new _OID([0], id_accounting);
-/* END_OF_SYMBOL_DEFINITION id_moc */
 
 /* eslint-enable */

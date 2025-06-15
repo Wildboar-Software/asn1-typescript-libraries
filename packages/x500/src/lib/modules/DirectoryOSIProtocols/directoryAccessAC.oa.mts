@@ -13,7 +13,6 @@ import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.mjs";
 import { search } from "../DirectoryAbstractService/search.oa.mjs";
 import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
 import { id_ac_directoryAccessAC } from "../DirectoryOSIProtocols/id-ac-directoryAccessAC.va.mjs";
-/* START_OF_SYMBOL_DEFINITION directoryAccessAC */
 /**
  * @summary directoryAccessAC
  * @description
@@ -61,6 +60,5 @@ export const directoryAccessAC: APPLICATION_CONTEXT = {
     ] /* OBJECT_FIELD_SETTING */,
     "&applicationContextName": id_ac_directoryAccessAC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION directoryAccessAC */
 
 /* eslint-enable */

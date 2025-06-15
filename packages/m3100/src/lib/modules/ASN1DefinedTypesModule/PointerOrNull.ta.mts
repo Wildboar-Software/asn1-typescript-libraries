@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PointerOrNull */
+
 /**
  * @summary PointerOrNull
  * @description
@@ -32,13 +32,11 @@ import {
 export type PointerOrNull =
     | { pointer: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { null_: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PointerOrNull */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PointerOrNull */
+
 let _cached_decoder_for_PointerOrNull: $.ASN1Decoder<PointerOrNull> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PointerOrNull */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PointerOrNull */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PointerOrNull
  * @function
@@ -58,13 +56,11 @@ export function _decode_PointerOrNull(el: _Element) {
     }
     return _cached_decoder_for_PointerOrNull(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PointerOrNull */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PointerOrNull */
+
 let _cached_encoder_for_PointerOrNull: $.ASN1Encoder<PointerOrNull> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PointerOrNull */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PointerOrNull */
+
 /**
  * @summary Encodes a(n) PointerOrNull into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_PointerOrNull(
     return _cached_encoder_for_PointerOrNull(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PointerOrNull */
 
 /* eslint-enable */

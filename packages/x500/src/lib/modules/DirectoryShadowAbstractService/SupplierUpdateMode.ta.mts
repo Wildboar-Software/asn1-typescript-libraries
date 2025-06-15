@@ -6,7 +6,6 @@ import {
     _decode_SchedulingParameters,
     _encode_SchedulingParameters,
 } from "../DirectoryShadowAbstractService/SchedulingParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SupplierUpdateMode */
 /**
  * @summary SupplierUpdateMode
  * @description
@@ -24,13 +23,9 @@ export type SupplierUpdateMode =
     | { onChange: BOOLEAN } /* CHOICE_ALT_ROOT */
     | { scheduled: SchedulingParameters } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SupplierUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierUpdateMode */
 let _cached_decoder_for_SupplierUpdateMode: $.ASN1Decoder<SupplierUpdateMode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupplierUpdateMode */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupplierUpdateMode
  * @function
@@ -48,13 +43,9 @@ export function _decode_SupplierUpdateMode(el: _Element) {
     }
     return _cached_decoder_for_SupplierUpdateMode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupplierUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplierUpdateMode */
 let _cached_encoder_for_SupplierUpdateMode: $.ASN1Encoder<SupplierUpdateMode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplierUpdateMode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupplierUpdateMode */
 /**
  * @summary Encodes a(n) SupplierUpdateMode into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_SupplierUpdateMode(
     return _cached_encoder_for_SupplierUpdateMode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupplierUpdateMode */
 
 /* eslint-enable */

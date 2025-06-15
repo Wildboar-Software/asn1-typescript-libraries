@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Membership */
 /**
  * @summary Membership
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Membership = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Membership */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Membership */
 let _cached_decoder_for_Membership: $.ASN1Decoder<Membership> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Membership */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Membership */
 /**
  * @summary Decodes an ASN.1 element into a(n) Membership
  * @function
@@ -48,13 +43,9 @@ export function _decode_Membership(el: _Element) {
     }
     return _cached_decoder_for_Membership(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Membership */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Membership */
 let _cached_encoder_for_Membership: $.ASN1Encoder<Membership> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Membership */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Membership */
 /**
  * @summary Encodes a(n) Membership into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Membership(
     return _cached_encoder_for_Membership(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Membership */
 
 /* eslint-enable */

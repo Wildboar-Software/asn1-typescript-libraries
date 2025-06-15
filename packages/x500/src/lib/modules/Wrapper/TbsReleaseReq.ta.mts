@@ -28,7 +28,6 @@ import {
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsReleaseReq */
 /**
  * @summary TbsReleaseReq
  * @description
@@ -126,9 +125,7 @@ export class TbsReleaseReq {
         })();
     }
 }
-/* END_OF_SYMBOL_DEFINITION TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsReleaseReq */
 /**
  * @summary The Leading Root Component Types of TbsReleaseReq
  * @description
@@ -174,9 +171,7 @@ export const _root_component_type_list_1_spec_for_TbsReleaseReq: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsReleaseReq */
 /**
  * @summary The Trailing Root Component Types of TbsReleaseReq
  * @description
@@ -186,9 +181,7 @@ export const _root_component_type_list_1_spec_for_TbsReleaseReq: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbsReleaseReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsReleaseReq */
 /**
  * @summary The Extension Addition Component Types of TbsReleaseReq
  * @description
@@ -198,13 +191,9 @@ export const _root_component_type_list_2_spec_for_TbsReleaseReq: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_TbsReleaseReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsReleaseReq */
 let _cached_decoder_for_TbsReleaseReq: $.ASN1Decoder<TbsReleaseReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsReleaseReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsReleaseReq
  * @function
@@ -266,13 +255,9 @@ export function _decode_TbsReleaseReq(el: _Element) {
     }
     return _cached_decoder_for_TbsReleaseReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsReleaseReq */
 let _cached_encoder_for_TbsReleaseReq: $.ASN1Encoder<TbsReleaseReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsReleaseReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsReleaseReq */
 /**
  * @summary Encodes a(n) TbsReleaseReq into an ASN.1 Element.
  * @function
@@ -327,6 +312,5 @@ export function _encode_TbsReleaseReq(
     return _cached_encoder_for_TbsReleaseReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsReleaseReq */
 
 /* eslint-enable */

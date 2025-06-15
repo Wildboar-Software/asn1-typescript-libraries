@@ -15,7 +15,7 @@ import {
     _decode_ConnectivityEndPoint,
     _encode_ConnectivityEndPoint,
 } from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PtoPoint */
+
 /**
  * @summary PtoPoint
  * @description
@@ -64,9 +64,8 @@ export class PtoPoint {
         return new PtoPoint(_o.aEnd, _o.zEnd);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PtoPoint */
+
 /**
  * @summary The Leading Root Component Types of PtoPoint
  * @description
@@ -79,9 +78,8 @@ export const _root_component_type_list_1_spec_for_PtoPoint: $.ComponentSpec[] = 
     new $.ComponentSpec('aEnd', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('zEnd', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PtoPoint */
+
 /**
  * @summary The Trailing Root Component Types of PtoPoint
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_PtoPoint: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PtoPoint: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PtoPoint */
+
 /**
  * @summary The Extension Addition Component Types of PtoPoint
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_PtoPoint: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_PtoPoint: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PtoPoint */
+
 let _cached_decoder_for_PtoPoint: $.ASN1Decoder<PtoPoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PtoPoint */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PtoPoint
  * @function
@@ -138,13 +133,11 @@ export function _decode_PtoPoint(el: _Element) {
     }
     return _cached_decoder_for_PtoPoint(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PtoPoint */
+
 let _cached_encoder_for_PtoPoint: $.ASN1Encoder<PtoPoint> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PtoPoint */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PtoPoint */
+
 /**
  * @summary Encodes a(n) PtoPoint into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_PtoPoint(
     return _cached_encoder_for_PtoPoint(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PtoPoint */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
 } from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EquivalentClassification */
+
 /**
  * @summary EquivalentClassification
  * @description
@@ -79,9 +79,8 @@ export class EquivalentClassification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EquivalentClassification */
+
 /**
  * @summary The Leading Root Component Types of EquivalentClassification
  * @description
@@ -113,9 +112,8 @@ export const _root_component_type_list_1_spec_for_EquivalentClassification: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EquivalentClassification */
+
 /**
  * @summary The Trailing Root Component Types of EquivalentClassification
  * @description
@@ -125,9 +123,8 @@ export const _root_component_type_list_1_spec_for_EquivalentClassification: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EquivalentClassification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EquivalentClassification */
+
 /**
  * @summary The Extension Addition Component Types of EquivalentClassification
  * @description
@@ -137,13 +134,11 @@ export const _root_component_type_list_2_spec_for_EquivalentClassification: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_EquivalentClassification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentClassification */
+
 let _cached_decoder_for_EquivalentClassification: $.ASN1Decoder<EquivalentClassification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EquivalentClassification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EquivalentClassification
  * @function
@@ -181,13 +176,11 @@ export function _decode_EquivalentClassification(el: _Element) {
     }
     return _cached_decoder_for_EquivalentClassification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentClassification */
+
 let _cached_encoder_for_EquivalentClassification: $.ASN1Encoder<EquivalentClassification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentClassification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EquivalentClassification */
+
 /**
  * @summary Encodes a(n) EquivalentClassification into an ASN.1 Element.
  * @function
@@ -223,6 +216,5 @@ export function _encode_EquivalentClassification(
     return _cached_encoder_for_EquivalentClassification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EquivalentClassification */
 
 /* eslint-enable */

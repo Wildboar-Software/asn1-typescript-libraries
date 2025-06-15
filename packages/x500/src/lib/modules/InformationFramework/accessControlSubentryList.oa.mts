@@ -10,7 +10,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { id_oa_accessControlSubentryList } from "../InformationFramework/id-oa-accessControlSubentryList.va.mjs";
-/* START_OF_SYMBOL_DEFINITION accessControlSubentryList */
 /**
  * @summary accessControlSubentryList
  * @description
@@ -48,6 +47,5 @@ export const accessControlSubentryList: ATTRIBUTE<DistinguishedName> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION accessControlSubentryList */
 
 /* eslint-enable */

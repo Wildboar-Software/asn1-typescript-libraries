@@ -21,7 +21,7 @@ import {
     _encode_PointerOrNull,
 } from '../ASN1DefinedTypesModule/PointerOrNull.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BridgeRollReply_Item */
+
 /**
  * @summary BridgeRollReply_Item
  * @description
@@ -35,13 +35,11 @@ import {
 export type BridgeRollReply_Item =
     | { bridgeFailed: Failed } /* CHOICE_ALT_ROOT */
     | { bridgeRollResult: PointerOrNull } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BridgeRollReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BridgeRollReply_Item */
+
 let _cached_decoder_for_BridgeRollReply_Item: $.ASN1Decoder<BridgeRollReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BridgeRollReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BridgeRollReply_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BridgeRollReply_Item
  * @function
@@ -67,13 +65,11 @@ export function _decode_BridgeRollReply_Item(el: _Element) {
     }
     return _cached_decoder_for_BridgeRollReply_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BridgeRollReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BridgeRollReply_Item */
+
 let _cached_encoder_for_BridgeRollReply_Item: $.ASN1Encoder<BridgeRollReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BridgeRollReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BridgeRollReply_Item */
+
 /**
  * @summary Encodes a(n) BridgeRollReply_Item into an ASN.1 Element.
  * @function
@@ -107,6 +103,5 @@ export function _encode_BridgeRollReply_Item(
     return _cached_encoder_for_BridgeRollReply_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BridgeRollReply_Item */
 
 /* eslint-enable */

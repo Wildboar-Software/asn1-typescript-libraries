@@ -25,7 +25,6 @@ import {
     _encode_LatestDeliveryTime,
 } from '../MTSAbstractService/LatestDeliveryTime.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION latest_delivery_time */
 /**
  * @summary latest_delivery_time
  * @description
@@ -62,6 +61,5 @@ export const latest_delivery_time: EXTENSION<LatestDeliveryTime> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION latest_delivery_time */
 
 /* eslint-enable */

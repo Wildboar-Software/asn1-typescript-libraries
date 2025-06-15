@@ -33,7 +33,6 @@ import {
     _root_component_type_list_1_spec_for_CommonResultsSeq,
 } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingResultData */
 /**
  * @summary TerminateOperationalBindingResultData
  * @description
@@ -145,9 +144,7 @@ export class TerminateOperationalBindingResultData implements CommonResultsSeq {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TerminateOperationalBindingResultData */
 /**
  * @summary The Leading Root Component Types of TerminateOperationalBindingResultData
  * @description
@@ -179,9 +176,7 @@ export const _root_component_type_list_1_spec_for_TerminateOperationalBindingRes
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TerminateOperationalBindingResultData */
 /**
  * @summary The Trailing Root Component Types of TerminateOperationalBindingResultData
  * @description
@@ -193,9 +188,7 @@ export const _root_component_type_list_1_spec_for_TerminateOperationalBindingRes
 export const _root_component_type_list_2_spec_for_TerminateOperationalBindingResultData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TerminateOperationalBindingResultData */
 /**
  * @summary The Extension Addition Component Types of TerminateOperationalBindingResultData
  * @description
@@ -205,13 +198,9 @@ export const _root_component_type_list_2_spec_for_TerminateOperationalBindingRes
  * @constant
  */
 export const _extension_additions_list_spec_for_TerminateOperationalBindingResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingResultData */
 let _cached_decoder_for_TerminateOperationalBindingResultData: $.ASN1Decoder<TerminateOperationalBindingResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminateOperationalBindingResultData
  * @function
@@ -291,13 +280,9 @@ export function _decode_TerminateOperationalBindingResultData(el: _Element) {
     }
     return _cached_decoder_for_TerminateOperationalBindingResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingResultData */
 let _cached_encoder_for_TerminateOperationalBindingResultData: $.ASN1Encoder<TerminateOperationalBindingResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingResultData */
 /**
  * @summary Encodes a(n) TerminateOperationalBindingResultData into an ASN.1 Element.
  * @function
@@ -390,6 +375,5 @@ export function _encode_TerminateOperationalBindingResultData(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingResultData */
 
 /* eslint-enable */

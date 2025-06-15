@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION uniDialogue_as_id */
 /**
  * @summary uniDialogue_as_id
  * @description
@@ -36,6 +35,5 @@ export const uniDialogue_as_id: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION uniDialogue_as_id */
 
 /* eslint-enable */

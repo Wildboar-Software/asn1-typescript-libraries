@@ -6,7 +6,6 @@ import {
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import { id_ce_issuerAltName } from "../CertificateExtensions/id-ce-issuerAltName.va.mjs";
-/* START_OF_SYMBOL_DEFINITION issuerAltName */
 /**
  * @summary issuerAltName
  * @description
@@ -34,6 +33,5 @@ export const issuerAltName: EXTENSION<GeneralNames> = {
     "&id": id_ce_issuerAltName /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION issuerAltName */
 
 /* eslint-enable */

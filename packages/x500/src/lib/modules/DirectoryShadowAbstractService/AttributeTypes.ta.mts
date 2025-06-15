@@ -6,7 +6,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeTypes */
 /**
  * @summary AttributeTypes
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AttributeTypes = AttributeType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AttributeTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypes */
 let _cached_decoder_for_AttributeTypes: $.ASN1Decoder<AttributeTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeTypes
  * @function
@@ -39,13 +34,9 @@ export function _decode_AttributeTypes(el: _Element) {
     }
     return _cached_decoder_for_AttributeTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypes */
 let _cached_encoder_for_AttributeTypes: $.ASN1Encoder<AttributeTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeTypes */
 /**
  * @summary Encodes a(n) AttributeTypes into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_AttributeTypes(
     return _cached_encoder_for_AttributeTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeTypes */
 
 /* eslint-enable */

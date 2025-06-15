@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ClockEventCounter */
 /**
  * @summary ClockEventCounter
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ClockEventCounter = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ClockEventCounter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventCounter */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockEventCounter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockEventCounter */
 export const _decode_ClockEventCounter = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ClockEventCounter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventCounter */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockEventCounter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockEventCounter */
 export const _encode_ClockEventCounter = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockEventCounter */
 
 /* eslint-enable */

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION UnsignedAttributes */
+
 /**
  * @summary UnsignedAttributes
  * @description
@@ -26,6 +26,5 @@ import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/A
  *
  */
 export const UnsignedAttributes: ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION UnsignedAttributes */
 
 /* eslint-enable */

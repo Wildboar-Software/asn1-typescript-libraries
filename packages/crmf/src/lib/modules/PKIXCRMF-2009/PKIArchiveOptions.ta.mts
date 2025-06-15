@@ -15,7 +15,7 @@ import {
     _decode_KeyGenParameters,
     _encode_KeyGenParameters,
 } from "../PKIXCRMF-2009/KeyGenParameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PKIArchiveOptions */
+
 /**
  * @summary PKIArchiveOptions
  * @description
@@ -35,13 +35,11 @@ export type PKIArchiveOptions =
     | { encryptedPrivKey: EncryptedKey } /* CHOICE_ALT_ROOT */
     | { keyGenParameters: KeyGenParameters } /* CHOICE_ALT_ROOT */
     | { archiveRemGenPrivKey: BOOLEAN } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PKIArchiveOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIArchiveOptions */
+
 let _cached_decoder_for_PKIArchiveOptions: $.ASN1Decoder<PKIArchiveOptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIArchiveOptions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIArchiveOptions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIArchiveOptions
  * @function
@@ -73,13 +71,11 @@ export function _decode_PKIArchiveOptions(el: _Element) {
     }
     return _cached_decoder_for_PKIArchiveOptions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIArchiveOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIArchiveOptions */
+
 let _cached_encoder_for_PKIArchiveOptions: $.ASN1Encoder<PKIArchiveOptions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIArchiveOptions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIArchiveOptions */
+
 /**
  * @summary Encodes a(n) PKIArchiveOptions into an ASN.1 Element.
  * @function
@@ -119,6 +115,5 @@ export function _encode_PKIArchiveOptions(
     return _cached_encoder_for_PKIArchiveOptions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIArchiveOptions */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_name_Type */
 /**
  * @summary mta_name_Type
  * @description
@@ -67,9 +66,7 @@ export class mta_name_Type {
         return new mta_name_Type(_o.domain, _o.mta_name);
     }
 }
-/* END_OF_SYMBOL_DEFINITION mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_mta_name_Type */
 /**
  * @summary The Leading Root Component Types of mta_name_Type
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_mta_name_Type: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_mta_name_Type */
 /**
  * @summary The Trailing Root Component Types of mta_name_Type
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_mta_name_Type: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_mta_name_Type: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_mta_name_Type */
 /**
  * @summary The Extension Addition Component Types of mta_name_Type
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_mta_name_Type: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_mta_name_Type: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_mta_name_Type */
 let _cached_decoder_for_mta_name_Type: $.ASN1Decoder<mta_name_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_mta_name_Type */
 /**
  * @summary Decodes an ASN.1 element into a(n) mta_name_Type
  * @function
@@ -155,13 +144,9 @@ export function _decode_mta_name_Type(el: _Element) {
     }
     return _cached_decoder_for_mta_name_Type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_mta_name_Type */
 let _cached_encoder_for_mta_name_Type: $.ASN1Encoder<mta_name_Type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_mta_name_Type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_mta_name_Type */
 /**
  * @summary Encodes a(n) mta_name_Type into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_mta_name_Type(
     return _cached_encoder_for_mta_name_Type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_mta_name_Type */
 
 /* eslint-enable */

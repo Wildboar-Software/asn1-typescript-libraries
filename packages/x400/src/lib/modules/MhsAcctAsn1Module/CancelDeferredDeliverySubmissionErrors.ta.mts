@@ -15,7 +15,6 @@ import {
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CancelDeferredDeliverySubmissionErrors */
 /**
  * @summary CancelDeferredDeliverySubmissionErrors
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type CancelDeferredDeliverySubmissionErrors = SubmissionError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CancelDeferredDeliverySubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliverySubmissionErrors */
 let _cached_decoder_for_CancelDeferredDeliverySubmissionErrors: $.ASN1Decoder<CancelDeferredDeliverySubmissionErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelDeferredDeliverySubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliverySubmissionErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) CancelDeferredDeliverySubmissionErrors
  * @function
@@ -49,13 +44,9 @@ export function _decode_CancelDeferredDeliverySubmissionErrors(el: _Element) {
     }
     return _cached_decoder_for_CancelDeferredDeliverySubmissionErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CancelDeferredDeliverySubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliverySubmissionErrors */
 let _cached_encoder_for_CancelDeferredDeliverySubmissionErrors: $.ASN1Encoder<CancelDeferredDeliverySubmissionErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelDeferredDeliverySubmissionErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliverySubmissionErrors */
 /**
  * @summary Encodes a(n) CancelDeferredDeliverySubmissionErrors into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_CancelDeferredDeliverySubmissionErrors(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CancelDeferredDeliverySubmissionErrors */
 
 /* eslint-enable */

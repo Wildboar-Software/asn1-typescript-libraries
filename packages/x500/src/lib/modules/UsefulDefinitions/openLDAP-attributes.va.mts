@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_openLDAP } from "../UsefulDefinitions/ldap-openLDAP.va.mjs";
-/* START_OF_SYMBOL_DEFINITION openLDAP_attributes */
 /**
  * @summary openLDAP_attributes
  * @description
@@ -19,6 +18,5 @@ export const openLDAP_attributes: ID = new _OID(
     [/* attributeType */ 3],
     ldap_openLDAP
 );
-/* END_OF_SYMBOL_DEFINITION openLDAP_attributes */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _encode_RelatedObjectInstance,
 } from '../ASN1DefinedTypesModule/RelatedObjectInstance.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SubNetworkConnectionPointerList */
+
 /**
  * @summary SubNetworkConnectionPointerList
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type SubNetworkConnectionPointerList = RelatedObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SubNetworkConnectionPointerList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubNetworkConnectionPointerList */
+
 let _cached_decoder_for_SubNetworkConnectionPointerList: $.ASN1Decoder<SubNetworkConnectionPointerList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubNetworkConnectionPointerList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubNetworkConnectionPointerList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubNetworkConnectionPointerList
  * @function
@@ -49,13 +47,11 @@ export function _decode_SubNetworkConnectionPointerList(el: _Element) {
     }
     return _cached_decoder_for_SubNetworkConnectionPointerList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubNetworkConnectionPointerList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubNetworkConnectionPointerList */
+
 let _cached_encoder_for_SubNetworkConnectionPointerList: $.ASN1Encoder<SubNetworkConnectionPointerList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubNetworkConnectionPointerList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubNetworkConnectionPointerList */
+
 /**
  * @summary Encodes a(n) SubNetworkConnectionPointerList into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_SubNetworkConnectionPointerList(
     return _cached_encoder_for_SubNetworkConnectionPointerList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubNetworkConnectionPointerList */
 
 /* eslint-enable */

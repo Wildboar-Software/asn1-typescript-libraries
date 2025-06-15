@@ -11,7 +11,6 @@ import {
     _decode_TbsApplAbort,
     _encode_TbsApplAbort,
 } from "../Wrapper/TbsApplAbort.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ApplAbort */
 /**
  * @summary ApplAbort
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ApplAbort = Signed<TbsApplAbort>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ApplAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplAbort */
 let _cached_decoder_for_ApplAbort: $.ASN1Decoder<ApplAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ApplAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ApplAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplAbort
  * @function
@@ -44,13 +39,9 @@ export function _decode_ApplAbort(el: _Element) {
     }
     return _cached_decoder_for_ApplAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ApplAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplAbort */
 let _cached_encoder_for_ApplAbort: $.ASN1Encoder<ApplAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ApplAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ApplAbort */
 /**
  * @summary Encodes a(n) ApplAbort into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ApplAbort(
     return _cached_encoder_for_ApplAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ApplAbort */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_KeyManagementInfo_Item_keyInfo,
     _encode_KeyManagementInfo_Item_keyInfo,
 } from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyManagementInfo_Item */
+
 /**
  * @summary KeyManagementInfo_Item
  * @description
@@ -62,9 +62,8 @@ export class KeyManagementInfo_Item {
         return new KeyManagementInfo_Item(_o.keyId, _o.keyInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyManagementInfo_Item */
+
 /**
  * @summary The Leading Root Component Types of KeyManagementInfo_Item
  * @description
@@ -83,9 +82,8 @@ export const _root_component_type_list_1_spec_for_KeyManagementInfo_Item: $.Comp
     ),
     new $.ComponentSpec("keyInfo", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyManagementInfo_Item */
+
 /**
  * @summary The Trailing Root Component Types of KeyManagementInfo_Item
  * @description
@@ -95,9 +93,8 @@ export const _root_component_type_list_1_spec_for_KeyManagementInfo_Item: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyManagementInfo_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyManagementInfo_Item */
+
 /**
  * @summary The Extension Addition Component Types of KeyManagementInfo_Item
  * @description
@@ -107,13 +104,11 @@ export const _root_component_type_list_2_spec_for_KeyManagementInfo_Item: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyManagementInfo_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyManagementInfo_Item */
+
 let _cached_decoder_for_KeyManagementInfo_Item: $.ASN1Decoder<KeyManagementInfo_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyManagementInfo_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyManagementInfo_Item
  * @function
@@ -144,13 +139,11 @@ export function _decode_KeyManagementInfo_Item(el: _Element) {
     }
     return _cached_decoder_for_KeyManagementInfo_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyManagementInfo_Item */
+
 let _cached_encoder_for_KeyManagementInfo_Item: $.ASN1Encoder<KeyManagementInfo_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyManagementInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyManagementInfo_Item */
+
 /**
  * @summary Encodes a(n) KeyManagementInfo_Item into an ASN.1 Element.
  * @function
@@ -182,6 +175,5 @@ export function _encode_KeyManagementInfo_Item(
     return _cached_encoder_for_KeyManagementInfo_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyManagementInfo_Item */
 
 /* eslint-enable */

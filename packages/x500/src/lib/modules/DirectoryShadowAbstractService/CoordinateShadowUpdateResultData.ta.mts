@@ -36,7 +36,6 @@ import {
     _root_component_type_list_1_spec_for_CommonResultsSeq,
 } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateResultData */
 /**
  * @summary CoordinateShadowUpdateResultData
  * @description
@@ -140,9 +139,7 @@ export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CoordinateShadowUpdateResultData */
 /**
  * @summary The Leading Root Component Types of CoordinateShadowUpdateResultData
  * @description
@@ -167,9 +164,7 @@ export const _root_component_type_list_1_spec_for_CoordinateShadowUpdateResultDa
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CoordinateShadowUpdateResultData */
 /**
  * @summary The Trailing Root Component Types of CoordinateShadowUpdateResultData
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_CoordinateShadowUpdateResultDa
 export const _root_component_type_list_2_spec_for_CoordinateShadowUpdateResultData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CoordinateShadowUpdateResultData */
 /**
  * @summary The Extension Addition Component Types of CoordinateShadowUpdateResultData
  * @description
@@ -193,13 +186,9 @@ export const _root_component_type_list_2_spec_for_CoordinateShadowUpdateResultDa
  * @constant
  */
 export const _extension_additions_list_spec_for_CoordinateShadowUpdateResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CoordinateShadowUpdateResultData */
 let _cached_decoder_for_CoordinateShadowUpdateResultData: $.ASN1Decoder<CoordinateShadowUpdateResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CoordinateShadowUpdateResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) CoordinateShadowUpdateResultData
  * @function
@@ -277,13 +266,9 @@ export function _decode_CoordinateShadowUpdateResultData(el: _Element) {
     }
     return _cached_decoder_for_CoordinateShadowUpdateResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CoordinateShadowUpdateResultData */
 let _cached_encoder_for_CoordinateShadowUpdateResultData: $.ASN1Encoder<CoordinateShadowUpdateResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CoordinateShadowUpdateResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CoordinateShadowUpdateResultData */
 /**
  * @summary Encodes a(n) CoordinateShadowUpdateResultData into an ASN.1 Element.
  * @function
@@ -380,6 +365,5 @@ export function _encode_CoordinateShadowUpdateResultData(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CoordinateShadowUpdateResultData */
 
 /* eslint-enable */

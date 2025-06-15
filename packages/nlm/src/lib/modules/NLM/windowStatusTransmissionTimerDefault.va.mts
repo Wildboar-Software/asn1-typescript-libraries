@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION windowStatusTransmissionTimerDefault */
+
 /**
  * @summary windowStatusTransmissionTimerDefault
  * @description
@@ -25,6 +25,5 @@ import {
  * @constant
  */
 export const windowStatusTransmissionTimerDefault: INTEGER = 60;
-/* END_OF_SYMBOL_DEFINITION windowStatusTransmissionTimerDefault */
 
 /* eslint-enable */

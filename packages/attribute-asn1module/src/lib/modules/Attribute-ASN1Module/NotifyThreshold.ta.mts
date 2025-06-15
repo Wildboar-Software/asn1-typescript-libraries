@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NotifyThreshold */
 /**
  * @summary NotifyThreshold
  * @description
@@ -62,9 +61,7 @@ class NotifyThreshold {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyThreshold */
 /**
  * @summary The Leading Root Component Types of NotifyThreshold
  * @description
@@ -78,9 +75,7 @@ const _root_component_type_list_1_spec_for_NotifyThreshold: $.ComponentSpec[] = 
     new $.ComponentSpec("threshold", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("notifyOnOff", false, $.hasTag(_TagClass.universal, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyThreshold */
 /**
  * @summary The Trailing Root Component Types of NotifyThreshold
  * @description
@@ -93,9 +88,7 @@ export
 const _root_component_type_list_2_spec_for_NotifyThreshold: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyThreshold */
 /**
  * @summary The Extension Addition Component Types of NotifyThreshold
  * @description
@@ -108,13 +101,9 @@ export
 const _extension_additions_list_spec_for_NotifyThreshold: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyThreshold */
 let _cached_decoder_for_NotifyThreshold: $.ASN1Decoder<NotifyThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotifyThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) NotifyThreshold
  * @function
@@ -142,13 +131,9 @@ function _decode_NotifyThreshold (el: _Element) {
 }; }
     return _cached_decoder_for_NotifyThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyThreshold */
 let _cached_encoder_for_NotifyThreshold: $.ASN1Encoder<NotifyThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotifyThreshold */
 /**
  * @summary Encodes a(n) NotifyThreshold into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ function _encode_NotifyThreshold (value: NotifyThreshold, elGetter: $.ASN1Encode
     return _cached_encoder_for_NotifyThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotifyThreshold */
 
 /* eslint-enable */

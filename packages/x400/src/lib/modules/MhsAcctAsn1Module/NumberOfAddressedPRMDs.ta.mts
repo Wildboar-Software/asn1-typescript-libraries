@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NumberOfAddressedPRMDs */
 /**
  * @summary NumberOfAddressedPRMDs
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NumberOfAddressedPRMDs = INTEGER;
-/* END_OF_SYMBOL_DEFINITION NumberOfAddressedPRMDs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfAddressedPRMDs */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfAddressedPRMDs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NumberOfAddressedPRMDs */
 export const _decode_NumberOfAddressedPRMDs = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_NumberOfAddressedPRMDs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfAddressedPRMDs */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfAddressedPRMDs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NumberOfAddressedPRMDs */
 export const _encode_NumberOfAddressedPRMDs = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NumberOfAddressedPRMDs */
 
 /* eslint-enable */

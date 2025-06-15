@@ -26,7 +26,7 @@ import {
   _decode_Controls,
   _encode_Controls,
 } from '../Lightweight-Directory-Access-Protocol-V3/Controls.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LDAPMessage */
+
 /**
  * @summary LDAPMessage
  * @description
@@ -116,9 +116,8 @@ export class LDAPMessage {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION LDAPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LDAPMessage */
+
 /**
  * @summary The Leading Root Component Types of LDAPMessage
  * @description
@@ -144,9 +143,8 @@ export const _root_component_type_list_1_spec_for_LDAPMessage: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LDAPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LDAPMessage */
+
 /**
  * @summary The Trailing Root Component Types of LDAPMessage
  * @description
@@ -156,9 +154,8 @@ export const _root_component_type_list_1_spec_for_LDAPMessage: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LDAPMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LDAPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LDAPMessage */
+
 /**
  * @summary The Extension Addition Component Types of LDAPMessage
  * @description
@@ -168,9 +165,8 @@ export const _root_component_type_list_2_spec_for_LDAPMessage: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_LDAPMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LDAPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LDAPMessage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPMessage
  * @function
@@ -214,9 +210,8 @@ export function _decode_LDAPMessage(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LDAPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LDAPMessage */
+
 /**
  * @summary Encodes a(n) LDAPMessage into an ASN.1 Element.
  * @function
@@ -245,6 +240,5 @@ export function _encode_LDAPMessage(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LDAPMessage */
 
 /* eslint-enable */

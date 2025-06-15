@@ -5,7 +5,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { userPwd } from "../PasswordPolicy/userPwd.oa.mjs";
 import { id_oc_userPwdClass } from "../SelectedObjectClasses/id-oc-userPwdClass.va.mjs";
-/* START_OF_SYMBOL_DEFINITION userPwdClass */
 /**
  * @summary userPwdClass
  * @description
@@ -31,6 +30,5 @@ export const userPwdClass: OBJECT_CLASS = {
     "&OptionalAttributes": [userPwd] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_userPwdClass /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userPwdClass */
 
 /* eslint-enable */

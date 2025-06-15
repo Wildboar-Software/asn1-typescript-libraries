@@ -23,7 +23,6 @@ import { id_hat_edi_bodypart_type } from '../EDIMSObjectIdentifiers/id-hat-edi-b
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION edi_bodypart_type */
 /**
  * @summary edi_bodypart_type
  * @description
@@ -56,6 +55,5 @@ export const edi_bodypart_type: X413ATTRIBUTE<EDIBodyPartType> = {
     '&id': id_hat_edi_bodypart_type /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_bodypart_type */
 
 /* eslint-enable */

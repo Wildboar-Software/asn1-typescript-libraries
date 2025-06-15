@@ -12,7 +12,7 @@ type ToBeHashed =
     | { content: _Element }
     | { authenticated_attributes: Attributes };
 
-/* START_OF_SYMBOL_DEFINITION Digest */
+
 /**
  * @summary Digest
  * @description
@@ -28,13 +28,11 @@ type ToBeHashed =
  * ```
  */
 export type Digest = HASH<ToBeHashed>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Digest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Digest */
+
 let _cached_decoder_for_Digest: $.ASN1Decoder<Digest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Digest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Digest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Digest
  * @function
@@ -49,13 +47,11 @@ export function _decode_Digest(el: _Element) {
     }
     return _cached_decoder_for_Digest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Digest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Digest */
+
 let _cached_encoder_for_Digest: $.ASN1Encoder<Digest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Digest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Digest */
+
 /**
  * @summary Encodes a(n) Digest into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_Digest(
     return _cached_encoder_for_Digest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Digest */
 
 /* eslint-enable */

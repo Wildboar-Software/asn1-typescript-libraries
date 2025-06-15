@@ -18,7 +18,7 @@ import {
   _decode_PKIStatusInfo,
   _encode_PKIStatusInfo,
 } from '../PKIXCMP-2009/PKIStatusInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertStatus */
+
 /**
  * @summary CertStatus
  * @description
@@ -77,9 +77,8 @@ export class CertStatus {
     return new CertStatus(_o.certHash, _o.certReqId, _o.statusInfo);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertStatus */
+
 /**
  * @summary The Leading Root Component Types of CertStatus
  * @description
@@ -111,9 +110,8 @@ export const _root_component_type_list_1_spec_for_CertStatus: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertStatus */
+
 /**
  * @summary The Trailing Root Component Types of CertStatus
  * @description
@@ -123,9 +121,8 @@ export const _root_component_type_list_1_spec_for_CertStatus: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertStatus: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertStatus */
+
 /**
  * @summary The Extension Addition Component Types of CertStatus
  * @description
@@ -135,13 +132,11 @@ export const _root_component_type_list_2_spec_for_CertStatus: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_CertStatus: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertStatus */
+
 let _cached_decoder_for_CertStatus: $.ASN1Decoder<CertStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertStatus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertStatus
  * @function
@@ -186,13 +181,11 @@ export function _decode_CertStatus(el: _Element) {
   }
   return _cached_decoder_for_CertStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertStatus */
+
 let _cached_encoder_for_CertStatus: $.ASN1Encoder<CertStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertStatus */
+
 /**
  * @summary Encodes a(n) CertStatus into an ASN.1 Element.
  * @function
@@ -224,6 +217,5 @@ export function _encode_CertStatus(
   return _cached_encoder_for_CertStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertStatus */
 
 /* eslint-enable */

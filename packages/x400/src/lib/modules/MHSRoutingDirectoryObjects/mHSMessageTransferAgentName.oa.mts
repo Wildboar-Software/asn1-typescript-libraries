@@ -18,7 +18,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { distinguishedName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/distinguishedName.oa.mjs';
 import { id_at_mhs_message_transfer_agent } from '../MHSRoutingObjectIdentifiers/id-at-mhs-message-transfer-agent.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSMessageTransferAgentName */
 /**
  * @summary mHSMessageTransferAgentName
  * @description
@@ -55,6 +54,5 @@ export const mHSMessageTransferAgentName: ATTRIBUTE = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSMessageTransferAgentName */
 
 /* eslint-enable */

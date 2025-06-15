@@ -15,7 +15,6 @@ import {
     _decode_Certificates,
     _encode_Certificates,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorCertificate */
 /**
  * @summary OriginatorCertificate
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatorCertificate = Certificates; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorCertificate */
 let _cached_decoder_for_OriginatorCertificate: $.ASN1Decoder<OriginatorCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorCertificate
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatorCertificate(el: _Element) {
     }
     return _cached_decoder_for_OriginatorCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorCertificate */
 let _cached_encoder_for_OriginatorCertificate: $.ASN1Encoder<OriginatorCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorCertificate */
 /**
  * @summary Encodes a(n) OriginatorCertificate into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginatorCertificate(
     return _cached_encoder_for_OriginatorCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorCertificate */
 
 /* eslint-enable */

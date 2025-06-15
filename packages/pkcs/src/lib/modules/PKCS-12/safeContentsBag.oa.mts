@@ -7,7 +7,7 @@ import {
     _decode_SafeContents,
     _encode_SafeContents,
 } from "../PKCS-12/SafeContents.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION safeContentsBag */
+
 /**
  * @summary safeContentsBag
  * @description
@@ -36,6 +36,5 @@ export const safeContentsBag: BAG_TYPE<SafeContents> = {
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION safeContentsBag */
 
 /* eslint-enable */

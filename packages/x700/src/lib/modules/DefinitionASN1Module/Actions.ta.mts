@@ -15,7 +15,7 @@ import {
     _decode_Actions_Item,
     _encode_Actions_Item,
 } from '../DefinitionASN1Module/Actions-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Actions */
+
 /**
  * @summary Actions
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type Actions = Actions_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Actions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Actions */
+
 let _cached_decoder_for_Actions: $.ASN1Decoder<Actions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Actions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Actions */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Actions
  * @function
@@ -51,13 +49,11 @@ export function _decode_Actions(el: _Element) {
     }
     return _cached_decoder_for_Actions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Actions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Actions */
+
 let _cached_encoder_for_Actions: $.ASN1Encoder<Actions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Actions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Actions */
+
 /**
  * @summary Encodes a(n) Actions into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_Actions(
     return _cached_encoder_for_Actions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Actions */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_RequestedDeliveryMethod_Item,
     _encode_RequestedDeliveryMethod_Item,
 } from '../MTSAbstractService/RequestedDeliveryMethod-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RequestedDeliveryMethod */
 /**
  * @summary RequestedDeliveryMethod
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type RequestedDeliveryMethod = RequestedDeliveryMethod_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RequestedDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedDeliveryMethod */
 let _cached_decoder_for_RequestedDeliveryMethod: $.ASN1Decoder<RequestedDeliveryMethod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestedDeliveryMethod */
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedDeliveryMethod
  * @function
@@ -54,13 +49,9 @@ export function _decode_RequestedDeliveryMethod(el: _Element) {
     }
     return _cached_decoder_for_RequestedDeliveryMethod(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestedDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedDeliveryMethod */
 let _cached_encoder_for_RequestedDeliveryMethod: $.ASN1Encoder<RequestedDeliveryMethod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestedDeliveryMethod */
 /**
  * @summary Encodes a(n) RequestedDeliveryMethod into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_RequestedDeliveryMethod(
     return _cached_encoder_for_RequestedDeliveryMethod(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestedDeliveryMethod */
 
 /* eslint-enable */

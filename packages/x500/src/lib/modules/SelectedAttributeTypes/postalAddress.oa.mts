@@ -12,7 +12,6 @@ import {
     _decode_PostalAddress,
     _encode_PostalAddress,
 } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION postalAddress */
 /**
  * @summary postalAddress
  * @description
@@ -54,6 +53,5 @@ export const postalAddress: ATTRIBUTE<PostalAddress> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION postalAddress */
 
 /* eslint-enable */

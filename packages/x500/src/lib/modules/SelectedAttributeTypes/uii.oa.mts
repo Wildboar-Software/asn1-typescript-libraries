@@ -8,7 +8,6 @@ import {
 import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
 import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
 import { id_at_uii } from "../SelectedAttributeTypes/id-at-uii.va.mjs";
-/* START_OF_SYMBOL_DEFINITION uii */
 /**
  * @summary uii
  * @description
@@ -48,6 +47,5 @@ export const uii: ATTRIBUTE<BIT_STRING> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uii */
 
 /* eslint-enable */

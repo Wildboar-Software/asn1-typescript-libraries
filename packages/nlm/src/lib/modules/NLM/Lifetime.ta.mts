@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Lifetime */
+
 /**
  * @summary Lifetime
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Lifetime = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Lifetime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Lifetime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Lifetime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Lifetime */
+
+
 export const _decode_Lifetime = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Lifetime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Lifetime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Lifetime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Lifetime */
+
+
 export const _encode_Lifetime = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Lifetime */
 
 /* eslint-enable */

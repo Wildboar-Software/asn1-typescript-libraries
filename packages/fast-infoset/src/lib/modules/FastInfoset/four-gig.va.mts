@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION four_gig */
 /**
  * @summary four_gig
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const four_gig: INTEGER = 4294967296;
-/* END_OF_SYMBOL_DEFINITION four_gig */
 
 /* eslint-enable */

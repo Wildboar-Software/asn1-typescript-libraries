@@ -9,7 +9,7 @@ import {
     _decode_RC2CBCParameter,
     _encode_RC2CBCParameter,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/RC2CBCParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION cea_RC2_cbc */
+
 /**
  * @summary cea_RC2_cbc
  * @description
@@ -40,6 +40,5 @@ export const cea_RC2_cbc: CONTENT_ENCRYPTION<RC2CBCParameter> = {
     "&paramPresence": required /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cea_RC2_cbc */
 
 /* eslint-enable */

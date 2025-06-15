@@ -15,7 +15,6 @@ import {
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeSubmissionIdentifier */
 /**
  * @summary ProbeSubmissionIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProbeSubmissionIdentifier = MTSIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionIdentifier */
 let _cached_decoder_for_ProbeSubmissionIdentifier: $.ASN1Decoder<ProbeSubmissionIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProbeSubmissionIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ProbeSubmissionIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionIdentifier */
 let _cached_encoder_for_ProbeSubmissionIdentifier: $.ASN1Encoder<ProbeSubmissionIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionIdentifier */
 /**
  * @summary Encodes a(n) ProbeSubmissionIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProbeSubmissionIdentifier(
     return _cached_encoder_for_ProbeSubmissionIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionIdentifier */
 
 /* eslint-enable */

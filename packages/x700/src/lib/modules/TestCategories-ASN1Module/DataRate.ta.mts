@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DataRate */
 /**
  * @summary DataRate
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type DataRate =
     | { real: REAL } /* CHOICE_ALT_ROOT */
     | { oi: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DataRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataRate */
 let _cached_decoder_for_DataRate: $.ASN1Decoder<DataRate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataRate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataRate */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataRate
  * @function
@@ -51,13 +46,9 @@ export function _decode_DataRate(el: _Element) {
     }
     return _cached_decoder_for_DataRate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataRate */
 let _cached_encoder_for_DataRate: $.ASN1Encoder<DataRate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataRate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataRate */
 /**
  * @summary Encodes a(n) DataRate into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_DataRate(
     return _cached_encoder_for_DataRate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataRate */
 
 /* eslint-enable */

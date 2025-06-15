@@ -20,7 +20,6 @@ import {
     _decode_Body,
     _encode_Body,
 } from '../EDIMSInformationObjects/Body.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIM */
 /**
  * @summary EDIM
  * @description
@@ -67,9 +66,7 @@ export class EDIM {
         return new EDIM(_o.heading, _o.body);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIM */
 /**
  * @summary The Leading Root Component Types of EDIM
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_EDIM: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIM */
 /**
  * @summary The Trailing Root Component Types of EDIM
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_EDIM: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIM: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIM */
 /**
  * @summary The Extension Addition Component Types of EDIM
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_EDIM: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIM: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIM */
 let _cached_decoder_for_EDIM: $.ASN1Decoder<EDIM> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIM */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIM
  * @function
@@ -153,13 +142,9 @@ export function _decode_EDIM(el: _Element) {
     }
     return _cached_decoder_for_EDIM(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIM */
 let _cached_encoder_for_EDIM: $.ASN1Encoder<EDIM> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIM */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIM */
 /**
  * @summary Encodes a(n) EDIM into an ASN.1 Element.
  * @function
@@ -185,6 +170,5 @@ export function _encode_EDIM(value: EDIM, elGetter: $.ASN1Encoder<EDIM>) {
     return _cached_encoder_for_EDIM(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIM */
 
 /* eslint-enable */

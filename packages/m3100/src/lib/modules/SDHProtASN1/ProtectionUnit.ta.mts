@@ -15,7 +15,7 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/RelativeDistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionUnit */
+
 /**
  * @summary ProtectionUnit
  * @description
@@ -32,13 +32,11 @@ import {
 export type ProtectionUnit =
     | { protectingUnit: RelativeDistinguishedName } /* CHOICE_ALT_ROOT */
     | { protectedUnit: RelativeDistinguishedName } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionUnit */
+
 let _cached_decoder_for_ProtectionUnit: $.ASN1Decoder<ProtectionUnit> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionUnit */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionUnit
  * @function
@@ -66,13 +64,11 @@ export function _decode_ProtectionUnit(el: _Element) {
     }
     return _cached_decoder_for_ProtectionUnit(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionUnit */
+
 let _cached_encoder_for_ProtectionUnit: $.ASN1Encoder<ProtectionUnit> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionUnit */
+
 /**
  * @summary Encodes a(n) ProtectionUnit into an ASN.1 Element.
  * @function
@@ -106,6 +102,5 @@ export function _encode_ProtectionUnit(
     return _cached_encoder_for_ProtectionUnit(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionUnit */
 
 /* eslint-enable */

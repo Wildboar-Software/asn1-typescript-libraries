@@ -15,7 +15,6 @@ import {
     _decode_ObjectClassList_Item,
     _encode_ObjectClassList_Item,
 } from '../AccessControl-ASN1Module/ObjectClassList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectClassList */
 /**
  * @summary ObjectClassList
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type ObjectClassList = ObjectClassList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClassList */
 let _cached_decoder_for_ObjectClassList: $.ASN1Decoder<ObjectClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectClassList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectClassList
  * @function
@@ -51,13 +46,9 @@ export function _decode_ObjectClassList(el: _Element) {
     }
     return _cached_decoder_for_ObjectClassList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClassList */
 let _cached_encoder_for_ObjectClassList: $.ASN1Encoder<ObjectClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectClassList */
 /**
  * @summary Encodes a(n) ObjectClassList into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_ObjectClassList(
     return _cached_encoder_for_ObjectClassList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectClassList */
 
 /* eslint-enable */

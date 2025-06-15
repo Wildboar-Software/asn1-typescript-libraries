@@ -25,7 +25,6 @@ import {
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubmissionProof */
 /**
  * @summary SubmissionProof
  * @description
@@ -86,9 +85,7 @@ export class SubmissionProof {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubmissionProof */
 /**
  * @summary The Leading Root Component Types of SubmissionProof
  * @description
@@ -120,9 +117,7 @@ export const _root_component_type_list_1_spec_for_SubmissionProof: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubmissionProof */
 /**
  * @summary The Trailing Root Component Types of SubmissionProof
  * @description
@@ -132,9 +127,7 @@ export const _root_component_type_list_1_spec_for_SubmissionProof: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubmissionProof: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubmissionProof */
 /**
  * @summary The Extension Addition Component Types of SubmissionProof
  * @description
@@ -144,13 +137,9 @@ export const _root_component_type_list_2_spec_for_SubmissionProof: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SubmissionProof: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionProof */
 let _cached_decoder_for_SubmissionProof: $.ASN1Decoder<SubmissionProof> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmissionProof */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionProof
  * @function
@@ -203,13 +192,9 @@ export function _decode_SubmissionProof(el: _Element) {
     }
     return _cached_decoder_for_SubmissionProof(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionProof */
 let _cached_encoder_for_SubmissionProof: $.ASN1Encoder<SubmissionProof> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionProof */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmissionProof */
 /**
  * @summary Encodes a(n) SubmissionProof into an ASN.1 Element.
  * @function
@@ -252,6 +237,5 @@ export function _encode_SubmissionProof(
     return _cached_encoder_for_SubmissionProof(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmissionProof */
 
 /* eslint-enable */

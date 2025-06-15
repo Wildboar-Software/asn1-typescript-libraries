@@ -26,7 +26,7 @@ import {
   _decode_BioAPI_INDICATOR_STATUS,
   _encode_BioAPI_INDICATOR_STATUS,
 } from '../BIP/BioAPI-INDICATOR-STATUS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SetIndicatorStatus_RequestParams */
+
 /**
  * @summary SetIndicatorStatus_RequestParams
  * @description
@@ -97,9 +97,8 @@ export class SetIndicatorStatus_RequestParams {
 
   public static _enum_for_indicatorStatus = _enum_for_BioAPI_INDICATOR_STATUS;
 }
-/* END_OF_SYMBOL_DEFINITION SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetIndicatorStatus_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of SetIndicatorStatus_RequestParams
  * @description
@@ -131,9 +130,8 @@ export const _root_component_type_list_1_spec_for_SetIndicatorStatus_RequestPara
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetIndicatorStatus_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of SetIndicatorStatus_RequestParams
  * @description
@@ -143,9 +141,8 @@ export const _root_component_type_list_1_spec_for_SetIndicatorStatus_RequestPara
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SetIndicatorStatus_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetIndicatorStatus_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of SetIndicatorStatus_RequestParams
  * @description
@@ -155,13 +152,11 @@ export const _root_component_type_list_2_spec_for_SetIndicatorStatus_RequestPara
  * @constant
  */
 export const _extension_additions_list_spec_for_SetIndicatorStatus_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SetIndicatorStatus_RequestParams */
+
 let _cached_decoder_for_SetIndicatorStatus_RequestParams: $.ASN1Decoder<SetIndicatorStatus_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SetIndicatorStatus_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SetIndicatorStatus_RequestParams
  * @function
@@ -199,13 +194,11 @@ export function _decode_SetIndicatorStatus_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_SetIndicatorStatus_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SetIndicatorStatus_RequestParams */
+
 let _cached_encoder_for_SetIndicatorStatus_RequestParams: $.ASN1Encoder<SetIndicatorStatus_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SetIndicatorStatus_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SetIndicatorStatus_RequestParams */
+
 /**
  * @summary Encodes a(n) SetIndicatorStatus_RequestParams into an ASN.1 Element.
  * @function
@@ -241,6 +234,5 @@ export function _encode_SetIndicatorStatus_RequestParams(
   return _cached_encoder_for_SetIndicatorStatus_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SetIndicatorStatus_RequestParams */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Sap2Addresses */
 /**
  * @summary Sap2Addresses
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Sap2Addresses = OCTET_STRING[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Sap2Addresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Sap2Addresses */
 let _cached_decoder_for_Sap2Addresses: $.ASN1Decoder<Sap2Addresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Sap2Addresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Sap2Addresses */
 /**
  * @summary Decodes an ASN.1 element into a(n) Sap2Addresses
  * @function
@@ -45,13 +40,9 @@ export function _decode_Sap2Addresses(el: _Element) {
   }
   return _cached_decoder_for_Sap2Addresses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Sap2Addresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Sap2Addresses */
 let _cached_encoder_for_Sap2Addresses: $.ASN1Encoder<Sap2Addresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Sap2Addresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Sap2Addresses */
 /**
  * @summary Encodes a(n) Sap2Addresses into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_Sap2Addresses(
   return _cached_encoder_for_Sap2Addresses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Sap2Addresses */
 
 /* eslint-enable */

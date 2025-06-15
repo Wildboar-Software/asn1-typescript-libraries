@@ -12,7 +12,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SaslCredentials */
 /**
  * @summary SaslCredentials
  * @description
@@ -90,9 +89,7 @@ export class SaslCredentials {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SaslCredentials */
 /**
  * @summary The Leading Root Component Types of SaslCredentials
  * @description
@@ -124,9 +121,7 @@ export const _root_component_type_list_1_spec_for_SaslCredentials: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SaslCredentials */
 /**
  * @summary The Trailing Root Component Types of SaslCredentials
  * @description
@@ -136,9 +131,7 @@ export const _root_component_type_list_1_spec_for_SaslCredentials: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SaslCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SaslCredentials */
 /**
  * @summary The Extension Addition Component Types of SaslCredentials
  * @description
@@ -148,13 +141,9 @@ export const _root_component_type_list_2_spec_for_SaslCredentials: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SaslCredentials: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SaslCredentials */
 let _cached_decoder_for_SaslCredentials: $.ASN1Decoder<SaslCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SaslCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) SaslCredentials
  * @function
@@ -212,13 +201,9 @@ export function _decode_SaslCredentials(el: _Element) {
     }
     return _cached_decoder_for_SaslCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SaslCredentials */
 let _cached_encoder_for_SaslCredentials: $.ASN1Encoder<SaslCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SaslCredentials */
 /**
  * @summary Encodes a(n) SaslCredentials into an ASN.1 Element.
  * @function
@@ -276,6 +261,5 @@ export function _encode_SaslCredentials(
     return _cached_encoder_for_SaslCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SaslCredentials */
 
 /* eslint-enable */

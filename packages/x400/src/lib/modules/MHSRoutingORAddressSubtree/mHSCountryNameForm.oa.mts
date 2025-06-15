@@ -13,7 +13,6 @@ import { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa.mjs';
 import { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa.mjs';
 import { id_nf_mhs_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-country.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSCountryNameForm */
 /**
  * @summary mHSCountryNameForm
  * @description
@@ -40,6 +39,5 @@ export const mHSCountryNameForm: NAME_FORM = {
     '&MandatoryAttributes': [mHSCountryName] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_country /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSCountryNameForm */
 
 /* eslint-enable */

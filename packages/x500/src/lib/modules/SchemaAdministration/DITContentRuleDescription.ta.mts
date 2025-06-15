@@ -17,7 +17,6 @@ import {
     _root_component_type_list_1_spec_for_DITContentRule,
 } from "../InformationFramework/DITContentRule.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DITContentRuleDescription */
 /**
  * @summary DITContentRuleDescription
  * @description
@@ -151,9 +150,7 @@ export class DITContentRuleDescription extends DITContentRule {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DITContentRuleDescription */
 /**
  * @summary The Leading Root Component Types of DITContentRuleDescription
  * @description
@@ -192,9 +189,7 @@ export const _root_component_type_list_1_spec_for_DITContentRuleDescription: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DITContentRuleDescription */
 /**
  * @summary The Trailing Root Component Types of DITContentRuleDescription
  * @description
@@ -204,9 +199,7 @@ export const _root_component_type_list_1_spec_for_DITContentRuleDescription: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DITContentRuleDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DITContentRuleDescription */
 /**
  * @summary The Extension Addition Component Types of DITContentRuleDescription
  * @description
@@ -216,13 +209,9 @@ export const _root_component_type_list_2_spec_for_DITContentRuleDescription: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_DITContentRuleDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DITContentRuleDescription */
 let _cached_decoder_for_DITContentRuleDescription: $.ASN1Decoder<DITContentRuleDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DITContentRuleDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) DITContentRuleDescription
  * @function
@@ -317,13 +306,9 @@ export function _decode_DITContentRuleDescription(el: _Element) {
     }
     return _cached_decoder_for_DITContentRuleDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DITContentRuleDescription */
 let _cached_encoder_for_DITContentRuleDescription: $.ASN1Encoder<DITContentRuleDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DITContentRuleDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DITContentRuleDescription */
 /**
  * @summary Encodes a(n) DITContentRuleDescription into an ASN.1 Element.
  * @function
@@ -427,6 +412,5 @@ export function _encode_DITContentRuleDescription(
     return _cached_encoder_for_DITContentRuleDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DITContentRuleDescription */
 
 /* eslint-enable */

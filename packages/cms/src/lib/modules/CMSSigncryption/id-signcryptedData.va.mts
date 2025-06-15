@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_signcryptedData */
+
 /**
  * @summary id_signcryptedData
  * @description
@@ -24,6 +24,5 @@ export const id_signcryptedData: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_signcryptedData */
 
 /* eslint-enable */

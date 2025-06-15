@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_opcode_abandon */
 /**
  * @summary id_opcode_abandon
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_opcode_abandon: Code = { local: 3 };
-/* END_OF_SYMBOL_DEFINITION id_opcode_abandon */
 
 /* eslint-enable */

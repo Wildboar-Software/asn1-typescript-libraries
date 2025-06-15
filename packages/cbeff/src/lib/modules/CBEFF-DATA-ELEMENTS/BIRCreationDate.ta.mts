@@ -15,7 +15,6 @@ import {
   _decode_Date_Time,
   _encode_Date_Time,
 } from '../CBEFF-DATA-ELEMENTS/Date-Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIRCreationDate */
 /**
  * @summary BIRCreationDate
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type BIRCreationDate = Date_Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BIRCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIRCreationDate */
 let _cached_decoder_for_BIRCreationDate: $.ASN1Decoder<BIRCreationDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIRCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIRCreationDate */
 /**
  * @summary Decodes an ASN.1 element into a(n) BIRCreationDate
  * @function
@@ -46,13 +41,9 @@ export function _decode_BIRCreationDate(el: _Element) {
   }
   return _cached_decoder_for_BIRCreationDate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIRCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIRCreationDate */
 let _cached_encoder_for_BIRCreationDate: $.ASN1Encoder<BIRCreationDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIRCreationDate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIRCreationDate */
 /**
  * @summary Encodes a(n) BIRCreationDate into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_BIRCreationDate(
   return _cached_encoder_for_BIRCreationDate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIRCreationDate */
 
 /* eslint-enable */

@@ -26,7 +26,6 @@ import {
     _decode_FNUAMSSecurityCheckField,
     _encode_FNUAMSSecurityCheckField,
 } from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FNUAMSReasonCodeField */
 /**
  * @summary FNUAMSReasonCodeField
  * @description
@@ -97,9 +96,7 @@ export class FNUAMSReasonCodeField {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FNUAMSReasonCodeField */
 /**
  * @summary The Leading Root Component Types of FNUAMSReasonCodeField
  * @description
@@ -131,9 +128,7 @@ export const _root_component_type_list_1_spec_for_FNUAMSReasonCodeField: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FNUAMSReasonCodeField */
 /**
  * @summary The Trailing Root Component Types of FNUAMSReasonCodeField
  * @description
@@ -143,9 +138,7 @@ export const _root_component_type_list_1_spec_for_FNUAMSReasonCodeField: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FNUAMSReasonCodeField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FNUAMSReasonCodeField */
 /**
  * @summary The Extension Addition Component Types of FNUAMSReasonCodeField
  * @description
@@ -155,13 +148,9 @@ export const _root_component_type_list_2_spec_for_FNUAMSReasonCodeField: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_FNUAMSReasonCodeField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSReasonCodeField */
 let _cached_decoder_for_FNUAMSReasonCodeField: $.ASN1Decoder<FNUAMSReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FNUAMSReasonCodeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) FNUAMSReasonCodeField
  * @function
@@ -215,13 +204,9 @@ export function _decode_FNUAMSReasonCodeField(el: _Element) {
     }
     return _cached_decoder_for_FNUAMSReasonCodeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSReasonCodeField */
 let _cached_encoder_for_FNUAMSReasonCodeField: $.ASN1Encoder<FNUAMSReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FNUAMSReasonCodeField */
 /**
  * @summary Encodes a(n) FNUAMSReasonCodeField into an ASN.1 Element.
  * @function
@@ -275,6 +260,5 @@ export function _encode_FNUAMSReasonCodeField(
     return _cached_encoder_for_FNUAMSReasonCodeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FNUAMSReasonCodeField */
 
 /* eslint-enable */

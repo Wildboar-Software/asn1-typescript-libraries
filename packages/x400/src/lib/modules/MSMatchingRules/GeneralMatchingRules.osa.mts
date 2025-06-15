@@ -44,7 +44,6 @@ import { redirectionOrDLExpansionSingleElementMatch } from '../MSMatchingRules/r
 import { redirectionOrDLExpansionSubstringElementsMatch } from '../MSMatchingRules/redirectionOrDLExpansionSubstringElementsMatch.oa.mjs';
 import { redirectionReasonMatch } from '../MSMatchingRules/redirectionReasonMatch.oa.mjs';
 import { valueCountMatch } from '../MSMatchingRules/valueCountMatch.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION GeneralMatchingRules */
 /**
  * @summary GeneralMatchingRules
  * @description
@@ -110,6 +109,5 @@ export const GeneralMatchingRules: MATCHING_RULE[] = [
     redirectionReasonMatch,
     valueCountMatch,
 ];
-/* END_OF_SYMBOL_DEFINITION GeneralMatchingRules */
 
 /* eslint-enable */

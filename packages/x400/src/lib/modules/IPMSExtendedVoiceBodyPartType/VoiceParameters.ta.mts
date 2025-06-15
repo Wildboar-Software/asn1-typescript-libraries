@@ -15,7 +15,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION VoiceParameters */
 /**
  * @summary VoiceParameters
  * @description
@@ -76,9 +75,7 @@ export class VoiceParameters {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_VoiceParameters */
 /**
  * @summary The Leading Root Component Types of VoiceParameters
  * @description
@@ -110,9 +107,7 @@ export const _root_component_type_list_1_spec_for_VoiceParameters: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_VoiceParameters */
 /**
  * @summary The Trailing Root Component Types of VoiceParameters
  * @description
@@ -122,9 +117,7 @@ export const _root_component_type_list_1_spec_for_VoiceParameters: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_VoiceParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_VoiceParameters */
 /**
  * @summary The Extension Addition Component Types of VoiceParameters
  * @description
@@ -134,13 +127,9 @@ export const _root_component_type_list_2_spec_for_VoiceParameters: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_VoiceParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceParameters */
 let _cached_decoder_for_VoiceParameters: $.ASN1Decoder<VoiceParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VoiceParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) VoiceParameters
  * @function
@@ -193,13 +182,9 @@ export function _decode_VoiceParameters(el: _Element) {
     }
     return _cached_decoder_for_VoiceParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceParameters */
 let _cached_encoder_for_VoiceParameters: $.ASN1Encoder<VoiceParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VoiceParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VoiceParameters */
 /**
  * @summary Encodes a(n) VoiceParameters into an ASN.1 Element.
  * @function
@@ -250,6 +235,5 @@ export function _encode_VoiceParameters(
     return _cached_encoder_for_VoiceParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VoiceParameters */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_EncKDCRepPart,
   _encode_EncKDCRepPart,
 } from '../KerberosV5Spec2/EncKDCRepPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncASRepPart */
+
 /**
  * @summary EncASRepPart
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type EncASRepPart = EncKDCRepPart; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EncASRepPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncASRepPart */
+
 let _cached_decoder_for_EncASRepPart: $.ASN1Decoder<EncASRepPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncASRepPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncASRepPart */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncASRepPart
  * @function
@@ -48,13 +46,11 @@ export function _decode_EncASRepPart(el: _Element) {
   }
   return _cached_decoder_for_EncASRepPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncASRepPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncASRepPart */
+
 let _cached_encoder_for_EncASRepPart: $.ASN1Encoder<EncASRepPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncASRepPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncASRepPart */
+
 /**
  * @summary Encodes a(n) EncASRepPart into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_EncASRepPart(
   return _cached_encoder_for_EncASRepPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncASRepPart */
 
 /* eslint-enable */

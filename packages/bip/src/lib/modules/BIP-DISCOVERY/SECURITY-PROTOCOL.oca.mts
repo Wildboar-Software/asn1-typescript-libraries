@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SECURITY_PROTOCOL */
+
 /**
  * @summary SECURITY_PROTOCOL
  * @description
@@ -65,6 +65,5 @@ export interface SECURITY_PROTOCOL<
    */
   readonly '&Parameter': Parameter;
 }
-/* END_OF_SYMBOL_DEFINITION SECURITY_PROTOCOL */
 
 /* eslint-enable */

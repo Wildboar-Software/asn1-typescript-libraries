@@ -22,7 +22,6 @@ import {
     _encode_TextualRepresentation,
 } from '../DefinitionASN1Module/TextualRepresentation.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION definedAs */
 /**
  * @summary definedAs
  * @description
@@ -64,6 +63,5 @@ export const definedAs: ATTRIBUTE<TextualRepresentation> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION definedAs */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attribute-ASN1Module/ServiceUser.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ServiceProvider */
 /**
  * @summary ServiceProvider
  * @description
@@ -24,13 +23,9 @@ import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attrib
  */
 export
 type ServiceProvider = ServiceUser; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ServiceProvider */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceProvider */
 let _cached_decoder_for_ServiceProvider: $.ASN1Decoder<ServiceProvider> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceProvider */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceProvider */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceProvider
  * @function
@@ -42,13 +37,9 @@ function _decode_ServiceProvider (el: _Element) {
     if (!_cached_decoder_for_ServiceProvider) { _cached_decoder_for_ServiceProvider = _decode_ServiceUser; }
     return _cached_decoder_for_ServiceProvider(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceProvider */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceProvider */
 let _cached_encoder_for_ServiceProvider: $.ASN1Encoder<ServiceProvider> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceProvider */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceProvider */
 /**
  * @summary Encodes a(n) ServiceProvider into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_ServiceProvider (value: ServiceProvider, elGetter: $.ASN1Encode
     return _cached_encoder_for_ServiceProvider(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceProvider */
 
 /* eslint-enable */

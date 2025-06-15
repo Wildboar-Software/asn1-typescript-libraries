@@ -47,7 +47,7 @@ import {
   _root_component_type_list_1_spec_for_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ExtendedResponse */
+
 /**
  * @summary ExtendedResponse
  * @description
@@ -144,9 +144,8 @@ export class ExtendedResponse implements LDAPResult {
 
   public static _enum_for_resultCode = _enum_for_LDAPResult_resultCode;
 }
-/* END_OF_SYMBOL_DEFINITION ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedResponse */
+
 /**
  * @summary The Leading Root Component Types of ExtendedResponse
  * @description
@@ -172,9 +171,8 @@ export const _root_component_type_list_1_spec_for_ExtendedResponse: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedResponse */
+
 /**
  * @summary The Trailing Root Component Types of ExtendedResponse
  * @description
@@ -184,9 +182,8 @@ export const _root_component_type_list_1_spec_for_ExtendedResponse: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtendedResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedResponse */
+
 /**
  * @summary The Extension Addition Component Types of ExtendedResponse
  * @description
@@ -196,13 +193,11 @@ export const _root_component_type_list_2_spec_for_ExtendedResponse: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtendedResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedResponse */
+
 let _cached_decoder_for_ExtendedResponse: $.ASN1Decoder<ExtendedResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedResponse
  * @function
@@ -275,13 +270,11 @@ export function _decode_ExtendedResponse(el: _Element) {
   }
   return _cached_decoder_for_ExtendedResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedResponse */
+
 let _cached_encoder_for_ExtendedResponse: $.ASN1Encoder<ExtendedResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedResponse */
+
 /**
  * @summary Encodes a(n) ExtendedResponse into an ASN.1 Element.
  * @function
@@ -352,6 +345,5 @@ export function _encode_ExtendedResponse(
   return _cached_encoder_for_ExtendedResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedResponse */
 
 /* eslint-enable */

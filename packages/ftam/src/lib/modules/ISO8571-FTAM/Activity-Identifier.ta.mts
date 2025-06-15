@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Activity_Identifier */
+
 /**
  * @summary Activity_Identifier
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Activity_Identifier = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Activity_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Activity_Identifier */
+
 let _cached_decoder_for_Activity_Identifier: $.ASN1Decoder<Activity_Identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Activity_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Activity_Identifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Activity_Identifier
  * @function
@@ -45,13 +43,11 @@ export function _decode_Activity_Identifier(el: _Element) {
   }
   return _cached_decoder_for_Activity_Identifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Activity_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Activity_Identifier */
+
 let _cached_encoder_for_Activity_Identifier: $.ASN1Encoder<Activity_Identifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Activity_Identifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Activity_Identifier */
+
 /**
  * @summary Encodes a(n) Activity_Identifier into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Activity_Identifier(
   return _cached_encoder_for_Activity_Identifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Activity_Identifier */
 
 /* eslint-enable */

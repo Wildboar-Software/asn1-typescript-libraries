@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION StoragePeriod */
 /**
  * @summary StoragePeriod
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type StoragePeriod = INTEGER;
-/* END_OF_SYMBOL_DEFINITION StoragePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StoragePeriod */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StoragePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StoragePeriod */
 export const _decode_StoragePeriod = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_StoragePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StoragePeriod */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StoragePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StoragePeriod */
 export const _encode_StoragePeriod = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_StoragePeriod */
 
 /* eslint-enable */

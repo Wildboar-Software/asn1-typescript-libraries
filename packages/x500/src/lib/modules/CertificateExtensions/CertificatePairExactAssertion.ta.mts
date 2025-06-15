@@ -10,7 +10,6 @@ import {
     _decode_CertificateExactAssertion,
     _encode_CertificateExactAssertion,
 } from "../CertificateExtensions/CertificateExactAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificatePairExactAssertion */
 /**
  * @summary CertificatePairExactAssertion
  * @description
@@ -76,9 +75,7 @@ export class CertificatePairExactAssertion {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificatePairExactAssertion */
 /**
  * @summary The Leading Root Component Types of CertificatePairExactAssertion
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_CertificatePairExactAssertion:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificatePairExactAssertion */
 /**
  * @summary The Trailing Root Component Types of CertificatePairExactAssertion
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_CertificatePairExactAssertion:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificatePairExactAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificatePairExactAssertion */
 /**
  * @summary The Extension Addition Component Types of CertificatePairExactAssertion
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_CertificatePairExactAssertion:
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificatePairExactAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificatePairExactAssertion */
 let _cached_decoder_for_CertificatePairExactAssertion: $.ASN1Decoder<CertificatePairExactAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificatePairExactAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificatePairExactAssertion
  * @function
@@ -183,13 +172,9 @@ export function _decode_CertificatePairExactAssertion(el: _Element) {
     }
     return _cached_decoder_for_CertificatePairExactAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificatePairExactAssertion */
 let _cached_encoder_for_CertificatePairExactAssertion: $.ASN1Encoder<CertificatePairExactAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificatePairExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificatePairExactAssertion */
 /**
  * @summary Encodes a(n) CertificatePairExactAssertion into an ASN.1 Element.
  * @function
@@ -239,6 +224,5 @@ export function _encode_CertificatePairExactAssertion(
     return _cached_encoder_for_CertificatePairExactAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificatePairExactAssertion */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_UUIDPair,
     _encode_UUIDPair,
 } from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION uUIDPairMatch */
 /**
  * @summary uUIDPairMatch
  * @description
@@ -34,6 +33,5 @@ export const uUIDPairMatch: MATCHING_RULE<UUIDPair> = {
     "&id": id_mr_uuidpairmatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uUIDPairMatch */
 
 /* eslint-enable */

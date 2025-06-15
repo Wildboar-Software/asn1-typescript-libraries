@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va.mjs";
-/* START_OF_SYMBOL_DEFINITION iso9797 */
 /**
  * @summary iso9797
  * @description
@@ -19,6 +18,5 @@ export const iso9797: ID = new _OID(
     [/* message-authentication-codes */ 9797],
     iso_standard
 );
-/* END_OF_SYMBOL_DEFINITION iso9797 */
 
 /* eslint-enable */

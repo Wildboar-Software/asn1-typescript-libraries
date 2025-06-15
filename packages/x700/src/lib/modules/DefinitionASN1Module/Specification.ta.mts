@@ -15,7 +15,7 @@ import {
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
 } from '../DefinitionASN1Module/TextualRepresentation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Specification */
+
 /**
  * @summary Specification
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Specification = TextualRepresentation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Specification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Specification */
+
 let _cached_decoder_for_Specification: $.ASN1Decoder<Specification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Specification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Specification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Specification
  * @function
@@ -46,13 +44,11 @@ export function _decode_Specification(el: _Element) {
     }
     return _cached_decoder_for_Specification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Specification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Specification */
+
 let _cached_encoder_for_Specification: $.ASN1Encoder<Specification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Specification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Specification */
+
 /**
  * @summary Encodes a(n) Specification into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Specification(
     return _cached_encoder_for_Specification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Specification */
 
 /* eslint-enable */

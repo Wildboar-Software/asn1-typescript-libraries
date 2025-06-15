@@ -15,7 +15,6 @@ import {
     _decode_IsdnNumber,
     _encode_IsdnNumber,
 } from '../TCAP-Examples/IsdnNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CallingPartyAddress */
 /**
  * @summary CallingPartyAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CallingPartyAddress = IsdnNumber; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CallingPartyAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CallingPartyAddress */
 let _cached_decoder_for_CallingPartyAddress: $.ASN1Decoder<CallingPartyAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CallingPartyAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CallingPartyAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) CallingPartyAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_CallingPartyAddress(el: _Element) {
     }
     return _cached_decoder_for_CallingPartyAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CallingPartyAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CallingPartyAddress */
 let _cached_encoder_for_CallingPartyAddress: $.ASN1Encoder<CallingPartyAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CallingPartyAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CallingPartyAddress */
 /**
  * @summary Encodes a(n) CallingPartyAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CallingPartyAddress(
     return _cached_encoder_for_CallingPartyAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CallingPartyAddress */
 
 /* eslint-enable */

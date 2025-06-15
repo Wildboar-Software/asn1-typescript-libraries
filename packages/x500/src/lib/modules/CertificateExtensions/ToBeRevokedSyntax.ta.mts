@@ -6,7 +6,6 @@ import {
     _decode_ToBeRevokedGroup,
     _encode_ToBeRevokedGroup,
 } from "../CertificateExtensions/ToBeRevokedGroup.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ToBeRevokedSyntax */
 /**
  * @summary ToBeRevokedSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ToBeRevokedSyntax = ToBeRevokedGroup[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ToBeRevokedSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ToBeRevokedSyntax */
 let _cached_decoder_for_ToBeRevokedSyntax: $.ASN1Decoder<ToBeRevokedSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ToBeRevokedSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ToBeRevokedSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) ToBeRevokedSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_ToBeRevokedSyntax(el: _Element) {
     }
     return _cached_decoder_for_ToBeRevokedSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ToBeRevokedSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ToBeRevokedSyntax */
 let _cached_encoder_for_ToBeRevokedSyntax: $.ASN1Encoder<ToBeRevokedSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ToBeRevokedSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ToBeRevokedSyntax */
 /**
  * @summary Encodes a(n) ToBeRevokedSyntax into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_ToBeRevokedSyntax(
     return _cached_encoder_for_ToBeRevokedSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ToBeRevokedSyntax */
 
 /* eslint-enable */

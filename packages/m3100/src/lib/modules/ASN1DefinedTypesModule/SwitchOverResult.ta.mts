@@ -15,7 +15,7 @@ import {
     _decode_IndividualResult,
     _encode_IndividualResult,
 } from '../ASN1DefinedTypesModule/IndividualResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SwitchOverResult */
+
 /**
  * @summary SwitchOverResult
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SwitchOverResult = IndividualResult[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SwitchOverResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SwitchOverResult */
+
 let _cached_decoder_for_SwitchOverResult: $.ASN1Decoder<SwitchOverResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SwitchOverResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SwitchOverResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SwitchOverResult
  * @function
@@ -48,13 +46,11 @@ export function _decode_SwitchOverResult(el: _Element) {
     }
     return _cached_decoder_for_SwitchOverResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SwitchOverResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SwitchOverResult */
+
 let _cached_encoder_for_SwitchOverResult: $.ASN1Encoder<SwitchOverResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SwitchOverResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SwitchOverResult */
+
 /**
  * @summary Encodes a(n) SwitchOverResult into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SwitchOverResult(
     return _cached_encoder_for_SwitchOverResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SwitchOverResult */
 
 /* eslint-enable */

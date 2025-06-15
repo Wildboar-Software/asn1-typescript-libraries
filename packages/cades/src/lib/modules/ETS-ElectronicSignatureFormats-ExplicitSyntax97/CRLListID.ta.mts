@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlValidatedID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CRLListID */
 /**
  * @summary CRLListID
  * @description
@@ -54,9 +53,7 @@ class CRLListID {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CRLListID */
 /**
  * @summary The Leading Root Component Types of CRLListID
  * @description
@@ -69,9 +66,7 @@ export
 const _root_component_type_list_1_spec_for_CRLListID: $.ComponentSpec[] = [
     new $.ComponentSpec("crls", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CRLListID */
 /**
  * @summary The Trailing Root Component Types of CRLListID
  * @description
@@ -84,9 +79,7 @@ export
 const _root_component_type_list_2_spec_for_CRLListID: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CRLListID */
 /**
  * @summary The Extension Addition Component Types of CRLListID
  * @description
@@ -99,13 +92,9 @@ export
 const _extension_additions_list_spec_for_CRLListID: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLListID */
 let _cached_decoder_for_CRLListID: $.ASN1Decoder<CRLListID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CRLListID */
 /**
  * @summary Decodes an ASN.1 element into a(n) CRLListID
  * @function
@@ -129,13 +118,9 @@ function _decode_CRLListID (el: _Element) {
 }; }
     return _cached_decoder_for_CRLListID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLListID */
 let _cached_encoder_for_CRLListID: $.ASN1Encoder<CRLListID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLListID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CRLListID */
 /**
  * @summary Encodes a(n) CRLListID into an ASN.1 Element.
  * @function
@@ -155,6 +140,5 @@ function _encode_CRLListID (value: CRLListID, elGetter: $.ASN1Encoder<CRLListID>
     return _cached_encoder_for_CRLListID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CRLListID */
 
 /* eslint-enable */

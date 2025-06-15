@@ -15,7 +15,6 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION waitingTime_Default */
 /**
  * @summary waitingTime_Default
  * @description
@@ -32,6 +31,5 @@ export const waitingTime_Default: Timer = Timer._from_object({
   exponent: 0,
   mantissa: 60,
 });
-/* END_OF_SYMBOL_DEFINITION waitingTime_Default */
 
 /* eslint-enable */

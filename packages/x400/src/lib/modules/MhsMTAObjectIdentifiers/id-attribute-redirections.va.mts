@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs';
 import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_attribute_redirections */
 /**
  * @summary id_attribute_redirections
  * @description
@@ -25,6 +24,5 @@ import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
  * @constant
  */
 export const id_attribute_redirections: ID = new _OID([141], id_attribute);
-/* END_OF_SYMBOL_DEFINITION id_attribute_redirections */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Bandwidth */
+
 /**
  * @summary Bandwidth
  * @description
@@ -74,9 +74,8 @@ export class Bandwidth {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Bandwidth */
+
 /**
  * @summary The Leading Root Component Types of Bandwidth
  * @description
@@ -101,9 +100,8 @@ export const _root_component_type_list_1_spec_for_Bandwidth: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Bandwidth */
+
 /**
  * @summary The Trailing Root Component Types of Bandwidth
  * @description
@@ -113,9 +111,8 @@ export const _root_component_type_list_1_spec_for_Bandwidth: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Bandwidth: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Bandwidth */
+
 /**
  * @summary The Extension Addition Component Types of Bandwidth
  * @description
@@ -125,13 +122,11 @@ export const _root_component_type_list_2_spec_for_Bandwidth: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Bandwidth: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Bandwidth */
+
 let _cached_decoder_for_Bandwidth: $.ASN1Decoder<Bandwidth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Bandwidth */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Bandwidth
  * @function
@@ -179,13 +174,11 @@ export function _decode_Bandwidth(el: _Element) {
     }
     return _cached_decoder_for_Bandwidth(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Bandwidth */
+
 let _cached_encoder_for_Bandwidth: $.ASN1Encoder<Bandwidth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Bandwidth */
+
 /**
  * @summary Encodes a(n) Bandwidth into an ASN.1 Element.
  * @function
@@ -234,6 +227,5 @@ export function _encode_Bandwidth(
     return _cached_encoder_for_Bandwidth(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Bandwidth */
 
 /* eslint-enable */

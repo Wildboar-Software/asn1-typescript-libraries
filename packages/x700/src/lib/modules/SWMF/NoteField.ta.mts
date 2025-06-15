@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NoteField */
 /**
  * @summary NoteField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NoteField = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION NoteField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoteField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoteField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoteField */
 export const _decode_NoteField = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_NoteField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoteField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoteField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoteField */
 export const _encode_NoteField = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoteField */
 
 /* eslint-enable */

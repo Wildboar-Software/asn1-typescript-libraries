@@ -8,7 +8,6 @@ import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.o
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
 import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION TelecommunicationAttributeSet */
 /**
  * @summary TelecommunicationAttributeSet
  * @description
@@ -40,6 +39,5 @@ export const TelecommunicationAttributeSet: ATTRIBUTE[] = [
     registeredAddress,
     x121Address,
 ];
-/* END_OF_SYMBOL_DEFINITION TelecommunicationAttributeSet */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_URI,
   _encode_URI,
 } from '../Lightweight-Directory-Access-Protocol-V3/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Referral */
+
 /**
  * @summary Referral
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Referral = URI[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Referral */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Referral */
+
 let _cached_decoder_for_Referral: $.ASN1Decoder<Referral> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Referral */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Referral */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Referral
  * @function
@@ -46,13 +44,11 @@ export function _decode_Referral(el: _Element) {
   }
   return _cached_decoder_for_Referral(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Referral */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Referral */
+
 let _cached_encoder_for_Referral: $.ASN1Encoder<Referral> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Referral */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Referral */
+
 /**
  * @summary Encodes a(n) Referral into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_Referral(
   return _cached_encoder_for_Referral(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Referral */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
 } from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION F_OPEN_request_contents_type */
+
 /**
  * @summary F_OPEN_request_contents_type
  * @description
@@ -30,13 +30,11 @@ import {
 export type F_OPEN_request_contents_type =
   | { unknown: NULL } /* CHOICE_ALT_ROOT */
   | { proposed: Contents_Type_Attribute } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION F_OPEN_request_contents_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_F_OPEN_request_contents_type */
+
 let _cached_decoder_for_F_OPEN_request_contents_type: $.ASN1Decoder<F_OPEN_request_contents_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_F_OPEN_request_contents_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_F_OPEN_request_contents_type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) F_OPEN_request_contents_type
  * @function
@@ -59,13 +57,11 @@ export function _decode_F_OPEN_request_contents_type(el: _Element) {
   }
   return _cached_decoder_for_F_OPEN_request_contents_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_F_OPEN_request_contents_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_F_OPEN_request_contents_type */
+
 let _cached_encoder_for_F_OPEN_request_contents_type: $.ASN1Encoder<F_OPEN_request_contents_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_F_OPEN_request_contents_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_F_OPEN_request_contents_type */
+
 /**
  * @summary Encodes a(n) F_OPEN_request_contents_type into an ASN.1 Element.
  * @function
@@ -99,6 +95,5 @@ export function _encode_F_OPEN_request_contents_type(
   return _cached_encoder_for_F_OPEN_request_contents_type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_F_OPEN_request_contents_type */
 
 /* eslint-enable */

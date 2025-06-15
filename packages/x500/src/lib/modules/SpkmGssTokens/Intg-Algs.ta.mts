@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Intg_Algs */
 /**
  * @summary Intg_Algs
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type Intg_Algs = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Intg_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Intg_Algs */
 let _cached_decoder_for_Intg_Algs: $.ASN1Decoder<Intg_Algs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Intg_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Intg_Algs */
 /**
  * @summary Decodes an ASN.1 element into a(n) Intg_Algs
  * @function
@@ -39,13 +34,9 @@ export function _decode_Intg_Algs(el: _Element) {
     }
     return _cached_decoder_for_Intg_Algs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Intg_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Intg_Algs */
 let _cached_encoder_for_Intg_Algs: $.ASN1Encoder<Intg_Algs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Intg_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Intg_Algs */
 /**
  * @summary Encodes a(n) Intg_Algs into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_Intg_Algs(
     return _cached_encoder_for_Intg_Algs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Intg_Algs */
 
 /* eslint-enable */

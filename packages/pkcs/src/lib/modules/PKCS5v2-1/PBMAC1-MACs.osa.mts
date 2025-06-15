@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PBMAC1_MACs */
+
 /**
  * @summary PBMAC1_MACs
  * @description
@@ -17,6 +17,5 @@ import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs"
  *
  */
 export const PBMAC1_MACs: ALGORITHM_IDENTIFIER<any>[] = [];
-/* END_OF_SYMBOL_DEFINITION PBMAC1_MACs */
 
 /* eslint-enable */

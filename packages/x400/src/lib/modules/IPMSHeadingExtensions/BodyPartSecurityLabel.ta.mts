@@ -16,7 +16,6 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartSecurityLabel */
 /**
  * @summary BodyPartSecurityLabel
  * @description
@@ -33,13 +32,9 @@ import {
 export type BodyPartSecurityLabel =
     | { body_part_unlabelled: NULL } /* CHOICE_ALT_ROOT */
     | { body_part_security_label: SecurityLabel } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPartSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSecurityLabel */
 let _cached_decoder_for_BodyPartSecurityLabel: $.ASN1Decoder<BodyPartSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartSecurityLabel */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartSecurityLabel
  * @function
@@ -65,13 +60,9 @@ export function _decode_BodyPartSecurityLabel(el: _Element) {
     }
     return _cached_decoder_for_BodyPartSecurityLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSecurityLabel */
 let _cached_encoder_for_BodyPartSecurityLabel: $.ASN1Encoder<BodyPartSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartSecurityLabel */
 /**
  * @summary Encodes a(n) BodyPartSecurityLabel into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_BodyPartSecurityLabel(
     return _cached_encoder_for_BodyPartSecurityLabel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartSecurityLabel */
 
 /* eslint-enable */

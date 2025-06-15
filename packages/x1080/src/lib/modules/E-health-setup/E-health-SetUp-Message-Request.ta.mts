@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Request */
+
 /**
  * @summary E_health_SetUp_Message_Request
  * @description
@@ -30,13 +30,11 @@ export type E_health_SetUp_Message_Request =
     | { simple: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { interactive: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Request */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_health_SetUp_Message_Request */
+
 let _cached_decoder_for_E_health_SetUp_Message_Request: $.ASN1Decoder<E_health_SetUp_Message_Request> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_health_SetUp_Message_Request */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_health_SetUp_Message_Request */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_health_SetUp_Message_Request
  * @function
@@ -54,13 +52,11 @@ export function _decode_E_health_SetUp_Message_Request(el: _Element) {
     }
     return _cached_decoder_for_E_health_SetUp_Message_Request(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_health_SetUp_Message_Request */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_health_SetUp_Message_Request */
+
 let _cached_encoder_for_E_health_SetUp_Message_Request: $.ASN1Encoder<E_health_SetUp_Message_Request> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_health_SetUp_Message_Request */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_health_SetUp_Message_Request */
+
 /**
  * @summary Encodes a(n) E_health_SetUp_Message_Request into an ASN.1 Element.
  * @function
@@ -84,6 +80,5 @@ export function _encode_E_health_SetUp_Message_Request(
     return _cached_encoder_for_E_health_SetUp_Message_Request(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_health_SetUp_Message_Request */
 
 /* eslint-enable */

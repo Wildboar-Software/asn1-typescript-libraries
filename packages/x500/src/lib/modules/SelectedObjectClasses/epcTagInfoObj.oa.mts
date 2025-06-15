@@ -9,7 +9,6 @@ import { epc } from "../SelectedAttributeTypes/epc.oa.mjs";
 import { epcInUrn } from "../SelectedAttributeTypes/epcInUrn.oa.mjs";
 import { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa.mjs";
 import { id_oc_epcTagInfoObj } from "../SelectedObjectClasses/id-oc-epcTagInfoObj.va.mjs";
-/* START_OF_SYMBOL_DEFINITION epcTagInfoObj */
 /**
  * @summary epcTagInfoObj
  * @description
@@ -47,6 +46,5 @@ export const epcTagInfoObj: OBJECT_CLASS = {
     "&ldapName": ["epcTagInfoObj"],
     "&id": id_oc_epcTagInfoObj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION epcTagInfoObj */
 
 /* eslint-enable */

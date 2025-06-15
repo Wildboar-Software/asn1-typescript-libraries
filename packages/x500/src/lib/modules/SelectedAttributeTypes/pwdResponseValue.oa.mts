@@ -9,7 +9,6 @@ import {
     _decode_PwdResponse,
     _encode_PwdResponse,
 } from "../SelectedAttributeTypes/PwdResponse.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdResponseValue */
 /**
  * @summary pwdResponseValue
  * @description
@@ -43,6 +42,5 @@ export const pwdResponseValue: ATTRIBUTE<PwdResponse> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdResponseValue */
 
 /* eslint-enable */

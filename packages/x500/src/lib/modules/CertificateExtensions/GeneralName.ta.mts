@@ -23,7 +23,6 @@ import {
     _decode_ORAddress,
     _encode_ORAddress,
 } from "../PkiPmiExternalDataTypes/ORAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION GeneralName */
 /**
  * @summary GeneralName
  * @description
@@ -55,13 +54,9 @@ export type GeneralName =
     | { iPAddress: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { registeredID: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION GeneralName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralName */
 let _cached_decoder_for_GeneralName: $.ASN1Decoder<GeneralName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralName */
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralName
  * @function
@@ -119,13 +114,9 @@ export function _decode_GeneralName(el: _Element) {
     }
     return _cached_decoder_for_GeneralName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralName */
 let _cached_encoder_for_GeneralName: $.ASN1Encoder<GeneralName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralName */
 /**
  * @summary Encodes a(n) GeneralName into an ASN.1 Element.
  * @function
@@ -201,6 +192,5 @@ export function _encode_GeneralName(
     return _cached_encoder_for_GeneralName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralName */
 
 /* eslint-enable */

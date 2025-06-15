@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { internet } from "../UsefulDefinitions/internet.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ldap_enterprise */
 /**
  * @summary ldap_enterprise
  * @description
@@ -19,6 +18,5 @@ export const ldap_enterprise: ID = new _OID(
     [/* private */ 4, /* enterprise */ 1],
     internet
 );
-/* END_OF_SYMBOL_DEFINITION ldap_enterprise */
 
 /* eslint-enable */

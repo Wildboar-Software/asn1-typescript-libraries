@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_attribute } from '../MhsAcctObjectIdentifiers/id-attribute.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_attribute_permissibleSecurityContext */
 /**
  * @summary id_attribute_permissibleSecurityContext
  * @description
@@ -28,6 +27,5 @@ export const id_attribute_permissibleSecurityContext: ID = new _OID(
     [85],
     id_attribute
 );
-/* END_OF_SYMBOL_DEFINITION id_attribute_permissibleSecurityContext */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotifyGUIStateEvent_ResponseParams */
+
 /**
  * @summary NotifyGUIStateEvent_ResponseParams
  * @description
@@ -84,9 +84,8 @@ export class NotifyGUIStateEvent_ResponseParams {
 
   public static _enum_for_response = _enum_for_BioAPI_GUI_RESPONSE;
 }
-/* END_OF_SYMBOL_DEFINITION NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyGUIStateEvent_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of NotifyGUIStateEvent_ResponseParams
  * @description
@@ -111,9 +110,8 @@ export const _root_component_type_list_1_spec_for_NotifyGUIStateEvent_ResponsePa
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyGUIStateEvent_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of NotifyGUIStateEvent_ResponseParams
  * @description
@@ -123,9 +121,8 @@ export const _root_component_type_list_1_spec_for_NotifyGUIStateEvent_ResponsePa
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NotifyGUIStateEvent_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyGUIStateEvent_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of NotifyGUIStateEvent_ResponseParams
  * @description
@@ -135,13 +132,11 @@ export const _root_component_type_list_2_spec_for_NotifyGUIStateEvent_ResponsePa
  * @constant
  */
 export const _extension_additions_list_spec_for_NotifyGUIStateEvent_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyGUIStateEvent_ResponseParams */
+
 let _cached_decoder_for_NotifyGUIStateEvent_ResponseParams: $.ASN1Decoder<NotifyGUIStateEvent_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotifyGUIStateEvent_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NotifyGUIStateEvent_ResponseParams
  * @function
@@ -175,13 +170,11 @@ export function _decode_NotifyGUIStateEvent_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_NotifyGUIStateEvent_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyGUIStateEvent_ResponseParams */
+
 let _cached_encoder_for_NotifyGUIStateEvent_ResponseParams: $.ASN1Encoder<NotifyGUIStateEvent_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotifyGUIStateEvent_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotifyGUIStateEvent_ResponseParams */
+
 /**
  * @summary Encodes a(n) NotifyGUIStateEvent_ResponseParams into an ASN.1 Element.
  * @function
@@ -216,6 +209,5 @@ export function _encode_NotifyGUIStateEvent_ResponseParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotifyGUIStateEvent_ResponseParams */
 
 /* eslint-enable */

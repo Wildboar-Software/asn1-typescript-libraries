@@ -26,7 +26,6 @@ import {
   _decode_User_Data,
   _encode_User_Data,
 } from '../ACSE-1/User-Data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION A_DT_apdu */
 /**
  * @summary A_DT_apdu
  * @description
@@ -96,9 +95,7 @@ export class A_DT_apdu {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_A_DT_apdu */
 /**
  * @summary The Leading Root Component Types of A_DT_apdu
  * @description
@@ -123,9 +120,7 @@ export const _root_component_type_list_1_spec_for_A_DT_apdu: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_A_DT_apdu */
 /**
  * @summary The Trailing Root Component Types of A_DT_apdu
  * @description
@@ -143,9 +138,7 @@ export const _root_component_type_list_2_spec_for_A_DT_apdu: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_A_DT_apdu */
 /**
  * @summary The Extension Addition Component Types of A_DT_apdu
  * @description
@@ -155,13 +148,9 @@ export const _root_component_type_list_2_spec_for_A_DT_apdu: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_A_DT_apdu: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_A_DT_apdu */
 let _cached_decoder_for_A_DT_apdu: $.ASN1Decoder<A_DT_apdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _decode_A_DT_apdu */
 /**
  * @summary Decodes an ASN.1 element into a(n) A_DT_apdu
  * @function
@@ -219,13 +208,9 @@ export function _decode_A_DT_apdu(el: _Element) {
   }
   return _cached_decoder_for_A_DT_apdu(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_A_DT_apdu */
 let _cached_encoder_for_A_DT_apdu: $.ASN1Encoder<A_DT_apdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_A_DT_apdu */
 
-/* START_OF_SYMBOL_DEFINITION _encode_A_DT_apdu */
 /**
  * @summary Encodes a(n) A_DT_apdu into an ASN.1 Element.
  * @function
@@ -287,6 +272,5 @@ export function _encode_A_DT_apdu(
   return _cached_encoder_for_A_DT_apdu(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_A_DT_apdu */
 
 /* eslint-enable */

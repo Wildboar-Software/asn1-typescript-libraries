@@ -15,7 +15,6 @@ import {
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestTerminateResult */
 /**
  * @summary TestTerminateResult
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TestTerminateResult = TestInvocationId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TestTerminateResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestTerminateResult */
 let _cached_decoder_for_TestTerminateResult: $.ASN1Decoder<TestTerminateResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestTerminateResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestTerminateResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestTerminateResult
  * @function
@@ -48,13 +43,9 @@ export function _decode_TestTerminateResult(el: _Element) {
     }
     return _cached_decoder_for_TestTerminateResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestTerminateResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestTerminateResult */
 let _cached_encoder_for_TestTerminateResult: $.ASN1Encoder<TestTerminateResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestTerminateResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestTerminateResult */
 /**
  * @summary Encodes a(n) TestTerminateResult into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TestTerminateResult(
     return _cached_encoder_for_TestTerminateResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestTerminateResult */
 
 /* eslint-enable */

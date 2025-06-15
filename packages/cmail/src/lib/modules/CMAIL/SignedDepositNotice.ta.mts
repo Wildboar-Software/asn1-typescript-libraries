@@ -15,7 +15,7 @@ import {
   _decode_SignedDepositNoticeType,
   _encode_SignedDepositNoticeType,
 } from '../CMAIL/SignedDepositNoticeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignedDepositNotice */
+
 /**
  * @summary SignedDepositNotice
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SignedDepositNotice = SignedDepositNoticeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignedDepositNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedDepositNotice */
+
 let _cached_decoder_for_SignedDepositNotice: $.ASN1Decoder<SignedDepositNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedDepositNotice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedDepositNotice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedDepositNotice
  * @function
@@ -46,13 +44,11 @@ export function _decode_SignedDepositNotice(el: _Element) {
   }
   return _cached_decoder_for_SignedDepositNotice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedDepositNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedDepositNotice */
+
 let _cached_encoder_for_SignedDepositNotice: $.ASN1Encoder<SignedDepositNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedDepositNotice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedDepositNotice */
+
 /**
  * @summary Encodes a(n) SignedDepositNotice into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_SignedDepositNotice(
   return _cached_encoder_for_SignedDepositNotice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedDepositNotice */
 
 /* eslint-enable */

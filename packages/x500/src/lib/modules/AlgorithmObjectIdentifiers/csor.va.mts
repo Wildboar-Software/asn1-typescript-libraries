@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { usgov } from "../AlgorithmObjectIdentifiers/usgov.va.mjs";
-/* START_OF_SYMBOL_DEFINITION csor */
 /**
  * @summary csor
  * @description
@@ -16,6 +15,5 @@ import { usgov } from "../AlgorithmObjectIdentifiers/usgov.va.mjs";
  * @constant
  */
 export const csor: ID = new _OID([/* csor */ 3], usgov);
-/* END_OF_SYMBOL_DEFINITION csor */
 
 /* eslint-enable */

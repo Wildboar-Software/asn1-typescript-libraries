@@ -6,7 +6,7 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityCondition */
+
 /**
  * @summary SecurityCondition
  * @description
@@ -29,13 +29,11 @@ export type SecurityCondition =
     | { and: SecurityCondition[] } /* CHOICE_ALT_ROOT */
     | { or: SecurityCondition[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SecurityCondition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityCondition */
+
 let _cached_decoder_for_SecurityCondition: $.ASN1Decoder<SecurityCondition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityCondition */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityCondition */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityCondition
  * @function
@@ -74,13 +72,11 @@ export function _decode_SecurityCondition(el: _Element) {
     }
     return _cached_decoder_for_SecurityCondition(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityCondition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityCondition */
+
 let _cached_encoder_for_SecurityCondition: $.ASN1Encoder<SecurityCondition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityCondition */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityCondition */
+
 /**
  * @summary Encodes a(n) SecurityCondition into an ASN.1 Element.
  * @function
@@ -129,6 +125,5 @@ export function _encode_SecurityCondition(
     return _cached_encoder_for_SecurityCondition(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityCondition */
 
 /* eslint-enable */

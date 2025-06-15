@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION defaultMetric_Default */
 /**
  * @summary defaultMetric_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const defaultMetric_Default: INTEGER = 20;
-/* END_OF_SYMBOL_DEFINITION defaultMetric_Default */
 
 /* eslint-enable */

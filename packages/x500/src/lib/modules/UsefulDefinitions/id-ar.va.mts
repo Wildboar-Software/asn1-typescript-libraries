@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { administrativeRoles } from "../UsefulDefinitions/administrativeRoles.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ar */
 /**
  * @summary id_ar
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_ar: ID = administrativeRoles;
-/* END_OF_SYMBOL_DEFINITION id_ar */
 
 /* eslint-enable */

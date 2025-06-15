@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoRestoreSource */
 /**
  * @summary AutoRestoreSource
  * @description
@@ -33,13 +32,9 @@ import {
 export type AutoRestoreSource =
     | { localObject: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { remoteSystem: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AutoRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoRestoreSource */
 let _cached_decoder_for_AutoRestoreSource: $.ASN1Decoder<AutoRestoreSource> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoRestoreSource */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoRestoreSource
  * @function
@@ -59,13 +54,9 @@ export function _decode_AutoRestoreSource(el: _Element) {
     }
     return _cached_decoder_for_AutoRestoreSource(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoRestoreSource */
 let _cached_encoder_for_AutoRestoreSource: $.ASN1Encoder<AutoRestoreSource> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoRestoreSource */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoRestoreSource */
 /**
  * @summary Encodes a(n) AutoRestoreSource into an ASN.1 Element.
  * @function
@@ -89,6 +80,5 @@ export function _encode_AutoRestoreSource(
     return _cached_encoder_for_AutoRestoreSource(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoRestoreSource */
 
 /* eslint-enable */

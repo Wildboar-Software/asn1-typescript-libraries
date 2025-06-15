@@ -19,7 +19,6 @@ import {
 import { templateName } from '../DefinitionDirectoryASN1Module/templateName.oa.mjs';
 import { templateDefinition } from '../DefinitionDirectoryASN1Module/templateDefinition.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementTemplate */
 /**
  * @summary managementTemplate
  * @description
@@ -51,6 +50,5 @@ export const managementTemplate: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementTemplate */
 
 /* eslint-enable */

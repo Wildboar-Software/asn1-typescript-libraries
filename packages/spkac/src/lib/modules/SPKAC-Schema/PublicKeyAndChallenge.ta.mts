@@ -12,7 +12,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/SubjectPublicKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PublicKeyAndChallenge */
+
 /**
  * @summary PublicKeyAndChallenge
  * @description
@@ -63,9 +63,8 @@ export class PublicKeyAndChallenge {
         return new PublicKeyAndChallenge(_o.spki, _o.challenge);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicKeyAndChallenge */
+
 /**
  * @summary The Leading Root Component Types of PublicKeyAndChallenge
  * @description
@@ -90,9 +89,8 @@ export const _root_component_type_list_1_spec_for_PublicKeyAndChallenge: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicKeyAndChallenge */
+
 /**
  * @summary The Trailing Root Component Types of PublicKeyAndChallenge
  * @description
@@ -102,9 +100,8 @@ export const _root_component_type_list_1_spec_for_PublicKeyAndChallenge: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PublicKeyAndChallenge: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicKeyAndChallenge */
+
 /**
  * @summary The Extension Addition Component Types of PublicKeyAndChallenge
  * @description
@@ -114,13 +111,11 @@ export const _root_component_type_list_2_spec_for_PublicKeyAndChallenge: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_PublicKeyAndChallenge: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeyAndChallenge */
+
 let _cached_decoder_for_PublicKeyAndChallenge: $.ASN1Decoder<PublicKeyAndChallenge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicKeyAndChallenge */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKeyAndChallenge
  * @function
@@ -151,13 +146,11 @@ export function _decode_PublicKeyAndChallenge(el: _Element) {
     }
     return _cached_decoder_for_PublicKeyAndChallenge(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeyAndChallenge */
+
 let _cached_encoder_for_PublicKeyAndChallenge: $.ASN1Encoder<PublicKeyAndChallenge> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeyAndChallenge */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicKeyAndChallenge */
+
 /**
  * @summary Encodes a(n) PublicKeyAndChallenge into an ASN.1 Element.
  * @function
@@ -192,6 +185,5 @@ export function _encode_PublicKeyAndChallenge(
     return _cached_encoder_for_PublicKeyAndChallenge(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicKeyAndChallenge */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek */
+
 /**
  * @summary DaysOfWeek
  * @description
@@ -26,133 +26,114 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DaysOfWeek = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_sunday */
+
 /**
  * @summary DaysOfWeek_sunday
  * @constant
  */
 export const DaysOfWeek_sunday: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_sunday */
 
-/* START_OF_SYMBOL_DEFINITION sunday */
+
 /**
  * @summary sunday
  * @constant
  */
 export const sunday: number = DaysOfWeek_sunday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION sunday */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_monday */
+
 /**
  * @summary DaysOfWeek_monday
  * @constant
  */
 export const DaysOfWeek_monday: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_monday */
 
-/* START_OF_SYMBOL_DEFINITION monday */
+
 /**
  * @summary monday
  * @constant
  */
 export const monday: number = DaysOfWeek_monday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION monday */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_tuesday */
+
 /**
  * @summary DaysOfWeek_tuesday
  * @constant
  */
 export const DaysOfWeek_tuesday: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_tuesday */
 
-/* START_OF_SYMBOL_DEFINITION tuesday */
+
 /**
  * @summary tuesday
  * @constant
  */
 export const tuesday: number = DaysOfWeek_tuesday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION tuesday */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_wednesday */
+
 /**
  * @summary DaysOfWeek_wednesday
  * @constant
  */
 export const DaysOfWeek_wednesday: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_wednesday */
 
-/* START_OF_SYMBOL_DEFINITION wednesday */
+
 /**
  * @summary wednesday
  * @constant
  */
 export const wednesday: number = DaysOfWeek_wednesday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION wednesday */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_thursday */
+
 /**
  * @summary DaysOfWeek_thursday
  * @constant
  */
 export const DaysOfWeek_thursday: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_thursday */
 
-/* START_OF_SYMBOL_DEFINITION thursday */
+
 /**
  * @summary thursday
  * @constant
  */
 export const thursday: number = DaysOfWeek_thursday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION thursday */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_friday */
+
 /**
  * @summary DaysOfWeek_friday
  * @constant
  */
 export const DaysOfWeek_friday: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_friday */
 
-/* START_OF_SYMBOL_DEFINITION friday */
+
 /**
  * @summary friday
  * @constant
  */
 export const friday: number = DaysOfWeek_friday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION friday */
 
-/* START_OF_SYMBOL_DEFINITION DaysOfWeek_saturday */
+
 /**
  * @summary DaysOfWeek_saturday
  * @constant
  */
 export const DaysOfWeek_saturday: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION DaysOfWeek_saturday */
 
-/* START_OF_SYMBOL_DEFINITION saturday */
+
 /**
  * @summary saturday
  * @constant
  */
 export const saturday: number = DaysOfWeek_saturday; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION saturday */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DaysOfWeek */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DaysOfWeek */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DaysOfWeek */
+
+
 export const _decode_DaysOfWeek = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_DaysOfWeek */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DaysOfWeek */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DaysOfWeek */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DaysOfWeek */
+
+
 export const _encode_DaysOfWeek = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DaysOfWeek */
 
 /* eslint-enable */

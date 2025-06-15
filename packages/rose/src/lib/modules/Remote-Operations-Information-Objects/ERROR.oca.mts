@@ -21,7 +21,7 @@ import {
   _decode_Code,
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ERROR */
+
 /**
  * @summary ERROR
  * @description
@@ -91,6 +91,5 @@ export interface ERROR<
    */
   readonly '&errorCode'?: Code;
 }
-/* END_OF_SYMBOL_DEFINITION ERROR */
 
 /* eslint-enable */

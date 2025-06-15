@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/ExtendedSubject.ta.mjs';
 import { id_hex_extended_subject } from '../IPMSObjectIdentifiers/id-hex-extended-subject.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION extended_subject */
 /**
  * @summary extended_subject
  * @description
@@ -45,6 +44,5 @@ export const extended_subject: IPMS_EXTENSION<ExtendedSubject> = {
     '&id': id_hex_extended_subject /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION extended_subject */
 
 /* eslint-enable */

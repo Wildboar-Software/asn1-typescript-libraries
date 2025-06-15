@@ -26,7 +26,6 @@ import {
     _decode_Termination,
     _encode_Termination,
 } from '../TC-Notation-Extensions/Termination.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 /**
  * @summary APPLICATION_CONTEXT
  * @description
@@ -118,6 +117,5 @@ export interface APPLICATION_CONTEXT {
      */
     readonly '&applicationContextName'?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 
 /* eslint-enable */

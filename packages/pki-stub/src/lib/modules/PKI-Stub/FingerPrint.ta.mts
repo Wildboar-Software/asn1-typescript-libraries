@@ -17,7 +17,6 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION FingerPrint */
 /**
  * @summary FingerPrint
  * @description
@@ -77,9 +76,7 @@ export class FingerPrint<_ToBeFingerprinted> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FingerPrint */
 /**
  * @summary The Leading Root Component Types of FingerPrint
  * @description
@@ -105,9 +102,7 @@ export const _root_component_type_list_1_spec_for_FingerPrint: $.ComponentSpec[]
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FingerPrint */
 /**
  * @summary The Trailing Root Component Types of FingerPrint
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_FingerPrint: $.ComponentSpec[]
  */
 export const _root_component_type_list_2_spec_for_FingerPrint: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FingerPrint */
 /**
  * @summary The Extension Addition Component Types of FingerPrint
  * @description
@@ -131,9 +124,7 @@ export const _root_component_type_list_2_spec_for_FingerPrint: $.ComponentSpec[]
  */
 export const _extension_additions_list_spec_for_FingerPrint: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_FingerPrint */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) FingerPrint
  * @function
@@ -167,9 +158,7 @@ export function _get_decoder_for_FingerPrint<ToBeFingerprinted>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_FingerPrint */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_FingerPrint */
 /**
  * @summary Returns a function that will encode a(n) FingerPrint into an ASN.1 Element.
  * @function
@@ -196,6 +185,5 @@ export function _get_encoder_for_FingerPrint<ToBeFingerprinted>(
         return $._encodeSequence(components, $.BER);
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_FingerPrint */
 
 /* eslint-enable */

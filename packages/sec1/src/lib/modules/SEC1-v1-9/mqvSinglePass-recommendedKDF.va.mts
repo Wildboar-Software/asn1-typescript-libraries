@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION mqvSinglePass_recommendedKDF */
 /**
  * @summary mqvSinglePass_recommendedKDF
  * @description
@@ -28,6 +27,5 @@ export
 const mqvSinglePass_recommendedKDF: OBJECT_IDENTIFIER = new _OID([
     3,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION mqvSinglePass_recommendedKDF */
 
 /* eslint-enable */

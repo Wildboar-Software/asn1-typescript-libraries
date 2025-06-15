@@ -5,7 +5,6 @@ import {
     _decode_StreetAddress,
     _encode_StreetAddress,
 } from "../MTSAbstractService/StreetAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION street_address */
 /**
  * @summary street_address
  * @description
@@ -33,6 +32,5 @@ export const street_address: EXTENSION_ATTRIBUTE<StreetAddress> = {
     "&id": 17 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION street_address */
 
 /* eslint-enable */

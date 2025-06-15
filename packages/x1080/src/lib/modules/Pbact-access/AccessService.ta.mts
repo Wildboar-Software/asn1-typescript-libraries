@@ -16,7 +16,7 @@ import {
     _decode_ObjectSel,
     _encode_ObjectSel,
 } from '../Pbact-access/ObjectSel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AccessService */
+
 /**
  * @summary AccessService
  * @description
@@ -76,9 +76,8 @@ export class AccessService {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AccessService */
+
 /**
  * @summary The Leading Root Component Types of AccessService
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_AccessService: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessService */
+
 /**
  * @summary The Trailing Root Component Types of AccessService
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_AccessService: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AccessService: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessService */
+
 /**
  * @summary The Extension Addition Component Types of AccessService
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_AccessService: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_AccessService: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessService */
+
 let _cached_decoder_for_AccessService: $.ASN1Decoder<AccessService> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessService */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessService
  * @function
@@ -166,13 +161,11 @@ export function _decode_AccessService(el: _Element) {
     }
     return _cached_decoder_for_AccessService(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessService */
+
 let _cached_encoder_for_AccessService: $.ASN1Encoder<AccessService> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessService */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessService */
+
 /**
  * @summary Encodes a(n) AccessService into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_AccessService(
     return _cached_encoder_for_AccessService(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessService */
 
 /* eslint-enable */

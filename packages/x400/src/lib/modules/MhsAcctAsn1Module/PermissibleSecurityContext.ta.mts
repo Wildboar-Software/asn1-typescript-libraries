@@ -15,7 +15,6 @@ import {
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PermissibleSecurityContext */
 /**
  * @summary PermissibleSecurityContext
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PermissibleSecurityContext = SecurityContext[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION PermissibleSecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PermissibleSecurityContext */
 let _cached_decoder_for_PermissibleSecurityContext: $.ASN1Decoder<PermissibleSecurityContext> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PermissibleSecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PermissibleSecurityContext */
 /**
  * @summary Decodes an ASN.1 element into a(n) PermissibleSecurityContext
  * @function
@@ -48,13 +43,9 @@ export function _decode_PermissibleSecurityContext(el: _Element) {
     }
     return _cached_decoder_for_PermissibleSecurityContext(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PermissibleSecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PermissibleSecurityContext */
 let _cached_encoder_for_PermissibleSecurityContext: $.ASN1Encoder<PermissibleSecurityContext> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PermissibleSecurityContext */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PermissibleSecurityContext */
 /**
  * @summary Encodes a(n) PermissibleSecurityContext into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_PermissibleSecurityContext(
     return _cached_encoder_for_PermissibleSecurityContext(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PermissibleSecurityContext */
 
 /* eslint-enable */

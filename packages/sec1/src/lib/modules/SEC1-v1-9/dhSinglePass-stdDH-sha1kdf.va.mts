@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dhSinglePass_stdDH_sha1kdf */
 /**
  * @summary dhSinglePass_stdDH_sha1kdf
  * @description
@@ -28,6 +27,5 @@ export
 const dhSinglePass_stdDH_sha1kdf: OBJECT_IDENTIFIER = new _OID([
     2,
 ], x9_63_scheme);
-/* END_OF_SYMBOL_DEFINITION dhSinglePass_stdDH_sha1kdf */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DbStoreBIR_ResponseParams */
+
 /**
  * @summary DbStoreBIR_ResponseParams
  * @description
@@ -59,9 +59,8 @@ export class DbStoreBIR_ResponseParams {
     return new DbStoreBIR_ResponseParams(_o.birUuid);
   }
 }
-/* END_OF_SYMBOL_DEFINITION DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbStoreBIR_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of DbStoreBIR_ResponseParams
  * @description
@@ -79,9 +78,8 @@ export const _root_component_type_list_1_spec_for_DbStoreBIR_ResponseParams: $.C
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbStoreBIR_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of DbStoreBIR_ResponseParams
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_DbStoreBIR_ResponseParams: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DbStoreBIR_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbStoreBIR_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of DbStoreBIR_ResponseParams
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_DbStoreBIR_ResponseParams: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_DbStoreBIR_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbStoreBIR_ResponseParams */
+
 let _cached_decoder_for_DbStoreBIR_ResponseParams: $.ASN1Decoder<DbStoreBIR_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbStoreBIR_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DbStoreBIR_ResponseParams
  * @function
@@ -137,13 +132,11 @@ export function _decode_DbStoreBIR_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_DbStoreBIR_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbStoreBIR_ResponseParams */
+
 let _cached_encoder_for_DbStoreBIR_ResponseParams: $.ASN1Encoder<DbStoreBIR_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbStoreBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbStoreBIR_ResponseParams */
+
 /**
  * @summary Encodes a(n) DbStoreBIR_ResponseParams into an ASN.1 Element.
  * @function
@@ -169,6 +162,5 @@ export function _encode_DbStoreBIR_ResponseParams(
   return _cached_encoder_for_DbStoreBIR_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbStoreBIR_ResponseParams */
 
 /* eslint-enable */

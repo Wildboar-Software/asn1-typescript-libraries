@@ -20,7 +20,6 @@ import {
     _decode_GenericMessageId,
     _encode_GenericMessageId,
 } from '../MhsMTAAsn1Module/GenericMessageId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailMpduIdentifier */
 /**
  * @summary EMailMpduIdentifier
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailMpduIdentifier =
     | { x400MTSIdentifier: MTSIdentifier } /* CHOICE_ALT_ROOT */
     | { genericMpduIdentifier: GenericMessageId } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailMpduIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailMpduIdentifier */
 let _cached_decoder_for_EMailMpduIdentifier: $.ASN1Decoder<EMailMpduIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailMpduIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailMpduIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailMpduIdentifier
  * @function
@@ -71,13 +66,9 @@ export function _decode_EMailMpduIdentifier(el: _Element) {
     }
     return _cached_decoder_for_EMailMpduIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailMpduIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailMpduIdentifier */
 let _cached_encoder_for_EMailMpduIdentifier: $.ASN1Encoder<EMailMpduIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailMpduIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailMpduIdentifier */
 /**
  * @summary Encodes a(n) EMailMpduIdentifier into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_EMailMpduIdentifier(
     return _cached_encoder_for_EMailMpduIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailMpduIdentifier */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_AuthenticationChoice,
   _encode_AuthenticationChoice,
 } from '../Lightweight-Directory-Access-Protocol-V3/AuthenticationChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BindRequest */
+
 /**
  * @summary BindRequest
  * @description
@@ -89,9 +89,8 @@ export class BindRequest {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BindRequest */
+
 /**
  * @summary The Leading Root Component Types of BindRequest
  * @description
@@ -123,9 +122,8 @@ export const _root_component_type_list_1_spec_for_BindRequest: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BindRequest */
+
 /**
  * @summary The Trailing Root Component Types of BindRequest
  * @description
@@ -135,9 +133,8 @@ export const _root_component_type_list_1_spec_for_BindRequest: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BindRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BindRequest */
+
 /**
  * @summary The Extension Addition Component Types of BindRequest
  * @description
@@ -147,13 +144,11 @@ export const _root_component_type_list_2_spec_for_BindRequest: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_BindRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindRequest */
+
 let _cached_decoder_for_BindRequest: $.ASN1Decoder<BindRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BindRequest
  * @function
@@ -193,13 +188,11 @@ export function _decode_BindRequest(el: _Element) {
   }
   return _cached_decoder_for_BindRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindRequest */
+
 let _cached_encoder_for_BindRequest: $.ASN1Encoder<BindRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindRequest */
+
 /**
  * @summary Encodes a(n) BindRequest into an ASN.1 Element.
  * @function
@@ -243,6 +236,5 @@ export function _encode_BindRequest(
   return _cached_encoder_for_BindRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindRequest */
 
 /* eslint-enable */

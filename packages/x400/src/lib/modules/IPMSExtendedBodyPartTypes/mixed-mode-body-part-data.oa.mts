@@ -16,7 +16,6 @@ import {
     _encode_MixedModeBodyPart,
 } from '../IPMSInformationObjects/MixedModeBodyPart.ta.mjs';
 import { id_et_mixed_mode } from '../IPMSObjectIdentifiers/id-et-mixed-mode.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mixed_mode_body_part_data */
 /**
  * @summary mixed_mode_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const mixed_mode_body_part_data: TYPE_IDENTIFIER<MixedModeBodyPart> = {
     '&id': id_et_mixed_mode /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mixed_mode_body_part_data */
 
 /* eslint-enable */

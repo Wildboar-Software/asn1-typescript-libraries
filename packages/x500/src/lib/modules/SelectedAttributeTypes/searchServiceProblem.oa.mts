@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { id_not_searchServiceProblem } from "../SelectedAttributeTypes/id-not-searchServiceProblem.va.mjs";
-/* START_OF_SYMBOL_DEFINITION searchServiceProblem */
 /**
  * @summary searchServiceProblem
  * @description
@@ -44,6 +43,5 @@ export const searchServiceProblem: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION searchServiceProblem */
 
 /* eslint-enable */

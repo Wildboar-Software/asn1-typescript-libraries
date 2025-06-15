@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ansi_X9_62 */
 /**
  * @summary ansi_X9_62
  * @description
@@ -20,6 +19,5 @@ export const ansi_X9_62: OBJECT_IDENTIFIER = new _OID([
     /* us */ 840,
     10045,
 ]);
-/* END_OF_SYMBOL_DEFINITION ansi_X9_62 */
 
 /* eslint-enable */

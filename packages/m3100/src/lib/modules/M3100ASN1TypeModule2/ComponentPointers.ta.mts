@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ComponentPointers */
+
 /**
  * @summary ComponentPointers
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ComponentPointers = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ComponentPointers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentPointers */
+
 let _cached_decoder_for_ComponentPointers: $.ASN1Decoder<ComponentPointers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentPointers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentPointers */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentPointers
  * @function
@@ -48,13 +46,11 @@ export function _decode_ComponentPointers(el: _Element) {
     }
     return _cached_decoder_for_ComponentPointers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentPointers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentPointers */
+
 let _cached_encoder_for_ComponentPointers: $.ASN1Encoder<ComponentPointers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentPointers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentPointers */
+
 /**
  * @summary Encodes a(n) ComponentPointers into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ComponentPointers(
     return _cached_encoder_for_ComponentPointers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentPointers */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import {
     _encode_ReportingDLName,
 } from '../MTSAbstractService/ReportingDLName.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION reporting_DL_name */
 /**
  * @summary reporting_DL_name
  * @description
@@ -57,6 +56,5 @@ export const reporting_DL_name: EXTENSION<ReportingDLName> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION reporting_DL_name */
 
 /* eslint-enable */

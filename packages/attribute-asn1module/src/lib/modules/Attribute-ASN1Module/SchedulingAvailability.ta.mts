@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilityStatus } from "../Attribute-ASN1Module/AvailabilityStatus.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SchedulingAvailability */
 /**
  * @summary SchedulingAvailability
  * @description
@@ -24,13 +23,9 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
  */
 export
 type SchedulingAvailability = AvailabilityStatus; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SchedulingAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchedulingAvailability */
 let _cached_decoder_for_SchedulingAvailability: $.ASN1Decoder<SchedulingAvailability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchedulingAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchedulingAvailability */
 /**
  * @summary Decodes an ASN.1 element into a(n) SchedulingAvailability
  * @function
@@ -42,13 +37,9 @@ function _decode_SchedulingAvailability (el: _Element) {
     if (!_cached_decoder_for_SchedulingAvailability) { _cached_decoder_for_SchedulingAvailability = _decode_AvailabilityStatus; }
     return _cached_decoder_for_SchedulingAvailability(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SchedulingAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchedulingAvailability */
 let _cached_encoder_for_SchedulingAvailability: $.ASN1Encoder<SchedulingAvailability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchedulingAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchedulingAvailability */
 /**
  * @summary Encodes a(n) SchedulingAvailability into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_SchedulingAvailability (value: SchedulingAvailability, elGetter
     return _cached_encoder_for_SchedulingAvailability(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchedulingAvailability */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TraceItem */
 /**
  * @summary TraceItem
  * @description
@@ -83,9 +82,7 @@ export class TraceItem {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TraceItem */
 /**
  * @summary The Leading Root Component Types of TraceItem
  * @description
@@ -117,9 +114,7 @@ export const _root_component_type_list_1_spec_for_TraceItem: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TraceItem */
 /**
  * @summary The Trailing Root Component Types of TraceItem
  * @description
@@ -129,9 +124,7 @@ export const _root_component_type_list_1_spec_for_TraceItem: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TraceItem: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TraceItem */
 /**
  * @summary The Extension Addition Component Types of TraceItem
  * @description
@@ -141,13 +134,9 @@ export const _root_component_type_list_2_spec_for_TraceItem: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_TraceItem: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TraceItem */
 let _cached_decoder_for_TraceItem: $.ASN1Decoder<TraceItem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TraceItem */
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceItem
  * @function
@@ -200,13 +189,9 @@ export function _decode_TraceItem(el: _Element) {
     }
     return _cached_decoder_for_TraceItem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TraceItem */
 let _cached_encoder_for_TraceItem: $.ASN1Encoder<TraceItem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TraceItem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TraceItem */
 /**
  * @summary Encodes a(n) TraceItem into an ASN.1 Element.
  * @function
@@ -258,6 +243,5 @@ export function _encode_TraceItem(
     return _cached_encoder_for_TraceItem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TraceItem */
 
 /* eslint-enable */

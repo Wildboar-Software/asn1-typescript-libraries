@@ -6,7 +6,6 @@ import {
     _decode_FilterItem,
     _encode_FilterItem,
 } from "../DirectoryAbstractService/FilterItem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Filter */
 /**
  * @summary Filter
  * @description
@@ -28,13 +27,9 @@ export type Filter =
     | { or: Filter[] } /* CHOICE_ALT_ROOT */
     | { not: Filter } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Filter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Filter */
 let _cached_decoder_for_Filter: $.ASN1Decoder<Filter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Filter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Filter */
 /**
  * @summary Decodes an ASN.1 element into a(n) Filter
  * @function
@@ -68,13 +63,9 @@ export function _decode_Filter(el: _Element) {
     }
     return _cached_decoder_for_Filter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Filter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Filter */
 let _cached_encoder_for_Filter: $.ASN1Encoder<Filter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Filter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Filter */
 /**
  * @summary Encodes a(n) Filter into an ASN.1 Element.
  * @function
@@ -117,6 +108,5 @@ export function _encode_Filter(value: Filter, elGetter: $.ASN1Encoder<Filter>) {
     return _cached_encoder_for_Filter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Filter */
 
 /* eslint-enable */

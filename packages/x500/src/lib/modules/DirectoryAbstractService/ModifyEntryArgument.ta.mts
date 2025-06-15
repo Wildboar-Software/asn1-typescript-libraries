@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyEntryArgument */
 /**
  * @summary ModifyEntryArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ModifyEntryArgument = OPTIONALLY_PROTECTED<ModifyEntryArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ModifyEntryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyEntryArgument */
 let _cached_decoder_for_ModifyEntryArgument: $.ASN1Decoder<ModifyEntryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyEntryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyEntryArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyEntryArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_ModifyEntryArgument(el: _Element) {
     }
     return _cached_decoder_for_ModifyEntryArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyEntryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyEntryArgument */
 let _cached_encoder_for_ModifyEntryArgument: $.ASN1Encoder<ModifyEntryArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyEntryArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyEntryArgument */
 /**
  * @summary Encodes a(n) ModifyEntryArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ModifyEntryArgument(
     return _cached_encoder_for_ModifyEntryArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyEntryArgument */
 
 /* eslint-enable */

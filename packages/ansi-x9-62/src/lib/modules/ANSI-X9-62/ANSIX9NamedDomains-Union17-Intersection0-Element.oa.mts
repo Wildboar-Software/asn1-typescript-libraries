@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ansix9p521r1 } from "../ANSI-X9-62/ansix9p521r1.va.mjs";
 import { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ANSIX9NamedDomains_Union17_Intersection0_Element */
 /**
  * @summary ANSIX9NamedDomains_Union17_Intersection0_Element
  * @description
@@ -22,6 +21,5 @@ export const ANSIX9NamedDomains_Union17_Intersection0_Element: ECDOMAIN = {
     encoderFor: {},
     "&id": ansix9p521r1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ANSIX9NamedDomains_Union17_Intersection0_Element */
 
 /* eslint-enable */

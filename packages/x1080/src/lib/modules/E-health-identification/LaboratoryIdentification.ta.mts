@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LaboratoryIdentification */
+
 /**
  * @summary LaboratoryIdentification
  * @description
@@ -82,9 +82,8 @@ export class LaboratoryIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LaboratoryIdentification */
+
 /**
  * @summary The Leading Root Component Types of LaboratoryIdentification
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_LaboratoryIdentification: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LaboratoryIdentification */
+
 /**
  * @summary The Trailing Root Component Types of LaboratoryIdentification
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_LaboratoryIdentification: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LaboratoryIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LaboratoryIdentification */
+
 /**
  * @summary The Extension Addition Component Types of LaboratoryIdentification
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_LaboratoryIdentification: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_LaboratoryIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LaboratoryIdentification */
+
 let _cached_decoder_for_LaboratoryIdentification: $.ASN1Decoder<LaboratoryIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LaboratoryIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LaboratoryIdentification
  * @function
@@ -193,13 +188,11 @@ export function _decode_LaboratoryIdentification(el: _Element) {
     }
     return _cached_decoder_for_LaboratoryIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LaboratoryIdentification */
+
 let _cached_encoder_for_LaboratoryIdentification: $.ASN1Encoder<LaboratoryIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LaboratoryIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LaboratoryIdentification */
+
 /**
  * @summary Encodes a(n) LaboratoryIdentification into an ASN.1 Element.
  * @function
@@ -236,6 +229,5 @@ export function _encode_LaboratoryIdentification(
     return _cached_encoder_for_LaboratoryIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LaboratoryIdentification */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
   _decode_BioAPI_DB_HANDLE,
   _encode_BioAPI_DB_HANDLE,
 } from '../BIP/BioAPI-DB-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DbClose_RequestParams */
+
 /**
  * @summary DbClose_RequestParams
  * @description
@@ -70,9 +70,8 @@ export class DbClose_RequestParams {
     return new DbClose_RequestParams(_o.originalBSPHandle, _o.dbHandle);
   }
 }
-/* END_OF_SYMBOL_DEFINITION DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbClose_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of DbClose_RequestParams
  * @description
@@ -97,9 +96,8 @@ export const _root_component_type_list_1_spec_for_DbClose_RequestParams: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbClose_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of DbClose_RequestParams
  * @description
@@ -109,9 +107,8 @@ export const _root_component_type_list_1_spec_for_DbClose_RequestParams: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DbClose_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbClose_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of DbClose_RequestParams
  * @description
@@ -121,13 +118,11 @@ export const _root_component_type_list_2_spec_for_DbClose_RequestParams: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_DbClose_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbClose_RequestParams */
+
 let _cached_decoder_for_DbClose_RequestParams: $.ASN1Decoder<DbClose_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbClose_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DbClose_RequestParams
  * @function
@@ -158,13 +153,11 @@ export function _decode_DbClose_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_DbClose_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbClose_RequestParams */
+
 let _cached_encoder_for_DbClose_RequestParams: $.ASN1Encoder<DbClose_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbClose_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbClose_RequestParams */
+
 /**
  * @summary Encodes a(n) DbClose_RequestParams into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_DbClose_RequestParams(
   return _cached_encoder_for_DbClose_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbClose_RequestParams */
 
 /* eslint-enable */

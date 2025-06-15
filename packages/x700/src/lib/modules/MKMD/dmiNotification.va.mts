@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION dmiNotification */
 /**
  * @summary dmiNotification
  * @description
@@ -31,6 +30,5 @@ export const dmiNotification: OBJECT_IDENTIFIER = new _OID([
     /* part2 */ 2,
     /* notification */ 10,
 ]);
-/* END_OF_SYMBOL_DEFINITION dmiNotification */
 
 /* eslint-enable */

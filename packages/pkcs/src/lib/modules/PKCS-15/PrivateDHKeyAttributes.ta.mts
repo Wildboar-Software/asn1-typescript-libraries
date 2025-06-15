@@ -27,7 +27,7 @@ import {
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateDHKeyAttributes */
+
 /**
  * @summary PrivateDHKeyAttributes
  * @description
@@ -90,9 +90,8 @@ export class PrivateDHKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateDHKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PrivateDHKeyAttributes
  * @description
@@ -105,9 +104,8 @@ export const _root_component_type_list_1_spec_for_PrivateDHKeyAttributes: $.Comp
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateDHKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PrivateDHKeyAttributes
  * @description
@@ -117,9 +115,8 @@ export const _root_component_type_list_1_spec_for_PrivateDHKeyAttributes: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PrivateDHKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateDHKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PrivateDHKeyAttributes
  * @description
@@ -129,13 +126,11 @@ export const _root_component_type_list_2_spec_for_PrivateDHKeyAttributes: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_PrivateDHKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDHKeyAttributes */
+
 let _cached_decoder_for_PrivateDHKeyAttributes: $.ASN1Decoder<PrivateDHKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateDHKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateDHKeyAttributes
  * @function
@@ -191,13 +186,11 @@ export function _decode_PrivateDHKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PrivateDHKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDHKeyAttributes */
+
 let _cached_encoder_for_PrivateDHKeyAttributes: $.ASN1Encoder<PrivateDHKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateDHKeyAttributes */
+
 /**
  * @summary Encodes a(n) PrivateDHKeyAttributes into an ASN.1 Element.
  * @function
@@ -241,6 +234,5 @@ export function _encode_PrivateDHKeyAttributes(
     return _cached_encoder_for_PrivateDHKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateDHKeyAttributes */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import type {
     CONTENT_TYPE,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ContentTypeBPUReport */
+
 /**
  * @summary ContentTypeBPUReport
  * @description
@@ -30,6 +30,5 @@ import type {
  *
  */
 export const ContentTypeBPUReport: CONTENT_TYPE[] = [bpuReport];
-/* END_OF_SYMBOL_DEFINITION ContentTypeBPUReport */
 
 /* eslint-enable */

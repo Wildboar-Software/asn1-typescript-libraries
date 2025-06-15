@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ComponentClass */
 /**
  * @summary ComponentClass
  * @description
@@ -62,9 +61,7 @@ class ComponentClass {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComponentClass */
 /**
  * @summary The Leading Root Component Types of ComponentClass
  * @description
@@ -78,9 +75,7 @@ const _root_component_type_list_1_spec_for_ComponentClass: $.ComponentSpec[] = [
     new $.ComponentSpec("componentClassRegistry", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("componentClassValue", false, $.hasTag(_TagClass.universal, 4), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComponentClass */
 /**
  * @summary The Trailing Root Component Types of ComponentClass
  * @description
@@ -93,9 +88,7 @@ export
 const _root_component_type_list_2_spec_for_ComponentClass: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComponentClass */
 /**
  * @summary The Extension Addition Component Types of ComponentClass
  * @description
@@ -108,13 +101,9 @@ export
 const _extension_additions_list_spec_for_ComponentClass: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentClass */
 let _cached_decoder_for_ComponentClass: $.ASN1Decoder<ComponentClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentClass */
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentClass
  * @function
@@ -142,13 +131,9 @@ function _decode_ComponentClass (el: _Element) {
 }; }
     return _cached_decoder_for_ComponentClass(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentClass */
 let _cached_encoder_for_ComponentClass: $.ASN1Encoder<ComponentClass> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentClass */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentClass */
 /**
  * @summary Encodes a(n) ComponentClass into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ function _encode_ComponentClass (value: ComponentClass, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_ComponentClass(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentClass */
 
 /* eslint-enable */

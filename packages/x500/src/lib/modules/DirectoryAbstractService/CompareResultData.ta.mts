@@ -38,7 +38,6 @@ import {
     CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CompareResultData */
 /**
  * @summary CompareResultData
  * @description
@@ -163,9 +162,7 @@ export class CompareResultData implements CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareResultData */
 /**
  * @summary The Leading Root Component Types of CompareResultData
  * @description
@@ -205,9 +202,7 @@ export const _root_component_type_list_1_spec_for_CompareResultData: $.Component
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareResultData */
 /**
  * @summary The Trailing Root Component Types of CompareResultData
  * @description
@@ -219,9 +214,7 @@ export const _root_component_type_list_1_spec_for_CompareResultData: $.Component
 export const _root_component_type_list_2_spec_for_CompareResultData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareResultData */
 /**
  * @summary The Extension Addition Component Types of CompareResultData
  * @description
@@ -233,13 +226,9 @@ export const _root_component_type_list_2_spec_for_CompareResultData: $.Component
 export const _extension_additions_list_spec_for_CompareResultData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResultData */
 let _cached_decoder_for_CompareResultData: $.ASN1Decoder<CompareResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareResultData
  * @function
@@ -331,13 +320,9 @@ export function _decode_CompareResultData(el: _Element) {
     }
     return _cached_decoder_for_CompareResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResultData */
 let _cached_encoder_for_CompareResultData: $.ASN1Encoder<CompareResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareResultData */
 /**
  * @summary Encodes a(n) CompareResultData into an ASN.1 Element.
  * @function
@@ -442,6 +427,5 @@ export function _encode_CompareResultData(
     return _cached_encoder_for_CompareResultData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareResultData */
 
 /* eslint-enable */

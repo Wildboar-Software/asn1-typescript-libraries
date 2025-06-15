@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_OCSPResponseStatus */
+
 /**
  * @summary OCSPResponseStatus
  * @description
@@ -29,9 +29,8 @@ export enum _enum_for_OCSPResponseStatus {
     sigRequired = 5,
     unauthorized = 6,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_OCSPResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus */
+
 /**
  * @summary OCSPResponseStatus
  * @description
@@ -51,9 +50,8 @@ export enum _enum_for_OCSPResponseStatus {
  * ```@enum {number}
  */
 export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus */
+
 /**
  * @summary OCSPResponseStatus
  * @description
@@ -73,9 +71,8 @@ export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * ```@enum {number}
  */
 export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus_successful */
+
 /**
  * @summary OCSPResponseStatus_successful
  * @constant
@@ -83,9 +80,8 @@ export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  */
 export const OCSPResponseStatus_successful: OCSPResponseStatus =
     OCSPResponseStatus.successful; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus_successful */
 
-/* START_OF_SYMBOL_DEFINITION successful */
+
 /**
  * @summary successful
  * @constant
@@ -93,9 +89,8 @@ export const OCSPResponseStatus_successful: OCSPResponseStatus =
  */
 export const successful: OCSPResponseStatus =
     OCSPResponseStatus.successful; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION successful */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus_malformedRequest */
+
 /**
  * @summary OCSPResponseStatus_malformedRequest
  * @constant
@@ -103,9 +98,8 @@ export const successful: OCSPResponseStatus =
  */
 export const OCSPResponseStatus_malformedRequest: OCSPResponseStatus =
     OCSPResponseStatus.malformedRequest; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus_malformedRequest */
 
-/* START_OF_SYMBOL_DEFINITION malformedRequest */
+
 /**
  * @summary malformedRequest
  * @constant
@@ -113,9 +107,8 @@ export const OCSPResponseStatus_malformedRequest: OCSPResponseStatus =
  */
 export const malformedRequest: OCSPResponseStatus =
     OCSPResponseStatus.malformedRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION malformedRequest */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus_internalError */
+
 /**
  * @summary OCSPResponseStatus_internalError
  * @constant
@@ -123,9 +116,8 @@ export const malformedRequest: OCSPResponseStatus =
  */
 export const OCSPResponseStatus_internalError: OCSPResponseStatus =
     OCSPResponseStatus.internalError; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus_internalError */
 
-/* START_OF_SYMBOL_DEFINITION internalError */
+
 /**
  * @summary internalError
  * @constant
@@ -133,9 +125,8 @@ export const OCSPResponseStatus_internalError: OCSPResponseStatus =
  */
 export const internalError: OCSPResponseStatus =
     OCSPResponseStatus.internalError; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION internalError */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus_tryLater */
+
 /**
  * @summary OCSPResponseStatus_tryLater
  * @constant
@@ -143,9 +134,8 @@ export const internalError: OCSPResponseStatus =
  */
 export const OCSPResponseStatus_tryLater: OCSPResponseStatus =
     OCSPResponseStatus.tryLater; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus_tryLater */
 
-/* START_OF_SYMBOL_DEFINITION tryLater */
+
 /**
  * @summary tryLater
  * @constant
@@ -153,9 +143,8 @@ export const OCSPResponseStatus_tryLater: OCSPResponseStatus =
  */
 export const tryLater: OCSPResponseStatus =
     OCSPResponseStatus.tryLater; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION tryLater */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus_sigRequired */
+
 /**
  * @summary OCSPResponseStatus_sigRequired
  * @constant
@@ -163,9 +152,8 @@ export const tryLater: OCSPResponseStatus =
  */
 export const OCSPResponseStatus_sigRequired: OCSPResponseStatus =
     OCSPResponseStatus.sigRequired; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus_sigRequired */
 
-/* START_OF_SYMBOL_DEFINITION sigRequired */
+
 /**
  * @summary sigRequired
  * @constant
@@ -173,9 +161,8 @@ export const OCSPResponseStatus_sigRequired: OCSPResponseStatus =
  */
 export const sigRequired: OCSPResponseStatus =
     OCSPResponseStatus.sigRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sigRequired */
 
-/* START_OF_SYMBOL_DEFINITION OCSPResponseStatus_unauthorized */
+
 /**
  * @summary OCSPResponseStatus_unauthorized
  * @constant
@@ -183,9 +170,8 @@ export const sigRequired: OCSPResponseStatus =
  */
 export const OCSPResponseStatus_unauthorized: OCSPResponseStatus =
     OCSPResponseStatus.unauthorized; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OCSPResponseStatus_unauthorized */
 
-/* START_OF_SYMBOL_DEFINITION unauthorized */
+
 /**
  * @summary unauthorized
  * @constant
@@ -193,21 +179,16 @@ export const OCSPResponseStatus_unauthorized: OCSPResponseStatus =
  */
 export const unauthorized: OCSPResponseStatus =
     OCSPResponseStatus.unauthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unauthorized */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OCSPResponseStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OCSPResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OCSPResponseStatus */
+
+
 export const _decode_OCSPResponseStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_OCSPResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OCSPResponseStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OCSPResponseStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OCSPResponseStatus */
+
+
 export const _encode_OCSPResponseStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OCSPResponseStatus */
 
 /* eslint-enable */

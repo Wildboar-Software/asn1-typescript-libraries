@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_ct } from '../SCVP-2009/id-ct.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_ct_scvp_certValRequest */
 /**
  * @summary id_ct_scvp_certValRequest
  * @description
@@ -28,6 +27,5 @@ export const id_ct_scvp_certValRequest: OBJECT_IDENTIFIER = new _OID(
   [10],
   id_ct
 );
-/* END_OF_SYMBOL_DEFINITION id_ct_scvp_certValRequest */
 
 /* eslint-enable */

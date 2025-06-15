@@ -18,7 +18,7 @@ import {
     _encode_TypeOfBiometricData,
 } from "../PKIXqualified97/TypeOfBiometricData.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION BiometricData */
+
 /**
  * @summary BiometricData
  * @description
@@ -94,9 +94,8 @@ export class BiometricData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricData */
+
 /**
  * @summary The Leading Root Component Types of BiometricData
  * @description
@@ -135,9 +134,8 @@ export const _root_component_type_list_1_spec_for_BiometricData: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricData */
+
 /**
  * @summary The Trailing Root Component Types of BiometricData
  * @description
@@ -147,9 +145,8 @@ export const _root_component_type_list_1_spec_for_BiometricData: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BiometricData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricData */
+
 /**
  * @summary The Extension Addition Component Types of BiometricData
  * @description
@@ -159,13 +156,11 @@ export const _root_component_type_list_2_spec_for_BiometricData: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_BiometricData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricData */
+
 let _cached_decoder_for_BiometricData: $.ASN1Decoder<BiometricData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricData
  * @function
@@ -221,13 +216,11 @@ export function _decode_BiometricData(el: _Element) {
     }
     return _cached_decoder_for_BiometricData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricData */
+
 let _cached_encoder_for_BiometricData: $.ASN1Encoder<BiometricData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricData */
+
 /**
  * @summary Encodes a(n) BiometricData into an ASN.1 Element.
  * @function
@@ -277,6 +270,5 @@ export function _encode_BiometricData(
     return _cached_encoder_for_BiometricData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricData */
 
 /* eslint-enable */

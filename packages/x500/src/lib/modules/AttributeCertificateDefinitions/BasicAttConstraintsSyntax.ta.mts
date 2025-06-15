@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION BasicAttConstraintsSyntax */
 /**
  * @summary BasicAttConstraintsSyntax
  * @description
@@ -82,9 +81,7 @@ export class BasicAttConstraintsSyntax {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BasicAttConstraintsSyntax */
 /**
  * @summary The Leading Root Component Types of BasicAttConstraintsSyntax
  * @description
@@ -109,9 +106,7 @@ export const _root_component_type_list_1_spec_for_BasicAttConstraintsSyntax: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BasicAttConstraintsSyntax */
 /**
  * @summary The Trailing Root Component Types of BasicAttConstraintsSyntax
  * @description
@@ -121,9 +116,7 @@ export const _root_component_type_list_1_spec_for_BasicAttConstraintsSyntax: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BasicAttConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BasicAttConstraintsSyntax */
 /**
  * @summary The Extension Addition Component Types of BasicAttConstraintsSyntax
  * @description
@@ -133,13 +126,9 @@ export const _root_component_type_list_2_spec_for_BasicAttConstraintsSyntax: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_BasicAttConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicAttConstraintsSyntax */
 let _cached_decoder_for_BasicAttConstraintsSyntax: $.ASN1Decoder<BasicAttConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BasicAttConstraintsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) BasicAttConstraintsSyntax
  * @function
@@ -186,13 +175,9 @@ export function _decode_BasicAttConstraintsSyntax(el: _Element) {
     }
     return _cached_decoder_for_BasicAttConstraintsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicAttConstraintsSyntax */
 let _cached_encoder_for_BasicAttConstraintsSyntax: $.ASN1Encoder<BasicAttConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BasicAttConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BasicAttConstraintsSyntax */
 /**
  * @summary Encodes a(n) BasicAttConstraintsSyntax into an ASN.1 Element.
  * @function
@@ -238,6 +223,5 @@ export function _encode_BasicAttConstraintsSyntax(
     return _cached_encoder_for_BasicAttConstraintsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BasicAttConstraintsSyntax */
 
 /* eslint-enable */

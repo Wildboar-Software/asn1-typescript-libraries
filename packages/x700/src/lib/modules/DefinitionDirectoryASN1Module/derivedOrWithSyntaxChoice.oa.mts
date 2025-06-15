@@ -22,7 +22,6 @@ import {
     _encode_DerivedOrWithSyntaxChoice,
 } from '../DefinitionASN1Module/DerivedOrWithSyntaxChoice.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION derivedOrWithSyntaxChoice */
 /**
  * @summary derivedOrWithSyntaxChoice
  * @description
@@ -64,6 +63,5 @@ export const derivedOrWithSyntaxChoice: ATTRIBUTE<DerivedOrWithSyntaxChoice> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION derivedOrWithSyntaxChoice */
 
 /* eslint-enable */

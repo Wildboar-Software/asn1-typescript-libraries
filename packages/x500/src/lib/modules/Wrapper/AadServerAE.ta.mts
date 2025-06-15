@@ -32,7 +32,6 @@ import {
     _root_component_type_list_1_spec_for_AadServer,
 } from "../Wrapper/AadServer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AadServerAE */
 /**
  * @summary AadServerAE
  * @description
@@ -148,9 +147,7 @@ export class AadServerAE extends AadServer {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AadServerAE */
 /**
  * @summary The Leading Root Component Types of AadServerAE
  * @description
@@ -169,9 +166,7 @@ export const _root_component_type_list_1_spec_for_AadServerAE: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AadServerAE */
 /**
  * @summary The Trailing Root Component Types of AadServerAE
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_AadServerAE: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AadServerAE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AadServerAE */
 /**
  * @summary The Extension Addition Component Types of AadServerAE
  * @description
@@ -193,13 +186,9 @@ export const _root_component_type_list_2_spec_for_AadServerAE: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_AadServerAE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AadServerAE */
 let _cached_decoder_for_AadServerAE: $.ASN1Decoder<AadServerAE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AadServerAE */
 /**
  * @summary Decodes an ASN.1 element into a(n) AadServerAE
  * @function
@@ -278,13 +267,9 @@ export function _decode_AadServerAE(el: _Element) {
     }
     return _cached_decoder_for_AadServerAE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AadServerAE */
 let _cached_encoder_for_AadServerAE: $.ASN1Encoder<AadServerAE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AadServerAE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AadServerAE */
 /**
  * @summary Encodes a(n) AadServerAE into an ASN.1 Element.
  * @function
@@ -368,6 +353,5 @@ export function _encode_AadServerAE(
     return _cached_encoder_for_AadServerAE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AadServerAE */
 
 /* eslint-enable */

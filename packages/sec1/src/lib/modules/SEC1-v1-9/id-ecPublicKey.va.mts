@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_publicKeyType } from "../SEC1-v1-9/id-publicKeyType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ecPublicKey */
 /**
  * @summary id_ecPublicKey
  * @description
@@ -28,6 +27,5 @@ export
 const id_ecPublicKey: OBJECT_IDENTIFIER = new _OID([
     1,
 ], id_publicKeyType);
-/* END_OF_SYMBOL_DEFINITION id_ecPublicKey */
 
 /* eslint-enable */

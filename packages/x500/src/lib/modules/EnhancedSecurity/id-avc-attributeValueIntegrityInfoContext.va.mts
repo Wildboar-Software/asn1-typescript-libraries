@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_avc_attributeValueIntegrityInfoContext */
 /**
  * @summary id_avc_attributeValueIntegrityInfoContext
  * @description
@@ -18,6 +17,5 @@ export const id_avc_attributeValueIntegrityInfoContext: OBJECT_IDENTIFIER = new 
     [4],
     id_avc
 );
-/* END_OF_SYMBOL_DEFINITION id_avc_attributeValueIntegrityInfoContext */
 
 /* eslint-enable */

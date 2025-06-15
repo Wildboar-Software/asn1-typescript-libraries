@@ -2,7 +2,7 @@
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { PKCS1MGFAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/PKCS1MGFAlgorithms-Union0-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms */
+
 /**
  * @summary PKCS1MGFAlgorithms
  * @description
@@ -23,6 +23,5 @@ import { PKCS1MGFAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/PKCS1
 export const PKCS1MGFAlgorithms: ALGORITHM_IDENTIFIER<any>[] = [
     PKCS1MGFAlgorithms_Union0_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms */
 
 /* eslint-enable */

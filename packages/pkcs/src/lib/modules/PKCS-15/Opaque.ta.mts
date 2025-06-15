@@ -6,7 +6,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Opaque */
+
 /**
  * @summary Opaque
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Opaque = ObjectValue<_Element>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Opaque */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Opaque */
+
 let _cached_decoder_for_Opaque: $.ASN1Decoder<Opaque> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Opaque */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Opaque */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Opaque
  * @function
@@ -39,13 +37,11 @@ export function _decode_Opaque(el: _Element) {
     }
     return _cached_decoder_for_Opaque(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Opaque */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Opaque */
+
 let _cached_encoder_for_Opaque: $.ASN1Encoder<Opaque> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Opaque */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Opaque */
+
 /**
  * @summary Encodes a(n) Opaque into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_Opaque(value: Opaque, elGetter: $.ASN1Encoder<Opaque>) {
     return _cached_encoder_for_Opaque(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Opaque */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_RoleSpecCertIdentifier,
     _encode_RoleSpecCertIdentifier,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RoleSpecCertIdentifierSyntax */
 /**
  * @summary RoleSpecCertIdentifierSyntax
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type RoleSpecCertIdentifierSyntax = RoleSpecCertIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RoleSpecCertIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSpecCertIdentifierSyntax */
 let _cached_decoder_for_RoleSpecCertIdentifierSyntax: $.ASN1Decoder<RoleSpecCertIdentifierSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSpecCertIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleSpecCertIdentifierSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleSpecCertIdentifierSyntax
  * @function
@@ -40,13 +35,9 @@ export function _decode_RoleSpecCertIdentifierSyntax(el: _Element) {
     }
     return _cached_decoder_for_RoleSpecCertIdentifierSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleSpecCertIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSpecCertIdentifierSyntax */
 let _cached_encoder_for_RoleSpecCertIdentifierSyntax: $.ASN1Encoder<RoleSpecCertIdentifierSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSpecCertIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleSpecCertIdentifierSyntax */
 /**
  * @summary Encodes a(n) RoleSpecCertIdentifierSyntax into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_RoleSpecCertIdentifierSyntax(
     return _cached_encoder_for_RoleSpecCertIdentifierSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleSpecCertIdentifierSyntax */
 
 /* eslint-enable */

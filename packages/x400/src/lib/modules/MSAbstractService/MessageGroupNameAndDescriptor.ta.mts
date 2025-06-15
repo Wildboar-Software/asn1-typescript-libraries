@@ -17,7 +17,6 @@ import {
     _decode_MessageGroupName,
     _encode_MessageGroupName,
 } from '../MSAbstractService/MessageGroupName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageGroupNameAndDescriptor */
 /**
  * @summary MessageGroupNameAndDescriptor
  * @description
@@ -73,9 +72,7 @@ export class MessageGroupNameAndDescriptor {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageGroupNameAndDescriptor */
 /**
  * @summary The Leading Root Component Types of MessageGroupNameAndDescriptor
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_MessageGroupNameAndDescriptor:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageGroupNameAndDescriptor */
 /**
  * @summary The Trailing Root Component Types of MessageGroupNameAndDescriptor
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_MessageGroupNameAndDescriptor:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageGroupNameAndDescriptor: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageGroupNameAndDescriptor */
 /**
  * @summary The Extension Addition Component Types of MessageGroupNameAndDescriptor
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_MessageGroupNameAndDescriptor:
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageGroupNameAndDescriptor: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupNameAndDescriptor */
 let _cached_decoder_for_MessageGroupNameAndDescriptor: $.ASN1Decoder<MessageGroupNameAndDescriptor> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageGroupNameAndDescriptor */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageGroupNameAndDescriptor
  * @function
@@ -176,13 +165,9 @@ export function _decode_MessageGroupNameAndDescriptor(el: _Element) {
     }
     return _cached_decoder_for_MessageGroupNameAndDescriptor(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupNameAndDescriptor */
 let _cached_encoder_for_MessageGroupNameAndDescriptor: $.ASN1Encoder<MessageGroupNameAndDescriptor> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupNameAndDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageGroupNameAndDescriptor */
 /**
  * @summary Encodes a(n) MessageGroupNameAndDescriptor into an ASN.1 Element.
  * @function
@@ -224,6 +209,5 @@ export function _encode_MessageGroupNameAndDescriptor(
     return _cached_encoder_for_MessageGroupNameAndDescriptor(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageGroupNameAndDescriptor */
 
 /* eslint-enable */

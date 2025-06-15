@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorsReference */
 /**
  * @summary OriginatorsReference
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatorsReference = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorsReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorsReference */
 let _cached_decoder_for_OriginatorsReference: $.ASN1Decoder<OriginatorsReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorsReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorsReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorsReference
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatorsReference(el: _Element) {
     }
     return _cached_decoder_for_OriginatorsReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorsReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorsReference */
 let _cached_encoder_for_OriginatorsReference: $.ASN1Encoder<OriginatorsReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorsReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorsReference */
 /**
  * @summary Encodes a(n) OriginatorsReference into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginatorsReference(
     return _cached_encoder_for_OriginatorsReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorsReference */
 
 /* eslint-enable */

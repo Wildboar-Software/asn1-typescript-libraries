@@ -6,7 +6,6 @@ import {
     _encode_CertificatePoliciesSyntax,
 } from "../CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
 import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.mjs";
-/* START_OF_SYMBOL_DEFINITION certificatePolicies */
 /**
  * @summary certificatePolicies
  * @description
@@ -34,6 +33,5 @@ export const certificatePolicies: EXTENSION<CertificatePoliciesSyntax> = {
     "&id": id_ce_certificatePolicies /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certificatePolicies */
 
 /* eslint-enable */

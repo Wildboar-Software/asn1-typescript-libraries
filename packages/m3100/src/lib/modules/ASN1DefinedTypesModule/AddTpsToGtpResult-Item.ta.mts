@@ -20,7 +20,7 @@ import {
     _decode_AddedTps,
     _encode_AddedTps,
 } from '../ASN1DefinedTypesModule/AddedTps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddTpsToGtpResult_Item */
+
 /**
  * @summary AddTpsToGtpResult_Item
  * @description
@@ -34,13 +34,11 @@ import {
 export type AddTpsToGtpResult_Item =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { addedTps: AddedTps } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AddTpsToGtpResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToGtpResult_Item */
+
 let _cached_decoder_for_AddTpsToGtpResult_Item: $.ASN1Decoder<AddTpsToGtpResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToGtpResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddTpsToGtpResult_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddTpsToGtpResult_Item
  * @function
@@ -64,13 +62,11 @@ export function _decode_AddTpsToGtpResult_Item(el: _Element) {
     }
     return _cached_decoder_for_AddTpsToGtpResult_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddTpsToGtpResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToGtpResult_Item */
+
 let _cached_encoder_for_AddTpsToGtpResult_Item: $.ASN1Encoder<AddTpsToGtpResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToGtpResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddTpsToGtpResult_Item */
+
 /**
  * @summary Encodes a(n) AddTpsToGtpResult_Item into an ASN.1 Element.
  * @function
@@ -104,6 +100,5 @@ export function _encode_AddTpsToGtpResult_Item(
     return _cached_encoder_for_AddTpsToGtpResult_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddTpsToGtpResult_Item */
 
 /* eslint-enable */

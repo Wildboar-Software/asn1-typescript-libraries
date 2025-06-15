@@ -40,7 +40,6 @@ import {
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PerAuthorityScope */
 /**
  * @summary PerAuthorityScope
  * @description
@@ -148,9 +147,7 @@ export class PerAuthorityScope {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerAuthorityScope */
 /**
  * @summary The Leading Root Component Types of PerAuthorityScope
  * @description
@@ -217,9 +214,7 @@ export const _root_component_type_list_1_spec_for_PerAuthorityScope: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerAuthorityScope */
 /**
  * @summary The Trailing Root Component Types of PerAuthorityScope
  * @description
@@ -229,9 +224,7 @@ export const _root_component_type_list_1_spec_for_PerAuthorityScope: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerAuthorityScope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerAuthorityScope */
 /**
  * @summary The Extension Addition Component Types of PerAuthorityScope
  * @description
@@ -241,13 +234,9 @@ export const _root_component_type_list_2_spec_for_PerAuthorityScope: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_PerAuthorityScope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerAuthorityScope */
 let _cached_decoder_for_PerAuthorityScope: $.ASN1Decoder<PerAuthorityScope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerAuthorityScope */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerAuthorityScope
  * @function
@@ -339,13 +328,9 @@ export function _decode_PerAuthorityScope(el: _Element) {
     }
     return _cached_decoder_for_PerAuthorityScope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerAuthorityScope */
 let _cached_encoder_for_PerAuthorityScope: $.ASN1Encoder<PerAuthorityScope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerAuthorityScope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerAuthorityScope */
 /**
  * @summary Encodes a(n) PerAuthorityScope into an ASN.1 Element.
  * @function
@@ -445,6 +430,5 @@ export function _encode_PerAuthorityScope(
     return _cached_encoder_for_PerAuthorityScope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerAuthorityScope */
 
 /* eslint-enable */

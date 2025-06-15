@@ -6,7 +6,6 @@ import {
     _decode_Jid,
     _encode_Jid,
 } from "../SelectedAttributeTypes/Jid.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION jidString */
 /**
  * @summary jidString
  * @description
@@ -36,6 +35,5 @@ export const jidString: SYNTAX_NAME<Jid> = {
     "&id": id_asx_jidString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION jidString */
 
 /* eslint-enable */

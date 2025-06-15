@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSSurnameAttribute } from '../MHSRoutingORAddressSubtree/mHSSurnameAttribute.oa.mjs';
 import { id_oc_mhs_surname } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-surname.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSSurname */
 /**
  * @summary mHSSurname
  * @description
@@ -48,6 +47,5 @@ export const mHSSurname: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSSurnameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_surname /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSSurname */
 
 /* eslint-enable */

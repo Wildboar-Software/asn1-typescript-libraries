@@ -20,7 +20,6 @@ import {
     _decode_CommonSubmissionResults,
     _encode_CommonSubmissionResults,
 } from '../MSAbstractService/CommonSubmissionResults.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MSMessageSubmissionResult */
 /**
  * @summary MSMessageSubmissionResult
  * @description
@@ -42,13 +41,9 @@ import {
 export type MSMessageSubmissionResult =
     | { mts_result: MSMessageSubmissionResult_mts_result } /* CHOICE_ALT_ROOT */
     | { store_draft_result: CommonSubmissionResults } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MSMessageSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSMessageSubmissionResult */
 let _cached_decoder_for_MSMessageSubmissionResult: $.ASN1Decoder<MSMessageSubmissionResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSMessageSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSMessageSubmissionResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSMessageSubmissionResult
  * @function
@@ -74,13 +69,9 @@ export function _decode_MSMessageSubmissionResult(el: _Element) {
     }
     return _cached_decoder_for_MSMessageSubmissionResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSMessageSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSMessageSubmissionResult */
 let _cached_encoder_for_MSMessageSubmissionResult: $.ASN1Encoder<MSMessageSubmissionResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSMessageSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSMessageSubmissionResult */
 /**
  * @summary Encodes a(n) MSMessageSubmissionResult into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_MSMessageSubmissionResult(
     return _cached_encoder_for_MSMessageSubmissionResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSMessageSubmissionResult */
 
 /* eslint-enable */

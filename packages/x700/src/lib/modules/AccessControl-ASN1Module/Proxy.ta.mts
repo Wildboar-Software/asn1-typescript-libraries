@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION Proxy */
 /**
  * @summary Proxy
  * @description
@@ -59,9 +58,7 @@ export class Proxy {
         return new Proxy(_o.proxyId, _o.proxyValue);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Proxy */
 /**
  * @summary The Leading Root Component Types of Proxy
  * @description
@@ -86,9 +83,7 @@ export const _root_component_type_list_1_spec_for_Proxy: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Proxy */
 /**
  * @summary The Trailing Root Component Types of Proxy
  * @description
@@ -98,9 +93,7 @@ export const _root_component_type_list_1_spec_for_Proxy: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Proxy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Proxy */
 /**
  * @summary The Extension Addition Component Types of Proxy
  * @description
@@ -110,13 +103,9 @@ export const _root_component_type_list_2_spec_for_Proxy: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Proxy: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Proxy */
 let _cached_decoder_for_Proxy: $.ASN1Decoder<Proxy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Proxy */
 /**
  * @summary Decodes an ASN.1 element into a(n) Proxy
  * @function
@@ -149,13 +138,9 @@ export function _decode_Proxy(el: _Element) {
     }
     return _cached_decoder_for_Proxy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Proxy */
 let _cached_encoder_for_Proxy: $.ASN1Encoder<Proxy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Proxy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Proxy */
 /**
  * @summary Encodes a(n) Proxy into an ASN.1 Element.
  * @function
@@ -191,6 +176,5 @@ export function _encode_Proxy(value: Proxy, elGetter: $.ASN1Encoder<Proxy>) {
     return _cached_encoder_for_Proxy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Proxy */
 
 /* eslint-enable */

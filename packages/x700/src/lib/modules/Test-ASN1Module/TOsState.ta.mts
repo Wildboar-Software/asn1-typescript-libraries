@@ -21,7 +21,6 @@ import {
     _decode_TestState,
     _encode_TestState,
 } from '../Test-ASN1Module/TestState.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TOsState */
 /**
  * @summary TOsState
  * @description
@@ -72,9 +71,7 @@ export class TOsState {
         return new TOsState(_o.tOInstance, _o.testState);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TOsState */
 /**
  * @summary The Leading Root Component Types of TOsState
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_TOsState: $.ComponentSpec[] = 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TOsState */
 /**
  * @summary The Trailing Root Component Types of TOsState
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_TOsState: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TOsState: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TOsState */
 /**
  * @summary The Extension Addition Component Types of TOsState
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_TOsState: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_TOsState: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TOsState */
 let _cached_decoder_for_TOsState: $.ASN1Decoder<TOsState> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TOsState */
 /**
  * @summary Decodes an ASN.1 element into a(n) TOsState
  * @function
@@ -163,13 +152,9 @@ export function _decode_TOsState(el: _Element) {
     }
     return _cached_decoder_for_TOsState(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TOsState */
 let _cached_encoder_for_TOsState: $.ASN1Encoder<TOsState> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TOsState */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TOsState */
 /**
  * @summary Encodes a(n) TOsState into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_TOsState(
     return _cached_encoder_for_TOsState(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TOsState */
 
 /* eslint-enable */

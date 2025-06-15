@@ -12,7 +12,6 @@ import {
     _encode_TBerror_code,
     _enum_for_TBerror_code,
 } from "../TrustBroker/TBerror-code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TBerror */
 /**
  * @summary TBerror
  * @description
@@ -90,9 +89,7 @@ export class TBerror {
 
     public static _enum_for_code = _enum_for_TBerror_code;
 }
-/* END_OF_SYMBOL_DEFINITION TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBerror */
 /**
  * @summary The Leading Root Component Types of TBerror
  * @description
@@ -117,9 +114,7 @@ export const _root_component_type_list_1_spec_for_TBerror: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBerror */
 /**
  * @summary The Trailing Root Component Types of TBerror
  * @description
@@ -129,9 +124,7 @@ export const _root_component_type_list_1_spec_for_TBerror: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TBerror: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBerror */
 /**
  * @summary The Extension Addition Component Types of TBerror
  * @description
@@ -141,13 +134,9 @@ export const _root_component_type_list_2_spec_for_TBerror: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_TBerror: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBerror */
 let _cached_decoder_for_TBerror: $.ASN1Decoder<TBerror> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBerror */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBerror
  * @function
@@ -191,13 +180,9 @@ export function _decode_TBerror(el: _Element) {
     }
     return _cached_decoder_for_TBerror(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBerror */
 let _cached_encoder_for_TBerror: $.ASN1Encoder<TBerror> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBerror */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBerror */
 /**
  * @summary Encodes a(n) TBerror into an ASN.1 Element.
  * @function
@@ -236,6 +221,5 @@ export function _encode_TBerror(
     return _cached_encoder_for_TBerror(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBerror */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_Control,
   _encode_Control,
 } from '../Lightweight-Directory-Access-Protocol-V3/Control.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Controls */
+
 /**
  * @summary Controls
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Controls = Control[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Controls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Controls */
+
 let _cached_decoder_for_Controls: $.ASN1Decoder<Controls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Controls */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Controls */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Controls
  * @function
@@ -48,13 +46,11 @@ export function _decode_Controls(el: _Element) {
   }
   return _cached_decoder_for_Controls(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Controls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Controls */
+
 let _cached_encoder_for_Controls: $.ASN1Encoder<Controls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Controls */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Controls */
+
 /**
  * @summary Encodes a(n) Controls into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_Controls(
   return _cached_encoder_for_Controls(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Controls */
 
 /* eslint-enable */

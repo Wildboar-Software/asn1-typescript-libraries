@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ccr_basic_encoding */
+
 /**
  * @summary ccr_basic_encoding
  * @description
@@ -29,6 +29,5 @@ export const ccr_basic_encoding: OBJECT_IDENTIFIER = new _OID(
   [/* asn1 */ 1, /* basic-encoding */ 1],
   joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION ccr_basic_encoding */
 
 /* eslint-enable */

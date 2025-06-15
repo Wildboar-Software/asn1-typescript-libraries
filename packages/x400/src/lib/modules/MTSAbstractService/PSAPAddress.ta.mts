@@ -15,7 +15,6 @@ import {
     _decode_PresentationAddress,
     _encode_PresentationAddress,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PSAPAddress */
 /**
  * @summary PSAPAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PSAPAddress = PresentationAddress; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PSAPAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PSAPAddress */
 let _cached_decoder_for_PSAPAddress: $.ASN1Decoder<PSAPAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PSAPAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PSAPAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PSAPAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_PSAPAddress(el: _Element) {
     }
     return _cached_decoder_for_PSAPAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PSAPAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PSAPAddress */
 let _cached_encoder_for_PSAPAddress: $.ASN1Encoder<PSAPAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PSAPAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PSAPAddress */
 /**
  * @summary Encodes a(n) PSAPAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PSAPAddress(
     return _cached_encoder_for_PSAPAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PSAPAddress */
 
 /* eslint-enable */

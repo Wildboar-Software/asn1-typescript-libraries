@@ -18,7 +18,7 @@ import {
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ManufacturerIdentification */
+
 /**
  * @summary ManufacturerIdentification
  * @description
@@ -88,9 +88,8 @@ export class ManufacturerIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ManufacturerIdentification */
+
 /**
  * @summary The Leading Root Component Types of ManufacturerIdentification
  * @description
@@ -129,9 +128,8 @@ export const _root_component_type_list_1_spec_for_ManufacturerIdentification: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ManufacturerIdentification */
+
 /**
  * @summary The Trailing Root Component Types of ManufacturerIdentification
  * @description
@@ -141,9 +139,8 @@ export const _root_component_type_list_1_spec_for_ManufacturerIdentification: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ManufacturerIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ManufacturerIdentification */
+
 /**
  * @summary The Extension Addition Component Types of ManufacturerIdentification
  * @description
@@ -153,13 +150,11 @@ export const _root_component_type_list_2_spec_for_ManufacturerIdentification: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_ManufacturerIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManufacturerIdentification */
+
 let _cached_decoder_for_ManufacturerIdentification: $.ASN1Decoder<ManufacturerIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManufacturerIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManufacturerIdentification
  * @function
@@ -211,13 +206,11 @@ export function _decode_ManufacturerIdentification(el: _Element) {
     }
     return _cached_decoder_for_ManufacturerIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManufacturerIdentification */
+
 let _cached_encoder_for_ManufacturerIdentification: $.ASN1Encoder<ManufacturerIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManufacturerIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManufacturerIdentification */
+
 /**
  * @summary Encodes a(n) ManufacturerIdentification into an ASN.1 Element.
  * @function
@@ -256,6 +249,5 @@ export function _encode_ManufacturerIdentification(
     return _cached_encoder_for_ManufacturerIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManufacturerIdentification */
 
 /* eslint-enable */

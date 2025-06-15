@@ -18,7 +18,7 @@ import {
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CommonReqComp */
+
 /**
  * @summary CommonReqComp
  * @description
@@ -86,9 +86,8 @@ export class CommonReqComp {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonReqComp */
+
 /**
  * @summary The Leading Root Component Types of CommonReqComp
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_CommonReqComp: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonReqComp */
+
 /**
  * @summary The Trailing Root Component Types of CommonReqComp
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_CommonReqComp: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonReqComp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonReqComp */
+
 /**
  * @summary The Extension Addition Component Types of CommonReqComp
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_CommonReqComp: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_CommonReqComp: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonReqComp */
+
 let _cached_decoder_for_CommonReqComp: $.ASN1Decoder<CommonReqComp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonReqComp */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonReqComp
  * @function
@@ -207,13 +202,11 @@ export function _decode_CommonReqComp(el: _Element) {
     }
     return _cached_decoder_for_CommonReqComp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonReqComp */
+
 let _cached_encoder_for_CommonReqComp: $.ASN1Encoder<CommonReqComp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonReqComp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonReqComp */
+
 /**
  * @summary Encodes a(n) CommonReqComp into an ASN.1 Element.
  * @function
@@ -265,6 +258,5 @@ export function _encode_CommonReqComp(
     return _cached_encoder_for_CommonReqComp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonReqComp */
 
 /* eslint-enable */

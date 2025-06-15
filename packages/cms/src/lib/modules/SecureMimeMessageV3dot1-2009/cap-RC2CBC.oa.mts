@@ -6,7 +6,7 @@ import {
     _decode_SMIMECapabilitiesParametersForRC2CBC,
     _encode_SMIMECapabilitiesParametersForRC2CBC,
 } from "../SecureMimeMessageV3dot1-2009/SMIMECapabilitiesParametersForRC2CBC.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION cap_RC2CBC */
+
 /**
  * @summary cap_RC2CBC
  * @description
@@ -34,6 +34,5 @@ export const cap_RC2CBC: SMIME_CAPS<SMIMECapabilitiesParametersForRC2CBC> = {
     "&id": rc2_cbc /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cap_RC2CBC */
 
 /* eslint-enable */

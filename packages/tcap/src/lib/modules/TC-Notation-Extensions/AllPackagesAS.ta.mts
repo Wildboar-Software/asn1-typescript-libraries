@@ -15,7 +15,6 @@ import {
     _decode_TCSingleAS,
     _encode_TCSingleAS,
 } from '../TC-Notation-Extensions/TCSingleAS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AllPackagesAS */
 /**
  * @summary AllPackagesAS
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type AllPackagesAS = TCSingleAS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AllPackagesAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AllPackagesAS */
 let _cached_decoder_for_AllPackagesAS: $.ASN1Decoder<AllPackagesAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AllPackagesAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AllPackagesAS */
 /**
  * @summary Decodes an ASN.1 element into a(n) AllPackagesAS
  * @function
@@ -52,13 +47,9 @@ export function _decode_AllPackagesAS(el: _Element) {
     }
     return _cached_decoder_for_AllPackagesAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AllPackagesAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AllPackagesAS */
 let _cached_encoder_for_AllPackagesAS: $.ASN1Encoder<AllPackagesAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AllPackagesAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AllPackagesAS */
 /**
  * @summary Encodes a(n) AllPackagesAS into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_AllPackagesAS(
     return _cached_encoder_for_AllPackagesAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AllPackagesAS */
 
 /* eslint-enable */

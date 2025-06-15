@@ -6,7 +6,6 @@ import {
 import { id_at_tagLocation } from "../SelectedAttributeTypes/id-at-tagLocation.va.mjs";
 import { utmCoordinates } from "../SelectedAttributeTypes/utmCoordinates.oa.mjs";
 import { utmCoords } from "../SelectedAttributeTypes/utmCoords.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION tagLocation */
 /**
  * @summary tagLocation
  * @description
@@ -46,6 +45,5 @@ export const tagLocation: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION tagLocation */
 
 /* eslint-enable */

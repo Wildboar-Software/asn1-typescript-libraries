@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
 import { id_eit } from '../MTSObjectIdentifiers/id-eit.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_eit_videotex */
 /**
  * @summary id_eit_videotex
  * @description
@@ -25,6 +24,5 @@ import { id_eit } from '../MTSObjectIdentifiers/id-eit.va.mjs';
  * @constant
  */
 export const id_eit_videotex: ID = new _OID([6], id_eit);
-/* END_OF_SYMBOL_DEFINITION id_eit_videotex */
 
 /* eslint-enable */

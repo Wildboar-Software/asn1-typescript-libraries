@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_telebio } from '../Telebiometrics/id-telebio.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_tmm */
+
 /**
  * @summary id_tmm
  * @description
@@ -25,6 +25,5 @@ import { id_telebio } from '../Telebiometrics/id-telebio.va.mjs';
  * @constant
  */
 export const id_tmm: OBJECT_IDENTIFIER = new _OID([/* tmm */ 1], id_telebio);
-/* END_OF_SYMBOL_DEFINITION id_tmm */
 
 /* eslint-enable */

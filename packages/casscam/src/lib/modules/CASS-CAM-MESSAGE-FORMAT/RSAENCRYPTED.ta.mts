@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION RSAENCRYPTED */
+
 /**
  * @summary RSAENCRYPTED
  * @description
@@ -31,9 +31,8 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type RSAENCRYPTED = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION RSAENCRYPTED */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_RSAENCRYPTED */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) RSAENCRYPTED
  * @function
@@ -44,9 +43,8 @@ export
 function _get_decoder_for_RSAENCRYPTED<ToBeEnciphered>(_decode_ToBeEnciphered: $.ASN1Decoder<ToBeEnciphered>) {
     return $._decodeBitString;
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_RSAENCRYPTED */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_RSAENCRYPTED */
+
 /**
  * @summary Returns a function that will encode a(n) RSAENCRYPTED into an ASN.1 Element.
  * @function
@@ -56,6 +54,5 @@ export
 function _get_encoder_for_RSAENCRYPTED<ToBeEnciphered>(_encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>) {
     return $._encodeBitString;
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_RSAENCRYPTED */
 
 /* eslint-enable */

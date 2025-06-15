@@ -16,7 +16,6 @@ import {
     _encode_MessageAdministrationPDUs,
 } from '../MTSAccessProtocol/MessageAdministrationPDUs.ta.mjs';
 import { id_as_mase_94 } from '../MHSProtocolObjectIdentifiers/id-as-mase-94.va.mjs';
-/* START_OF_SYMBOL_DEFINITION message_administration_abstract_syntax_94 */
 /**
  * @summary message_administration_abstract_syntax_94
  * @description
@@ -46,6 +45,5 @@ export const message_administration_abstract_syntax_94: ABSTRACT_SYNTAX<MessageA
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION message_administration_abstract_syntax_94 */
 
 /* eslint-enable */

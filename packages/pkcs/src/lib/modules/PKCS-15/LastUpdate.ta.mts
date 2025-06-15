@@ -6,7 +6,7 @@ import {
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LastUpdate */
+
 /**
  * @summary LastUpdate
  * @description
@@ -25,13 +25,11 @@ export type LastUpdate =
     | { generalizedTime: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | { referencedTime: ReferencedValue<GeneralizedTime> } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION LastUpdate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastUpdate */
+
 let _cached_decoder_for_LastUpdate: $.ASN1Decoder<LastUpdate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastUpdate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastUpdate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LastUpdate
  * @function
@@ -66,13 +64,11 @@ export function _decode_LastUpdate(el: _Element) {
     }
     return _cached_decoder_for_LastUpdate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LastUpdate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastUpdate */
+
 let _cached_encoder_for_LastUpdate: $.ASN1Encoder<LastUpdate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastUpdate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastUpdate */
+
 /**
  * @summary Encodes a(n) LastUpdate into an ASN.1 Element.
  * @function
@@ -98,6 +94,5 @@ export function _encode_LastUpdate(
     return _cached_encoder_for_LastUpdate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastUpdate */
 
 /* eslint-enable */

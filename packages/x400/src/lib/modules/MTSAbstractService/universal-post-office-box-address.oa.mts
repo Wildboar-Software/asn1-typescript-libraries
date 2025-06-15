@@ -15,7 +15,6 @@ import {
     _encode_UniversalPostOfficeBoxAddress,
 } from '../MTSAbstractService/UniversalPostOfficeBoxAddress.ta.mjs';
 import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION universal_post_office_box_address */
 /**
  * @summary universal_post_office_box_address
  * @description
@@ -44,6 +43,5 @@ export const universal_post_office_box_address: EXTENSION_ATTRIBUTE<UniversalPos
     '&id': 37 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_post_office_box_address */
 
 /* eslint-enable */

@@ -10,7 +10,7 @@ import {
     _encode_SMIMECapabilities,
 } from "../PKCS-9/SMIMECapabilities.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION smimeCapabilities */
+
 /**
  * @summary smimeCapabilities
  * @description
@@ -44,6 +44,5 @@ export const smimeCapabilities: ATTRIBUTE<SMIMECapabilities> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION smimeCapabilities */
 
 /* eslint-enable */

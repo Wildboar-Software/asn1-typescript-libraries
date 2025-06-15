@@ -25,7 +25,7 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from '../ISO8823-PRESENTATION/Transfer-syntax-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Context_list_Item */
+
 /**
  * @summary Context_list_Item
  * @description
@@ -82,9 +82,8 @@ export class Context_list_Item {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Context_list_Item */
+
 /**
  * @summary The Leading Root Component Types of Context_list_Item
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_Context_list_Item: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context_list_Item */
+
 /**
  * @summary The Trailing Root Component Types of Context_list_Item
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_Context_list_Item: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Context_list_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context_list_Item */
+
 /**
  * @summary The Extension Addition Component Types of Context_list_Item
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_Context_list_Item: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_Context_list_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_list_Item */
+
 let _cached_decoder_for_Context_list_Item: $.ASN1Decoder<Context_list_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Context_list_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Context_list_Item
  * @function
@@ -188,13 +183,11 @@ export function _decode_Context_list_Item(el: _Element) {
     }
     return _cached_decoder_for_Context_list_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_list_Item */
+
 let _cached_encoder_for_Context_list_Item: $.ASN1Encoder<Context_list_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_list_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Context_list_Item */
+
 /**
  * @summary Encodes a(n) Context_list_Item into an ASN.1 Element.
  * @function
@@ -233,6 +226,5 @@ export function _encode_Context_list_Item(
     return _cached_encoder_for_Context_list_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Context_list_Item */
 
 /* eslint-enable */

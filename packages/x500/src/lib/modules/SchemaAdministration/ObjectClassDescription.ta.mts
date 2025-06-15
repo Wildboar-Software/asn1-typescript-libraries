@@ -17,7 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ObjectClassDescription */
 /**
  * @summary ObjectClassDescription
  * @description
@@ -111,9 +110,7 @@ export class ObjectClassDescription {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectClassDescription */
 /**
  * @summary The Leading Root Component Types of ObjectClassDescription
  * @description
@@ -165,9 +162,7 @@ export const _root_component_type_list_1_spec_for_ObjectClassDescription: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectClassDescription */
 /**
  * @summary The Trailing Root Component Types of ObjectClassDescription
  * @description
@@ -177,9 +172,7 @@ export const _root_component_type_list_1_spec_for_ObjectClassDescription: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObjectClassDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectClassDescription */
 /**
  * @summary The Extension Addition Component Types of ObjectClassDescription
  * @description
@@ -189,13 +182,9 @@ export const _root_component_type_list_2_spec_for_ObjectClassDescription: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_ObjectClassDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClassDescription */
 let _cached_decoder_for_ObjectClassDescription: $.ASN1Decoder<ObjectClassDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectClassDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectClassDescription
  * @function
@@ -261,13 +250,9 @@ export function _decode_ObjectClassDescription(el: _Element) {
     }
     return _cached_decoder_for_ObjectClassDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClassDescription */
 let _cached_encoder_for_ObjectClassDescription: $.ASN1Encoder<ObjectClassDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectClassDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectClassDescription */
 /**
  * @summary Encodes a(n) ObjectClassDescription into an ASN.1 Element.
  * @function
@@ -328,6 +313,5 @@ export function _encode_ObjectClassDescription(
     return _cached_encoder_for_ObjectClassDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectClassDescription */
 
 /* eslint-enable */

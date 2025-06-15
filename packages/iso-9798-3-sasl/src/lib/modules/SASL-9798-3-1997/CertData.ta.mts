@@ -18,7 +18,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION CertData */
+
 /**
  * @summary CertData
  * @description
@@ -38,13 +38,11 @@ type CertData =
     { certificateSet: Certificate[] } /* CHOICE_ALT_ROOT */
     | { certURL: IA5String } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertData */
+
 let _cached_decoder_for_CertData: $.ASN1Decoder<CertData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertData
  * @function
@@ -59,13 +57,11 @@ function _decode_CertData (el: _Element) {
 }); }
     return _cached_decoder_for_CertData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertData */
+
 let _cached_encoder_for_CertData: $.ASN1Encoder<CertData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertData */
+
 /**
  * @summary Encodes a(n) CertData into an ASN.1 Element.
  * @function
@@ -82,6 +78,5 @@ function _encode_CertData (value: CertData, elGetter: $.ASN1Encoder<CertData>) {
     return _cached_encoder_for_CertData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertData */
 
 /* eslint-enable */

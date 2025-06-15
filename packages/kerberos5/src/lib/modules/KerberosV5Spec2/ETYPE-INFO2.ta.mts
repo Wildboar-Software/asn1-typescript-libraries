@@ -15,7 +15,7 @@ import {
   _decode_ETYPE_INFO2_ENTRY,
   _encode_ETYPE_INFO2_ENTRY,
 } from '../KerberosV5Spec2/ETYPE-INFO2-ENTRY.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ETYPE_INFO2 */
+
 /**
  * @summary ETYPE_INFO2
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ETYPE_INFO2 = ETYPE_INFO2_ENTRY[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ETYPE_INFO2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ETYPE_INFO2 */
+
 let _cached_decoder_for_ETYPE_INFO2: $.ASN1Decoder<ETYPE_INFO2> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ETYPE_INFO2 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ETYPE_INFO2 */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ETYPE_INFO2
  * @function
@@ -48,13 +46,11 @@ export function _decode_ETYPE_INFO2(el: _Element) {
   }
   return _cached_decoder_for_ETYPE_INFO2(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ETYPE_INFO2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ETYPE_INFO2 */
+
 let _cached_encoder_for_ETYPE_INFO2: $.ASN1Encoder<ETYPE_INFO2> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ETYPE_INFO2 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ETYPE_INFO2 */
+
 /**
  * @summary Encodes a(n) ETYPE_INFO2 into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ETYPE_INFO2(
   return _cached_encoder_for_ETYPE_INFO2(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ETYPE_INFO2 */
 
 /* eslint-enable */

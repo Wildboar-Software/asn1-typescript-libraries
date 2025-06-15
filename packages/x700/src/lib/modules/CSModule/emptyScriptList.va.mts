@@ -18,7 +18,6 @@ import {
     _decode_ScriptList,
     _encode_ScriptList,
 } from '../CSModule/ScriptList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION emptyScriptList */
 /**
  * @summary emptyScriptList
  * @description
@@ -32,6 +31,5 @@ import {
  * @constant
  */
 export const emptyScriptList: AvailableScriptList = [];
-/* END_OF_SYMBOL_DEFINITION emptyScriptList */
 
 /* eslint-enable */

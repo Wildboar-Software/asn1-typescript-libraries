@@ -15,7 +15,7 @@ import {
   _encode_asymmetricKeyInformation_KiType,
 } from '../GulsSecurityTransformations/asymmetricKeyInformation-KiType.ta.mjs';
 import { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION asymmetricKeyInformation */
+
 /**
  * @summary asymmetricKeyInformation
  * @description
@@ -50,6 +50,5 @@ export const asymmetricKeyInformation: KEY_INFORMATION<asymmetricKeyInformation_
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&KiType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION asymmetricKeyInformation */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_DigitalPostmarkType,
   _encode_DigitalPostmarkType,
 } from '../CMAIL/DigitalPostmarkType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReceiptNoticeType */
+
 /**
  * @summary ReceiptNoticeType
  * @description
@@ -58,9 +58,8 @@ export class ReceiptNoticeType {
     return new ReceiptNoticeType(_o.operatorPostmark);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReceiptNoticeType */
+
 /**
  * @summary The Leading Root Component Types of ReceiptNoticeType
  * @description
@@ -78,9 +77,8 @@ export const _root_component_type_list_1_spec_for_ReceiptNoticeType: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReceiptNoticeType */
+
 /**
  * @summary The Trailing Root Component Types of ReceiptNoticeType
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_ReceiptNoticeType: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReceiptNoticeType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReceiptNoticeType */
+
 /**
  * @summary The Extension Addition Component Types of ReceiptNoticeType
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_ReceiptNoticeType: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_ReceiptNoticeType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptNoticeType */
+
 let _cached_decoder_for_ReceiptNoticeType: $.ASN1Decoder<ReceiptNoticeType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReceiptNoticeType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReceiptNoticeType
  * @function
@@ -136,13 +131,11 @@ export function _decode_ReceiptNoticeType(el: _Element) {
   }
   return _cached_decoder_for_ReceiptNoticeType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptNoticeType */
+
 let _cached_encoder_for_ReceiptNoticeType: $.ASN1Encoder<ReceiptNoticeType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReceiptNoticeType */
+
 /**
  * @summary Encodes a(n) ReceiptNoticeType into an ASN.1 Element.
  * @function
@@ -173,6 +166,5 @@ export function _encode_ReceiptNoticeType(
   return _cached_encoder_for_ReceiptNoticeType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReceiptNoticeType */
 
 /* eslint-enable */

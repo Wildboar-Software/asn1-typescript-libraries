@@ -11,7 +11,6 @@ import {
     _decode_TbsHandshakeWrpRej,
     _encode_TbsHandshakeWrpRej,
 } from "../Wrapper/TbsHandshakeWrpRej.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HandshakeWrpRej */
 /**
  * @summary HandshakeWrpRej
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type HandshakeWrpRej = Signed<TbsHandshakeWrpRej>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION HandshakeWrpRej */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HandshakeWrpRej */
 let _cached_decoder_for_HandshakeWrpRej: $.ASN1Decoder<HandshakeWrpRej> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HandshakeWrpRej */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HandshakeWrpRej */
 /**
  * @summary Decodes an ASN.1 element into a(n) HandshakeWrpRej
  * @function
@@ -44,13 +39,9 @@ export function _decode_HandshakeWrpRej(el: _Element) {
     }
     return _cached_decoder_for_HandshakeWrpRej(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HandshakeWrpRej */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HandshakeWrpRej */
 let _cached_encoder_for_HandshakeWrpRej: $.ASN1Encoder<HandshakeWrpRej> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HandshakeWrpRej */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HandshakeWrpRej */
 /**
  * @summary Encodes a(n) HandshakeWrpRej into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_HandshakeWrpRej(
     return _cached_encoder_for_HandshakeWrpRej(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HandshakeWrpRej */
 
 /* eslint-enable */

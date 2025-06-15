@@ -66,7 +66,6 @@ import {
     _decode_ReplaceAvlRsp,
     _encode_ReplaceAvlRsp,
 } from "../AVL-management/ReplaceAvlRsp.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AvlProt */
 /**
  * @summary AvlProt
  * @description
@@ -106,13 +105,9 @@ export type AvlProt =
     | { deleteAvlRsp: DeleteAvlRsp } /* CHOICE_ALT_ROOT */
     | { abortAVL: AbortAVL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AvlProt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AvlProt */
 let _cached_decoder_for_AvlProt: $.ASN1Decoder<AvlProt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AvlProt */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AvlProt */
 /**
  * @summary Decodes an ASN.1 element into a(n) AvlProt
  * @function
@@ -186,13 +181,9 @@ export function _decode_AvlProt(el: _Element) {
     }
     return _cached_decoder_for_AvlProt(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AvlProt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AvlProt */
 let _cached_encoder_for_AvlProt: $.ASN1Encoder<AvlProt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AvlProt */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AvlProt */
 /**
  * @summary Encodes a(n) AvlProt into an ASN.1 Element.
  * @function
@@ -292,6 +283,5 @@ export function _encode_AvlProt(
     return _cached_encoder_for_AvlProt(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AvlProt */
 
 /* eslint-enable */

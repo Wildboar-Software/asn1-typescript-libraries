@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_package } from "../UsefulDefinitions/id-package.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_package_dopConnection */
 /**
  * @summary id_package_dopConnection
  * @description
@@ -18,6 +17,5 @@ export const id_package_dopConnection: OBJECT_IDENTIFIER = new _OID(
     [13],
     id_package
 );
-/* END_OF_SYMBOL_DEFINITION id_package_dopConnection */
 
 /* eslint-enable */

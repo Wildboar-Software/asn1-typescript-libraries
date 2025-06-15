@@ -11,7 +11,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IdmResult */
 /**
  * @summary IdmResult
  * @description
@@ -79,9 +78,7 @@ export class IdmResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmResult */
 /**
  * @summary The Leading Root Component Types of IdmResult
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_IdmResult: $.ComponentSpec[] =
     new $.ComponentSpec("opcode", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmResult */
 /**
  * @summary The Trailing Root Component Types of IdmResult
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_IdmResult: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IdmResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmResult */
 /**
  * @summary The Extension Addition Component Types of IdmResult
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_IdmResult: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_IdmResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmResult */
 let _cached_decoder_for_IdmResult: $.ASN1Decoder<IdmResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IdmResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) IdmResult
  * @function
@@ -163,13 +152,9 @@ export function _decode_IdmResult(el: _Element) {
     }
     return _cached_decoder_for_IdmResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmResult */
 let _cached_encoder_for_IdmResult: $.ASN1Encoder<IdmResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IdmResult */
 /**
  * @summary Encodes a(n) IdmResult into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_IdmResult(
     return _cached_encoder_for_IdmResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IdmResult */
 
 /* eslint-enable */

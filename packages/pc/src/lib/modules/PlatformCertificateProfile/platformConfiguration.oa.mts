@@ -13,7 +13,6 @@ import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/A
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { PlatformConfiguration, _decode_PlatformConfiguration, _encode_PlatformConfiguration } from "../PlatformCertificateProfile/PlatformConfiguration.ta.mjs";
 import { tcg_at_platformConfiguration_v2 } from "../PlatformCertificateProfile/tcg-at-platformConfiguration-v2.va.mjs";
-/* START_OF_SYMBOL_DEFINITION platformConfiguration */
 /**
  * @summary platformConfiguration
  * @description
@@ -48,6 +47,5 @@ const platformConfiguration: ATTRIBUTE<PlatformConfiguration> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION platformConfiguration */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _encode_DLPolicy,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy.ta.mjs';
 import { id_at_mhs_dl_policy } from '../MHSObjectIdentifiers/id-at-mhs-dl-policy.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_dl_policy */
 /**
  * @summary mhs_dl_policy
  * @description
@@ -58,6 +57,5 @@ export const mhs_dl_policy: ATTRIBUTE<DLPolicy> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_dl_policy */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_replaceAvlReq */
 /**
  * @summary id_replaceAvlReq
  * @description
@@ -15,6 +14,5 @@ import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
  * @constant
  */
 export const id_replaceAvlReq: OBJECT_IDENTIFIER = new _OID([4], id_cmsct);
-/* END_OF_SYMBOL_DEFINITION id_replaceAvlReq */
 
 /* eslint-enable */

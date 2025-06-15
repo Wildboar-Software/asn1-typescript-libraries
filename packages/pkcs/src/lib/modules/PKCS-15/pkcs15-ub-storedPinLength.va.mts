@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION pkcs15_ub_storedPinLength */
+
 /**
  * @summary pkcs15_ub_storedPinLength
  * @description
@@ -15,6 +15,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const pkcs15_ub_storedPinLength: INTEGER = 64;
-/* END_OF_SYMBOL_DEFINITION pkcs15_ub_storedPinLength */
 
 /* eslint-enable */

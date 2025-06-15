@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_IntermediateResourceBoundaryTestOutcome */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome
  * @description
@@ -30,9 +29,7 @@ export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
     wrongSignalReceived = 2,
     waitDurationTimerExpired = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_IntermediateResourceBoundaryTestOutcome */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome
  * @description
@@ -46,9 +43,7 @@ export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
  * ```@enum {number}
  */
 export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
-/* END_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome
  * @description
@@ -62,9 +57,7 @@ export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateReso
  * ```@enum {number}
  */
 export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
-/* END_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_passed */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_passed
  * @constant
@@ -72,9 +65,7 @@ export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateRes
  */
 export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.passed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_passed */
 
-/* START_OF_SYMBOL_DEFINITION passed */
 /**
  * @summary passed
  * @constant
@@ -82,9 +73,7 @@ export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourc
  */
 export const passed: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.passed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION passed */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_unexpected */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_unexpected
  * @constant
@@ -92,9 +81,7 @@ export const passed: IntermediateResourceBoundaryTestOutcome =
  */
 export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_unexpected */
 
-/* START_OF_SYMBOL_DEFINITION unexpected */
 /**
  * @summary unexpected
  * @constant
@@ -102,9 +89,7 @@ export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateRes
  */
 export const unexpected: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unexpected */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_wrongSignalReceived */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_wrongSignalReceived
  * @constant
@@ -112,9 +97,7 @@ export const unexpected: IntermediateResourceBoundaryTestOutcome =
  */
 export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_wrongSignalReceived */
 
-/* START_OF_SYMBOL_DEFINITION wrongSignalReceived */
 /**
  * @summary wrongSignalReceived
  * @constant
@@ -122,9 +105,7 @@ export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: Interm
  */
 export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION wrongSignalReceived */
 
-/* START_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired */
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired
  * @constant
@@ -132,9 +113,7 @@ export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
  */
 export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired */
 
-/* START_OF_SYMBOL_DEFINITION waitDurationTimerExpired */
 /**
  * @summary waitDurationTimerExpired
  * @constant
@@ -142,13 +121,9 @@ export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: I
  */
 export const waitDurationTimerExpired: IntermediateResourceBoundaryTestOutcome =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION waitDurationTimerExpired */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResourceBoundaryTestOutcome */
 let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<IntermediateResourceBoundaryTestOutcome> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntermediateResourceBoundaryTestOutcome */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntermediateResourceBoundaryTestOutcome */
 /**
  * @summary Decodes an ASN.1 element into a(n) IntermediateResourceBoundaryTestOutcome
  * @function
@@ -162,13 +137,9 @@ export function _decode_IntermediateResourceBoundaryTestOutcome(el: _Element) {
     }
     return _cached_decoder_for_IntermediateResourceBoundaryTestOutcome(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IntermediateResourceBoundaryTestOutcome */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResourceBoundaryTestOutcome */
 let _cached_encoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Encoder<IntermediateResourceBoundaryTestOutcome> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntermediateResourceBoundaryTestOutcome */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntermediateResourceBoundaryTestOutcome */
 /**
  * @summary Encodes a(n) IntermediateResourceBoundaryTestOutcome into an ASN.1 Element.
  * @function
@@ -190,6 +161,5 @@ export function _encode_IntermediateResourceBoundaryTestOutcome(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntermediateResourceBoundaryTestOutcome */
 
 /* eslint-enable */

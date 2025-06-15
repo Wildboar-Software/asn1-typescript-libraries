@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CONTENT_TYPE */
+
 /**
  * @summary CONTENT_TYPE
  * @description
@@ -58,6 +58,5 @@ export interface CONTENT_TYPE<
      */
     readonly "&Type": Type;
 }
-/* END_OF_SYMBOL_DEFINITION CONTENT_TYPE */
 
 /* eslint-enable */

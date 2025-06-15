@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_swb */
 /**
  * @summary id_swb
  * @description
@@ -35,6 +34,5 @@ export const id_swb: OBJECT_IDENTIFIER = new _OID([
   /* pkix */ 7,
   18,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_swb */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _encode_ExtensionType,
 } from "./ExtensionType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RegistrationTypes */
 /**
  * @summary RegistrationTypes
  * @description
@@ -76,9 +75,7 @@ export class RegistrationTypes {
         return new RegistrationTypes(_o.standard_parameters, _o.extensions);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RegistrationTypes */
 /**
  * @summary The Leading Root Component Types of RegistrationTypes
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_RegistrationTypes: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RegistrationTypes */
 /**
  * @summary The Trailing Root Component Types of RegistrationTypes
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_RegistrationTypes: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RegistrationTypes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RegistrationTypes */
 /**
  * @summary The Extension Addition Component Types of RegistrationTypes
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_RegistrationTypes: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_RegistrationTypes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationTypes */
 let _cached_decoder_for_RegistrationTypes: $.ASN1Decoder<RegistrationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegistrationTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) RegistrationTypes
  * @function
@@ -181,13 +170,9 @@ export function _decode_RegistrationTypes(el: _Element) {
     }
     return _cached_decoder_for_RegistrationTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationTypes */
 let _cached_encoder_for_RegistrationTypes: $.ASN1Encoder<RegistrationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegistrationTypes */
 /**
  * @summary Encodes a(n) RegistrationTypes into an ASN.1 Element.
  * @function
@@ -235,6 +220,5 @@ export function _encode_RegistrationTypes(
     return _cached_encoder_for_RegistrationTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegistrationTypes */
 
 /* eslint-enable */

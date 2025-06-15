@@ -15,7 +15,6 @@ import {
     _decode_IPM,
     _encode_IPM,
 } from '../IPMSInformationObjects/IPM.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageData */
 /**
  * @summary MessageData
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageData = IPM; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageData */
 let _cached_decoder_for_MessageData: $.ASN1Decoder<MessageData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageData */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageData
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageData(el: _Element) {
     }
     return _cached_decoder_for_MessageData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageData */
 let _cached_encoder_for_MessageData: $.ASN1Encoder<MessageData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageData */
 /**
  * @summary Encodes a(n) MessageData into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageData(
     return _cached_encoder_for_MessageData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageData */
 
 /* eslint-enable */

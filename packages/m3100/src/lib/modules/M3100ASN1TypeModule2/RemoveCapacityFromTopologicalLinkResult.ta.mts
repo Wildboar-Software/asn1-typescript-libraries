@@ -15,7 +15,7 @@ import {
     _decode_Capacity,
     _encode_Capacity,
 } from '../M3100ASN1TypeModule2/Capacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RemoveCapacityFromTopologicalLinkResult */
+
 /**
  * @summary RemoveCapacityFromTopologicalLinkResult
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RemoveCapacityFromTopologicalLinkResult = Capacity; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RemoveCapacityFromTopologicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult */
+
 let _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult: $.ASN1Decoder<RemoveCapacityFromTopologicalLinkResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopologicalLinkResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopologicalLinkResult
  * @function
@@ -46,13 +44,11 @@ export function _decode_RemoveCapacityFromTopologicalLinkResult(el: _Element) {
     }
     return _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopologicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult */
+
 let _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopologicalLinkResult */
+
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopologicalLinkResult into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_RemoveCapacityFromTopologicalLinkResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopologicalLinkResult */
 
 /* eslint-enable */

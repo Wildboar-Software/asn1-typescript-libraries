@@ -8,7 +8,6 @@ import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
 import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
 import { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.mjs";
-/* START_OF_SYMBOL_DEFINITION oidRoot */
 /**
  * @summary oidRoot
  * @description
@@ -37,6 +36,5 @@ export const oidRoot: OBJECT_CLASS = {
     "&id": id_oidRoot /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oidRoot */
 
 /* eslint-enable */

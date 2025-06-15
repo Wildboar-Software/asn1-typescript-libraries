@@ -21,7 +21,6 @@ import {
     _decode_MembershipStatus,
     _encode_MembershipStatus,
 } from '../MdmpmfASN1Module/MembershipStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VerifyMembershipStatusReply */
 /**
  * @summary VerifyMembershipStatusReply
  * @description
@@ -84,9 +83,7 @@ export class VerifyMembershipStatusReply {
 
     public static _enum_for_membershipStatus = _enum_for_MembershipStatus;
 }
-/* END_OF_SYMBOL_DEFINITION VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_VerifyMembershipStatusReply */
 /**
  * @summary The Leading Root Component Types of VerifyMembershipStatusReply
  * @description
@@ -105,9 +102,7 @@ export const _root_component_type_list_1_spec_for_VerifyMembershipStatusReply: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_VerifyMembershipStatusReply */
 /**
  * @summary The Trailing Root Component Types of VerifyMembershipStatusReply
  * @description
@@ -117,9 +112,7 @@ export const _root_component_type_list_1_spec_for_VerifyMembershipStatusReply: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_VerifyMembershipStatusReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_VerifyMembershipStatusReply */
 /**
  * @summary The Extension Addition Component Types of VerifyMembershipStatusReply
  * @description
@@ -129,13 +122,9 @@ export const _root_component_type_list_2_spec_for_VerifyMembershipStatusReply: $
  * @constant
  */
 export const _extension_additions_list_spec_for_VerifyMembershipStatusReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VerifyMembershipStatusReply */
 let _cached_decoder_for_VerifyMembershipStatusReply: $.ASN1Decoder<VerifyMembershipStatusReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VerifyMembershipStatusReply */
 /**
  * @summary Decodes an ASN.1 element into a(n) VerifyMembershipStatusReply
  * @function
@@ -169,13 +158,9 @@ export function _decode_VerifyMembershipStatusReply(el: _Element) {
     }
     return _cached_decoder_for_VerifyMembershipStatusReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VerifyMembershipStatusReply */
 let _cached_encoder_for_VerifyMembershipStatusReply: $.ASN1Encoder<VerifyMembershipStatusReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VerifyMembershipStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VerifyMembershipStatusReply */
 /**
  * @summary Encodes a(n) VerifyMembershipStatusReply into an ASN.1 Element.
  * @function
@@ -210,6 +195,5 @@ export function _encode_VerifyMembershipStatusReply(
     return _cached_encoder_for_VerifyMembershipStatusReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VerifyMembershipStatusReply */
 
 /* eslint-enable */

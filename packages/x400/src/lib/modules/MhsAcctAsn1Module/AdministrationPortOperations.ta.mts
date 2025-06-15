@@ -15,7 +15,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AdministrationPortOperations */
 /**
  * @summary AdministrationPortOperations
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AdministrationPortOperations = EventTypeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AdministrationPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationPortOperations */
 let _cached_decoder_for_AdministrationPortOperations: $.ASN1Decoder<AdministrationPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdministrationPortOperations */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdministrationPortOperations
  * @function
@@ -46,13 +41,9 @@ export function _decode_AdministrationPortOperations(el: _Element) {
     }
     return _cached_decoder_for_AdministrationPortOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdministrationPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationPortOperations */
 let _cached_encoder_for_AdministrationPortOperations: $.ASN1Encoder<AdministrationPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdministrationPortOperations */
 /**
  * @summary Encodes a(n) AdministrationPortOperations into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AdministrationPortOperations(
     return _cached_encoder_for_AdministrationPortOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdministrationPortOperations */
 
 /* eslint-enable */

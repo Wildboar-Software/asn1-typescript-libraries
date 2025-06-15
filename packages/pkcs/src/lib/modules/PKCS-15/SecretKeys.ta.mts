@@ -11,7 +11,7 @@ import {
     _decode_SecretKeyType,
     _encode_SecretKeyType,
 } from "../PKCS-15/SecretKeyType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecretKeys */
+
 /**
  * @summary SecretKeys
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type SecretKeys = PathOrObjects<SecretKeyType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SecretKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecretKeys */
+
 let _cached_decoder_for_SecretKeys: $.ASN1Decoder<SecretKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecretKeys */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecretKeys */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecretKeys
  * @function
@@ -44,13 +42,11 @@ export function _decode_SecretKeys(el: _Element) {
     }
     return _cached_decoder_for_SecretKeys(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecretKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecretKeys */
+
 let _cached_encoder_for_SecretKeys: $.ASN1Encoder<SecretKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecretKeys */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecretKeys */
+
 /**
  * @summary Encodes a(n) SecretKeys into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_SecretKeys(
     return _cached_encoder_for_SecretKeys(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecretKeys */
 
 /* eslint-enable */

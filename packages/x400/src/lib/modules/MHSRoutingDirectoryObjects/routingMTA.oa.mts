@@ -20,7 +20,6 @@ import { routingCollective } from '../MHSRoutingDirectoryObjects/routingCollecti
 import { oRAddressSubtrees } from '../MHSRoutingDirectoryObjects/oRAddressSubtrees.oa.mjs';
 import { mHSMessageTransferAgentName } from '../MHSRoutingDirectoryObjects/mHSMessageTransferAgentName.oa.mjs';
 import { id_oc_routing_mta } from '../MHSRoutingObjectIdentifiers/id-oc-routing-mta.va.mjs';
-/* START_OF_SYMBOL_DEFINITION routingMTA */
 /**
  * @summary routingMTA
  * @description
@@ -51,6 +50,5 @@ export const routingMTA: OBJECT_CLASS = {
     '&id': id_oc_routing_mta /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION routingMTA */
 
 /* eslint-enable */

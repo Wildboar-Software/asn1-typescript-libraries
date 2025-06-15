@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOrDirectoryName,
     _encode_ORAddressAndOrDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DLExemptedRecipients */
 /**
  * @summary DLExemptedRecipients
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DLExemptedRecipients = ORAddressAndOrDirectoryName[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION DLExemptedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExemptedRecipients */
 let _cached_decoder_for_DLExemptedRecipients: $.ASN1Decoder<DLExemptedRecipients> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLExemptedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLExemptedRecipients */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLExemptedRecipients
  * @function
@@ -48,13 +43,9 @@ export function _decode_DLExemptedRecipients(el: _Element) {
     }
     return _cached_decoder_for_DLExemptedRecipients(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLExemptedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExemptedRecipients */
 let _cached_encoder_for_DLExemptedRecipients: $.ASN1Encoder<DLExemptedRecipients> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLExemptedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLExemptedRecipients */
 /**
  * @summary Encodes a(n) DLExemptedRecipients into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_DLExemptedRecipients(
     return _cached_encoder_for_DLExemptedRecipients(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLExemptedRecipients */
 
 /* eslint-enable */

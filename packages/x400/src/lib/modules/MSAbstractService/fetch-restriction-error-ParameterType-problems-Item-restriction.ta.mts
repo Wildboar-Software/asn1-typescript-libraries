@@ -17,7 +17,6 @@ import {
     _decode_MS_EITs,
     _encode_MS_EITs,
 } from '../MSAbstractService/MS-EITs.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType_problems_Item_restriction */
 /**
  * @summary fetch_restriction_error_ParameterType_problems_Item_restriction
  * @description
@@ -32,13 +31,9 @@ export type fetch_restriction_error_ParameterType_problems_Item_restriction =
     | { content_type: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { eit: MS_EITs } /* CHOICE_ALT_ROOT */
     | { attribute_length: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction */
 let _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction: $.ASN1Decoder<fetch_restriction_error_ParameterType_problems_Item_restriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_fetch_restriction_error_ParameterType_problems_Item_restriction */
 /**
  * @summary Decodes an ASN.1 element into a(n) fetch_restriction_error_ParameterType_problems_Item_restriction
  * @function
@@ -74,13 +69,9 @@ export function _decode_fetch_restriction_error_ParameterType_problems_Item_rest
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_fetch_restriction_error_ParameterType_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction */
 let _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction: $.ASN1Encoder<fetch_restriction_error_ParameterType_problems_Item_restriction> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_fetch_restriction_error_ParameterType_problems_Item_restriction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_fetch_restriction_error_ParameterType_problems_Item_restriction */
 /**
  * @summary Encodes a(n) fetch_restriction_error_ParameterType_problems_Item_restriction into an ASN.1 Element.
  * @function
@@ -125,6 +116,5 @@ export function _encode_fetch_restriction_error_ParameterType_problems_Item_rest
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_fetch_restriction_error_ParameterType_problems_Item_restriction */
 
 /* eslint-enable */

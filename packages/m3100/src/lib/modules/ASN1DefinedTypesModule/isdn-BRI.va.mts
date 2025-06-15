@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION isdn_BRI */
+
 /**
  * @summary isdn_BRI
  * @description
@@ -32,6 +32,5 @@ export const isdn_BRI: CharacteristicInformation = new _OID(
     [40],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION isdn_BRI */
 
 /* eslint-enable */

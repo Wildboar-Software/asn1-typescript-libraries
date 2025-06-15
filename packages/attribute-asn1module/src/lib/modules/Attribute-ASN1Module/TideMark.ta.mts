@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TideMark */
 /**
  * @summary TideMark
  * @description
@@ -29,13 +28,9 @@ export
 type TideMark =
     { maxTideMar: ObservedValue } /* CHOICE_ALT_ROOT */
     | { minTideMark: ObservedValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TideMark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TideMark */
 let _cached_decoder_for_TideMark: $.ASN1Decoder<TideMark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TideMark */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TideMark */
 /**
  * @summary Decodes an ASN.1 element into a(n) TideMark
  * @function
@@ -50,13 +45,9 @@ function _decode_TideMark (el: _Element) {
 }); }
     return _cached_decoder_for_TideMark(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TideMark */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TideMark */
 let _cached_encoder_for_TideMark: $.ASN1Encoder<TideMark> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TideMark */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TideMark */
 /**
  * @summary Encodes a(n) TideMark into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ function _encode_TideMark (value: TideMark, elGetter: $.ASN1Encoder<TideMark>) {
     return _cached_encoder_for_TideMark(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TideMark */
 
 /* eslint-enable */

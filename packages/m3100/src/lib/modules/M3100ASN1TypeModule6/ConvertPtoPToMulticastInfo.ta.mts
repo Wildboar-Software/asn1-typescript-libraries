@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConvertPtoPToMulticastInfo */
+
 /**
  * @summary ConvertPtoPToMulticastInfo
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ConvertPtoPToMulticastInfo = ObjectInstance[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ConvertPtoPToMulticastInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertPtoPToMulticastInfo */
+
 let _cached_decoder_for_ConvertPtoPToMulticastInfo: $.ASN1Decoder<ConvertPtoPToMulticastInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertPtoPToMulticastInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConvertPtoPToMulticastInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConvertPtoPToMulticastInfo
  * @function
@@ -48,13 +46,11 @@ export function _decode_ConvertPtoPToMulticastInfo(el: _Element) {
     }
     return _cached_decoder_for_ConvertPtoPToMulticastInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConvertPtoPToMulticastInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertPtoPToMulticastInfo */
+
 let _cached_encoder_for_ConvertPtoPToMulticastInfo: $.ASN1Encoder<ConvertPtoPToMulticastInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertPtoPToMulticastInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConvertPtoPToMulticastInfo */
+
 /**
  * @summary Encodes a(n) ConvertPtoPToMulticastInfo into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ConvertPtoPToMulticastInfo(
     return _cached_encoder_for_ConvertPtoPToMulticastInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConvertPtoPToMulticastInfo */
 
 /* eslint-enable */

@@ -7,7 +7,6 @@ import {
     _decode_IntEmail,
     _encode_IntEmail,
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION intEmailMatch */
 /**
  * @summary intEmailMatch
  * @description
@@ -39,6 +38,5 @@ export const intEmailMatch: MATCHING_RULE<IntEmail> = {
     "&id": id_mr_intEmailMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION intEmailMatch */
 
 /* eslint-enable */

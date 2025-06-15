@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PerOctetComponentRate */
 /**
  * @summary PerOctetComponentRate
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PerOctetComponentRate = INTEGER;
-/* END_OF_SYMBOL_DEFINITION PerOctetComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerOctetComponentRate */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerOctetComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerOctetComponentRate */
 export const _decode_PerOctetComponentRate = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_PerOctetComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerOctetComponentRate */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerOctetComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerOctetComponentRate */
 export const _encode_PerOctetComponentRate = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerOctetComponentRate */
 
 /* eslint-enable */

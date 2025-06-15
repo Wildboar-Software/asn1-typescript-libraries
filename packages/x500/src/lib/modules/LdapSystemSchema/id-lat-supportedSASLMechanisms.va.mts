@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_lat } from "../UsefulDefinitions/id-lat.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_lat_supportedSASLMechanisms */
 /**
  * @summary id_lat_supportedSASLMechanisms
  * @description
@@ -18,6 +17,5 @@ export const id_lat_supportedSASLMechanisms: OBJECT_IDENTIFIER = new _OID(
     [14],
     id_lat
 );
-/* END_OF_SYMBOL_DEFINITION id_lat_supportedSASLMechanisms */
 
 /* eslint-enable */

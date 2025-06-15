@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_gmac */
 /**
  * @summary id_gmac
  * @description
@@ -16,6 +15,5 @@ import { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va.mjs";
  * @constant
  */
 export const id_gmac: ID = new _OID([/* part3 */ 3, /* gmac */ 4], iso9797);
-/* END_OF_SYMBOL_DEFINITION id_gmac */
 
 /* eslint-enable */

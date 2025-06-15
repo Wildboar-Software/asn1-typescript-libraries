@@ -6,7 +6,7 @@ import { aa_signingTime } from "../CryptographicMessageSyntax-2010/aa-signingTim
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 import { tokenizedParts } from "../TokenizationManifest/tokenizedParts.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SignedAttributesSet */
+
 /**
  * @summary SignedAttributesSet
  * @description
@@ -29,6 +29,5 @@ export const SignedAttributesSet: ATTRIBUTE[] = [
     ...CMSProfileAttributes,
     tokenizedParts,
 ];
-/* END_OF_SYMBOL_DEFINITION SignedAttributesSet */
 
 /* eslint-enable */

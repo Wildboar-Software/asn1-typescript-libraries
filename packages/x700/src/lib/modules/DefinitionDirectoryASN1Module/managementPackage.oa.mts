@@ -24,7 +24,6 @@ import { actions } from '../DefinitionDirectoryASN1Module/actions.oa.mjs';
 import { notifications } from '../DefinitionDirectoryASN1Module/notifications.oa.mjs';
 import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementPackage */
 /**
  * @summary managementPackage
  * @description
@@ -65,6 +64,5 @@ export const managementPackage: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementPackage */
 
 /* eslint-enable */

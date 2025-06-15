@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION CompressionAlgorithmTable */
 /**
  * @summary CompressionAlgorithmTable
  * @description
@@ -26,6 +25,5 @@ import { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSI
  *
  */
 export const CompressionAlgorithmTable: COMPRESSION_ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION CompressionAlgorithmTable */
 
 /* eslint-enable */

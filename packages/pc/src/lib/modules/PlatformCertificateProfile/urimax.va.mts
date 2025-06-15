@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION urimax */
 /**
  * @summary urimax
  * @description
@@ -28,6 +27,5 @@ import {
  */
 export
 const urimax: INTEGER = 1024;
-/* END_OF_SYMBOL_DEFINITION urimax */
 
 /* eslint-enable */

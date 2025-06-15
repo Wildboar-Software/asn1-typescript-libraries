@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MORTs */
 /**
  * @summary MORTs
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MORTs = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MORTs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MORTs */
 let _cached_decoder_for_MORTs: $.ASN1Decoder<MORTs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MORTs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MORTs */
 /**
  * @summary Decodes an ASN.1 element into a(n) MORTs
  * @function
@@ -48,13 +43,9 @@ export function _decode_MORTs(el: _Element) {
     }
     return _cached_decoder_for_MORTs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MORTs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MORTs */
 let _cached_encoder_for_MORTs: $.ASN1Encoder<MORTs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MORTs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MORTs */
 /**
  * @summary Encodes a(n) MORTs into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_MORTs(value: MORTs, elGetter: $.ASN1Encoder<MORTs>) {
     return _cached_encoder_for_MORTs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MORTs */
 
 /* eslint-enable */

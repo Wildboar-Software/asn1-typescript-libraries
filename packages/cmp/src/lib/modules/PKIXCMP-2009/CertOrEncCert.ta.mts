@@ -20,7 +20,7 @@ import {
   _decode_EncryptedValue,
   _encode_EncryptedValue,
 } from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/EncryptedValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertOrEncCert */
+
 /**
  * @summary CertOrEncCert
  * @description
@@ -36,13 +36,11 @@ import {
 export type CertOrEncCert =
   | { certificate: CMPCertificate } /* CHOICE_ALT_ROOT */
   | { encryptedCert: EncryptedValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CertOrEncCert */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertOrEncCert */
+
 let _cached_decoder_for_CertOrEncCert: $.ASN1Decoder<CertOrEncCert> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertOrEncCert */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertOrEncCert */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertOrEncCert
  * @function
@@ -66,13 +64,11 @@ export function _decode_CertOrEncCert(el: _Element) {
   }
   return _cached_decoder_for_CertOrEncCert(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertOrEncCert */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertOrEncCert */
+
 let _cached_encoder_for_CertOrEncCert: $.ASN1Encoder<CertOrEncCert> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertOrEncCert */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertOrEncCert */
+
 /**
  * @summary Encodes a(n) CertOrEncCert into an ASN.1 Element.
  * @function
@@ -106,6 +102,5 @@ export function _encode_CertOrEncCert(
   return _cached_encoder_for_CertOrEncCert(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertOrEncCert */
 
 /* eslint-enable */

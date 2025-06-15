@@ -29,7 +29,6 @@ import {
 } from '../MTAAbstractService/MTABindResult.ta.mjs';
 import { mta_bind_error } from '../MTAAbstractService/mta-bind-error.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_bind */
 /**
  * @summary mta_bind
  * @description
@@ -68,6 +67,5 @@ export const mta_bind: ABSTRACT_OPERATION<MTABindArgument, MTABindResult> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mta_bind */
 
 /* eslint-enable */

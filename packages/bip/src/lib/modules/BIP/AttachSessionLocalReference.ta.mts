@@ -26,7 +26,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttachSessionLocalReference */
+
 /**
  * @summary AttachSessionLocalReference
  * @description
@@ -105,9 +105,8 @@ export class AttachSessionLocalReference {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttachSessionLocalReference */
+
 /**
  * @summary The Leading Root Component Types of AttachSessionLocalReference
  * @description
@@ -153,9 +152,8 @@ export const _root_component_type_list_1_spec_for_AttachSessionLocalReference: $
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttachSessionLocalReference */
+
 /**
  * @summary The Trailing Root Component Types of AttachSessionLocalReference
  * @description
@@ -165,9 +163,8 @@ export const _root_component_type_list_1_spec_for_AttachSessionLocalReference: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttachSessionLocalReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttachSessionLocalReference */
+
 /**
  * @summary The Extension Addition Component Types of AttachSessionLocalReference
  * @description
@@ -177,13 +174,11 @@ export const _root_component_type_list_2_spec_for_AttachSessionLocalReference: $
  * @constant
  */
 export const _extension_additions_list_spec_for_AttachSessionLocalReference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttachSessionLocalReference */
+
 let _cached_decoder_for_AttachSessionLocalReference: $.ASN1Decoder<AttachSessionLocalReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttachSessionLocalReference */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttachSessionLocalReference
  * @function
@@ -229,13 +224,11 @@ export function _decode_AttachSessionLocalReference(el: _Element) {
   }
   return _cached_decoder_for_AttachSessionLocalReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttachSessionLocalReference */
+
 let _cached_encoder_for_AttachSessionLocalReference: $.ASN1Encoder<AttachSessionLocalReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttachSessionLocalReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttachSessionLocalReference */
+
 /**
  * @summary Encodes a(n) AttachSessionLocalReference into an ASN.1 Element.
  * @function
@@ -273,6 +266,5 @@ export function _encode_AttachSessionLocalReference(
   return _cached_encoder_for_AttachSessionLocalReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttachSessionLocalReference */
 
 /* eslint-enable */

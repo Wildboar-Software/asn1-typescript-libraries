@@ -9,7 +9,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CVCertificateAttributes */
+
 /**
  * @summary CVCertificateAttributes
  * @description
@@ -64,9 +64,8 @@ export class CVCertificateAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CVCertificateAttributes */
+
 /**
  * @summary The Leading Root Component Types of CVCertificateAttributes
  * @description
@@ -78,9 +77,8 @@ export class CVCertificateAttributes {
 export const _root_component_type_list_1_spec_for_CVCertificateAttributes: $.ComponentSpec[] = [
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CVCertificateAttributes */
+
 /**
  * @summary The Trailing Root Component Types of CVCertificateAttributes
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_CVCertificateAttributes: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CVCertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CVCertificateAttributes */
+
 /**
  * @summary The Extension Addition Component Types of CVCertificateAttributes
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_CVCertificateAttributes: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_CVCertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CVCertificateAttributes */
+
 let _cached_decoder_for_CVCertificateAttributes: $.ASN1Decoder<CVCertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CVCertificateAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CVCertificateAttributes
  * @function
@@ -138,13 +133,11 @@ export function _decode_CVCertificateAttributes(el: _Element) {
     }
     return _cached_decoder_for_CVCertificateAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CVCertificateAttributes */
+
 let _cached_encoder_for_CVCertificateAttributes: $.ASN1Encoder<CVCertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CVCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CVCertificateAttributes */
+
 /**
  * @summary Encodes a(n) CVCertificateAttributes into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_CVCertificateAttributes(
     return _cached_encoder_for_CVCertificateAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CVCertificateAttributes */
 
 /* eslint-enable */

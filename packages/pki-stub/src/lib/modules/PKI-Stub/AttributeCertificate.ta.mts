@@ -21,7 +21,6 @@ import {
     _encode_TBSAttributeCertificate,
 } from "../PKI-Stub/TBSAttributeCertificate.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeCertificate */
 /**
  * @summary AttributeCertificate
  * @description
@@ -33,14 +32,10 @@ import {
  * ```
  */
 export type AttributeCertificate = SIGNED<TBSAttributeCertificate>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificate */
 let _cached_decoder_for_AttributeCertificate: $.ASN1Decoder<AttributeCertificate> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeCertificate
  * @function
@@ -56,14 +51,10 @@ export function _decode_AttributeCertificate(el: _Element) {
     }
     return _cached_decoder_for_AttributeCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificate */
 let _cached_encoder_for_AttributeCertificate: $.ASN1Encoder<AttributeCertificate> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeCertificate */
 /**
  * @summary Encodes a(n) AttributeCertificate into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_AttributeCertificate(
     return _cached_encoder_for_AttributeCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeCertificate */
 
 /* eslint-enable */

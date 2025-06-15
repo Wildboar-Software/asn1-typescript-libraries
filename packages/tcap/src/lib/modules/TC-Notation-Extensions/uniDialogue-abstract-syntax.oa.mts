@@ -16,7 +16,6 @@ import {
     _encode_UniDialoguePDU,
 } from '../UnidialoguePDUs/UniDialoguePDU.ta.mjs';
 import { uniDialogue_as_id } from '../UnidialoguePDUs/uniDialogue-as-id.va.mjs';
-/* START_OF_SYMBOL_DEFINITION uniDialogue_abstract_syntax */
 /**
  * @summary uniDialogue_abstract_syntax
  * @description
@@ -46,6 +45,5 @@ export const uniDialogue_abstract_syntax: ABSTRACT_SYNTAX<UniDialoguePDU> = {
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION uniDialogue_abstract_syntax */
 
 /* eslint-enable */

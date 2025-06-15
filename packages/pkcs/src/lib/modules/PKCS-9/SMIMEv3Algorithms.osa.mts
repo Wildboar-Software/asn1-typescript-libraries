@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SMIMEv3Algorithms */
+
 /**
  * @summary SMIMEv3Algorithms
  * @description
@@ -17,6 +17,5 @@ import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramewor
  *
  */
 export const SMIMEv3Algorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SMIMEv3Algorithms */
 
 /* eslint-enable */

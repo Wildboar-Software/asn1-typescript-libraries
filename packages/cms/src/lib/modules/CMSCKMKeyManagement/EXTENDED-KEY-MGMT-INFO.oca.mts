@@ -1,8 +1,7 @@
 /* eslint-disable */
 import { TYPE_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION EXTENDED_KEY_MGMT_INFO */
+
 export type EXTENDED_KEY_MGMT_INFO = TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION EXTENDED_KEY_MGMT_INFO */
 
 /* eslint-enable */

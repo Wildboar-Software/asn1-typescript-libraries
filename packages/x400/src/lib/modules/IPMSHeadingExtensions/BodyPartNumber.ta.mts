@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BodyPartNumber */
 /**
  * @summary BodyPartNumber
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BodyPartNumber = INTEGER;
-/* END_OF_SYMBOL_DEFINITION BodyPartNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartNumber */
 export const _decode_BodyPartNumber = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartNumber */
 export const _encode_BodyPartNumber = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartNumber */
 
 /* eslint-enable */

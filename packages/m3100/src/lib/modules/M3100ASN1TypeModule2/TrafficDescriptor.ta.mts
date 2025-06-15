@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TrafficDescriptor */
+
 /**
  * @summary TrafficDescriptor
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TrafficDescriptor = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TrafficDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrafficDescriptor */
+
 let _cached_decoder_for_TrafficDescriptor: $.ASN1Decoder<TrafficDescriptor> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrafficDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrafficDescriptor */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TrafficDescriptor
  * @function
@@ -46,13 +44,11 @@ export function _decode_TrafficDescriptor(el: _Element) {
     }
     return _cached_decoder_for_TrafficDescriptor(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrafficDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrafficDescriptor */
+
 let _cached_encoder_for_TrafficDescriptor: $.ASN1Encoder<TrafficDescriptor> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrafficDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrafficDescriptor */
+
 /**
  * @summary Encodes a(n) TrafficDescriptor into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TrafficDescriptor(
     return _cached_encoder_for_TrafficDescriptor(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrafficDescriptor */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_CriteriaItem,
     _encode_CriteriaItem,
 } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Criteria */
 /**
  * @summary Criteria
  * @description
@@ -28,13 +27,9 @@ export type Criteria =
     | { or: Criteria[] } /* CHOICE_ALT_ROOT */
     | { not: Criteria } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Criteria */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Criteria */
 let _cached_decoder_for_Criteria: $.ASN1Decoder<Criteria> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Criteria */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Criteria */
 /**
  * @summary Decodes an ASN.1 element into a(n) Criteria
  * @function
@@ -68,13 +63,9 @@ export function _decode_Criteria(el: _Element) {
     }
     return _cached_decoder_for_Criteria(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Criteria */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Criteria */
 let _cached_encoder_for_Criteria: $.ASN1Encoder<Criteria> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Criteria */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Criteria */
 /**
  * @summary Encodes a(n) Criteria into an ASN.1 Element.
  * @function
@@ -122,6 +113,5 @@ export function _encode_Criteria(
     return _cached_encoder_for_Criteria(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Criteria */
 
 /* eslint-enable */

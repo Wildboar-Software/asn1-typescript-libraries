@@ -15,7 +15,6 @@ import {
     _decode_RetrievalError,
     _encode_RetrievalError,
 } from '../MhsAcctAsn1Module/RetrievalError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeleteErrors */
 /**
  * @summary DeleteErrors
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type DeleteErrors = RetrievalError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeleteErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteErrors */
 let _cached_decoder_for_DeleteErrors: $.ASN1Decoder<DeleteErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeleteErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeleteErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteErrors
  * @function
@@ -49,13 +44,9 @@ export function _decode_DeleteErrors(el: _Element) {
     }
     return _cached_decoder_for_DeleteErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeleteErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteErrors */
 let _cached_encoder_for_DeleteErrors: $.ASN1Encoder<DeleteErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeleteErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeleteErrors */
 /**
  * @summary Encodes a(n) DeleteErrors into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_DeleteErrors(
     return _cached_encoder_for_DeleteErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeleteErrors */
 
 /* eslint-enable */

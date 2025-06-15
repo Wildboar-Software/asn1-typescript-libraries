@@ -21,7 +21,7 @@ import {
   _decode_ActionErrorInfo_errorInfo,
   _encode_ActionErrorInfo_errorInfo,
 } from '../CMIP-1/ActionErrorInfo-errorInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActionErrorInfo */
+
 /**
  * @summary ActionErrorInfo
  * @description
@@ -96,9 +96,8 @@ export class ActionErrorInfo {
 
   public static _enum_for_errorStatus = _enum_for_ActionErrorInfo_errorStatus;
 }
-/* END_OF_SYMBOL_DEFINITION ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ActionErrorInfo */
+
 /**
  * @summary The Leading Root Component Types of ActionErrorInfo
  * @description
@@ -117,9 +116,8 @@ export const _root_component_type_list_1_spec_for_ActionErrorInfo: $.ComponentSp
   ),
   new $.ComponentSpec('errorInfo', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ActionErrorInfo */
+
 /**
  * @summary The Trailing Root Component Types of ActionErrorInfo
  * @description
@@ -129,9 +127,8 @@ export const _root_component_type_list_1_spec_for_ActionErrorInfo: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ActionErrorInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ActionErrorInfo */
+
 /**
  * @summary The Extension Addition Component Types of ActionErrorInfo
  * @description
@@ -141,13 +138,11 @@ export const _root_component_type_list_2_spec_for_ActionErrorInfo: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ActionErrorInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionErrorInfo */
+
 let _cached_decoder_for_ActionErrorInfo: $.ASN1Decoder<ActionErrorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionErrorInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionErrorInfo
  * @function
@@ -178,13 +173,11 @@ export function _decode_ActionErrorInfo(el: _Element) {
   }
   return _cached_decoder_for_ActionErrorInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionErrorInfo */
+
 let _cached_encoder_for_ActionErrorInfo: $.ASN1Encoder<ActionErrorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionErrorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionErrorInfo */
+
 /**
  * @summary Encodes a(n) ActionErrorInfo into an ASN.1 Element.
  * @function
@@ -224,6 +217,5 @@ export function _encode_ActionErrorInfo(
   return _cached_encoder_for_ActionErrorInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionErrorInfo */
 
 /* eslint-enable */

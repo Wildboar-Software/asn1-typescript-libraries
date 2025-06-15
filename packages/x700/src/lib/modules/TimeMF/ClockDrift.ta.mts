@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ClockDrift */
 /**
  * @summary ClockDrift
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ClockDrift = REAL; // RealType
-/* END_OF_SYMBOL_DEFINITION ClockDrift */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockDrift */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockDrift */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockDrift */
 export const _decode_ClockDrift = $._decodeReal;
-/* END_OF_SYMBOL_DEFINITION _decode_ClockDrift */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockDrift */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockDrift */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockDrift */
 export const _encode_ClockDrift = $._encodeReal;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockDrift */
 
 /* eslint-enable */

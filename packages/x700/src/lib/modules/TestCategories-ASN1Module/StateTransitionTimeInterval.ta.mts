@@ -15,7 +15,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION StateTransitionTimeInterval */
 /**
  * @summary StateTransitionTimeInterval
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type StateTransitionTimeInterval = Timespec; // DefinedType
-/* END_OF_SYMBOL_DEFINITION StateTransitionTimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StateTransitionTimeInterval */
 let _cached_decoder_for_StateTransitionTimeInterval: $.ASN1Decoder<StateTransitionTimeInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StateTransitionTimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StateTransitionTimeInterval */
 /**
  * @summary Decodes an ASN.1 element into a(n) StateTransitionTimeInterval
  * @function
@@ -46,13 +41,9 @@ export function _decode_StateTransitionTimeInterval(el: _Element) {
     }
     return _cached_decoder_for_StateTransitionTimeInterval(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StateTransitionTimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StateTransitionTimeInterval */
 let _cached_encoder_for_StateTransitionTimeInterval: $.ASN1Encoder<StateTransitionTimeInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StateTransitionTimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StateTransitionTimeInterval */
 /**
  * @summary Encodes a(n) StateTransitionTimeInterval into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_StateTransitionTimeInterval(
     return _cached_encoder_for_StateTransitionTimeInterval(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StateTransitionTimeInterval */
 
 /* eslint-enable */

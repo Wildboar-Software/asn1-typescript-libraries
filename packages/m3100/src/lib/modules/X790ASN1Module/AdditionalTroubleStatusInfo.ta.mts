@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AdditionalTroubleStatusInfo */
+
 /**
  * @summary AdditionalTroubleStatusInfo
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AdditionalTroubleStatusInfo = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AdditionalTroubleStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalTroubleStatusInfo */
+
 let _cached_decoder_for_AdditionalTroubleStatusInfo: $.ASN1Decoder<AdditionalTroubleStatusInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalTroubleStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalTroubleStatusInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalTroubleStatusInfo
  * @function
@@ -45,13 +43,11 @@ export function _decode_AdditionalTroubleStatusInfo(el: _Element) {
     }
     return _cached_decoder_for_AdditionalTroubleStatusInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalTroubleStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalTroubleStatusInfo */
+
 let _cached_encoder_for_AdditionalTroubleStatusInfo: $.ASN1Encoder<AdditionalTroubleStatusInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalTroubleStatusInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalTroubleStatusInfo */
+
 /**
  * @summary Encodes a(n) AdditionalTroubleStatusInfo into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_AdditionalTroubleStatusInfo(
     return _cached_encoder_for_AdditionalTroubleStatusInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalTroubleStatusInfo */
 
 /* eslint-enable */

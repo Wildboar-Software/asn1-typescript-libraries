@@ -22,7 +22,6 @@ import {
     _encode_AdditionalInformation,
 } from '../DefinitionDirectoryASN1Module/AdditionalInformation.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION additionalInformation */
 /**
  * @summary additionalInformation
  * @description
@@ -64,6 +63,5 @@ export const additionalInformation: ATTRIBUTE<AdditionalInformation> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION additionalInformation */
 
 /* eslint-enable */

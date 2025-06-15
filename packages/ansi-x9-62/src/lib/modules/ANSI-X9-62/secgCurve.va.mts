@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION secgCurve */
 /**
  * @summary secgCurve
  * @description
@@ -21,6 +20,5 @@ export const secgCurve: OBJECT_IDENTIFIER = new _OID([
     /* certicom */ 132,
     /* curve */ 0,
 ]);
-/* END_OF_SYMBOL_DEFINITION secgCurve */
 
 /* eslint-enable */

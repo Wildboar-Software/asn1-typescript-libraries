@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oidC1 } from "../SelectedAttributeTypes/id-oidC1.va.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION oidC1 */
 /**
  * @summary oidC1
  * @description
@@ -44,6 +43,5 @@ export const oidC1: ATTRIBUTE<INTEGER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oidC1 */
 
 /* eslint-enable */

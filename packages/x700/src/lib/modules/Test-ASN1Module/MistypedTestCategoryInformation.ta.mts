@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MistypedTestCategoryInformation */
 /**
  * @summary MistypedTestCategoryInformation
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MistypedTestCategoryInformation = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION MistypedTestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MistypedTestCategoryInformation */
 let _cached_decoder_for_MistypedTestCategoryInformation: $.ASN1Decoder<MistypedTestCategoryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MistypedTestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MistypedTestCategoryInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) MistypedTestCategoryInformation
  * @function
@@ -44,13 +39,9 @@ export function _decode_MistypedTestCategoryInformation(el: _Element) {
     }
     return _cached_decoder_for_MistypedTestCategoryInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MistypedTestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MistypedTestCategoryInformation */
 let _cached_encoder_for_MistypedTestCategoryInformation: $.ASN1Encoder<MistypedTestCategoryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MistypedTestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MistypedTestCategoryInformation */
 /**
  * @summary Encodes a(n) MistypedTestCategoryInformation into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_MistypedTestCategoryInformation(
     return _cached_encoder_for_MistypedTestCategoryInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MistypedTestCategoryInformation */
 
 /* eslint-enable */

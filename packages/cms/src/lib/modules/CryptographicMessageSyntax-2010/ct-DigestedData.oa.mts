@@ -6,7 +6,7 @@ import {
     _encode_DigestedData,
 } from "../CryptographicMessageSyntax-2010/DigestedData.ta.mjs";
 import { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ct_DigestedData */
+
 /**
  * @summary ct_DigestedData
  * @description
@@ -32,6 +32,5 @@ export const ct_DigestedData: CONTENT_TYPE<DigestedData> = {
     "&id": id_digestedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_DigestedData */
 
 /* eslint-enable */

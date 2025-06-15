@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION issuerAndSerialNumber */
+
 /**
  * @summary issuerAndSerialNumber
  * @description
@@ -28,6 +28,5 @@ export const issuerAndSerialNumber: KEY_IDENTIFIER<_Element> = {
     "&id": 1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION issuerAndSerialNumber */
 
 /* eslint-enable */

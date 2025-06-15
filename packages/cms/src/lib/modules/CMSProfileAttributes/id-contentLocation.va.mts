@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { itu_t, ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_contentLocation */
+
 /**
  * @summary id_contentLocation
  * @description
@@ -25,6 +25,5 @@ export const id_contentLocation: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION id_contentLocation */
 
 /* eslint-enable */

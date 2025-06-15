@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, PrintableString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OrganizationName */
 /**
  * @summary OrganizationName
  * @description
@@ -14,9 +13,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type OrganizationName = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION OrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OrganizationName */
 /**
  * @summary Decodes an ASN.1 element into a(n) OrganizationName
  * @function
@@ -26,9 +23,7 @@ export type OrganizationName = PrintableString; // PrintableString
 export function _decode_OrganizationName(el: _Element) {
     return $._decodePrintableString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OrganizationName */
 /**
  * @summary Encodes a(n) OrganizationName into an ASN.1 Element.
  * @function
@@ -43,6 +38,5 @@ export function _encode_OrganizationName(
     return $._encodePrintableString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OrganizationName */
 
 /* eslint-enable */

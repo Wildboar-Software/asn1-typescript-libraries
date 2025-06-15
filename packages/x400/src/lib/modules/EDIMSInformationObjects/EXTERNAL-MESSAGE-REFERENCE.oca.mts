@@ -11,8 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION EXTERNAL_MESSAGE_REFERENCE */
 export type EXTERNAL_MESSAGE_REFERENCE = TYPE_IDENTIFIER;
-/* END_OF_SYMBOL_DEFINITION EXTERNAL_MESSAGE_REFERENCE */
 
 /* eslint-enable */

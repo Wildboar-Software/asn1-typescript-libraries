@@ -23,7 +23,6 @@ import {
     _encode_Message,
 } from '../MTAAbstractService/Message.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION message_transfer */
 /**
  * @summary message_transfer
  * @description
@@ -58,6 +57,5 @@ export const message_transfer: ABSTRACT_OPERATION<Message> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_transfer */
 
 /* eslint-enable */

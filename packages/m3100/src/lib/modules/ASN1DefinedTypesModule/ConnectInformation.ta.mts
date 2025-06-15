@@ -15,7 +15,7 @@ import {
     _decode_ConnectInformation_Item,
     _encode_ConnectInformation_Item,
 } from '../ASN1DefinedTypesModule/ConnectInformation-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectInformation */
+
 /**
  * @summary ConnectInformation
  * @description
@@ -40,13 +40,11 @@ import {
  * ```
  */
 export type ConnectInformation = ConnectInformation_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ConnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectInformation */
+
 let _cached_decoder_for_ConnectInformation: $.ASN1Decoder<ConnectInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectInformation
  * @function
@@ -61,13 +59,11 @@ export function _decode_ConnectInformation(el: _Element) {
     }
     return _cached_decoder_for_ConnectInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectInformation */
+
 let _cached_encoder_for_ConnectInformation: $.ASN1Encoder<ConnectInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectInformation */
+
 /**
  * @summary Encodes a(n) ConnectInformation into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_ConnectInformation(
     return _cached_encoder_for_ConnectInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectInformation */
 
 /* eslint-enable */

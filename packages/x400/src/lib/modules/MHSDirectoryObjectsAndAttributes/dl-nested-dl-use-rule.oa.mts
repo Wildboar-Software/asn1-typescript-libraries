@@ -12,7 +12,6 @@ import {
 import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.mjs';
 import { dl_nested_dl } from '../MHSDirectoryObjectsAndAttributes/dl-nested-dl.oa.mjs';
 import { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/DIT-CONTEXT-USE-RULE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_nested_dl_use_rule */
 /**
  * @summary dl_nested_dl_use_rule
  * @description
@@ -40,6 +39,5 @@ export const dl_nested_dl_use_rule: DIT_CONTEXT_USE_RULE = {
         ] /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Optional': [dl_nested_dl] /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_nested_dl_use_rule */
 
 /* eslint-enable */

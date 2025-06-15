@@ -25,7 +25,6 @@ import {
     _decode_TestThreshold,
     _encode_TestThreshold,
 } from '../TestCategories-ASN1Module/TestThreshold.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataIntegrityTestResults */
 /**
  * @summary DataIntegrityTestResults
  * @description
@@ -47,13 +46,9 @@ export type DataIntegrityTestResults =
     | { testResult: DataIntegrityTestResults_testResult } /* CHOICE_ALT_ROOT */
     | { timeoutPeriod: TimeoutPeriod } /* CHOICE_ALT_ROOT */
     | { testThreshold: TestThreshold } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DataIntegrityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataIntegrityTestResults */
 let _cached_decoder_for_DataIntegrityTestResults: $.ASN1Decoder<DataIntegrityTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataIntegrityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataIntegrityTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataIntegrityTestResults
  * @function
@@ -87,13 +82,9 @@ export function _decode_DataIntegrityTestResults(el: _Element) {
     }
     return _cached_decoder_for_DataIntegrityTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataIntegrityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataIntegrityTestResults */
 let _cached_encoder_for_DataIntegrityTestResults: $.ASN1Encoder<DataIntegrityTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataIntegrityTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataIntegrityTestResults */
 /**
  * @summary Encodes a(n) DataIntegrityTestResults into an ASN.1 Element.
  * @function
@@ -133,6 +124,5 @@ export function _encode_DataIntegrityTestResults(
     return _cached_encoder_for_DataIntegrityTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataIntegrityTestResults */
 
 /* eslint-enable */

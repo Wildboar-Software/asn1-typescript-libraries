@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ecdsa_with_Sha512 */
 /**
  * @summary ecdsa_with_Sha512
  * @description
@@ -29,6 +28,5 @@ const ecdsa_with_Sha512: OBJECT_IDENTIFIER = new _OID([
     /* specified */ 3,
     4,
 ], id_ecSigType);
-/* END_OF_SYMBOL_DEFINITION ecdsa_with_Sha512 */
 
 /* eslint-enable */

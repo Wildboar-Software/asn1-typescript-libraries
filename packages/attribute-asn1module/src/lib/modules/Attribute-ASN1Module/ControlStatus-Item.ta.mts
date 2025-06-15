@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ControlStatus_Item */
 /**
  * @summary ControlStatus_Item
  * @description
@@ -27,9 +26,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type ControlStatus_Item = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ControlStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION ControlStatus_Item_subjectToTest */
 /**
  * @summary ControlStatus_Item_subjectToTest
  * @constant
@@ -37,9 +34,7 @@ type ControlStatus_Item = INTEGER;
  */
 export
 const ControlStatus_Item_subjectToTest: ControlStatus_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlStatus_Item_subjectToTest */
 
-/* START_OF_SYMBOL_DEFINITION subjectToTest */
 /**
  * @summary ControlStatus_Item_subjectToTest
  * @constant
@@ -47,9 +42,7 @@ const ControlStatus_Item_subjectToTest: ControlStatus_Item = 0; /* LONG_NAMED_IN
  */
 export
 const subjectToTest: ControlStatus_Item = ControlStatus_Item_subjectToTest; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION subjectToTest */
 
-/* START_OF_SYMBOL_DEFINITION ControlStatus_Item_partOfServicesLocked */
 /**
  * @summary ControlStatus_Item_partOfServicesLocked
  * @constant
@@ -57,9 +50,7 @@ const subjectToTest: ControlStatus_Item = ControlStatus_Item_subjectToTest; /* S
  */
 export
 const ControlStatus_Item_partOfServicesLocked: ControlStatus_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlStatus_Item_partOfServicesLocked */
 
-/* START_OF_SYMBOL_DEFINITION partOfServicesLocked */
 /**
  * @summary ControlStatus_Item_partOfServicesLocked
  * @constant
@@ -67,9 +58,7 @@ const ControlStatus_Item_partOfServicesLocked: ControlStatus_Item = 1; /* LONG_N
  */
 export
 const partOfServicesLocked: ControlStatus_Item = ControlStatus_Item_partOfServicesLocked; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION partOfServicesLocked */
 
-/* START_OF_SYMBOL_DEFINITION ControlStatus_Item_reservedForTest */
 /**
  * @summary ControlStatus_Item_reservedForTest
  * @constant
@@ -77,9 +66,7 @@ const partOfServicesLocked: ControlStatus_Item = ControlStatus_Item_partOfServic
  */
 export
 const ControlStatus_Item_reservedForTest: ControlStatus_Item = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlStatus_Item_reservedForTest */
 
-/* START_OF_SYMBOL_DEFINITION reservedForTest */
 /**
  * @summary ControlStatus_Item_reservedForTest
  * @constant
@@ -87,9 +74,7 @@ const ControlStatus_Item_reservedForTest: ControlStatus_Item = 2; /* LONG_NAMED_
  */
 export
 const reservedForTest: ControlStatus_Item = ControlStatus_Item_reservedForTest; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION reservedForTest */
 
-/* START_OF_SYMBOL_DEFINITION ControlStatus_Item_suspended */
 /**
  * @summary ControlStatus_Item_suspended
  * @constant
@@ -97,9 +82,7 @@ const reservedForTest: ControlStatus_Item = ControlStatus_Item_reservedForTest; 
  */
 export
 const ControlStatus_Item_suspended: ControlStatus_Item = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlStatus_Item_suspended */
 
-/* START_OF_SYMBOL_DEFINITION suspended */
 /**
  * @summary ControlStatus_Item_suspended
  * @constant
@@ -107,21 +90,12 @@ const ControlStatus_Item_suspended: ControlStatus_Item = 3; /* LONG_NAMED_INTEGE
  */
 export
 const suspended: ControlStatus_Item = ControlStatus_Item_suspended; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION suspended */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlStatus_Item */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ControlStatus_Item */
 export const _decode_ControlStatus_Item = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ControlStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlStatus_Item */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlStatus_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ControlStatus_Item */
 export const _encode_ControlStatus_Item = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ControlStatus_Item */
 
 /* eslint-enable */

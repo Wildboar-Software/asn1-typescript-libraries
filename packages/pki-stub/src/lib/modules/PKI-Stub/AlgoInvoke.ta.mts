@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AlgoInvoke */
 /**
  * @summary AlgoInvoke
  * @description
@@ -24,9 +23,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AlgoInvoke = _Element; // ObjectClassFieldType
-/* END_OF_SYMBOL_DEFINITION AlgoInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgoInvoke */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgoInvoke
  * @function
@@ -36,9 +33,7 @@ export type AlgoInvoke = _Element; // ObjectClassFieldType
 export function _decode_AlgoInvoke(el: _Element) {
     return $._decodeAny(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgoInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgoInvoke */
 /**
  * @summary Encodes a(n) AlgoInvoke into an ASN.1 Element.
  * @function
@@ -53,6 +48,5 @@ export function _encode_AlgoInvoke(
     return $._encodeAny(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgoInvoke */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION secp192r1 */
+
 /**
  * @summary secp192r1
  * @description
@@ -25,6 +25,5 @@ export const secp192r1: OBJECT_IDENTIFIER = new _OID([
     /* prime */ 1,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION secp192r1 */
 
 /* eslint-enable */

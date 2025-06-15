@@ -15,7 +15,7 @@ import {
   _decode_RevDetails,
   _encode_RevDetails,
 } from '../PKIXCMP-2009/RevDetails.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevReqContent */
+
 /**
  * @summary RevReqContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RevReqContent = RevDetails[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RevReqContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevReqContent */
+
 let _cached_decoder_for_RevReqContent: $.ASN1Decoder<RevReqContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevReqContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevReqContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RevReqContent
  * @function
@@ -48,13 +46,11 @@ export function _decode_RevReqContent(el: _Element) {
   }
   return _cached_decoder_for_RevReqContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevReqContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevReqContent */
+
 let _cached_encoder_for_RevReqContent: $.ASN1Encoder<RevReqContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevReqContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevReqContent */
+
 /**
  * @summary Encodes a(n) RevReqContent into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RevReqContent(
   return _cached_encoder_for_RevReqContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevReqContent */
 
 /* eslint-enable */

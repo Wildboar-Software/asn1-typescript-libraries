@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CMIP_AVA */
+
 /**
  * @summary CMIP_AVA
  * @description
@@ -59,6 +59,5 @@ export interface CMIP_AVA<Value = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
    */
   readonly '&Value': Value;
 }
-/* END_OF_SYMBOL_DEFINITION CMIP_AVA */
 
 /* eslint-enable */

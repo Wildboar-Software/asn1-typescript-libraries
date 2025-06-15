@@ -15,7 +15,6 @@ import {
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TimeAttributeIdentifier */
 /**
  * @summary TimeAttributeIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TimeAttributeIdentifier = AttributeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TimeAttributeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeAttributeIdentifier */
 let _cached_decoder_for_TimeAttributeIdentifier: $.ASN1Decoder<TimeAttributeIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeAttributeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeAttributeIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeAttributeIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_TimeAttributeIdentifier(el: _Element) {
     }
     return _cached_decoder_for_TimeAttributeIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeAttributeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeAttributeIdentifier */
 let _cached_encoder_for_TimeAttributeIdentifier: $.ASN1Encoder<TimeAttributeIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeAttributeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeAttributeIdentifier */
 /**
  * @summary Encodes a(n) TimeAttributeIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TimeAttributeIdentifier(
     return _cached_encoder_for_TimeAttributeIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeAttributeIdentifier */
 
 /* eslint-enable */

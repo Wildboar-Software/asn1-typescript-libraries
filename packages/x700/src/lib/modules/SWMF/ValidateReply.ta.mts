@@ -16,7 +16,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ValidateReply */
 /**
  * @summary ValidateReply
  * @description
@@ -39,13 +38,9 @@ export type ValidateReply =
     | { passValidationWithResult: ManagementExtension[] } /* CHOICE_ALT_ROOT */
     | { failValidation: NULL } /* CHOICE_ALT_ROOT */
     | { failValidationWithResult: ManagementExtension[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ValidateReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidateReply */
 let _cached_decoder_for_ValidateReply: $.ASN1Decoder<ValidateReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ValidateReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ValidateReply */
 /**
  * @summary Decodes an ASN.1 element into a(n) ValidateReply
  * @function
@@ -89,13 +84,9 @@ export function _decode_ValidateReply(el: _Element) {
     }
     return _cached_decoder_for_ValidateReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ValidateReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidateReply */
 let _cached_encoder_for_ValidateReply: $.ASN1Encoder<ValidateReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ValidateReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ValidateReply */
 /**
  * @summary Encodes a(n) ValidateReply into an ASN.1 Element.
  * @function
@@ -155,6 +146,5 @@ export function _encode_ValidateReply(
     return _cached_encoder_for_ValidateReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ValidateReply */
 
 /* eslint-enable */

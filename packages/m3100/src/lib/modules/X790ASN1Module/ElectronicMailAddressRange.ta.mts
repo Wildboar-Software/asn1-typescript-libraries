@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ElectronicMailAddressRange */
+
 /**
  * @summary ElectronicMailAddressRange
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ElectronicMailAddressRange = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ElectronicMailAddressRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ElectronicMailAddressRange */
+
 let _cached_decoder_for_ElectronicMailAddressRange: $.ASN1Decoder<ElectronicMailAddressRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ElectronicMailAddressRange */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ElectronicMailAddressRange */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ElectronicMailAddressRange
  * @function
@@ -45,13 +43,11 @@ export function _decode_ElectronicMailAddressRange(el: _Element) {
     }
     return _cached_decoder_for_ElectronicMailAddressRange(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ElectronicMailAddressRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ElectronicMailAddressRange */
+
 let _cached_encoder_for_ElectronicMailAddressRange: $.ASN1Encoder<ElectronicMailAddressRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ElectronicMailAddressRange */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ElectronicMailAddressRange */
+
 /**
  * @summary Encodes a(n) ElectronicMailAddressRange into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_ElectronicMailAddressRange(
     return _cached_encoder_for_ElectronicMailAddressRange(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ElectronicMailAddressRange */
 
 /* eslint-enable */

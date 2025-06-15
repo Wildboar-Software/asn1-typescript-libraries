@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_RealizationParameter_realization_type */
+
 /**
  * @summary RealizationParameter_realization_type
  * @description
@@ -26,9 +26,8 @@ export enum _enum_for_RealizationParameter_realization_type {
   association_service = 0,
   transfer_service = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_RealizationParameter_realization_type */
 
-/* START_OF_SYMBOL_DEFINITION RealizationParameter_realization_type */
+
 /**
  * @summary RealizationParameter_realization_type
  * @description
@@ -40,9 +39,8 @@ export enum _enum_for_RealizationParameter_realization_type {
  * ```@enum {number}
  */
 export type RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
-/* END_OF_SYMBOL_DEFINITION RealizationParameter_realization_type */
 
-/* START_OF_SYMBOL_DEFINITION RealizationParameter_realization_type */
+
 /**
  * @summary RealizationParameter_realization_type
  * @description
@@ -54,9 +52,8 @@ export type RealizationParameter_realization_type = _enum_for_RealizationParamet
  * ```@enum {number}
  */
 export const RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
-/* END_OF_SYMBOL_DEFINITION RealizationParameter_realization_type */
 
-/* START_OF_SYMBOL_DEFINITION RealizationParameter_realization_type_association_service */
+
 /**
  * @summary RealizationParameter_realization_type_association_service
  * @constant
@@ -64,9 +61,8 @@ export const RealizationParameter_realization_type = _enum_for_RealizationParame
  */
 export const RealizationParameter_realization_type_association_service: RealizationParameter_realization_type =
   RealizationParameter_realization_type.association_service; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RealizationParameter_realization_type_association_service */
 
-/* START_OF_SYMBOL_DEFINITION association_service */
+
 /**
  * @summary association_service
  * @constant
@@ -74,9 +70,8 @@ export const RealizationParameter_realization_type_association_service: Realizat
  */
 export const association_service: RealizationParameter_realization_type =
   RealizationParameter_realization_type.association_service; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION association_service */
 
-/* START_OF_SYMBOL_DEFINITION RealizationParameter_realization_type_transfer_service */
+
 /**
  * @summary RealizationParameter_realization_type_transfer_service
  * @constant
@@ -84,9 +79,8 @@ export const association_service: RealizationParameter_realization_type =
  */
 export const RealizationParameter_realization_type_transfer_service: RealizationParameter_realization_type =
   RealizationParameter_realization_type.transfer_service; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RealizationParameter_realization_type_transfer_service */
 
-/* START_OF_SYMBOL_DEFINITION transfer_service */
+
 /**
  * @summary transfer_service
  * @constant
@@ -94,13 +88,11 @@ export const RealizationParameter_realization_type_transfer_service: Realization
  */
 export const transfer_service: RealizationParameter_realization_type =
   RealizationParameter_realization_type.transfer_service; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION transfer_service */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RealizationParameter_realization_type */
+
 let _cached_decoder_for_RealizationParameter_realization_type: $.ASN1Decoder<RealizationParameter_realization_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RealizationParameter_realization_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RealizationParameter_realization_type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RealizationParameter_realization_type
  * @function
@@ -114,13 +106,11 @@ export function _decode_RealizationParameter_realization_type(el: _Element) {
   }
   return _cached_decoder_for_RealizationParameter_realization_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RealizationParameter_realization_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RealizationParameter_realization_type */
+
 let _cached_encoder_for_RealizationParameter_realization_type: $.ASN1Encoder<RealizationParameter_realization_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RealizationParameter_realization_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RealizationParameter_realization_type */
+
 /**
  * @summary Encodes a(n) RealizationParameter_realization_type into an ASN.1 Element.
  * @function
@@ -142,6 +132,5 @@ export function _encode_RealizationParameter_realization_type(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RealizationParameter_realization_type */
 
 /* eslint-enable */

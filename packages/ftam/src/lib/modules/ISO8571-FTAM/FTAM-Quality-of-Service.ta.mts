@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service */
+
 /**
  * @summary FTAM_Quality_of_Service
  * @description
@@ -26,85 +26,75 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FTAM_Quality_of_Service = INTEGER;
-/* END_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service */
 
-/* START_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_no_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_no_recovery
  * @constant
  * @type {number}
  */
 export const FTAM_Quality_of_Service_no_recovery: FTAM_Quality_of_Service = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_no_recovery */
 
-/* START_OF_SYMBOL_DEFINITION no_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_no_recovery
  * @constant
  * @type {number}
  */
 export const no_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service_no_recovery; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_recovery */
 
-/* START_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_class_1_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_class_1_recovery
  * @constant
  * @type {number}
  */
 export const FTAM_Quality_of_Service_class_1_recovery: FTAM_Quality_of_Service = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_class_1_recovery */
 
-/* START_OF_SYMBOL_DEFINITION class_1_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_class_1_recovery
  * @constant
  * @type {number}
  */
 export const class_1_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service_class_1_recovery; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION class_1_recovery */
 
-/* START_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_class_2_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_class_2_recovery
  * @constant
  * @type {number}
  */
 export const FTAM_Quality_of_Service_class_2_recovery: FTAM_Quality_of_Service = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_class_2_recovery */
 
-/* START_OF_SYMBOL_DEFINITION class_2_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_class_2_recovery
  * @constant
  * @type {number}
  */
 export const class_2_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service_class_2_recovery; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION class_2_recovery */
 
-/* START_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_class_3_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_class_3_recovery
  * @constant
  * @type {number}
  */
 export const FTAM_Quality_of_Service_class_3_recovery: FTAM_Quality_of_Service = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FTAM_Quality_of_Service_class_3_recovery */
 
-/* START_OF_SYMBOL_DEFINITION class_3_recovery */
+
 /**
  * @summary FTAM_Quality_of_Service_class_3_recovery
  * @constant
  * @type {number}
  */
 export const class_3_recovery: FTAM_Quality_of_Service = FTAM_Quality_of_Service_class_3_recovery; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION class_3_recovery */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FTAM_Quality_of_Service */
+
 let _cached_decoder_for_FTAM_Quality_of_Service: $.ASN1Decoder<FTAM_Quality_of_Service> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FTAM_Quality_of_Service */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FTAM_Quality_of_Service */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FTAM_Quality_of_Service
  * @function
@@ -119,13 +109,11 @@ export function _decode_FTAM_Quality_of_Service(el: _Element) {
   }
   return _cached_decoder_for_FTAM_Quality_of_Service(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FTAM_Quality_of_Service */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FTAM_Quality_of_Service */
+
 let _cached_encoder_for_FTAM_Quality_of_Service: $.ASN1Encoder<FTAM_Quality_of_Service> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FTAM_Quality_of_Service */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FTAM_Quality_of_Service */
+
 /**
  * @summary Encodes a(n) FTAM_Quality_of_Service into an ASN.1 Element.
  * @function
@@ -148,6 +136,5 @@ export function _encode_FTAM_Quality_of_Service(
   return _cached_encoder_for_FTAM_Quality_of_Service(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FTAM_Quality_of_Service */
 
 /* eslint-enable */

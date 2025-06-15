@@ -2,7 +2,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION FRIENDS */
 /**
  * @summary FRIENDS
  * @description
@@ -52,6 +51,5 @@ export interface FRIENDS {
      */
     readonly "&Friends"?: ATTRIBUTE[];
 }
-/* END_OF_SYMBOL_DEFINITION FRIENDS */
 
 /* eslint-enable */

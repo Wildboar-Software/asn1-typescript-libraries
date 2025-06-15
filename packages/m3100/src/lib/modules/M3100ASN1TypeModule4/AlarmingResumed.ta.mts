@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AlarmingResumed */
+
 /**
  * @summary AlarmingResumed
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AlarmingResumed = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION AlarmingResumed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmingResumed */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmingResumed */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmingResumed */
+
+
 export const _decode_AlarmingResumed = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmingResumed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmingResumed */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmingResumed */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmingResumed */
+
+
 export const _encode_AlarmingResumed = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmingResumed */
 
 /* eslint-enable */

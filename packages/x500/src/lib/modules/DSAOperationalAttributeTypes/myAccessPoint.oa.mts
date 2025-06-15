@@ -10,7 +10,6 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION myAccessPoint */
 /**
  * @summary myAccessPoint
  * @description
@@ -49,6 +48,5 @@ export const myAccessPoint: ATTRIBUTE<AccessPoint> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION myAccessPoint */
 
 /* eslint-enable */

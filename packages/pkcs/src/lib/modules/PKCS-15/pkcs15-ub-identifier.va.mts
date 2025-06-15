@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION pkcs15_ub_identifier */
+
 /**
  * @summary pkcs15_ub_identifier
  * @description
@@ -15,6 +15,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const pkcs15_ub_identifier: INTEGER = 255;
-/* END_OF_SYMBOL_DEFINITION pkcs15_ub_identifier */
 
 /* eslint-enable */

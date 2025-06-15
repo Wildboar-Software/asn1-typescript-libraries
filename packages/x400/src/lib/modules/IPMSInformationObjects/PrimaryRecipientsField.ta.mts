@@ -15,7 +15,6 @@ import {
     _decode_PrimaryRecipientsSubfield,
     _encode_PrimaryRecipientsSubfield,
 } from '../IPMSInformationObjects/PrimaryRecipientsSubfield.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrimaryRecipientsField */
 /**
  * @summary PrimaryRecipientsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PrimaryRecipientsField = PrimaryRecipientsSubfield[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PrimaryRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryRecipientsField */
 let _cached_decoder_for_PrimaryRecipientsField: $.ASN1Decoder<PrimaryRecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrimaryRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrimaryRecipientsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryRecipientsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_PrimaryRecipientsField(el: _Element) {
     }
     return _cached_decoder_for_PrimaryRecipientsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrimaryRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryRecipientsField */
 let _cached_encoder_for_PrimaryRecipientsField: $.ASN1Encoder<PrimaryRecipientsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrimaryRecipientsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrimaryRecipientsField */
 /**
  * @summary Encodes a(n) PrimaryRecipientsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_PrimaryRecipientsField(
     return _cached_encoder_for_PrimaryRecipientsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrimaryRecipientsField */
 
 /* eslint-enable */

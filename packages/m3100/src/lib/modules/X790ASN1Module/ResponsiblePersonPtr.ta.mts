@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResponsiblePersonPtr */
+
 /**
  * @summary ResponsiblePersonPtr
  * @description
@@ -35,13 +35,11 @@ export type ResponsiblePersonPtr =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { objectInstance: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ResponsiblePersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponsiblePersonPtr */
+
 let _cached_decoder_for_ResponsiblePersonPtr: $.ASN1Decoder<ResponsiblePersonPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponsiblePersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponsiblePersonPtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponsiblePersonPtr
  * @function
@@ -61,13 +59,11 @@ export function _decode_ResponsiblePersonPtr(el: _Element) {
     }
     return _cached_decoder_for_ResponsiblePersonPtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponsiblePersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponsiblePersonPtr */
+
 let _cached_encoder_for_ResponsiblePersonPtr: $.ASN1Encoder<ResponsiblePersonPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponsiblePersonPtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponsiblePersonPtr */
+
 /**
  * @summary Encodes a(n) ResponsiblePersonPtr into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_ResponsiblePersonPtr(
     return _cached_encoder_for_ResponsiblePersonPtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponsiblePersonPtr */
 
 /* eslint-enable */

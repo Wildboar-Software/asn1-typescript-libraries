@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_etsi_es_attributes */
 /**
  * @summary id_etsi_es_attributes
  * @description
@@ -39,6 +38,5 @@ const id_etsi_es_attributes: OBJECT_IDENTIFIER = new _OID([
     /* electronic-signature-standard */ 1733,
     /* attributes */ 2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_etsi_es_attributes */
 
 /* eslint-enable */

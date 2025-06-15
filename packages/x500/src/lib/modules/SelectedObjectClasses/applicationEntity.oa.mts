@@ -13,7 +13,6 @@ import { presentationAddress } from "../SelectedAttributeTypes/presentationAddre
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { supportedApplicationContext } from "../SelectedAttributeTypes/supportedApplicationContext.oa.mjs";
 import { id_oc_applicationEntity } from "../SelectedObjectClasses/id-oc-applicationEntity.va.mjs";
-/* START_OF_SYMBOL_DEFINITION applicationEntity */
 /**
  * @summary applicationEntity
  * @description
@@ -60,6 +59,5 @@ export const applicationEntity: OBJECT_CLASS = {
     "&id": id_oc_applicationEntity /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION applicationEntity */
 
 /* eslint-enable */

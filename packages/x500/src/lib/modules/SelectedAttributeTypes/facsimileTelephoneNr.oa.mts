@@ -6,7 +6,6 @@ import {
     _encode_FacsimileTelephoneNumber,
 } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION facsimileTelephoneNr */
 /**
  * @summary facsimileTelephoneNr
  * @description
@@ -36,6 +35,5 @@ export const facsimileTelephoneNr: SYNTAX_NAME<FacsimileTelephoneNumber> = {
     "&id": id_lsx_facsimileTelephoneNr /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION facsimileTelephoneNr */
 
 /* eslint-enable */

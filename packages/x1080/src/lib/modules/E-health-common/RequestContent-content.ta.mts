@@ -31,7 +31,7 @@ import {
 } from "./Requirements.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION RequestContent_content */
+
 /**
  * @summary RequestContent_content
  * @description
@@ -149,9 +149,8 @@ export class RequestContent_content {
         return ExchangeMode_sync;
     }
 }
-/* END_OF_SYMBOL_DEFINITION RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestContent_content */
+
 /**
  * @summary The Leading Root Component Types of RequestContent_content
  * @description
@@ -218,9 +217,8 @@ export const _root_component_type_list_1_spec_for_RequestContent_content: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestContent_content */
+
 /**
  * @summary The Trailing Root Component Types of RequestContent_content
  * @description
@@ -230,9 +228,8 @@ export const _root_component_type_list_1_spec_for_RequestContent_content: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RequestContent_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestContent_content */
+
 /**
  * @summary The Extension Addition Component Types of RequestContent_content
  * @description
@@ -242,13 +239,11 @@ export const _root_component_type_list_2_spec_for_RequestContent_content: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_RequestContent_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestContent_content */
+
 let _cached_decoder_for_RequestContent_content: $.ASN1Decoder<RequestContent_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestContent_content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestContent_content
  * @function
@@ -336,13 +331,11 @@ export function _decode_RequestContent_content(el: _Element) {
     }
     return _cached_decoder_for_RequestContent_content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestContent_content */
+
 let _cached_encoder_for_RequestContent_content: $.ASN1Encoder<RequestContent_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestContent_content */
+
 /**
  * @summary Encodes a(n) RequestContent_content into an ASN.1 Element.
  * @function
@@ -431,6 +424,5 @@ export function _encode_RequestContent_content(
     return _cached_encoder_for_RequestContent_content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestContent_content */
 
 /* eslint-enable */

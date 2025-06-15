@@ -6,7 +6,6 @@ import {
     _encode_CRLReason,
 } from "../CertificateExtensions/CRLReason.ta.mjs";
 import { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va.mjs";
-/* START_OF_SYMBOL_DEFINITION reasonCode */
 /**
  * @summary reasonCode
  * @description
@@ -34,6 +33,5 @@ export const reasonCode: EXTENSION<CRLReason> = {
     "&id": id_ce_reasonCode /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION reasonCode */
 
 /* eslint-enable */

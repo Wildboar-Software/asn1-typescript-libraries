@@ -3,7 +3,6 @@ import { IA5String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ia5String */
 /**
  * @summary ia5String
  * @description
@@ -33,6 +32,5 @@ export const ia5String: SYNTAX_NAME<IA5String> = {
     "&id": id_lsx_ia5String /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ia5String */
 
 /* eslint-enable */

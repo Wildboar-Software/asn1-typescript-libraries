@@ -68,7 +68,6 @@ import {
     _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ReadArgumentData */
 /**
  * @summary ReadArgumentData
  * @description
@@ -303,9 +302,7 @@ export class ReadArgumentData implements CommonArguments {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReadArgumentData */
 /**
  * @summary The Leading Root Component Types of ReadArgumentData
  * @description
@@ -338,9 +335,7 @@ export const _root_component_type_list_1_spec_for_ReadArgumentData: $.ComponentS
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReadArgumentData */
 /**
  * @summary The Trailing Root Component Types of ReadArgumentData
  * @description
@@ -352,9 +347,7 @@ export const _root_component_type_list_1_spec_for_ReadArgumentData: $.ComponentS
 export const _root_component_type_list_2_spec_for_ReadArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReadArgumentData */
 /**
  * @summary The Extension Addition Component Types of ReadArgumentData
  * @description
@@ -366,13 +359,9 @@ export const _root_component_type_list_2_spec_for_ReadArgumentData: $.ComponentS
 export const _extension_additions_list_spec_for_ReadArgumentData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadArgumentData */
 let _cached_decoder_for_ReadArgumentData: $.ASN1Decoder<ReadArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReadArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReadArgumentData
  * @function
@@ -518,13 +507,9 @@ export function _decode_ReadArgumentData(el: _Element) {
     }
     return _cached_decoder_for_ReadArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadArgumentData */
 let _cached_encoder_for_ReadArgumentData: $.ASN1Encoder<ReadArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReadArgumentData */
 /**
  * @summary Encodes a(n) ReadArgumentData into an ASN.1 Element.
  * @function
@@ -712,6 +697,5 @@ export function _encode_ReadArgumentData(
     return _cached_encoder_for_ReadArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReadArgumentData */
 
 /* eslint-enable */

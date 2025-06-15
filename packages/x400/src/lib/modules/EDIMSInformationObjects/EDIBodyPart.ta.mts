@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EDIBodyPart */
 /**
  * @summary EDIBodyPart
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EDIBodyPart = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION EDIBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIBodyPart */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIBodyPart */
 export const _decode_EDIBodyPart = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_EDIBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIBodyPart */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIBodyPart */
 export const _encode_EDIBodyPart = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIBodyPart */
 
 /* eslint-enable */

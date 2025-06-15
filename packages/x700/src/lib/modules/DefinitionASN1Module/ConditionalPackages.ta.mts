@@ -15,7 +15,7 @@ import {
     _decode_ConditionalPackages_Item,
     _encode_ConditionalPackages_Item,
 } from '../DefinitionASN1Module/ConditionalPackages-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConditionalPackages */
+
 /**
  * @summary ConditionalPackages
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type ConditionalPackages = ConditionalPackages_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ConditionalPackages */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConditionalPackages */
+
 let _cached_decoder_for_ConditionalPackages: $.ASN1Decoder<ConditionalPackages> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConditionalPackages */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConditionalPackages */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConditionalPackages
  * @function
@@ -50,13 +48,11 @@ export function _decode_ConditionalPackages(el: _Element) {
     }
     return _cached_decoder_for_ConditionalPackages(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConditionalPackages */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConditionalPackages */
+
 let _cached_encoder_for_ConditionalPackages: $.ASN1Encoder<ConditionalPackages> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConditionalPackages */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConditionalPackages */
+
 /**
  * @summary Encodes a(n) ConditionalPackages into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_ConditionalPackages(
     return _cached_encoder_for_ConditionalPackages(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConditionalPackages */
 
 /* eslint-enable */

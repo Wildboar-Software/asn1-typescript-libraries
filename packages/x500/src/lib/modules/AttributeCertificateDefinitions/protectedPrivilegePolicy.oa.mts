@@ -6,7 +6,6 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION protectedPrivilegePolicy */
 /**
  * @summary protectedPrivilegePolicy
  * @description
@@ -34,6 +33,5 @@ export const protectedPrivilegePolicy: OBJECT_CLASS = {
     "&OptionalAttributes": [protPrivPolicy] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_protectedPrivilegePolicy /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION protectedPrivilegePolicy */
 
 /* eslint-enable */

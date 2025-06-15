@@ -31,7 +31,6 @@ import {
     _encode_PublicKey,
 } from "../PKI-Stub/PublicKey.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCertIdentifier */
 /**
  * @summary PKCertIdentifier
  * @description
@@ -51,14 +50,10 @@ export type PKCertIdentifier =
     | { fingerprintPKC: FingerPrint<Certificate> } /* CHOICE_ALT_ROOT */
     | { fingerprintPK: FingerPrint<PublicKey> } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PKCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCertIdentifier */
 let _cached_decoder_for_PKCertIdentifier: $.ASN1Decoder<PKCertIdentifier> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKCertIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) PKCertIdentifier
  * @function
@@ -93,14 +88,10 @@ export function _decode_PKCertIdentifier(el: _Element) {
     }
     return _cached_decoder_for_PKCertIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCertIdentifier */
 let _cached_encoder_for_PKCertIdentifier: $.ASN1Encoder<PKCertIdentifier> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCertIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKCertIdentifier */
 /**
  * @summary Encodes a(n) PKCertIdentifier into an ASN.1 Element.
  * @function
@@ -142,6 +133,5 @@ export function _encode_PKCertIdentifier(
     return _cached_encoder_for_PKCertIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKCertIdentifier */
 
 /* eslint-enable */

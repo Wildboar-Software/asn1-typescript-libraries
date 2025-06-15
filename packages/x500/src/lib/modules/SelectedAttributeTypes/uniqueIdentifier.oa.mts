@@ -11,7 +11,6 @@ import {
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION uniqueIdentifier */
 /**
  * @summary uniqueIdentifier
  * @description
@@ -51,6 +50,5 @@ export const uniqueIdentifier: ATTRIBUTE<UniqueIdentifier> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uniqueIdentifier */
 
 /* eslint-enable */

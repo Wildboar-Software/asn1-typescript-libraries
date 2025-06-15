@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { sseoi } from '../NLM/sseoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION sNPADTEAddress */
+
 /**
  * @summary sNPADTEAddress
  * @description
@@ -28,6 +28,5 @@ export const sNPADTEAddress: OBJECT_IDENTIFIER = new _OID(
     [/* sNPAAddressType */ 5, /* dTEAddress */ 1],
     sseoi
 );
-/* END_OF_SYMBOL_DEFINITION sNPADTEAddress */
 
 /* eslint-enable */

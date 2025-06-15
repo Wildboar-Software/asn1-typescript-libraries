@@ -12,7 +12,6 @@ import {
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
 import { GeneralAutoActionErrors } from '../MSGeneralAutoActionTypes/GeneralAutoActionErrors.osa.mjs';
 import { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActionErrors.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION AutoActionErrorTable */
 /**
  * @summary AutoActionErrorTable
  * @description
@@ -31,6 +30,5 @@ export const AutoActionErrorTable: AUTO_ACTION_ERROR[] = [
     ...GeneralAutoActionErrors,
     ...ContentSpecificAutoActionErrors,
 ];
-/* END_OF_SYMBOL_DEFINITION AutoActionErrorTable */
 
 /* eslint-enable */

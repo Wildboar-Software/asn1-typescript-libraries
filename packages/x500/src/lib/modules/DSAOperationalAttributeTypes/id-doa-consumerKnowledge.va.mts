@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_doa_consumerKnowledge */
 /**
  * @summary id_doa_consumerKnowledge
  * @description
@@ -18,6 +17,5 @@ export const id_doa_consumerKnowledge: OBJECT_IDENTIFIER = new _OID(
     [6],
     id_doa
 );
-/* END_OF_SYMBOL_DEFINITION id_doa_consumerKnowledge */
 
 /* eslint-enable */

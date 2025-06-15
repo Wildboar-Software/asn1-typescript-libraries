@@ -16,7 +16,7 @@ import {
 } from '../Pbact-access/RenameResult.ta.mjs';
 import { id_renameResult } from '../Pbact-access/id-renameResult.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION renameResult */
+
 /**
  * @summary renameResult
  * @description
@@ -44,6 +44,5 @@ export const renameResult: CONTENT_TYPE<RenameResult> = {
     '&id': id_renameResult /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION renameResult */
 
 /* eslint-enable */

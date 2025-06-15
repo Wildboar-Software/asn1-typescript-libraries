@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportDestinationName */
 /**
  * @summary ReportDestinationName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportDestinationName = ORAddressAndOptionalDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportDestinationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDestinationName */
 let _cached_decoder_for_ReportDestinationName: $.ASN1Decoder<ReportDestinationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDestinationName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportDestinationName */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportDestinationName
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReportDestinationName(el: _Element) {
     }
     return _cached_decoder_for_ReportDestinationName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportDestinationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDestinationName */
 let _cached_encoder_for_ReportDestinationName: $.ASN1Encoder<ReportDestinationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDestinationName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportDestinationName */
 /**
  * @summary Encodes a(n) ReportDestinationName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReportDestinationName(
     return _cached_encoder_for_ReportDestinationName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportDestinationName */
 
 /* eslint-enable */

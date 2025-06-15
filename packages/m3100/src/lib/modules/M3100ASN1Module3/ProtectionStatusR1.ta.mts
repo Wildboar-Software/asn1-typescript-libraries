@@ -15,7 +15,7 @@ import {
     _decode_ProtectionStatusR1_Item,
     _encode_ProtectionStatusR1_Item,
 } from '../M3100ASN1Module3/ProtectionStatusR1-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatusR1 */
+
 /**
  * @summary ProtectionStatusR1
  * @description
@@ -48,13 +48,11 @@ import {
  * ```
  */
 export type ProtectionStatusR1 = ProtectionStatusR1_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ProtectionStatusR1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusR1 */
+
 let _cached_decoder_for_ProtectionStatusR1: $.ASN1Decoder<ProtectionStatusR1> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusR1 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatusR1 */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatusR1
  * @function
@@ -69,13 +67,11 @@ export function _decode_ProtectionStatusR1(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatusR1(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatusR1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusR1 */
+
 let _cached_encoder_for_ProtectionStatusR1: $.ASN1Encoder<ProtectionStatusR1> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusR1 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatusR1 */
+
 /**
  * @summary Encodes a(n) ProtectionStatusR1 into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_ProtectionStatusR1(
     return _cached_encoder_for_ProtectionStatusR1(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatusR1 */
 
 /* eslint-enable */

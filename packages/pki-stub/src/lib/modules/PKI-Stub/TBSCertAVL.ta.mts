@@ -40,7 +40,6 @@ import {
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TBSCertAVL */
 /**
  * @summary TBSCertAVL
  * @description
@@ -158,9 +157,7 @@ export class TBSCertAVL {
         return v1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSCertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCertAVL */
 /**
  * @summary The Leading Root Component Types of TBSCertAVL
  * @description
@@ -208,9 +205,7 @@ export const _root_component_type_list_1_spec_for_TBSCertAVL: $.ComponentSpec[] 
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertAVL */
 /**
  * @summary The Trailing Root Component Types of TBSCertAVL
  * @description
@@ -229,9 +224,7 @@ export const _root_component_type_list_2_spec_for_TBSCertAVL: $.ComponentSpec[] 
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL */
 /**
  * @summary The Extension Addition Component Types of TBSCertAVL
  * @description
@@ -242,9 +235,7 @@ export const _root_component_type_list_2_spec_for_TBSCertAVL: $.ComponentSpec[] 
  */
 export const _extension_additions_list_spec_for_TBSCertAVL: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSCertAVL */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSCertAVL
  * @function
@@ -313,9 +304,7 @@ export function _decode_TBSCertAVL(el: _Element) {
         avlExtensions
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSCertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSCertAVL */
 /**
  * @summary Encodes a(n) TBSCertAVL into an ASN.1 Element.
  * @function
@@ -353,6 +342,5 @@ export function _encode_TBSCertAVL(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSCertAVL */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_KDC_REP,
   _encode_KDC_REP,
 } from '../KerberosV5Spec2/KDC-REP.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TGS_REP */
+
 /**
  * @summary TGS_REP
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TGS_REP = KDC_REP; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TGS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TGS_REP */
+
 let _cached_decoder_for_TGS_REP: $.ASN1Decoder<TGS_REP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TGS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TGS_REP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TGS_REP
  * @function
@@ -48,13 +46,11 @@ export function _decode_TGS_REP(el: _Element) {
   }
   return _cached_decoder_for_TGS_REP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TGS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TGS_REP */
+
 let _cached_encoder_for_TGS_REP: $.ASN1Encoder<TGS_REP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TGS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TGS_REP */
+
 /**
  * @summary Encodes a(n) TGS_REP into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_TGS_REP(
   return _cached_encoder_for_TGS_REP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TGS_REP */
 
 /* eslint-enable */

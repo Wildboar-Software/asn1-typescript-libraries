@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { hashAlgorithm } from "../AlgorithmObjectIdentifiers/hashAlgorithm.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ha */
 /**
  * @summary id_ha
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_ha: ID = hashAlgorithm;
-/* END_OF_SYMBOL_DEFINITION id_ha */
 
 /* eslint-enable */

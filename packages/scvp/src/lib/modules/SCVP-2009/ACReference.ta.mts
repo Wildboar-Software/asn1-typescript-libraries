@@ -21,7 +21,6 @@ import {
   _encode_SCVPCertID,
 } from '../SCVP-2009/SCVPCertID.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ACReference */
 /**
  * @summary ACReference
  * @description
@@ -38,13 +37,9 @@ import {
 export type ACReference =
   | { attrCert: AttributeCertificate } /* CHOICE_ALT_ROOT */
   | { acRef: SCVPCertID } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ACReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACReference */
 let _cached_decoder_for_ACReference: $.ASN1Decoder<ACReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) ACReference
  * @function
@@ -70,13 +65,9 @@ export function _decode_ACReference(el: _Element) {
   }
   return _cached_decoder_for_ACReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACReference */
 let _cached_encoder_for_ACReference: $.ASN1Encoder<ACReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACReference */
 /**
  * @summary Encodes a(n) ACReference into an ASN.1 Element.
  * @function
@@ -110,6 +101,5 @@ export function _encode_ACReference(
   return _cached_encoder_for_ACReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ACReference */
 
 /* eslint-enable */

@@ -19,7 +19,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { id_aae_auto_forwarding_loop } from '../IPMSObjectIdentifiers/id-aae-auto-forwarding-loop.va.mjs';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_forwarding_loop */
 /**
  * @summary auto_forwarding_loop
  * @description
@@ -50,6 +49,5 @@ export const auto_forwarding_loop: AUTO_ACTION_ERROR = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_forwarding_loop */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SupportedChoice,
     _encode_SupportedChoice,
 } from '../GrmAttributeDefinitionModule/SupportedChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Supports */
 /**
  * @summary Supports
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Supports = SupportedChoice[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Supports */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Supports */
 let _cached_decoder_for_Supports: $.ASN1Decoder<Supports> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Supports */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Supports */
 /**
  * @summary Decodes an ASN.1 element into a(n) Supports
  * @function
@@ -48,13 +43,9 @@ export function _decode_Supports(el: _Element) {
     }
     return _cached_decoder_for_Supports(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Supports */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Supports */
 let _cached_encoder_for_Supports: $.ASN1Encoder<Supports> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Supports */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Supports */
 /**
  * @summary Encodes a(n) Supports into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Supports(
     return _cached_encoder_for_Supports(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Supports */
 
 /* eslint-enable */

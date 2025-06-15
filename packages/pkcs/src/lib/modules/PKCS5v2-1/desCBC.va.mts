@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { oiw } from "../PKCS5v2-1/oiw.va.mjs";
-/* START_OF_SYMBOL_DEFINITION desCBC */
+
 /**
  * @summary desCBC
  * @description
@@ -18,6 +18,5 @@ export const desCBC: OBJECT_IDENTIFIER = new _OID(
     [/* secsig */ 3, /* algorithms */ 2, 7],
     oiw
 );
-/* END_OF_SYMBOL_DEFINITION desCBC */
 
 /* eslint-enable */

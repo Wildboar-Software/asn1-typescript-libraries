@@ -17,7 +17,7 @@ import {
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertID */
+
 /**
  * @summary CertID
  * @description
@@ -86,9 +86,8 @@ export class CertID {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertID */
+
 /**
  * @summary The Leading Root Component Types of CertID
  * @description
@@ -127,9 +126,8 @@ export const _root_component_type_list_1_spec_for_CertID: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertID */
+
 /**
  * @summary The Trailing Root Component Types of CertID
  * @description
@@ -139,9 +137,8 @@ export const _root_component_type_list_1_spec_for_CertID: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertID */
+
 /**
  * @summary The Extension Addition Component Types of CertID
  * @description
@@ -151,13 +148,11 @@ export const _root_component_type_list_2_spec_for_CertID: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_CertID: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertID */
+
 let _cached_decoder_for_CertID: $.ASN1Decoder<CertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertID
  * @function
@@ -197,13 +192,11 @@ export function _decode_CertID(el: _Element) {
     }
     return _cached_decoder_for_CertID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertID */
+
 let _cached_encoder_for_CertID: $.ASN1Encoder<CertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertID */
+
 /**
  * @summary Encodes a(n) CertID into an ASN.1 Element.
  * @function
@@ -243,6 +236,5 @@ export function _encode_CertID(value: CertID, elGetter: $.ASN1Encoder<CertID>) {
     return _cached_encoder_for_CertID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertID */
 
 /* eslint-enable */

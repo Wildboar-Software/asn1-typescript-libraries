@@ -6,7 +6,7 @@ import {
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyPairIdentifier */
+
 /**
  * @summary KeyPairIdentifier
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type KeyPairIdentifier = SignerIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyPairIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyPairIdentifier */
+
 let _cached_decoder_for_KeyPairIdentifier: $.ASN1Decoder<KeyPairIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyPairIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyPairIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyPairIdentifier
  * @function
@@ -37,13 +35,11 @@ export function _decode_KeyPairIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KeyPairIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyPairIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyPairIdentifier */
+
 let _cached_encoder_for_KeyPairIdentifier: $.ASN1Encoder<KeyPairIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyPairIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyPairIdentifier */
+
 /**
  * @summary Encodes a(n) KeyPairIdentifier into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_KeyPairIdentifier(
     return _cached_encoder_for_KeyPairIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyPairIdentifier */
 
 /* eslint-enable */

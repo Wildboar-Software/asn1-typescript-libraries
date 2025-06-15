@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSInitialsAttribute } from '../MHSRoutingORAddressSubtree/mHSInitialsAttribute.oa.mjs';
 import { id_oc_mhs_initials } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-initials.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSInitials */
 /**
  * @summary mHSInitials
  * @description
@@ -48,6 +47,5 @@ export const mHSInitials: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSInitialsAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_initials /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSInitials */
 
 /* eslint-enable */

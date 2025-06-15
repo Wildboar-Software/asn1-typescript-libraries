@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta.mjs";
 import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CommitmentTypeIndication */
 /**
  * @summary CommitmentTypeIndication
  * @description
@@ -63,9 +62,7 @@ class CommitmentTypeIndication {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommitmentTypeIndication */
 /**
  * @summary The Leading Root Component Types of CommitmentTypeIndication
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_CommitmentTypeIndication: $.Component
     new $.ComponentSpec("commitmentTypeId", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("commitmentTypeQualifier", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommitmentTypeIndication */
 /**
  * @summary The Trailing Root Component Types of CommitmentTypeIndication
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_CommitmentTypeIndication: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommitmentTypeIndication */
 /**
  * @summary The Extension Addition Component Types of CommitmentTypeIndication
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_CommitmentTypeIndication: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommitmentTypeIndication */
 let _cached_decoder_for_CommitmentTypeIndication: $.ASN1Decoder<CommitmentTypeIndication> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommitmentTypeIndication */
 /**
  * @summary Decodes an ASN.1 element into a(n) CommitmentTypeIndication
  * @function
@@ -148,13 +137,9 @@ function _decode_CommitmentTypeIndication (el: _Element) {
 }; }
     return _cached_decoder_for_CommitmentTypeIndication(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommitmentTypeIndication */
 let _cached_encoder_for_CommitmentTypeIndication: $.ASN1Encoder<CommitmentTypeIndication> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommitmentTypeIndication */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommitmentTypeIndication */
 /**
  * @summary Encodes a(n) CommitmentTypeIndication into an ASN.1 Element.
  * @function
@@ -175,6 +160,5 @@ function _encode_CommitmentTypeIndication (value: CommitmentTypeIndication, elGe
     return _cached_encoder_for_CommitmentTypeIndication(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommitmentTypeIndication */
 
 /* eslint-enable */

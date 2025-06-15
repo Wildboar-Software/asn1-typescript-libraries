@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TestStepQualifier */
 /**
  * @summary TestStepQualifier
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TestStepQualifier = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION TestStepQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestStepQualifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestStepQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestStepQualifier */
 export const _decode_TestStepQualifier = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_TestStepQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestStepQualifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestStepQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestStepQualifier */
 export const _encode_TestStepQualifier = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestStepQualifier */
 
 /* eslint-enable */

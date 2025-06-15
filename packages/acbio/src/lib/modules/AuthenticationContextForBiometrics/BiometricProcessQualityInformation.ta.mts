@@ -20,7 +20,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BiometricProcessQualityInformation */
+
 /**
  * @summary BiometricProcessQualityInformation
  * @description
@@ -36,13 +36,11 @@ import {
 export type BiometricProcessQualityInformation =
     | { biometricProcessQuality: BiometricProcessQuality } /* CHOICE_ALT_ROOT */
     | { biometricProcessQualityReferrer: URI } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BiometricProcessQualityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessQualityInformation */
+
 let _cached_decoder_for_BiometricProcessQualityInformation: $.ASN1Decoder<BiometricProcessQualityInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessQualityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricProcessQualityInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricProcessQualityInformation
  * @function
@@ -63,13 +61,11 @@ export function _decode_BiometricProcessQualityInformation(el: _Element) {
     }
     return _cached_decoder_for_BiometricProcessQualityInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricProcessQualityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessQualityInformation */
+
 let _cached_encoder_for_BiometricProcessQualityInformation: $.ASN1Encoder<BiometricProcessQualityInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessQualityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricProcessQualityInformation */
+
 /**
  * @summary Encodes a(n) BiometricProcessQualityInformation into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_BiometricProcessQualityInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricProcessQualityInformation */
 
 /* eslint-enable */

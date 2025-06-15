@@ -20,7 +20,7 @@ import {
     _decode_EncapsulatedContentInfoBPUReport,
     _encode_EncapsulatedContentInfoBPUReport,
 } from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoBPUReport.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentBPUReport */
+
 /**
  * @summary ContentBPUReport
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type ContentBPUReport = SIGNEDDATA<EncapsulatedContentInfoBPUReport>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContentBPUReport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentBPUReport */
+
 let _cached_decoder_for_ContentBPUReport: $.ASN1Decoder<ContentBPUReport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentBPUReport */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentBPUReport */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentBPUReport
  * @function
@@ -53,13 +51,11 @@ export function _decode_ContentBPUReport(el: _Element) {
     }
     return _cached_decoder_for_ContentBPUReport(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentBPUReport */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentBPUReport */
+
 let _cached_encoder_for_ContentBPUReport: $.ASN1Encoder<ContentBPUReport> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentBPUReport */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentBPUReport */
+
 /**
  * @summary Encodes a(n) ContentBPUReport into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_ContentBPUReport(
     return _cached_encoder_for_ContentBPUReport(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentBPUReport */
 
 /* eslint-enable */

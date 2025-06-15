@@ -17,7 +17,7 @@ import {
   _get_decoder_for_GenericTimeTypeChoice,
   _get_encoder_for_GenericTimeTypeChoice,
 } from '../XSD/GenericTimeTypeChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GYearMonth */
+
 /**
  * @summary GYearMonth
  * @description
@@ -34,13 +34,11 @@ import {
  * ```
  */
 export type GYearMonth = GenericTimeTypeChoice<TIME, VisibleString>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GYearMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GYearMonth */
+
 let _cached_decoder_for_GYearMonth: $.ASN1Decoder<GYearMonth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GYearMonth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GYearMonth */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GYearMonth
  * @function
@@ -56,13 +54,11 @@ export function _decode_GYearMonth(el: _Element) {
   }
   return _cached_decoder_for_GYearMonth(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GYearMonth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GYearMonth */
+
 let _cached_encoder_for_GYearMonth: $.ASN1Encoder<GYearMonth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GYearMonth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GYearMonth */
+
 /**
  * @summary Encodes a(n) GYearMonth into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_GYearMonth(
   return _cached_encoder_for_GYearMonth(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GYearMonth */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION FilterItem_substrings */
 /**
  * @summary FilterItem_substrings
  * @description
@@ -68,9 +67,7 @@ export class FilterItem_substrings {
         return new FilterItem_substrings(_o.type_, _o.strings);
     }
 }
-/* END_OF_SYMBOL_DEFINITION FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FilterItem_substrings */
 /**
  * @summary The Leading Root Component Types of FilterItem_substrings
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_FilterItem_substrings: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FilterItem_substrings */
 /**
  * @summary The Trailing Root Component Types of FilterItem_substrings
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_FilterItem_substrings: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FilterItem_substrings: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FilterItem_substrings */
 /**
  * @summary The Extension Addition Component Types of FilterItem_substrings
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_FilterItem_substrings: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_FilterItem_substrings: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterItem_substrings */
 let _cached_decoder_for_FilterItem_substrings: $.ASN1Decoder<FilterItem_substrings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FilterItem_substrings */
 /**
  * @summary Decodes an ASN.1 element into a(n) FilterItem_substrings
  * @function
@@ -158,13 +147,9 @@ export function _decode_FilterItem_substrings(el: _Element) {
     }
     return _cached_decoder_for_FilterItem_substrings(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterItem_substrings */
 let _cached_encoder_for_FilterItem_substrings: $.ASN1Encoder<FilterItem_substrings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterItem_substrings */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FilterItem_substrings */
 /**
  * @summary Encodes a(n) FilterItem_substrings into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_FilterItem_substrings(
     return _cached_encoder_for_FilterItem_substrings(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FilterItem_substrings */
 
 /* eslint-enable */

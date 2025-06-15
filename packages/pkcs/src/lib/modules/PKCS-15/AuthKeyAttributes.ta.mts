@@ -11,7 +11,7 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthKeyAttributes */
+
 /**
  * @summary AuthKeyAttributes
  * @description
@@ -82,9 +82,8 @@ export class AuthKeyAttributes {
         return true;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuthKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of AuthKeyAttributes
  * @description
@@ -109,9 +108,8 @@ export const _root_component_type_list_1_spec_for_AuthKeyAttributes: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuthKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of AuthKeyAttributes
  * @description
@@ -121,9 +119,8 @@ export const _root_component_type_list_1_spec_for_AuthKeyAttributes: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AuthKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuthKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of AuthKeyAttributes
  * @description
@@ -133,13 +130,11 @@ export const _root_component_type_list_2_spec_for_AuthKeyAttributes: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_AuthKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthKeyAttributes */
+
 let _cached_decoder_for_AuthKeyAttributes: $.ASN1Decoder<AuthKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthKeyAttributes
  * @function
@@ -186,13 +181,11 @@ export function _decode_AuthKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_AuthKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthKeyAttributes */
+
 let _cached_encoder_for_AuthKeyAttributes: $.ASN1Encoder<AuthKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthKeyAttributes */
+
 /**
  * @summary Encodes a(n) AuthKeyAttributes into an ASN.1 Element.
  * @function
@@ -235,6 +228,5 @@ export function _encode_AuthKeyAttributes(
     return _cached_encoder_for_AuthKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthKeyAttributes */
 
 /* eslint-enable */

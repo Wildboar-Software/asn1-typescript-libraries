@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SpecifiedECDomain, _decode_SpecifiedECDomain, _encode_SpecifiedECDomain } from "../SEC1-v1-9/SpecifiedECDomain.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDomainParameters */
 /**
  * @summary ECDomainParameters
  * @description
@@ -33,13 +32,9 @@ type ECDomainParameters =
     { specified: SpecifiedECDomain } /* CHOICE_ALT_ROOT */
     | { named: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { implicitCA: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ECDomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDomainParameters */
 let _cached_decoder_for_ECDomainParameters: $.ASN1Decoder<ECDomainParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECDomainParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECDomainParameters
  * @function
@@ -55,13 +50,9 @@ function _decode_ECDomainParameters (el: _Element) {
 }); }
     return _cached_decoder_for_ECDomainParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECDomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDomainParameters */
 let _cached_encoder_for_ECDomainParameters: $.ASN1Encoder<ECDomainParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDomainParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECDomainParameters */
 /**
  * @summary Encodes a(n) ECDomainParameters into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ function _encode_ECDomainParameters (value: ECDomainParameters, elGetter: $.ASN1
     return _cached_encoder_for_ECDomainParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECDomainParameters */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION HandOffLocation */
+
 /**
  * @summary HandOffLocation
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type HandOffLocation = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION HandOffLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HandOffLocation */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HandOffLocation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HandOffLocation */
+
+
 export const _decode_HandOffLocation = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_HandOffLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HandOffLocation */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HandOffLocation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HandOffLocation */
+
+
 export const _encode_HandOffLocation = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_HandOffLocation */
 
 /* eslint-enable */

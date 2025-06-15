@@ -21,7 +21,7 @@ import {
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TokenAB */
+
 /**
  * @summary TokenAB
  * @description
@@ -96,9 +96,8 @@ class TokenAB {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TokenAB */
+
 /**
  * @summary The Leading Root Component Types of TokenAB
  * @description
@@ -115,9 +114,8 @@ const _root_component_type_list_1_spec_for_TokenAB: $.ComponentSpec[] = [
     /* FIXME: authID COULD_NOT_RESOLVE_TYPE_DEF */,
     new $.ComponentSpec("signature", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TokenAB */
+
 /**
  * @summary The Trailing Root Component Types of TokenAB
  * @description
@@ -130,9 +128,8 @@ export
 const _root_component_type_list_2_spec_for_TokenAB: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TokenAB */
+
 /**
  * @summary The Extension Addition Component Types of TokenAB
  * @description
@@ -145,13 +142,11 @@ export
 const _extension_additions_list_spec_for_TokenAB: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenAB */
+
 let _cached_decoder_for_TokenAB: $.ASN1Decoder<TokenAB> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TokenAB */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TokenAB
  * @function
@@ -193,13 +188,11 @@ function _decode_TokenAB (el: _Element) {
 }; }
     return _cached_decoder_for_TokenAB(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenAB */
+
 let _cached_encoder_for_TokenAB: $.ASN1Encoder<TokenAB> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenAB */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TokenAB */
+
 /**
  * @summary Encodes a(n) TokenAB into an ASN.1 Element.
  * @function
@@ -223,6 +216,5 @@ function _encode_TokenAB (value: TokenAB, elGetter: $.ASN1Encoder<TokenAB>) {
     return _cached_encoder_for_TokenAB(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TokenAB */
 
 /* eslint-enable */

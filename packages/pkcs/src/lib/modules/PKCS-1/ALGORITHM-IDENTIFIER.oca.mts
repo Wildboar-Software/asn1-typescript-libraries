@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ALGORITHM_IDENTIFIER */
+
 /**
  * @summary ALGORITHM_IDENTIFIER
  * @description
@@ -57,6 +57,5 @@ export interface ALGORITHM_IDENTIFIER<
      */
     readonly "&Type": Type;
 }
-/* END_OF_SYMBOL_DEFINITION ALGORITHM_IDENTIFIER */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SDSEContent,
     _encode_SDSEContent,
 } from "../DirectoryShadowAbstractService/SDSEContent.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IncrementalStepRefresh_sDSEChanges */
 /**
  * @summary IncrementalStepRefresh_sDSEChanges
  * @description
@@ -31,13 +30,9 @@ export type IncrementalStepRefresh_sDSEChanges =
     | { remove: NULL } /* CHOICE_ALT_ROOT */
     | { modify: ContentChange } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION IncrementalStepRefresh_sDSEChanges */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IncrementalStepRefresh_sDSEChanges */
 let _cached_decoder_for_IncrementalStepRefresh_sDSEChanges: $.ASN1Decoder<IncrementalStepRefresh_sDSEChanges> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IncrementalStepRefresh_sDSEChanges */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IncrementalStepRefresh_sDSEChanges */
 /**
  * @summary Decodes an ASN.1 element into a(n) IncrementalStepRefresh_sDSEChanges
  * @function
@@ -64,13 +59,9 @@ export function _decode_IncrementalStepRefresh_sDSEChanges(el: _Element) {
     }
     return _cached_decoder_for_IncrementalStepRefresh_sDSEChanges(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IncrementalStepRefresh_sDSEChanges */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IncrementalStepRefresh_sDSEChanges */
 let _cached_encoder_for_IncrementalStepRefresh_sDSEChanges: $.ASN1Encoder<IncrementalStepRefresh_sDSEChanges> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IncrementalStepRefresh_sDSEChanges */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IncrementalStepRefresh_sDSEChanges */
 /**
  * @summary Encodes a(n) IncrementalStepRefresh_sDSEChanges into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_IncrementalStepRefresh_sDSEChanges(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IncrementalStepRefresh_sDSEChanges */
 
 /* eslint-enable */

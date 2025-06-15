@@ -6,7 +6,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PostalAddress */
 /**
  * @summary PostalAddress
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type PostalAddress = UnboundedDirectoryString[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PostalAddress */
 let _cached_decoder_for_PostalAddress: $.ASN1Decoder<PostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PostalAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PostalAddress
  * @function
@@ -39,13 +34,9 @@ export function _decode_PostalAddress(el: _Element) {
     }
     return _cached_decoder_for_PostalAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PostalAddress */
 let _cached_encoder_for_PostalAddress: $.ASN1Encoder<PostalAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PostalAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PostalAddress */
 /**
  * @summary Encodes a(n) PostalAddress into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_PostalAddress(
     return _cached_encoder_for_PostalAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PostalAddress */
 
 /* eslint-enable */

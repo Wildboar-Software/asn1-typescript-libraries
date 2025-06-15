@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExternalSchedulerName */
 /**
  * @summary ExternalSchedulerName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExternalSchedulerName = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExternalSchedulerName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalSchedulerName */
 let _cached_decoder_for_ExternalSchedulerName: $.ASN1Decoder<ExternalSchedulerName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalSchedulerName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExternalSchedulerName */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExternalSchedulerName
  * @function
@@ -48,13 +43,9 @@ export function _decode_ExternalSchedulerName(el: _Element) {
     }
     return _cached_decoder_for_ExternalSchedulerName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExternalSchedulerName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalSchedulerName */
 let _cached_encoder_for_ExternalSchedulerName: $.ASN1Encoder<ExternalSchedulerName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalSchedulerName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExternalSchedulerName */
 /**
  * @summary Encodes a(n) ExternalSchedulerName into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ExternalSchedulerName(
     return _cached_encoder_for_ExternalSchedulerName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExternalSchedulerName */
 
 /* eslint-enable */

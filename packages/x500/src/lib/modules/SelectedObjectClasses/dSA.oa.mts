@@ -6,7 +6,6 @@ import {
 import { knowledgeInformation } from "../SelectedAttributeTypes/knowledgeInformation.oa.mjs";
 import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.mjs";
 import { id_oc_dSA } from "../SelectedObjectClasses/id-oc-dSA.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dSA */
 /**
  * @summary dSA
  * @description
@@ -35,6 +34,5 @@ export const dSA: OBJECT_CLASS = {
     "&id": id_oc_dSA /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dSA */
 
 /* eslint-enable */

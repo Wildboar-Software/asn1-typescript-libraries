@@ -15,7 +15,7 @@ import {
     _decode_RemoveTpsFromGtpResult_Item,
     _encode_RemoveTpsFromGtpResult_Item,
 } from '../ASN1DefinedTypesModule/RemoveTpsFromGtpResult-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RemoveTpsFromGtpResult */
+
 /**
  * @summary RemoveTpsFromGtpResult
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type RemoveTpsFromGtpResult = RemoveTpsFromGtpResult_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RemoveTpsFromGtpResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveTpsFromGtpResult */
+
 let _cached_decoder_for_RemoveTpsFromGtpResult: $.ASN1Decoder<RemoveTpsFromGtpResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveTpsFromGtpResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveTpsFromGtpResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveTpsFromGtpResult
  * @function
@@ -51,13 +49,11 @@ export function _decode_RemoveTpsFromGtpResult(el: _Element) {
     }
     return _cached_decoder_for_RemoveTpsFromGtpResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveTpsFromGtpResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveTpsFromGtpResult */
+
 let _cached_encoder_for_RemoveTpsFromGtpResult: $.ASN1Encoder<RemoveTpsFromGtpResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveTpsFromGtpResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveTpsFromGtpResult */
+
 /**
  * @summary Encodes a(n) RemoveTpsFromGtpResult into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_RemoveTpsFromGtpResult(
     return _cached_encoder_for_RemoveTpsFromGtpResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveTpsFromGtpResult */
 
 /* eslint-enable */

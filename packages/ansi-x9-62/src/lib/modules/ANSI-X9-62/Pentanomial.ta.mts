@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Pentanomial */
 /**
  * @summary Pentanomial
  * @description
@@ -64,9 +63,7 @@ export class Pentanomial {
         return new Pentanomial(_o.k1, _o.k2, _o.k3);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Pentanomial */
 /**
  * @summary The Leading Root Component Types of Pentanomial
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_Pentanomial: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Pentanomial */
 /**
  * @summary The Trailing Root Component Types of Pentanomial
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_Pentanomial: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Pentanomial: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Pentanomial */
 /**
  * @summary The Extension Addition Component Types of Pentanomial
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_Pentanomial: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_Pentanomial: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pentanomial */
 let _cached_decoder_for_Pentanomial: $.ASN1Decoder<Pentanomial> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pentanomial */
 /**
  * @summary Decodes an ASN.1 element into a(n) Pentanomial
  * @function
@@ -160,13 +149,9 @@ export function _decode_Pentanomial(el: _Element) {
     }
     return _cached_decoder_for_Pentanomial(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pentanomial */
 let _cached_encoder_for_Pentanomial: $.ASN1Encoder<Pentanomial> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pentanomial */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pentanomial */
 /**
  * @summary Encodes a(n) Pentanomial into an ASN.1 Element.
  * @function
@@ -196,6 +181,5 @@ export function _encode_Pentanomial(
     return _cached_encoder_for_Pentanomial(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pentanomial */
 
 /* eslint-enable */

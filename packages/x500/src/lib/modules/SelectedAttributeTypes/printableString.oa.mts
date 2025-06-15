@@ -3,7 +3,6 @@ import { PrintableString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_printableString } from "../SelectedAttributeTypes/id-lsx-printableString.va.mjs";
-/* START_OF_SYMBOL_DEFINITION printableString */
 /**
  * @summary printableString
  * @description
@@ -33,6 +32,5 @@ export const printableString: SYNTAX_NAME<PrintableString> = {
     "&id": id_lsx_printableString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION printableString */
 
 /* eslint-enable */

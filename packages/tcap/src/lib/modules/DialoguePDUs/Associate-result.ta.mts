@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Associate_result */
 /**
  * @summary Associate_result
  * @description
@@ -24,57 +23,40 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Associate_result = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Associate_result */
 
-/* START_OF_SYMBOL_DEFINITION Associate_result_accepted */
 /**
  * @summary Associate_result_accepted
  * @constant
  * @type {number}
  */
 export const Associate_result_accepted: Associate_result = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Associate_result_accepted */
 
-/* START_OF_SYMBOL_DEFINITION accepted */
 /**
  * @summary Associate_result_accepted
  * @constant
  * @type {number}
  */
 export const accepted: Associate_result = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION accepted */
 
-/* START_OF_SYMBOL_DEFINITION Associate_result_reject_permanent */
 /**
  * @summary Associate_result_reject_permanent
  * @constant
  * @type {number}
  */
 export const Associate_result_reject_permanent: Associate_result = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Associate_result_reject_permanent */
 
-/* START_OF_SYMBOL_DEFINITION reject_permanent */
 /**
  * @summary Associate_result_reject_permanent
  * @constant
  * @type {number}
  */
 export const reject_permanent: Associate_result = Associate_result_reject_permanent; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION reject_permanent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Associate_result */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Associate_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Associate_result */
 export const _decode_Associate_result = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Associate_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Associate_result */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Associate_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Associate_result */
 export const _encode_Associate_result = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Associate_result */
 
 /* eslint-enable */

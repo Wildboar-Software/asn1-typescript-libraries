@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION combine */
+
 /**
  * @summary combine
  * @description
@@ -57,6 +57,5 @@ function combine (
         "&id": base["&id"],
     };
 }
-/* END_OF_SYMBOL_DEFINITION combine */
 
 /* eslint-enable */

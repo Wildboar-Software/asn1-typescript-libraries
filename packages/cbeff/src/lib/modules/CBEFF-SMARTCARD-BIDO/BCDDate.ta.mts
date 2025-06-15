@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BCDDate */
 /**
  * @summary BCDDate
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BCDDate = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION BCDDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BCDDate */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BCDDate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BCDDate */
 export const _decode_BCDDate = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_BCDDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BCDDate */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BCDDate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BCDDate */
 export const _encode_BCDDate = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BCDDate */
 
 /* eslint-enable */

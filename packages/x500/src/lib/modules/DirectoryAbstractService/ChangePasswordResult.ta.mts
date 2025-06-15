@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ChangePasswordResult */
 /**
  * @summary ChangePasswordResult
  * @description
@@ -31,13 +30,9 @@ export type ChangePasswordResult =
           information: OPTIONALLY_PROTECTED_SEQ<ChangePasswordResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ChangePasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangePasswordResult */
 let _cached_decoder_for_ChangePasswordResult: $.ASN1Decoder<ChangePasswordResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangePasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChangePasswordResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangePasswordResult
  * @function
@@ -65,13 +60,9 @@ export function _decode_ChangePasswordResult(el: _Element) {
     }
     return _cached_decoder_for_ChangePasswordResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChangePasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangePasswordResult */
 let _cached_encoder_for_ChangePasswordResult: $.ASN1Encoder<ChangePasswordResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangePasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChangePasswordResult */
 /**
  * @summary Encodes a(n) ChangePasswordResult into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_ChangePasswordResult(
     return _cached_encoder_for_ChangePasswordResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChangePasswordResult */
 
 /* eslint-enable */

@@ -60,7 +60,6 @@ import {
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
 } from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPart_basic */
 /**
  * @summary BodyPart_basic
  * @description
@@ -82,13 +81,9 @@ export type BodyPart_basic =
     | { mixed_mode: MixedModeBodyPart } /* CHOICE_ALT_ROOT */
     | { bilaterally_defined: BilaterallyDefinedBodyPart } /* CHOICE_ALT_ROOT */
     | { nationally_defined: NationallyDefinedBodyPart } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPart_basic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPart_basic */
 let _cached_decoder_for_BodyPart_basic: $.ASN1Decoder<BodyPart_basic> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPart_basic */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPart_basic */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPart_basic
  * @function
@@ -164,13 +159,9 @@ export function _decode_BodyPart_basic(el: _Element) {
     }
     return _cached_decoder_for_BodyPart_basic(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPart_basic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPart_basic */
 let _cached_encoder_for_BodyPart_basic: $.ASN1Encoder<BodyPart_basic> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPart_basic */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPart_basic */
 /**
  * @summary Encodes a(n) BodyPart_basic into an ASN.1 Element.
  * @function
@@ -252,6 +243,5 @@ export function _encode_BodyPart_basic(
     return _cached_encoder_for_BodyPart_basic(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPart_basic */
 
 /* eslint-enable */

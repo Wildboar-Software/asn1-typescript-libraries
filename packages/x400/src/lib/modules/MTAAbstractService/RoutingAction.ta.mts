@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_RoutingAction */
 /**
  * @summary RoutingAction
  * @description
@@ -26,9 +25,7 @@ export enum _enum_for_RoutingAction {
     relayed = 0,
     rerouted = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_RoutingAction */
 
-/* START_OF_SYMBOL_DEFINITION RoutingAction */
 /**
  * @summary RoutingAction
  * @description
@@ -40,9 +37,7 @@ export enum _enum_for_RoutingAction {
  * ```@enum {number}
  */
 export type RoutingAction = _enum_for_RoutingAction;
-/* END_OF_SYMBOL_DEFINITION RoutingAction */
 
-/* START_OF_SYMBOL_DEFINITION RoutingAction */
 /**
  * @summary RoutingAction
  * @description
@@ -54,9 +49,7 @@ export type RoutingAction = _enum_for_RoutingAction;
  * ```@enum {number}
  */
 export const RoutingAction = _enum_for_RoutingAction;
-/* END_OF_SYMBOL_DEFINITION RoutingAction */
 
-/* START_OF_SYMBOL_DEFINITION RoutingAction_relayed */
 /**
  * @summary RoutingAction_relayed
  * @constant
@@ -64,9 +57,7 @@ export const RoutingAction = _enum_for_RoutingAction;
  */
 export const RoutingAction_relayed: RoutingAction =
     RoutingAction.relayed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RoutingAction_relayed */
 
-/* START_OF_SYMBOL_DEFINITION relayed */
 /**
  * @summary relayed
  * @constant
@@ -74,9 +65,7 @@ export const RoutingAction_relayed: RoutingAction =
  */
 export const relayed: RoutingAction =
     RoutingAction.relayed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION relayed */
 
-/* START_OF_SYMBOL_DEFINITION RoutingAction_rerouted */
 /**
  * @summary RoutingAction_rerouted
  * @constant
@@ -84,9 +73,7 @@ export const relayed: RoutingAction =
  */
 export const RoutingAction_rerouted: RoutingAction =
     RoutingAction.rerouted; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RoutingAction_rerouted */
 
-/* START_OF_SYMBOL_DEFINITION rerouted */
 /**
  * @summary rerouted
  * @constant
@@ -94,21 +81,12 @@ export const RoutingAction_rerouted: RoutingAction =
  */
 export const rerouted: RoutingAction =
     RoutingAction.rerouted; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION rerouted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAction */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingAction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoutingAction */
 export const _decode_RoutingAction = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_RoutingAction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAction */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingAction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoutingAction */
 export const _encode_RoutingAction = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoutingAction */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ObservedValue */
 /**
  * @summary ObservedValue
  * @description
@@ -32,13 +31,9 @@ export
 type ObservedValue =
     { integer: INTEGER } /* CHOICE_ALT_ROOT */
     | { real: REAL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ObservedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservedValue */
 let _cached_decoder_for_ObservedValue: $.ASN1Decoder<ObservedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservedValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObservedValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObservedValue
  * @function
@@ -53,13 +48,9 @@ function _decode_ObservedValue (el: _Element) {
 }); }
     return _cached_decoder_for_ObservedValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObservedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservedValue */
 let _cached_encoder_for_ObservedValue: $.ASN1Encoder<ObservedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservedValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObservedValue */
 /**
  * @summary Encodes a(n) ObservedValue into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_ObservedValue (value: ObservedValue, elGetter: $.ASN1Encoder<Ob
     return _cached_encoder_for_ObservedValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObservedValue */
 
 /* eslint-enable */

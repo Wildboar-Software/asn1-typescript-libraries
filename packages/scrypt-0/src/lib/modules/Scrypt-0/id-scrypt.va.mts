@@ -4,7 +4,7 @@ import {
     ObjectIdentifier as _OID,
 } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_scrypt */
+
 /**
  * @summary id_scrypt
  * @description
@@ -30,6 +30,5 @@ const id_scrypt: OBJECT_IDENTIFIER = new _OID([
     4,
     11,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_scrypt */
 
 /* eslint-enable */

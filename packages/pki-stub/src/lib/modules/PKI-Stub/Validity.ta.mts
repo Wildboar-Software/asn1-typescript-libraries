@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Time, _decode_Time, _encode_Time } from "../PKI-Stub/Time.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Validity */
 /**
  * @summary Validity
  * @description
@@ -72,9 +71,7 @@ export class Validity {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Validity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Validity */
 /**
  * @summary The Leading Root Component Types of Validity
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_Validity: $.ComponentSpec[] =
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Validity */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Validity */
 /**
  * @summary The Trailing Root Component Types of Validity
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_Validity: $.ComponentSpec[] =
  */
 export const _root_component_type_list_2_spec_for_Validity: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Validity */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Validity */
 /**
  * @summary The Extension Addition Component Types of Validity
  * @description
@@ -126,9 +119,7 @@ export const _root_component_type_list_2_spec_for_Validity: $.ComponentSpec[] =
  */
 export const _extension_additions_list_spec_for_Validity: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Validity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Validity */
 /**
  * @summary Decodes an ASN.1 element into a(n) Validity
  * @function
@@ -152,9 +143,7 @@ export function _decode_Validity(el: _Element) {
     notAfter = _decode_Time(sequence[1]);
     return new Validity(notBefore, notAfter, sequence.slice(2));
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Validity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Validity */
 /**
  * @summary Encodes a(n) Validity into an ASN.1 Element.
  * @function
@@ -180,6 +169,5 @@ export function _encode_Validity(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Validity */
 
 /* eslint-enable */

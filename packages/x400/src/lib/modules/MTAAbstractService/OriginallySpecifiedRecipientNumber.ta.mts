@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OriginallySpecifiedRecipientNumber */
 /**
  * @summary OriginallySpecifiedRecipientNumber
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type OriginallySpecifiedRecipientNumber = INTEGER;
-/* END_OF_SYMBOL_DEFINITION OriginallySpecifiedRecipientNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginallySpecifiedRecipientNumber */
 let _cached_decoder_for_OriginallySpecifiedRecipientNumber: $.ASN1Decoder<OriginallySpecifiedRecipientNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginallySpecifiedRecipientNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginallySpecifiedRecipientNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginallySpecifiedRecipientNumber
  * @function
@@ -44,13 +39,9 @@ export function _decode_OriginallySpecifiedRecipientNumber(el: _Element) {
     }
     return _cached_decoder_for_OriginallySpecifiedRecipientNumber(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginallySpecifiedRecipientNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginallySpecifiedRecipientNumber */
 let _cached_encoder_for_OriginallySpecifiedRecipientNumber: $.ASN1Encoder<OriginallySpecifiedRecipientNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginallySpecifiedRecipientNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginallySpecifiedRecipientNumber */
 /**
  * @summary Encodes a(n) OriginallySpecifiedRecipientNumber into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_OriginallySpecifiedRecipientNumber(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginallySpecifiedRecipientNumber */
 
 /* eslint-enable */

@@ -8,7 +8,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SecurityEnvironmentInfo */
+
 /**
  * @summary SecurityEnvironmentInfo
  * @description
@@ -71,9 +71,8 @@ export class SecurityEnvironmentInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityEnvironmentInfo */
+
 /**
  * @summary The Leading Root Component Types of SecurityEnvironmentInfo
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_SecurityEnvironmentInfo: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityEnvironmentInfo */
+
 /**
  * @summary The Trailing Root Component Types of SecurityEnvironmentInfo
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_SecurityEnvironmentInfo: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityEnvironmentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityEnvironmentInfo */
+
 /**
  * @summary The Extension Addition Component Types of SecurityEnvironmentInfo
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_SecurityEnvironmentInfo: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_SecurityEnvironmentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEnvironmentInfo */
+
 let _cached_decoder_for_SecurityEnvironmentInfo: $.ASN1Decoder<SecurityEnvironmentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityEnvironmentInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityEnvironmentInfo
  * @function
@@ -159,13 +154,11 @@ export function _decode_SecurityEnvironmentInfo(el: _Element) {
     }
     return _cached_decoder_for_SecurityEnvironmentInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEnvironmentInfo */
+
 let _cached_encoder_for_SecurityEnvironmentInfo: $.ASN1Encoder<SecurityEnvironmentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEnvironmentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityEnvironmentInfo */
+
 /**
  * @summary Encodes a(n) SecurityEnvironmentInfo into an ASN.1 Element.
  * @function
@@ -202,6 +195,5 @@ export function _encode_SecurityEnvironmentInfo(
     return _cached_encoder_for_SecurityEnvironmentInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityEnvironmentInfo */
 
 /* eslint-enable */

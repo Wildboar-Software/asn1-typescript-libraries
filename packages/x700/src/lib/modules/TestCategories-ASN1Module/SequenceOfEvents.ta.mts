@@ -33,7 +33,6 @@ import {
     _decode_WaitDuration,
     _encode_WaitDuration,
 } from '../TestCategories-ASN1Module/WaitDuration.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SequenceOfEvents */
 /**
  * @summary SequenceOfEvents
  * @description
@@ -134,9 +133,7 @@ export class SequenceOfEvents {
 
     public static _enum_for_signalDirection = _enum_for_SignalDirection;
 }
-/* END_OF_SYMBOL_DEFINITION SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SequenceOfEvents */
 /**
  * @summary The Leading Root Component Types of SequenceOfEvents
  * @description
@@ -196,9 +193,7 @@ export const _root_component_type_list_1_spec_for_SequenceOfEvents: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SequenceOfEvents */
 /**
  * @summary The Trailing Root Component Types of SequenceOfEvents
  * @description
@@ -208,9 +203,7 @@ export const _root_component_type_list_1_spec_for_SequenceOfEvents: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SequenceOfEvents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SequenceOfEvents */
 /**
  * @summary The Extension Addition Component Types of SequenceOfEvents
  * @description
@@ -220,13 +213,9 @@ export const _root_component_type_list_2_spec_for_SequenceOfEvents: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_SequenceOfEvents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfEvents */
 let _cached_decoder_for_SequenceOfEvents: $.ASN1Decoder<SequenceOfEvents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SequenceOfEvents */
 /**
  * @summary Decodes an ASN.1 element into a(n) SequenceOfEvents
  * @function
@@ -280,13 +269,9 @@ export function _decode_SequenceOfEvents(el: _Element) {
     }
     return _cached_decoder_for_SequenceOfEvents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfEvents */
 let _cached_encoder_for_SequenceOfEvents: $.ASN1Encoder<SequenceOfEvents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfEvents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SequenceOfEvents */
 /**
  * @summary Encodes a(n) SequenceOfEvents into an ASN.1 Element.
  * @function
@@ -332,6 +317,5 @@ export function _encode_SequenceOfEvents(
     return _cached_encoder_for_SequenceOfEvents(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SequenceOfEvents */
 
 /* eslint-enable */

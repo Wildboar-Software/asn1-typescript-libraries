@@ -6,7 +6,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PBKDF2_params_salt */
+
 /**
  * @summary PBKDF2_params_salt
  * @description
@@ -20,13 +20,11 @@ import {
 export type PBKDF2_params_salt =
     | { specified: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { otherSource: AlgorithmIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PBKDF2_params_salt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PBKDF2_params_salt */
+
 let _cached_decoder_for_PBKDF2_params_salt: $.ASN1Decoder<PBKDF2_params_salt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PBKDF2_params_salt */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PBKDF2_params_salt */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PBKDF2_params_salt
  * @function
@@ -44,13 +42,11 @@ export function _decode_PBKDF2_params_salt(el: _Element) {
     }
     return _cached_decoder_for_PBKDF2_params_salt(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PBKDF2_params_salt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PBKDF2_params_salt */
+
 let _cached_encoder_for_PBKDF2_params_salt: $.ASN1Encoder<PBKDF2_params_salt> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PBKDF2_params_salt */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PBKDF2_params_salt */
+
 /**
  * @summary Encodes a(n) PBKDF2_params_salt into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_PBKDF2_params_salt(
     return _cached_encoder_for_PBKDF2_params_salt(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PBKDF2_params_salt */
 
 /* eslint-enable */

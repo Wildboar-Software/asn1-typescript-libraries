@@ -15,7 +15,7 @@ import {
     _decode_WeekMaskWps_Item,
     _encode_WeekMaskWps_Item,
 } from '../Schedulerev1-ASN1Module/WeekMaskWps-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WeekMaskWps */
+
 /**
  * @summary WeekMaskWps
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type WeekMaskWps = WeekMaskWps_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION WeekMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMaskWps */
+
 let _cached_decoder_for_WeekMaskWps: $.ASN1Decoder<WeekMaskWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WeekMaskWps */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) WeekMaskWps
  * @function
@@ -50,13 +48,11 @@ export function _decode_WeekMaskWps(el: _Element) {
     }
     return _cached_decoder_for_WeekMaskWps(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WeekMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMaskWps */
+
 let _cached_encoder_for_WeekMaskWps: $.ASN1Encoder<WeekMaskWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WeekMaskWps */
+
 /**
  * @summary Encodes a(n) WeekMaskWps into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_WeekMaskWps(
     return _cached_encoder_for_WeekMaskWps(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WeekMaskWps */
 
 /* eslint-enable */

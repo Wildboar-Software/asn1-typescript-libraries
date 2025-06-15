@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ClaimedAttributes, _decode_ClaimedAttributes, _encode_ClaimedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/ClaimedAttributes.ta.mjs";
 import { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CertifiedAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignerAttribute_Item */
 /**
  * @summary SignerAttribute_Item
  * @description
@@ -27,13 +26,9 @@ export
 type SignerAttribute_Item =
     { claimedAttributes: ClaimedAttributes } /* CHOICE_ALT_ROOT */
     | { certifiedAttributes: CertifiedAttributes } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SignerAttribute_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerAttribute_Item */
 let _cached_decoder_for_SignerAttribute_Item: $.ASN1Decoder<SignerAttribute_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerAttribute_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignerAttribute_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignerAttribute_Item
  * @function
@@ -48,13 +43,9 @@ function _decode_SignerAttribute_Item (el: _Element) {
 }); }
     return _cached_decoder_for_SignerAttribute_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignerAttribute_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerAttribute_Item */
 let _cached_encoder_for_SignerAttribute_Item: $.ASN1Encoder<SignerAttribute_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerAttribute_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignerAttribute_Item */
 /**
  * @summary Encodes a(n) SignerAttribute_Item into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ function _encode_SignerAttribute_Item (value: SignerAttribute_Item, elGetter: $.
     return _cached_encoder_for_SignerAttribute_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignerAttribute_Item */
 
 /* eslint-enable */

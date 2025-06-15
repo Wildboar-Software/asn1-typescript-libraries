@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_ct */
 /**
  * @summary id_ct
  * @description
@@ -35,6 +34,5 @@ export const id_ct: OBJECT_IDENTIFIER = new _OID([
   /* id-smime */ 16,
   1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_ct */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _encode_DLSubmitPermission,
 } from '../MHSDirectoryObjectsAndAttributes/DLSubmitPermission.ta.mjs';
 import { id_at_mhs_dl_submit_permissions } from '../MHSObjectIdentifiers/id-at-mhs-dl-submit-permissions.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_dl_submit_permissions */
 /**
  * @summary mhs_dl_submit_permissions
  * @description
@@ -57,6 +56,5 @@ export const mhs_dl_submit_permissions: ATTRIBUTE<DLSubmitPermission> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_dl_submit_permissions */
 
 /* eslint-enable */

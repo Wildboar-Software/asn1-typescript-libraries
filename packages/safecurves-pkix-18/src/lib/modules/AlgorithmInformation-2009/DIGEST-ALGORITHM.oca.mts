@@ -12,7 +12,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DIGEST_ALGORITHM */
+
 /**
  * @summary DIGEST_ALGORITHM
  * @description
@@ -65,6 +65,5 @@ interface DIGEST_ALGORITHM<
      */
     readonly "&paramPresence"?: ParamOptions;
 };
-/* END_OF_SYMBOL_DEFINITION DIGEST_ALGORITHM */
 
 /* eslint-enable */

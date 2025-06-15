@@ -23,7 +23,6 @@ import {
     _encode_AE_title,
 } from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LastBackupDestination */
 /**
  * @summary LastBackupDestination
  * @description
@@ -44,13 +43,9 @@ export type LastBackupDestination =
     | { localObject: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { managingSystem: AE_title } /* CHOICE_ALT_ROOT */
     | { remoteSystem: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION LastBackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastBackupDestination */
 let _cached_decoder_for_LastBackupDestination: $.ASN1Decoder<LastBackupDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastBackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastBackupDestination */
 /**
  * @summary Decodes an ASN.1 element into a(n) LastBackupDestination
  * @function
@@ -72,13 +67,9 @@ export function _decode_LastBackupDestination(el: _Element) {
     }
     return _cached_decoder_for_LastBackupDestination(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LastBackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastBackupDestination */
 let _cached_encoder_for_LastBackupDestination: $.ASN1Encoder<LastBackupDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastBackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastBackupDestination */
 /**
  * @summary Encodes a(n) LastBackupDestination into an ASN.1 Element.
  * @function
@@ -104,6 +95,5 @@ export function _encode_LastBackupDestination(
     return _cached_encoder_for_LastBackupDestination(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastBackupDestination */
 
 /* eslint-enable */

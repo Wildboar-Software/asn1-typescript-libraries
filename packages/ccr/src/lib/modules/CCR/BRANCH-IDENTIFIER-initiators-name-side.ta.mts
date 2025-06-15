@@ -12,14 +12,13 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_BRANCH_IDENTIFIER_initiators_name_side */
+
 export enum _enum_for_BRANCH_IDENTIFIER_initiators_name_side {
   sender = 0,
   receiver = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_BRANCH_IDENTIFIER_initiators_name_side */
 
-/* START_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name_side */
+
 /**
  * @summary BRANCH_IDENTIFIER_initiators_name_side
  * @description
@@ -33,49 +32,43 @@ export enum _enum_for_BRANCH_IDENTIFIER_initiators_name_side {
 export type BRANCH_IDENTIFIER_initiators_name_side =
   | _enum_for_BRANCH_IDENTIFIER_initiators_name_side
   | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name_side */
 
-/* START_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name_side_sender */
+
 /**
  * @summary BRANCH_IDENTIFIER_initiators_name_side_sender
  * @constant
  * @type {number}
  */
 export const BRANCH_IDENTIFIER_initiators_name_side_sender: BRANCH_IDENTIFIER_initiators_name_side = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name_side_sender */
 
-/* START_OF_SYMBOL_DEFINITION sender */
+
 /**
  * @summary sender
  * @constant
  * @type {number}
  */
 export const sender: BRANCH_IDENTIFIER_initiators_name_side = BRANCH_IDENTIFIER_initiators_name_side_sender; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sender */
 
-/* START_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name_side_receiver */
+
 /**
  * @summary BRANCH_IDENTIFIER_initiators_name_side_receiver
  * @constant
  * @type {number}
  */
 export const BRANCH_IDENTIFIER_initiators_name_side_receiver: BRANCH_IDENTIFIER_initiators_name_side = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name_side_receiver */
 
-/* START_OF_SYMBOL_DEFINITION receiver */
+
 /**
  * @summary receiver
  * @constant
  * @type {number}
  */
 export const receiver: BRANCH_IDENTIFIER_initiators_name_side = BRANCH_IDENTIFIER_initiators_name_side_receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION receiver */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side */
+
 let _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side: $.ASN1Decoder<BRANCH_IDENTIFIER_initiators_name_side> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRANCH_IDENTIFIER_initiators_name_side */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRANCH_IDENTIFIER_initiators_name_side
  * @function
@@ -89,13 +82,11 @@ export function _decode_BRANCH_IDENTIFIER_initiators_name_side(el: _Element) {
   }
   return _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name_side(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRANCH_IDENTIFIER_initiators_name_side */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name_side */
+
 let _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name_side: $.ASN1Encoder<BRANCH_IDENTIFIER_initiators_name_side> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name_side */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRANCH_IDENTIFIER_initiators_name_side */
+
 /**
  * @summary Encodes a(n) BRANCH_IDENTIFIER_initiators_name_side into an ASN.1 Element.
  * @function
@@ -117,6 +108,5 @@ export function _encode_BRANCH_IDENTIFIER_initiators_name_side(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRANCH_IDENTIFIER_initiators_name_side */
 
 /* eslint-enable */

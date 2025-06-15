@@ -14,7 +14,7 @@ import {
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION objectInIncompatibleState */
+
 /**
  * @summary objectInIncompatibleState
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const objectInIncompatibleState: GeneralErrorCause = { localValue: 1 };
-/* END_OF_SYMBOL_DEFINITION objectInIncompatibleState */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MEDICAL_STAFF_SCHEME */
+
 /**
  * @summary MEDICAL_STAFF_SCHEME
  * @description
@@ -105,6 +105,5 @@ export interface MEDICAL_STAFF_SCHEME<
      */
     readonly '&Observer': Observer;
 }
-/* END_OF_SYMBOL_DEFINITION MEDICAL_STAFF_SCHEME */
 
 /* eslint-enable */

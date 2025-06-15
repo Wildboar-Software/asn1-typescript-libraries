@@ -31,7 +31,7 @@ import {
     _encode_PublicKey,
 } from "../AsymmetricKeyPackageModuleV1/PublicKey.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OneAsymmetricKey */
+
 /**
  * @summary OneAsymmetricKey
  * @description
@@ -117,9 +117,8 @@ export class OneAsymmetricKey {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OneAsymmetricKey */
+
 /**
  * @summary The Leading Root Component Types of OneAsymmetricKey
  * @description
@@ -158,9 +157,8 @@ export const _root_component_type_list_1_spec_for_OneAsymmetricKey: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OneAsymmetricKey */
+
 /**
  * @summary The Trailing Root Component Types of OneAsymmetricKey
  * @description
@@ -170,9 +168,8 @@ export const _root_component_type_list_1_spec_for_OneAsymmetricKey: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OneAsymmetricKey: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OneAsymmetricKey */
+
 /**
  * @summary The Extension Addition Component Types of OneAsymmetricKey
  * @description
@@ -190,13 +187,11 @@ export const _extension_additions_list_spec_for_OneAsymmetricKey: $.ComponentSpe
         2
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OneAsymmetricKey */
+
 let _cached_decoder_for_OneAsymmetricKey: $.ASN1Decoder<OneAsymmetricKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OneAsymmetricKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OneAsymmetricKey
  * @function
@@ -263,13 +258,11 @@ export function _decode_OneAsymmetricKey(el: _Element) {
     }
     return _cached_decoder_for_OneAsymmetricKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OneAsymmetricKey */
+
 let _cached_encoder_for_OneAsymmetricKey: $.ASN1Encoder<OneAsymmetricKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OneAsymmetricKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OneAsymmetricKey */
+
 /**
  * @summary Encodes a(n) OneAsymmetricKey into an ASN.1 Element.
  * @function
@@ -331,6 +324,5 @@ export function _encode_OneAsymmetricKey(
     return _cached_encoder_for_OneAsymmetricKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OneAsymmetricKey */
 
 /* eslint-enable */

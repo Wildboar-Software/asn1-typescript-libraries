@@ -3,7 +3,6 @@ import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va.mjs";
-/* START_OF_SYMBOL_DEFINITION octetString */
 /**
  * @summary octetString
  * @description
@@ -33,6 +32,5 @@ export const octetString: SYNTAX_NAME<OCTET_STRING> = {
     "&id": id_lsx_octetString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION octetString */
 
 /* eslint-enable */

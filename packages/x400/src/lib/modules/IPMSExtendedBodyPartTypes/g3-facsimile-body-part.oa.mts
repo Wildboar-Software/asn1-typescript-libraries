@@ -12,7 +12,6 @@ import {
 import { g3_facsimile_body_part_parameters } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-parameters.oa.mjs';
 import { g3_facsimile_body_part_data } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION g3_facsimile_body_part */
 /**
  * @summary g3_facsimile_body_part
  * @description
@@ -39,6 +38,5 @@ export const g3_facsimile_body_part: EXTENDED_BODY_PART_TYPE = {
     '&parameters': g3_facsimile_body_part_parameters /* OBJECT_FIELD_SETTING */,
     '&data': g3_facsimile_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION g3_facsimile_body_part */
 
 /* eslint-enable */

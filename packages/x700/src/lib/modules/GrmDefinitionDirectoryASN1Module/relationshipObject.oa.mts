@@ -22,7 +22,6 @@ import {
     _encode_RelationshipObject,
 } from '../GrmAttributeDefinitionModule/RelationshipObject.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION relationshipObject */
 /**
  * @summary relationshipObject
  * @description
@@ -64,6 +63,5 @@ export const relationshipObject: ATTRIBUTE<RelationshipObject> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION relationshipObject */
 
 /* eslint-enable */

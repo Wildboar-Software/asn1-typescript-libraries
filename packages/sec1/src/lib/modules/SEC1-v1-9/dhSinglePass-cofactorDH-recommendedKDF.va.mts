@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dhSinglePass_cofactorDH_recommendedKDF */
 /**
  * @summary dhSinglePass_cofactorDH_recommendedKDF
  * @description
@@ -28,6 +27,5 @@ export
 const dhSinglePass_cofactorDH_recommendedKDF: OBJECT_IDENTIFIER = new _OID([
     1,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION dhSinglePass_cofactorDH_recommendedKDF */
 
 /* eslint-enable */

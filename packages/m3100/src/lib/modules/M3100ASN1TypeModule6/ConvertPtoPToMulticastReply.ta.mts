@@ -15,7 +15,7 @@ import {
     _decode_ConvertPtoPToMulticastReply_Item,
     _encode_ConvertPtoPToMulticastReply_Item,
 } from '../M3100ASN1TypeModule6/ConvertPtoPToMulticastReply-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConvertPtoPToMulticastReply */
+
 /**
  * @summary ConvertPtoPToMulticastReply
  * @description
@@ -31,13 +31,11 @@ import {
  * ```
  */
 export type ConvertPtoPToMulticastReply = ConvertPtoPToMulticastReply_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ConvertPtoPToMulticastReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertPtoPToMulticastReply */
+
 let _cached_decoder_for_ConvertPtoPToMulticastReply: $.ASN1Decoder<ConvertPtoPToMulticastReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertPtoPToMulticastReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConvertPtoPToMulticastReply */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConvertPtoPToMulticastReply
  * @function
@@ -52,13 +50,11 @@ export function _decode_ConvertPtoPToMulticastReply(el: _Element) {
     }
     return _cached_decoder_for_ConvertPtoPToMulticastReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConvertPtoPToMulticastReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertPtoPToMulticastReply */
+
 let _cached_encoder_for_ConvertPtoPToMulticastReply: $.ASN1Encoder<ConvertPtoPToMulticastReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertPtoPToMulticastReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConvertPtoPToMulticastReply */
+
 /**
  * @summary Encodes a(n) ConvertPtoPToMulticastReply into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_ConvertPtoPToMulticastReply(
     return _cached_encoder_for_ConvertPtoPToMulticastReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConvertPtoPToMulticastReply */
 
 /* eslint-enable */

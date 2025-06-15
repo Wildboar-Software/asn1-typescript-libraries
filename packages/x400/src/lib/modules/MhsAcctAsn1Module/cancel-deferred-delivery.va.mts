@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION cancel_deferred_delivery */
 /**
  * @summary cancel_deferred_delivery
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const cancel_deferred_delivery: EventTypeId = { localForm: 3 };
-/* END_OF_SYMBOL_DEFINITION cancel_deferred_delivery */
 
 /* eslint-enable */

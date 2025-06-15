@@ -6,7 +6,6 @@ import {
     _decode_PreferredDeliveryMethod_Item,
     _encode_PreferredDeliveryMethod_Item,
 } from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PreferredDeliveryMethod */
 /**
  * @summary PreferredDeliveryMethod
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type PreferredDeliveryMethod = PreferredDeliveryMethod_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PreferredDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredDeliveryMethod */
 let _cached_decoder_for_PreferredDeliveryMethod: $.ASN1Decoder<PreferredDeliveryMethod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PreferredDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PreferredDeliveryMethod */
 /**
  * @summary Decodes an ASN.1 element into a(n) PreferredDeliveryMethod
  * @function
@@ -49,13 +44,9 @@ export function _decode_PreferredDeliveryMethod(el: _Element) {
     }
     return _cached_decoder_for_PreferredDeliveryMethod(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PreferredDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredDeliveryMethod */
 let _cached_encoder_for_PreferredDeliveryMethod: $.ASN1Encoder<PreferredDeliveryMethod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PreferredDeliveryMethod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PreferredDeliveryMethod */
 /**
  * @summary Encodes a(n) PreferredDeliveryMethod into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_PreferredDeliveryMethod(
     return _cached_encoder_for_PreferredDeliveryMethod(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PreferredDeliveryMethod */
 
 /* eslint-enable */

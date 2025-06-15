@@ -15,7 +15,7 @@ import {
   _decode_SignedReceiptNoticeType,
   _encode_SignedReceiptNoticeType,
 } from '../CMAIL/SignedReceiptNoticeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignedReceiptNotice */
+
 /**
  * @summary SignedReceiptNotice
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SignedReceiptNotice = SignedReceiptNoticeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignedReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedReceiptNotice */
+
 let _cached_decoder_for_SignedReceiptNotice: $.ASN1Decoder<SignedReceiptNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedReceiptNotice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedReceiptNotice
  * @function
@@ -46,13 +44,11 @@ export function _decode_SignedReceiptNotice(el: _Element) {
   }
   return _cached_decoder_for_SignedReceiptNotice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedReceiptNotice */
+
 let _cached_encoder_for_SignedReceiptNotice: $.ASN1Encoder<SignedReceiptNotice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedReceiptNotice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedReceiptNotice */
+
 /**
  * @summary Encodes a(n) SignedReceiptNotice into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_SignedReceiptNotice(
   return _cached_encoder_for_SignedReceiptNotice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedReceiptNotice */
 
 /* eslint-enable */

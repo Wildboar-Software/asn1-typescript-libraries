@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_unsupported_critical_function */
 /**
  * @summary err_unsupported_critical_function
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_unsupported_critical_function: Code = { local: 13 };
-/* END_OF_SYMBOL_DEFINITION err_unsupported_critical_function */
 
 /* eslint-enable */

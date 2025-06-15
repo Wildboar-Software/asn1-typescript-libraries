@@ -20,7 +20,6 @@ import {
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Message */
 /**
  * @summary Message
  * @description
@@ -69,9 +68,7 @@ export class Message {
         return new Message(_o.envelope, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Message */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Message */
 /**
  * @summary The Leading Root Component Types of Message
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_Message: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Message */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Message */
 /**
  * @summary The Trailing Root Component Types of Message
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_Message: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Message: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Message */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Message */
 /**
  * @summary The Extension Addition Component Types of Message
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_Message: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Message: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Message */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Message */
 let _cached_decoder_for_Message: $.ASN1Decoder<Message> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Message */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Message */
 /**
  * @summary Decodes an ASN.1 element into a(n) Message
  * @function
@@ -155,13 +144,9 @@ export function _decode_Message(el: _Element) {
     }
     return _cached_decoder_for_Message(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Message */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Message */
 let _cached_encoder_for_Message: $.ASN1Encoder<Message> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Message */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Message */
 /**
  * @summary Encodes a(n) Message into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_Message(
     return _cached_encoder_for_Message(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Message */
 
 /* eslint-enable */

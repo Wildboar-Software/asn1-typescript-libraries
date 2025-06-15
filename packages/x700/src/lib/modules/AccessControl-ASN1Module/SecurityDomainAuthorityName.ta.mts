@@ -20,7 +20,6 @@ import {
     _decode_Proxy,
     _encode_Proxy,
 } from '../AccessControl-ASN1Module/Proxy.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityDomainAuthorityName */
 /**
  * @summary SecurityDomainAuthorityName
  * @description
@@ -37,13 +36,9 @@ import {
 export type SecurityDomainAuthorityName =
     | { domainAuthorityName: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { alternativeAuthorityName: Proxy } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SecurityDomainAuthorityName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityDomainAuthorityName */
 let _cached_decoder_for_SecurityDomainAuthorityName: $.ASN1Decoder<SecurityDomainAuthorityName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityDomainAuthorityName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityDomainAuthorityName */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityDomainAuthorityName
  * @function
@@ -69,13 +64,9 @@ export function _decode_SecurityDomainAuthorityName(el: _Element) {
     }
     return _cached_decoder_for_SecurityDomainAuthorityName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityDomainAuthorityName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityDomainAuthorityName */
 let _cached_encoder_for_SecurityDomainAuthorityName: $.ASN1Encoder<SecurityDomainAuthorityName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityDomainAuthorityName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityDomainAuthorityName */
 /**
  * @summary Encodes a(n) SecurityDomainAuthorityName into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_SecurityDomainAuthorityName(
     return _cached_encoder_for_SecurityDomainAuthorityName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityDomainAuthorityName */
 
 /* eslint-enable */

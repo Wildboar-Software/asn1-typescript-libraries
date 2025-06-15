@@ -21,7 +21,7 @@ import {
   _decode_ProblemCode,
   _encode_ProblemCode,
 } from '../SeseAPDUs/ProblemCode.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SEPAbort */
+
 /**
  * @summary SEPAbort
  * @description
@@ -83,9 +83,8 @@ export class SEPAbort {
     return new SEPAbort(_o.invocationId, _o.itemIdentifier, _o.problemCode);
   }
 }
-/* END_OF_SYMBOL_DEFINITION SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SEPAbort */
+
 /**
  * @summary The Leading Root Component Types of SEPAbort
  * @description
@@ -117,9 +116,8 @@ export const _root_component_type_list_1_spec_for_SEPAbort: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SEPAbort */
+
 /**
  * @summary The Trailing Root Component Types of SEPAbort
  * @description
@@ -129,9 +127,8 @@ export const _root_component_type_list_1_spec_for_SEPAbort: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SEPAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SEPAbort */
+
 /**
  * @summary The Extension Addition Component Types of SEPAbort
  * @description
@@ -141,13 +138,11 @@ export const _root_component_type_list_2_spec_for_SEPAbort: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_SEPAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SEPAbort */
+
 let _cached_decoder_for_SEPAbort: $.ASN1Decoder<SEPAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SEPAbort */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SEPAbort
  * @function
@@ -192,13 +187,11 @@ export function _decode_SEPAbort(el: _Element) {
   }
   return _cached_decoder_for_SEPAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SEPAbort */
+
 let _cached_encoder_for_SEPAbort: $.ASN1Encoder<SEPAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SEPAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SEPAbort */
+
 /**
  * @summary Encodes a(n) SEPAbort into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_SEPAbort(
   return _cached_encoder_for_SEPAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SEPAbort */
 
 /* eslint-enable */

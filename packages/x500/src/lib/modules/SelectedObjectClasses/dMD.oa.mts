@@ -7,7 +7,6 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
 import { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va.mjs";
 import { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION dMD */
 /**
  * @summary dMD
  * @description
@@ -40,6 +39,5 @@ export const dMD: OBJECT_CLASS = {
     "&id": id_oc_dmd /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dMD */
 
 /* eslint-enable */

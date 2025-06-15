@@ -6,7 +6,6 @@ import {
     _decode_AccessPoint,
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RemoteDSAList */
 /**
  * @summary RemoteDSAList
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type RemoteDSAList = AccessPoint[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RemoteDSAList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoteDSAList */
 let _cached_decoder_for_RemoteDSAList: $.ASN1Decoder<RemoteDSAList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoteDSAList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoteDSAList */
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoteDSAList
  * @function
@@ -39,13 +34,9 @@ export function _decode_RemoteDSAList(el: _Element) {
     }
     return _cached_decoder_for_RemoteDSAList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoteDSAList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoteDSAList */
 let _cached_encoder_for_RemoteDSAList: $.ASN1Encoder<RemoteDSAList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoteDSAList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoteDSAList */
 /**
  * @summary Encodes a(n) RemoteDSAList into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_RemoteDSAList(
     return _cached_encoder_for_RemoteDSAList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoteDSAList */
 
 /* eslint-enable */

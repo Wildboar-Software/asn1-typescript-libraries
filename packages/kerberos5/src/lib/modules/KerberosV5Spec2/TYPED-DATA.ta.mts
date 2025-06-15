@@ -15,7 +15,7 @@ import {
   _decode_TYPED_DATA_Item,
   _encode_TYPED_DATA_Item,
 } from '../KerberosV5Spec2/TYPED-DATA-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TYPED_DATA */
+
 /**
  * @summary TYPED_DATA
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type TYPED_DATA = TYPED_DATA_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TYPED_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TYPED_DATA */
+
 let _cached_decoder_for_TYPED_DATA: $.ASN1Decoder<TYPED_DATA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TYPED_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TYPED_DATA */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TYPED_DATA
  * @function
@@ -51,13 +49,11 @@ export function _decode_TYPED_DATA(el: _Element) {
   }
   return _cached_decoder_for_TYPED_DATA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TYPED_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TYPED_DATA */
+
 let _cached_encoder_for_TYPED_DATA: $.ASN1Encoder<TYPED_DATA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TYPED_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TYPED_DATA */
+
 /**
  * @summary Encodes a(n) TYPED_DATA into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_TYPED_DATA(
   return _cached_encoder_for_TYPED_DATA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TYPED_DATA */
 
 /* eslint-enable */

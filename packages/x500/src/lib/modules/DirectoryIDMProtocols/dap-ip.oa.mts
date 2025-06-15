@@ -13,7 +13,6 @@ import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.mjs";
 import { search } from "../DirectoryAbstractService/search.oa.mjs";
 import { id_idm_dap } from "../DirectoryIDMProtocols/id-idm-dap.va.mjs";
 import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dap_ip */
 /**
  * @summary dap_ip
  * @description
@@ -61,6 +60,5 @@ export const dap_ip: IDM_PROTOCOL = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": id_idm_dap /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dap_ip */
 
 /* eslint-enable */

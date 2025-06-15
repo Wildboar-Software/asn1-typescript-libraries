@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { pkcs7_body_part_data } from '../PKCS7BodyPartType/pkcs7-body-part-data.oa.mjs';
 import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION pkcs7_body_part */
 /**
  * @summary pkcs7_body_part
  * @description
@@ -35,6 +34,5 @@ export const pkcs7_body_part: EXTENDED_BODY_PART_TYPE = {
     encoderFor: {},
     '&data': pkcs7_body_part_data /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pkcs7_body_part */
 
 /* eslint-enable */

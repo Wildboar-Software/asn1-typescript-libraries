@@ -16,7 +16,7 @@ import {
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Boolean_Pattern */
+
 /**
  * @summary Boolean_Pattern
  * @description
@@ -66,9 +66,8 @@ export class Boolean_Pattern {
     return new Boolean_Pattern(_o.equality_comparision, _o.boolean_value);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Boolean_Pattern */
+
 /**
  * @summary The Leading Root Component Types of Boolean_Pattern
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_Boolean_Pattern: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Boolean_Pattern */
+
 /**
  * @summary The Trailing Root Component Types of Boolean_Pattern
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_Boolean_Pattern: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Boolean_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Boolean_Pattern */
+
 /**
  * @summary The Extension Addition Component Types of Boolean_Pattern
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_Boolean_Pattern: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_Boolean_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Boolean_Pattern */
+
 let _cached_decoder_for_Boolean_Pattern: $.ASN1Decoder<Boolean_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Boolean_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Boolean_Pattern
  * @function
@@ -158,13 +153,11 @@ export function _decode_Boolean_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Boolean_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Boolean_Pattern */
+
 let _cached_encoder_for_Boolean_Pattern: $.ASN1Encoder<Boolean_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Boolean_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Boolean_Pattern */
+
 /**
  * @summary Encodes a(n) Boolean_Pattern into an ASN.1 Element.
  * @function
@@ -203,6 +196,5 @@ export function _encode_Boolean_Pattern(
   return _cached_encoder_for_Boolean_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Boolean_Pattern */
 
 /* eslint-enable */

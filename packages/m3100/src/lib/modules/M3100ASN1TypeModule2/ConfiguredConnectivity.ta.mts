@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ConfiguredConnectivity */
+
 /**
  * @summary ConfiguredConnectivity
  * @description
@@ -30,9 +30,8 @@ export enum _enum_for_ConfiguredConnectivity {
     bidirectionalConnect = 2,
     noConnect = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ConfiguredConnectivity */
 
-/* START_OF_SYMBOL_DEFINITION ConfiguredConnectivity */
+
 /**
  * @summary ConfiguredConnectivity
  * @description
@@ -46,9 +45,8 @@ export enum _enum_for_ConfiguredConnectivity {
  * ```@enum {number}
  */
 export type ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
-/* END_OF_SYMBOL_DEFINITION ConfiguredConnectivity */
 
-/* START_OF_SYMBOL_DEFINITION ConfiguredConnectivity */
+
 /**
  * @summary ConfiguredConnectivity
  * @description
@@ -62,9 +60,8 @@ export type ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
  * ```@enum {number}
  */
 export const ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
-/* END_OF_SYMBOL_DEFINITION ConfiguredConnectivity */
 
-/* START_OF_SYMBOL_DEFINITION ConfiguredConnectivity_sourceConnect */
+
 /**
  * @summary ConfiguredConnectivity_sourceConnect
  * @constant
@@ -72,9 +69,8 @@ export const ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
  */
 export const ConfiguredConnectivity_sourceConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.sourceConnect; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ConfiguredConnectivity_sourceConnect */
 
-/* START_OF_SYMBOL_DEFINITION sourceConnect */
+
 /**
  * @summary sourceConnect
  * @constant
@@ -82,9 +78,8 @@ export const ConfiguredConnectivity_sourceConnect: ConfiguredConnectivity =
  */
 export const sourceConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.sourceConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sourceConnect */
 
-/* START_OF_SYMBOL_DEFINITION ConfiguredConnectivity_sinkConnect */
+
 /**
  * @summary ConfiguredConnectivity_sinkConnect
  * @constant
@@ -92,9 +87,8 @@ export const sourceConnect: ConfiguredConnectivity =
  */
 export const ConfiguredConnectivity_sinkConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.sinkConnect; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ConfiguredConnectivity_sinkConnect */
 
-/* START_OF_SYMBOL_DEFINITION sinkConnect */
+
 /**
  * @summary sinkConnect
  * @constant
@@ -102,9 +96,8 @@ export const ConfiguredConnectivity_sinkConnect: ConfiguredConnectivity =
  */
 export const sinkConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.sinkConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sinkConnect */
 
-/* START_OF_SYMBOL_DEFINITION ConfiguredConnectivity_bidirectionalConnect */
+
 /**
  * @summary ConfiguredConnectivity_bidirectionalConnect
  * @constant
@@ -112,9 +105,8 @@ export const sinkConnect: ConfiguredConnectivity =
  */
 export const ConfiguredConnectivity_bidirectionalConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.bidirectionalConnect; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ConfiguredConnectivity_bidirectionalConnect */
 
-/* START_OF_SYMBOL_DEFINITION bidirectionalConnect */
+
 /**
  * @summary bidirectionalConnect
  * @constant
@@ -122,9 +114,8 @@ export const ConfiguredConnectivity_bidirectionalConnect: ConfiguredConnectivity
  */
 export const bidirectionalConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.bidirectionalConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bidirectionalConnect */
 
-/* START_OF_SYMBOL_DEFINITION ConfiguredConnectivity_noConnect */
+
 /**
  * @summary ConfiguredConnectivity_noConnect
  * @constant
@@ -132,9 +123,8 @@ export const bidirectionalConnect: ConfiguredConnectivity =
  */
 export const ConfiguredConnectivity_noConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.noConnect; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ConfiguredConnectivity_noConnect */
 
-/* START_OF_SYMBOL_DEFINITION noConnect */
+
 /**
  * @summary noConnect
  * @constant
@@ -142,21 +132,16 @@ export const ConfiguredConnectivity_noConnect: ConfiguredConnectivity =
  */
 export const noConnect: ConfiguredConnectivity =
     ConfiguredConnectivity.noConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noConnect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConfiguredConnectivity */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConfiguredConnectivity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConfiguredConnectivity */
+
+
 export const _decode_ConfiguredConnectivity = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ConfiguredConnectivity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConfiguredConnectivity */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConfiguredConnectivity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConfiguredConnectivity */
+
+
 export const _encode_ConfiguredConnectivity = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConfiguredConnectivity */
 
 /* eslint-enable */

@@ -35,7 +35,6 @@ import {
     id_for_action,
 } from "../EDIMSObjectIdentifiers/id-for-action.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION NextRecipientFields */
 /**
  * @summary NextRecipientFields
  * @description
@@ -126,9 +125,7 @@ export class NextRecipientFields {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NextRecipientFields */
 /**
  * @summary The Leading Root Component Types of NextRecipientFields
  * @description
@@ -167,9 +164,7 @@ export const _root_component_type_list_1_spec_for_NextRecipientFields: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NextRecipientFields */
 /**
  * @summary The Trailing Root Component Types of NextRecipientFields
  * @description
@@ -179,9 +174,7 @@ export const _root_component_type_list_1_spec_for_NextRecipientFields: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NextRecipientFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NextRecipientFields */
 /**
  * @summary The Extension Addition Component Types of NextRecipientFields
  * @description
@@ -191,13 +184,9 @@ export const _root_component_type_list_2_spec_for_NextRecipientFields: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_NextRecipientFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NextRecipientFields */
 let _cached_decoder_for_NextRecipientFields: $.ASN1Decoder<NextRecipientFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NextRecipientFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) NextRecipientFields
  * @function
@@ -263,13 +252,9 @@ export function _decode_NextRecipientFields(el: _Element) {
     }
     return _cached_decoder_for_NextRecipientFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NextRecipientFields */
 let _cached_encoder_for_NextRecipientFields: $.ASN1Encoder<NextRecipientFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NextRecipientFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NextRecipientFields */
 /**
  * @summary Encodes a(n) NextRecipientFields into an ASN.1 Element.
  * @function
@@ -344,6 +329,5 @@ export function _encode_NextRecipientFields(
     return _cached_encoder_for_NextRecipientFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NextRecipientFields */
 
 /* eslint-enable */

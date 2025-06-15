@@ -23,7 +23,7 @@ import {
   _decode_SetArgument,
   _encode_SetArgument,
 } from '../CMIP-1/SetArgument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION m_Set */
+
 /**
  * @summary m_Set
  * @description
@@ -65,6 +65,5 @@ export const m_Set: OPERATION<SetArgument> = {
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Set */
 
 /* eslint-enable */

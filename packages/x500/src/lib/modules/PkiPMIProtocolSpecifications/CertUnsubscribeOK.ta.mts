@@ -6,7 +6,6 @@ import {
     _decode_CertUnsubscribeOK_Item,
     _encode_CertUnsubscribeOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUnsubscribeOK */
 /**
  * @summary CertUnsubscribeOK
  * @description
@@ -26,13 +25,9 @@ import {
  * ```
  */
 export type CertUnsubscribeOK = CertUnsubscribeOK_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertUnsubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUnsubscribeOK */
 let _cached_decoder_for_CertUnsubscribeOK: $.ASN1Decoder<CertUnsubscribeOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUnsubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUnsubscribeOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUnsubscribeOK
  * @function
@@ -47,13 +42,9 @@ export function _decode_CertUnsubscribeOK(el: _Element) {
     }
     return _cached_decoder_for_CertUnsubscribeOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUnsubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUnsubscribeOK */
 let _cached_encoder_for_CertUnsubscribeOK: $.ASN1Encoder<CertUnsubscribeOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUnsubscribeOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUnsubscribeOK */
 /**
  * @summary Encodes a(n) CertUnsubscribeOK into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_CertUnsubscribeOK(
     return _cached_encoder_for_CertUnsubscribeOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUnsubscribeOK */
 
 /* eslint-enable */

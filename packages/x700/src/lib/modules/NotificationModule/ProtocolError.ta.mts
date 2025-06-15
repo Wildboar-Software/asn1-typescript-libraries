@@ -15,7 +15,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtocolError */
 /**
  * @summary ProtocolError
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProtocolError = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ProtocolError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolError */
 let _cached_decoder_for_ProtocolError: $.ASN1Decoder<ProtocolError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtocolError */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolError
  * @function
@@ -48,13 +43,9 @@ export function _decode_ProtocolError(el: _Element) {
     }
     return _cached_decoder_for_ProtocolError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtocolError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolError */
 let _cached_encoder_for_ProtocolError: $.ASN1Encoder<ProtocolError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtocolError */
 /**
  * @summary Encodes a(n) ProtocolError into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ProtocolError(
     return _cached_encoder_for_ProtocolError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtocolError */
 
 /* eslint-enable */

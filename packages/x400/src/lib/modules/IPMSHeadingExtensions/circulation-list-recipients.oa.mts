@@ -16,7 +16,6 @@ import {
 } from '../IPMSHeadingExtensions/CirculationList.ta.mjs';
 import { id_hex_circulation_list_recipients } from '../IPMSObjectIdentifiers/id-hex-circulation-list-recipients.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION circulation_list_recipients */
 /**
  * @summary circulation_list_recipients
  * @description
@@ -45,6 +44,5 @@ export const circulation_list_recipients: IPMS_EXTENSION<CirculationList> = {
     '&id': id_hex_circulation_list_recipients /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION circulation_list_recipients */
 
 /* eslint-enable */

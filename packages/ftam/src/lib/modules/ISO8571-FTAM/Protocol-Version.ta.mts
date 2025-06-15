@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Protocol_Version */
+
 /**
  * @summary Protocol_Version
  * @description
@@ -25,45 +25,39 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Protocol_Version = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Protocol_Version */
 
-/* START_OF_SYMBOL_DEFINITION Protocol_Version_version_1 */
+
 /**
  * @summary Protocol_Version_version_1
  * @constant
  */
 export const Protocol_Version_version_1: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Protocol_Version_version_1 */
 
-/* START_OF_SYMBOL_DEFINITION version_1 */
+
 /**
  * @summary version_1
  * @constant
  */
 export const version_1: number = Protocol_Version_version_1; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION version_1 */
 
-/* START_OF_SYMBOL_DEFINITION Protocol_Version_version_2 */
+
 /**
  * @summary Protocol_Version_version_2
  * @constant
  */
 export const Protocol_Version_version_2: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Protocol_Version_version_2 */
 
-/* START_OF_SYMBOL_DEFINITION version_2 */
+
 /**
  * @summary version_2
  * @constant
  */
 export const version_2: number = Protocol_Version_version_2; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION version_2 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Protocol_Version */
+
 let _cached_decoder_for_Protocol_Version: $.ASN1Decoder<Protocol_Version> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Protocol_Version */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Protocol_Version */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Protocol_Version
  * @function
@@ -78,13 +72,11 @@ export function _decode_Protocol_Version(el: _Element) {
   }
   return _cached_decoder_for_Protocol_Version(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Protocol_Version */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Protocol_Version */
+
 let _cached_encoder_for_Protocol_Version: $.ASN1Encoder<Protocol_Version> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Protocol_Version */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Protocol_Version */
+
 /**
  * @summary Encodes a(n) Protocol_Version into an ASN.1 Element.
  * @function
@@ -107,6 +99,5 @@ export function _encode_Protocol_Version(
   return _cached_encoder_for_Protocol_Version(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Protocol_Version */
 
 /* eslint-enable */

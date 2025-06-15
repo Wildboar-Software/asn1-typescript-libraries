@@ -61,7 +61,6 @@ import {
     _decode_ReleaseRsp,
     _encode_ReleaseRsp,
 } from "../Wrapper/ReleaseRsp.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION WrapperPDU */
 /**
  * @summary WrapperPDU
  * @description
@@ -99,13 +98,9 @@ export type WrapperPDU =
     | { dataTransferClient: DataTransferClient } /* CHOICE_ALT_ROOT */
     | { dataTransferServer: DataTransferServer } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION WrapperPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WrapperPDU */
 let _cached_decoder_for_WrapperPDU: $.ASN1Decoder<WrapperPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WrapperPDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WrapperPDU */
 /**
  * @summary Decodes an ASN.1 element into a(n) WrapperPDU
  * @function
@@ -185,13 +180,9 @@ export function _decode_WrapperPDU(el: _Element) {
     }
     return _cached_decoder_for_WrapperPDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WrapperPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WrapperPDU */
 let _cached_encoder_for_WrapperPDU: $.ASN1Encoder<WrapperPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WrapperPDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WrapperPDU */
 /**
  * @summary Encodes a(n) WrapperPDU into an ASN.1 Element.
  * @function
@@ -285,6 +276,5 @@ export function _encode_WrapperPDU(
     return _cached_encoder_for_WrapperPDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WrapperPDU */
 
 /* eslint-enable */

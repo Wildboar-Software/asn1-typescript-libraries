@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ManufacturerSchemes */
+
 /**
  * @summary ManufacturerSchemes
  * @description
@@ -26,6 +26,5 @@ import { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCH
  *
  */
 export const ManufacturerSchemes: MANUFACTURER_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION ManufacturerSchemes */
 
 /* eslint-enable */

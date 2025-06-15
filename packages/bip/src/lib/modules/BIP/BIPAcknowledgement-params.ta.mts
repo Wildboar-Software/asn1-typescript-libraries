@@ -25,7 +25,7 @@ import {
   _decode_GUIProgressEvent_AcknowledgementParams,
   _encode_GUIProgressEvent_AcknowledgementParams,
 } from '../BIP/GUIProgressEvent-AcknowledgementParams.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPAcknowledgement_params */
+
 /**
  * @summary BIPAcknowledgement_params
  * @description
@@ -45,13 +45,11 @@ export type BIPAcknowledgement_params =
       guiProgressEvent: GUIProgressEvent_AcknowledgementParams;
     } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BIPAcknowledgement_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPAcknowledgement_params */
+
 let _cached_decoder_for_BIPAcknowledgement_params: $.ASN1Decoder<BIPAcknowledgement_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPAcknowledgement_params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPAcknowledgement_params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPAcknowledgement_params
  * @function
@@ -79,13 +77,11 @@ export function _decode_BIPAcknowledgement_params(el: _Element) {
   }
   return _cached_decoder_for_BIPAcknowledgement_params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPAcknowledgement_params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPAcknowledgement_params */
+
 let _cached_encoder_for_BIPAcknowledgement_params: $.ASN1Encoder<BIPAcknowledgement_params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPAcknowledgement_params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPAcknowledgement_params */
+
 /**
  * @summary Encodes a(n) BIPAcknowledgement_params into an ASN.1 Element.
  * @function
@@ -110,6 +106,5 @@ export function _encode_BIPAcknowledgement_params(
   return _cached_encoder_for_BIPAcknowledgement_params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPAcknowledgement_params */
 
 /* eslint-enable */

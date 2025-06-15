@@ -20,7 +20,6 @@ import {
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SpecificPassword */
 /**
  * @summary SpecificPassword
  * @description
@@ -81,9 +80,7 @@ export class SpecificPassword {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecificPassword */
 /**
  * @summary The Leading Root Component Types of SpecificPassword
  * @description
@@ -115,9 +112,7 @@ export const _root_component_type_list_1_spec_for_SpecificPassword: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecificPassword */
 /**
  * @summary The Trailing Root Component Types of SpecificPassword
  * @description
@@ -127,9 +122,7 @@ export const _root_component_type_list_1_spec_for_SpecificPassword: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SpecificPassword: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecificPassword */
 /**
  * @summary The Extension Addition Component Types of SpecificPassword
  * @description
@@ -139,13 +132,9 @@ export const _root_component_type_list_2_spec_for_SpecificPassword: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_SpecificPassword: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificPassword */
 let _cached_decoder_for_SpecificPassword: $.ASN1Decoder<SpecificPassword> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SpecificPassword */
 /**
  * @summary Decodes an ASN.1 element into a(n) SpecificPassword
  * @function
@@ -198,13 +187,9 @@ export function _decode_SpecificPassword(el: _Element) {
     }
     return _cached_decoder_for_SpecificPassword(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificPassword */
 let _cached_encoder_for_SpecificPassword: $.ASN1Encoder<SpecificPassword> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SpecificPassword */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SpecificPassword */
 /**
  * @summary Encodes a(n) SpecificPassword into an ASN.1 Element.
  * @function
@@ -247,6 +232,5 @@ export function _encode_SpecificPassword(
     return _cached_encoder_for_SpecificPassword(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SpecificPassword */
 
 /* eslint-enable */

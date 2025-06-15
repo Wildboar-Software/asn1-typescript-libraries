@@ -25,7 +25,7 @@ import {
   _decode_BioAPI_INPUT_BIR,
   _encode_BioAPI_INPUT_BIR,
 } from '../BIP/BioAPI-INPUT-BIR.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Transform_RequestParams */
+
 /**
  * @summary Transform_RequestParams
  * @description
@@ -86,9 +86,8 @@ export class Transform_RequestParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Transform_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of Transform_RequestParams
  * @description
@@ -120,9 +119,8 @@ export const _root_component_type_list_1_spec_for_Transform_RequestParams: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Transform_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of Transform_RequestParams
  * @description
@@ -132,9 +130,8 @@ export const _root_component_type_list_1_spec_for_Transform_RequestParams: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Transform_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Transform_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of Transform_RequestParams
  * @description
@@ -144,13 +141,11 @@ export const _root_component_type_list_2_spec_for_Transform_RequestParams: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_Transform_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Transform_RequestParams */
+
 let _cached_decoder_for_Transform_RequestParams: $.ASN1Decoder<Transform_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Transform_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Transform_RequestParams
  * @function
@@ -186,13 +181,11 @@ export function _decode_Transform_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_Transform_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Transform_RequestParams */
+
 let _cached_encoder_for_Transform_RequestParams: $.ASN1Encoder<Transform_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Transform_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Transform_RequestParams */
+
 /**
  * @summary Encodes a(n) Transform_RequestParams into an ASN.1 Element.
  * @function
@@ -225,6 +218,5 @@ export function _encode_Transform_RequestParams(
   return _cached_encoder_for_Transform_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Transform_RequestParams */
 
 /* eslint-enable */

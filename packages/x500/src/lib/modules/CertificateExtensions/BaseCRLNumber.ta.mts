@@ -6,7 +6,6 @@ import {
     _decode_CRLNumber,
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BaseCRLNumber */
 /**
  * @summary BaseCRLNumber
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type BaseCRLNumber = CRLNumber; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BaseCRLNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BaseCRLNumber */
 let _cached_decoder_for_BaseCRLNumber: $.ASN1Decoder<BaseCRLNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BaseCRLNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BaseCRLNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) BaseCRLNumber
  * @function
@@ -37,13 +32,9 @@ export function _decode_BaseCRLNumber(el: _Element) {
     }
     return _cached_decoder_for_BaseCRLNumber(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BaseCRLNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BaseCRLNumber */
 let _cached_encoder_for_BaseCRLNumber: $.ASN1Encoder<BaseCRLNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BaseCRLNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BaseCRLNumber */
 /**
  * @summary Encodes a(n) BaseCRLNumber into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_BaseCRLNumber(
     return _cached_encoder_for_BaseCRLNumber(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BaseCRLNumber */
 
 /* eslint-enable */

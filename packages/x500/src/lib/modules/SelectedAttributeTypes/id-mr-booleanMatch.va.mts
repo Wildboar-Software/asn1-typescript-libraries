@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mr_booleanMatch */
 /**
  * @summary id_mr_booleanMatch
  * @description
@@ -15,6 +14,5 @@ import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
  * @constant
  */
 export const id_mr_booleanMatch: OBJECT_IDENTIFIER = new _OID([13], id_mr);
-/* END_OF_SYMBOL_DEFINITION id_mr_booleanMatch */
 
 /* eslint-enable */

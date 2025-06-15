@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { x509CRL } from "../PKCS-12/x509CRL.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION CRLTypes */
+
 /**
  * @summary CRLTypes
  * @description
@@ -20,6 +20,5 @@ import { x509CRL } from "../PKCS-12/x509CRL.oa.mjs";
  *
  */
 export const CRLTypes: BAG_TYPE<any>[] = [x509CRL];
-/* END_OF_SYMBOL_DEFINITION CRLTypes */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_UnitEventNotificationDisabler,
   _encode_UnitEventNotificationDisabler,
 } from '../BIP/UnitEventNotificationDisabler.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnitEventNotificationDisablers */
+
 /**
  * @summary UnitEventNotificationDisablers
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type UnitEventNotificationDisablers = UnitEventNotificationDisabler[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION UnitEventNotificationDisablers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventNotificationDisablers */
+
 let _cached_decoder_for_UnitEventNotificationDisablers: $.ASN1Decoder<UnitEventNotificationDisablers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventNotificationDisablers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnitEventNotificationDisablers */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitEventNotificationDisablers
  * @function
@@ -49,13 +47,11 @@ export function _decode_UnitEventNotificationDisablers(el: _Element) {
   }
   return _cached_decoder_for_UnitEventNotificationDisablers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnitEventNotificationDisablers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventNotificationDisablers */
+
 let _cached_encoder_for_UnitEventNotificationDisablers: $.ASN1Encoder<UnitEventNotificationDisablers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventNotificationDisablers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnitEventNotificationDisablers */
+
 /**
  * @summary Encodes a(n) UnitEventNotificationDisablers into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_UnitEventNotificationDisablers(
   return _cached_encoder_for_UnitEventNotificationDisablers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnitEventNotificationDisablers */
 
 /* eslint-enable */

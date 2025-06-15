@@ -18,7 +18,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { connectionGroupName } from '../MHSRoutingDirectoryObjects/connectionGroupName.oa.mjs';
 import { id_at_entry_connection_group_name } from '../MHSRoutingObjectIdentifiers/id-at-entry-connection-group-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION entryConnectionGroupName */
 /**
  * @summary entryConnectionGroupName
  * @description
@@ -54,6 +53,5 @@ export const entryConnectionGroupName: ATTRIBUTE = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION entryConnectionGroupName */
 
 /* eslint-enable */

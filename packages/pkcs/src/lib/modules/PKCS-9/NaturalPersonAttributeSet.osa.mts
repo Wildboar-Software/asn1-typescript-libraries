@@ -11,7 +11,7 @@ import { pseudonym } from "../PKCS-9/pseudonym.oa.mjs";
 import { unstructuredAddress } from "../PKCS-9/unstructuredAddress.oa.mjs";
 import { unstructuredName } from "../PKCS-9/unstructuredName.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION NaturalPersonAttributeSet */
+
 /**
  * @summary NaturalPersonAttributeSet
  * @description
@@ -50,6 +50,5 @@ export const NaturalPersonAttributeSet: ATTRIBUTE[] = [
     pseudonym,
     serialNumber,
 ];
-/* END_OF_SYMBOL_DEFINITION NaturalPersonAttributeSet */
 
 /* eslint-enable */

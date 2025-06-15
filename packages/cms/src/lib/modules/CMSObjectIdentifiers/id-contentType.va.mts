@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_contentType */
+
 /**
  * @summary id_contentType
  * @description
@@ -16,6 +16,5 @@ import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
  * @constant
  */
 export const id_contentType: OID = new _OID([/* contentType */ 3], pkcs9);
-/* END_OF_SYMBOL_DEFINITION id_contentType */
 
 /* eslint-enable */

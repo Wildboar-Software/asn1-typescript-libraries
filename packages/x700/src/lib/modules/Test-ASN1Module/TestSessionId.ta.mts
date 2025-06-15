@@ -17,7 +17,6 @@ import {
     _decode_TestSessionId_globalRef,
     _encode_TestSessionId_globalRef,
 } from '../Test-ASN1Module/TestSessionId-globalRef.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestSessionId */
 /**
  * @summary TestSessionId
  * @description
@@ -69,9 +68,7 @@ export class TestSessionId {
         return new TestSessionId(_o.localId, _o.globalRef);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestSessionId */
 /**
  * @summary The Leading Root Component Types of TestSessionId
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_TestSessionId: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestSessionId */
 /**
  * @summary The Trailing Root Component Types of TestSessionId
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_TestSessionId: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestSessionId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestSessionId */
 /**
  * @summary The Extension Addition Component Types of TestSessionId
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_TestSessionId: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_TestSessionId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSessionId */
 let _cached_decoder_for_TestSessionId: $.ASN1Decoder<TestSessionId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestSessionId */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestSessionId
  * @function
@@ -170,13 +159,9 @@ export function _decode_TestSessionId(el: _Element) {
     }
     return _cached_decoder_for_TestSessionId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSessionId */
 let _cached_encoder_for_TestSessionId: $.ASN1Encoder<TestSessionId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestSessionId */
 /**
  * @summary Encodes a(n) TestSessionId into an ASN.1 Element.
  * @function
@@ -212,6 +197,5 @@ export function _encode_TestSessionId(
     return _cached_encoder_for_TestSessionId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestSessionId */
 
 /* eslint-enable */

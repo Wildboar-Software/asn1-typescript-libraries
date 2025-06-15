@@ -21,7 +21,6 @@ import {
     _decode_BodyPartReference_stored_body_part,
     _encode_BodyPartReference_stored_body_part,
 } from '../IPMSInformationObjects/BodyPartReference-stored-body-part.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartReference */
 /**
  * @summary BodyPartReference
  * @description
@@ -46,13 +45,9 @@ export type BodyPartReference =
     | {
           stored_body_part: BodyPartReference_stored_body_part;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartReference */
 let _cached_decoder_for_BodyPartReference: $.ASN1Decoder<BodyPartReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartReference
  * @function
@@ -90,13 +85,9 @@ export function _decode_BodyPartReference(el: _Element) {
     }
     return _cached_decoder_for_BodyPartReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartReference */
 let _cached_encoder_for_BodyPartReference: $.ASN1Encoder<BodyPartReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartReference */
 /**
  * @summary Encodes a(n) BodyPartReference into an ASN.1 Element.
  * @function
@@ -142,6 +133,5 @@ export function _encode_BodyPartReference(
     return _cached_encoder_for_BodyPartReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartReference */
 
 /* eslint-enable */

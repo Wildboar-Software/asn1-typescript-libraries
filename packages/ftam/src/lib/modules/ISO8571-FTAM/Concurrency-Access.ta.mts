@@ -15,7 +15,7 @@ import {
   _decode_Concurrency_Key,
   _encode_Concurrency_Key,
 } from '../ISO8571-FTAM/Concurrency-Key.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Concurrency_Access */
+
 /**
  * @summary Concurrency_Access
  * @description
@@ -116,9 +116,8 @@ export class Concurrency_Access {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Concurrency_Access */
+
 /**
  * @summary The Leading Root Component Types of Concurrency_Access
  * @description
@@ -185,9 +184,8 @@ export const _root_component_type_list_1_spec_for_Concurrency_Access: $.Componen
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Concurrency_Access */
+
 /**
  * @summary The Trailing Root Component Types of Concurrency_Access
  * @description
@@ -197,9 +195,8 @@ export const _root_component_type_list_1_spec_for_Concurrency_Access: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Concurrency_Access: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Concurrency_Access */
+
 /**
  * @summary The Extension Addition Component Types of Concurrency_Access
  * @description
@@ -209,13 +206,11 @@ export const _root_component_type_list_2_spec_for_Concurrency_Access: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_Concurrency_Access: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Concurrency_Access */
+
 let _cached_decoder_for_Concurrency_Access: $.ASN1Decoder<Concurrency_Access> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Concurrency_Access */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Concurrency_Access
  * @function
@@ -289,13 +284,11 @@ export function _decode_Concurrency_Access(el: _Element) {
   }
   return _cached_decoder_for_Concurrency_Access(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Concurrency_Access */
+
 let _cached_encoder_for_Concurrency_Access: $.ASN1Encoder<Concurrency_Access> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Concurrency_Access */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Concurrency_Access */
+
 /**
  * @summary Encodes a(n) Concurrency_Access into an ASN.1 Element.
  * @function
@@ -370,6 +363,5 @@ export function _encode_Concurrency_Access(
   return _cached_encoder_for_Concurrency_Access(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Concurrency_Access */
 
 /* eslint-enable */

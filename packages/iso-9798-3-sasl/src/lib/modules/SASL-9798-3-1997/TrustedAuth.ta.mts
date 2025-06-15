@@ -22,7 +22,7 @@ import {
     _encode_Certificate,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TrustedAuth */
+
 /**
  * @summary TrustedAuth
  * @description
@@ -51,13 +51,11 @@ type TrustedAuth =
     | { issuerKeyHash: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { authorityCertificate: Certificate } /* CHOICE_ALT_ROOT */
     | { pkcs15KeyHash: OCTET_STRING } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TrustedAuth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustedAuth */
+
 let _cached_decoder_for_TrustedAuth: $.ASN1Decoder<TrustedAuth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustedAuth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustedAuth */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustedAuth
  * @function
@@ -75,13 +73,11 @@ function _decode_TrustedAuth (el: _Element) {
 }); }
     return _cached_decoder_for_TrustedAuth(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustedAuth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustedAuth */
+
 let _cached_encoder_for_TrustedAuth: $.ASN1Encoder<TrustedAuth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustedAuth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustedAuth */
+
 /**
  * @summary Encodes a(n) TrustedAuth into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ function _encode_TrustedAuth (value: TrustedAuth, elGetter: $.ASN1Encoder<Truste
     return _cached_encoder_for_TrustedAuth(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustedAuth */
 
 /* eslint-enable */

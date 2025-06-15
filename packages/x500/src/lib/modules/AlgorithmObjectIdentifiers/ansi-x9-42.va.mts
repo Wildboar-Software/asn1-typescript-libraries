@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { us_iso } from "../AlgorithmObjectIdentifiers/us-iso.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ansi_x9_42 */
 /**
  * @summary ansi_x9_42
  * @description
@@ -16,6 +15,5 @@ import { us_iso } from "../AlgorithmObjectIdentifiers/us-iso.va.mjs";
  * @constant
  */
 export const ansi_x9_42: ID = new _OID([/* ansi-x942 */ 10046], us_iso);
-/* END_OF_SYMBOL_DEFINITION ansi_x9_42 */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { aes } from "../AlgorithmObjectIdentifiers/aes.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_aes128_CBC */
 /**
  * @summary id_aes128_CBC
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_aes128_CBC: ID = new _OID([2], aes);
-/* END_OF_SYMBOL_DEFINITION id_aes128_CBC */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../CryptographicMessageSyntax-2010/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SigncryptedAttributes */
+
 /**
  * @summary SigncryptedAttributes
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type SigncryptedAttributes = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SigncryptedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SigncryptedAttributes */
+
 let _cached_decoder_for_SigncryptedAttributes: $.ASN1Decoder<SigncryptedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SigncryptedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SigncryptedAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SigncryptedAttributes
  * @function
@@ -40,13 +38,11 @@ export function _decode_SigncryptedAttributes(el: _Element) {
     }
     return _cached_decoder_for_SigncryptedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SigncryptedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SigncryptedAttributes */
+
 let _cached_encoder_for_SigncryptedAttributes: $.ASN1Encoder<SigncryptedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SigncryptedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SigncryptedAttributes */
+
 /**
  * @summary Encodes a(n) SigncryptedAttributes into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_SigncryptedAttributes(
     return _cached_encoder_for_SigncryptedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SigncryptedAttributes */
 
 /* eslint-enable */

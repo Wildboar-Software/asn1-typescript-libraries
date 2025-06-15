@@ -16,7 +16,7 @@ import {
 } from '../Pbact-access/ModifyRequest.ta.mjs';
 import { id_modifyRequest } from '../Pbact-access/id-modifyRequest.va.mjs';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION modifyRequest */
+
 /**
  * @summary modifyRequest
  * @description
@@ -44,6 +44,5 @@ export const modifyRequest: CONTENT_TYPE<ModifyRequest> = {
     '&id': id_modifyRequest /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION modifyRequest */
 
 /* eslint-enable */

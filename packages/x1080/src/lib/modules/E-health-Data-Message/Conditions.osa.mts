@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CONDITION } from '../E-health-Data-Message/CONDITION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION Conditions */
+
 /**
  * @summary Conditions
  * @description
@@ -26,6 +26,5 @@ import { CONDITION } from '../E-health-Data-Message/CONDITION.oca.mjs';
  *
  */
 export const Conditions: CONDITION[] = [];
-/* END_OF_SYMBOL_DEFINITION Conditions */
 
 /* eslint-enable */

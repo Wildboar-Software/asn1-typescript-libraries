@@ -11,7 +11,6 @@ import {
     _decode_DirectoryBindResult,
     _encode_DirectoryBindResult,
 } from "../DirectoryAbstractService/DirectoryBindResult.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION directoryBind */
 /**
  * @summary directoryBind
  * @description
@@ -46,6 +45,5 @@ export const directoryBind: OPERATION<
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION directoryBind */
 
 /* eslint-enable */

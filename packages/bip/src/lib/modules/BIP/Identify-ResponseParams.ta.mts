@@ -21,7 +21,7 @@ import {
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Identify_ResponseParams */
+
 /**
  * @summary Identify_ResponseParams
  * @description
@@ -72,9 +72,8 @@ export class Identify_ResponseParams {
     return new Identify_ResponseParams(_o.candidates, _o.auditData);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Identify_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of Identify_ResponseParams
  * @description
@@ -99,9 +98,8 @@ export const _root_component_type_list_1_spec_for_Identify_ResponseParams: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Identify_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of Identify_ResponseParams
  * @description
@@ -111,9 +109,8 @@ export const _root_component_type_list_1_spec_for_Identify_ResponseParams: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Identify_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Identify_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of Identify_ResponseParams
  * @description
@@ -123,13 +120,11 @@ export const _root_component_type_list_2_spec_for_Identify_ResponseParams: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_Identify_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Identify_ResponseParams */
+
 let _cached_decoder_for_Identify_ResponseParams: $.ASN1Decoder<Identify_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Identify_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Identify_ResponseParams
  * @function
@@ -173,13 +168,11 @@ export function _decode_Identify_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_Identify_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Identify_ResponseParams */
+
 let _cached_encoder_for_Identify_ResponseParams: $.ASN1Encoder<Identify_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Identify_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Identify_ResponseParams */
+
 /**
  * @summary Encodes a(n) Identify_ResponseParams into an ASN.1 Element.
  * @function
@@ -213,6 +206,5 @@ export function _encode_Identify_ResponseParams(
   return _cached_encoder_for_Identify_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Identify_ResponseParams */
 
 /* eslint-enable */

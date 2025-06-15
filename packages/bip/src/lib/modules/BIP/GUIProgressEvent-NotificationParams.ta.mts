@@ -61,7 +61,7 @@ import {
   _decode_BioAPI_GUI_BITMAP_ARRAY,
   _encode_BioAPI_GUI_BITMAP_ARRAY,
 } from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIProgressEvent_NotificationParams */
+
 /**
  * @summary GUIProgressEvent_NotificationParams
  * @description
@@ -217,9 +217,8 @@ export class GUIProgressEvent_NotificationParams {
 
   public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
 }
-/* END_OF_SYMBOL_DEFINITION GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIProgressEvent_NotificationParams */
+
 /**
  * @summary The Leading Root Component Types of GUIProgressEvent_NotificationParams
  * @description
@@ -307,9 +306,8 @@ export const _root_component_type_list_1_spec_for_GUIProgressEvent_NotificationP
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIProgressEvent_NotificationParams */
+
 /**
  * @summary The Trailing Root Component Types of GUIProgressEvent_NotificationParams
  * @description
@@ -319,9 +317,8 @@ export const _root_component_type_list_1_spec_for_GUIProgressEvent_NotificationP
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUIProgressEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIProgressEvent_NotificationParams */
+
 /**
  * @summary The Extension Addition Component Types of GUIProgressEvent_NotificationParams
  * @description
@@ -331,13 +328,11 @@ export const _root_component_type_list_2_spec_for_GUIProgressEvent_NotificationP
  * @constant
  */
 export const _extension_additions_list_spec_for_GUIProgressEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIProgressEvent_NotificationParams */
+
 let _cached_decoder_for_GUIProgressEvent_NotificationParams: $.ASN1Decoder<GUIProgressEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIProgressEvent_NotificationParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIProgressEvent_NotificationParams
  * @function
@@ -424,13 +419,11 @@ export function _decode_GUIProgressEvent_NotificationParams(el: _Element) {
   }
   return _cached_decoder_for_GUIProgressEvent_NotificationParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIProgressEvent_NotificationParams */
+
 let _cached_encoder_for_GUIProgressEvent_NotificationParams: $.ASN1Encoder<GUIProgressEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIProgressEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIProgressEvent_NotificationParams */
+
 /**
  * @summary Encodes a(n) GUIProgressEvent_NotificationParams into an ASN.1 Element.
  * @function
@@ -488,6 +481,5 @@ export function _encode_GUIProgressEvent_NotificationParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIProgressEvent_NotificationParams */
 
 /* eslint-enable */

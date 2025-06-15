@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_RedirectionReason */
 export enum _enum_for_RedirectionReason {
     recipient_assigned_alternate_recipient = 0,
     originator_requested_alternate_recipient = 1,
@@ -20,9 +19,7 @@ export enum _enum_for_RedirectionReason {
     directory_look_up = 3,
     alias = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_RedirectionReason */
 
-/* START_OF_SYMBOL_DEFINITION RedirectionReason */
 /**
  * @summary RedirectionReason
  * @description
@@ -40,111 +37,82 @@ export enum _enum_for_RedirectionReason {
  * ```@enum {number}
  */
 export type RedirectionReason = _enum_for_RedirectionReason | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION RedirectionReason */
 
-/* START_OF_SYMBOL_DEFINITION RedirectionReason_recipient_assigned_alternate_recipient */
 /**
  * @summary RedirectionReason_recipient_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
 export const RedirectionReason_recipient_assigned_alternate_recipient: RedirectionReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RedirectionReason_recipient_assigned_alternate_recipient */
 
-/* START_OF_SYMBOL_DEFINITION recipient_assigned_alternate_recipient */
 /**
  * @summary recipient_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
 export const recipient_assigned_alternate_recipient: RedirectionReason = RedirectionReason_recipient_assigned_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION recipient_assigned_alternate_recipient */
 
-/* START_OF_SYMBOL_DEFINITION RedirectionReason_originator_requested_alternate_recipient */
 /**
  * @summary RedirectionReason_originator_requested_alternate_recipient
  * @constant
  * @type {number}
  */
 export const RedirectionReason_originator_requested_alternate_recipient: RedirectionReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RedirectionReason_originator_requested_alternate_recipient */
 
-/* START_OF_SYMBOL_DEFINITION originator_requested_alternate_recipient */
 /**
  * @summary originator_requested_alternate_recipient
  * @constant
  * @type {number}
  */
 export const originator_requested_alternate_recipient: RedirectionReason = RedirectionReason_originator_requested_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION originator_requested_alternate_recipient */
 
-/* START_OF_SYMBOL_DEFINITION RedirectionReason_recipient_MD_assigned_alternate_recipient */
 /**
  * @summary RedirectionReason_recipient_MD_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
 export const RedirectionReason_recipient_MD_assigned_alternate_recipient: RedirectionReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RedirectionReason_recipient_MD_assigned_alternate_recipient */
 
-/* START_OF_SYMBOL_DEFINITION recipient_MD_assigned_alternate_recipient */
 /**
  * @summary recipient_MD_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
 export const recipient_MD_assigned_alternate_recipient: RedirectionReason = RedirectionReason_recipient_MD_assigned_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION recipient_MD_assigned_alternate_recipient */
 
-/* START_OF_SYMBOL_DEFINITION RedirectionReason_directory_look_up */
 /**
  * @summary RedirectionReason_directory_look_up
  * @constant
  * @type {number}
  */
 export const RedirectionReason_directory_look_up: RedirectionReason = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RedirectionReason_directory_look_up */
 
-/* START_OF_SYMBOL_DEFINITION directory_look_up */
 /**
  * @summary directory_look_up
  * @constant
  * @type {number}
  */
 export const directory_look_up: RedirectionReason = RedirectionReason_directory_look_up; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION directory_look_up */
 
-/* START_OF_SYMBOL_DEFINITION RedirectionReason_alias */
 /**
  * @summary RedirectionReason_alias
  * @constant
  * @type {number}
  */
 export const RedirectionReason_alias: RedirectionReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION RedirectionReason_alias */
 
-/* START_OF_SYMBOL_DEFINITION alias */
 /**
  * @summary alias
  * @constant
  * @type {number}
  */
 export const alias: RedirectionReason = RedirectionReason_alias; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION alias */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionReason */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectionReason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RedirectionReason */
 export const _decode_RedirectionReason = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_RedirectionReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionReason */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectionReason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RedirectionReason */
 export const _encode_RedirectionReason = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RedirectionReason */
 
 /* eslint-enable */

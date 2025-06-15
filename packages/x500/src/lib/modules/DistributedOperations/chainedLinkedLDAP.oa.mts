@@ -3,7 +3,6 @@ import { linkedLDAP } from "../DirectoryAbstractService/linkedLDAP.oa.mjs";
 import { chained } from "../DistributedOperations/chained.oa.mjs";
 import type { ChainedOperation } from "./chained.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION chainedLinkedLDAP */
 /**
  * @summary chainedLinkedLDAP
  * @description
@@ -19,6 +18,5 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @implements {OPERATION}
  */
 export const chainedLinkedLDAP: ChainedOperation = chained(linkedLDAP);
-/* END_OF_SYMBOL_DEFINITION chainedLinkedLDAP */
 
 /* eslint-enable */

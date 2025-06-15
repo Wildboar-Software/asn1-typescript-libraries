@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION CurvePrivateKey */
+
 /**
  * @summary CurvePrivateKey
  * @description
@@ -27,21 +27,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type CurvePrivateKey = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION CurvePrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CurvePrivateKey */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CurvePrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CurvePrivateKey */
+
+
 export const _decode_CurvePrivateKey = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_CurvePrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CurvePrivateKey */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CurvePrivateKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CurvePrivateKey */
+
+
 export const _encode_CurvePrivateKey = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CurvePrivateKey */
 
 /* eslint-enable */

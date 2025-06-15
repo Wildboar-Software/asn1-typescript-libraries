@@ -14,7 +14,7 @@ import { gulsSignatureTransformation } from '../GulsSecurityTransformations/guls
 import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
 import { symmetricKeyInformation } from '../GulsSecurityTransformations/symmetricKeyInformation.oa.mjs';
 import { asymmetricKeyInformation } from '../GulsSecurityTransformations/asymmetricKeyInformation.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION signature */
+
 /**
  * @summary signature
  * @description
@@ -46,6 +46,5 @@ export const signature: PROTECTION_MAPPING = {
   ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&bypassPermitted': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signature */
 
 /* eslint-enable */

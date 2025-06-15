@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va.mjs';
-/* START_OF_SYMBOL_DEFINITION originatingL1LSPBufferSize_Default */
 /**
  * @summary originatingL1LSPBufferSize_Default
  * @description
@@ -25,6 +24,5 @@ import { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va.mjs';
  * @constant
  */
 export const originatingL1LSPBufferSize_Default: INTEGER = receiveLSPBufferSize;
-/* END_OF_SYMBOL_DEFINITION originatingL1LSPBufferSize_Default */
 
 /* eslint-enable */

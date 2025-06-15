@@ -15,7 +15,6 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION reserveTimer_Default */
 /**
  * @summary reserveTimer_Default
  * @description
@@ -32,6 +31,5 @@ export const reserveTimer_Default: Timer = Timer._from_object({
   exponent: 2,
   mantissa: 6,
 });
-/* END_OF_SYMBOL_DEFINITION reserveTimer_Default */
 
 /* eslint-enable */

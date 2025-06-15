@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_at_specific_passwords */
 /**
  * @summary id_at_specific_passwords
  * @description
@@ -29,6 +28,5 @@ import { id_at } from '../MHSRoutingObjectIdentifiers/id-at.va.mjs';
  * @constant
  */
 export const id_at_specific_passwords: ID = new _OID([37], id_at);
-/* END_OF_SYMBOL_DEFINITION id_at_specific_passwords */
 
 /* eslint-enable */

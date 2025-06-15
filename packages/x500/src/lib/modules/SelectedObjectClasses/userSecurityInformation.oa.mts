@@ -6,7 +6,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_userSecurityInformation } from "../SelectedObjectClasses/id-oc-userSecurityInformation.va.mjs";
-/* START_OF_SYMBOL_DEFINITION userSecurityInformation */
 /**
  * @summary userSecurityInformation
  * @description
@@ -38,6 +37,5 @@ export const userSecurityInformation: OBJECT_CLASS = {
     "&ldapDesc": "X.521 user security information",
     "&id": id_oc_userSecurityInformation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userSecurityInformation */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_SignalRate,
     _encode_SignalRate,
 } from '../M3100ASN1TypeModule2/SignalRate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AvailableSignalRateList */
+
 /**
  * @summary AvailableSignalRateList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AvailableSignalRateList = SignalRate[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AvailableSignalRateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailableSignalRateList */
+
 let _cached_decoder_for_AvailableSignalRateList: $.ASN1Decoder<AvailableSignalRateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AvailableSignalRateList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AvailableSignalRateList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AvailableSignalRateList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AvailableSignalRateList(el: _Element) {
     }
     return _cached_decoder_for_AvailableSignalRateList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AvailableSignalRateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailableSignalRateList */
+
 let _cached_encoder_for_AvailableSignalRateList: $.ASN1Encoder<AvailableSignalRateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AvailableSignalRateList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AvailableSignalRateList */
+
 /**
  * @summary Encodes a(n) AvailableSignalRateList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AvailableSignalRateList(
     return _cached_encoder_for_AvailableSignalRateList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AvailableSignalRateList */
 
 /* eslint-enable */

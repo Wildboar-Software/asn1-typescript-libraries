@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_pkcs } from '../CmsTelebiometric/id-pkcs.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_pkcs_9 */
+
 /**
  * @summary id_pkcs_9
  * @description
@@ -25,6 +25,5 @@ import { id_pkcs } from '../CmsTelebiometric/id-pkcs.va.mjs';
  * @constant
  */
 export const id_pkcs_9: OBJECT_IDENTIFIER = new _OID([/* pkcs-9 */ 9], id_pkcs);
-/* END_OF_SYMBOL_DEFINITION id_pkcs_9 */
 
 /* eslint-enable */

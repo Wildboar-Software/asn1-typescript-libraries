@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../PkiPmiExternalDataTypes/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryOfficeNumber */
 /**
  * @summary UniversalPhysicalDeliveryOfficeNumber
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalPhysicalDeliveryOfficeNumber = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryOfficeNumber */
 let _cached_decoder_for_UniversalPhysicalDeliveryOfficeNumber: $.ASN1Decoder<UniversalPhysicalDeliveryOfficeNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryOfficeNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryOfficeNumber
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalPhysicalDeliveryOfficeNumber(el: _Element) {
     }
     return _cached_decoder_for_UniversalPhysicalDeliveryOfficeNumber(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryOfficeNumber */
 let _cached_encoder_for_UniversalPhysicalDeliveryOfficeNumber: $.ASN1Encoder<UniversalPhysicalDeliveryOfficeNumber> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPhysicalDeliveryOfficeNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryOfficeNumber */
 /**
  * @summary Encodes a(n) UniversalPhysicalDeliveryOfficeNumber into an ASN.1 Element.
  * @function
@@ -64,6 +55,5 @@ export function _encode_UniversalPhysicalDeliveryOfficeNumber(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPhysicalDeliveryOfficeNumber */
 
 /* eslint-enable */

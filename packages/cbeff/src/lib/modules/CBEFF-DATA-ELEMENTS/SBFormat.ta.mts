@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SBFormat */
 /**
  * @summary SBFormat
  * @description
@@ -63,9 +62,7 @@ export class SBFormat {
     return new SBFormat(_o.sb_owner, _o.sb_type);
   }
 }
-/* END_OF_SYMBOL_DEFINITION SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SBFormat */
 /**
  * @summary The Leading Root Component Types of SBFormat
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_SBFormat: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SBFormat */
 /**
  * @summary The Trailing Root Component Types of SBFormat
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_SBFormat: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SBFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SBFormat */
 /**
  * @summary The Extension Addition Component Types of SBFormat
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_SBFormat: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_SBFormat: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SBFormat */
 let _cached_decoder_for_SBFormat: $.ASN1Decoder<SBFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SBFormat */
 /**
  * @summary Decodes an ASN.1 element into a(n) SBFormat
  * @function
@@ -157,13 +146,9 @@ export function _decode_SBFormat(el: _Element) {
   }
   return _cached_decoder_for_SBFormat(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SBFormat */
 let _cached_encoder_for_SBFormat: $.ASN1Encoder<SBFormat> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SBFormat */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SBFormat */
 /**
  * @summary Encodes a(n) SBFormat into an ASN.1 Element.
  * @function
@@ -196,6 +181,5 @@ export function _encode_SBFormat(
   return _cached_encoder_for_SBFormat(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SBFormat */
 
 /* eslint-enable */

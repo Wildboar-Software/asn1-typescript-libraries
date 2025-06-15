@@ -11,7 +11,6 @@ import {
     _decode_SenderStaticInfo,
     _encode_SenderStaticInfo,
 } from "../PkiPmiWrapper/SenderStaticInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SenderDhInfo */
 /**
  * @summary SenderDhInfo
  * @description
@@ -29,13 +28,9 @@ export type SenderDhInfo =
     | { senderStaticInfo: SenderStaticInfo } /* CHOICE_ALT_ROOT */
     | { senderDhPublicKey: SenderDhPublicKey } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SenderDhInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SenderDhInfo */
 let _cached_decoder_for_SenderDhInfo: $.ASN1Decoder<SenderDhInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SenderDhInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SenderDhInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) SenderDhInfo
  * @function
@@ -63,13 +58,9 @@ export function _decode_SenderDhInfo(el: _Element) {
     }
     return _cached_decoder_for_SenderDhInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SenderDhInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SenderDhInfo */
 let _cached_encoder_for_SenderDhInfo: $.ASN1Encoder<SenderDhInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SenderDhInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SenderDhInfo */
 /**
  * @summary Encodes a(n) SenderDhInfo into an ASN.1 Element.
  * @function
@@ -103,6 +94,5 @@ export function _encode_SenderDhInfo(
     return _cached_encoder_for_SenderDhInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SenderDhInfo */
 
 /* eslint-enable */

@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/MSExtensionErrorParameter.ta.mjs';
 import { err_ms_extension_error } from '../MSAccessProtocol/err-ms-extension-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_extension_error */
 /**
  * @summary ms_extension_error
  * @description
@@ -54,6 +53,5 @@ export const ms_extension_error: ABSTRACT_ERROR<MSExtensionErrorParameter> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_extension_error */
 
 /* eslint-enable */

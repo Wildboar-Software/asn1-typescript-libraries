@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_act } from '../EDIMSObjectIdentifiers/id-act.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_act_edi_auto_correlate */
 /**
  * @summary id_act_edi_auto_correlate
  * @description
@@ -25,6 +24,5 @@ import { id_act } from '../EDIMSObjectIdentifiers/id-act.va.mjs';
  * @constant
  */
 export const id_act_edi_auto_correlate: ID = new _OID([1], id_act);
-/* END_OF_SYMBOL_DEFINITION id_act_edi_auto_correlate */
 
 /* eslint-enable */

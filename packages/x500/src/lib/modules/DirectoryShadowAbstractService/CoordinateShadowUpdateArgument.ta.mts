@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgument */
 /**
  * @summary CoordinateShadowUpdateArgument
  * @description
@@ -24,13 +23,9 @@ import {
  * ```
  */
 export type CoordinateShadowUpdateArgument = OPTIONALLY_PROTECTED<CoordinateShadowUpdateArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CoordinateShadowUpdateArgument */
 let _cached_decoder_for_CoordinateShadowUpdateArgument: $.ASN1Decoder<CoordinateShadowUpdateArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CoordinateShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CoordinateShadowUpdateArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) CoordinateShadowUpdateArgument
  * @function
@@ -45,13 +40,9 @@ export function _decode_CoordinateShadowUpdateArgument(el: _Element) {
     }
     return _cached_decoder_for_CoordinateShadowUpdateArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CoordinateShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CoordinateShadowUpdateArgument */
 let _cached_encoder_for_CoordinateShadowUpdateArgument: $.ASN1Encoder<CoordinateShadowUpdateArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CoordinateShadowUpdateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CoordinateShadowUpdateArgument */
 /**
  * @summary Encodes a(n) CoordinateShadowUpdateArgument into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_CoordinateShadowUpdateArgument(
     return _cached_encoder_for_CoordinateShadowUpdateArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CoordinateShadowUpdateArgument */
 
 /* eslint-enable */

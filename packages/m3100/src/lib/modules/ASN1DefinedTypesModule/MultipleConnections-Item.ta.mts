@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MultipleConnections_Item */
+
 /**
  * @summary MultipleConnections_Item
  * @description
@@ -31,13 +31,11 @@ export type MultipleConnections_Item =
     | { downstreamConnected: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { upstreamNotConnected: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { upstreamConnected: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MultipleConnections_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleConnections_Item */
+
 let _cached_decoder_for_MultipleConnections_Item: $.ASN1Decoder<MultipleConnections_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleConnections_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleConnections_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleConnections_Item
  * @function
@@ -77,13 +75,11 @@ export function _decode_MultipleConnections_Item(el: _Element) {
     }
     return _cached_decoder_for_MultipleConnections_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleConnections_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleConnections_Item */
+
 let _cached_encoder_for_MultipleConnections_Item: $.ASN1Encoder<MultipleConnections_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleConnections_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleConnections_Item */
+
 /**
  * @summary Encodes a(n) MultipleConnections_Item into an ASN.1 Element.
  * @function
@@ -129,6 +125,5 @@ export function _encode_MultipleConnections_Item(
     return _cached_encoder_for_MultipleConnections_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleConnections_Item */
 
 /* eslint-enable */

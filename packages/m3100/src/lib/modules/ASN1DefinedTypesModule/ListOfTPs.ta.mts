@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ListOfTPs */
+
 /**
  * @summary ListOfTPs
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ListOfTPs = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ListOfTPs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListOfTPs */
+
 let _cached_decoder_for_ListOfTPs: $.ASN1Decoder<ListOfTPs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListOfTPs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListOfTPs */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ListOfTPs
  * @function
@@ -48,13 +46,11 @@ export function _decode_ListOfTPs(el: _Element) {
     }
     return _cached_decoder_for_ListOfTPs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListOfTPs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListOfTPs */
+
 let _cached_encoder_for_ListOfTPs: $.ASN1Encoder<ListOfTPs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListOfTPs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListOfTPs */
+
 /**
  * @summary Encodes a(n) ListOfTPs into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ListOfTPs(
     return _cached_encoder_for_ListOfTPs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListOfTPs */
 
 /* eslint-enable */

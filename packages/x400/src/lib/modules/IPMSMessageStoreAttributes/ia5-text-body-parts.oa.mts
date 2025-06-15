@@ -22,7 +22,6 @@ import { id_bat_ia5_text_body_parts } from '../IPMSObjectIdentifiers/id-bat-ia5-
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ia5_text_body_parts */
 /**
  * @summary ia5_text_body_parts
  * @description
@@ -53,6 +52,5 @@ export const ia5_text_body_parts: X413ATTRIBUTE<IA5TextBodyPart> = {
     '&id': id_bat_ia5_text_body_parts /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ia5_text_body_parts */
 
 /* eslint-enable */

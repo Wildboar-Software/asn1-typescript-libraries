@@ -7,7 +7,7 @@ import {
     _encode_Extensions,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ExtensionRequest */
+
 /**
  * @summary ExtensionRequest
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type ExtensionRequest = Extensions; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ExtensionRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionRequest */
+
 let _cached_decoder_for_ExtensionRequest: $.ASN1Decoder<ExtensionRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtensionRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionRequest
  * @function
@@ -38,13 +36,11 @@ export function _decode_ExtensionRequest(el: _Element) {
     }
     return _cached_decoder_for_ExtensionRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtensionRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionRequest */
+
 let _cached_encoder_for_ExtensionRequest: $.ASN1Encoder<ExtensionRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtensionRequest */
+
 /**
  * @summary Encodes a(n) ExtensionRequest into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ export function _encode_ExtensionRequest(
     return _cached_encoder_for_ExtensionRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtensionRequest */
 
 /* eslint-enable */

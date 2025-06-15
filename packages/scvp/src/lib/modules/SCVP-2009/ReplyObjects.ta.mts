@@ -15,7 +15,6 @@ import {
   _decode_CertReply,
   _encode_CertReply,
 } from '../SCVP-2009/CertReply.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyObjects */
 /**
  * @summary ReplyObjects
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReplyObjects = CertReply[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ReplyObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyObjects */
 let _cached_decoder_for_ReplyObjects: $.ASN1Decoder<ReplyObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyObjects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyObjects */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyObjects
  * @function
@@ -48,13 +43,9 @@ export function _decode_ReplyObjects(el: _Element) {
   }
   return _cached_decoder_for_ReplyObjects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyObjects */
 let _cached_encoder_for_ReplyObjects: $.ASN1Encoder<ReplyObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyObjects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyObjects */
 /**
  * @summary Encodes a(n) ReplyObjects into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ReplyObjects(
   return _cached_encoder_for_ReplyObjects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyObjects */
 
 /* eslint-enable */

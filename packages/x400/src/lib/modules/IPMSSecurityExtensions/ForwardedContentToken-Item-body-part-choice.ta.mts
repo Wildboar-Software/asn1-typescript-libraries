@@ -20,7 +20,6 @@ import {
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardedContentToken_Item_body_part_choice */
 /**
  * @summary ForwardedContentToken_Item_body_part_choice
  * @description
@@ -36,13 +35,9 @@ export type ForwardedContentToken_Item_body_part_choice =
     | {
           message_or_content_body_part: ForwardedContentToken;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ForwardedContentToken_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedContentToken_Item_body_part_choice */
 let _cached_decoder_for_ForwardedContentToken_Item_body_part_choice: $.ASN1Decoder<ForwardedContentToken_Item_body_part_choice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedContentToken_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardedContentToken_Item_body_part_choice */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardedContentToken_Item_body_part_choice
  * @function
@@ -65,13 +60,9 @@ export function _decode_ForwardedContentToken_Item_body_part_choice(
     }
     return _cached_decoder_for_ForwardedContentToken_Item_body_part_choice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardedContentToken_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedContentToken_Item_body_part_choice */
 let _cached_encoder_for_ForwardedContentToken_Item_body_part_choice: $.ASN1Encoder<ForwardedContentToken_Item_body_part_choice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedContentToken_Item_body_part_choice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardedContentToken_Item_body_part_choice */
 /**
  * @summary Encodes a(n) ForwardedContentToken_Item_body_part_choice into an ASN.1 Element.
  * @function
@@ -98,6 +89,5 @@ export function _encode_ForwardedContentToken_Item_body_part_choice(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardedContentToken_Item_body_part_choice */
 
 /* eslint-enable */

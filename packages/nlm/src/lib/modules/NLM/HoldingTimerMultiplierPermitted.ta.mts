@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION HoldingTimerMultiplierPermitted */
+
 /**
  * @summary HoldingTimerMultiplierPermitted
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type HoldingTimerMultiplierPermitted = INTEGER;
-/* END_OF_SYMBOL_DEFINITION HoldingTimerMultiplierPermitted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HoldingTimerMultiplierPermitted */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HoldingTimerMultiplierPermitted */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HoldingTimerMultiplierPermitted */
+
+
 export const _decode_HoldingTimerMultiplierPermitted = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_HoldingTimerMultiplierPermitted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HoldingTimerMultiplierPermitted */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HoldingTimerMultiplierPermitted */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HoldingTimerMultiplierPermitted */
+
+
 export const _encode_HoldingTimerMultiplierPermitted = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_HoldingTimerMultiplierPermitted */
 
 /* eslint-enable */

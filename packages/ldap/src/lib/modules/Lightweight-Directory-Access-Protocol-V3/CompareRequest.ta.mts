@@ -20,7 +20,7 @@ import {
   _decode_AttributeValueAssertion,
   _encode_AttributeValueAssertion,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CompareRequest */
+
 /**
  * @summary CompareRequest
  * @description
@@ -76,9 +76,8 @@ export class CompareRequest {
     return new CompareRequest(_o.entry, _o.ava, _o._unrecognizedExtensionsList);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareRequest */
+
 /**
  * @summary The Leading Root Component Types of CompareRequest
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_CompareRequest: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareRequest */
+
 /**
  * @summary The Trailing Root Component Types of CompareRequest
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_CompareRequest: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CompareRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareRequest */
+
 /**
  * @summary The Extension Addition Component Types of CompareRequest
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_CompareRequest: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CompareRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareRequest */
+
 let _cached_decoder_for_CompareRequest: $.ASN1Decoder<CompareRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareRequest
  * @function
@@ -165,13 +160,11 @@ export function _decode_CompareRequest(el: _Element) {
   }
   return _cached_decoder_for_CompareRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareRequest */
+
 let _cached_encoder_for_CompareRequest: $.ASN1Encoder<CompareRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareRequest */
+
 /**
  * @summary Encodes a(n) CompareRequest into an ASN.1 Element.
  * @function
@@ -214,6 +207,5 @@ export function _encode_CompareRequest(
   return _cached_encoder_for_CompareRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareRequest */
 
 /* eslint-enable */

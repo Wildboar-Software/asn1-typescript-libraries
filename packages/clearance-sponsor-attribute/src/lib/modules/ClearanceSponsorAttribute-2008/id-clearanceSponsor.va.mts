@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_clearanceSponsor */
+
 /**
  * @summary id_clearanceSponsor
  * @description
@@ -42,6 +42,5 @@ const id_clearanceSponsor: OBJECT_IDENTIFIER = new _OID([
     /* attributes */ 5,
     68,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_clearanceSponsor */
 
 /* eslint-enable */

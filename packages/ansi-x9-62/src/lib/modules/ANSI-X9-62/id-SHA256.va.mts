@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_SHA256 */
 /**
  * @summary id_SHA256
  * @description
@@ -26,6 +25,5 @@ export const id_SHA256: OBJECT_IDENTIFIER = new _OID([
     /* hashalgs */ 2,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_SHA256 */
 
 /* eslint-enable */

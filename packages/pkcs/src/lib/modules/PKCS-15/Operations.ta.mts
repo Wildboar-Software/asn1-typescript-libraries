@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, BIT_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Operations */
+
 /**
  * @summary Operations
  * @description
@@ -23,149 +23,128 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type Operations = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION Operations */
 
-/* START_OF_SYMBOL_DEFINITION Operations_compute_checksum */
+
 /**
  * @summary Operations_compute_checksum
  * @constant
  */
 export const Operations_compute_checksum: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_compute_checksum */
 
-/* START_OF_SYMBOL_DEFINITION compute_checksum */
+
 /**
  * @summary compute_checksum
  * @constant
  */
 export const compute_checksum: number = Operations_compute_checksum; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION compute_checksum */
 
-/* START_OF_SYMBOL_DEFINITION Operations_compute_signature */
+
 /**
  * @summary Operations_compute_signature
  * @constant
  */
 export const Operations_compute_signature: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_compute_signature */
 
-/* START_OF_SYMBOL_DEFINITION compute_signature */
+
 /**
  * @summary compute_signature
  * @constant
  */
 export const compute_signature: number = Operations_compute_signature; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION compute_signature */
 
-/* START_OF_SYMBOL_DEFINITION Operations_verify_checksum */
+
 /**
  * @summary Operations_verify_checksum
  * @constant
  */
 export const Operations_verify_checksum: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_verify_checksum */
 
-/* START_OF_SYMBOL_DEFINITION verify_checksum */
+
 /**
  * @summary verify_checksum
  * @constant
  */
 export const verify_checksum: number = Operations_verify_checksum; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION verify_checksum */
 
-/* START_OF_SYMBOL_DEFINITION Operations_verify_signature */
+
 /**
  * @summary Operations_verify_signature
  * @constant
  */
 export const Operations_verify_signature: number = 3; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_verify_signature */
 
-/* START_OF_SYMBOL_DEFINITION verify_signature */
+
 /**
  * @summary verify_signature
  * @constant
  */
 export const verify_signature: number = Operations_verify_signature; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION verify_signature */
 
-/* START_OF_SYMBOL_DEFINITION Operations_encipher */
+
 /**
  * @summary Operations_encipher
  * @constant
  */
 export const Operations_encipher: number = 4; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_encipher */
 
-/* START_OF_SYMBOL_DEFINITION encipher */
+
 /**
  * @summary encipher
  * @constant
  */
 export const encipher: number = Operations_encipher; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION encipher */
 
-/* START_OF_SYMBOL_DEFINITION Operations_decipher */
+
 /**
  * @summary Operations_decipher
  * @constant
  */
 export const Operations_decipher: number = 5; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_decipher */
 
-/* START_OF_SYMBOL_DEFINITION decipher */
+
 /**
  * @summary decipher
  * @constant
  */
 export const decipher: number = Operations_decipher; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION decipher */
 
-/* START_OF_SYMBOL_DEFINITION Operations_hash */
+
 /**
  * @summary Operations_hash
  * @constant
  */
 export const Operations_hash: number = 6; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_hash */
 
-/* START_OF_SYMBOL_DEFINITION hash */
+
 /**
  * @summary hash
  * @constant
  */
 export const hash: number = Operations_hash; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION hash */
 
-/* START_OF_SYMBOL_DEFINITION Operations_generate_key */
+
 /**
  * @summary Operations_generate_key
  * @constant
  */
 export const Operations_generate_key: number = 7; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION Operations_generate_key */
 
-/* START_OF_SYMBOL_DEFINITION generate_key */
+
 /**
  * @summary generate_key
  * @constant
  */
 export const generate_key: number = Operations_generate_key; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION generate_key */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Operations */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Operations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Operations */
+
+
 export const _decode_Operations = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_Operations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Operations */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Operations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Operations */
+
+
 export const _encode_Operations = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Operations */
 
 /* eslint-enable */

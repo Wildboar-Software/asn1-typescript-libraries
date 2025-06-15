@@ -21,7 +21,7 @@ import {
     _encode_Failed,
 } from '../ASN1DefinedTypesModule/Failed.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION JoinXCReply_Item */
+
 /**
  * @summary JoinXCReply_Item
  * @description
@@ -35,13 +35,11 @@ import {
 export type JoinXCReply_Item =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { success: JoinXCReply_Item_success } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION JoinXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCReply_Item */
+
 let _cached_decoder_for_JoinXCReply_Item: $.ASN1Decoder<JoinXCReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_JoinXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_JoinXCReply_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) JoinXCReply_Item
  * @function
@@ -67,13 +65,11 @@ export function _decode_JoinXCReply_Item(el: _Element) {
     }
     return _cached_decoder_for_JoinXCReply_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_JoinXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCReply_Item */
+
 let _cached_encoder_for_JoinXCReply_Item: $.ASN1Encoder<JoinXCReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_JoinXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_JoinXCReply_Item */
+
 /**
  * @summary Encodes a(n) JoinXCReply_Item into an ASN.1 Element.
  * @function
@@ -107,6 +103,5 @@ export function _encode_JoinXCReply_Item(
     return _cached_encoder_for_JoinXCReply_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_JoinXCReply_Item */
 
 /* eslint-enable */

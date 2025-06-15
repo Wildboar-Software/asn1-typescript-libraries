@@ -17,7 +17,7 @@ import {
   _decode_BIPMessage,
   _encode_BIPMessage,
 } from '../BIP/BIPMessage.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCPIPBIPMessage_content */
+
 /**
  * @summary TCPIPBIPMessage_content
  * @description
@@ -33,13 +33,11 @@ export type TCPIPBIPMessage_content =
   | { keepalive: NULL } /* CHOICE_ALT_ROOT */
   | { requestLinkChannelOnSpecifiedPort: INTEGER } /* CHOICE_ALT_ROOT */
   | { requestLinkChannel: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TCPIPBIPMessage_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCPIPBIPMessage_content */
+
 let _cached_decoder_for_TCPIPBIPMessage_content: $.ASN1Decoder<TCPIPBIPMessage_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCPIPBIPMessage_content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCPIPBIPMessage_content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TCPIPBIPMessage_content
  * @function
@@ -59,13 +57,11 @@ export function _decode_TCPIPBIPMessage_content(el: _Element) {
   }
   return _cached_decoder_for_TCPIPBIPMessage_content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCPIPBIPMessage_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCPIPBIPMessage_content */
+
 let _cached_encoder_for_TCPIPBIPMessage_content: $.ASN1Encoder<TCPIPBIPMessage_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCPIPBIPMessage_content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCPIPBIPMessage_content */
+
 /**
  * @summary Encodes a(n) TCPIPBIPMessage_content into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_TCPIPBIPMessage_content(
   return _cached_encoder_for_TCPIPBIPMessage_content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCPIPBIPMessage_content */
 
 /* eslint-enable */

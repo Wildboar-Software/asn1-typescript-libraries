@@ -12,7 +12,6 @@ import {
 import { Characteristic_two, _decode_Characteristic_two, _encode_Characteristic_two } from "../SEC1-v1-9/Characteristic-two.ta.mjs";
 import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.mjs";
 import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */
 /**
  * @summary FieldTypes_Union1_Intersection0_Element
  * @description
@@ -39,6 +38,5 @@ const FieldTypes_Union1_Intersection0_Element: FIELD_ID<Characteristic_two> = {
     "&id": characteristic_two_field /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */
 
 /* eslint-enable */

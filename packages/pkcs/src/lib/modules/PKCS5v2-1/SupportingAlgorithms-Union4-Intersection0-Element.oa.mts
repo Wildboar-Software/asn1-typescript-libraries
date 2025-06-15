@@ -6,7 +6,7 @@ import {
     _decode_RC5_CBC_Parameters,
     _encode_RC5_CBC_Parameters,
 } from "../PKCS5v2-1/RC5-CBC-Parameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union4_Intersection0_Element */
+
 /**
  * @summary SupportingAlgorithms_Union4_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const SupportingAlgorithms_Union4_Intersection0_Element: ALGORITHM_IDENTI
     "&id": rc5_CBC_PAD /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union4_Intersection0_Element */
 
 /* eslint-enable */

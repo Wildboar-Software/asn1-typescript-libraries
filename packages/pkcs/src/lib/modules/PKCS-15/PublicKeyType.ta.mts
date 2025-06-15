@@ -31,7 +31,7 @@ import {
     _decode_PublicRSAKeyAttributes,
     _encode_PublicRSAKeyAttributes,
 } from "../PKCS-15/PublicRSAKeyAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PublicKeyType */
+
 /**
  * @summary PublicKeyType
  * @description
@@ -66,13 +66,11 @@ export type PublicKeyType =
           publicKEAKey: PublicKeyObject<PublicKEAKeyAttributes>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PublicKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeyType */
+
 let _cached_decoder_for_PublicKeyType: $.ASN1Decoder<PublicKeyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicKeyType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKeyType
  * @function
@@ -130,13 +128,11 @@ export function _decode_PublicKeyType(el: _Element) {
     }
     return _cached_decoder_for_PublicKeyType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeyType */
+
 let _cached_encoder_for_PublicKeyType: $.ASN1Encoder<PublicKeyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicKeyType */
+
 /**
  * @summary Encodes a(n) PublicKeyType into an ASN.1 Element.
  * @function
@@ -197,6 +193,5 @@ export function _encode_PublicKeyType(
     return _cached_encoder_for_PublicKeyType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicKeyType */
 
 /* eslint-enable */

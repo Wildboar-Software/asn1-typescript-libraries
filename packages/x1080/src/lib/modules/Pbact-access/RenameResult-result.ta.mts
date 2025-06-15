@@ -16,7 +16,7 @@ import {
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RenameResult_result */
+
 /**
  * @summary RenameResult_result
  * @description
@@ -31,13 +31,11 @@ export type RenameResult_result =
     | { success: NULL } /* CHOICE_ALT_ROOT */
     | { failure: AccessdErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RenameResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RenameResult_result */
+
 let _cached_decoder_for_RenameResult_result: $.ASN1Decoder<RenameResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RenameResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RenameResult_result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RenameResult_result
  * @function
@@ -61,13 +59,11 @@ export function _decode_RenameResult_result(el: _Element) {
     }
     return _cached_decoder_for_RenameResult_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RenameResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RenameResult_result */
+
 let _cached_encoder_for_RenameResult_result: $.ASN1Encoder<RenameResult_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RenameResult_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RenameResult_result */
+
 /**
  * @summary Encodes a(n) RenameResult_result into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_RenameResult_result(
     return _cached_encoder_for_RenameResult_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RenameResult_result */
 
 /* eslint-enable */

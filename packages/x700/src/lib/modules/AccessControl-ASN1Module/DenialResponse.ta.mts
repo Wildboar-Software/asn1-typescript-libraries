@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DenialResponse */
 /**
  * @summary DenialResponse
  * @description
@@ -30,9 +29,7 @@ export enum _enum_for_DenialResponse {
     abortAssociation = 2,
     denyWithFalseResponse = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DenialResponse */
 
-/* START_OF_SYMBOL_DEFINITION DenialResponse */
 /**
  * @summary DenialResponse
  * @description
@@ -46,9 +43,7 @@ export enum _enum_for_DenialResponse {
  * ```@enum {number}
  */
 export type DenialResponse = _enum_for_DenialResponse;
-/* END_OF_SYMBOL_DEFINITION DenialResponse */
 
-/* START_OF_SYMBOL_DEFINITION DenialResponse */
 /**
  * @summary DenialResponse
  * @description
@@ -62,9 +57,7 @@ export type DenialResponse = _enum_for_DenialResponse;
  * ```@enum {number}
  */
 export const DenialResponse = _enum_for_DenialResponse;
-/* END_OF_SYMBOL_DEFINITION DenialResponse */
 
-/* START_OF_SYMBOL_DEFINITION DenialResponse_denyWithResponse */
 /**
  * @summary DenialResponse_denyWithResponse
  * @constant
@@ -72,9 +65,7 @@ export const DenialResponse = _enum_for_DenialResponse;
  */
 export const DenialResponse_denyWithResponse: DenialResponse =
     DenialResponse.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialResponse_denyWithResponse */
 
-/* START_OF_SYMBOL_DEFINITION denyWithResponse */
 /**
  * @summary denyWithResponse
  * @constant
@@ -82,9 +73,7 @@ export const DenialResponse_denyWithResponse: DenialResponse =
  */
 export const denyWithResponse: DenialResponse =
     DenialResponse.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION denyWithResponse */
 
-/* START_OF_SYMBOL_DEFINITION DenialResponse_denyWithoutResponse */
 /**
  * @summary DenialResponse_denyWithoutResponse
  * @constant
@@ -92,9 +81,7 @@ export const denyWithResponse: DenialResponse =
  */
 export const DenialResponse_denyWithoutResponse: DenialResponse =
     DenialResponse.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialResponse_denyWithoutResponse */
 
-/* START_OF_SYMBOL_DEFINITION denyWithoutResponse */
 /**
  * @summary denyWithoutResponse
  * @constant
@@ -102,9 +89,7 @@ export const DenialResponse_denyWithoutResponse: DenialResponse =
  */
 export const denyWithoutResponse: DenialResponse =
     DenialResponse.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION denyWithoutResponse */
 
-/* START_OF_SYMBOL_DEFINITION DenialResponse_abortAssociation */
 /**
  * @summary DenialResponse_abortAssociation
  * @constant
@@ -112,9 +97,7 @@ export const denyWithoutResponse: DenialResponse =
  */
 export const DenialResponse_abortAssociation: DenialResponse =
     DenialResponse.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialResponse_abortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION abortAssociation */
 /**
  * @summary abortAssociation
  * @constant
@@ -122,9 +105,7 @@ export const DenialResponse_abortAssociation: DenialResponse =
  */
 export const abortAssociation: DenialResponse =
     DenialResponse.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION abortAssociation */
 
-/* START_OF_SYMBOL_DEFINITION DenialResponse_denyWithFalseResponse */
 /**
  * @summary DenialResponse_denyWithFalseResponse
  * @constant
@@ -132,9 +113,7 @@ export const abortAssociation: DenialResponse =
  */
 export const DenialResponse_denyWithFalseResponse: DenialResponse =
     DenialResponse.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DenialResponse_denyWithFalseResponse */
 
-/* START_OF_SYMBOL_DEFINITION denyWithFalseResponse */
 /**
  * @summary denyWithFalseResponse
  * @constant
@@ -142,21 +121,12 @@ export const DenialResponse_denyWithFalseResponse: DenialResponse =
  */
 export const denyWithFalseResponse: DenialResponse =
     DenialResponse.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION denyWithFalseResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialResponse */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DenialResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DenialResponse */
 export const _decode_DenialResponse = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_DenialResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialResponse */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DenialResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DenialResponse */
 export const _encode_DenialResponse = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DenialResponse */
 
 /* eslint-enable */

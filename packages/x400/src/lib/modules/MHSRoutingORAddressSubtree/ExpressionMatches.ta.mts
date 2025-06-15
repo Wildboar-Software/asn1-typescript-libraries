@@ -15,7 +15,6 @@ import {
     _decode_ExpressionMatch,
     _encode_ExpressionMatch,
 } from '../MHSRoutingORAddressSubtree/ExpressionMatch.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExpressionMatches */
 /**
  * @summary ExpressionMatches
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExpressionMatches = ExpressionMatch[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ExpressionMatches */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpressionMatches */
 let _cached_decoder_for_ExpressionMatches: $.ASN1Decoder<ExpressionMatches> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExpressionMatches */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExpressionMatches */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExpressionMatches
  * @function
@@ -48,13 +43,9 @@ export function _decode_ExpressionMatches(el: _Element) {
     }
     return _cached_decoder_for_ExpressionMatches(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExpressionMatches */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpressionMatches */
 let _cached_encoder_for_ExpressionMatches: $.ASN1Encoder<ExpressionMatches> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExpressionMatches */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExpressionMatches */
 /**
  * @summary Encodes a(n) ExpressionMatches into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ExpressionMatches(
     return _cached_encoder_for_ExpressionMatches(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExpressionMatches */
 
 /* eslint-enable */

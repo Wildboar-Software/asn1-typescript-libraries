@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ExternalPointMessage */
+
 /**
  * @summary ExternalPointMessage
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ExternalPointMessage = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION ExternalPointMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalPointMessage */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalPointMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExternalPointMessage */
+
+
 export const _decode_ExternalPointMessage = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_ExternalPointMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalPointMessage */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalPointMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExternalPointMessage */
+
+
 export const _encode_ExternalPointMessage = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExternalPointMessage */
 
 /* eslint-enable */

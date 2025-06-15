@@ -16,7 +16,7 @@ import {
     _decode_CreateSpecification,
     _encode_CreateSpecification,
 } from '../DefinitionASN1Module/CreateSpecification.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Create */
+
 /**
  * @summary Create
  * @description
@@ -32,13 +32,11 @@ import {
 export type Create =
     | { present: CreateSpecification } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Create */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Create */
+
 let _cached_decoder_for_Create: $.ASN1Decoder<Create> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Create */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Create */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Create
  * @function
@@ -54,13 +52,11 @@ export function _decode_Create(el: _Element) {
     }
     return _cached_decoder_for_Create(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Create */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Create */
+
 let _cached_encoder_for_Create: $.ASN1Encoder<Create> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Create */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Create */
+
 /**
  * @summary Encodes a(n) Create into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_Create(value: Create, elGetter: $.ASN1Encoder<Create>) {
     return _cached_encoder_for_Create(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Create */
 
 /* eslint-enable */

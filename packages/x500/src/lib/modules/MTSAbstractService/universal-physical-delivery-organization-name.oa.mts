@@ -5,7 +5,6 @@ import {
     _decode_UniversalPhysicalDeliveryOrganizationName,
     _encode_UniversalPhysicalDeliveryOrganizationName,
 } from "../MTSAbstractService/UniversalPhysicalDeliveryOrganizationName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_physical_delivery_organization_name */
 /**
  * @summary universal_physical_delivery_organization_name
  * @description
@@ -33,6 +32,5 @@ export const universal_physical_delivery_organization_name: EXTENSION_ATTRIBUTE<
     "&id": 33 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_physical_delivery_organization_name */
 
 /* eslint-enable */

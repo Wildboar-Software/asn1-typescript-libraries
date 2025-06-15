@@ -32,7 +32,6 @@ import {
     _encode_WrpError,
     _enum_for_WrpError,
 } from "../Wrapper/WrpError.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsDtSecAbort */
 /**
  * @summary TbsDtSecAbort
  * @description
@@ -132,9 +131,7 @@ export class TbsDtSecAbort {
 
     public static _enum_for_diag = _enum_for_WrpError;
 }
-/* END_OF_SYMBOL_DEFINITION TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsDtSecAbort */
 /**
  * @summary The Leading Root Component Types of TbsDtSecAbort
  * @description
@@ -187,9 +184,7 @@ export const _root_component_type_list_1_spec_for_TbsDtSecAbort: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsDtSecAbort */
 /**
  * @summary The Trailing Root Component Types of TbsDtSecAbort
  * @description
@@ -199,9 +194,7 @@ export const _root_component_type_list_1_spec_for_TbsDtSecAbort: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TbsDtSecAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsDtSecAbort */
 /**
  * @summary The Extension Addition Component Types of TbsDtSecAbort
  * @description
@@ -211,13 +204,9 @@ export const _root_component_type_list_2_spec_for_TbsDtSecAbort: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_TbsDtSecAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsDtSecAbort */
 let _cached_decoder_for_TbsDtSecAbort: $.ASN1Decoder<TbsDtSecAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsDtSecAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsDtSecAbort
  * @function
@@ -283,13 +272,9 @@ export function _decode_TbsDtSecAbort(el: _Element) {
     }
     return _cached_decoder_for_TbsDtSecAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsDtSecAbort */
 let _cached_encoder_for_TbsDtSecAbort: $.ASN1Encoder<TbsDtSecAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsDtSecAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsDtSecAbort */
 /**
  * @summary Encodes a(n) TbsDtSecAbort into an ASN.1 Element.
  * @function
@@ -344,6 +329,5 @@ export function _encode_TbsDtSecAbort(
     return _cached_encoder_for_TbsDtSecAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsDtSecAbort */
 
 /* eslint-enable */

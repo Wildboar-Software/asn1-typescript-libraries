@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION AlgorithmIdentifier */
 /**
  * @summary AlgorithmIdentifier
  * @description
@@ -63,9 +62,7 @@ class AlgorithmIdentifier {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmIdentifier */
 /**
  * @summary The Leading Root Component Types of AlgorithmIdentifier
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_AlgorithmIdentifier: $.ComponentSpec[
     new $.ComponentSpec("algorithm", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("parameters", true, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmIdentifier */
 /**
  * @summary The Trailing Root Component Types of AlgorithmIdentifier
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_AlgorithmIdentifier: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmIdentifier */
 /**
  * @summary The Extension Addition Component Types of AlgorithmIdentifier
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_AlgorithmIdentifier: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmIdentifier */
 let _cached_decoder_for_AlgorithmIdentifier: $.ASN1Decoder<AlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmIdentifier
  * @function
@@ -148,13 +137,9 @@ function _decode_AlgorithmIdentifier (el: _Element) {
 }; }
     return _cached_decoder_for_AlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmIdentifier */
 let _cached_encoder_for_AlgorithmIdentifier: $.ASN1Encoder<AlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlgorithmIdentifier */
 /**
  * @summary Encodes a(n) AlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -175,6 +160,5 @@ function _encode_AlgorithmIdentifier (value: AlgorithmIdentifier, elGetter: $.AS
     return _cached_encoder_for_AlgorithmIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlgorithmIdentifier */
 
 /* eslint-enable */

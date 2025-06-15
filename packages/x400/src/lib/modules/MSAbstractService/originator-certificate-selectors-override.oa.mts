@@ -16,7 +16,6 @@ import {
 } from '../MTSAbstractService/CertificateSelectors.ta.mjs';
 import { id_ext_originator_certificate_selectors_override } from '../MSObjectIdentifiers/id-ext-originator-certificate-selectors-override.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originator_certificate_selectors_override */
 /**
  * @summary originator_certificate_selectors_override
  * @description
@@ -49,6 +48,5 @@ export const originator_certificate_selectors_override: MS_EXTENSION<Certificate
     '&id': id_ext_originator_certificate_selectors_override /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originator_certificate_selectors_override */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ProbeSubmissionEnvelope,
     _encode_ProbeSubmissionEnvelope,
 } from '../MTSAbstractService/ProbeSubmissionEnvelope.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeSubmissionArgument */
 /**
  * @summary ProbeSubmissionArgument
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProbeSubmissionArgument = ProbeSubmissionEnvelope; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeSubmissionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionArgument */
 let _cached_decoder_for_ProbeSubmissionArgument: $.ASN1Decoder<ProbeSubmissionArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeSubmissionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionArgument
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProbeSubmissionArgument(el: _Element) {
     }
     return _cached_decoder_for_ProbeSubmissionArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeSubmissionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionArgument */
 let _cached_encoder_for_ProbeSubmissionArgument: $.ASN1Encoder<ProbeSubmissionArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeSubmissionArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionArgument */
 /**
  * @summary Encodes a(n) ProbeSubmissionArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProbeSubmissionArgument(
     return _cached_encoder_for_ProbeSubmissionArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeSubmissionArgument */
 
 /* eslint-enable */

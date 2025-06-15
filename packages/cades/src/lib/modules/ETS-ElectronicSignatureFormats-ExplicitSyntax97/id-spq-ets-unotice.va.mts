@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_spq_ets_unotice */
 /**
  * @summary id_spq_ets_unotice
  * @description
@@ -47,6 +46,5 @@ const id_spq_ets_unotice: OBJECT_IDENTIFIER = new _OID([
     /* id-spq */ 5,
     2,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_spq_ets_unotice */
 
 /* eslint-enable */

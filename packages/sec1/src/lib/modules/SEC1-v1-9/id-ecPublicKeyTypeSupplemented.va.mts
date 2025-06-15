@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ecPublicKeyTypeSupplemented */
 /**
  * @summary id_ecPublicKeyTypeSupplemented
  * @description
@@ -29,6 +28,5 @@ export
 const id_ecPublicKeyTypeSupplemented: OBJECT_IDENTIFIER = new _OID([
     /* supplementalPoints */ 0,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION id_ecPublicKeyTypeSupplemented */
 
 /* eslint-enable */

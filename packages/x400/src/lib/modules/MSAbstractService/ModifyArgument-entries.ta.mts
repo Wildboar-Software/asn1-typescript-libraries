@@ -20,7 +20,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModifyArgument_entries */
 /**
  * @summary ModifyArgument_entries
  * @description
@@ -34,13 +33,9 @@ import {
 export type ModifyArgument_entries =
     | { selector: Selector } /* CHOICE_ALT_ROOT */
     | { specific_entries: SequenceNumber[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ModifyArgument_entries */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyArgument_entries */
 let _cached_decoder_for_ModifyArgument_entries: $.ASN1Decoder<ModifyArgument_entries> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyArgument_entries */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyArgument_entries */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyArgument_entries
  * @function
@@ -68,13 +63,9 @@ export function _decode_ModifyArgument_entries(el: _Element) {
     }
     return _cached_decoder_for_ModifyArgument_entries(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyArgument_entries */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyArgument_entries */
 let _cached_encoder_for_ModifyArgument_entries: $.ASN1Encoder<ModifyArgument_entries> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyArgument_entries */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyArgument_entries */
 /**
  * @summary Encodes a(n) ModifyArgument_entries into an ASN.1 Element.
  * @function
@@ -112,6 +103,5 @@ export function _encode_ModifyArgument_entries(
     return _cached_encoder_for_ModifyArgument_entries(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyArgument_entries */
 
 /* eslint-enable */

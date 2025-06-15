@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { id_tokenization_manifest } from "../CMSObjectIdentifiers/id-tokenization-manifest.va.mjs";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_XPathTokensSet */
+
 /**
  * @summary id_XPathTokensSet
  * @description
@@ -19,6 +19,5 @@ export const id_XPathTokensSet: OID = new _OID(
     [/* xPathTokensSet */ 1],
     id_tokenization_manifest
 );
-/* END_OF_SYMBOL_DEFINITION id_XPathTokensSet */
 
 /* eslint-enable */

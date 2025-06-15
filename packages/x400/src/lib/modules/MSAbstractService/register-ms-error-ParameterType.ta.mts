@@ -21,7 +21,6 @@ import {
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
 } from '../MSAbstractService/RegistrationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION register_ms_error_ParameterType */
 /**
  * @summary register_ms_error_ParameterType
  * @description
@@ -81,9 +80,7 @@ export class register_ms_error_ParameterType {
 
     public static _enum_for_problem = _enum_for_RegistrationProblem;
 }
-/* END_OF_SYMBOL_DEFINITION register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_register_ms_error_ParameterType */
 /**
  * @summary The Leading Root Component Types of register_ms_error_ParameterType
  * @description
@@ -108,9 +105,7 @@ export const _root_component_type_list_1_spec_for_register_ms_error_ParameterTyp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_register_ms_error_ParameterType */
 /**
  * @summary The Trailing Root Component Types of register_ms_error_ParameterType
  * @description
@@ -120,9 +115,7 @@ export const _root_component_type_list_1_spec_for_register_ms_error_ParameterTyp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_register_ms_error_ParameterType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_register_ms_error_ParameterType */
 /**
  * @summary The Extension Addition Component Types of register_ms_error_ParameterType
  * @description
@@ -132,13 +125,9 @@ export const _root_component_type_list_2_spec_for_register_ms_error_ParameterTyp
  * @constant
  */
 export const _extension_additions_list_spec_for_register_ms_error_ParameterType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_register_ms_error_ParameterType */
 let _cached_decoder_for_register_ms_error_ParameterType: $.ASN1Decoder<register_ms_error_ParameterType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_register_ms_error_ParameterType */
 /**
  * @summary Decodes an ASN.1 element into a(n) register_ms_error_ParameterType
  * @function
@@ -184,13 +173,9 @@ export function _decode_register_ms_error_ParameterType(el: _Element) {
     }
     return _cached_decoder_for_register_ms_error_ParameterType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_register_ms_error_ParameterType */
 let _cached_encoder_for_register_ms_error_ParameterType: $.ASN1Encoder<register_ms_error_ParameterType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_register_ms_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_register_ms_error_ParameterType */
 /**
  * @summary Encodes a(n) register_ms_error_ParameterType into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_register_ms_error_ParameterType(
     return _cached_encoder_for_register_ms_error_ParameterType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_register_ms_error_ParameterType */
 
 /* eslint-enable */

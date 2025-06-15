@@ -22,7 +22,6 @@ import {
     _encode_RoleMappingSpecification,
 } from '../GrmAttributeDefinitionModule/RoleMappingSpecification.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION roleMappingSpecificationSet */
 /**
  * @summary roleMappingSpecificationSet
  * @description
@@ -67,6 +66,5 @@ export const roleMappingSpecificationSet: ATTRIBUTE<RoleMappingSpecification> =
         '&obsolete':
             false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     };
-/* END_OF_SYMBOL_DEFINITION roleMappingSpecificationSet */
 
 /* eslint-enable */

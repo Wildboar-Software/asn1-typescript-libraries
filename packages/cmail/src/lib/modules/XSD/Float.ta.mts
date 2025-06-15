@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Float */
+
 /**
  * @summary Float
  * @description
@@ -27,21 +27,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Float = REAL; // RealType
-/* END_OF_SYMBOL_DEFINITION Float */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Float */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Float */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Float */
+
+
 export const _decode_Float = $._decodeReal;
-/* END_OF_SYMBOL_DEFINITION _decode_Float */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Float */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Float */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Float */
+
+
 export const _encode_Float = $._encodeReal;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Float */
 
 /* eslint-enable */

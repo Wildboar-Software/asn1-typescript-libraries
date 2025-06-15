@@ -39,7 +39,7 @@ import {
     _decode_AdditionalProperties,
     _encode_AdditionalProperties,
 } from '../DefinitionASN1Module/AdditionalProperties.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PropertyList */
+
 /**
  * @summary PropertyList
  * @description
@@ -183,9 +183,8 @@ export class PropertyList {
 
     public static _enum_for_addRemove = _enum_for_PropertyList_addRemove;
 }
-/* END_OF_SYMBOL_DEFINITION PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PropertyList */
+
 /**
  * @summary The Leading Root Component Types of PropertyList
  * @description
@@ -259,9 +258,8 @@ export const _root_component_type_list_1_spec_for_PropertyList: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PropertyList */
+
 /**
  * @summary The Trailing Root Component Types of PropertyList
  * @description
@@ -271,9 +269,8 @@ export const _root_component_type_list_1_spec_for_PropertyList: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PropertyList: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PropertyList */
+
 /**
  * @summary The Extension Addition Component Types of PropertyList
  * @description
@@ -283,13 +280,11 @@ export const _root_component_type_list_2_spec_for_PropertyList: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PropertyList: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PropertyList */
+
 let _cached_decoder_for_PropertyList: $.ASN1Decoder<PropertyList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PropertyList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PropertyList
  * @function
@@ -386,13 +381,11 @@ export function _decode_PropertyList(el: _Element) {
     }
     return _cached_decoder_for_PropertyList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PropertyList */
+
 let _cached_encoder_for_PropertyList: $.ASN1Encoder<PropertyList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PropertyList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PropertyList */
+
 /**
  * @summary Encodes a(n) PropertyList into an ASN.1 Element.
  * @function
@@ -501,6 +494,5 @@ export function _encode_PropertyList(
     return _cached_encoder_for_PropertyList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PropertyList */
 
 /* eslint-enable */

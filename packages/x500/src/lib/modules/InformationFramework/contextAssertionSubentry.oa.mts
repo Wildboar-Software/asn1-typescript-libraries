@@ -5,7 +5,6 @@ import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION contextAssertionSubentry */
 /**
  * @summary contextAssertionSubentry
  * @description
@@ -33,6 +32,5 @@ export const contextAssertionSubentry: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": id_sc_contextAssertionSubentry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contextAssertionSubentry */
 
 /* eslint-enable */

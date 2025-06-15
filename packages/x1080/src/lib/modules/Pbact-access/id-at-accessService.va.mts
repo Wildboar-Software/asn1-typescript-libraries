@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_x1080_0_attr } from '../Pbact-access/id-x1080-0-attr.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_at_accessService */
+
 /**
  * @summary id_at_accessService
  * @description
@@ -28,6 +28,5 @@ export const id_at_accessService: OBJECT_IDENTIFIER = new _OID(
     [1],
     id_x1080_0_attr
 );
-/* END_OF_SYMBOL_DEFINITION id_at_accessService */
 
 /* eslint-enable */

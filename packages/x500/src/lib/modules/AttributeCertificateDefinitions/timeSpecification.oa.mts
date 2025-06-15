@@ -6,7 +6,6 @@ import {
     _decode_TimeSpecification,
     _encode_TimeSpecification,
 } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION timeSpecification */
 /**
  * @summary timeSpecification
  * @description
@@ -34,6 +33,5 @@ export const timeSpecification: EXTENSION<TimeSpecification> = {
     "&id": id_ce_timeSpecification /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION timeSpecification */
 
 /* eslint-enable */

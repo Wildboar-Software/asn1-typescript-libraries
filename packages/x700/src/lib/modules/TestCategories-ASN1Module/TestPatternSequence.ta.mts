@@ -15,7 +15,6 @@ import {
     _decode_TestPattern,
     _encode_TestPattern,
 } from '../TestCategories-ASN1Module/TestPattern.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestPatternSequence */
 /**
  * @summary TestPatternSequence
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type TestPatternSequence = TestPattern[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TestPatternSequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestPatternSequence */
 let _cached_decoder_for_TestPatternSequence: $.ASN1Decoder<TestPatternSequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestPatternSequence */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestPatternSequence */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestPatternSequence
  * @function
@@ -49,13 +44,9 @@ export function _decode_TestPatternSequence(el: _Element) {
     }
     return _cached_decoder_for_TestPatternSequence(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestPatternSequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestPatternSequence */
 let _cached_encoder_for_TestPatternSequence: $.ASN1Encoder<TestPatternSequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestPatternSequence */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestPatternSequence */
 /**
  * @summary Encodes a(n) TestPatternSequence into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_TestPatternSequence(
     return _cached_encoder_for_TestPatternSequence(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestPatternSequence */
 
 /* eslint-enable */

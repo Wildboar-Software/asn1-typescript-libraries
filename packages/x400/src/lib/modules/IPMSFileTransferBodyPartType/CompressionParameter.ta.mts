@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION CompressionParameter */
 /**
  * @summary CompressionParameter
  * @description
@@ -67,9 +66,7 @@ export class CompressionParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompressionParameter */
 /**
  * @summary The Leading Root Component Types of CompressionParameter
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_CompressionParameter: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompressionParameter */
 /**
  * @summary The Trailing Root Component Types of CompressionParameter
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_CompressionParameter: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CompressionParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompressionParameter */
 /**
  * @summary The Extension Addition Component Types of CompressionParameter
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_CompressionParameter: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_CompressionParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompressionParameter */
 let _cached_decoder_for_CompressionParameter: $.ASN1Decoder<CompressionParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompressionParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompressionParameter
  * @function
@@ -162,13 +151,9 @@ export function _decode_CompressionParameter(el: _Element) {
     }
     return _cached_decoder_for_CompressionParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompressionParameter */
 let _cached_encoder_for_CompressionParameter: $.ASN1Encoder<CompressionParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompressionParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompressionParameter */
 /**
  * @summary Encodes a(n) CompressionParameter into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_CompressionParameter(
     return _cached_encoder_for_CompressionParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompressionParameter */
 
 /* eslint-enable */

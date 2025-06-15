@@ -8,7 +8,7 @@ import {
 import { caseIgnoreMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { pkcs_9_at_friendlyName } from "../PKCS-9/pkcs-9-at-friendlyName.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION friendlyName */
+
 /**
  * @summary friendlyName
  * @description
@@ -44,6 +44,5 @@ export const friendlyName: ATTRIBUTE<BMPString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION friendlyName */
 
 /* eslint-enable */

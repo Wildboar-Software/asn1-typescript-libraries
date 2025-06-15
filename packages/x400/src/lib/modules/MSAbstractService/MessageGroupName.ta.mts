@@ -15,7 +15,6 @@ import {
     _decode_GroupNamePart,
     _encode_GroupNamePart,
 } from '../MSAbstractService/GroupNamePart.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageGroupName */
 /**
  * @summary MessageGroupName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageGroupName = GroupNamePart[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MessageGroupName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupName */
 let _cached_decoder_for_MessageGroupName: $.ASN1Decoder<MessageGroupName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageGroupName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageGroupName */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageGroupName
  * @function
@@ -48,13 +43,9 @@ export function _decode_MessageGroupName(el: _Element) {
     }
     return _cached_decoder_for_MessageGroupName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageGroupName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupName */
 let _cached_encoder_for_MessageGroupName: $.ASN1Encoder<MessageGroupName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageGroupName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageGroupName */
 /**
  * @summary Encodes a(n) MessageGroupName into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_MessageGroupName(
     return _cached_encoder_for_MessageGroupName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageGroupName */
 
 /* eslint-enable */

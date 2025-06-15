@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NameCompAlgSet */
 /**
  * @summary NameCompAlgSet
  * @description
@@ -28,26 +27,18 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * @type {OBJECT_IDENTIFIER}
  */
 export type NameCompAlgSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION NameCompAlgSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameCompAlgSet */
 let _cached_decoder_for_NameCompAlgSet: $.ASN1Decoder<NameCompAlgSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameCompAlgSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameCompAlgSet */
 export function _decode_NameCompAlgSet(el: _Element) {
   if (!_cached_decoder_for_NameCompAlgSet) {
     _cached_decoder_for_NameCompAlgSet = $._decodeObjectIdentifier;
   }
   return _cached_decoder_for_NameCompAlgSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameCompAlgSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameCompAlgSet */
 let _cached_encoder_for_NameCompAlgSet: $.ASN1Encoder<NameCompAlgSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameCompAlgSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameCompAlgSet */
 export function _encode_NameCompAlgSet(
   value: NameCompAlgSet,
   elGetter: $.ASN1Encoder<NameCompAlgSet>
@@ -57,6 +48,5 @@ export function _encode_NameCompAlgSet(
   }
   return _cached_encoder_for_NameCompAlgSet(value, elGetter);
 }
-/* END_OF_SYMBOL_DEFINITION _encode_NameCompAlgSet */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import {
     _decode_ForwardedNotificationFields,
     _encode_ForwardedNotificationFields,
 } from '../EDIMSInformationObjects/ForwardedNotificationFields.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIN */
 /**
  * @summary EDIN
  * @description
@@ -50,13 +49,9 @@ export type EDIN =
     | {
           forwarded_notification: ForwardedNotificationFields;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EDIN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIN */
 let _cached_decoder_for_EDIN: $.ASN1Decoder<EDIN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIN */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIN
  * @function
@@ -88,13 +83,9 @@ export function _decode_EDIN(el: _Element) {
     }
     return _cached_decoder_for_EDIN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIN */
 let _cached_encoder_for_EDIN: $.ASN1Encoder<EDIN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIN */
 /**
  * @summary Encodes a(n) EDIN into an ASN.1 Element.
  * @function
@@ -131,6 +122,5 @@ export function _encode_EDIN(value: EDIN, elGetter: $.ASN1Encoder<EDIN>) {
     return _cached_encoder_for_EDIN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIN */
 
 /* eslint-enable */

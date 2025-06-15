@@ -19,7 +19,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { submission_control } from '../MTSAbstractService/submission-control.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_submission_control */
 /**
  * @summary ms_submission_control
  * @description
@@ -35,6 +34,5 @@ import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca
  * @implements {ABSTRACT_OPERATION}
  */
 export const ms_submission_control: ABSTRACT_OPERATION = submission_control;
-/* END_OF_SYMBOL_DEFINITION ms_submission_control */
 
 /* eslint-enable */

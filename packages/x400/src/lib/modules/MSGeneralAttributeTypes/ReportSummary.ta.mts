@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ReportSummary */
 /**
  * @summary ReportSummary
  * @description
@@ -39,9 +38,7 @@ export enum _enum_for_ReportSummary {
     delivery_report_from_intended_recipient = 6,
     non_delivery_report_from_intended_recipient = 7,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ReportSummary */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary */
 /**
  * @summary ReportSummary
  * @description
@@ -60,9 +57,7 @@ export enum _enum_for_ReportSummary {
  * ```@enum {number}
  */
 export type ReportSummary = _enum_for_ReportSummary;
-/* END_OF_SYMBOL_DEFINITION ReportSummary */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary */
 /**
  * @summary ReportSummary
  * @description
@@ -81,9 +76,7 @@ export type ReportSummary = _enum_for_ReportSummary;
  * ```@enum {number}
  */
 export const ReportSummary = _enum_for_ReportSummary;
-/* END_OF_SYMBOL_DEFINITION ReportSummary */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_no_report_requested */
 /**
  * @summary ReportSummary_no_report_requested
  * @constant
@@ -91,9 +84,7 @@ export const ReportSummary = _enum_for_ReportSummary;
  */
 export const ReportSummary_no_report_requested: ReportSummary =
     ReportSummary.no_report_requested; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_no_report_requested */
 
-/* START_OF_SYMBOL_DEFINITION no_report_requested */
 /**
  * @summary no_report_requested
  * @constant
@@ -101,9 +92,7 @@ export const ReportSummary_no_report_requested: ReportSummary =
  */
 export const no_report_requested: ReportSummary =
     ReportSummary.no_report_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_report_requested */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_no_report_received */
 /**
  * @summary ReportSummary_no_report_received
  * @constant
@@ -111,9 +100,7 @@ export const no_report_requested: ReportSummary =
  */
 export const ReportSummary_no_report_received: ReportSummary =
     ReportSummary.no_report_received; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_no_report_received */
 
-/* START_OF_SYMBOL_DEFINITION no_report_received */
 /**
  * @summary no_report_received
  * @constant
@@ -121,9 +108,7 @@ export const ReportSummary_no_report_received: ReportSummary =
  */
 export const no_report_received: ReportSummary =
     ReportSummary.no_report_received; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_report_received */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_report_outstanding */
 /**
  * @summary ReportSummary_report_outstanding
  * @constant
@@ -131,9 +116,7 @@ export const no_report_received: ReportSummary =
  */
 export const ReportSummary_report_outstanding: ReportSummary =
     ReportSummary.report_outstanding; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_report_outstanding */
 
-/* START_OF_SYMBOL_DEFINITION report_outstanding */
 /**
  * @summary report_outstanding
  * @constant
@@ -141,9 +124,7 @@ export const ReportSummary_report_outstanding: ReportSummary =
  */
 export const report_outstanding: ReportSummary =
     ReportSummary.report_outstanding; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION report_outstanding */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_delivery_cancelled */
 /**
  * @summary ReportSummary_delivery_cancelled
  * @constant
@@ -151,9 +132,7 @@ export const report_outstanding: ReportSummary =
  */
 export const ReportSummary_delivery_cancelled: ReportSummary =
     ReportSummary.delivery_cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_delivery_cancelled */
 
-/* START_OF_SYMBOL_DEFINITION delivery_cancelled */
 /**
  * @summary delivery_cancelled
  * @constant
@@ -161,9 +140,7 @@ export const ReportSummary_delivery_cancelled: ReportSummary =
  */
 export const delivery_cancelled: ReportSummary =
     ReportSummary.delivery_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION delivery_cancelled */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_delivery_report_from_another_recipient */
 /**
  * @summary ReportSummary_delivery_report_from_another_recipient
  * @constant
@@ -171,9 +148,7 @@ export const delivery_cancelled: ReportSummary =
  */
 export const ReportSummary_delivery_report_from_another_recipient: ReportSummary =
     ReportSummary.delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_delivery_report_from_another_recipient */
 
-/* START_OF_SYMBOL_DEFINITION delivery_report_from_another_recipient */
 /**
  * @summary delivery_report_from_another_recipient
  * @constant
@@ -181,9 +156,7 @@ export const ReportSummary_delivery_report_from_another_recipient: ReportSummary
  */
 export const delivery_report_from_another_recipient: ReportSummary =
     ReportSummary.delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION delivery_report_from_another_recipient */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_non_delivery_report_from_another_recipient */
 /**
  * @summary ReportSummary_non_delivery_report_from_another_recipient
  * @constant
@@ -191,9 +164,7 @@ export const delivery_report_from_another_recipient: ReportSummary =
  */
 export const ReportSummary_non_delivery_report_from_another_recipient: ReportSummary =
     ReportSummary.non_delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_non_delivery_report_from_another_recipient */
 
-/* START_OF_SYMBOL_DEFINITION non_delivery_report_from_another_recipient */
 /**
  * @summary non_delivery_report_from_another_recipient
  * @constant
@@ -201,9 +172,7 @@ export const ReportSummary_non_delivery_report_from_another_recipient: ReportSum
  */
 export const non_delivery_report_from_another_recipient: ReportSummary =
     ReportSummary.non_delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION non_delivery_report_from_another_recipient */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_delivery_report_from_intended_recipient */
 /**
  * @summary ReportSummary_delivery_report_from_intended_recipient
  * @constant
@@ -211,9 +180,7 @@ export const non_delivery_report_from_another_recipient: ReportSummary =
  */
 export const ReportSummary_delivery_report_from_intended_recipient: ReportSummary =
     ReportSummary.delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_delivery_report_from_intended_recipient */
 
-/* START_OF_SYMBOL_DEFINITION delivery_report_from_intended_recipient */
 /**
  * @summary delivery_report_from_intended_recipient
  * @constant
@@ -221,9 +188,7 @@ export const ReportSummary_delivery_report_from_intended_recipient: ReportSummar
  */
 export const delivery_report_from_intended_recipient: ReportSummary =
     ReportSummary.delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION delivery_report_from_intended_recipient */
 
-/* START_OF_SYMBOL_DEFINITION ReportSummary_non_delivery_report_from_intended_recipient */
 /**
  * @summary ReportSummary_non_delivery_report_from_intended_recipient
  * @constant
@@ -231,9 +196,7 @@ export const delivery_report_from_intended_recipient: ReportSummary =
  */
 export const ReportSummary_non_delivery_report_from_intended_recipient: ReportSummary =
     ReportSummary.non_delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReportSummary_non_delivery_report_from_intended_recipient */
 
-/* START_OF_SYMBOL_DEFINITION non_delivery_report_from_intended_recipient */
 /**
  * @summary non_delivery_report_from_intended_recipient
  * @constant
@@ -241,21 +204,12 @@ export const ReportSummary_non_delivery_report_from_intended_recipient: ReportSu
  */
 export const non_delivery_report_from_intended_recipient: ReportSummary =
     ReportSummary.non_delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION non_delivery_report_from_intended_recipient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportSummary */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportSummary */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportSummary */
 export const _decode_ReportSummary = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ReportSummary */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportSummary */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportSummary */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportSummary */
 export const _encode_ReportSummary = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportSummary */
 
 /* eslint-enable */

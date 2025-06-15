@@ -40,7 +40,6 @@ import { universal_poste_restante_address } from "../PkiPmiExternalDataTypes/uni
 import { universal_street_address } from "../PkiPmiExternalDataTypes/universal-street-address.oa.mjs";
 import { universal_unformatted_postal_address } from "../PkiPmiExternalDataTypes/universal-unformatted-postal-address.oa.mjs";
 import { universal_unique_postal_name } from "../PkiPmiExternalDataTypes/universal-unique-postal-name.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ExtensionAttributeTable */
 /**
  * @summary ExtensionAttributeTable
  * @description
@@ -117,6 +116,5 @@ export const ExtensionAttributeTable: EXTENSION_ATTRIBUTE[] = [
     extended_network_address,
     terminal_type,
 ];
-/* END_OF_SYMBOL_DEFINITION ExtensionAttributeTable */
 
 /* eslint-enable */

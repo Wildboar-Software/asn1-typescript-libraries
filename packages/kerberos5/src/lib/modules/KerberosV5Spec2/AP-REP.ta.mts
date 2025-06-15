@@ -16,7 +16,7 @@ import {
   _decode_EncryptedData,
   _encode_EncryptedData,
 } from '../KerberosV5Spec2/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AP_REP */
+
 /**
  * @summary AP_REP
  * @description
@@ -71,9 +71,8 @@ export class AP_REP {
     return new AP_REP(_o.pvno, _o.msg_type, _o.enc_part);
   }
 }
-/* END_OF_SYMBOL_DEFINITION AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AP_REP */
+
 /**
  * @summary The Leading Root Component Types of AP_REP
  * @description
@@ -105,9 +104,8 @@ export const _root_component_type_list_1_spec_for_AP_REP: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AP_REP */
+
 /**
  * @summary The Trailing Root Component Types of AP_REP
  * @description
@@ -117,9 +115,8 @@ export const _root_component_type_list_1_spec_for_AP_REP: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AP_REP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AP_REP */
+
 /**
  * @summary The Extension Addition Component Types of AP_REP
  * @description
@@ -129,13 +126,11 @@ export const _root_component_type_list_2_spec_for_AP_REP: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_AP_REP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_REP */
+
 let _cached_decoder_for_AP_REP: $.ASN1Decoder<AP_REP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AP_REP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AP_REP
  * @function
@@ -176,13 +171,11 @@ export function _decode_AP_REP(el: _Element) {
   }
   return _cached_decoder_for_AP_REP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_REP */
+
 let _cached_encoder_for_AP_REP: $.ASN1Encoder<AP_REP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_REP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AP_REP */
+
 /**
  * @summary Encodes a(n) AP_REP into an ASN.1 Element.
  * @function
@@ -229,6 +222,5 @@ export function _encode_AP_REP(value: AP_REP, elGetter: $.ASN1Encoder<AP_REP>) {
   return _cached_encoder_for_AP_REP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AP_REP */
 
 /* eslint-enable */

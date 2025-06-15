@@ -10,7 +10,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary supplierOrConsumerInformationMatch_AssertionType
  * @description
@@ -64,9 +63,7 @@ export class supplierOrConsumerInformationMatch_AssertionType {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary The Leading Root Component Types of supplierOrConsumerInformationMatch_AssertionType
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_supplierOrConsumerInformationM
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary The Trailing Root Component Types of supplierOrConsumerInformationMatch_AssertionType
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_supplierOrConsumerInformationM
  * @constant
  */
 export const _root_component_type_list_2_spec_for_supplierOrConsumerInformationMatch_AssertionType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary The Extension Addition Component Types of supplierOrConsumerInformationMatch_AssertionType
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_supplierOrConsumerInformationM
  * @constant
  */
 export const _extension_additions_list_spec_for_supplierOrConsumerInformationMatch_AssertionType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_supplierOrConsumerInformationMatch_AssertionType */
 let _cached_decoder_for_supplierOrConsumerInformationMatch_AssertionType: $.ASN1Decoder<supplierOrConsumerInformationMatch_AssertionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary Decodes an ASN.1 element into a(n) supplierOrConsumerInformationMatch_AssertionType
  * @function
@@ -171,13 +160,9 @@ export function _decode_supplierOrConsumerInformationMatch_AssertionType(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType */
 let _cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType: $.ASN1Encoder<supplierOrConsumerInformationMatch_AssertionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary Encodes a(n) supplierOrConsumerInformationMatch_AssertionType into an ASN.1 Element.
  * @function
@@ -219,6 +204,5 @@ export function _encode_supplierOrConsumerInformationMatch_AssertionType(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_supplierOrConsumerInformationMatch_AssertionType */
 
 /* eslint-enable */

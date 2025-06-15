@@ -12,7 +12,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION ReplyWantBack */
 /**
  * @summary ReplyWantBack
  * @description
@@ -63,9 +62,7 @@ export class ReplyWantBack {
     return new ReplyWantBack(_o.wb, _o.value);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplyWantBack */
 /**
  * @summary The Leading Root Component Types of ReplyWantBack
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_ReplyWantBack: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplyWantBack */
 /**
  * @summary The Trailing Root Component Types of ReplyWantBack
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_ReplyWantBack: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReplyWantBack: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplyWantBack */
 /**
  * @summary The Extension Addition Component Types of ReplyWantBack
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_ReplyWantBack: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ReplyWantBack: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyWantBack */
 let _cached_decoder_for_ReplyWantBack: $.ASN1Decoder<ReplyWantBack> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyWantBack */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyWantBack
  * @function
@@ -149,13 +138,9 @@ export function _decode_ReplyWantBack(el: _Element) {
   }
   return _cached_decoder_for_ReplyWantBack(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyWantBack */
 let _cached_encoder_for_ReplyWantBack: $.ASN1Encoder<ReplyWantBack> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyWantBack */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyWantBack */
 /**
  * @summary Encodes a(n) ReplyWantBack into an ASN.1 Element.
  * @function
@@ -184,6 +169,5 @@ export function _encode_ReplyWantBack(
   return _cached_encoder_for_ReplyWantBack(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyWantBack */
 
 /* eslint-enable */

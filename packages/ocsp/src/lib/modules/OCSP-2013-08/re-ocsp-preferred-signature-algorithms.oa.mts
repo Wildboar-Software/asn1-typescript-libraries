@@ -7,7 +7,7 @@ import {
     _encode_PreferredSignatureAlgorithms,
 } from "../OCSP-2013-08/PreferredSignatureAlgorithms.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION re_ocsp_preferred_signature_algorithms */
+
 /**
  * @summary re_ocsp_preferred_signature_algorithms
  * @description
@@ -35,6 +35,5 @@ export const re_ocsp_preferred_signature_algorithms: EXTENSION<PreferredSignatur
     "&id": id_pkix_ocsp_pref_sig_algs /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION re_ocsp_preferred_signature_algorithms */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_BIPMessage_nature,
   _encode_BIPMessage_nature,
 } from '../BIP/BIPMessage-nature.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPMessage */
+
 /**
  * @summary BIPMessage
  * @description
@@ -69,9 +69,8 @@ export class BIPMessage {
     return new BIPMessage(_o.nature, _o._unrecognizedExtensionsList);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPMessage */
+
 /**
  * @summary The Leading Root Component Types of BIPMessage
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_BIPMessage: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPMessage */
+
 /**
  * @summary The Trailing Root Component Types of BIPMessage
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_BIPMessage: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BIPMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPMessage */
+
 /**
  * @summary The Extension Addition Component Types of BIPMessage
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_BIPMessage: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_BIPMessage: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPMessage */
+
 let _cached_decoder_for_BIPMessage: $.ASN1Decoder<BIPMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPMessage */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPMessage
  * @function
@@ -145,13 +140,11 @@ export function _decode_BIPMessage(el: _Element) {
   }
   return _cached_decoder_for_BIPMessage(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPMessage */
+
 let _cached_encoder_for_BIPMessage: $.ASN1Encoder<BIPMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPMessage */
+
 /**
  * @summary Encodes a(n) BIPMessage into an ASN.1 Element.
  * @function
@@ -182,6 +175,5 @@ export function _encode_BIPMessage(
   return _cached_encoder_for_BIPMessage(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPMessage */
 
 /* eslint-enable */

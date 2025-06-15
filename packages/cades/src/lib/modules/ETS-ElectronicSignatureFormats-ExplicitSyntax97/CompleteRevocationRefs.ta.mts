@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlOcspRef.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CompleteRevocationRefs */
 /**
  * @summary CompleteRevocationRefs
  * @description
@@ -24,13 +23,9 @@ import { CrlOcspRef, _decode_CrlOcspRef, _encode_CrlOcspRef } from "../ETS-Elect
  */
 export
 type CompleteRevocationRefs = CrlOcspRef[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CompleteRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompleteRevocationRefs */
 let _cached_decoder_for_CompleteRevocationRefs: $.ASN1Decoder<CompleteRevocationRefs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompleteRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompleteRevocationRefs */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompleteRevocationRefs
  * @function
@@ -42,13 +37,9 @@ function _decode_CompleteRevocationRefs (el: _Element) {
     if (!_cached_decoder_for_CompleteRevocationRefs) { _cached_decoder_for_CompleteRevocationRefs = $._decodeSequenceOf<CrlOcspRef>(() => _decode_CrlOcspRef); }
     return _cached_decoder_for_CompleteRevocationRefs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompleteRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompleteRevocationRefs */
 let _cached_encoder_for_CompleteRevocationRefs: $.ASN1Encoder<CompleteRevocationRefs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompleteRevocationRefs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompleteRevocationRefs */
 /**
  * @summary Encodes a(n) CompleteRevocationRefs into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_CompleteRevocationRefs (value: CompleteRevocationRefs, elGetter
     return _cached_encoder_for_CompleteRevocationRefs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompleteRevocationRefs */
 
 /* eslint-enable */

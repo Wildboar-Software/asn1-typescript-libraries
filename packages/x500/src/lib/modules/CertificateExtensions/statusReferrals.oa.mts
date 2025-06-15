@@ -6,7 +6,6 @@ import {
     _decode_StatusReferrals,
     _encode_StatusReferrals,
 } from "../CertificateExtensions/StatusReferrals.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION statusReferrals */
 /**
  * @summary statusReferrals
  * @description
@@ -34,6 +33,5 @@ export const statusReferrals: EXTENSION<StatusReferrals> = {
     "&id": id_ce_statusReferrals /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION statusReferrals */
 
 /* eslint-enable */

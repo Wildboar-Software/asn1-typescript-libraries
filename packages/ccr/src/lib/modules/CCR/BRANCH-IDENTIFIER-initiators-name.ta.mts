@@ -21,7 +21,7 @@ import {
   _decode_BRANCH_IDENTIFIER_initiators_name_side,
   _encode_BRANCH_IDENTIFIER_initiators_name_side,
 } from '../CCR/BRANCH-IDENTIFIER-initiators-name-side.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name */
+
 /**
  * @summary BRANCH_IDENTIFIER_initiators_name
  * @description
@@ -36,13 +36,11 @@ export type BRANCH_IDENTIFIER_initiators_name =
   | { name: AE_title } /* CHOICE_ALT_ROOT */
   | { side: BRANCH_IDENTIFIER_initiators_name_side } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION BRANCH_IDENTIFIER_initiators_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name */
+
 let _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name: $.ASN1Decoder<BRANCH_IDENTIFIER_initiators_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRANCH_IDENTIFIER_initiators_name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRANCH_IDENTIFIER_initiators_name
  * @function
@@ -68,13 +66,11 @@ export function _decode_BRANCH_IDENTIFIER_initiators_name(el: _Element) {
   }
   return _cached_decoder_for_BRANCH_IDENTIFIER_initiators_name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRANCH_IDENTIFIER_initiators_name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name */
+
 let _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name: $.ASN1Encoder<BRANCH_IDENTIFIER_initiators_name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRANCH_IDENTIFIER_initiators_name */
+
 /**
  * @summary Encodes a(n) BRANCH_IDENTIFIER_initiators_name into an ASN.1 Element.
  * @function
@@ -108,6 +104,5 @@ export function _encode_BRANCH_IDENTIFIER_initiators_name(
   return _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRANCH_IDENTIFIER_initiators_name */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import {
     _decode_ABRT_apdu,
     _encode_ABRT_apdu,
 } from '../DialoguePDUs/ABRT-apdu.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DialoguePDU */
 /**
  * @summary DialoguePDU
  * @description
@@ -44,13 +43,9 @@ export type DialoguePDU =
     | { dialogueRequest: AARQ_apdu } /* CHOICE_ALT_ROOT */
     | { dialogueResponse: AARE_apdu } /* CHOICE_ALT_ROOT */
     | { dialogueAbort: ABRT_apdu } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DialoguePDU */
 let _cached_decoder_for_DialoguePDU: $.ASN1Decoder<DialoguePDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DialoguePDU */
 /**
  * @summary Decodes an ASN.1 element into a(n) DialoguePDU
  * @function
@@ -69,13 +64,9 @@ export function _decode_DialoguePDU(el: _Element) {
     }
     return _cached_decoder_for_DialoguePDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DialoguePDU */
 let _cached_encoder_for_DialoguePDU: $.ASN1Encoder<DialoguePDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DialoguePDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DialoguePDU */
 /**
  * @summary Encodes a(n) DialoguePDU into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_DialoguePDU(
     return _cached_encoder_for_DialoguePDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DialoguePDU */
 
 /* eslint-enable */

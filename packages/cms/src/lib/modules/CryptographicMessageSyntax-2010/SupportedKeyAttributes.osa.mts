@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedKeyAttributes */
+
 /**
  * @summary SupportedKeyAttributes
  * @description
@@ -16,6 +16,5 @@ import { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.
  *
  */
 export const SupportedKeyAttributes: KEY_ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedKeyAttributes */
 
 /* eslint-enable */

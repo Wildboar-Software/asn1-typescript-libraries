@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_TransferProblem */
+
 /**
  * @summary TransferProblem
  * @description
@@ -31,9 +31,8 @@ export enum _enum_for_TransferProblem {
   inappropriateInvocationId = 3,
   alternatingSequenceError = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_TransferProblem */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem */
+
 /**
  * @summary TransferProblem
  * @description
@@ -47,9 +46,8 @@ export enum _enum_for_TransferProblem {
  * ```@enum {number}
  */
 export type TransferProblem = _enum_for_TransferProblem;
-/* END_OF_SYMBOL_DEFINITION TransferProblem */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem */
+
 /**
  * @summary TransferProblem
  * @description
@@ -63,9 +61,8 @@ export type TransferProblem = _enum_for_TransferProblem;
  * ```@enum {number}
  */
 export const TransferProblem = _enum_for_TransferProblem;
-/* END_OF_SYMBOL_DEFINITION TransferProblem */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem_duplicateInvocationId */
+
 /**
  * @summary TransferProblem_duplicateInvocationId
  * @constant
@@ -73,9 +70,8 @@ export const TransferProblem = _enum_for_TransferProblem;
  */
 export const TransferProblem_duplicateInvocationId: TransferProblem =
   TransferProblem.duplicateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TransferProblem_duplicateInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION duplicateInvocationId */
+
 /**
  * @summary duplicateInvocationId
  * @constant
@@ -83,9 +79,8 @@ export const TransferProblem_duplicateInvocationId: TransferProblem =
  */
 export const duplicateInvocationId: TransferProblem =
   TransferProblem.duplicateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION duplicateInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem_unrecognizedSecurityExchange */
+
 /**
  * @summary TransferProblem_unrecognizedSecurityExchange
  * @constant
@@ -93,9 +88,8 @@ export const duplicateInvocationId: TransferProblem =
  */
 export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
   TransferProblem.unrecognizedSecurityExchange; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TransferProblem_unrecognizedSecurityExchange */
 
-/* START_OF_SYMBOL_DEFINITION unrecognizedSecurityExchange */
+
 /**
  * @summary unrecognizedSecurityExchange
  * @constant
@@ -103,9 +97,8 @@ export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
  */
 export const unrecognizedSecurityExchange: TransferProblem =
   TransferProblem.unrecognizedSecurityExchange; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unrecognizedSecurityExchange */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem_mistypedItem */
+
 /**
  * @summary TransferProblem_mistypedItem
  * @constant
@@ -113,9 +106,8 @@ export const unrecognizedSecurityExchange: TransferProblem =
  */
 export const TransferProblem_mistypedItem: TransferProblem =
   TransferProblem.mistypedItem; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TransferProblem_mistypedItem */
 
-/* START_OF_SYMBOL_DEFINITION mistypedItem */
+
 /**
  * @summary mistypedItem
  * @constant
@@ -123,9 +115,8 @@ export const TransferProblem_mistypedItem: TransferProblem =
  */
 export const mistypedItem: TransferProblem =
   TransferProblem.mistypedItem; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mistypedItem */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem_inappropriateInvocationId */
+
 /**
  * @summary TransferProblem_inappropriateInvocationId
  * @constant
@@ -133,9 +124,8 @@ export const mistypedItem: TransferProblem =
  */
 export const TransferProblem_inappropriateInvocationId: TransferProblem =
   TransferProblem.inappropriateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TransferProblem_inappropriateInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION inappropriateInvocationId */
+
 /**
  * @summary inappropriateInvocationId
  * @constant
@@ -143,9 +133,8 @@ export const TransferProblem_inappropriateInvocationId: TransferProblem =
  */
 export const inappropriateInvocationId: TransferProblem =
   TransferProblem.inappropriateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION inappropriateInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION TransferProblem_alternatingSequenceError */
+
 /**
  * @summary TransferProblem_alternatingSequenceError
  * @constant
@@ -153,9 +142,8 @@ export const inappropriateInvocationId: TransferProblem =
  */
 export const TransferProblem_alternatingSequenceError: TransferProblem =
   TransferProblem.alternatingSequenceError; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TransferProblem_alternatingSequenceError */
 
-/* START_OF_SYMBOL_DEFINITION alternatingSequenceError */
+
 /**
  * @summary alternatingSequenceError
  * @constant
@@ -163,21 +151,16 @@ export const TransferProblem_alternatingSequenceError: TransferProblem =
  */
 export const alternatingSequenceError: TransferProblem =
   TransferProblem.alternatingSequenceError; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION alternatingSequenceError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransferProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransferProblem */
+
+
 export const _decode_TransferProblem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_TransferProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransferProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransferProblem */
+
+
 export const _encode_TransferProblem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransferProblem */
 
 /* eslint-enable */

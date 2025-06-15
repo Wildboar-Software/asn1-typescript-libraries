@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_routing_address */
 /**
  * @summary ub_routing_address
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_routing_address: INTEGER = 14;
-/* END_OF_SYMBOL_DEFINITION ub_routing_address */
 
 /* eslint-enable */

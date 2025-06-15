@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ComponentAddress */
 /**
  * @summary ComponentAddress
  * @description
@@ -62,9 +61,7 @@ class ComponentAddress {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComponentAddress */
 /**
  * @summary The Leading Root Component Types of ComponentAddress
  * @description
@@ -78,9 +75,7 @@ const _root_component_type_list_1_spec_for_ComponentAddress: $.ComponentSpec[] =
     new $.ComponentSpec("addressType", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("addressValue", false, $.hasTag(_TagClass.universal, 12), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComponentAddress */
 /**
  * @summary The Trailing Root Component Types of ComponentAddress
  * @description
@@ -93,9 +88,7 @@ export
 const _root_component_type_list_2_spec_for_ComponentAddress: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComponentAddress */
 /**
  * @summary The Extension Addition Component Types of ComponentAddress
  * @description
@@ -108,13 +101,9 @@ export
 const _extension_additions_list_spec_for_ComponentAddress: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentAddress */
 let _cached_decoder_for_ComponentAddress: $.ASN1Decoder<ComponentAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentAddress
  * @function
@@ -142,13 +131,9 @@ function _decode_ComponentAddress (el: _Element) {
 }; }
     return _cached_decoder_for_ComponentAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentAddress */
 let _cached_encoder_for_ComponentAddress: $.ASN1Encoder<ComponentAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentAddress */
 /**
  * @summary Encodes a(n) ComponentAddress into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ function _encode_ComponentAddress (value: ComponentAddress, elGetter: $.ASN1Enco
     return _cached_encoder_for_ComponentAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentAddress */
 
 /* eslint-enable */

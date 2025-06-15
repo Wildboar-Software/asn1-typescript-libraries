@@ -12,7 +12,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION physicalDeliveryOfficeName */
 /**
  * @summary physicalDeliveryOfficeName
  * @description
@@ -54,6 +53,5 @@ export const physicalDeliveryOfficeName: ATTRIBUTE<UnboundedDirectoryString> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION physicalDeliveryOfficeName */
 
 /* eslint-enable */

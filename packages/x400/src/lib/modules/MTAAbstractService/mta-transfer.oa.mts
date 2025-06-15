@@ -13,7 +13,6 @@ import { mta_connect } from '../MTAAbstractService/mta-connect.oa.mjs';
 import { transfer } from '../MTAAbstractService/transfer.oa.mjs';
 import { id_ct_mta_transfer } from '../MTSObjectIdentifiers/id-ct-mta-transfer.va.mjs';
 import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_transfer */
 /**
  * @summary mta_transfer
  * @description
@@ -40,6 +39,5 @@ export const mta_transfer: CONTRACT = {
     '&OperationsOf': [transfer] /* OBJECT_FIELD_SETTING */,
     '&id': id_ct_mta_transfer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mta_transfer */
 
 /* eslint-enable */

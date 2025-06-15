@@ -8,7 +8,7 @@ import { OAEP_PSSDigestAlgorithms_Union4_Intersection0_Element } from "../PKCS-1
 import { OAEP_PSSDigestAlgorithms_Union5_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union5-Intersection0-Element.oa.mjs";
 import { OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union6-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms */
+
 /**
  * @summary OAEP_PSSDigestAlgorithms
  * @description
@@ -41,6 +41,5 @@ export const OAEP_PSSDigestAlgorithms: ALGORITHM_IDENTIFIER<any>[] = [
     OAEP_PSSDigestAlgorithms_Union5_Intersection0_Element,
     OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms */
 
 /* eslint-enable */

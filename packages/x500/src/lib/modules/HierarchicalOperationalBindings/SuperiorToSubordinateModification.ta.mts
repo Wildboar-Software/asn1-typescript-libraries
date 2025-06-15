@@ -6,7 +6,6 @@ import {
     _decode_SuperiorToSubordinate,
     _encode_SuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SuperiorToSubordinateModification */
 /**
  * @summary SuperiorToSubordinateModification
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type SuperiorToSubordinateModification = SuperiorToSubordinate; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SuperiorToSubordinateModification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SuperiorToSubordinateModification */
 let _cached_decoder_for_SuperiorToSubordinateModification: $.ASN1Decoder<SuperiorToSubordinateModification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SuperiorToSubordinateModification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SuperiorToSubordinateModification */
 /**
  * @summary Decodes an ASN.1 element into a(n) SuperiorToSubordinateModification
  * @function
@@ -38,13 +33,9 @@ export function _decode_SuperiorToSubordinateModification(el: _Element) {
     }
     return _cached_decoder_for_SuperiorToSubordinateModification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SuperiorToSubordinateModification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SuperiorToSubordinateModification */
 let _cached_encoder_for_SuperiorToSubordinateModification: $.ASN1Encoder<SuperiorToSubordinateModification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SuperiorToSubordinateModification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SuperiorToSubordinateModification */
 /**
  * @summary Encodes a(n) SuperiorToSubordinateModification into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ export function _encode_SuperiorToSubordinateModification(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SuperiorToSubordinateModification */
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import {
     _decode_SwitchStatus,
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item_lockout */
+
 /**
  * @summary ProtectionStatusR1_Item_lockout
  * @description
@@ -31,13 +31,11 @@ import {
 export type ProtectionStatusR1_Item_lockout =
     | { switchStatus: SwitchStatus } /* CHOICE_ALT_ROOT */
     | { releaseFailed: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusR1_Item_lockout */
+
 let _cached_decoder_for_ProtectionStatusR1_Item_lockout: $.ASN1Decoder<ProtectionStatusR1_Item_lockout> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatusR1_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatusR1_Item_lockout */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatusR1_Item_lockout
  * @function
@@ -63,13 +61,11 @@ export function _decode_ProtectionStatusR1_Item_lockout(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatusR1_Item_lockout(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatusR1_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusR1_Item_lockout */
+
 let _cached_encoder_for_ProtectionStatusR1_Item_lockout: $.ASN1Encoder<ProtectionStatusR1_Item_lockout> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatusR1_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatusR1_Item_lockout */
+
 /**
  * @summary Encodes a(n) ProtectionStatusR1_Item_lockout into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_ProtectionStatusR1_Item_lockout(
     return _cached_encoder_for_ProtectionStatusR1_Item_lockout(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatusR1_Item_lockout */
 
 /* eslint-enable */

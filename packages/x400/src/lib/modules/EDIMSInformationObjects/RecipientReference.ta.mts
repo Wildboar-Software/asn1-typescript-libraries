@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RecipientReference */
 /**
  * @summary RecipientReference
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RecipientReference = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION RecipientReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReference */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientReference */
 export const _decode_RecipientReference = $._decodeTeletexString;
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReference */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientReference */
 export const _encode_RecipientReference = $._encodeTeletexString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientReference */
 
 /* eslint-enable */

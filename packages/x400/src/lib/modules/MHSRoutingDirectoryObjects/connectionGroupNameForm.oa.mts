@@ -13,7 +13,6 @@ import { connectionGroup } from '../MHSRoutingDirectoryObjects/connectionGroup.o
 import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { id_nf_connection_group } from '../MHSRoutingObjectIdentifiers/id-nf-connection-group.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION connectionGroupNameForm */
 /**
  * @summary connectionGroupNameForm
  * @description
@@ -40,6 +39,5 @@ export const connectionGroupNameForm: NAME_FORM = {
     '&MandatoryAttributes': [commonName] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_connection_group /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION connectionGroupNameForm */
 
 /* eslint-enable */

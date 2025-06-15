@@ -15,7 +15,6 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConvertedEncodedInformationTypes */
 /**
  * @summary ConvertedEncodedInformationTypes
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ConvertedEncodedInformationTypes = EncodedInformationTypes; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ConvertedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertedEncodedInformationTypes */
 let _cached_decoder_for_ConvertedEncodedInformationTypes: $.ASN1Decoder<ConvertedEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConvertedEncodedInformationTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConvertedEncodedInformationTypes
  * @function
@@ -46,13 +41,9 @@ export function _decode_ConvertedEncodedInformationTypes(el: _Element) {
     }
     return _cached_decoder_for_ConvertedEncodedInformationTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConvertedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertedEncodedInformationTypes */
 let _cached_encoder_for_ConvertedEncodedInformationTypes: $.ASN1Encoder<ConvertedEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConvertedEncodedInformationTypes */
 /**
  * @summary Encodes a(n) ConvertedEncodedInformationTypes into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_ConvertedEncodedInformationTypes(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConvertedEncodedInformationTypes */
 
 /* eslint-enable */

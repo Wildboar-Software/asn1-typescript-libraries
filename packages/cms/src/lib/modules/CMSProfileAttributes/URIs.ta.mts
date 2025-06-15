@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION URIs */
+
 /**
  * @summary URIs
  * @description
@@ -14,13 +14,11 @@ import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mj
  * ```
  */
 export type URIs = URI[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION URIs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_URIs */
+
 let _cached_decoder_for_URIs: $.ASN1Decoder<URIs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_URIs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_URIs */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) URIs
  * @function
@@ -33,13 +31,11 @@ export function _decode_URIs(el: _Element) {
     }
     return _cached_decoder_for_URIs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_URIs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_URIs */
+
 let _cached_encoder_for_URIs: $.ASN1Encoder<URIs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_URIs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_URIs */
+
 /**
  * @summary Encodes a(n) URIs into an ASN.1 Element.
  * @function
@@ -57,6 +53,5 @@ export function _encode_URIs(value: URIs, elGetter: $.ASN1Encoder<URIs>) {
     return _cached_encoder_for_URIs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_URIs */
 
 /* eslint-enable */

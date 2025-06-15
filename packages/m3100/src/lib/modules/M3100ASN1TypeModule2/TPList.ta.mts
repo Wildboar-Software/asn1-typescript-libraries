@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TPList */
+
 /**
  * @summary TPList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TPList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TPList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TPList */
+
 let _cached_decoder_for_TPList: $.ASN1Decoder<TPList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TPList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TPList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TPList
  * @function
@@ -48,13 +46,11 @@ export function _decode_TPList(el: _Element) {
     }
     return _cached_decoder_for_TPList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TPList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TPList */
+
 let _cached_encoder_for_TPList: $.ASN1Encoder<TPList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TPList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TPList */
+
 /**
  * @summary Encodes a(n) TPList into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_TPList(value: TPList, elGetter: $.ASN1Encoder<TPList>) {
     return _cached_encoder_for_TPList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TPList */
 
 /* eslint-enable */

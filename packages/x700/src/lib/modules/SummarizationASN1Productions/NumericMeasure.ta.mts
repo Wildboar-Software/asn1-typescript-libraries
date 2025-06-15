@@ -21,7 +21,6 @@ import {
     _decode_NumericMeasure_qualifiedValue,
     _encode_NumericMeasure_qualifiedValue,
 } from '../SummarizationASN1Productions/NumericMeasure-qualifiedValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NumericMeasure */
 /**
  * @summary NumericMeasure
  * @description
@@ -47,13 +46,9 @@ export type NumericMeasure =
     | { missingData: NULL } /* CHOICE_ALT_ROOT */
     | { valueOnly: ObservedValue } /* CHOICE_ALT_ROOT */
     | { qualifiedValue: NumericMeasure_qualifiedValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NumericMeasure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericMeasure */
 let _cached_decoder_for_NumericMeasure: $.ASN1Decoder<NumericMeasure> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericMeasure */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NumericMeasure */
 /**
  * @summary Decodes an ASN.1 element into a(n) NumericMeasure
  * @function
@@ -76,13 +71,9 @@ export function _decode_NumericMeasure(el: _Element) {
     }
     return _cached_decoder_for_NumericMeasure(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NumericMeasure */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericMeasure */
 let _cached_encoder_for_NumericMeasure: $.ASN1Encoder<NumericMeasure> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericMeasure */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NumericMeasure */
 /**
  * @summary Encodes a(n) NumericMeasure into an ASN.1 Element.
  * @function
@@ -107,6 +98,5 @@ export function _encode_NumericMeasure(
     return _cached_encoder_for_NumericMeasure(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NumericMeasure */
 
 /* eslint-enable */

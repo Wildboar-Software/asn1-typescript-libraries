@@ -36,7 +36,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliverInfo */
 /**
  * @summary DeliverInfo
  * @description
@@ -114,9 +113,7 @@ export class DeliverInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliverInfo */
 /**
  * @summary The Leading Root Component Types of DeliverInfo
  * @description
@@ -162,9 +159,7 @@ export const _root_component_type_list_1_spec_for_DeliverInfo: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliverInfo */
 /**
  * @summary The Trailing Root Component Types of DeliverInfo
  * @description
@@ -174,9 +169,7 @@ export const _root_component_type_list_1_spec_for_DeliverInfo: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeliverInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliverInfo */
 /**
  * @summary The Extension Addition Component Types of DeliverInfo
  * @description
@@ -186,13 +179,9 @@ export const _root_component_type_list_2_spec_for_DeliverInfo: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_DeliverInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverInfo */
 let _cached_decoder_for_DeliverInfo: $.ASN1Decoder<DeliverInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliverInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliverInfo
  * @function
@@ -260,13 +249,9 @@ export function _decode_DeliverInfo(el: _Element) {
     }
     return _cached_decoder_for_DeliverInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverInfo */
 let _cached_encoder_for_DeliverInfo: $.ASN1Encoder<DeliverInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliverInfo */
 /**
  * @summary Encodes a(n) DeliverInfo into an ASN.1 Element.
  * @function
@@ -333,6 +318,5 @@ export function _encode_DeliverInfo(
     return _cached_encoder_for_DeliverInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliverInfo */
 
 /* eslint-enable */

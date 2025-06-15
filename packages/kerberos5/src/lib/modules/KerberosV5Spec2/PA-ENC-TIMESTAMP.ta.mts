@@ -15,7 +15,7 @@ import {
   _decode_EncryptedData,
   _encode_EncryptedData,
 } from '../KerberosV5Spec2/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PA_ENC_TIMESTAMP */
+
 /**
  * @summary PA_ENC_TIMESTAMP
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type PA_ENC_TIMESTAMP = EncryptedData; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PA_ENC_TIMESTAMP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PA_ENC_TIMESTAMP */
+
 let _cached_decoder_for_PA_ENC_TIMESTAMP: $.ASN1Decoder<PA_ENC_TIMESTAMP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PA_ENC_TIMESTAMP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PA_ENC_TIMESTAMP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PA_ENC_TIMESTAMP
  * @function
@@ -46,13 +44,11 @@ export function _decode_PA_ENC_TIMESTAMP(el: _Element) {
   }
   return _cached_decoder_for_PA_ENC_TIMESTAMP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PA_ENC_TIMESTAMP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PA_ENC_TIMESTAMP */
+
 let _cached_encoder_for_PA_ENC_TIMESTAMP: $.ASN1Encoder<PA_ENC_TIMESTAMP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PA_ENC_TIMESTAMP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PA_ENC_TIMESTAMP */
+
 /**
  * @summary Encodes a(n) PA_ENC_TIMESTAMP into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_PA_ENC_TIMESTAMP(
   return _cached_encoder_for_PA_ENC_TIMESTAMP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PA_ENC_TIMESTAMP */
 
 /* eslint-enable */

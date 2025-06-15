@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UpdateShadowResult */
 /**
  * @summary UpdateShadowResult
  * @description
@@ -31,13 +30,9 @@ export type UpdateShadowResult =
           information: OPTIONALLY_PROTECTED<UpdateShadowResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION UpdateShadowResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateShadowResult */
 let _cached_decoder_for_UpdateShadowResult: $.ASN1Decoder<UpdateShadowResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UpdateShadowResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UpdateShadowResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) UpdateShadowResult
  * @function
@@ -60,13 +55,9 @@ export function _decode_UpdateShadowResult(el: _Element) {
     }
     return _cached_decoder_for_UpdateShadowResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UpdateShadowResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateShadowResult */
 let _cached_encoder_for_UpdateShadowResult: $.ASN1Encoder<UpdateShadowResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UpdateShadowResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UpdateShadowResult */
 /**
  * @summary Encodes a(n) UpdateShadowResult into an ASN.1 Element.
  * @function
@@ -92,6 +83,5 @@ export function _encode_UpdateShadowResult(
     return _cached_encoder_for_UpdateShadowResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UpdateShadowResult */
 
 /* eslint-enable */

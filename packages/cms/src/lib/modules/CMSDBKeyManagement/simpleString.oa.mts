@@ -6,7 +6,7 @@ import {
     _encode_SimpleString,
 } from "../CMSDBKeyManagement/SimpleString.ta.mjs";
 import { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va.mjs";
-/* START_OF_SYMBOL_DEFINITION simpleString */
+
 /**
  * @summary simpleString
  * @description
@@ -33,6 +33,5 @@ export const simpleString: DBEKM<SimpleString> = {
     "&id": id_SimpleString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION simpleString */
 
 /* eslint-enable */

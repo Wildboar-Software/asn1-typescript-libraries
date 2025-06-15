@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_at_attributeAuthorityRevocationList */
 /**
  * @summary id_at_attributeAuthorityRevocationList
  * @description
@@ -18,6 +17,5 @@ export const id_at_attributeAuthorityRevocationList: OBJECT_IDENTIFIER = new _OI
     [63],
     id_at
 );
-/* END_OF_SYMBOL_DEFINITION id_at_attributeAuthorityRevocationList */
 
 /* eslint-enable */

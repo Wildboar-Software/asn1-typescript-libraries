@@ -6,7 +6,6 @@ import {
 import { top } from "../InformationFramework/top.oa.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_oc_oidC1obj } from "../SelectedObjectClasses/id-oc-oidC1obj.va.mjs";
-/* START_OF_SYMBOL_DEFINITION oidC1obj */
 /**
  * @summary oidC1obj
  * @description
@@ -35,6 +34,5 @@ export const oidC1obj: OBJECT_CLASS = {
     "&id": id_oc_oidC1obj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oidC1obj */
 
 /* eslint-enable */

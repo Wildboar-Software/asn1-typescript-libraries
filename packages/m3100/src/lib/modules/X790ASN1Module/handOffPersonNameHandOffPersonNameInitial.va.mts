@@ -42,7 +42,7 @@ import {
     _decode_PersonRespon,
     _encode_PersonRespon,
 } from '../X790ASN1Module/PersonRespon.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION handOffPersonNameHandOffPersonNameInitial */
+
 /**
  * @summary handOffPersonNameHandOffPersonNameInitial
  * @description
@@ -67,6 +67,5 @@ export const handOffPersonNameHandOffPersonNameInitial: PersonReach = PersonReac
         _unrecognizedExtensionsList: undefined,
     },
 );
-/* END_OF_SYMBOL_DEFINITION handOffPersonNameHandOffPersonNameInitial */
 
 /* eslint-enable */

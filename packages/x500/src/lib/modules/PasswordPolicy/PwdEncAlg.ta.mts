@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PwdEncAlg */
 /**
  * @summary PwdEncAlg
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type PwdEncAlg = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PwdEncAlg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdEncAlg */
 let _cached_decoder_for_PwdEncAlg: $.ASN1Decoder<PwdEncAlg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PwdEncAlg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PwdEncAlg */
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdEncAlg
  * @function
@@ -37,13 +32,9 @@ export function _decode_PwdEncAlg(el: _Element) {
     }
     return _cached_decoder_for_PwdEncAlg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PwdEncAlg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdEncAlg */
 let _cached_encoder_for_PwdEncAlg: $.ASN1Encoder<PwdEncAlg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PwdEncAlg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PwdEncAlg */
 /**
  * @summary Encodes a(n) PwdEncAlg into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_PwdEncAlg(
     return _cached_encoder_for_PwdEncAlg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PwdEncAlg */
 
 /* eslint-enable */

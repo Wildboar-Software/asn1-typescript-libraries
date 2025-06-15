@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ProtectionDirection */
+
 /**
  * @summary ProtectionDirection
  * @description
@@ -27,9 +27,8 @@ export enum _enum_for_ProtectionDirection {
     receive = 1,
     bidirectional = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ProtectionDirection */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionDirection */
+
 /**
  * @summary ProtectionDirection
  * @description
@@ -41,9 +40,8 @@ export enum _enum_for_ProtectionDirection {
  * ```@enum {number}
  */
 export type ProtectionDirection = _enum_for_ProtectionDirection;
-/* END_OF_SYMBOL_DEFINITION ProtectionDirection */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionDirection */
+
 /**
  * @summary ProtectionDirection
  * @description
@@ -55,9 +53,8 @@ export type ProtectionDirection = _enum_for_ProtectionDirection;
  * ```@enum {number}
  */
 export const ProtectionDirection = _enum_for_ProtectionDirection;
-/* END_OF_SYMBOL_DEFINITION ProtectionDirection */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionDirection_transmit */
+
 /**
  * @summary ProtectionDirection_transmit
  * @constant
@@ -65,9 +62,8 @@ export const ProtectionDirection = _enum_for_ProtectionDirection;
  */
 export const ProtectionDirection_transmit: ProtectionDirection =
     ProtectionDirection.transmit; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtectionDirection_transmit */
 
-/* START_OF_SYMBOL_DEFINITION transmit */
+
 /**
  * @summary transmit
  * @constant
@@ -75,9 +71,8 @@ export const ProtectionDirection_transmit: ProtectionDirection =
  */
 export const transmit: ProtectionDirection =
     ProtectionDirection.transmit; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION transmit */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionDirection_receive */
+
 /**
  * @summary ProtectionDirection_receive
  * @constant
@@ -85,9 +80,8 @@ export const transmit: ProtectionDirection =
  */
 export const ProtectionDirection_receive: ProtectionDirection =
     ProtectionDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtectionDirection_receive */
 
-/* START_OF_SYMBOL_DEFINITION receive */
+
 /**
  * @summary receive
  * @constant
@@ -95,9 +89,8 @@ export const ProtectionDirection_receive: ProtectionDirection =
  */
 export const receive: ProtectionDirection =
     ProtectionDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION receive */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionDirection_bidirectional */
+
 /**
  * @summary ProtectionDirection_bidirectional
  * @constant
@@ -105,9 +98,8 @@ export const receive: ProtectionDirection =
  */
 export const ProtectionDirection_bidirectional: ProtectionDirection =
     ProtectionDirection.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtectionDirection_bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION bidirectional */
+
 /**
  * @summary bidirectional
  * @constant
@@ -115,21 +107,16 @@ export const ProtectionDirection_bidirectional: ProtectionDirection =
  */
 export const bidirectional: ProtectionDirection =
     ProtectionDirection.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionDirection */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionDirection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionDirection */
+
+
 export const _decode_ProtectionDirection = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionDirection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionDirection */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionDirection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionDirection */
+
+
 export const _encode_ProtectionDirection = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionDirection */
 
 /* eslint-enable */

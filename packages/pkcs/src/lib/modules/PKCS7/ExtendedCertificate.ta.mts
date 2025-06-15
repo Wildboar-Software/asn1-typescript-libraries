@@ -12,7 +12,7 @@ import {
     _encode_ExtendedCertificateInfo,
 } from "../PKCS7/ExtendedCertificateInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ExtendedCertificate */
+
 /**
  * @summary ExtendedCertificate
  * @description
@@ -25,13 +25,11 @@ import {
  * ```
  */
 export type ExtendedCertificate = SIGNED<ExtendedCertificateInfo>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificate */
+
 let _cached_decoder_for_ExtendedCertificate: $.ASN1Decoder<ExtendedCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedCertificate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedCertificate
  * @function
@@ -46,13 +44,11 @@ export function _decode_ExtendedCertificate(el: _Element) {
     }
     return _cached_decoder_for_ExtendedCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificate */
+
 let _cached_encoder_for_ExtendedCertificate: $.ASN1Encoder<ExtendedCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedCertificate */
+
 /**
  * @summary Encodes a(n) ExtendedCertificate into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_ExtendedCertificate(
     return _cached_encoder_for_ExtendedCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedCertificate */
 
 /* eslint-enable */

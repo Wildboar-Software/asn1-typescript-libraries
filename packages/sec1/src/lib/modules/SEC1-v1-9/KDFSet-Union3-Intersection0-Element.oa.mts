@@ -12,7 +12,6 @@ import {
 import { ikev2_kdf } from "../SEC1-v1-9/ikev2-kdf.va.mjs";
 import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION KDFSet_Union3_Intersection0_Element */
 /**
  * @summary KDFSet_Union3_Intersection0_Element
  * @description
@@ -39,6 +38,5 @@ const KDFSet_Union3_Intersection0_Element: ALGORITHM<HashAlgorithm> = {
     "&id": ikev2_kdf /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION KDFSet_Union3_Intersection0_Element */
 
 /* eslint-enable */

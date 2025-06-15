@@ -16,7 +16,7 @@ import {
     _encode_AuthorityInfoAccessSyntax,
 } from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ServiceLocator */
+
 /**
  * @summary ServiceLocator
  * @description
@@ -65,9 +65,8 @@ export class ServiceLocator {
         return new ServiceLocator(_o.issuer, _o.locator);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceLocator */
+
 /**
  * @summary The Leading Root Component Types of ServiceLocator
  * @description
@@ -86,9 +85,8 @@ export const _root_component_type_list_1_spec_for_ServiceLocator: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceLocator */
+
 /**
  * @summary The Trailing Root Component Types of ServiceLocator
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_1_spec_for_ServiceLocator: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceLocator: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceLocator */
+
 /**
  * @summary The Extension Addition Component Types of ServiceLocator
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_ServiceLocator: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceLocator: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceLocator */
+
 let _cached_decoder_for_ServiceLocator: $.ASN1Decoder<ServiceLocator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceLocator */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceLocator
  * @function
@@ -147,13 +142,11 @@ export function _decode_ServiceLocator(el: _Element) {
     }
     return _cached_decoder_for_ServiceLocator(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceLocator */
+
 let _cached_encoder_for_ServiceLocator: $.ASN1Encoder<ServiceLocator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceLocator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceLocator */
+
 /**
  * @summary Encodes a(n) ServiceLocator into an ASN.1 Element.
  * @function
@@ -185,6 +178,5 @@ export function _encode_ServiceLocator(
     return _cached_encoder_for_ServiceLocator(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceLocator */
 
 /* eslint-enable */

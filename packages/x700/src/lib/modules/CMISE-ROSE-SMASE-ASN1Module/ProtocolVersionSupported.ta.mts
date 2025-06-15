@@ -15,7 +15,6 @@ import {
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
 } from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtocolVersionSupported */
 /**
  * @summary ProtocolVersionSupported
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProtocolVersionSupported = ProtocolVersion; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProtocolVersionSupported */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersionSupported */
 let _cached_decoder_for_ProtocolVersionSupported: $.ASN1Decoder<ProtocolVersionSupported> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersionSupported */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtocolVersionSupported */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolVersionSupported
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProtocolVersionSupported(el: _Element) {
     }
     return _cached_decoder_for_ProtocolVersionSupported(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtocolVersionSupported */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersionSupported */
 let _cached_encoder_for_ProtocolVersionSupported: $.ASN1Encoder<ProtocolVersionSupported> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersionSupported */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtocolVersionSupported */
 /**
  * @summary Encodes a(n) ProtocolVersionSupported into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProtocolVersionSupported(
     return _cached_encoder_for_ProtocolVersionSupported(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtocolVersionSupported */
 
 /* eslint-enable */

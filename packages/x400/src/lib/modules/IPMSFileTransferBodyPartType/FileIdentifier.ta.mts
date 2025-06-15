@@ -20,7 +20,6 @@ import {
     _decode_CrossReference,
     _encode_CrossReference,
 } from '../IPMSFileTransferBodyPartType/CrossReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FileIdentifier */
 /**
  * @summary FileIdentifier
  * @description
@@ -37,13 +36,9 @@ import {
 export type FileIdentifier =
     | { pathname_and_version: PathnameandVersion } /* CHOICE_ALT_ROOT */
     | { cross_reference: CrossReference } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FileIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FileIdentifier */
 let _cached_decoder_for_FileIdentifier: $.ASN1Decoder<FileIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FileIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FileIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) FileIdentifier
  * @function
@@ -71,13 +66,9 @@ export function _decode_FileIdentifier(el: _Element) {
     }
     return _cached_decoder_for_FileIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FileIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FileIdentifier */
 let _cached_encoder_for_FileIdentifier: $.ASN1Encoder<FileIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FileIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FileIdentifier */
 /**
  * @summary Encodes a(n) FileIdentifier into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_FileIdentifier(
     return _cached_encoder_for_FileIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FileIdentifier */
 
 /* eslint-enable */

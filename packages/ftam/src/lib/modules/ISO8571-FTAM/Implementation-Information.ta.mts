@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Implementation_Information */
+
 /**
  * @summary Implementation_Information
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Implementation_Information = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION Implementation_Information */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Implementation_Information */
+
 let _cached_decoder_for_Implementation_Information: $.ASN1Decoder<Implementation_Information> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Implementation_Information */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Implementation_Information */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Implementation_Information
  * @function
@@ -45,13 +43,11 @@ export function _decode_Implementation_Information(el: _Element) {
   }
   return _cached_decoder_for_Implementation_Information(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Implementation_Information */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Implementation_Information */
+
 let _cached_encoder_for_Implementation_Information: $.ASN1Encoder<Implementation_Information> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Implementation_Information */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Implementation_Information */
+
 /**
  * @summary Encodes a(n) Implementation_Information into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Implementation_Information(
   return _cached_encoder_for_Implementation_Information(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Implementation_Information */
 
 /* eslint-enable */

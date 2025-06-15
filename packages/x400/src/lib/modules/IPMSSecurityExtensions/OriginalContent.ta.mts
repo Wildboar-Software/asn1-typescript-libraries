@@ -15,7 +15,6 @@ import {
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginalContent */
 /**
  * @summary OriginalContent
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginalContent = Content; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginalContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalContent */
 let _cached_decoder_for_OriginalContent: $.ASN1Decoder<OriginalContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginalContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginalContent */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalContent
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginalContent(el: _Element) {
     }
     return _cached_decoder_for_OriginalContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginalContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalContent */
 let _cached_encoder_for_OriginalContent: $.ASN1Encoder<OriginalContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginalContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginalContent */
 /**
  * @summary Encodes a(n) OriginalContent into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginalContent(
     return _cached_encoder_for_OriginalContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginalContent */
 
 /* eslint-enable */

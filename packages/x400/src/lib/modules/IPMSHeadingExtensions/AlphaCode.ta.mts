@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlphaCode */
 /**
  * @summary AlphaCode
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AlphaCode = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AlphaCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlphaCode */
 let _cached_decoder_for_AlphaCode: $.ASN1Decoder<AlphaCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlphaCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlphaCode */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlphaCode
  * @function
@@ -46,13 +41,9 @@ export function _decode_AlphaCode(el: _Element) {
     }
     return _cached_decoder_for_AlphaCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlphaCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlphaCode */
 let _cached_encoder_for_AlphaCode: $.ASN1Encoder<AlphaCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlphaCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlphaCode */
 /**
  * @summary Encodes a(n) AlphaCode into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AlphaCode(
     return _cached_encoder_for_AlphaCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlphaCode */
 
 /* eslint-enable */

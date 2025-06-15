@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION manualL2OnlyMode_Default */
 /**
  * @summary manualL2OnlyMode_Default
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const manualL2OnlyMode_Default: BOOLEAN = false;
-/* END_OF_SYMBOL_DEFINITION manualL2OnlyMode_Default */
 
 /* eslint-enable */

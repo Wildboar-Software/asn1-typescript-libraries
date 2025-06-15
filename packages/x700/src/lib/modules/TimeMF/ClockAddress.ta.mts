@@ -16,7 +16,6 @@ import {
     _decode_ClockAddress_ip,
     _encode_ClockAddress_ip,
 } from '../TimeMF/ClockAddress-ip.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ClockAddress */
 /**
  * @summary ClockAddress
  * @description
@@ -34,13 +33,9 @@ import {
 export type ClockAddress =
     | { isoNsap: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { ip: ClockAddress_ip } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ClockAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockAddress */
 let _cached_decoder_for_ClockAddress: $.ASN1Decoder<ClockAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ClockAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ClockAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockAddress
  * @function
@@ -68,13 +63,9 @@ export function _decode_ClockAddress(el: _Element) {
     }
     return _cached_decoder_for_ClockAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ClockAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockAddress */
 let _cached_encoder_for_ClockAddress: $.ASN1Encoder<ClockAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ClockAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ClockAddress */
 /**
  * @summary Encodes a(n) ClockAddress into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_ClockAddress(
     return _cached_encoder_for_ClockAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ClockAddress */
 
 /* eslint-enable */

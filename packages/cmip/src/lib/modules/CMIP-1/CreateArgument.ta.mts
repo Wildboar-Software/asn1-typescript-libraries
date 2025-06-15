@@ -36,7 +36,7 @@ import {
   _decode_Attribute,
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CreateArgument */
+
 /**
  * @summary CreateArgument
  * @description
@@ -123,9 +123,8 @@ export class CreateArgument {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CreateArgument */
+
 /**
  * @summary The Leading Root Component Types of CreateArgument
  * @description
@@ -171,9 +170,8 @@ export const _root_component_type_list_1_spec_for_CreateArgument: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CreateArgument */
+
 /**
  * @summary The Trailing Root Component Types of CreateArgument
  * @description
@@ -183,9 +181,8 @@ export const _root_component_type_list_1_spec_for_CreateArgument: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CreateArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CreateArgument */
+
 /**
  * @summary The Extension Addition Component Types of CreateArgument
  * @description
@@ -195,13 +192,11 @@ export const _root_component_type_list_2_spec_for_CreateArgument: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CreateArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateArgument */
+
 let _cached_decoder_for_CreateArgument: $.ASN1Decoder<CreateArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CreateArgument */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CreateArgument
  * @function
@@ -270,13 +265,11 @@ export function _decode_CreateArgument(el: _Element) {
   }
   return _cached_decoder_for_CreateArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateArgument */
+
 let _cached_encoder_for_CreateArgument: $.ASN1Encoder<CreateArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CreateArgument */
+
 /**
  * @summary Encodes a(n) CreateArgument into an ASN.1 Element.
  * @function
@@ -344,6 +337,5 @@ export function _encode_CreateArgument(
   return _cached_encoder_for_CreateArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CreateArgument */
 
 /* eslint-enable */

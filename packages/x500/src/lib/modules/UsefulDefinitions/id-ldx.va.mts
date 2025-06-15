@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_x509 } from "../UsefulDefinitions/ldap-x509.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ldx */
 /**
  * @summary id_ldx
  * @description
@@ -15,6 +14,5 @@ import { ldap_x509 } from "../UsefulDefinitions/ldap-x509.va.mjs";
  * @constant
  */
 export const id_ldx: ID = ldap_x509;
-/* END_OF_SYMBOL_DEFINITION id_ldx */
 
 /* eslint-enable */

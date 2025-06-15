@@ -20,7 +20,7 @@ import {
     _decode_PointCapacity,
     _encode_PointCapacity,
 } from '../M3100ASN1TypeModule2/PointCapacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RequestedPointCapacity */
+
 /**
  * @summary RequestedPointCapacity
  * @description
@@ -37,13 +37,11 @@ import {
 export type RequestedPointCapacity =
     | { specificTPs: NWTPList } /* CHOICE_ALT_ROOT */
     | { capacity: PointCapacity } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RequestedPointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedPointCapacity */
+
 let _cached_decoder_for_RequestedPointCapacity: $.ASN1Decoder<RequestedPointCapacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedPointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestedPointCapacity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedPointCapacity
  * @function
@@ -69,13 +67,11 @@ export function _decode_RequestedPointCapacity(el: _Element) {
     }
     return _cached_decoder_for_RequestedPointCapacity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestedPointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedPointCapacity */
+
 let _cached_encoder_for_RequestedPointCapacity: $.ASN1Encoder<RequestedPointCapacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedPointCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestedPointCapacity */
+
 /**
  * @summary Encodes a(n) RequestedPointCapacity into an ASN.1 Element.
  * @function
@@ -109,6 +105,5 @@ export function _encode_RequestedPointCapacity(
     return _cached_encoder_for_RequestedPointCapacity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestedPointCapacity */
 
 /* eslint-enable */

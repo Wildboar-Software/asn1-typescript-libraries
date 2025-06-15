@@ -18,7 +18,7 @@ import {
     _encode_SessionType,
 } from "./SessionType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ErrorContent_content */
+
 /**
  * @summary ErrorContent_content
  * @description
@@ -89,9 +89,8 @@ export class ErrorContent_content {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorContent_content */
+
 /**
  * @summary The Leading Root Component Types of ErrorContent_content
  * @description
@@ -124,9 +123,8 @@ export const _root_component_type_list_1_spec_for_ErrorContent_content: $.Compon
     ),
     new $.ComponentSpec('error', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorContent_content */
+
 /**
  * @summary The Trailing Root Component Types of ErrorContent_content
  * @description
@@ -136,9 +134,8 @@ export const _root_component_type_list_1_spec_for_ErrorContent_content: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ErrorContent_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorContent_content */
+
 /**
  * @summary The Extension Addition Component Types of ErrorContent_content
  * @description
@@ -148,13 +145,11 @@ export const _root_component_type_list_2_spec_for_ErrorContent_content: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ErrorContent_content: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorContent_content */
+
 let _cached_decoder_for_ErrorContent_content: $.ASN1Decoder<ErrorContent_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ErrorContent_content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorContent_content
  * @function
@@ -210,13 +205,11 @@ export function _decode_ErrorContent_content(el: _Element) {
     }
     return _cached_decoder_for_ErrorContent_content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorContent_content */
+
 let _cached_encoder_for_ErrorContent_content: $.ASN1Encoder<ErrorContent_content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ErrorContent_content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ErrorContent_content */
+
 /**
  * @summary Encodes a(n) ErrorContent_content into an ASN.1 Element.
  * @function
@@ -260,6 +253,5 @@ export function _encode_ErrorContent_content(
     return _cached_encoder_for_ErrorContent_content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ErrorContent_content */
 
 /* eslint-enable */

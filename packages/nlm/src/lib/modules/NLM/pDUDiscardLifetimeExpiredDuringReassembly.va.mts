@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardLifetimeExpiredDuringReassembly */
+
 /**
  * @summary pDUDiscardLifetimeExpiredDuringReassembly
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardLifetimeExpiredDuringReassembly: OBJECT_IDENTIFIER = new 
     [/* lifetimeExpiredDuringReassembly */ 161],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardLifetimeExpiredDuringReassembly */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_CertPolicyId,
     _encode_CertPolicyId,
 } from "../AttributeCertificateDefinitions/CertPolicyId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AcceptableCertPoliciesSyntax */
 /**
  * @summary AcceptableCertPoliciesSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AcceptableCertPoliciesSyntax = CertPolicyId[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AcceptableCertPoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptableCertPoliciesSyntax */
 let _cached_decoder_for_AcceptableCertPoliciesSyntax: $.ASN1Decoder<AcceptableCertPoliciesSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptableCertPoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AcceptableCertPoliciesSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) AcceptableCertPoliciesSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_AcceptableCertPoliciesSyntax(el: _Element) {
     }
     return _cached_decoder_for_AcceptableCertPoliciesSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AcceptableCertPoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptableCertPoliciesSyntax */
 let _cached_encoder_for_AcceptableCertPoliciesSyntax: $.ASN1Encoder<AcceptableCertPoliciesSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptableCertPoliciesSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AcceptableCertPoliciesSyntax */
 /**
  * @summary Encodes a(n) AcceptableCertPoliciesSyntax into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_AcceptableCertPoliciesSyntax(
     return _cached_encoder_for_AcceptableCertPoliciesSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AcceptableCertPoliciesSyntax */
 
 /* eslint-enable */

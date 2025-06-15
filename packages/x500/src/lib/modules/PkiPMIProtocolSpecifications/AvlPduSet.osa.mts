@@ -16,7 +16,6 @@ import { rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/rejectCAsubsc
 import { replaceAvlReq } from "../PkiPMIProtocolSpecifications/replaceAvlReq.oa.mjs";
 import { replaceAvlRsp } from "../PkiPMIProtocolSpecifications/replaceAvlRsp.oa.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION AvlPduSet */
 /**
  * @summary AvlPduSet
  * @description
@@ -66,6 +65,5 @@ export const AvlPduSet: WRAPPED_PDU[] = [
     certReplaceRsp,
     rejectCAsubscribe,
 ];
-/* END_OF_SYMBOL_DEFINITION AvlPduSet */
 
 /* eslint-enable */

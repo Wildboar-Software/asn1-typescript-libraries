@@ -15,7 +15,7 @@ import {
     _decode_SNPAAddress,
     _encode_SNPAAddress,
 } from '../NLM/SNPAAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManualISSNPAAddress */
+
 /**
  * @summary ManualISSNPAAddress
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ManualISSNPAAddress = SNPAAddress[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ManualISSNPAAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManualISSNPAAddress */
+
 let _cached_decoder_for_ManualISSNPAAddress: $.ASN1Decoder<ManualISSNPAAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManualISSNPAAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManualISSNPAAddress */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManualISSNPAAddress
  * @function
@@ -48,13 +46,11 @@ export function _decode_ManualISSNPAAddress(el: _Element) {
     }
     return _cached_decoder_for_ManualISSNPAAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManualISSNPAAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManualISSNPAAddress */
+
 let _cached_encoder_for_ManualISSNPAAddress: $.ASN1Encoder<ManualISSNPAAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManualISSNPAAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManualISSNPAAddress */
+
 /**
  * @summary Encodes a(n) ManualISSNPAAddress into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ManualISSNPAAddress(
     return _cached_encoder_for_ManualISSNPAAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManualISSNPAAddress */
 
 /* eslint-enable */

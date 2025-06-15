@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttCertValidityPeriod */
 /**
  * @summary AttCertValidityPeriod
  * @description
@@ -72,9 +71,7 @@ export class AttCertValidityPeriod {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttCertValidityPeriod */
 /**
  * @summary The Leading Root Component Types of AttCertValidityPeriod
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_AttCertValidityPeriod: $.Compo
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertValidityPeriod */
 /**
  * @summary The Trailing Root Component Types of AttCertValidityPeriod
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_AttCertValidityPeriod: $.Compo
  */
 export const _root_component_type_list_2_spec_for_AttCertValidityPeriod: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertValidityPeriod */
 /**
  * @summary The Extension Addition Component Types of AttCertValidityPeriod
  * @description
@@ -126,12 +119,8 @@ export const _root_component_type_list_2_spec_for_AttCertValidityPeriod: $.Compo
  */
 export const _extension_additions_list_spec_for_AttCertValidityPeriod: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertValidityPeriod */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttCertValidityPeriod */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttCertValidityPeriod
  * @function
@@ -159,12 +148,8 @@ export function _decode_AttCertValidityPeriod(el: _Element) {
         sequence.slice(2)
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertValidityPeriod */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertValidityPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttCertValidityPeriod */
 /**
  * @summary Encodes a(n) AttCertValidityPeriod into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ export function _encode_AttCertValidityPeriod(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttCertValidityPeriod */
 
 /* eslint-enable */

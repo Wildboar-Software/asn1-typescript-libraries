@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION abandoned */
 /**
  * @summary abandoned
  * @description
@@ -43,6 +42,5 @@ export const abandoned: ERROR<OPTIONALLY_PROTECTED<AbandonedData>> = {
     "&errorCode": id_errcode_abandoned /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ParameterType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION abandoned */
 
 /* eslint-enable */

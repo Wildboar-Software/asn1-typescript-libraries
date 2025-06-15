@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ComponentDataElementSeparator */
 /**
  * @summary ComponentDataElementSeparator
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ComponentDataElementSeparator = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION ComponentDataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentDataElementSeparator */
 let _cached_decoder_for_ComponentDataElementSeparator: $.ASN1Decoder<ComponentDataElementSeparator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComponentDataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComponentDataElementSeparator */
 /**
  * @summary Decodes an ASN.1 element into a(n) ComponentDataElementSeparator
  * @function
@@ -44,13 +39,9 @@ export function _decode_ComponentDataElementSeparator(el: _Element) {
     }
     return _cached_decoder_for_ComponentDataElementSeparator(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComponentDataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentDataElementSeparator */
 let _cached_encoder_for_ComponentDataElementSeparator: $.ASN1Encoder<ComponentDataElementSeparator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComponentDataElementSeparator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComponentDataElementSeparator */
 /**
  * @summary Encodes a(n) ComponentDataElementSeparator into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_ComponentDataElementSeparator(
     return _cached_encoder_for_ComponentDataElementSeparator(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComponentDataElementSeparator */
 
 /* eslint-enable */

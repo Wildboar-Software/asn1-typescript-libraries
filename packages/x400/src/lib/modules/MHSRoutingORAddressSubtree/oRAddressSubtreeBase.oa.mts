@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { id_oc_oraddress_subtree_base } from '../MHSRoutingObjectIdentifiers/id-oc-oraddress-subtree-base.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRAddressSubtreeBase */
 /**
  * @summary oRAddressSubtreeBase
  * @description
@@ -48,6 +47,5 @@ export const oRAddressSubtreeBase: OBJECT_CLASS = {
     '&MandatoryAttributes': [commonName] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_oraddress_subtree_base /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRAddressSubtreeBase */
 
 /* eslint-enable */

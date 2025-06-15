@@ -19,7 +19,6 @@ import {
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultSequenceOfDays */
 /**
  * @summary defaultSequenceOfDays
  * @description
@@ -35,6 +34,5 @@ import {
 export const defaultSequenceOfDays: SequenceOfDays = [
     { intervalsOfDayWps: defaultIntervalsOfDayWps },
 ];
-/* END_OF_SYMBOL_DEFINITION defaultSequenceOfDays */
 
 /* eslint-enable */

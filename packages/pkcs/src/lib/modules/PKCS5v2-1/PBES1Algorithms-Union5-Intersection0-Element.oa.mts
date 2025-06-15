@@ -6,7 +6,7 @@ import {
     _encode_PBEParameter,
 } from "../PKCS5v2-1/PBEParameter.ta.mjs";
 import { pbeWithSHA1AndRC2_CBC } from "../PKCS5v2-1/pbeWithSHA1AndRC2-CBC.va.mjs";
-/* START_OF_SYMBOL_DEFINITION PBES1Algorithms_Union5_Intersection0_Element */
+
 /**
  * @summary PBES1Algorithms_Union5_Intersection0_Element
  * @description
@@ -32,6 +32,5 @@ export const PBES1Algorithms_Union5_Intersection0_Element: ALGORITHM_IDENTIFIER<
     "&id": pbeWithSHA1AndRC2_CBC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION PBES1Algorithms_Union5_Intersection0_Element */
 
 /* eslint-enable */

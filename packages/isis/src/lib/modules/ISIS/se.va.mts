@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { sseoi } from '../ISIS/sseoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION se */
 /**
  * @summary se
  * @description
@@ -28,6 +27,5 @@ export const se: OBJECT_IDENTIFIER = new _OID(
   [/* specificProblems */ 3],
   sseoi
 );
-/* END_OF_SYMBOL_DEFINITION se */
 
 /* eslint-enable */

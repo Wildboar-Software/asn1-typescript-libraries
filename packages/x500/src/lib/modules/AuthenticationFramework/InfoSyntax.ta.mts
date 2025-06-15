@@ -11,7 +11,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION InfoSyntax */
 /**
  * @summary InfoSyntax
  * @description
@@ -32,13 +31,9 @@ export type InfoSyntax =
     | { content: UnboundedDirectoryString } /* CHOICE_ALT_ROOT */
     | { pointer: InfoSyntax_pointer } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION InfoSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InfoSyntax */
 let _cached_decoder_for_InfoSyntax: $.ASN1Decoder<InfoSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InfoSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InfoSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) InfoSyntax
  * @function
@@ -60,13 +55,9 @@ export function _decode_InfoSyntax(el: _Element) {
     }
     return _cached_decoder_for_InfoSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InfoSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InfoSyntax */
 let _cached_encoder_for_InfoSyntax: $.ASN1Encoder<InfoSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InfoSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InfoSyntax */
 /**
  * @summary Encodes a(n) InfoSyntax into an ASN.1 Element.
  * @function
@@ -90,6 +81,5 @@ export function _encode_InfoSyntax(
     return _cached_encoder_for_InfoSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InfoSyntax */
 
 /* eslint-enable */

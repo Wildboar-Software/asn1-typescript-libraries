@@ -14,7 +14,6 @@ import {
     _decode_DefaultIndex,
     _encode_DefaultIndex,
 } from '../Schedulerev1-ASN1Module/DefaultIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultDefaultIndex */
 /**
  * @summary defaultDefaultIndex
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const defaultDefaultIndex: DefaultIndex = 0;
-/* END_OF_SYMBOL_DEFINITION defaultDefaultIndex */
 
 /* eslint-enable */

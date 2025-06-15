@@ -20,7 +20,6 @@ import {
   _decode_Default_Context_List,
   _encode_Default_Context_List,
 } from '../ACSE-1/Default-Context-List.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Syntactic_context_list */
 /**
  * @summary Syntactic_context_list
  * @description
@@ -37,13 +36,9 @@ import {
 export type Syntactic_context_list =
   | { context_list: Context_list } /* CHOICE_ALT_ROOT */
   | { default_contact_list: Default_Context_List } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Syntactic_context_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Syntactic_context_list */
 let _cached_decoder_for_Syntactic_context_list: $.ASN1Decoder<Syntactic_context_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Syntactic_context_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Syntactic_context_list */
 /**
  * @summary Decodes an ASN.1 element into a(n) Syntactic_context_list
  * @function
@@ -69,13 +64,9 @@ export function _decode_Syntactic_context_list(el: _Element) {
   }
   return _cached_decoder_for_Syntactic_context_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Syntactic_context_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Syntactic_context_list */
 let _cached_encoder_for_Syntactic_context_list: $.ASN1Encoder<Syntactic_context_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Syntactic_context_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Syntactic_context_list */
 /**
  * @summary Encodes a(n) Syntactic_context_list into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_Syntactic_context_list(
   return _cached_encoder_for_Syntactic_context_list(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Syntactic_context_list */
 
 /* eslint-enable */

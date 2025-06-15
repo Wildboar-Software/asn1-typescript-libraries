@@ -25,7 +25,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DLSubmitPermission */
 /**
  * @summary DLSubmitPermission
  * @description
@@ -46,13 +45,9 @@ export type DLSubmitPermission =
     | { member_of_dl: ORName } /* CHOICE_ALT_ROOT */
     | { pattern_match: ORNamePattern } /* CHOICE_ALT_ROOT */
     | { member_of_group: Name } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DLSubmitPermission */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DLSubmitPermission */
 let _cached_decoder_for_DLSubmitPermission: $.ASN1Decoder<DLSubmitPermission> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DLSubmitPermission */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DLSubmitPermission */
 /**
  * @summary Decodes an ASN.1 element into a(n) DLSubmitPermission
  * @function
@@ -86,13 +81,9 @@ export function _decode_DLSubmitPermission(el: _Element) {
     }
     return _cached_decoder_for_DLSubmitPermission(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DLSubmitPermission */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DLSubmitPermission */
 let _cached_encoder_for_DLSubmitPermission: $.ASN1Encoder<DLSubmitPermission> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DLSubmitPermission */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DLSubmitPermission */
 /**
  * @summary Encodes a(n) DLSubmitPermission into an ASN.1 Element.
  * @function
@@ -138,6 +129,5 @@ export function _encode_DLSubmitPermission(
     return _cached_encoder_for_DLSubmitPermission(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DLSubmitPermission */
 
 /* eslint-enable */

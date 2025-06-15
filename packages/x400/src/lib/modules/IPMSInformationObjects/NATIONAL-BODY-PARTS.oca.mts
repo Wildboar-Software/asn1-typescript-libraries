@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NATIONAL_BODY_PARTS */
 /**
  * @summary NATIONAL_BODY_PARTS
  * @description
@@ -59,6 +58,5 @@ export interface NATIONAL_BODY_PARTS<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION NATIONAL_BODY_PARTS */
 
 /* eslint-enable */

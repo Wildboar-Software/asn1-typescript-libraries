@@ -40,7 +40,6 @@ import {
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertReply */
 /**
  * @summary CertReply
  * @description
@@ -161,9 +160,7 @@ export class CertReply {
 
   public static _enum_for_replyStatus = _enum_for_ReplyStatus;
 }
-/* END_OF_SYMBOL_DEFINITION CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReply */
 /**
  * @summary The Leading Root Component Types of CertReply
  * @description
@@ -224,9 +221,7 @@ export const _root_component_type_list_1_spec_for_CertReply: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReply */
 /**
  * @summary The Trailing Root Component Types of CertReply
  * @description
@@ -236,9 +231,7 @@ export const _root_component_type_list_1_spec_for_CertReply: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReply */
 /**
  * @summary The Extension Addition Component Types of CertReply
  * @description
@@ -248,13 +241,9 @@ export const _root_component_type_list_2_spec_for_CertReply: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_CertReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReply */
 let _cached_decoder_for_CertReply: $.ASN1Decoder<CertReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReply */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReply
  * @function
@@ -333,13 +322,9 @@ export function _decode_CertReply(el: _Element) {
   }
   return _cached_decoder_for_CertReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReply */
 let _cached_encoder_for_CertReply: $.ASN1Encoder<CertReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReply */
 /**
  * @summary Encodes a(n) CertReply into an ASN.1 Element.
  * @function
@@ -411,6 +396,5 @@ export function _encode_CertReply(
   return _cached_encoder_for_CertReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReply */
 
 /* eslint-enable */

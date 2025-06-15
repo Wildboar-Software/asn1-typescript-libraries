@@ -15,7 +15,7 @@ import {
   _decode_LDAPResult,
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SearchResultDone */
+
 /**
  * @summary SearchResultDone
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SearchResultDone = LDAPResult; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SearchResultDone */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultDone */
+
 let _cached_decoder_for_SearchResultDone: $.ASN1Decoder<SearchResultDone> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultDone */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchResultDone */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchResultDone
  * @function
@@ -48,13 +46,11 @@ export function _decode_SearchResultDone(el: _Element) {
   }
   return _cached_decoder_for_SearchResultDone(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchResultDone */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultDone */
+
 let _cached_encoder_for_SearchResultDone: $.ASN1Encoder<SearchResultDone> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultDone */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchResultDone */
+
 /**
  * @summary Encodes a(n) SearchResultDone into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_SearchResultDone(
   return _cached_encoder_for_SearchResultDone(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchResultDone */
 
 /* eslint-enable */

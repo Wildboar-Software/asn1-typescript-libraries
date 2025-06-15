@@ -17,7 +17,7 @@ import {
     _encode_EventTypeId,
 } from '../CMIP-1/EventTypeId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EventReply */
+
 /**
  * @summary EventReply
  * @description
@@ -67,9 +67,8 @@ export class EventReply {
     return new EventReply(_o.eventType, _o.eventReplyInfo);
   }
 }
-/* END_OF_SYMBOL_DEFINITION EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EventReply */
+
 /**
  * @summary The Leading Root Component Types of EventReply
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_EventReply: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EventReply */
+
 /**
  * @summary The Trailing Root Component Types of EventReply
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_EventReply: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EventReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EventReply */
+
 /**
  * @summary The Extension Addition Component Types of EventReply
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_EventReply: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_EventReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EventReply */
+
 let _cached_decoder_for_EventReply: $.ASN1Decoder<EventReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EventReply */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EventReply
  * @function
@@ -160,13 +155,11 @@ export function _decode_EventReply(el: _Element) {
   }
   return _cached_decoder_for_EventReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EventReply */
+
 let _cached_encoder_for_EventReply: $.ASN1Encoder<EventReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EventReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EventReply */
+
 /**
  * @summary Encodes a(n) EventReply into an ASN.1 Element.
  * @function
@@ -202,6 +195,5 @@ export function _encode_EventReply(
   return _cached_encoder_for_EventReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EventReply */
 
 /* eslint-enable */

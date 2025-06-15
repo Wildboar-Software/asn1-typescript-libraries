@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_swb } from '../SCVP-2009/id-swb.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_swb_pkc_all_cert_paths */
 /**
  * @summary id_swb_pkc_all_cert_paths
  * @description
@@ -28,6 +27,5 @@ export const id_swb_pkc_all_cert_paths: OBJECT_IDENTIFIER = new _OID(
   [12],
   id_swb
 );
-/* END_OF_SYMBOL_DEFINITION id_swb_pkc_all_cert_paths */
 
 /* eslint-enable */

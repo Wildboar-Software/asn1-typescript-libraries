@@ -50,7 +50,6 @@ import { local_postal_attributes } from '../MTSAbstractService/local-postal-attr
 import { universal_local_postal_attributes } from '../MTSAbstractService/universal-local-postal-attributes.oa.mjs';
 import { extended_network_address } from '../MTSAbstractService/extended-network-address.oa.mjs';
 import { terminal_type } from '../MTSAbstractService/terminal-type.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtensionAttributeTable */
 /**
  * @summary ExtensionAttributeTable
  * @description
@@ -128,6 +127,5 @@ export const ExtensionAttributeTable: EXTENSION_ATTRIBUTE[] = [
     extended_network_address,
     terminal_type,
 ];
-/* END_OF_SYMBOL_DEFINITION ExtensionAttributeTable */
 
 /* eslint-enable */

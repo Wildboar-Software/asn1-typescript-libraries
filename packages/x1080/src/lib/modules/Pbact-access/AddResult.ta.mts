@@ -16,7 +16,7 @@ import {
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddResult */
+
 /**
  * @summary AddResult
  * @description
@@ -34,13 +34,11 @@ export type AddResult =
     | { success: NULL } /* CHOICE_ALT_ROOT */
     | { failure: AccessdErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AddResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddResult */
+
 let _cached_decoder_for_AddResult: $.ASN1Decoder<AddResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddResult
  * @function
@@ -62,13 +60,11 @@ export function _decode_AddResult(el: _Element) {
     }
     return _cached_decoder_for_AddResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddResult */
+
 let _cached_encoder_for_AddResult: $.ASN1Encoder<AddResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddResult */
+
 /**
  * @summary Encodes a(n) AddResult into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_AddResult(
     return _cached_encoder_for_AddResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddResult */
 
 /* eslint-enable */

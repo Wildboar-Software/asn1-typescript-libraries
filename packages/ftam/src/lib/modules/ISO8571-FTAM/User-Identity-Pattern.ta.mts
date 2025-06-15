@@ -15,7 +15,7 @@ import {
   _decode_String_Pattern,
   _encode_String_Pattern,
 } from '../ISO8571-FTAM/String-Pattern.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION User_Identity_Pattern */
+
 /**
  * @summary User_Identity_Pattern
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type User_Identity_Pattern = String_Pattern; // DefinedType
-/* END_OF_SYMBOL_DEFINITION User_Identity_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity_Pattern */
+
 let _cached_decoder_for_User_Identity_Pattern: $.ASN1Decoder<User_Identity_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_User_Identity_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_User_Identity_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) User_Identity_Pattern
  * @function
@@ -46,13 +44,11 @@ export function _decode_User_Identity_Pattern(el: _Element) {
   }
   return _cached_decoder_for_User_Identity_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_User_Identity_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity_Pattern */
+
 let _cached_encoder_for_User_Identity_Pattern: $.ASN1Encoder<User_Identity_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_User_Identity_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_User_Identity_Pattern */
+
 /**
  * @summary Encodes a(n) User_Identity_Pattern into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_User_Identity_Pattern(
   return _cached_encoder_for_User_Identity_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_User_Identity_Pattern */
 
 /* eslint-enable */

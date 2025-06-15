@@ -22,7 +22,7 @@ import {
   _encode_Extensions,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RevDetails */
+
 /**
  * @summary RevDetails
  * @description
@@ -77,9 +77,8 @@ export class RevDetails {
     return new RevDetails(_o.certDetails, _o.crlEntryDetails);
   }
 }
-/* END_OF_SYMBOL_DEFINITION RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevDetails */
+
 /**
  * @summary The Leading Root Component Types of RevDetails
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_RevDetails: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevDetails */
+
 /**
  * @summary The Trailing Root Component Types of RevDetails
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_RevDetails: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RevDetails: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevDetails */
+
 /**
  * @summary The Extension Addition Component Types of RevDetails
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_RevDetails: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_RevDetails: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevDetails */
+
 let _cached_decoder_for_RevDetails: $.ASN1Decoder<RevDetails> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevDetails */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RevDetails
  * @function
@@ -174,13 +169,11 @@ export function _decode_RevDetails(el: _Element) {
   }
   return _cached_decoder_for_RevDetails(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevDetails */
+
 let _cached_encoder_for_RevDetails: $.ASN1Encoder<RevDetails> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevDetails */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevDetails */
+
 /**
  * @summary Encodes a(n) RevDetails into an ASN.1 Element.
  * @function
@@ -211,6 +204,5 @@ export function _encode_RevDetails(
   return _cached_encoder_for_RevDetails(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevDetails */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION modifyEntry */
 /**
  * @summary modifyEntry
  * @description
@@ -63,6 +62,5 @@ export const modifyEntry: OPERATION<ModifyEntryArgument, ModifyEntryResult> = {
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION modifyEntry */
 
 /* eslint-enable */

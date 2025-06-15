@@ -20,7 +20,6 @@ import {
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TypeOfDaysMaskWps_Item */
 /**
  * @summary TypeOfDaysMaskWps_Item
  * @description
@@ -67,9 +66,7 @@ export class TypeOfDaysMaskWps_Item {
         return new TypeOfDaysMaskWps_Item(_o.typeOfDay, _o.timesOfDay);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TypeOfDaysMaskWps_Item */
 /**
  * @summary The Leading Root Component Types of TypeOfDaysMaskWps_Item
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_TypeOfDaysMaskWps_Item: $.Comp
     ),
     new $.ComponentSpec('timesOfDay', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TypeOfDaysMaskWps_Item */
 /**
  * @summary The Trailing Root Component Types of TypeOfDaysMaskWps_Item
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_TypeOfDaysMaskWps_Item: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TypeOfDaysMaskWps_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TypeOfDaysMaskWps_Item */
 /**
  * @summary The Extension Addition Component Types of TypeOfDaysMaskWps_Item
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_TypeOfDaysMaskWps_Item: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_TypeOfDaysMaskWps_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfDaysMaskWps_Item */
 let _cached_decoder_for_TypeOfDaysMaskWps_Item: $.ASN1Decoder<TypeOfDaysMaskWps_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeOfDaysMaskWps_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeOfDaysMaskWps_Item
  * @function
@@ -149,13 +138,9 @@ export function _decode_TypeOfDaysMaskWps_Item(el: _Element) {
     }
     return _cached_decoder_for_TypeOfDaysMaskWps_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfDaysMaskWps_Item */
 let _cached_encoder_for_TypeOfDaysMaskWps_Item: $.ASN1Encoder<TypeOfDaysMaskWps_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfDaysMaskWps_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeOfDaysMaskWps_Item */
 /**
  * @summary Encodes a(n) TypeOfDaysMaskWps_Item into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ export function _encode_TypeOfDaysMaskWps_Item(
     return _cached_encoder_for_TypeOfDaysMaskWps_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeOfDaysMaskWps_Item */
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import {
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
 import { cancelFailed } from '../Remote-Operations-Useful-Definitions/cancelFailed.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION cancel */
+
 /**
  * @summary cancel
  * @description
@@ -67,6 +67,5 @@ export const cancel: OPERATION<InvokeId> = {
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cancel */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_TriggerResultInfo_resultType,
     _encode_TriggerResultInfo_resultType,
 } from '../CSModule/TriggerResultInfo-resultType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TriggerResultInfo */
 /**
  * @summary TriggerResultInfo
  * @description
@@ -73,9 +72,7 @@ export class TriggerResultInfo {
         return new TriggerResultInfo(_o.triggerId, _o.resultType);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TriggerResultInfo */
 /**
  * @summary The Leading Root Component Types of TriggerResultInfo
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_TriggerResultInfo: $.Component
     new $.ComponentSpec('triggerId', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('resultType', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TriggerResultInfo */
 /**
  * @summary The Trailing Root Component Types of TriggerResultInfo
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_TriggerResultInfo: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TriggerResultInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TriggerResultInfo */
 /**
  * @summary The Extension Addition Component Types of TriggerResultInfo
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_TriggerResultInfo: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_TriggerResultInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerResultInfo */
 let _cached_decoder_for_TriggerResultInfo: $.ASN1Decoder<TriggerResultInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TriggerResultInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TriggerResultInfo
  * @function
@@ -149,13 +138,9 @@ export function _decode_TriggerResultInfo(el: _Element) {
     }
     return _cached_decoder_for_TriggerResultInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerResultInfo */
 let _cached_encoder_for_TriggerResultInfo: $.ASN1Encoder<TriggerResultInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TriggerResultInfo */
 /**
  * @summary Encodes a(n) TriggerResultInfo into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ export function _encode_TriggerResultInfo(
     return _cached_encoder_for_TriggerResultInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TriggerResultInfo */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
 } from "../PKIXCRMF-2009/CertReq.ta.mjs";
 import { id_regInfo_certReq } from "../PKIXCRMF-2009/id-regInfo-certReq.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regInfo_certReq */
+
 /**
  * @summary regInfo_certReq
  * @description
@@ -33,6 +33,5 @@ export const regInfo_certReq: ATTRIBUTE<CertReq> = {
     "&id": id_regInfo_certReq /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regInfo_certReq */
 
 /* eslint-enable */

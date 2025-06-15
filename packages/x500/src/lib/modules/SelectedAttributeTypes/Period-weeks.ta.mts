@@ -6,7 +6,6 @@ import {
     _decode_Period_weeks_bitWeek,
     _encode_Period_weeks_bitWeek,
 } from "../SelectedAttributeTypes/Period-weeks-bitWeek.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Period_weeks */
 /**
  * @summary Period_weeks
  * @description
@@ -22,13 +21,9 @@ export type Period_weeks =
     | { intWeek: INTEGER[] } /* CHOICE_ALT_ROOT */
     | { bitWeek: Period_weeks_bitWeek } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Period_weeks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_weeks */
 let _cached_decoder_for_Period_weeks: $.ASN1Decoder<Period_weeks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Period_weeks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Period_weeks */
 /**
  * @summary Decodes an ASN.1 element into a(n) Period_weeks
  * @function
@@ -50,13 +45,9 @@ export function _decode_Period_weeks(el: _Element) {
     }
     return _cached_decoder_for_Period_weeks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Period_weeks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_weeks */
 let _cached_encoder_for_Period_weeks: $.ASN1Encoder<Period_weeks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Period_weeks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Period_weeks */
 /**
  * @summary Encodes a(n) Period_weeks into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_Period_weeks(
     return _cached_encoder_for_Period_weeks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Period_weeks */
 
 /* eslint-enable */

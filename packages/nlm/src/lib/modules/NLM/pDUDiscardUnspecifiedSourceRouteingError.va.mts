@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardUnspecifiedSourceRouteingError */
+
 /**
  * @summary pDUDiscardUnspecifiedSourceRouteingError
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardUnspecifiedSourceRouteingError: OBJECT_IDENTIFIER = new _
     [/* unspecifiedSourceRouteingError */ 144],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardUnspecifiedSourceRouteingError */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NotSupportedProbableCause */
+
 /**
  * @summary NotSupportedProbableCause
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type NotSupportedProbableCause = ProbableCause[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NotSupportedProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NotSupportedProbableCause */
+
 let _cached_decoder_for_NotSupportedProbableCause: $.ASN1Decoder<NotSupportedProbableCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NotSupportedProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NotSupportedProbableCause */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NotSupportedProbableCause
  * @function
@@ -48,13 +46,11 @@ export function _decode_NotSupportedProbableCause(el: _Element) {
     }
     return _cached_decoder_for_NotSupportedProbableCause(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NotSupportedProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NotSupportedProbableCause */
+
 let _cached_encoder_for_NotSupportedProbableCause: $.ASN1Encoder<NotSupportedProbableCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NotSupportedProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NotSupportedProbableCause */
+
 /**
  * @summary Encodes a(n) NotSupportedProbableCause into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_NotSupportedProbableCause(
     return _cached_encoder_for_NotSupportedProbableCause(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NotSupportedProbableCause */
 
 /* eslint-enable */

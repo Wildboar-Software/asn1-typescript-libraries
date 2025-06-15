@@ -11,7 +11,7 @@ import {
     _decode_CertBasedAuthenticationAttributes,
     _encode_CertBasedAuthenticationAttributes,
 } from "../PKCS-15/CertBasedAuthenticationAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ExternalAuthObjectAttributes */
+
 /**
  * @summary ExternalAuthObjectAttributes
  * @description
@@ -32,13 +32,11 @@ export type ExternalAuthObjectAttributes =
           certBasedAttributes: CertBasedAuthenticationAttributes;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ExternalAuthObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalAuthObjectAttributes */
+
 let _cached_decoder_for_ExternalAuthObjectAttributes: $.ASN1Decoder<ExternalAuthObjectAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExternalAuthObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExternalAuthObjectAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExternalAuthObjectAttributes
  * @function
@@ -64,13 +62,11 @@ export function _decode_ExternalAuthObjectAttributes(el: _Element) {
     }
     return _cached_decoder_for_ExternalAuthObjectAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExternalAuthObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalAuthObjectAttributes */
+
 let _cached_encoder_for_ExternalAuthObjectAttributes: $.ASN1Encoder<ExternalAuthObjectAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExternalAuthObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExternalAuthObjectAttributes */
+
 /**
  * @summary Encodes a(n) ExternalAuthObjectAttributes into an ASN.1 Element.
  * @function
@@ -99,6 +95,5 @@ export function _encode_ExternalAuthObjectAttributes(
     return _cached_encoder_for_ExternalAuthObjectAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExternalAuthObjectAttributes */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WaitingInterval */
 /**
  * @summary WaitingInterval
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type WaitingInterval = Timespec; // DefinedType
-/* END_OF_SYMBOL_DEFINITION WaitingInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WaitingInterval */
 let _cached_decoder_for_WaitingInterval: $.ASN1Decoder<WaitingInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WaitingInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WaitingInterval */
 /**
  * @summary Decodes an ASN.1 element into a(n) WaitingInterval
  * @function
@@ -46,13 +41,9 @@ export function _decode_WaitingInterval(el: _Element) {
     }
     return _cached_decoder_for_WaitingInterval(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WaitingInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WaitingInterval */
 let _cached_encoder_for_WaitingInterval: $.ASN1Encoder<WaitingInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WaitingInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WaitingInterval */
 /**
  * @summary Encodes a(n) WaitingInterval into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_WaitingInterval(
     return _cached_encoder_for_WaitingInterval(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WaitingInterval */
 
 /* eslint-enable */

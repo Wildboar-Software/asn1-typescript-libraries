@@ -6,7 +6,6 @@ import {
     _decode_IntEmail,
     _encode_IntEmail,
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION intEmailString */
 /**
  * @summary intEmailString
  * @description
@@ -36,6 +35,5 @@ export const intEmailString: SYNTAX_NAME<IntEmail> = {
     "&id": id_asx_intEmailString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION intEmailString */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../ANSI-X9-62/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECPKAlgorithm */
 /**
  * @summary ECPKAlgorithm
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ECPKAlgorithm = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ECPKAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPKAlgorithm */
 let _cached_decoder_for_ECPKAlgorithm: $.ASN1Decoder<ECPKAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPKAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECPKAlgorithm */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECPKAlgorithm
  * @function
@@ -37,13 +32,9 @@ export function _decode_ECPKAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_ECPKAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECPKAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPKAlgorithm */
 let _cached_encoder_for_ECPKAlgorithm: $.ASN1Encoder<ECPKAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPKAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECPKAlgorithm */
 /**
  * @summary Encodes a(n) ECPKAlgorithm into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_ECPKAlgorithm(
     return _cached_encoder_for_ECPKAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECPKAlgorithm */
 
 /* eslint-enable */

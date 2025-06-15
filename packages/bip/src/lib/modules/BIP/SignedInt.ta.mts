@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SignedInt */
+
 /**
  * @summary SignedInt
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SignedInt = INTEGER;
-/* END_OF_SYMBOL_DEFINITION SignedInt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedInt */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedInt */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedInt */
+
+
 export const _decode_SignedInt = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_SignedInt */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedInt */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedInt */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedInt */
+
+
 export const _encode_SignedInt = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedInt */
 
 /* eslint-enable */

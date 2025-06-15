@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EDIM_EXTENSION */
 /**
  * @summary EDIM_EXTENSION
  * @description
@@ -77,6 +76,5 @@ export interface EDIM_EXTENSION<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION EDIM_EXTENSION */
 
 /* eslint-enable */

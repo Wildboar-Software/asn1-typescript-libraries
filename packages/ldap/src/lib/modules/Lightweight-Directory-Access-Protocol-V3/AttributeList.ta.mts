@@ -15,7 +15,7 @@ import {
   _decode_Attribute,
   _encode_Attribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeList */
+
 /**
  * @summary AttributeList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AttributeList = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeList */
+
 let _cached_decoder_for_AttributeList: $.ASN1Decoder<AttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AttributeList(el: _Element) {
   }
   return _cached_decoder_for_AttributeList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeList */
+
 let _cached_encoder_for_AttributeList: $.ASN1Encoder<AttributeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeList */
+
 /**
  * @summary Encodes a(n) AttributeList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AttributeList(
   return _cached_encoder_for_AttributeList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeList */
 
 /* eslint-enable */

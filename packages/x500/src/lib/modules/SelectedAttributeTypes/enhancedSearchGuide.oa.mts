@@ -10,7 +10,6 @@ import {
     _encode_EnhancedGuide,
 } from "../SelectedAttributeTypes/EnhancedGuide.ta.mjs";
 import { id_at_enhancedSearchGuide } from "../SelectedAttributeTypes/id-at-enhancedSearchGuide.va.mjs";
-/* START_OF_SYMBOL_DEFINITION enhancedSearchGuide */
 /**
  * @summary enhancedSearchGuide
  * @description
@@ -48,6 +47,5 @@ export const enhancedSearchGuide: ATTRIBUTE<EnhancedGuide> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION enhancedSearchGuide */
 
 /* eslint-enable */

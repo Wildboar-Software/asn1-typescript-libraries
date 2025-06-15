@@ -15,7 +15,6 @@ import {
     _decode_OsiRes_result,
     _encode_OsiRes_result,
 } from "../OSIProtocolSpecification/OsiRes-result.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiRes */
 /**
  * @summary OsiRes
  * @description
@@ -66,9 +65,7 @@ export class OsiRes {
         return new OsiRes(_o.invokeId, _o.result);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiRes */
 /**
  * @summary The Leading Root Component Types of OsiRes
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_OsiRes: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiRes */
 /**
  * @summary The Trailing Root Component Types of OsiRes
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_OsiRes: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiRes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiRes */
 /**
  * @summary The Extension Addition Component Types of OsiRes
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_OsiRes: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiRes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRes */
 let _cached_decoder_for_OsiRes: $.ASN1Decoder<OsiRes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiRes */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiRes
  * @function
@@ -149,13 +138,9 @@ export function _decode_OsiRes(el: _Element) {
     }
     return _cached_decoder_for_OsiRes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRes */
 let _cached_encoder_for_OsiRes: $.ASN1Encoder<OsiRes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiRes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiRes */
 /**
  * @summary Encodes a(n) OsiRes into an ASN.1 Element.
  * @function
@@ -195,6 +180,5 @@ export function _encode_OsiRes(value: OsiRes, elGetter: $.ASN1Encoder<OsiRes>) {
     return _cached_encoder_for_OsiRes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiRes */
 
 /* eslint-enable */

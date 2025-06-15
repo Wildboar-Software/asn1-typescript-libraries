@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_methods } from '../Telebiometrics/id-methods.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_methods_culturology */
+
 /**
  * @summary id_methods_culturology
  * @description
@@ -28,6 +28,5 @@ export const id_methods_culturology: OBJECT_IDENTIFIER = new _OID(
     [/* culturology */ 4],
     id_methods
 );
-/* END_OF_SYMBOL_DEFINITION id_methods_culturology */
 
 /* eslint-enable */

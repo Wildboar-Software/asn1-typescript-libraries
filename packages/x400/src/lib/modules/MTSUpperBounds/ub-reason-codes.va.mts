@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_reason_codes */
 /**
  * @summary ub_reason_codes
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_reason_codes: INTEGER = 32767;
-/* END_OF_SYMBOL_DEFINITION ub_reason_codes */
 
 /* eslint-enable */

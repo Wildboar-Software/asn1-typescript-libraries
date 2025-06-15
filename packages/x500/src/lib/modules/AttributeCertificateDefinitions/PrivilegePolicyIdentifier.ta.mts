@@ -15,7 +15,6 @@ import {
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrivilegePolicyIdentifier */
 /**
  * @summary PrivilegePolicyIdentifier
  * @description
@@ -79,9 +78,7 @@ export class PrivilegePolicyIdentifier {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivilegePolicyIdentifier */
 /**
  * @summary The Leading Root Component Types of PrivilegePolicyIdentifier
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_PrivilegePolicyIdentifier: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivilegePolicyIdentifier */
 /**
  * @summary The Trailing Root Component Types of PrivilegePolicyIdentifier
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_PrivilegePolicyIdentifier: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PrivilegePolicyIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivilegePolicyIdentifier */
 /**
  * @summary The Extension Addition Component Types of PrivilegePolicyIdentifier
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_PrivilegePolicyIdentifier: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_PrivilegePolicyIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivilegePolicyIdentifier */
 let _cached_decoder_for_PrivilegePolicyIdentifier: $.ASN1Decoder<PrivilegePolicyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivilegePolicyIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivilegePolicyIdentifier
  * @function
@@ -171,13 +160,9 @@ export function _decode_PrivilegePolicyIdentifier(el: _Element) {
     }
     return _cached_decoder_for_PrivilegePolicyIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivilegePolicyIdentifier */
 let _cached_encoder_for_PrivilegePolicyIdentifier: $.ASN1Encoder<PrivilegePolicyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivilegePolicyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivilegePolicyIdentifier */
 /**
  * @summary Encodes a(n) PrivilegePolicyIdentifier into an ASN.1 Element.
  * @function
@@ -217,6 +202,5 @@ export function _encode_PrivilegePolicyIdentifier(
     return _cached_encoder_for_PrivilegePolicyIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivilegePolicyIdentifier */
 
 /* eslint-enable */

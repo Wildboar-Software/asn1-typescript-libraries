@@ -16,7 +16,6 @@ import { ms_cancel_deferred_delivery } from '../MSAbstractService/ms-cancel-defe
 import { ms_submission_control } from '../MSAbstractService/ms-submission-control.oa.mjs';
 import { id_pt_ms_submission } from '../MSObjectIdentifiers/id-pt-ms-submission.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_submission */
 /**
  * @summary ms_submission
  * @description
@@ -50,6 +49,5 @@ export const ms_submission: PORT = {
     '&Consumer': [ms_submission_control] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_ms_submission /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_submission */
 
 /* eslint-enable */

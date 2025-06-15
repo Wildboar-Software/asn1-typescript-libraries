@@ -36,7 +36,6 @@ import {
     _decode_Application_Entity_Title,
     _encode_Application_Entity_Title,
 } from '../IPMSFileTransferBodyPartType/Application-Entity-Title.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Access_Control_Element */
 /**
  * @summary Access_Control_Element
  * @description
@@ -113,9 +112,7 @@ export class Access_Control_Element {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Access_Control_Element */
 /**
  * @summary The Leading Root Component Types of Access_Control_Element
  * @description
@@ -161,9 +158,7 @@ export const _root_component_type_list_1_spec_for_Access_Control_Element: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Access_Control_Element */
 /**
  * @summary The Trailing Root Component Types of Access_Control_Element
  * @description
@@ -173,9 +168,7 @@ export const _root_component_type_list_1_spec_for_Access_Control_Element: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Access_Control_Element: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Access_Control_Element */
 /**
  * @summary The Extension Addition Component Types of Access_Control_Element
  * @description
@@ -185,13 +178,9 @@ export const _root_component_type_list_2_spec_for_Access_Control_Element: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_Access_Control_Element: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Control_Element */
 let _cached_decoder_for_Access_Control_Element: $.ASN1Decoder<Access_Control_Element> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Access_Control_Element */
 /**
  * @summary Decodes an ASN.1 element into a(n) Access_Control_Element
  * @function
@@ -258,13 +247,9 @@ export function _decode_Access_Control_Element(el: _Element) {
     }
     return _cached_decoder_for_Access_Control_Element(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Control_Element */
 let _cached_encoder_for_Access_Control_Element: $.ASN1Encoder<Access_Control_Element> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Control_Element */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Access_Control_Element */
 /**
  * @summary Encodes a(n) Access_Control_Element into an ASN.1 Element.
  * @function
@@ -329,6 +314,5 @@ export function _encode_Access_Control_Element(
     return _cached_encoder_for_Access_Control_Element(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Access_Control_Element */
 
 /* eslint-enable */

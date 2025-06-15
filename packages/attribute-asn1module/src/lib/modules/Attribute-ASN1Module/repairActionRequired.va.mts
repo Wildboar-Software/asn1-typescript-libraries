@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepairAction.va.mjs";
-/* START_OF_SYMBOL_DEFINITION repairActionRequired */
 /**
  * @summary repairActionRequired
  * @description
@@ -28,6 +27,5 @@ export
 const repairActionRequired: OBJECT_IDENTIFIER = new _OID([
     2,
 ], arfProposedRepairAction);
-/* END_OF_SYMBOL_DEFINITION repairActionRequired */
 
 /* eslint-enable */

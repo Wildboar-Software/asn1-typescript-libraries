@@ -20,7 +20,7 @@ import {
     _decode_ResourceProblem,
     _encode_ResourceProblem,
 } from '../ASN1DefinedTypesModule/ResourceProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Failed */
+
 /**
  * @summary Failed
  * @description
@@ -37,13 +37,11 @@ import {
 export type Failed =
     | { logicalProblem: LogicalProblem } /* CHOICE_ALT_ROOT */
     | { resourceProblem: ResourceProblem } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Failed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Failed */
+
 let _cached_decoder_for_Failed: $.ASN1Decoder<Failed> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Failed */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Failed */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Failed
  * @function
@@ -60,13 +58,11 @@ export function _decode_Failed(el: _Element) {
     }
     return _cached_decoder_for_Failed(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Failed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Failed */
+
 let _cached_encoder_for_Failed: $.ASN1Encoder<Failed> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Failed */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Failed */
+
 /**
  * @summary Encodes a(n) Failed into an ASN.1 Element.
  * @function
@@ -87,6 +83,5 @@ export function _encode_Failed(value: Failed, elGetter: $.ASN1Encoder<Failed>) {
     return _cached_encoder_for_Failed(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Failed */
 
 /* eslint-enable */

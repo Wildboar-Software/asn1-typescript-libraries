@@ -14,7 +14,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ReplyCheck */
 /**
  * @summary ReplyCheck
  * @description
@@ -74,9 +73,7 @@ export class ReplyCheck {
     return 0;
   }
 }
-/* END_OF_SYMBOL_DEFINITION ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplyCheck */
 /**
  * @summary The Leading Root Component Types of ReplyCheck
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_ReplyCheck: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplyCheck */
 /**
  * @summary The Trailing Root Component Types of ReplyCheck
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_ReplyCheck: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReplyCheck: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplyCheck */
 /**
  * @summary The Extension Addition Component Types of ReplyCheck
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_ReplyCheck: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ReplyCheck: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyCheck */
 let _cached_decoder_for_ReplyCheck: $.ASN1Decoder<ReplyCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyCheck */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyCheck
  * @function
@@ -168,13 +157,9 @@ export function _decode_ReplyCheck(el: _Element) {
   }
   return _cached_decoder_for_ReplyCheck(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyCheck */
 let _cached_encoder_for_ReplyCheck: $.ASN1Encoder<ReplyCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyCheck */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyCheck */
 /**
  * @summary Encodes a(n) ReplyCheck into an ASN.1 Element.
  * @function
@@ -206,6 +191,5 @@ export function _encode_ReplyCheck(
   return _cached_encoder_for_ReplyCheck(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyCheck */
 
 /* eslint-enable */

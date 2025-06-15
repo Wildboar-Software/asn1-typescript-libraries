@@ -23,7 +23,6 @@ import {
     _encode_OriginatorRequestedAlternateRecipient,
 } from '../MTAAbstractService/OriginatorRequestedAlternateRecipient.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originator_requested_alternate_recipient */
 /**
  * @summary originator_requested_alternate_recipient
  * @description
@@ -57,6 +56,5 @@ export const originator_requested_alternate_recipient: EXTENSION<OriginatorReque
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originator_requested_alternate_recipient */
 
 /* eslint-enable */

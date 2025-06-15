@@ -22,7 +22,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TerminateValidationArgument */
 /**
  * @summary TerminateValidationArgument
  * @description
@@ -85,9 +84,7 @@ export class TerminateValidationArgument {
 
     public static _enum_for_terminateValidationInfo = _enum_for_TerminateValidationInfo;
 }
-/* END_OF_SYMBOL_DEFINITION TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TerminateValidationArgument */
 /**
  * @summary The Leading Root Component Types of TerminateValidationArgument
  * @description
@@ -112,9 +109,7 @@ export const _root_component_type_list_1_spec_for_TerminateValidationArgument: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TerminateValidationArgument */
 /**
  * @summary The Trailing Root Component Types of TerminateValidationArgument
  * @description
@@ -124,9 +119,7 @@ export const _root_component_type_list_1_spec_for_TerminateValidationArgument: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TerminateValidationArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TerminateValidationArgument */
 /**
  * @summary The Extension Addition Component Types of TerminateValidationArgument
  * @description
@@ -136,13 +129,9 @@ export const _root_component_type_list_2_spec_for_TerminateValidationArgument: $
  * @constant
  */
 export const _extension_additions_list_spec_for_TerminateValidationArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateValidationArgument */
 let _cached_decoder_for_TerminateValidationArgument: $.ASN1Decoder<TerminateValidationArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminateValidationArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminateValidationArgument
  * @function
@@ -191,13 +180,9 @@ export function _decode_TerminateValidationArgument(el: _Element) {
     }
     return _cached_decoder_for_TerminateValidationArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateValidationArgument */
 let _cached_encoder_for_TerminateValidationArgument: $.ASN1Encoder<TerminateValidationArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateValidationArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminateValidationArgument */
 /**
  * @summary Encodes a(n) TerminateValidationArgument into an ASN.1 Element.
  * @function
@@ -242,6 +227,5 @@ export function _encode_TerminateValidationArgument(
     return _cached_encoder_for_TerminateValidationArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminateValidationArgument */
 
 /* eslint-enable */

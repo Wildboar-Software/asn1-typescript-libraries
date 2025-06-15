@@ -16,7 +16,6 @@ import {
 } from '../SCVP-2009/RevInfoWantBack.ta.mjs';
 import { id_swb_aa_revocation_info } from '../SCVP-2009/id-swb-aa-revocation-info.va.mjs';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION swb_aa_revocation_info */
 /**
  * @summary swb_aa_revocation_info
  * @description
@@ -42,6 +41,5 @@ export const swb_aa_revocation_info: WANT_BACK<RevInfoWantBack> = {
   '&id': id_swb_aa_revocation_info /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION swb_aa_revocation_info */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION serviceNotSupported */
+
 /**
  * @summary serviceNotSupported
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const serviceNotSupported: GeneralErrorCause = { localValue: 4 };
-/* END_OF_SYMBOL_DEFINITION serviceNotSupported */
 
 /* eslint-enable */

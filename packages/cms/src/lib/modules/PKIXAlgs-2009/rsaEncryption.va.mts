@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION rsaEncryption */
+
 /**
  * @summary rsaEncryption
  * @description
@@ -24,6 +24,5 @@ export const rsaEncryption: OBJECT_IDENTIFIER = new _OID([
     /* pkcs-1 */ 1,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION rsaEncryption */
 
 /* eslint-enable */

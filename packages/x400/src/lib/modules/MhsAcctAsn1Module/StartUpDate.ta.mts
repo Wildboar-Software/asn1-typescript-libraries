@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION StartUpDate */
 /**
  * @summary StartUpDate
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type StartUpDate = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION StartUpDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StartUpDate */
 let _cached_decoder_for_StartUpDate: $.ASN1Decoder<StartUpDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StartUpDate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StartUpDate */
 /**
  * @summary Decodes an ASN.1 element into a(n) StartUpDate
  * @function
@@ -46,13 +41,9 @@ export function _decode_StartUpDate(el: _Element) {
     }
     return _cached_decoder_for_StartUpDate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StartUpDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StartUpDate */
 let _cached_encoder_for_StartUpDate: $.ASN1Encoder<StartUpDate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StartUpDate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StartUpDate */
 /**
  * @summary Encodes a(n) StartUpDate into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_StartUpDate(
     return _cached_encoder_for_StartUpDate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StartUpDate */
 
 /* eslint-enable */

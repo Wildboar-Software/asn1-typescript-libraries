@@ -11,7 +11,6 @@ import {
     _decode_OsiBindResult_normal_mode_parameters,
     _encode_OsiBindResult_normal_mode_parameters,
 } from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiBindResult */
 /**
  * @summary OsiBindResult
  * @description
@@ -74,9 +73,7 @@ export class OsiBindResult {
         return new OsiBindResult(_o.mode_selector, _o.normal_mode_parameters);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiBindResult */
 /**
  * @summary The Leading Root Component Types of OsiBindResult
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_OsiBindResult: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiBindResult */
 /**
  * @summary The Trailing Root Component Types of OsiBindResult
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_OsiBindResult: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiBindResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiBindResult */
 /**
  * @summary The Extension Addition Component Types of OsiBindResult
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_OsiBindResult: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiBindResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBindResult */
 let _cached_decoder_for_OsiBindResult: $.ASN1Decoder<OsiBindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiBindResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiBindResult
  * @function
@@ -177,13 +166,9 @@ export function _decode_OsiBindResult(el: _Element) {
     }
     return _cached_decoder_for_OsiBindResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBindResult */
 let _cached_encoder_for_OsiBindResult: $.ASN1Encoder<OsiBindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiBindResult */
 /**
  * @summary Encodes a(n) OsiBindResult into an ASN.1 Element.
  * @function
@@ -222,6 +207,5 @@ export function _encode_OsiBindResult(
     return _cached_encoder_for_OsiBindResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiBindResult */
 
 /* eslint-enable */

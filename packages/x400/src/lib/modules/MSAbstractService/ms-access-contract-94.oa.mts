@@ -15,7 +15,6 @@ import { ms_submission } from '../MSAbstractService/ms-submission.oa.mjs';
 import { administration } from '../MTSAbstractService/administration.oa.mjs';
 import { id_crt_ms_access_94 } from '../MSObjectIdentifiers/id-crt-ms-access-94.va.mjs';
 import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_access_contract_94 */
 /**
  * @summary ms_access_contract_94
  * @description
@@ -46,6 +45,5 @@ export const ms_access_contract_94: CONTRACT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_crt_ms_access_94 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_access_contract_94 */
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
     _encode_ContentInfo,
 } from "../PKCS7/ContentInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AuthenticatedSafe */
+
 /**
  * @summary AuthenticatedSafe
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type AuthenticatedSafe = ContentInfo[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AuthenticatedSafe */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticatedSafe */
+
 let _cached_decoder_for_AuthenticatedSafe: $.ASN1Decoder<AuthenticatedSafe> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticatedSafe */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthenticatedSafe */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticatedSafe
  * @function
@@ -40,13 +38,11 @@ export function _decode_AuthenticatedSafe(el: _Element) {
     }
     return _cached_decoder_for_AuthenticatedSafe(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthenticatedSafe */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticatedSafe */
+
 let _cached_encoder_for_AuthenticatedSafe: $.ASN1Encoder<AuthenticatedSafe> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticatedSafe */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthenticatedSafe */
+
 /**
  * @summary Encodes a(n) AuthenticatedSafe into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_AuthenticatedSafe(
     return _cached_encoder_for_AuthenticatedSafe(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthenticatedSafe */
 
 /* eslint-enable */

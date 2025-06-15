@@ -3,7 +3,7 @@ import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { aes256_CBC_PAD } from "../PKCS5v2-1/aes256-CBC-PAD.va.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union7_Intersection0_Element */
+
 /**
  * @summary SupportingAlgorithms_Union7_Intersection0_Element
  * @description
@@ -29,6 +29,5 @@ export const SupportingAlgorithms_Union7_Intersection0_Element: ALGORITHM_IDENTI
     "&id": aes256_CBC_PAD /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union7_Intersection0_Element */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION G3FacsimileData */
 /**
  * @summary G3FacsimileData
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type G3FacsimileData = BIT_STRING[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION G3FacsimileData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_G3FacsimileData */
 let _cached_decoder_for_G3FacsimileData: $.ASN1Decoder<G3FacsimileData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_G3FacsimileData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_G3FacsimileData */
 /**
  * @summary Decodes an ASN.1 element into a(n) G3FacsimileData
  * @function
@@ -45,13 +40,9 @@ export function _decode_G3FacsimileData(el: _Element) {
     }
     return _cached_decoder_for_G3FacsimileData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_G3FacsimileData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_G3FacsimileData */
 let _cached_encoder_for_G3FacsimileData: $.ASN1Encoder<G3FacsimileData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_G3FacsimileData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_G3FacsimileData */
 /**
  * @summary Encodes a(n) G3FacsimileData into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_G3FacsimileData(
     return _cached_encoder_for_G3FacsimileData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_G3FacsimileData */
 
 /* eslint-enable */

@@ -40,7 +40,7 @@ import { syncNotSupported } from '../CMIP-1/syncNotSupported.oa.mjs';
 import { m_Linked_Reply } from '../CMIP-1/m-Linked-Reply.oa.mjs';
 import { accessDenied } from '../CMIP-1/accessDenied.oa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION m_Set_Confirmed */
+
 /**
  * @summary m_Set_Confirmed
  * @description
@@ -102,6 +102,5 @@ export const m_Set_Confirmed: OPERATION<SetArgument, SetResult> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Set_Confirmed */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _decode_EDIApplicationSecurityExtensions,
     _encode_EDIApplicationSecurityExtensions,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIApplicationSecurityElementsField */
 /**
  * @summary EDIApplicationSecurityElementsField
  * @description
@@ -87,9 +86,7 @@ export class EDIApplicationSecurityElementsField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIApplicationSecurityElementsField */
 /**
  * @summary The Leading Root Component Types of EDIApplicationSecurityElementsField
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_EDIApplicationSecurityElements
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIApplicationSecurityElementsField */
 /**
  * @summary The Trailing Root Component Types of EDIApplicationSecurityElementsField
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_EDIApplicationSecurityElements
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIApplicationSecurityElementsField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIApplicationSecurityElementsField */
 /**
  * @summary The Extension Addition Component Types of EDIApplicationSecurityElementsField
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_EDIApplicationSecurityElements
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIApplicationSecurityElementsField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityElementsField */
 let _cached_decoder_for_EDIApplicationSecurityElementsField: $.ASN1Decoder<EDIApplicationSecurityElementsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityElementsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIApplicationSecurityElementsField
  * @function
@@ -206,13 +195,9 @@ export function _decode_EDIApplicationSecurityElementsField(el: _Element) {
     }
     return _cached_decoder_for_EDIApplicationSecurityElementsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityElementsField */
 let _cached_encoder_for_EDIApplicationSecurityElementsField: $.ASN1Encoder<EDIApplicationSecurityElementsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityElementsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityElementsField */
 /**
  * @summary Encodes a(n) EDIApplicationSecurityElementsField into an ASN.1 Element.
  * @function
@@ -273,6 +258,5 @@ export function _encode_EDIApplicationSecurityElementsField(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityElementsField */
 
 /* eslint-enable */

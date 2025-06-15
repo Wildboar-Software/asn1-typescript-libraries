@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC1-v1-9/FieldElement.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDSA_Sig_Value_y */
 /**
  * @summary ECDSA_Sig_Value_y
  * @description
@@ -27,13 +26,9 @@ export
 type ECDSA_Sig_Value_y =
     { b: BOOLEAN } /* CHOICE_ALT_ROOT */
     | { f: FieldElement } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ECDSA_Sig_Value_y */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Sig_Value_y */
 let _cached_decoder_for_ECDSA_Sig_Value_y: $.ASN1Decoder<ECDSA_Sig_Value_y> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Sig_Value_y */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECDSA_Sig_Value_y */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECDSA_Sig_Value_y
  * @function
@@ -48,13 +43,9 @@ function _decode_ECDSA_Sig_Value_y (el: _Element) {
 }); }
     return _cached_decoder_for_ECDSA_Sig_Value_y(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECDSA_Sig_Value_y */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Sig_Value_y */
 let _cached_encoder_for_ECDSA_Sig_Value_y: $.ASN1Encoder<ECDSA_Sig_Value_y> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Sig_Value_y */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECDSA_Sig_Value_y */
 /**
  * @summary Encodes a(n) ECDSA_Sig_Value_y into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ function _encode_ECDSA_Sig_Value_y (value: ECDSA_Sig_Value_y, elGetter: $.ASN1En
     return _cached_encoder_for_ECDSA_Sig_Value_y(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECDSA_Sig_Value_y */
 
 /* eslint-enable */

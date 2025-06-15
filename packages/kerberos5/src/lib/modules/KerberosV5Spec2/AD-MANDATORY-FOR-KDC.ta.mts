@@ -15,7 +15,7 @@ import {
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AD_MANDATORY_FOR_KDC */
+
 /**
  * @summary AD_MANDATORY_FOR_KDC
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AD_MANDATORY_FOR_KDC = AuthorizationData; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AD_MANDATORY_FOR_KDC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_MANDATORY_FOR_KDC */
+
 let _cached_decoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Decoder<AD_MANDATORY_FOR_KDC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_MANDATORY_FOR_KDC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AD_MANDATORY_FOR_KDC */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AD_MANDATORY_FOR_KDC
  * @function
@@ -46,13 +44,11 @@ export function _decode_AD_MANDATORY_FOR_KDC(el: _Element) {
   }
   return _cached_decoder_for_AD_MANDATORY_FOR_KDC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AD_MANDATORY_FOR_KDC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_MANDATORY_FOR_KDC */
+
 let _cached_encoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Encoder<AD_MANDATORY_FOR_KDC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_MANDATORY_FOR_KDC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AD_MANDATORY_FOR_KDC */
+
 /**
  * @summary Encodes a(n) AD_MANDATORY_FOR_KDC into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_AD_MANDATORY_FOR_KDC(
   return _cached_encoder_for_AD_MANDATORY_FOR_KDC(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AD_MANDATORY_FOR_KDC */
 
 /* eslint-enable */

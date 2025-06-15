@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_ext } from '../EDIMSObjectIdentifiers/id-ext.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_ext_submission_options */
 /**
  * @summary id_ext_submission_options
  * @description
@@ -25,6 +24,5 @@ import { id_ext } from '../EDIMSObjectIdentifiers/id-ext.va.mjs';
  * @constant
  */
 export const id_ext_submission_options: ID = new _OID([0], id_ext);
-/* END_OF_SYMBOL_DEFINITION id_ext_submission_options */
 
 /* eslint-enable */

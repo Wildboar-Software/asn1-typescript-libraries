@@ -5,7 +5,6 @@ import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.o
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
 import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION disp_ip */
 /**
  * @summary disp_ip
  * @description
@@ -37,6 +36,5 @@ export const disp_ip: IDM_PROTOCOL = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": id_idm_disp /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION disp_ip */
 
 /* eslint-enable */

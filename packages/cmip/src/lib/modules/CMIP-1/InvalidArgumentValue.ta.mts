@@ -20,7 +20,7 @@ import {
   _decode_InvalidArgumentValue_eventValue,
   _encode_InvalidArgumentValue_eventValue,
 } from '../CMIP-1/InvalidArgumentValue-eventValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InvalidArgumentValue */
+
 /**
  * @summary InvalidArgumentValue
  * @description
@@ -42,13 +42,11 @@ import {
 export type InvalidArgumentValue =
   | { actionValue: ActionInfo } /* CHOICE_ALT_ROOT */
   | { eventValue: InvalidArgumentValue_eventValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION InvalidArgumentValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidArgumentValue */
+
 let _cached_decoder_for_InvalidArgumentValue: $.ASN1Decoder<InvalidArgumentValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvalidArgumentValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvalidArgumentValue */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvalidArgumentValue
  * @function
@@ -74,13 +72,11 @@ export function _decode_InvalidArgumentValue(el: _Element) {
   }
   return _cached_decoder_for_InvalidArgumentValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvalidArgumentValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidArgumentValue */
+
 let _cached_encoder_for_InvalidArgumentValue: $.ASN1Encoder<InvalidArgumentValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvalidArgumentValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvalidArgumentValue */
+
 /**
  * @summary Encodes a(n) InvalidArgumentValue into an ASN.1 Element.
  * @function
@@ -114,6 +110,5 @@ export function _encode_InvalidArgumentValue(
   return _cached_encoder_for_InvalidArgumentValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvalidArgumentValue */
 
 /* eslint-enable */

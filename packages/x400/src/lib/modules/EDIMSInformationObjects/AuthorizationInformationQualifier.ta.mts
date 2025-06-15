@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AuthorizationInformationQualifier */
 /**
  * @summary AuthorizationInformationQualifier
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AuthorizationInformationQualifier = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION AuthorizationInformationQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationInformationQualifier */
 let _cached_decoder_for_AuthorizationInformationQualifier: $.ASN1Decoder<AuthorizationInformationQualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationInformationQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorizationInformationQualifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthorizationInformationQualifier
  * @function
@@ -45,13 +40,9 @@ export function _decode_AuthorizationInformationQualifier(el: _Element) {
     }
     return _cached_decoder_for_AuthorizationInformationQualifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorizationInformationQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationInformationQualifier */
 let _cached_encoder_for_AuthorizationInformationQualifier: $.ASN1Encoder<AuthorizationInformationQualifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationInformationQualifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorizationInformationQualifier */
 /**
  * @summary Encodes a(n) AuthorizationInformationQualifier into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_AuthorizationInformationQualifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorizationInformationQualifier */
 
 /* eslint-enable */

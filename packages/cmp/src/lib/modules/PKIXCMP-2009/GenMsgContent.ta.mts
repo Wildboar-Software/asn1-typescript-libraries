@@ -15,7 +15,7 @@ import {
   _decode_InfoTypeAndValue,
   _encode_InfoTypeAndValue,
 } from '../PKIXCMP-2009/InfoTypeAndValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GenMsgContent */
+
 /**
  * @summary GenMsgContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GenMsgContent = InfoTypeAndValue[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION GenMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GenMsgContent */
+
 let _cached_decoder_for_GenMsgContent: $.ASN1Decoder<GenMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GenMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GenMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GenMsgContent
  * @function
@@ -48,13 +46,11 @@ export function _decode_GenMsgContent(el: _Element) {
   }
   return _cached_decoder_for_GenMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GenMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GenMsgContent */
+
 let _cached_encoder_for_GenMsgContent: $.ASN1Encoder<GenMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GenMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GenMsgContent */
+
 /**
  * @summary Encodes a(n) GenMsgContent into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_GenMsgContent(
   return _cached_encoder_for_GenMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GenMsgContent */
 
 /* eslint-enable */

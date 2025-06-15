@@ -15,7 +15,6 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION maximumLSPGenerationInterval_Default */
 /**
  * @summary maximumLSPGenerationInterval_Default
  * @description
@@ -32,6 +31,5 @@ export const maximumLSPGenerationInterval_Default: Timer = Timer._from_object({
   exponent: 2,
   mantissa: 9,
 });
-/* END_OF_SYMBOL_DEFINITION maximumLSPGenerationInterval_Default */
 
 /* eslint-enable */

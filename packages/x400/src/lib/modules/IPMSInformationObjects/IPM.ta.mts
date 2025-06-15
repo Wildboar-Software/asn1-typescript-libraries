@@ -20,7 +20,6 @@ import {
     _decode_Body,
     _encode_Body,
 } from '../IPMSInformationObjects/Body.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPM */
 /**
  * @summary IPM
  * @description
@@ -67,9 +66,7 @@ export class IPM {
         return new IPM(_o.heading, _o.body);
     }
 }
-/* END_OF_SYMBOL_DEFINITION IPM */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPM */
 /**
  * @summary The Leading Root Component Types of IPM
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_IPM: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPM */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPM */
 /**
  * @summary The Trailing Root Component Types of IPM
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_IPM: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IPM: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPM */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPM */
 /**
  * @summary The Extension Addition Component Types of IPM
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_IPM: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_IPM: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPM */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPM */
 let _cached_decoder_for_IPM: $.ASN1Decoder<IPM> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPM */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPM */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPM
  * @function
@@ -153,13 +142,9 @@ export function _decode_IPM(el: _Element) {
     }
     return _cached_decoder_for_IPM(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPM */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPM */
 let _cached_encoder_for_IPM: $.ASN1Encoder<IPM> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPM */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPM */
 /**
  * @summary Encodes a(n) IPM into an ASN.1 Element.
  * @function
@@ -185,6 +170,5 @@ export function _encode_IPM(value: IPM, elGetter: $.ASN1Encoder<IPM>) {
     return _cached_encoder_for_IPM(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPM */
 
 /* eslint-enable */

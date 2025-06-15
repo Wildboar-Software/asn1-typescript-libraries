@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Version */
+
 /**
  * @summary Version
  * @description
@@ -16,57 +16,48 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type Version = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Version */
 
-/* START_OF_SYMBOL_DEFINITION Version_two_prime */
+
 /**
  * @summary Version_two_prime
  * @constant
  * @type {number}
  */
 export const Version_two_prime: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Version_two_prime */
 
-/* START_OF_SYMBOL_DEFINITION two_prime */
+
 /**
  * @summary Version_two_prime
  * @constant
  * @type {number}
  */
 export const two_prime: Version = Version_two_prime; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION two_prime */
 
-/* START_OF_SYMBOL_DEFINITION Version_multi */
+
 /**
  * @summary Version_multi
  * @constant
  * @type {number}
  */
 export const Version_multi: Version = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Version_multi */
 
-/* START_OF_SYMBOL_DEFINITION multi */
+
 /**
  * @summary Version_multi
  * @constant
  * @type {number}
  */
 export const multi: Version = Version_multi; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION multi */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Version */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Version */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Version */
+
+
 export const _decode_Version = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Version */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Version */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Version */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Version */
+
+
 export const _encode_Version = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Version */
 
 /* eslint-enable */

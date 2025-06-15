@@ -6,7 +6,6 @@ import {
     _decode_CertUpdateOK_Item,
     _encode_CertUpdateOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertUpdateOK-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUpdateOK */
 /**
  * @summary CertUpdateOK
  * @description
@@ -26,13 +25,9 @@ import {
  * ```
  */
 export type CertUpdateOK = CertUpdateOK_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertUpdateOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateOK */
 let _cached_decoder_for_CertUpdateOK: $.ASN1Decoder<CertUpdateOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUpdateOK */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUpdateOK */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUpdateOK
  * @function
@@ -47,13 +42,9 @@ export function _decode_CertUpdateOK(el: _Element) {
     }
     return _cached_decoder_for_CertUpdateOK(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUpdateOK */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateOK */
 let _cached_encoder_for_CertUpdateOK: $.ASN1Encoder<CertUpdateOK> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUpdateOK */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUpdateOK */
 /**
  * @summary Encodes a(n) CertUpdateOK into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_CertUpdateOK(
     return _cached_encoder_for_CertUpdateOK(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUpdateOK */
 
 /* eslint-enable */

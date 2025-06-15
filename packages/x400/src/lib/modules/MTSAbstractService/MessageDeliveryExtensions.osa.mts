@@ -39,7 +39,6 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
 import { conversion_with_loss_prohibited } from "./conversion-with-loss-prohibited.oa.mjs";
 import { physical_forwarding_prohibited } from "./physical-forwarding-prohibited.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MessageDeliveryExtensions */
 /**
  * @summary MessageDeliveryExtensions
  * @description
@@ -97,6 +96,5 @@ export const MessageDeliveryExtensions: EXTENSION[] = [
     internal_trace_information,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION MessageDeliveryExtensions */
 
 /* eslint-enable */

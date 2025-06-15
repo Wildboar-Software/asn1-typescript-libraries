@@ -6,7 +6,7 @@ import {
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../CMSSigncryption/XPathSet.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION xPathManifest */
+
 /**
  * @summary xPathManifest
  * @description
@@ -34,6 +34,5 @@ export const xPathManifest: SIGNCRYPTED<XPathSet> = {
     "&id": xPath /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION xPathManifest */
 
 /* eslint-enable */

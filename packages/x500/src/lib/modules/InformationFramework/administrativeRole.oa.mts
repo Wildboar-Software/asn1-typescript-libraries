@@ -8,7 +8,6 @@ import {
 import { id_oa_administrativeRole } from "../InformationFramework/id-oa-administrativeRole.va.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION administrativeRole */
 /**
  * @summary administrativeRole
  * @description
@@ -49,6 +48,5 @@ export const administrativeRole: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION administrativeRole */
 
 /* eslint-enable */

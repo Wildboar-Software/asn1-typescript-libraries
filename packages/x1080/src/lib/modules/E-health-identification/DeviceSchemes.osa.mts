@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { DEVICE_SCHEME } from '../E-health-identification/DEVICE-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION DeviceSchemes */
+
 /**
  * @summary DeviceSchemes
  * @description
@@ -26,6 +26,5 @@ import { DEVICE_SCHEME } from '../E-health-identification/DEVICE-SCHEME.oca.mjs'
  *
  */
 export const DeviceSchemes: DEVICE_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION DeviceSchemes */
 
 /* eslint-enable */

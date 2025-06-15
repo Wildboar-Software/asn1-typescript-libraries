@@ -16,7 +16,6 @@ import {
 } from '../IPMSInformationObjects/AbsenceAdvice.ta.mjs';
 import { id_on_absence_advice } from '../IPMSObjectIdentifiers/id-on-absence-advice.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION absence_advice */
 /**
  * @summary absence_advice
  * @description
@@ -45,6 +44,5 @@ export const absence_advice: IPMS_EXTENSION<AbsenceAdvice> = {
     '&id': id_on_absence_advice /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION absence_advice */
 
 /* eslint-enable */

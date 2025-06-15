@@ -6,7 +6,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LocaleContextSyntax */
 /**
  * @summary LocaleContextSyntax
  * @description
@@ -24,13 +23,9 @@ export type LocaleContextSyntax =
     | { localeID1: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { localeID2: UnboundedDirectoryString } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION LocaleContextSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocaleContextSyntax */
 let _cached_decoder_for_LocaleContextSyntax: $.ASN1Decoder<LocaleContextSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocaleContextSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocaleContextSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) LocaleContextSyntax
  * @function
@@ -52,13 +47,9 @@ export function _decode_LocaleContextSyntax(el: _Element) {
     }
     return _cached_decoder_for_LocaleContextSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LocaleContextSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocaleContextSyntax */
 let _cached_encoder_for_LocaleContextSyntax: $.ASN1Encoder<LocaleContextSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocaleContextSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocaleContextSyntax */
 /**
  * @summary Encodes a(n) LocaleContextSyntax into an ASN.1 Element.
  * @function
@@ -82,6 +73,5 @@ export function _encode_LocaleContextSyntax(
     return _cached_encoder_for_LocaleContextSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocaleContextSyntax */
 
 /* eslint-enable */

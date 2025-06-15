@@ -15,7 +15,6 @@ import {
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchTestInvocationId */
 /**
  * @summary NoSuchTestInvocationId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NoSuchTestInvocationId = TestInvocationId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NoSuchTestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchTestInvocationId */
 let _cached_decoder_for_NoSuchTestInvocationId: $.ASN1Decoder<NoSuchTestInvocationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchTestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchTestInvocationId */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchTestInvocationId
  * @function
@@ -46,13 +41,9 @@ export function _decode_NoSuchTestInvocationId(el: _Element) {
     }
     return _cached_decoder_for_NoSuchTestInvocationId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchTestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchTestInvocationId */
 let _cached_encoder_for_NoSuchTestInvocationId: $.ASN1Encoder<NoSuchTestInvocationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchTestInvocationId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchTestInvocationId */
 /**
  * @summary Encodes a(n) NoSuchTestInvocationId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_NoSuchTestInvocationId(
     return _cached_encoder_for_NoSuchTestInvocationId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchTestInvocationId */
 
 /* eslint-enable */

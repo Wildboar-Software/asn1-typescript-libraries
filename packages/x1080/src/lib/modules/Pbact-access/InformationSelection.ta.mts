@@ -21,7 +21,7 @@ import {
     _decode_InformationSelection_infoTypes,
     _encode_InformationSelection_infoTypes,
 } from '../Pbact-access/InformationSelection-infoTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InformationSelection */
+
 /**
  * @summary InformationSelection
  * @description
@@ -95,9 +95,8 @@ export class InformationSelection {
 
     public static _enum_for_infoTypes = _enum_for_InformationSelection_infoTypes;
 }
-/* END_OF_SYMBOL_DEFINITION InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InformationSelection */
+
 /**
  * @summary The Leading Root Component Types of InformationSelection
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_InformationSelection: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InformationSelection */
+
 /**
  * @summary The Trailing Root Component Types of InformationSelection
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_InformationSelection: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InformationSelection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InformationSelection */
+
 /**
  * @summary The Extension Addition Component Types of InformationSelection
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_InformationSelection: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_InformationSelection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationSelection */
+
 let _cached_decoder_for_InformationSelection: $.ASN1Decoder<InformationSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InformationSelection */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InformationSelection
  * @function
@@ -181,13 +176,11 @@ export function _decode_InformationSelection(el: _Element) {
     }
     return _cached_decoder_for_InformationSelection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationSelection */
+
 let _cached_encoder_for_InformationSelection: $.ASN1Encoder<InformationSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InformationSelection */
+
 /**
  * @summary Encodes a(n) InformationSelection into an ASN.1 Element.
  * @function
@@ -227,6 +220,5 @@ export function _encode_InformationSelection(
     return _cached_encoder_for_InformationSelection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InformationSelection */
 
 /* eslint-enable */

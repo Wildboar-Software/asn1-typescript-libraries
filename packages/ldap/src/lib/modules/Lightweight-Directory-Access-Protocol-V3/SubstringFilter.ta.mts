@@ -20,7 +20,7 @@ import {
   _decode_SubstringFilter_substrings_substring,
   _encode_SubstringFilter_substrings_substring,
 } from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubstringFilter */
+
 /**
  * @summary SubstringFilter
  * @description
@@ -84,9 +84,8 @@ export class SubstringFilter {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION SubstringFilter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubstringFilter */
+
 /**
  * @summary The Leading Root Component Types of SubstringFilter
  * @description
@@ -111,9 +110,8 @@ export const _root_component_type_list_1_spec_for_SubstringFilter: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubstringFilter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubstringFilter */
+
 /**
  * @summary The Trailing Root Component Types of SubstringFilter
  * @description
@@ -123,9 +121,8 @@ export const _root_component_type_list_1_spec_for_SubstringFilter: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubstringFilter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubstringFilter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubstringFilter */
+
 /**
  * @summary The Extension Addition Component Types of SubstringFilter
  * @description
@@ -135,9 +132,8 @@ export const _root_component_type_list_2_spec_for_SubstringFilter: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_SubstringFilter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubstringFilter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubstringFilter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubstringFilter
  * @function
@@ -163,9 +159,8 @@ export function _decode_SubstringFilter(el: _Element) {
     )(sequence[1]);
     return new SubstringFilter(type_, substrings, sequence.slice(2));
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubstringFilter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubstringFilter */
+
 /**
  * @summary Encodes a(n) SubstringFilter into an ASN.1 Element.
  * @function
@@ -186,6 +181,5 @@ export function _encode_SubstringFilter(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubstringFilter */
 
 /* eslint-enable */

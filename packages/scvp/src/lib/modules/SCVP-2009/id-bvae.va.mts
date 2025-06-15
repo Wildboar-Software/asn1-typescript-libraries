@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_svp_basicValAlg } from '../SCVP-2009/id-svp-basicValAlg.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_bvae */
 /**
  * @summary id_bvae
  * @description
@@ -25,6 +24,5 @@ import { id_svp_basicValAlg } from '../SCVP-2009/id-svp-basicValAlg.va.mjs';
  * @constant
  */
 export const id_bvae: OBJECT_IDENTIFIER = id_svp_basicValAlg;
-/* END_OF_SYMBOL_DEFINITION id_bvae */
 
 /* eslint-enable */

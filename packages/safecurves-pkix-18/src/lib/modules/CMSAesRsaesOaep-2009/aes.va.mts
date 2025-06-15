@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION aes */
+
 /**
  * @summary aes
  * @description
@@ -38,6 +38,5 @@ const aes: OBJECT_IDENTIFIER = new _OID([
     /* nistAlgorithms */ 4,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION aes */
 
 /* eslint-enable */

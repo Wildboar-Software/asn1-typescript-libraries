@@ -3,7 +3,7 @@ import { ContentEncryptionAlgorithms_Union0_Intersection0_Exclusion } from "../P
 import type { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { SupportingAlgorithms } from "../PKCS5v2-1/SupportingAlgorithms.osa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ContentEncryptionAlgorithms */
+
 /**
  * @summary ContentEncryptionAlgorithms
  * @description
@@ -32,6 +32,5 @@ export const ContentEncryptionAlgorithms: ALGORITHM_IDENTIFIER<any>[] = Array.fr
         return _nx;
     })()
 );
-/* END_OF_SYMBOL_DEFINITION ContentEncryptionAlgorithms */
 
 /* eslint-enable */

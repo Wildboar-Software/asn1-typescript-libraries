@@ -16,7 +16,7 @@ import {
     _encode_AttributeCertificate,
 } from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AttributeCertificates */
+
 /**
  * @summary AttributeCertificates
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type AttributeCertificates = AttributeCertificate[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AttributeCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificates */
+
 let _cached_decoder_for_AttributeCertificates: $.ASN1Decoder<AttributeCertificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeCertificates */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeCertificates
  * @function
@@ -49,13 +47,11 @@ export function _decode_AttributeCertificates(el: _Element) {
     }
     return _cached_decoder_for_AttributeCertificates(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificates */
+
 let _cached_encoder_for_AttributeCertificates: $.ASN1Encoder<AttributeCertificates> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificates */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeCertificates */
+
 /**
  * @summary Encodes a(n) AttributeCertificates into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_AttributeCertificates(
     return _cached_encoder_for_AttributeCertificates(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeCertificates */
 
 /* eslint-enable */

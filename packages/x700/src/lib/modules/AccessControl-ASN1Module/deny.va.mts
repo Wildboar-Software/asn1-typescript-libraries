@@ -16,7 +16,6 @@ import {
     _decode_EnforcementAction,
     _encode_EnforcementAction,
 } from '../AccessControl-ASN1Module/EnforcementAction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION deny */
 /**
  * @summary deny
  * @description
@@ -30,6 +29,5 @@ import {
  * @constant
  */
 export const deny: EnforcementAction = EnforcementAction_denyWithResponse;
-/* END_OF_SYMBOL_DEFINITION deny */
 
 /* eslint-enable */

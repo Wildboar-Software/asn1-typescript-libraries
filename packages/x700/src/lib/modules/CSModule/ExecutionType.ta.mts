@@ -15,7 +15,6 @@ import {
     _decode_ScriptThreadSet,
     _encode_ScriptThreadSet,
 } from '../CSModule/ScriptThreadSet.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExecutionType */
 /**
  * @summary ExecutionType
  * @description
@@ -34,13 +33,9 @@ export type ExecutionType =
     | { singleExecution: ScriptThreadSet } /* CHOICE_ALT_ROOT */
     | { parallelExecution: ScriptThreadSet[] } /* CHOICE_ALT_ROOT */
     | { sequentialExecution: ScriptThreadSet[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ExecutionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExecutionType */
 let _cached_decoder_for_ExecutionType: $.ASN1Decoder<ExecutionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExecutionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExecutionType */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExecutionType
  * @function
@@ -71,13 +66,9 @@ export function _decode_ExecutionType(el: _Element) {
     }
     return _cached_decoder_for_ExecutionType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExecutionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExecutionType */
 let _cached_encoder_for_ExecutionType: $.ASN1Encoder<ExecutionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExecutionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExecutionType */
 /**
  * @summary Encodes a(n) ExecutionType into an ASN.1 Element.
  * @function
@@ -114,6 +105,5 @@ export function _encode_ExecutionType(
     return _cached_encoder_for_ExecutionType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExecutionType */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RepairActivityID */
+
 /**
  * @summary RepairActivityID
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RepairActivityID = INTEGER;
-/* END_OF_SYMBOL_DEFINITION RepairActivityID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepairActivityID */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepairActivityID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RepairActivityID */
+
+
 export const _decode_RepairActivityID = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_RepairActivityID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepairActivityID */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepairActivityID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RepairActivityID */
+
+
 export const _encode_RepairActivityID = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RepairActivityID */
 
 /* eslint-enable */

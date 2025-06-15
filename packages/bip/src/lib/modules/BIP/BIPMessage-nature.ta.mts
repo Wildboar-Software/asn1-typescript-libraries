@@ -30,7 +30,7 @@ import {
   _decode_BIPAcknowledgement,
   _encode_BIPAcknowledgement,
 } from '../BIP/BIPAcknowledgement.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPMessage_nature */
+
 /**
  * @summary BIPMessage_nature
  * @description
@@ -46,13 +46,11 @@ export type BIPMessage_nature =
   | { response: BIPResponse } /* CHOICE_ALT_ROOT */
   | { notification: BIPNotification } /* CHOICE_ALT_ROOT */
   | { acknowledgement: BIPAcknowledgement } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BIPMessage_nature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPMessage_nature */
+
 let _cached_decoder_for_BIPMessage_nature: $.ASN1Decoder<BIPMessage_nature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPMessage_nature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPMessage_nature */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPMessage_nature
  * @function
@@ -72,13 +70,11 @@ export function _decode_BIPMessage_nature(el: _Element) {
   }
   return _cached_decoder_for_BIPMessage_nature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPMessage_nature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPMessage_nature */
+
 let _cached_encoder_for_BIPMessage_nature: $.ASN1Encoder<BIPMessage_nature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPMessage_nature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPMessage_nature */
+
 /**
  * @summary Encodes a(n) BIPMessage_nature into an ASN.1 Element.
  * @function
@@ -104,6 +100,5 @@ export function _encode_BIPMessage_nature(
   return _cached_encoder_for_BIPMessage_nature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPMessage_nature */
 
 /* eslint-enable */

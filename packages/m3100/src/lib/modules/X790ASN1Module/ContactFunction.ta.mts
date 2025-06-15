@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ContactFunction */
+
 export enum _enum_for_ContactFunction {
     other = 0,
     customerMaintenanceManager = 1,
@@ -24,9 +24,8 @@ export enum _enum_for_ContactFunction {
     tester = 7,
     screener = 8,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ContactFunction */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction */
+
 /**
  * @summary ContactFunction
  * @description
@@ -42,183 +41,160 @@ export enum _enum_for_ContactFunction {
  * ```@enum {number}
  */
 export type ContactFunction = _enum_for_ContactFunction | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION ContactFunction */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_other */
+
 /**
  * @summary ContactFunction_other
  * @constant
  * @type {number}
  */
 export const ContactFunction_other: ContactFunction = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_other */
 
-/* START_OF_SYMBOL_DEFINITION other */
+
 /**
  * @summary other
  * @constant
  * @type {number}
  */
 export const other: ContactFunction = ContactFunction_other; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION other */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_customerMaintenanceManager */
+
 /**
  * @summary ContactFunction_customerMaintenanceManager
  * @constant
  * @type {number}
  */
 export const ContactFunction_customerMaintenanceManager: ContactFunction = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_customerMaintenanceManager */
 
-/* START_OF_SYMBOL_DEFINITION customerMaintenanceManager */
+
 /**
  * @summary customerMaintenanceManager
  * @constant
  * @type {number}
  */
 export const customerMaintenanceManager: ContactFunction = ContactFunction_customerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION customerMaintenanceManager */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_providerMaintenanceManager */
+
 /**
  * @summary ContactFunction_providerMaintenanceManager
  * @constant
  * @type {number}
  */
 export const ContactFunction_providerMaintenanceManager: ContactFunction = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_providerMaintenanceManager */
 
-/* START_OF_SYMBOL_DEFINITION providerMaintenanceManager */
+
 /**
  * @summary providerMaintenanceManager
  * @constant
  * @type {number}
  */
 export const providerMaintenanceManager: ContactFunction = ContactFunction_providerMaintenanceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION providerMaintenanceManager */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_customerAccountManager */
+
 /**
  * @summary ContactFunction_customerAccountManager
  * @constant
  * @type {number}
  */
 export const ContactFunction_customerAccountManager: ContactFunction = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_customerAccountManager */
 
-/* START_OF_SYMBOL_DEFINITION customerAccountManager */
+
 /**
  * @summary customerAccountManager
  * @constant
  * @type {number}
  */
 export const customerAccountManager: ContactFunction = ContactFunction_customerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION customerAccountManager */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_providerAccountManager */
+
 /**
  * @summary ContactFunction_providerAccountManager
  * @constant
  * @type {number}
  */
 export const ContactFunction_providerAccountManager: ContactFunction = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_providerAccountManager */
 
-/* START_OF_SYMBOL_DEFINITION providerAccountManager */
+
 /**
  * @summary providerAccountManager
  * @constant
  * @type {number}
  */
 export const providerAccountManager: ContactFunction = ContactFunction_providerAccountManager; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION providerAccountManager */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_fieldServiceManager */
+
 /**
  * @summary ContactFunction_fieldServiceManager
  * @constant
  * @type {number}
  */
 export const ContactFunction_fieldServiceManager: ContactFunction = 5; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_fieldServiceManager */
 
-/* START_OF_SYMBOL_DEFINITION fieldServiceManager */
+
 /**
  * @summary fieldServiceManager
  * @constant
  * @type {number}
  */
 export const fieldServiceManager: ContactFunction = ContactFunction_fieldServiceManager; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION fieldServiceManager */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_repairman */
+
 /**
  * @summary ContactFunction_repairman
  * @constant
  * @type {number}
  */
 export const ContactFunction_repairman: ContactFunction = 6; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_repairman */
 
-/* START_OF_SYMBOL_DEFINITION repairman */
+
 /**
  * @summary repairman
  * @constant
  * @type {number}
  */
 export const repairman: ContactFunction = ContactFunction_repairman; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION repairman */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_tester */
+
 /**
  * @summary ContactFunction_tester
  * @constant
  * @type {number}
  */
 export const ContactFunction_tester: ContactFunction = 7; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_tester */
 
-/* START_OF_SYMBOL_DEFINITION tester */
+
 /**
  * @summary tester
  * @constant
  * @type {number}
  */
 export const tester: ContactFunction = ContactFunction_tester; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION tester */
 
-/* START_OF_SYMBOL_DEFINITION ContactFunction_screener */
+
 /**
  * @summary ContactFunction_screener
  * @constant
  * @type {number}
  */
 export const ContactFunction_screener: ContactFunction = 8; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ContactFunction_screener */
 
-/* START_OF_SYMBOL_DEFINITION screener */
+
 /**
  * @summary screener
  * @constant
  * @type {number}
  */
 export const screener: ContactFunction = ContactFunction_screener; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION screener */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactFunction */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactFunction */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContactFunction */
+
+
 export const _decode_ContactFunction = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ContactFunction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactFunction */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactFunction */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContactFunction */
+
+
 export const _encode_ContactFunction = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContactFunction */
 
 /* eslint-enable */

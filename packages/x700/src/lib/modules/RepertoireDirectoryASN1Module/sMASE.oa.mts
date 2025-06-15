@@ -20,7 +20,6 @@ import { supportedSmaseFunctionalUnits } from '../RepertoireDirectoryASN1Module/
 import { mitMoList } from '../RepertoireDirectoryASN1Module/mitMoList.oa.mjs';
 import { supportsMKMglobalNames } from '../RepertoireDirectoryASN1Module/supportsMKMglobalNames.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION sMASE */
 /**
  * @summary sMASE
  * @description
@@ -57,6 +56,5 @@ export const sMASE: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sMASE */
 
 /* eslint-enable */

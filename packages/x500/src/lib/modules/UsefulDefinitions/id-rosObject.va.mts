@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { rosObject } from "../UsefulDefinitions/rosObject.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_rosObject */
 /**
  * @summary id_rosObject
  * @description
@@ -15,6 +14,5 @@ import { rosObject } from "../UsefulDefinitions/rosObject.va.mjs";
  * @constant
  */
 export const id_rosObject: ID = rosObject;
-/* END_OF_SYMBOL_DEFINITION id_rosObject */
 
 /* eslint-enable */

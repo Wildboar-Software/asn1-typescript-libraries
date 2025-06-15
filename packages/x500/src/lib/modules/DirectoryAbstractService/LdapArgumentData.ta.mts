@@ -66,7 +66,6 @@ import {
     _root_component_type_list_1_spec_for_CommonArgumentsSeq,
 } from "../DirectoryAbstractService/CommonArgumentsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION LdapArgumentData */
 /**
  * @summary LdapArgumentData
  * @description
@@ -283,9 +282,7 @@ export class LdapArgumentData implements CommonArgumentsSeq {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LdapArgumentData */
 /**
  * @summary The Leading Root Component Types of LdapArgumentData
  * @description
@@ -317,9 +314,7 @@ export const _root_component_type_list_1_spec_for_LdapArgumentData: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LdapArgumentData */
 /**
  * @summary The Trailing Root Component Types of LdapArgumentData
  * @description
@@ -331,9 +326,7 @@ export const _root_component_type_list_1_spec_for_LdapArgumentData: $.ComponentS
 export const _root_component_type_list_2_spec_for_LdapArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonArgumentsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LdapArgumentData */
 /**
  * @summary The Extension Addition Component Types of LdapArgumentData
  * @description
@@ -343,13 +336,9 @@ export const _root_component_type_list_2_spec_for_LdapArgumentData: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_LdapArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LdapArgumentData */
 let _cached_decoder_for_LdapArgumentData: $.ASN1Decoder<LdapArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LdapArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) LdapArgumentData
  * @function
@@ -489,13 +478,9 @@ export function _decode_LdapArgumentData(el: _Element) {
     }
     return _cached_decoder_for_LdapArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LdapArgumentData */
 let _cached_encoder_for_LdapArgumentData: $.ASN1Encoder<LdapArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LdapArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LdapArgumentData */
 /**
  * @summary Encodes a(n) LdapArgumentData into an ASN.1 Element.
  * @function
@@ -663,6 +648,5 @@ export function _encode_LdapArgumentData(
     return _cached_encoder_for_LdapArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LdapArgumentData */
 
 /* eslint-enable */

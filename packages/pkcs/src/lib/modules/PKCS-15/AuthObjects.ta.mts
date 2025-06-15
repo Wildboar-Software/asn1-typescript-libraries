@@ -11,7 +11,7 @@ import {
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthObjects */
+
 /**
  * @summary AuthObjects
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type AuthObjects = PathOrObjects<AuthenticationType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AuthObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthObjects */
+
 let _cached_decoder_for_AuthObjects: $.ASN1Decoder<AuthObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthObjects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthObjects */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthObjects
  * @function
@@ -44,13 +42,11 @@ export function _decode_AuthObjects(el: _Element) {
     }
     return _cached_decoder_for_AuthObjects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthObjects */
+
 let _cached_encoder_for_AuthObjects: $.ASN1Encoder<AuthObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthObjects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthObjects */
+
 /**
  * @summary Encodes a(n) AuthObjects into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_AuthObjects(
     return _cached_encoder_for_AuthObjects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthObjects */
 
 /* eslint-enable */

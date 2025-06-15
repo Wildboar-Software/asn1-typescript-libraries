@@ -16,7 +16,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CorrelatedDeliveredEDINs */
 /**
  * @summary CorrelatedDeliveredEDINs
  * @description
@@ -33,13 +32,9 @@ import {
 export type CorrelatedDeliveredEDINs =
     | { no_edin_received: NULL } /* CHOICE_ALT_ROOT */
     | { edins_received: SequenceNumber[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CorrelatedDeliveredEDINs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CorrelatedDeliveredEDINs */
 let _cached_decoder_for_CorrelatedDeliveredEDINs: $.ASN1Decoder<CorrelatedDeliveredEDINs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CorrelatedDeliveredEDINs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CorrelatedDeliveredEDINs */
 /**
  * @summary Decodes an ASN.1 element into a(n) CorrelatedDeliveredEDINs
  * @function
@@ -67,13 +62,9 @@ export function _decode_CorrelatedDeliveredEDINs(el: _Element) {
     }
     return _cached_decoder_for_CorrelatedDeliveredEDINs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CorrelatedDeliveredEDINs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CorrelatedDeliveredEDINs */
 let _cached_encoder_for_CorrelatedDeliveredEDINs: $.ASN1Encoder<CorrelatedDeliveredEDINs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CorrelatedDeliveredEDINs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CorrelatedDeliveredEDINs */
 /**
  * @summary Encodes a(n) CorrelatedDeliveredEDINs into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_CorrelatedDeliveredEDINs(
     return _cached_encoder_for_CorrelatedDeliveredEDINs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CorrelatedDeliveredEDINs */
 
 /* eslint-enable */

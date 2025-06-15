@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
 import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION Manifest */
+
 /**
  * @summary Manifest
  * @description
@@ -20,6 +20,5 @@ import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest
  *
  */
 export const Manifest: TOKENIZED[] = [xPathTokensManifest];
-/* END_OF_SYMBOL_DEFINITION Manifest */
 
 /* eslint-enable */

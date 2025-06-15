@@ -21,7 +21,6 @@ import {
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIAutoAcknowledgementRegistrationParameter */
 /**
  * @summary EDIAutoAcknowledgementRegistrationParameter
  * @description
@@ -77,9 +76,7 @@ export class EDIAutoAcknowledgementRegistrationParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIAutoAcknowledgementRegistrationParameter */
 /**
  * @summary The Leading Root Component Types of EDIAutoAcknowledgementRegistrationParameter
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_EDIAutoAcknowledgementRegistra
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIAutoAcknowledgementRegistrationParameter */
 /**
  * @summary The Trailing Root Component Types of EDIAutoAcknowledgementRegistrationParameter
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_EDIAutoAcknowledgementRegistra
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIAutoAcknowledgementRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIAutoAcknowledgementRegistrationParameter */
 /**
  * @summary The Extension Addition Component Types of EDIAutoAcknowledgementRegistrationParameter
  * @description
@@ -128,13 +121,9 @@ export const _root_component_type_list_2_spec_for_EDIAutoAcknowledgementRegistra
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIAutoAcknowledgementRegistrationParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter */
 let _cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter: $.ASN1Decoder<EDIAutoAcknowledgementRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIAutoAcknowledgementRegistrationParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIAutoAcknowledgementRegistrationParameter
  * @function
@@ -184,13 +173,9 @@ export function _decode_EDIAutoAcknowledgementRegistrationParameter(
     }
     return _cached_decoder_for_EDIAutoAcknowledgementRegistrationParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIAutoAcknowledgementRegistrationParameter */
 let _cached_encoder_for_EDIAutoAcknowledgementRegistrationParameter: $.ASN1Encoder<EDIAutoAcknowledgementRegistrationParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIAutoAcknowledgementRegistrationParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIAutoAcknowledgementRegistrationParameter */
 /**
  * @summary Encodes a(n) EDIAutoAcknowledgementRegistrationParameter into an ASN.1 Element.
  * @function
@@ -240,6 +225,5 @@ export function _encode_EDIAutoAcknowledgementRegistrationParameter(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIAutoAcknowledgementRegistrationParameter */
 
 /* eslint-enable */

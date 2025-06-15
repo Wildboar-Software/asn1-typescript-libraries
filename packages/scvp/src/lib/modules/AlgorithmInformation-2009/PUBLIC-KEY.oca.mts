@@ -3,7 +3,6 @@ import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PUBLIC_KEY */
 /**
  * @summary PUBLIC_KEY
  * @description
@@ -89,6 +88,5 @@ export interface PUBLIC_KEY<
      */
     readonly "&PrivateKey": PrivateKey;
 }
-/* END_OF_SYMBOL_DEFINITION PUBLIC_KEY */
 
 /* eslint-enable */

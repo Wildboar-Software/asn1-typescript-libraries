@@ -12,7 +12,7 @@ import {
 import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
 import { kwa_aes128_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes128-wrap.oa.mjs";
 import { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyWrapAlgorithms */
+
 /**
  * @summary KeyWrapAlgorithms
  * @description
@@ -32,6 +32,5 @@ import { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa.mjs"
  */
 export
 const KeyWrapAlgorithms: (KEY_WRAP)[] = [ kwa_aes128_wrap, kwa_aes256_wrap, ];
-/* END_OF_SYMBOL_DEFINITION KeyWrapAlgorithms */
 
 /* eslint-enable */

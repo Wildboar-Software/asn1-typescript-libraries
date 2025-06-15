@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pe } from "../PkiPmiExternalDataTypes/id-pe.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_pe_authorityInfoAccess */
 /**
  * @summary id_pe_authorityInfoAccess
  * @description
@@ -18,6 +17,5 @@ export const id_pe_authorityInfoAccess: OBJECT_IDENTIFIER = new _OID(
     [1],
     id_pe
 );
-/* END_OF_SYMBOL_DEFINITION id_pe_authorityInfoAccess */
 
 /* eslint-enable */

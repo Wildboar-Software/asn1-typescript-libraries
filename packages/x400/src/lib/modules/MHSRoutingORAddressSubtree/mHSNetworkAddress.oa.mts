@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSNetworkAddressAttribute.oa.mjs';
 import { id_oc_mhs_network_address } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-network-address.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSNetworkAddress */
 /**
  * @summary mHSNetworkAddress
  * @description
@@ -50,6 +49,5 @@ export const mHSNetworkAddress: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_network_address /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSNetworkAddress */
 
 /* eslint-enable */

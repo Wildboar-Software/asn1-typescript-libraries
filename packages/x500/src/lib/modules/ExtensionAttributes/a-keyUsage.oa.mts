@@ -6,7 +6,6 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION a_keyUsage */
 /**
  * @summary a_keyUsage
  * @description
@@ -44,6 +43,5 @@ export const a_keyUsage: ATTRIBUTE<typeof keyUsage["&ExtnType"]> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION a_keyUsage */
 
 /* eslint-enable */

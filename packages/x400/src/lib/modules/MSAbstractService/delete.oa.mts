@@ -38,7 +38,6 @@ import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.m
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_delete } from '../MSAccessProtocol/op-delete.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION delete_ */
 /**
  * @summary delete_
  * @description
@@ -94,6 +93,5 @@ export const delete_: ABSTRACT_OPERATION<DeleteArgument, DeleteResult> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delete_ */
 
 /* eslint-enable */

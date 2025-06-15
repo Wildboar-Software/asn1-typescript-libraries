@@ -22,7 +22,6 @@ import { characterizedBy } from '../DefinitionDirectoryASN1Module/characterizedB
 import { conditionalPackages } from '../DefinitionDirectoryASN1Module/conditionalPackages.oa.mjs';
 import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementObjectClass */
 /**
  * @summary managementObjectClass
  * @description
@@ -60,6 +59,5 @@ export const managementObjectClass: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementObjectClass */
 
 /* eslint-enable */

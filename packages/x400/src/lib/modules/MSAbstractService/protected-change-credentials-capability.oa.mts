@@ -16,7 +16,6 @@ import {
 } from '../MSAbstractService/ChangeCredentialsAlgorithms.ta.mjs';
 import { id_ext_protected_change_credentials_capability } from '../MSObjectIdentifiers/id-ext-protected-change-credentials-capability.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION protected_change_credentials_capability */
 /**
  * @summary protected_change_credentials_capability
  * @description
@@ -45,6 +44,5 @@ export const protected_change_credentials_capability: MS_EXTENSION<ChangeCredent
     '&id': id_ext_protected_change_credentials_capability /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION protected_change_credentials_capability */
 
 /* eslint-enable */

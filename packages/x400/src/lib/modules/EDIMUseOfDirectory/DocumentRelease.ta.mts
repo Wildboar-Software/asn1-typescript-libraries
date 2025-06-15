@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DocumentRelease */
 /**
  * @summary DocumentRelease
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DocumentRelease = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION DocumentRelease */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentRelease */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DocumentRelease */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DocumentRelease */
 export const _decode_DocumentRelease = $._decodeTeletexString;
-/* END_OF_SYMBOL_DEFINITION _decode_DocumentRelease */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentRelease */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DocumentRelease */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DocumentRelease */
 export const _encode_DocumentRelease = $._encodeTeletexString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DocumentRelease */
 
 /* eslint-enable */

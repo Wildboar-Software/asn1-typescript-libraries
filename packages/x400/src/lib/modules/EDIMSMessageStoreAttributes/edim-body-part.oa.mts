@@ -22,7 +22,6 @@ import { id_bat_edim_body_part } from '../EDIMSObjectIdentifiers/id-bat-edim-bod
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION edim_body_part */
 /**
  * @summary edim_body_part
  * @description
@@ -55,6 +54,5 @@ export const edim_body_part: X413ATTRIBUTE<SequenceNumber> = {
     '&id': id_bat_edim_body_part /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edim_body_part */
 
 /* eslint-enable */

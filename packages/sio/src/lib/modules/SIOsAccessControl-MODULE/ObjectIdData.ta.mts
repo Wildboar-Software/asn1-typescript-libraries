@@ -11,7 +11,7 @@ import {
     _decode_ObjectIdName,
     _encode_ObjectIdName,
 } from "../SIOsAccessControl-MODULE/ObjectIdName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ObjectIdData */
+
 /**
  * @summary ObjectIdData
  * @description
@@ -61,9 +61,8 @@ export class ObjectIdData {
         return new ObjectIdData(_o.objectId, _o.objectIdName);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectIdData */
+
 /**
  * @summary The Leading Root Component Types of ObjectIdData
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_ObjectIdData: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectIdData */
+
 /**
  * @summary The Trailing Root Component Types of ObjectIdData
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_ObjectIdData: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObjectIdData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectIdData */
+
 /**
  * @summary The Extension Addition Component Types of ObjectIdData
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_ObjectIdData: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ObjectIdData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectIdData */
+
 let _cached_decoder_for_ObjectIdData: $.ASN1Decoder<ObjectIdData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectIdData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectIdData
  * @function
@@ -149,13 +144,11 @@ export function _decode_ObjectIdData(el: _Element) {
     }
     return _cached_decoder_for_ObjectIdData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectIdData */
+
 let _cached_encoder_for_ObjectIdData: $.ASN1Encoder<ObjectIdData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectIdData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectIdData */
+
 /**
  * @summary Encodes a(n) ObjectIdData into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_ObjectIdData(
     return _cached_encoder_for_ObjectIdData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectIdData */
 
 /* eslint-enable */

@@ -25,7 +25,6 @@ import { id_hat_importance } from '../IPMSObjectIdentifiers/id-hat-importance.va
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION importance */
 /**
  * @summary importance
  * @description
@@ -62,6 +61,5 @@ export const importance: X413ATTRIBUTE<ImportanceField> = {
     '&id': id_hat_importance /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION importance */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AD_IF_RELEVANT */
+
 /**
  * @summary AD_IF_RELEVANT
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AD_IF_RELEVANT = AuthorizationData; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AD_IF_RELEVANT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_IF_RELEVANT */
+
 let _cached_decoder_for_AD_IF_RELEVANT: $.ASN1Decoder<AD_IF_RELEVANT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AD_IF_RELEVANT */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AD_IF_RELEVANT */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AD_IF_RELEVANT
  * @function
@@ -46,13 +44,11 @@ export function _decode_AD_IF_RELEVANT(el: _Element) {
   }
   return _cached_decoder_for_AD_IF_RELEVANT(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AD_IF_RELEVANT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_IF_RELEVANT */
+
 let _cached_encoder_for_AD_IF_RELEVANT: $.ASN1Encoder<AD_IF_RELEVANT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AD_IF_RELEVANT */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AD_IF_RELEVANT */
+
 /**
  * @summary Encodes a(n) AD_IF_RELEVANT into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_AD_IF_RELEVANT(
   return _cached_encoder_for_AD_IF_RELEVANT(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AD_IF_RELEVANT */
 
 /* eslint-enable */

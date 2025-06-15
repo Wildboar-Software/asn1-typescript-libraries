@@ -33,7 +33,7 @@ import {
     _decode_BRTCertificateInformation,
     _encode_BRTCertificateInformation,
 } from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ACBioContentInformation */
+
 /**
  * @summary ACBioContentInformation
  * @description
@@ -121,9 +121,8 @@ export class ACBioContentInformation {
         return v0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ACBioContentInformation */
+
 /**
  * @summary The Leading Root Component Types of ACBioContentInformation
  * @description
@@ -169,9 +168,8 @@ export const _root_component_type_list_1_spec_for_ACBioContentInformation: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ACBioContentInformation */
+
 /**
  * @summary The Trailing Root Component Types of ACBioContentInformation
  * @description
@@ -181,9 +179,8 @@ export const _root_component_type_list_1_spec_for_ACBioContentInformation: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ACBioContentInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ACBioContentInformation */
+
 /**
  * @summary The Extension Addition Component Types of ACBioContentInformation
  * @description
@@ -193,13 +190,11 @@ export const _root_component_type_list_2_spec_for_ACBioContentInformation: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_ACBioContentInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACBioContentInformation */
+
 let _cached_decoder_for_ACBioContentInformation: $.ASN1Decoder<ACBioContentInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACBioContentInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ACBioContentInformation
  * @function
@@ -260,13 +255,11 @@ export function _decode_ACBioContentInformation(el: _Element) {
     }
     return _cached_decoder_for_ACBioContentInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACBioContentInformation */
+
 let _cached_encoder_for_ACBioContentInformation: $.ASN1Encoder<ACBioContentInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACBioContentInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACBioContentInformation */
+
 /**
  * @summary Encodes a(n) ACBioContentInformation into an ASN.1 Element.
  * @function
@@ -327,6 +320,5 @@ export function _encode_ACBioContentInformation(
     return _cached_encoder_for_ACBioContentInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ACBioContentInformation */
 
 /* eslint-enable */

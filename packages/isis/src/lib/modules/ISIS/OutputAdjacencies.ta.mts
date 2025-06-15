@@ -15,7 +15,6 @@ import {
   _decode_LocalDistinguishedName,
   _encode_LocalDistinguishedName,
 } from '../ISIS/LocalDistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OutputAdjacencies */
 /**
  * @summary OutputAdjacencies
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OutputAdjacencies = LocalDistinguishedName[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OutputAdjacencies */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OutputAdjacencies */
 let _cached_decoder_for_OutputAdjacencies: $.ASN1Decoder<OutputAdjacencies> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OutputAdjacencies */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OutputAdjacencies */
 /**
  * @summary Decodes an ASN.1 element into a(n) OutputAdjacencies
  * @function
@@ -48,13 +43,9 @@ export function _decode_OutputAdjacencies(el: _Element) {
   }
   return _cached_decoder_for_OutputAdjacencies(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OutputAdjacencies */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OutputAdjacencies */
 let _cached_encoder_for_OutputAdjacencies: $.ASN1Encoder<OutputAdjacencies> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OutputAdjacencies */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OutputAdjacencies */
 /**
  * @summary Encodes a(n) OutputAdjacencies into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_OutputAdjacencies(
   return _cached_encoder_for_OutputAdjacencies(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OutputAdjacencies */
 
 /* eslint-enable */

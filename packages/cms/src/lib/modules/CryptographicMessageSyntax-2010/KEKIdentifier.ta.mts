@@ -12,7 +12,7 @@ import {
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
 } from "../CryptographicMessageSyntax-2010/OtherKeyAttribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KEKIdentifier */
+
 /**
  * @summary KEKIdentifier
  * @description
@@ -68,9 +68,8 @@ export class KEKIdentifier {
         return new KEKIdentifier(_o.keyIdentifier, _o.date, _o.other);
     }
 }
-/* END_OF_SYMBOL_DEFINITION KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KEKIdentifier */
+
 /**
  * @summary The Leading Root Component Types of KEKIdentifier
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_KEKIdentifier: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KEKIdentifier */
+
 /**
  * @summary The Trailing Root Component Types of KEKIdentifier
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_KEKIdentifier: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KEKIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KEKIdentifier */
+
 /**
  * @summary The Extension Addition Component Types of KEKIdentifier
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_KEKIdentifier: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_KEKIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KEKIdentifier */
+
 let _cached_decoder_for_KEKIdentifier: $.ASN1Decoder<KEKIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KEKIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KEKIdentifier
  * @function
@@ -179,13 +174,11 @@ export function _decode_KEKIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KEKIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KEKIdentifier */
+
 let _cached_encoder_for_KEKIdentifier: $.ASN1Encoder<KEKIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KEKIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KEKIdentifier */
+
 /**
  * @summary Encodes a(n) KEKIdentifier into an ASN.1 Element.
  * @function
@@ -222,6 +215,5 @@ export function _encode_KEKIdentifier(
     return _cached_encoder_for_KEKIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KEKIdentifier */
 
 /* eslint-enable */

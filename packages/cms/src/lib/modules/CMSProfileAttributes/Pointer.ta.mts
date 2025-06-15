@@ -18,7 +18,7 @@ import {
     _encode_RFID,
 } from "../CMSProfileAttributes/RFID.ta.mjs";
 import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Pointer */
+
 /**
  * @summary Pointer
  * @description
@@ -43,13 +43,11 @@ export type Pointer =
     | { address: Address } /* CHOICE_ALT_ROOT */
     | { dbRecord: DBRecord } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Pointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pointer */
+
 let _cached_decoder_for_Pointer: $.ASN1Decoder<Pointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Pointer
  * @function
@@ -68,13 +66,11 @@ export function _decode_Pointer(el: _Element) {
     }
     return _cached_decoder_for_Pointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pointer */
+
 let _cached_encoder_for_Pointer: $.ASN1Encoder<Pointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pointer */
+
 /**
  * @summary Encodes a(n) Pointer into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_Pointer(
     return _cached_encoder_for_Pointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pointer */
 
 /* eslint-enable */

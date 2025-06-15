@@ -20,7 +20,7 @@ import {
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BiometricProcessSecurityInformation */
+
 /**
  * @summary BiometricProcessSecurityInformation
  * @description
@@ -38,13 +38,11 @@ export type BiometricProcessSecurityInformation =
           biometricProcessSecurity: BiometricProcessSecurity;
       } /* CHOICE_ALT_ROOT */
     | { biometricProcessSecurityReferrer: URI } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BiometricProcessSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessSecurityInformation */
+
 let _cached_decoder_for_BiometricProcessSecurityInformation: $.ASN1Decoder<BiometricProcessSecurityInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcessSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricProcessSecurityInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricProcessSecurityInformation
  * @function
@@ -65,13 +63,11 @@ export function _decode_BiometricProcessSecurityInformation(el: _Element) {
     }
     return _cached_decoder_for_BiometricProcessSecurityInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricProcessSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessSecurityInformation */
+
 let _cached_encoder_for_BiometricProcessSecurityInformation: $.ASN1Encoder<BiometricProcessSecurityInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcessSecurityInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricProcessSecurityInformation */
+
 /**
  * @summary Encodes a(n) BiometricProcessSecurityInformation into an ASN.1 Element.
  * @function
@@ -98,6 +94,5 @@ export function _encode_BiometricProcessSecurityInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricProcessSecurityInformation */
 
 /* eslint-enable */

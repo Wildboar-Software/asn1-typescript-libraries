@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { operationalBinding } from "../UsefulDefinitions/operationalBinding.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ob */
 /**
  * @summary id_ob
  * @description
@@ -15,6 +14,5 @@ import { operationalBinding } from "../UsefulDefinitions/operationalBinding.va.m
  * @constant
  */
 export const id_ob: ID = operationalBinding;
-/* END_OF_SYMBOL_DEFINITION id_ob */
 
 /* eslint-enable */

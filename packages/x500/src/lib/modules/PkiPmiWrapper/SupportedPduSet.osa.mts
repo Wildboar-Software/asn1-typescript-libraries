@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedPduSet */
 /**
  * @summary SupportedPduSet
  * @description
@@ -16,6 +15,5 @@ import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
  *
  */
 export const SupportedPduSet: WRAPPED_PDU[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedPduSet */
 
 /* eslint-enable */

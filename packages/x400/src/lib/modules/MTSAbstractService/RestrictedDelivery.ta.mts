@@ -15,7 +15,6 @@ import {
     _decode_Restriction,
     _encode_Restriction,
 } from '../MTSAbstractService/Restriction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RestrictedDelivery */
 /**
  * @summary RestrictedDelivery
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RestrictedDelivery = Restriction[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RestrictedDelivery */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RestrictedDelivery */
 let _cached_decoder_for_RestrictedDelivery: $.ASN1Decoder<RestrictedDelivery> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RestrictedDelivery */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RestrictedDelivery */
 /**
  * @summary Decodes an ASN.1 element into a(n) RestrictedDelivery
  * @function
@@ -48,13 +43,9 @@ export function _decode_RestrictedDelivery(el: _Element) {
     }
     return _cached_decoder_for_RestrictedDelivery(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RestrictedDelivery */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RestrictedDelivery */
 let _cached_encoder_for_RestrictedDelivery: $.ASN1Encoder<RestrictedDelivery> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RestrictedDelivery */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RestrictedDelivery */
 /**
  * @summary Encodes a(n) RestrictedDelivery into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_RestrictedDelivery(
     return _cached_encoder_for_RestrictedDelivery(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RestrictedDelivery */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _encode_Credentials,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Credentials.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION responderCredentials */
+
 /**
  * @summary responderCredentials
  * @description
@@ -45,6 +45,5 @@ export const responderCredentials: SEC_EXCHG_ITEM<Credentials> = {
   '&itemId': 2 /* OBJECT_FIELD_SETTING */,
   '&ItemType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION responderCredentials */
 
 /* eslint-enable */

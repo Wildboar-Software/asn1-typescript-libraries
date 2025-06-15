@@ -6,7 +6,6 @@ import {
     _decode_AttributeMappings_Item,
     _encode_AttributeMappings_Item,
 } from "../AttributeCertificateDefinitions/AttributeMappings-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeMappings */
 /**
  * @summary AttributeMappings
  * @description
@@ -26,13 +25,9 @@ import {
  * ```
  */
 export type AttributeMappings = AttributeMappings_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AttributeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeMappings */
 let _cached_decoder_for_AttributeMappings: $.ASN1Decoder<AttributeMappings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeMappings */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeMappings
  * @function
@@ -47,13 +42,9 @@ export function _decode_AttributeMappings(el: _Element) {
     }
     return _cached_decoder_for_AttributeMappings(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeMappings */
 let _cached_encoder_for_AttributeMappings: $.ASN1Encoder<AttributeMappings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeMappings */
 /**
  * @summary Encodes a(n) AttributeMappings into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_AttributeMappings(
     return _cached_encoder_for_AttributeMappings(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeMappings */
 
 /* eslint-enable */

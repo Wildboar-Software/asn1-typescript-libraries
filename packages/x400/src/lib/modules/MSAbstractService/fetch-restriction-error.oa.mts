@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/fetch-restriction-error-ParameterType.ta.mjs';
 import { err_fetch_restriction_error } from '../MSAccessProtocol/err-fetch-restriction-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION fetch_restriction_error */
 /**
  * @summary fetch_restriction_error
  * @description
@@ -61,6 +60,5 @@ export const fetch_restriction_error: ABSTRACT_ERROR<fetch_restriction_error_Par
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION fetch_restriction_error */
 
 /* eslint-enable */

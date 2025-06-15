@@ -20,7 +20,6 @@ import {
   _decode_Vein_only,
   _encode_Vein_only,
 } from '../CBEFF-DATA-ELEMENTS/Vein-only.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BiometricSubtype */
 /**
  * @summary BiometricSubtype
  * @description
@@ -36,24 +35,16 @@ import {
 export type BiometricSubtype =
   | { any_: Any_sub_type } /* CHOICE_ALT_ROOT */
   | { vein_only: Vein_only } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BiometricSubtype */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricSubtype */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricSubtype */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricSubtype */
 export const _decode_BiometricSubtype = $._decode_inextensible_choice<BiometricSubtype>(
   {
     'CONTEXT 0': ['any_', _decode_Any_sub_type],
     'CONTEXT 1': ['vein_only', _decode_Vein_only],
   }
 );
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricSubtype */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricSubtype */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricSubtype */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricSubtype */
 export const _encode_BiometricSubtype = $._encode_choice<BiometricSubtype>(
   {
     any_: _encode_Any_sub_type,
@@ -62,6 +53,5 @@ export const _encode_BiometricSubtype = $._encode_choice<BiometricSubtype>(
   $.BER
 );
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricSubtype */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION tu11VC11CI */
+
 /**
  * @summary tu11VC11CI
  * @description
@@ -32,6 +32,5 @@ export const tu11VC11CI: CharacteristicInformation = new _OID(
     [13],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION tu11VC11CI */
 
 /* eslint-enable */

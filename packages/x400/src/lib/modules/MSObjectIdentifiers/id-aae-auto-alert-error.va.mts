@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_aae } from '../MSObjectIdentifiers/id-aae.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_aae_auto_alert_error */
 /**
  * @summary id_aae_auto_alert_error
  * @description
@@ -25,6 +24,5 @@ import { id_aae } from '../MSObjectIdentifiers/id-aae.va.mjs';
  * @constant
  */
 export const id_aae_auto_alert_error: ID = new _OID([0], id_aae);
-/* END_OF_SYMBOL_DEFINITION id_aae_auto_alert_error */
 
 /* eslint-enable */

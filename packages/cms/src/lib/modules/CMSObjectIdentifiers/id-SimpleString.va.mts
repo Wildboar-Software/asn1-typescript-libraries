@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va.mjs";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_SimpleString */
+
 /**
  * @summary id_SimpleString
  * @description
@@ -16,6 +16,5 @@ import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
  * @constant
  */
 export const id_SimpleString: OID = new _OID([/* ss */ 1], dbEKM);
-/* END_OF_SYMBOL_DEFINITION id_SimpleString */
 
 /* eslint-enable */

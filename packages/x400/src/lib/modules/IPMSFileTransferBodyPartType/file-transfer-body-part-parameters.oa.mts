@@ -16,7 +16,6 @@ import {
     _encode_FileTransferParameters,
 } from '../IPMSFileTransferBodyPartType/FileTransferParameters.ta.mjs';
 import { id_ep_file_transfer } from '../IPMSObjectIdentifiers/id-ep-file-transfer.va.mjs';
-/* START_OF_SYMBOL_DEFINITION file_transfer_body_part_parameters */
 /**
  * @summary file_transfer_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const file_transfer_body_part_parameters: TYPE_IDENTIFIER<FileTransferPar
     '&id': id_ep_file_transfer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION file_transfer_body_part_parameters */
 
 /* eslint-enable */

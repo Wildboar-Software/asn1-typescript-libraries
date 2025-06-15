@@ -15,7 +15,6 @@ import {
     _decode_ProceduralStatus,
     _encode_ProceduralStatus,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProceduralStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProceduralStatusValue */
 /**
  * @summary ProceduralStatusValue
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProceduralStatusValue = ProceduralStatus; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProceduralStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProceduralStatusValue */
 let _cached_decoder_for_ProceduralStatusValue: $.ASN1Decoder<ProceduralStatusValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProceduralStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProceduralStatusValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProceduralStatusValue
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProceduralStatusValue(el: _Element) {
     }
     return _cached_decoder_for_ProceduralStatusValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProceduralStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProceduralStatusValue */
 let _cached_encoder_for_ProceduralStatusValue: $.ASN1Encoder<ProceduralStatusValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProceduralStatusValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProceduralStatusValue */
 /**
  * @summary Encodes a(n) ProceduralStatusValue into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProceduralStatusValue(
     return _cached_encoder_for_ProceduralStatusValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProceduralStatusValue */
 
 /* eslint-enable */

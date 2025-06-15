@@ -21,7 +21,6 @@ import {
     _decode_LocalIPMIdentifier,
     _encode_LocalIPMIdentifier,
 } from '../IPMSInformationObjects/LocalIPMIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMIdentifier */
 /**
  * @summary IPMIdentifier
  * @description
@@ -71,9 +70,7 @@ export class IPMIdentifier {
         return new IPMIdentifier(_o.user, _o.user_relative_identifier);
     }
 }
-/* END_OF_SYMBOL_DEFINITION IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPMIdentifier */
 /**
  * @summary The Leading Root Component Types of IPMIdentifier
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_IPMIdentifier: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPMIdentifier */
 /**
  * @summary The Trailing Root Component Types of IPMIdentifier
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_IPMIdentifier: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IPMIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPMIdentifier */
 /**
  * @summary The Extension Addition Component Types of IPMIdentifier
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_IPMIdentifier: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_IPMIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMIdentifier */
 let _cached_decoder_for_IPMIdentifier: $.ASN1Decoder<IPMIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMIdentifier
  * @function
@@ -173,13 +162,9 @@ export function _decode_IPMIdentifier(el: _Element) {
     }
     return _cached_decoder_for_IPMIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMIdentifier */
 let _cached_encoder_for_IPMIdentifier: $.ASN1Encoder<IPMIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMIdentifier */
 /**
  * @summary Encodes a(n) IPMIdentifier into an ASN.1 Element.
  * @function
@@ -221,6 +206,5 @@ export function _encode_IPMIdentifier(
     return _cached_encoder_for_IPMIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMIdentifier */
 
 /* eslint-enable */

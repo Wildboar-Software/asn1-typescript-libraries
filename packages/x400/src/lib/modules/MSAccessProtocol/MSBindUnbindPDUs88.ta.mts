@@ -20,7 +20,6 @@ import {
     _decode_Unbind,
     _encode_Unbind,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MSBindUnbindPDUs88 */
 /**
  * @summary MSBindUnbindPDUs88
  * @description
@@ -37,13 +36,9 @@ import {
 export type MSBindUnbindPDUs88 =
     | { bind: Bind } /* CHOICE_ALT_ROOT */
     | { unbind: Unbind } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MSBindUnbindPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindUnbindPDUs88 */
 let _cached_decoder_for_MSBindUnbindPDUs88: $.ASN1Decoder<MSBindUnbindPDUs88> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindUnbindPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSBindUnbindPDUs88 */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSBindUnbindPDUs88
  * @function
@@ -65,13 +60,9 @@ export function _decode_MSBindUnbindPDUs88(el: _Element) {
     }
     return _cached_decoder_for_MSBindUnbindPDUs88(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSBindUnbindPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindUnbindPDUs88 */
 let _cached_encoder_for_MSBindUnbindPDUs88: $.ASN1Encoder<MSBindUnbindPDUs88> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindUnbindPDUs88 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSBindUnbindPDUs88 */
 /**
  * @summary Encodes a(n) MSBindUnbindPDUs88 into an ASN.1 Element.
  * @function
@@ -95,6 +86,5 @@ export function _encode_MSBindUnbindPDUs88(
     return _cached_encoder_for_MSBindUnbindPDUs88(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSBindUnbindPDUs88 */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION MaxLogSize */
 /**
  * @summary MaxLogSize
  * @description
@@ -27,9 +26,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type MaxLogSize = INTEGER;
-/* END_OF_SYMBOL_DEFINITION MaxLogSize */
 
-/* START_OF_SYMBOL_DEFINITION MaxLogSize_unlimited */
 /**
  * @summary MaxLogSize_unlimited
  * @constant
@@ -37,9 +34,7 @@ type MaxLogSize = INTEGER;
  */
 export
 const MaxLogSize_unlimited: MaxLogSize = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION MaxLogSize_unlimited */
 
-/* START_OF_SYMBOL_DEFINITION unlimited */
 /**
  * @summary MaxLogSize_unlimited
  * @constant
@@ -47,21 +42,12 @@ const MaxLogSize_unlimited: MaxLogSize = 0; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const unlimited: MaxLogSize = MaxLogSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION unlimited */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxLogSize */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaxLogSize */
 export const _decode_MaxLogSize = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_MaxLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxLogSize */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxLogSize */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaxLogSize */
 export const _encode_MaxLogSize = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaxLogSize */
 
 /* eslint-enable */

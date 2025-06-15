@@ -11,7 +11,6 @@ import {
     _decode_CertReplaceOK_Item_ok,
     _encode_CertReplaceOK_Item_ok,
 } from "../CaSubscription/CertReplaceOK-Item-ok.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertReplaceOK_Item */
 /**
  * @summary CertReplaceOK_Item
  * @description
@@ -26,13 +25,9 @@ export type CertReplaceOK_Item =
     | { ok: CertReplaceOK_Item_ok } /* CHOICE_ALT_ROOT */
     | { not_ok: CertReplaceOK_Item_not_ok } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertReplaceOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceOK_Item */
 let _cached_decoder_for_CertReplaceOK_Item: $.ASN1Decoder<CertReplaceOK_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReplaceOK_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReplaceOK_Item
  * @function
@@ -60,13 +55,9 @@ export function _decode_CertReplaceOK_Item(el: _Element) {
     }
     return _cached_decoder_for_CertReplaceOK_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReplaceOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceOK_Item */
 let _cached_encoder_for_CertReplaceOK_Item: $.ASN1Encoder<CertReplaceOK_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceOK_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReplaceOK_Item */
 /**
  * @summary Encodes a(n) CertReplaceOK_Item into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_CertReplaceOK_Item(
     return _cached_encoder_for_CertReplaceOK_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReplaceOK_Item */
 
 /* eslint-enable */

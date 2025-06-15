@@ -19,7 +19,6 @@ import {
 import { mhs_user_agent } from '../MHSDirectoryObjectsAndAttributes/mhs-user-agent.oa.mjs';
 import { edi_capabilities } from '../EDIMUseOfDirectory/edi-capabilities.oa.mjs';
 import { id_doc_edi_user_agent } from '../EDIMUseOfDirectory/id-doc-edi-user-agent.va.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_user_agent */
 /**
  * @summary edi_user_agent
  * @description
@@ -47,6 +46,5 @@ export const edi_user_agent: OBJECT_CLASS = {
     '&id': id_doc_edi_user_agent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_user_agent */
 
 /* eslint-enable */

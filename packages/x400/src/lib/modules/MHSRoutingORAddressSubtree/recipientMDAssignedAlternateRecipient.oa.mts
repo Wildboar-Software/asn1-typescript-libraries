@@ -22,7 +22,6 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import { id_at_recipient_md_assigned_alternate_recipient } from '../MHSRoutingObjectIdentifiers/id-at-recipient-md-assigned-alternate-recipient.va.mjs';
-/* START_OF_SYMBOL_DEFINITION recipientMDAssignedAlternateRecipient */
 /**
  * @summary recipientMDAssignedAlternateRecipient
  * @description
@@ -59,6 +58,5 @@ export const recipientMDAssignedAlternateRecipient: ATTRIBUTE<ORName> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipientMDAssignedAlternateRecipient */
 
 /* eslint-enable */

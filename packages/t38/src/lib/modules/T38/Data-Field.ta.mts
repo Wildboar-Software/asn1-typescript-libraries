@@ -15,7 +15,7 @@ import {
   _decode_Data_Field_Item,
   _encode_Data_Field_Item,
 } from '../T38/Data-Field-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Data_Field */
+
 /**
  * @summary Data_Field
  * @description
@@ -34,13 +34,11 @@ import {
  * ```
  */
 export type Data_Field = Data_Field_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Data_Field */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Data_Field */
+
 let _cached_decoder_for_Data_Field: $.ASN1Decoder<Data_Field> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Data_Field */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Data_Field */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Data_Field
  * @function
@@ -55,13 +53,11 @@ export function _decode_Data_Field(el: _Element) {
   }
   return _cached_decoder_for_Data_Field(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Data_Field */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Data_Field */
+
 let _cached_encoder_for_Data_Field: $.ASN1Encoder<Data_Field> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Data_Field */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Data_Field */
+
 /**
  * @summary Encodes a(n) Data_Field into an ASN.1 Element.
  * @function
@@ -82,6 +78,5 @@ export function _encode_Data_Field(
   return _cached_encoder_for_Data_Field(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Data_Field */
 
 /* eslint-enable */

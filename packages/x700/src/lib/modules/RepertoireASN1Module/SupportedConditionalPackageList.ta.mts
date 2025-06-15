@@ -15,7 +15,6 @@ import {
     _decode_Packages,
     _encode_Packages,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SupportedConditionalPackageList */
 /**
  * @summary SupportedConditionalPackageList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SupportedConditionalPackageList = Packages; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SupportedConditionalPackageList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedConditionalPackageList */
 let _cached_decoder_for_SupportedConditionalPackageList: $.ASN1Decoder<SupportedConditionalPackageList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedConditionalPackageList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedConditionalPackageList */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedConditionalPackageList
  * @function
@@ -46,13 +41,9 @@ export function _decode_SupportedConditionalPackageList(el: _Element) {
     }
     return _cached_decoder_for_SupportedConditionalPackageList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedConditionalPackageList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedConditionalPackageList */
 let _cached_encoder_for_SupportedConditionalPackageList: $.ASN1Encoder<SupportedConditionalPackageList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedConditionalPackageList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedConditionalPackageList */
 /**
  * @summary Encodes a(n) SupportedConditionalPackageList into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SupportedConditionalPackageList(
     return _cached_encoder_for_SupportedConditionalPackageList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedConditionalPackageList */
 
 /* eslint-enable */

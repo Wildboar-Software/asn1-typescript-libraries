@@ -27,7 +27,6 @@ import {
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
 } from '../MTSAbstractService/MessageSecurityLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageTokenEncryptedData */
 /**
  * @summary MessageTokenEncryptedData
  * @description
@@ -106,9 +105,7 @@ export class MessageTokenEncryptedData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageTokenEncryptedData */
 /**
  * @summary The Leading Root Component Types of MessageTokenEncryptedData
  * @description
@@ -154,9 +151,7 @@ export const _root_component_type_list_1_spec_for_MessageTokenEncryptedData: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageTokenEncryptedData */
 /**
  * @summary The Trailing Root Component Types of MessageTokenEncryptedData
  * @description
@@ -166,9 +161,7 @@ export const _root_component_type_list_1_spec_for_MessageTokenEncryptedData: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MessageTokenEncryptedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageTokenEncryptedData */
 /**
  * @summary The Extension Addition Component Types of MessageTokenEncryptedData
  * @description
@@ -178,13 +171,9 @@ export const _root_component_type_list_2_spec_for_MessageTokenEncryptedData: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_MessageTokenEncryptedData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageTokenEncryptedData */
 let _cached_decoder_for_MessageTokenEncryptedData: $.ASN1Decoder<MessageTokenEncryptedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageTokenEncryptedData */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageTokenEncryptedData
  * @function
@@ -251,13 +240,9 @@ export function _decode_MessageTokenEncryptedData(el: _Element) {
     }
     return _cached_decoder_for_MessageTokenEncryptedData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageTokenEncryptedData */
 let _cached_encoder_for_MessageTokenEncryptedData: $.ASN1Encoder<MessageTokenEncryptedData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageTokenEncryptedData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageTokenEncryptedData */
 /**
  * @summary Encodes a(n) MessageTokenEncryptedData into an ASN.1 Element.
  * @function
@@ -329,6 +314,5 @@ export function _encode_MessageTokenEncryptedData(
     return _cached_encoder_for_MessageTokenEncryptedData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageTokenEncryptedData */
 
 /* eslint-enable */

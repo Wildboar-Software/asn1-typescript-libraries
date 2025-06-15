@@ -10,7 +10,7 @@ import {
     _encode_PBMParameter,
 } from "../PKIXCRMF-2009/PBMParameter.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Password_MACAlgorithms_Union0_Intersection0_Element */
+
 /**
  * @summary Password_MACAlgorithms_Union0_Intersection0_Element
  * @description
@@ -38,6 +38,5 @@ export const Password_MACAlgorithms_Union0_Intersection0_Element: MAC_ALGORITHM<
     "&keyed": false /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION Password_MACAlgorithms_Union0_Intersection0_Element */
 
 /* eslint-enable */

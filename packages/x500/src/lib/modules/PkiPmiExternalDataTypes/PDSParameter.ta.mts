@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PDSParameter */
 /**
  * @summary PDSParameter
  * @description
@@ -57,9 +56,7 @@ export class PDSParameter {
         return new PDSParameter(_o.printable_string, _o.teletex_string);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDSParameter */
 /**
  * @summary The Leading Root Component Types of PDSParameter
  * @description
@@ -84,9 +81,7 @@ export const _root_component_type_list_1_spec_for_PDSParameter: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDSParameter */
 /**
  * @summary The Trailing Root Component Types of PDSParameter
  * @description
@@ -96,9 +91,7 @@ export const _root_component_type_list_1_spec_for_PDSParameter: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PDSParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDSParameter */
 /**
  * @summary The Extension Addition Component Types of PDSParameter
  * @description
@@ -108,13 +101,9 @@ export const _root_component_type_list_2_spec_for_PDSParameter: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PDSParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDSParameter */
 let _cached_decoder_for_PDSParameter: $.ASN1Decoder<PDSParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDSParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) PDSParameter
  * @function
@@ -156,13 +145,9 @@ export function _decode_PDSParameter(el: _Element) {
     }
     return _cached_decoder_for_PDSParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDSParameter */
 let _cached_encoder_for_PDSParameter: $.ASN1Encoder<PDSParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDSParameter */
 /**
  * @summary Encodes a(n) PDSParameter into an ASN.1 Element.
  * @function
@@ -201,6 +186,5 @@ export function _encode_PDSParameter(
     return _cached_encoder_for_PDSParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDSParameter */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Select_Attributes */
+
 /**
  * @summary Select_Attributes
  * @description
@@ -59,9 +59,8 @@ export class Select_Attributes {
     return new Select_Attributes(_o.pathname);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Select_Attributes */
+
 /**
  * @summary The Leading Root Component Types of Select_Attributes
  * @description
@@ -73,9 +72,8 @@ export class Select_Attributes {
 export const _root_component_type_list_1_spec_for_Select_Attributes: $.ComponentSpec[] = [
   new $.ComponentSpec('pathname', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Select_Attributes */
+
 /**
  * @summary The Trailing Root Component Types of Select_Attributes
  * @description
@@ -85,9 +83,8 @@ export const _root_component_type_list_1_spec_for_Select_Attributes: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Select_Attributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Select_Attributes */
+
 /**
  * @summary The Extension Addition Component Types of Select_Attributes
  * @description
@@ -97,13 +94,11 @@ export const _root_component_type_list_2_spec_for_Select_Attributes: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_Select_Attributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Select_Attributes */
+
 let _cached_decoder_for_Select_Attributes: $.ASN1Decoder<Select_Attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Select_Attributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Select_Attributes
  * @function
@@ -132,13 +127,11 @@ export function _decode_Select_Attributes(el: _Element) {
   }
   return _cached_decoder_for_Select_Attributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Select_Attributes */
+
 let _cached_encoder_for_Select_Attributes: $.ASN1Encoder<Select_Attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Select_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Select_Attributes */
+
 /**
  * @summary Encodes a(n) Select_Attributes into an ASN.1 Element.
  * @function
@@ -175,6 +168,5 @@ export function _encode_Select_Attributes(
   return _cached_encoder_for_Select_Attributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Select_Attributes */
 
 /* eslint-enable */

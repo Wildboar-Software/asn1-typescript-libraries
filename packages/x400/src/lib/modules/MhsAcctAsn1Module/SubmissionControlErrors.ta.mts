@@ -15,7 +15,6 @@ import {
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubmissionControlErrors */
 /**
  * @summary SubmissionControlErrors
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubmissionControlErrors = SubmissionError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubmissionControlErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionControlErrors */
 let _cached_decoder_for_SubmissionControlErrors: $.ASN1Decoder<SubmissionControlErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionControlErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmissionControlErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionControlErrors
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubmissionControlErrors(el: _Element) {
     }
     return _cached_decoder_for_SubmissionControlErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubmissionControlErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionControlErrors */
 let _cached_encoder_for_SubmissionControlErrors: $.ASN1Encoder<SubmissionControlErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionControlErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmissionControlErrors */
 /**
  * @summary Encodes a(n) SubmissionControlErrors into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubmissionControlErrors(
     return _cached_encoder_for_SubmissionControlErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmissionControlErrors */
 
 /* eslint-enable */

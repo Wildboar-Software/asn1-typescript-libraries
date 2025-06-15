@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LineImage */
+
 /**
  * @summary LineImage
  * @description
@@ -25,21 +25,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LineImage = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION LineImage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LineImage */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LineImage */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LineImage */
+
+
 export const _decode_LineImage = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_LineImage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LineImage */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LineImage */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LineImage */
+
+
 export const _encode_LineImage = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LineImage */
 
 /* eslint-enable */

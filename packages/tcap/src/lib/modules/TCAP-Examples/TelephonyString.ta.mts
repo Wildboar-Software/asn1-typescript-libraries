@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TelephonyString */
 /**
  * @summary TelephonyString
  * @description
@@ -27,21 +26,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TelephonyString = IA5String; // IA5String
-/* END_OF_SYMBOL_DEFINITION TelephonyString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TelephonyString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TelephonyString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TelephonyString */
 export const _decode_TelephonyString = $._decodeIA5String;
-/* END_OF_SYMBOL_DEFINITION _decode_TelephonyString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TelephonyString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TelephonyString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TelephonyString */
 export const _encode_TelephonyString = $._encodeIA5String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TelephonyString */
 
 /* eslint-enable */

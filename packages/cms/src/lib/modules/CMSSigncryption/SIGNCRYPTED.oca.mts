@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SIGNCRYPTED */
+
 /**
  * @summary SIGNCRYPTED
  * @description
@@ -57,6 +57,5 @@ export interface SIGNCRYPTED<
      */
     readonly "&Type": Type;
 }
-/* END_OF_SYMBOL_DEFINITION SIGNCRYPTED */
 
 /* eslint-enable */

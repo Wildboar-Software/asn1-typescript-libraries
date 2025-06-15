@@ -25,7 +25,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Vertex */
 /**
  * @summary Vertex
  * @description
@@ -101,9 +100,7 @@ export class Vertex {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Vertex */
 /**
  * @summary The Leading Root Component Types of Vertex
  * @description
@@ -142,9 +139,7 @@ export const _root_component_type_list_1_spec_for_Vertex: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Vertex */
 /**
  * @summary The Trailing Root Component Types of Vertex
  * @description
@@ -154,9 +149,7 @@ export const _root_component_type_list_1_spec_for_Vertex: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Vertex: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Vertex */
 /**
  * @summary The Extension Addition Component Types of Vertex
  * @description
@@ -166,13 +159,9 @@ export const _root_component_type_list_2_spec_for_Vertex: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Vertex: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Vertex */
 let _cached_decoder_for_Vertex: $.ASN1Decoder<Vertex> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Vertex */
 /**
  * @summary Decodes an ASN.1 element into a(n) Vertex
  * @function
@@ -234,13 +223,9 @@ export function _decode_Vertex(el: _Element) {
     }
     return _cached_decoder_for_Vertex(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Vertex */
 let _cached_encoder_for_Vertex: $.ASN1Encoder<Vertex> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Vertex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Vertex */
 /**
  * @summary Encodes a(n) Vertex into an ASN.1 Element.
  * @function
@@ -307,6 +292,5 @@ export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>) {
     return _cached_encoder_for_Vertex(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Vertex */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeTypeDescription */
 /**
  * @summary AttributeTypeDescription
  * @description
@@ -115,9 +114,7 @@ export class AttributeTypeDescription {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeDescription */
 /**
  * @summary The Leading Root Component Types of AttributeTypeDescription
  * @description
@@ -169,9 +166,7 @@ export const _root_component_type_list_1_spec_for_AttributeTypeDescription: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeDescription */
 /**
  * @summary The Trailing Root Component Types of AttributeTypeDescription
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_AttributeTypeDescription: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeTypeDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeDescription */
 /**
  * @summary The Extension Addition Component Types of AttributeTypeDescription
  * @description
@@ -193,13 +186,9 @@ export const _root_component_type_list_2_spec_for_AttributeTypeDescription: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeTypeDescription: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeDescription */
 let _cached_decoder_for_AttributeTypeDescription: $.ASN1Decoder<AttributeTypeDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeTypeDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeTypeDescription
  * @function
@@ -265,13 +254,9 @@ export function _decode_AttributeTypeDescription(el: _Element) {
     }
     return _cached_decoder_for_AttributeTypeDescription(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeDescription */
 let _cached_encoder_for_AttributeTypeDescription: $.ASN1Encoder<AttributeTypeDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeTypeDescription */
 /**
  * @summary Encodes a(n) AttributeTypeDescription into an ASN.1 Element.
  * @function
@@ -332,6 +317,5 @@ export function _encode_AttributeTypeDescription(
     return _cached_encoder_for_AttributeTypeDescription(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeTypeDescription */
 
 /* eslint-enable */

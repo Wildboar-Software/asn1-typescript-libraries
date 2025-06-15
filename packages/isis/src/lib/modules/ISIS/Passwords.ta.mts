@@ -15,7 +15,6 @@ import {
   _decode_Password,
   _encode_Password,
 } from '../ISIS/Password.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Passwords */
 /**
  * @summary Passwords
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Passwords = Password[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Passwords */
 let _cached_decoder_for_Passwords: $.ASN1Decoder<Passwords> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Passwords */
 /**
  * @summary Decodes an ASN.1 element into a(n) Passwords
  * @function
@@ -48,13 +43,9 @@ export function _decode_Passwords(el: _Element) {
   }
   return _cached_decoder_for_Passwords(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Passwords */
 let _cached_encoder_for_Passwords: $.ASN1Encoder<Passwords> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Passwords */
 /**
  * @summary Encodes a(n) Passwords into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Passwords(
   return _cached_encoder_for_Passwords(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Passwords */
 
 /* eslint-enable */

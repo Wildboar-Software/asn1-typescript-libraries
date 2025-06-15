@@ -16,7 +16,6 @@ import {
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AUTO_ACTION */
 /**
  * @summary AUTO_ACTION
  * @description
@@ -80,6 +79,5 @@ export interface AUTO_ACTION<
      */
     readonly '&Errors'?: AUTO_ACTION_ERROR[];
 }
-/* END_OF_SYMBOL_DEFINITION AUTO_ACTION */
 
 /* eslint-enable */

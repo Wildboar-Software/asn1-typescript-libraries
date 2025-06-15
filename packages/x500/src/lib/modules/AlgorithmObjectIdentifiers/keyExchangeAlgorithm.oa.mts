@@ -6,7 +6,6 @@ import {
     _encode_KEA_Parms_Id,
 } from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION keyExchangeAlgorithm */
 /**
  * @summary keyExchangeAlgorithm
  * @description
@@ -34,6 +33,5 @@ export const keyExchangeAlgorithm: ALGORITHM<KEA_Parms_Id> = {
     "&id": id_keyExchangeAlgorithm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION keyExchangeAlgorithm */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import {
 } from '../MTSAbstractService/ORAddress.ta.mjs';
 import { oRAddressMatch } from '../MSMatchingRules/oRAddressMatch.oa.mjs';
 import { id_at_mhs_or_addresses } from '../MHSObjectIdentifiers/id-at-mhs-or-addresses.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_or_addresses */
 /**
  * @summary mhs_or_addresses
  * @description
@@ -62,6 +61,5 @@ export const mhs_or_addresses: ATTRIBUTE<ORAddress> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_or_addresses */
 
 /* eslint-enable */

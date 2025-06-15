@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MSBindError */
 /**
  * @summary MSBindError
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MSBindError = INTEGER;
-/* END_OF_SYMBOL_DEFINITION MSBindError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindError */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSBindError */
 export const _decode_MSBindError = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_MSBindError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindError */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSBindError */
 export const _encode_MSBindError = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSBindError */
 
 /* eslint-enable */

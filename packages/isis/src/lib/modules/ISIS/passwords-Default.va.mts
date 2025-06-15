@@ -18,7 +18,6 @@ import {
   _decode_Password,
   _encode_Password,
 } from '../ISIS/Password.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION passwords_Default */
 /**
  * @summary passwords_Default
  * @description
@@ -32,6 +31,5 @@ import {
  * @constant
  */
 export const passwords_Default: Passwords = [];
-/* END_OF_SYMBOL_DEFINITION passwords_Default */
 
 /* eslint-enable */

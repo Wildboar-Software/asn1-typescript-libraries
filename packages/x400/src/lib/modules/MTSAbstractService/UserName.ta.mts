@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UserName */
 /**
  * @summary UserName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UserName = ORAddressAndOptionalDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UserName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserName */
 let _cached_decoder_for_UserName: $.ASN1Decoder<UserName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserName
  * @function
@@ -46,13 +41,9 @@ export function _decode_UserName(el: _Element) {
     }
     return _cached_decoder_for_UserName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserName */
 let _cached_encoder_for_UserName: $.ASN1Encoder<UserName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserName */
 /**
  * @summary Encodes a(n) UserName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_UserName(
     return _cached_encoder_for_UserName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserName */
 
 /* eslint-enable */

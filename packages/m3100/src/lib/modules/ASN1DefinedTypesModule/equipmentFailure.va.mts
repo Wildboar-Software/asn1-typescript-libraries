@@ -14,7 +14,7 @@ import {
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION equipmentFailure */
+
 /**
  * @summary equipmentFailure
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const equipmentFailure: GeneralErrorCause = { localValue: 6 };
-/* END_OF_SYMBOL_DEFINITION equipmentFailure */
 
 /* eslint-enable */

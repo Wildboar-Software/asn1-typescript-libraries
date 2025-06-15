@@ -15,7 +15,6 @@ import {
     _decode_AttributeSelection,
     _encode_AttributeSelection,
 } from '../MSAbstractService/AttributeSelection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EntryInformationSelection */
 /**
  * @summary EntryInformationSelection
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EntryInformationSelection = AttributeSelection[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION EntryInformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformationSelection */
 let _cached_decoder_for_EntryInformationSelection: $.ASN1Decoder<EntryInformationSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryInformationSelection */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryInformationSelection
  * @function
@@ -48,13 +43,9 @@ export function _decode_EntryInformationSelection(el: _Element) {
     }
     return _cached_decoder_for_EntryInformationSelection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryInformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformationSelection */
 let _cached_encoder_for_EntryInformationSelection: $.ASN1Encoder<EntryInformationSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformationSelection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryInformationSelection */
 /**
  * @summary Encodes a(n) EntryInformationSelection into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_EntryInformationSelection(
     return _cached_encoder_for_EntryInformationSelection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryInformationSelection */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_NonDeliveryReport,
     _encode_NonDeliveryReport,
 } from '../MTSAbstractService/NonDeliveryReport.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportType */
 /**
  * @summary ReportType
  * @description
@@ -37,13 +36,9 @@ import {
 export type ReportType =
     | { delivery: DeliveryReport } /* CHOICE_ALT_ROOT */
     | { non_delivery: NonDeliveryReport } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ReportType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportType */
 let _cached_decoder_for_ReportType: $.ASN1Decoder<ReportType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportType */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportType
  * @function
@@ -71,13 +66,9 @@ export function _decode_ReportType(el: _Element) {
     }
     return _cached_decoder_for_ReportType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportType */
 let _cached_encoder_for_ReportType: $.ASN1Encoder<ReportType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportType */
 /**
  * @summary Encodes a(n) ReportType into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_ReportType(
     return _cached_encoder_for_ReportType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportType */
 
 /* eslint-enable */

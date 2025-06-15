@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_moc } from "../DirectoryManagement/id-moc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_moc_shadowingAgreement */
 /**
  * @summary id_moc_shadowingAgreement
  * @description
@@ -18,6 +17,5 @@ export const id_moc_shadowingAgreement: OBJECT_IDENTIFIER = new _OID(
     [7],
     id_moc
 );
-/* END_OF_SYMBOL_DEFINITION id_moc_shadowingAgreement */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField */
 /**
  * @summary FNUserBasicCodeField
  * @description
@@ -29,219 +28,166 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FNUserBasicCodeField = INTEGER;
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_unspecified */
 /**
  * @summary FNUserBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_unspecified: FNUserBasicCodeField = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_unspecified */
 
-/* START_OF_SYMBOL_DEFINITION unspecified */
 /**
  * @summary FNUserBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
 export const unspecified: FNUserBasicCodeField = FNUserBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION unspecified */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_forwarded_for_archiving */
 /**
  * @summary FNUserBasicCodeField_forwarded_for_archiving
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_forwarded_for_archiving: FNUserBasicCodeField = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_forwarded_for_archiving */
 
-/* START_OF_SYMBOL_DEFINITION forwarded_for_archiving */
 /**
  * @summary FNUserBasicCodeField_forwarded_for_archiving
  * @constant
  * @type {number}
  */
 export const forwarded_for_archiving: FNUserBasicCodeField = FNUserBasicCodeField_forwarded_for_archiving; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION forwarded_for_archiving */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_forwarded_for_information */
 /**
  * @summary FNUserBasicCodeField_forwarded_for_information
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_forwarded_for_information: FNUserBasicCodeField = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_forwarded_for_information */
 
-/* START_OF_SYMBOL_DEFINITION forwarded_for_information */
 /**
  * @summary FNUserBasicCodeField_forwarded_for_information
  * @constant
  * @type {number}
  */
 export const forwarded_for_information: FNUserBasicCodeField = FNUserBasicCodeField_forwarded_for_information; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION forwarded_for_information */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_forwarded_for_additional_action */
 /**
  * @summary FNUserBasicCodeField_forwarded_for_additional_action
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_forwarded_for_additional_action: FNUserBasicCodeField = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_forwarded_for_additional_action */
 
-/* START_OF_SYMBOL_DEFINITION forwarded_for_additional_action */
 /**
  * @summary FNUserBasicCodeField_forwarded_for_additional_action
  * @constant
  * @type {number}
  */
 export const forwarded_for_additional_action: FNUserBasicCodeField = FNUserBasicCodeField_forwarded_for_additional_action; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION forwarded_for_additional_action */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_subscription_changed */
 /**
  * @summary FNUserBasicCodeField_subscription_changed
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_subscription_changed: FNUserBasicCodeField = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_subscription_changed */
 
-/* START_OF_SYMBOL_DEFINITION subscription_changed */
 /**
  * @summary FNUserBasicCodeField_subscription_changed
  * @constant
  * @type {number}
  */
 export const subscription_changed: FNUserBasicCodeField = FNUserBasicCodeField_subscription_changed; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION subscription_changed */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_heading_field_not_supported */
 /**
  * @summary FNUserBasicCodeField_heading_field_not_supported
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_heading_field_not_supported: FNUserBasicCodeField = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_heading_field_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION heading_field_not_supported */
 /**
  * @summary FNUserBasicCodeField_heading_field_not_supported
  * @constant
  * @type {number}
  */
 export const heading_field_not_supported: FNUserBasicCodeField = FNUserBasicCodeField_heading_field_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION heading_field_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_bodypart_type_not_supported */
 /**
  * @summary FNUserBasicCodeField_bodypart_type_not_supported
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_bodypart_type_not_supported: FNUserBasicCodeField = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_bodypart_type_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION bodypart_type_not_supported */
 /**
  * @summary FNUserBasicCodeField_bodypart_type_not_supported
  * @constant
  * @type {number}
  */
 export const bodypart_type_not_supported: FNUserBasicCodeField = FNUserBasicCodeField_bodypart_type_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION bodypart_type_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_message_type_not_supported */
 /**
  * @summary FNUserBasicCodeField_message_type_not_supported
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_message_type_not_supported: FNUserBasicCodeField = 7; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_message_type_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION message_type_not_supported */
 /**
  * @summary FNUserBasicCodeField_message_type_not_supported
  * @constant
  * @type {number}
  */
 export const message_type_not_supported: FNUserBasicCodeField = FNUserBasicCodeField_message_type_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION message_type_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_syntax_identifier_not_supported */
 /**
  * @summary FNUserBasicCodeField_syntax_identifier_not_supported
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_syntax_identifier_not_supported: FNUserBasicCodeField = 8; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_syntax_identifier_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION syntax_identifier_not_supported */
 /**
  * @summary FNUserBasicCodeField_syntax_identifier_not_supported
  * @constant
  * @type {number}
  */
 export const syntax_identifier_not_supported: FNUserBasicCodeField = FNUserBasicCodeField_syntax_identifier_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION syntax_identifier_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_interchange_sender_unknown */
 /**
  * @summary FNUserBasicCodeField_interchange_sender_unknown
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_interchange_sender_unknown: FNUserBasicCodeField = 9; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_interchange_sender_unknown */
 
-/* START_OF_SYMBOL_DEFINITION interchange_sender_unknown */
 /**
  * @summary FNUserBasicCodeField_interchange_sender_unknown
  * @constant
  * @type {number}
  */
 export const interchange_sender_unknown: FNUserBasicCodeField = FNUserBasicCodeField_interchange_sender_unknown; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION interchange_sender_unknown */
 
-/* START_OF_SYMBOL_DEFINITION FNUserBasicCodeField_user_defined_reason */
 /**
  * @summary FNUserBasicCodeField_user_defined_reason
  * @constant
  * @type {number}
  */
 export const FNUserBasicCodeField_user_defined_reason: FNUserBasicCodeField = 10; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION FNUserBasicCodeField_user_defined_reason */
 
-/* START_OF_SYMBOL_DEFINITION user_defined_reason */
 /**
  * @summary FNUserBasicCodeField_user_defined_reason
  * @constant
  * @type {number}
  */
 export const user_defined_reason: FNUserBasicCodeField = FNUserBasicCodeField_user_defined_reason; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION user_defined_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserBasicCodeField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FNUserBasicCodeField */
 export const _decode_FNUserBasicCodeField = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_FNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserBasicCodeField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FNUserBasicCodeField */
 export const _encode_FNUserBasicCodeField = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FNUserBasicCodeField */
 
 /* eslint-enable */

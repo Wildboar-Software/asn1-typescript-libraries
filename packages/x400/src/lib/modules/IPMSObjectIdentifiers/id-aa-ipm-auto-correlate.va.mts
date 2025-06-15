@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_aa } from '../IPMSObjectIdentifiers/id-aa.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_aa_ipm_auto_correlate */
 /**
  * @summary id_aa_ipm_auto_correlate
  * @description
@@ -25,6 +24,5 @@ import { id_aa } from '../IPMSObjectIdentifiers/id-aa.va.mjs';
  * @constant
  */
 export const id_aa_ipm_auto_correlate: ID = new _OID([1], id_aa);
-/* END_OF_SYMBOL_DEFINITION id_aa_ipm_auto_correlate */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _decode_KeyConstructionLabel,
     _encode_KeyConstructionLabel,
 } from "../CMSCKMKeyManagement/KeyConstructionLabel.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyConstructionLabels */
+
 /**
  * @summary KeyConstructionLabels
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type KeyConstructionLabels = KeyConstructionLabel[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION KeyConstructionLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructionLabels */
+
 let _cached_decoder_for_KeyConstructionLabels: $.ASN1Decoder<KeyConstructionLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructionLabels */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyConstructionLabels */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyConstructionLabels
  * @function
@@ -39,13 +37,11 @@ export function _decode_KeyConstructionLabels(el: _Element) {
     }
     return _cached_decoder_for_KeyConstructionLabels(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyConstructionLabels */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructionLabels */
+
 let _cached_encoder_for_KeyConstructionLabels: $.ASN1Encoder<KeyConstructionLabels> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructionLabels */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyConstructionLabels */
+
 /**
  * @summary Encodes a(n) KeyConstructionLabels into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_KeyConstructionLabels(
     return _cached_encoder_for_KeyConstructionLabels(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyConstructionLabels */
 
 /* eslint-enable */

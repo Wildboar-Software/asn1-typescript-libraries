@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EXTENDED_BODY_PART_TYPE */
 /**
  * @summary EXTENDED_BODY_PART_TYPE
  * @description
@@ -66,6 +65,5 @@ export interface EXTENDED_BODY_PART_TYPE {
      */
     readonly '&data'?: TYPE_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION EXTENDED_BODY_PART_TYPE */
 
 /* eslint-enable */

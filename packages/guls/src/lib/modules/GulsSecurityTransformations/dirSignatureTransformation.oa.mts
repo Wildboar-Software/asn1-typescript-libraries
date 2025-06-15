@@ -17,7 +17,7 @@ import {
   _encode_dirSignatureTransformation_XformedDataType,
 } from '../GulsSecurityTransformations/dirSignatureTransformation-XformedDataType.ta.mjs';
 import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dirSignatureTransformation */
+
 /**
  * @summary dirSignatureTransformation
  * @description
@@ -67,6 +67,5 @@ export const dirSignatureTransformation: SECURITY_TRANSFORMATION<dirSignatureTra
   '&XformedDataType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&QualifierType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dirSignatureTransformation */
 
 /* eslint-enable */

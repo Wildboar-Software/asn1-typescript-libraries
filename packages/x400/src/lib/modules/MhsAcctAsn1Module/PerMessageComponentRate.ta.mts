@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PerMessageComponentRate */
 /**
  * @summary PerMessageComponentRate
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PerMessageComponentRate = INTEGER;
-/* END_OF_SYMBOL_DEFINITION PerMessageComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerMessageComponentRate */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerMessageComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerMessageComponentRate */
 export const _decode_PerMessageComponentRate = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_PerMessageComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerMessageComponentRate */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerMessageComponentRate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerMessageComponentRate */
 export const _encode_PerMessageComponentRate = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerMessageComponentRate */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ProbableCause */
 /**
  * @summary ProbableCause
  * @description
@@ -32,13 +31,9 @@ export
 type ProbableCause =
     { globalValue: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { localValue: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbableCause */
 let _cached_decoder_for_ProbableCause: $.ASN1Decoder<ProbableCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbableCause */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbableCause
  * @function
@@ -53,13 +48,9 @@ function _decode_ProbableCause (el: _Element) {
 }); }
     return _cached_decoder_for_ProbableCause(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbableCause */
 let _cached_encoder_for_ProbableCause: $.ASN1Encoder<ProbableCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbableCause */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbableCause */
 /**
  * @summary Encodes a(n) ProbableCause into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_ProbableCause (value: ProbableCause, elGetter: $.ASN1Encoder<Pr
     return _cached_encoder_for_ProbableCause(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbableCause */
 
 /* eslint-enable */

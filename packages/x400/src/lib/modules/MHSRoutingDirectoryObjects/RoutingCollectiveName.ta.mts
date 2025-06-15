@@ -15,7 +15,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RoutingCollectiveName */
 /**
  * @summary RoutingCollectiveName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type RoutingCollectiveName = DistinguishedName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RoutingCollectiveName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingCollectiveName */
 let _cached_decoder_for_RoutingCollectiveName: $.ASN1Decoder<RoutingCollectiveName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoutingCollectiveName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoutingCollectiveName */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoutingCollectiveName
  * @function
@@ -46,13 +41,9 @@ export function _decode_RoutingCollectiveName(el: _Element) {
     }
     return _cached_decoder_for_RoutingCollectiveName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoutingCollectiveName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingCollectiveName */
 let _cached_encoder_for_RoutingCollectiveName: $.ASN1Encoder<RoutingCollectiveName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoutingCollectiveName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoutingCollectiveName */
 /**
  * @summary Encodes a(n) RoutingCollectiveName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_RoutingCollectiveName(
     return _cached_encoder_for_RoutingCollectiveName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoutingCollectiveName */
 
 /* eslint-enable */

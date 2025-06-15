@@ -20,7 +20,7 @@ import type {
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION signedDataACBio */
+
 /**
  * @summary signedDataACBio
  * @description
@@ -48,6 +48,5 @@ export const signedDataACBio: CONTENT_TYPE<SignedDataACBio> = {
     '&id': id_signedDataACBio /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signedDataACBio */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ChallengeResponse */
 /**
  * @summary ChallengeResponse
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ChallengeResponse = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION ChallengeResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChallengeResponse */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChallengeResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChallengeResponse */
 export const _decode_ChallengeResponse = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_ChallengeResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChallengeResponse */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChallengeResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChallengeResponse */
 export const _encode_ChallengeResponse = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChallengeResponse */
 
 /* eslint-enable */

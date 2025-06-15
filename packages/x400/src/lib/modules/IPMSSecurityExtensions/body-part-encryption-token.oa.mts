@@ -25,7 +25,6 @@ import {
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION body_part_encryption_token */
 /**
  * @summary body_part_encryption_token
  * @description
@@ -62,6 +61,5 @@ export const body_part_encryption_token: EXTENSION<BodyPartTokens> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION body_part_encryption_token */
 
 /* eslint-enable */

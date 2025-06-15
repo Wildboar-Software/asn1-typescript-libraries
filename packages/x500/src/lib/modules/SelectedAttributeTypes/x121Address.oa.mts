@@ -12,7 +12,6 @@ import {
     _decode_X121Address,
     _encode_X121Address,
 } from "../SelectedAttributeTypes/X121Address.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION x121Address */
 /**
  * @summary x121Address
  * @description
@@ -54,6 +53,5 @@ export const x121Address: ATTRIBUTE<X121Address> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION x121Address */
 
 /* eslint-enable */

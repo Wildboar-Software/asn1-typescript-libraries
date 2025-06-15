@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ServiceProviderErrorResponseReason */
 /**
  * @summary ServiceProviderErrorResponseReason
  * @description
@@ -30,9 +29,7 @@ export enum _enum_for_ServiceProviderErrorResponseReason {
     providerNotAvailable = 2,
     requiredServiceNotAvailable = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ServiceProviderErrorResponseReason */
 
-/* START_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason */
 /**
  * @summary ServiceProviderErrorResponseReason
  * @description
@@ -46,9 +43,7 @@ export enum _enum_for_ServiceProviderErrorResponseReason {
  * ```@enum {number}
  */
 export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
-/* END_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason */
 
-/* START_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason */
 /**
  * @summary ServiceProviderErrorResponseReason
  * @description
@@ -62,9 +57,7 @@ export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorR
  * ```@enum {number}
  */
 export const ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
-/* END_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason */
 
-/* START_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_insufficientResources */
 /**
  * @summary ServiceProviderErrorResponseReason_insufficientResources
  * @constant
@@ -72,9 +65,7 @@ export const ServiceProviderErrorResponseReason = _enum_for_ServiceProviderError
  */
 export const ServiceProviderErrorResponseReason_insufficientResources: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.insufficientResources; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_insufficientResources */
 
-/* START_OF_SYMBOL_DEFINITION insufficientResources */
 /**
  * @summary insufficientResources
  * @constant
@@ -82,9 +73,7 @@ export const ServiceProviderErrorResponseReason_insufficientResources: ServicePr
  */
 export const insufficientResources: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.insufficientResources; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION insufficientResources */
 
-/* START_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_providerDoesNotExist */
 /**
  * @summary ServiceProviderErrorResponseReason_providerDoesNotExist
  * @constant
@@ -92,9 +81,7 @@ export const insufficientResources: ServiceProviderErrorResponseReason =
  */
 export const ServiceProviderErrorResponseReason_providerDoesNotExist: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.providerDoesNotExist; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_providerDoesNotExist */
 
-/* START_OF_SYMBOL_DEFINITION providerDoesNotExist */
 /**
  * @summary providerDoesNotExist
  * @constant
@@ -102,9 +89,7 @@ export const ServiceProviderErrorResponseReason_providerDoesNotExist: ServicePro
  */
 export const providerDoesNotExist: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.providerDoesNotExist; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION providerDoesNotExist */
 
-/* START_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_providerNotAvailable */
 /**
  * @summary ServiceProviderErrorResponseReason_providerNotAvailable
  * @constant
@@ -112,9 +97,7 @@ export const providerDoesNotExist: ServiceProviderErrorResponseReason =
  */
 export const ServiceProviderErrorResponseReason_providerNotAvailable: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.providerNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_providerNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION providerNotAvailable */
 /**
  * @summary providerNotAvailable
  * @constant
@@ -122,9 +105,7 @@ export const ServiceProviderErrorResponseReason_providerNotAvailable: ServicePro
  */
 export const providerNotAvailable: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.providerNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION providerNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_requiredServiceNotAvailable */
 /**
  * @summary ServiceProviderErrorResponseReason_requiredServiceNotAvailable
  * @constant
@@ -132,9 +113,7 @@ export const providerNotAvailable: ServiceProviderErrorResponseReason =
  */
 export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.requiredServiceNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ServiceProviderErrorResponseReason_requiredServiceNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION requiredServiceNotAvailable */
 /**
  * @summary requiredServiceNotAvailable
  * @constant
@@ -142,13 +121,9 @@ export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable: Ser
  */
 export const requiredServiceNotAvailable: ServiceProviderErrorResponseReason =
     ServiceProviderErrorResponseReason.requiredServiceNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION requiredServiceNotAvailable */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceProviderErrorResponseReason */
 let _cached_decoder_for_ServiceProviderErrorResponseReason: $.ASN1Decoder<ServiceProviderErrorResponseReason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceProviderErrorResponseReason */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceProviderErrorResponseReason */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceProviderErrorResponseReason
  * @function
@@ -162,13 +137,9 @@ export function _decode_ServiceProviderErrorResponseReason(el: _Element) {
     }
     return _cached_decoder_for_ServiceProviderErrorResponseReason(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceProviderErrorResponseReason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceProviderErrorResponseReason */
 let _cached_encoder_for_ServiceProviderErrorResponseReason: $.ASN1Encoder<ServiceProviderErrorResponseReason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceProviderErrorResponseReason */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceProviderErrorResponseReason */
 /**
  * @summary Encodes a(n) ServiceProviderErrorResponseReason into an ASN.1 Element.
  * @function
@@ -190,6 +161,5 @@ export function _encode_ServiceProviderErrorResponseReason(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceProviderErrorResponseReason */
 
 /* eslint-enable */

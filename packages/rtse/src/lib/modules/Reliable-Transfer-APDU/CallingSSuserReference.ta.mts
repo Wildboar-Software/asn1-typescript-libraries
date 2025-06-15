@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CallingSSuserReference */
+
 /**
  * @summary CallingSSuserReference
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type CallingSSuserReference =
   | { t61String: T61String } /* CHOICE_ALT_ROOT */
   | { octetString: OCTET_STRING } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CallingSSuserReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CallingSSuserReference */
+
 let _cached_decoder_for_CallingSSuserReference: $.ASN1Decoder<CallingSSuserReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CallingSSuserReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CallingSSuserReference */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CallingSSuserReference
  * @function
@@ -54,13 +52,11 @@ export function _decode_CallingSSuserReference(el: _Element) {
   }
   return _cached_decoder_for_CallingSSuserReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CallingSSuserReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CallingSSuserReference */
+
 let _cached_encoder_for_CallingSSuserReference: $.ASN1Encoder<CallingSSuserReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CallingSSuserReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CallingSSuserReference */
+
 /**
  * @summary Encodes a(n) CallingSSuserReference into an ASN.1 Element.
  * @function
@@ -84,6 +80,5 @@ export function _encode_CallingSSuserReference(
   return _cached_encoder_for_CallingSSuserReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CallingSSuserReference */
 
 /* eslint-enable */

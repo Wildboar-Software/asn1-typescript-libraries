@@ -24,7 +24,6 @@ import {
     _encode_RevocationInfoChoices,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION LongTermValidation */
 /**
  * @summary LongTermValidation
  * @description
@@ -91,9 +90,7 @@ class LongTermValidation {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LongTermValidation */
 /**
  * @summary The Leading Root Component Types of LongTermValidation
  * @description
@@ -109,9 +106,7 @@ const _root_component_type_list_1_spec_for_LongTermValidation: $.ComponentSpec[]
     /* FIXME: extraCertificates COULD_NOT_RESOLVE_TYPE_DEF */,
     /* FIXME: extraRevocation COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LongTermValidation */
 /**
  * @summary The Trailing Root Component Types of LongTermValidation
  * @description
@@ -124,9 +119,7 @@ export
 const _root_component_type_list_2_spec_for_LongTermValidation: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LongTermValidation */
 /**
  * @summary The Extension Addition Component Types of LongTermValidation
  * @description
@@ -139,13 +132,9 @@ export
 const _extension_additions_list_spec_for_LongTermValidation: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LongTermValidation */
 let _cached_decoder_for_LongTermValidation: $.ASN1Decoder<LongTermValidation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LongTermValidation */
 /**
  * @summary Decodes an ASN.1 element into a(n) LongTermValidation
  * @function
@@ -184,13 +173,9 @@ function _decode_LongTermValidation (el: _Element) {
 }; }
     return _cached_decoder_for_LongTermValidation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LongTermValidation */
 let _cached_encoder_for_LongTermValidation: $.ASN1Encoder<LongTermValidation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LongTermValidation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LongTermValidation */
 /**
  * @summary Encodes a(n) LongTermValidation into an ASN.1 Element.
  * @function
@@ -213,6 +198,5 @@ function _encode_LongTermValidation (value: LongTermValidation, elGetter: $.ASN1
     return _cached_encoder_for_LongTermValidation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LongTermValidation */
 
 /* eslint-enable */

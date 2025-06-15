@@ -21,7 +21,7 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InvokeExerciseArg */
+
 /**
  * @summary InvokeExerciseArg
  * @description
@@ -71,9 +71,8 @@ export class InvokeExerciseArg {
         return new InvokeExerciseArg(_o.protectionEntity, _o.otherInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvokeExerciseArg */
+
 /**
  * @summary The Leading Root Component Types of InvokeExerciseArg
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_InvokeExerciseArg: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvokeExerciseArg */
+
 /**
  * @summary The Trailing Root Component Types of InvokeExerciseArg
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_InvokeExerciseArg: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_InvokeExerciseArg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvokeExerciseArg */
+
 /**
  * @summary The Extension Addition Component Types of InvokeExerciseArg
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_InvokeExerciseArg: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_InvokeExerciseArg: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeExerciseArg */
+
 let _cached_decoder_for_InvokeExerciseArg: $.ASN1Decoder<InvokeExerciseArg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvokeExerciseArg */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeExerciseArg
  * @function
@@ -172,13 +167,11 @@ export function _decode_InvokeExerciseArg(el: _Element) {
     }
     return _cached_decoder_for_InvokeExerciseArg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeExerciseArg */
+
 let _cached_encoder_for_InvokeExerciseArg: $.ASN1Encoder<InvokeExerciseArg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeExerciseArg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvokeExerciseArg */
+
 /**
  * @summary Encodes a(n) InvokeExerciseArg into an ASN.1 Element.
  * @function
@@ -217,6 +210,5 @@ export function _encode_InvokeExerciseArg(
     return _cached_encoder_for_InvokeExerciseArg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvokeExerciseArg */
 
 /* eslint-enable */

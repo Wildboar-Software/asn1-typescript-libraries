@@ -25,7 +25,7 @@ import {
   _decode_ReturnResult_result,
   _encode_ReturnResult_result,
 } from '../Remote-Operations-Generic-ROS-PDUs/ReturnResult-result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReturnResult */
+
 /**
  * @summary ReturnResult
  * @description
@@ -90,9 +90,8 @@ export class ReturnResult {
     return new ReturnResult(_o.invokeId, _o.result);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReturnResult */
+
 /**
  * @summary The Leading Root Component Types of ReturnResult
  * @description
@@ -111,9 +110,8 @@ export const _root_component_type_list_1_spec_for_ReturnResult: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReturnResult */
+
 /**
  * @summary The Trailing Root Component Types of ReturnResult
  * @description
@@ -123,9 +121,8 @@ export const _root_component_type_list_1_spec_for_ReturnResult: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReturnResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReturnResult */
+
 /**
  * @summary The Extension Addition Component Types of ReturnResult
  * @description
@@ -135,13 +132,11 @@ export const _root_component_type_list_2_spec_for_ReturnResult: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ReturnResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnResult */
+
 let _cached_decoder_for_ReturnResult: $.ASN1Decoder<ReturnResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReturnResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReturnResult
  * @function
@@ -178,13 +173,11 @@ export function _decode_ReturnResult(el: _Element) {
   }
   return _cached_decoder_for_ReturnResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnResult */
+
 let _cached_encoder_for_ReturnResult: $.ASN1Encoder<ReturnResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReturnResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReturnResult */
+
 /**
  * @summary Encodes a(n) ReturnResult into an ASN.1 Element.
  * @function
@@ -215,6 +208,5 @@ export function _encode_ReturnResult(
   return _cached_encoder_for_ReturnResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReturnResult */
 
 /* eslint-enable */

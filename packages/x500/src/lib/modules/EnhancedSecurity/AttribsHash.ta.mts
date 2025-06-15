@@ -11,7 +11,6 @@ import {
     _decode_HashedAttributes,
     _encode_HashedAttributes,
 } from "../EnhancedSecurity/HashedAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttribsHash */
 /**
  * @summary AttribsHash
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type AttribsHash = HASH<HashedAttributes>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AttribsHash */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttribsHash */
 let _cached_decoder_for_AttribsHash: $.ASN1Decoder<AttribsHash> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttribsHash */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttribsHash */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttribsHash
  * @function
@@ -44,13 +39,9 @@ export function _decode_AttribsHash(el: _Element) {
     }
     return _cached_decoder_for_AttribsHash(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttribsHash */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttribsHash */
 let _cached_encoder_for_AttribsHash: $.ASN1Encoder<AttribsHash> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttribsHash */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttribsHash */
 /**
  * @summary Encodes a(n) AttribsHash into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AttribsHash(
     return _cached_encoder_for_AttribsHash(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttribsHash */
 
 /* eslint-enable */

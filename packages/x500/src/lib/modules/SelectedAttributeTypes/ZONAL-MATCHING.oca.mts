@@ -2,7 +2,6 @@
 import { MAPPING_BASED_MATCHING } from "../InformationFramework/MAPPING-BASED-MATCHING.oca.mjs";
 import { ZonalResult } from "../SelectedAttributeTypes/ZonalResult.ta.mjs";
 import { ZonalSelect } from "../SelectedAttributeTypes/ZonalSelect.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ZONAL_MATCHING */
 /**
  * @summary ZONAL_MATCHING
  * @description
@@ -16,6 +15,5 @@ import { ZonalSelect } from "../SelectedAttributeTypes/ZonalSelect.ta.mjs";
  * @interface
  */
 export type ZONAL_MATCHING = MAPPING_BASED_MATCHING<ZonalSelect, ZonalResult>;
-/* END_OF_SYMBOL_DEFINITION ZONAL_MATCHING */
 
 /* eslint-enable */

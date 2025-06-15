@@ -21,7 +21,7 @@ import {
     _encode_RelativeDistinguishedName,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION FromAndToProtectionUnit */
+
 /**
  * @summary FromAndToProtectionUnit
  * @description
@@ -42,13 +42,11 @@ export type FromAndToProtectionUnit =
     | {
           toProtectionUnitNumber: RelativeDistinguishedName;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FromAndToProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FromAndToProtectionUnit */
+
 let _cached_decoder_for_FromAndToProtectionUnit: $.ASN1Decoder<FromAndToProtectionUnit> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FromAndToProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FromAndToProtectionUnit */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FromAndToProtectionUnit
  * @function
@@ -76,13 +74,11 @@ export function _decode_FromAndToProtectionUnit(el: _Element) {
     }
     return _cached_decoder_for_FromAndToProtectionUnit(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FromAndToProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FromAndToProtectionUnit */
+
 let _cached_encoder_for_FromAndToProtectionUnit: $.ASN1Encoder<FromAndToProtectionUnit> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FromAndToProtectionUnit */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FromAndToProtectionUnit */
+
 /**
  * @summary Encodes a(n) FromAndToProtectionUnit into an ASN.1 Element.
  * @function
@@ -116,6 +112,5 @@ export function _encode_FromAndToProtectionUnit(
     return _cached_encoder_for_FromAndToProtectionUnit(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FromAndToProtectionUnit */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { id_dsa_with_sha256 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha256.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dsa_with_sha256 */
 /**
  * @summary dsa_with_sha256
  * @description
@@ -28,6 +27,5 @@ export const dsa_with_sha256: ALGORITHM = {
     "&id": id_dsa_with_sha256 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dsa_with_sha256 */
 
 /* eslint-enable */

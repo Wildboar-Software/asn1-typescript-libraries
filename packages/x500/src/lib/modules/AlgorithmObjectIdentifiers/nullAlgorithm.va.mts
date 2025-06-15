@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { algorithm } from "../UsefulDefinitions/algorithm.va.mjs";
-/* START_OF_SYMBOL_DEFINITION nullAlgorithm */
 /**
  * @summary nullAlgorithm
  * @description
@@ -16,6 +15,5 @@ import { algorithm } from "../UsefulDefinitions/algorithm.va.mjs";
  * @constant
  */
 export const nullAlgorithm: ID = new _OID([0], algorithm);
-/* END_OF_SYMBOL_DEFINITION nullAlgorithm */
 
 /* eslint-enable */

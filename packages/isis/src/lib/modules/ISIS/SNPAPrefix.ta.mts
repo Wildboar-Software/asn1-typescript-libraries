@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SNPAPrefix */
 /**
  * @summary SNPAPrefix
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SNPAPrefix = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION SNPAPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SNPAPrefix */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SNPAPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SNPAPrefix */
 export const _decode_SNPAPrefix = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_SNPAPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SNPAPrefix */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SNPAPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SNPAPrefix */
 export const _encode_SNPAPrefix = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SNPAPrefix */
 
 /* eslint-enable */

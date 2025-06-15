@@ -15,7 +15,6 @@ import {
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import { id_aa_ipm_auto_correlate } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-correlate.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_correlate */
 /**
  * @summary ipm_auto_correlate
  * @description
@@ -42,6 +41,5 @@ export const ipm_auto_correlate: AUTO_ACTION = {
     '&id': id_aa_ipm_auto_correlate /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_correlate */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
 } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyRights_Item_item */
 /**
  * @summary ModifyRights_Item_item
  * @description
@@ -31,13 +30,9 @@ export type ModifyRights_Item_item =
     | { attribute: AttributeType } /* CHOICE_ALT_ROOT */
     | { value: AttributeValueAssertion } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ModifyRights_Item_item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights_Item_item */
 let _cached_decoder_for_ModifyRights_Item_item: $.ASN1Decoder<ModifyRights_Item_item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRights_Item_item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyRights_Item_item */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyRights_Item_item
  * @function
@@ -69,13 +64,9 @@ export function _decode_ModifyRights_Item_item(el: _Element) {
     }
     return _cached_decoder_for_ModifyRights_Item_item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyRights_Item_item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights_Item_item */
 let _cached_encoder_for_ModifyRights_Item_item: $.ASN1Encoder<ModifyRights_Item_item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRights_Item_item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyRights_Item_item */
 /**
  * @summary Encodes a(n) ModifyRights_Item_item into an ASN.1 Element.
  * @function
@@ -115,6 +106,5 @@ export function _encode_ModifyRights_Item_item(
     return _cached_encoder_for_ModifyRights_Item_item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyRights_Item_item */
 
 /* eslint-enable */

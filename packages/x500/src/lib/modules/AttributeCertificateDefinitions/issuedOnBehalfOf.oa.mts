@@ -6,7 +6,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION issuedOnBehalfOf */
 /**
  * @summary issuedOnBehalfOf
  * @description
@@ -34,6 +33,5 @@ export const issuedOnBehalfOf: EXTENSION<GeneralName> = {
     "&id": id_ce_issuedOnBehalfOf /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION issuedOnBehalfOf */
 
 /* eslint-enable */

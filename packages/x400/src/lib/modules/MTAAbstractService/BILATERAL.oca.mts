@@ -15,7 +15,6 @@ import {
     _decode_BilateralDomain,
     _encode_BilateralDomain,
 } from '../MTAAbstractService/BilateralDomain.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BILATERAL */
 /**
  * @summary BILATERAL
  * @description
@@ -64,6 +63,5 @@ export interface BILATERAL<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION BILATERAL */
 
 /* eslint-enable */

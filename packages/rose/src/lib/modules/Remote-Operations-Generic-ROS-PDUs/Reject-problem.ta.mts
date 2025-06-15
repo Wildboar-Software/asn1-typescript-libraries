@@ -30,7 +30,7 @@ import {
   _decode_ReturnErrorProblem,
   _encode_ReturnErrorProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Reject_problem */
+
 /**
  * @summary Reject_problem
  * @description
@@ -46,13 +46,11 @@ export type Reject_problem =
   | { invoke: InvokeProblem } /* CHOICE_ALT_ROOT */
   | { returnResult: ReturnResultProblem } /* CHOICE_ALT_ROOT */
   | { returnError: ReturnErrorProblem } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Reject_problem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Reject_problem */
+
 let _cached_decoder_for_Reject_problem: $.ASN1Decoder<Reject_problem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Reject_problem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Reject_problem */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Reject_problem
  * @function
@@ -88,13 +86,11 @@ export function _decode_Reject_problem(el: _Element) {
   }
   return _cached_decoder_for_Reject_problem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Reject_problem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Reject_problem */
+
 let _cached_encoder_for_Reject_problem: $.ASN1Encoder<Reject_problem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Reject_problem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Reject_problem */
+
 /**
  * @summary Encodes a(n) Reject_problem into an ASN.1 Element.
  * @function
@@ -140,6 +136,5 @@ export function _encode_Reject_problem(
   return _cached_encoder_for_Reject_problem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Reject_problem */
 
 /* eslint-enable */

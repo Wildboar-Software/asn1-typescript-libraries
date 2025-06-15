@@ -23,7 +23,6 @@ import {
     _encode_ContentCorrelator,
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION content_correlator */
 /**
  * @summary content_correlator
  * @description
@@ -57,6 +56,5 @@ export const content_correlator: EXTENSION<ContentCorrelator> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION content_correlator */
 
 /* eslint-enable */

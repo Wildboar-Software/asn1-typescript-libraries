@@ -18,7 +18,6 @@ import {
   _decode_AreaAddress,
   _encode_AreaAddress,
 } from '../ISIS/AreaAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION manualAreaAddresses_Default */
 /**
  * @summary manualAreaAddresses_Default
  * @description
@@ -32,6 +31,5 @@ import {
  * @constant
  */
 export const manualAreaAddresses_Default: AreaAddresses = [];
-/* END_OF_SYMBOL_DEFINITION manualAreaAddresses_Default */
 
 /* eslint-enable */

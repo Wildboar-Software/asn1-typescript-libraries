@@ -6,7 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../PkiPmiExternalDataTypes/PDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PostOfficeBoxAddress */
 /**
  * @summary PostOfficeBoxAddress
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type PostOfficeBoxAddress = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PostOfficeBoxAddress */
 let _cached_decoder_for_PostOfficeBoxAddress: $.ASN1Decoder<PostOfficeBoxAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PostOfficeBoxAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) PostOfficeBoxAddress
  * @function
@@ -37,13 +32,9 @@ export function _decode_PostOfficeBoxAddress(el: _Element) {
     }
     return _cached_decoder_for_PostOfficeBoxAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PostOfficeBoxAddress */
 let _cached_encoder_for_PostOfficeBoxAddress: $.ASN1Encoder<PostOfficeBoxAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PostOfficeBoxAddress */
 /**
  * @summary Encodes a(n) PostOfficeBoxAddress into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_PostOfficeBoxAddress(
     return _cached_encoder_for_PostOfficeBoxAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PostOfficeBoxAddress */
 
 /* eslint-enable */

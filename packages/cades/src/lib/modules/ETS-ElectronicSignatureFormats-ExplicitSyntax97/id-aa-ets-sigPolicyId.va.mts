@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_sigPolicyId */
 /**
  * @summary id_aa_ets_sigPolicyId
  * @description
@@ -47,6 +46,5 @@ const id_aa_ets_sigPolicyId: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     15,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_sigPolicyId */
 
 /* eslint-enable */

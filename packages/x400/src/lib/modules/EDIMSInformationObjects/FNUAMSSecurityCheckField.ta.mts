@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FNUAMSSecurityCheckField */
 /**
  * @summary FNUAMSSecurityCheckField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FNUAMSSecurityCheckField = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION FNUAMSSecurityCheckField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSSecurityCheckField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FNUAMSSecurityCheckField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FNUAMSSecurityCheckField */
 export const _decode_FNUAMSSecurityCheckField = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_FNUAMSSecurityCheckField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSSecurityCheckField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FNUAMSSecurityCheckField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FNUAMSSecurityCheckField */
 export const _encode_FNUAMSSecurityCheckField = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FNUAMSSecurityCheckField */
 
 /* eslint-enable */

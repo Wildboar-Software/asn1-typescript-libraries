@@ -21,7 +21,6 @@ import {
     _decode_NNPDAUDiagnosticField,
     _encode_NNPDAUDiagnosticField,
 } from '../EDIMSInformationObjects/NNPDAUDiagnosticField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NNPDAUReasonCodeField */
 /**
  * @summary NNPDAUReasonCodeField
  * @description
@@ -74,9 +73,7 @@ export class NNPDAUReasonCodeField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NNPDAUReasonCodeField */
 /**
  * @summary The Leading Root Component Types of NNPDAUReasonCodeField
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_NNPDAUReasonCodeField: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NNPDAUReasonCodeField */
 /**
  * @summary The Trailing Root Component Types of NNPDAUReasonCodeField
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_NNPDAUReasonCodeField: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NNPDAUReasonCodeField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NNPDAUReasonCodeField */
 /**
  * @summary The Extension Addition Component Types of NNPDAUReasonCodeField
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_NNPDAUReasonCodeField: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_NNPDAUReasonCodeField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNPDAUReasonCodeField */
 let _cached_decoder_for_NNPDAUReasonCodeField: $.ASN1Decoder<NNPDAUReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NNPDAUReasonCodeField */
 /**
  * @summary Decodes an ASN.1 element into a(n) NNPDAUReasonCodeField
  * @function
@@ -177,13 +166,9 @@ export function _decode_NNPDAUReasonCodeField(el: _Element) {
     }
     return _cached_decoder_for_NNPDAUReasonCodeField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNPDAUReasonCodeField */
 let _cached_encoder_for_NNPDAUReasonCodeField: $.ASN1Encoder<NNPDAUReasonCodeField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNPDAUReasonCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NNPDAUReasonCodeField */
 /**
  * @summary Encodes a(n) NNPDAUReasonCodeField into an ASN.1 Element.
  * @function
@@ -224,6 +209,5 @@ export function _encode_NNPDAUReasonCodeField(
     return _cached_encoder_for_NNPDAUReasonCodeField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NNPDAUReasonCodeField */
 
 /* eslint-enable */

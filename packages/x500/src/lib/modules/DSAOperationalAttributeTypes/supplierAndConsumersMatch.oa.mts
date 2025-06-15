@@ -6,7 +6,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION supplierAndConsumersMatch */
 /**
  * @summary supplierAndConsumersMatch
  * @description
@@ -34,6 +33,5 @@ export const supplierAndConsumersMatch: MATCHING_RULE<Name> = {
     "&id": id_kmr_supplierConsumersMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supplierAndConsumersMatch */
 
 /* eslint-enable */

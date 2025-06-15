@@ -15,7 +15,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION WaitDuration */
 /**
  * @summary WaitDuration
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type WaitDuration = Timespec; // DefinedType
-/* END_OF_SYMBOL_DEFINITION WaitDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WaitDuration */
 let _cached_decoder_for_WaitDuration: $.ASN1Decoder<WaitDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WaitDuration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WaitDuration */
 /**
  * @summary Decodes an ASN.1 element into a(n) WaitDuration
  * @function
@@ -46,13 +41,9 @@ export function _decode_WaitDuration(el: _Element) {
     }
     return _cached_decoder_for_WaitDuration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WaitDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WaitDuration */
 let _cached_encoder_for_WaitDuration: $.ASN1Encoder<WaitDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WaitDuration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WaitDuration */
 /**
  * @summary Encodes a(n) WaitDuration into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_WaitDuration(
     return _cached_encoder_for_WaitDuration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WaitDuration */
 
 /* eslint-enable */

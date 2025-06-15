@@ -28,7 +28,6 @@ import {
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
 import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq } from "./CommonResultsSeq.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ModifyDNResultData */
 /**
  * @summary ModifyDNResultData
  * @description
@@ -120,9 +119,7 @@ export class ModifyDNResultData implements CommonResultsSeq {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyDNResultData */
 /**
  * @summary The Leading Root Component Types of ModifyDNResultData
  * @description
@@ -140,9 +137,7 @@ export const _root_component_type_list_1_spec_for_ModifyDNResultData: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyDNResultData */
 /**
  * @summary The Trailing Root Component Types of ModifyDNResultData
  * @description
@@ -154,9 +149,7 @@ export const _root_component_type_list_1_spec_for_ModifyDNResultData: $.Componen
 export const _root_component_type_list_2_spec_for_ModifyDNResultData: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyDNResultData */
 /**
  * @summary The Extension Addition Component Types of ModifyDNResultData
  * @description
@@ -166,13 +159,9 @@ export const _root_component_type_list_2_spec_for_ModifyDNResultData: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyDNResultData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNResultData */
 let _cached_decoder_for_ModifyDNResultData: $.ASN1Decoder<ModifyDNResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyDNResultData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyDNResultData
  * @function
@@ -242,13 +231,9 @@ export function _decode_ModifyDNResultData(el: _Element) {
     }
     return _cached_decoder_for_ModifyDNResultData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNResultData */
 let _cached_encoder_for_ModifyDNResultData: $.ASN1Encoder<ModifyDNResultData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNResultData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyDNResultData */
 /**
  * @summary Encodes a(n) ModifyDNResultData into an ASN.1 Element.
  * @function
@@ -328,6 +313,5 @@ export function _encode_ModifyDNResultData(
     return _cached_encoder_for_ModifyDNResultData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyDNResultData */
 
 /* eslint-enable */

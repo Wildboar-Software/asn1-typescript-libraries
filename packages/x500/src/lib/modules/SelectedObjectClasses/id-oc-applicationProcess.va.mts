@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_oc_applicationProcess */
 /**
  * @summary id_oc_applicationProcess
  * @description
@@ -18,6 +17,5 @@ export const id_oc_applicationProcess: OBJECT_IDENTIFIER = new _OID(
     [11],
     id_oc
 );
-/* END_OF_SYMBOL_DEFINITION id_oc_applicationProcess */
 
 /* eslint-enable */

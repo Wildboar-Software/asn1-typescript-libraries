@@ -26,7 +26,6 @@ import {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EntryModification_modification */
 /**
  * @summary EntryModification_modification
  * @description
@@ -42,13 +41,9 @@ export type EntryModification_modification =
     | { remove_attribute: AttributeType } /* CHOICE_ALT_ROOT */
     | { add_values: OrderedAttribute } /* CHOICE_ALT_ROOT */
     | { remove_values: OrderedAttribute } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EntryModification_modification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryModification_modification */
 let _cached_decoder_for_EntryModification_modification: $.ASN1Decoder<EntryModification_modification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryModification_modification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryModification_modification */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryModification_modification
  * @function
@@ -86,13 +81,9 @@ export function _decode_EntryModification_modification(el: _Element) {
     }
     return _cached_decoder_for_EntryModification_modification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryModification_modification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryModification_modification */
 let _cached_encoder_for_EntryModification_modification: $.ASN1Encoder<EntryModification_modification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryModification_modification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryModification_modification */
 /**
  * @summary Encodes a(n) EntryModification_modification into an ASN.1 Element.
  * @function
@@ -138,6 +129,5 @@ export function _encode_EntryModification_modification(
     return _cached_encoder_for_EntryModification_modification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryModification_modification */
 
 /* eslint-enable */

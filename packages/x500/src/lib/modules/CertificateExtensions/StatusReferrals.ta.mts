@@ -6,7 +6,6 @@ import {
     _decode_StatusReferral,
     _encode_StatusReferral,
 } from "../CertificateExtensions/StatusReferral.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION StatusReferrals */
 /**
  * @summary StatusReferrals
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type StatusReferrals = StatusReferral[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION StatusReferrals */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_StatusReferrals */
 let _cached_decoder_for_StatusReferrals: $.ASN1Decoder<StatusReferrals> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_StatusReferrals */
 
-/* START_OF_SYMBOL_DEFINITION _decode_StatusReferrals */
 /**
  * @summary Decodes an ASN.1 element into a(n) StatusReferrals
  * @function
@@ -39,13 +34,9 @@ export function _decode_StatusReferrals(el: _Element) {
     }
     return _cached_decoder_for_StatusReferrals(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_StatusReferrals */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_StatusReferrals */
 let _cached_encoder_for_StatusReferrals: $.ASN1Encoder<StatusReferrals> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_StatusReferrals */
 
-/* START_OF_SYMBOL_DEFINITION _encode_StatusReferrals */
 /**
  * @summary Encodes a(n) StatusReferrals into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_StatusReferrals(
     return _cached_encoder_for_StatusReferrals(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_StatusReferrals */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SecurityEvaluationExtension */
+
 /**
  * @summary SecurityEvaluationExtension
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SecurityEvaluationExtension = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION SecurityEvaluationExtension */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEvaluationExtension */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityEvaluationExtension */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityEvaluationExtension */
+
+
 export const _decode_SecurityEvaluationExtension = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityEvaluationExtension */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEvaluationExtension */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityEvaluationExtension */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityEvaluationExtension */
+
+
 export const _encode_SecurityEvaluationExtension = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityEvaluationExtension */
 
 /* eslint-enable */

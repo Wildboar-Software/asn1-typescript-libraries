@@ -15,7 +15,6 @@ import {
     _decode_GlobalTime,
     _encode_GlobalTime,
 } from '../SummarizationASN1Productions/GlobalTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScanInitiationTime */
 /**
  * @summary ScanInitiationTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ScanInitiationTime = GlobalTime; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ScanInitiationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScanInitiationTime */
 let _cached_decoder_for_ScanInitiationTime: $.ASN1Decoder<ScanInitiationTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScanInitiationTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScanInitiationTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScanInitiationTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_ScanInitiationTime(el: _Element) {
     }
     return _cached_decoder_for_ScanInitiationTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScanInitiationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScanInitiationTime */
 let _cached_encoder_for_ScanInitiationTime: $.ASN1Encoder<ScanInitiationTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScanInitiationTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScanInitiationTime */
 /**
  * @summary Encodes a(n) ScanInitiationTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ScanInitiationTime(
     return _cached_encoder_for_ScanInitiationTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScanInitiationTime */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary MessageOriginAuthenticationAlgorithmIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageOriginAuthenticationAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier */
 let _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1Decoder<MessageOriginAuthenticationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageOriginAuthenticationAlgorithmIdentifier
  * @function
@@ -50,13 +45,9 @@ export function _decode_MessageOriginAuthenticationAlgorithmIdentifier(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier */
 let _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1Encoder<MessageOriginAuthenticationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageOriginAuthenticationAlgorithmIdentifier */
 /**
  * @summary Encodes a(n) MessageOriginAuthenticationAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_MessageOriginAuthenticationAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageOriginAuthenticationAlgorithmIdentifier */
 
 /* eslint-enable */

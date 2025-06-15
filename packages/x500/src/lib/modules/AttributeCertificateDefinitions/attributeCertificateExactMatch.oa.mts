@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta.mjs";
 import { id_mr_attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/id-mr-attributeCertificateExactMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeCertificateExactMatch */
 /**
  * @summary attributeCertificateExactMatch
  * @description
@@ -34,6 +33,5 @@ export const attributeCertificateExactMatch: MATCHING_RULE<AttributeCertificateE
     "&id": id_mr_attributeCertificateExactMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeCertificateExactMatch */
 
 /* eslint-enable */

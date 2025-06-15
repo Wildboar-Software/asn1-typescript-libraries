@@ -16,7 +16,7 @@ import {
     _encode_POPOSigningKeyInput_authInfo,
 } from "../PKIXCRMF-2009/POPOSigningKeyInput-authInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION POPOSigningKeyInput */
+
 /**
  * @summary POPOSigningKeyInput
  * @description
@@ -73,9 +73,8 @@ export class POPOSigningKeyInput {
         return new POPOSigningKeyInput(_o.authInfo, _o.publicKey);
     }
 }
-/* END_OF_SYMBOL_DEFINITION POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_POPOSigningKeyInput */
+
 /**
  * @summary The Leading Root Component Types of POPOSigningKeyInput
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_POPOSigningKeyInput: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_POPOSigningKeyInput */
+
 /**
  * @summary The Trailing Root Component Types of POPOSigningKeyInput
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_POPOSigningKeyInput: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_POPOSigningKeyInput: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_POPOSigningKeyInput */
+
 /**
  * @summary The Extension Addition Component Types of POPOSigningKeyInput
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_POPOSigningKeyInput: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_POPOSigningKeyInput: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_POPOSigningKeyInput */
+
 let _cached_decoder_for_POPOSigningKeyInput: $.ASN1Decoder<POPOSigningKeyInput> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _decode_POPOSigningKeyInput */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) POPOSigningKeyInput
  * @function
@@ -155,13 +150,11 @@ export function _decode_POPOSigningKeyInput(el: _Element) {
     }
     return _cached_decoder_for_POPOSigningKeyInput(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_POPOSigningKeyInput */
+
 let _cached_encoder_for_POPOSigningKeyInput: $.ASN1Encoder<POPOSigningKeyInput> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_POPOSigningKeyInput */
 
-/* START_OF_SYMBOL_DEFINITION _encode_POPOSigningKeyInput */
+
 /**
  * @summary Encodes a(n) POPOSigningKeyInput into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_POPOSigningKeyInput(
     return _cached_encoder_for_POPOSigningKeyInput(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_POPOSigningKeyInput */
 
 /* eslint-enable */

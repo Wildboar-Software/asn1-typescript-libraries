@@ -6,7 +6,6 @@ import {
     _decode_TraceItem,
     _encode_TraceItem,
 } from "../DistributedOperations/TraceItem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TraceInformation */
 /**
  * @summary TraceInformation
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type TraceInformation = TraceItem[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TraceInformation */
 let _cached_decoder_for_TraceInformation: $.ASN1Decoder<TraceInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TraceInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceInformation
  * @function
@@ -39,13 +34,9 @@ export function _decode_TraceInformation(el: _Element) {
     }
     return _cached_decoder_for_TraceInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TraceInformation */
 let _cached_encoder_for_TraceInformation: $.ASN1Encoder<TraceInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TraceInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TraceInformation */
 /**
  * @summary Encodes a(n) TraceInformation into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_TraceInformation(
     return _cached_encoder_for_TraceInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TraceInformation */
 
 /* eslint-enable */

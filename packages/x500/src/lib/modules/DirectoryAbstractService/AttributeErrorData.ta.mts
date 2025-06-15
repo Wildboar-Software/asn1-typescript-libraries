@@ -38,7 +38,6 @@ import {
     CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeErrorData */
 /**
  * @summary AttributeErrorData
  * @description
@@ -142,9 +141,7 @@ export class AttributeErrorData implements CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeErrorData */
 /**
  * @summary The Leading Root Component Types of AttributeErrorData
  * @description
@@ -170,9 +167,7 @@ export const _root_component_type_list_1_spec_for_AttributeErrorData: $.Componen
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeErrorData */
 /**
  * @summary The Trailing Root Component Types of AttributeErrorData
  * @description
@@ -184,9 +179,7 @@ export const _root_component_type_list_1_spec_for_AttributeErrorData: $.Componen
 export const _root_component_type_list_2_spec_for_AttributeErrorData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeErrorData */
 /**
  * @summary The Extension Addition Component Types of AttributeErrorData
  * @description
@@ -198,13 +191,9 @@ export const _root_component_type_list_2_spec_for_AttributeErrorData: $.Componen
 export const _extension_additions_list_spec_for_AttributeErrorData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeErrorData */
 let _cached_decoder_for_AttributeErrorData: $.ASN1Decoder<AttributeErrorData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeErrorData */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeErrorData
  * @function
@@ -285,13 +274,9 @@ export function _decode_AttributeErrorData(el: _Element) {
     }
     return _cached_decoder_for_AttributeErrorData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeErrorData */
 let _cached_encoder_for_AttributeErrorData: $.ASN1Encoder<AttributeErrorData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeErrorData */
 /**
  * @summary Encodes a(n) AttributeErrorData into an ASN.1 Element.
  * @function
@@ -384,6 +369,5 @@ export function _encode_AttributeErrorData(
     return _cached_encoder_for_AttributeErrorData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeErrorData */
 
 /* eslint-enable */

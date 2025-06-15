@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 /**
  * @summary OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values
  * @description
@@ -16,13 +15,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values = {
     single_ASN1_type: _Element;
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 let _cached_decoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values: $.ASN1Decoder<OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values
  * @function
@@ -48,13 +43,9 @@ export function _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_d
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 let _cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values: $.ASN1Encoder<OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 /**
  * @summary Encodes a(n) OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values into an ASN.1 Element.
  * @function
@@ -87,6 +78,5 @@ export function _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_d
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values */
 
 /* eslint-enable */

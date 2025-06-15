@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProblemCause */
+
 /**
  * @summary ProblemCause
  * @description
@@ -29,13 +29,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ProblemCause =
     | { unknown: NULL } /* CHOICE_ALT_ROOT */
     | { integerValue: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProblemCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProblemCause */
+
 let _cached_decoder_for_ProblemCause: $.ASN1Decoder<ProblemCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProblemCause */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProblemCause */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProblemCause
  * @function
@@ -53,13 +51,11 @@ export function _decode_ProblemCause(el: _Element) {
     }
     return _cached_decoder_for_ProblemCause(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProblemCause */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProblemCause */
+
 let _cached_encoder_for_ProblemCause: $.ASN1Encoder<ProblemCause> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProblemCause */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProblemCause */
+
 /**
  * @summary Encodes a(n) ProblemCause into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_ProblemCause(
     return _cached_encoder_for_ProblemCause(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProblemCause */
 
 /* eslint-enable */

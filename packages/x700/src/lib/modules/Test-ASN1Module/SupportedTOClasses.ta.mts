@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupportedTOClasses */
 /**
  * @summary SupportedTOClasses
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SupportedTOClasses = OBJECT_IDENTIFIER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedTOClasses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedTOClasses */
 let _cached_decoder_for_SupportedTOClasses: $.ASN1Decoder<SupportedTOClasses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedTOClasses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedTOClasses */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedTOClasses
  * @function
@@ -45,13 +40,9 @@ export function _decode_SupportedTOClasses(el: _Element) {
     }
     return _cached_decoder_for_SupportedTOClasses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedTOClasses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedTOClasses */
 let _cached_encoder_for_SupportedTOClasses: $.ASN1Encoder<SupportedTOClasses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedTOClasses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedTOClasses */
 /**
  * @summary Encodes a(n) SupportedTOClasses into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_SupportedTOClasses(
     return _cached_encoder_for_SupportedTOClasses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedTOClasses */
 
 /* eslint-enable */

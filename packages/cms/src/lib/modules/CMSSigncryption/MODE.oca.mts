@@ -2,7 +2,7 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MODE */
+
 /**
  * @summary MODE
  * @description
@@ -51,6 +51,5 @@ export interface MODE<Type = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */> {
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION MODE */
 
 /* eslint-enable */

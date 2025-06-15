@@ -16,7 +16,7 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PublicKeyObject */
+
 /**
  * @summary PublicKeyObject
  * @description
@@ -32,9 +32,8 @@ export type PublicKeyObject<KeyAttributes> = PKCS15Object<
     CommonPublicKeyAttributes,
     KeyAttributes
 >; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PublicKeyObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_PublicKeyObject */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PublicKeyObject
  * @function
@@ -54,9 +53,8 @@ export function _get_decoder_for_PublicKeyObject<KeyAttributes>(
         _decode_KeyAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_PublicKeyObject */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_PublicKeyObject */
+
 /**
  * @summary Returns a function that will encode a(n) PublicKeyObject into an ASN.1 Element.
  * @function
@@ -75,6 +73,5 @@ export function _get_encoder_for_PublicKeyObject<KeyAttributes>(
         _encode_KeyAttributes
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_PublicKeyObject */
 
 /* eslint-enable */

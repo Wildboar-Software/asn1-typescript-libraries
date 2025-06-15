@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TriggerId */
 /**
  * @summary TriggerId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TriggerId = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TriggerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerId */
 let _cached_decoder_for_TriggerId: $.ASN1Decoder<TriggerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TriggerId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TriggerId */
 /**
  * @summary Decodes an ASN.1 element into a(n) TriggerId
  * @function
@@ -46,13 +41,9 @@ export function _decode_TriggerId(el: _Element) {
     }
     return _cached_decoder_for_TriggerId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TriggerId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerId */
 let _cached_encoder_for_TriggerId: $.ASN1Encoder<TriggerId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TriggerId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TriggerId */
 /**
  * @summary Encodes a(n) TriggerId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TriggerId(
     return _cached_encoder_for_TriggerId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TriggerId */
 
 /* eslint-enable */

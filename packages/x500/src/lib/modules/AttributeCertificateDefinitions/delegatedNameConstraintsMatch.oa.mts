@@ -6,7 +6,6 @@ import {
     _encode_NameConstraintsSyntax,
 } from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION delegatedNameConstraintsMatch */
 /**
  * @summary delegatedNameConstraintsMatch
  * @description
@@ -34,6 +33,5 @@ export const delegatedNameConstraintsMatch: MATCHING_RULE<NameConstraintsSyntax>
     "&id": id_mr_delegatedNameConstraintsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delegatedNameConstraintsMatch */
 
 /* eslint-enable */

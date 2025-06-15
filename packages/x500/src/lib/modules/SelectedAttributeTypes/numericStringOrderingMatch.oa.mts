@@ -4,7 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_numericStringOrderingMatch } from "../SelectedAttributeTypes/id-mr-numericStringOrderingMatch.va.mjs";
 import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION numericStringOrderingMatch */
 /**
  * @summary numericStringOrderingMatch
  * @description
@@ -36,6 +35,5 @@ export const numericStringOrderingMatch: MATCHING_RULE<NumericString> = {
     "&id": id_mr_numericStringOrderingMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION numericStringOrderingMatch */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { matchingRestriction } from "../UsefulDefinitions/matchingRestriction.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mre */
 /**
  * @summary id_mre
  * @description
@@ -15,6 +14,5 @@ import { matchingRestriction } from "../UsefulDefinitions/matchingRestriction.va
  * @constant
  */
 export const id_mre: ID = matchingRestriction;
-/* END_OF_SYMBOL_DEFINITION id_mre */
 
 /* eslint-enable */

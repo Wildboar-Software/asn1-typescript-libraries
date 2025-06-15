@@ -13,7 +13,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { alg_id_sha1 } from "../PKCS-15/alg-id-sha1.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DigestInfoWithDefault */
+
 /**
  * @summary DigestInfoWithDefault
  * @description
@@ -73,9 +73,8 @@ export class DigestInfoWithDefault {
         return alg_id_sha1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DigestInfoWithDefault */
+
 /**
  * @summary The Leading Root Component Types of DigestInfoWithDefault
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_DigestInfoWithDefault: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DigestInfoWithDefault */
+
 /**
  * @summary The Trailing Root Component Types of DigestInfoWithDefault
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_DigestInfoWithDefault: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DigestInfoWithDefault: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DigestInfoWithDefault */
+
 /**
  * @summary The Extension Addition Component Types of DigestInfoWithDefault
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_DigestInfoWithDefault: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_DigestInfoWithDefault: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestInfoWithDefault */
+
 let _cached_decoder_for_DigestInfoWithDefault: $.ASN1Decoder<DigestInfoWithDefault> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DigestInfoWithDefault */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DigestInfoWithDefault
  * @function
@@ -173,13 +168,11 @@ export function _decode_DigestInfoWithDefault(el: _Element) {
     }
     return _cached_decoder_for_DigestInfoWithDefault(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestInfoWithDefault */
+
 let _cached_encoder_for_DigestInfoWithDefault: $.ASN1Encoder<DigestInfoWithDefault> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestInfoWithDefault */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DigestInfoWithDefault */
+
 /**
  * @summary Encodes a(n) DigestInfoWithDefault into an ASN.1 Element.
  * @function
@@ -220,6 +213,5 @@ export function _encode_DigestInfoWithDefault(
     return _cached_encoder_for_DigestInfoWithDefault(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DigestInfoWithDefault */
 
 /* eslint-enable */

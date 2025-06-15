@@ -5,7 +5,6 @@ import { dSAOperationalBindingManagementBind } from "../OperationalBindingManage
 import { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa.mjs";
 import { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa.mjs";
 import { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION dop_ip */
 /**
  * @summary dop_ip
  * @description
@@ -37,6 +36,5 @@ export const dop_ip: IDM_PROTOCOL = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": id_idm_dop /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dop_ip */
 
 /* eslint-enable */

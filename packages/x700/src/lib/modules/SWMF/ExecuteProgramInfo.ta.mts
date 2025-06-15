@@ -15,7 +15,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExecuteProgramInfo */
 /**
  * @summary ExecuteProgramInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ExecuteProgramInfo = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExecuteProgramInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExecuteProgramInfo */
 let _cached_decoder_for_ExecuteProgramInfo: $.ASN1Decoder<ExecuteProgramInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExecuteProgramInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExecuteProgramInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExecuteProgramInfo
  * @function
@@ -48,13 +43,9 @@ export function _decode_ExecuteProgramInfo(el: _Element) {
     }
     return _cached_decoder_for_ExecuteProgramInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExecuteProgramInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExecuteProgramInfo */
 let _cached_encoder_for_ExecuteProgramInfo: $.ASN1Encoder<ExecuteProgramInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExecuteProgramInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExecuteProgramInfo */
 /**
  * @summary Encodes a(n) ExecuteProgramInfo into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ExecuteProgramInfo(
     return _cached_encoder_for_ExecuteProgramInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExecuteProgramInfo */
 
 /* eslint-enable */

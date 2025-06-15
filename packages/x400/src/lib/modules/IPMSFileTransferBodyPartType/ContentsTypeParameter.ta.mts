@@ -15,7 +15,6 @@ import {
     _decode_Contents_Type_Attribute,
     _encode_Contents_Type_Attribute,
 } from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentsTypeParameter */
 /**
  * @summary ContentsTypeParameter
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ContentsTypeParameter = Contents_Type_Attribute; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContentsTypeParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentsTypeParameter */
 let _cached_decoder_for_ContentsTypeParameter: $.ASN1Decoder<ContentsTypeParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentsTypeParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentsTypeParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentsTypeParameter
  * @function
@@ -46,13 +41,9 @@ export function _decode_ContentsTypeParameter(el: _Element) {
     }
     return _cached_decoder_for_ContentsTypeParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentsTypeParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentsTypeParameter */
 let _cached_encoder_for_ContentsTypeParameter: $.ASN1Encoder<ContentsTypeParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentsTypeParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentsTypeParameter */
 /**
  * @summary Encodes a(n) ContentsTypeParameter into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ContentsTypeParameter(
     return _cached_encoder_for_ContentsTypeParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentsTypeParameter */
 
 /* eslint-enable */

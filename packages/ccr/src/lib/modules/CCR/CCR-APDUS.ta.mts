@@ -85,7 +85,7 @@ import {
   _decode_C_CANCEL_RI,
   _encode_C_CANCEL_RI,
 } from '../CCR/C-CANCEL-RI.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CCR_APDUS */
+
 /**
  * @summary CCR_APDUS
  * @description
@@ -130,13 +130,11 @@ export type CCR_APDUS =
   | { c_NOCHANGE_RC: C_NOCHANGE_RC } /* CHOICE_ALT_EXT */
   | { c_CANCEL_RI: C_CANCEL_RI } /* CHOICE_ALT_EXT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CCR_APDUS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CCR_APDUS */
+
 let _cached_decoder_for_CCR_APDUS: $.ASN1Decoder<CCR_APDUS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CCR_APDUS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CCR_APDUS */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CCR_APDUS
  * @function
@@ -165,13 +163,11 @@ export function _decode_CCR_APDUS(el: _Element) {
   }
   return _cached_decoder_for_CCR_APDUS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CCR_APDUS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CCR_APDUS */
+
 let _cached_encoder_for_CCR_APDUS: $.ASN1Encoder<CCR_APDUS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CCR_APDUS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CCR_APDUS */
+
 /**
  * @summary Encodes a(n) CCR_APDUS into an ASN.1 Element.
  * @function
@@ -208,6 +204,5 @@ export function _encode_CCR_APDUS(
   return _cached_encoder_for_CCR_APDUS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CCR_APDUS */
 
 /* eslint-enable */

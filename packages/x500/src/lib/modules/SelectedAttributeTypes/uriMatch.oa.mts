@@ -4,7 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.mjs";
-/* START_OF_SYMBOL_DEFINITION uriMatch */
 /**
  * @summary uriMatch
  * @description
@@ -36,6 +35,5 @@ export const uriMatch: MATCHING_RULE<UTF8String> = {
     "&id": id_mr_uriMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uriMatch */
 
 /* eslint-enable */

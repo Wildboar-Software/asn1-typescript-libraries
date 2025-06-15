@@ -6,7 +6,7 @@ import {
     _decode_Signcrypted,
     _encode_Signcrypted,
 } from "../CMSSigncryption/Signcrypted.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SigncryptedPartsManifest */
+
 /**
  * @summary SigncryptedPartsManifest
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SigncryptedPartsManifest = Signcrypted; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SigncryptedPartsManifest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SigncryptedPartsManifest */
+
 let _cached_decoder_for_SigncryptedPartsManifest: $.ASN1Decoder<SigncryptedPartsManifest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SigncryptedPartsManifest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SigncryptedPartsManifest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SigncryptedPartsManifest
  * @function
@@ -37,13 +35,11 @@ export function _decode_SigncryptedPartsManifest(el: _Element) {
     }
     return _cached_decoder_for_SigncryptedPartsManifest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SigncryptedPartsManifest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SigncryptedPartsManifest */
+
 let _cached_encoder_for_SigncryptedPartsManifest: $.ASN1Encoder<SigncryptedPartsManifest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SigncryptedPartsManifest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SigncryptedPartsManifest */
+
 /**
  * @summary Encodes a(n) SigncryptedPartsManifest into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_SigncryptedPartsManifest(
     return _cached_encoder_for_SigncryptedPartsManifest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SigncryptedPartsManifest */
 
 /* eslint-enable */

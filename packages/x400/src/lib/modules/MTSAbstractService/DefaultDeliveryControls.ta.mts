@@ -15,7 +15,6 @@ import {
     _decode_Controls,
     _encode_Controls,
 } from '../MTSAbstractService/Controls.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DefaultDeliveryControls */
 /**
  * @summary DefaultDeliveryControls
  * @description
@@ -36,13 +35,9 @@ import {
  * ```
  */
 export type DefaultDeliveryControls = Controls; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DefaultDeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultDeliveryControls */
 let _cached_decoder_for_DefaultDeliveryControls: $.ASN1Decoder<DefaultDeliveryControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultDeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DefaultDeliveryControls */
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultDeliveryControls
  * @function
@@ -55,13 +50,9 @@ export function _decode_DefaultDeliveryControls(el: _Element) {
     }
     return _cached_decoder_for_DefaultDeliveryControls(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DefaultDeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultDeliveryControls */
 let _cached_encoder_for_DefaultDeliveryControls: $.ASN1Encoder<DefaultDeliveryControls> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultDeliveryControls */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DefaultDeliveryControls */
 /**
  * @summary Encodes a(n) DefaultDeliveryControls into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_DefaultDeliveryControls(
     return _cached_encoder_for_DefaultDeliveryControls(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DefaultDeliveryControls */
 
 /* eslint-enable */

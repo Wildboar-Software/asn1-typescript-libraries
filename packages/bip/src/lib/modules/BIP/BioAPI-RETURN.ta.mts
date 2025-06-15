@@ -15,7 +15,7 @@ import {
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_RETURN */
+
 /**
  * @summary BioAPI_RETURN
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BioAPI_RETURN = UnsignedInt; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BioAPI_RETURN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_RETURN */
+
 let _cached_decoder_for_BioAPI_RETURN: $.ASN1Decoder<BioAPI_RETURN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_RETURN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_RETURN */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_RETURN
  * @function
@@ -46,13 +44,11 @@ export function _decode_BioAPI_RETURN(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_RETURN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_RETURN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_RETURN */
+
 let _cached_encoder_for_BioAPI_RETURN: $.ASN1Encoder<BioAPI_RETURN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_RETURN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_RETURN */
+
 /**
  * @summary Encodes a(n) BioAPI_RETURN into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_BioAPI_RETURN(
   return _cached_encoder_for_BioAPI_RETURN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_RETURN */
 
 /* eslint-enable */

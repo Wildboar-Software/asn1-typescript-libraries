@@ -15,7 +15,7 @@ import {
   _decode_AE_title,
   _encode_AE_title,
 } from '../ISO8571-FTAM/AE-title.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Application_Entity_Title */
+
 /**
  * @summary Application_Entity_Title
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Application_Entity_Title = AE_title; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Application_Entity_Title */
+
 let _cached_decoder_for_Application_Entity_Title: $.ASN1Decoder<Application_Entity_Title> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Application_Entity_Title */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Application_Entity_Title
  * @function
@@ -48,13 +46,11 @@ export function _decode_Application_Entity_Title(el: _Element) {
   }
   return _cached_decoder_for_Application_Entity_Title(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Application_Entity_Title */
+
 let _cached_encoder_for_Application_Entity_Title: $.ASN1Encoder<Application_Entity_Title> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Application_Entity_Title */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Application_Entity_Title */
+
 /**
  * @summary Encodes a(n) Application_Entity_Title into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_Application_Entity_Title(
   return _cached_encoder_for_Application_Entity_Title(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Application_Entity_Title */
 
 /* eslint-enable */

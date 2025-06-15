@@ -19,7 +19,7 @@ import {
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
 import { refuse } from '../Remote-Operations-Useful-Definitions/refuse.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION emptyBind */
+
 /**
  * @summary emptyBind
  * @description
@@ -56,6 +56,5 @@ export const emptyBind: OPERATION = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION emptyBind */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniversalCommonName */
 /**
  * @summary UniversalCommonName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UniversalCommonName = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalCommonName */
 let _cached_decoder_for_UniversalCommonName: $.ASN1Decoder<UniversalCommonName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalCommonName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalCommonName
  * @function
@@ -46,13 +41,9 @@ export function _decode_UniversalCommonName(el: _Element) {
     }
     return _cached_decoder_for_UniversalCommonName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalCommonName */
 let _cached_encoder_for_UniversalCommonName: $.ASN1Encoder<UniversalCommonName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalCommonName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalCommonName */
 /**
  * @summary Encodes a(n) UniversalCommonName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_UniversalCommonName(
     return _cached_encoder_for_UniversalCommonName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalCommonName */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../X790ASN1Module/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleReportStatusWindow */
+
 /**
  * @summary TroubleReportStatusWindow
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TroubleReportStatusWindow = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TroubleReportStatusWindow */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatusWindow */
+
 let _cached_decoder_for_TroubleReportStatusWindow: $.ASN1Decoder<TroubleReportStatusWindow> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleReportStatusWindow */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleReportStatusWindow */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportStatusWindow
  * @function
@@ -46,13 +44,11 @@ export function _decode_TroubleReportStatusWindow(el: _Element) {
     }
     return _cached_decoder_for_TroubleReportStatusWindow(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleReportStatusWindow */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatusWindow */
+
 let _cached_encoder_for_TroubleReportStatusWindow: $.ASN1Encoder<TroubleReportStatusWindow> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleReportStatusWindow */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleReportStatusWindow */
+
 /**
  * @summary Encodes a(n) TroubleReportStatusWindow into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TroubleReportStatusWindow(
     return _cached_encoder_for_TroubleReportStatusWindow(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleReportStatusWindow */
 
 /* eslint-enable */

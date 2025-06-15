@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
 import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECPKRestrictions */
 /**
  * @summary ECPKRestrictions
  * @description
@@ -63,9 +62,7 @@ class ECPKRestrictions {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECPKRestrictions */
 /**
  * @summary The Leading Root Component Types of ECPKRestrictions
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_ECPKRestrictions: $.ComponentSpec[] =
     new $.ComponentSpec("ecDomain", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("eccAlgorithms", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECPKRestrictions */
 /**
  * @summary The Trailing Root Component Types of ECPKRestrictions
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_ECPKRestrictions: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECPKRestrictions */
 /**
  * @summary The Extension Addition Component Types of ECPKRestrictions
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_ECPKRestrictions: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPKRestrictions */
 let _cached_decoder_for_ECPKRestrictions: $.ASN1Decoder<ECPKRestrictions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECPKRestrictions */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECPKRestrictions
  * @function
@@ -143,13 +132,9 @@ function _decode_ECPKRestrictions (el: _Element) {
 }; }
     return _cached_decoder_for_ECPKRestrictions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPKRestrictions */
 let _cached_encoder_for_ECPKRestrictions: $.ASN1Encoder<ECPKRestrictions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPKRestrictions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECPKRestrictions */
 /**
  * @summary Encodes a(n) ECPKRestrictions into an ASN.1 Element.
  * @function
@@ -170,6 +155,5 @@ function _encode_ECPKRestrictions (value: ECPKRestrictions, elGetter: $.ASN1Enco
     return _cached_encoder_for_ECPKRestrictions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECPKRestrictions */
 
 /* eslint-enable */

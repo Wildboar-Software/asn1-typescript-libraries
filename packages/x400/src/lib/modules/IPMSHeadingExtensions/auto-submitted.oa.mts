@@ -17,7 +17,6 @@ import {
 } from '../IPMSHeadingExtensions/AutoSubmitted.ta.mjs';
 import { id_hex_auto_submitted } from '../IPMSObjectIdentifiers/id-hex-auto-submitted.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION auto_submitted */
 /**
  * @summary auto_submitted
  * @description
@@ -46,6 +45,5 @@ export const auto_submitted: IPMS_EXTENSION<AutoSubmitted> = {
     '&id': id_hex_auto_submitted /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_submitted */
 
 /* eslint-enable */

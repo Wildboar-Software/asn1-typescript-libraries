@@ -11,7 +11,6 @@ import {
     _decode_CertUnsubscribeOK,
     _encode_CertUnsubscribeOK,
 } from "../CaSubscription/CertUnsubscribeOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertUnsubscribeRsp_result */
 /**
  * @summary CertUnsubscribeRsp_result
  * @description
@@ -26,13 +25,9 @@ export type CertUnsubscribeRsp_result =
     | { success: CertUnsubscribeOK } /* CHOICE_ALT_ROOT */
     | { failure: CertUnsubscribeErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertUnsubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUnsubscribeRsp_result */
 let _cached_decoder_for_CertUnsubscribeRsp_result: $.ASN1Decoder<CertUnsubscribeRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertUnsubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertUnsubscribeRsp_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertUnsubscribeRsp_result
  * @function
@@ -60,13 +55,9 @@ export function _decode_CertUnsubscribeRsp_result(el: _Element) {
     }
     return _cached_decoder_for_CertUnsubscribeRsp_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertUnsubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUnsubscribeRsp_result */
 let _cached_encoder_for_CertUnsubscribeRsp_result: $.ASN1Encoder<CertUnsubscribeRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertUnsubscribeRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertUnsubscribeRsp_result */
 /**
  * @summary Encodes a(n) CertUnsubscribeRsp_result into an ASN.1 Element.
  * @function
@@ -100,6 +91,5 @@ export function _encode_CertUnsubscribeRsp_result(
     return _cached_encoder_for_CertUnsubscribeRsp_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertUnsubscribeRsp_result */
 
 /* eslint-enable */

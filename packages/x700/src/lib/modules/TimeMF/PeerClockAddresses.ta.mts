@@ -15,7 +15,6 @@ import {
     _decode_SinglePeerClock,
     _encode_SinglePeerClock,
 } from '../TimeMF/SinglePeerClock.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PeerClockAddresses */
 /**
  * @summary PeerClockAddresses
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PeerClockAddresses = SinglePeerClock[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION PeerClockAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PeerClockAddresses */
 let _cached_decoder_for_PeerClockAddresses: $.ASN1Decoder<PeerClockAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PeerClockAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PeerClockAddresses */
 /**
  * @summary Decodes an ASN.1 element into a(n) PeerClockAddresses
  * @function
@@ -48,13 +43,9 @@ export function _decode_PeerClockAddresses(el: _Element) {
     }
     return _cached_decoder_for_PeerClockAddresses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PeerClockAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PeerClockAddresses */
 let _cached_encoder_for_PeerClockAddresses: $.ASN1Encoder<PeerClockAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PeerClockAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PeerClockAddresses */
 /**
  * @summary Encodes a(n) PeerClockAddresses into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_PeerClockAddresses(
     return _cached_encoder_for_PeerClockAddresses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PeerClockAddresses */
 
 /* eslint-enable */

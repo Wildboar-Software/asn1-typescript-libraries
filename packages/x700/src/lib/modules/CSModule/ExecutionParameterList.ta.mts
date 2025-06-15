@@ -15,7 +15,6 @@ import {
     _decode_ExecutionParameter,
     _encode_ExecutionParameter,
 } from '../CSModule/ExecutionParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExecutionParameterList */
 /**
  * @summary ExecutionParameterList
  * @description
@@ -34,13 +33,9 @@ export type ExecutionParameterList =
     | { executionParameter: ExecutionParameter } /* CHOICE_ALT_ROOT */
     | { sequentialExecutionList: ExecutionParameter[] } /* CHOICE_ALT_ROOT */
     | { parallelExecutionList: ExecutionParameter[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ExecutionParameterList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExecutionParameterList */
 let _cached_decoder_for_ExecutionParameterList: $.ASN1Decoder<ExecutionParameterList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExecutionParameterList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExecutionParameterList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExecutionParameterList
  * @function
@@ -74,13 +69,9 @@ export function _decode_ExecutionParameterList(el: _Element) {
     }
     return _cached_decoder_for_ExecutionParameterList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExecutionParameterList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExecutionParameterList */
 let _cached_encoder_for_ExecutionParameterList: $.ASN1Encoder<ExecutionParameterList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExecutionParameterList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExecutionParameterList */
 /**
  * @summary Encodes a(n) ExecutionParameterList into an ASN.1 Element.
  * @function
@@ -117,6 +108,5 @@ export function _encode_ExecutionParameterList(
     return _cached_encoder_for_ExecutionParameterList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExecutionParameterList */
 
 /* eslint-enable */

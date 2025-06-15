@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { modules } from '../ObjectIdentifiers/modules.va.mjs';
-/* START_OF_SYMBOL_DEFINITION genericProtectingTransferSyntax */
+
 /**
  * @summary genericProtectingTransferSyntax
  * @description
@@ -28,6 +28,5 @@ export const genericProtectingTransferSyntax: OBJECT_IDENTIFIER = new _OID(
   [7],
   modules
 );
-/* END_OF_SYMBOL_DEFINITION genericProtectingTransferSyntax */
 
 /* eslint-enable */

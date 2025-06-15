@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ContentIdentifier */
 /**
  * @summary ContentIdentifier
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ContentIdentifier = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION ContentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentIdentifier */
 let _cached_decoder_for_ContentIdentifier: $.ASN1Decoder<ContentIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_ContentIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ContentIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentIdentifier */
 let _cached_encoder_for_ContentIdentifier: $.ASN1Encoder<ContentIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentIdentifier */
 /**
  * @summary Encodes a(n) ContentIdentifier into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ContentIdentifier(
     return _cached_encoder_for_ContentIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentIdentifier */
 
 /* eslint-enable */

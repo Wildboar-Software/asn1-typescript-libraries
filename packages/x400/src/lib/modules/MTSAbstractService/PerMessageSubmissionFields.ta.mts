@@ -52,7 +52,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerMessageSubmissionFields */
 /**
  * @summary PerMessageSubmissionFields
  * @description
@@ -184,9 +183,7 @@ export class PerMessageSubmissionFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerMessageSubmissionFields */
 /**
  * @summary The Leading Root Component Types of PerMessageSubmissionFields
  * @description
@@ -253,9 +250,7 @@ export const _root_component_type_list_1_spec_for_PerMessageSubmissionFields: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerMessageSubmissionFields */
 /**
  * @summary The Trailing Root Component Types of PerMessageSubmissionFields
  * @description
@@ -265,9 +260,7 @@ export const _root_component_type_list_1_spec_for_PerMessageSubmissionFields: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PerMessageSubmissionFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerMessageSubmissionFields */
 /**
  * @summary The Extension Addition Component Types of PerMessageSubmissionFields
  * @description
@@ -277,13 +270,9 @@ export const _root_component_type_list_2_spec_for_PerMessageSubmissionFields: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_PerMessageSubmissionFields: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerMessageSubmissionFields */
 let _cached_decoder_for_PerMessageSubmissionFields: $.ASN1Decoder<PerMessageSubmissionFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerMessageSubmissionFields */
 /**
  * @summary Decodes an ASN.1 element into a(n) PerMessageSubmissionFields
  * @function
@@ -366,13 +355,9 @@ export function _decode_PerMessageSubmissionFields(el: _Element) {
     }
     return _cached_decoder_for_PerMessageSubmissionFields(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerMessageSubmissionFields */
 let _cached_encoder_for_PerMessageSubmissionFields: $.ASN1Encoder<PerMessageSubmissionFields> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerMessageSubmissionFields */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerMessageSubmissionFields */
 /**
  * @summary Encodes a(n) PerMessageSubmissionFields into an ASN.1 Element.
  * @function
@@ -463,6 +448,5 @@ export function _encode_PerMessageSubmissionFields(
     return _cached_encoder_for_PerMessageSubmissionFields(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerMessageSubmissionFields */
 
 /* eslint-enable */

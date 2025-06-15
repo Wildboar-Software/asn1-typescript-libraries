@@ -17,7 +17,7 @@ import {
     _encode_ACSE_apdu,
 } from '@wildboar/acse/src/lib/modules/ACSE-1/ACSE-apdu.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION acse_abstract_syntax */
+
 /**
  * @summary acse_abstract_syntax
  * @description
@@ -57,6 +57,5 @@ export const acse_abstract_syntax: ABSTRACT_SYNTAX<ACSE_apdu> = {
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
   '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION acse_abstract_syntax */
 
 /* eslint-enable */

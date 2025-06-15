@@ -27,7 +27,7 @@ import {
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PublicKEAKeyAttributes */
+
 /**
  * @summary PublicKEAKeyAttributes
  * @description
@@ -90,9 +90,8 @@ export class PublicKEAKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicKEAKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PublicKEAKeyAttributes
  * @description
@@ -105,9 +104,8 @@ export const _root_component_type_list_1_spec_for_PublicKEAKeyAttributes: $.Comp
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicKEAKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PublicKEAKeyAttributes
  * @description
@@ -117,9 +115,8 @@ export const _root_component_type_list_1_spec_for_PublicKEAKeyAttributes: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PublicKEAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicKEAKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PublicKEAKeyAttributes
  * @description
@@ -129,13 +126,11 @@ export const _root_component_type_list_2_spec_for_PublicKEAKeyAttributes: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_PublicKEAKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKEAKeyAttributes */
+
 let _cached_decoder_for_PublicKEAKeyAttributes: $.ASN1Decoder<PublicKEAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicKEAKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKEAKeyAttributes
  * @function
@@ -191,13 +186,11 @@ export function _decode_PublicKEAKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PublicKEAKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKEAKeyAttributes */
+
 let _cached_encoder_for_PublicKEAKeyAttributes: $.ASN1Encoder<PublicKEAKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKEAKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicKEAKeyAttributes */
+
 /**
  * @summary Encodes a(n) PublicKEAKeyAttributes into an ASN.1 Element.
  * @function
@@ -241,6 +234,5 @@ export function _encode_PublicKEAKeyAttributes(
     return _cached_encoder_for_PublicKEAKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicKEAKeyAttributes */
 
 /* eslint-enable */

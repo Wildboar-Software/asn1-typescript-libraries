@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION FilterItem_substrings_strings_Item */
 /**
  * @summary FilterItem_substrings_strings_Item
  * @description
@@ -25,13 +24,9 @@ export type FilterItem_substrings_strings_Item =
     | { initial: _Element } /* CHOICE_ALT_ROOT */
     | { any_: _Element } /* CHOICE_ALT_ROOT */
     | { final: _Element } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FilterItem_substrings_strings_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterItem_substrings_strings_Item */
 let _cached_decoder_for_FilterItem_substrings_strings_Item: $.ASN1Decoder<FilterItem_substrings_strings_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterItem_substrings_strings_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FilterItem_substrings_strings_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) FilterItem_substrings_strings_Item
  * @function
@@ -59,13 +54,9 @@ export function _decode_FilterItem_substrings_strings_Item(el: _Element) {
     }
     return _cached_decoder_for_FilterItem_substrings_strings_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FilterItem_substrings_strings_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterItem_substrings_strings_Item */
 let _cached_encoder_for_FilterItem_substrings_strings_Item: $.ASN1Encoder<FilterItem_substrings_strings_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterItem_substrings_strings_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FilterItem_substrings_strings_Item */
 /**
  * @summary Encodes a(n) FilterItem_substrings_strings_Item into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_FilterItem_substrings_strings_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FilterItem_substrings_strings_Item */
 
 /* eslint-enable */

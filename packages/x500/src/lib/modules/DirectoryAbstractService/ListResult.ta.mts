@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ListResult */
 /**
  * @summary ListResult
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ListResult = OPTIONALLY_PROTECTED<ListResultData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResult */
 let _cached_decoder_for_ListResult: $.ASN1Decoder<ListResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListResult
  * @function
@@ -44,13 +39,9 @@ export function _decode_ListResult(el: _Element) {
     }
     return _cached_decoder_for_ListResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResult */
 let _cached_encoder_for_ListResult: $.ASN1Encoder<ListResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListResult */
 /**
  * @summary Encodes a(n) ListResult into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ListResult(
     return _cached_encoder_for_ListResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListResult */
 
 /* eslint-enable */

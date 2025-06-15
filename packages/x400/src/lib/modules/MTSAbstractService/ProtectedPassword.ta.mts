@@ -22,7 +22,6 @@ import {
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectedPassword */
 /**
  * @summary ProtectedPassword
  * @description
@@ -104,9 +103,7 @@ export class ProtectedPassword {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedPassword */
 /**
  * @summary The Leading Root Component Types of ProtectedPassword
  * @description
@@ -152,9 +149,7 @@ export const _root_component_type_list_1_spec_for_ProtectedPassword: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectedPassword */
 /**
  * @summary The Trailing Root Component Types of ProtectedPassword
  * @description
@@ -164,9 +159,7 @@ export const _root_component_type_list_1_spec_for_ProtectedPassword: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectedPassword: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectedPassword */
 /**
  * @summary The Extension Addition Component Types of ProtectedPassword
  * @description
@@ -176,13 +169,9 @@ export const _root_component_type_list_2_spec_for_ProtectedPassword: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectedPassword: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectedPassword */
 let _cached_decoder_for_ProtectedPassword: $.ASN1Decoder<ProtectedPassword> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectedPassword */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectedPassword
  * @function
@@ -247,13 +236,9 @@ export function _decode_ProtectedPassword(el: _Element) {
     }
     return _cached_decoder_for_ProtectedPassword(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectedPassword */
 let _cached_encoder_for_ProtectedPassword: $.ASN1Encoder<ProtectedPassword> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectedPassword */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectedPassword */
 /**
  * @summary Encodes a(n) ProtectedPassword into an ASN.1 Element.
  * @function
@@ -316,6 +301,5 @@ export function _encode_ProtectedPassword(
     return _cached_encoder_for_ProtectedPassword(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectedPassword */
 
 /* eslint-enable */

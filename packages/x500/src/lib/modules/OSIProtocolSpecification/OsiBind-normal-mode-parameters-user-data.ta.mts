@@ -6,7 +6,6 @@ import {
     _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
     _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_user_data */
 /**
  * @summary OsiBind_normal_mode_parameters_user_data
  * @description
@@ -20,13 +19,9 @@ import {
 export type OsiBind_normal_mode_parameters_user_data = {
     fully_encoded_data: OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item[];
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind_normal_mode_parameters_user_data */
 let _cached_decoder_for_OsiBind_normal_mode_parameters_user_data: $.ASN1Decoder<OsiBind_normal_mode_parameters_user_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiBind_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiBind_normal_mode_parameters_user_data */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiBind_normal_mode_parameters_user_data
  * @function
@@ -53,13 +48,9 @@ export function _decode_OsiBind_normal_mode_parameters_user_data(el: _Element) {
     }
     return _cached_decoder_for_OsiBind_normal_mode_parameters_user_data(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiBind_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind_normal_mode_parameters_user_data */
 let _cached_encoder_for_OsiBind_normal_mode_parameters_user_data: $.ASN1Encoder<OsiBind_normal_mode_parameters_user_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiBind_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiBind_normal_mode_parameters_user_data */
 /**
  * @summary Encodes a(n) OsiBind_normal_mode_parameters_user_data into an ASN.1 Element.
  * @function
@@ -95,6 +86,5 @@ export function _encode_OsiBind_normal_mode_parameters_user_data(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiBind_normal_mode_parameters_user_data */
 
 /* eslint-enable */

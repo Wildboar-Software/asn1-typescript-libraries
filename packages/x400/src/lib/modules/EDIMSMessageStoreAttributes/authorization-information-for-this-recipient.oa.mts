@@ -22,7 +22,6 @@ import { id_rat_authorization_information_for_this_recipient } from '../EDIMSObj
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION authorization_information_for_this_recipient */
 /**
  * @summary authorization_information_for_this_recipient
  * @description
@@ -55,6 +54,5 @@ export const authorization_information_for_this_recipient: X413ATTRIBUTE<Authori
     '&id': id_rat_authorization_information_for_this_recipient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authorization_information_for_this_recipient */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardDestinationAddressUnreachable */
+
 /**
  * @summary pDUDiscardDestinationAddressUnreachable
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardDestinationAddressUnreachable: OBJECT_IDENTIFIER = new _O
     [/* destinationAddressUnreachable */ 128],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardDestinationAddressUnreachable */
 
 /* eslint-enable */

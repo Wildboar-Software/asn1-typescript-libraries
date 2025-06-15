@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_nf_applProcessNameForm */
 /**
  * @summary id_nf_applProcessNameForm
  * @description
@@ -18,6 +17,5 @@ export const id_nf_applProcessNameForm: OBJECT_IDENTIFIER = new _OID(
     [10],
     id_nf
 );
-/* END_OF_SYMBOL_DEFINITION id_nf_applProcessNameForm */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_12PbeIds } from "../PKCS-12/pkcs-12PbeIds.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pbewithSHAAnd40BitRC2_CBC */
+
 /**
  * @summary pbewithSHAAnd40BitRC2_CBC
  * @description
@@ -18,6 +18,5 @@ export const pbewithSHAAnd40BitRC2_CBC: OBJECT_IDENTIFIER = new _OID(
     [6],
     pkcs_12PbeIds
 );
-/* END_OF_SYMBOL_DEFINITION pbewithSHAAnd40BitRC2_CBC */
 
 /* eslint-enable */

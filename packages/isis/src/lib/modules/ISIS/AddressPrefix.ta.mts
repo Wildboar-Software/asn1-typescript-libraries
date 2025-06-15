@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AddressPrefix */
 /**
  * @summary AddressPrefix
  * @description
@@ -26,21 +25,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AddressPrefix = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION AddressPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddressPrefix */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddressPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddressPrefix */
 export const _decode_AddressPrefix = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_AddressPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddressPrefix */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddressPrefix */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddressPrefix */
 export const _encode_AddressPrefix = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddressPrefix */
 
 /* eslint-enable */

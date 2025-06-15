@@ -6,7 +6,6 @@ import {
     _decode_RequestAuthenticationPolicy,
     _encode_RequestAuthenticationPolicy,
 } from "../DirectoryManagement/RequestAuthenticationPolicy.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ResultAuthenticationPolicy */
 /**
  * @summary ResultAuthenticationPolicy
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ResultAuthenticationPolicy = RequestAuthenticationPolicy; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ResultAuthenticationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultAuthenticationPolicy */
 let _cached_decoder_for_ResultAuthenticationPolicy: $.ASN1Decoder<ResultAuthenticationPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResultAuthenticationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResultAuthenticationPolicy */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResultAuthenticationPolicy
  * @function
@@ -37,13 +32,9 @@ export function _decode_ResultAuthenticationPolicy(el: _Element) {
     }
     return _cached_decoder_for_ResultAuthenticationPolicy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResultAuthenticationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultAuthenticationPolicy */
 let _cached_encoder_for_ResultAuthenticationPolicy: $.ASN1Encoder<ResultAuthenticationPolicy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResultAuthenticationPolicy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResultAuthenticationPolicy */
 /**
  * @summary Encodes a(n) ResultAuthenticationPolicy into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_ResultAuthenticationPolicy(
     return _cached_encoder_for_ResultAuthenticationPolicy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResultAuthenticationPolicy */
 
 /* eslint-enable */

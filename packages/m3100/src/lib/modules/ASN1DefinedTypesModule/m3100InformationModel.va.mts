@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION m3100InformationModel */
+
 /**
  * @summary m3100InformationModel
  * @description
@@ -34,6 +34,5 @@ export const m3100InformationModel: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION m3100InformationModel */
 
 /* eslint-enable */

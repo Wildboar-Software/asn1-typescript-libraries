@@ -39,7 +39,7 @@ import {
   _decode_AttributeSelection,
   _encode_AttributeSelection,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeSelection.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SearchRequest */
+
 /**
  * @summary SearchRequest
  * @description
@@ -166,9 +166,8 @@ export class SearchRequest {
 
   public static _enum_for_derefAliases = _enum_for_SearchRequest_derefAliases;
 }
-/* END_OF_SYMBOL_DEFINITION SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchRequest */
+
 /**
  * @summary The Leading Root Component Types of SearchRequest
  * @description
@@ -229,9 +228,8 @@ export const _root_component_type_list_1_spec_for_SearchRequest: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchRequest */
+
 /**
  * @summary The Trailing Root Component Types of SearchRequest
  * @description
@@ -241,9 +239,8 @@ export const _root_component_type_list_1_spec_for_SearchRequest: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SearchRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchRequest */
+
 /**
  * @summary The Extension Addition Component Types of SearchRequest
  * @description
@@ -253,13 +250,11 @@ export const _root_component_type_list_2_spec_for_SearchRequest: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_SearchRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchRequest */
+
 let _cached_decoder_for_SearchRequest: $.ASN1Decoder<SearchRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SearchRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchRequest
  * @function
@@ -319,13 +314,11 @@ export function _decode_SearchRequest(el: _Element) {
   }
   return _cached_decoder_for_SearchRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchRequest */
+
 let _cached_encoder_for_SearchRequest: $.ASN1Encoder<SearchRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SearchRequest */
+
 /**
  * @summary Encodes a(n) SearchRequest into an ASN.1 Element.
  * @function
@@ -380,6 +373,5 @@ export function _encode_SearchRequest(
   return _cached_encoder_for_SearchRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SearchRequest */
 
 /* eslint-enable */

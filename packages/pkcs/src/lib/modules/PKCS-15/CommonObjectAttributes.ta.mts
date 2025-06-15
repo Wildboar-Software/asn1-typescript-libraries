@@ -23,7 +23,7 @@ import {
 } from "../PKCS-15/Identifier.ta.mjs";
 import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CommonObjectAttributes */
+
 /**
  * @summary CommonObjectAttributes
  * @description
@@ -109,9 +109,8 @@ export class CommonObjectAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonObjectAttributes */
+
 /**
  * @summary The Leading Root Component Types of CommonObjectAttributes
  * @description
@@ -143,9 +142,8 @@ export const _root_component_type_list_1_spec_for_CommonObjectAttributes: $.Comp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonObjectAttributes */
+
 /**
  * @summary The Trailing Root Component Types of CommonObjectAttributes
  * @description
@@ -155,9 +153,8 @@ export const _root_component_type_list_1_spec_for_CommonObjectAttributes: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonObjectAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonObjectAttributes */
+
 /**
  * @summary The Extension Addition Component Types of CommonObjectAttributes
  * @description
@@ -182,13 +179,11 @@ export const _extension_additions_list_spec_for_CommonObjectAttributes: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonObjectAttributes */
+
 let _cached_decoder_for_CommonObjectAttributes: $.ASN1Decoder<CommonObjectAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonObjectAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonObjectAttributes
  * @function
@@ -251,13 +246,11 @@ export function _decode_CommonObjectAttributes(el: _Element) {
     }
     return _cached_decoder_for_CommonObjectAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonObjectAttributes */
+
 let _cached_encoder_for_CommonObjectAttributes: $.ASN1Encoder<CommonObjectAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonObjectAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonObjectAttributes */
+
 /**
  * @summary Encodes a(n) CommonObjectAttributes into an ASN.1 Element.
  * @function
@@ -310,6 +303,5 @@ export function _encode_CommonObjectAttributes(
     return _cached_encoder_for_CommonObjectAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonObjectAttributes */
 
 /* eslint-enable */

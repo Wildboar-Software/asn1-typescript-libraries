@@ -31,7 +31,7 @@ import {
     _decode_SecretKeys,
     _encode_SecretKeys,
 } from "../PKCS-15/SecretKeys.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS15Objects */
+
 /**
  * @summary PKCS15Objects
  * @description
@@ -64,13 +64,11 @@ export type PKCS15Objects =
     | { dataObjects: DataObjects } /* CHOICE_ALT_ROOT */
     | { authObjects: AuthObjects } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PKCS15Objects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCS15Objects */
+
 let _cached_decoder_for_PKCS15Objects: $.ASN1Decoder<PKCS15Objects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCS15Objects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKCS15Objects */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKCS15Objects
  * @function
@@ -128,13 +126,11 @@ export function _decode_PKCS15Objects(el: _Element) {
     }
     return _cached_decoder_for_PKCS15Objects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKCS15Objects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCS15Objects */
+
 let _cached_encoder_for_PKCS15Objects: $.ASN1Encoder<PKCS15Objects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCS15Objects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKCS15Objects */
+
 /**
  * @summary Encodes a(n) PKCS15Objects into an ASN.1 Element.
  * @function
@@ -210,6 +206,5 @@ export function _encode_PKCS15Objects(
     return _cached_encoder_for_PKCS15Objects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKCS15Objects */
 
 /* eslint-enable */

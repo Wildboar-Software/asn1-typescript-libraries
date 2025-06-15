@@ -15,7 +15,7 @@ import {
     _decode_ActivityDuration_Item,
     _encode_ActivityDuration_Item,
 } from '../X790ASN1Module/ActivityDuration-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ActivityDuration */
+
 /**
  * @summary ActivityDuration
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type ActivityDuration = ActivityDuration_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ActivityDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityDuration */
+
 let _cached_decoder_for_ActivityDuration: $.ASN1Decoder<ActivityDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActivityDuration */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActivityDuration */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActivityDuration
  * @function
@@ -53,13 +51,11 @@ export function _decode_ActivityDuration(el: _Element) {
     }
     return _cached_decoder_for_ActivityDuration(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActivityDuration */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityDuration */
+
 let _cached_encoder_for_ActivityDuration: $.ASN1Encoder<ActivityDuration> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActivityDuration */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActivityDuration */
+
 /**
  * @summary Encodes a(n) ActivityDuration into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_ActivityDuration(
     return _cached_encoder_for_ActivityDuration(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActivityDuration */
 
 /* eslint-enable */

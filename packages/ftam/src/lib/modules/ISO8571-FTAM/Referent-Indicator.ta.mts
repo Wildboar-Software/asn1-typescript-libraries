@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Referent_Indicator */
+
 /**
  * @summary Referent_Indicator
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Referent_Indicator = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION Referent_Indicator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Referent_Indicator */
+
 let _cached_decoder_for_Referent_Indicator: $.ASN1Decoder<Referent_Indicator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Referent_Indicator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Referent_Indicator */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Referent_Indicator
  * @function
@@ -45,13 +43,11 @@ export function _decode_Referent_Indicator(el: _Element) {
   }
   return _cached_decoder_for_Referent_Indicator(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Referent_Indicator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Referent_Indicator */
+
 let _cached_encoder_for_Referent_Indicator: $.ASN1Encoder<Referent_Indicator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Referent_Indicator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Referent_Indicator */
+
 /**
  * @summary Encodes a(n) Referent_Indicator into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Referent_Indicator(
   return _cached_encoder_for_Referent_Indicator(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Referent_Indicator */
 
 /* eslint-enable */

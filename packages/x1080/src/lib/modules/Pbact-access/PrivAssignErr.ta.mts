@@ -22,7 +22,7 @@ import {
     _decode_AssignErr,
     _encode_AssignErr,
 } from '../Pbact-access/AssignErr.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PrivAssignErr */
+
 /**
  * @summary PrivAssignErr
  * @description
@@ -40,13 +40,11 @@ export type PrivAssignErr =
     | { cmsErr: CmsErrorCode } /* CHOICE_ALT_ROOT */
     | { assignErr: AssignErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PrivAssignErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivAssignErr */
+
 let _cached_decoder_for_PrivAssignErr: $.ASN1Decoder<PrivAssignErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivAssignErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivAssignErr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivAssignErr
  * @function
@@ -72,13 +70,11 @@ export function _decode_PrivAssignErr(el: _Element) {
     }
     return _cached_decoder_for_PrivAssignErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivAssignErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivAssignErr */
+
 let _cached_encoder_for_PrivAssignErr: $.ASN1Encoder<PrivAssignErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivAssignErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivAssignErr */
+
 /**
  * @summary Encodes a(n) PrivAssignErr into an ASN.1 Element.
  * @function
@@ -112,6 +108,5 @@ export function _encode_PrivAssignErr(
     return _cached_encoder_for_PrivAssignErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivAssignErr */
 
 /* eslint-enable */

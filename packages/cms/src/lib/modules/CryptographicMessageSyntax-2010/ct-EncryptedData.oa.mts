@@ -6,7 +6,7 @@ import {
     _encode_EncryptedData,
 } from "../CryptographicMessageSyntax-2010/EncryptedData.ta.mjs";
 import { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ct_EncryptedData */
+
 /**
  * @summary ct_EncryptedData
  * @description
@@ -32,6 +32,5 @@ export const ct_EncryptedData: CONTENT_TYPE<EncryptedData> = {
     "&id": id_encryptedData /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ct_EncryptedData */
 
 /* eslint-enable */

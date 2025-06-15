@@ -40,7 +40,6 @@ import {
     _decode_RTABapdu,
     _encode_RTABapdu,
 } from '../MTSAccessProtocol/RTABapdu.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RTSE_apdus */
 /**
  * @summary RTSE_apdus
  * @description
@@ -65,13 +64,9 @@ export type RTSE_apdus =
     | { rttp_apdu: RTTPapdu } /* CHOICE_ALT_ROOT */
     | { rttr_apdu: RTTRapdu } /* CHOICE_ALT_ROOT */
     | { rtab_apdu: RTABapdu } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RTSE_apdus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RTSE_apdus */
 let _cached_decoder_for_RTSE_apdus: $.ASN1Decoder<RTSE_apdus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RTSE_apdus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RTSE_apdus */
 /**
  * @summary Decodes an ASN.1 element into a(n) RTSE_apdus
  * @function
@@ -105,13 +100,9 @@ export function _decode_RTSE_apdus(el: _Element) {
     }
     return _cached_decoder_for_RTSE_apdus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RTSE_apdus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RTSE_apdus */
 let _cached_encoder_for_RTSE_apdus: $.ASN1Encoder<RTSE_apdus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RTSE_apdus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RTSE_apdus */
 /**
  * @summary Encodes a(n) RTSE_apdus into an ASN.1 Element.
  * @function
@@ -159,6 +150,5 @@ export function _encode_RTSE_apdus(
     return _cached_encoder_for_RTSE_apdus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RTSE_apdus */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_PNExtensionsSubField,
     _encode_PNExtensionsSubField,
 } from '../EDIMSInformationObjects/PNExtensionsSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PNExtensionsField */
 /**
  * @summary PNExtensionsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type PNExtensionsField = PNExtensionsSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION PNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PNExtensionsField */
 let _cached_decoder_for_PNExtensionsField: $.ASN1Decoder<PNExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PNExtensionsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) PNExtensionsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_PNExtensionsField(el: _Element) {
     }
     return _cached_decoder_for_PNExtensionsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PNExtensionsField */
 let _cached_encoder_for_PNExtensionsField: $.ASN1Encoder<PNExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PNExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PNExtensionsField */
 /**
  * @summary Encodes a(n) PNExtensionsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_PNExtensionsField(
     return _cached_encoder_for_PNExtensionsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PNExtensionsField */
 
 /* eslint-enable */

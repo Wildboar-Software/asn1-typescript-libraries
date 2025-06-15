@@ -31,7 +31,6 @@ import {
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
 } from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyOperationalBindingArgumentData */
 /**
  * @summary ModifyOperationalBindingArgumentData
  * @description
@@ -151,9 +150,7 @@ export class ModifyOperationalBindingArgumentData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyOperationalBindingArgumentData */
 /**
  * @summary The Leading Root Component Types of ModifyOperationalBindingArgumentData
  * @description
@@ -224,9 +221,7 @@ export const _root_component_type_list_1_spec_for_ModifyOperationalBindingArgume
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyOperationalBindingArgumentData */
 /**
  * @summary The Trailing Root Component Types of ModifyOperationalBindingArgumentData
  * @description
@@ -236,9 +231,7 @@ export const _root_component_type_list_1_spec_for_ModifyOperationalBindingArgume
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyOperationalBindingArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyOperationalBindingArgumentData */
 /**
  * @summary The Extension Addition Component Types of ModifyOperationalBindingArgumentData
  * @description
@@ -248,13 +241,9 @@ export const _root_component_type_list_2_spec_for_ModifyOperationalBindingArgume
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyOperationalBindingArgumentData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyOperationalBindingArgumentData */
 let _cached_decoder_for_ModifyOperationalBindingArgumentData: $.ASN1Decoder<ModifyOperationalBindingArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyOperationalBindingArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyOperationalBindingArgumentData
  * @function
@@ -346,13 +335,9 @@ export function _decode_ModifyOperationalBindingArgumentData(el: _Element) {
     }
     return _cached_decoder_for_ModifyOperationalBindingArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyOperationalBindingArgumentData */
 let _cached_encoder_for_ModifyOperationalBindingArgumentData: $.ASN1Encoder<ModifyOperationalBindingArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyOperationalBindingArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyOperationalBindingArgumentData */
 /**
  * @summary Encodes a(n) ModifyOperationalBindingArgumentData into an ASN.1 Element.
  * @function
@@ -444,6 +429,5 @@ export function _encode_ModifyOperationalBindingArgumentData(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyOperationalBindingArgumentData */
 
 /* eslint-enable */

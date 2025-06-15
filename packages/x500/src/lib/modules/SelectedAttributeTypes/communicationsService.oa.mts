@@ -11,7 +11,6 @@ import {
 } from "../SelectedAttributeTypes/CommunicationsService.ta.mjs";
 import { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION communicationsService */
 /**
  * @summary communicationsService
  * @description
@@ -51,6 +50,5 @@ export const communicationsService: ATTRIBUTE<CommunicationsService> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION communicationsService */
 
 /* eslint-enable */

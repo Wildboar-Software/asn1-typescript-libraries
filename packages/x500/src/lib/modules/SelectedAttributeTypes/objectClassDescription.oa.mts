@@ -6,7 +6,6 @@ import {
     _encode_ObjectClassDescription,
 } from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
 import { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va.mjs";
-/* START_OF_SYMBOL_DEFINITION objectClassDescription */
 /**
  * @summary objectClassDescription
  * @description
@@ -36,6 +35,5 @@ export const objectClassDescription: SYNTAX_NAME<ObjectClassDescription> = {
     "&id": id_lsx_objectClassDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION objectClassDescription */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_RecipientEncryptedKey,
     _encode_RecipientEncryptedKey,
 } from '../CmsTelebiometric/RecipientEncryptedKey.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientEncryptedKeys */
+
 /**
  * @summary RecipientEncryptedKeys
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RecipientEncryptedKeys = RecipientEncryptedKey[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION RecipientEncryptedKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientEncryptedKeys */
+
 let _cached_decoder_for_RecipientEncryptedKeys: $.ASN1Decoder<RecipientEncryptedKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientEncryptedKeys */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientEncryptedKeys */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientEncryptedKeys
  * @function
@@ -48,13 +46,11 @@ export function _decode_RecipientEncryptedKeys(el: _Element) {
     }
     return _cached_decoder_for_RecipientEncryptedKeys(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientEncryptedKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientEncryptedKeys */
+
 let _cached_encoder_for_RecipientEncryptedKeys: $.ASN1Encoder<RecipientEncryptedKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientEncryptedKeys */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientEncryptedKeys */
+
 /**
  * @summary Encodes a(n) RecipientEncryptedKeys into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RecipientEncryptedKeys(
     return _cached_encoder_for_RecipientEncryptedKeys(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientEncryptedKeys */
 
 /* eslint-enable */

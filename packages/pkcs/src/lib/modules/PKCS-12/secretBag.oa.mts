@@ -7,7 +7,7 @@ import {
     _decode_SecretBag,
     _encode_SecretBag,
 } from "../PKCS-12/SecretBag.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION secretBag */
+
 /**
  * @summary secretBag
  * @description
@@ -36,6 +36,5 @@ export const secretBag: BAG_TYPE<SecretBag> = {
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION secretBag */
 
 /* eslint-enable */

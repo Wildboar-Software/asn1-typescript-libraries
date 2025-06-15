@@ -16,7 +16,6 @@ import {
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION removeEntry */
 /**
  * @summary removeEntry
  * @description
@@ -60,6 +59,5 @@ export const removeEntry: OPERATION<RemoveEntryArgument, RemoveEntryResult> = {
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION removeEntry */
 
 /* eslint-enable */

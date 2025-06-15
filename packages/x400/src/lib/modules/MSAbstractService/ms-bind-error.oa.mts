@@ -23,7 +23,6 @@ import {
     _encode_ms_bind_error_ParameterType,
 } from '../MSAbstractService/ms-bind-error-ParameterType.ta.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_bind_error */
 /**
  * @summary ms_bind_error
  * @description
@@ -61,6 +60,5 @@ export const ms_bind_error: ABSTRACT_ERROR<ms_bind_error_ParameterType> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_bind_error */
 
 /* eslint-enable */

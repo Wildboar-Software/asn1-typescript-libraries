@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeSet */
+
 /**
  * @summary AttributeSet
  * @description
@@ -26,6 +26,5 @@ import { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca.mjs';
  *
  */
 export const AttributeSet: CMIP_ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION AttributeSet */
 
 /* eslint-enable */

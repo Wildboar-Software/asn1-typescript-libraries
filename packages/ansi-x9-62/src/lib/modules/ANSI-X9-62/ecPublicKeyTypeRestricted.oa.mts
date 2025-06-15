@@ -6,7 +6,6 @@ import {
     _encode_ECPKRestrictions,
 } from "../ANSI-X9-62/ECPKRestrictions.ta.mjs";
 import { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ecPublicKeyTypeRestricted */
 /**
  * @summary ecPublicKeyTypeRestricted
  * @description
@@ -34,6 +33,5 @@ export const ecPublicKeyTypeRestricted: ALGORITHM<ECPKRestrictions> = {
     "&id": id_ecPublicKeyRestricted /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecPublicKeyTypeRestricted */
 
 /* eslint-enable */

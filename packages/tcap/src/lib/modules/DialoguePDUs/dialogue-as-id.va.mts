@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION dialogue_as_id */
 /**
  * @summary dialogue_as_id
  * @description
@@ -29,6 +28,5 @@ export const dialogue_as_id: OBJECT_IDENTIFIER = new _OID(
     [ 0 /* recommendation */, 17 /* q */, 773, /* as */ 1, /* dialogue-as */ 1, /* version1 */ 1],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION dialogue_as_id */
 
 /* eslint-enable */

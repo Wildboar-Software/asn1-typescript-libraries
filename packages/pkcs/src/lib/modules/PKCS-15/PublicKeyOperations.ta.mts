@@ -6,7 +6,7 @@ import {
     _decode_Operations,
     _encode_Operations,
 } from "../PKCS-15/Operations.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PublicKeyOperations */
+
 /**
  * @summary PublicKeyOperations
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type PublicKeyOperations = Operations; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PublicKeyOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeyOperations */
+
 let _cached_decoder_for_PublicKeyOperations: $.ASN1Decoder<PublicKeyOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeyOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicKeyOperations */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKeyOperations
  * @function
@@ -37,13 +35,11 @@ export function _decode_PublicKeyOperations(el: _Element) {
     }
     return _cached_decoder_for_PublicKeyOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicKeyOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeyOperations */
+
 let _cached_encoder_for_PublicKeyOperations: $.ASN1Encoder<PublicKeyOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeyOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicKeyOperations */
+
 /**
  * @summary Encodes a(n) PublicKeyOperations into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_PublicKeyOperations(
     return _cached_encoder_for_PublicKeyOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicKeyOperations */
 
 /* eslint-enable */

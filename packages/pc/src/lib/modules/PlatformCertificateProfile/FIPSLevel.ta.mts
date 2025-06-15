@@ -14,7 +14,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SecurityLevel, _enum_for_SecurityLevel, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfile/SecurityLevel.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION FIPSLevel */
 /**
  * @summary FIPSLevel
  * @description
@@ -83,9 +82,7 @@ class FIPSLevel {
 
     public static _enum_for_level = _enum_for_SecurityLevel;
 }
-/* END_OF_SYMBOL_DEFINITION FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FIPSLevel */
 /**
  * @summary The Leading Root Component Types of FIPSLevel
  * @description
@@ -100,9 +97,7 @@ const _root_component_type_list_1_spec_for_FIPSLevel: $.ComponentSpec[] = [
     new $.ComponentSpec("level", false, $.hasTag(_TagClass.universal, 10), undefined, undefined),
     new $.ComponentSpec("plus", true, $.hasTag(_TagClass.universal, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FIPSLevel */
 /**
  * @summary The Trailing Root Component Types of FIPSLevel
  * @description
@@ -115,9 +110,7 @@ export
 const _root_component_type_list_2_spec_for_FIPSLevel: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FIPSLevel */
 /**
  * @summary The Extension Addition Component Types of FIPSLevel
  * @description
@@ -130,13 +123,9 @@ export
 const _extension_additions_list_spec_for_FIPSLevel: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FIPSLevel */
 let _cached_decoder_for_FIPSLevel: $.ASN1Decoder<FIPSLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FIPSLevel */
 /**
  * @summary Decodes an ASN.1 element into a(n) FIPSLevel
  * @function
@@ -172,13 +161,9 @@ function _decode_FIPSLevel (el: _Element) {
 }; }
     return _cached_decoder_for_FIPSLevel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FIPSLevel */
 let _cached_encoder_for_FIPSLevel: $.ASN1Encoder<FIPSLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FIPSLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FIPSLevel */
 /**
  * @summary Encodes a(n) FIPSLevel into an ASN.1 Element.
  * @function
@@ -200,6 +185,5 @@ function _encode_FIPSLevel (value: FIPSLevel, elGetter: $.ASN1Encoder<FIPSLevel>
     return _cached_encoder_for_FIPSLevel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FIPSLevel */
 
 /* eslint-enable */

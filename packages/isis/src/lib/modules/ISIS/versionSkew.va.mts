@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { se } from '../ISIS/se.va.mjs';
-/* START_OF_SYMBOL_DEFINITION versionSkew */
 /**
  * @summary versionSkew
  * @description
@@ -28,6 +27,5 @@ export const versionSkew: OBJECT_IDENTIFIER = new _OID(
   [/* versionSkew */ 14],
   se
 );
-/* END_OF_SYMBOL_DEFINITION versionSkew */
 
 /* eslint-enable */

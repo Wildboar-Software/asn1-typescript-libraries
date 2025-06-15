@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_edwards_curve_algs */
+
 /**
  * @summary id_edwards_curve_algs
  * @description
@@ -32,6 +32,5 @@ const id_edwards_curve_algs: OBJECT_IDENTIFIER = new _OID([
     3,
     101,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_edwards_curve_algs */
 
 /* eslint-enable */

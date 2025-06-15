@@ -12,7 +12,6 @@ import {
     _decode_AbandonResult,
     _encode_AbandonResult,
 } from "../DirectoryAbstractService/AbandonResult.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION abandon */
 /**
  * @summary abandon
  * @description
@@ -46,6 +45,5 @@ export const abandon: OPERATION<AbandonArgument, AbandonResult> = {
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION abandon */
 
 /* eslint-enable */

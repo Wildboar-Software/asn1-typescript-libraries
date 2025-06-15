@@ -15,7 +15,6 @@ import {
     _decode_BodyPartSynopsis,
     _encode_BodyPartSynopsis,
 } from '../IPMSMessageStoreAttributes/BodyPartSynopsis.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMSynopsis */
 /**
  * @summary IPMSynopsis
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type IPMSynopsis = BodyPartSynopsis[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION IPMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMSynopsis */
 let _cached_decoder_for_IPMSynopsis: $.ASN1Decoder<IPMSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMSynopsis */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMSynopsis
  * @function
@@ -48,13 +43,9 @@ export function _decode_IPMSynopsis(el: _Element) {
     }
     return _cached_decoder_for_IPMSynopsis(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMSynopsis */
 let _cached_encoder_for_IPMSynopsis: $.ASN1Encoder<IPMSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMSynopsis */
 /**
  * @summary Encodes a(n) IPMSynopsis into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_IPMSynopsis(
     return _cached_encoder_for_IPMSynopsis(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMSynopsis */
 
 /* eslint-enable */

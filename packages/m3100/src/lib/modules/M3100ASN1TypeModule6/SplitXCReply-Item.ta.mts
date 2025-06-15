@@ -21,7 +21,7 @@ import {
     _encode_Failed,
 } from '../ASN1DefinedTypesModule/Failed.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SplitXCReply_Item */
+
 /**
  * @summary SplitXCReply_Item
  * @description
@@ -35,13 +35,11 @@ import {
 export type SplitXCReply_Item =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { success: CoincidentUnidirectionalConnections } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SplitXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SplitXCReply_Item */
+
 let _cached_decoder_for_SplitXCReply_Item: $.ASN1Decoder<SplitXCReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SplitXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SplitXCReply_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SplitXCReply_Item
  * @function
@@ -66,13 +64,11 @@ export function _decode_SplitXCReply_Item(el: _Element) {
     }
     return _cached_decoder_for_SplitXCReply_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SplitXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SplitXCReply_Item */
+
 let _cached_encoder_for_SplitXCReply_Item: $.ASN1Encoder<SplitXCReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SplitXCReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SplitXCReply_Item */
+
 /**
  * @summary Encodes a(n) SplitXCReply_Item into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_SplitXCReply_Item(
     return _cached_encoder_for_SplitXCReply_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SplitXCReply_Item */
 
 /* eslint-enable */

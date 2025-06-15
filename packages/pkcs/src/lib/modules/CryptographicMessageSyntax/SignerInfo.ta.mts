@@ -40,7 +40,7 @@ import {
     _decode_UnsignedAttributes,
     _encode_UnsignedAttributes,
 } from "../CryptographicMessageSyntax/UnsignedAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SignerInfo */
+
 /**
  * @summary SignerInfo
  * @description
@@ -133,9 +133,8 @@ export class SignerInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignerInfo */
+
 /**
  * @summary The Leading Root Component Types of SignerInfo
  * @description
@@ -189,9 +188,8 @@ export const _root_component_type_list_1_spec_for_SignerInfo: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignerInfo */
+
 /**
  * @summary The Trailing Root Component Types of SignerInfo
  * @description
@@ -201,9 +199,8 @@ export const _root_component_type_list_1_spec_for_SignerInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SignerInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignerInfo */
+
 /**
  * @summary The Extension Addition Component Types of SignerInfo
  * @description
@@ -213,13 +210,11 @@ export const _root_component_type_list_2_spec_for_SignerInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_SignerInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerInfo */
+
 let _cached_decoder_for_SignerInfo: $.ASN1Decoder<SignerInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignerInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignerInfo
  * @function
@@ -290,13 +285,11 @@ export function _decode_SignerInfo(el: _Element) {
     }
     return _cached_decoder_for_SignerInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerInfo */
+
 let _cached_encoder_for_SignerInfo: $.ASN1Encoder<SignerInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignerInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignerInfo */
+
 /**
  * @summary Encodes a(n) SignerInfo into an ASN.1 Element.
  * @function
@@ -359,6 +352,5 @@ export function _encode_SignerInfo(
     return _cached_encoder_for_SignerInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignerInfo */
 
 /* eslint-enable */

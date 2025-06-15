@@ -18,7 +18,7 @@ import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.mjs';
 // Because of a mistake in the specification.
 type RELATIVE_IRI = RELATIVE_OID_IRI;
 
-/* START_OF_SYMBOL_DEFINITION UNIT */
+
 /**
  * @summary UNIT
  * @description
@@ -112,6 +112,5 @@ export interface UNIT {
      */
     readonly '&multipleFactor'?: REAL;
 }
-/* END_OF_SYMBOL_DEFINITION UNIT */
 
 /* eslint-enable */

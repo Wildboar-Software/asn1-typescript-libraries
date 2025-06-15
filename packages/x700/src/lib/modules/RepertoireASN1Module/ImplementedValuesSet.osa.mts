@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { MKMF_VALUES } from '../RepertoireASN1Module/MKMF-VALUES.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ImplementedValuesSet */
 /**
  * @summary ImplementedValuesSet
  * @description
@@ -26,6 +25,5 @@ import { MKMF_VALUES } from '../RepertoireASN1Module/MKMF-VALUES.oca.mjs';
  *
  */
 export const ImplementedValuesSet: MKMF_VALUES[] = [];
-/* END_OF_SYMBOL_DEFINITION ImplementedValuesSet */
 
 /* eslint-enable */

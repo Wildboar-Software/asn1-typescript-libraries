@@ -47,7 +47,6 @@ import {
     _decode_TestObjectList,
     _encode_TestObjectList,
 } from '../Test-ASN1Module/TestObjectList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestRequestControlledInfo */
 /**
  * @summary TestRequestControlledInfo
  * @description
@@ -150,9 +149,7 @@ export class TestRequestControlledInfo {
 
     public static _enum_for_controlledTestRequestType = _enum_for_ControlledTestRequestType;
 }
-/* END_OF_SYMBOL_DEFINITION TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestRequestControlledInfo */
 /**
  * @summary The Leading Root Component Types of TestRequestControlledInfo
  * @description
@@ -212,9 +209,7 @@ export const _root_component_type_list_1_spec_for_TestRequestControlledInfo: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestRequestControlledInfo */
 /**
  * @summary The Trailing Root Component Types of TestRequestControlledInfo
  * @description
@@ -224,9 +219,7 @@ export const _root_component_type_list_1_spec_for_TestRequestControlledInfo: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestRequestControlledInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestRequestControlledInfo */
 /**
  * @summary The Extension Addition Component Types of TestRequestControlledInfo
  * @description
@@ -236,13 +229,9 @@ export const _root_component_type_list_2_spec_for_TestRequestControlledInfo: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_TestRequestControlledInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestRequestControlledInfo */
 let _cached_decoder_for_TestRequestControlledInfo: $.ASN1Decoder<TestRequestControlledInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestRequestControlledInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestRequestControlledInfo
  * @function
@@ -319,13 +308,9 @@ export function _decode_TestRequestControlledInfo(el: _Element) {
     }
     return _cached_decoder_for_TestRequestControlledInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestRequestControlledInfo */
 let _cached_encoder_for_TestRequestControlledInfo: $.ASN1Encoder<TestRequestControlledInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestRequestControlledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestRequestControlledInfo */
 /**
  * @summary Encodes a(n) TestRequestControlledInfo into an ASN.1 Element.
  * @function
@@ -398,6 +383,5 @@ export function _encode_TestRequestControlledInfo(
     return _cached_encoder_for_TestRequestControlledInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestRequestControlledInfo */
 
 /* eslint-enable */

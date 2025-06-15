@@ -20,7 +20,6 @@ import {
     _decode_VideotexData,
     _encode_VideotexData,
 } from '../IPMSInformationObjects/VideotexData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION VideotexBodyPart */
 /**
  * @summary VideotexBodyPart
  * @description
@@ -70,9 +69,7 @@ export class VideotexBodyPart {
         return new VideotexBodyPart(_o.parameters, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_VideotexBodyPart */
 /**
  * @summary The Leading Root Component Types of VideotexBodyPart
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_VideotexBodyPart: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_VideotexBodyPart */
 /**
  * @summary The Trailing Root Component Types of VideotexBodyPart
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_VideotexBodyPart: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_VideotexBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_VideotexBodyPart */
 /**
  * @summary The Extension Addition Component Types of VideotexBodyPart
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_VideotexBodyPart: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_VideotexBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_VideotexBodyPart */
 let _cached_decoder_for_VideotexBodyPart: $.ASN1Decoder<VideotexBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_VideotexBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) VideotexBodyPart
  * @function
@@ -158,13 +147,9 @@ export function _decode_VideotexBodyPart(el: _Element) {
     }
     return _cached_decoder_for_VideotexBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_VideotexBodyPart */
 let _cached_encoder_for_VideotexBodyPart: $.ASN1Encoder<VideotexBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_VideotexBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_VideotexBodyPart */
 /**
  * @summary Encodes a(n) VideotexBodyPart into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_VideotexBodyPart(
     return _cached_encoder_for_VideotexBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_VideotexBodyPart */
 
 /* eslint-enable */

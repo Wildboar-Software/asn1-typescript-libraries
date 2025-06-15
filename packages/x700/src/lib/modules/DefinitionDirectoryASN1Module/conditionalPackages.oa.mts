@@ -22,7 +22,6 @@ import {
     _encode_ConditionalPackages,
 } from '../DefinitionASN1Module/ConditionalPackages.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION conditionalPackages */
 /**
  * @summary conditionalPackages
  * @description
@@ -64,6 +63,5 @@ export const conditionalPackages: ATTRIBUTE<ConditionalPackages> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION conditionalPackages */
 
 /* eslint-enable */

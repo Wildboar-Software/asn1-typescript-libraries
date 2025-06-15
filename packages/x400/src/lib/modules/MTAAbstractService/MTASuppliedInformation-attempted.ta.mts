@@ -20,7 +20,6 @@ import {
     _decode_GlobalDomainIdentifier,
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MTASuppliedInformation_attempted */
 /**
  * @summary MTASuppliedInformation_attempted
  * @description
@@ -34,13 +33,9 @@ import {
 export type MTASuppliedInformation_attempted =
     | { mta: MTAName } /* CHOICE_ALT_ROOT */
     | { domain: GlobalDomainIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MTASuppliedInformation_attempted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTASuppliedInformation_attempted */
 let _cached_decoder_for_MTASuppliedInformation_attempted: $.ASN1Decoder<MTASuppliedInformation_attempted> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTASuppliedInformation_attempted */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTASuppliedInformation_attempted */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTASuppliedInformation_attempted
  * @function
@@ -58,13 +53,9 @@ export function _decode_MTASuppliedInformation_attempted(el: _Element) {
     }
     return _cached_decoder_for_MTASuppliedInformation_attempted(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTASuppliedInformation_attempted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTASuppliedInformation_attempted */
 let _cached_encoder_for_MTASuppliedInformation_attempted: $.ASN1Encoder<MTASuppliedInformation_attempted> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTASuppliedInformation_attempted */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTASuppliedInformation_attempted */
 /**
  * @summary Encodes a(n) MTASuppliedInformation_attempted into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_MTASuppliedInformation_attempted(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTASuppliedInformation_attempted */
 
 /* eslint-enable */

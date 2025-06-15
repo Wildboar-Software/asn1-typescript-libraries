@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_recipient_reference_qualifier */
 /**
  * @summary ub_recipient_reference_qualifier
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_recipient_reference_qualifier: INTEGER = 2;
-/* END_OF_SYMBOL_DEFINITION ub_recipient_reference_qualifier */
 
 /* eslint-enable */

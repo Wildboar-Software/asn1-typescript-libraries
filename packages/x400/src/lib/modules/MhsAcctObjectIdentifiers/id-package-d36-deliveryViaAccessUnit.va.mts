@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_package } from '../MhsAcctObjectIdentifiers/id-package.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_package_d36_deliveryViaAccessUnit */
 /**
  * @summary id_package_d36_deliveryViaAccessUnit
  * @description
@@ -28,6 +27,5 @@ export const id_package_d36_deliveryViaAccessUnit: ID = new _OID(
     [12],
     id_package
 );
-/* END_OF_SYMBOL_DEFINITION id_package_d36_deliveryViaAccessUnit */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PtoTPPool */
+
 /**
  * @summary PtoTPPool
  * @description
@@ -69,9 +69,8 @@ export class PtoTPPool {
         return new PtoTPPool(_o.fromTp, _o.toTpPool);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PtoTPPool */
+
 /**
  * @summary The Leading Root Component Types of PtoTPPool
  * @description
@@ -84,9 +83,8 @@ export const _root_component_type_list_1_spec_for_PtoTPPool: $.ComponentSpec[] =
     new $.ComponentSpec('fromTp', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('toTpPool', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PtoTPPool */
+
 /**
  * @summary The Trailing Root Component Types of PtoTPPool
  * @description
@@ -96,9 +94,8 @@ export const _root_component_type_list_1_spec_for_PtoTPPool: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PtoTPPool: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PtoTPPool */
+
 /**
  * @summary The Extension Addition Component Types of PtoTPPool
  * @description
@@ -108,13 +105,11 @@ export const _root_component_type_list_2_spec_for_PtoTPPool: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_PtoTPPool: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PtoTPPool */
+
 let _cached_decoder_for_PtoTPPool: $.ASN1Decoder<PtoTPPool> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PtoTPPool */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PtoTPPool
  * @function
@@ -143,13 +138,11 @@ export function _decode_PtoTPPool(el: _Element) {
     }
     return _cached_decoder_for_PtoTPPool(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PtoTPPool */
+
 let _cached_encoder_for_PtoTPPool: $.ASN1Encoder<PtoTPPool> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PtoTPPool */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PtoTPPool */
+
 /**
  * @summary Encodes a(n) PtoTPPool into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_PtoTPPool(
     return _cached_encoder_for_PtoTPPool(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PtoTPPool */
 
 /* eslint-enable */

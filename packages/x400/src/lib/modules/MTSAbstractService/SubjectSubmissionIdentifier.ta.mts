@@ -15,7 +15,6 @@ import {
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubjectSubmissionIdentifier */
 /**
  * @summary SubjectSubmissionIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubjectSubmissionIdentifier = MTSIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubjectSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectSubmissionIdentifier */
 let _cached_decoder_for_SubjectSubmissionIdentifier: $.ASN1Decoder<SubjectSubmissionIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectSubmissionIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectSubmissionIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubjectSubmissionIdentifier(el: _Element) {
     }
     return _cached_decoder_for_SubjectSubmissionIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectSubmissionIdentifier */
 let _cached_encoder_for_SubjectSubmissionIdentifier: $.ASN1Encoder<SubjectSubmissionIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectSubmissionIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectSubmissionIdentifier */
 /**
  * @summary Encodes a(n) SubjectSubmissionIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubjectSubmissionIdentifier(
     return _cached_encoder_for_SubjectSubmissionIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectSubmissionIdentifier */
 
 /* eslint-enable */

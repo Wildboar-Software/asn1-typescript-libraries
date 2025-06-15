@@ -15,7 +15,7 @@ import {
     _decode_ArcAlarmDetail,
     _encode_ArcAlarmDetail,
 } from '../M3100ASN1TypeModule4/ArcAlarmDetail.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ArcAlarmDetailSet */
+
 /**
  * @summary ArcAlarmDetailSet
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ArcAlarmDetailSet = ArcAlarmDetail[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ArcAlarmDetailSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcAlarmDetailSet */
+
 let _cached_decoder_for_ArcAlarmDetailSet: $.ASN1Decoder<ArcAlarmDetailSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcAlarmDetailSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArcAlarmDetailSet */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArcAlarmDetailSet
  * @function
@@ -48,13 +46,11 @@ export function _decode_ArcAlarmDetailSet(el: _Element) {
     }
     return _cached_decoder_for_ArcAlarmDetailSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArcAlarmDetailSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcAlarmDetailSet */
+
 let _cached_encoder_for_ArcAlarmDetailSet: $.ASN1Encoder<ArcAlarmDetailSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcAlarmDetailSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArcAlarmDetailSet */
+
 /**
  * @summary Encodes a(n) ArcAlarmDetailSet into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ArcAlarmDetailSet(
     return _cached_encoder_for_ArcAlarmDetailSet(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArcAlarmDetailSet */
 
 /* eslint-enable */

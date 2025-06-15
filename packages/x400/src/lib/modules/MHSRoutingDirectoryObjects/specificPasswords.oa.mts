@@ -22,7 +22,6 @@ import {
     _encode_SpecificPassword,
 } from '../MHSRoutingDirectoryObjects/SpecificPassword.ta.mjs';
 import { id_at_specific_passwords } from '../MHSRoutingObjectIdentifiers/id-at-specific-passwords.va.mjs';
-/* START_OF_SYMBOL_DEFINITION specificPasswords */
 /**
  * @summary specificPasswords
  * @description
@@ -58,6 +57,5 @@ export const specificPasswords: ATTRIBUTE<SpecificPassword> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION specificPasswords */
 
 /* eslint-enable */

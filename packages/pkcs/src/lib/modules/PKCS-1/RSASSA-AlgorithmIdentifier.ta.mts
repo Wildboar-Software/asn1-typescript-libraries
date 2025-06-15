@@ -6,7 +6,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS-1/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RSASSA_AlgorithmIdentifier */
+
 /**
  * @summary RSASSA_AlgorithmIdentifier
  * @description
@@ -20,13 +20,11 @@ import {
  * ```
  */
 export type RSASSA_AlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RSASSA_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RSASSA_AlgorithmIdentifier */
+
 let _cached_decoder_for_RSASSA_AlgorithmIdentifier: $.ASN1Decoder<RSASSA_AlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RSASSA_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RSASSA_AlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RSASSA_AlgorithmIdentifier
  * @function
@@ -39,13 +37,11 @@ export function _decode_RSASSA_AlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_RSASSA_AlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RSASSA_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RSASSA_AlgorithmIdentifier */
+
 let _cached_encoder_for_RSASSA_AlgorithmIdentifier: $.ASN1Encoder<RSASSA_AlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RSASSA_AlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RSASSA_AlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) RSASSA_AlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -63,6 +59,5 @@ export function _encode_RSASSA_AlgorithmIdentifier(
     return _cached_encoder_for_RSASSA_AlgorithmIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RSASSA_AlgorithmIdentifier */
 
 /* eslint-enable */

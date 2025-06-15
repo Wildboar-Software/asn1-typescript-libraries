@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SignatureAlgorithms */
+
 /**
  * @summary SignatureAlgorithms
  * @description
@@ -16,6 +16,5 @@ import { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca.mjs";
  *
  */
 export const SignatureAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SignatureAlgorithms */
 
 /* eslint-enable */

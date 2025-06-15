@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BDBIndex */
 /**
  * @summary BDBIndex
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type BDBIndex = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION BDBIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BDBIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BDBIndex */
 export const _decode_BDBIndex = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_BDBIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BDBIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BDBIndex */
 export const _encode_BDBIndex = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BDBIndex */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OptionalIdentifier */
 /**
  * @summary OptionalIdentifier
  * @description
@@ -32,13 +31,9 @@ import {
 export type OptionalIdentifier =
     | { present: Identifier } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OptionalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalIdentifier */
 let _cached_decoder_for_OptionalIdentifier: $.ASN1Decoder<OptionalIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalIdentifier
  * @function
@@ -56,13 +51,9 @@ export function _decode_OptionalIdentifier(el: _Element) {
     }
     return _cached_decoder_for_OptionalIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalIdentifier */
 let _cached_encoder_for_OptionalIdentifier: $.ASN1Encoder<OptionalIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalIdentifier */
 /**
  * @summary Encodes a(n) OptionalIdentifier into an ASN.1 Element.
  * @function
@@ -86,6 +77,5 @@ export function _encode_OptionalIdentifier(
     return _cached_encoder_for_OptionalIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalIdentifier */
 
 /* eslint-enable */

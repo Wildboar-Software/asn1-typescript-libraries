@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Creator */
 /**
  * @summary Creator
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Creator = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION Creator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Creator */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Creator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Creator */
 export const _decode_Creator = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_Creator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Creator */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Creator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Creator */
 export const _encode_Creator = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Creator */
 
 /* eslint-enable */

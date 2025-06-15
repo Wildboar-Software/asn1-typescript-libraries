@@ -23,7 +23,6 @@ import {
 } from '../MTSAbstractService/ExtendedEncodedInformationType.ta.mjs';
 import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.mjs';
 import { id_at_mhs_unacceptable_eits } from '../MHSObjectIdentifiers/id-at-mhs-unacceptable-eits.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_unacceptable_eits */
 /**
  * @summary mhs_unacceptable_eits
  * @description
@@ -60,6 +59,5 @@ export const mhs_unacceptable_eits: ATTRIBUTE<ExtendedEncodedInformationType> = 
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_unacceptable_eits */
 
 /* eslint-enable */

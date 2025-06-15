@@ -11,7 +11,6 @@ import {
     _decode_EstablishOperationalBindingArgumentData,
     _encode_EstablishOperationalBindingArgumentData,
 } from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingArgument */
 /**
  * @summary EstablishOperationalBindingArgument
  * @description
@@ -24,13 +23,9 @@ import {
  * ```
  */
 export type EstablishOperationalBindingArgument = OPTIONALLY_PROTECTED_SEQ<EstablishOperationalBindingArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EstablishOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EstablishOperationalBindingArgument */
 let _cached_decoder_for_EstablishOperationalBindingArgument: $.ASN1Decoder<EstablishOperationalBindingArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EstablishOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EstablishOperationalBindingArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) EstablishOperationalBindingArgument
  * @function
@@ -45,13 +40,9 @@ export function _decode_EstablishOperationalBindingArgument(el: _Element) {
     }
     return _cached_decoder_for_EstablishOperationalBindingArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EstablishOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EstablishOperationalBindingArgument */
 let _cached_encoder_for_EstablishOperationalBindingArgument: $.ASN1Encoder<EstablishOperationalBindingArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EstablishOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EstablishOperationalBindingArgument */
 /**
  * @summary Encodes a(n) EstablishOperationalBindingArgument into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_EstablishOperationalBindingArgument(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EstablishOperationalBindingArgument */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { aes } from "../AlgorithmObjectIdentifiers/aes.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_aes256_wrap */
 /**
  * @summary id_aes256_wrap
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_aes256_wrap: ID = new _OID([45], aes);
-/* END_OF_SYMBOL_DEFINITION id_aes256_wrap */
 
 /* eslint-enable */

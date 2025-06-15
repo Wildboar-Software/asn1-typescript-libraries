@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ReplyStatus */
 /**
  * @summary ReplyStatus
  * @description
@@ -43,9 +42,7 @@ export enum _enum_for_ReplyStatus {
   certPathNotValidNow = 7,
   wantBackUnsatisfied = 8,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ReplyStatus */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus */
 /**
  * @summary ReplyStatus
  * @description
@@ -67,9 +64,7 @@ export enum _enum_for_ReplyStatus {
  * ```@enum {number}
  */
 export type ReplyStatus = _enum_for_ReplyStatus;
-/* END_OF_SYMBOL_DEFINITION ReplyStatus */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus */
 /**
  * @summary ReplyStatus
  * @description
@@ -91,9 +86,7 @@ export type ReplyStatus = _enum_for_ReplyStatus;
  * ```@enum {number}
  */
 export const ReplyStatus = _enum_for_ReplyStatus;
-/* END_OF_SYMBOL_DEFINITION ReplyStatus */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_success */
 /**
  * @summary ReplyStatus_success
  * @constant
@@ -101,9 +94,7 @@ export const ReplyStatus = _enum_for_ReplyStatus;
  */
 export const ReplyStatus_success: ReplyStatus =
   ReplyStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_success */
 
-/* START_OF_SYMBOL_DEFINITION success */
 /**
  * @summary success
  * @constant
@@ -111,9 +102,7 @@ export const ReplyStatus_success: ReplyStatus =
  */
 export const success: ReplyStatus =
   ReplyStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION success */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_malformedPKC */
 /**
  * @summary ReplyStatus_malformedPKC
  * @constant
@@ -121,9 +110,7 @@ export const success: ReplyStatus =
  */
 export const ReplyStatus_malformedPKC: ReplyStatus =
   ReplyStatus.malformedPKC; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_malformedPKC */
 
-/* START_OF_SYMBOL_DEFINITION malformedPKC */
 /**
  * @summary malformedPKC
  * @constant
@@ -131,9 +118,7 @@ export const ReplyStatus_malformedPKC: ReplyStatus =
  */
 export const malformedPKC: ReplyStatus =
   ReplyStatus.malformedPKC; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION malformedPKC */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_malformedAC */
 /**
  * @summary ReplyStatus_malformedAC
  * @constant
@@ -141,9 +126,7 @@ export const malformedPKC: ReplyStatus =
  */
 export const ReplyStatus_malformedAC: ReplyStatus =
   ReplyStatus.malformedAC; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_malformedAC */
 
-/* START_OF_SYMBOL_DEFINITION malformedAC */
 /**
  * @summary malformedAC
  * @constant
@@ -151,9 +134,7 @@ export const ReplyStatus_malformedAC: ReplyStatus =
  */
 export const malformedAC: ReplyStatus =
   ReplyStatus.malformedAC; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION malformedAC */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_unavailableValidationTime */
 /**
  * @summary ReplyStatus_unavailableValidationTime
  * @constant
@@ -161,9 +142,7 @@ export const malformedAC: ReplyStatus =
  */
 export const ReplyStatus_unavailableValidationTime: ReplyStatus =
   ReplyStatus.unavailableValidationTime; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_unavailableValidationTime */
 
-/* START_OF_SYMBOL_DEFINITION unavailableValidationTime */
 /**
  * @summary unavailableValidationTime
  * @constant
@@ -171,9 +150,7 @@ export const ReplyStatus_unavailableValidationTime: ReplyStatus =
  */
 export const unavailableValidationTime: ReplyStatus =
   ReplyStatus.unavailableValidationTime; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unavailableValidationTime */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_referenceCertHashFail */
 /**
  * @summary ReplyStatus_referenceCertHashFail
  * @constant
@@ -181,9 +158,7 @@ export const unavailableValidationTime: ReplyStatus =
  */
 export const ReplyStatus_referenceCertHashFail: ReplyStatus =
   ReplyStatus.referenceCertHashFail; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_referenceCertHashFail */
 
-/* START_OF_SYMBOL_DEFINITION referenceCertHashFail */
 /**
  * @summary referenceCertHashFail
  * @constant
@@ -191,9 +166,7 @@ export const ReplyStatus_referenceCertHashFail: ReplyStatus =
  */
 export const referenceCertHashFail: ReplyStatus =
   ReplyStatus.referenceCertHashFail; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION referenceCertHashFail */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_certPathConstructFail */
 /**
  * @summary ReplyStatus_certPathConstructFail
  * @constant
@@ -201,9 +174,7 @@ export const referenceCertHashFail: ReplyStatus =
  */
 export const ReplyStatus_certPathConstructFail: ReplyStatus =
   ReplyStatus.certPathConstructFail; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_certPathConstructFail */
 
-/* START_OF_SYMBOL_DEFINITION certPathConstructFail */
 /**
  * @summary certPathConstructFail
  * @constant
@@ -211,9 +182,7 @@ export const ReplyStatus_certPathConstructFail: ReplyStatus =
  */
 export const certPathConstructFail: ReplyStatus =
   ReplyStatus.certPathConstructFail; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION certPathConstructFail */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_certPathNotValid */
 /**
  * @summary ReplyStatus_certPathNotValid
  * @constant
@@ -221,9 +190,7 @@ export const certPathConstructFail: ReplyStatus =
  */
 export const ReplyStatus_certPathNotValid: ReplyStatus =
   ReplyStatus.certPathNotValid; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_certPathNotValid */
 
-/* START_OF_SYMBOL_DEFINITION certPathNotValid */
 /**
  * @summary certPathNotValid
  * @constant
@@ -231,9 +198,7 @@ export const ReplyStatus_certPathNotValid: ReplyStatus =
  */
 export const certPathNotValid: ReplyStatus =
   ReplyStatus.certPathNotValid; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION certPathNotValid */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_certPathNotValidNow */
 /**
  * @summary ReplyStatus_certPathNotValidNow
  * @constant
@@ -241,9 +206,7 @@ export const certPathNotValid: ReplyStatus =
  */
 export const ReplyStatus_certPathNotValidNow: ReplyStatus =
   ReplyStatus.certPathNotValidNow; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_certPathNotValidNow */
 
-/* START_OF_SYMBOL_DEFINITION certPathNotValidNow */
 /**
  * @summary certPathNotValidNow
  * @constant
@@ -251,9 +214,7 @@ export const ReplyStatus_certPathNotValidNow: ReplyStatus =
  */
 export const certPathNotValidNow: ReplyStatus =
   ReplyStatus.certPathNotValidNow; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION certPathNotValidNow */
 
-/* START_OF_SYMBOL_DEFINITION ReplyStatus_wantBackUnsatisfied */
 /**
  * @summary ReplyStatus_wantBackUnsatisfied
  * @constant
@@ -261,9 +222,7 @@ export const certPathNotValidNow: ReplyStatus =
  */
 export const ReplyStatus_wantBackUnsatisfied: ReplyStatus =
   ReplyStatus.wantBackUnsatisfied; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReplyStatus_wantBackUnsatisfied */
 
-/* START_OF_SYMBOL_DEFINITION wantBackUnsatisfied */
 /**
  * @summary wantBackUnsatisfied
  * @constant
@@ -271,21 +230,12 @@ export const ReplyStatus_wantBackUnsatisfied: ReplyStatus =
  */
 export const wantBackUnsatisfied: ReplyStatus =
   ReplyStatus.wantBackUnsatisfied; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION wantBackUnsatisfied */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplyStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplyStatus */
 export const _decode_ReplyStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ReplyStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplyStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplyStatus */
 export const _encode_ReplyStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplyStatus */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalPDSParameter */
 /**
  * @summary UniversalPDSParameter
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalPDSParameter = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPDSParameter */
 let _cached_decoder_for_UniversalPDSParameter: $.ASN1Decoder<UniversalPDSParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPDSParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPDSParameter
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalPDSParameter(el: _Element) {
     }
     return _cached_decoder_for_UniversalPDSParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPDSParameter */
 let _cached_encoder_for_UniversalPDSParameter: $.ASN1Encoder<UniversalPDSParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPDSParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPDSParameter */
 /**
  * @summary Encodes a(n) UniversalPDSParameter into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_UniversalPDSParameter(
     return _cached_encoder_for_UniversalPDSParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPDSParameter */
 
 /* eslint-enable */

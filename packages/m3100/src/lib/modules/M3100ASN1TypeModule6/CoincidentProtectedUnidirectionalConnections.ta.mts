@@ -20,7 +20,7 @@ import {
     _decode_MulticastXC,
     _encode_MulticastXC,
 } from '../M3100ASN1TypeModule6/MulticastXC.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CoincidentProtectedUnidirectionalConnections */
+
 /**
  * @summary CoincidentProtectedUnidirectionalConnections
  * @description
@@ -75,9 +75,8 @@ export class CoincidentProtectedUnidirectionalConnections {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CoincidentProtectedUnidirectionalConnections */
+
 /**
  * @summary The Leading Root Component Types of CoincidentProtectedUnidirectionalConnections
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_CoincidentProtectedUnidirectio
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CoincidentProtectedUnidirectionalConnections */
+
 /**
  * @summary The Trailing Root Component Types of CoincidentProtectedUnidirectionalConnections
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_CoincidentProtectedUnidirectio
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CoincidentProtectedUnidirectionalConnections: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CoincidentProtectedUnidirectionalConnections */
+
 /**
  * @summary The Extension Addition Component Types of CoincidentProtectedUnidirectionalConnections
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_CoincidentProtectedUnidirectio
  * @constant
  */
 export const _extension_additions_list_spec_for_CoincidentProtectedUnidirectionalConnections: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CoincidentProtectedUnidirectionalConnections */
+
 let _cached_decoder_for_CoincidentProtectedUnidirectionalConnections: $.ASN1Decoder<CoincidentProtectedUnidirectionalConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CoincidentProtectedUnidirectionalConnections */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CoincidentProtectedUnidirectionalConnections
  * @function
@@ -168,13 +163,11 @@ export function _decode_CoincidentProtectedUnidirectionalConnections(
     }
     return _cached_decoder_for_CoincidentProtectedUnidirectionalConnections(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CoincidentProtectedUnidirectionalConnections */
+
 let _cached_encoder_for_CoincidentProtectedUnidirectionalConnections: $.ASN1Encoder<CoincidentProtectedUnidirectionalConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CoincidentProtectedUnidirectionalConnections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CoincidentProtectedUnidirectionalConnections */
+
 /**
  * @summary Encodes a(n) CoincidentProtectedUnidirectionalConnections into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_CoincidentProtectedUnidirectionalConnections(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CoincidentProtectedUnidirectionalConnections */
 
 /* eslint-enable */

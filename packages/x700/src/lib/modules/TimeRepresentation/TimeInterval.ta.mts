@@ -25,7 +25,6 @@ import {
     _decode_Nanoseconds,
     _encode_Nanoseconds,
 } from '../TimeRepresentation/Nanoseconds.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TimeInterval */
 /**
  * @summary TimeInterval
  * @description
@@ -82,9 +81,7 @@ export class TimeInterval {
         return new TimeInterval(_o.epochs, _o.seconds, _o.nanoseconds);
     }
 }
-/* END_OF_SYMBOL_DEFINITION TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeInterval */
 /**
  * @summary The Leading Root Component Types of TimeInterval
  * @description
@@ -116,9 +113,7 @@ export const _root_component_type_list_1_spec_for_TimeInterval: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeInterval */
 /**
  * @summary The Trailing Root Component Types of TimeInterval
  * @description
@@ -128,9 +123,7 @@ export const _root_component_type_list_1_spec_for_TimeInterval: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeInterval: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeInterval */
 /**
  * @summary The Extension Addition Component Types of TimeInterval
  * @description
@@ -140,13 +133,9 @@ export const _root_component_type_list_2_spec_for_TimeInterval: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeInterval: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeInterval */
 let _cached_decoder_for_TimeInterval: $.ASN1Decoder<TimeInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeInterval */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeInterval
  * @function
@@ -180,13 +169,9 @@ export function _decode_TimeInterval(el: _Element) {
     }
     return _cached_decoder_for_TimeInterval(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeInterval */
 let _cached_encoder_for_TimeInterval: $.ASN1Encoder<TimeInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeInterval */
 /**
  * @summary Encodes a(n) TimeInterval into an ASN.1 Element.
  * @function
@@ -219,6 +204,5 @@ export function _encode_TimeInterval(
     return _cached_encoder_for_TimeInterval(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeInterval */
 
 /* eslint-enable */

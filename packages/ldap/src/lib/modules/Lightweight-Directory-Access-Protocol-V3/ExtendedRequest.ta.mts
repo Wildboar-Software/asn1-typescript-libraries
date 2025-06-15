@@ -17,7 +17,7 @@ import {
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtendedRequest */
+
 /**
  * @summary ExtendedRequest
  * @description
@@ -77,9 +77,8 @@ export class ExtendedRequest {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedRequest */
+
 /**
  * @summary The Leading Root Component Types of ExtendedRequest
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_ExtendedRequest: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedRequest */
+
 /**
  * @summary The Trailing Root Component Types of ExtendedRequest
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_ExtendedRequest: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtendedRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedRequest */
+
 /**
  * @summary The Extension Addition Component Types of ExtendedRequest
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_ExtendedRequest: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtendedRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedRequest */
+
 let _cached_decoder_for_ExtendedRequest: $.ASN1Decoder<ExtendedRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedRequest
  * @function
@@ -185,13 +180,11 @@ export function _decode_ExtendedRequest(el: _Element) {
   }
   return _cached_decoder_for_ExtendedRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedRequest */
+
 let _cached_encoder_for_ExtendedRequest: $.ASN1Encoder<ExtendedRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedRequest */
+
 /**
  * @summary Encodes a(n) ExtendedRequest into an ASN.1 Element.
  * @function
@@ -243,6 +236,5 @@ export function _encode_ExtendedRequest(
   return _cached_encoder_for_ExtendedRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedRequest */
 
 /* eslint-enable */

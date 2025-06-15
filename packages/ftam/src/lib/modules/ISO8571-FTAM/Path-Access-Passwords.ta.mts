@@ -15,7 +15,7 @@ import {
   _decode_Path_Access_Passwords_Item,
   _encode_Path_Access_Passwords_Item,
 } from '../ISO8571-FTAM/Path-Access-Passwords-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Path_Access_Passwords */
+
 /**
  * @summary Path_Access_Passwords
  * @description
@@ -39,13 +39,11 @@ import {
  * ```
  */
 export type Path_Access_Passwords = Path_Access_Passwords_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Path_Access_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Path_Access_Passwords */
+
 let _cached_decoder_for_Path_Access_Passwords: $.ASN1Decoder<Path_Access_Passwords> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Path_Access_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Path_Access_Passwords */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Path_Access_Passwords
  * @function
@@ -63,13 +61,11 @@ export function _decode_Path_Access_Passwords(el: _Element) {
   }
   return _cached_decoder_for_Path_Access_Passwords(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Path_Access_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Path_Access_Passwords */
+
 let _cached_encoder_for_Path_Access_Passwords: $.ASN1Encoder<Path_Access_Passwords> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Path_Access_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Path_Access_Passwords */
+
 /**
  * @summary Encodes a(n) Path_Access_Passwords into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_Path_Access_Passwords(
   return _cached_encoder_for_Path_Access_Passwords(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Path_Access_Passwords */
 
 /* eslint-enable */

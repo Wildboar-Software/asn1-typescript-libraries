@@ -15,7 +15,6 @@ import {
     _decode_Packages,
     _encode_Packages,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PackageConflict_Item */
 /**
  * @summary PackageConflict_Item
  * @description
@@ -29,13 +28,9 @@ import {
 export type PackageConflict_Item =
     | { conflictingPackagesPresent: Packages } /* CHOICE_ALT_ROOT */
     | { packagesMissing: Packages } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PackageConflict_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PackageConflict_Item */
 let _cached_decoder_for_PackageConflict_Item: $.ASN1Decoder<PackageConflict_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PackageConflict_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PackageConflict_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) PackageConflict_Item
  * @function
@@ -59,13 +54,9 @@ export function _decode_PackageConflict_Item(el: _Element) {
     }
     return _cached_decoder_for_PackageConflict_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PackageConflict_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PackageConflict_Item */
 let _cached_encoder_for_PackageConflict_Item: $.ASN1Encoder<PackageConflict_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PackageConflict_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PackageConflict_Item */
 /**
  * @summary Encodes a(n) PackageConflict_Item into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_PackageConflict_Item(
     return _cached_encoder_for_PackageConflict_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PackageConflict_Item */
 
 /* eslint-enable */

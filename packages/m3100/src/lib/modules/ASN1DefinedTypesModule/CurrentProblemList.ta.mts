@@ -15,7 +15,7 @@ import {
     _decode_CurrentProblem,
     _encode_CurrentProblem,
 } from '../ASN1DefinedTypesModule/CurrentProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CurrentProblemList */
+
 /**
  * @summary CurrentProblemList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type CurrentProblemList = CurrentProblem[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CurrentProblemList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrentProblemList */
+
 let _cached_decoder_for_CurrentProblemList: $.ASN1Decoder<CurrentProblemList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CurrentProblemList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CurrentProblemList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CurrentProblemList
  * @function
@@ -48,13 +46,11 @@ export function _decode_CurrentProblemList(el: _Element) {
     }
     return _cached_decoder_for_CurrentProblemList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CurrentProblemList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrentProblemList */
+
 let _cached_encoder_for_CurrentProblemList: $.ASN1Encoder<CurrentProblemList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CurrentProblemList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CurrentProblemList */
+
 /**
  * @summary Encodes a(n) CurrentProblemList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_CurrentProblemList(
     return _cached_encoder_for_CurrentProblemList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CurrentProblemList */
 
 /* eslint-enable */

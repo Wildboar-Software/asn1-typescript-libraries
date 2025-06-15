@@ -16,7 +16,7 @@ import {
     _decode_ResponseBytes,
     _encode_ResponseBytes,
 } from "../OCSP-2013-08/ResponseBytes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OCSPResponse */
+
 /**
  * @summary OCSPResponse
  * @description
@@ -73,9 +73,8 @@ export class OCSPResponse {
 
     public static _enum_for_responseStatus = _enum_for_OCSPResponseStatus;
 }
-/* END_OF_SYMBOL_DEFINITION OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OCSPResponse */
+
 /**
  * @summary The Leading Root Component Types of OCSPResponse
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_OCSPResponse: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OCSPResponse */
+
 /**
  * @summary The Trailing Root Component Types of OCSPResponse
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_OCSPResponse: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OCSPResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OCSPResponse */
+
 /**
  * @summary The Extension Addition Component Types of OCSPResponse
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_OCSPResponse: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_OCSPResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OCSPResponse */
+
 let _cached_decoder_for_OCSPResponse: $.ASN1Decoder<OCSPResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OCSPResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OCSPResponse
  * @function
@@ -174,13 +169,11 @@ export function _decode_OCSPResponse(el: _Element) {
     }
     return _cached_decoder_for_OCSPResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OCSPResponse */
+
 let _cached_encoder_for_OCSPResponse: $.ASN1Encoder<OCSPResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OCSPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OCSPResponse */
+
 /**
  * @summary Encodes a(n) OCSPResponse into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_OCSPResponse(
     return _cached_encoder_for_OCSPResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OCSPResponse */
 
 /* eslint-enable */

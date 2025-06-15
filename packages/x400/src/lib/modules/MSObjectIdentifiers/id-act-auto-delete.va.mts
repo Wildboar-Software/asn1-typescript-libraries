@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_act_auto_delete */
 /**
  * @summary id_act_auto_delete
  * @description
@@ -25,6 +24,5 @@ import { id_act } from '../MSObjectIdentifiers/id-act.va.mjs';
  * @constant
  */
 export const id_act_auto_delete: ID = new _OID([3], id_act);
-/* END_OF_SYMBOL_DEFINITION id_act_auto_delete */
 
 /* eslint-enable */

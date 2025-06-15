@@ -15,7 +15,7 @@ import {
     _decode_EscalationList_Item,
     _encode_EscalationList_Item,
 } from '../X790ASN1Module/EscalationList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EscalationList */
+
 /**
  * @summary EscalationList
  * @description
@@ -35,13 +35,11 @@ import {
  * ```
  */
 export type EscalationList = EscalationList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION EscalationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EscalationList */
+
 let _cached_decoder_for_EscalationList: $.ASN1Decoder<EscalationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EscalationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EscalationList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EscalationList
  * @function
@@ -56,13 +54,11 @@ export function _decode_EscalationList(el: _Element) {
     }
     return _cached_decoder_for_EscalationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EscalationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EscalationList */
+
 let _cached_encoder_for_EscalationList: $.ASN1Encoder<EscalationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EscalationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EscalationList */
+
 /**
  * @summary Encodes a(n) EscalationList into an ASN.1 Element.
  * @function
@@ -83,6 +79,5 @@ export function _encode_EscalationList(
     return _cached_encoder_for_EscalationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EscalationList */
 
 /* eslint-enable */

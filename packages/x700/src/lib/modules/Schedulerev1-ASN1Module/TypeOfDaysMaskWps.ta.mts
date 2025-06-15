@@ -15,7 +15,7 @@ import {
     _decode_TypeOfDaysMaskWps_Item,
     _encode_TypeOfDaysMaskWps_Item,
 } from '../Schedulerev1-ASN1Module/TypeOfDaysMaskWps-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TypeOfDaysMaskWps */
+
 /**
  * @summary TypeOfDaysMaskWps
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type TypeOfDaysMaskWps = TypeOfDaysMaskWps_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TypeOfDaysMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfDaysMaskWps */
+
 let _cached_decoder_for_TypeOfDaysMaskWps: $.ASN1Decoder<TypeOfDaysMaskWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfDaysMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeOfDaysMaskWps */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeOfDaysMaskWps
  * @function
@@ -50,13 +48,11 @@ export function _decode_TypeOfDaysMaskWps(el: _Element) {
     }
     return _cached_decoder_for_TypeOfDaysMaskWps(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TypeOfDaysMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfDaysMaskWps */
+
 let _cached_encoder_for_TypeOfDaysMaskWps: $.ASN1Encoder<TypeOfDaysMaskWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfDaysMaskWps */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeOfDaysMaskWps */
+
 /**
  * @summary Encodes a(n) TypeOfDaysMaskWps into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_TypeOfDaysMaskWps(
     return _cached_encoder_for_TypeOfDaysMaskWps(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeOfDaysMaskWps */
 
 /* eslint-enable */

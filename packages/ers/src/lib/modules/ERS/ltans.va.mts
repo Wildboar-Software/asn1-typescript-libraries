@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION ltans */
+
 /**
  * @summary ltans
  * @description
@@ -37,6 +37,5 @@ const ltans: OBJECT_IDENTIFIER = new _OID([
     /* mechanisms */ 5,
     /* ltans */ 11,
 ]);
-/* END_OF_SYMBOL_DEFINITION ltans */
 
 /* eslint-enable */

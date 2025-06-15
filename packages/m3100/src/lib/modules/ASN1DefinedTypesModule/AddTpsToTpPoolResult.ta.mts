@@ -15,7 +15,7 @@ import {
     _decode_AddTpsToTpPoolResult_Item,
     _encode_AddTpsToTpPoolResult_Item,
 } from '../ASN1DefinedTypesModule/AddTpsToTpPoolResult-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddTpsToTpPoolResult */
+
 /**
  * @summary AddTpsToTpPoolResult
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type AddTpsToTpPoolResult = AddTpsToTpPoolResult_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AddTpsToTpPoolResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToTpPoolResult */
+
 let _cached_decoder_for_AddTpsToTpPoolResult: $.ASN1Decoder<AddTpsToTpPoolResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddTpsToTpPoolResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddTpsToTpPoolResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddTpsToTpPoolResult
  * @function
@@ -51,13 +49,11 @@ export function _decode_AddTpsToTpPoolResult(el: _Element) {
     }
     return _cached_decoder_for_AddTpsToTpPoolResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddTpsToTpPoolResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToTpPoolResult */
+
 let _cached_encoder_for_AddTpsToTpPoolResult: $.ASN1Encoder<AddTpsToTpPoolResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddTpsToTpPoolResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddTpsToTpPoolResult */
+
 /**
  * @summary Encodes a(n) AddTpsToTpPoolResult into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_AddTpsToTpPoolResult(
     return _cached_encoder_for_AddTpsToTpPoolResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddTpsToTpPoolResult */
 
 /* eslint-enable */

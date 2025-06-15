@@ -20,7 +20,6 @@ import {
   _decode_ACReference,
   _encode_ACReference,
 } from '../SCVP-2009/ACReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertReference */
 /**
  * @summary CertReference
  * @description
@@ -38,13 +37,9 @@ import {
 export type CertReference =
   | { pkc: PKCReference } /* CHOICE_ALT_ROOT */
   | { ac: ACReference } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CertReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReference */
 let _cached_decoder_for_CertReference: $.ASN1Decoder<CertReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReference
  * @function
@@ -64,13 +59,9 @@ export function _decode_CertReference(el: _Element) {
   }
   return _cached_decoder_for_CertReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReference */
 let _cached_encoder_for_CertReference: $.ASN1Encoder<CertReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReference */
 /**
  * @summary Encodes a(n) CertReference into an ASN.1 Element.
  * @function
@@ -94,6 +85,5 @@ export function _encode_CertReference(
   return _cached_encoder_for_CertReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReference */
 
 /* eslint-enable */

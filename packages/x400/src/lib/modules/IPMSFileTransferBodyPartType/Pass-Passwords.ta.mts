@@ -15,7 +15,6 @@ import {
     _decode_Password,
     _encode_Password,
 } from '../IPMSFileTransferBodyPartType/Password.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Pass_Passwords */
 /**
  * @summary Pass_Passwords
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type Pass_Passwords = Password[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Pass_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pass_Passwords */
 let _cached_decoder_for_Pass_Passwords: $.ASN1Decoder<Pass_Passwords> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pass_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pass_Passwords */
 /**
  * @summary Decodes an ASN.1 element into a(n) Pass_Passwords
  * @function
@@ -48,13 +43,9 @@ export function _decode_Pass_Passwords(el: _Element) {
     }
     return _cached_decoder_for_Pass_Passwords(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pass_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pass_Passwords */
 let _cached_encoder_for_Pass_Passwords: $.ASN1Encoder<Pass_Passwords> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pass_Passwords */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pass_Passwords */
 /**
  * @summary Encodes a(n) Pass_Passwords into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Pass_Passwords(
     return _cached_encoder_for_Pass_Passwords(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pass_Passwords */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { ECDHAlgorithmSet_Union9_Intersection0_Element } from "../SEC1-v1-9/ECDH
 import { ECDHAlgorithmSet_Union10_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union10-Intersection0-Element.oa.mjs";
 import { ECDHAlgorithmSet_Union11_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union11-Intersection0-Element.oa.mjs";
 import { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union12-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDHAlgorithmSet */
 /**
  * @summary ECDHAlgorithmSet
  * @description
@@ -55,6 +54,5 @@ import { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECD
  */
 export
 const ECDHAlgorithmSet: (ALGORITHM)[] = [ ECDHAlgorithmSet_Union0_Intersection0_Element, ECDHAlgorithmSet_Union1_Intersection0_Element, ECDHAlgorithmSet_Union2_Intersection0_Element, ECDHAlgorithmSet_Union3_Intersection0_Element, ECDHAlgorithmSet_Union4_Intersection0_Element, ECDHAlgorithmSet_Union5_Intersection0_Element, ECDHAlgorithmSet_Union6_Intersection0_Element, ECDHAlgorithmSet_Union7_Intersection0_Element, ECDHAlgorithmSet_Union8_Intersection0_Element, ECDHAlgorithmSet_Union9_Intersection0_Element, ECDHAlgorithmSet_Union10_Intersection0_Element, ECDHAlgorithmSet_Union11_Intersection0_Element, ECDHAlgorithmSet_Union12_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION ECDHAlgorithmSet */
 
 /* eslint-enable */

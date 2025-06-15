@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_cat } from '../IPMSObjectIdentifiers/id-cat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_cat_correlated_delivered_replies */
 /**
  * @summary id_cat_correlated_delivered_replies
  * @description
@@ -25,6 +24,5 @@ import { id_cat } from '../IPMSObjectIdentifiers/id-cat.va.mjs';
  * @constant
  */
 export const id_cat_correlated_delivered_replies: ID = new _OID([1], id_cat);
-/* END_OF_SYMBOL_DEFINITION id_cat_correlated_delivered_replies */
 
 /* eslint-enable */

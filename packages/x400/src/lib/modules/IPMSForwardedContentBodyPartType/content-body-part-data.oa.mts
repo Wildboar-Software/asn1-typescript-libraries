@@ -20,7 +20,6 @@ import {
     ExtendedContentType,
 } from "../MTSAbstractService/ExtendedContentType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION content_body_part_data */
 /**
  * @summary content_body_part_data
  * @description
@@ -51,6 +50,5 @@ export function content_body_part_data (content_type: ExtendedContentType): TYPE
         '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     };
 };
-/* END_OF_SYMBOL_DEFINITION content_body_part_data */
 
 /* eslint-enable */

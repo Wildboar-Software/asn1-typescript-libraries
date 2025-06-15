@@ -4,7 +4,6 @@ import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
 import { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
 import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION resPersonNameForm */
 /**
  * @summary resPersonNameForm
  * @description
@@ -32,6 +31,5 @@ export const resPersonNameForm: NAME_FORM = {
     "&OptionalAttributes": [streetAddress] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_resPersonNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION resPersonNameForm */
 
 /* eslint-enable */

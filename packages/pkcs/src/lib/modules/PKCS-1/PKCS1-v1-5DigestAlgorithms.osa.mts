@@ -10,7 +10,7 @@ import { PKCS1_v1_5DigestAlgorithms_Union6_Intersection0_Element } from "../PKCS
 import { PKCS1_v1_5DigestAlgorithms_Union7_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union7-Intersection0-Element.oa.mjs";
 import { PKCS1_v1_5DigestAlgorithms_Union8_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union8-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCS1_v1_5DigestAlgorithms */
+
 /**
  * @summary PKCS1_v1_5DigestAlgorithms
  * @description
@@ -46,6 +46,5 @@ export const PKCS1_v1_5DigestAlgorithms: ALGORITHM_IDENTIFIER<any>[] = [
     PKCS1_v1_5DigestAlgorithms_Union7_Intersection0_Element,
     PKCS1_v1_5DigestAlgorithms_Union8_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION PKCS1_v1_5DigestAlgorithms */
 
 /* eslint-enable */

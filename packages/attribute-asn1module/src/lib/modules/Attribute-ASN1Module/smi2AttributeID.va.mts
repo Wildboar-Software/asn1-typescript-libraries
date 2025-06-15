@@ -14,7 +14,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION smi2AttributeID */
 /**
  * @summary smi2AttributeID
  * @description
@@ -34,6 +33,5 @@ const smi2AttributeID: OBJECT_IDENTIFIER = new _OID([
     /* part2 */ 2,
     /* attribute */ 7,
 ], joint_iso_itu_t);
-/* END_OF_SYMBOL_DEFINITION smi2AttributeID */
 
 /* eslint-enable */

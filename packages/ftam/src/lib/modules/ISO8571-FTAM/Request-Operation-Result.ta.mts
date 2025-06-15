@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Request_Operation_Result */
+
 /**
  * @summary Request_Operation_Result
  * @description
@@ -25,49 +25,43 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Request_Operation_Result = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Request_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION Request_Operation_Result_summary */
+
 /**
  * @summary Request_Operation_Result_summary
  * @constant
  * @type {number}
  */
 export const Request_Operation_Result_summary: Request_Operation_Result = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Request_Operation_Result_summary */
 
-/* START_OF_SYMBOL_DEFINITION summary */
+
 /**
  * @summary Request_Operation_Result_summary
  * @constant
  * @type {number}
  */
 export const summary: Request_Operation_Result = Request_Operation_Result_summary; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION summary */
 
-/* START_OF_SYMBOL_DEFINITION Request_Operation_Result_fiii_list */
+
 /**
  * @summary Request_Operation_Result_fiii_list
  * @constant
  * @type {number}
  */
 export const Request_Operation_Result_fiii_list: Request_Operation_Result = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Request_Operation_Result_fiii_list */
 
-/* START_OF_SYMBOL_DEFINITION fiii_list */
+
 /**
  * @summary Request_Operation_Result_fiii_list
  * @constant
  * @type {number}
  */
 export const fiii_list: Request_Operation_Result = Request_Operation_Result_fiii_list; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION fiii_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Request_Operation_Result */
+
 let _cached_decoder_for_Request_Operation_Result: $.ASN1Decoder<Request_Operation_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Request_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Request_Operation_Result */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Request_Operation_Result
  * @function
@@ -82,13 +76,11 @@ export function _decode_Request_Operation_Result(el: _Element) {
   }
   return _cached_decoder_for_Request_Operation_Result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Request_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Request_Operation_Result */
+
 let _cached_encoder_for_Request_Operation_Result: $.ASN1Encoder<Request_Operation_Result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Request_Operation_Result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Request_Operation_Result */
+
 /**
  * @summary Encodes a(n) Request_Operation_Result into an ASN.1 Element.
  * @function
@@ -111,6 +103,5 @@ export function _encode_Request_Operation_Result(
   return _cached_encoder_for_Request_Operation_Result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Request_Operation_Result */
 
 /* eslint-enable */

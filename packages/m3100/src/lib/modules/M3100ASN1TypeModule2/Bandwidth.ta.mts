@@ -15,7 +15,7 @@ import {
     _decode_Bandwidth_Item,
     _encode_Bandwidth_Item,
 } from '../M3100ASN1TypeModule2/Bandwidth-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Bandwidth */
+
 /**
  * @summary Bandwidth
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type Bandwidth = Bandwidth_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Bandwidth */
+
 let _cached_decoder_for_Bandwidth: $.ASN1Decoder<Bandwidth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Bandwidth */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Bandwidth
  * @function
@@ -49,13 +47,11 @@ export function _decode_Bandwidth(el: _Element) {
     }
     return _cached_decoder_for_Bandwidth(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Bandwidth */
+
 let _cached_encoder_for_Bandwidth: $.ASN1Encoder<Bandwidth> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Bandwidth */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Bandwidth */
+
 /**
  * @summary Encodes a(n) Bandwidth into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_Bandwidth(
     return _cached_encoder_for_Bandwidth(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Bandwidth */
 
 /* eslint-enable */

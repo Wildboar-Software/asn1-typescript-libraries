@@ -2,15 +2,12 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_MasterOrShadowAccessPoint_category */
 export enum _enum_for_MasterOrShadowAccessPoint_category {
     master = 0,
     shadow = 1,
     writeableCopy = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_MasterOrShadowAccessPoint_category */
 
-/* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category */
 /**
  * @summary MasterOrShadowAccessPoint_category
  * @description
@@ -24,67 +21,51 @@ export enum _enum_for_MasterOrShadowAccessPoint_category {
 export type MasterOrShadowAccessPoint_category =
     | _enum_for_MasterOrShadowAccessPoint_category
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category */
 
-/* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category_master */
 /**
  * @summary MasterOrShadowAccessPoint_category_master
  * @constant
  * @type {number}
  */
 export const MasterOrShadowAccessPoint_category_master: MasterOrShadowAccessPoint_category = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category_master */
 
-/* START_OF_SYMBOL_DEFINITION master */
 /**
  * @summary master
  * @constant
  * @type {number}
  */
 export const master: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPoint_category_master; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION master */
 
-/* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category_shadow */
 /**
  * @summary MasterOrShadowAccessPoint_category_shadow
  * @constant
  * @type {number}
  */
 export const MasterOrShadowAccessPoint_category_shadow: MasterOrShadowAccessPoint_category = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category_shadow */
 
-/* START_OF_SYMBOL_DEFINITION shadow */
 /**
  * @summary shadow
  * @constant
  * @type {number}
  */
 export const shadow: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPoint_category_shadow; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION shadow */
 
-/* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category_writeableCopy */
 /**
  * @summary MasterOrShadowAccessPoint_category_writeableCopy
  * @constant
  * @type {number}
  */
 export const MasterOrShadowAccessPoint_category_writeableCopy: MasterOrShadowAccessPoint_category = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint_category_writeableCopy */
 
-/* START_OF_SYMBOL_DEFINITION writeableCopy */
 /**
  * @summary writeableCopy
  * @constant
  * @type {number}
  */
 export const writeableCopy: MasterOrShadowAccessPoint_category = MasterOrShadowAccessPoint_category_writeableCopy; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION writeableCopy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MasterOrShadowAccessPoint_category */
 let _cached_decoder_for_MasterOrShadowAccessPoint_category: $.ASN1Decoder<MasterOrShadowAccessPoint_category> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MasterOrShadowAccessPoint_category */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MasterOrShadowAccessPoint_category */
 /**
  * @summary Decodes an ASN.1 element into a(n) MasterOrShadowAccessPoint_category
  * @function
@@ -98,13 +79,9 @@ export function _decode_MasterOrShadowAccessPoint_category(el: _Element) {
     }
     return _cached_decoder_for_MasterOrShadowAccessPoint_category(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MasterOrShadowAccessPoint_category */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MasterOrShadowAccessPoint_category */
 let _cached_encoder_for_MasterOrShadowAccessPoint_category: $.ASN1Encoder<MasterOrShadowAccessPoint_category> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MasterOrShadowAccessPoint_category */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MasterOrShadowAccessPoint_category */
 /**
  * @summary Encodes a(n) MasterOrShadowAccessPoint_category into an ASN.1 Element.
  * @function
@@ -126,6 +103,5 @@ export function _encode_MasterOrShadowAccessPoint_category(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MasterOrShadowAccessPoint_category */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BSPLoadCallParams */
+
 /**
  * @summary BSPLoadCallParams
  * @description
@@ -81,9 +81,8 @@ export class BSPLoadCallParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPLoadCallParams */
+
 /**
  * @summary The Leading Root Component Types of BSPLoadCallParams
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_BSPLoadCallParams: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPLoadCallParams */
+
 /**
  * @summary The Trailing Root Component Types of BSPLoadCallParams
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_BSPLoadCallParams: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BSPLoadCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPLoadCallParams */
+
 /**
  * @summary The Extension Addition Component Types of BSPLoadCallParams
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_BSPLoadCallParams: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_BSPLoadCallParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPLoadCallParams */
+
 let _cached_decoder_for_BSPLoadCallParams: $.ASN1Decoder<BSPLoadCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BSPLoadCallParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BSPLoadCallParams
  * @function
@@ -183,13 +178,11 @@ export function _decode_BSPLoadCallParams(el: _Element) {
   }
   return _cached_decoder_for_BSPLoadCallParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPLoadCallParams */
+
 let _cached_encoder_for_BSPLoadCallParams: $.ASN1Encoder<BSPLoadCallParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPLoadCallParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BSPLoadCallParams */
+
 /**
  * @summary Encodes a(n) BSPLoadCallParams into an ASN.1 Element.
  * @function
@@ -225,6 +218,5 @@ export function _encode_BSPLoadCallParams(
   return _cached_encoder_for_BSPLoadCallParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BSPLoadCallParams */
 
 /* eslint-enable */

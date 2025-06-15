@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION Timer */
+
 /**
  * @summary Timer
  * @description
@@ -65,9 +65,8 @@ class Timer {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION Timer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Timer */
+
 /**
  * @summary The Leading Root Component Types of Timer
  * @description
@@ -81,9 +80,8 @@ const _root_component_type_list_1_spec_for_Timer: $.ComponentSpec[] = [
     new $.ComponentSpec("exponent", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("mantissa", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Timer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Timer */
+
 /**
  * @summary The Trailing Root Component Types of Timer
  * @description
@@ -96,9 +94,8 @@ export
 const _root_component_type_list_2_spec_for_Timer: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Timer */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Timer */
+
 /**
  * @summary The Extension Addition Component Types of Timer
  * @description
@@ -111,13 +108,11 @@ export
 const _extension_additions_list_spec_for_Timer: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Timer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Timer */
+
 let _cached_decoder_for_Timer: $.ASN1Decoder<Timer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Timer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Timer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Timer
  * @function
@@ -145,13 +140,11 @@ function _decode_Timer (el: _Element) {
 }; }
     return _cached_decoder_for_Timer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Timer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Timer */
+
 let _cached_encoder_for_Timer: $.ASN1Encoder<Timer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Timer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Timer */
+
 /**
  * @summary Encodes a(n) Timer into an ASN.1 Element.
  * @function
@@ -172,6 +165,5 @@ function _encode_Timer (value: Timer, elGetter: $.ASN1Encoder<Timer>) {
     return _cached_encoder_for_Timer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Timer */
 
 /* eslint-enable */

@@ -12,14 +12,13 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_AttributeIdError_errorStatus */
+
 export enum _enum_for_AttributeIdError_errorStatus {
   accessDenied = 2,
   noSuchAttribute = 5,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_AttributeIdError_errorStatus */
 
-/* START_OF_SYMBOL_DEFINITION AttributeIdError_errorStatus */
+
 /**
  * @summary AttributeIdError_errorStatus
  * @description
@@ -33,57 +32,48 @@ export enum _enum_for_AttributeIdError_errorStatus {
 export type AttributeIdError_errorStatus =
   | _enum_for_AttributeIdError_errorStatus
   | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION AttributeIdError_errorStatus */
 
-/* START_OF_SYMBOL_DEFINITION AttributeIdError_errorStatus_accessDenied */
+
 /**
  * @summary AttributeIdError_errorStatus_accessDenied
  * @constant
  * @type {number}
  */
 export const AttributeIdError_errorStatus_accessDenied: AttributeIdError_errorStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeIdError_errorStatus_accessDenied */
 
-/* START_OF_SYMBOL_DEFINITION accessDenied */
+
 /**
  * @summary accessDenied
  * @constant
  * @type {number}
  */
 export const accessDenied: AttributeIdError_errorStatus = AttributeIdError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION accessDenied */
 
-/* START_OF_SYMBOL_DEFINITION AttributeIdError_errorStatus_noSuchAttribute */
+
 /**
  * @summary AttributeIdError_errorStatus_noSuchAttribute
  * @constant
  * @type {number}
  */
 export const AttributeIdError_errorStatus_noSuchAttribute: AttributeIdError_errorStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeIdError_errorStatus_noSuchAttribute */
 
-/* START_OF_SYMBOL_DEFINITION noSuchAttribute */
+
 /**
  * @summary noSuchAttribute
  * @constant
  * @type {number}
  */
 export const noSuchAttribute: AttributeIdError_errorStatus = AttributeIdError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noSuchAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIdError_errorStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeIdError_errorStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeIdError_errorStatus */
+
+
 export const _decode_AttributeIdError_errorStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeIdError_errorStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIdError_errorStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeIdError_errorStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeIdError_errorStatus */
+
+
 export const _encode_AttributeIdError_errorStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeIdError_errorStatus */
 
 /* eslint-enable */

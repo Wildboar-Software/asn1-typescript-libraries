@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UnitsType */
 /**
  * @summary UnitsType
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type UnitsType = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION UnitsType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitsType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitsType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnitsType */
 export const _decode_UnitsType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_UnitsType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitsType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitsType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnitsType */
 export const _encode_UnitsType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnitsType */
 
 /* eslint-enable */

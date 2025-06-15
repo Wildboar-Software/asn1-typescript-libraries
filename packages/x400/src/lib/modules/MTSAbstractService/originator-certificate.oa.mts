@@ -23,7 +23,6 @@ import {
     _encode_OriginatorCertificate,
 } from '../MTSAbstractService/OriginatorCertificate.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originator_certificate */
 /**
  * @summary originator_certificate
  * @description
@@ -57,6 +56,5 @@ export const originator_certificate: EXTENSION<OriginatorCertificate> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originator_certificate */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import { id_bat_edi_body_part } from '../EDIMSObjectIdentifiers/id-bat-edi-body-
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION edi_body_part */
 /**
  * @summary edi_body_part
  * @description
@@ -53,6 +52,5 @@ export const edi_body_part: X413ATTRIBUTE<EDIBodyPart> = {
     '&id': id_bat_edi_body_part /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_body_part */
 
 /* eslint-enable */

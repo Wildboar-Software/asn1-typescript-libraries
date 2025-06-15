@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GenericTimeTypeChoice */
+
 /**
  * @summary GenericTimeTypeChoice
  * @description
@@ -30,9 +30,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type GenericTimeTypeChoice<BasicType, Alternative> =
   | { asn1supportedvalue: BasicType } /* CHOICE_ALT_ROOT */
   | { othervalues: Alternative } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION GenericTimeTypeChoice */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_GenericTimeTypeChoice */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) GenericTimeTypeChoice
  * @function
@@ -50,9 +49,8 @@ export function _get_decoder_for_GenericTimeTypeChoice<BasicType, Alternative>(
     'CONTEXT 1': ['othervalues', _decode_Alternative],
   });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_GenericTimeTypeChoice */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_GenericTimeTypeChoice */
+
 /**
  * @summary Returns a function that will encode a(n) GenericTimeTypeChoice into an ASN.1 Element.
  * @function
@@ -70,6 +68,5 @@ export function _get_encoder_for_GenericTimeTypeChoice<BasicType, Alternative>(
     $.BER
   );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_GenericTimeTypeChoice */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbpDataTransferServer_conf */
 /**
  * @summary TbpDataTransferServer_conf
  * @description
@@ -26,13 +25,9 @@ export type TbpDataTransferServer_conf =
     | { clear: WrappedProt } /* CHOICE_ALT_ROOT */
     | { protected_: ENCIPHERED<_Element> } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TbpDataTransferServer_conf */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbpDataTransferServer_conf */
 let _cached_decoder_for_TbpDataTransferServer_conf: $.ASN1Decoder<TbpDataTransferServer_conf> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbpDataTransferServer_conf */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbpDataTransferServer_conf */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbpDataTransferServer_conf
  * @function
@@ -58,13 +53,9 @@ export function _decode_TbpDataTransferServer_conf(el: _Element) {
     }
     return _cached_decoder_for_TbpDataTransferServer_conf(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbpDataTransferServer_conf */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbpDataTransferServer_conf */
 let _cached_encoder_for_TbpDataTransferServer_conf: $.ASN1Encoder<TbpDataTransferServer_conf> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbpDataTransferServer_conf */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbpDataTransferServer_conf */
 /**
  * @summary Encodes a(n) TbpDataTransferServer_conf into an ASN.1 Element.
  * @function
@@ -98,6 +89,5 @@ export function _encode_TbpDataTransferServer_conf(
     return _cached_encoder_for_TbpDataTransferServer_conf(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbpDataTransferServer_conf */
 
 /* eslint-enable */

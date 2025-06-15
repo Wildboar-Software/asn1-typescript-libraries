@@ -7,7 +7,6 @@ import {
 import { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa.mjs";
 import { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION algorithmIdentifierMatch */
 /**
  * @summary algorithmIdentifierMatch
  * @description
@@ -41,6 +40,5 @@ export const algorithmIdentifierMatch: MATCHING_RULE<AlgorithmIdentifier> = {
     "&id": id_mr_algorithmIdentifierMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION algorithmIdentifierMatch */
 
 /* eslint-enable */

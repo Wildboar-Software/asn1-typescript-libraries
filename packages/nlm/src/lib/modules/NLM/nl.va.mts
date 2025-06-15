@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { network_layer } from '../NLM/network-layer.va.mjs';
-/* START_OF_SYMBOL_DEFINITION nl */
+
 /**
  * @summary nl
  * @description
@@ -28,6 +28,5 @@ export const nl: OBJECT_IDENTIFIER = new _OID(
     [/* management */ 0],
     network_layer
 );
-/* END_OF_SYMBOL_DEFINITION nl */
 
 /* eslint-enable */

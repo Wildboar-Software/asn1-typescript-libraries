@@ -10,7 +10,6 @@ import {
     _decode_ContextAssertion,
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeValueAssertion_assertedContexts */
 /**
  * @summary AttributeValueAssertion_assertedContexts
  * @description
@@ -24,13 +23,9 @@ import {
 export type AttributeValueAssertion_assertedContexts =
     | { allContexts: NULL } /* CHOICE_ALT_ROOT */
     | { selectedContexts: ContextAssertion[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION AttributeValueAssertion_assertedContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueAssertion_assertedContexts */
 let _cached_decoder_for_AttributeValueAssertion_assertedContexts: $.ASN1Decoder<AttributeValueAssertion_assertedContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueAssertion_assertedContexts */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeValueAssertion_assertedContexts */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValueAssertion_assertedContexts
  * @function
@@ -58,13 +53,9 @@ export function _decode_AttributeValueAssertion_assertedContexts(el: _Element) {
     }
     return _cached_decoder_for_AttributeValueAssertion_assertedContexts(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeValueAssertion_assertedContexts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueAssertion_assertedContexts */
 let _cached_encoder_for_AttributeValueAssertion_assertedContexts: $.ASN1Encoder<AttributeValueAssertion_assertedContexts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueAssertion_assertedContexts */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeValueAssertion_assertedContexts */
 /**
  * @summary Encodes a(n) AttributeValueAssertion_assertedContexts into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_AttributeValueAssertion_assertedContexts(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeValueAssertion_assertedContexts */
 
 /* eslint-enable */

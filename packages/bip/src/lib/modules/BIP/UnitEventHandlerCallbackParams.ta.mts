@@ -37,7 +37,7 @@ import {
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UnitEventHandlerCallbackParams */
+
 /**
  * @summary UnitEventHandlerCallbackParams
  * @description
@@ -132,9 +132,8 @@ export class UnitEventHandlerCallbackParams {
 
   public static _enum_for_unitEventType = _enum_for_BioAPI_UNIT_EVENT_TYPE;
 }
-/* END_OF_SYMBOL_DEFINITION UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnitEventHandlerCallbackParams */
+
 /**
  * @summary The Leading Root Component Types of UnitEventHandlerCallbackParams
  * @description
@@ -187,9 +186,8 @@ export const _root_component_type_list_1_spec_for_UnitEventHandlerCallbackParams
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnitEventHandlerCallbackParams */
+
 /**
  * @summary The Trailing Root Component Types of UnitEventHandlerCallbackParams
  * @description
@@ -199,9 +197,8 @@ export const _root_component_type_list_1_spec_for_UnitEventHandlerCallbackParams
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UnitEventHandlerCallbackParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnitEventHandlerCallbackParams */
+
 /**
  * @summary The Extension Addition Component Types of UnitEventHandlerCallbackParams
  * @description
@@ -211,13 +208,11 @@ export const _root_component_type_list_2_spec_for_UnitEventHandlerCallbackParams
  * @constant
  */
 export const _extension_additions_list_spec_for_UnitEventHandlerCallbackParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventHandlerCallbackParams */
+
 let _cached_decoder_for_UnitEventHandlerCallbackParams: $.ASN1Decoder<UnitEventHandlerCallbackParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnitEventHandlerCallbackParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitEventHandlerCallbackParams
  * @function
@@ -279,13 +274,11 @@ export function _decode_UnitEventHandlerCallbackParams(el: _Element) {
   }
   return _cached_decoder_for_UnitEventHandlerCallbackParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventHandlerCallbackParams */
+
 let _cached_encoder_for_UnitEventHandlerCallbackParams: $.ASN1Encoder<UnitEventHandlerCallbackParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnitEventHandlerCallbackParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnitEventHandlerCallbackParams */
+
 /**
  * @summary Encodes a(n) UnitEventHandlerCallbackParams into an ASN.1 Element.
  * @function
@@ -329,6 +322,5 @@ export function _encode_UnitEventHandlerCallbackParams(
   return _cached_encoder_for_UnitEventHandlerCallbackParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnitEventHandlerCallbackParams */
 
 /* eslint-enable */

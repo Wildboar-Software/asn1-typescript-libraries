@@ -7,7 +7,7 @@ import { enveloped_data } from "../PKCS7/enveloped-data.oa.mjs";
 import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
 import { signed_and_enveloped_data } from "../PKCS7/signed-and-enveloped-data.oa.mjs";
 import { signed_data } from "../PKCS7/signed-data.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION PKCS7ContentTable */
+
 /**
  * @summary PKCS7ContentTable
  * @description
@@ -32,6 +32,5 @@ export const PKCS7ContentTable: PKCS7_CONTENT_TYPE<any>[] = [
     encrypted_data,
     authenticated_data,
 ];
-/* END_OF_SYMBOL_DEFINITION PKCS7ContentTable */
 
 /* eslint-enable */

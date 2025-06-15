@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION dh_public_number */
 /**
  * @summary dh_public_number
  * @description
@@ -19,6 +18,5 @@ export const dh_public_number: ID = new _OID(
     [/* number-type */ 2, /* dh-public-number */ 1],
     ansi_x9_42
 );
-/* END_OF_SYMBOL_DEFINITION dh_public_number */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_TotalRefresh,
     _encode_TotalRefresh,
 } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RefreshInformation */
 /**
  * @summary RefreshInformation
  * @description
@@ -38,13 +37,9 @@ export type RefreshInformation =
     | { incremental: IncrementalRefresh } /* CHOICE_ALT_ROOT */
     | { otherStrategy: EXTERNAL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RefreshInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RefreshInformation */
 let _cached_decoder_for_RefreshInformation: $.ASN1Decoder<RefreshInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RefreshInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RefreshInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) RefreshInformation
  * @function
@@ -74,13 +69,9 @@ export function _decode_RefreshInformation(el: _Element) {
     }
     return _cached_decoder_for_RefreshInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RefreshInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RefreshInformation */
 let _cached_encoder_for_RefreshInformation: $.ASN1Encoder<RefreshInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RefreshInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RefreshInformation */
 /**
  * @summary Encodes a(n) RefreshInformation into an ASN.1 Element.
  * @function
@@ -116,6 +107,5 @@ export function _encode_RefreshInformation(
     return _cached_encoder_for_RefreshInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RefreshInformation */
 
 /* eslint-enable */

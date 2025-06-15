@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InstanceIdList */
 /**
  * @summary InstanceIdList
  * @description
@@ -27,14 +26,10 @@ import {
  * ```
  */
 export type InstanceIdList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION InstanceIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InstanceIdList */
 let _cached_decoder_for_InstanceIdList: $.ASN1Decoder<InstanceIdList> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InstanceIdList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InstanceIdList */
 /**
  * @summary Decodes an ASN.1 element into a(n) InstanceIdList
  * @function
@@ -49,14 +44,10 @@ export function _decode_InstanceIdList(el: _Element) {
     }
     return _cached_decoder_for_InstanceIdList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InstanceIdList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InstanceIdList */
 let _cached_encoder_for_InstanceIdList: $.ASN1Encoder<InstanceIdList> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InstanceIdList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InstanceIdList */
 /**
  * @summary Encodes a(n) InstanceIdList into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_InstanceIdList(
     return _cached_encoder_for_InstanceIdList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InstanceIdList */
 
 /* eslint-enable */

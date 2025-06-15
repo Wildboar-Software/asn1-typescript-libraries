@@ -15,7 +15,6 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pollESHelloRate_Default */
 /**
  * @summary pollESHelloRate_Default
  * @description
@@ -32,6 +31,5 @@ export const pollESHelloRate_Default: Timer = Timer._from_object({
   exponent: 0,
   mantissa: 50,
 });
-/* END_OF_SYMBOL_DEFINITION pollESHelloRate_Default */
 
 /* eslint-enable */

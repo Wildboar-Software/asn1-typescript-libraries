@@ -13,7 +13,6 @@ import {
     _decode_TerminateOperationalBindingResult,
     _encode_TerminateOperationalBindingResult,
 } from "../OperationalBindingManagement/TerminateOperationalBindingResult.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION terminateOperationalBinding */
 /**
  * @summary terminateOperationalBinding
  * @description
@@ -53,6 +52,5 @@ export const terminateOperationalBinding: OPERATION<
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION terminateOperationalBinding */
 
 /* eslint-enable */

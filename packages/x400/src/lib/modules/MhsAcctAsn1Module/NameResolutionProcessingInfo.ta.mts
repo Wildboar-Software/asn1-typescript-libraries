@@ -15,7 +15,6 @@ import {
     _decode_DirectoryNameAndOptionalORAddress,
     _encode_DirectoryNameAndOptionalORAddress,
 } from '../MhsAcctAsn1Module/DirectoryNameAndOptionalORAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NameResolutionProcessingInfo */
 /**
  * @summary NameResolutionProcessingInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NameResolutionProcessingInfo = DirectoryNameAndOptionalORAddress; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NameResolutionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameResolutionProcessingInfo */
 let _cached_decoder_for_NameResolutionProcessingInfo: $.ASN1Decoder<NameResolutionProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameResolutionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameResolutionProcessingInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameResolutionProcessingInfo
  * @function
@@ -46,13 +41,9 @@ export function _decode_NameResolutionProcessingInfo(el: _Element) {
     }
     return _cached_decoder_for_NameResolutionProcessingInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameResolutionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameResolutionProcessingInfo */
 let _cached_encoder_for_NameResolutionProcessingInfo: $.ASN1Encoder<NameResolutionProcessingInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameResolutionProcessingInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameResolutionProcessingInfo */
 /**
  * @summary Encodes a(n) NameResolutionProcessingInfo into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_NameResolutionProcessingInfo(
     return _cached_encoder_for_NameResolutionProcessingInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameResolutionProcessingInfo */
 
 /* eslint-enable */

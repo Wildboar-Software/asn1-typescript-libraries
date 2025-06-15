@@ -16,7 +16,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION RCASRnMsgContent */
+
 /**
  * @summary RCASRnMsgContent
  * @description
@@ -76,9 +76,8 @@ class RCASRnMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RCASRnMsgContent */
+
 /**
  * @summary The Leading Root Component Types of RCASRnMsgContent
  * @description
@@ -93,9 +92,8 @@ const _root_component_type_list_1_spec_for_RCASRnMsgContent: $.ComponentSpec[] =
     new $.ComponentSpec("keyRequest-Req", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("purchaseReport-Req", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RCASRnMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of RCASRnMsgContent
  * @description
@@ -108,9 +106,8 @@ export
 const _root_component_type_list_2_spec_for_RCASRnMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RCASRnMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of RCASRnMsgContent
  * @description
@@ -123,13 +120,11 @@ export
 const _extension_additions_list_spec_for_RCASRnMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RCASRnMsgContent */
+
 let _cached_decoder_for_RCASRnMsgContent: $.ASN1Decoder<RCASRnMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RCASRnMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RCASRnMsgContent
  * @function
@@ -165,13 +160,11 @@ function _decode_RCASRnMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_RCASRnMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RCASRnMsgContent */
+
 let _cached_encoder_for_RCASRnMsgContent: $.ASN1Encoder<RCASRnMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RCASRnMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RCASRnMsgContent */
+
 /**
  * @summary Encodes a(n) RCASRnMsgContent into an ASN.1 Element.
  * @function
@@ -193,6 +186,5 @@ function _encode_RCASRnMsgContent (value: RCASRnMsgContent, elGetter: $.ASN1Enco
     return _cached_encoder_for_RCASRnMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RCASRnMsgContent */
 
 /* eslint-enable */

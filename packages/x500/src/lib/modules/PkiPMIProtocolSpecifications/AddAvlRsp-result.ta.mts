@@ -11,7 +11,6 @@ import {
     _decode_AddAvlOK,
     _encode_AddAvlOK,
 } from "../PkiPMIProtocolSpecifications/AddAvlOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AddAvlRsp_result */
 /**
  * @summary AddAvlRsp_result
  * @description
@@ -26,13 +25,9 @@ export type AddAvlRsp_result =
     | { success: AddAvlOK } /* CHOICE_ALT_ROOT */
     | { failure: AddAvlErr } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AddAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlRsp_result */
 let _cached_decoder_for_AddAvlRsp_result: $.ASN1Decoder<AddAvlRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddAvlRsp_result */
 /**
  * @summary Decodes an ASN.1 element into a(n) AddAvlRsp_result
  * @function
@@ -56,13 +51,9 @@ export function _decode_AddAvlRsp_result(el: _Element) {
     }
     return _cached_decoder_for_AddAvlRsp_result(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlRsp_result */
 let _cached_encoder_for_AddAvlRsp_result: $.ASN1Encoder<AddAvlRsp_result> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlRsp_result */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddAvlRsp_result */
 /**
  * @summary Encodes a(n) AddAvlRsp_result into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_AddAvlRsp_result(
     return _cached_encoder_for_AddAvlRsp_result(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddAvlRsp_result */
 
 /* eslint-enable */

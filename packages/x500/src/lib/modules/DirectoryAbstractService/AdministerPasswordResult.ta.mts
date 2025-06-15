@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AdministerPasswordResult */
 /**
  * @summary AdministerPasswordResult
  * @description
@@ -31,13 +30,9 @@ export type AdministerPasswordResult =
           information: OPTIONALLY_PROTECTED_SEQ<AdministerPasswordResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AdministerPasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministerPasswordResult */
 let _cached_decoder_for_AdministerPasswordResult: $.ASN1Decoder<AdministerPasswordResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministerPasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdministerPasswordResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdministerPasswordResult
  * @function
@@ -65,13 +60,9 @@ export function _decode_AdministerPasswordResult(el: _Element) {
     }
     return _cached_decoder_for_AdministerPasswordResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdministerPasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministerPasswordResult */
 let _cached_encoder_for_AdministerPasswordResult: $.ASN1Encoder<AdministerPasswordResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministerPasswordResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdministerPasswordResult */
 /**
  * @summary Encodes a(n) AdministerPasswordResult into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_AdministerPasswordResult(
     return _cached_encoder_for_AdministerPasswordResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdministerPasswordResult */
 
 /* eslint-enable */

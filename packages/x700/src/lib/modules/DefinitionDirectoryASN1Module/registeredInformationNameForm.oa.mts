@@ -13,7 +13,6 @@ import { registeredInformation } from '../DefinitionDirectoryASN1Module/register
 import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.mjs';
 import { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION registeredInformationNameForm */
 /**
  * @summary registeredInformationNameForm
  * @description
@@ -43,6 +42,5 @@ export const registeredInformationNameForm: NAME_FORM = {
         mkmDirectoryNameForm
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION registeredInformationNameForm */
 
 /* eslint-enable */

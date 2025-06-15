@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION finf_doc_opt_decl */
 /**
  * @summary finf_doc_opt_decl
  * @description
@@ -33,6 +32,5 @@ export const finf_doc_opt_decl: OBJECT_IDENTIFIER = new _OID([
   /* encodings */ 1,
   /* optional-xml-declaration */ 0,
 ]);
-/* END_OF_SYMBOL_DEFINITION finf_doc_opt_decl */
 
 /* eslint-enable */

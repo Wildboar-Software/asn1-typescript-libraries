@@ -25,7 +25,6 @@ import {
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
 } from '../IPMSInformationObjects/OtherNotificationTypeFields.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPN_choice */
 /**
  * @summary IPN_choice
  * @description
@@ -42,13 +41,9 @@ export type IPN_choice =
     | {
           other_notification_type_fields: OtherNotificationTypeFields;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION IPN_choice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPN_choice */
 let _cached_decoder_for_IPN_choice: $.ASN1Decoder<IPN_choice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPN_choice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPN_choice */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPN_choice
  * @function
@@ -82,13 +77,9 @@ export function _decode_IPN_choice(el: _Element) {
     }
     return _cached_decoder_for_IPN_choice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPN_choice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPN_choice */
 let _cached_encoder_for_IPN_choice: $.ASN1Encoder<IPN_choice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPN_choice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPN_choice */
 /**
  * @summary Encodes a(n) IPN_choice into an ASN.1 Element.
  * @function
@@ -128,6 +119,5 @@ export function _encode_IPN_choice(
     return _cached_encoder_for_IPN_choice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPN_choice */
 
 /* eslint-enable */

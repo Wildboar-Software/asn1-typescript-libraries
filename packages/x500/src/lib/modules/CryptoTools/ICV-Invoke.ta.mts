@@ -11,7 +11,6 @@ import {
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ICV_Invoke */
 /**
  * @summary ICV_Invoke
  * @description
@@ -79,9 +78,7 @@ export class ICV_Invoke<ToBeProtected> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ICV_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ICV_Invoke */
 /**
  * @summary The Leading Root Component Types of ICV_Invoke
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_ICV_Invoke: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ICV_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ICV_Invoke */
 /**
  * @summary The Trailing Root Component Types of ICV_Invoke
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_ICV_Invoke: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ICV_Invoke: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ICV_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ICV_Invoke */
 /**
  * @summary The Extension Addition Component Types of ICV_Invoke
  * @description
@@ -137,9 +130,7 @@ export const _root_component_type_list_2_spec_for_ICV_Invoke: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ICV_Invoke: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ICV_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_ICV_Invoke */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ICV_Invoke
  * @function
@@ -189,9 +180,7 @@ export function _get_decoder_for_ICV_Invoke<ToBeProtected>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_ICV_Invoke */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_ICV_Invoke */
 /**
  * @summary Returns a function that will encode a(n) ICV_Invoke into an ASN.1 Element.
  * @function
@@ -229,6 +218,5 @@ export function _get_encoder_for_ICV_Invoke<ToBeProtected>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_ICV_Invoke */
 
 /* eslint-enable */

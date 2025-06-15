@@ -33,7 +33,6 @@ import {
     _extension_additions_list_spec_for_CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ServiceErrorData */
 /**
  * @summary ServiceErrorData
  * @description
@@ -125,9 +124,7 @@ export class ServiceErrorData implements CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceErrorData */
 /**
  * @summary The Leading Root Component Types of ServiceErrorData
  * @description
@@ -145,9 +142,7 @@ export const _root_component_type_list_1_spec_for_ServiceErrorData: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceErrorData */
 /**
  * @summary The Trailing Root Component Types of ServiceErrorData
  * @description
@@ -186,9 +181,7 @@ export const _root_component_type_list_2_spec_for_ServiceErrorData: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceErrorData */
 /**
  * @summary The Extension Addition Component Types of ServiceErrorData
  * @description
@@ -198,13 +191,9 @@ export const _root_component_type_list_2_spec_for_ServiceErrorData: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceErrorData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceErrorData */
 let _cached_decoder_for_ServiceErrorData: $.ASN1Decoder<ServiceErrorData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceErrorData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceErrorData
  * @function
@@ -276,13 +265,9 @@ export function _decode_ServiceErrorData(el: _Element) {
     }
     return _cached_decoder_for_ServiceErrorData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceErrorData */
 let _cached_encoder_for_ServiceErrorData: $.ASN1Encoder<ServiceErrorData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceErrorData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceErrorData */
 /**
  * @summary Encodes a(n) ServiceErrorData into an ASN.1 Element.
  * @function
@@ -364,6 +349,5 @@ export function _encode_ServiceErrorData(
     return _cached_encoder_for_ServiceErrorData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceErrorData */
 
 /* eslint-enable */

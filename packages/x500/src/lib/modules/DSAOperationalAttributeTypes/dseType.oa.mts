@@ -10,7 +10,6 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION dseType */
 /**
  * @summary dseType
  * @description
@@ -49,6 +48,5 @@ export const dseType: ATTRIBUTE<DSEType> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dseType */
 
 /* eslint-enable */

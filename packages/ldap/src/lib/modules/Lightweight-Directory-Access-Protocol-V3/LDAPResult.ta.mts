@@ -33,7 +33,7 @@ import {
   _encode_Referral,
 } from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LDAPResult */
+
 /**
  * @summary LDAPResult
  * @description
@@ -148,9 +148,8 @@ export class LDAPResult {
 
   public static _enum_for_resultCode = _enum_for_LDAPResult_resultCode;
 }
-/* END_OF_SYMBOL_DEFINITION LDAPResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LDAPResult */
+
 /**
  * @summary The Leading Root Component Types of LDAPResult
  * @description
@@ -189,9 +188,8 @@ export const _root_component_type_list_1_spec_for_LDAPResult: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LDAPResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LDAPResult */
+
 /**
  * @summary The Trailing Root Component Types of LDAPResult
  * @description
@@ -201,9 +199,8 @@ export const _root_component_type_list_1_spec_for_LDAPResult: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LDAPResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LDAPResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LDAPResult */
+
 /**
  * @summary The Extension Addition Component Types of LDAPResult
  * @description
@@ -213,9 +210,8 @@ export const _root_component_type_list_2_spec_for_LDAPResult: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_LDAPResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LDAPResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LDAPResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPResult
  * @function
@@ -264,9 +260,8 @@ export function _decode_LDAPResult(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LDAPResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LDAPResult */
+
 /**
  * @summary Encodes a(n) LDAPResult into an ASN.1 Element.
  * @function
@@ -294,6 +289,5 @@ export function _encode_LDAPResult(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LDAPResult */
 
 /* eslint-enable */

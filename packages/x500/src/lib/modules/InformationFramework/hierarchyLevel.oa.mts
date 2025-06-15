@@ -11,7 +11,6 @@ import {
 import { id_oa_hierarchyLevel } from "../InformationFramework/id-oa-hierarchyLevel.va.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION hierarchyLevel */
 /**
  * @summary hierarchyLevel
  * @description
@@ -52,6 +51,5 @@ export const hierarchyLevel: ATTRIBUTE<HierarchyLevel> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION hierarchyLevel */
 
 /* eslint-enable */

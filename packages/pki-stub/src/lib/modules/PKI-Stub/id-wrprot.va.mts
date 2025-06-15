@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import { wrapperProtocolType } from "../PKI-Stub/wrapperProtocolType.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION id_wrprot */
 /**
  * @summary id_wrprot
  * @description
@@ -26,6 +25,5 @@ import { wrapperProtocolType } from "../PKI-Stub/wrapperProtocolType.va.mjs";
  * @constant
  */
 export const id_wrprot: OBJECT_IDENTIFIER = wrapperProtocolType;
-/* END_OF_SYMBOL_DEFINITION id_wrprot */
 
 /* eslint-enable */

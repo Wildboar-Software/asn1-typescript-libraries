@@ -15,7 +15,6 @@ import {
     _decode_ForwardedContentToken_Item,
     _encode_ForwardedContentToken_Item,
 } from '../IPMSSecurityExtensions/ForwardedContentToken-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardedContentToken */
 /**
  * @summary ForwardedContentToken
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type ForwardedContentToken = ForwardedContentToken_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ForwardedContentToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedContentToken */
 let _cached_decoder_for_ForwardedContentToken: $.ASN1Decoder<ForwardedContentToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedContentToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardedContentToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardedContentToken
  * @function
@@ -54,13 +49,9 @@ export function _decode_ForwardedContentToken(el: _Element) {
     }
     return _cached_decoder_for_ForwardedContentToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardedContentToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedContentToken */
 let _cached_encoder_for_ForwardedContentToken: $.ASN1Encoder<ForwardedContentToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedContentToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardedContentToken */
 /**
  * @summary Encodes a(n) ForwardedContentToken into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_ForwardedContentToken(
     return _cached_encoder_for_ForwardedContentToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardedContentToken */
 
 /* eslint-enable */

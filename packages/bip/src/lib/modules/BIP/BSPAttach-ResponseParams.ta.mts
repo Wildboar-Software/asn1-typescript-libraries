@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BSPAttach_ResponseParams */
+
 /**
  * @summary BSPAttach_ResponseParams
  * @description
@@ -57,9 +57,8 @@ export class BSPAttach_ResponseParams {
     return new BSPAttach_ResponseParams(_o.newOriginalBSPHandle);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPAttach_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of BSPAttach_ResponseParams
  * @description
@@ -77,9 +76,8 @@ export const _root_component_type_list_1_spec_for_BSPAttach_ResponseParams: $.Co
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPAttach_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of BSPAttach_ResponseParams
  * @description
@@ -89,9 +87,8 @@ export const _root_component_type_list_1_spec_for_BSPAttach_ResponseParams: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BSPAttach_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPAttach_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of BSPAttach_ResponseParams
  * @description
@@ -101,13 +98,11 @@ export const _root_component_type_list_2_spec_for_BSPAttach_ResponseParams: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_BSPAttach_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPAttach_ResponseParams */
+
 let _cached_decoder_for_BSPAttach_ResponseParams: $.ASN1Decoder<BSPAttach_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BSPAttach_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BSPAttach_ResponseParams
  * @function
@@ -135,13 +130,11 @@ export function _decode_BSPAttach_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_BSPAttach_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPAttach_ResponseParams */
+
 let _cached_encoder_for_BSPAttach_ResponseParams: $.ASN1Encoder<BSPAttach_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPAttach_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BSPAttach_ResponseParams */
+
 /**
  * @summary Encodes a(n) BSPAttach_ResponseParams into an ASN.1 Element.
  * @function
@@ -172,6 +165,5 @@ export function _encode_BSPAttach_ResponseParams(
   return _cached_encoder_for_BSPAttach_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BSPAttach_ResponseParams */
 
 /* eslint-enable */

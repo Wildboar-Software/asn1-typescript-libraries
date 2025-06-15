@@ -23,7 +23,6 @@ import {
     _encode_RecipientCertificate,
 } from '../MTSAbstractService/RecipientCertificate.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION recipient_certificate */
 /**
  * @summary recipient_certificate
  * @description
@@ -57,6 +56,5 @@ export const recipient_certificate: EXTENSION<RecipientCertificate> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipient_certificate */
 
 /* eslint-enable */

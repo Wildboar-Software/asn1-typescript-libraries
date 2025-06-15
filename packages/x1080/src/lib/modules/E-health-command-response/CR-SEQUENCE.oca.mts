@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { INTERACTIVE_MESSAGE } from '../E-health-command-response/INTERACTIVE-MESSAGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION CR_SEQUENCE */
+
 /**
  * @summary CR_SEQUENCE
  * @description
@@ -97,6 +97,5 @@ export interface CR_SEQUENCE {
      */
     readonly '&first'?: INTERACTIVE_MESSAGE;
 }
-/* END_OF_SYMBOL_DEFINITION CR_SEQUENCE */
 
 /* eslint-enable */

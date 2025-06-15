@@ -23,7 +23,7 @@ import {
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION C_NOCHANGE_RI */
+
 /**
  * @summary C_NOCHANGE_RI
  * @description
@@ -104,9 +104,8 @@ export class C_NOCHANGE_RI {
 
   public static _enum_for_confirmation = _enum_for_C_NOCHANGE_RI_confirmation;
 }
-/* END_OF_SYMBOL_DEFINITION C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_C_NOCHANGE_RI */
+
 /**
  * @summary The Leading Root Component Types of C_NOCHANGE_RI
  * @description
@@ -124,9 +123,8 @@ export const _root_component_type_list_1_spec_for_C_NOCHANGE_RI: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_C_NOCHANGE_RI */
+
 /**
  * @summary The Trailing Root Component Types of C_NOCHANGE_RI
  * @description
@@ -144,9 +142,8 @@ export const _root_component_type_list_2_spec_for_C_NOCHANGE_RI: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_C_NOCHANGE_RI */
+
 /**
  * @summary The Extension Addition Component Types of C_NOCHANGE_RI
  * @description
@@ -156,13 +153,11 @@ export const _root_component_type_list_2_spec_for_C_NOCHANGE_RI: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_C_NOCHANGE_RI: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_C_NOCHANGE_RI */
+
 let _cached_decoder_for_C_NOCHANGE_RI: $.ASN1Decoder<C_NOCHANGE_RI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_C_NOCHANGE_RI */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) C_NOCHANGE_RI
  * @function
@@ -212,13 +207,11 @@ export function _decode_C_NOCHANGE_RI(el: _Element) {
   }
   return _cached_decoder_for_C_NOCHANGE_RI(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_C_NOCHANGE_RI */
+
 let _cached_encoder_for_C_NOCHANGE_RI: $.ASN1Encoder<C_NOCHANGE_RI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_C_NOCHANGE_RI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_C_NOCHANGE_RI */
+
 /**
  * @summary Encodes a(n) C_NOCHANGE_RI into an ASN.1 Element.
  * @function
@@ -273,6 +266,5 @@ export function _encode_C_NOCHANGE_RI(
   return _cached_encoder_for_C_NOCHANGE_RI(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_C_NOCHANGE_RI */
 
 /* eslint-enable */

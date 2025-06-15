@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_etsi_es_IDUP_Mechanism_v1 */
 /**
  * @summary id_etsi_es_IDUP_Mechanism_v1
  * @description
@@ -43,6 +42,5 @@ const id_etsi_es_IDUP_Mechanism_v1: OBJECT_IDENTIFIER = new _OID([
     /* idupMechanism */ 4,
     /* etsiESv1 */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_etsi_es_IDUP_Mechanism_v1 */
 
 /* eslint-enable */

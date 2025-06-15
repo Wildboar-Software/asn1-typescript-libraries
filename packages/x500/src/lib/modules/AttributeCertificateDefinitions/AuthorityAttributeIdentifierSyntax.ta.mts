@@ -6,7 +6,6 @@ import {
     _decode_AuthAttId,
     _encode_AuthAttId,
 } from "../AttributeCertificateDefinitions/AuthAttId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthorityAttributeIdentifierSyntax */
 /**
  * @summary AuthorityAttributeIdentifierSyntax
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AuthorityAttributeIdentifierSyntax = AuthAttId[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AuthorityAttributeIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorityAttributeIdentifierSyntax */
 let _cached_decoder_for_AuthorityAttributeIdentifierSyntax: $.ASN1Decoder<AuthorityAttributeIdentifierSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorityAttributeIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorityAttributeIdentifierSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthorityAttributeIdentifierSyntax
  * @function
@@ -39,13 +34,9 @@ export function _decode_AuthorityAttributeIdentifierSyntax(el: _Element) {
     }
     return _cached_decoder_for_AuthorityAttributeIdentifierSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorityAttributeIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorityAttributeIdentifierSyntax */
 let _cached_encoder_for_AuthorityAttributeIdentifierSyntax: $.ASN1Encoder<AuthorityAttributeIdentifierSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorityAttributeIdentifierSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorityAttributeIdentifierSyntax */
 /**
  * @summary Encodes a(n) AuthorityAttributeIdentifierSyntax into an ASN.1 Element.
  * @function
@@ -69,6 +60,5 @@ export function _encode_AuthorityAttributeIdentifierSyntax(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorityAttributeIdentifierSyntax */
 
 /* eslint-enable */

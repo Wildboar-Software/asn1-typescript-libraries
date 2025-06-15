@@ -11,7 +11,6 @@ import {
     _decode_TbsHandshakeReq_encr_mode_non_aead,
     _encode_TbsHandshakeReq_encr_mode_non_aead,
 } from "../Wrapper/TbsHandshakeReq-encr-mode-non-aead.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TbsHandshakeReq_encr_mode */
 /**
  * @summary TbsHandshakeReq_encr_mode
  * @description
@@ -26,13 +25,9 @@ export type TbsHandshakeReq_encr_mode =
     | { aead: AlgorithmIdentifier[] } /* CHOICE_ALT_ROOT */
     | { non_aead: TbsHandshakeReq_encr_mode_non_aead } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TbsHandshakeReq_encr_mode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeReq_encr_mode */
 let _cached_decoder_for_TbsHandshakeReq_encr_mode: $.ASN1Decoder<TbsHandshakeReq_encr_mode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TbsHandshakeReq_encr_mode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TbsHandshakeReq_encr_mode */
 /**
  * @summary Decodes an ASN.1 element into a(n) TbsHandshakeReq_encr_mode
  * @function
@@ -62,13 +57,9 @@ export function _decode_TbsHandshakeReq_encr_mode(el: _Element) {
     }
     return _cached_decoder_for_TbsHandshakeReq_encr_mode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TbsHandshakeReq_encr_mode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeReq_encr_mode */
 let _cached_encoder_for_TbsHandshakeReq_encr_mode: $.ASN1Encoder<TbsHandshakeReq_encr_mode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TbsHandshakeReq_encr_mode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TbsHandshakeReq_encr_mode */
 /**
  * @summary Encodes a(n) TbsHandshakeReq_encr_mode into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_TbsHandshakeReq_encr_mode(
     return _cached_encoder_for_TbsHandshakeReq_encr_mode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TbsHandshakeReq_encr_mode */
 
 /* eslint-enable */

@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateKeyUsagePeriod */
 /**
  * @summary PrivateKeyUsagePeriod
  * @description
@@ -69,9 +68,7 @@ export class PrivateKeyUsagePeriod {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateKeyUsagePeriod */
 /**
  * @summary The Leading Root Component Types of PrivateKeyUsagePeriod
  * @description
@@ -96,9 +93,7 @@ export const _root_component_type_list_1_spec_for_PrivateKeyUsagePeriod: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateKeyUsagePeriod */
 /**
  * @summary The Trailing Root Component Types of PrivateKeyUsagePeriod
  * @description
@@ -108,9 +103,7 @@ export const _root_component_type_list_1_spec_for_PrivateKeyUsagePeriod: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PrivateKeyUsagePeriod: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateKeyUsagePeriod */
 /**
  * @summary The Extension Addition Component Types of PrivateKeyUsagePeriod
  * @description
@@ -120,13 +113,9 @@ export const _root_component_type_list_2_spec_for_PrivateKeyUsagePeriod: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_PrivateKeyUsagePeriod: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyUsagePeriod */
 let _cached_decoder_for_PrivateKeyUsagePeriod: $.ASN1Decoder<PrivateKeyUsagePeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateKeyUsagePeriod */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateKeyUsagePeriod
  * @function
@@ -176,13 +165,9 @@ export function _decode_PrivateKeyUsagePeriod(el: _Element) {
     }
     return _cached_decoder_for_PrivateKeyUsagePeriod(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyUsagePeriod */
 let _cached_encoder_for_PrivateKeyUsagePeriod: $.ASN1Encoder<PrivateKeyUsagePeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyUsagePeriod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateKeyUsagePeriod */
 /**
  * @summary Encodes a(n) PrivateKeyUsagePeriod into an ASN.1 Element.
  * @function
@@ -230,6 +215,5 @@ export function _encode_PrivateKeyUsagePeriod(
     return _cached_encoder_for_PrivateKeyUsagePeriod(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateKeyUsagePeriod */
 
 /* eslint-enable */

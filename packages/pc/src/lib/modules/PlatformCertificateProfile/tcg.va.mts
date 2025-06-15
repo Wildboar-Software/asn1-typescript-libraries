@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION tcg */
 /**
  * @summary tcg
  * @description
@@ -33,6 +32,5 @@ const tcg: OBJECT_IDENTIFIER = new _OID([
     /* international-organizations */ 23,
     /* tcg */ 133,
 ]);
-/* END_OF_SYMBOL_DEFINITION tcg */
 
 /* eslint-enable */

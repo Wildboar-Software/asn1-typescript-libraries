@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_Induced */
 /**
  * @summary Induced
  * @description
@@ -32,9 +31,7 @@ export enum _enum_for_Induced {
     disabled = 4,
     enabled = 5,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_Induced */
 
-/* START_OF_SYMBOL_DEFINITION Induced */
 /**
  * @summary Induced
  * @description
@@ -48,9 +45,7 @@ export enum _enum_for_Induced {
  * ```@enum {number}
  */
 export type Induced = _enum_for_Induced;
-/* END_OF_SYMBOL_DEFINITION Induced */
 
-/* START_OF_SYMBOL_DEFINITION Induced */
 /**
  * @summary Induced
  * @description
@@ -64,9 +59,7 @@ export type Induced = _enum_for_Induced;
  * ```@enum {number}
  */
 export const Induced = _enum_for_Induced;
-/* END_OF_SYMBOL_DEFINITION Induced */
 
-/* START_OF_SYMBOL_DEFINITION Induced_start */
 /**
  * @summary Induced_start
  * @constant
@@ -74,18 +67,14 @@ export const Induced = _enum_for_Induced;
  */
 export const Induced_start: Induced =
     Induced.start; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Induced_start */
 
-/* START_OF_SYMBOL_DEFINITION start */
 /**
  * @summary start
  * @constant
  * @type {number}
  */
 export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION start */
 
-/* START_OF_SYMBOL_DEFINITION Induced_suspend */
 /**
  * @summary Induced_suspend
  * @constant
@@ -93,9 +82,7 @@ export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
  */
 export const Induced_suspend: Induced =
     Induced.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Induced_suspend */
 
-/* START_OF_SYMBOL_DEFINITION suspend */
 /**
  * @summary suspend
  * @constant
@@ -103,9 +90,7 @@ export const Induced_suspend: Induced =
  */
 export const suspend: Induced =
     Induced.suspend; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION suspend */
 
-/* START_OF_SYMBOL_DEFINITION Induced_resume */
 /**
  * @summary Induced_resume
  * @constant
@@ -113,9 +98,7 @@ export const suspend: Induced =
  */
 export const Induced_resume: Induced =
     Induced.resume; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Induced_resume */
 
-/* START_OF_SYMBOL_DEFINITION resume */
 /**
  * @summary resume
  * @constant
@@ -123,9 +106,7 @@ export const Induced_resume: Induced =
  */
 export const resume: Induced =
     Induced.resume; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION resume */
 
-/* START_OF_SYMBOL_DEFINITION Induced_delete_ */
 /**
  * @summary Induced_delete_
  * @constant
@@ -133,9 +114,7 @@ export const resume: Induced =
  */
 export const Induced_delete_: Induced =
     Induced.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Induced_delete_ */
 
-/* START_OF_SYMBOL_DEFINITION delete_ */
 /**
  * @summary delete_
  * @constant
@@ -143,9 +122,7 @@ export const Induced_delete_: Induced =
  */
 export const delete_: Induced =
     Induced.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION delete_ */
 
-/* START_OF_SYMBOL_DEFINITION Induced_disabled */
 /**
  * @summary Induced_disabled
  * @constant
@@ -153,9 +130,7 @@ export const delete_: Induced =
  */
 export const Induced_disabled: Induced =
     Induced.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Induced_disabled */
 
-/* START_OF_SYMBOL_DEFINITION disabled */
 /**
  * @summary disabled
  * @constant
@@ -163,9 +138,7 @@ export const Induced_disabled: Induced =
  */
 export const disabled: Induced =
     Induced.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION disabled */
 
-/* START_OF_SYMBOL_DEFINITION Induced_enabled */
 /**
  * @summary Induced_enabled
  * @constant
@@ -173,9 +146,7 @@ export const disabled: Induced =
  */
 export const Induced_enabled: Induced =
     Induced.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION Induced_enabled */
 
-/* START_OF_SYMBOL_DEFINITION enabled */
 /**
  * @summary enabled
  * @constant
@@ -183,21 +154,12 @@ export const Induced_enabled: Induced =
  */
 export const enabled: Induced =
     Induced.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION enabled */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Induced */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Induced */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Induced */
 export const _decode_Induced = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_Induced */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Induced */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Induced */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Induced */
 export const _encode_Induced = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Induced */
 
 /* eslint-enable */

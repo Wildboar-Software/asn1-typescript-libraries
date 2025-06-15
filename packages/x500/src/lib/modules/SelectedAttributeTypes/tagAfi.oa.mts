@@ -8,7 +8,6 @@ import {
 import { id_at_tagAfi } from "../SelectedAttributeTypes/id-at-tagAfi.va.mjs";
 import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION tagAfi */
 /**
  * @summary tagAfi
  * @description
@@ -48,6 +47,5 @@ export const tagAfi: ATTRIBUTE<OCTET_STRING> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION tagAfi */
 
 /* eslint-enable */

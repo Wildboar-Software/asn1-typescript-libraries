@@ -15,7 +15,6 @@ import {
     _encode_LDAPMessage,
 } from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ldapTransport */
 /**
  * @summary ldapTransport
  * @description
@@ -54,6 +53,5 @@ export const ldapTransport: OPERATION<LdapArgument, LDAPMessage[]> = {
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ldapTransport */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 import { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyAgreementAlgorithmSet */
+
 /**
  * @summary KeyAgreementAlgorithmSet
  * @description
@@ -17,6 +17,5 @@ import { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/K
  *
  */
 export const KeyAgreementAlgorithmSet: KEY_AGREE[] = [...KeyAgreementAlgs];
-/* END_OF_SYMBOL_DEFINITION KeyAgreementAlgorithmSet */
 
 /* eslint-enable */

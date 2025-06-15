@@ -35,7 +35,7 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyConstructRecipientInfo */
+
 /**
  * @summary KeyConstructRecipientInfo
  * @description
@@ -122,9 +122,8 @@ export class KeyConstructRecipientInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyConstructRecipientInfo */
+
 /**
  * @summary The Leading Root Component Types of KeyConstructRecipientInfo
  * @description
@@ -177,9 +176,8 @@ export const _root_component_type_list_1_spec_for_KeyConstructRecipientInfo: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyConstructRecipientInfo */
+
 /**
  * @summary The Trailing Root Component Types of KeyConstructRecipientInfo
  * @description
@@ -189,9 +187,8 @@ export const _root_component_type_list_1_spec_for_KeyConstructRecipientInfo: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyConstructRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyConstructRecipientInfo */
+
 /**
  * @summary The Extension Addition Component Types of KeyConstructRecipientInfo
  * @description
@@ -201,13 +198,11 @@ export const _root_component_type_list_2_spec_for_KeyConstructRecipientInfo: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyConstructRecipientInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructRecipientInfo */
+
 let _cached_decoder_for_KeyConstructRecipientInfo: $.ASN1Decoder<KeyConstructRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyConstructRecipientInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyConstructRecipientInfo
  * @function
@@ -273,13 +268,11 @@ export function _decode_KeyConstructRecipientInfo(el: _Element) {
     }
     return _cached_decoder_for_KeyConstructRecipientInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructRecipientInfo */
+
 let _cached_encoder_for_KeyConstructRecipientInfo: $.ASN1Encoder<KeyConstructRecipientInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyConstructRecipientInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyConstructRecipientInfo */
+
 /**
  * @summary Encodes a(n) KeyConstructRecipientInfo into an ASN.1 Element.
  * @function
@@ -327,6 +320,5 @@ export function _encode_KeyConstructRecipientInfo(
     return _cached_encoder_for_KeyConstructRecipientInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyConstructRecipientInfo */
 
 /* eslint-enable */

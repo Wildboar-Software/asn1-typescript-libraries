@@ -7,7 +7,7 @@ import {
     _encode_QCStatements,
 } from "../PKIXqualified97/QCStatements.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION qcStatements */
+
 /**
  * @summary qcStatements
  * @description
@@ -35,6 +35,5 @@ export const qcStatements: EXTENSION<QCStatements> = {
     "&id": id_pe_qcStatements /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION qcStatements */
 
 /* eslint-enable */

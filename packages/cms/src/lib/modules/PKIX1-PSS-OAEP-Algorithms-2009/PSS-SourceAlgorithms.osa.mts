@@ -19,7 +19,7 @@ const PSS_SourceAlgorithms_0: ALGORITHM<EncodingParameters> = {
     "&Type": 0 as never,
 };
 
-/* START_OF_SYMBOL_DEFINITION PSS_SourceAlgorithms */
+
 /**
  * @summary PSS_SourceAlgorithms
  * @description
@@ -41,6 +41,5 @@ const PSS_SourceAlgorithms_0: ALGORITHM<EncodingParameters> = {
 export const PSS_SourceAlgorithms: ALGORITHM[] = [
     PSS_SourceAlgorithms_0,
 ];
-/* END_OF_SYMBOL_DEFINITION PSS_SourceAlgorithms */
 
 /* eslint-enable */

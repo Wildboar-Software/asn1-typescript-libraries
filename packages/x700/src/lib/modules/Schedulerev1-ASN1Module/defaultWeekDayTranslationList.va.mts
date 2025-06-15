@@ -32,7 +32,6 @@ import {
 } from '../Schedulerev1-ASN1Module/TypeOfDay.ta.mjs';
 import { WeekDayTranslationList_Item } from '../Schedulerev1-ASN1Module/WeekDayTranslationList-Item.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION defaultWeekDayTranslationList */
 /**
  * @summary defaultWeekDayTranslationList
  * @description
@@ -83,6 +82,5 @@ export const defaultWeekDayTranslationList: WeekDayTranslationList = [
         TypeOfDay_weekend,
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION defaultWeekDayTranslationList */
 
 /* eslint-enable */

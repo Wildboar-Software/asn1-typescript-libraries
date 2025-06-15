@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION sha512_224WithRSAEncryption */
+
 /**
  * @summary sha512_224WithRSAEncryption
  * @description
@@ -18,6 +18,5 @@ export const sha512_224WithRSAEncryption: OBJECT_IDENTIFIER = new _OID(
     [15],
     pkcs_1
 );
-/* END_OF_SYMBOL_DEFINITION sha512_224WithRSAEncryption */
 
 /* eslint-enable */

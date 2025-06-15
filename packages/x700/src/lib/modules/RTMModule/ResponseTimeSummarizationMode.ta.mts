@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ResponseTimeSummarizationMode */
 /**
  * @summary ResponseTimeSummarizationMode
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_ResponseTimeSummarizationMode {
     rawResponseTime = 0,
     responseTimePerBit = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ResponseTimeSummarizationMode */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode */
 /**
  * @summary ResponseTimeSummarizationMode
  * @description
@@ -42,9 +39,7 @@ export enum _enum_for_ResponseTimeSummarizationMode {
  * ```@enum {number}
  */
 export type ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationMode;
-/* END_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode */
 /**
  * @summary ResponseTimeSummarizationMode
  * @description
@@ -57,9 +52,7 @@ export type ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationM
  * ```@enum {number}
  */
 export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationMode;
-/* END_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode_rawResponseTime */
 /**
  * @summary ResponseTimeSummarizationMode_rawResponseTime
  * @constant
@@ -67,9 +60,7 @@ export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarization
  */
 export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummarizationMode =
     ResponseTimeSummarizationMode.rawResponseTime; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode_rawResponseTime */
 
-/* START_OF_SYMBOL_DEFINITION rawResponseTime */
 /**
  * @summary rawResponseTime
  * @constant
@@ -77,9 +68,7 @@ export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummariz
  */
 export const rawResponseTime: ResponseTimeSummarizationMode =
     ResponseTimeSummarizationMode.rawResponseTime; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION rawResponseTime */
 
-/* START_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode_responseTimePerBit */
 /**
  * @summary ResponseTimeSummarizationMode_responseTimePerBit
  * @constant
@@ -87,9 +76,7 @@ export const rawResponseTime: ResponseTimeSummarizationMode =
  */
 export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSummarizationMode =
     ResponseTimeSummarizationMode.responseTimePerBit; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ResponseTimeSummarizationMode_responseTimePerBit */
 
-/* START_OF_SYMBOL_DEFINITION responseTimePerBit */
 /**
  * @summary responseTimePerBit
  * @constant
@@ -97,21 +84,12 @@ export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSumma
  */
 export const responseTimePerBit: ResponseTimeSummarizationMode =
     ResponseTimeSummarizationMode.responseTimePerBit; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION responseTimePerBit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTimeSummarizationMode */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseTimeSummarizationMode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseTimeSummarizationMode */
 export const _decode_ResponseTimeSummarizationMode = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseTimeSummarizationMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTimeSummarizationMode */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseTimeSummarizationMode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseTimeSummarizationMode */
 export const _encode_ResponseTimeSummarizationMode = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseTimeSummarizationMode */
 
 /* eslint-enable */

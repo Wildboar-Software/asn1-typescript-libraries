@@ -40,7 +40,6 @@ import {
     _decode_CommonError,
     _encode_CommonError,
 } from '../Schedulerev1-ASN1Module/CommonError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OperationResult_Item */
 /**
  * @summary OperationResult_Item
  * @description
@@ -58,13 +57,9 @@ export type OperationResult_Item =
     | { setListError: SetListError } /* CHOICE_ALT_ROOT */
     | { actionResult: ActionResult } /* CHOICE_ALT_ROOT */
     | { commonError: CommonError } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION OperationResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationResult_Item */
 let _cached_decoder_for_OperationResult_Item: $.ASN1Decoder<OperationResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationResult_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationResult_Item
  * @function
@@ -110,13 +105,9 @@ export function _decode_OperationResult_Item(el: _Element) {
     }
     return _cached_decoder_for_OperationResult_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationResult_Item */
 let _cached_encoder_for_OperationResult_Item: $.ASN1Encoder<OperationResult_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationResult_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationResult_Item */
 /**
  * @summary Encodes a(n) OperationResult_Item into an ASN.1 Element.
  * @function
@@ -174,6 +165,5 @@ export function _encode_OperationResult_Item(
     return _cached_encoder_for_OperationResult_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationResult_Item */
 
 /* eslint-enable */

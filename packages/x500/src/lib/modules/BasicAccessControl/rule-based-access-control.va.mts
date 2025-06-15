@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_acScheme } from "../UsefulDefinitions/id-acScheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION rule_based_access_control */
 /**
  * @summary rule_based_access_control
  * @description
@@ -18,6 +17,5 @@ export const rule_based_access_control: OBJECT_IDENTIFIER = new _OID(
     [3],
     id_acScheme
 );
-/* END_OF_SYMBOL_DEFINITION rule_based_access_control */
 
 /* eslint-enable */

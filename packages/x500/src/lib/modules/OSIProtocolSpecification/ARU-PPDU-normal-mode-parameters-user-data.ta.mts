@@ -6,7 +6,6 @@ import {
     _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
     _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ARU_PPDU_normal_mode_parameters_user_data */
 /**
  * @summary ARU_PPDU_normal_mode_parameters_user_data
  * @description
@@ -20,13 +19,9 @@ import {
 export type ARU_PPDU_normal_mode_parameters_user_data = {
     fully_encoded_data: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item[];
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ARU_PPDU_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data */
 let _cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data: $.ASN1Decoder<ARU_PPDU_normal_mode_parameters_user_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ARU_PPDU_normal_mode_parameters_user_data */
 /**
  * @summary Decodes an ASN.1 element into a(n) ARU_PPDU_normal_mode_parameters_user_data
  * @function
@@ -55,13 +50,9 @@ export function _decode_ARU_PPDU_normal_mode_parameters_user_data(
     }
     return _cached_decoder_for_ARU_PPDU_normal_mode_parameters_user_data(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ARU_PPDU_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data */
 let _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data: $.ASN1Encoder<ARU_PPDU_normal_mode_parameters_user_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ARU_PPDU_normal_mode_parameters_user_data */
 /**
  * @summary Encodes a(n) ARU_PPDU_normal_mode_parameters_user_data into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_ARU_PPDU_normal_mode_parameters_user_data(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ARU_PPDU_normal_mode_parameters_user_data */
 
 /* eslint-enable */

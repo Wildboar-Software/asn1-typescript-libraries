@@ -15,7 +15,6 @@ import {
     _decode_CirculationMember,
     _encode_CirculationMember,
 } from '../IPMSHeadingExtensions/CirculationMember.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CirculationList */
 /**
  * @summary CirculationList
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type CirculationList = CirculationMember[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CirculationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationList */
 let _cached_decoder_for_CirculationList: $.ASN1Decoder<CirculationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CirculationList */
 /**
  * @summary Decodes an ASN.1 element into a(n) CirculationList
  * @function
@@ -49,13 +44,9 @@ export function _decode_CirculationList(el: _Element) {
     }
     return _cached_decoder_for_CirculationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CirculationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationList */
 let _cached_encoder_for_CirculationList: $.ASN1Encoder<CirculationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CirculationList */
 /**
  * @summary Encodes a(n) CirculationList into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_CirculationList(
     return _cached_encoder_for_CirculationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CirculationList */
 
 /* eslint-enable */

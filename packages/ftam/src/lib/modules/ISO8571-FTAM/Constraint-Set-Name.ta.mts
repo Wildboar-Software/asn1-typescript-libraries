@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Constraint_Set_Name */
+
 /**
  * @summary Constraint_Set_Name
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Constraint_Set_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Constraint_Set_Name */
+
 let _cached_decoder_for_Constraint_Set_Name: $.ASN1Decoder<Constraint_Set_Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Constraint_Set_Name */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Constraint_Set_Name
  * @function
@@ -45,13 +43,11 @@ export function _decode_Constraint_Set_Name(el: _Element) {
   }
   return _cached_decoder_for_Constraint_Set_Name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Constraint_Set_Name */
+
 let _cached_encoder_for_Constraint_Set_Name: $.ASN1Encoder<Constraint_Set_Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Constraint_Set_Name */
+
 /**
  * @summary Encodes a(n) Constraint_Set_Name into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Constraint_Set_Name(
   return _cached_encoder_for_Constraint_Set_Name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Constraint_Set_Name */
 
 /* eslint-enable */

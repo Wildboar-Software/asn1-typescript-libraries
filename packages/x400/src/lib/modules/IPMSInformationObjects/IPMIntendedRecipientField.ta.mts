@@ -15,7 +15,6 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMIntendedRecipientField */
 /**
  * @summary IPMIntendedRecipientField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type IPMIntendedRecipientField = ORDescriptor; // DefinedType
-/* END_OF_SYMBOL_DEFINITION IPMIntendedRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMIntendedRecipientField */
 let _cached_decoder_for_IPMIntendedRecipientField: $.ASN1Decoder<IPMIntendedRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMIntendedRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMIntendedRecipientField */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMIntendedRecipientField
  * @function
@@ -46,13 +41,9 @@ export function _decode_IPMIntendedRecipientField(el: _Element) {
     }
     return _cached_decoder_for_IPMIntendedRecipientField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPMIntendedRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMIntendedRecipientField */
 let _cached_encoder_for_IPMIntendedRecipientField: $.ASN1Encoder<IPMIntendedRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMIntendedRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMIntendedRecipientField */
 /**
  * @summary Encodes a(n) IPMIntendedRecipientField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_IPMIntendedRecipientField(
     return _cached_encoder_for_IPMIntendedRecipientField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMIntendedRecipientField */
 
 /* eslint-enable */

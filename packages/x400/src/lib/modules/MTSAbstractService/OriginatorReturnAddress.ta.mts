@@ -15,7 +15,6 @@ import {
     _decode_ORAddress,
     _encode_ORAddress,
 } from '../MTSAbstractService/ORAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorReturnAddress */
 /**
  * @summary OriginatorReturnAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatorReturnAddress = ORAddress; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorReturnAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorReturnAddress */
 let _cached_decoder_for_OriginatorReturnAddress: $.ASN1Decoder<OriginatorReturnAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorReturnAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorReturnAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorReturnAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatorReturnAddress(el: _Element) {
     }
     return _cached_decoder_for_OriginatorReturnAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorReturnAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorReturnAddress */
 let _cached_encoder_for_OriginatorReturnAddress: $.ASN1Encoder<OriginatorReturnAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorReturnAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorReturnAddress */
 /**
  * @summary Encodes a(n) OriginatorReturnAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginatorReturnAddress(
     return _cached_encoder_for_OriginatorReturnAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorReturnAddress */
 
 /* eslint-enable */

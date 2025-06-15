@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SerialNumber */
+
 /**
  * @summary SerialNumber
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SerialNumber = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION SerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SerialNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SerialNumber */
+
+
 export const _decode_SerialNumber = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_SerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SerialNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SerialNumber */
+
+
 export const _encode_SerialNumber = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SerialNumber */
 
 /* eslint-enable */

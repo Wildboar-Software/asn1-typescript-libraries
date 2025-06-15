@@ -8,7 +8,7 @@ import {
 import { caseIgnoreMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { pkcs_9_at_countryOfResidence } from "../PKCS-9/pkcs-9-at-countryOfResidence.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION countryOfResidence */
+
 /**
  * @summary countryOfResidence
  * @description
@@ -45,6 +45,5 @@ export const countryOfResidence: ATTRIBUTE<PrintableString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION countryOfResidence */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_X121Address,
     _encode_X121Address,
 } from '../MTSAbstractService/X121Address.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NetworkAddress */
 /**
  * @summary NetworkAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NetworkAddress = X121Address; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NetworkAddress */
 let _cached_decoder_for_NetworkAddress: $.ASN1Decoder<NetworkAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NetworkAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_NetworkAddress(el: _Element) {
     }
     return _cached_decoder_for_NetworkAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NetworkAddress */
 let _cached_encoder_for_NetworkAddress: $.ASN1Encoder<NetworkAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NetworkAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NetworkAddress */
 /**
  * @summary Encodes a(n) NetworkAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_NetworkAddress(
     return _cached_encoder_for_NetworkAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NetworkAddress */
 
 /* eslint-enable */

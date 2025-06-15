@@ -8,7 +8,6 @@ import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";
 import { id_oc_country } from "../SelectedObjectClasses/id-oc-country.va.mjs";
-/* START_OF_SYMBOL_DEFINITION country */
 /**
  * @summary country
  * @description
@@ -43,6 +42,5 @@ export const country: OBJECT_CLASS = {
     "&id": id_oc_country /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION country */
 
 /* eslint-enable */

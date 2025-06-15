@@ -12,7 +12,6 @@ import {
 import { edims_access_contract } from '../EDIMSFunctionalObjects/edims-access-contract.oa.mjs';
 import { id_ot_edimg_user } from '../EDIMSObjectIdentifiers/id-ot-edimg-user.va.mjs';
 import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION edimg_user */
 /**
  * @summary edimg_user
  * @description
@@ -37,6 +36,5 @@ export const edimg_user: MHS_OBJECT = {
     '&Initiates': [edims_access_contract] /* OBJECT_FIELD_SETTING */,
     '&id': id_ot_edimg_user /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edimg_user */
 
 /* eslint-enable */

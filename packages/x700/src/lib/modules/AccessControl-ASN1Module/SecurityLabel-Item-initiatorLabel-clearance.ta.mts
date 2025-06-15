@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SecurityLabel_Item_initiatorLabel_clearance */
 /**
  * @summary SecurityLabel_Item_initiatorLabel_clearance
  * @description
@@ -27,13 +26,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type SecurityLabel_Item_initiatorLabel_clearance =
     | { localForm: INTEGER } /* CHOICE_ALT_ROOT */
     | { globalForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SecurityLabel_Item_initiatorLabel_clearance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance */
 let _cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance: $.ASN1Decoder<SecurityLabel_Item_initiatorLabel_clearance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityLabel_Item_initiatorLabel_clearance */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityLabel_Item_initiatorLabel_clearance
  * @function
@@ -61,13 +56,9 @@ export function _decode_SecurityLabel_Item_initiatorLabel_clearance(
     }
     return _cached_decoder_for_SecurityLabel_Item_initiatorLabel_clearance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityLabel_Item_initiatorLabel_clearance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel_Item_initiatorLabel_clearance */
 let _cached_encoder_for_SecurityLabel_Item_initiatorLabel_clearance: $.ASN1Encoder<SecurityLabel_Item_initiatorLabel_clearance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel_Item_initiatorLabel_clearance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityLabel_Item_initiatorLabel_clearance */
 /**
  * @summary Encodes a(n) SecurityLabel_Item_initiatorLabel_clearance into an ASN.1 Element.
  * @function
@@ -104,6 +95,5 @@ export function _encode_SecurityLabel_Item_initiatorLabel_clearance(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityLabel_Item_initiatorLabel_clearance */
 
 /* eslint-enable */

@@ -22,7 +22,6 @@ import {
     _encode_RoleSpecifier,
 } from '../GrmAttributeDefinitionModule/RoleSpecifier.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION roleSpecifier */
 /**
  * @summary roleSpecifier
  * @description
@@ -64,6 +63,5 @@ export const roleSpecifier: ATTRIBUTE<RoleSpecifier> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION roleSpecifier */
 
 /* eslint-enable */

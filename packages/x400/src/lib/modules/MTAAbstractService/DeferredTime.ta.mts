@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeferredTime */
 /**
  * @summary DeferredTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DeferredTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DeferredTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeferredTime */
 let _cached_decoder_for_DeferredTime: $.ASN1Decoder<DeferredTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeferredTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeferredTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeferredTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_DeferredTime(el: _Element) {
     }
     return _cached_decoder_for_DeferredTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeferredTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeferredTime */
 let _cached_encoder_for_DeferredTime: $.ASN1Encoder<DeferredTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeferredTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeferredTime */
 /**
  * @summary Encodes a(n) DeferredTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DeferredTime(
     return _cached_encoder_for_DeferredTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeferredTime */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TrustAnchorList */
 /**
  * @summary TrustAnchorList
  * @description
@@ -24,13 +23,9 @@ import { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice
  */
 export
 type TrustAnchorList = TrustAnchorChoice[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TrustAnchorList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorList */
 let _cached_decoder_for_TrustAnchorList: $.ASN1Decoder<TrustAnchorList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorList */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorList
  * @function
@@ -42,13 +37,9 @@ function _decode_TrustAnchorList (el: _Element) {
     if (!_cached_decoder_for_TrustAnchorList) { _cached_decoder_for_TrustAnchorList = $._decodeSequenceOf<TrustAnchorChoice>(() => _decode_TrustAnchorChoice); }
     return _cached_decoder_for_TrustAnchorList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorList */
 let _cached_encoder_for_TrustAnchorList: $.ASN1Encoder<TrustAnchorList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorList */
 /**
  * @summary Encodes a(n) TrustAnchorList into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_TrustAnchorList (value: TrustAnchorList, elGetter: $.ASN1Encode
     return _cached_encoder_for_TrustAnchorList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorList */
 
 /* eslint-enable */

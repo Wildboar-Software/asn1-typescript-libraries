@@ -16,7 +16,6 @@ import {
     _decode_Condition,
     _encode_Condition,
 } from '../ChangeOverASN1Productions/Condition.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Conditions */
 /**
  * @summary Conditions
  * @description
@@ -66,9 +65,7 @@ export class Conditions {
         return new Conditions(_o.primary, _o.secondary);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Conditions */
 /**
  * @summary The Leading Root Component Types of Conditions
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_Conditions: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Conditions */
 /**
  * @summary The Trailing Root Component Types of Conditions
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_Conditions: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Conditions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Conditions */
 /**
  * @summary The Extension Addition Component Types of Conditions
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_Conditions: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_Conditions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Conditions */
 let _cached_decoder_for_Conditions: $.ASN1Decoder<Conditions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Conditions */
 /**
  * @summary Decodes an ASN.1 element into a(n) Conditions
  * @function
@@ -167,13 +156,9 @@ export function _decode_Conditions(el: _Element) {
     }
     return _cached_decoder_for_Conditions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Conditions */
 let _cached_encoder_for_Conditions: $.ASN1Encoder<Conditions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Conditions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Conditions */
 /**
  * @summary Encodes a(n) Conditions into an ASN.1 Element.
  * @function
@@ -216,6 +201,5 @@ export function _encode_Conditions(
     return _cached_encoder_for_Conditions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Conditions */
 
 /* eslint-enable */

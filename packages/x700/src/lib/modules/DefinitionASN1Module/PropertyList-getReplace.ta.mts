@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_PropertyList_getReplace */
+
 /**
  * @summary PropertyList_getReplace
  * @description
@@ -27,9 +27,8 @@ export enum _enum_for_PropertyList_getReplace {
     rEPLACE = 1,
     gET_REPLACE = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_PropertyList_getReplace */
 
-/* START_OF_SYMBOL_DEFINITION PropertyList_getReplace */
+
 /**
  * @summary PropertyList_getReplace
  * @description
@@ -41,9 +40,8 @@ export enum _enum_for_PropertyList_getReplace {
  * ```@enum {number}
  */
 export type PropertyList_getReplace = _enum_for_PropertyList_getReplace;
-/* END_OF_SYMBOL_DEFINITION PropertyList_getReplace */
 
-/* START_OF_SYMBOL_DEFINITION PropertyList_getReplace */
+
 /**
  * @summary PropertyList_getReplace
  * @description
@@ -55,9 +53,8 @@ export type PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  * ```@enum {number}
  */
 export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
-/* END_OF_SYMBOL_DEFINITION PropertyList_getReplace */
 
-/* START_OF_SYMBOL_DEFINITION PropertyList_getReplace_gET */
+
 /**
  * @summary PropertyList_getReplace_gET
  * @constant
@@ -65,9 +62,8 @@ export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  */
 export const PropertyList_getReplace_gET: PropertyList_getReplace =
     PropertyList_getReplace.gET; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PropertyList_getReplace_gET */
 
-/* START_OF_SYMBOL_DEFINITION gET */
+
 /**
  * @summary gET
  * @constant
@@ -75,9 +71,8 @@ export const PropertyList_getReplace_gET: PropertyList_getReplace =
  */
 export const gET: PropertyList_getReplace =
     PropertyList_getReplace.gET; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION gET */
 
-/* START_OF_SYMBOL_DEFINITION PropertyList_getReplace_rEPLACE */
+
 /**
  * @summary PropertyList_getReplace_rEPLACE
  * @constant
@@ -85,9 +80,8 @@ export const gET: PropertyList_getReplace =
  */
 export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
     PropertyList_getReplace.rEPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PropertyList_getReplace_rEPLACE */
 
-/* START_OF_SYMBOL_DEFINITION rEPLACE */
+
 /**
  * @summary rEPLACE
  * @constant
@@ -95,9 +89,8 @@ export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
  */
 export const rEPLACE: PropertyList_getReplace =
     PropertyList_getReplace.rEPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION rEPLACE */
 
-/* START_OF_SYMBOL_DEFINITION PropertyList_getReplace_gET_REPLACE */
+
 /**
  * @summary PropertyList_getReplace_gET_REPLACE
  * @constant
@@ -105,9 +98,8 @@ export const rEPLACE: PropertyList_getReplace =
  */
 export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
     PropertyList_getReplace.gET_REPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PropertyList_getReplace_gET_REPLACE */
 
-/* START_OF_SYMBOL_DEFINITION gET_REPLACE */
+
 /**
  * @summary gET_REPLACE
  * @constant
@@ -115,21 +107,16 @@ export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
  */
 export const gET_REPLACE: PropertyList_getReplace =
     PropertyList_getReplace.gET_REPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION gET_REPLACE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PropertyList_getReplace */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PropertyList_getReplace */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PropertyList_getReplace */
+
+
 export const _decode_PropertyList_getReplace = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_PropertyList_getReplace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PropertyList_getReplace */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PropertyList_getReplace */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PropertyList_getReplace */
+
+
 export const _encode_PropertyList_getReplace = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PropertyList_getReplace */
 
 /* eslint-enable */

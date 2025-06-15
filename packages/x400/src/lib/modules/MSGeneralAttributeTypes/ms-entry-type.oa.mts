@@ -24,7 +24,6 @@ import { id_att_entry_type } from '../MSObjectIdentifiers/id-att-entry-type.va.m
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_entry_type */
 /**
  * @summary ms_entry_type
  * @description
@@ -61,6 +60,5 @@ export const ms_entry_type: X413ATTRIBUTE<EntryType> = {
     '&id': id_att_entry_type /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_entry_type */
 
 /* eslint-enable */

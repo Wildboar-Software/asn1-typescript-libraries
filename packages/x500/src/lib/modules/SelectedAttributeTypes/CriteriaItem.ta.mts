@@ -6,7 +6,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CriteriaItem */
 /**
  * @summary CriteriaItem
  * @description
@@ -30,13 +29,9 @@ export type CriteriaItem =
     | { lessOrEqual: AttributeType } /* CHOICE_ALT_ROOT */
     | { approximateMatch: AttributeType } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CriteriaItem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CriteriaItem */
 let _cached_decoder_for_CriteriaItem: $.ASN1Decoder<CriteriaItem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CriteriaItem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CriteriaItem */
 /**
  * @summary Decodes an ASN.1 element into a(n) CriteriaItem
  * @function
@@ -82,13 +77,9 @@ export function _decode_CriteriaItem(el: _Element) {
     }
     return _cached_decoder_for_CriteriaItem(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CriteriaItem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CriteriaItem */
 let _cached_encoder_for_CriteriaItem: $.ASN1Encoder<CriteriaItem> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CriteriaItem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CriteriaItem */
 /**
  * @summary Encodes a(n) CriteriaItem into an ASN.1 Element.
  * @function
@@ -140,6 +131,5 @@ export function _encode_CriteriaItem(
     return _cached_encoder_for_CriteriaItem(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CriteriaItem */
 
 /* eslint-enable */

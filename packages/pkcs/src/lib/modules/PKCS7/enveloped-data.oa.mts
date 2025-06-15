@@ -6,7 +6,7 @@ import {
 } from "../PKCS7/EnvelopedData.ta.mjs";
 import { id_enveloped_data } from "../PKCS7/id-enveloped-data.va.mjs";
 import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION enveloped_data */
+
 /**
  * @summary enveloped_data
  * @description
@@ -35,6 +35,5 @@ export const enveloped_data: PKCS7_CONTENT_TYPE<EnvelopedData> = {
     "&id": id_enveloped_data /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION enveloped_data */
 
 /* eslint-enable */

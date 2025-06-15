@@ -6,7 +6,7 @@ import {
     _decode_RecipientInfo,
     _encode_RecipientInfo,
 } from "../CryptographicMessageSyntax-2010/RecipientInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RecipientInfos */
+
 /**
  * @summary RecipientInfos
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type RecipientInfos = RecipientInfo[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RecipientInfos */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientInfos */
+
 let _cached_decoder_for_RecipientInfos: $.ASN1Decoder<RecipientInfos> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientInfos */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientInfos */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientInfos
  * @function
@@ -39,13 +37,11 @@ export function _decode_RecipientInfos(el: _Element) {
     }
     return _cached_decoder_for_RecipientInfos(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientInfos */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientInfos */
+
 let _cached_encoder_for_RecipientInfos: $.ASN1Encoder<RecipientInfos> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientInfos */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientInfos */
+
 /**
  * @summary Encodes a(n) RecipientInfos into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_RecipientInfos(
     return _cached_encoder_for_RecipientInfos(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientInfos */
 
 /* eslint-enable */

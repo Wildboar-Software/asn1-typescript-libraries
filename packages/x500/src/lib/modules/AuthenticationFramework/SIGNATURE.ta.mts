@@ -11,7 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SIGNATURE */
 /**
  * @summary SIGNATURE
  * @description
@@ -71,9 +70,7 @@ export class SIGNATURE {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SIGNATURE */
 /**
  * @summary The Leading Root Component Types of SIGNATURE
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_SIGNATURE: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNATURE */
 /**
  * @summary The Trailing Root Component Types of SIGNATURE
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_SIGNATURE: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SIGNATURE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNATURE */
 /**
  * @summary The Extension Addition Component Types of SIGNATURE
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_SIGNATURE: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_SIGNATURE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SIGNATURE */
 let _cached_decoder_for_SIGNATURE: $.ASN1Decoder<SIGNATURE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SIGNATURE */
 /**
  * @summary Decodes an ASN.1 element into a(n) SIGNATURE
  * @function
@@ -161,13 +150,9 @@ export function _decode_SIGNATURE(el: _Element) {
     }
     return _cached_decoder_for_SIGNATURE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SIGNATURE */
 let _cached_encoder_for_SIGNATURE: $.ASN1Encoder<SIGNATURE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SIGNATURE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SIGNATURE */
 /**
  * @summary Encodes a(n) SIGNATURE into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_SIGNATURE(
     return _cached_encoder_for_SIGNATURE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SIGNATURE */
 
 /* eslint-enable */

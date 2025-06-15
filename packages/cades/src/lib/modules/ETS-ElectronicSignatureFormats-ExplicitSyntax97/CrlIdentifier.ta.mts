@@ -18,7 +18,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION CrlIdentifier */
 /**
  * @summary CrlIdentifier
  * @description
@@ -75,9 +74,7 @@ class CrlIdentifier {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrlIdentifier */
 /**
  * @summary The Leading Root Component Types of CrlIdentifier
  * @description
@@ -92,9 +89,7 @@ const _root_component_type_list_1_spec_for_CrlIdentifier: $.ComponentSpec[] = [
     new $.ComponentSpec("crlIssuedTime", false, $.hasTag(_TagClass.universal, 23), undefined, undefined),
     new $.ComponentSpec("crlNumber", true, $.hasTag(_TagClass.universal, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrlIdentifier */
 /**
  * @summary The Trailing Root Component Types of CrlIdentifier
  * @description
@@ -107,9 +102,7 @@ export
 const _root_component_type_list_2_spec_for_CrlIdentifier: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrlIdentifier */
 /**
  * @summary The Extension Addition Component Types of CrlIdentifier
  * @description
@@ -122,13 +115,9 @@ export
 const _extension_additions_list_spec_for_CrlIdentifier: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrlIdentifier */
 let _cached_decoder_for_CrlIdentifier: $.ASN1Decoder<CrlIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrlIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) CrlIdentifier
  * @function
@@ -164,13 +153,9 @@ function _decode_CrlIdentifier (el: _Element) {
 }; }
     return _cached_decoder_for_CrlIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrlIdentifier */
 let _cached_encoder_for_CrlIdentifier: $.ASN1Encoder<CrlIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrlIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrlIdentifier */
 /**
  * @summary Encodes a(n) CrlIdentifier into an ASN.1 Element.
  * @function
@@ -192,6 +177,5 @@ function _encode_CrlIdentifier (value: CrlIdentifier, elGetter: $.ASN1Encoder<Cr
     return _cached_encoder_for_CrlIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrlIdentifier */
 
 /* eslint-enable */

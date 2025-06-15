@@ -15,7 +15,7 @@ import {
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
 } from '../DefinitionASN1Module/TextualRepresentation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DefinedAs */
+
 /**
  * @summary DefinedAs
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type DefinedAs = TextualRepresentation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DefinedAs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefinedAs */
+
 let _cached_decoder_for_DefinedAs: $.ASN1Decoder<DefinedAs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefinedAs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DefinedAs */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DefinedAs
  * @function
@@ -46,13 +44,11 @@ export function _decode_DefinedAs(el: _Element) {
     }
     return _cached_decoder_for_DefinedAs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DefinedAs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefinedAs */
+
 let _cached_encoder_for_DefinedAs: $.ASN1Encoder<DefinedAs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefinedAs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DefinedAs */
+
 /**
  * @summary Encodes a(n) DefinedAs into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_DefinedAs(
     return _cached_encoder_for_DefinedAs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DefinedAs */
 
 /* eslint-enable */

@@ -19,7 +19,7 @@ import {
   _decode_ROS,
   _encode_ROS,
 } from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ROS_ConsumerAS */
+
 /**
  * @summary ROS_ConsumerAS
  * @description
@@ -34,13 +34,11 @@ import {
  * ```
  */
 export type ROS_ConsumerAS = ROS; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ROS_ConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ROS_ConsumerAS */
+
 let _cached_decoder_for_ROS_ConsumerAS: $.ASN1Decoder<ROS_ConsumerAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ROS_ConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ROS_ConsumerAS */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROS_ConsumerAS
  * @function
@@ -53,13 +51,11 @@ export function _decode_ROS_ConsumerAS(el: _Element) {
   }
   return _cached_decoder_for_ROS_ConsumerAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ROS_ConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ROS_ConsumerAS */
+
 let _cached_encoder_for_ROS_ConsumerAS: $.ASN1Encoder<ROS_ConsumerAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ROS_ConsumerAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ROS_ConsumerAS */
+
 /**
  * @summary Encodes a(n) ROS_ConsumerAS into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_ROS_ConsumerAS(
   return _cached_encoder_for_ROS_ConsumerAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ROS_ConsumerAS */
 
 /* eslint-enable */

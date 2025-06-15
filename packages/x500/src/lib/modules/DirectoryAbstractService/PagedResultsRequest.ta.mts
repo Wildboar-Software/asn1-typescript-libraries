@@ -10,7 +10,6 @@ import {
     _decode_PagedResultsRequest_newRequest,
     _encode_PagedResultsRequest_newRequest,
 } from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PagedResultsRequest */
 /**
  * @summary PagedResultsRequest
  * @description
@@ -36,13 +35,9 @@ export type PagedResultsRequest =
     | { queryReference: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { abandonQuery: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PagedResultsRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PagedResultsRequest */
 let _cached_decoder_for_PagedResultsRequest: $.ASN1Decoder<PagedResultsRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PagedResultsRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PagedResultsRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) PagedResultsRequest
  * @function
@@ -69,13 +64,9 @@ export function _decode_PagedResultsRequest(el: _Element) {
     }
     return _cached_decoder_for_PagedResultsRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PagedResultsRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PagedResultsRequest */
 let _cached_encoder_for_PagedResultsRequest: $.ASN1Encoder<PagedResultsRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PagedResultsRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PagedResultsRequest */
 /**
  * @summary Encodes a(n) PagedResultsRequest into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_PagedResultsRequest(
     return _cached_encoder_for_PagedResultsRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PagedResultsRequest */
 
 /* eslint-enable */

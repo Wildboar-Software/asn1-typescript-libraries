@@ -6,7 +6,6 @@ import {
     _decode_OctetSubstringAssertion_Item,
     _encode_OctetSubstringAssertion_Item,
 } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OctetSubstringAssertion */
 /**
  * @summary OctetSubstringAssertion
  * @description
@@ -22,13 +21,9 @@ import {
  * ```
  */
 export type OctetSubstringAssertion = OctetSubstringAssertion_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION OctetSubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OctetSubstringAssertion */
 let _cached_decoder_for_OctetSubstringAssertion: $.ASN1Decoder<OctetSubstringAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OctetSubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OctetSubstringAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) OctetSubstringAssertion
  * @function
@@ -43,13 +38,9 @@ export function _decode_OctetSubstringAssertion(el: _Element) {
     }
     return _cached_decoder_for_OctetSubstringAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OctetSubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OctetSubstringAssertion */
 let _cached_encoder_for_OctetSubstringAssertion: $.ASN1Encoder<OctetSubstringAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OctetSubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OctetSubstringAssertion */
 /**
  * @summary Encodes a(n) OctetSubstringAssertion into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OctetSubstringAssertion(
     return _cached_encoder_for_OctetSubstringAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OctetSubstringAssertion */
 
 /* eslint-enable */

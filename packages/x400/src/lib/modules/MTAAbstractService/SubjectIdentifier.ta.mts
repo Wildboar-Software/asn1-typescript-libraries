@@ -15,7 +15,6 @@ import {
     _decode_MessageOrProbeIdentifier,
     _encode_MessageOrProbeIdentifier,
 } from '../MTAAbstractService/MessageOrProbeIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubjectIdentifier */
 /**
  * @summary SubjectIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SubjectIdentifier = MessageOrProbeIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SubjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectIdentifier */
 let _cached_decoder_for_SubjectIdentifier: $.ASN1Decoder<SubjectIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_SubjectIdentifier(el: _Element) {
     }
     return _cached_decoder_for_SubjectIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectIdentifier */
 let _cached_encoder_for_SubjectIdentifier: $.ASN1Encoder<SubjectIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectIdentifier */
 /**
  * @summary Encodes a(n) SubjectIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SubjectIdentifier(
     return _cached_encoder_for_SubjectIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectIdentifier */
 
 /* eslint-enable */

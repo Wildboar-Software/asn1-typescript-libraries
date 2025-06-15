@@ -11,7 +11,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { pkcs_9_at_unstructuredAddress } from "../PKCS-9/pkcs-9-at-unstructuredAddress.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION unstructuredAddress */
+
 /**
  * @summary unstructuredAddress
  * @description
@@ -46,6 +46,5 @@ export const unstructuredAddress: ATTRIBUTE<DirectoryString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION unstructuredAddress */
 
 /* eslint-enable */

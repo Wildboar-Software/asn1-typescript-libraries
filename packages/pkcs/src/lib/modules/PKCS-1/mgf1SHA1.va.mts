@@ -8,7 +8,7 @@ import { id_mgf1 } from "../PKCS-1/id-mgf1.va.mjs";
 import { MaskGenAlgorithm } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
 import { sha1 } from "../PKCS-1/sha1.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mgf1SHA1 */
+
 /**
  * @summary mgf1SHA1
  * @description
@@ -29,6 +29,5 @@ export const mgf1SHA1: MaskGenAlgorithm = AlgorithmIdentifier._from_object({
     parameters: _encode_AlgorithmIdentifier(sha1, $.DER),
     _unrecognizedExtensionsList: undefined,
 });
-/* END_OF_SYMBOL_DEFINITION mgf1SHA1 */
 
 /* eslint-enable */

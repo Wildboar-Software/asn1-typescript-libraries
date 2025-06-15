@@ -13,7 +13,7 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CAMClientVersion, _decode_CAMClientVersion, _encode_CAMClientVersion } from "../CASS-CAM-MESSAGE-FORMAT/CAMClientVersion.ta.mjs";
 import { CASSInfo, _decode_CASSInfo, _encode_CASSInfo } from "../CASS-CAM-MESSAGE-FORMAT/CASSInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RcasAncMsgContent */
+
 /**
  * @summary RcasAncMsgContent
  * @description
@@ -76,9 +76,8 @@ class RcasAncMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RcasAncMsgContent */
+
 /**
  * @summary The Leading Root Component Types of RcasAncMsgContent
  * @description
@@ -93,9 +92,8 @@ const _root_component_type_list_1_spec_for_RcasAncMsgContent: $.ComponentSpec[] 
     new $.ComponentSpec("cAMClientVersion", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("cASSInfo", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RcasAncMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of RcasAncMsgContent
  * @description
@@ -108,9 +106,8 @@ export
 const _root_component_type_list_2_spec_for_RcasAncMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RcasAncMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of RcasAncMsgContent
  * @description
@@ -123,13 +120,11 @@ export
 const _extension_additions_list_spec_for_RcasAncMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RcasAncMsgContent */
+
 let _cached_decoder_for_RcasAncMsgContent: $.ASN1Decoder<RcasAncMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RcasAncMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RcasAncMsgContent
  * @function
@@ -161,13 +156,11 @@ function _decode_RcasAncMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_RcasAncMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RcasAncMsgContent */
+
 let _cached_encoder_for_RcasAncMsgContent: $.ASN1Encoder<RcasAncMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RcasAncMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RcasAncMsgContent */
+
 /**
  * @summary Encodes a(n) RcasAncMsgContent into an ASN.1 Element.
  * @function
@@ -189,6 +182,5 @@ function _encode_RcasAncMsgContent (value: RcasAncMsgContent, elGetter: $.ASN1En
     return _cached_encoder_for_RcasAncMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RcasAncMsgContent */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeCertificateAssertion_holder */
 /**
  * @summary AttributeCertificateAssertion_holder
  * @description
@@ -26,13 +25,9 @@ export type AttributeCertificateAssertion_holder =
     | { baseCertificateID: IssuerSerial } /* CHOICE_ALT_ROOT */
     | { holderName: GeneralNames } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AttributeCertificateAssertion_holder */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificateAssertion_holder */
 let _cached_decoder_for_AttributeCertificateAssertion_holder: $.ASN1Decoder<AttributeCertificateAssertion_holder> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeCertificateAssertion_holder */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeCertificateAssertion_holder */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeCertificateAssertion_holder
  * @function
@@ -60,13 +55,9 @@ export function _decode_AttributeCertificateAssertion_holder(el: _Element) {
     }
     return _cached_decoder_for_AttributeCertificateAssertion_holder(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeCertificateAssertion_holder */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificateAssertion_holder */
 let _cached_encoder_for_AttributeCertificateAssertion_holder: $.ASN1Encoder<AttributeCertificateAssertion_holder> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeCertificateAssertion_holder */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeCertificateAssertion_holder */
 /**
  * @summary Encodes a(n) AttributeCertificateAssertion_holder into an ASN.1 Element.
  * @function
@@ -103,6 +94,5 @@ export function _encode_AttributeCertificateAssertion_holder(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeCertificateAssertion_holder */
 
 /* eslint-enable */

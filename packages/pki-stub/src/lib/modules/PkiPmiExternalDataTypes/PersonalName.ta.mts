@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PersonalName */
 /**
  * @summary PersonalName
  * @description
@@ -78,9 +77,7 @@ export class PersonalName {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PersonalName */
 /**
  * @summary The Leading Root Component Types of PersonalName
  * @description
@@ -120,9 +117,7 @@ export const _root_component_type_list_1_spec_for_PersonalName: $.ComponentSpec[
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PersonalName */
 /**
  * @summary The Trailing Root Component Types of PersonalName
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_PersonalName: $.ComponentSpec[
  */
 export const _root_component_type_list_2_spec_for_PersonalName: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PersonalName */
 /**
  * @summary The Extension Addition Component Types of PersonalName
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_PersonalName: $.ComponentSpec[
  */
 export const _extension_additions_list_spec_for_PersonalName: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonalName */
 let _cached_decoder_for_PersonalName: $.ASN1Decoder<PersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PersonalName */
 /**
  * @summary Decodes an ASN.1 element into a(n) PersonalName
  * @function
@@ -212,13 +201,9 @@ export function _decode_PersonalName(el: _Element) {
     }
     return _cached_decoder_for_PersonalName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonalName */
 let _cached_encoder_for_PersonalName: $.ASN1Encoder<PersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PersonalName */
 /**
  * @summary Encodes a(n) PersonalName into an ASN.1 Element.
  * @function
@@ -276,6 +261,5 @@ export function _encode_PersonalName(
     return _cached_encoder_for_PersonalName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PersonalName */
 
 /* eslint-enable */

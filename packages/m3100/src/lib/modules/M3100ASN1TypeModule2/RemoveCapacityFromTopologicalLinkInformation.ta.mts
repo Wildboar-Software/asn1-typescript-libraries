@@ -15,7 +15,7 @@ import {
     _decode_RequestedCapacity,
     _encode_RequestedCapacity,
 } from '../M3100ASN1TypeModule2/RequestedCapacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RemoveCapacityFromTopologicalLinkInformation */
+
 /**
  * @summary RemoveCapacityFromTopologicalLinkInformation
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RemoveCapacityFromTopologicalLinkInformation = RequestedCapacity; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RemoveCapacityFromTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation */
+
 let _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Decoder<RemoveCapacityFromTopologicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopologicalLinkInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopologicalLinkInformation
  * @function
@@ -48,13 +46,11 @@ export function _decode_RemoveCapacityFromTopologicalLinkInformation(
     }
     return _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RemoveCapacityFromTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation */
+
 let _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopologicalLinkInformation */
+
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopologicalLinkInformation into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RemoveCapacityFromTopologicalLinkInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RemoveCapacityFromTopologicalLinkInformation */
 
 /* eslint-enable */

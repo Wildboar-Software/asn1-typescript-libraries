@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSProtocolObjectIdentifiers/ID.ta.mjs';
 import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_as_mta_rtse */
 /**
  * @summary id_as_mta_rtse
  * @description
@@ -29,6 +28,5 @@ import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.mjs';
  * @constant
  */
 export const id_as_mta_rtse: ID = new _OID([12], id_as);
-/* END_OF_SYMBOL_DEFINITION id_as_mta_rtse */
 
 /* eslint-enable */

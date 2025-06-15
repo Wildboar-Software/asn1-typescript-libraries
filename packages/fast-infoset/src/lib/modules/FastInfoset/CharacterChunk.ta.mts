@@ -15,7 +15,6 @@ import {
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CharacterChunk */
 /**
  * @summary CharacterChunk
  * @description
@@ -57,9 +56,7 @@ export class CharacterChunk {
     return new CharacterChunk(_o.character_codes);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CharacterChunk */
 /**
  * @summary The Leading Root Component Types of CharacterChunk
  * @description
@@ -77,9 +74,7 @@ export const _root_component_type_list_1_spec_for_CharacterChunk: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CharacterChunk */
 /**
  * @summary The Trailing Root Component Types of CharacterChunk
  * @description
@@ -89,9 +84,7 @@ export const _root_component_type_list_1_spec_for_CharacterChunk: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CharacterChunk: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CharacterChunk */
 /**
  * @summary The Extension Addition Component Types of CharacterChunk
  * @description
@@ -101,13 +94,9 @@ export const _root_component_type_list_2_spec_for_CharacterChunk: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CharacterChunk: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterChunk */
 let _cached_decoder_for_CharacterChunk: $.ASN1Decoder<CharacterChunk> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CharacterChunk */
 /**
  * @summary Decodes an ASN.1 element into a(n) CharacterChunk
  * @function
@@ -135,13 +124,9 @@ export function _decode_CharacterChunk(el: _Element) {
   }
   return _cached_decoder_for_CharacterChunk(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterChunk */
 let _cached_encoder_for_CharacterChunk: $.ASN1Encoder<CharacterChunk> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterChunk */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CharacterChunk */
 /**
  * @summary Encodes a(n) CharacterChunk into an ASN.1 Element.
  * @function
@@ -172,6 +157,5 @@ export function _encode_CharacterChunk(
   return _cached_encoder_for_CharacterChunk(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CharacterChunk */
 
 /* eslint-enable */

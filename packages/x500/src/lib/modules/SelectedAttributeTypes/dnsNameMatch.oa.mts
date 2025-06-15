@@ -7,7 +7,6 @@ import {
     _encode_DomainName,
 } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 import { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dnsNameMatch */
 /**
  * @summary dnsNameMatch
  * @description
@@ -39,6 +38,5 @@ export const dnsNameMatch: MATCHING_RULE<DomainName> = {
     "&id": id_mr_dnsNameMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dnsNameMatch */
 
 /* eslint-enable */

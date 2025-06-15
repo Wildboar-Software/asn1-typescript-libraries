@@ -20,7 +20,6 @@ export {
     _encode_SIGNATURE as _encode_ProofOfDelivery,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProofOfDelivery */
 /**
  * @summary ProofOfDelivery
  * @description
@@ -43,8 +42,6 @@ export {
  * ```
  */
 export type ProofOfDelivery = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProofOfDelivery */
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProofOfDelivery */
 
 /* eslint-enable */

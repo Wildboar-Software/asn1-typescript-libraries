@@ -15,7 +15,6 @@ import {
     _decode_EDIMIdentifier,
     _encode_EDIMIdentifier,
 } from '../EDIMSInformationObjects/EDIMIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObsoletedEDIMsSubfield */
 /**
  * @summary ObsoletedEDIMsSubfield
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ObsoletedEDIMsSubfield = EDIMIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ObsoletedEDIMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObsoletedEDIMsSubfield */
 let _cached_decoder_for_ObsoletedEDIMsSubfield: $.ASN1Decoder<ObsoletedEDIMsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObsoletedEDIMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObsoletedEDIMsSubfield */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObsoletedEDIMsSubfield
  * @function
@@ -46,13 +41,9 @@ export function _decode_ObsoletedEDIMsSubfield(el: _Element) {
     }
     return _cached_decoder_for_ObsoletedEDIMsSubfield(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObsoletedEDIMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObsoletedEDIMsSubfield */
 let _cached_encoder_for_ObsoletedEDIMsSubfield: $.ASN1Encoder<ObsoletedEDIMsSubfield> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObsoletedEDIMsSubfield */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObsoletedEDIMsSubfield */
 /**
  * @summary Encodes a(n) ObsoletedEDIMsSubfield into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ObsoletedEDIMsSubfield(
     return _cached_encoder_for_ObsoletedEDIMsSubfield(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObsoletedEDIMsSubfield */
 
 /* eslint-enable */

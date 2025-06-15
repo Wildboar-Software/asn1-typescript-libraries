@@ -36,7 +36,6 @@ import {
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
 } from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestRequestUncontrolledInfo */
 /**
  * @summary TestRequestUncontrolledInfo
  * @description
@@ -115,9 +114,7 @@ export class TestRequestUncontrolledInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestRequestUncontrolledInfo */
 /**
  * @summary The Leading Root Component Types of TestRequestUncontrolledInfo
  * @description
@@ -163,9 +160,7 @@ export const _root_component_type_list_1_spec_for_TestRequestUncontrolledInfo: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestRequestUncontrolledInfo */
 /**
  * @summary The Trailing Root Component Types of TestRequestUncontrolledInfo
  * @description
@@ -175,9 +170,7 @@ export const _root_component_type_list_1_spec_for_TestRequestUncontrolledInfo: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestRequestUncontrolledInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestRequestUncontrolledInfo */
 /**
  * @summary The Extension Addition Component Types of TestRequestUncontrolledInfo
  * @description
@@ -187,13 +180,9 @@ export const _root_component_type_list_2_spec_for_TestRequestUncontrolledInfo: $
  * @constant
  */
 export const _extension_additions_list_spec_for_TestRequestUncontrolledInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestRequestUncontrolledInfo */
 let _cached_decoder_for_TestRequestUncontrolledInfo: $.ASN1Decoder<TestRequestUncontrolledInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestRequestUncontrolledInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestRequestUncontrolledInfo
  * @function
@@ -256,13 +245,9 @@ export function _decode_TestRequestUncontrolledInfo(el: _Element) {
     }
     return _cached_decoder_for_TestRequestUncontrolledInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestRequestUncontrolledInfo */
 let _cached_encoder_for_TestRequestUncontrolledInfo: $.ASN1Encoder<TestRequestUncontrolledInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestRequestUncontrolledInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestRequestUncontrolledInfo */
 /**
  * @summary Encodes a(n) TestRequestUncontrolledInfo into an ASN.1 Element.
  * @function
@@ -320,6 +305,5 @@ export function _encode_TestRequestUncontrolledInfo(
     return _cached_encoder_for_TestRequestUncontrolledInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestRequestUncontrolledInfo */
 
 /* eslint-enable */

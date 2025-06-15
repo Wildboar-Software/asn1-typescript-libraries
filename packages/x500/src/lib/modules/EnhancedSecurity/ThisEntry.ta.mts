@@ -6,7 +6,6 @@ import {
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
 } from "../EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ThisEntry */
 /**
  * @summary ThisEntry
  * @description
@@ -24,13 +23,9 @@ export type ThisEntry =
     | { onlyOne: NULL } /* CHOICE_ALT_ROOT */
     | { specific: IssuerAndSerialNumber } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ThisEntry */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ThisEntry */
 let _cached_decoder_for_ThisEntry: $.ASN1Decoder<ThisEntry> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ThisEntry */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ThisEntry */
 /**
  * @summary Decodes an ASN.1 element into a(n) ThisEntry
  * @function
@@ -46,13 +41,9 @@ export function _decode_ThisEntry(el: _Element) {
     }
     return _cached_decoder_for_ThisEntry(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ThisEntry */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ThisEntry */
 let _cached_encoder_for_ThisEntry: $.ASN1Encoder<ThisEntry> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ThisEntry */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ThisEntry */
 /**
  * @summary Encodes a(n) ThisEntry into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_ThisEntry(
     return _cached_encoder_for_ThisEntry(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ThisEntry */
 
 /* eslint-enable */

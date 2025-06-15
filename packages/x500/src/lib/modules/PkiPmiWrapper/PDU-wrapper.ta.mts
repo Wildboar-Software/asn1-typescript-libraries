@@ -11,7 +11,6 @@ import {
     _decode_TBSPDU_wrapper,
     _encode_TBSPDU_wrapper,
 } from "../PkiPmiWrapper/TBSPDU-wrapper.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PDU_wrapper */
 /**
  * @summary PDU_wrapper
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type PDU_wrapper = SIGNED<TBSPDU_wrapper>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDU_wrapper */
 let _cached_decoder_for_PDU_wrapper: $.ASN1Decoder<PDU_wrapper> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDU_wrapper */
 /**
  * @summary Decodes an ASN.1 element into a(n) PDU_wrapper
  * @function
@@ -44,13 +39,9 @@ export function _decode_PDU_wrapper(el: _Element) {
     }
     return _cached_decoder_for_PDU_wrapper(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDU_wrapper */
 let _cached_encoder_for_PDU_wrapper: $.ASN1Encoder<PDU_wrapper> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDU_wrapper */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDU_wrapper */
 /**
  * @summary Encodes a(n) PDU_wrapper into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_PDU_wrapper(
     return _cached_encoder_for_PDU_wrapper(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDU_wrapper */
 
 /* eslint-enable */

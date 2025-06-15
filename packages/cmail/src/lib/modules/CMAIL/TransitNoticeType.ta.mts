@@ -15,7 +15,7 @@ import {
   _decode_DigitalPostmarkType,
   _encode_DigitalPostmarkType,
 } from '../CMAIL/DigitalPostmarkType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TransitNoticeType */
+
 /**
  * @summary TransitNoticeType
  * @description
@@ -58,9 +58,8 @@ export class TransitNoticeType {
     return new TransitNoticeType(_o.digitalPostmark);
   }
 }
-/* END_OF_SYMBOL_DEFINITION TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TransitNoticeType */
+
 /**
  * @summary The Leading Root Component Types of TransitNoticeType
  * @description
@@ -78,9 +77,8 @@ export const _root_component_type_list_1_spec_for_TransitNoticeType: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TransitNoticeType */
+
 /**
  * @summary The Trailing Root Component Types of TransitNoticeType
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_TransitNoticeType: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TransitNoticeType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TransitNoticeType */
+
 /**
  * @summary The Extension Addition Component Types of TransitNoticeType
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_TransitNoticeType: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_TransitNoticeType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitNoticeType */
+
 let _cached_decoder_for_TransitNoticeType: $.ASN1Decoder<TransitNoticeType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TransitNoticeType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TransitNoticeType
  * @function
@@ -136,13 +131,11 @@ export function _decode_TransitNoticeType(el: _Element) {
   }
   return _cached_decoder_for_TransitNoticeType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitNoticeType */
+
 let _cached_encoder_for_TransitNoticeType: $.ASN1Encoder<TransitNoticeType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TransitNoticeType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TransitNoticeType */
+
 /**
  * @summary Encodes a(n) TransitNoticeType into an ASN.1 Element.
  * @function
@@ -173,6 +166,5 @@ export function _encode_TransitNoticeType(
   return _cached_encoder_for_TransitNoticeType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TransitNoticeType */
 
 /* eslint-enable */

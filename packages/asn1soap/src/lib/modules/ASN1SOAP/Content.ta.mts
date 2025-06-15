@@ -21,7 +21,7 @@ import {
   _encode_Document,
 } from '@wildboar/fast-infoset/src/lib/modules/FastInfoset/Document.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Content */
+
 /**
  * @summary Content
  * @description
@@ -42,13 +42,11 @@ import {
 export type Content =
   | { encoded_value: Content_encoded_value } /* CHOICE_ALT_ROOT */
   | { fast_infoset_document: OCTET_STRING } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Content */
+
 let _cached_decoder_for_Content: $.ASN1Decoder<Content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Content */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Content
  * @function
@@ -64,13 +62,11 @@ export function _decode_Content(el: _Element) {
   }
   return _cached_decoder_for_Content(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Content */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Content */
+
 let _cached_encoder_for_Content: $.ASN1Encoder<Content> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Content */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Content */
+
 /**
  * @summary Encodes a(n) Content into an ASN.1 Element.
  * @function
@@ -94,6 +90,5 @@ export function _encode_Content(
   return _cached_encoder_for_Content(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Content */
 
 /* eslint-enable */

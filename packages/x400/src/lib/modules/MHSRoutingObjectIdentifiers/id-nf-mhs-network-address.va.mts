@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_nf } from '../MHSRoutingObjectIdentifiers/id-nf.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_nf_mhs_network_address */
 /**
  * @summary id_nf_mhs_network_address
  * @description
@@ -29,6 +28,5 @@ import { id_nf } from '../MHSRoutingObjectIdentifiers/id-nf.va.mjs';
  * @constant
  */
 export const id_nf_mhs_network_address: ID = new _OID([8], id_nf);
-/* END_OF_SYMBOL_DEFINITION id_nf_mhs_network_address */
 
 /* eslint-enable */

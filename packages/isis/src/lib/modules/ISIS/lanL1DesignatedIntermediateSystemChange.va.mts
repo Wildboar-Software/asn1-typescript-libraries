@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { se } from '../ISIS/se.va.mjs';
-/* START_OF_SYMBOL_DEFINITION lanL1DesignatedIntermediateSystemChange */
 /**
  * @summary lanL1DesignatedIntermediateSystemChange
  * @description
@@ -28,6 +27,5 @@ export const lanL1DesignatedIntermediateSystemChange: OBJECT_IDENTIFIER = new _O
   [/* lanL1DesignatedIntermediateSystemChange */ 5],
   se
 );
-/* END_OF_SYMBOL_DEFINITION lanL1DesignatedIntermediateSystemChange */
 
 /* eslint-enable */

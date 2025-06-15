@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OperationTime */
 /**
  * @summary OperationTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OperationTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OperationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationTime */
 let _cached_decoder_for_OperationTime: $.ASN1Decoder<OperationTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_OperationTime(el: _Element) {
     }
     return _cached_decoder_for_OperationTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationTime */
 let _cached_encoder_for_OperationTime: $.ASN1Encoder<OperationTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationTime */
 /**
  * @summary Encodes a(n) OperationTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OperationTime(
     return _cached_encoder_for_OperationTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationTime */
 
 /* eslint-enable */

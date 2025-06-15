@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION EventTime */
 /**
  * @summary EventTime
  * @description
@@ -27,21 +26,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type EventTime = GeneralizedTime; // GeneralizedTime
-/* END_OF_SYMBOL_DEFINITION EventTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EventTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EventTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EventTime */
 export const _decode_EventTime = $._decodeGeneralizedTime;
-/* END_OF_SYMBOL_DEFINITION _decode_EventTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EventTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EventTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EventTime */
 export const _encode_EventTime = $._encodeGeneralizedTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EventTime */
 
 /* eslint-enable */

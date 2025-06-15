@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AvlSerialNumber */
 /**
  * @summary AvlSerialNumber
  * @description
@@ -14,9 +13,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AvlSerialNumber = OCTET_STRING;
-/* END_OF_SYMBOL_DEFINITION AvlSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AvlSerialNumber */
 /**
  * @summary Decodes an ASN.1 element into a(n) AvlSerialNumber
  * @function
@@ -26,9 +23,7 @@ export type AvlSerialNumber = OCTET_STRING;
 export function _decode_AvlSerialNumber(el: _Element) {
     return $._decodeBigInt(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AvlSerialNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AvlSerialNumber */
 /**
  * @summary Encodes a(n) AvlSerialNumber into an ASN.1 Element.
  * @function
@@ -43,6 +38,5 @@ export function _encode_AvlSerialNumber(
     return $._encodeBigInt(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AvlSerialNumber */
 
 /* eslint-enable */

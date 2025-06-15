@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ReachabilityChangeSyntax_newState */
+
 /**
  * @summary ReachabilityChangeSyntax_newState
  * @description
@@ -26,9 +26,8 @@ export enum _enum_for_ReachabilityChangeSyntax_newState {
     down = 0,
     up = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ReachabilityChangeSyntax_newState */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState */
+
 /**
  * @summary ReachabilityChangeSyntax_newState
  * @description
@@ -40,9 +39,8 @@ export enum _enum_for_ReachabilityChangeSyntax_newState {
  * ```@enum {number}
  */
 export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState */
+
 /**
  * @summary ReachabilityChangeSyntax_newState
  * @description
@@ -54,9 +52,8 @@ export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSynt
  * ```@enum {number}
  */
 export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState_down */
+
 /**
  * @summary ReachabilityChangeSyntax_newState_down
  * @constant
@@ -64,9 +61,8 @@ export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyn
  */
 export const ReachabilityChangeSyntax_newState_down: ReachabilityChangeSyntax_newState =
     ReachabilityChangeSyntax_newState.down; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState_down */
 
-/* START_OF_SYMBOL_DEFINITION down */
+
 /**
  * @summary down
  * @constant
@@ -74,9 +70,8 @@ export const ReachabilityChangeSyntax_newState_down: ReachabilityChangeSyntax_ne
  */
 export const down: ReachabilityChangeSyntax_newState =
     ReachabilityChangeSyntax_newState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION down */
 
-/* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState_up */
+
 /**
  * @summary ReachabilityChangeSyntax_newState_up
  * @constant
@@ -84,9 +79,8 @@ export const down: ReachabilityChangeSyntax_newState =
  */
 export const ReachabilityChangeSyntax_newState_up: ReachabilityChangeSyntax_newState =
     ReachabilityChangeSyntax_newState.up; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax_newState_up */
 
-/* START_OF_SYMBOL_DEFINITION up */
+
 /**
  * @summary up
  * @constant
@@ -94,13 +88,11 @@ export const ReachabilityChangeSyntax_newState_up: ReachabilityChangeSyntax_newS
  */
 export const up: ReachabilityChangeSyntax_newState =
     ReachabilityChangeSyntax_newState.up; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION up */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReachabilityChangeSyntax_newState */
+
 let _cached_decoder_for_ReachabilityChangeSyntax_newState: $.ASN1Decoder<ReachabilityChangeSyntax_newState> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReachabilityChangeSyntax_newState */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReachabilityChangeSyntax_newState */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReachabilityChangeSyntax_newState
  * @function
@@ -114,13 +106,11 @@ export function _decode_ReachabilityChangeSyntax_newState(el: _Element) {
     }
     return _cached_decoder_for_ReachabilityChangeSyntax_newState(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReachabilityChangeSyntax_newState */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReachabilityChangeSyntax_newState */
+
 let _cached_encoder_for_ReachabilityChangeSyntax_newState: $.ASN1Encoder<ReachabilityChangeSyntax_newState> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReachabilityChangeSyntax_newState */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReachabilityChangeSyntax_newState */
+
 /**
  * @summary Encodes a(n) ReachabilityChangeSyntax_newState into an ASN.1 Element.
  * @function
@@ -142,6 +132,5 @@ export function _encode_ReachabilityChangeSyntax_newState(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReachabilityChangeSyntax_newState */
 
 /* eslint-enable */

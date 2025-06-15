@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_ext_protected_change_credentials */
 /**
  * @summary id_ext_protected_change_credentials
  * @description
@@ -25,6 +24,5 @@ import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
  * @constant
  */
 export const id_ext_protected_change_credentials: ID = new _OID([4], id_ext);
-/* END_OF_SYMBOL_DEFINITION id_ext_protected_change_credentials */
 
 /* eslint-enable */

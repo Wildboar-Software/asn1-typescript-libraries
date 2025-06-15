@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_integer_options */
 /**
  * @summary ub_integer_options
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_integer_options: INTEGER = 256;
-/* END_OF_SYMBOL_DEFINITION ub_integer_options */
 
 /* eslint-enable */

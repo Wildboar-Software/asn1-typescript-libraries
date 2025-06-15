@@ -20,7 +20,7 @@ import {
     _decode_PointToMultipoint,
     _encode_PointToMultipoint,
 } from '../ASN1DefinedTypesModule/PointToMultipoint.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Connected */
+
 /**
  * @summary Connected
  * @description
@@ -37,13 +37,11 @@ import {
 export type Connected =
     | { pointToPoint: PointToPoint } /* CHOICE_ALT_ROOT */
     | { pointToMultipoint: PointToMultipoint } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Connected */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Connected */
+
 let _cached_decoder_for_Connected: $.ASN1Decoder<Connected> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Connected */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Connected */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Connected
  * @function
@@ -71,13 +69,11 @@ export function _decode_Connected(el: _Element) {
     }
     return _cached_decoder_for_Connected(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Connected */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Connected */
+
 let _cached_encoder_for_Connected: $.ASN1Encoder<Connected> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Connected */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Connected */
+
 /**
  * @summary Encodes a(n) Connected into an ASN.1 Element.
  * @function
@@ -111,6 +107,5 @@ export function _encode_Connected(
     return _cached_encoder_for_Connected(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Connected */
 
 /* eslint-enable */

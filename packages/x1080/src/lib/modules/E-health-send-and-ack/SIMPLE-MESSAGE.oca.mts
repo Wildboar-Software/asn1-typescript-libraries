@@ -14,7 +14,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { ERROR } from '../E-health-send-and-ack/ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SIMPLE_MESSAGE */
+
 /**
  * @summary SIMPLE_MESSAGE
  * @description
@@ -91,6 +91,5 @@ export interface SIMPLE_MESSAGE<
         | { explicit: UniversalString }
         | _Element;
 }
-/* END_OF_SYMBOL_DEFINITION SIMPLE_MESSAGE */
 
 /* eslint-enable */

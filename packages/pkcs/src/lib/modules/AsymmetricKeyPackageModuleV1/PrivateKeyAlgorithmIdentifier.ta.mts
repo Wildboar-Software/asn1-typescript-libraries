@@ -7,7 +7,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PrivateKeyAlgorithmIdentifier */
+
 /**
  * @summary PrivateKeyAlgorithmIdentifier
  * @description
@@ -21,13 +21,11 @@ import {
  * ```
  */
 export type PrivateKeyAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PrivateKeyAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyAlgorithmIdentifier */
+
 let _cached_decoder_for_PrivateKeyAlgorithmIdentifier: $.ASN1Decoder<PrivateKeyAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateKeyAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateKeyAlgorithmIdentifier
  * @function
@@ -40,13 +38,11 @@ export function _decode_PrivateKeyAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_PrivateKeyAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateKeyAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyAlgorithmIdentifier */
+
 let _cached_encoder_for_PrivateKeyAlgorithmIdentifier: $.ASN1Encoder<PrivateKeyAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateKeyAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) PrivateKeyAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -64,6 +60,5 @@ export function _encode_PrivateKeyAlgorithmIdentifier(
     return _cached_encoder_for_PrivateKeyAlgorithmIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateKeyAlgorithmIdentifier */
 
 /* eslint-enable */

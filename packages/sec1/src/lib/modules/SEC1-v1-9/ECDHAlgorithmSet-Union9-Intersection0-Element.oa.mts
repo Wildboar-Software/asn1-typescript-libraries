@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { dhSinglePass_cofactorDH_sha256kdf_scheme } from "../SEC1-v1-9/dhSinglePass-cofactorDH-sha256kdf-scheme.va.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDHAlgorithmSet_Union9_Intersection0_Element */
 /**
  * @summary ECDHAlgorithmSet_Union9_Intersection0_Element
  * @description
@@ -38,6 +37,5 @@ const ECDHAlgorithmSet_Union9_Intersection0_Element: ALGORITHM = {
     "&id": dhSinglePass_cofactorDH_sha256kdf_scheme /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ECDHAlgorithmSet_Union9_Intersection0_Element */
 
 /* eslint-enable */

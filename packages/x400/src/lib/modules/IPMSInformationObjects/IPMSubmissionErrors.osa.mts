@@ -12,7 +12,6 @@ import {
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 import { invalid_assembly_instructions } from '../IPMSInformationObjects/invalid-assembly-instructions.oa.mjs';
 import { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMSubmissionErrors */
 /**
  * @summary IPMSubmissionErrors
  * @description
@@ -32,6 +31,5 @@ export const IPMSubmissionErrors: MS_EXTENSION[] = [
     invalid_assembly_instructions,
     invalid_ipn,
 ];
-/* END_OF_SYMBOL_DEFINITION IPMSubmissionErrors */
 
 /* eslint-enable */

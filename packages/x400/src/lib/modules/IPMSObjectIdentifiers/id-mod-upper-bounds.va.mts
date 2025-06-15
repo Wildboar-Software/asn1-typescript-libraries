@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_mod_upper_bounds */
 /**
  * @summary id_mod_upper_bounds
  * @description
@@ -25,6 +24,5 @@ import { id_mod } from '../IPMSObjectIdentifiers/id-mod.va.mjs';
  * @constant
  */
 export const id_mod_upper_bounds: ID = new _OID([10], id_mod);
-/* END_OF_SYMBOL_DEFINITION id_mod_upper_bounds */
 
 /* eslint-enable */

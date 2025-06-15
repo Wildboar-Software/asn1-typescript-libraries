@@ -6,7 +6,6 @@ import {
     _encode_CountryName,
 } from "../SelectedAttributeTypes/CountryName.ta.mjs";
 import { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.mjs";
-/* START_OF_SYMBOL_DEFINITION countryString */
 /**
  * @summary countryString
  * @description
@@ -36,6 +35,5 @@ export const countryString: SYNTAX_NAME<CountryName> = {
     "&id": id_lsx_countryString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION countryString */
 
 /* eslint-enable */

@@ -20,7 +20,6 @@ import {
     _decode_ObjectList,
     _encode_ObjectList,
 } from '../SummarizationASN1Productions/ObjectList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument_scopeOrListChoice */
 /**
  * @summary DynamicSimpleScanArgument_scopeOrListChoice
  * @description
@@ -36,13 +35,9 @@ export type DynamicSimpleScanArgument_scopeOrListChoice =
           scopedSelection: DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection;
       } /* CHOICE_ALT_ROOT */
     | { objectList: ObjectList } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument_scopeOrListChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice */
 let _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice: $.ASN1Decoder<DynamicSimpleScanArgument_scopeOrListChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DynamicSimpleScanArgument_scopeOrListChoice */
 /**
  * @summary Decodes an ASN.1 element into a(n) DynamicSimpleScanArgument_scopeOrListChoice
  * @function
@@ -71,13 +66,9 @@ export function _decode_DynamicSimpleScanArgument_scopeOrListChoice(
     }
     return _cached_decoder_for_DynamicSimpleScanArgument_scopeOrListChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DynamicSimpleScanArgument_scopeOrListChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice */
 let _cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice: $.ASN1Encoder<DynamicSimpleScanArgument_scopeOrListChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DynamicSimpleScanArgument_scopeOrListChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DynamicSimpleScanArgument_scopeOrListChoice */
 /**
  * @summary Encodes a(n) DynamicSimpleScanArgument_scopeOrListChoice into an ASN.1 Element.
  * @function
@@ -115,6 +106,5 @@ export function _encode_DynamicSimpleScanArgument_scopeOrListChoice(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DynamicSimpleScanArgument_scopeOrListChoice */
 
 /* eslint-enable */

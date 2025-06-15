@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION IOIndex */
+
 /**
  * @summary IOIndex
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type IOIndex = INTEGER;
-/* END_OF_SYMBOL_DEFINITION IOIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IOIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IOIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IOIndex */
+
+
 export const _decode_IOIndex = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_IOIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IOIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IOIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IOIndex */
+
+
 export const _encode_IOIndex = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_IOIndex */
 
 /* eslint-enable */

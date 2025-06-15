@@ -6,7 +6,7 @@ import {
     _decode_SecurityClassification,
     _encode_SecurityClassification,
 } from "../SIOsAccessControl-MODULE/SecurityClassification.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecurityClassifications */
+
 /**
  * @summary SecurityClassifications
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SecurityClassifications = SecurityClassification[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SecurityClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityClassifications */
+
 let _cached_decoder_for_SecurityClassifications: $.ASN1Decoder<SecurityClassifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityClassifications */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityClassifications
  * @function
@@ -39,13 +37,11 @@ export function _decode_SecurityClassifications(el: _Element) {
     }
     return _cached_decoder_for_SecurityClassifications(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityClassifications */
+
 let _cached_encoder_for_SecurityClassifications: $.ASN1Encoder<SecurityClassifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityClassifications */
+
 /**
  * @summary Encodes a(n) SecurityClassifications into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_SecurityClassifications(
     return _cached_encoder_for_SecurityClassifications(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityClassifications */
 
 /* eslint-enable */

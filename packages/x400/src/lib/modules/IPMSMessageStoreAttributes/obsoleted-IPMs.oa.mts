@@ -23,7 +23,6 @@ import { id_hat_obsoleted_IPMs } from '../IPMSObjectIdentifiers/id-hat-obsoleted
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION obsoleted_IPMs */
 /**
  * @summary obsoleted_IPMs
  * @description
@@ -56,6 +55,5 @@ export const obsoleted_IPMs: X413ATTRIBUTE<ObsoletedIPMsSubfield> = {
     '&id': id_hat_obsoleted_IPMs /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION obsoleted_IPMs */
 
 /* eslint-enable */

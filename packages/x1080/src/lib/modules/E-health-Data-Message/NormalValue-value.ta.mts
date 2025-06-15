@@ -16,7 +16,7 @@ import {
     _decode_NormalValue_value_range,
     _encode_NormalValue_value_range,
 } from '../E-health-Data-Message/NormalValue-value-range.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NormalValue_value */
+
 /**
  * @summary NormalValue_value
  * @description
@@ -31,13 +31,11 @@ export type NormalValue_value =
     | { range: NormalValue_value_range } /* CHOICE_ALT_ROOT */
     | { low_limit: REAL } /* CHOICE_ALT_ROOT */
     | { high_limit: REAL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION NormalValue_value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NormalValue_value */
+
 let _cached_decoder_for_NormalValue_value: $.ASN1Decoder<NormalValue_value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NormalValue_value */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NormalValue_value */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NormalValue_value
  * @function
@@ -56,13 +54,11 @@ export function _decode_NormalValue_value(el: _Element) {
     }
     return _cached_decoder_for_NormalValue_value(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NormalValue_value */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NormalValue_value */
+
 let _cached_encoder_for_NormalValue_value: $.ASN1Encoder<NormalValue_value> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NormalValue_value */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NormalValue_value */
+
 /**
  * @summary Encodes a(n) NormalValue_value into an ASN.1 Element.
  * @function
@@ -87,6 +83,5 @@ export function _encode_NormalValue_value(
     return _cached_encoder_for_NormalValue_value(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NormalValue_value */
 
 /* eslint-enable */

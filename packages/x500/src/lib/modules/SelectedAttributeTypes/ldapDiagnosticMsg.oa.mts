@@ -6,7 +6,6 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_ldapDiagnosticMsg } from "../SelectedAttributeTypes/id-not-ldapDiagnosticMsg.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ldapDiagnosticMsg */
 /**
  * @summary ldapDiagnosticMsg
  * @description
@@ -41,6 +40,5 @@ export const ldapDiagnosticMsg: ATTRIBUTE<UTF8String> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ldapDiagnosticMsg */
 
 /* eslint-enable */

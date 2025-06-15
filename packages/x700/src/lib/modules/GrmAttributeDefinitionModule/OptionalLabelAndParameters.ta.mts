@@ -21,7 +21,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OptionalLabelAndParameters */
 /**
  * @summary OptionalLabelAndParameters
  * @description
@@ -73,9 +72,7 @@ export class OptionalLabelAndParameters {
         return new OptionalLabelAndParameters(_o.label, _o.parameters);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalLabelAndParameters */
 /**
  * @summary The Leading Root Component Types of OptionalLabelAndParameters
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_OptionalLabelAndParameters: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalLabelAndParameters */
 /**
  * @summary The Trailing Root Component Types of OptionalLabelAndParameters
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_OptionalLabelAndParameters: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OptionalLabelAndParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalLabelAndParameters */
 /**
  * @summary The Extension Addition Component Types of OptionalLabelAndParameters
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_OptionalLabelAndParameters: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_OptionalLabelAndParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalLabelAndParameters */
 let _cached_decoder_for_OptionalLabelAndParameters: $.ASN1Decoder<OptionalLabelAndParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalLabelAndParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalLabelAndParameters
  * @function
@@ -172,13 +161,9 @@ export function _decode_OptionalLabelAndParameters(el: _Element) {
     }
     return _cached_decoder_for_OptionalLabelAndParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalLabelAndParameters */
 let _cached_encoder_for_OptionalLabelAndParameters: $.ASN1Encoder<OptionalLabelAndParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalLabelAndParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalLabelAndParameters */
 /**
  * @summary Encodes a(n) OptionalLabelAndParameters into an ASN.1 Element.
  * @function
@@ -211,6 +196,5 @@ export function _encode_OptionalLabelAndParameters(
     return _cached_encoder_for_OptionalLabelAndParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalLabelAndParameters */
 
 /* eslint-enable */

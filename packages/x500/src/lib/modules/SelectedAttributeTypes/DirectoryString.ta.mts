@@ -9,7 +9,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DirectoryString */
 /**
  * @summary DirectoryString
  * @description
@@ -31,13 +30,9 @@ export type DirectoryString =
     | { bmpString: BMPString } /* CHOICE_ALT_ROOT */
     | { universalString: UniversalString } /* CHOICE_ALT_ROOT */
     | { uTF8String: UTF8String } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryString */
 let _cached_decoder_for_DirectoryString: $.ASN1Decoder<DirectoryString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DirectoryString */
 /**
  * @summary Decodes an ASN.1 element into a(n) DirectoryString
  * @function
@@ -58,13 +53,9 @@ export function _decode_DirectoryString(el: _Element) {
     }
     return _cached_decoder_for_DirectoryString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryString */
 let _cached_encoder_for_DirectoryString: $.ASN1Encoder<DirectoryString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DirectoryString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DirectoryString */
 /**
  * @summary Encodes a(n) DirectoryString into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_DirectoryString(
     return _cached_encoder_for_DirectoryString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DirectoryString */
 
 /* eslint-enable */

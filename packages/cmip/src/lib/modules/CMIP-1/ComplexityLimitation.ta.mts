@@ -23,7 +23,7 @@ import {
   _decode_CMISSync,
   _encode_CMISSync,
 } from '../CMIP-1/CMISSync.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ComplexityLimitation */
+
 /**
  * @summary ComplexityLimitation
  * @description
@@ -100,9 +100,8 @@ export class ComplexityLimitation {
 
   public static _enum_for_sync = _enum_for_CMISSync;
 }
-/* END_OF_SYMBOL_DEFINITION ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComplexityLimitation */
+
 /**
  * @summary The Leading Root Component Types of ComplexityLimitation
  * @description
@@ -134,9 +133,8 @@ export const _root_component_type_list_1_spec_for_ComplexityLimitation: $.Compon
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComplexityLimitation */
+
 /**
  * @summary The Trailing Root Component Types of ComplexityLimitation
  * @description
@@ -146,9 +144,8 @@ export const _root_component_type_list_1_spec_for_ComplexityLimitation: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ComplexityLimitation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComplexityLimitation */
+
 /**
  * @summary The Extension Addition Component Types of ComplexityLimitation
  * @description
@@ -158,13 +155,11 @@ export const _root_component_type_list_2_spec_for_ComplexityLimitation: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ComplexityLimitation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ComplexityLimitation */
+
 let _cached_decoder_for_ComplexityLimitation: $.ASN1Decoder<ComplexityLimitation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ComplexityLimitation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ComplexityLimitation
  * @function
@@ -217,13 +212,11 @@ export function _decode_ComplexityLimitation(el: _Element) {
   }
   return _cached_decoder_for_ComplexityLimitation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ComplexityLimitation */
+
 let _cached_encoder_for_ComplexityLimitation: $.ASN1Encoder<ComplexityLimitation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ComplexityLimitation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ComplexityLimitation */
+
 /**
  * @summary Encodes a(n) ComplexityLimitation into an ASN.1 Element.
  * @function
@@ -279,6 +272,5 @@ export function _encode_ComplexityLimitation(
   return _cached_encoder_for_ComplexityLimitation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ComplexityLimitation */
 
 /* eslint-enable */

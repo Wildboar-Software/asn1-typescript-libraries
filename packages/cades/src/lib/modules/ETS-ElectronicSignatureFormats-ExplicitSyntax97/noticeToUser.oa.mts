@@ -12,7 +12,6 @@ import {
 import { id_spq_ets_unotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-unotice.va.mjs";
 import { SPUserNotice, _decode_SPUserNotice, _encode_SPUserNotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPUserNotice.ta.mjs";
 import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION noticeToUser */
 /**
  * @summary noticeToUser
  * @description
@@ -41,6 +40,5 @@ const noticeToUser: SIG_POLICY_QUALIFIER<SPUserNotice> = {
     "&id": id_spq_ets_unotice /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Qualifier": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION noticeToUser */
 
 /* eslint-enable */

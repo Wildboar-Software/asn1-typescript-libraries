@@ -17,7 +17,7 @@ import {
     _encode_Certificate,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Signature */
+
 /**
  * @summary Signature
  * @description
@@ -74,9 +74,8 @@ export class Signature {
         return new Signature(_o.signatureAlgorithm, _o.signature, _o.certs);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Signature */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Signature */
+
 /**
  * @summary The Leading Root Component Types of Signature
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_Signature: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Signature */
+
 /**
  * @summary The Trailing Root Component Types of Signature
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_Signature: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Signature: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Signature */
+
 /**
  * @summary The Extension Addition Component Types of Signature
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_Signature: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Signature: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Signature */
+
 let _cached_decoder_for_Signature: $.ASN1Decoder<Signature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Signature */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Signature
  * @function
@@ -187,13 +182,11 @@ export function _decode_Signature(el: _Element) {
     }
     return _cached_decoder_for_Signature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Signature */
+
 let _cached_encoder_for_Signature: $.ASN1Encoder<Signature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Signature */
+
 /**
  * @summary Encodes a(n) Signature into an ASN.1 Element.
  * @function
@@ -240,6 +233,5 @@ export function _encode_Signature(
     return _cached_encoder_for_Signature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Signature */
 
 /* eslint-enable */

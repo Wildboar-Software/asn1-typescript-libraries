@@ -23,7 +23,6 @@ import {
     _encode_receive_ipm_ArgumentType,
 } from '../IPMSAbstractService/receive-ipm-ArgumentType.ta.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION receive_ipm */
 /**
  * @summary receive_ipm
  * @description
@@ -60,6 +59,5 @@ export const receive_ipm: ABSTRACT_OPERATION<receive_ipm_ArgumentType> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION receive_ipm */
 
 /* eslint-enable */

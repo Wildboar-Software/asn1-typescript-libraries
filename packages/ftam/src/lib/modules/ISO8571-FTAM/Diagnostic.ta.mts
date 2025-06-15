@@ -15,7 +15,7 @@ import {
   _decode_Diagnostic_Item,
   _encode_Diagnostic_Item,
 } from '../ISO8571-FTAM/Diagnostic-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Diagnostic */
+
 /**
  * @summary Diagnostic
  * @description
@@ -39,13 +39,11 @@ import {
  * ```
  */
 export type Diagnostic = Diagnostic_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Diagnostic */
+
 let _cached_decoder_for_Diagnostic: $.ASN1Decoder<Diagnostic> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Diagnostic */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Diagnostic
  * @function
@@ -60,13 +58,11 @@ export function _decode_Diagnostic(el: _Element) {
   }
   return _cached_decoder_for_Diagnostic(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Diagnostic */
+
 let _cached_encoder_for_Diagnostic: $.ASN1Encoder<Diagnostic> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Diagnostic */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Diagnostic */
+
 /**
  * @summary Encodes a(n) Diagnostic into an ASN.1 Element.
  * @function
@@ -93,6 +89,5 @@ export function _encode_Diagnostic(
   return _cached_encoder_for_Diagnostic(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Diagnostic */
 
 /* eslint-enable */

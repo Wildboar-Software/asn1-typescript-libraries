@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION characteristic_two_field */
 /**
  * @summary characteristic_two_field
  * @description
@@ -28,6 +27,5 @@ export
 const characteristic_two_field: OBJECT_IDENTIFIER = new _OID([
     2,
 ], id_fieldType);
-/* END_OF_SYMBOL_DEFINITION characteristic_two_field */
 
 /* eslint-enable */

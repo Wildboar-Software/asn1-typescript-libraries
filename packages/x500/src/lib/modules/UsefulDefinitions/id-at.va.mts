@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { attributeType } from "../UsefulDefinitions/attributeType.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_at */
 /**
  * @summary id_at
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_at: ID = attributeType;
-/* END_OF_SYMBOL_DEFINITION id_at */
 
 /* eslint-enable */

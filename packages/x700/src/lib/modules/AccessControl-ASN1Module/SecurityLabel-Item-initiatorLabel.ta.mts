@@ -17,7 +17,6 @@ import {
     _decode_SecurityLabel_Item_initiatorLabel_clearance,
     _encode_SecurityLabel_Item_initiatorLabel_clearance,
 } from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityLabel_Item_initiatorLabel */
 /**
  * @summary SecurityLabel_Item_initiatorLabel
  * @description
@@ -66,9 +65,7 @@ export class SecurityLabel_Item_initiatorLabel {
         return new SecurityLabel_Item_initiatorLabel(_o.clearance, _o.category);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityLabel_Item_initiatorLabel */
 /**
  * @summary The Leading Root Component Types of SecurityLabel_Item_initiatorLabel
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_SecurityLabel_Item_initiatorLa
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityLabel_Item_initiatorLabel */
 /**
  * @summary The Trailing Root Component Types of SecurityLabel_Item_initiatorLabel
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_SecurityLabel_Item_initiatorLa
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityLabel_Item_initiatorLabel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityLabel_Item_initiatorLabel */
 /**
  * @summary The Extension Addition Component Types of SecurityLabel_Item_initiatorLabel
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_SecurityLabel_Item_initiatorLa
  * @constant
  */
 export const _extension_additions_list_spec_for_SecurityLabel_Item_initiatorLabel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel_Item_initiatorLabel */
 let _cached_decoder_for_SecurityLabel_Item_initiatorLabel: $.ASN1Decoder<SecurityLabel_Item_initiatorLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityLabel_Item_initiatorLabel */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityLabel_Item_initiatorLabel
  * @function
@@ -163,13 +152,9 @@ export function _decode_SecurityLabel_Item_initiatorLabel(el: _Element) {
     }
     return _cached_decoder_for_SecurityLabel_Item_initiatorLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel_Item_initiatorLabel */
 let _cached_encoder_for_SecurityLabel_Item_initiatorLabel: $.ASN1Encoder<SecurityLabel_Item_initiatorLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel_Item_initiatorLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityLabel_Item_initiatorLabel */
 /**
  * @summary Encodes a(n) SecurityLabel_Item_initiatorLabel into an ASN.1 Element.
  * @function
@@ -211,6 +196,5 @@ export function _encode_SecurityLabel_Item_initiatorLabel(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityLabel_Item_initiatorLabel */
 
 /* eslint-enable */

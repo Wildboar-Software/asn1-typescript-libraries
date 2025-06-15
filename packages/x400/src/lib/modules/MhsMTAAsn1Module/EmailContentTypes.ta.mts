@@ -15,7 +15,6 @@ import {
     _decode_EMailContentType,
     _encode_EMailContentType,
 } from '../MhsMTAAsn1Module/EMailContentType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EmailContentTypes */
 /**
  * @summary EmailContentTypes
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EmailContentTypes = EMailContentType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION EmailContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EmailContentTypes */
 let _cached_decoder_for_EmailContentTypes: $.ASN1Decoder<EmailContentTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EmailContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EmailContentTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) EmailContentTypes
  * @function
@@ -48,13 +43,9 @@ export function _decode_EmailContentTypes(el: _Element) {
     }
     return _cached_decoder_for_EmailContentTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EmailContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EmailContentTypes */
 let _cached_encoder_for_EmailContentTypes: $.ASN1Encoder<EmailContentTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EmailContentTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EmailContentTypes */
 /**
  * @summary Encodes a(n) EmailContentTypes into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_EmailContentTypes(
     return _cached_encoder_for_EmailContentTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EmailContentTypes */
 
 /* eslint-enable */

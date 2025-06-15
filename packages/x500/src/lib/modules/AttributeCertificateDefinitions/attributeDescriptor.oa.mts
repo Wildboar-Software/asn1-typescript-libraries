@@ -7,7 +7,6 @@ import {
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_attributeDescriptor } from "./id-ce-attributeDescriptor.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION attributeDescriptor */
 /**
  * @summary attributeDescriptor
  * @description
@@ -35,6 +34,5 @@ export const attributeDescriptor: EXTENSION<AttributeDescriptorSyntax> = {
     "&id": id_ce_attributeDescriptor,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeDescriptor */
 
 /* eslint-enable */

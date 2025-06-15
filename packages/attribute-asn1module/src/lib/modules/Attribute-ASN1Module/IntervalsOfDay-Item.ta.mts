@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/Time24.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IntervalsOfDay_Item */
 /**
  * @summary IntervalsOfDay_Item
  * @description
@@ -59,9 +58,7 @@ class IntervalsOfDay_Item {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IntervalsOfDay_Item */
 /**
  * @summary The Leading Root Component Types of IntervalsOfDay_Item
  * @description
@@ -75,9 +72,7 @@ const _root_component_type_list_1_spec_for_IntervalsOfDay_Item: $.ComponentSpec[
     new $.ComponentSpec("intervalStart", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("intervalEnd", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IntervalsOfDay_Item */
 /**
  * @summary The Trailing Root Component Types of IntervalsOfDay_Item
  * @description
@@ -90,9 +85,7 @@ export
 const _root_component_type_list_2_spec_for_IntervalsOfDay_Item: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IntervalsOfDay_Item */
 /**
  * @summary The Extension Addition Component Types of IntervalsOfDay_Item
  * @description
@@ -105,13 +98,9 @@ export
 const _extension_additions_list_spec_for_IntervalsOfDay_Item: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntervalsOfDay_Item */
 let _cached_decoder_for_IntervalsOfDay_Item: $.ASN1Decoder<IntervalsOfDay_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntervalsOfDay_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) IntervalsOfDay_Item
  * @function
@@ -139,13 +128,9 @@ function _decode_IntervalsOfDay_Item (el: _Element) {
 }; }
     return _cached_decoder_for_IntervalsOfDay_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntervalsOfDay_Item */
 let _cached_encoder_for_IntervalsOfDay_Item: $.ASN1Encoder<IntervalsOfDay_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntervalsOfDay_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntervalsOfDay_Item */
 /**
  * @summary Encodes a(n) IntervalsOfDay_Item into an ASN.1 Element.
  * @function
@@ -166,6 +151,5 @@ function _encode_IntervalsOfDay_Item (value: IntervalsOfDay_Item, elGetter: $.AS
     return _cached_encoder_for_IntervalsOfDay_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntervalsOfDay_Item */
 
 /* eslint-enable */

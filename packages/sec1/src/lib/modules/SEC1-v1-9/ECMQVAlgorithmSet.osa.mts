@@ -25,7 +25,6 @@ import { ECMQVAlgorithmSet_Union11_Intersection0_Element } from "../SEC1-v1-9/EC
 import { ECMQVAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECMQVAlgorithmSet-Union12-Intersection0-Element.oa.mjs";
 import { ECMQVAlgorithmSet_Union13_Intersection0_Element } from "../SEC1-v1-9/ECMQVAlgorithmSet-Union13-Intersection0-Element.oa.mjs";
 import { ECMQVAlgorithmSet_Union14_Intersection0_Element } from "../SEC1-v1-9/ECMQVAlgorithmSet-Union14-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet */
 /**
  * @summary ECMQVAlgorithmSet
  * @description
@@ -59,6 +58,5 @@ import { ECMQVAlgorithmSet_Union14_Intersection0_Element } from "../SEC1-v1-9/EC
  */
 export
 const ECMQVAlgorithmSet: (ALGORITHM)[] = [ ECMQVAlgorithmSet_Union0_Intersection0_Element, ECMQVAlgorithmSet_Union1_Intersection0_Element, ECMQVAlgorithmSet_Union2_Intersection0_Element, ECMQVAlgorithmSet_Union3_Intersection0_Element, ECMQVAlgorithmSet_Union4_Intersection0_Element, ECMQVAlgorithmSet_Union5_Intersection0_Element, ECMQVAlgorithmSet_Union6_Intersection0_Element, ECMQVAlgorithmSet_Union7_Intersection0_Element, ECMQVAlgorithmSet_Union8_Intersection0_Element, ECMQVAlgorithmSet_Union9_Intersection0_Element, ECMQVAlgorithmSet_Union10_Intersection0_Element, ECMQVAlgorithmSet_Union11_Intersection0_Element, ECMQVAlgorithmSet_Union12_Intersection0_Element, ECMQVAlgorithmSet_Union13_Intersection0_Element, ECMQVAlgorithmSet_Union14_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet */
 
 /* eslint-enable */

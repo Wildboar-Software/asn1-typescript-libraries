@@ -15,7 +15,6 @@ import {
     _decode_RetrievalError,
     _encode_RetrievalError,
 } from '../MhsAcctAsn1Module/RetrievalError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FetchErrors */
 /**
  * @summary FetchErrors
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type FetchErrors = RetrievalError; // DefinedType
-/* END_OF_SYMBOL_DEFINITION FetchErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchErrors */
 let _cached_decoder_for_FetchErrors: $.ASN1Decoder<FetchErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FetchErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FetchErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) FetchErrors
  * @function
@@ -47,13 +42,9 @@ export function _decode_FetchErrors(el: _Element) {
     }
     return _cached_decoder_for_FetchErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FetchErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchErrors */
 let _cached_encoder_for_FetchErrors: $.ASN1Encoder<FetchErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FetchErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FetchErrors */
 /**
  * @summary Encodes a(n) FetchErrors into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_FetchErrors(
     return _cached_encoder_for_FetchErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FetchErrors */
 
 /* eslint-enable */

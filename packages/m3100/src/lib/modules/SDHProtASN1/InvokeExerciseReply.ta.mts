@@ -15,7 +15,7 @@ import {
     _decode_InvokeExerciseReply_Item,
     _encode_InvokeExerciseReply_Item,
 } from '../SDHProtASN1/InvokeExerciseReply-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InvokeExerciseReply */
+
 /**
  * @summary InvokeExerciseReply
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type InvokeExerciseReply = InvokeExerciseReply_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION InvokeExerciseReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeExerciseReply */
+
 let _cached_decoder_for_InvokeExerciseReply: $.ASN1Decoder<InvokeExerciseReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InvokeExerciseReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InvokeExerciseReply */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeExerciseReply
  * @function
@@ -51,13 +49,11 @@ export function _decode_InvokeExerciseReply(el: _Element) {
     }
     return _cached_decoder_for_InvokeExerciseReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InvokeExerciseReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeExerciseReply */
+
 let _cached_encoder_for_InvokeExerciseReply: $.ASN1Encoder<InvokeExerciseReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InvokeExerciseReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InvokeExerciseReply */
+
 /**
  * @summary Encodes a(n) InvokeExerciseReply into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_InvokeExerciseReply(
     return _cached_encoder_for_InvokeExerciseReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InvokeExerciseReply */
 
 /* eslint-enable */

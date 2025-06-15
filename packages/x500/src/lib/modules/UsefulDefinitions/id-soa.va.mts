@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { schemaOperationalAttribute } from "../UsefulDefinitions/schemaOperationalAttribute.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_soa */
 /**
  * @summary id_soa
  * @description
@@ -15,6 +14,5 @@ import { schemaOperationalAttribute } from "../UsefulDefinitions/schemaOperation
  * @constant
  */
 export const id_soa: ID = schemaOperationalAttribute;
-/* END_OF_SYMBOL_DEFINITION id_soa */
 
 /* eslint-enable */

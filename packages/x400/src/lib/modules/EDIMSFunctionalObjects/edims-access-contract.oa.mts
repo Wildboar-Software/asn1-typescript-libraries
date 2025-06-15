@@ -12,7 +12,6 @@ import {
 import { origination } from '../EDIMSAbstractService/origination.oa.mjs';
 import { reception } from '../EDIMSAbstractService/reception.oa.mjs';
 import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION edims_access_contract */
 /**
  * @summary edims_access_contract
  * @description
@@ -35,6 +34,5 @@ export const edims_access_contract: CONTRACT = {
     encoderFor: {},
     '&InitiatorConsumerOf': [origination, reception] /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edims_access_contract */
 
 /* eslint-enable */

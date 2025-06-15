@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { cmoi } from '../CommonMgt/cmoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION poi */
 /**
  * @summary poi
  * @description
@@ -25,6 +24,5 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @constant
  */
 export const poi: OBJECT_IDENTIFIER = new _OID([/* package */ 4], cmoi);
-/* END_OF_SYMBOL_DEFINITION poi */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_PKIMessage,
   _encode_PKIMessage,
 } from '../PKIXCMP-2009/PKIMessage.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PKIMessages */
+
 /**
  * @summary PKIMessages
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type PKIMessages = PKIMessage[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PKIMessages */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIMessages */
+
 let _cached_decoder_for_PKIMessages: $.ASN1Decoder<PKIMessages> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIMessages */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIMessages */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIMessages
  * @function
@@ -48,13 +46,11 @@ export function _decode_PKIMessages(el: _Element) {
   }
   return _cached_decoder_for_PKIMessages(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIMessages */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIMessages */
+
 let _cached_encoder_for_PKIMessages: $.ASN1Encoder<PKIMessages> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIMessages */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIMessages */
+
 /**
  * @summary Encodes a(n) PKIMessages into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_PKIMessages(
   return _cached_encoder_for_PKIMessages(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIMessages */
 
 /* eslint-enable */

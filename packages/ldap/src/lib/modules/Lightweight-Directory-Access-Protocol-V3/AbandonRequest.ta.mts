@@ -15,7 +15,7 @@ import {
   _decode_MessageID,
   _encode_MessageID,
 } from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AbandonRequest */
+
 /**
  * @summary AbandonRequest
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AbandonRequest = MessageID; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AbandonRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonRequest */
+
 let _cached_decoder_for_AbandonRequest: $.ASN1Decoder<AbandonRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AbandonRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AbandonRequest
  * @function
@@ -48,13 +46,11 @@ export function _decode_AbandonRequest(el: _Element) {
   }
   return _cached_decoder_for_AbandonRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AbandonRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonRequest */
+
 let _cached_encoder_for_AbandonRequest: $.ASN1Encoder<AbandonRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AbandonRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AbandonRequest */
+
 /**
  * @summary Encodes a(n) AbandonRequest into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_AbandonRequest(
   return _cached_encoder_for_AbandonRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AbandonRequest */
 
 /* eslint-enable */

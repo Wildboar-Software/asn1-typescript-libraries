@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GenericName */
 /**
  * @summary GenericName
  * @description
@@ -62,9 +61,7 @@ export class GenericName {
         return new GenericName(_o.displayFormat, _o.typedFormat);
     }
 }
-/* END_OF_SYMBOL_DEFINITION GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GenericName */
 /**
  * @summary The Leading Root Component Types of GenericName
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_GenericName: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GenericName */
 /**
  * @summary The Trailing Root Component Types of GenericName
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_GenericName: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GenericName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GenericName */
 /**
  * @summary The Extension Addition Component Types of GenericName
  * @description
@@ -113,13 +106,9 @@ export const _root_component_type_list_2_spec_for_GenericName: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_GenericName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GenericName */
 let _cached_decoder_for_GenericName: $.ASN1Decoder<GenericName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GenericName */
 /**
  * @summary Decodes an ASN.1 element into a(n) GenericName
  * @function
@@ -148,13 +137,9 @@ export function _decode_GenericName(el: _Element) {
     }
     return _cached_decoder_for_GenericName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GenericName */
 let _cached_encoder_for_GenericName: $.ASN1Encoder<GenericName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GenericName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GenericName */
 /**
  * @summary Encodes a(n) GenericName into an ASN.1 Element.
  * @function
@@ -189,6 +174,5 @@ export function _encode_GenericName(
     return _cached_encoder_for_GenericName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GenericName */
 
 /* eslint-enable */

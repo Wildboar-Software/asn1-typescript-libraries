@@ -10,7 +10,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION directoryBindError */
 /**
  * @summary directoryBindError
  * @description
@@ -42,6 +41,5 @@ export const directoryBindError: ERROR<
     },
     "&ParameterType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION directoryBindError */
 
 /* eslint-enable */

@@ -19,7 +19,6 @@ import { recipient_reassignment_prohibited } from "./recipient-reassignment-proh
 import { dl_expansion_prohibited } from "./dl-expansion-prohibited.oa.mjs";
 import { conversion_with_loss_prohibited } from "./conversion-with-loss-prohibited.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PerProbeSubmissionExtensions */
 /**
  * @summary PerProbeSubmissionExtensions
  * @description
@@ -49,6 +48,5 @@ export const PerProbeSubmissionExtensions: EXTENSION[] = [
     probe_origin_authentication_check,
     ...PrivateExtensions,
 ];
-/* END_OF_SYMBOL_DEFINITION PerProbeSubmissionExtensions */
 
 /* eslint-enable */

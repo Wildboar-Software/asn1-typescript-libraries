@@ -15,7 +15,7 @@ import {
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MonthDay */
+
 /**
  * @summary MonthDay
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type MonthDay = DateTimeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MonthDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MonthDay */
+
 let _cached_decoder_for_MonthDay: $.ASN1Decoder<MonthDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MonthDay */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MonthDay */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MonthDay
  * @function
@@ -47,13 +45,11 @@ export function _decode_MonthDay(el: _Element) {
   }
   return _cached_decoder_for_MonthDay(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MonthDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MonthDay */
+
 let _cached_encoder_for_MonthDay: $.ASN1Encoder<MonthDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MonthDay */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MonthDay */
+
 /**
  * @summary Encodes a(n) MonthDay into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_MonthDay(
   return _cached_encoder_for_MonthDay(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MonthDay */
 
 /* eslint-enable */

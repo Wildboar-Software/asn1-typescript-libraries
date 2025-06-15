@@ -22,7 +22,6 @@ import {
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NumericMeasure_qualifiedValue */
 /**
  * @summary NumericMeasure_qualifiedValue
  * @description
@@ -91,9 +90,7 @@ export class NumericMeasure_qualifiedValue {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NumericMeasure_qualifiedValue */
 /**
  * @summary The Leading Root Component Types of NumericMeasure_qualifiedValue
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_NumericMeasure_qualifiedValue:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NumericMeasure_qualifiedValue */
 /**
  * @summary The Trailing Root Component Types of NumericMeasure_qualifiedValue
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_NumericMeasure_qualifiedValue:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NumericMeasure_qualifiedValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NumericMeasure_qualifiedValue */
 /**
  * @summary The Extension Addition Component Types of NumericMeasure_qualifiedValue
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_NumericMeasure_qualifiedValue:
  * @constant
  */
 export const _extension_additions_list_spec_for_NumericMeasure_qualifiedValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericMeasure_qualifiedValue */
 let _cached_decoder_for_NumericMeasure_qualifiedValue: $.ASN1Decoder<NumericMeasure_qualifiedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NumericMeasure_qualifiedValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) NumericMeasure_qualifiedValue
  * @function
@@ -191,13 +180,9 @@ export function _decode_NumericMeasure_qualifiedValue(el: _Element) {
     }
     return _cached_decoder_for_NumericMeasure_qualifiedValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericMeasure_qualifiedValue */
 let _cached_encoder_for_NumericMeasure_qualifiedValue: $.ASN1Encoder<NumericMeasure_qualifiedValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericMeasure_qualifiedValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NumericMeasure_qualifiedValue */
 /**
  * @summary Encodes a(n) NumericMeasure_qualifiedValue into an ASN.1 Element.
  * @function
@@ -238,6 +223,5 @@ export function _encode_NumericMeasure_qualifiedValue(
     return _cached_encoder_for_NumericMeasure_qualifiedValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NumericMeasure_qualifiedValue */
 
 /* eslint-enable */

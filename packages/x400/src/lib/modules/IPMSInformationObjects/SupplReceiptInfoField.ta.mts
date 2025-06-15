@@ -15,7 +15,6 @@ import {
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from '../MTSAbstractService/SupplementaryInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SupplReceiptInfoField */
 /**
  * @summary SupplReceiptInfoField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SupplReceiptInfoField = SupplementaryInformation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SupplReceiptInfoField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplReceiptInfoField */
 let _cached_decoder_for_SupplReceiptInfoField: $.ASN1Decoder<SupplReceiptInfoField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplReceiptInfoField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupplReceiptInfoField */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupplReceiptInfoField
  * @function
@@ -46,13 +41,9 @@ export function _decode_SupplReceiptInfoField(el: _Element) {
     }
     return _cached_decoder_for_SupplReceiptInfoField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupplReceiptInfoField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplReceiptInfoField */
 let _cached_encoder_for_SupplReceiptInfoField: $.ASN1Encoder<SupplReceiptInfoField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupplReceiptInfoField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupplReceiptInfoField */
 /**
  * @summary Encodes a(n) SupplReceiptInfoField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_SupplReceiptInfoField(
     return _cached_encoder_for_SupplReceiptInfoField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupplReceiptInfoField */
 
 /* eslint-enable */

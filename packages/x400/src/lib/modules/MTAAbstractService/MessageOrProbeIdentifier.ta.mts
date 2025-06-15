@@ -15,7 +15,6 @@ import {
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MessageOrProbeIdentifier */
 /**
  * @summary MessageOrProbeIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MessageOrProbeIdentifier = MTSIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MessageOrProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageOrProbeIdentifier */
 let _cached_decoder_for_MessageOrProbeIdentifier: $.ASN1Decoder<MessageOrProbeIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageOrProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageOrProbeIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageOrProbeIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_MessageOrProbeIdentifier(el: _Element) {
     }
     return _cached_decoder_for_MessageOrProbeIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageOrProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageOrProbeIdentifier */
 let _cached_encoder_for_MessageOrProbeIdentifier: $.ASN1Encoder<MessageOrProbeIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageOrProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageOrProbeIdentifier */
 /**
  * @summary Encodes a(n) MessageOrProbeIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MessageOrProbeIdentifier(
     return _cached_encoder_for_MessageOrProbeIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageOrProbeIdentifier */
 
 /* eslint-enable */

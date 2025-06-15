@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AP_title_form3 */
 /**
  * @summary AP_title_form3
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AP_title_form3 = PrintableString; // PrintableString
-/* END_OF_SYMBOL_DEFINITION AP_title_form3 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_title_form3 */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_title_form3 */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AP_title_form3 */
 export const _decode_AP_title_form3 = $._decodePrintableString;
-/* END_OF_SYMBOL_DEFINITION _decode_AP_title_form3 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_title_form3 */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_title_form3 */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AP_title_form3 */
 export const _encode_AP_title_form3 = $._encodePrintableString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AP_title_form3 */
 
 /* eslint-enable */

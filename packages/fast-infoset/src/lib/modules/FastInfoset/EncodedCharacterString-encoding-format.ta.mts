@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EncodedCharacterString_encoding_format */
 /**
  * @summary EncodedCharacterString_encoding_format
  * @description
@@ -29,12 +28,8 @@ export type EncodedCharacterString_encoding_format =
   | { utf_16: NULL } /* CHOICE_ALT_ROOT */
   | { restricted_alphabet: INTEGER } /* CHOICE_ALT_ROOT */
   | { encoding_algorithm: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EncodedCharacterString_encoding_format */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedCharacterString_encoding_format */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedCharacterString_encoding_format */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncodedCharacterString_encoding_format */
 export const _decode_EncodedCharacterString_encoding_format = $._decode_inextensible_choice<EncodedCharacterString_encoding_format>(
   {
     'CONTEXT 0': ['utf_8', $._decodeNull],
@@ -43,12 +38,8 @@ export const _decode_EncodedCharacterString_encoding_format = $._decode_inextens
     'CONTEXT 3': ['encoding_algorithm', $._decodeInteger],
   }
 );
-/* END_OF_SYMBOL_DEFINITION _decode_EncodedCharacterString_encoding_format */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedCharacterString_encoding_format */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedCharacterString_encoding_format */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncodedCharacterString_encoding_format */
 export const _encode_EncodedCharacterString_encoding_format = $._encode_choice<EncodedCharacterString_encoding_format>(
   {
     utf_8: $._encodeNull,
@@ -59,6 +50,5 @@ export const _encode_EncodedCharacterString_encoding_format = $._encode_choice<E
   $.BER
 );
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncodedCharacterString_encoding_format */
 
 /* eslint-enable */

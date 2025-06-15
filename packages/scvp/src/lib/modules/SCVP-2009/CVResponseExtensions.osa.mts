@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { EXTENSION } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CVResponseExtensions */
 /**
  * @summary CVResponseExtensions
  * @description
@@ -27,6 +26,5 @@ import { EXTENSION } from '@wildboar/x500/src/lib/modules/AuthenticationFramewor
  *
  */
 export const CVResponseExtensions: EXTENSION[] = [];
-/* END_OF_SYMBOL_DEFINITION CVResponseExtensions */
 
 /* eslint-enable */

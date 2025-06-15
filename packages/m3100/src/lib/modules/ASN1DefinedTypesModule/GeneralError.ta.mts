@@ -15,7 +15,7 @@ import {
     _decode_GeneralError_Item,
     _encode_GeneralError_Item,
 } from '../ASN1DefinedTypesModule/GeneralError-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GeneralError */
+
 /**
  * @summary GeneralError
  * @description
@@ -31,13 +31,11 @@ import {
  * ```
  */
 export type GeneralError = GeneralError_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION GeneralError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralError */
+
 let _cached_decoder_for_GeneralError: $.ASN1Decoder<GeneralError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GeneralError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GeneralError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GeneralError
  * @function
@@ -52,13 +50,11 @@ export function _decode_GeneralError(el: _Element) {
     }
     return _cached_decoder_for_GeneralError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GeneralError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralError */
+
 let _cached_encoder_for_GeneralError: $.ASN1Encoder<GeneralError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GeneralError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GeneralError */
+
 /**
  * @summary Encodes a(n) GeneralError into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_GeneralError(
     return _cached_encoder_for_GeneralError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GeneralError */
 
 /* eslint-enable */

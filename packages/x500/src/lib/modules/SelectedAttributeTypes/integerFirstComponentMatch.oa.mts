@@ -4,7 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_integerFirstComponentMatch } from "../SelectedAttributeTypes/id-mr-integerFirstComponentMatch.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION integerFirstComponentMatch */
 /**
  * @summary integerFirstComponentMatch
  * @description
@@ -36,6 +35,5 @@ export const integerFirstComponentMatch: MATCHING_RULE<INTEGER> = {
     "&id": id_mr_integerFirstComponentMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION integerFirstComponentMatch */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EntryType */
 /**
  * @summary EntryType
  * @description
@@ -29,147 +28,110 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EntryType = INTEGER;
-/* END_OF_SYMBOL_DEFINITION EntryType */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_delivered_message */
 /**
  * @summary EntryType_delivered_message
  * @constant
  * @type {number}
  */
 export const EntryType_delivered_message: EntryType = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_delivered_message */
 
-/* START_OF_SYMBOL_DEFINITION delivered_message */
 /**
  * @summary EntryType_delivered_message
  * @constant
  * @type {number}
  */
 export const delivered_message: EntryType = EntryType_delivered_message; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION delivered_message */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_delivered_report */
 /**
  * @summary EntryType_delivered_report
  * @constant
  * @type {number}
  */
 export const EntryType_delivered_report: EntryType = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_delivered_report */
 
-/* START_OF_SYMBOL_DEFINITION delivered_report */
 /**
  * @summary EntryType_delivered_report
  * @constant
  * @type {number}
  */
 export const delivered_report: EntryType = EntryType_delivered_report; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION delivered_report */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_returned_content */
 /**
  * @summary EntryType_returned_content
  * @constant
  * @type {number}
  */
 export const EntryType_returned_content: EntryType = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_returned_content */
 
-/* START_OF_SYMBOL_DEFINITION returned_content */
 /**
  * @summary EntryType_returned_content
  * @constant
  * @type {number}
  */
 export const returned_content: EntryType = EntryType_returned_content; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION returned_content */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_submitted_message */
 /**
  * @summary EntryType_submitted_message
  * @constant
  * @type {number}
  */
 export const EntryType_submitted_message: EntryType = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_submitted_message */
 
-/* START_OF_SYMBOL_DEFINITION submitted_message */
 /**
  * @summary EntryType_submitted_message
  * @constant
  * @type {number}
  */
 export const submitted_message: EntryType = EntryType_submitted_message; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION submitted_message */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_submitted_probe */
 /**
  * @summary EntryType_submitted_probe
  * @constant
  * @type {number}
  */
 export const EntryType_submitted_probe: EntryType = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_submitted_probe */
 
-/* START_OF_SYMBOL_DEFINITION submitted_probe */
 /**
  * @summary EntryType_submitted_probe
  * @constant
  * @type {number}
  */
 export const submitted_probe: EntryType = EntryType_submitted_probe; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION submitted_probe */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_draft_message */
 /**
  * @summary EntryType_draft_message
  * @constant
  * @type {number}
  */
 export const EntryType_draft_message: EntryType = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_draft_message */
 
-/* START_OF_SYMBOL_DEFINITION draft_message */
 /**
  * @summary EntryType_draft_message
  * @constant
  * @type {number}
  */
 export const draft_message: EntryType = EntryType_draft_message; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION draft_message */
 
-/* START_OF_SYMBOL_DEFINITION EntryType_auto_action_event */
 /**
  * @summary EntryType_auto_action_event
  * @constant
  * @type {number}
  */
 export const EntryType_auto_action_event: EntryType = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION EntryType_auto_action_event */
 
-/* START_OF_SYMBOL_DEFINITION auto_action_event */
 /**
  * @summary EntryType_auto_action_event
  * @constant
  * @type {number}
  */
 export const auto_action_event: EntryType = EntryType_auto_action_event; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION auto_action_event */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryType */
 export const _decode_EntryType = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_EntryType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryType */
 export const _encode_EntryType = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryType */
 
 /* eslint-enable */

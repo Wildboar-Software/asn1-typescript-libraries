@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { REGISTERED_AS } from '../SMModule/REGISTERED-AS.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION RegisteredAsTable */
 /**
  * @summary RegisteredAsTable
  * @description
@@ -26,6 +25,5 @@ import { REGISTERED_AS } from '../SMModule/REGISTERED-AS.oca.mjs';
  *
  */
 export const RegisteredAsTable: REGISTERED_AS[] = [];
-/* END_OF_SYMBOL_DEFINITION RegisteredAsTable */
 
 /* eslint-enable */

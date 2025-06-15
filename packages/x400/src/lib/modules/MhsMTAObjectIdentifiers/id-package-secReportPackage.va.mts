@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs';
 import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_package_secReportPackage */
 /**
  * @summary id_package_secReportPackage
  * @description
@@ -25,6 +24,5 @@ import { id_package } from '../MhsMTAObjectIdentifiers/id-package.va.mjs';
  * @constant
  */
 export const id_package_secReportPackage: ID = new _OID([24], id_package);
-/* END_OF_SYMBOL_DEFINITION id_package_secReportPackage */
 
 /* eslint-enable */

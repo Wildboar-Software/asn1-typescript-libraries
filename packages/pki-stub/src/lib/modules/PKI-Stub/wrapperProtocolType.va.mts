@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import { ds } from "../PKI-Stub/ds.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION wrapperProtocolType */
 /**
  * @summary wrapperProtocolType
  * @description
@@ -26,6 +25,5 @@ import { ds } from "../PKI-Stub/ds.va.mjs";
  * @constant
  */
 export const wrapperProtocolType: OBJECT_IDENTIFIER = new _OID([43], ds);
-/* END_OF_SYMBOL_DEFINITION wrapperProtocolType */
 
 /* eslint-enable */

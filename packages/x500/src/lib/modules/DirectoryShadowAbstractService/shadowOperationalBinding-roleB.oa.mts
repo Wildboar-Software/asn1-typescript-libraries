@@ -7,7 +7,6 @@ import {
     _encode_ModificationParameter,
 } from "../DirectoryShadowAbstractService/ModificationParameter.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleB */
 /**
  * @summary shadowOperationalBinding_roleB
  * @description
@@ -44,6 +43,5 @@ export const shadowOperationalBinding_roleB: OP_BIND_ROLE<
     "&ModifyParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&TerminateParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleB */
 
 /* eslint-enable */

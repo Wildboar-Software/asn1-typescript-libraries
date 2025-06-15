@@ -29,7 +29,7 @@ import {
   _decode_acknowledge_ResultType,
   _encode_acknowledge_ResultType,
 } from '../Remote-Operations-Useful-Definitions/acknowledge-ResultType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION acknowledge */
+
 /**
  * @summary acknowledge
  * @description
@@ -72,6 +72,5 @@ export const acknowledge: OPERATION<InvokeId, acknowledge_ResultType> = {
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION acknowledge */
 
 /* eslint-enable */

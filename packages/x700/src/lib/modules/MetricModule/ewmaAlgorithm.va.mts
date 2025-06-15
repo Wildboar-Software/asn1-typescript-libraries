@@ -15,7 +15,6 @@ import {
     _encode_AlgorithmIdentifier,
 } from '../MetricModule/AlgorithmIdentifier.ta.mjs';
 import { moaAlgorithmIdentifiers } from '../MetricModule/moaAlgorithmIdentifiers.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ewmaAlgorithm */
 /**
  * @summary ewmaAlgorithm
  * @description
@@ -32,6 +31,5 @@ export const ewmaAlgorithm: AlgorithmIdentifier = new _OID(
     [0],
     moaAlgorithmIdentifiers
 );
-/* END_OF_SYMBOL_DEFINITION ewmaAlgorithm */
 
 /* eslint-enable */

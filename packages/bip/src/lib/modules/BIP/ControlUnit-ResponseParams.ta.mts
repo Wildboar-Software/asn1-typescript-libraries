@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ControlUnit_ResponseParams */
+
 /**
  * @summary ControlUnit_ResponseParams
  * @description
@@ -59,9 +59,8 @@ export class ControlUnit_ResponseParams {
     return new ControlUnit_ResponseParams(_o.outputData);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ControlUnit_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of ControlUnit_ResponseParams
  * @description
@@ -79,9 +78,8 @@ export const _root_component_type_list_1_spec_for_ControlUnit_ResponseParams: $.
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ControlUnit_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of ControlUnit_ResponseParams
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_ControlUnit_ResponseParams: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ControlUnit_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ControlUnit_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of ControlUnit_ResponseParams
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_ControlUnit_ResponseParams: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_ControlUnit_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlUnit_ResponseParams */
+
 let _cached_decoder_for_ControlUnit_ResponseParams: $.ASN1Decoder<ControlUnit_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ControlUnit_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ControlUnit_ResponseParams
  * @function
@@ -137,13 +132,11 @@ export function _decode_ControlUnit_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_ControlUnit_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlUnit_ResponseParams */
+
 let _cached_encoder_for_ControlUnit_ResponseParams: $.ASN1Encoder<ControlUnit_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlUnit_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ControlUnit_ResponseParams */
+
 /**
  * @summary Encodes a(n) ControlUnit_ResponseParams into an ASN.1 Element.
  * @function
@@ -171,6 +164,5 @@ export function _encode_ControlUnit_ResponseParams(
   return _cached_encoder_for_ControlUnit_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ControlUnit_ResponseParams */
 
 /* eslint-enable */

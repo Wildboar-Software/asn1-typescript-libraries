@@ -16,7 +16,6 @@ import {
     _decode_InvokeId,
     _encode_InvokeId,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RequestIdentifier */
 /**
  * @summary RequestIdentifier
  * @description
@@ -35,13 +34,9 @@ export type RequestIdentifier =
     | { number_: INTEGER } /* CHOICE_ALT_ROOT */
     | { invokeID: InvokeId } /* CHOICE_ALT_ROOT */
     | { identifier: _Element } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RequestIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestIdentifier */
 let _cached_decoder_for_RequestIdentifier: $.ASN1Decoder<RequestIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestIdentifier
  * @function
@@ -66,13 +61,9 @@ export function _decode_RequestIdentifier(el: _Element) {
     }
     return _cached_decoder_for_RequestIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestIdentifier */
 let _cached_encoder_for_RequestIdentifier: $.ASN1Encoder<RequestIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestIdentifier */
 /**
  * @summary Encodes a(n) RequestIdentifier into an ASN.1 Element.
  * @function
@@ -107,6 +98,5 @@ export function _encode_RequestIdentifier(
     return _cached_encoder_for_RequestIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestIdentifier */
 
 /* eslint-enable */

@@ -26,7 +26,6 @@ import {
     _decode_ResponseTimeout,
     _encode_ResponseTimeout,
 } from '../TestCategories-ASN1Module/ResponseTimeout.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PDUReception */
 /**
  * @summary PDUReception
  * @description
@@ -83,9 +82,7 @@ export class PDUReception {
         return new PDUReception(_o.pDUType, _o.parameter, _o.responseTimeout);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDUReception */
 /**
  * @summary The Leading Root Component Types of PDUReception
  * @description
@@ -117,9 +114,7 @@ export const _root_component_type_list_1_spec_for_PDUReception: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDUReception */
 /**
  * @summary The Trailing Root Component Types of PDUReception
  * @description
@@ -129,9 +124,7 @@ export const _root_component_type_list_1_spec_for_PDUReception: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PDUReception: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDUReception */
 /**
  * @summary The Extension Addition Component Types of PDUReception
  * @description
@@ -141,13 +134,9 @@ export const _root_component_type_list_2_spec_for_PDUReception: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_PDUReception: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUReception */
 let _cached_decoder_for_PDUReception: $.ASN1Decoder<PDUReception> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDUReception */
 /**
  * @summary Decodes an ASN.1 element into a(n) PDUReception
  * @function
@@ -194,13 +183,9 @@ export function _decode_PDUReception(el: _Element) {
     }
     return _cached_decoder_for_PDUReception(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUReception */
 let _cached_encoder_for_PDUReception: $.ASN1Encoder<PDUReception> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUReception */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDUReception */
 /**
  * @summary Encodes a(n) PDUReception into an ASN.1 Element.
  * @function
@@ -238,6 +223,5 @@ export function _encode_PDUReception(
     return _cached_encoder_for_PDUReception(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDUReception */
 
 /* eslint-enable */

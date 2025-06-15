@@ -24,7 +24,6 @@ import { id_hat_auto_submitted } from '../IPMSObjectIdentifiers/id-hat-auto-subm
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION auto_submitted */
 /**
  * @summary auto_submitted
  * @description
@@ -57,6 +56,5 @@ export const auto_submitted: X413ATTRIBUTE<AutoSubmitted> = {
     '&id': id_hat_auto_submitted /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION auto_submitted */
 
 /* eslint-enable */

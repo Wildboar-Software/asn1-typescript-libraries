@@ -42,7 +42,7 @@ import {
     _encode_OptionalValidity,
 } from "../PKIXCRMF-2009/OptionalValidity.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertTemplate */
+
 /**
  * @summary CertTemplate
  * @description
@@ -159,9 +159,8 @@ export class CertTemplate {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertTemplate */
+
 /**
  * @summary The Leading Root Component Types of CertTemplate
  * @description
@@ -242,9 +241,8 @@ export const _root_component_type_list_1_spec_for_CertTemplate: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertTemplate */
+
 /**
  * @summary The Trailing Root Component Types of CertTemplate
  * @description
@@ -254,9 +252,8 @@ export const _root_component_type_list_1_spec_for_CertTemplate: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertTemplate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertTemplate */
+
 /**
  * @summary The Extension Addition Component Types of CertTemplate
  * @description
@@ -266,13 +263,11 @@ export const _root_component_type_list_2_spec_for_CertTemplate: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_CertTemplate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertTemplate */
+
 let _cached_decoder_for_CertTemplate: $.ASN1Decoder<CertTemplate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertTemplate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertTemplate
  * @function
@@ -370,13 +365,11 @@ export function _decode_CertTemplate(el: _Element) {
     }
     return _cached_decoder_for_CertTemplate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertTemplate */
+
 let _cached_encoder_for_CertTemplate: $.ASN1Encoder<CertTemplate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertTemplate */
+
 /**
  * @summary Encodes a(n) CertTemplate into an ASN.1 Element.
  * @function
@@ -483,6 +476,5 @@ export function _encode_CertTemplate(
     return _cached_encoder_for_CertTemplate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertTemplate */
 
 /* eslint-enable */

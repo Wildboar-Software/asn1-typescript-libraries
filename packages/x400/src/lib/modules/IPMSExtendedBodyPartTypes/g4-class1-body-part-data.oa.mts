@@ -16,7 +16,6 @@ import {
     _encode_G4Class1BodyPart,
 } from '../IPMSInformationObjects/G4Class1BodyPart.ta.mjs';
 import { id_et_g4_class1 } from '../IPMSObjectIdentifiers/id-et-g4-class1.va.mjs';
-/* START_OF_SYMBOL_DEFINITION g4_class1_body_part_data */
 /**
  * @summary g4_class1_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const g4_class1_body_part_data: TYPE_IDENTIFIER<G4Class1BodyPart> = {
     '&id': id_et_g4_class1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION g4_class1_body_part_data */
 
 /* eslint-enable */

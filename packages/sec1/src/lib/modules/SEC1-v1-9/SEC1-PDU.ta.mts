@@ -15,7 +15,6 @@ import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPubl
 import { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.mjs";
 import { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta.mjs";
 import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SEC1_PDU */
 /**
  * @summary SEC1_PDU
  * @description
@@ -41,13 +40,9 @@ type SEC1_PDU =
     | { ecies: ECIES_Ciphertext_Value } /* CHOICE_ALT_ROOT */
     | { sharedinfo: ASN1SharedInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SEC1_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SEC1_PDU */
 let _cached_decoder_for_SEC1_PDU: $.ASN1Decoder<SEC1_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SEC1_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SEC1_PDU */
 /**
  * @summary Decodes an ASN.1 element into a(n) SEC1_PDU
  * @function
@@ -65,13 +60,9 @@ function _decode_SEC1_PDU (el: _Element) {
 }); }
     return _cached_decoder_for_SEC1_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SEC1_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SEC1_PDU */
 let _cached_encoder_for_SEC1_PDU: $.ASN1Encoder<SEC1_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SEC1_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SEC1_PDU */
 /**
  * @summary Encodes a(n) SEC1_PDU into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ function _encode_SEC1_PDU (value: SEC1_PDU, elGetter: $.ASN1Encoder<SEC1_PDU>) {
     return _cached_encoder_for_SEC1_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SEC1_PDU */
 
 /* eslint-enable */

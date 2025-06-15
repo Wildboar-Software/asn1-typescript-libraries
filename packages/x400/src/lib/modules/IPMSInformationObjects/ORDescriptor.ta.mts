@@ -26,7 +26,6 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from '../IPMSInformationObjects/TelephoneNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ORDescriptor */
 /**
  * @summary ORDescriptor
  * @description
@@ -87,9 +86,7 @@ export class ORDescriptor {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORDescriptor */
 /**
  * @summary The Leading Root Component Types of ORDescriptor
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_ORDescriptor: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORDescriptor */
 /**
  * @summary The Trailing Root Component Types of ORDescriptor
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_ORDescriptor: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ORDescriptor: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORDescriptor */
 /**
  * @summary The Extension Addition Component Types of ORDescriptor
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_ORDescriptor: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ORDescriptor: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORDescriptor */
 let _cached_decoder_for_ORDescriptor: $.ASN1Decoder<ORDescriptor> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORDescriptor */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORDescriptor
  * @function
@@ -202,13 +191,9 @@ export function _decode_ORDescriptor(el: _Element) {
     }
     return _cached_decoder_for_ORDescriptor(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORDescriptor */
 let _cached_encoder_for_ORDescriptor: $.ASN1Encoder<ORDescriptor> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORDescriptor */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORDescriptor */
 /**
  * @summary Encodes a(n) ORDescriptor into an ASN.1 Element.
  * @function
@@ -254,6 +239,5 @@ export function _encode_ORDescriptor(
     return _cached_encoder_for_ORDescriptor(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORDescriptor */
 
 /* eslint-enable */

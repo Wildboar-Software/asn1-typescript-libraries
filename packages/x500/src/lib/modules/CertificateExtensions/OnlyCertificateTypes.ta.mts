@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, BIT_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OnlyCertificateTypes */
 /**
  * @summary OnlyCertificateTypes
  * @description
@@ -17,69 +16,48 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type OnlyCertificateTypes = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION OnlyCertificateTypes */
 
-/* START_OF_SYMBOL_DEFINITION OnlyCertificateTypes_user */
 /**
  * @summary OnlyCertificateTypes_user
  * @constant
  */
 export const OnlyCertificateTypes_user: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION OnlyCertificateTypes_user */
 
-/* START_OF_SYMBOL_DEFINITION user */
 /**
  * @summary user
  * @constant
  */
 export const user: number = OnlyCertificateTypes_user; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION user */
 
-/* START_OF_SYMBOL_DEFINITION OnlyCertificateTypes_authority */
 /**
  * @summary OnlyCertificateTypes_authority
  * @constant
  */
 export const OnlyCertificateTypes_authority: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION OnlyCertificateTypes_authority */
 
-/* START_OF_SYMBOL_DEFINITION authority */
 /**
  * @summary authority
  * @constant
  */
 export const authority: number = OnlyCertificateTypes_authority; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION authority */
 
-/* START_OF_SYMBOL_DEFINITION OnlyCertificateTypes_attribute */
 /**
  * @summary OnlyCertificateTypes_attribute
  * @constant
  */
 export const OnlyCertificateTypes_attribute: number = 2; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION OnlyCertificateTypes_attribute */
 
-/* START_OF_SYMBOL_DEFINITION attribute */
 /**
  * @summary attribute
  * @constant
  */
 export const attribute: number = OnlyCertificateTypes_attribute; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OnlyCertificateTypes */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OnlyCertificateTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OnlyCertificateTypes */
 export const _decode_OnlyCertificateTypes = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_OnlyCertificateTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OnlyCertificateTypes */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OnlyCertificateTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OnlyCertificateTypes */
 export const _encode_OnlyCertificateTypes = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OnlyCertificateTypes */
 
 /* eslint-enable */

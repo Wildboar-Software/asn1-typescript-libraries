@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_local_ipm_identifier */
 /**
  * @summary ub_local_ipm_identifier
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_local_ipm_identifier: INTEGER = 64;
-/* END_OF_SYMBOL_DEFINITION ub_local_ipm_identifier */
 
 /* eslint-enable */

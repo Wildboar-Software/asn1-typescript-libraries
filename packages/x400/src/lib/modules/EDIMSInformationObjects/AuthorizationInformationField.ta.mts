@@ -21,7 +21,6 @@ import {
     _decode_AuthorizationInformationQualifier,
     _encode_AuthorizationInformationQualifier,
 } from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AuthorizationInformationField */
 /**
  * @summary AuthorizationInformationField
  * @description
@@ -77,9 +76,7 @@ export class AuthorizationInformationField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuthorizationInformationField */
 /**
  * @summary The Leading Root Component Types of AuthorizationInformationField
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_AuthorizationInformationField:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuthorizationInformationField */
 /**
  * @summary The Trailing Root Component Types of AuthorizationInformationField
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_AuthorizationInformationField:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AuthorizationInformationField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuthorizationInformationField */
 /**
  * @summary The Extension Addition Component Types of AuthorizationInformationField
  * @description
@@ -128,13 +121,9 @@ export const _root_component_type_list_2_spec_for_AuthorizationInformationField:
  * @constant
  */
 export const _extension_additions_list_spec_for_AuthorizationInformationField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationInformationField */
 let _cached_decoder_for_AuthorizationInformationField: $.ASN1Decoder<AuthorizationInformationField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorizationInformationField */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthorizationInformationField
  * @function
@@ -182,13 +171,9 @@ export function _decode_AuthorizationInformationField(el: _Element) {
     }
     return _cached_decoder_for_AuthorizationInformationField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationInformationField */
 let _cached_encoder_for_AuthorizationInformationField: $.ASN1Encoder<AuthorizationInformationField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationInformationField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorizationInformationField */
 /**
  * @summary Encodes a(n) AuthorizationInformationField into an ASN.1 Element.
  * @function
@@ -234,6 +219,5 @@ export function _encode_AuthorizationInformationField(
     return _cached_encoder_for_AuthorizationInformationField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorizationInformationField */
 
 /* eslint-enable */

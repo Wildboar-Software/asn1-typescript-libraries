@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_errcode_attributeError */
 /**
  * @summary id_errcode_attributeError
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_errcode_attributeError: Code = { local: 1 };
-/* END_OF_SYMBOL_DEFINITION id_errcode_attributeError */
 
 /* eslint-enable */

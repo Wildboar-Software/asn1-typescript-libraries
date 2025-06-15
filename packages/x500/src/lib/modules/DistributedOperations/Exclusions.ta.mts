@@ -6,7 +6,6 @@ import {
     _decode_RDNSequence,
     _encode_RDNSequence,
 } from "../InformationFramework/RDNSequence.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Exclusions */
 /**
  * @summary Exclusions
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type Exclusions = RDNSequence[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Exclusions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Exclusions */
 let _cached_decoder_for_Exclusions: $.ASN1Decoder<Exclusions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Exclusions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Exclusions */
 /**
  * @summary Decodes an ASN.1 element into a(n) Exclusions
  * @function
@@ -39,13 +34,9 @@ export function _decode_Exclusions(el: _Element) {
     }
     return _cached_decoder_for_Exclusions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Exclusions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Exclusions */
 let _cached_encoder_for_Exclusions: $.ASN1Encoder<Exclusions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Exclusions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Exclusions */
 /**
  * @summary Encodes a(n) Exclusions into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_Exclusions(
     return _cached_encoder_for_Exclusions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Exclusions */
 
 /* eslint-enable */

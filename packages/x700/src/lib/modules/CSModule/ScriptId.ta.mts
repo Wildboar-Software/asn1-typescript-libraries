@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScriptId */
 /**
  * @summary ScriptId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ScriptId = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ScriptId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptId */
 let _cached_decoder_for_ScriptId: $.ASN1Decoder<ScriptId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScriptId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScriptId
  * @function
@@ -46,13 +41,9 @@ export function _decode_ScriptId(el: _Element) {
     }
     return _cached_decoder_for_ScriptId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScriptId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptId */
 let _cached_encoder_for_ScriptId: $.ASN1Encoder<ScriptId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScriptId */
 /**
  * @summary Encodes a(n) ScriptId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ScriptId(
     return _cached_encoder_for_ScriptId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScriptId */
 
 /* eslint-enable */

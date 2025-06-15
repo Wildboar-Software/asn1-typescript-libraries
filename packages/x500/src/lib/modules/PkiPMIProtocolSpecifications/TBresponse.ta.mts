@@ -11,7 +11,6 @@ import {
     _decode_TBOK,
     _encode_TBOK,
 } from "../PkiPMIProtocolSpecifications/TBOK.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TBresponse */
 /**
  * @summary TBresponse
  * @description
@@ -29,13 +28,9 @@ export type TBresponse =
     | { success: TBOK } /* CHOICE_ALT_ROOT */
     | { failure: TBerror } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TBresponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBresponse */
 let _cached_decoder_for_TBresponse: $.ASN1Decoder<TBresponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBresponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBresponse */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBresponse
  * @function
@@ -59,13 +54,9 @@ export function _decode_TBresponse(el: _Element) {
     }
     return _cached_decoder_for_TBresponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBresponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBresponse */
 let _cached_encoder_for_TBresponse: $.ASN1Encoder<TBresponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBresponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBresponse */
 /**
  * @summary Encodes a(n) TBresponse into an ASN.1 Element.
  * @function
@@ -99,6 +90,5 @@ export function _encode_TBresponse(
     return _cached_encoder_for_TBresponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBresponse */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_ToTPPools_Item,
     _encode_ToTPPools_Item,
 } from '../ASN1DefinedTypesModule/ToTPPools-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ToTPPools */
+
 /**
  * @summary ToTPPools
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type ToTPPools = ToTPPools_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ToTPPools */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ToTPPools */
+
 let _cached_decoder_for_ToTPPools: $.ASN1Decoder<ToTPPools> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ToTPPools */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ToTPPools */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ToTPPools
  * @function
@@ -50,13 +48,11 @@ export function _decode_ToTPPools(el: _Element) {
     }
     return _cached_decoder_for_ToTPPools(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ToTPPools */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ToTPPools */
+
 let _cached_encoder_for_ToTPPools: $.ASN1Encoder<ToTPPools> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ToTPPools */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ToTPPools */
+
 /**
  * @summary Encodes a(n) ToTPPools into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_ToTPPools(
     return _cached_encoder_for_ToTPPools(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ToTPPools */
 
 /* eslint-enable */

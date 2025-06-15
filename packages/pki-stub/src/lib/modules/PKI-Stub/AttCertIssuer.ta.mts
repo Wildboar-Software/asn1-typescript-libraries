@@ -27,7 +27,6 @@ import {
     _encode_ObjectDigestInfo,
 } from "../PKI-Stub/ObjectDigestInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttCertIssuer */
 /**
  * @summary AttCertIssuer
  * @description
@@ -98,9 +97,7 @@ export class AttCertIssuer {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttCertIssuer */
 /**
  * @summary The Leading Root Component Types of AttCertIssuer
  * @description
@@ -133,9 +130,7 @@ export const _root_component_type_list_1_spec_for_AttCertIssuer: $.ComponentSpec
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertIssuer */
 /**
  * @summary The Trailing Root Component Types of AttCertIssuer
  * @description
@@ -146,9 +141,7 @@ export const _root_component_type_list_1_spec_for_AttCertIssuer: $.ComponentSpec
  */
 export const _root_component_type_list_2_spec_for_AttCertIssuer: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertIssuer */
 /**
  * @summary The Extension Addition Component Types of AttCertIssuer
  * @description
@@ -159,14 +152,10 @@ export const _root_component_type_list_2_spec_for_AttCertIssuer: $.ComponentSpec
  */
 export const _extension_additions_list_spec_for_AttCertIssuer: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertIssuer */
 let _cached_decoder_for_AttCertIssuer: $.ASN1Decoder<AttCertIssuer> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttCertIssuer */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttCertIssuer
  * @function
@@ -224,14 +213,10 @@ export function _decode_AttCertIssuer(el: _Element) {
     }
     return _cached_decoder_for_AttCertIssuer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertIssuer */
 let _cached_encoder_for_AttCertIssuer: $.ASN1Encoder<AttCertIssuer> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertIssuer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttCertIssuer */
 /**
  * @summary Encodes a(n) AttCertIssuer into an ASN.1 Element.
  * @function
@@ -296,6 +281,5 @@ export function _encode_AttCertIssuer(
     return _cached_encoder_for_AttCertIssuer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttCertIssuer */
 
 /* eslint-enable */

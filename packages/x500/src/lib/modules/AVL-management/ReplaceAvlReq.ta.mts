@@ -20,7 +20,6 @@ import {
     _decode_CertAVL,
     _encode_CertAVL,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReplaceAvlReq */
 /**
  * @summary ReplaceAvlReq
  * @description
@@ -88,9 +87,7 @@ export class ReplaceAvlReq {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplaceAvlReq */
 /**
  * @summary The Leading Root Component Types of ReplaceAvlReq
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_ReplaceAvlReq: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplaceAvlReq */
 /**
  * @summary The Trailing Root Component Types of ReplaceAvlReq
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_ReplaceAvlReq: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReplaceAvlReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplaceAvlReq */
 /**
  * @summary The Extension Addition Component Types of ReplaceAvlReq
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_ReplaceAvlReq: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ReplaceAvlReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplaceAvlReq */
 let _cached_decoder_for_ReplaceAvlReq: $.ASN1Decoder<ReplaceAvlReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReplaceAvlReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplaceAvlReq
  * @function
@@ -203,13 +192,9 @@ export function _decode_ReplaceAvlReq(el: _Element) {
     }
     return _cached_decoder_for_ReplaceAvlReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplaceAvlReq */
 let _cached_encoder_for_ReplaceAvlReq: $.ASN1Encoder<ReplaceAvlReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReplaceAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReplaceAvlReq */
 /**
  * @summary Encodes a(n) ReplaceAvlReq into an ASN.1 Element.
  * @function
@@ -249,6 +234,5 @@ export function _encode_ReplaceAvlReq(
     return _cached_encoder_for_ReplaceAvlReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReplaceAvlReq */
 
 /* eslint-enable */

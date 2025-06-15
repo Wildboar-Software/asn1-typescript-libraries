@@ -23,7 +23,7 @@ import {
     _encode_OOBCertHash,
 } from "../PKIXCMP-2009/OOBCertHash.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CommonCertificateAttributes */
+
 /**
  * @summary CommonCertificateAttributes
  * @description
@@ -145,9 +145,8 @@ export class CommonCertificateAttributes {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonCertificateAttributes */
+
 /**
  * @summary The Leading Root Component Types of CommonCertificateAttributes
  * @description
@@ -186,9 +185,8 @@ export const _root_component_type_list_1_spec_for_CommonCertificateAttributes: $
         undefined,
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonCertificateAttributes */
+
 /**
  * @summary The Trailing Root Component Types of CommonCertificateAttributes
  * @description
@@ -198,9 +196,8 @@ export const _root_component_type_list_1_spec_for_CommonCertificateAttributes: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonCertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonCertificateAttributes */
+
 /**
  * @summary The Extension Addition Component Types of CommonCertificateAttributes
  * @description
@@ -232,13 +229,11 @@ export const _extension_additions_list_spec_for_CommonCertificateAttributes: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonCertificateAttributes */
+
 let _cached_decoder_for_CommonCertificateAttributes: $.ASN1Decoder<CommonCertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonCertificateAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonCertificateAttributes
  * @function
@@ -322,13 +317,11 @@ export function _decode_CommonCertificateAttributes(el: _Element) {
     }
     return _cached_decoder_for_CommonCertificateAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonCertificateAttributes */
+
 let _cached_encoder_for_CommonCertificateAttributes: $.ASN1Encoder<CommonCertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonCertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonCertificateAttributes */
+
 /**
  * @summary Encodes a(n) CommonCertificateAttributes into an ASN.1 Element.
  * @function
@@ -421,6 +414,5 @@ export function _encode_CommonCertificateAttributes(
     return _cached_encoder_for_CommonCertificateAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonCertificateAttributes */
 
 /* eslint-enable */

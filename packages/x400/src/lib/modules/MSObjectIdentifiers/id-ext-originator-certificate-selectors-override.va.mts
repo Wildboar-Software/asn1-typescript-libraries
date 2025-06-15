@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_ext } from '../MSObjectIdentifiers/id-ext.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_ext_originator_certificate_selectors_override */
 /**
  * @summary id_ext_originator_certificate_selectors_override
  * @description
@@ -28,6 +27,5 @@ export const id_ext_originator_certificate_selectors_override: ID = new _OID(
     [2],
     id_ext
 );
-/* END_OF_SYMBOL_DEFINITION id_ext_originator_certificate_selectors_override */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ArrivalTime */
 /**
  * @summary ArrivalTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ArrivalTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ArrivalTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArrivalTime */
 let _cached_decoder_for_ArrivalTime: $.ASN1Decoder<ArrivalTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArrivalTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArrivalTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) ArrivalTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_ArrivalTime(el: _Element) {
     }
     return _cached_decoder_for_ArrivalTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArrivalTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArrivalTime */
 let _cached_encoder_for_ArrivalTime: $.ASN1Encoder<ArrivalTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArrivalTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArrivalTime */
 /**
  * @summary Encodes a(n) ArrivalTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ArrivalTime(
     return _cached_encoder_for_ArrivalTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArrivalTime */
 
 /* eslint-enable */

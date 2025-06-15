@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION WantBack */
 /**
  * @summary WantBack
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type WantBack = OBJECT_IDENTIFIER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION WantBack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WantBack */
 let _cached_decoder_for_WantBack: $.ASN1Decoder<WantBack> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WantBack */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WantBack */
 /**
  * @summary Decodes an ASN.1 element into a(n) WantBack
  * @function
@@ -45,13 +40,9 @@ export function _decode_WantBack(el: _Element) {
   }
   return _cached_decoder_for_WantBack(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WantBack */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WantBack */
 let _cached_encoder_for_WantBack: $.ASN1Encoder<WantBack> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WantBack */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WantBack */
 /**
  * @summary Encodes a(n) WantBack into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_WantBack(
   return _cached_encoder_for_WantBack(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WantBack */
 
 /* eslint-enable */

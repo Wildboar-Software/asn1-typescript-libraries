@@ -21,7 +21,7 @@ import {
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION cancelFailed_ParameterType */
+
 /**
  * @summary cancelFailed_ParameterType
  * @description
@@ -78,9 +78,8 @@ export class cancelFailed_ParameterType {
 
   public static _enum_for_problem = _enum_for_CancelProblem;
 }
-/* END_OF_SYMBOL_DEFINITION cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_cancelFailed_ParameterType */
+
 /**
  * @summary The Leading Root Component Types of cancelFailed_ParameterType
  * @description
@@ -105,9 +104,8 @@ export const _root_component_type_list_1_spec_for_cancelFailed_ParameterType: $.
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_cancelFailed_ParameterType */
+
 /**
  * @summary The Trailing Root Component Types of cancelFailed_ParameterType
  * @description
@@ -117,9 +115,8 @@ export const _root_component_type_list_1_spec_for_cancelFailed_ParameterType: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_cancelFailed_ParameterType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_cancelFailed_ParameterType */
+
 /**
  * @summary The Extension Addition Component Types of cancelFailed_ParameterType
  * @description
@@ -129,13 +126,11 @@ export const _root_component_type_list_2_spec_for_cancelFailed_ParameterType: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_cancelFailed_ParameterType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_cancelFailed_ParameterType */
+
 let _cached_decoder_for_cancelFailed_ParameterType: $.ASN1Decoder<cancelFailed_ParameterType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_cancelFailed_ParameterType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) cancelFailed_ParameterType
  * @function
@@ -179,13 +174,11 @@ export function _decode_cancelFailed_ParameterType(el: _Element) {
   }
   return _cached_decoder_for_cancelFailed_ParameterType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_cancelFailed_ParameterType */
+
 let _cached_encoder_for_cancelFailed_ParameterType: $.ASN1Encoder<cancelFailed_ParameterType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_cancelFailed_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_cancelFailed_ParameterType */
+
 /**
  * @summary Encodes a(n) cancelFailed_ParameterType into an ASN.1 Element.
  * @function
@@ -224,6 +217,5 @@ export function _encode_cancelFailed_ParameterType(
   return _cached_encoder_for_cancelFailed_ParameterType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_cancelFailed_ParameterType */
 
 /* eslint-enable */

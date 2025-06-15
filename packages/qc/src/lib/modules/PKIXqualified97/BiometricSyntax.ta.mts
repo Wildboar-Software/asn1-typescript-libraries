@@ -6,7 +6,7 @@ import {
     _decode_BiometricData,
     _encode_BiometricData,
 } from "../PKIXqualified97/BiometricData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BiometricSyntax */
+
 /**
  * @summary BiometricSyntax
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type BiometricSyntax = BiometricData[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BiometricSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricSyntax */
+
 let _cached_decoder_for_BiometricSyntax: $.ASN1Decoder<BiometricSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricSyntax */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricSyntax
  * @function
@@ -39,13 +37,11 @@ export function _decode_BiometricSyntax(el: _Element) {
     }
     return _cached_decoder_for_BiometricSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricSyntax */
+
 let _cached_encoder_for_BiometricSyntax: $.ASN1Encoder<BiometricSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricSyntax */
+
 /**
  * @summary Encodes a(n) BiometricSyntax into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_BiometricSyntax(
     return _cached_encoder_for_BiometricSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricSyntax */
 
 /* eslint-enable */

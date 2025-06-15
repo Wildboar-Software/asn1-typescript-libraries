@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION X509Curves */
 /**
  * @summary X509Curves
  * @description
@@ -18,26 +17,18 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * @type {OBJECT_IDENTIFIER}
  */
 export type X509Curves = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION X509Curves */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X509Curves */
 let _cached_decoder_for_X509Curves: $.ASN1Decoder<X509Curves> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X509Curves */
 
-/* START_OF_SYMBOL_DEFINITION _decode_X509Curves */
 export function _decode_X509Curves(el: _Element) {
     if (!_cached_decoder_for_X509Curves) {
         _cached_decoder_for_X509Curves = $._decodeObjectIdentifier;
     }
     return _cached_decoder_for_X509Curves(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_X509Curves */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X509Curves */
 let _cached_encoder_for_X509Curves: $.ASN1Encoder<X509Curves> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X509Curves */
 
-/* START_OF_SYMBOL_DEFINITION _encode_X509Curves */
 export function _encode_X509Curves(
     value: X509Curves,
     elGetter: $.ASN1Encoder<X509Curves>
@@ -47,6 +38,5 @@ export function _encode_X509Curves(
     }
     return _cached_encoder_for_X509Curves(value, elGetter);
 }
-/* END_OF_SYMBOL_DEFINITION _encode_X509Curves */
 
 /* eslint-enable */

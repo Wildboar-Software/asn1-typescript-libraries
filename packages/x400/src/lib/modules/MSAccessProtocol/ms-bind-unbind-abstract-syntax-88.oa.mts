@@ -16,7 +16,6 @@ import {
     _encode_MSBindUnbindPDUs88,
 } from '../MSAccessProtocol/MSBindUnbindPDUs88.ta.mjs';
 import { id_as_ms_88 } from '../MHSProtocolObjectIdentifiers/id-as-ms-88.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_bind_unbind_abstract_syntax_88 */
 /**
  * @summary ms_bind_unbind_abstract_syntax_88
  * @description
@@ -46,6 +45,5 @@ export const ms_bind_unbind_abstract_syntax_88: ABSTRACT_SYNTAX<MSBindUnbindPDUs
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&property': undefined,
 };
-/* END_OF_SYMBOL_DEFINITION ms_bind_unbind_abstract_syntax_88 */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_er_internal */
+
 /**
  * @summary id_aa_er_internal
  * @description
@@ -39,6 +39,5 @@ const id_aa_er_internal: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     49,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_er_internal */
 
 /* eslint-enable */

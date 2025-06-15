@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION MHS_OBJECT */
 /**
  * @summary MHS_OBJECT
  * @description
@@ -24,6 +23,5 @@ import { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operatio
  * @interface
  */
 export type MHS_OBJECT = ROS_OBJECT_CLASS;
-/* END_OF_SYMBOL_DEFINITION MHS_OBJECT */
 
 /* eslint-enable */

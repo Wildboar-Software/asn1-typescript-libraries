@@ -22,7 +22,6 @@ import { id_att_per_recipient_message_submission_fields } from '../MSObjectIdent
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_per_recipient_message_submission_fields */
 /**
  * @summary mt_per_recipient_message_submission_fields
  * @description
@@ -53,6 +52,5 @@ export const mt_per_recipient_message_submission_fields: X413ATTRIBUTE<PerRecipi
     '&id': id_att_per_recipient_message_submission_fields /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_per_recipient_message_submission_fields */
 
 /* eslint-enable */

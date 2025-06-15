@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CryptoModuleSecurity */
+
 /**
  * @summary CryptoModuleSecurity
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CryptoModuleSecurity = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION CryptoModuleSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoModuleSecurity */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CryptoModuleSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CryptoModuleSecurity */
+
+
 export const _decode_CryptoModuleSecurity = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_CryptoModuleSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoModuleSecurity */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CryptoModuleSecurity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CryptoModuleSecurity */
+
+
 export const _encode_CryptoModuleSecurity = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CryptoModuleSecurity */
 
 /* eslint-enable */

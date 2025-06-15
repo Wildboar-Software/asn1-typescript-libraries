@@ -20,7 +20,7 @@ import {
     _decode_SessionId,
     _encode_SessionId,
 } from '../E-health-common/SessionId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION E_terminateResponse */
+
 /**
  * @summary E_terminateResponse
  * @description
@@ -80,9 +80,8 @@ export class E_terminateResponse {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_terminateResponse */
+
 /**
  * @summary The Leading Root Component Types of E_terminateResponse
  * @description
@@ -107,9 +106,8 @@ export const _root_component_type_list_1_spec_for_E_terminateResponse: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_terminateResponse */
+
 /**
  * @summary The Trailing Root Component Types of E_terminateResponse
  * @description
@@ -119,9 +117,8 @@ export const _root_component_type_list_1_spec_for_E_terminateResponse: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_E_terminateResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_terminateResponse */
+
 /**
  * @summary The Extension Addition Component Types of E_terminateResponse
  * @description
@@ -131,13 +128,11 @@ export const _root_component_type_list_2_spec_for_E_terminateResponse: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_E_terminateResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_E_terminateResponse */
+
 let _cached_decoder_for_E_terminateResponse: $.ASN1Decoder<E_terminateResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_E_terminateResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) E_terminateResponse
  * @function
@@ -172,13 +167,11 @@ export function _decode_E_terminateResponse(el: _Element) {
     }
     return _cached_decoder_for_E_terminateResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_E_terminateResponse */
+
 let _cached_encoder_for_E_terminateResponse: $.ASN1Encoder<E_terminateResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_E_terminateResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_E_terminateResponse */
+
 /**
  * @summary Encodes a(n) E_terminateResponse into an ASN.1 Element.
  * @function
@@ -218,6 +211,5 @@ export function _encode_E_terminateResponse(
     return _cached_encoder_for_E_terminateResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_E_terminateResponse */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AccountName */
+
 /**
  * @summary AccountName
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AccountName = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION AccountName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccountName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccountName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccountName */
+
+
 export const _decode_AccountName = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_AccountName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccountName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccountName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccountName */
+
+
 export const _encode_AccountName = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccountName */
 
 /* eslint-enable */

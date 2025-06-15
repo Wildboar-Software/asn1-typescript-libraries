@@ -16,7 +16,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportDeliveryResult */
 /**
  * @summary ReportDeliveryResult
  * @description
@@ -36,13 +35,9 @@ export type ReportDeliveryResult =
     | { empty_result: NULL } /* CHOICE_ALT_ROOT */
     | { extensions: ExtensionField[] } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ReportDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryResult */
 let _cached_decoder_for_ReportDeliveryResult: $.ASN1Decoder<ReportDeliveryResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportDeliveryResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportDeliveryResult
  * @function
@@ -65,13 +60,9 @@ export function _decode_ReportDeliveryResult(el: _Element) {
     }
     return _cached_decoder_for_ReportDeliveryResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryResult */
 let _cached_encoder_for_ReportDeliveryResult: $.ASN1Encoder<ReportDeliveryResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportDeliveryResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportDeliveryResult */
 /**
  * @summary Encodes a(n) ReportDeliveryResult into an ASN.1 Element.
  * @function
@@ -98,6 +89,5 @@ export function _encode_ReportDeliveryResult(
     return _cached_encoder_for_ReportDeliveryResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportDeliveryResult */
 
 /* eslint-enable */

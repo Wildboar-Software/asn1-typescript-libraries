@@ -25,7 +25,7 @@ import {
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Typed_data_type */
+
 /**
  * @summary Typed_data_type
  * @description
@@ -44,13 +44,11 @@ export type Typed_data_type =
     | { acPPDU: AC_PPDU } /* CHOICE_ALT_ROOT */
     | { acaPPDU: ACA_PPDU } /* CHOICE_ALT_ROOT */
     | { ttdPPDU: User_data } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Typed_data_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Typed_data_type */
+
 let _cached_decoder_for_Typed_data_type: $.ASN1Decoder<Typed_data_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Typed_data_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Typed_data_type */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Typed_data_type
  * @function
@@ -76,13 +74,11 @@ export function _decode_Typed_data_type(el: _Element) {
     }
     return _cached_decoder_for_Typed_data_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Typed_data_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Typed_data_type */
+
 let _cached_encoder_for_Typed_data_type: $.ASN1Encoder<Typed_data_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Typed_data_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Typed_data_type */
+
 /**
  * @summary Encodes a(n) Typed_data_type into an ASN.1 Element.
  * @function
@@ -117,6 +113,5 @@ export function _encode_Typed_data_type(
     return _cached_encoder_for_Typed_data_type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Typed_data_type */
 
 /* eslint-enable */

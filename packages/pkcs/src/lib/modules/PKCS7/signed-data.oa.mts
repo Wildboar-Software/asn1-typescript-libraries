@@ -6,7 +6,7 @@ import {
     _decode_SignedData,
     _encode_SignedData,
 } from "../PKCS7/SignedData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION signed_data */
+
 /**
  * @summary signed_data
  * @description
@@ -34,6 +34,5 @@ export const signed_data: PKCS7_CONTENT_TYPE<SignedData> = {
     "&id": id_signed_data /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signed_data */
 
 /* eslint-enable */

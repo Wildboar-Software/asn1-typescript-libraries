@@ -30,7 +30,7 @@ import {
     _decode_PtoMPools,
     _encode_PtoMPools,
 } from '../ASN1DefinedTypesModule/PtoMPools.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectionType */
+
 /**
  * @summary ConnectionType
  * @description
@@ -51,13 +51,11 @@ export type ConnectionType =
     | { ptoTpPool: PtoTPPool } /* CHOICE_ALT_ROOT */
     | { explicitPtoMP: ExplicitPtoMP } /* CHOICE_ALT_ROOT */
     | { ptoMPools: PtoMPools } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionType */
+
 let _cached_decoder_for_ConnectionType: $.ASN1Decoder<ConnectionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectionType
  * @function
@@ -93,13 +91,11 @@ export function _decode_ConnectionType(el: _Element) {
     }
     return _cached_decoder_for_ConnectionType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionType */
+
 let _cached_encoder_for_ConnectionType: $.ASN1Encoder<ConnectionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionType */
+
 /**
  * @summary Encodes a(n) ConnectionType into an ASN.1 Element.
  * @function
@@ -145,6 +141,5 @@ export function _encode_ConnectionType(
     return _cached_encoder_for_ConnectionType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionType */
 
 /* eslint-enable */

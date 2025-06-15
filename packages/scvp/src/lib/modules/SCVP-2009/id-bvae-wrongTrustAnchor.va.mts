@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_bvae } from '../SCVP-2009/id-bvae.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_bvae_wrongTrustAnchor */
 /**
  * @summary id_bvae_wrongTrustAnchor
  * @description
@@ -28,6 +27,5 @@ export const id_bvae_wrongTrustAnchor: OBJECT_IDENTIFIER = new _OID(
   [3],
   id_bvae
 );
-/* END_OF_SYMBOL_DEFINITION id_bvae_wrongTrustAnchor */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_cap } from "../SecureMimeMessageV3dot1-2009/id-cap.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_cap_preferBinaryInside */
+
 /**
  * @summary id_cap_preferBinaryInside
  * @description
@@ -18,6 +18,5 @@ export const id_cap_preferBinaryInside: OBJECT_IDENTIFIER = new _OID(
     [1],
     id_cap
 );
-/* END_OF_SYMBOL_DEFINITION id_cap_preferBinaryInside */
 
 /* eslint-enable */

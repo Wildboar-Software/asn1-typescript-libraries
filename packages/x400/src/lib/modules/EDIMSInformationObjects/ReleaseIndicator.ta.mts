@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ReleaseIndicator */
 /**
  * @summary ReleaseIndicator
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ReleaseIndicator = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION ReleaseIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseIndicator */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReleaseIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReleaseIndicator */
 export const _decode_ReleaseIndicator = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_ReleaseIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseIndicator */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReleaseIndicator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReleaseIndicator */
 export const _encode_ReleaseIndicator = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReleaseIndicator */
 
 /* eslint-enable */

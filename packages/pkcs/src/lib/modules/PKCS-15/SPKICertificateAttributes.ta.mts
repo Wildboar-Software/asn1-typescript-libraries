@@ -9,7 +9,7 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPKICertificateAttributes */
+
 /**
  * @summary SPKICertificateAttributes
  * @description
@@ -64,9 +64,8 @@ export class SPKICertificateAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKICertificateAttributes */
+
 /**
  * @summary The Leading Root Component Types of SPKICertificateAttributes
  * @description
@@ -78,9 +77,8 @@ export class SPKICertificateAttributes {
 export const _root_component_type_list_1_spec_for_SPKICertificateAttributes: $.ComponentSpec[] = [
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKICertificateAttributes */
+
 /**
  * @summary The Trailing Root Component Types of SPKICertificateAttributes
  * @description
@@ -90,9 +88,8 @@ export const _root_component_type_list_1_spec_for_SPKICertificateAttributes: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SPKICertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKICertificateAttributes */
+
 /**
  * @summary The Extension Addition Component Types of SPKICertificateAttributes
  * @description
@@ -102,13 +99,11 @@ export const _root_component_type_list_2_spec_for_SPKICertificateAttributes: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_SPKICertificateAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKICertificateAttributes */
+
 let _cached_decoder_for_SPKICertificateAttributes: $.ASN1Decoder<SPKICertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPKICertificateAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SPKICertificateAttributes
  * @function
@@ -138,13 +133,11 @@ export function _decode_SPKICertificateAttributes(el: _Element) {
     }
     return _cached_decoder_for_SPKICertificateAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKICertificateAttributes */
+
 let _cached_encoder_for_SPKICertificateAttributes: $.ASN1Encoder<SPKICertificateAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKICertificateAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPKICertificateAttributes */
+
 /**
  * @summary Encodes a(n) SPKICertificateAttributes into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_SPKICertificateAttributes(
     return _cached_encoder_for_SPKICertificateAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPKICertificateAttributes */
 
 /* eslint-enable */

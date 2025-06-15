@@ -6,7 +6,7 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../PKCS-10/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Attributes */
+
 /**
  * @summary Attributes
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Attributes = Attribute[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attributes */
+
 let _cached_decoder_for_Attributes: $.ASN1Decoder<Attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Attributes
  * @function
@@ -39,13 +37,11 @@ export function _decode_Attributes(el: _Element) {
     }
     return _cached_decoder_for_Attributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attributes */
+
 let _cached_encoder_for_Attributes: $.ASN1Encoder<Attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attributes */
+
 /**
  * @summary Encodes a(n) Attributes into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_Attributes(
     return _cached_encoder_for_Attributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attributes */
 
 /* eslint-enable */

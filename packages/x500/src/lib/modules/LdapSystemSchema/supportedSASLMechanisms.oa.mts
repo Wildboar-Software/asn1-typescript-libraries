@@ -10,7 +10,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION supportedSASLMechanisms */
 /**
  * @summary supportedSASLMechanisms
  * @description
@@ -49,6 +48,5 @@ export const supportedSASLMechanisms: ATTRIBUTE<DirectoryString> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION supportedSASLMechanisms */
 
 /* eslint-enable */

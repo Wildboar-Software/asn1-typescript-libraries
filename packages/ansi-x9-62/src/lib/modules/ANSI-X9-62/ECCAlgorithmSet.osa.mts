@@ -9,7 +9,6 @@ import { ECCAlgorithmSet_Union5_Intersection0_Element } from "./ECCAlgorithmSet-
 import { ECCAlgorithmSet_Union6_Intersection0_Element } from "./ECCAlgorithmSet-Union6-Intersection0-Element.oa.mjs";
 import { ECCAlgorithmSet_Union7_Intersection0_Element } from "./ECCAlgorithmSet-Union7-Intersection0-Element.oa.mjs";
 import { ECCAlgorithmSet_Union8_Intersection0_Element } from "./ECCAlgorithmSet-Union8-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet */
 /**
  * @summary ECCAlgorithmSet
  * @description
@@ -46,6 +45,5 @@ export const ECCAlgorithmSet: ALGORITHM[] = [
     ECCAlgorithmSet_Union7_Intersection0_Element,
     ECCAlgorithmSet_Union8_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION ECCAlgorithmSet */
 
 /* eslint-enable */

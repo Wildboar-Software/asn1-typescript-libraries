@@ -6,7 +6,7 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION X520OrganizationName */
+
 /**
  * @summary X520OrganizationName
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type X520OrganizationName = DirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION X520OrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X520OrganizationName */
+
 let _cached_decoder_for_X520OrganizationName: $.ASN1Decoder<X520OrganizationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X520OrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_X520OrganizationName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) X520OrganizationName
  * @function
@@ -37,13 +35,11 @@ export function _decode_X520OrganizationName(el: _Element) {
     }
     return _cached_decoder_for_X520OrganizationName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_X520OrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X520OrganizationName */
+
 let _cached_encoder_for_X520OrganizationName: $.ASN1Encoder<X520OrganizationName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X520OrganizationName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_X520OrganizationName */
+
 /**
  * @summary Encodes a(n) X520OrganizationName into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_X520OrganizationName(
     return _cached_encoder_for_X520OrganizationName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_X520OrganizationName */
 
 /* eslint-enable */

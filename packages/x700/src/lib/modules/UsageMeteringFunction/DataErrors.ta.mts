@@ -16,7 +16,6 @@ import {
     _decode_PossibleError,
     _encode_PossibleError,
 } from '../UsageMeteringFunction/PossibleError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DataErrors */
 /**
  * @summary DataErrors
  * @description
@@ -33,13 +32,9 @@ import {
 export type DataErrors =
     | { possibleErrors: PossibleError[] } /* CHOICE_ALT_ROOT */
     | { noProblem: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DataErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataErrors */
 let _cached_decoder_for_DataErrors: $.ASN1Decoder<DataErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataErrors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataErrors */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataErrors
  * @function
@@ -60,13 +55,9 @@ export function _decode_DataErrors(el: _Element) {
     }
     return _cached_decoder_for_DataErrors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataErrors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataErrors */
 let _cached_encoder_for_DataErrors: $.ASN1Encoder<DataErrors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataErrors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataErrors */
 /**
  * @summary Encodes a(n) DataErrors into an ASN.1 Element.
  * @function
@@ -93,6 +84,5 @@ export function _encode_DataErrors(
     return _cached_encoder_for_DataErrors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataErrors */
 
 /* eslint-enable */

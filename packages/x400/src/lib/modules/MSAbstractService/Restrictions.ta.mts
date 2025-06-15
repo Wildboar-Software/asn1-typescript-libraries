@@ -18,7 +18,6 @@ import {
     _decode_MS_EITs,
     _encode_MS_EITs,
 } from '../MSAbstractService/MS-EITs.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Restrictions */
 /**
  * @summary Restrictions
  * @description
@@ -80,9 +79,7 @@ export class Restrictions {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Restrictions */
 /**
  * @summary The Leading Root Component Types of Restrictions
  * @description
@@ -114,9 +111,7 @@ export const _root_component_type_list_1_spec_for_Restrictions: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Restrictions */
 /**
  * @summary The Trailing Root Component Types of Restrictions
  * @description
@@ -126,9 +121,7 @@ export const _root_component_type_list_1_spec_for_Restrictions: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Restrictions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Restrictions */
 /**
  * @summary The Extension Addition Component Types of Restrictions
  * @description
@@ -138,13 +131,9 @@ export const _root_component_type_list_2_spec_for_Restrictions: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_Restrictions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Restrictions */
 let _cached_decoder_for_Restrictions: $.ASN1Decoder<Restrictions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Restrictions */
 /**
  * @summary Decodes an ASN.1 element into a(n) Restrictions
  * @function
@@ -201,13 +190,9 @@ export function _decode_Restrictions(el: _Element) {
     }
     return _cached_decoder_for_Restrictions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Restrictions */
 let _cached_encoder_for_Restrictions: $.ASN1Encoder<Restrictions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Restrictions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Restrictions */
 /**
  * @summary Encodes a(n) Restrictions into an ASN.1 Element.
  * @function
@@ -264,6 +249,5 @@ export function _encode_Restrictions(
     return _cached_encoder_for_Restrictions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Restrictions */
 
 /* eslint-enable */

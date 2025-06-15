@@ -17,7 +17,7 @@ import {
     _encode_Credentials,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Credentials.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION initiatorCredentials */
+
 /**
  * @summary initiatorCredentials
  * @description
@@ -48,6 +48,5 @@ export const initiatorCredentials: SEC_EXCHG_ITEM<Credentials> = {
   '&Errors': [authenticationFailure] /* OBJECT_FIELD_SETTING */,
   '&ItemType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION initiatorCredentials */
 
 /* eslint-enable */

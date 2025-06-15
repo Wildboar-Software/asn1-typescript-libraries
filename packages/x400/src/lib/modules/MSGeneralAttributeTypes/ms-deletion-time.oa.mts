@@ -24,7 +24,6 @@ import { id_att_deletion_time } from '../MSObjectIdentifiers/id-att-deletion-tim
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_deletion_time */
 /**
  * @summary ms_deletion_time
  * @description
@@ -59,6 +58,5 @@ export const ms_deletion_time: X413ATTRIBUTE<DeletionTime> = {
     '&id': id_att_deletion_time /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_deletion_time */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs";
 import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
 import { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ThresholdInfo */
 /**
  * @summary ThresholdInfo
  * @description
@@ -81,9 +80,7 @@ class ThresholdInfo {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ThresholdInfo */
 /**
  * @summary The Leading Root Component Types of ThresholdInfo
  * @description
@@ -99,9 +96,7 @@ const _root_component_type_list_1_spec_for_ThresholdInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("thresholdLevel", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("armTime", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ThresholdInfo */
 /**
  * @summary The Trailing Root Component Types of ThresholdInfo
  * @description
@@ -114,9 +109,7 @@ export
 const _root_component_type_list_2_spec_for_ThresholdInfo: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ThresholdInfo */
 /**
  * @summary The Extension Addition Component Types of ThresholdInfo
  * @description
@@ -129,13 +122,9 @@ export
 const _extension_additions_list_spec_for_ThresholdInfo: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ThresholdInfo */
 let _cached_decoder_for_ThresholdInfo: $.ASN1Decoder<ThresholdInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ThresholdInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ThresholdInfo
  * @function
@@ -174,13 +163,9 @@ function _decode_ThresholdInfo (el: _Element) {
 }; }
     return _cached_decoder_for_ThresholdInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ThresholdInfo */
 let _cached_encoder_for_ThresholdInfo: $.ASN1Encoder<ThresholdInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ThresholdInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ThresholdInfo */
 /**
  * @summary Encodes a(n) ThresholdInfo into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ function _encode_ThresholdInfo (value: ThresholdInfo, elGetter: $.ASN1Encoder<Th
     return _cached_encoder_for_ThresholdInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ThresholdInfo */
 
 /* eslint-enable */

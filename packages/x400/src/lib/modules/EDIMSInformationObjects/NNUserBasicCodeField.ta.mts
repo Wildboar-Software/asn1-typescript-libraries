@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField */
 /**
  * @summary NNUserBasicCodeField
  * @description
@@ -37,219 +36,166 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NNUserBasicCodeField = INTEGER;
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_unspecified */
 /**
  * @summary NNUserBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_unspecified: NNUserBasicCodeField = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_unspecified */
 
-/* START_OF_SYMBOL_DEFINITION unspecified */
 /**
  * @summary NNUserBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
 export const unspecified: NNUserBasicCodeField = NNUserBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION unspecified */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_syntax_error */
 /**
  * @summary NNUserBasicCodeField_syntax_error
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_syntax_error: NNUserBasicCodeField = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_syntax_error */
 
-/* START_OF_SYMBOL_DEFINITION syntax_error */
 /**
  * @summary NNUserBasicCodeField_syntax_error
  * @constant
  * @type {number}
  */
 export const syntax_error: NNUserBasicCodeField = NNUserBasicCodeField_syntax_error; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION syntax_error */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_interchange_sender_unknown */
 /**
  * @summary NNUserBasicCodeField_interchange_sender_unknown
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_interchange_sender_unknown: NNUserBasicCodeField = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_interchange_sender_unknown */
 
-/* START_OF_SYMBOL_DEFINITION interchange_sender_unknown */
 /**
  * @summary NNUserBasicCodeField_interchange_sender_unknown
  * @constant
  * @type {number}
  */
 export const interchange_sender_unknown: NNUserBasicCodeField = NNUserBasicCodeField_interchange_sender_unknown; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION interchange_sender_unknown */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_interchange_recipient_unknown */
 /**
  * @summary NNUserBasicCodeField_interchange_recipient_unknown
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_interchange_recipient_unknown: NNUserBasicCodeField = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_interchange_recipient_unknown */
 
-/* START_OF_SYMBOL_DEFINITION interchange_recipient_unknown */
 /**
  * @summary NNUserBasicCodeField_interchange_recipient_unknown
  * @constant
  * @type {number}
  */
 export const interchange_recipient_unknown: NNUserBasicCodeField = NNUserBasicCodeField_interchange_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION interchange_recipient_unknown */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_invalid_heading_field */
 /**
  * @summary NNUserBasicCodeField_invalid_heading_field
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_invalid_heading_field: NNUserBasicCodeField = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_invalid_heading_field */
 
-/* START_OF_SYMBOL_DEFINITION invalid_heading_field */
 /**
  * @summary NNUserBasicCodeField_invalid_heading_field
  * @constant
  * @type {number}
  */
 export const invalid_heading_field: NNUserBasicCodeField = NNUserBasicCodeField_invalid_heading_field; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalid_heading_field */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_invalid_bodypart_type */
 /**
  * @summary NNUserBasicCodeField_invalid_bodypart_type
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_invalid_bodypart_type: NNUserBasicCodeField = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_invalid_bodypart_type */
 
-/* START_OF_SYMBOL_DEFINITION invalid_bodypart_type */
 /**
  * @summary NNUserBasicCodeField_invalid_bodypart_type
  * @constant
  * @type {number}
  */
 export const invalid_bodypart_type: NNUserBasicCodeField = NNUserBasicCodeField_invalid_bodypart_type; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalid_bodypart_type */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_invalid_message_type */
 /**
  * @summary NNUserBasicCodeField_invalid_message_type
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_invalid_message_type: NNUserBasicCodeField = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_invalid_message_type */
 
-/* START_OF_SYMBOL_DEFINITION invalid_message_type */
 /**
  * @summary NNUserBasicCodeField_invalid_message_type
  * @constant
  * @type {number}
  */
 export const invalid_message_type: NNUserBasicCodeField = NNUserBasicCodeField_invalid_message_type; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalid_message_type */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_functional_group_not_supported */
 /**
  * @summary NNUserBasicCodeField_functional_group_not_supported
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_functional_group_not_supported: NNUserBasicCodeField = 7; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_functional_group_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION functional_group_not_supported */
 /**
  * @summary NNUserBasicCodeField_functional_group_not_supported
  * @constant
  * @type {number}
  */
 export const functional_group_not_supported: NNUserBasicCodeField = NNUserBasicCodeField_functional_group_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION functional_group_not_supported */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_subscription_terminated */
 /**
  * @summary NNUserBasicCodeField_subscription_terminated
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_subscription_terminated: NNUserBasicCodeField = 8; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_subscription_terminated */
 
-/* START_OF_SYMBOL_DEFINITION subscription_terminated */
 /**
  * @summary NNUserBasicCodeField_subscription_terminated
  * @constant
  * @type {number}
  */
 export const subscription_terminated: NNUserBasicCodeField = NNUserBasicCodeField_subscription_terminated; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION subscription_terminated */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_no_bilateral_agreement */
 /**
  * @summary NNUserBasicCodeField_no_bilateral_agreement
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_no_bilateral_agreement: NNUserBasicCodeField = 9; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_no_bilateral_agreement */
 
-/* START_OF_SYMBOL_DEFINITION no_bilateral_agreement */
 /**
  * @summary NNUserBasicCodeField_no_bilateral_agreement
  * @constant
  * @type {number}
  */
 export const no_bilateral_agreement: NNUserBasicCodeField = NNUserBasicCodeField_no_bilateral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_bilateral_agreement */
 
-/* START_OF_SYMBOL_DEFINITION NNUserBasicCodeField_user_defined_reason */
 /**
  * @summary NNUserBasicCodeField_user_defined_reason
  * @constant
  * @type {number}
  */
 export const NNUserBasicCodeField_user_defined_reason: NNUserBasicCodeField = 10; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION NNUserBasicCodeField_user_defined_reason */
 
-/* START_OF_SYMBOL_DEFINITION user_defined_reason */
 /**
  * @summary NNUserBasicCodeField_user_defined_reason
  * @constant
  * @type {number}
  */
 export const user_defined_reason: NNUserBasicCodeField = NNUserBasicCodeField_user_defined_reason; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION user_defined_reason */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUserBasicCodeField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NNUserBasicCodeField */
 export const _decode_NNUserBasicCodeField = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_NNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUserBasicCodeField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NNUserBasicCodeField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NNUserBasicCodeField */
 export const _encode_NNUserBasicCodeField = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NNUserBasicCodeField */
 
 /* eslint-enable */

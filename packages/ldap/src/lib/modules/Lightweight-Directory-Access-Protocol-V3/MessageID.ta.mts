@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MessageID */
+
 /**
  * @summary MessageID
  * @description
@@ -24,9 +24,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type MessageID = INTEGER;
-/* END_OF_SYMBOL_DEFINITION MessageID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MessageID */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageID
  * @function
@@ -36,9 +35,8 @@ export type MessageID = INTEGER;
 export function _decode_MessageID(el: _Element) {
   return $._decodeInteger(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MessageID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MessageID */
+
 /**
  * @summary Encodes a(n) MessageID into an ASN.1 Element.
  * @function
@@ -53,6 +51,5 @@ export function _encode_MessageID(
   return $._encodeInteger(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MessageID */
 
 /* eslint-enable */

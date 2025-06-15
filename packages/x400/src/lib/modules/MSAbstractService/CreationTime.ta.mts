@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CreationTime */
 /**
  * @summary CreationTime
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CreationTime = UTCTime; // UTCTime
-/* END_OF_SYMBOL_DEFINITION CreationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CreationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CreationTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CreationTime */
 export const _decode_CreationTime = $._decodeUTCTime;
-/* END_OF_SYMBOL_DEFINITION _decode_CreationTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CreationTime */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CreationTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CreationTime */
 export const _encode_CreationTime = $._encodeUTCTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CreationTime */
 
 /* eslint-enable */

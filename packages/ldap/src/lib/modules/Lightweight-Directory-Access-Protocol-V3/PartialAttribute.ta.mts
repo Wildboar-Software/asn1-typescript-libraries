@@ -24,7 +24,7 @@ import {
   _decode_AttributeValue,
   _encode_AttributeValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PartialAttribute */
+
 /**
  * @summary PartialAttribute
  * @description
@@ -84,9 +84,8 @@ export class PartialAttribute {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION PartialAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PartialAttribute */
+
 /**
  * @summary The Leading Root Component Types of PartialAttribute
  * @description
@@ -111,9 +110,8 @@ export const _root_component_type_list_1_spec_for_PartialAttribute: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PartialAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PartialAttribute */
+
 /**
  * @summary The Trailing Root Component Types of PartialAttribute
  * @description
@@ -123,9 +121,8 @@ export const _root_component_type_list_1_spec_for_PartialAttribute: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PartialAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PartialAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PartialAttribute */
+
 /**
  * @summary The Extension Addition Component Types of PartialAttribute
  * @description
@@ -135,9 +132,8 @@ export const _root_component_type_list_2_spec_for_PartialAttribute: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_PartialAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PartialAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PartialAttribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PartialAttribute
  * @function
@@ -161,9 +157,8 @@ export function _decode_PartialAttribute(el: _Element) {
     vals = $._decodeSetOf<AttributeValue>(() => _decode_AttributeValue)(sequence[1]);
     return new PartialAttribute(type_, vals, sequence.slice(2));
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PartialAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PartialAttribute */
+
 /**
  * @summary Encodes a(n) PartialAttribute into an ASN.1 Element.
  * @function
@@ -190,6 +185,5 @@ export function _encode_PartialAttribute(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PartialAttribute */
 
 /* eslint-enable */

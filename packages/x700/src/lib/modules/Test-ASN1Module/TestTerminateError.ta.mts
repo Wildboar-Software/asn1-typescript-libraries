@@ -15,7 +15,6 @@ import {
     _decode_TestTerminateError_Item,
     _encode_TestTerminateError_Item,
 } from '../Test-ASN1Module/TestTerminateError-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestTerminateError */
 /**
  * @summary TestTerminateError
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type TestTerminateError = TestTerminateError_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TestTerminateError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestTerminateError */
 let _cached_decoder_for_TestTerminateError: $.ASN1Decoder<TestTerminateError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestTerminateError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestTerminateError */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestTerminateError
  * @function
@@ -51,13 +46,9 @@ export function _decode_TestTerminateError(el: _Element) {
     }
     return _cached_decoder_for_TestTerminateError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestTerminateError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestTerminateError */
 let _cached_encoder_for_TestTerminateError: $.ASN1Encoder<TestTerminateError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestTerminateError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestTerminateError */
 /**
  * @summary Encodes a(n) TestTerminateError into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_TestTerminateError(
     return _cached_encoder_for_TestTerminateError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestTerminateError */
 
 /* eslint-enable */

@@ -24,7 +24,6 @@ import {
     _encode_AttributeType,
 } from "../MSAbstractService/AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mhs_supported_attributes */
 /**
  * @summary mhs_supported_attributes
  * @description
@@ -61,6 +60,5 @@ export const mhs_supported_attributes: ATTRIBUTE<AttributeType> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_supported_attributes */
 
 /* eslint-enable */

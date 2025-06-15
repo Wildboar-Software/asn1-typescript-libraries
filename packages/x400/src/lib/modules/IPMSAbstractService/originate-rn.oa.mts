@@ -30,7 +30,6 @@ import {
 import { subscription_error } from '../IPMSAbstractService/subscription-error.oa.mjs';
 import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION originate_rn */
 /**
  * @summary originate_rn
  * @description
@@ -78,6 +77,5 @@ export const originate_rn: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION originate_rn */
 
 /* eslint-enable */

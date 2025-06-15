@@ -20,7 +20,6 @@ import {
     _decode_PSAPAddress,
     _encode_PSAPAddress,
 } from '../MTSAbstractService/PSAPAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UserAddress */
 /**
  * @summary UserAddress
  * @description
@@ -42,13 +41,9 @@ import {
 export type UserAddress =
     | { x121: UserAddress_x121 } /* CHOICE_ALT_ROOT */
     | { presentation: PSAPAddress } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UserAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserAddress */
 let _cached_decoder_for_UserAddress: $.ASN1Decoder<UserAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserAddress
  * @function
@@ -74,13 +69,9 @@ export function _decode_UserAddress(el: _Element) {
     }
     return _cached_decoder_for_UserAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserAddress */
 let _cached_encoder_for_UserAddress: $.ASN1Encoder<UserAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserAddress */
 /**
  * @summary Encodes a(n) UserAddress into an ASN.1 Element.
  * @function
@@ -114,6 +105,5 @@ export function _encode_UserAddress(
     return _cached_encoder_for_UserAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserAddress */
 
 /* eslint-enable */

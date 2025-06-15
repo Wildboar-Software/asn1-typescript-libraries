@@ -2,7 +2,6 @@
 import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION All_operations_consumer_initiated */
 /**
  * @summary All_operations_consumer_initiated
  * @description
@@ -21,6 +20,5 @@ export const All_operations_consumer_initiated: OPERATION[] = [
     requestShadowUpdate,
     updateShadow,
 ];
-/* END_OF_SYMBOL_DEFINITION All_operations_consumer_initiated */
 
 /* eslint-enable */

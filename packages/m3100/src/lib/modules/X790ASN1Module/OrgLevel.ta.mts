@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel */
+
 /**
  * @summary OrgLevel
  * @description
@@ -26,147 +26,128 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type OrgLevel = INTEGER;
-/* END_OF_SYMBOL_DEFINITION OrgLevel */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_no_escalation */
+
 /**
  * @summary OrgLevel_no_escalation
  * @constant
  * @type {number}
  */
 export const OrgLevel_no_escalation: OrgLevel = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_no_escalation */
 
-/* START_OF_SYMBOL_DEFINITION no_escalation */
+
 /**
  * @summary OrgLevel_no_escalation
  * @constant
  * @type {number}
  */
 export const no_escalation: OrgLevel = OrgLevel_no_escalation; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_escalation */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_first_level */
+
 /**
  * @summary OrgLevel_first_level
  * @constant
  * @type {number}
  */
 export const OrgLevel_first_level: OrgLevel = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_first_level */
 
-/* START_OF_SYMBOL_DEFINITION first_level */
+
 /**
  * @summary OrgLevel_first_level
  * @constant
  * @type {number}
  */
 export const first_level: OrgLevel = OrgLevel_first_level; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION first_level */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_second_level */
+
 /**
  * @summary OrgLevel_second_level
  * @constant
  * @type {number}
  */
 export const OrgLevel_second_level: OrgLevel = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_second_level */
 
-/* START_OF_SYMBOL_DEFINITION second_level */
+
 /**
  * @summary OrgLevel_second_level
  * @constant
  * @type {number}
  */
 export const second_level: OrgLevel = OrgLevel_second_level; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION second_level */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_third_level */
+
 /**
  * @summary OrgLevel_third_level
  * @constant
  * @type {number}
  */
 export const OrgLevel_third_level: OrgLevel = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_third_level */
 
-/* START_OF_SYMBOL_DEFINITION third_level */
+
 /**
  * @summary OrgLevel_third_level
  * @constant
  * @type {number}
  */
 export const third_level: OrgLevel = OrgLevel_third_level; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION third_level */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_fourth_level */
+
 /**
  * @summary OrgLevel_fourth_level
  * @constant
  * @type {number}
  */
 export const OrgLevel_fourth_level: OrgLevel = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_fourth_level */
 
-/* START_OF_SYMBOL_DEFINITION fourth_level */
+
 /**
  * @summary OrgLevel_fourth_level
  * @constant
  * @type {number}
  */
 export const fourth_level: OrgLevel = OrgLevel_fourth_level; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION fourth_level */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_fifth_level */
+
 /**
  * @summary OrgLevel_fifth_level
  * @constant
  * @type {number}
  */
 export const OrgLevel_fifth_level: OrgLevel = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_fifth_level */
 
-/* START_OF_SYMBOL_DEFINITION fifth_level */
+
 /**
  * @summary OrgLevel_fifth_level
  * @constant
  * @type {number}
  */
 export const fifth_level: OrgLevel = OrgLevel_fifth_level; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION fifth_level */
 
-/* START_OF_SYMBOL_DEFINITION OrgLevel_sixth_level */
+
 /**
  * @summary OrgLevel_sixth_level
  * @constant
  * @type {number}
  */
 export const OrgLevel_sixth_level: OrgLevel = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrgLevel_sixth_level */
 
-/* START_OF_SYMBOL_DEFINITION sixth_level */
+
 /**
  * @summary OrgLevel_sixth_level
  * @constant
  * @type {number}
  */
 export const sixth_level: OrgLevel = OrgLevel_sixth_level; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION sixth_level */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OrgLevel */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OrgLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OrgLevel */
+
+
 export const _decode_OrgLevel = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_OrgLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OrgLevel */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OrgLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OrgLevel */
+
+
 export const _encode_OrgLevel = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OrgLevel */
 
 /* eslint-enable */

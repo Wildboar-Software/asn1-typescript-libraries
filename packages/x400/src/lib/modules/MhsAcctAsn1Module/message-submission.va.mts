@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION message_submission */
 /**
  * @summary message_submission
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const message_submission: EventTypeId = { localForm: 11 };
-/* END_OF_SYMBOL_DEFINITION message_submission */
 
 /* eslint-enable */

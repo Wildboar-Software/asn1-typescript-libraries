@@ -9,7 +9,6 @@ import {
     _decode_CertReplaceErr_code,
     _encode_CertReplaceErr_code,
 } from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertReplaceErr */
 /**
  * @summary CertReplaceErr
  * @description
@@ -62,9 +61,7 @@ export class CertReplaceErr {
         return new CertReplaceErr(_o.code, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReplaceErr */
 /**
  * @summary The Leading Root Component Types of CertReplaceErr
  * @description
@@ -76,9 +73,7 @@ export class CertReplaceErr {
 export const _root_component_type_list_1_spec_for_CertReplaceErr: $.ComponentSpec[] = [
     new $.ComponentSpec("code", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReplaceErr */
 /**
  * @summary The Trailing Root Component Types of CertReplaceErr
  * @description
@@ -88,9 +83,7 @@ export const _root_component_type_list_1_spec_for_CertReplaceErr: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertReplaceErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReplaceErr */
 /**
  * @summary The Extension Addition Component Types of CertReplaceErr
  * @description
@@ -100,13 +93,9 @@ export const _root_component_type_list_2_spec_for_CertReplaceErr: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_CertReplaceErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceErr */
 let _cached_decoder_for_CertReplaceErr: $.ASN1Decoder<CertReplaceErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReplaceErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReplaceErr
  * @function
@@ -134,13 +123,9 @@ export function _decode_CertReplaceErr(el: _Element) {
     }
     return _cached_decoder_for_CertReplaceErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceErr */
 let _cached_encoder_for_CertReplaceErr: $.ASN1Encoder<CertReplaceErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReplaceErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReplaceErr */
 /**
  * @summary Encodes a(n) CertReplaceErr into an ASN.1 Element.
  * @function
@@ -176,6 +161,5 @@ export function _encode_CertReplaceErr(
     return _cached_encoder_for_CertReplaceErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReplaceErr */
 
 /* eslint-enable */

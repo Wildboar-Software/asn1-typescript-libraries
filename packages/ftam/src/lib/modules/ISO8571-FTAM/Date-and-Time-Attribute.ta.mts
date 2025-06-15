@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Date_and_Time_Attribute */
+
 /**
  * @summary Date_and_Time_Attribute
  * @description
@@ -32,13 +32,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type Date_and_Time_Attribute =
   | { no_value_available: NULL } /* CHOICE_ALT_ROOT */
   | { actual_values: GeneralizedTime } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Date_and_Time_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Date_and_Time_Attribute */
+
 let _cached_decoder_for_Date_and_Time_Attribute: $.ASN1Decoder<Date_and_Time_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Date_and_Time_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Date_and_Time_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Date_and_Time_Attribute
  * @function
@@ -62,13 +60,11 @@ export function _decode_Date_and_Time_Attribute(el: _Element) {
   }
   return _cached_decoder_for_Date_and_Time_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Date_and_Time_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Date_and_Time_Attribute */
+
 let _cached_encoder_for_Date_and_Time_Attribute: $.ASN1Encoder<Date_and_Time_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Date_and_Time_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Date_and_Time_Attribute */
+
 /**
  * @summary Encodes a(n) Date_and_Time_Attribute into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_Date_and_Time_Attribute(
   return _cached_encoder_for_Date_and_Time_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Date_and_Time_Attribute */
 
 /* eslint-enable */

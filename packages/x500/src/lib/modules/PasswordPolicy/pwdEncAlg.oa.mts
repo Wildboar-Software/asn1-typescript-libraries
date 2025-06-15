@@ -11,7 +11,6 @@ import {
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";
 import { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.mjs";
 import { pwdEncAlgMatch } from "../PasswordPolicy/pwdEncAlgMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdEncAlg */
 /**
  * @summary pwdEncAlg
  * @description
@@ -53,6 +52,5 @@ export const pwdEncAlg: ATTRIBUTE<PwdEncAlg> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdEncAlg */
 
 /* eslint-enable */

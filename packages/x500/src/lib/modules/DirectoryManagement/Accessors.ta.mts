@@ -6,7 +6,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Accessors */
 /**
  * @summary Accessors
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type Accessors = Name[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Accessors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Accessors */
 let _cached_decoder_for_Accessors: $.ASN1Decoder<Accessors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Accessors */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Accessors */
 /**
  * @summary Decodes an ASN.1 element into a(n) Accessors
  * @function
@@ -39,13 +34,9 @@ export function _decode_Accessors(el: _Element) {
     }
     return _cached_decoder_for_Accessors(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Accessors */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Accessors */
 let _cached_encoder_for_Accessors: $.ASN1Encoder<Accessors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Accessors */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Accessors */
 /**
  * @summary Encodes a(n) Accessors into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_Accessors(
     return _cached_encoder_for_Accessors(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Accessors */
 
 /* eslint-enable */

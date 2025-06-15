@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, EXTERNAL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Association_informationBindErr */
 /**
  * @summary Association_informationBindErr
  * @description
@@ -20,13 +19,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type Association_informationBindErr = EXTERNAL[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Association_informationBindErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Association_informationBindErr */
 let _cached_decoder_for_Association_informationBindErr: $.ASN1Decoder<Association_informationBindErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Association_informationBindErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Association_informationBindErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) Association_informationBindErr
  * @function
@@ -41,13 +36,9 @@ export function _decode_Association_informationBindErr(el: _Element) {
     }
     return _cached_decoder_for_Association_informationBindErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Association_informationBindErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Association_informationBindErr */
 let _cached_encoder_for_Association_informationBindErr: $.ASN1Encoder<Association_informationBindErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Association_informationBindErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Association_informationBindErr */
 /**
  * @summary Encodes a(n) Association_informationBindErr into an ASN.1 Element.
  * @function
@@ -68,6 +59,5 @@ export function _encode_Association_informationBindErr(
     return _cached_encoder_for_Association_informationBindErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Association_informationBindErr */
 
 /* eslint-enable */

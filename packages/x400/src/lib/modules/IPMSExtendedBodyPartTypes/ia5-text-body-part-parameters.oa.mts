@@ -16,7 +16,6 @@ import {
     _encode_IA5TextParameters,
 } from '../IPMSInformationObjects/IA5TextParameters.ta.mjs';
 import { id_ep_ia5_text } from '../IPMSObjectIdentifiers/id-ep-ia5-text.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ia5_text_body_part_parameters */
 /**
  * @summary ia5_text_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const ia5_text_body_part_parameters: TYPE_IDENTIFIER<IA5TextParameters> =
     '&id': id_ep_ia5_text /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ia5_text_body_part_parameters */
 
 /* eslint-enable */

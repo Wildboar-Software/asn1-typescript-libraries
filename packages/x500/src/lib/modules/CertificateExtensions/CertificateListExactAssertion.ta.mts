@@ -16,7 +16,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateListExactAssertion */
 /**
  * @summary CertificateListExactAssertion
  * @description
@@ -80,9 +79,7 @@ export class CertificateListExactAssertion {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateListExactAssertion */
 /**
  * @summary The Leading Root Component Types of CertificateListExactAssertion
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_CertificateListExactAssertion:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateListExactAssertion */
 /**
  * @summary The Trailing Root Component Types of CertificateListExactAssertion
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_CertificateListExactAssertion:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificateListExactAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateListExactAssertion */
 /**
  * @summary The Extension Addition Component Types of CertificateListExactAssertion
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_CertificateListExactAssertion:
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificateListExactAssertion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateListExactAssertion */
 let _cached_decoder_for_CertificateListExactAssertion: $.ASN1Decoder<CertificateListExactAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateListExactAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateListExactAssertion
  * @function
@@ -179,13 +168,9 @@ export function _decode_CertificateListExactAssertion(el: _Element) {
     }
     return _cached_decoder_for_CertificateListExactAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateListExactAssertion */
 let _cached_encoder_for_CertificateListExactAssertion: $.ASN1Encoder<CertificateListExactAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateListExactAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateListExactAssertion */
 /**
  * @summary Encodes a(n) CertificateListExactAssertion into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_CertificateListExactAssertion(
     return _cached_encoder_for_CertificateListExactAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateListExactAssertion */
 
 /* eslint-enable */

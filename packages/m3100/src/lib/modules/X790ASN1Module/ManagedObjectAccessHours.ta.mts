@@ -15,7 +15,7 @@ import {
     _decode_WeekMask,
     _encode_WeekMask,
 } from '../X790ASN1Module/WeekMask.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagedObjectAccessHours */
+
 /**
  * @summary ManagedObjectAccessHours
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ManagedObjectAccessHours = WeekMask[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ManagedObjectAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectAccessHours */
+
 let _cached_decoder_for_ManagedObjectAccessHours: $.ASN1Decoder<ManagedObjectAccessHours> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedObjectAccessHours */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectAccessHours
  * @function
@@ -48,13 +46,11 @@ export function _decode_ManagedObjectAccessHours(el: _Element) {
     }
     return _cached_decoder_for_ManagedObjectAccessHours(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedObjectAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectAccessHours */
+
 let _cached_encoder_for_ManagedObjectAccessHours: $.ASN1Encoder<ManagedObjectAccessHours> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectAccessHours */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedObjectAccessHours */
+
 /**
  * @summary Encodes a(n) ManagedObjectAccessHours into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ManagedObjectAccessHours(
     return _cached_encoder_for_ManagedObjectAccessHours(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedObjectAccessHours */
 
 /* eslint-enable */

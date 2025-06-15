@@ -16,7 +16,6 @@ import {
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
 import { id_mr_mts_identifier_match } from '../MSObjectIdentifiers/id-mr-mts-identifier-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mTSIdentifierMatch */
 /**
  * @summary mTSIdentifierMatch
  * @description
@@ -45,6 +44,5 @@ export const mTSIdentifierMatch: MATCHING_RULE<MTSIdentifier> = {
     '&id': id_mr_mts_identifier_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mTSIdentifierMatch */
 
 /* eslint-enable */

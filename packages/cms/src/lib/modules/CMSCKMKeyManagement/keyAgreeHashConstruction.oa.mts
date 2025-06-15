@@ -6,7 +6,7 @@ import {
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION keyAgreeHashConstruction */
+
 /**
  * @summary keyAgreeHashConstruction
  * @description
@@ -35,6 +35,5 @@ export const keyAgreeHashConstruction: ALGORITHM<DigestAlgorithmIdentifier> = {
     "&id": id_ckm_key_agree_hash /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION keyAgreeHashConstruction */
 
 /* eslint-enable */

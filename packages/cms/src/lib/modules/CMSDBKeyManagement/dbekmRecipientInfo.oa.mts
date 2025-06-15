@@ -5,7 +5,7 @@ import {
 } from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta.mjs";
 import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
 import { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dbekmRecipientInfo */
+
 /**
  * @summary dbekmRecipientInfo
  * @description
@@ -32,6 +32,5 @@ export const dbekmRecipientInfo: KEY_MANAGEMENT = {
     "&id": id_dbekm_recip_info /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dbekmRecipientInfo */
 
 /* eslint-enable */

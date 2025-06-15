@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProcessWithAuxBIR_ResponseParams */
+
 /**
  * @summary ProcessWithAuxBIR_ResponseParams
  * @description
@@ -59,9 +59,8 @@ export class ProcessWithAuxBIR_ResponseParams {
     return new ProcessWithAuxBIR_ResponseParams(_o.processedBIR);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProcessWithAuxBIR_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of ProcessWithAuxBIR_ResponseParams
  * @description
@@ -79,9 +78,8 @@ export const _root_component_type_list_1_spec_for_ProcessWithAuxBIR_ResponsePara
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProcessWithAuxBIR_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of ProcessWithAuxBIR_ResponseParams
  * @description
@@ -91,9 +89,8 @@ export const _root_component_type_list_1_spec_for_ProcessWithAuxBIR_ResponsePara
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProcessWithAuxBIR_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProcessWithAuxBIR_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of ProcessWithAuxBIR_ResponseParams
  * @description
@@ -103,13 +100,11 @@ export const _root_component_type_list_2_spec_for_ProcessWithAuxBIR_ResponsePara
  * @constant
  */
 export const _extension_additions_list_spec_for_ProcessWithAuxBIR_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessWithAuxBIR_ResponseParams */
+
 let _cached_decoder_for_ProcessWithAuxBIR_ResponseParams: $.ASN1Decoder<ProcessWithAuxBIR_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProcessWithAuxBIR_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProcessWithAuxBIR_ResponseParams
  * @function
@@ -137,13 +132,11 @@ export function _decode_ProcessWithAuxBIR_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_ProcessWithAuxBIR_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessWithAuxBIR_ResponseParams */
+
 let _cached_encoder_for_ProcessWithAuxBIR_ResponseParams: $.ASN1Encoder<ProcessWithAuxBIR_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProcessWithAuxBIR_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProcessWithAuxBIR_ResponseParams */
+
 /**
  * @summary Encodes a(n) ProcessWithAuxBIR_ResponseParams into an ASN.1 Element.
  * @function
@@ -174,6 +167,5 @@ export function _encode_ProcessWithAuxBIR_ResponseParams(
   return _cached_encoder_for_ProcessWithAuxBIR_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProcessWithAuxBIR_ResponseParams */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CountryName */
 /**
  * @summary CountryName
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type CountryName =
     | { x121_dcc_code: NumericString } /* CHOICE_ALT_ROOT */
     | { iso_3166_alpha2_code: PrintableString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CountryName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CountryName */
 let _cached_decoder_for_CountryName: $.ASN1Decoder<CountryName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CountryName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CountryName */
 /**
  * @summary Decodes an ASN.1 element into a(n) CountryName
  * @function
@@ -57,13 +52,9 @@ export function _decode_CountryName(el: _Element) {
     }
     return _cached_decoder_for_CountryName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CountryName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CountryName */
 let _cached_encoder_for_CountryName: $.ASN1Encoder<CountryName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CountryName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CountryName */
 /**
  * @summary Encodes a(n) CountryName into an ASN.1 Element.
  * @function
@@ -93,6 +84,5 @@ export function _encode_CountryName(
     return _cached_encoder_for_CountryName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CountryName */
 
 /* eslint-enable */

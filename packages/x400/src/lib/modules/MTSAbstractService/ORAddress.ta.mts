@@ -26,7 +26,6 @@ import {
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
 } from '../MTSAbstractService/ExtensionAttributes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ORAddress */
 /**
  * @summary ORAddress
  * @description
@@ -88,9 +87,7 @@ export class ORAddress {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddress */
 /**
  * @summary The Leading Root Component Types of ORAddress
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddress */
 /**
  * @summary The Trailing Root Component Types of ORAddress
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
 /**
  * @summary The Extension Addition Component Types of ORAddress
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddress */
 let _cached_decoder_for_ORAddress: $.ASN1Decoder<ORAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddress
  * @function
@@ -201,13 +190,9 @@ export function _decode_ORAddress(el: _Element) {
     }
     return _cached_decoder_for_ORAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddress */
 let _cached_encoder_for_ORAddress: $.ASN1Encoder<ORAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORAddress */
 /**
  * @summary Encodes a(n) ORAddress into an ASN.1 Element.
  * @function
@@ -252,6 +237,5 @@ export function _encode_ORAddress(
     return _cached_encoder_for_ORAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORAddress */
 
 /* eslint-enable */

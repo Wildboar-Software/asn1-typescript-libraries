@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION aes192_cbc_in_ecies */
 /**
  * @summary aes192_cbc_in_ecies
  * @description
@@ -29,6 +28,5 @@ const aes192_cbc_in_ecies: OBJECT_IDENTIFIER = new _OID([
     20,
     1,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION aes192_cbc_in_ecies */
 
 /* eslint-enable */

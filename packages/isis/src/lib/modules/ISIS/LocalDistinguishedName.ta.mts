@@ -16,7 +16,6 @@ import {
   _encode_BaseManagedObjectId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/BaseManagedObjectId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LocalDistinguishedName */
 /**
  * @summary LocalDistinguishedName
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type LocalDistinguishedName = BaseManagedObjectId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LocalDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalDistinguishedName */
 let _cached_decoder_for_LocalDistinguishedName: $.ASN1Decoder<LocalDistinguishedName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocalDistinguishedName */
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalDistinguishedName
  * @function
@@ -47,13 +42,9 @@ export function _decode_LocalDistinguishedName(el: _Element) {
   }
   return _cached_decoder_for_LocalDistinguishedName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LocalDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalDistinguishedName */
 let _cached_encoder_for_LocalDistinguishedName: $.ASN1Encoder<LocalDistinguishedName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalDistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocalDistinguishedName */
 /**
  * @summary Encodes a(n) LocalDistinguishedName into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_LocalDistinguishedName(
   return _cached_encoder_for_LocalDistinguishedName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocalDistinguishedName */
 
 /* eslint-enable */

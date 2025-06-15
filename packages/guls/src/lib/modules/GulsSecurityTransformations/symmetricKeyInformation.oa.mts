@@ -15,7 +15,7 @@ import {
   _encode_symmetricKeyInformation_KiType,
 } from '../GulsSecurityTransformations/symmetricKeyInformation-KiType.ta.mjs';
 import { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION symmetricKeyInformation */
+
 /**
  * @summary symmetricKeyInformation
  * @description
@@ -48,6 +48,5 @@ export const symmetricKeyInformation: KEY_INFORMATION<symmetricKeyInformation_Ki
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&KiType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION symmetricKeyInformation */
 
 /* eslint-enable */

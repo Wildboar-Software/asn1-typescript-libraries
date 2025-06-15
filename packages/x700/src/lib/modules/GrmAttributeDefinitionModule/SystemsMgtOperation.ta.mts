@@ -25,7 +25,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SystemsMgtOperation */
 /**
  * @summary SystemsMgtOperation
  * @description
@@ -54,13 +53,9 @@ export type SystemsMgtOperation =
     | { delete_: TemplateList } /* CHOICE_ALT_ROOT */
     | { action: LabelAndParameters } /* CHOICE_ALT_ROOT */
     | { notification: LabelAndParameters } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SystemsMgtOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemsMgtOperation */
 let _cached_decoder_for_SystemsMgtOperation: $.ASN1Decoder<SystemsMgtOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemsMgtOperation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SystemsMgtOperation */
 /**
  * @summary Decodes an ASN.1 element into a(n) SystemsMgtOperation
  * @function
@@ -124,13 +119,9 @@ export function _decode_SystemsMgtOperation(el: _Element) {
     }
     return _cached_decoder_for_SystemsMgtOperation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SystemsMgtOperation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemsMgtOperation */
 let _cached_encoder_for_SystemsMgtOperation: $.ASN1Encoder<SystemsMgtOperation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemsMgtOperation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SystemsMgtOperation */
 /**
  * @summary Encodes a(n) SystemsMgtOperation into an ASN.1 Element.
  * @function
@@ -200,6 +191,5 @@ export function _encode_SystemsMgtOperation(
     return _cached_encoder_for_SystemsMgtOperation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SystemsMgtOperation */
 
 /* eslint-enable */

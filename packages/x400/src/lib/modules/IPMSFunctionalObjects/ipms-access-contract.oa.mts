@@ -13,7 +13,6 @@ import { origination } from '../IPMSAbstractService/origination.oa.mjs';
 import { reception } from '../IPMSAbstractService/reception.oa.mjs';
 import { management } from '../IPMSAbstractService/management.oa.mjs';
 import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipms_access_contract */
 /**
  * @summary ipms_access_contract
  * @description
@@ -40,6 +39,5 @@ export const ipms_access_contract: CONTRACT = {
         management,
     ] /* OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipms_access_contract */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
 } from '../RepertoireASN1Module/GdmoObjectClass.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SupportedManagedObjectClassList */
 /**
  * @summary SupportedManagedObjectClassList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type SupportedManagedObjectClassList = GdmoObjectClass[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedManagedObjectClassList */
 let _cached_decoder_for_SupportedManagedObjectClassList: $.ASN1Decoder<SupportedManagedObjectClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedManagedObjectClassList */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedManagedObjectClassList
  * @function
@@ -48,13 +43,9 @@ export function _decode_SupportedManagedObjectClassList(el: _Element) {
     }
     return _cached_decoder_for_SupportedManagedObjectClassList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedManagedObjectClassList */
 let _cached_encoder_for_SupportedManagedObjectClassList: $.ASN1Encoder<SupportedManagedObjectClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedManagedObjectClassList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedManagedObjectClassList */
 /**
  * @summary Encodes a(n) SupportedManagedObjectClassList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_SupportedManagedObjectClassList(
     return _cached_encoder_for_SupportedManagedObjectClassList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedManagedObjectClassList */
 
 /* eslint-enable */

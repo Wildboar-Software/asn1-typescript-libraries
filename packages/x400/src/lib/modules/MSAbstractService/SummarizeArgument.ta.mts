@@ -33,7 +33,6 @@ import {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SummarizeArgument */
 /**
  * @summary SummarizeArgument
  * @description
@@ -116,9 +115,7 @@ export class SummarizeArgument {
         return delivery;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SummarizeArgument */
 /**
  * @summary The Leading Root Component Types of SummarizeArgument
  * @description
@@ -157,9 +154,7 @@ export const _root_component_type_list_1_spec_for_SummarizeArgument: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SummarizeArgument */
 /**
  * @summary The Trailing Root Component Types of SummarizeArgument
  * @description
@@ -169,9 +164,7 @@ export const _root_component_type_list_1_spec_for_SummarizeArgument: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SummarizeArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SummarizeArgument */
 /**
  * @summary The Extension Addition Component Types of SummarizeArgument
  * @description
@@ -181,13 +174,9 @@ export const _root_component_type_list_2_spec_for_SummarizeArgument: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_SummarizeArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SummarizeArgument */
 let _cached_decoder_for_SummarizeArgument: $.ASN1Decoder<SummarizeArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SummarizeArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) SummarizeArgument
  * @function
@@ -250,13 +239,9 @@ export function _decode_SummarizeArgument(el: _Element) {
     }
     return _cached_decoder_for_SummarizeArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SummarizeArgument */
 let _cached_encoder_for_SummarizeArgument: $.ASN1Encoder<SummarizeArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SummarizeArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SummarizeArgument */
 /**
  * @summary Encodes a(n) SummarizeArgument into an ASN.1 Element.
  * @function
@@ -322,6 +307,5 @@ export function _encode_SummarizeArgument(
     return _cached_encoder_for_SummarizeArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SummarizeArgument */
 
 /* eslint-enable */

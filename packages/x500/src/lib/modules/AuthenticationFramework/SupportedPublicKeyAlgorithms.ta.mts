@@ -16,7 +16,6 @@ import {
     _decode_OidOrAttr,
     _encode_OidOrAttr,
 } from "../AuthenticationFramework/OidOrAttr.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedPublicKeyAlgorithms */
 /**
  * @summary SupportedPublicKeyAlgorithms
  * @description
@@ -88,9 +87,7 @@ export class SupportedPublicKeyAlgorithms {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupportedPublicKeyAlgorithms */
 /**
  * @summary The Leading Root Component Types of SupportedPublicKeyAlgorithms
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_SupportedPublicKeyAlgorithms: 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupportedPublicKeyAlgorithms */
 /**
  * @summary The Trailing Root Component Types of SupportedPublicKeyAlgorithms
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_SupportedPublicKeyAlgorithms: 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SupportedPublicKeyAlgorithms: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupportedPublicKeyAlgorithms */
 /**
  * @summary The Extension Addition Component Types of SupportedPublicKeyAlgorithms
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_SupportedPublicKeyAlgorithms: 
  * @constant
  */
 export const _extension_additions_list_spec_for_SupportedPublicKeyAlgorithms: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedPublicKeyAlgorithms */
 let _cached_decoder_for_SupportedPublicKeyAlgorithms: $.ASN1Decoder<SupportedPublicKeyAlgorithms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedPublicKeyAlgorithms */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedPublicKeyAlgorithms
  * @function
@@ -205,13 +194,9 @@ export function _decode_SupportedPublicKeyAlgorithms(el: _Element) {
     }
     return _cached_decoder_for_SupportedPublicKeyAlgorithms(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedPublicKeyAlgorithms */
 let _cached_encoder_for_SupportedPublicKeyAlgorithms: $.ASN1Encoder<SupportedPublicKeyAlgorithms> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedPublicKeyAlgorithms */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedPublicKeyAlgorithms */
 /**
  * @summary Encodes a(n) SupportedPublicKeyAlgorithms into an ASN.1 Element.
  * @function
@@ -263,6 +248,5 @@ export function _encode_SupportedPublicKeyAlgorithms(
     return _cached_encoder_for_SupportedPublicKeyAlgorithms(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedPublicKeyAlgorithms */
 
 /* eslint-enable */

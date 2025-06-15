@@ -16,7 +16,7 @@ import {
     _decode_SchemeOID,
     _encode_SchemeOID,
 } from "../ANSI-X9-42/SchemeOID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SchemeSyntax */
+
 /**
  * @summary SchemeSyntax
  * @description
@@ -35,13 +35,11 @@ export type SchemeSyntax =
     | { schemeId: SchemeIdentifier } /* CHOICE_ALT_ROOT */
     | { oid: SchemeOID } /* CHOICE_ALT_ROOT */
     | { number_: SchemeNumber } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SchemeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeSyntax */
+
 let _cached_decoder_for_SchemeSyntax: $.ASN1Decoder<SchemeSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SchemeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SchemeSyntax */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SchemeSyntax
  * @function
@@ -60,13 +58,11 @@ export function _decode_SchemeSyntax(el: _Element) {
     }
     return _cached_decoder_for_SchemeSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SchemeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeSyntax */
+
 let _cached_encoder_for_SchemeSyntax: $.ASN1Encoder<SchemeSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SchemeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SchemeSyntax */
+
 /**
  * @summary Encodes a(n) SchemeSyntax into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_SchemeSyntax(
     return _cached_encoder_for_SchemeSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SchemeSyntax */
 
 /* eslint-enable */

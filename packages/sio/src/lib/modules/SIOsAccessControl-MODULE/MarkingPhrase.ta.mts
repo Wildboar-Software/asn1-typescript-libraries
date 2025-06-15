@@ -6,7 +6,7 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MarkingPhrase */
+
 /**
  * @summary MarkingPhrase
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type MarkingPhrase = DirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MarkingPhrase */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MarkingPhrase */
+
 let _cached_decoder_for_MarkingPhrase: $.ASN1Decoder<MarkingPhrase> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MarkingPhrase */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MarkingPhrase */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MarkingPhrase
  * @function
@@ -37,13 +35,11 @@ export function _decode_MarkingPhrase(el: _Element) {
     }
     return _cached_decoder_for_MarkingPhrase(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MarkingPhrase */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MarkingPhrase */
+
 let _cached_encoder_for_MarkingPhrase: $.ASN1Encoder<MarkingPhrase> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MarkingPhrase */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MarkingPhrase */
+
 /**
  * @summary Encodes a(n) MarkingPhrase into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_MarkingPhrase(
     return _cached_encoder_for_MarkingPhrase(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MarkingPhrase */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 import { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta.mjs";
 import { prime_field } from "../SEC1-v1-9/prime-field.va.mjs";
 import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION FieldTypes_Union0_Intersection0_Element */
 /**
  * @summary FieldTypes_Union0_Intersection0_Element
  * @description
@@ -39,6 +38,5 @@ const FieldTypes_Union0_Intersection0_Element: FIELD_ID<Prime_p> = {
     "&id": prime_field /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION FieldTypes_Union0_Intersection0_Element */
 
 /* eslint-enable */

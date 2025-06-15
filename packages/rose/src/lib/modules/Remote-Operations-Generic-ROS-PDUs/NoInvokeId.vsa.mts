@@ -15,7 +15,7 @@ import {
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoInvokeId */
+
 /**
  * @summary NoInvokeId
  * @description
@@ -29,26 +29,22 @@ import {
  * @type {InvokeId}
  */
 export type NoInvokeId = InvokeId; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION NoInvokeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoInvokeId */
+
 let _cached_decoder_for_NoInvokeId: $.ASN1Decoder<NoInvokeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoInvokeId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoInvokeId */
+
 export function _decode_NoInvokeId(el: _Element) {
   if (!_cached_decoder_for_NoInvokeId) {
     _cached_decoder_for_NoInvokeId = _decode_InvokeId;
   }
   return _cached_decoder_for_NoInvokeId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoInvokeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoInvokeId */
+
 let _cached_encoder_for_NoInvokeId: $.ASN1Encoder<NoInvokeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoInvokeId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoInvokeId */
+
 export function _encode_NoInvokeId(
   value: NoInvokeId,
   elGetter: $.ASN1Encoder<NoInvokeId>
@@ -58,6 +54,5 @@ export function _encode_NoInvokeId(
   }
   return _cached_encoder_for_NoInvokeId(value, elGetter);
 }
-/* END_OF_SYMBOL_DEFINITION _encode_NoInvokeId */
 
 /* eslint-enable */

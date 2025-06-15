@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ac } from "../UsefulDefinitions/id-ac.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ac_directoryOperationalBindingManagementAC */
 /**
  * @summary id_ac_directoryOperationalBindingManagementAC
  * @description
@@ -18,6 +17,5 @@ export const id_ac_directoryOperationalBindingManagementAC: OBJECT_IDENTIFIER = 
     [3],
     id_ac
 );
-/* END_OF_SYMBOL_DEFINITION id_ac_directoryOperationalBindingManagementAC */
 
 /* eslint-enable */

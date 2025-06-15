@@ -23,7 +23,6 @@ import {
     _encode_DirectoryString,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs';
 import { id_at_mhs_surname } from '../MHSRoutingObjectIdentifiers/id-at-mhs-surname.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSSurnameAttribute */
 /**
  * @summary mHSSurnameAttribute
  * @description
@@ -60,6 +59,5 @@ export const mHSSurnameAttribute: ATTRIBUTE<DirectoryString> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSSurnameAttribute */
 
 /* eslint-enable */

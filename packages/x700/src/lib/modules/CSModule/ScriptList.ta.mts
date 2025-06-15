@@ -15,7 +15,6 @@ import {
     _decode_ScriptId,
     _encode_ScriptId,
 } from '../CSModule/ScriptId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ScriptList */
 /**
  * @summary ScriptList
  * @description
@@ -34,13 +33,9 @@ export type ScriptList =
     | { scriptId: ScriptId } /* CHOICE_ALT_ROOT */
     | { sequentialScriptList: ScriptId[] } /* CHOICE_ALT_ROOT */
     | { parallelScriptList: ScriptId[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptList */
 let _cached_decoder_for_ScriptList: $.ASN1Decoder<ScriptList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ScriptList */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScriptList
  * @function
@@ -67,13 +62,9 @@ export function _decode_ScriptList(el: _Element) {
     }
     return _cached_decoder_for_ScriptList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptList */
 let _cached_encoder_for_ScriptList: $.ASN1Encoder<ScriptList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScriptList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ScriptList */
 /**
  * @summary Encodes a(n) ScriptList into an ASN.1 Element.
  * @function
@@ -104,6 +95,5 @@ export function _encode_ScriptList(
     return _cached_encoder_for_ScriptList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ScriptList */
 
 /* eslint-enable */

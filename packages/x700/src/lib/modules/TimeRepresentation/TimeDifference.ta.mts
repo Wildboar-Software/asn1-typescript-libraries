@@ -36,7 +36,6 @@ import {
     _decode_MaximumErrorInNanoseconds,
     _encode_MaximumErrorInNanoseconds,
 } from '../TimeRepresentation/MaximumErrorInNanoseconds.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TimeDifference */
 /**
  * @summary TimeDifference
  * @description
@@ -121,9 +120,7 @@ export class TimeDifference {
 
     public static _enum_for_sign = _enum_for_TimeDifference_sign;
 }
-/* END_OF_SYMBOL_DEFINITION TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeDifference */
 /**
  * @summary The Leading Root Component Types of TimeDifference
  * @description
@@ -169,9 +166,7 @@ export const _root_component_type_list_1_spec_for_TimeDifference: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeDifference */
 /**
  * @summary The Trailing Root Component Types of TimeDifference
  * @description
@@ -181,9 +176,7 @@ export const _root_component_type_list_1_spec_for_TimeDifference: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeDifference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeDifference */
 /**
  * @summary The Extension Addition Component Types of TimeDifference
  * @description
@@ -193,13 +186,9 @@ export const _root_component_type_list_2_spec_for_TimeDifference: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeDifference: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeDifference */
 let _cached_decoder_for_TimeDifference: $.ASN1Decoder<TimeDifference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeDifference */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeDifference
  * @function
@@ -245,13 +234,9 @@ export function _decode_TimeDifference(el: _Element) {
     }
     return _cached_decoder_for_TimeDifference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeDifference */
 let _cached_encoder_for_TimeDifference: $.ASN1Encoder<TimeDifference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeDifference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeDifference */
 /**
  * @summary Encodes a(n) TimeDifference into an ASN.1 Element.
  * @function
@@ -292,6 +277,5 @@ export function _encode_TimeDifference(
     return _cached_encoder_for_TimeDifference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeDifference */
 
 /* eslint-enable */

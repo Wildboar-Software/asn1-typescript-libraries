@@ -15,7 +15,7 @@ import {
     _decode_AuthorizationList_Item,
     _encode_AuthorizationList_Item,
 } from '../X790ASN1Module/AuthorizationList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AuthorizationList */
+
 /**
  * @summary AuthorizationList
  * @description
@@ -33,13 +33,11 @@ import {
  * ```
  */
 export type AuthorizationList = AuthorizationList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AuthorizationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationList */
+
 let _cached_decoder_for_AuthorizationList: $.ASN1Decoder<AuthorizationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorizationList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthorizationList
  * @function
@@ -54,13 +52,11 @@ export function _decode_AuthorizationList(el: _Element) {
     }
     return _cached_decoder_for_AuthorizationList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorizationList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationList */
+
 let _cached_encoder_for_AuthorizationList: $.ASN1Encoder<AuthorizationList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorizationList */
+
 /**
  * @summary Encodes a(n) AuthorizationList into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_AuthorizationList(
     return _cached_encoder_for_AuthorizationList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorizationList */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DomainLocalID */
 /**
  * @summary DomainLocalID
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type DomainLocalID = UnboundedDirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DomainLocalID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainLocalID */
 let _cached_decoder_for_DomainLocalID: $.ASN1Decoder<DomainLocalID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainLocalID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DomainLocalID */
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainLocalID
  * @function
@@ -37,13 +32,9 @@ export function _decode_DomainLocalID(el: _Element) {
     }
     return _cached_decoder_for_DomainLocalID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DomainLocalID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainLocalID */
 let _cached_encoder_for_DomainLocalID: $.ASN1Encoder<DomainLocalID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DomainLocalID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DomainLocalID */
 /**
  * @summary Encodes a(n) DomainLocalID into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_DomainLocalID(
     return _cached_encoder_for_DomainLocalID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DomainLocalID */
 
 /* eslint-enable */

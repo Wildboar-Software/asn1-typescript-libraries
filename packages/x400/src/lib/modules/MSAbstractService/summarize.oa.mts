@@ -37,7 +37,6 @@ import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.m
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_summarize } from '../MSAccessProtocol/op-summarize.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION summarize */
 /**
  * @summary summarize
  * @description
@@ -94,6 +93,5 @@ export const summarize: ABSTRACT_OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION summarize */
 
 /* eslint-enable */

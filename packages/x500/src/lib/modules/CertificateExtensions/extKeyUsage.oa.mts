@@ -7,7 +7,6 @@ import {
     _decode_KeyPurposeId,
     _encode_KeyPurposeId,
 } from "../CertificateExtensions/KeyPurposeId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION extKeyUsage */
 /**
  * @summary extKeyUsage
  * @description
@@ -40,6 +39,5 @@ export const extKeyUsage: EXTENSION<KeyPurposeId[]> = {
     "&id": id_ce_extKeyUsage /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION extKeyUsage */
 
 /* eslint-enable */

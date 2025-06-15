@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { uniqueIdentifier } from "../CMSDBKeyManagement/uniqueIdentifier.oa.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION DbEKMAttributes */
+
 /**
  * @summary DbEKMAttributes
  * @description
@@ -20,6 +20,5 @@ import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramew
  *
  */
 export const DbEKMAttributes: ATTRIBUTE[] = [uniqueIdentifier];
-/* END_OF_SYMBOL_DEFINITION DbEKMAttributes */
 
 /* eslint-enable */

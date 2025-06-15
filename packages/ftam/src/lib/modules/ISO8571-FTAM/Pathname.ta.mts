@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Pathname */
+
 /**
  * @summary Pathname
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Pathname = GraphicString[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Pathname */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname */
+
 let _cached_decoder_for_Pathname: $.ASN1Decoder<Pathname> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pathname */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pathname */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Pathname
  * @function
@@ -45,13 +43,11 @@ export function _decode_Pathname(el: _Element) {
   }
   return _cached_decoder_for_Pathname(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pathname */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname */
+
 let _cached_encoder_for_Pathname: $.ASN1Encoder<Pathname> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pathname */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pathname */
+
 /**
  * @summary Encodes a(n) Pathname into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_Pathname(
   return _cached_encoder_for_Pathname(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pathname */
 
 /* eslint-enable */

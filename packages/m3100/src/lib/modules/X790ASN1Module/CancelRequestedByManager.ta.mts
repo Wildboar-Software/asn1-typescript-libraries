@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CancelRequestedByManager */
+
 /**
  * @summary CancelRequestedByManager
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CancelRequestedByManager = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION CancelRequestedByManager */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelRequestedByManager */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CancelRequestedByManager */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CancelRequestedByManager */
+
+
 export const _decode_CancelRequestedByManager = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_CancelRequestedByManager */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelRequestedByManager */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CancelRequestedByManager */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CancelRequestedByManager */
+
+
 export const _encode_CancelRequestedByManager = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CancelRequestedByManager */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_generation_qualifier_length */
 /**
  * @summary ub_generation_qualifier_length
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_generation_qualifier_length: INTEGER = 3;
-/* END_OF_SYMBOL_DEFINITION ub_generation_qualifier_length */
 
 /* eslint-enable */

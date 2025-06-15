@@ -13,7 +13,6 @@ import { mHSOrganizationalUnit } from '../MHSRoutingORAddressSubtree/mHSOrganiza
 import { mHSOrganizationalUnitName } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnitName.oa.mjs';
 import { id_nf_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organizational-unit.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSOrganizationalUnitNameForm */
 /**
  * @summary mHSOrganizationalUnitNameForm
  * @description
@@ -42,6 +41,5 @@ export const mHSOrganizationalUnitNameForm: NAME_FORM = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_organizational_unit /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSOrganizationalUnitNameForm */
 
 /* eslint-enable */

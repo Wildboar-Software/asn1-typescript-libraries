@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectiveOrganizationalUnitName } from "../SelectedAttributeTypes/id-at-collectiveOrganizationalUnitName.va.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveOrganizationalUnitName */
 /**
  * @summary collectiveOrganizationalUnitName
  * @description
@@ -46,6 +45,5 @@ export const collectiveOrganizationalUnitName: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveOrganizationalUnitName */
 
 /* eslint-enable */

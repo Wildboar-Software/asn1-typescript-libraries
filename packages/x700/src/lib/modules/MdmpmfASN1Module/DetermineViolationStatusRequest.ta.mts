@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusRequest */
 /**
  * @summary DetermineViolationStatusRequest
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DetermineViolationStatusRequest = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DetermineViolationStatusRequest */
 let _cached_decoder_for_DetermineViolationStatusRequest: $.ASN1Decoder<DetermineViolationStatusRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DetermineViolationStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DetermineViolationStatusRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) DetermineViolationStatusRequest
  * @function
@@ -46,13 +41,9 @@ export function _decode_DetermineViolationStatusRequest(el: _Element) {
     }
     return _cached_decoder_for_DetermineViolationStatusRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DetermineViolationStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DetermineViolationStatusRequest */
 let _cached_encoder_for_DetermineViolationStatusRequest: $.ASN1Encoder<DetermineViolationStatusRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DetermineViolationStatusRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DetermineViolationStatusRequest */
 /**
  * @summary Encodes a(n) DetermineViolationStatusRequest into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DetermineViolationStatusRequest(
     return _cached_encoder_for_DetermineViolationStatusRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DetermineViolationStatusRequest */
 
 /* eslint-enable */

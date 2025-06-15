@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION actionType */
 /**
  * @summary actionType
  * @description
@@ -36,6 +35,5 @@ export const actionType: OBJECT_IDENTIFIER = new _OID(
     ],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION actionType */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_mst_invalid_ipn } from '../IPMSObjectIdentifiers/id-mst-invalid-ipn.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION invalid_ipn */
 /**
  * @summary invalid_ipn
  * @description
@@ -41,6 +40,5 @@ export const invalid_ipn: MS_EXTENSION<NULL> = {
     '&id': id_mst_invalid_ipn /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION invalid_ipn */
 
 /* eslint-enable */

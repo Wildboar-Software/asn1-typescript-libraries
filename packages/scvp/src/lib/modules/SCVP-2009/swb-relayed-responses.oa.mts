@@ -16,7 +16,6 @@ import {
 } from '../SCVP-2009/SCVPResponses.ta.mjs';
 import { id_swb_relayed_responses } from '../SCVP-2009/id-swb-relayed-responses.va.mjs';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION swb_relayed_responses */
 /**
  * @summary swb_relayed_responses
  * @description
@@ -42,6 +41,5 @@ export const swb_relayed_responses: WANT_BACK<SCVPResponses> = {
   '&id': id_swb_relayed_responses /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION swb_relayed_responses */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_password_length */
 /**
  * @summary ub_password_length
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_password_length: INTEGER = 62;
-/* END_OF_SYMBOL_DEFINITION ub_password_length */
 
 /* eslint-enable */

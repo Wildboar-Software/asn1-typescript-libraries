@@ -7,7 +7,6 @@ import {
     _encode_AttributeOptionList,
 } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
 import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ldapAttributeOptionContext */
 /**
  * @summary ldapAttributeOptionContext
  * @description
@@ -44,6 +43,5 @@ export const ldapAttributeOptionContext: CONTEXT<
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ldapAttributeOptionContext */
 
 /* eslint-enable */

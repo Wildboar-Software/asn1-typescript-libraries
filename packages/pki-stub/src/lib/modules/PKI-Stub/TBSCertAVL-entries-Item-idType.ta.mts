@@ -21,7 +21,6 @@ import {
     _encode_DistinguishedName,
 } from "../PKI-Stub/DistinguishedName.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TBSCertAVL_entries_Item_idType */
 /**
  * @summary TBSCertAVL_entries_Item_idType
  * @description
@@ -36,14 +35,10 @@ export type TBSCertAVL_entries_Item_idType =
     | { certIdentifier: PKCertIdentifier } /* CHOICE_ALT_ROOT */
     | { entityGroup: DistinguishedName } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TBSCertAVL_entries_Item_idType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL_entries_Item_idType */
 let _cached_decoder_for_TBSCertAVL_entries_Item_idType: $.ASN1Decoder<TBSCertAVL_entries_Item_idType> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL_entries_Item_idType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSCertAVL_entries_Item_idType */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSCertAVL_entries_Item_idType
  * @function
@@ -65,14 +60,10 @@ export function _decode_TBSCertAVL_entries_Item_idType(el: _Element) {
     }
     return _cached_decoder_for_TBSCertAVL_entries_Item_idType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSCertAVL_entries_Item_idType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL_entries_Item_idType */
 let _cached_encoder_for_TBSCertAVL_entries_Item_idType: $.ASN1Encoder<TBSCertAVL_entries_Item_idType> | null =
     null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL_entries_Item_idType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSCertAVL_entries_Item_idType */
 /**
  * @summary Encodes a(n) TBSCertAVL_entries_Item_idType into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_TBSCertAVL_entries_Item_idType(
     return _cached_encoder_for_TBSCertAVL_entries_Item_idType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSCertAVL_entries_Item_idType */
 
 /* eslint-enable */

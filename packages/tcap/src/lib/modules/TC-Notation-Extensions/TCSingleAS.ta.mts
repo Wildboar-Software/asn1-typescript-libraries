@@ -15,7 +15,6 @@ import {
     _decode_TCMessage,
     _encode_TCMessage,
 } from '../TCAPMessages/TCMessage.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TCSingleAS */
 /**
  * @summary TCSingleAS
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type TCSingleAS = TCMessage; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TCSingleAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TCSingleAS */
 let _cached_decoder_for_TCSingleAS: $.ASN1Decoder<TCSingleAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TCSingleAS */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TCSingleAS */
 /**
  * @summary Decodes an ASN.1 element into a(n) TCSingleAS
  * @function
@@ -47,13 +42,9 @@ export function _decode_TCSingleAS(el: _Element) {
     }
     return _cached_decoder_for_TCSingleAS(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TCSingleAS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TCSingleAS */
 let _cached_encoder_for_TCSingleAS: $.ASN1Encoder<TCSingleAS> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TCSingleAS */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TCSingleAS */
 /**
  * @summary Encodes a(n) TCSingleAS into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_TCSingleAS(
     return _cached_encoder_for_TCSingleAS(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TCSingleAS */
 
 /* eslint-enable */

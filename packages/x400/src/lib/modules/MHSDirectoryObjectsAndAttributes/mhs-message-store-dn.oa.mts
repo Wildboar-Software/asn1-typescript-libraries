@@ -19,7 +19,6 @@ import {
 import { distinguishedName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/distinguishedName.oa.mjs';
 import { distinguishedNameMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/distinguishedNameMatch.oa.mjs';
 import { id_at_mhs_message_store_dn } from '../MHSObjectIdentifiers/id-at-mhs-message-store-dn.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mhs_message_store_dn */
 /**
  * @summary mhs_message_store_dn
  * @description
@@ -58,6 +57,5 @@ export const mhs_message_store_dn: ATTRIBUTE = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mhs_message_store_dn */
 
 /* eslint-enable */

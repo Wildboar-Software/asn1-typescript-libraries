@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DisplayText */
 /**
  * @summary DisplayText
  * @description
@@ -25,13 +24,9 @@ export type DisplayText =
     | { visibleString: VisibleString } /* CHOICE_ALT_ROOT */
     | { bmpString: BMPString } /* CHOICE_ALT_ROOT */
     | { utf8String: UTF8String } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DisplayText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DisplayText */
 let _cached_decoder_for_DisplayText: $.ASN1Decoder<DisplayText> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DisplayText */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DisplayText */
 /**
  * @summary Decodes an ASN.1 element into a(n) DisplayText
  * @function
@@ -50,13 +45,9 @@ export function _decode_DisplayText(el: _Element) {
     }
     return _cached_decoder_for_DisplayText(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DisplayText */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DisplayText */
 let _cached_encoder_for_DisplayText: $.ASN1Encoder<DisplayText> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DisplayText */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DisplayText */
 /**
  * @summary Encodes a(n) DisplayText into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_DisplayText(
     return _cached_encoder_for_DisplayText(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DisplayText */
 
 /* eslint-enable */

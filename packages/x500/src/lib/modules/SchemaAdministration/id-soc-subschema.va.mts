@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_soc } from "../UsefulDefinitions/id-soc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_soc_subschema */
 /**
  * @summary id_soc_subschema
  * @description
@@ -15,6 +14,5 @@ import { id_soc } from "../UsefulDefinitions/id-soc.va.mjs";
  * @constant
  */
 export const id_soc_subschema: OBJECT_IDENTIFIER = new _OID([1], id_soc);
-/* END_OF_SYMBOL_DEFINITION id_soc_subschema */
 
 /* eslint-enable */

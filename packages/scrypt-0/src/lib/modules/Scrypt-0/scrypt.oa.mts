@@ -4,7 +4,7 @@ import { id_scrypt } from "../Scrypt-0/id-scrypt.va.mjs";
 import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION scrypt */
+
 /**
  * @summary scrypt
  * @description
@@ -33,6 +33,5 @@ const scrypt: ALGORITHM<Scrypt_params> = {
     "&id": id_scrypt /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION scrypt */
 
 /* eslint-enable */

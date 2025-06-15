@@ -9,7 +9,7 @@ import {
     _decode_IV,
     _encode_IV,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION cea_3DES_cbc */
+
 /**
  * @summary cea_3DES_cbc
  * @description
@@ -40,6 +40,5 @@ export const cea_3DES_cbc: CONTENT_ENCRYPTION<IV> = {
     "&paramPresence": required /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cea_3DES_cbc */
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ import {
   _decode_BioAPI_BFP_SCHEMA,
   _encode_BioAPI_BFP_SCHEMA,
 } from '../BIP/BioAPI-BFP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddMaster_ResponseParams */
+
 /**
  * @summary AddMaster_ResponseParams
  * @description
@@ -89,9 +89,8 @@ export class AddMaster_ResponseParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddMaster_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of AddMaster_ResponseParams
  * @description
@@ -123,9 +122,8 @@ export const _root_component_type_list_1_spec_for_AddMaster_ResponseParams: $.Co
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddMaster_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of AddMaster_ResponseParams
  * @description
@@ -135,9 +133,8 @@ export const _root_component_type_list_1_spec_for_AddMaster_ResponseParams: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddMaster_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddMaster_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of AddMaster_ResponseParams
  * @description
@@ -147,13 +144,11 @@ export const _root_component_type_list_2_spec_for_AddMaster_ResponseParams: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_AddMaster_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddMaster_ResponseParams */
+
 let _cached_decoder_for_AddMaster_ResponseParams: $.ASN1Decoder<AddMaster_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddMaster_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddMaster_ResponseParams
  * @function
@@ -204,13 +199,11 @@ export function _decode_AddMaster_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_AddMaster_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddMaster_ResponseParams */
+
 let _cached_encoder_for_AddMaster_ResponseParams: $.ASN1Encoder<AddMaster_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddMaster_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddMaster_ResponseParams */
+
 /**
  * @summary Encodes a(n) AddMaster_ResponseParams into an ASN.1 Element.
  * @function
@@ -248,6 +241,5 @@ export function _encode_AddMaster_ResponseParams(
   return _cached_encoder_for_AddMaster_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddMaster_ResponseParams */
 
 /* eslint-enable */

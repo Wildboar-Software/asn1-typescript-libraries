@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Percent */
 /**
  * @summary Percent
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Percent = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Percent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Percent */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Percent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Percent */
 export const _decode_Percent = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_Percent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Percent */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Percent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Percent */
 export const _encode_Percent = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Percent */
 
 /* eslint-enable */

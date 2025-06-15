@@ -15,7 +15,6 @@ import { matchingRules } from "../SchemaAdministration/matchingRules.oa.mjs";
 import { matchingRuleUse } from "../SchemaAdministration/matchingRuleUse.oa.mjs";
 import { nameForms } from "../SchemaAdministration/nameForms.oa.mjs";
 import { objectClasses } from "../SchemaAdministration/objectClasses.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION subschema */
 /**
  * @summary subschema
  * @description
@@ -65,6 +64,5 @@ export const subschema: OBJECT_CLASS = {
     "&ldapName": ["subschema"],
     "&id": id_soc_subschema /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subschema */
 
 /* eslint-enable */

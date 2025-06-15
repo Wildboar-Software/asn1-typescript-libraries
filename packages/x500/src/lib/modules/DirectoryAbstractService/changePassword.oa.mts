@@ -13,7 +13,6 @@ import {
 } from "../DirectoryAbstractService/ChangePasswordResult.ta.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION changePassword */
 /**
  * @summary changePassword
  * @description
@@ -51,6 +50,5 @@ export const changePassword: OPERATION<
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION changePassword */
 
 /* eslint-enable */

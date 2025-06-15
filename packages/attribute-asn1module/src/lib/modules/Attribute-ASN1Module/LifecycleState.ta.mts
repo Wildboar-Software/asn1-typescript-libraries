@@ -13,7 +13,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_LifecycleState */
 /**
  * @summary LifecycleState
  * @description
@@ -30,9 +29,7 @@ enum _enum_for_LifecycleState {
     installed = 1,
     pendingRemoval = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_LifecycleState */
 
-/* START_OF_SYMBOL_DEFINITION LifecycleState */
 /**
  * @summary LifecycleState
  * @description
@@ -45,9 +42,7 @@ enum _enum_for_LifecycleState {
  */
 export
 type LifecycleState = _enum_for_LifecycleState;
-/* END_OF_SYMBOL_DEFINITION LifecycleState */
 
-/* START_OF_SYMBOL_DEFINITION LifecycleState */
 /**
  * @summary LifecycleState
  * @description
@@ -60,9 +55,7 @@ type LifecycleState = _enum_for_LifecycleState;
  */
 export
 const LifecycleState = _enum_for_LifecycleState;
-/* END_OF_SYMBOL_DEFINITION LifecycleState */
 
-/* START_OF_SYMBOL_DEFINITION LifecycleState_planned */
 /**
  * @summary LifecycleState_planned
  * @constant
@@ -70,9 +63,7 @@ const LifecycleState = _enum_for_LifecycleState;
  */
 export
 const LifecycleState_planned: LifecycleState = LifecycleState.planned; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LifecycleState_planned */
 
-/* START_OF_SYMBOL_DEFINITION planned */
 /**
  * @summary planned
  * @constant
@@ -80,9 +71,7 @@ const LifecycleState_planned: LifecycleState = LifecycleState.planned; /* LONG_N
  */
 export
 const planned: LifecycleState = LifecycleState.planned; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION planned */
 
-/* START_OF_SYMBOL_DEFINITION LifecycleState_installed */
 /**
  * @summary LifecycleState_installed
  * @constant
@@ -90,9 +79,7 @@ const planned: LifecycleState = LifecycleState.planned; /* SHORT_NAMED_ENUMERATE
  */
 export
 const LifecycleState_installed: LifecycleState = LifecycleState.installed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LifecycleState_installed */
 
-/* START_OF_SYMBOL_DEFINITION installed */
 /**
  * @summary installed
  * @constant
@@ -100,9 +87,7 @@ const LifecycleState_installed: LifecycleState = LifecycleState.installed; /* LO
  */
 export
 const installed: LifecycleState = LifecycleState.installed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION installed */
 
-/* START_OF_SYMBOL_DEFINITION LifecycleState_pendingRemoval */
 /**
  * @summary LifecycleState_pendingRemoval
  * @constant
@@ -110,9 +95,7 @@ const installed: LifecycleState = LifecycleState.installed; /* SHORT_NAMED_ENUME
  */
 export
 const LifecycleState_pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION LifecycleState_pendingRemoval */
 
-/* START_OF_SYMBOL_DEFINITION pendingRemoval */
 /**
  * @summary pendingRemoval
  * @constant
@@ -120,21 +103,12 @@ const LifecycleState_pendingRemoval: LifecycleState = LifecycleState.pendingRemo
  */
 export
 const pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION pendingRemoval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LifecycleState */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LifecycleState */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LifecycleState */
 export const _decode_LifecycleState = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_LifecycleState */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LifecycleState */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LifecycleState */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LifecycleState */
 export const _encode_LifecycleState = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_LifecycleState */
 
 /* eslint-enable */

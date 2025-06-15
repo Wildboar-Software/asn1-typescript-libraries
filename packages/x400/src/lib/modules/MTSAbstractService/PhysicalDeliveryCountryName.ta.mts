@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryCountryName */
 /**
  * @summary PhysicalDeliveryCountryName
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type PhysicalDeliveryCountryName =
     | { x121_dcc_code: NumericString } /* CHOICE_ALT_ROOT */
     | { iso_3166_alpha2_code: PrintableString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryCountryName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryCountryName */
 let _cached_decoder_for_PhysicalDeliveryCountryName: $.ASN1Decoder<PhysicalDeliveryCountryName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryCountryName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryCountryName */
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryCountryName
  * @function
@@ -57,13 +52,9 @@ export function _decode_PhysicalDeliveryCountryName(el: _Element) {
     }
     return _cached_decoder_for_PhysicalDeliveryCountryName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryCountryName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryCountryName */
 let _cached_encoder_for_PhysicalDeliveryCountryName: $.ASN1Encoder<PhysicalDeliveryCountryName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryCountryName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryCountryName */
 /**
  * @summary Encodes a(n) PhysicalDeliveryCountryName into an ASN.1 Element.
  * @function
@@ -87,6 +78,5 @@ export function _encode_PhysicalDeliveryCountryName(
     return _cached_encoder_for_PhysicalDeliveryCountryName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryCountryName */
 
 /* eslint-enable */

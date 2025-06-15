@@ -16,7 +16,7 @@ import {
   _decode_Access_Control_Change_Attribute_actual_values,
   _encode_Access_Control_Change_Attribute_actual_values,
 } from '../ISO8571-FTAM/Access-Control-Change-Attribute-actual-values.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Access_Control_Change_Attribute */
+
 /**
  * @summary Access_Control_Change_Attribute
  * @description
@@ -45,13 +45,11 @@ export type Access_Control_Change_Attribute =
   | {
       actual_values: Access_Control_Change_Attribute_actual_values;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Access_Control_Change_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Control_Change_Attribute */
+
 let _cached_decoder_for_Access_Control_Change_Attribute: $.ASN1Decoder<Access_Control_Change_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Access_Control_Change_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Access_Control_Change_Attribute */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Access_Control_Change_Attribute
  * @function
@@ -77,13 +75,11 @@ export function _decode_Access_Control_Change_Attribute(el: _Element) {
   }
   return _cached_decoder_for_Access_Control_Change_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Access_Control_Change_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Control_Change_Attribute */
+
 let _cached_encoder_for_Access_Control_Change_Attribute: $.ASN1Encoder<Access_Control_Change_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Access_Control_Change_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Access_Control_Change_Attribute */
+
 /**
  * @summary Encodes a(n) Access_Control_Change_Attribute into an ASN.1 Element.
  * @function
@@ -117,6 +113,5 @@ export function _encode_Access_Control_Change_Attribute(
   return _cached_encoder_for_Access_Control_Change_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Access_Control_Change_Attribute */
 
 /* eslint-enable */

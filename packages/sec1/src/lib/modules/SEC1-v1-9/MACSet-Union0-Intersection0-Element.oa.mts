@@ -12,7 +12,6 @@ import {
 import { hmac_full_ecies } from "../SEC1-v1-9/hmac-full-ecies.va.mjs";
 import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION MACSet_Union0_Intersection0_Element */
 /**
  * @summary MACSet_Union0_Intersection0_Element
  * @description
@@ -39,6 +38,5 @@ const MACSet_Union0_Intersection0_Element: ALGORITHM<HashAlgorithm> = {
     "&id": hmac_full_ecies /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION MACSet_Union0_Intersection0_Element */
 
 /* eslint-enable */

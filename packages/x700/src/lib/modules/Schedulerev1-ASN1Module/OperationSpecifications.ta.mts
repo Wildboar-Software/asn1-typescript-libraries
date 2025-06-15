@@ -15,7 +15,7 @@ import {
     _decode_OperationSpecifications_Item,
     _encode_OperationSpecifications_Item,
 } from '../Schedulerev1-ASN1Module/OperationSpecifications-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OperationSpecifications */
+
 /**
  * @summary OperationSpecifications
  * @description
@@ -33,13 +33,11 @@ import {
  * ```
  */
 export type OperationSpecifications = OperationSpecifications_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OperationSpecifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationSpecifications */
+
 let _cached_decoder_for_OperationSpecifications: $.ASN1Decoder<OperationSpecifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OperationSpecifications */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OperationSpecifications */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationSpecifications
  * @function
@@ -54,13 +52,11 @@ export function _decode_OperationSpecifications(el: _Element) {
     }
     return _cached_decoder_for_OperationSpecifications(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OperationSpecifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationSpecifications */
+
 let _cached_encoder_for_OperationSpecifications: $.ASN1Encoder<OperationSpecifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OperationSpecifications */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OperationSpecifications */
+
 /**
  * @summary Encodes a(n) OperationSpecifications into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_OperationSpecifications(
     return _cached_encoder_for_OperationSpecifications(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OperationSpecifications */
 
 /* eslint-enable */

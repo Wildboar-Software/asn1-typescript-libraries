@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa.mjs';
 import { id_oc_mhs_country } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-country.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSCountry */
 /**
  * @summary mHSCountry
  * @description
@@ -48,6 +47,5 @@ export const mHSCountry: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSCountryName] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_country /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSCountry */
 
 /* eslint-enable */

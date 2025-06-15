@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION x790ObjectClass */
+
 /**
  * @summary x790ObjectClass
  * @description
@@ -33,6 +33,5 @@ export const x790ObjectClass: OBJECT_IDENTIFIER = new _OID([
     /* informationModel */ 0,
     /* managedObjectClass */ 3,
 ]);
-/* END_OF_SYMBOL_DEFINITION x790ObjectClass */
 
 /* eslint-enable */

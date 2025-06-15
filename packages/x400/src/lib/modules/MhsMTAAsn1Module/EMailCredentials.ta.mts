@@ -20,7 +20,6 @@ import {
     _decode_EMailStrongCredentials,
     _encode_EMailStrongCredentials,
 } from '../MhsMTAAsn1Module/EMailStrongCredentials.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailCredentials */
 /**
  * @summary EMailCredentials
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailCredentials =
     | { simple: EMailSimpleCredentials } /* CHOICE_ALT_ROOT */
     | { strong: EMailStrongCredentials } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailCredentials */
 let _cached_decoder_for_EMailCredentials: $.ASN1Decoder<EMailCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailCredentials
  * @function
@@ -63,13 +58,9 @@ export function _decode_EMailCredentials(el: _Element) {
     }
     return _cached_decoder_for_EMailCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailCredentials */
 let _cached_encoder_for_EMailCredentials: $.ASN1Encoder<EMailCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailCredentials */
 /**
  * @summary Encodes a(n) EMailCredentials into an ASN.1 Element.
  * @function
@@ -93,6 +84,5 @@ export function _encode_EMailCredentials(
     return _cached_encoder_for_EMailCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailCredentials */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ManualHandlingInstruction,
     _encode_ManualHandlingInstruction,
 } from '../IPMSHeadingExtensions/ManualHandlingInstruction.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManualHandlingInstructions */
 /**
  * @summary ManualHandlingInstructions
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type ManualHandlingInstructions = ManualHandlingInstruction[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ManualHandlingInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManualHandlingInstructions */
 let _cached_decoder_for_ManualHandlingInstructions: $.ASN1Decoder<ManualHandlingInstructions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManualHandlingInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManualHandlingInstructions */
 /**
  * @summary Decodes an ASN.1 element into a(n) ManualHandlingInstructions
  * @function
@@ -50,13 +45,9 @@ export function _decode_ManualHandlingInstructions(el: _Element) {
     }
     return _cached_decoder_for_ManualHandlingInstructions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManualHandlingInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManualHandlingInstructions */
 let _cached_encoder_for_ManualHandlingInstructions: $.ASN1Encoder<ManualHandlingInstructions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManualHandlingInstructions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManualHandlingInstructions */
 /**
  * @summary Encodes a(n) ManualHandlingInstructions into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_ManualHandlingInstructions(
     return _cached_encoder_for_ManualHandlingInstructions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManualHandlingInstructions */
 
 /* eslint-enable */

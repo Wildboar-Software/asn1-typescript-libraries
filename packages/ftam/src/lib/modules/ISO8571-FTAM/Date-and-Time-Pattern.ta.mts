@@ -16,7 +16,7 @@ import {
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Date_and_Time_Pattern */
+
 /**
  * @summary Date_and_Time_Pattern
  * @description
@@ -69,9 +69,8 @@ export class Date_and_Time_Pattern {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Date_and_Time_Pattern */
+
 /**
  * @summary The Leading Root Component Types of Date_and_Time_Pattern
  * @description
@@ -96,9 +95,8 @@ export const _root_component_type_list_1_spec_for_Date_and_Time_Pattern: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Date_and_Time_Pattern */
+
 /**
  * @summary The Trailing Root Component Types of Date_and_Time_Pattern
  * @description
@@ -108,9 +106,8 @@ export const _root_component_type_list_1_spec_for_Date_and_Time_Pattern: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Date_and_Time_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Date_and_Time_Pattern */
+
 /**
  * @summary The Extension Addition Component Types of Date_and_Time_Pattern
  * @description
@@ -120,13 +117,11 @@ export const _root_component_type_list_2_spec_for_Date_and_Time_Pattern: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_Date_and_Time_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Date_and_Time_Pattern */
+
 let _cached_decoder_for_Date_and_Time_Pattern: $.ASN1Decoder<Date_and_Time_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Date_and_Time_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Date_and_Time_Pattern
  * @function
@@ -164,13 +159,11 @@ export function _decode_Date_and_Time_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Date_and_Time_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Date_and_Time_Pattern */
+
 let _cached_encoder_for_Date_and_Time_Pattern: $.ASN1Encoder<Date_and_Time_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Date_and_Time_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Date_and_Time_Pattern */
+
 /**
  * @summary Encodes a(n) Date_and_Time_Pattern into an ASN.1 Element.
  * @function
@@ -209,6 +202,5 @@ export function _encode_Date_and_Time_Pattern(
   return _cached_encoder_for_Date_and_Time_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Date_and_Time_Pattern */
 
 /* eslint-enable */

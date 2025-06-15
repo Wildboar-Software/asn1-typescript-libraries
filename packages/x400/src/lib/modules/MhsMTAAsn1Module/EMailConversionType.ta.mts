@@ -20,7 +20,6 @@ import {
     _decode_GenericConversion,
     _encode_GenericConversion,
 } from '../MhsMTAAsn1Module/GenericConversion.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailConversionType */
 /**
  * @summary EMailConversionType
  * @description
@@ -37,13 +36,9 @@ import {
 export type EMailConversionType =
     | { x400Conversion: ExplicitConversion } /* CHOICE_ALT_ROOT */
     | { genericConversion: GenericConversion } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EMailConversionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailConversionType */
 let _cached_decoder_for_EMailConversionType: $.ASN1Decoder<EMailConversionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailConversionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailConversionType */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailConversionType
  * @function
@@ -71,13 +66,9 @@ export function _decode_EMailConversionType(el: _Element) {
     }
     return _cached_decoder_for_EMailConversionType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailConversionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailConversionType */
 let _cached_encoder_for_EMailConversionType: $.ASN1Encoder<EMailConversionType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailConversionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailConversionType */
 /**
  * @summary Encodes a(n) EMailConversionType into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_EMailConversionType(
     return _cached_encoder_for_EMailConversionType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailConversionType */
 
 /* eslint-enable */

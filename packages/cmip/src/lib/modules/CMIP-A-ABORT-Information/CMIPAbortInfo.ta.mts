@@ -18,7 +18,7 @@ import {
   _decode_CMIPAbortSource,
   _encode_CMIPAbortSource,
 } from '../CMIP-A-ABORT-Information/CMIPAbortSource.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIPAbortInfo */
+
 /**
  * @summary CMIPAbortInfo
  * @description
@@ -76,9 +76,8 @@ export class CMIPAbortInfo {
 
   public static _enum_for_abortSource = _enum_for_CMIPAbortSource;
 }
-/* END_OF_SYMBOL_DEFINITION CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CMIPAbortInfo */
+
 /**
  * @summary The Leading Root Component Types of CMIPAbortInfo
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_CMIPAbortInfo: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CMIPAbortInfo */
+
 /**
  * @summary The Trailing Root Component Types of CMIPAbortInfo
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_CMIPAbortInfo: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CMIPAbortInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CMIPAbortInfo */
+
 /**
  * @summary The Extension Addition Component Types of CMIPAbortInfo
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_CMIPAbortInfo: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_CMIPAbortInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMIPAbortInfo */
+
 let _cached_decoder_for_CMIPAbortInfo: $.ASN1Decoder<CMIPAbortInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CMIPAbortInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CMIPAbortInfo
  * @function
@@ -175,13 +170,11 @@ export function _decode_CMIPAbortInfo(el: _Element) {
   }
   return _cached_decoder_for_CMIPAbortInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMIPAbortInfo */
+
 let _cached_encoder_for_CMIPAbortInfo: $.ASN1Encoder<CMIPAbortInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMIPAbortInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CMIPAbortInfo */
+
 /**
  * @summary Encodes a(n) CMIPAbortInfo into an ASN.1 Element.
  * @function
@@ -222,6 +215,5 @@ export function _encode_CMIPAbortInfo(
   return _cached_encoder_for_CMIPAbortInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CMIPAbortInfo */
 
 /* eslint-enable */

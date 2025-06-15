@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_orgRoleNameForm } from "../SelectedObjectClasses/id-nf-orgRoleNameForm.va.mjs";
 import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION orgRoleNameForm */
 /**
  * @summary orgRoleNameForm
  * @description
@@ -29,6 +28,5 @@ export const orgRoleNameForm: NAME_FORM = {
     "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_orgRoleNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION orgRoleNameForm */
 
 /* eslint-enable */

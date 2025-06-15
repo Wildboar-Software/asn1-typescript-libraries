@@ -16,7 +16,7 @@ import {
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Bundle */
+
 /**
  * @summary Bundle
  * @description
@@ -66,9 +66,8 @@ export class Bundle {
         return new Bundle(_o.characteristicInfoType, _o.bundlingFactor);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Bundle */
+
 /**
  * @summary The Leading Root Component Types of Bundle
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_Bundle: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Bundle */
+
 /**
  * @summary The Trailing Root Component Types of Bundle
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_Bundle: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Bundle: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Bundle */
+
 /**
  * @summary The Extension Addition Component Types of Bundle
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_Bundle: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_Bundle: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Bundle */
+
 let _cached_decoder_for_Bundle: $.ASN1Decoder<Bundle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Bundle */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Bundle
  * @function
@@ -154,13 +149,11 @@ export function _decode_Bundle(el: _Element) {
     }
     return _cached_decoder_for_Bundle(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Bundle */
+
 let _cached_encoder_for_Bundle: $.ASN1Encoder<Bundle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Bundle */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Bundle */
+
 /**
  * @summary Encodes a(n) Bundle into an ASN.1 Element.
  * @function
@@ -192,6 +185,5 @@ export function _encode_Bundle(value: Bundle, elGetter: $.ASN1Encoder<Bundle>) {
     return _cached_encoder_for_Bundle(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Bundle */
 
 /* eslint-enable */

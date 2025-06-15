@@ -39,7 +39,6 @@ import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.m
 import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.mjs';
 import { op_fetch } from '../MSAccessProtocol/op-fetch.va.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION fetch */
 /**
  * @summary fetch
  * @description
@@ -96,6 +95,5 @@ export const fetch: ABSTRACT_OPERATION<FetchArgument, FetchResult> = {
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION fetch */
 
 /* eslint-enable */

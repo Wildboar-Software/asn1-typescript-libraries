@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ProtocolVersion */
+
 /**
  * @summary ProtocolVersion
  * @description
@@ -28,9 +28,8 @@ export enum _enum_for_ProtocolVersion {
     x2584 = 2,
     x2588 = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion */
+
 /**
  * @summary ProtocolVersion
  * @description
@@ -42,9 +41,8 @@ export enum _enum_for_ProtocolVersion {
  * ```@enum {number}
  */
 export type ProtocolVersion = _enum_for_ProtocolVersion;
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion */
+
 /**
  * @summary ProtocolVersion
  * @description
@@ -56,9 +54,8 @@ export type ProtocolVersion = _enum_for_ProtocolVersion;
  * ```@enum {number}
  */
 export const ProtocolVersion = _enum_for_ProtocolVersion;
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion_iSO8208V1 */
+
 /**
  * @summary ProtocolVersion_iSO8208V1
  * @constant
@@ -66,9 +63,8 @@ export const ProtocolVersion = _enum_for_ProtocolVersion;
  */
 export const ProtocolVersion_iSO8208V1: ProtocolVersion =
     ProtocolVersion.iSO8208V1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion_iSO8208V1 */
 
-/* START_OF_SYMBOL_DEFINITION iSO8208V1 */
+
 /**
  * @summary iSO8208V1
  * @constant
@@ -76,9 +72,8 @@ export const ProtocolVersion_iSO8208V1: ProtocolVersion =
  */
 export const iSO8208V1: ProtocolVersion =
     ProtocolVersion.iSO8208V1; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION iSO8208V1 */
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion_iSO8208V2 */
+
 /**
  * @summary ProtocolVersion_iSO8208V2
  * @constant
@@ -86,9 +81,8 @@ export const iSO8208V1: ProtocolVersion =
  */
 export const ProtocolVersion_iSO8208V2: ProtocolVersion =
     ProtocolVersion.iSO8208V2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion_iSO8208V2 */
 
-/* START_OF_SYMBOL_DEFINITION iSO8208V2 */
+
 /**
  * @summary iSO8208V2
  * @constant
@@ -96,9 +90,8 @@ export const ProtocolVersion_iSO8208V2: ProtocolVersion =
  */
 export const iSO8208V2: ProtocolVersion =
     ProtocolVersion.iSO8208V2; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION iSO8208V2 */
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion_x2584 */
+
 /**
  * @summary ProtocolVersion_x2584
  * @constant
@@ -106,9 +99,8 @@ export const iSO8208V2: ProtocolVersion =
  */
 export const ProtocolVersion_x2584: ProtocolVersion =
     ProtocolVersion.x2584; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion_x2584 */
 
-/* START_OF_SYMBOL_DEFINITION x2584 */
+
 /**
  * @summary x2584
  * @constant
@@ -116,9 +108,8 @@ export const ProtocolVersion_x2584: ProtocolVersion =
  */
 export const x2584: ProtocolVersion =
     ProtocolVersion.x2584; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION x2584 */
 
-/* START_OF_SYMBOL_DEFINITION ProtocolVersion_x2588 */
+
 /**
  * @summary ProtocolVersion_x2588
  * @constant
@@ -126,9 +117,8 @@ export const x2584: ProtocolVersion =
  */
 export const ProtocolVersion_x2588: ProtocolVersion =
     ProtocolVersion.x2588; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtocolVersion_x2588 */
 
-/* START_OF_SYMBOL_DEFINITION x2588 */
+
 /**
  * @summary x2588
  * @constant
@@ -136,21 +126,16 @@ export const ProtocolVersion_x2588: ProtocolVersion =
  */
 export const x2588: ProtocolVersion =
     ProtocolVersion.x2588; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION x2588 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersion */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtocolVersion */
+
+
 export const _decode_ProtocolVersion = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersion */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtocolVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtocolVersion */
+
+
 export const _encode_ProtocolVersion = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtocolVersion */
 
 /* eslint-enable */

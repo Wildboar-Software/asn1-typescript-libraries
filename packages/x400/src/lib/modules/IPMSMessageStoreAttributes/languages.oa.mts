@@ -24,7 +24,6 @@ import { id_hat_languages } from '../IPMSObjectIdentifiers/id-hat-languages.va.m
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION languages */
 /**
  * @summary languages
  * @description
@@ -61,6 +60,5 @@ export const languages: X413ATTRIBUTE<Language> = {
     '&id': id_hat_languages /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION languages */
 
 /* eslint-enable */

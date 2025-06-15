@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION LogRqtMsgContent */
+
 /**
  * @summary LogRqtMsgContent
  * @description
@@ -67,9 +67,8 @@ class LogRqtMsgContent {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LogRqtMsgContent */
+
 /**
  * @summary The Leading Root Component Types of LogRqtMsgContent
  * @description
@@ -83,9 +82,8 @@ const _root_component_type_list_1_spec_for_LogRqtMsgContent: $.ComponentSpec[] =
     new $.ComponentSpec("sessionID", false, $.hasTag(_TagClass.context, 0), undefined, undefined),
     new $.ComponentSpec("logRequest-Req", false, $.hasTag(_TagClass.context, 1), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LogRqtMsgContent */
+
 /**
  * @summary The Trailing Root Component Types of LogRqtMsgContent
  * @description
@@ -98,9 +96,8 @@ export
 const _root_component_type_list_2_spec_for_LogRqtMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LogRqtMsgContent */
+
 /**
  * @summary The Extension Addition Component Types of LogRqtMsgContent
  * @description
@@ -113,13 +110,11 @@ export
 const _extension_additions_list_spec_for_LogRqtMsgContent: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LogRqtMsgContent */
+
 let _cached_decoder_for_LogRqtMsgContent: $.ASN1Decoder<LogRqtMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LogRqtMsgContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LogRqtMsgContent
  * @function
@@ -147,13 +142,11 @@ function _decode_LogRqtMsgContent (el: _Element) {
 }; }
     return _cached_decoder_for_LogRqtMsgContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LogRqtMsgContent */
+
 let _cached_encoder_for_LogRqtMsgContent: $.ASN1Encoder<LogRqtMsgContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LogRqtMsgContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LogRqtMsgContent */
+
 /**
  * @summary Encodes a(n) LogRqtMsgContent into an ASN.1 Element.
  * @function
@@ -174,6 +167,5 @@ function _encode_LogRqtMsgContent (value: LogRqtMsgContent, elGetter: $.ASN1Enco
     return _cached_encoder_for_LogRqtMsgContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LogRqtMsgContent */
 
 /* eslint-enable */

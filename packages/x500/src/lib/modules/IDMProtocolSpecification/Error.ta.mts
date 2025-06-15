@@ -12,7 +12,6 @@ import {
     _decode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Error */
 /**
  * @summary Error
  * @description
@@ -78,9 +77,7 @@ export class Error {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Error */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Error */
 /**
  * @summary The Leading Root Component Types of Error
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_Error: $.ComponentSpec[] = [
     new $.ComponentSpec("errcode", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("error", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Error */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Error */
 /**
  * @summary The Trailing Root Component Types of Error
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_Error: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Error: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Error */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Error */
 /**
  * @summary The Extension Addition Component Types of Error
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_Error: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Error: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Error */
 let _cached_decoder_for_Error: $.ASN1Decoder<Error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Error */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Error */
 /**
  * @summary Decodes an ASN.1 element into a(n) Error
  * @function
@@ -162,13 +151,9 @@ export function _decode_Error(el: _Element) {
     }
     return _cached_decoder_for_Error(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Error */
 let _cached_encoder_for_Error: $.ASN1Encoder<Error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Error */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Error */
 /**
  * @summary Encodes a(n) Error into an ASN.1 Element.
  * @function
@@ -203,6 +188,5 @@ export function _encode_Error(value: Error, elGetter: $.ASN1Encoder<Error>) {
     return _cached_encoder_for_Error(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Error */
 
 /* eslint-enable */

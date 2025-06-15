@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Date_Time */
 /**
  * @summary Date_Time
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Date_Time = TIME; // TimeType
-/* END_OF_SYMBOL_DEFINITION Date_Time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Date_Time */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Date_Time */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Date_Time */
 export const _decode_Date_Time = $._decodeTime;
-/* END_OF_SYMBOL_DEFINITION _decode_Date_Time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Date_Time */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Date_Time */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Date_Time */
 export const _encode_Date_Time = $._encodeTime;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Date_Time */
 
 /* eslint-enable */

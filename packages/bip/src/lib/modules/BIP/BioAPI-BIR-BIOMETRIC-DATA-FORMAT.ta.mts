@@ -15,7 +15,7 @@ import {
   _decode_UnsignedShort,
   _encode_UnsignedShort,
 } from '../BIP/UnsignedShort.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 /**
  * @summary BioAPI_BIR_BIOMETRIC_DATA_FORMAT
  * @description
@@ -67,9 +67,8 @@ export class BioAPI_BIR_BIOMETRIC_DATA_FORMAT {
     return new BioAPI_BIR_BIOMETRIC_DATA_FORMAT(_o.formatOwner, _o.formatType);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_BIR_BIOMETRIC_DATA_FORMAT
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORM
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_BIR_BIOMETRIC_DATA_FORMAT
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORM
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_BIR_BIOMETRIC_DATA_FORMAT
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORM
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 let _cached_decoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT: $.ASN1Decoder<BioAPI_BIR_BIOMETRIC_DATA_FORMAT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_BIOMETRIC_DATA_FORMAT
  * @function
@@ -155,13 +150,11 @@ export function _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 let _cached_encoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT: $.ASN1Encoder<BioAPI_BIR_BIOMETRIC_DATA_FORMAT> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
+
 /**
  * @summary Encodes a(n) BioAPI_BIR_BIOMETRIC_DATA_FORMAT into an ASN.1 Element.
  * @function
@@ -190,6 +183,5 @@ export function _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT(
   return _cached_encoder_for_BioAPI_BIR_BIOMETRIC_DATA_FORMAT(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT */
 
 /* eslint-enable */

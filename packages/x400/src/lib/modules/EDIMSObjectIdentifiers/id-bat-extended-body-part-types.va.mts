@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_bat_extended_body_part_types */
 /**
  * @summary id_bat_extended_body_part_types
  * @description
@@ -25,6 +24,5 @@ import { id_bat } from '../EDIMSObjectIdentifiers/id-bat.va.mjs';
  * @constant
  */
 export const id_bat_extended_body_part_types: ID = new _OID([6], id_bat);
-/* END_OF_SYMBOL_DEFINITION id_bat_extended_body_part_types */
 
 /* eslint-enable */

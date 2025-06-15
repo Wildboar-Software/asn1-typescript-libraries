@@ -22,7 +22,6 @@ import { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTC
 import { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
 import { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
 import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BiometricHeaderTemplate */
 /**
  * @summary BiometricHeaderTemplate
  * @description
@@ -146,9 +145,7 @@ class BiometricHeaderTemplate {
      */
     public static get _default_value_for_patronHeaderVersion () { return new Uint8Array([ 0x01, 0x01 ]); }
 }
-/* END_OF_SYMBOL_DEFINITION BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricHeaderTemplate */
 /**
  * @summary The Leading Root Component Types of BiometricHeaderTemplate
  * @description
@@ -171,9 +168,7 @@ const _root_component_type_list_1_spec_for_BiometricHeaderTemplate: $.ComponentS
     new $.ComponentSpec("birIndex", true, $.hasTag(_TagClass.context, 16), undefined, undefined),
     new $.ComponentSpec("matchingAlgParameters", true, $.hasTag(_TagClass.context, 17), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricHeaderTemplate */
 /**
  * @summary The Trailing Root Component Types of BiometricHeaderTemplate
  * @description
@@ -186,9 +181,7 @@ export
 const _root_component_type_list_2_spec_for_BiometricHeaderTemplate: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricHeaderTemplate */
 /**
  * @summary The Extension Addition Component Types of BiometricHeaderTemplate
  * @description
@@ -201,13 +194,9 @@ export
 const _extension_additions_list_spec_for_BiometricHeaderTemplate: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricHeaderTemplate */
 let _cached_decoder_for_BiometricHeaderTemplate: $.ASN1Decoder<BiometricHeaderTemplate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricHeaderTemplate */
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricHeaderTemplate
  * @function
@@ -267,13 +256,9 @@ function _decode_BiometricHeaderTemplate (el: _Element) {
 }; }
     return _cached_decoder_for_BiometricHeaderTemplate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricHeaderTemplate */
 let _cached_encoder_for_BiometricHeaderTemplate: $.ASN1Encoder<BiometricHeaderTemplate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricHeaderTemplate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricHeaderTemplate */
 /**
  * @summary Encodes a(n) BiometricHeaderTemplate into an ASN.1 Element.
  * @function
@@ -303,6 +288,5 @@ function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGett
     return _cached_encoder_for_BiometricHeaderTemplate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricHeaderTemplate */
 
 /* eslint-enable */

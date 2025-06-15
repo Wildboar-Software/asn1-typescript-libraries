@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKInfoAlgorithms */
+
 /**
  * @summary PKInfoAlgorithms
  * @description
@@ -18,6 +18,5 @@ import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFra
  *
  */
 export const PKInfoAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION PKInfoAlgorithms */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_service_error */
 /**
  * @summary err_service_error
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_service_error: Code = { local: 27 };
-/* END_OF_SYMBOL_DEFINITION err_service_error */
 
 /* eslint-enable */

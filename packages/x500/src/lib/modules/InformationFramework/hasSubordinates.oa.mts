@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oa_hasSubordinates } from "../InformationFramework/id-oa-hasSubordinates.va.mjs";
 import { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION hasSubordinates */
 /**
  * @summary hasSubordinates
  * @description
@@ -46,6 +45,5 @@ export const hasSubordinates: ATTRIBUTE<BOOLEAN> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION hasSubordinates */
 
 /* eslint-enable */

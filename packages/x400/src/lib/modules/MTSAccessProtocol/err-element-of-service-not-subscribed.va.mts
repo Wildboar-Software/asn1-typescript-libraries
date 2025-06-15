@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_element_of_service_not_subscribed */
 /**
  * @summary err_element_of_service_not_subscribed
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_element_of_service_not_subscribed: Code = { local: 4 };
-/* END_OF_SYMBOL_DEFINITION err_element_of_service_not_subscribed */
 
 /* eslint-enable */

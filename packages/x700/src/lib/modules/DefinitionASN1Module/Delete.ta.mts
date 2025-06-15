@@ -16,7 +16,7 @@ import {
     _decode_DeleteSpecification,
     _encode_DeleteSpecification,
 } from '../DefinitionASN1Module/DeleteSpecification.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Delete */
+
 /**
  * @summary Delete
  * @description
@@ -32,13 +32,11 @@ import {
 export type Delete =
     | { present: DeleteSpecification } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Delete */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Delete */
+
 let _cached_decoder_for_Delete: $.ASN1Decoder<Delete> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Delete */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Delete */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Delete
  * @function
@@ -54,13 +52,11 @@ export function _decode_Delete(el: _Element) {
     }
     return _cached_decoder_for_Delete(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Delete */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Delete */
+
 let _cached_encoder_for_Delete: $.ASN1Encoder<Delete> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Delete */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Delete */
+
 /**
  * @summary Encodes a(n) Delete into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_Delete(value: Delete, elGetter: $.ASN1Encoder<Delete>) {
     return _cached_encoder_for_Delete(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Delete */
 
 /* eslint-enable */

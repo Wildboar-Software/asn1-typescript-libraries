@@ -7,7 +7,6 @@ import {
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION telephoneNumberSubstringsMatch */
 /**
  * @summary telephoneNumberSubstringsMatch
  * @description
@@ -39,6 +38,5 @@ export const telephoneNumberSubstringsMatch: MATCHING_RULE<SubstringAssertion> =
     "&id": id_mr_telephoneNumberSubstringsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION telephoneNumberSubstringsMatch */
 
 /* eslint-enable */

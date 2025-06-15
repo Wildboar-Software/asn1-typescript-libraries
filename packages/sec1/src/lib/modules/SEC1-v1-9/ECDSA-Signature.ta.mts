@@ -12,7 +12,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECDSA_Sig_Value, _decode_ECDSA_Sig_Value, _encode_ECDSA_Sig_Value } from "../SEC1-v1-9/ECDSA-Sig-Value.ta.mjs";
 import { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC1-v1-9/ECDSA-Full-R.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDSA_Signature */
 /**
  * @summary ECDSA_Signature
  * @description
@@ -32,13 +31,9 @@ type ECDSA_Signature =
     { two_ints_plus: ECDSA_Sig_Value } /* CHOICE_ALT_ROOT */
     | { point_int: ECDSA_Full_R } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ECDSA_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Signature */
 let _cached_decoder_for_ECDSA_Signature: $.ASN1Decoder<ECDSA_Signature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECDSA_Signature */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECDSA_Signature
  * @function
@@ -53,13 +48,9 @@ function _decode_ECDSA_Signature (el: _Element) {
 }); }
     return _cached_decoder_for_ECDSA_Signature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECDSA_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Signature */
 let _cached_encoder_for_ECDSA_Signature: $.ASN1Encoder<ECDSA_Signature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Signature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECDSA_Signature */
 /**
  * @summary Encodes a(n) ECDSA_Signature into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ function _encode_ECDSA_Signature (value: ECDSA_Signature, elGetter: $.ASN1Encode
     return _cached_encoder_for_ECDSA_Signature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECDSA_Signature */
 
 /* eslint-enable */

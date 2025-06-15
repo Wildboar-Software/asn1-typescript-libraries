@@ -26,7 +26,6 @@ import {
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
 } from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObservationId */
 /**
  * @summary ObservationId
  * @description
@@ -87,9 +86,7 @@ export class ObservationId {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObservationId */
 /**
  * @summary The Leading Root Component Types of ObservationId
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_ObservationId: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObservationId */
 /**
  * @summary The Trailing Root Component Types of ObservationId
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_ObservationId: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ObservationId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObservationId */
 /**
  * @summary The Extension Addition Component Types of ObservationId
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_ObservationId: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ObservationId: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservationId */
 let _cached_decoder_for_ObservationId: $.ASN1Decoder<ObservationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObservationId */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObservationId
  * @function
@@ -200,13 +189,9 @@ export function _decode_ObservationId(el: _Element) {
     }
     return _cached_decoder_for_ObservationId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservationId */
 let _cached_encoder_for_ObservationId: $.ASN1Encoder<ObservationId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObservationId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObservationId */
 /**
  * @summary Encodes a(n) ObservationId into an ASN.1 Element.
  * @function
@@ -250,6 +235,5 @@ export function _encode_ObservationId(
     return _cached_encoder_for_ObservationId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObservationId */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _encode_NameType,
 } from '../ASN1DefinedTypesModule/NameType.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UserIdentifier */
+
 /**
  * @summary UserIdentifier
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type UserIdentifier = NameType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UserIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserIdentifier */
+
 let _cached_decoder_for_UserIdentifier: $.ASN1Decoder<UserIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UserIdentifier
  * @function
@@ -47,13 +45,11 @@ export function _decode_UserIdentifier(el: _Element) {
     }
     return _cached_decoder_for_UserIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserIdentifier */
+
 let _cached_encoder_for_UserIdentifier: $.ASN1Encoder<UserIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserIdentifier */
+
 /**
  * @summary Encodes a(n) UserIdentifier into an ASN.1 Element.
  * @function
@@ -71,6 +67,5 @@ export function _encode_UserIdentifier(
     return _cached_encoder_for_UserIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserIdentifier */
 
 /* eslint-enable */

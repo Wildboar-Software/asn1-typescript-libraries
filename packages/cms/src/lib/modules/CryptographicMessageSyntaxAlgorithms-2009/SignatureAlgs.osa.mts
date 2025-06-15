@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SignatureAlgs */
+
 /**
  * @summary SignatureAlgs
  * @description
@@ -19,6 +19,5 @@ import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGO
  *
  */
 export const SignatureAlgs: SIGNATURE_ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SignatureAlgs */
 
 /* eslint-enable */

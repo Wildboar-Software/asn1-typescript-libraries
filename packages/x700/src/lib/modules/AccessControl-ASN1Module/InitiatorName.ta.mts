@@ -21,7 +21,6 @@ import {
     _encode_AE_title,
 } from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION InitiatorName */
 /**
  * @summary InitiatorName
  * @description
@@ -42,13 +41,9 @@ export type InitiatorName =
     | { groupName: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { role: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { application: AE_title } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION InitiatorName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InitiatorName */
 let _cached_decoder_for_InitiatorName: $.ASN1Decoder<InitiatorName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InitiatorName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InitiatorName */
 /**
  * @summary Decodes an ASN.1 element into a(n) InitiatorName
  * @function
@@ -86,13 +81,9 @@ export function _decode_InitiatorName(el: _Element) {
     }
     return _cached_decoder_for_InitiatorName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InitiatorName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InitiatorName */
 let _cached_encoder_for_InitiatorName: $.ASN1Encoder<InitiatorName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InitiatorName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InitiatorName */
 /**
  * @summary Encodes a(n) InitiatorName into an ASN.1 Element.
  * @function
@@ -138,6 +129,5 @@ export function _encode_InitiatorName(
     return _cached_encoder_for_InitiatorName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InitiatorName */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
 import { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa.mjs";
 import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
 import { id_at_collectiveFacsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-collectiveFacsimileTelephoneNumber.va.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveFacsimileTelephoneNumber */
 /**
  * @summary collectiveFacsimileTelephoneNumber
  * @description
@@ -46,6 +45,5 @@ export const collectiveFacsimileTelephoneNumber: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveFacsimileTelephoneNumber */
 
 /* eslint-enable */

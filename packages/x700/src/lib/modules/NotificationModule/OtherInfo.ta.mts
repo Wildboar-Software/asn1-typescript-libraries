@@ -15,7 +15,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OtherInfo */
 /**
  * @summary OtherInfo
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OtherInfo = ManagementExtension[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION OtherInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherInfo */
 let _cached_decoder_for_OtherInfo: $.ASN1Decoder<OtherInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherInfo
  * @function
@@ -48,13 +43,9 @@ export function _decode_OtherInfo(el: _Element) {
     }
     return _cached_decoder_for_OtherInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherInfo */
 let _cached_encoder_for_OtherInfo: $.ASN1Encoder<OtherInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherInfo */
 /**
  * @summary Encodes a(n) OtherInfo into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_OtherInfo(
     return _cached_encoder_for_OtherInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherInfo */
 
 /* eslint-enable */

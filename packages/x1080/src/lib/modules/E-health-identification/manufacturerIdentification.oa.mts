@@ -16,7 +16,7 @@ import {
     _encode_ManufacturerIdentification,
 } from '../E-health-identification/ManufacturerIdentification.ta.mjs';
 import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION manufacturerIdentification */
+
 /**
  * @summary manufacturerIdentification
  * @description
@@ -44,6 +44,5 @@ export const manufacturerIdentification: IDENTIFICATION<ManufacturerIdentificati
     '&category': id_drug_manufac /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Identification': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION manufacturerIdentification */
 
 /* eslint-enable */

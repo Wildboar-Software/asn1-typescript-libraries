@@ -16,7 +16,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IPMLocation */
 /**
  * @summary IPMLocation
  * @description
@@ -34,13 +33,9 @@ export type IPMLocation =
     | { stored: SequenceNumber[] } /* CHOICE_ALT_ROOT */
     | { absent: NULL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION IPMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMLocation */
 let _cached_decoder_for_IPMLocation: $.ASN1Decoder<IPMLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IPMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IPMLocation */
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMLocation
  * @function
@@ -63,13 +58,9 @@ export function _decode_IPMLocation(el: _Element) {
     }
     return _cached_decoder_for_IPMLocation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IPMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMLocation */
 let _cached_encoder_for_IPMLocation: $.ASN1Encoder<IPMLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IPMLocation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IPMLocation */
 /**
  * @summary Encodes a(n) IPMLocation into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_IPMLocation(
     return _cached_encoder_for_IPMLocation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IPMLocation */
 
 /* eslint-enable */

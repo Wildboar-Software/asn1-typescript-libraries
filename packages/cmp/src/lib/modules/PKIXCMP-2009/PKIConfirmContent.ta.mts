@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PKIConfirmContent */
+
 /**
  * @summary PKIConfirmContent
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PKIConfirmContent = NULL; // NullType
-/* END_OF_SYMBOL_DEFINITION PKIConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIConfirmContent */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIConfirmContent */
+
+
 export const _decode_PKIConfirmContent = $._decodeNull;
-/* END_OF_SYMBOL_DEFINITION _decode_PKIConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIConfirmContent */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIConfirmContent */
+
+
 export const _encode_PKIConfirmContent = $._encodeNull;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIConfirmContent */
 
 /* eslint-enable */

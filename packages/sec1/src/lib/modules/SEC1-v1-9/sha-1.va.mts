@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION sha_1 */
 /**
  * @summary sha_1
  * @description
@@ -36,6 +35,5 @@ const sha_1: OBJECT_IDENTIFIER = new _OID([
     /* algorithm */ 2,
     26,
 ]);
-/* END_OF_SYMBOL_DEFINITION sha_1 */
 
 /* eslint-enable */

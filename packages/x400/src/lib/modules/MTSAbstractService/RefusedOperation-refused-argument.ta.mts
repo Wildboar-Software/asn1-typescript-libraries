@@ -21,7 +21,6 @@ import {
     _encode_ExtensionType,
 } from "./ExtensionType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RefusedOperation_refused_argument */
 /**
  * @summary RefusedOperation_refused_argument
  * @description
@@ -35,13 +34,9 @@ import {
 export type RefusedOperation_refused_argument =
     | { built_in_argument: RefusedArgument } /* CHOICE_ALT_ROOT */
     | { refused_extension: ExtensionType } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RefusedOperation_refused_argument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusedOperation_refused_argument */
 let _cached_decoder_for_RefusedOperation_refused_argument: $.ASN1Decoder<RefusedOperation_refused_argument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RefusedOperation_refused_argument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RefusedOperation_refused_argument */
 /**
  * @summary Decodes an ASN.1 element into a(n) RefusedOperation_refused_argument
  * @function
@@ -64,13 +59,9 @@ export function _decode_RefusedOperation_refused_argument(el: _Element) {
     }
     return _cached_decoder_for_RefusedOperation_refused_argument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RefusedOperation_refused_argument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusedOperation_refused_argument */
 let _cached_encoder_for_RefusedOperation_refused_argument: $.ASN1Encoder<RefusedOperation_refused_argument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RefusedOperation_refused_argument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RefusedOperation_refused_argument */
 /**
  * @summary Encodes a(n) RefusedOperation_refused_argument into an ASN.1 Element.
  * @function
@@ -102,6 +93,5 @@ export function _encode_RefusedOperation_refused_argument(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RefusedOperation_refused_argument */
 
 /* eslint-enable */

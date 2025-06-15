@@ -16,7 +16,6 @@ import {
     _decode_Register_MSResult_registered_information,
     _encode_Register_MSResult_registered_information,
 } from '../MSAbstractService/Register-MSResult-registered-information.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Register_MSResult */
 /**
  * @summary Register_MSResult
  * @description
@@ -52,13 +51,9 @@ export type Register_MSResult =
     | {
           registered_information: Register_MSResult_registered_information;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Register_MSResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Register_MSResult */
 let _cached_decoder_for_Register_MSResult: $.ASN1Decoder<Register_MSResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Register_MSResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Register_MSResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) Register_MSResult
  * @function
@@ -79,13 +74,9 @@ export function _decode_Register_MSResult(el: _Element) {
     }
     return _cached_decoder_for_Register_MSResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Register_MSResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Register_MSResult */
 let _cached_encoder_for_Register_MSResult: $.ASN1Encoder<Register_MSResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Register_MSResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Register_MSResult */
 /**
  * @summary Encodes a(n) Register_MSResult into an ASN.1 Element.
  * @function
@@ -109,6 +100,5 @@ export function _encode_Register_MSResult(
     return _cached_encoder_for_Register_MSResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Register_MSResult */
 
 /* eslint-enable */

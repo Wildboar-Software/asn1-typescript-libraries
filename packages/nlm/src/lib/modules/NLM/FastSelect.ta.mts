@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_FastSelect */
+
 /**
  * @summary FastSelect
  * @description
@@ -30,9 +30,8 @@ export enum _enum_for_FastSelect {
     fastSelectWithRestrictedResponse = 2,
     noFastSelect = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_FastSelect */
 
-/* START_OF_SYMBOL_DEFINITION FastSelect */
+
 /**
  * @summary FastSelect
  * @description
@@ -46,9 +45,8 @@ export enum _enum_for_FastSelect {
  * ```@enum {number}
  */
 export type FastSelect = _enum_for_FastSelect;
-/* END_OF_SYMBOL_DEFINITION FastSelect */
 
-/* START_OF_SYMBOL_DEFINITION FastSelect */
+
 /**
  * @summary FastSelect
  * @description
@@ -62,9 +60,8 @@ export type FastSelect = _enum_for_FastSelect;
  * ```@enum {number}
  */
 export const FastSelect = _enum_for_FastSelect;
-/* END_OF_SYMBOL_DEFINITION FastSelect */
 
-/* START_OF_SYMBOL_DEFINITION FastSelect_notSpecified */
+
 /**
  * @summary FastSelect_notSpecified
  * @constant
@@ -72,9 +69,8 @@ export const FastSelect = _enum_for_FastSelect;
  */
 export const FastSelect_notSpecified: FastSelect =
     FastSelect.notSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION FastSelect_notSpecified */
 
-/* START_OF_SYMBOL_DEFINITION notSpecified */
+
 /**
  * @summary notSpecified
  * @constant
@@ -82,9 +78,8 @@ export const FastSelect_notSpecified: FastSelect =
  */
 export const notSpecified: FastSelect =
     FastSelect.notSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION notSpecified */
 
-/* START_OF_SYMBOL_DEFINITION FastSelect_fastSelect */
+
 /**
  * @summary FastSelect_fastSelect
  * @constant
@@ -92,9 +87,8 @@ export const notSpecified: FastSelect =
  */
 export const FastSelect_fastSelect: FastSelect =
     FastSelect.fastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION FastSelect_fastSelect */
 
-/* START_OF_SYMBOL_DEFINITION fastSelect */
+
 /**
  * @summary fastSelect
  * @constant
@@ -102,9 +96,8 @@ export const FastSelect_fastSelect: FastSelect =
  */
 export const fastSelect: FastSelect =
     FastSelect.fastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION fastSelect */
 
-/* START_OF_SYMBOL_DEFINITION FastSelect_fastSelectWithRestrictedResponse */
+
 /**
  * @summary FastSelect_fastSelectWithRestrictedResponse
  * @constant
@@ -112,9 +105,8 @@ export const fastSelect: FastSelect =
  */
 export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
     FastSelect.fastSelectWithRestrictedResponse; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION FastSelect_fastSelectWithRestrictedResponse */
 
-/* START_OF_SYMBOL_DEFINITION fastSelectWithRestrictedResponse */
+
 /**
  * @summary fastSelectWithRestrictedResponse
  * @constant
@@ -122,9 +114,8 @@ export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
  */
 export const fastSelectWithRestrictedResponse: FastSelect =
     FastSelect.fastSelectWithRestrictedResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION fastSelectWithRestrictedResponse */
 
-/* START_OF_SYMBOL_DEFINITION FastSelect_noFastSelect */
+
 /**
  * @summary FastSelect_noFastSelect
  * @constant
@@ -132,9 +123,8 @@ export const fastSelectWithRestrictedResponse: FastSelect =
  */
 export const FastSelect_noFastSelect: FastSelect =
     FastSelect.noFastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION FastSelect_noFastSelect */
 
-/* START_OF_SYMBOL_DEFINITION noFastSelect */
+
 /**
  * @summary noFastSelect
  * @constant
@@ -142,21 +132,16 @@ export const FastSelect_noFastSelect: FastSelect =
  */
 export const noFastSelect: FastSelect =
     FastSelect.noFastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION noFastSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FastSelect */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FastSelect */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FastSelect */
+
+
 export const _decode_FastSelect = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_FastSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FastSelect */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FastSelect */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FastSelect */
+
+
 export const _encode_FastSelect = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FastSelect */
 
 /* eslint-enable */

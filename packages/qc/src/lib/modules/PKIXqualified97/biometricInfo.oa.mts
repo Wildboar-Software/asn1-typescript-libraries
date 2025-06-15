@@ -7,7 +7,7 @@ import {
 } from "../PKIXqualified97/BiometricSyntax.ta.mjs";
 import { id_pe_biometricInfo } from "../PKIXqualified97/id-pe-biometricInfo.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION biometricInfo */
+
 /**
  * @summary biometricInfo
  * @description
@@ -35,6 +35,5 @@ export const biometricInfo: EXTENSION<BiometricSyntax> = {
     "&id": id_pe_biometricInfo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION biometricInfo */
 
 /* eslint-enable */

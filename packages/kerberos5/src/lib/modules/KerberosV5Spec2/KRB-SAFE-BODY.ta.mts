@@ -32,7 +32,7 @@ import {
   _decode_HostAddress,
   _encode_HostAddress,
 } from '../KerberosV5Spec2/HostAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION KRB_SAFE_BODY */
+
 /**
  * @summary KRB_SAFE_BODY
  * @description
@@ -117,9 +117,8 @@ export class KRB_SAFE_BODY {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_SAFE_BODY */
+
 /**
  * @summary The Leading Root Component Types of KRB_SAFE_BODY
  * @description
@@ -172,9 +171,8 @@ export const _root_component_type_list_1_spec_for_KRB_SAFE_BODY: $.ComponentSpec
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_SAFE_BODY */
+
 /**
  * @summary The Trailing Root Component Types of KRB_SAFE_BODY
  * @description
@@ -184,9 +182,8 @@ export const _root_component_type_list_1_spec_for_KRB_SAFE_BODY: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KRB_SAFE_BODY: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_SAFE_BODY */
+
 /**
  * @summary The Extension Addition Component Types of KRB_SAFE_BODY
  * @description
@@ -196,13 +193,11 @@ export const _root_component_type_list_2_spec_for_KRB_SAFE_BODY: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_KRB_SAFE_BODY: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_SAFE_BODY */
+
 let _cached_decoder_for_KRB_SAFE_BODY: $.ASN1Decoder<KRB_SAFE_BODY> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KRB_SAFE_BODY */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KRB_SAFE_BODY
  * @function
@@ -272,13 +267,11 @@ export function _decode_KRB_SAFE_BODY(el: _Element) {
   }
   return _cached_decoder_for_KRB_SAFE_BODY(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_SAFE_BODY */
+
 let _cached_encoder_for_KRB_SAFE_BODY: $.ASN1Encoder<KRB_SAFE_BODY> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_SAFE_BODY */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KRB_SAFE_BODY */
+
 /**
  * @summary Encodes a(n) KRB_SAFE_BODY into an ASN.1 Element.
  * @function
@@ -349,6 +342,5 @@ export function _encode_KRB_SAFE_BODY(
   return _cached_encoder_for_KRB_SAFE_BODY(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KRB_SAFE_BODY */
 
 /* eslint-enable */

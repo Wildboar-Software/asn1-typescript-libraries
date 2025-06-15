@@ -31,7 +31,6 @@ import { submission_control_violated } from '../MTSAbstractService/submission-co
 import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.mjs';
 import { id_act_ipm_auto_forward } from '../MSObjectIdentifiers/id-act-ipm-auto-forward.va.mjs';
 import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ipm_auto_forward */
 /**
  * @summary ipm_auto_forward
  * @description
@@ -84,6 +83,5 @@ export const ipm_auto_forward: AUTO_ACTION<ipm_auto_forward_RegistrationParamete
     '&id': id_act_ipm_auto_forward /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&RegistrationParameter': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_forward */
 
 /* eslint-enable */

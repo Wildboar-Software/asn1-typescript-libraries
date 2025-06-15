@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION mkmDirectoryAttributeType */
 /**
  * @summary mkmDirectoryAttributeType
  * @description
@@ -33,6 +32,5 @@ export const mkmDirectoryAttributeType: OBJECT_IDENTIFIER = new _OID([
     /* standardSpecificExtension */ 0,
     /* directoryAttributeTypes */ 4,
 ]);
-/* END_OF_SYMBOL_DEFINITION mkmDirectoryAttributeType */
 
 /* eslint-enable */

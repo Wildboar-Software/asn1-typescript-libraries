@@ -11,7 +11,7 @@ import {
     _encode_RSAES_OAEP_params,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/RSAES-OAEP-params.ta.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION kta_rsaES_OAEP */
+
 /**
  * @summary kta_rsaES_OAEP
  * @description
@@ -44,6 +44,5 @@ export const kta_rsaES_OAEP: KEY_TRANSPORT<RSAES_OAEP_params> = {
     "&PublicKeySet": [pk_rsa, pk_rsaES_OAEP] /* OBJECT_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kta_rsaES_OAEP */
 
 /* eslint-enable */

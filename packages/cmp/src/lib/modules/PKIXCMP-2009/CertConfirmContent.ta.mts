@@ -15,7 +15,7 @@ import {
   _decode_CertStatus,
   _encode_CertStatus,
 } from '../PKIXCMP-2009/CertStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CertConfirmContent */
+
 /**
  * @summary CertConfirmContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type CertConfirmContent = CertStatus[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertConfirmContent */
+
 let _cached_decoder_for_CertConfirmContent: $.ASN1Decoder<CertConfirmContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertConfirmContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertConfirmContent
  * @function
@@ -48,13 +46,11 @@ export function _decode_CertConfirmContent(el: _Element) {
   }
   return _cached_decoder_for_CertConfirmContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertConfirmContent */
+
 let _cached_encoder_for_CertConfirmContent: $.ASN1Encoder<CertConfirmContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertConfirmContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertConfirmContent */
+
 /**
  * @summary Encodes a(n) CertConfirmContent into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_CertConfirmContent(
   return _cached_encoder_for_CertConfirmContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertConfirmContent */
 
 /* eslint-enable */

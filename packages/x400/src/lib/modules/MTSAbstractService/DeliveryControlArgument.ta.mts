@@ -58,7 +58,6 @@ import {
     _extension_additions_list_spec_for_Controls,
 } from '../MTSAbstractService/Controls.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DeliveryControlArgument */
 /**
  * @summary DeliveryControlArgument
  * @description
@@ -175,9 +174,7 @@ export class DeliveryControlArgument implements DeliveryControls {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryControlArgument */
 /**
  * @summary The Leading Root Component Types of DeliveryControlArgument
  * @description
@@ -196,9 +193,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControlArgument: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControlArgument */
 /**
  * @summary The Trailing Root Component Types of DeliveryControlArgument
  * @description
@@ -210,9 +205,7 @@ export const _root_component_type_list_1_spec_for_DeliveryControlArgument: $.Com
 export const _root_component_type_list_2_spec_for_DeliveryControlArgument: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_Controls,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControlArgument */
 /**
  * @summary The Extension Addition Component Types of DeliveryControlArgument
  * @description
@@ -224,13 +217,9 @@ export const _root_component_type_list_2_spec_for_DeliveryControlArgument: $.Com
 export const _extension_additions_list_spec_for_DeliveryControlArgument: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_Controls,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControlArgument */
 let _cached_decoder_for_DeliveryControlArgument: $.ASN1Decoder<DeliveryControlArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveryControlArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryControlArgument
  * @function
@@ -322,13 +311,9 @@ export function _decode_DeliveryControlArgument(el: _Element) {
     }
     return _cached_decoder_for_DeliveryControlArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControlArgument */
 let _cached_encoder_for_DeliveryControlArgument: $.ASN1Encoder<DeliveryControlArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveryControlArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveryControlArgument */
 /**
  * @summary Encodes a(n) DeliveryControlArgument into an ASN.1 Element.
  * @function
@@ -436,6 +421,5 @@ export function _encode_DeliveryControlArgument(
     return _cached_encoder_for_DeliveryControlArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveryControlArgument */
 
 /* eslint-enable */

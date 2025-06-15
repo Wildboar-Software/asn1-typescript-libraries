@@ -20,7 +20,7 @@ import {
     _decode_ReadResult_result,
     _encode_ReadResult_result,
 } from '../Pbact-access/ReadResult-result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReadResult */
+
 /**
  * @summary ReadResult
  * @description
@@ -83,9 +83,8 @@ export class ReadResult {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReadResult */
+
 /**
  * @summary The Leading Root Component Types of ReadResult
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_ReadResult: $.ComponentSpec[] 
     ),
     new $.ComponentSpec('result', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReadResult */
+
 /**
  * @summary The Trailing Root Component Types of ReadResult
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_ReadResult: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReadResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReadResult */
+
 /**
  * @summary The Extension Addition Component Types of ReadResult
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_ReadResult: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ReadResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadResult */
+
 let _cached_decoder_for_ReadResult: $.ASN1Decoder<ReadResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReadResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReadResult
  * @function
@@ -163,13 +158,11 @@ export function _decode_ReadResult(el: _Element) {
     }
     return _cached_decoder_for_ReadResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadResult */
+
 let _cached_encoder_for_ReadResult: $.ASN1Encoder<ReadResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReadResult */
+
 /**
  * @summary Encodes a(n) ReadResult into an ASN.1 Element.
  * @function
@@ -209,6 +202,5 @@ export function _encode_ReadResult(
     return _cached_encoder_for_ReadResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReadResult */
 
 /* eslint-enable */

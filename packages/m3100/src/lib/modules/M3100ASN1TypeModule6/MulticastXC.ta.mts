@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MulticastXC */
+
 /**
  * @summary MulticastXC
  * @description
@@ -72,9 +72,8 @@ export class MulticastXC {
         return new MulticastXC(_o.mpXC, _o.xcA, _o.xcB);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MulticastXC */
+
 /**
  * @summary The Leading Root Component Types of MulticastXC
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_MulticastXC: $.ComponentSpec[]
     new $.ComponentSpec('xcA', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('xcB', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MulticastXC */
+
 /**
  * @summary The Trailing Root Component Types of MulticastXC
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_MulticastXC: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MulticastXC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MulticastXC */
+
 /**
  * @summary The Extension Addition Component Types of MulticastXC
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_MulticastXC: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_MulticastXC: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MulticastXC */
+
 let _cached_decoder_for_MulticastXC: $.ASN1Decoder<MulticastXC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MulticastXC */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MulticastXC
  * @function
@@ -150,13 +145,11 @@ export function _decode_MulticastXC(el: _Element) {
     }
     return _cached_decoder_for_MulticastXC(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MulticastXC */
+
 let _cached_encoder_for_MulticastXC: $.ASN1Encoder<MulticastXC> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MulticastXC */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MulticastXC */
+
 /**
  * @summary Encodes a(n) MulticastXC into an ASN.1 Element.
  * @function
@@ -195,6 +188,5 @@ export function _encode_MulticastXC(
     return _cached_encoder_for_MulticastXC(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MulticastXC */
 
 /* eslint-enable */

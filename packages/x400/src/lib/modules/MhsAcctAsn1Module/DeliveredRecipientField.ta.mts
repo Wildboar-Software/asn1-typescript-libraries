@@ -31,7 +31,6 @@ import {
     _decode_ConversionStatistics,
     _encode_ConversionStatistics,
 } from '../MhsAcctAsn1Module/ConversionStatistics.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DeliveredRecipientField */
 /**
  * @summary DeliveredRecipientField
  * @description
@@ -111,9 +110,7 @@ export class DeliveredRecipientField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveredRecipientField */
 /**
  * @summary The Leading Root Component Types of DeliveredRecipientField
  * @description
@@ -159,9 +156,7 @@ export const _root_component_type_list_1_spec_for_DeliveredRecipientField: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveredRecipientField */
 /**
  * @summary The Trailing Root Component Types of DeliveredRecipientField
  * @description
@@ -171,9 +166,7 @@ export const _root_component_type_list_1_spec_for_DeliveredRecipientField: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeliveredRecipientField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveredRecipientField */
 /**
  * @summary The Extension Addition Component Types of DeliveredRecipientField
  * @description
@@ -183,13 +176,9 @@ export const _root_component_type_list_2_spec_for_DeliveredRecipientField: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_DeliveredRecipientField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveredRecipientField */
 let _cached_decoder_for_DeliveredRecipientField: $.ASN1Decoder<DeliveredRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeliveredRecipientField */
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveredRecipientField
  * @function
@@ -254,13 +243,9 @@ export function _decode_DeliveredRecipientField(el: _Element) {
     }
     return _cached_decoder_for_DeliveredRecipientField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveredRecipientField */
 let _cached_encoder_for_DeliveredRecipientField: $.ASN1Encoder<DeliveredRecipientField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeliveredRecipientField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeliveredRecipientField */
 /**
  * @summary Encodes a(n) DeliveredRecipientField into an ASN.1 Element.
  * @function
@@ -321,6 +306,5 @@ export function _encode_DeliveredRecipientField(
     return _cached_encoder_for_DeliveredRecipientField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeliveredRecipientField */
 
 /* eslint-enable */

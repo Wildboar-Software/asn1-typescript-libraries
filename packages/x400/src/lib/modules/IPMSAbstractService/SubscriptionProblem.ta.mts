@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_SubscriptionProblem */
 /**
  * @summary SubscriptionProblem
  * @description
@@ -27,9 +26,7 @@ export enum _enum_for_SubscriptionProblem {
     ipms_eos_not_subscribed = 0,
     mts_eos_not_subscribed = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_SubscriptionProblem */
 
-/* START_OF_SYMBOL_DEFINITION SubscriptionProblem */
 /**
  * @summary SubscriptionProblem
  * @description
@@ -42,9 +39,7 @@ export enum _enum_for_SubscriptionProblem {
  * ```@enum {number}
  */
 export type SubscriptionProblem = _enum_for_SubscriptionProblem;
-/* END_OF_SYMBOL_DEFINITION SubscriptionProblem */
 
-/* START_OF_SYMBOL_DEFINITION SubscriptionProblem */
 /**
  * @summary SubscriptionProblem
  * @description
@@ -57,9 +52,7 @@ export type SubscriptionProblem = _enum_for_SubscriptionProblem;
  * ```@enum {number}
  */
 export const SubscriptionProblem = _enum_for_SubscriptionProblem;
-/* END_OF_SYMBOL_DEFINITION SubscriptionProblem */
 
-/* START_OF_SYMBOL_DEFINITION SubscriptionProblem_ipms_eos_not_subscribed */
 /**
  * @summary SubscriptionProblem_ipms_eos_not_subscribed
  * @constant
@@ -67,9 +60,7 @@ export const SubscriptionProblem = _enum_for_SubscriptionProblem;
  */
 export const SubscriptionProblem_ipms_eos_not_subscribed: SubscriptionProblem =
     SubscriptionProblem.ipms_eos_not_subscribed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubscriptionProblem_ipms_eos_not_subscribed */
 
-/* START_OF_SYMBOL_DEFINITION ipms_eos_not_subscribed */
 /**
  * @summary ipms_eos_not_subscribed
  * @constant
@@ -77,9 +68,7 @@ export const SubscriptionProblem_ipms_eos_not_subscribed: SubscriptionProblem =
  */
 export const ipms_eos_not_subscribed: SubscriptionProblem =
     SubscriptionProblem.ipms_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ipms_eos_not_subscribed */
 
-/* START_OF_SYMBOL_DEFINITION SubscriptionProblem_mts_eos_not_subscribed */
 /**
  * @summary SubscriptionProblem_mts_eos_not_subscribed
  * @constant
@@ -87,9 +76,7 @@ export const ipms_eos_not_subscribed: SubscriptionProblem =
  */
 export const SubscriptionProblem_mts_eos_not_subscribed: SubscriptionProblem =
     SubscriptionProblem.mts_eos_not_subscribed; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION SubscriptionProblem_mts_eos_not_subscribed */
 
-/* START_OF_SYMBOL_DEFINITION mts_eos_not_subscribed */
 /**
  * @summary mts_eos_not_subscribed
  * @constant
@@ -97,21 +84,12 @@ export const SubscriptionProblem_mts_eos_not_subscribed: SubscriptionProblem =
  */
 export const mts_eos_not_subscribed: SubscriptionProblem =
     SubscriptionProblem.mts_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION mts_eos_not_subscribed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscriptionProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubscriptionProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubscriptionProblem */
 export const _decode_SubscriptionProblem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_SubscriptionProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscriptionProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubscriptionProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubscriptionProblem */
 export const _encode_SubscriptionProblem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubscriptionProblem */
 
 /* eslint-enable */

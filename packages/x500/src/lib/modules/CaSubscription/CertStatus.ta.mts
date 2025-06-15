@@ -2,16 +2,13 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_CertStatus */
 export enum _enum_for_CertStatus {
     good = 0,
     revoked = 1,
     on_hold = 2,
     expired = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION CertStatus */
 /**
  * @summary CertStatus
  * @description
@@ -28,93 +25,68 @@ export enum _enum_for_CertStatus {
  * ```@enum {number}
  */
 export type CertStatus = _enum_for_CertStatus | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION CertStatus_good */
 /**
  * @summary CertStatus_good
  * @constant
  * @type {number}
  */
 export const CertStatus_good: CertStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CertStatus_good */
 
-/* START_OF_SYMBOL_DEFINITION good */
 /**
  * @summary good
  * @constant
  * @type {number}
  */
 export const good: CertStatus = CertStatus_good; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION good */
 
-/* START_OF_SYMBOL_DEFINITION CertStatus_revoked */
 /**
  * @summary CertStatus_revoked
  * @constant
  * @type {number}
  */
 export const CertStatus_revoked: CertStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CertStatus_revoked */
 
-/* START_OF_SYMBOL_DEFINITION revoked */
 /**
  * @summary revoked
  * @constant
  * @type {number}
  */
 export const revoked: CertStatus = CertStatus_revoked; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION revoked */
 
-/* START_OF_SYMBOL_DEFINITION CertStatus_on_hold */
 /**
  * @summary CertStatus_on_hold
  * @constant
  * @type {number}
  */
 export const CertStatus_on_hold: CertStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CertStatus_on_hold */
 
-/* START_OF_SYMBOL_DEFINITION on_hold */
 /**
  * @summary on_hold
  * @constant
  * @type {number}
  */
 export const on_hold: CertStatus = CertStatus_on_hold; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION on_hold */
 
-/* START_OF_SYMBOL_DEFINITION CertStatus_expired */
 /**
  * @summary CertStatus_expired
  * @constant
  * @type {number}
  */
 export const CertStatus_expired: CertStatus = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION CertStatus_expired */
 
-/* START_OF_SYMBOL_DEFINITION expired */
 /**
  * @summary expired
  * @constant
  * @type {number}
  */
 export const expired: CertStatus = CertStatus_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION expired */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertStatus */
 export const _decode_CertStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertStatus */
 export const _encode_CertStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertStatus */
 
 /* eslint-enable */

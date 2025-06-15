@@ -26,7 +26,6 @@ import {
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
 } from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ChangeOverInfo */
 /**
  * @summary ChangeOverInfo
  * @description
@@ -105,9 +104,7 @@ export class ChangeOverInfo {
         return { noObject: null };
     }
 }
-/* END_OF_SYMBOL_DEFINITION ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChangeOverInfo */
 /**
  * @summary The Leading Root Component Types of ChangeOverInfo
  * @description
@@ -146,9 +143,7 @@ export const _root_component_type_list_1_spec_for_ChangeOverInfo: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChangeOverInfo */
 /**
  * @summary The Trailing Root Component Types of ChangeOverInfo
  * @description
@@ -158,9 +153,7 @@ export const _root_component_type_list_1_spec_for_ChangeOverInfo: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ChangeOverInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChangeOverInfo */
 /**
  * @summary The Extension Addition Component Types of ChangeOverInfo
  * @description
@@ -170,13 +163,9 @@ export const _root_component_type_list_2_spec_for_ChangeOverInfo: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_ChangeOverInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeOverInfo */
 let _cached_decoder_for_ChangeOverInfo: $.ASN1Decoder<ChangeOverInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChangeOverInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangeOverInfo
  * @function
@@ -237,13 +226,9 @@ export function _decode_ChangeOverInfo(el: _Element) {
     }
     return _cached_decoder_for_ChangeOverInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeOverInfo */
 let _cached_encoder_for_ChangeOverInfo: $.ASN1Encoder<ChangeOverInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChangeOverInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChangeOverInfo */
 /**
  * @summary Encodes a(n) ChangeOverInfo into an ASN.1 Element.
  * @function
@@ -304,6 +289,5 @@ export function _encode_ChangeOverInfo(
     return _cached_encoder_for_ChangeOverInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChangeOverInfo */
 
 /* eslint-enable */

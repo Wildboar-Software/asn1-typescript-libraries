@@ -17,7 +17,6 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION HASH */
 /**
  * @summary HASH
  * @description
@@ -77,9 +76,7 @@ export class HASH<_ToBeHashed> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION HASH */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HASH */
 /**
  * @summary The Leading Root Component Types of HASH
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_HASH: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HASH */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HASH */
 /**
  * @summary The Trailing Root Component Types of HASH
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_HASH: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HASH: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HASH */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HASH */
 /**
  * @summary The Extension Addition Component Types of HASH
  * @description
@@ -128,9 +121,7 @@ export const _root_component_type_list_2_spec_for_HASH: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_HASH: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HASH */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_HASH */
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) HASH
  * @function
@@ -162,9 +153,7 @@ export function _get_decoder_for_HASH<ToBeHashed>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_HASH */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_HASH */
 /**
  * @summary Returns a function that will encode a(n) HASH into an ASN.1 Element.
  * @function
@@ -199,6 +188,5 @@ export function _get_encoder_for_HASH<ToBeHashed>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_HASH */
 
 /* eslint-enable */

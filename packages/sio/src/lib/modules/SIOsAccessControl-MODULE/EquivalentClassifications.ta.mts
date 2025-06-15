@@ -6,7 +6,7 @@ import {
     _decode_EquivalentClassification,
     _encode_EquivalentClassification,
 } from "../SIOsAccessControl-MODULE/EquivalentClassification.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EquivalentClassifications */
+
 /**
  * @summary EquivalentClassifications
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type EquivalentClassifications = EquivalentClassification[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION EquivalentClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentClassifications */
+
 let _cached_decoder_for_EquivalentClassifications: $.ASN1Decoder<EquivalentClassifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EquivalentClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EquivalentClassifications */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EquivalentClassifications
  * @function
@@ -40,13 +38,11 @@ export function _decode_EquivalentClassifications(el: _Element) {
     }
     return _cached_decoder_for_EquivalentClassifications(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EquivalentClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentClassifications */
+
 let _cached_encoder_for_EquivalentClassifications: $.ASN1Encoder<EquivalentClassifications> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EquivalentClassifications */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EquivalentClassifications */
+
 /**
  * @summary Encodes a(n) EquivalentClassifications into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_EquivalentClassifications(
     return _cached_encoder_for_EquivalentClassifications(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EquivalentClassifications */
 
 /* eslint-enable */

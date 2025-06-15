@@ -6,7 +6,6 @@ import {
     _decode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _encode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
 } from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy-standard.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RequestShadowUpdateArgumentData_requestedStrategy */
 /**
  * @summary RequestShadowUpdateArgumentData_requestedStrategy
  * @description
@@ -23,13 +22,9 @@ export type RequestShadowUpdateArgumentData_requestedStrategy =
       } /* CHOICE_ALT_ROOT */
     | { other: EXTERNAL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION RequestShadowUpdateArgumentData_requestedStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy */
 let _cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy: $.ASN1Decoder<RequestShadowUpdateArgumentData_requestedStrategy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestShadowUpdateArgumentData_requestedStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestShadowUpdateArgumentData_requestedStrategy */
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestShadowUpdateArgumentData_requestedStrategy
  * @function
@@ -56,13 +51,9 @@ export function _decode_RequestShadowUpdateArgumentData_requestedStrategy(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestShadowUpdateArgumentData_requestedStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy */
 let _cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy: $.ASN1Encoder<RequestShadowUpdateArgumentData_requestedStrategy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestShadowUpdateArgumentData_requestedStrategy */
 /**
  * @summary Encodes a(n) RequestShadowUpdateArgumentData_requestedStrategy into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_RequestShadowUpdateArgumentData_requestedStrategy(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestShadowUpdateArgumentData_requestedStrategy */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_x1080_1 */
+
 /**
  * @summary id_x1080_1
  * @description
@@ -30,6 +30,5 @@ export const id_x1080_1: OBJECT_IDENTIFIER = new _OID([
     /* telehealth */ 0,
     /* part1 */ 1,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_x1080_1 */
 
 /* eslint-enable */

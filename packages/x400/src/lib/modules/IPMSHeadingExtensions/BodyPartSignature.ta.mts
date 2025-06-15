@@ -20,7 +20,6 @@ export {
     _encode_SIGNATURE as _encode_BodyPartSignature,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BodyPartSignature */
 /**
  * @summary BodyPartSignature
  * @description
@@ -37,6 +36,5 @@ export {
  * ```
  */
 export type BodyPartSignature = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION BodyPartSignature */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultTimePeriod */
+
 /**
  * @summary defaultTimePeriod
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const defaultTimePeriod: TimePeriod = { seconds: 0 };
-/* END_OF_SYMBOL_DEFINITION defaultTimePeriod */
 
 /* eslint-enable */

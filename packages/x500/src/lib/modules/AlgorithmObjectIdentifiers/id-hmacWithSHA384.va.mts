@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { digestAlgorithm } from "../AlgorithmObjectIdentifiers/digestAlgorithm.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_hmacWithSHA384 */
 /**
  * @summary id_hmacWithSHA384
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_hmacWithSHA384: ID = new _OID([10], digestAlgorithm);
-/* END_OF_SYMBOL_DEFINITION id_hmacWithSHA384 */
 
 /* eslint-enable */

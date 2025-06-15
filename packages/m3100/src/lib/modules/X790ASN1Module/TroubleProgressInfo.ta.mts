@@ -21,7 +21,7 @@ import {
     _decode_AdditionalTroubleStatusInfo,
     _encode_AdditionalTroubleStatusInfo,
 } from '../X790ASN1Module/AdditionalTroubleStatusInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleProgressInfo */
+
 /**
  * @summary TroubleProgressInfo
  * @description
@@ -82,9 +82,8 @@ export class TroubleProgressInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TroubleProgressInfo */
+
 /**
  * @summary The Leading Root Component Types of TroubleProgressInfo
  * @description
@@ -109,9 +108,8 @@ export const _root_component_type_list_1_spec_for_TroubleProgressInfo: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TroubleProgressInfo */
+
 /**
  * @summary The Trailing Root Component Types of TroubleProgressInfo
  * @description
@@ -121,9 +119,8 @@ export const _root_component_type_list_1_spec_for_TroubleProgressInfo: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TroubleProgressInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TroubleProgressInfo */
+
 /**
  * @summary The Extension Addition Component Types of TroubleProgressInfo
  * @description
@@ -133,13 +130,11 @@ export const _root_component_type_list_2_spec_for_TroubleProgressInfo: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_TroubleProgressInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleProgressInfo */
+
 let _cached_decoder_for_TroubleProgressInfo: $.ASN1Decoder<TroubleProgressInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleProgressInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleProgressInfo
  * @function
@@ -189,13 +184,11 @@ export function _decode_TroubleProgressInfo(el: _Element) {
     }
     return _cached_decoder_for_TroubleProgressInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleProgressInfo */
+
 let _cached_encoder_for_TroubleProgressInfo: $.ASN1Encoder<TroubleProgressInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleProgressInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleProgressInfo */
+
 /**
  * @summary Encodes a(n) TroubleProgressInfo into an ASN.1 Element.
  * @function
@@ -242,6 +235,5 @@ export function _encode_TroubleProgressInfo(
     return _cached_encoder_for_TroubleProgressInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleProgressInfo */
 
 /* eslint-enable */

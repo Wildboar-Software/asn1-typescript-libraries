@@ -50,7 +50,6 @@ import {
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
 } from "../MTSAbstractService/TerminalIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 /**
  * @summary BuiltInStandardAttributes
  * @description
@@ -167,9 +166,7 @@ export class BuiltInStandardAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInStandardAttributes */
 /**
  * @summary The Leading Root Component Types of BuiltInStandardAttributes
  * @description
@@ -243,9 +240,7 @@ export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInStandardAttributes */
 /**
  * @summary The Trailing Root Component Types of BuiltInStandardAttributes
  * @description
@@ -255,9 +250,7 @@ export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
 /**
  * @summary The Extension Addition Component Types of BuiltInStandardAttributes
  * @description
@@ -267,13 +260,9 @@ export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInStandardAttributes */
 let _cached_decoder_for_BuiltInStandardAttributes: $.ASN1Decoder<BuiltInStandardAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) BuiltInStandardAttributes
  * @function
@@ -366,13 +355,9 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
     }
     return _cached_decoder_for_BuiltInStandardAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInStandardAttributes */
 let _cached_encoder_for_BuiltInStandardAttributes: $.ASN1Encoder<BuiltInStandardAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */
 /**
  * @summary Encodes a(n) BuiltInStandardAttributes into an ASN.1 Element.
  * @function
@@ -467,6 +452,5 @@ export function _encode_BuiltInStandardAttributes(
     return _cached_encoder_for_BuiltInStandardAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */
 
 /* eslint-enable */

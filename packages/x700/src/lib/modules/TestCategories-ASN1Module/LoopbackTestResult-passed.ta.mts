@@ -20,7 +20,6 @@ import {
     _decode_LoopbackError,
     _encode_LoopbackError,
 } from '../TestCategories-ASN1Module/LoopbackError.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LoopbackTestResult_passed */
 /**
  * @summary LoopbackTestResult_passed
  * @description
@@ -72,9 +71,7 @@ export class LoopbackTestResult_passed {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LoopbackTestResult_passed */
 /**
  * @summary The Leading Root Component Types of LoopbackTestResult_passed
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_LoopbackTestResult_passed: $.C
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LoopbackTestResult_passed */
 /**
  * @summary The Trailing Root Component Types of LoopbackTestResult_passed
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_LoopbackTestResult_passed: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LoopbackTestResult_passed: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LoopbackTestResult_passed */
 /**
  * @summary The Extension Addition Component Types of LoopbackTestResult_passed
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_LoopbackTestResult_passed: $.C
  * @constant
  */
 export const _extension_additions_list_spec_for_LoopbackTestResult_passed: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackTestResult_passed */
 let _cached_decoder_for_LoopbackTestResult_passed: $.ASN1Decoder<LoopbackTestResult_passed> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LoopbackTestResult_passed */
 /**
  * @summary Decodes an ASN.1 element into a(n) LoopbackTestResult_passed
  * @function
@@ -163,13 +152,9 @@ export function _decode_LoopbackTestResult_passed(el: _Element) {
     }
     return _cached_decoder_for_LoopbackTestResult_passed(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackTestResult_passed */
 let _cached_encoder_for_LoopbackTestResult_passed: $.ASN1Encoder<LoopbackTestResult_passed> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LoopbackTestResult_passed */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LoopbackTestResult_passed */
 /**
  * @summary Encodes a(n) LoopbackTestResult_passed into an ASN.1 Element.
  * @function
@@ -204,6 +189,5 @@ export function _encode_LoopbackTestResult_passed(
     return _cached_encoder_for_LoopbackTestResult_passed(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LoopbackTestResult_passed */
 
 /* eslint-enable */

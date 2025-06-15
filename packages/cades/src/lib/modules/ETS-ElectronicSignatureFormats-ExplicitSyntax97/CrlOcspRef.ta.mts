@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta.mjs";
 import { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta.mjs";
 import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CrlOcspRef */
 /**
  * @summary CrlOcspRef
  * @description
@@ -71,9 +70,7 @@ class CrlOcspRef {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrlOcspRef */
 /**
  * @summary The Leading Root Component Types of CrlOcspRef
  * @description
@@ -88,9 +85,7 @@ const _root_component_type_list_1_spec_for_CrlOcspRef: $.ComponentSpec[] = [
     new $.ComponentSpec("ocspids", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("otherRev", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrlOcspRef */
 /**
  * @summary The Trailing Root Component Types of CrlOcspRef
  * @description
@@ -103,9 +98,7 @@ export
 const _root_component_type_list_2_spec_for_CrlOcspRef: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrlOcspRef */
 /**
  * @summary The Extension Addition Component Types of CrlOcspRef
  * @description
@@ -118,13 +111,9 @@ export
 const _extension_additions_list_spec_for_CrlOcspRef: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CrlOcspRef */
 let _cached_decoder_for_CrlOcspRef: $.ASN1Decoder<CrlOcspRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CrlOcspRef */
 /**
  * @summary Decodes an ASN.1 element into a(n) CrlOcspRef
  * @function
@@ -160,13 +149,9 @@ function _decode_CrlOcspRef (el: _Element) {
 }; }
     return _cached_decoder_for_CrlOcspRef(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CrlOcspRef */
 let _cached_encoder_for_CrlOcspRef: $.ASN1Encoder<CrlOcspRef> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CrlOcspRef */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CrlOcspRef */
 /**
  * @summary Encodes a(n) CrlOcspRef into an ASN.1 Element.
  * @function
@@ -188,6 +173,5 @@ function _encode_CrlOcspRef (value: CrlOcspRef, elGetter: $.ASN1Encoder<CrlOcspR
     return _cached_encoder_for_CrlOcspRef(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CrlOcspRef */
 
 /* eslint-enable */

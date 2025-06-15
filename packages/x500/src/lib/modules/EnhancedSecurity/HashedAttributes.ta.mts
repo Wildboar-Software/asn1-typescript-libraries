@@ -6,7 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION HashedAttributes */
 /**
  * @summary HashedAttributes
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type HashedAttributes = Attribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION HashedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HashedAttributes */
 let _cached_decoder_for_HashedAttributes: $.ASN1Decoder<HashedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HashedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HashedAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) HashedAttributes
  * @function
@@ -39,13 +34,9 @@ export function _decode_HashedAttributes(el: _Element) {
     }
     return _cached_decoder_for_HashedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HashedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HashedAttributes */
 let _cached_encoder_for_HashedAttributes: $.ASN1Encoder<HashedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HashedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HashedAttributes */
 /**
  * @summary Encodes a(n) HashedAttributes into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_HashedAttributes(
     return _cached_encoder_for_HashedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HashedAttributes */
 
 /* eslint-enable */

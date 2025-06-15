@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Key_Estb_Algs */
 /**
  * @summary Key_Estb_Algs
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type Key_Estb_Algs = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Key_Estb_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Key_Estb_Algs */
 let _cached_decoder_for_Key_Estb_Algs: $.ASN1Decoder<Key_Estb_Algs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Key_Estb_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Key_Estb_Algs */
 /**
  * @summary Decodes an ASN.1 element into a(n) Key_Estb_Algs
  * @function
@@ -39,13 +34,9 @@ export function _decode_Key_Estb_Algs(el: _Element) {
     }
     return _cached_decoder_for_Key_Estb_Algs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Key_Estb_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Key_Estb_Algs */
 let _cached_encoder_for_Key_Estb_Algs: $.ASN1Encoder<Key_Estb_Algs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Key_Estb_Algs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Key_Estb_Algs */
 /**
  * @summary Encodes a(n) Key_Estb_Algs into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_Key_Estb_Algs(
     return _cached_encoder_for_Key_Estb_Algs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Key_Estb_Algs */
 
 /* eslint-enable */

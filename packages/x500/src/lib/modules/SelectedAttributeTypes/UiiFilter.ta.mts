@@ -6,7 +6,6 @@ import {
     _decode_UiiItem,
     _encode_UiiItem,
 } from "../SelectedAttributeTypes/UiiItem.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UiiFilter */
 /**
  * @summary UiiFilter
  * @description
@@ -26,13 +25,9 @@ export type UiiFilter =
     | { and: UiiFilter[] } /* CHOICE_ALT_ROOT */
     | { or: UiiFilter[] } /* CHOICE_ALT_ROOT */
     | { not: UiiFilter } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UiiFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UiiFilter */
 let _cached_decoder_for_UiiFilter: $.ASN1Decoder<UiiFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UiiFilter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UiiFilter */
 /**
  * @summary Decodes an ASN.1 element into a(n) UiiFilter
  * @function
@@ -68,13 +63,9 @@ export function _decode_UiiFilter(el: _Element) {
     }
     return _cached_decoder_for_UiiFilter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UiiFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UiiFilter */
 let _cached_encoder_for_UiiFilter: $.ASN1Encoder<UiiFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UiiFilter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UiiFilter */
 /**
  * @summary Encodes a(n) UiiFilter into an ASN.1 Element.
  * @function
@@ -128,6 +119,5 @@ export function _encode_UiiFilter(
     return _cached_encoder_for_UiiFilter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UiiFilter */
 
 /* eslint-enable */

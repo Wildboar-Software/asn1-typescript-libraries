@@ -6,7 +6,7 @@ import {
 import { PFX, _decode_PFX, _encode_PFX } from "../PKCS-12/PFX.ta.mjs";
 import { pkcs_9_at_userPKCS12 } from "../PKCS-9/pkcs-9-at-userPKCS12.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION userPKCS12 */
+
 /**
  * @summary userPKCS12
  * @description
@@ -39,6 +39,5 @@ export const userPKCS12: ATTRIBUTE<PFX> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userPKCS12 */
 
 /* eslint-enable */

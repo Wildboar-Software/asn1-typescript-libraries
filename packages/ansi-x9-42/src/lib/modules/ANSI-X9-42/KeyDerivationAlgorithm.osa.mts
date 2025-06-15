@@ -6,7 +6,7 @@ import {
     _encodeNull,
 } from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyDerivationAlgorithm */
+
 /**
  * @summary KeyDerivationAlgorithm
  * @description
@@ -37,6 +37,5 @@ export const KeyDerivationAlgorithm: ALGORITHM_ID[] = [
         "&Type": 0 as never,
     },
 ];
-/* END_OF_SYMBOL_DEFINITION KeyDerivationAlgorithm */
 
 /* eslint-enable */

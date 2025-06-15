@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_labeledURI */
 /**
  * @summary ub_labeledURI
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_labeledURI: INTEGER = 32768;
-/* END_OF_SYMBOL_DEFINITION ub_labeledURI */
 
 /* eslint-enable */

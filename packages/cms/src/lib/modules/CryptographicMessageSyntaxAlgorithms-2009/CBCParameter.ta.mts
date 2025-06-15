@@ -6,7 +6,7 @@ import {
     _decode_IV,
     _encode_IV,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CBCParameter */
+
 /**
  * @summary CBCParameter
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type CBCParameter = IV; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CBCParameter */
+
 let _cached_decoder_for_CBCParameter: $.ASN1Decoder<CBCParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CBCParameter */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CBCParameter
  * @function
@@ -37,13 +35,11 @@ export function _decode_CBCParameter(el: _Element) {
     }
     return _cached_decoder_for_CBCParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CBCParameter */
+
 let _cached_encoder_for_CBCParameter: $.ASN1Encoder<CBCParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CBCParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CBCParameter */
+
 /**
  * @summary Encodes a(n) CBCParameter into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_CBCParameter(
     return _cached_encoder_for_CBCParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CBCParameter */
 
 /* eslint-enable */

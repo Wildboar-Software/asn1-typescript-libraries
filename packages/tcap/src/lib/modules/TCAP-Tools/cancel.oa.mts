@@ -25,7 +25,6 @@ import {
   _encode_TCInvokeIdSet,
 } from '../TCAPMessages/TCInvokeIdSet.ta.mjs';
 import { cancelFailed } from '../TCAP-Tools/cancelFailed.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION cancel */
 /**
  * @summary cancel
  * @description
@@ -65,6 +64,5 @@ export const cancel: OPERATION<$.Selection<TCInvokeIdSet, 'present'>> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cancel */
 
 /* eslint-enable */

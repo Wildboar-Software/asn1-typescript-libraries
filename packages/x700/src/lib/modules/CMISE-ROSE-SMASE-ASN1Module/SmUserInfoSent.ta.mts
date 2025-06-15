@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SmUserInfoSent */
 /**
  * @summary SmUserInfoSent
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type SmUserInfoSent =
     | { nothingSent: NULL } /* CHOICE_ALT_ROOT */
     | { informationSent: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SmUserInfoSent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SmUserInfoSent */
 let _cached_decoder_for_SmUserInfoSent: $.ASN1Decoder<SmUserInfoSent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SmUserInfoSent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SmUserInfoSent */
 /**
  * @summary Decodes an ASN.1 element into a(n) SmUserInfoSent
  * @function
@@ -54,13 +49,9 @@ export function _decode_SmUserInfoSent(el: _Element) {
     }
     return _cached_decoder_for_SmUserInfoSent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SmUserInfoSent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SmUserInfoSent */
 let _cached_encoder_for_SmUserInfoSent: $.ASN1Encoder<SmUserInfoSent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SmUserInfoSent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SmUserInfoSent */
 /**
  * @summary Encodes a(n) SmUserInfoSent into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_SmUserInfoSent(
     return _cached_encoder_for_SmUserInfoSent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SmUserInfoSent */
 
 /* eslint-enable */

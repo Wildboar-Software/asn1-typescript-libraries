@@ -15,7 +15,7 @@ import {
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubstringFilter_substrings_substring */
+
 /**
  * @summary SubstringFilter_substrings_substring
  * @description
@@ -31,13 +31,11 @@ export type SubstringFilter_substrings_substring =
   | { any_: AssertionValue } /* CHOICE_ALT_ROOT */
   | { final: AssertionValue } /* CHOICE_ALT_ROOT */
   | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION SubstringFilter_substrings_substring */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubstringFilter_substrings_substring */
+
 let _cached_decoder_for_SubstringFilter_substrings_substring: $.ASN1Decoder<SubstringFilter_substrings_substring> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubstringFilter_substrings_substring */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubstringFilter_substrings_substring */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubstringFilter_substrings_substring
  * @function
@@ -65,13 +63,11 @@ export function _decode_SubstringFilter_substrings_substring(el: _Element) {
   }
   return _cached_decoder_for_SubstringFilter_substrings_substring(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubstringFilter_substrings_substring */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubstringFilter_substrings_substring */
+
 let _cached_encoder_for_SubstringFilter_substrings_substring: $.ASN1Encoder<SubstringFilter_substrings_substring> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubstringFilter_substrings_substring */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubstringFilter_substrings_substring */
+
 /**
  * @summary Encodes a(n) SubstringFilter_substrings_substring into an ASN.1 Element.
  * @function
@@ -114,6 +110,5 @@ export function _encode_SubstringFilter_substrings_substring(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubstringFilter_substrings_substring */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PDUString */
 /**
  * @summary PDUString
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PDUString = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION PDUString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PDUString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PDUString */
 export const _decode_PDUString = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_PDUString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PDUString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PDUString */
 export const _encode_PDUString = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PDUString */
 
 /* eslint-enable */

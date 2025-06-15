@@ -11,7 +11,6 @@ import {
     _decode_TerminateOperationalBindingArgumentData,
     _encode_TerminateOperationalBindingArgumentData,
 } from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingArgument */
 /**
  * @summary TerminateOperationalBindingArgument
  * @description
@@ -24,13 +23,9 @@ import {
  * ```
  */
 export type TerminateOperationalBindingArgument = OPTIONALLY_PROTECTED_SEQ<TerminateOperationalBindingArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TerminateOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingArgument */
 let _cached_decoder_for_TerminateOperationalBindingArgument: $.ASN1Decoder<TerminateOperationalBindingArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TerminateOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminateOperationalBindingArgument
  * @function
@@ -45,13 +40,9 @@ export function _decode_TerminateOperationalBindingArgument(el: _Element) {
     }
     return _cached_decoder_for_TerminateOperationalBindingArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TerminateOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingArgument */
 let _cached_encoder_for_TerminateOperationalBindingArgument: $.ASN1Encoder<TerminateOperationalBindingArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TerminateOperationalBindingArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingArgument */
 /**
  * @summary Encodes a(n) TerminateOperationalBindingArgument into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_TerminateOperationalBindingArgument(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TerminateOperationalBindingArgument */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CommonPublicKeyAttributes */
+
 /**
  * @summary CommonPublicKeyAttributes
  * @description
@@ -75,9 +75,8 @@ export class CommonPublicKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonPublicKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of CommonPublicKeyAttributes
  * @description
@@ -89,9 +88,8 @@ export class CommonPublicKeyAttributes {
 export const _root_component_type_list_1_spec_for_CommonPublicKeyAttributes: $.ComponentSpec[] = [
     new $.ComponentSpec("subjectName", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonPublicKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of CommonPublicKeyAttributes
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_CommonPublicKeyAttributes: $.C
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonPublicKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonPublicKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of CommonPublicKeyAttributes
  * @description
@@ -121,13 +118,11 @@ export const _extension_additions_list_spec_for_CommonPublicKeyAttributes: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonPublicKeyAttributes */
+
 let _cached_decoder_for_CommonPublicKeyAttributes: $.ASN1Decoder<CommonPublicKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonPublicKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonPublicKeyAttributes
  * @function
@@ -175,13 +170,11 @@ export function _decode_CommonPublicKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_CommonPublicKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonPublicKeyAttributes */
+
 let _cached_encoder_for_CommonPublicKeyAttributes: $.ASN1Encoder<CommonPublicKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonPublicKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonPublicKeyAttributes */
+
 /**
  * @summary Encodes a(n) CommonPublicKeyAttributes into an ASN.1 Element.
  * @function
@@ -226,6 +219,5 @@ export function _encode_CommonPublicKeyAttributes(
     return _cached_encoder_for_CommonPublicKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonPublicKeyAttributes */
 
 /* eslint-enable */

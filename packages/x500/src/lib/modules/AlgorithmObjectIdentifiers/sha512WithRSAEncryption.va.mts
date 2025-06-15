@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
-/* START_OF_SYMBOL_DEFINITION sha512WithRSAEncryption */
 /**
  * @summary sha512WithRSAEncryption
  * @description
@@ -19,6 +18,5 @@ export const sha512WithRSAEncryption: ID = new _OID(
     [/* sha512WithRSAEncryption */ 13],
     pkcs_1
 );
-/* END_OF_SYMBOL_DEFINITION sha512WithRSAEncryption */
 
 /* eslint-enable */

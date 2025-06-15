@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest */
 /**
  * @summary PhysicalDeliveryReportRequest
  * @description
@@ -27,93 +26,68 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type PhysicalDeliveryReportRequest = INTEGER;
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS
  * @constant
  * @type {number}
  */
 export const PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS: PhysicalDeliveryReportRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS */
 
-/* START_OF_SYMBOL_DEFINITION return_of_undeliverable_mail_by_PDS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS
  * @constant
  * @type {number}
  */
 export const return_of_undeliverable_mail_by_PDS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION return_of_undeliverable_mail_by_PDS */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_notification_by_PDS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_PDS
  * @constant
  * @type {number}
  */
 export const PhysicalDeliveryReportRequest_return_of_notification_by_PDS: PhysicalDeliveryReportRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_notification_by_PDS */
 
-/* START_OF_SYMBOL_DEFINITION return_of_notification_by_PDS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_PDS
  * @constant
  * @type {number}
  */
 export const return_of_notification_by_PDS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_notification_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION return_of_notification_by_PDS */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_notification_by_MHS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS
  * @constant
  * @type {number}
  */
 export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS: PhysicalDeliveryReportRequest = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_notification_by_MHS */
 
-/* START_OF_SYMBOL_DEFINITION return_of_notification_by_MHS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS
  * @constant
  * @type {number}
  */
 export const return_of_notification_by_MHS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_notification_by_MHS; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION return_of_notification_by_MHS */
 
-/* START_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS
  * @constant
  * @type {number}
  */
 export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS: PhysicalDeliveryReportRequest = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS */
 
-/* START_OF_SYMBOL_DEFINITION return_of_notification_by_MHS_and_PDS */
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS
  * @constant
  * @type {number}
  */
 export const return_of_notification_by_MHS_and_PDS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION return_of_notification_by_MHS_and_PDS */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryReportRequest */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalDeliveryReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryReportRequest */
 export const _decode_PhysicalDeliveryReportRequest = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalDeliveryReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryReportRequest */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalDeliveryReportRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryReportRequest */
 export const _encode_PhysicalDeliveryReportRequest = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalDeliveryReportRequest */
 
 /* eslint-enable */

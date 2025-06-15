@@ -11,7 +11,6 @@ import {
 import { id_soa_attributeTypes } from "../SchemaAdministration/id-soa-attributeTypes.va.mjs";
 import { attributeTypeDescription } from "../SelectedAttributeTypes/attributeTypeDescription.oa.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeTypes */
 /**
  * @summary attributeTypes
  * @description
@@ -52,6 +51,5 @@ export const attributeTypes: ATTRIBUTE<AttributeTypeDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeTypes */
 
 /* eslint-enable */

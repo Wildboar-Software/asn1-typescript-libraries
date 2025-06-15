@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION ACBioInstance */
+
 /**
  * @summary ACBioInstance
  * @description
@@ -59,9 +59,8 @@ export class ACBioInstance {
         return new ACBioInstance(_o.contentType, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ACBioInstance */
+
 /**
  * @summary The Leading Root Component Types of ACBioInstance
  * @description
@@ -86,9 +85,8 @@ export const _root_component_type_list_1_spec_for_ACBioInstance: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ACBioInstance */
+
 /**
  * @summary The Trailing Root Component Types of ACBioInstance
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_1_spec_for_ACBioInstance: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ACBioInstance: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ACBioInstance */
+
 /**
  * @summary The Extension Addition Component Types of ACBioInstance
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_ACBioInstance: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_ACBioInstance: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACBioInstance */
+
 let _cached_decoder_for_ACBioInstance: $.ASN1Decoder<ACBioInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACBioInstance */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ACBioInstance
  * @function
@@ -151,13 +146,11 @@ export function _decode_ACBioInstance(el: _Element) {
     }
     return _cached_decoder_for_ACBioInstance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACBioInstance */
+
 let _cached_encoder_for_ACBioInstance: $.ASN1Encoder<ACBioInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACBioInstance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACBioInstance */
+
 /**
  * @summary Encodes a(n) ACBioInstance into an ASN.1 Element.
  * @function
@@ -195,6 +188,5 @@ export function _encode_ACBioInstance(
     return _cached_encoder_for_ACBioInstance(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ACBioInstance */
 
 /* eslint-enable */

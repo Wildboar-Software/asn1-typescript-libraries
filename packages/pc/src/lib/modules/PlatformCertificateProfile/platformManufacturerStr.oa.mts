@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { tcg_at_platformManufacturerStr } from "../PlatformCertificateProfile/tcg-at-platformManufacturerStr.va.mjs";
-/* START_OF_SYMBOL_DEFINITION platformManufacturerStr */
 /**
  * @summary platformManufacturerStr
  * @description
@@ -49,6 +48,5 @@ const platformManufacturerStr: ATTRIBUTE<UTF8String> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION platformManufacturerStr */
 
 /* eslint-enable */

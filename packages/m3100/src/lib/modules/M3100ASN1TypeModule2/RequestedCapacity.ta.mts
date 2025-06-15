@@ -20,7 +20,7 @@ import {
     _decode_Capacity,
     _encode_Capacity,
 } from '../M3100ASN1TypeModule2/Capacity.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RequestedCapacity */
+
 /**
  * @summary RequestedCapacity
  * @description
@@ -37,13 +37,11 @@ import {
 export type RequestedCapacity =
     | { specificChannels: Channel[] } /* CHOICE_ALT_ROOT */
     | { capacity: Capacity } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RequestedCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedCapacity */
+
 let _cached_decoder_for_RequestedCapacity: $.ASN1Decoder<RequestedCapacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RequestedCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RequestedCapacity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedCapacity
  * @function
@@ -69,13 +67,11 @@ export function _decode_RequestedCapacity(el: _Element) {
     }
     return _cached_decoder_for_RequestedCapacity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RequestedCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedCapacity */
+
 let _cached_encoder_for_RequestedCapacity: $.ASN1Encoder<RequestedCapacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RequestedCapacity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RequestedCapacity */
+
 /**
  * @summary Encodes a(n) RequestedCapacity into an ASN.1 Element.
  * @function
@@ -113,6 +109,5 @@ export function _encode_RequestedCapacity(
     return _cached_encoder_for_RequestedCapacity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RequestedCapacity */
 
 /* eslint-enable */

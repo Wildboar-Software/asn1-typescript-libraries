@@ -16,7 +16,7 @@ import { NamedCurve_Union12_Intersection0_Element } from "./NamedCurve-Union12-I
 import { NamedCurve_Union13_Intersection0_Element } from "./NamedCurve-Union13-Intersection0-Element.oa.mjs";
 import { NamedCurve_Union14_Intersection0_Element } from "./NamedCurve-Union14-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION NamedCurve */
+
 /**
  * @summary NamedCurve
  * @description
@@ -55,6 +55,5 @@ export const NamedCurve: CURVE[] = [
     NamedCurve_Union13_Intersection0_Element,
     NamedCurve_Union14_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION NamedCurve */
 
 /* eslint-enable */

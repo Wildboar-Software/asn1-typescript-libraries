@@ -19,7 +19,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION CertificateIdentifier */
 /**
  * @summary CertificateIdentifier
  * @description
@@ -69,9 +68,7 @@ class CertificateIdentifier {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateIdentifier */
 /**
  * @summary The Leading Root Component Types of CertificateIdentifier
  * @description
@@ -85,9 +82,7 @@ const _root_component_type_list_1_spec_for_CertificateIdentifier: $.ComponentSpe
     new $.ComponentSpec("attributeCertIdentifier", true, $.hasTag(_TagClass.context, 0), undefined, undefined),
     /* FIXME: genericCertIdentifier COULD_NOT_RESOLVE_TYPE_DEF */
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateIdentifier */
 /**
  * @summary The Trailing Root Component Types of CertificateIdentifier
  * @description
@@ -100,9 +95,7 @@ export
 const _root_component_type_list_2_spec_for_CertificateIdentifier: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateIdentifier */
 /**
  * @summary The Extension Addition Component Types of CertificateIdentifier
  * @description
@@ -115,13 +108,9 @@ export
 const _extension_additions_list_spec_for_CertificateIdentifier: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateIdentifier */
 let _cached_decoder_for_CertificateIdentifier: $.ASN1Decoder<CertificateIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateIdentifier
  * @function
@@ -154,13 +143,9 @@ function _decode_CertificateIdentifier (el: _Element) {
 }; }
     return _cached_decoder_for_CertificateIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateIdentifier */
 let _cached_encoder_for_CertificateIdentifier: $.ASN1Encoder<CertificateIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateIdentifier */
 /**
  * @summary Encodes a(n) CertificateIdentifier into an ASN.1 Element.
  * @function
@@ -181,6 +166,5 @@ function _encode_CertificateIdentifier (value: CertificateIdentifier, elGetter: 
     return _cached_encoder_for_CertificateIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateIdentifier */
 
 /* eslint-enable */

@@ -17,7 +17,7 @@ import {
     _encode_ExtendedCertificate,
 } from "../PKCS7/ExtendedCertificate.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertificateChoice */
+
 /**
  * @summary CertificateChoice
  * @description
@@ -36,13 +36,11 @@ export type CertificateChoice =
     | { certificate: Certificate } /* CHOICE_ALT_ROOT */
     | { extendedCertificate: ExtendedCertificate } /* CHOICE_ALT_ROOT */
     | { attributeCertificate: AttributeCertificate } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CertificateChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateChoice */
+
 let _cached_decoder_for_CertificateChoice: $.ASN1Decoder<CertificateChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateChoice
  * @function
@@ -71,13 +69,11 @@ export function _decode_CertificateChoice(el: _Element) {
     }
     return _cached_decoder_for_CertificateChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateChoice */
+
 let _cached_encoder_for_CertificateChoice: $.ASN1Encoder<CertificateChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateChoice */
+
 /**
  * @summary Encodes a(n) CertificateChoice into an ASN.1 Element.
  * @function
@@ -112,6 +108,5 @@ export function _encode_CertificateChoice(
     return _cached_encoder_for_CertificateChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateChoice */
 
 /* eslint-enable */

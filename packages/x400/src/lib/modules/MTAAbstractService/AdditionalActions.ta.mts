@@ -26,7 +26,6 @@ import {
     _decode_OtherActions,
     _encode_OtherActions,
 } from '../MTAAbstractService/OtherActions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AdditionalActions */
 /**
  * @summary AdditionalActions
  * @description
@@ -98,9 +97,7 @@ export class AdditionalActions {
         return new Uint8ClampedArray([]);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdditionalActions */
 /**
  * @summary The Leading Root Component Types of AdditionalActions
  * @description
@@ -132,9 +129,7 @@ export const _root_component_type_list_1_spec_for_AdditionalActions: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdditionalActions */
 /**
  * @summary The Trailing Root Component Types of AdditionalActions
  * @description
@@ -144,9 +139,7 @@ export const _root_component_type_list_1_spec_for_AdditionalActions: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AdditionalActions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdditionalActions */
 /**
  * @summary The Extension Addition Component Types of AdditionalActions
  * @description
@@ -156,13 +149,9 @@ export const _root_component_type_list_2_spec_for_AdditionalActions: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_AdditionalActions: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalActions */
 let _cached_decoder_for_AdditionalActions: $.ASN1Decoder<AdditionalActions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdditionalActions */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalActions
  * @function
@@ -218,13 +207,9 @@ export function _decode_AdditionalActions(el: _Element) {
     }
     return _cached_decoder_for_AdditionalActions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalActions */
 let _cached_encoder_for_AdditionalActions: $.ASN1Encoder<AdditionalActions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdditionalActions */
 /**
  * @summary Encodes a(n) AdditionalActions into an ASN.1 Element.
  * @function
@@ -278,6 +263,5 @@ export function _encode_AdditionalActions(
     return _cached_encoder_for_AdditionalActions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdditionalActions */
 
 /* eslint-enable */

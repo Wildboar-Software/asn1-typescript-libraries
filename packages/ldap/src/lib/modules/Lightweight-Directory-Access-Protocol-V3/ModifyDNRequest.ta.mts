@@ -22,7 +22,7 @@ import {
   _decode_RelativeLDAPDN,
   _encode_RelativeLDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ModifyDNRequest */
+
 /**
  * @summary ModifyDNRequest
  * @description
@@ -98,9 +98,8 @@ export class ModifyDNRequest {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyDNRequest */
+
 /**
  * @summary The Leading Root Component Types of ModifyDNRequest
  * @description
@@ -139,9 +138,8 @@ export const _root_component_type_list_1_spec_for_ModifyDNRequest: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyDNRequest */
+
 /**
  * @summary The Trailing Root Component Types of ModifyDNRequest
  * @description
@@ -151,9 +149,8 @@ export const _root_component_type_list_1_spec_for_ModifyDNRequest: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyDNRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyDNRequest */
+
 /**
  * @summary The Extension Addition Component Types of ModifyDNRequest
  * @description
@@ -163,13 +160,11 @@ export const _root_component_type_list_2_spec_for_ModifyDNRequest: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ModifyDNRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNRequest */
+
 let _cached_decoder_for_ModifyDNRequest: $.ASN1Decoder<ModifyDNRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyDNRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyDNRequest
  * @function
@@ -228,13 +223,11 @@ export function _decode_ModifyDNRequest(el: _Element) {
   }
   return _cached_decoder_for_ModifyDNRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNRequest */
+
 let _cached_encoder_for_ModifyDNRequest: $.ASN1Encoder<ModifyDNRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyDNRequest */
+
 /**
  * @summary Encodes a(n) ModifyDNRequest into an ASN.1 Element.
  * @function
@@ -283,6 +276,5 @@ export function _encode_ModifyDNRequest(
   return _cached_encoder_for_ModifyDNRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyDNRequest */
 
 /* eslint-enable */

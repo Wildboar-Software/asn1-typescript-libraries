@@ -22,7 +22,6 @@ import {
     _encode_MappedRelationshipClass,
 } from '../GrmAttributeDefinitionModule/MappedRelationshipClass.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mappedRelationshipClass */
 /**
  * @summary mappedRelationshipClass
  * @description
@@ -64,6 +63,5 @@ export const mappedRelationshipClass: ATTRIBUTE<MappedRelationshipClass> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mappedRelationshipClass */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestCategoryInformation */
 /**
  * @summary TestCategoryInformation
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TestCategoryInformation = AdditionalInformation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestCategoryInformation */
 let _cached_decoder_for_TestCategoryInformation: $.ASN1Decoder<TestCategoryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestCategoryInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestCategoryInformation
  * @function
@@ -46,13 +41,9 @@ export function _decode_TestCategoryInformation(el: _Element) {
     }
     return _cached_decoder_for_TestCategoryInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestCategoryInformation */
 let _cached_encoder_for_TestCategoryInformation: $.ASN1Encoder<TestCategoryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestCategoryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestCategoryInformation */
 /**
  * @summary Encodes a(n) TestCategoryInformation into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TestCategoryInformation(
     return _cached_encoder_for_TestCategoryInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestCategoryInformation */
 
 /* eslint-enable */

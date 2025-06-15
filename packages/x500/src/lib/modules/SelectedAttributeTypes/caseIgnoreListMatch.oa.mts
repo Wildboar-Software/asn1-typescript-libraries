@@ -7,7 +7,6 @@ import {
 } from "../SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
 import { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.mjs";
 import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION caseIgnoreListMatch */
 /**
  * @summary caseIgnoreListMatch
  * @description
@@ -39,6 +38,5 @@ export const caseIgnoreListMatch: MATCHING_RULE<CaseIgnoreList> = {
     "&id": id_mr_caseIgnoreListMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION caseIgnoreListMatch */
 
 /* eslint-enable */

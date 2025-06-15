@@ -15,7 +15,7 @@ import {
   _decode_PA_DATA,
   _encode_PA_DATA,
 } from '../KerberosV5Spec2/PA-DATA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION METHOD_DATA */
+
 /**
  * @summary METHOD_DATA
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type METHOD_DATA = PA_DATA[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION METHOD_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_METHOD_DATA */
+
 let _cached_decoder_for_METHOD_DATA: $.ASN1Decoder<METHOD_DATA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_METHOD_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_METHOD_DATA */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) METHOD_DATA
  * @function
@@ -48,13 +46,11 @@ export function _decode_METHOD_DATA(el: _Element) {
   }
   return _cached_decoder_for_METHOD_DATA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_METHOD_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_METHOD_DATA */
+
 let _cached_encoder_for_METHOD_DATA: $.ASN1Encoder<METHOD_DATA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_METHOD_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_METHOD_DATA */
+
 /**
  * @summary Encodes a(n) METHOD_DATA into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_METHOD_DATA(
   return _cached_encoder_for_METHOD_DATA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_METHOD_DATA */
 
 /* eslint-enable */

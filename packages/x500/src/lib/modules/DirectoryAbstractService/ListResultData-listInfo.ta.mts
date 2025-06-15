@@ -43,7 +43,6 @@ import {
     _extension_additions_list_spec_for_CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ListResultData_listInfo */
 /**
  * @summary ListResultData_listInfo
  * @description
@@ -149,9 +148,7 @@ export class ListResultData_listInfo implements CommonResults {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListResultData_listInfo */
 /**
  * @summary The Leading Root Component Types of ListResultData_listInfo
  * @description
@@ -184,9 +181,7 @@ export const _root_component_type_list_1_spec_for_ListResultData_listInfo: $.Com
     ),
     ..._root_component_type_list_1_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListResultData_listInfo */
 /**
  * @summary The Trailing Root Component Types of ListResultData_listInfo
  * @description
@@ -198,9 +193,7 @@ export const _root_component_type_list_1_spec_for_ListResultData_listInfo: $.Com
 export const _root_component_type_list_2_spec_for_ListResultData_listInfo: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListResultData_listInfo */
 /**
  * @summary The Extension Addition Component Types of ListResultData_listInfo
  * @description
@@ -212,13 +205,9 @@ export const _root_component_type_list_2_spec_for_ListResultData_listInfo: $.Com
 export const _extension_additions_list_spec_for_ListResultData_listInfo: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonResults,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResultData_listInfo */
 let _cached_decoder_for_ListResultData_listInfo: $.ASN1Decoder<ListResultData_listInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListResultData_listInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListResultData_listInfo
  * @function
@@ -307,13 +296,9 @@ export function _decode_ListResultData_listInfo(el: _Element) {
     }
     return _cached_decoder_for_ListResultData_listInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResultData_listInfo */
 let _cached_encoder_for_ListResultData_listInfo: $.ASN1Encoder<ListResultData_listInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResultData_listInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListResultData_listInfo */
 /**
  * @summary Encodes a(n) ListResultData_listInfo into an ASN.1 Element.
  * @function
@@ -412,6 +397,5 @@ export function _encode_ListResultData_listInfo(
     return _cached_encoder_for_ListResultData_listInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListResultData_listInfo */
 
 /* eslint-enable */

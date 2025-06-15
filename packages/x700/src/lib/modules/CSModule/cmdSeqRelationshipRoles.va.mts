@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION cmdSeqRelationshipRoles */
 /**
  * @summary cmdSeqRelationshipRoles
  * @description
@@ -29,6 +28,5 @@ export const cmdSeqRelationshipRoles: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part21 */ 21, /* relationshipRole */ 13],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION cmdSeqRelationshipRoles */
 
 /* eslint-enable */

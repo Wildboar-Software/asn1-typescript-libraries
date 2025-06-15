@@ -24,7 +24,6 @@ import {
 } from "./Version.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION TBBSecurityAssertions */
 /**
  * @summary TBBSecurityAssertions
  * @description
@@ -121,9 +120,7 @@ class TBBSecurityAssertions {
 
     public static _enum_for_rtmType = _enum_for_MeasurementRootType;
 }
-/* END_OF_SYMBOL_DEFINITION TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBBSecurityAssertions */
 /**
  * @summary The Leading Root Component Types of TBBSecurityAssertions
  * @description
@@ -141,9 +138,7 @@ const _root_component_type_list_1_spec_for_TBBSecurityAssertions: $.ComponentSpe
     new $.ComponentSpec("iso9000Certified", true, $.hasTag(_TagClass.universal, 1), undefined, undefined),
     new $.ComponentSpec("iso9000Uri", true, $.hasTag(_TagClass.universal, 22), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBBSecurityAssertions */
 /**
  * @summary The Trailing Root Component Types of TBBSecurityAssertions
  * @description
@@ -156,9 +151,7 @@ export
 const _root_component_type_list_2_spec_for_TBBSecurityAssertions: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBBSecurityAssertions */
 /**
  * @summary The Extension Addition Component Types of TBBSecurityAssertions
  * @description
@@ -171,13 +164,9 @@ export
 const _extension_additions_list_spec_for_TBBSecurityAssertions: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBBSecurityAssertions */
 let _cached_decoder_for_TBBSecurityAssertions: $.ASN1Decoder<TBBSecurityAssertions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBBSecurityAssertions */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBBSecurityAssertions
  * @function
@@ -222,13 +211,9 @@ function _decode_TBBSecurityAssertions (el: _Element) {
 }; }
     return _cached_decoder_for_TBBSecurityAssertions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBBSecurityAssertions */
 let _cached_encoder_for_TBBSecurityAssertions: $.ASN1Encoder<TBBSecurityAssertions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBBSecurityAssertions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBBSecurityAssertions */
 /**
  * @summary Encodes a(n) TBBSecurityAssertions into an ASN.1 Element.
  * @function
@@ -253,6 +238,5 @@ function _encode_TBBSecurityAssertions (value: TBBSecurityAssertions, elGetter: 
     return _cached_encoder_for_TBBSecurityAssertions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBBSecurityAssertions */
 
 /* eslint-enable */

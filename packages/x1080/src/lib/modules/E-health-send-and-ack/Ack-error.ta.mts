@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION Ack_error */
+
 /**
  * @summary Ack_error
  * @description
@@ -58,9 +58,8 @@ export class Ack_error {
         return new Ack_error(_o.code, _o.parameter);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Ack_error */
+
 /**
  * @summary The Leading Root Component Types of Ack_error
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_Ack_error: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Ack_error */
+
 /**
  * @summary The Trailing Root Component Types of Ack_error
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_Ack_error: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Ack_error: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Ack_error */
+
 /**
  * @summary The Extension Addition Component Types of Ack_error
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_Ack_error: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Ack_error: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Ack_error */
+
 let _cached_decoder_for_Ack_error: $.ASN1Decoder<Ack_error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Ack_error */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Ack_error
  * @function
@@ -144,13 +139,11 @@ export function _decode_Ack_error(el: _Element) {
     }
     return _cached_decoder_for_Ack_error(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Ack_error */
+
 let _cached_encoder_for_Ack_error: $.ASN1Encoder<Ack_error> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Ack_error */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Ack_error */
+
 /**
  * @summary Encodes a(n) Ack_error into an ASN.1 Element.
  * @function
@@ -179,6 +172,5 @@ export function _encode_Ack_error(
     return _cached_encoder_for_Ack_error(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Ack_error */
 
 /* eslint-enable */

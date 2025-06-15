@@ -21,7 +21,6 @@ import {
     _decode_Checkmark,
     _encode_Checkmark,
 } from '../IPMSHeadingExtensions/Checkmark.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CirculationMember */
 /**
  * @summary CirculationMember
  * @description
@@ -79,9 +78,7 @@ export class CirculationMember {
         return new CirculationMember(_o.circulation_recipient, _o.checked);
     }
 }
-/* END_OF_SYMBOL_DEFINITION CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CirculationMember */
 /**
  * @summary The Leading Root Component Types of CirculationMember
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_CirculationMember: $.Component
     ),
     new $.ComponentSpec('checked', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CirculationMember */
 /**
  * @summary The Trailing Root Component Types of CirculationMember
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_CirculationMember: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CirculationMember: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CirculationMember */
 /**
  * @summary The Extension Addition Component Types of CirculationMember
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_CirculationMember: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_CirculationMember: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationMember */
 let _cached_decoder_for_CirculationMember: $.ASN1Decoder<CirculationMember> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CirculationMember */
 /**
  * @summary Decodes an ASN.1 element into a(n) CirculationMember
  * @function
@@ -172,13 +161,9 @@ export function _decode_CirculationMember(el: _Element) {
     }
     return _cached_decoder_for_CirculationMember(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationMember */
 let _cached_encoder_for_CirculationMember: $.ASN1Encoder<CirculationMember> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CirculationMember */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CirculationMember */
 /**
  * @summary Encodes a(n) CirculationMember into an ASN.1 Element.
  * @function
@@ -212,6 +197,5 @@ export function _encode_CirculationMember(
     return _cached_encoder_for_CirculationMember(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CirculationMember */
 
 /* eslint-enable */

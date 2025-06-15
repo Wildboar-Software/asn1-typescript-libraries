@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RedirectHoldingTime_Permitted */
+
 /**
  * @summary RedirectHoldingTime_Permitted
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RedirectHoldingTime_Permitted = INTEGER;
-/* END_OF_SYMBOL_DEFINITION RedirectHoldingTime_Permitted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectHoldingTime_Permitted */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RedirectHoldingTime_Permitted */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RedirectHoldingTime_Permitted */
+
+
 export const _decode_RedirectHoldingTime_Permitted = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_RedirectHoldingTime_Permitted */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectHoldingTime_Permitted */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RedirectHoldingTime_Permitted */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RedirectHoldingTime_Permitted */
+
+
 export const _encode_RedirectHoldingTime_Permitted = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RedirectHoldingTime_Permitted */
 
 /* eslint-enable */

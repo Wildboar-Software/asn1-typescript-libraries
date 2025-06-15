@@ -21,7 +21,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleLocation */
+
 /**
  * @summary TroubleLocation
  * @description
@@ -42,13 +42,11 @@ export type TroubleLocation =
     | { locationPtr: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { noTroubleLocationValue: NULL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TroubleLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleLocation */
+
 let _cached_decoder_for_TroubleLocation: $.ASN1Decoder<TroubleLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleLocation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleLocation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleLocation
  * @function
@@ -80,13 +78,11 @@ export function _decode_TroubleLocation(el: _Element) {
     }
     return _cached_decoder_for_TroubleLocation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleLocation */
+
 let _cached_encoder_for_TroubleLocation: $.ASN1Encoder<TroubleLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleLocation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleLocation */
+
 /**
  * @summary Encodes a(n) TroubleLocation into an ASN.1 Element.
  * @function
@@ -126,6 +122,5 @@ export function _encode_TroubleLocation(
     return _cached_encoder_for_TroubleLocation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleLocation */
 
 /* eslint-enable */

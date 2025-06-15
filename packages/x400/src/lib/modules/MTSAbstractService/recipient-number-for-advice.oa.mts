@@ -25,7 +25,6 @@ import {
     _encode_RecipientNumberForAdvice,
 } from '../MTSAbstractService/RecipientNumberForAdvice.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION recipient_number_for_advice */
 /**
  * @summary recipient_number_for_advice
  * @description
@@ -62,6 +61,5 @@ export const recipient_number_for_advice: EXTENSION<RecipientNumberForAdvice> = 
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipient_number_for_advice */
 
 /* eslint-enable */

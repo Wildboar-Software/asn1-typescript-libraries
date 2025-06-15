@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import { nl } from "@wildboar/nlm/src/lib/modules/NLM/nl.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION isisoi */
 /**
  * @summary isisoi
  * @description
@@ -26,6 +25,5 @@ import { nl } from "@wildboar/nlm/src/lib/modules/NLM/nl.va.mjs";
  * @constant
  */
 export const isisoi: OBJECT_IDENTIFIER = new _OID([/* iSIS */ 1], nl);
-/* END_OF_SYMBOL_DEFINITION isisoi */
 
 /* eslint-enable */

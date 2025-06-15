@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mp } from "../DirectoryManagement/id-mp.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mp_chainedListPackage */
 /**
  * @summary id_mp_chainedListPackage
  * @description
@@ -18,6 +17,5 @@ export const id_mp_chainedListPackage: OBJECT_IDENTIFIER = new _OID(
     [13],
     id_mp
 );
-/* END_OF_SYMBOL_DEFINITION id_mp_chainedListPackage */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProofOfDeliveryAlgorithmIdentifier */
 /**
  * @summary ProofOfDeliveryAlgorithmIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProofOfDeliveryAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProofOfDeliveryAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier */
 let _cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier: $.ASN1Decoder<ProofOfDeliveryAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProofOfDeliveryAlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProofOfDeliveryAlgorithmIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProofOfDeliveryAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ProofOfDeliveryAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProofOfDeliveryAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfDeliveryAlgorithmIdentifier */
 let _cached_encoder_for_ProofOfDeliveryAlgorithmIdentifier: $.ASN1Encoder<ProofOfDeliveryAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProofOfDeliveryAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProofOfDeliveryAlgorithmIdentifier */
 /**
  * @summary Encodes a(n) ProofOfDeliveryAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_ProofOfDeliveryAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProofOfDeliveryAlgorithmIdentifier */
 
 /* eslint-enable */

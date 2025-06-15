@@ -15,7 +15,7 @@ import {
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
 } from '../DefinitionASN1Module/TextualRepresentation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Description */
+
 /**
  * @summary Description
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Description = TextualRepresentation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Description */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Description */
+
 let _cached_decoder_for_Description: $.ASN1Decoder<Description> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Description */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Description */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Description
  * @function
@@ -46,13 +44,11 @@ export function _decode_Description(el: _Element) {
     }
     return _cached_decoder_for_Description(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Description */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Description */
+
 let _cached_encoder_for_Description: $.ASN1Encoder<Description> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Description */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Description */
+
 /**
  * @summary Encodes a(n) Description into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_Description(
     return _cached_encoder_for_Description(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Description */
 
 /* eslint-enable */

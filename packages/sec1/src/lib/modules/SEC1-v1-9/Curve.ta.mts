@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC1-v1-9/FieldElement.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Curve */
 /**
  * @summary Curve
  * @description
@@ -73,9 +72,7 @@ class Curve {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION Curve */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Curve */
 /**
  * @summary The Leading Root Component Types of Curve
  * @description
@@ -90,9 +87,7 @@ const _root_component_type_list_1_spec_for_Curve: $.ComponentSpec[] = [
     new $.ComponentSpec("b", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
     new $.ComponentSpec("seed", true, $.hasTag(_TagClass.universal, 3), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Curve */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Curve */
 /**
  * @summary The Trailing Root Component Types of Curve
  * @description
@@ -105,9 +100,7 @@ export
 const _root_component_type_list_2_spec_for_Curve: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Curve */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Curve */
 /**
  * @summary The Extension Addition Component Types of Curve
  * @description
@@ -120,13 +113,9 @@ export
 const _extension_additions_list_spec_for_Curve: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Curve */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Curve */
 let _cached_decoder_for_Curve: $.ASN1Decoder<Curve> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Curve */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Curve */
 /**
  * @summary Decodes an ASN.1 element into a(n) Curve
  * @function
@@ -162,13 +151,9 @@ function _decode_Curve (el: _Element) {
 }; }
     return _cached_decoder_for_Curve(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Curve */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Curve */
 let _cached_encoder_for_Curve: $.ASN1Encoder<Curve> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Curve */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Curve */
 /**
  * @summary Encodes a(n) Curve into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ function _encode_Curve (value: Curve, elGetter: $.ASN1Encoder<Curve>) {
     return _cached_encoder_for_Curve(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Curve */
 
 /* eslint-enable */

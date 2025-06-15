@@ -22,7 +22,6 @@ import { id_nat_notification_security_elements } from '../EDIMSObjectIdentifiers
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION notification_security_elements */
 /**
  * @summary notification_security_elements
  * @description
@@ -55,6 +54,5 @@ export const notification_security_elements: X413ATTRIBUTE<SecurityElementsField
     '&id': id_nat_notification_security_elements /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION notification_security_elements */
 
 /* eslint-enable */

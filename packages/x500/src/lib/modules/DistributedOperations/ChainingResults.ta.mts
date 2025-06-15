@@ -25,7 +25,6 @@ import {
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ChainingResults */
 /**
  * @summary ChainingResults
  * @description
@@ -111,9 +110,7 @@ export class ChainingResults {
         return SecurityParameters._from_object({});
     }
 }
-/* END_OF_SYMBOL_DEFINITION ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChainingResults */
 /**
  * @summary The Leading Root Component Types of ChainingResults
  * @description
@@ -152,9 +149,7 @@ export const _root_component_type_list_1_spec_for_ChainingResults: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChainingResults */
 /**
  * @summary The Trailing Root Component Types of ChainingResults
  * @description
@@ -164,9 +159,7 @@ export const _root_component_type_list_1_spec_for_ChainingResults: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ChainingResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChainingResults */
 /**
  * @summary The Extension Addition Component Types of ChainingResults
  * @description
@@ -176,13 +169,9 @@ export const _root_component_type_list_2_spec_for_ChainingResults: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ChainingResults: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ChainingResults */
 let _cached_decoder_for_ChainingResults: $.ASN1Decoder<ChainingResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ChainingResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) ChainingResults
  * @function
@@ -249,13 +238,9 @@ export function _decode_ChainingResults(el: _Element) {
     }
     return _cached_decoder_for_ChainingResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ChainingResults */
 let _cached_encoder_for_ChainingResults: $.ASN1Encoder<ChainingResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ChainingResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ChainingResults */
 /**
  * @summary Encodes a(n) ChainingResults into an ASN.1 Element.
  * @function
@@ -328,6 +313,5 @@ export function _encode_ChainingResults(
     return _cached_encoder_for_ChainingResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ChainingResults */
 
 /* eslint-enable */

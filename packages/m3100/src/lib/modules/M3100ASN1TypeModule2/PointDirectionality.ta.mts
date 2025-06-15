@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_PointDirectionality */
+
 /**
  * @summary PointDirectionality
  * @description
@@ -27,9 +27,8 @@ export enum _enum_for_PointDirectionality {
     source = 2,
     bidirectional = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_PointDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION PointDirectionality */
+
 /**
  * @summary PointDirectionality
  * @description
@@ -41,9 +40,8 @@ export enum _enum_for_PointDirectionality {
  * ```@enum {number}
  */
 export type PointDirectionality = _enum_for_PointDirectionality;
-/* END_OF_SYMBOL_DEFINITION PointDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION PointDirectionality */
+
 /**
  * @summary PointDirectionality
  * @description
@@ -55,9 +53,8 @@ export type PointDirectionality = _enum_for_PointDirectionality;
  * ```@enum {number}
  */
 export const PointDirectionality = _enum_for_PointDirectionality;
-/* END_OF_SYMBOL_DEFINITION PointDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION PointDirectionality_sink */
+
 /**
  * @summary PointDirectionality_sink
  * @constant
@@ -65,9 +62,8 @@ export const PointDirectionality = _enum_for_PointDirectionality;
  */
 export const PointDirectionality_sink: PointDirectionality =
     PointDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PointDirectionality_sink */
 
-/* START_OF_SYMBOL_DEFINITION sink */
+
 /**
  * @summary sink
  * @constant
@@ -75,9 +71,8 @@ export const PointDirectionality_sink: PointDirectionality =
  */
 export const sink: PointDirectionality =
     PointDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sink */
 
-/* START_OF_SYMBOL_DEFINITION PointDirectionality_source */
+
 /**
  * @summary PointDirectionality_source
  * @constant
@@ -85,9 +80,8 @@ export const sink: PointDirectionality =
  */
 export const PointDirectionality_source: PointDirectionality =
     PointDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PointDirectionality_source */
 
-/* START_OF_SYMBOL_DEFINITION source */
+
 /**
  * @summary source
  * @constant
@@ -95,9 +89,8 @@ export const PointDirectionality_source: PointDirectionality =
  */
 export const source: PointDirectionality =
     PointDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION source */
 
-/* START_OF_SYMBOL_DEFINITION PointDirectionality_bidirectional */
+
 /**
  * @summary PointDirectionality_bidirectional
  * @constant
@@ -105,9 +98,8 @@ export const source: PointDirectionality =
  */
 export const PointDirectionality_bidirectional: PointDirectionality =
     PointDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION PointDirectionality_bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION bidirectional */
+
 /**
  * @summary bidirectional
  * @constant
@@ -115,21 +107,16 @@ export const PointDirectionality_bidirectional: PointDirectionality =
  */
 export const bidirectional: PointDirectionality =
     PointDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PointDirectionality */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PointDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PointDirectionality */
+
+
 export const _decode_PointDirectionality = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_PointDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PointDirectionality */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PointDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PointDirectionality */
+
+
 export const _encode_PointDirectionality = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_PointDirectionality */
 
 /* eslint-enable */

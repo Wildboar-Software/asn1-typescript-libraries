@@ -3,7 +3,6 @@ import { changePassword } from "../DirectoryAbstractService/changePassword.oa.mj
 import { chained } from "../DistributedOperations/chained.oa.mjs";
 import type { ChainedOperation } from "./chained.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION chainedChangePassword */
 /**
  * @summary chainedChangePassword
  * @description
@@ -19,6 +18,5 @@ import type { ChainedOperation } from "./chained.oa.mjs";
  * @implements {OPERATION}
  */
 export const chainedChangePassword: ChainedOperation = chained(changePassword);
-/* END_OF_SYMBOL_DEFINITION chainedChangePassword */
 
 /* eslint-enable */

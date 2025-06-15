@@ -7,7 +7,6 @@ import {
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION uniqueMemberMatch */
 /**
  * @summary uniqueMemberMatch
  * @description
@@ -39,6 +38,5 @@ export const uniqueMemberMatch: MATCHING_RULE<NameAndOptionalUID> = {
     "&id": id_mr_uniqueMemberMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uniqueMemberMatch */
 
 /* eslint-enable */

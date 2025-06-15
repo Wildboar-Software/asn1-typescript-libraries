@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_lsx_deliveryMethod */
 /**
  * @summary id_lsx_deliveryMethod
  * @description
@@ -15,6 +14,5 @@ import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
  * @constant
  */
 export const id_lsx_deliveryMethod: OBJECT_IDENTIFIER = new _OID([14], id_lsx);
-/* END_OF_SYMBOL_DEFINITION id_lsx_deliveryMethod */
 
 /* eslint-enable */

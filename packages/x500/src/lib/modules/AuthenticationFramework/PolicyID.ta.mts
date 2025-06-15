@@ -6,7 +6,6 @@ import {
     _decode_CertPolicyId,
     _encode_CertPolicyId,
 } from "../CertificateExtensions/CertPolicyId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PolicyID */
 /**
  * @summary PolicyID
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type PolicyID = CertPolicyId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PolicyID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyID */
 let _cached_decoder_for_PolicyID: $.ASN1Decoder<PolicyID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PolicyID */
 /**
  * @summary Decodes an ASN.1 element into a(n) PolicyID
  * @function
@@ -37,13 +32,9 @@ export function _decode_PolicyID(el: _Element) {
     }
     return _cached_decoder_for_PolicyID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PolicyID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyID */
 let _cached_encoder_for_PolicyID: $.ASN1Encoder<PolicyID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PolicyID */
 /**
  * @summary Encodes a(n) PolicyID into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_PolicyID(
     return _cached_encoder_for_PolicyID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PolicyID */
 
 /* eslint-enable */

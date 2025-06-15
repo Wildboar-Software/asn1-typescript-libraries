@@ -23,7 +23,6 @@ import {
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION forwarding_request */
 /**
  * @summary forwarding_request
  * @description
@@ -57,6 +56,5 @@ export const forwarding_request: EXTENSION<SequenceNumber> = {
         []
     ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION forwarding_request */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_MS_EIT,
     _encode_MS_EIT,
 } from '../MSAbstractService/MS-EIT.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MS_EITs */
 /**
  * @summary MS_EITs
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MS_EITs = MS_EIT[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MS_EITs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MS_EITs */
 let _cached_decoder_for_MS_EITs: $.ASN1Decoder<MS_EITs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MS_EITs */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MS_EITs */
 /**
  * @summary Decodes an ASN.1 element into a(n) MS_EITs
  * @function
@@ -48,13 +43,9 @@ export function _decode_MS_EITs(el: _Element) {
     }
     return _cached_decoder_for_MS_EITs(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MS_EITs */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MS_EITs */
 let _cached_encoder_for_MS_EITs: $.ASN1Encoder<MS_EITs> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MS_EITs */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MS_EITs */
 /**
  * @summary Encodes a(n) MS_EITs into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_MS_EITs(
     return _cached_encoder_for_MS_EITs(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MS_EITs */
 
 /* eslint-enable */

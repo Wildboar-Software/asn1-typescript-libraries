@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardUnknownAddressInSourceRouteingField */
+
 /**
  * @summary pDUDiscardUnknownAddressInSourceRouteingField
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardUnknownAddressInSourceRouteingField: OBJECT_IDENTIFIER = 
     [/* unknownAddressInSourceRouteingField */ 146],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardUnknownAddressInSourceRouteingField */
 
 /* eslint-enable */

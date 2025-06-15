@@ -7,7 +7,7 @@ import { regCtrl_pkiPublicationInfo } from "../PKIXCRMF-2009/regCtrl-pkiPublicat
 import { regCtrl_protocolEncrKey } from "../PKIXCRMF-2009/regCtrl-protocolEncrKey.oa.mjs";
 import { regCtrl_regToken } from "../PKIXCRMF-2009/regCtrl-regToken.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RegControlSet */
+
 /**
  * @summary RegControlSet
  * @description
@@ -34,6 +34,5 @@ export const RegControlSet: ATTRIBUTE[] = [
     regCtrl_oldCertID,
     regCtrl_protocolEncrKey,
 ];
-/* END_OF_SYMBOL_DEFINITION RegControlSet */
 
 /* eslint-enable */

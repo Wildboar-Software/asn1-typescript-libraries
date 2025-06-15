@@ -15,7 +15,6 @@ import {
     _decode_ExtendedEncodedInformationType,
     _encode_ExtendedEncodedInformationType,
 } from '../MTSAbstractService/ExtendedEncodedInformationType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtendedEncodedInformationTypes */
 /**
  * @summary ExtendedEncodedInformationTypes
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type ExtendedEncodedInformationTypes = ExtendedEncodedInformationType[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ExtendedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedEncodedInformationTypes */
 let _cached_decoder_for_ExtendedEncodedInformationTypes: $.ASN1Decoder<ExtendedEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedEncodedInformationTypes */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedEncodedInformationTypes
  * @function
@@ -49,13 +44,9 @@ export function _decode_ExtendedEncodedInformationTypes(el: _Element) {
     }
     return _cached_decoder_for_ExtendedEncodedInformationTypes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedEncodedInformationTypes */
 let _cached_encoder_for_ExtendedEncodedInformationTypes: $.ASN1Encoder<ExtendedEncodedInformationTypes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedEncodedInformationTypes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedEncodedInformationTypes */
 /**
  * @summary Encodes a(n) ExtendedEncodedInformationTypes into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_ExtendedEncodedInformationTypes(
     return _cached_encoder_for_ExtendedEncodedInformationTypes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedEncodedInformationTypes */
 
 /* eslint-enable */

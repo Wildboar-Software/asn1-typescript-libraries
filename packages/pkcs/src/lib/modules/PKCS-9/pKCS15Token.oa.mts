@@ -10,7 +10,7 @@ import {
 } from "../PKCS-15/PKCS15Token.ta.mjs";
 import { pkcs_9_at_pkcs15Token } from "../PKCS-9/pkcs-9-at-pkcs15Token.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pKCS15Token */
+
 /**
  * @summary pKCS15Token
  * @description
@@ -43,6 +43,5 @@ export const pKCS15Token: ATTRIBUTE<PKCS15Token> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pKCS15Token */
 
 /* eslint-enable */

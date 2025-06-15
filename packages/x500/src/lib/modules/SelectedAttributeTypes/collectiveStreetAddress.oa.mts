@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectiveStreetAddress } from "../SelectedAttributeTypes/id-at-collectiveStreetAddress.va.mjs";
 import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveStreetAddress */
 /**
  * @summary collectiveStreetAddress
  * @description
@@ -46,6 +45,5 @@ export const collectiveStreetAddress: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveStreetAddress */
 
 /* eslint-enable */

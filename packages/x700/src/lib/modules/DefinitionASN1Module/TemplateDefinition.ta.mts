@@ -15,7 +15,7 @@ import {
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
 } from '../DefinitionASN1Module/TextualRepresentation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TemplateDefinition */
+
 /**
  * @summary TemplateDefinition
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type TemplateDefinition = TextualRepresentation; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TemplateDefinition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateDefinition */
+
 let _cached_decoder_for_TemplateDefinition: $.ASN1Decoder<TemplateDefinition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TemplateDefinition */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TemplateDefinition */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TemplateDefinition
  * @function
@@ -46,13 +44,11 @@ export function _decode_TemplateDefinition(el: _Element) {
     }
     return _cached_decoder_for_TemplateDefinition(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TemplateDefinition */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateDefinition */
+
 let _cached_encoder_for_TemplateDefinition: $.ASN1Encoder<TemplateDefinition> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TemplateDefinition */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TemplateDefinition */
+
 /**
  * @summary Encodes a(n) TemplateDefinition into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_TemplateDefinition(
     return _cached_encoder_for_TemplateDefinition(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TemplateDefinition */
 
 /* eslint-enable */

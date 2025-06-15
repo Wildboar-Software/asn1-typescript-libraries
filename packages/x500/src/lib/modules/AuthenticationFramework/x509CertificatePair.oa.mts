@@ -6,7 +6,6 @@ import {
 } from "../AuthenticationFramework/CertificatePair.ta.mjs";
 import { id_lsx_x509CertificatePair } from "../AuthenticationFramework/id-lsx-x509CertificatePair.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION x509CertificatePair */
 /**
  * @summary x509CertificatePair
  * @description
@@ -36,6 +35,5 @@ export const x509CertificatePair: SYNTAX_NAME<CertificatePair> = {
     "&id": id_lsx_x509CertificatePair /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION x509CertificatePair */
 
 /* eslint-enable */

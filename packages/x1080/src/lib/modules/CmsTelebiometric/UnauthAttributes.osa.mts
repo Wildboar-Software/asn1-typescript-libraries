@@ -13,7 +13,7 @@ import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/A
 import { aa_CEKReference } from '../CmsTelebiometric/aa-CEKReference.oa.mjs';
 import { aa_CEKMaxDecrypts } from '../CmsTelebiometric/aa-CEKMaxDecrypts.oa.mjs';
 import { aa_KEKDerivationAlg } from '../CmsTelebiometric/aa-KEKDerivationAlg.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION UnauthAttributes */
+
 /**
  * @summary UnauthAttributes
  * @description
@@ -33,6 +33,5 @@ export const UnauthAttributes: ATTRIBUTE[] = [
     aa_CEKMaxDecrypts,
     aa_KEKDerivationAlg,
 ];
-/* END_OF_SYMBOL_DEFINITION UnauthAttributes */
 
 /* eslint-enable */

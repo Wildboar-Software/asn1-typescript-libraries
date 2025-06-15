@@ -47,7 +47,6 @@ import {
     _extension_additions_list_spec_for_ProbeSubmissionResult,
 } from '../MTSAbstractService/ProbeSubmissionResult.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MSProbeSubmissionResult */
 /**
  * @summary MSProbeSubmissionResult
  * @description
@@ -137,9 +136,7 @@ export class MSProbeSubmissionResult implements ProbeSubmissionResult {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MSProbeSubmissionResult */
 /**
  * @summary The Leading Root Component Types of MSProbeSubmissionResult
  * @description
@@ -158,9 +155,7 @@ export const _root_component_type_list_1_spec_for_MSProbeSubmissionResult: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSProbeSubmissionResult */
 /**
  * @summary The Trailing Root Component Types of MSProbeSubmissionResult
  * @description
@@ -172,9 +167,7 @@ export const _root_component_type_list_1_spec_for_MSProbeSubmissionResult: $.Com
 export const _root_component_type_list_2_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_ProbeSubmissionResult,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSProbeSubmissionResult */
 /**
  * @summary The Extension Addition Component Types of MSProbeSubmissionResult
  * @description
@@ -186,13 +179,9 @@ export const _root_component_type_list_2_spec_for_MSProbeSubmissionResult: $.Com
 export const _extension_additions_list_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_ProbeSubmissionResult,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSProbeSubmissionResult */
 let _cached_decoder_for_MSProbeSubmissionResult: $.ASN1Decoder<MSProbeSubmissionResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSProbeSubmissionResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSProbeSubmissionResult
  * @function
@@ -260,13 +249,9 @@ export function _decode_MSProbeSubmissionResult(el: _Element) {
     }
     return _cached_decoder_for_MSProbeSubmissionResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSProbeSubmissionResult */
 let _cached_encoder_for_MSProbeSubmissionResult: $.ASN1Encoder<MSProbeSubmissionResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSProbeSubmissionResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSProbeSubmissionResult */
 /**
  * @summary Encodes a(n) MSProbeSubmissionResult into an ASN.1 Element.
  * @function
@@ -333,6 +318,5 @@ export function _encode_MSProbeSubmissionResult(
     return _cached_encoder_for_MSProbeSubmissionResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSProbeSubmissionResult */
 
 /* eslint-enable */

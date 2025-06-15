@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION hMAC_SHA1 */
+
 /**
  * @summary hMAC_SHA1
  * @description
@@ -26,6 +26,5 @@ export const hMAC_SHA1: OBJECT_IDENTIFIER = new _OID([
     1,
     2,
 ]);
-/* END_OF_SYMBOL_DEFINITION hMAC_SHA1 */
 
 /* eslint-enable */

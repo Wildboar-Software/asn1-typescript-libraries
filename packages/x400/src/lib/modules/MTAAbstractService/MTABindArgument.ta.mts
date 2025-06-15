@@ -16,7 +16,6 @@ import {
     _decode_MTABindArgument_authenticated,
     _encode_MTABindArgument_authenticated,
 } from '../MTAAbstractService/MTABindArgument-authenticated.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MTABindArgument */
 /**
  * @summary MTABindArgument
  * @description
@@ -44,13 +43,9 @@ import {
 export type MTABindArgument =
     | { unauthenticated: NULL } /* CHOICE_ALT_ROOT */
     | { authenticated: MTABindArgument_authenticated } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION MTABindArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTABindArgument */
 let _cached_decoder_for_MTABindArgument: $.ASN1Decoder<MTABindArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTABindArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTABindArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTABindArgument
  * @function
@@ -73,13 +68,9 @@ export function _decode_MTABindArgument(el: _Element) {
     }
     return _cached_decoder_for_MTABindArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTABindArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTABindArgument */
 let _cached_encoder_for_MTABindArgument: $.ASN1Encoder<MTABindArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTABindArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTABindArgument */
 /**
  * @summary Encodes a(n) MTABindArgument into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_MTABindArgument(
     return _cached_encoder_for_MTABindArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTABindArgument */
 
 /* eslint-enable */

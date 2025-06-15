@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_wf } from '../MHSRoutingObjectIdentifiers/id-wf.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_wf_integer */
 /**
  * @summary id_wf_integer
  * @description
@@ -29,6 +28,5 @@ import { id_wf } from '../MHSRoutingObjectIdentifiers/id-wf.va.mjs';
  * @constant
  */
 export const id_wf_integer: ID = new _OID([0], id_wf);
-/* END_OF_SYMBOL_DEFINITION id_wf_integer */
 
 /* eslint-enable */

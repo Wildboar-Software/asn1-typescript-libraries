@@ -6,7 +6,6 @@ import {
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateSerialNumbers */
 /**
  * @summary CertificateSerialNumbers
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type CertificateSerialNumbers = CertificateSerialNumber[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertificateSerialNumbers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateSerialNumbers */
 let _cached_decoder_for_CertificateSerialNumbers: $.ASN1Decoder<CertificateSerialNumbers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateSerialNumbers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateSerialNumbers */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateSerialNumbers
  * @function
@@ -39,13 +34,9 @@ export function _decode_CertificateSerialNumbers(el: _Element) {
     }
     return _cached_decoder_for_CertificateSerialNumbers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateSerialNumbers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateSerialNumbers */
 let _cached_encoder_for_CertificateSerialNumbers: $.ASN1Encoder<CertificateSerialNumbers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateSerialNumbers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateSerialNumbers */
 /**
  * @summary Encodes a(n) CertificateSerialNumbers into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_CertificateSerialNumbers(
     return _cached_encoder_for_CertificateSerialNumbers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateSerialNumbers */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_doa_myAccessPoint */
 /**
  * @summary id_doa_myAccessPoint
  * @description
@@ -15,6 +14,5 @@ import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
  * @constant
  */
 export const id_doa_myAccessPoint: OBJECT_IDENTIFIER = new _OID([1], id_doa);
-/* END_OF_SYMBOL_DEFINITION id_doa_myAccessPoint */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _encode_G3FacsimileParameters,
 } from '../IPMSInformationObjects/G3FacsimileParameters.ta.mjs';
 import { id_ep_g3_facsimile } from '../IPMSObjectIdentifiers/id-ep-g3-facsimile.va.mjs';
-/* START_OF_SYMBOL_DEFINITION g3_facsimile_body_part_parameters */
 /**
  * @summary g3_facsimile_body_part_parameters
  * @description
@@ -42,6 +41,5 @@ export const g3_facsimile_body_part_parameters: TYPE_IDENTIFIER<G3FacsimileParam
     '&id': id_ep_g3_facsimile /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION g3_facsimile_body_part_parameters */
 
 /* eslint-enable */

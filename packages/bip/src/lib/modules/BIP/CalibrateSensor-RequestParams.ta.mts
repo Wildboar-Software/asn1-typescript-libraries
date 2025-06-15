@@ -20,7 +20,7 @@ import {
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CalibrateSensor_RequestParams */
+
 /**
  * @summary CalibrateSensor_RequestParams
  * @description
@@ -72,9 +72,8 @@ export class CalibrateSensor_RequestParams {
     return new CalibrateSensor_RequestParams(_o.originalBSPHandle, _o.timeout);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CalibrateSensor_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of CalibrateSensor_RequestParams
  * @description
@@ -99,9 +98,8 @@ export const _root_component_type_list_1_spec_for_CalibrateSensor_RequestParams:
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CalibrateSensor_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of CalibrateSensor_RequestParams
  * @description
@@ -111,9 +109,8 @@ export const _root_component_type_list_1_spec_for_CalibrateSensor_RequestParams:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CalibrateSensor_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CalibrateSensor_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of CalibrateSensor_RequestParams
  * @description
@@ -123,13 +120,11 @@ export const _root_component_type_list_2_spec_for_CalibrateSensor_RequestParams:
  * @constant
  */
 export const _extension_additions_list_spec_for_CalibrateSensor_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CalibrateSensor_RequestParams */
+
 let _cached_decoder_for_CalibrateSensor_RequestParams: $.ASN1Decoder<CalibrateSensor_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CalibrateSensor_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CalibrateSensor_RequestParams
  * @function
@@ -160,13 +155,11 @@ export function _decode_CalibrateSensor_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_CalibrateSensor_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CalibrateSensor_RequestParams */
+
 let _cached_encoder_for_CalibrateSensor_RequestParams: $.ASN1Encoder<CalibrateSensor_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CalibrateSensor_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CalibrateSensor_RequestParams */
+
 /**
  * @summary Encodes a(n) CalibrateSensor_RequestParams into an ASN.1 Element.
  * @function
@@ -198,6 +191,5 @@ export function _encode_CalibrateSensor_RequestParams(
   return _cached_encoder_for_CalibrateSensor_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CalibrateSensor_RequestParams */
 
 /* eslint-enable */

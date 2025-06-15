@@ -20,7 +20,7 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReceiptRequest */
+
 /**
  * @summary ReceiptRequest
  * @description
@@ -81,9 +81,8 @@ export class ReceiptRequest {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReceiptRequest */
+
 /**
  * @summary The Leading Root Component Types of ReceiptRequest
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_ReceiptRequest: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReceiptRequest */
+
 /**
  * @summary The Trailing Root Component Types of ReceiptRequest
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_ReceiptRequest: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReceiptRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReceiptRequest */
+
 /**
  * @summary The Extension Addition Component Types of ReceiptRequest
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_ReceiptRequest: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_ReceiptRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptRequest */
+
 let _cached_decoder_for_ReceiptRequest: $.ASN1Decoder<ReceiptRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReceiptRequest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReceiptRequest
  * @function
@@ -185,13 +180,11 @@ export function _decode_ReceiptRequest(el: _Element) {
     }
     return _cached_decoder_for_ReceiptRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptRequest */
+
 let _cached_encoder_for_ReceiptRequest: $.ASN1Encoder<ReceiptRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReceiptRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReceiptRequest */
+
 /**
  * @summary Encodes a(n) ReceiptRequest into an ASN.1 Element.
  * @function
@@ -230,6 +223,5 @@ export function _encode_ReceiptRequest(
     return _cached_encoder_for_ReceiptRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReceiptRequest */
 
 /* eslint-enable */

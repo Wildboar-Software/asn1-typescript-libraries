@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContactObjectPtrList */
+
 /**
  * @summary ContactObjectPtrList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ContactObjectPtrList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ContactObjectPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactObjectPtrList */
+
 let _cached_decoder_for_ContactObjectPtrList: $.ASN1Decoder<ContactObjectPtrList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactObjectPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContactObjectPtrList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContactObjectPtrList
  * @function
@@ -48,13 +46,11 @@ export function _decode_ContactObjectPtrList(el: _Element) {
     }
     return _cached_decoder_for_ContactObjectPtrList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContactObjectPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactObjectPtrList */
+
 let _cached_encoder_for_ContactObjectPtrList: $.ASN1Encoder<ContactObjectPtrList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactObjectPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContactObjectPtrList */
+
 /**
  * @summary Encodes a(n) ContactObjectPtrList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ContactObjectPtrList(
     return _cached_encoder_for_ContactObjectPtrList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContactObjectPtrList */
 
 /* eslint-enable */

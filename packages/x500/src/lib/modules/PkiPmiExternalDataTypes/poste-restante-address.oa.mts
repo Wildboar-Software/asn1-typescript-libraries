@@ -5,7 +5,6 @@ import {
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
 } from "../PkiPmiExternalDataTypes/PosteRestanteAddress.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION poste_restante_address */
 /**
  * @summary poste_restante_address
  * @description
@@ -33,6 +32,5 @@ export const poste_restante_address: EXTENSION_ATTRIBUTE<PosteRestanteAddress> =
     "&id": 19 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION poste_restante_address */
 
 /* eslint-enable */

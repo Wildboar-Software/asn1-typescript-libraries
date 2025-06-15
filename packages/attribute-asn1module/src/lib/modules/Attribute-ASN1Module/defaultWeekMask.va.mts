@@ -13,7 +13,6 @@ import { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1M
 import { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va.mjs";
 import { WeekMask_Item } from "../Attribute-ASN1Module/WeekMask-Item.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION defaultWeekMask */
 /**
  * @summary defaultWeekMask
  * @description
@@ -36,6 +35,5 @@ const defaultWeekMask: WeekMask = [
         defaultIntervalsOfDay,
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION defaultWeekMask */
 
 /* eslint-enable */

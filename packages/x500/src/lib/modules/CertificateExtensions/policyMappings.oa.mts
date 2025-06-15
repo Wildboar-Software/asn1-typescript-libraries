@@ -6,7 +6,6 @@ import {
     _decode_PolicyMappingsSyntax,
     _encode_PolicyMappingsSyntax,
 } from "../CertificateExtensions/PolicyMappingsSyntax.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION policyMappings */
 /**
  * @summary policyMappings
  * @description
@@ -34,6 +33,5 @@ export const policyMappings: EXTENSION<PolicyMappingsSyntax> = {
     "&id": id_ce_policyMappings /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION policyMappings */
 
 /* eslint-enable */

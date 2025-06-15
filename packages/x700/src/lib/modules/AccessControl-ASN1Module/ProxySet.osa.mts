@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ProxySet */
 /**
  * @summary ProxySet
  * @description
@@ -26,6 +25,5 @@ import { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca.mjs';
  *
  */
 export const ProxySet: AC_PROXY[] = [];
-/* END_OF_SYMBOL_DEFINITION ProxySet */
 
 /* eslint-enable */

@@ -170,7 +170,7 @@ import {
   _decode_F_COPY_response,
   _encode_F_COPY_response,
 } from '../ISO8571-FTAM/F-COPY-response.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FSM_PDU */
+
 /**
  * @summary FSM_PDU
  * @description
@@ -265,13 +265,11 @@ export type FSM_PDU =
   | { f_move_response: F_MOVE_response } /* CHOICE_ALT_ROOT */
   | { f_copy_request: F_COPY_request } /* CHOICE_ALT_ROOT */
   | { f_copy_response: F_COPY_response } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION FSM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FSM_PDU */
+
 let _cached_decoder_for_FSM_PDU: $.ASN1Decoder<FSM_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FSM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FSM_PDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FSM_PDU
  * @function
@@ -457,13 +455,11 @@ export function _decode_FSM_PDU(el: _Element) {
   }
   return _cached_decoder_for_FSM_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FSM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FSM_PDU */
+
 let _cached_encoder_for_FSM_PDU: $.ASN1Encoder<FSM_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FSM_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FSM_PDU */
+
 /**
  * @summary Encodes a(n) FSM_PDU into an ASN.1 Element.
  * @function
@@ -677,6 +673,5 @@ export function _encode_FSM_PDU(
   return _cached_encoder_for_FSM_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FSM_PDU */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ExtendedCertificateOrCertificate */
+
 /**
  * @summary ExtendedCertificateOrCertificate
  * @description
@@ -27,13 +27,11 @@ import {
 export type ExtendedCertificateOrCertificate =
     | { certificate: Certificate } /* CHOICE_ALT_ROOT */
     | { extendedCertificate: ExtendedCertificate } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ExtendedCertificateOrCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificateOrCertificate */
+
 let _cached_decoder_for_ExtendedCertificateOrCertificate: $.ASN1Decoder<ExtendedCertificateOrCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtendedCertificateOrCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtendedCertificateOrCertificate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedCertificateOrCertificate
  * @function
@@ -56,13 +54,11 @@ export function _decode_ExtendedCertificateOrCertificate(el: _Element) {
     }
     return _cached_decoder_for_ExtendedCertificateOrCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtendedCertificateOrCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificateOrCertificate */
+
 let _cached_encoder_for_ExtendedCertificateOrCertificate: $.ASN1Encoder<ExtendedCertificateOrCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtendedCertificateOrCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtendedCertificateOrCertificate */
+
 /**
  * @summary Encodes a(n) ExtendedCertificateOrCertificate into an ASN.1 Element.
  * @function
@@ -94,6 +90,5 @@ export function _encode_ExtendedCertificateOrCertificate(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtendedCertificateOrCertificate */
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va.mjs";
 import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION orgPersonNameForm */
 /**
  * @summary orgPersonNameForm
  * @description
@@ -32,6 +31,5 @@ export const orgPersonNameForm: NAME_FORM = {
     "&OptionalAttributes": [organizationalUnitName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_orgPersonNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION orgPersonNameForm */
 
 /* eslint-enable */

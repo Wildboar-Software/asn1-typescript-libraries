@@ -15,7 +15,6 @@ import {
     _decode_FunctionalUnits,
     _encode_FunctionalUnits,
 } from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CmiseFunctionalUnitsSelected */
 /**
  * @summary CmiseFunctionalUnitsSelected
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type CmiseFunctionalUnitsSelected = FunctionalUnits; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CmiseFunctionalUnitsSelected */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CmiseFunctionalUnitsSelected */
 let _cached_decoder_for_CmiseFunctionalUnitsSelected: $.ASN1Decoder<CmiseFunctionalUnitsSelected> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CmiseFunctionalUnitsSelected */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CmiseFunctionalUnitsSelected */
 /**
  * @summary Decodes an ASN.1 element into a(n) CmiseFunctionalUnitsSelected
  * @function
@@ -46,13 +41,9 @@ export function _decode_CmiseFunctionalUnitsSelected(el: _Element) {
     }
     return _cached_decoder_for_CmiseFunctionalUnitsSelected(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CmiseFunctionalUnitsSelected */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CmiseFunctionalUnitsSelected */
 let _cached_encoder_for_CmiseFunctionalUnitsSelected: $.ASN1Encoder<CmiseFunctionalUnitsSelected> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CmiseFunctionalUnitsSelected */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CmiseFunctionalUnitsSelected */
 /**
  * @summary Encodes a(n) CmiseFunctionalUnitsSelected into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CmiseFunctionalUnitsSelected(
     return _cached_encoder_for_CmiseFunctionalUnitsSelected(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CmiseFunctionalUnitsSelected */
 
 /* eslint-enable */

@@ -24,7 +24,7 @@ import {
   _decode_FunctionalUnits,
   _encode_FunctionalUnits,
 } from '../CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CMIPUserInfo */
+
 /**
  * @summary CMIPUserInfo
  * @description
@@ -116,9 +116,8 @@ export class CMIPUserInfo {
     return new Uint8ClampedArray([]);
   }
 }
-/* END_OF_SYMBOL_DEFINITION CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CMIPUserInfo */
+
 /**
  * @summary The Leading Root Component Types of CMIPUserInfo
  * @description
@@ -157,9 +156,8 @@ export const _root_component_type_list_1_spec_for_CMIPUserInfo: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CMIPUserInfo */
+
 /**
  * @summary The Trailing Root Component Types of CMIPUserInfo
  * @description
@@ -169,9 +167,8 @@ export const _root_component_type_list_1_spec_for_CMIPUserInfo: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CMIPUserInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CMIPUserInfo */
+
 /**
  * @summary The Extension Addition Component Types of CMIPUserInfo
  * @description
@@ -181,13 +178,11 @@ export const _root_component_type_list_2_spec_for_CMIPUserInfo: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_CMIPUserInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CMIPUserInfo */
+
 let _cached_decoder_for_CMIPUserInfo: $.ASN1Decoder<CMIPUserInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CMIPUserInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CMIPUserInfo
  * @function
@@ -245,13 +240,11 @@ export function _decode_CMIPUserInfo(el: _Element) {
   }
   return _cached_decoder_for_CMIPUserInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CMIPUserInfo */
+
 let _cached_encoder_for_CMIPUserInfo: $.ASN1Encoder<CMIPUserInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CMIPUserInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CMIPUserInfo */
+
 /**
  * @summary Encodes a(n) CMIPUserInfo into an ASN.1 Element.
  * @function
@@ -318,6 +311,5 @@ export function _encode_CMIPUserInfo(
   return _cached_encoder_for_CMIPUserInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CMIPUserInfo */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilityStatus } from "../Attribute-ASN1Module/AvailabilityStatus.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION LogAvailability */
 /**
  * @summary LogAvailability
  * @description
@@ -24,13 +23,9 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
  */
 export
 type LogAvailability = AvailabilityStatus; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LogAvailability */
 let _cached_decoder_for_LogAvailability: $.ASN1Decoder<LogAvailability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LogAvailability */
 /**
  * @summary Decodes an ASN.1 element into a(n) LogAvailability
  * @function
@@ -42,13 +37,9 @@ function _decode_LogAvailability (el: _Element) {
     if (!_cached_decoder_for_LogAvailability) { _cached_decoder_for_LogAvailability = _decode_AvailabilityStatus; }
     return _cached_decoder_for_LogAvailability(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LogAvailability */
 let _cached_encoder_for_LogAvailability: $.ASN1Encoder<LogAvailability> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LogAvailability */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LogAvailability */
 /**
  * @summary Encodes a(n) LogAvailability into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_LogAvailability (value: LogAvailability, elGetter: $.ASN1Encode
     return _cached_encoder_for_LogAvailability(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LogAvailability */
 
 /* eslint-enable */

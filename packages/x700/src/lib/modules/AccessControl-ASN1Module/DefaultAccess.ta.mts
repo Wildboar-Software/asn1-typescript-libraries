@@ -21,7 +21,6 @@ import {
     deny,
 } from './deny.va.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DefaultAccess */
 /**
  * @summary DefaultAccess
  * @description
@@ -299,9 +298,7 @@ export class DefaultAccess {
 
     public static _enum_for_filter = _enum_for_EnforcementAction;
 }
-/* END_OF_SYMBOL_DEFINITION DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DefaultAccess */
 /**
  * @summary The Leading Root Component Types of DefaultAccess
  * @description
@@ -382,9 +379,7 @@ export const _root_component_type_list_1_spec_for_DefaultAccess: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DefaultAccess */
 /**
  * @summary The Trailing Root Component Types of DefaultAccess
  * @description
@@ -394,9 +389,7 @@ export const _root_component_type_list_1_spec_for_DefaultAccess: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DefaultAccess: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DefaultAccess */
 /**
  * @summary The Extension Addition Component Types of DefaultAccess
  * @description
@@ -406,13 +399,9 @@ export const _root_component_type_list_2_spec_for_DefaultAccess: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_DefaultAccess: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultAccess */
 let _cached_decoder_for_DefaultAccess: $.ASN1Decoder<DefaultAccess> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DefaultAccess */
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultAccess
  * @function
@@ -524,13 +513,9 @@ export function _decode_DefaultAccess(el: _Element) {
     }
     return _cached_decoder_for_DefaultAccess(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultAccess */
 let _cached_encoder_for_DefaultAccess: $.ASN1Encoder<DefaultAccess> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultAccess */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DefaultAccess */
 /**
  * @summary Encodes a(n) DefaultAccess into an ASN.1 Element.
  * @function
@@ -679,6 +664,5 @@ export function _encode_DefaultAccess(
     return _cached_encoder_for_DefaultAccess(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DefaultAccess */
 
 /* eslint-enable */

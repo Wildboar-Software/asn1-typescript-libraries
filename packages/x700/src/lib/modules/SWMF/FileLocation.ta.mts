@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FileLocation */
 /**
  * @summary FileLocation
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FileLocation = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION FileLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FileLocation */
 let _cached_decoder_for_FileLocation: $.ASN1Decoder<FileLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FileLocation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FileLocation */
 /**
  * @summary Decodes an ASN.1 element into a(n) FileLocation
  * @function
@@ -45,13 +40,9 @@ export function _decode_FileLocation(el: _Element) {
     }
     return _cached_decoder_for_FileLocation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FileLocation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FileLocation */
 let _cached_encoder_for_FileLocation: $.ASN1Encoder<FileLocation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FileLocation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FileLocation */
 /**
  * @summary Encodes a(n) FileLocation into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_FileLocation(
     return _cached_encoder_for_FileLocation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FileLocation */
 
 /* eslint-enable */

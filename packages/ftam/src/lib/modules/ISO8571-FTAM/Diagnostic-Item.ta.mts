@@ -23,7 +23,7 @@ import {
   _decode_Entity_Reference,
   _encode_Entity_Reference,
 } from '../ISO8571-FTAM/Entity-Reference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Diagnostic_Item */
+
 /**
  * @summary Diagnostic_Item
  * @description
@@ -101,9 +101,8 @@ export class Diagnostic_Item {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Diagnostic_Item */
+
 /**
  * @summary The Leading Root Component Types of Diagnostic_Item
  * @description
@@ -156,9 +155,8 @@ export const _root_component_type_list_1_spec_for_Diagnostic_Item: $.ComponentSp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Diagnostic_Item */
+
 /**
  * @summary The Trailing Root Component Types of Diagnostic_Item
  * @description
@@ -168,9 +166,8 @@ export const _root_component_type_list_1_spec_for_Diagnostic_Item: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Diagnostic_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Diagnostic_Item */
+
 /**
  * @summary The Extension Addition Component Types of Diagnostic_Item
  * @description
@@ -180,13 +177,11 @@ export const _root_component_type_list_2_spec_for_Diagnostic_Item: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_Diagnostic_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Diagnostic_Item */
+
 let _cached_decoder_for_Diagnostic_Item: $.ASN1Decoder<Diagnostic_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Diagnostic_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Diagnostic_Item
  * @function
@@ -260,13 +255,11 @@ export function _decode_Diagnostic_Item(el: _Element) {
   }
   return _cached_decoder_for_Diagnostic_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Diagnostic_Item */
+
 let _cached_encoder_for_Diagnostic_Item: $.ASN1Encoder<Diagnostic_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Diagnostic_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Diagnostic_Item */
+
 /**
  * @summary Encodes a(n) Diagnostic_Item into an ASN.1 Element.
  * @function
@@ -333,6 +326,5 @@ export function _encode_Diagnostic_Item(
   return _cached_encoder_for_Diagnostic_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Diagnostic_Item */
 
 /* eslint-enable */

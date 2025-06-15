@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MultipleSignaturesAlgo */
 /**
  * @summary MultipleSignaturesAlgo
  * @description
@@ -19,13 +18,9 @@ import {
  * ```
  */
 export type MultipleSignaturesAlgo = AlgorithmIdentifier[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MultipleSignaturesAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleSignaturesAlgo */
 let _cached_decoder_for_MultipleSignaturesAlgo: $.ASN1Decoder<MultipleSignaturesAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleSignaturesAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleSignaturesAlgo */
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleSignaturesAlgo
  * @function
@@ -40,13 +35,9 @@ export function _decode_MultipleSignaturesAlgo(el: _Element) {
     }
     return _cached_decoder_for_MultipleSignaturesAlgo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleSignaturesAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleSignaturesAlgo */
 let _cached_encoder_for_MultipleSignaturesAlgo: $.ASN1Encoder<MultipleSignaturesAlgo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleSignaturesAlgo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleSignaturesAlgo */
 /**
  * @summary Encodes a(n) MultipleSignaturesAlgo into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ export function _encode_MultipleSignaturesAlgo(
     return _cached_encoder_for_MultipleSignaturesAlgo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleSignaturesAlgo */
 
 /* eslint-enable */

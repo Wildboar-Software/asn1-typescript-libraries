@@ -15,7 +15,7 @@ import {
   _decode_KDC_REP,
   _encode_KDC_REP,
 } from '../KerberosV5Spec2/KDC-REP.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AS_REP */
+
 /**
  * @summary AS_REP
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AS_REP = KDC_REP; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AS_REP */
+
 let _cached_decoder_for_AS_REP: $.ASN1Decoder<AS_REP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AS_REP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AS_REP
  * @function
@@ -48,13 +46,11 @@ export function _decode_AS_REP(el: _Element) {
   }
   return _cached_decoder_for_AS_REP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AS_REP */
+
 let _cached_encoder_for_AS_REP: $.ASN1Encoder<AS_REP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AS_REP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AS_REP */
+
 /**
  * @summary Encodes a(n) AS_REP into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_AS_REP(value: AS_REP, elGetter: $.ASN1Encoder<AS_REP>) {
   return _cached_encoder_for_AS_REP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AS_REP */
 
 /* eslint-enable */

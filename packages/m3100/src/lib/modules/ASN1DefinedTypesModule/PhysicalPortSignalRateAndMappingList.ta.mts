@@ -20,7 +20,7 @@ import {
     _decode_SignalRateAndMappingList,
     _encode_SignalRateAndMappingList,
 } from '../ASN1DefinedTypesModule/SignalRateAndMappingList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PhysicalPortSignalRateAndMappingList */
+
 /**
  * @summary PhysicalPortSignalRateAndMappingList
  * @description
@@ -41,13 +41,11 @@ export type PhysicalPortSignalRateAndMappingList =
           diverse: PhysicalPortSignalRateAndMappingList_diverse;
       } /* CHOICE_ALT_ROOT */
     | { uniform: SignalRateAndMappingList } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PhysicalPortSignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalPortSignalRateAndMappingList */
+
 let _cached_decoder_for_PhysicalPortSignalRateAndMappingList: $.ASN1Decoder<PhysicalPortSignalRateAndMappingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PhysicalPortSignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PhysicalPortSignalRateAndMappingList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalPortSignalRateAndMappingList
  * @function
@@ -68,13 +66,11 @@ export function _decode_PhysicalPortSignalRateAndMappingList(el: _Element) {
     }
     return _cached_decoder_for_PhysicalPortSignalRateAndMappingList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PhysicalPortSignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalPortSignalRateAndMappingList */
+
 let _cached_encoder_for_PhysicalPortSignalRateAndMappingList: $.ASN1Encoder<PhysicalPortSignalRateAndMappingList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PhysicalPortSignalRateAndMappingList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PhysicalPortSignalRateAndMappingList */
+
 /**
  * @summary Encodes a(n) PhysicalPortSignalRateAndMappingList into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_PhysicalPortSignalRateAndMappingList(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PhysicalPortSignalRateAndMappingList */
 
 /* eslint-enable */

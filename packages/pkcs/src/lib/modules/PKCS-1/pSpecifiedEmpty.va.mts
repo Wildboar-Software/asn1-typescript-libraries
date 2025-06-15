@@ -5,7 +5,7 @@ import { emptyString } from "../PKCS-1/emptyString.va.mjs";
 import { id_pSpecified } from "../PKCS-1/id-pSpecified.va.mjs";
 import { PSourceAlgorithm } from "../PKCS-1/PSourceAlgorithm.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pSpecifiedEmpty */
+
 /**
  * @summary pSpecifiedEmpty
  * @description
@@ -28,6 +28,5 @@ export const pSpecifiedEmpty: PSourceAlgorithm = AlgorithmIdentifier._from_objec
         _unrecognizedExtensionsList: undefined,
     }
 );
-/* END_OF_SYMBOL_DEFINITION pSpecifiedEmpty */
 
 /* eslint-enable */

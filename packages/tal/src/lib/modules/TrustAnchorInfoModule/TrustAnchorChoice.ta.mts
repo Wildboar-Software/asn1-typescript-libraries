@@ -15,7 +15,6 @@ import { TBSCertificate, _decode_TBSCertificate, _encode_TBSCertificate } from "
 import { TrustAnchorInfo, _decode_TrustAnchorInfo, _encode_TrustAnchorInfo } from "../TrustAnchorInfoModule/TrustAnchorInfo.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION TrustAnchorChoice */
 /**
  * @summary TrustAnchorChoice
  * @description
@@ -34,13 +33,9 @@ type TrustAnchorChoice =
     { certificate: Certificate } /* CHOICE_ALT_ROOT */
     | { tbsCert: TBSCertificate } /* CHOICE_ALT_ROOT */
     | { taInfo: TrustAnchorInfo } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TrustAnchorChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorChoice */
 let _cached_decoder_for_TrustAnchorChoice: $.ASN1Decoder<TrustAnchorChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorChoice */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorChoice
  * @function
@@ -56,13 +51,9 @@ function _decode_TrustAnchorChoice (el: _Element) {
 }); }
     return _cached_decoder_for_TrustAnchorChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorChoice */
 let _cached_encoder_for_TrustAnchorChoice: $.ASN1Encoder<TrustAnchorChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorChoice */
 /**
  * @summary Encodes a(n) TrustAnchorChoice into an ASN.1 Element.
  * @function
@@ -80,6 +71,5 @@ function _encode_TrustAnchorChoice (value: TrustAnchorChoice, elGetter: $.ASN1En
     return _cached_encoder_for_TrustAnchorChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorChoice */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_MRMapping,
     _encode_MRMapping,
 } from "../ServiceAdministration/MRMapping.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MRMappings */
 /**
  * @summary MRMappings
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type MRMappings = MRMapping[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION MRMappings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MRMappings */
 let _cached_decoder_for_MRMappings: $.ASN1Decoder<MRMappings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MRMappings */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MRMappings */
 /**
  * @summary Decodes an ASN.1 element into a(n) MRMappings
  * @function
@@ -39,13 +34,9 @@ export function _decode_MRMappings(el: _Element) {
     }
     return _cached_decoder_for_MRMappings(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MRMappings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MRMappings */
 let _cached_encoder_for_MRMappings: $.ASN1Encoder<MRMappings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MRMappings */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MRMappings */
 /**
  * @summary Encodes a(n) MRMappings into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_MRMappings(
     return _cached_encoder_for_MRMappings(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MRMappings */
 
 /* eslint-enable */

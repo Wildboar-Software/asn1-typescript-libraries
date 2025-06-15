@@ -9,7 +9,6 @@ import {
     _decode_SequenceMatchType,
     _encode_SequenceMatchType,
 } from "../SelectedAttributeTypes/SequenceMatchType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION sequenceMatchType */
 /**
  * @summary sequenceMatchType
  * @description
@@ -44,6 +43,5 @@ export const sequenceMatchType: ATTRIBUTE<SequenceMatchType> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sequenceMatchType */
 
 /* eslint-enable */

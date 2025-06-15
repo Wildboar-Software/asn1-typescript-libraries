@@ -22,7 +22,6 @@ import {
     _encode_MappingPair,
 } from '../GrmAttributeDefinitionModule/MappingPair.ta.mjs';
 import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.mjs';
-/* START_OF_SYMBOL_DEFINITION operationsMapping */
 /**
  * @summary operationsMapping
  * @description
@@ -64,6 +63,5 @@ export const operationsMapping: ATTRIBUTE<MappingPair> = {
         userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION operationsMapping */
 
 /* eslint-enable */

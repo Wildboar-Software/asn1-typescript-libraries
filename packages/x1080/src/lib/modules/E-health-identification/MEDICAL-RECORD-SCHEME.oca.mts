@@ -16,7 +16,7 @@ import {
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MEDICAL_RECORD_SCHEME */
+
 /**
  * @summary MEDICAL_RECORD_SCHEME
  * @description
@@ -101,6 +101,5 @@ export interface MEDICAL_RECORD_SCHEME<
      */
     readonly '&Record': Record;
 }
-/* END_OF_SYMBOL_DEFINITION MEDICAL_RECORD_SCHEME */
 
 /* eslint-enable */

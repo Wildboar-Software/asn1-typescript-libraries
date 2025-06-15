@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { WeekMask_Item, _decode_WeekMask_Item, _encode_WeekMask_Item } from "../Attribute-ASN1Module/WeekMask-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION WeekMask */
 /**
  * @summary WeekMask
  * @description
@@ -29,13 +28,9 @@ import { WeekMask_Item, _decode_WeekMask_Item, _encode_WeekMask_Item } from "../
  */
 export
 type WeekMask = WeekMask_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION WeekMask */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask */
 let _cached_decoder_for_WeekMask: $.ASN1Decoder<WeekMask> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_WeekMask */
 
-/* START_OF_SYMBOL_DEFINITION _decode_WeekMask */
 /**
  * @summary Decodes an ASN.1 element into a(n) WeekMask
  * @function
@@ -47,13 +42,9 @@ function _decode_WeekMask (el: _Element) {
     if (!_cached_decoder_for_WeekMask) { _cached_decoder_for_WeekMask = $._decodeSetOf<WeekMask_Item>(() => _decode_WeekMask_Item); }
     return _cached_decoder_for_WeekMask(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_WeekMask */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask */
 let _cached_encoder_for_WeekMask: $.ASN1Encoder<WeekMask> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_WeekMask */
 
-/* START_OF_SYMBOL_DEFINITION _encode_WeekMask */
 /**
  * @summary Encodes a(n) WeekMask into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ function _encode_WeekMask (value: WeekMask, elGetter: $.ASN1Encoder<WeekMask>) {
     return _cached_encoder_for_WeekMask(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_WeekMask */
 
 /* eslint-enable */

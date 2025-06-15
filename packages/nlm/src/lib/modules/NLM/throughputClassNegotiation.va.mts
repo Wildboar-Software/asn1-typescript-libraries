@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { aoi } from '../NLM/aoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION throughputClassNegotiation */
+
 /**
  * @summary throughputClassNegotiation
  * @description
@@ -28,6 +28,5 @@ export const throughputClassNegotiation: OBJECT_IDENTIFIER = new _OID(
     [168],
     aoi
 );
-/* END_OF_SYMBOL_DEFINITION throughputClassNegotiation */
 
 /* eslint-enable */

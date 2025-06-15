@@ -53,7 +53,6 @@ import {
     _extension_additions_list_spec_for_AdditionalActions,
 } from '../MTAAbstractService/AdditionalActions.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION MTASuppliedInformation */
 /**
  * @summary MTASuppliedInformation
  * @description
@@ -156,9 +155,7 @@ export class MTASuppliedInformation implements AdditionalActions {
 
     public static _enum_for_routing_action = _enum_for_RoutingAction;
 }
-/* END_OF_SYMBOL_DEFINITION MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MTASuppliedInformation */
 /**
  * @summary The Leading Root Component Types of MTASuppliedInformation
  * @description
@@ -185,9 +182,7 @@ export const _root_component_type_list_1_spec_for_MTASuppliedInformation: $.Comp
     new $.ComponentSpec('attempted', true, $.hasAnyTag, undefined, undefined),
     ..._root_component_type_list_1_spec_for_AdditionalActions,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MTASuppliedInformation */
 /**
  * @summary The Trailing Root Component Types of MTASuppliedInformation
  * @description
@@ -199,9 +194,7 @@ export const _root_component_type_list_1_spec_for_MTASuppliedInformation: $.Comp
 export const _root_component_type_list_2_spec_for_MTASuppliedInformation: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_AdditionalActions,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MTASuppliedInformation */
 /**
  * @summary The Extension Addition Component Types of MTASuppliedInformation
  * @description
@@ -213,13 +206,9 @@ export const _root_component_type_list_2_spec_for_MTASuppliedInformation: $.Comp
 export const _extension_additions_list_spec_for_MTASuppliedInformation: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_AdditionalActions,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MTASuppliedInformation */
 let _cached_decoder_for_MTASuppliedInformation: $.ASN1Decoder<MTASuppliedInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MTASuppliedInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) MTASuppliedInformation
  * @function
@@ -294,13 +283,9 @@ export function _decode_MTASuppliedInformation(el: _Element) {
     }
     return _cached_decoder_for_MTASuppliedInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MTASuppliedInformation */
 let _cached_encoder_for_MTASuppliedInformation: $.ASN1Encoder<MTASuppliedInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MTASuppliedInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MTASuppliedInformation */
 /**
  * @summary Encodes a(n) MTASuppliedInformation into an ASN.1 Element.
  * @function
@@ -372,6 +357,5 @@ export function _encode_MTASuppliedInformation(
     return _cached_encoder_for_MTASuppliedInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MTASuppliedInformation */
 
 /* eslint-enable */

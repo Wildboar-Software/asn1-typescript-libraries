@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { modules } from '../ObjectIdentifiers/modules.va.mjs';
-/* START_OF_SYMBOL_DEFINITION gulsSecurityExchanges */
+
 /**
  * @summary gulsSecurityExchanges
  * @description
@@ -25,6 +25,5 @@ import { modules } from '../ObjectIdentifiers/modules.va.mjs';
  * @constant
  */
 export const gulsSecurityExchanges: OBJECT_IDENTIFIER = new _OID([2], modules);
-/* END_OF_SYMBOL_DEFINITION gulsSecurityExchanges */
 
 /* eslint-enable */

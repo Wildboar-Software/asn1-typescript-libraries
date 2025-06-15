@@ -6,7 +6,7 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION X520CommonName */
+
 /**
  * @summary X520CommonName
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type X520CommonName = DirectoryString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION X520CommonName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X520CommonName */
+
 let _cached_decoder_for_X520CommonName: $.ASN1Decoder<X520CommonName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X520CommonName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_X520CommonName */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) X520CommonName
  * @function
@@ -37,13 +35,11 @@ export function _decode_X520CommonName(el: _Element) {
     }
     return _cached_decoder_for_X520CommonName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_X520CommonName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X520CommonName */
+
 let _cached_encoder_for_X520CommonName: $.ASN1Encoder<X520CommonName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X520CommonName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_X520CommonName */
+
 /**
  * @summary Encodes a(n) X520CommonName into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_X520CommonName(
     return _cached_encoder_for_X520CommonName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_X520CommonName */
 
 /* eslint-enable */

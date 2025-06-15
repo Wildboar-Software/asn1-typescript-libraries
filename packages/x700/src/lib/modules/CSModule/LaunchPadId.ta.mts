@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LaunchPadId */
 /**
  * @summary LaunchPadId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type LaunchPadId = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LaunchPadId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LaunchPadId */
 let _cached_decoder_for_LaunchPadId: $.ASN1Decoder<LaunchPadId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LaunchPadId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LaunchPadId */
 /**
  * @summary Decodes an ASN.1 element into a(n) LaunchPadId
  * @function
@@ -46,13 +41,9 @@ export function _decode_LaunchPadId(el: _Element) {
     }
     return _cached_decoder_for_LaunchPadId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LaunchPadId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LaunchPadId */
 let _cached_encoder_for_LaunchPadId: $.ASN1Encoder<LaunchPadId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LaunchPadId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LaunchPadId */
 /**
  * @summary Encodes a(n) LaunchPadId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_LaunchPadId(
     return _cached_encoder_for_LaunchPadId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LaunchPadId */
 
 /* eslint-enable */

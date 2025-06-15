@@ -15,7 +15,7 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectSel_objSelect_objectNames_Item_object */
+
 /**
  * @summary ObjectSel_objSelect_objectNames_Item_object
  * @description
@@ -30,13 +30,11 @@ export type ObjectSel_objSelect_objectNames_Item_object =
     | { names: DistinguishedName[] } /* CHOICE_ALT_ROOT */
     | { subtree: DistinguishedName } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ObjectSel_objSelect_objectNames_Item_object */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object */
+
 let _cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object: $.ASN1Decoder<ObjectSel_objSelect_objectNames_Item_object> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectSel_objSelect_objectNames_Item_object */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectSel_objSelect_objectNames_Item_object
  * @function
@@ -68,13 +66,11 @@ export function _decode_ObjectSel_objSelect_objectNames_Item_object(
     }
     return _cached_decoder_for_ObjectSel_objSelect_objectNames_Item_object(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectSel_objSelect_objectNames_Item_object */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectSel_objSelect_objectNames_Item_object */
+
 let _cached_encoder_for_ObjectSel_objSelect_objectNames_Item_object: $.ASN1Encoder<ObjectSel_objSelect_objectNames_Item_object> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectSel_objSelect_objectNames_Item_object */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectSel_objSelect_objectNames_Item_object */
+
 /**
  * @summary Encodes a(n) ObjectSel_objSelect_objectNames_Item_object into an ASN.1 Element.
  * @function
@@ -115,6 +111,5 @@ export function _encode_ObjectSel_objSelect_objectNames_Item_object(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectSel_objSelect_objectNames_Item_object */
 
 /* eslint-enable */

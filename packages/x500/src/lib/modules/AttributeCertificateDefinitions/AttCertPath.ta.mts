@@ -6,7 +6,6 @@ import {
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttCertPath */
 /**
  * @summary AttCertPath
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AttCertPath = AttributeCertificate[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AttCertPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertPath */
 let _cached_decoder_for_AttCertPath: $.ASN1Decoder<AttCertPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertPath */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttCertPath */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttCertPath
  * @function
@@ -39,13 +34,9 @@ export function _decode_AttCertPath(el: _Element) {
     }
     return _cached_decoder_for_AttCertPath(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttCertPath */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertPath */
 let _cached_encoder_for_AttCertPath: $.ASN1Encoder<AttCertPath> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertPath */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttCertPath */
 /**
  * @summary Encodes a(n) AttCertPath into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_AttCertPath(
     return _cached_encoder_for_AttCertPath(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttCertPath */
 
 /* eslint-enable */

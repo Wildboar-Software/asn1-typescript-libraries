@@ -25,7 +25,7 @@ import {
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION ArchiveTimeStamp */
+
 /**
  * @summary ArchiveTimeStamp
  * @description
@@ -89,9 +89,8 @@ class ArchiveTimeStamp {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ArchiveTimeStamp */
+
 /**
  * @summary The Leading Root Component Types of ArchiveTimeStamp
  * @description
@@ -107,9 +106,8 @@ const _root_component_type_list_1_spec_for_ArchiveTimeStamp: $.ComponentSpec[] =
     new $.ComponentSpec("reducedHashtree", true, $.hasTag(_TagClass.context, 2), undefined, undefined),
     new $.ComponentSpec("timeStamp", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ArchiveTimeStamp */
+
 /**
  * @summary The Trailing Root Component Types of ArchiveTimeStamp
  * @description
@@ -122,9 +120,8 @@ export
 const _root_component_type_list_2_spec_for_ArchiveTimeStamp: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ArchiveTimeStamp */
+
 /**
  * @summary The Extension Addition Component Types of ArchiveTimeStamp
  * @description
@@ -137,13 +134,11 @@ export
 const _extension_additions_list_spec_for_ArchiveTimeStamp: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArchiveTimeStamp */
+
 let _cached_decoder_for_ArchiveTimeStamp: $.ASN1Decoder<ArchiveTimeStamp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArchiveTimeStamp */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArchiveTimeStamp
  * @function
@@ -182,13 +177,11 @@ function _decode_ArchiveTimeStamp (el: _Element) {
 }; }
     return _cached_decoder_for_ArchiveTimeStamp(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArchiveTimeStamp */
+
 let _cached_encoder_for_ArchiveTimeStamp: $.ASN1Encoder<ArchiveTimeStamp> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArchiveTimeStamp */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArchiveTimeStamp */
+
 /**
  * @summary Encodes a(n) ArchiveTimeStamp into an ASN.1 Element.
  * @function
@@ -211,6 +204,5 @@ function _encode_ArchiveTimeStamp (value: ArchiveTimeStamp, elGetter: $.ASN1Enco
     return _cached_encoder_for_ArchiveTimeStamp(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArchiveTimeStamp */
 
 /* eslint-enable */

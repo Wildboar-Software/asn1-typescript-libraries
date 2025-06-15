@@ -15,7 +15,7 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
 import { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
+
 /**
  * @summary APPLICATION_CONTEXT
  * @description
@@ -97,6 +97,5 @@ export interface APPLICATION_CONTEXT {
    */
   readonly '&applicationContextName'?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 
 /* eslint-enable */

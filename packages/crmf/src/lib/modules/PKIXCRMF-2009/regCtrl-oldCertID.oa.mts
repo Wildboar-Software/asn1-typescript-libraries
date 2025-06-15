@@ -7,7 +7,7 @@ import {
     _encode_OldCertId,
 } from "../PKIXCRMF-2009/OldCertId.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regCtrl_oldCertID */
+
 /**
  * @summary regCtrl_oldCertID
  * @description
@@ -33,6 +33,5 @@ export const regCtrl_oldCertID: ATTRIBUTE<OldCertId> = {
     "&id": id_regCtrl_oldCertID /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regCtrl_oldCertID */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { mqvFull_sha1kdf } from "../SEC1-v1-9/mqvFull-sha1kdf.va.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet_Union3_Intersection0_Element */
 /**
  * @summary ECMQVAlgorithmSet_Union3_Intersection0_Element
  * @description
@@ -38,6 +37,5 @@ const ECMQVAlgorithmSet_Union3_Intersection0_Element: ALGORITHM = {
     "&id": mqvFull_sha1kdf /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet_Union3_Intersection0_Element */
 
 /* eslint-enable */

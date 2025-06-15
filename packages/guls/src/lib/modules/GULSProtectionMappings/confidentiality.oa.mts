@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import { dirEncryptedTransformation } from '../GulsSecurityTransformations/dirEncryptedTransformation.oa.mjs';
 import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION confidentiality */
+
 /**
  * @summary confidentiality
  * @description
@@ -43,6 +43,5 @@ export const confidentiality: PROTECTION_MAPPING = {
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION confidentiality */
 
 /* eslint-enable */

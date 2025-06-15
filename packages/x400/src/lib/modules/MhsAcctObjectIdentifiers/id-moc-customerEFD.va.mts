@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_moc } from '../MhsAcctObjectIdentifiers/id-moc.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_moc_customerEFD */
 /**
  * @summary id_moc_customerEFD
  * @description
@@ -25,6 +24,5 @@ import { id_moc } from '../MhsAcctObjectIdentifiers/id-moc.va.mjs';
  * @constant
  */
 export const id_moc_customerEFD: ID = new _OID([6], id_moc);
-/* END_OF_SYMBOL_DEFINITION id_moc_customerEFD */
 
 /* eslint-enable */

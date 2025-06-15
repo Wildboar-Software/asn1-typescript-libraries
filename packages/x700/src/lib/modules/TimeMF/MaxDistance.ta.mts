@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MaxDistance */
 /**
  * @summary MaxDistance
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MaxDistance = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MaxDistance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxDistance */
 let _cached_decoder_for_MaxDistance: $.ASN1Decoder<MaxDistance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxDistance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaxDistance */
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxDistance
  * @function
@@ -46,13 +41,9 @@ export function _decode_MaxDistance(el: _Element) {
     }
     return _cached_decoder_for_MaxDistance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaxDistance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxDistance */
 let _cached_encoder_for_MaxDistance: $.ASN1Encoder<MaxDistance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxDistance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaxDistance */
 /**
  * @summary Encodes a(n) MaxDistance into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MaxDistance(
     return _cached_encoder_for_MaxDistance(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaxDistance */
 
 /* eslint-enable */

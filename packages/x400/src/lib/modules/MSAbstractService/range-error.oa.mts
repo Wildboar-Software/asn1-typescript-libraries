@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/range-error-ParameterType.ta.mjs';
 import { err_range_error } from '../MSAccessProtocol/err-range-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION range_error */
 /**
  * @summary range_error
  * @description
@@ -54,6 +53,5 @@ export const range_error: ABSTRACT_ERROR<range_error_ParameterType> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION range_error */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MaxSkew */
 /**
  * @summary MaxSkew
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MaxSkew = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MaxSkew */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxSkew */
 let _cached_decoder_for_MaxSkew: $.ASN1Decoder<MaxSkew> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaxSkew */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaxSkew */
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxSkew
  * @function
@@ -46,13 +41,9 @@ export function _decode_MaxSkew(el: _Element) {
     }
     return _cached_decoder_for_MaxSkew(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaxSkew */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxSkew */
 let _cached_encoder_for_MaxSkew: $.ASN1Encoder<MaxSkew> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaxSkew */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaxSkew */
 /**
  * @summary Encodes a(n) MaxSkew into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MaxSkew(
     return _cached_encoder_for_MaxSkew(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaxSkew */
 
 /* eslint-enable */

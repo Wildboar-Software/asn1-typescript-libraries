@@ -15,7 +15,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DescriptionString */
 /**
  * @summary DescriptionString
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type DescriptionString = UniversalOrBMPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DescriptionString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DescriptionString */
 let _cached_decoder_for_DescriptionString: $.ASN1Decoder<DescriptionString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DescriptionString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DescriptionString */
 /**
  * @summary Decodes an ASN.1 element into a(n) DescriptionString
  * @function
@@ -46,13 +41,9 @@ export function _decode_DescriptionString(el: _Element) {
     }
     return _cached_decoder_for_DescriptionString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DescriptionString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DescriptionString */
 let _cached_encoder_for_DescriptionString: $.ASN1Encoder<DescriptionString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DescriptionString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DescriptionString */
 /**
  * @summary Encodes a(n) DescriptionString into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_DescriptionString(
     return _cached_encoder_for_DescriptionString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DescriptionString */
 
 /* eslint-enable */

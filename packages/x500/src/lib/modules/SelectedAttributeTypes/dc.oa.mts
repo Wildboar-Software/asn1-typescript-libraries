@@ -9,7 +9,6 @@ import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mj
 import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_coat_dc } from "../SelectedAttributeTypes/id-coat-dc.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dc */
 /**
  * @summary dc
  * @description
@@ -51,6 +50,5 @@ export const dc: ATTRIBUTE<IA5String> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dc */
 
 /* eslint-enable */

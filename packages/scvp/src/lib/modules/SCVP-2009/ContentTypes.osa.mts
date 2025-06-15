@@ -14,7 +14,6 @@ import { ct_scvp_certValRequest } from '../SCVP-2009/ct-scvp-certValRequest.oa.m
 import { ct_scvp_certValResponse } from '../SCVP-2009/ct-scvp-certValResponse.oa.mjs';
 import { ct_scvp_valPolRequest } from '../SCVP-2009/ct-scvp-valPolRequest.oa.mjs';
 import { ct_scvp_valPolResponse } from '../SCVP-2009/ct-scvp-valPolResponse.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentTypes */
 /**
  * @summary ContentTypes
  * @description
@@ -37,6 +36,5 @@ export const ContentTypes: CONTENT_TYPE[] = [
   ct_scvp_valPolRequest,
   ct_scvp_valPolResponse,
 ];
-/* END_OF_SYMBOL_DEFINITION ContentTypes */
 
 /* eslint-enable */

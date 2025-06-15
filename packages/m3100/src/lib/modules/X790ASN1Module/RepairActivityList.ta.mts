@@ -15,7 +15,7 @@ import {
     _decode_RepairActivityList_Item,
     _encode_RepairActivityList_Item,
 } from '../X790ASN1Module/RepairActivityList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RepairActivityList */
+
 /**
  * @summary RepairActivityList
  * @description
@@ -33,13 +33,11 @@ import {
  * ```
  */
 export type RepairActivityList = RepairActivityList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RepairActivityList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RepairActivityList */
+
 let _cached_decoder_for_RepairActivityList: $.ASN1Decoder<RepairActivityList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RepairActivityList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RepairActivityList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RepairActivityList
  * @function
@@ -54,13 +52,11 @@ export function _decode_RepairActivityList(el: _Element) {
     }
     return _cached_decoder_for_RepairActivityList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RepairActivityList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RepairActivityList */
+
 let _cached_encoder_for_RepairActivityList: $.ASN1Encoder<RepairActivityList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RepairActivityList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RepairActivityList */
+
 /**
  * @summary Encodes a(n) RepairActivityList into an ASN.1 Element.
  * @function
@@ -81,6 +77,5 @@ export function _encode_RepairActivityList(
     return _cached_encoder_for_RepairActivityList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RepairActivityList */
 
 /* eslint-enable */

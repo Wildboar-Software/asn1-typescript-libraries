@@ -11,7 +11,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EntryInformation_information_Item */
 /**
  * @summary EntryInformation_information_Item
  * @description
@@ -26,13 +25,9 @@ export type EntryInformation_information_Item =
     | { attributeType: AttributeType } /* CHOICE_ALT_ROOT */
     | { attribute: Attribute } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION EntryInformation_information_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformation_information_Item */
 let _cached_decoder_for_EntryInformation_information_Item: $.ASN1Decoder<EntryInformation_information_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformation_information_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryInformation_information_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryInformation_information_Item
  * @function
@@ -50,13 +45,9 @@ export function _decode_EntryInformation_information_Item(el: _Element) {
     }
     return _cached_decoder_for_EntryInformation_information_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryInformation_information_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformation_information_Item */
 let _cached_encoder_for_EntryInformation_information_Item: $.ASN1Encoder<EntryInformation_information_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformation_information_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryInformation_information_Item */
 /**
  * @summary Encodes a(n) EntryInformation_information_Item into an ASN.1 Element.
  * @function
@@ -83,6 +74,5 @@ export function _encode_EntryInformation_information_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryInformation_information_Item */
 
 /* eslint-enable */

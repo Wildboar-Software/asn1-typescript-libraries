@@ -7,7 +7,6 @@ import {
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";
 import { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdEncAlgMatch */
 /**
  * @summary pwdEncAlgMatch
  * @description
@@ -39,6 +38,5 @@ export const pwdEncAlgMatch: MATCHING_RULE<PwdEncAlg> = {
     "&id": id_mr_pwdEncAlgMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdEncAlgMatch */
 
 /* eslint-enable */

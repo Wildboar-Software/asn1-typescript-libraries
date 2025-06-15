@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActionTypeId */
+
 /**
  * @summary ActionTypeId
  * @description
@@ -30,13 +30,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ActionTypeId =
   | { globalForm: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
   | { localForm: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ActionTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionTypeId */
+
 let _cached_decoder_for_ActionTypeId: $.ASN1Decoder<ActionTypeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionTypeId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionTypeId
  * @function
@@ -62,13 +60,11 @@ export function _decode_ActionTypeId(el: _Element) {
   }
   return _cached_decoder_for_ActionTypeId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionTypeId */
+
 let _cached_encoder_for_ActionTypeId: $.ASN1Encoder<ActionTypeId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionTypeId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionTypeId */
+
 /**
  * @summary Encodes a(n) ActionTypeId into an ASN.1 Element.
  * @function
@@ -102,6 +98,5 @@ export function _encode_ActionTypeId(
   return _cached_encoder_for_ActionTypeId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionTypeId */
 
 /* eslint-enable */

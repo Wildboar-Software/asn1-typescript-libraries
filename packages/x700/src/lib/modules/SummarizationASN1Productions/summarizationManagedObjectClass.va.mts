@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION summarizationManagedObjectClass */
 /**
  * @summary summarizationManagedObjectClass
  * @description
@@ -29,6 +28,5 @@ export const summarizationManagedObjectClass: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part13 */ 13, /* managedObjectClass */ 3],
     joint_iso_ccitt
 );
-/* END_OF_SYMBOL_DEFINITION summarizationManagedObjectClass */
 
 /* eslint-enable */

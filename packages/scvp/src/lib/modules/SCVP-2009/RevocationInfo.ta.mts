@@ -25,7 +25,6 @@ import {
   _decode_OtherRevInfo,
   _encode_OtherRevInfo,
 } from '../SCVP-2009/OtherRevInfo.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevocationInfo */
 /**
  * @summary RevocationInfo
  * @description
@@ -46,13 +45,9 @@ export type RevocationInfo =
   | { delta_crl: CertificateList } /* CHOICE_ALT_ROOT */
   | { ocsp: OCSPResponse } /* CHOICE_ALT_ROOT */
   | { other: OtherRevInfo } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RevocationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfo */
 let _cached_decoder_for_RevocationInfo: $.ASN1Decoder<RevocationInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevocationInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevocationInfo
  * @function
@@ -84,13 +79,9 @@ export function _decode_RevocationInfo(el: _Element) {
   }
   return _cached_decoder_for_RevocationInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevocationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfo */
 let _cached_encoder_for_RevocationInfo: $.ASN1Encoder<RevocationInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevocationInfo */
 /**
  * @summary Encodes a(n) RevocationInfo into an ASN.1 Element.
  * @function
@@ -136,6 +127,5 @@ export function _encode_RevocationInfo(
   return _cached_encoder_for_RevocationInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevocationInfo */
 
 /* eslint-enable */

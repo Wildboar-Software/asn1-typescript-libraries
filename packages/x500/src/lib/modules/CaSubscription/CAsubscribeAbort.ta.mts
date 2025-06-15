@@ -16,7 +16,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CAsubscribeAbort */
 /**
  * @summary CAsubscribeAbort
  * @description
@@ -84,9 +83,7 @@ export class CAsubscribeAbort {
 
     public static _enum_for_reason = _enum_for_CASP_error;
 }
-/* END_OF_SYMBOL_DEFINITION CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CAsubscribeAbort */
 /**
  * @summary The Leading Root Component Types of CAsubscribeAbort
  * @description
@@ -111,9 +108,7 @@ export const _root_component_type_list_1_spec_for_CAsubscribeAbort: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CAsubscribeAbort */
 /**
  * @summary The Trailing Root Component Types of CAsubscribeAbort
  * @description
@@ -123,9 +118,7 @@ export const _root_component_type_list_1_spec_for_CAsubscribeAbort: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CAsubscribeAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CAsubscribeAbort */
 /**
  * @summary The Extension Addition Component Types of CAsubscribeAbort
  * @description
@@ -135,13 +128,9 @@ export const _root_component_type_list_2_spec_for_CAsubscribeAbort: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_CAsubscribeAbort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CAsubscribeAbort */
 let _cached_decoder_for_CAsubscribeAbort: $.ASN1Decoder<CAsubscribeAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CAsubscribeAbort */
 /**
  * @summary Decodes an ASN.1 element into a(n) CAsubscribeAbort
  * @function
@@ -172,13 +161,9 @@ export function _decode_CAsubscribeAbort(el: _Element) {
     }
     return _cached_decoder_for_CAsubscribeAbort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CAsubscribeAbort */
 let _cached_encoder_for_CAsubscribeAbort: $.ASN1Encoder<CAsubscribeAbort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CAsubscribeAbort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CAsubscribeAbort */
 /**
  * @summary Encodes a(n) CAsubscribeAbort into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ export function _encode_CAsubscribeAbort(
     return _cached_encoder_for_CAsubscribeAbort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CAsubscribeAbort */
 
 /* eslint-enable */

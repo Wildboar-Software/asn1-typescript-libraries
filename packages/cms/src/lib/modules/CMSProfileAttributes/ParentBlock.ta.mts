@@ -6,7 +6,7 @@ import {
     _decode_HashPointer,
     _encode_HashPointer,
 } from "../CMSProfileAttributes/HashPointer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ParentBlock */
+
 /**
  * @summary ParentBlock
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type ParentBlock = HashPointer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ParentBlock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ParentBlock */
+
 let _cached_decoder_for_ParentBlock: $.ASN1Decoder<ParentBlock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ParentBlock */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ParentBlock */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ParentBlock
  * @function
@@ -37,13 +35,11 @@ export function _decode_ParentBlock(el: _Element) {
     }
     return _cached_decoder_for_ParentBlock(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ParentBlock */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ParentBlock */
+
 let _cached_encoder_for_ParentBlock: $.ASN1Encoder<ParentBlock> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ParentBlock */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ParentBlock */
+
 /**
  * @summary Encodes a(n) ParentBlock into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_ParentBlock(
     return _cached_encoder_for_ParentBlock(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ParentBlock */
 
 /* eslint-enable */

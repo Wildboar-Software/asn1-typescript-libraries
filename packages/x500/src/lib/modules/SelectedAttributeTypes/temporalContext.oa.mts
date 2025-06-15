@@ -12,7 +12,6 @@ import {
     _decode_TimeSpecification,
     _encode_TimeSpecification,
 } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION temporalContext */
 /**
  * @summary temporalContext
  * @description
@@ -45,6 +44,5 @@ export const temporalContext: CONTEXT<TimeSpecification, TimeAssertion> = {
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&absentMatch": TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION temporalContext */
 
 /* eslint-enable */

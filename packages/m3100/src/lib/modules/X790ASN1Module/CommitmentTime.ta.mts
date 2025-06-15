@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CommitmentTime */
+
 /**
  * @summary CommitmentTime
  * @description
@@ -34,13 +34,11 @@ export type CommitmentTime =
     | { clearedTime: GeneralizedTime } /* CHOICE_ALT_ROOT */
     | { estimatedClearTime: GeneralizedTime } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CommitmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommitmentTime */
+
 let _cached_decoder_for_CommitmentTime: $.ASN1Decoder<CommitmentTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommitmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommitmentTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommitmentTime
  * @function
@@ -74,13 +72,11 @@ export function _decode_CommitmentTime(el: _Element) {
     }
     return _cached_decoder_for_CommitmentTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommitmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommitmentTime */
+
 let _cached_encoder_for_CommitmentTime: $.ASN1Encoder<CommitmentTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommitmentTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommitmentTime */
+
 /**
  * @summary Encodes a(n) CommitmentTime into an ASN.1 Element.
  * @function
@@ -120,6 +116,5 @@ export function _encode_CommitmentTime(
     return _cached_encoder_for_CommitmentTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommitmentTime */
 
 /* eslint-enable */

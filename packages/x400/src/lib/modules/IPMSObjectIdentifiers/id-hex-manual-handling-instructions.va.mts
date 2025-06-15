@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_hex_manual_handling_instructions */
 /**
  * @summary id_hex_manual_handling_instructions
  * @description
@@ -25,6 +24,5 @@ import { id_hex } from '../IPMSObjectIdentifiers/id-hex.va.mjs';
  * @constant
  */
 export const id_hex_manual_handling_instructions: ID = new _OID([10], id_hex);
-/* END_OF_SYMBOL_DEFINITION id_hex_manual_handling_instructions */
 
 /* eslint-enable */

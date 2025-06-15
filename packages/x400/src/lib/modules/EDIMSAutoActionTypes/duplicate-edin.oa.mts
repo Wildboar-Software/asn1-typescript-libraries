@@ -19,7 +19,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { id_aae_duplicate_edin } from '../EDIMSObjectIdentifiers/id-aae-duplicate-edin.va.mjs';
 import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION duplicate_edin */
 /**
  * @summary duplicate_edin
  * @description
@@ -49,6 +48,5 @@ export const duplicate_edin: AUTO_ACTION_ERROR = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION duplicate_edin */
 
 /* eslint-enable */

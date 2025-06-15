@@ -4,7 +4,7 @@ import { signcryptedAttributes } from "../CMSSigncryption/signcryptedAttributes.
 import { signcryptedComponents } from "../CMSSigncryption/signcryptedComponents.oa.mjs";
 import { signcryptedContent } from "../CMSSigncryption/signcryptedContent.oa.mjs";
 import { signcryptedEnveloped } from "../CMSSigncryption/signcryptedEnveloped.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ProcessingModes */
+
 /**
  * @summary ProcessingModes
  * @description
@@ -31,6 +31,5 @@ export const ProcessingModes: MODE[] = [
     signcryptedContent,
     signcryptedEnveloped,
 ];
-/* END_OF_SYMBOL_DEFINITION ProcessingModes */
 
 /* eslint-enable */

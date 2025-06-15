@@ -15,7 +15,7 @@ import {
   _decode_Attribute_Extensions_Pattern_Item,
   _encode_Attribute_Extensions_Pattern_Item,
 } from '../ISO8571-FTAM/Attribute-Extensions-Pattern-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Attribute_Extensions_Pattern */
+
 /**
  * @summary Attribute_Extensions_Pattern
  * @description
@@ -40,13 +40,11 @@ import {
  * ```
  */
 export type Attribute_Extensions_Pattern = Attribute_Extensions_Pattern_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Attribute_Extensions_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Extensions_Pattern */
+
 let _cached_decoder_for_Attribute_Extensions_Pattern: $.ASN1Decoder<Attribute_Extensions_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_Extensions_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Attribute_Extensions_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute_Extensions_Pattern
  * @function
@@ -61,13 +59,11 @@ export function _decode_Attribute_Extensions_Pattern(el: _Element) {
   }
   return _cached_decoder_for_Attribute_Extensions_Pattern(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Attribute_Extensions_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Extensions_Pattern */
+
 let _cached_encoder_for_Attribute_Extensions_Pattern: $.ASN1Encoder<Attribute_Extensions_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_Extensions_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Attribute_Extensions_Pattern */
+
 /**
  * @summary Encodes a(n) Attribute_Extensions_Pattern into an ASN.1 Element.
  * @function
@@ -88,6 +84,5 @@ export function _encode_Attribute_Extensions_Pattern(
   return _cached_encoder_for_Attribute_Extensions_Pattern(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Attribute_Extensions_Pattern */
 
 /* eslint-enable */

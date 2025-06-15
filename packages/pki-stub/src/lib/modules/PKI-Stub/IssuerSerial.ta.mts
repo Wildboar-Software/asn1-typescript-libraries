@@ -27,7 +27,6 @@ import {
     _encode_UniqueIdentifier,
 } from "../PKI-Stub/UniqueIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION IssuerSerial */
 /**
  * @summary IssuerSerial
  * @description
@@ -95,9 +94,7 @@ export class IssuerSerial {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION IssuerSerial */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuerSerial */
 /**
  * @summary The Leading Root Component Types of IssuerSerial
  * @description
@@ -130,9 +127,7 @@ export const _root_component_type_list_1_spec_for_IssuerSerial: $.ComponentSpec[
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuerSerial */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerial */
 /**
  * @summary The Trailing Root Component Types of IssuerSerial
  * @description
@@ -143,9 +138,7 @@ export const _root_component_type_list_1_spec_for_IssuerSerial: $.ComponentSpec[
  */
 export const _root_component_type_list_2_spec_for_IssuerSerial: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerial */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerial */
 /**
  * @summary The Extension Addition Component Types of IssuerSerial
  * @description
@@ -156,9 +149,7 @@ export const _root_component_type_list_2_spec_for_IssuerSerial: $.ComponentSpec[
  */
 export const _extension_additions_list_spec_for_IssuerSerial: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerial */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IssuerSerial */
 /**
  * @summary Decodes an ASN.1 element into a(n) IssuerSerial
  * @function
@@ -202,9 +193,7 @@ export function _decode_IssuerSerial(el: _Element) {
         _unrecognizedExtensionsList
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IssuerSerial */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IssuerSerial */
 /**
  * @summary Encodes a(n) IssuerSerial into an ASN.1 Element.
  * @function
@@ -233,6 +222,5 @@ export function _encode_IssuerSerial(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IssuerSerial */
 
 /* eslint-enable */

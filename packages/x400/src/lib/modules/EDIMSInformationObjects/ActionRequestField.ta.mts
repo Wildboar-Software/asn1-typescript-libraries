@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActionRequestField */
 /**
  * @summary ActionRequestField
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ActionRequestField = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION ActionRequestField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionRequestField */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionRequestField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionRequestField */
 export const _decode_ActionRequestField = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_ActionRequestField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionRequestField */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionRequestField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionRequestField */
 export const _encode_ActionRequestField = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionRequestField */
 
 /* eslint-enable */

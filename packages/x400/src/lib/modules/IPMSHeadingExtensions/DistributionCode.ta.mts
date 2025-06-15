@@ -22,7 +22,6 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DistributionCode */
 /**
  * @summary DistributionCode
  * @description
@@ -83,9 +82,7 @@ export class DistributionCode {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DistributionCode */
 /**
  * @summary The Leading Root Component Types of DistributionCode
  * @description
@@ -117,9 +114,7 @@ export const _root_component_type_list_1_spec_for_DistributionCode: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DistributionCode */
 /**
  * @summary The Trailing Root Component Types of DistributionCode
  * @description
@@ -129,9 +124,7 @@ export const _root_component_type_list_1_spec_for_DistributionCode: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DistributionCode: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DistributionCode */
 /**
  * @summary The Extension Addition Component Types of DistributionCode
  * @description
@@ -141,13 +134,9 @@ export const _root_component_type_list_2_spec_for_DistributionCode: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_DistributionCode: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributionCode */
 let _cached_decoder_for_DistributionCode: $.ASN1Decoder<DistributionCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DistributionCode */
 /**
  * @summary Decodes an ASN.1 element into a(n) DistributionCode
  * @function
@@ -196,13 +185,9 @@ export function _decode_DistributionCode(el: _Element) {
     }
     return _cached_decoder_for_DistributionCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributionCode */
 let _cached_encoder_for_DistributionCode: $.ASN1Encoder<DistributionCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributionCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DistributionCode */
 /**
  * @summary Encodes a(n) DistributionCode into an ASN.1 Element.
  * @function
@@ -243,6 +228,5 @@ export function _encode_DistributionCode(
     return _cached_encoder_for_DistributionCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DistributionCode */
 
 /* eslint-enable */

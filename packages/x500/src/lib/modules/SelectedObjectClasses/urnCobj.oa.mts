@@ -6,7 +6,6 @@ import {
 import { top } from "../InformationFramework/top.oa.mjs";
 import { urnC } from "../SelectedAttributeTypes/urnC.oa.mjs";
 import { id_oc_urnCobj } from "../SelectedObjectClasses/id-oc-urnCobj.va.mjs";
-/* START_OF_SYMBOL_DEFINITION urnCobj */
 /**
  * @summary urnCobj
  * @description
@@ -35,6 +34,5 @@ export const urnCobj: OBJECT_CLASS = {
     "&id": id_oc_urnCobj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION urnCobj */
 
 /* eslint-enable */

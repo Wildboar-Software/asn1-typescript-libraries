@@ -19,7 +19,6 @@ export {
     _encode_SIGNATURE as _encode_ProofOfSubmission,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ProofOfSubmission */
 /**
  * @summary ProofOfSubmission
  * @description
@@ -38,6 +37,5 @@ export {
  * ```
  */
 export type ProofOfSubmission = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProofOfSubmission */
 
 /* eslint-enable */

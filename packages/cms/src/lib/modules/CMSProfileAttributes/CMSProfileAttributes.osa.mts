@@ -8,7 +8,7 @@ import { aa_sidechains } from "../CMSProfileAttributes/aa-sidechains.oa.mjs";
 import { aa_signerInfo } from "../CMSProfileAttributes/aa-signerInfo.oa.mjs";
 import { aa_signerInfos } from "../CMSProfileAttributes/aa-signerInfos.oa.mjs";
 import { aa_timeStamped } from "../CMSProfileAttributes/aa-timeStamped.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION CMSProfileAttributes */
+
 /**
  * @summary CMSProfileAttributes
  * @description
@@ -36,6 +36,5 @@ export const CMSProfileAttributes: ATTRIBUTE[] = [
     aa_sidechains,
     aa_parentBlock,
 ];
-/* END_OF_SYMBOL_DEFINITION CMSProfileAttributes */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
   _decode_Attribute,
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GetInfoStatus */
+
 /**
  * @summary GetInfoStatus
  * @description
@@ -37,13 +37,11 @@ import {
 export type GetInfoStatus =
   | { attributeIdError: AttributeIdError } /* CHOICE_ALT_ROOT */
   | { attribute: Attribute } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION GetInfoStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GetInfoStatus */
+
 let _cached_decoder_for_GetInfoStatus: $.ASN1Decoder<GetInfoStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GetInfoStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GetInfoStatus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GetInfoStatus
  * @function
@@ -67,13 +65,11 @@ export function _decode_GetInfoStatus(el: _Element) {
   }
   return _cached_decoder_for_GetInfoStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GetInfoStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GetInfoStatus */
+
 let _cached_encoder_for_GetInfoStatus: $.ASN1Encoder<GetInfoStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GetInfoStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GetInfoStatus */
+
 /**
  * @summary Encodes a(n) GetInfoStatus into an ASN.1 Element.
  * @function
@@ -107,6 +103,5 @@ export function _encode_GetInfoStatus(
   return _cached_encoder_for_GetInfoStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GetInfoStatus */
 
 /* eslint-enable */

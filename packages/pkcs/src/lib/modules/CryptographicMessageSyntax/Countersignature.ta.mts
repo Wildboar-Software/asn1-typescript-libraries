@@ -6,7 +6,7 @@ import {
     _decode_SignerInfo,
     _encode_SignerInfo,
 } from "../CryptographicMessageSyntax/SignerInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Countersignature */
+
 /**
  * @summary Countersignature
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Countersignature = SignerInfo; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Countersignature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Countersignature */
+
 let _cached_decoder_for_Countersignature: $.ASN1Decoder<Countersignature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Countersignature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Countersignature */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Countersignature
  * @function
@@ -37,13 +35,11 @@ export function _decode_Countersignature(el: _Element) {
     }
     return _cached_decoder_for_Countersignature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Countersignature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Countersignature */
+
 let _cached_encoder_for_Countersignature: $.ASN1Encoder<Countersignature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Countersignature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Countersignature */
+
 /**
  * @summary Encodes a(n) Countersignature into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_Countersignature(
     return _cached_encoder_for_Countersignature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Countersignature */
 
 /* eslint-enable */

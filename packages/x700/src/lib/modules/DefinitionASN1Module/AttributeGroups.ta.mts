@@ -15,7 +15,6 @@ import {
     _decode_AttributeGroups_Item,
     _encode_AttributeGroups_Item,
 } from '../DefinitionASN1Module/AttributeGroups-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AttributeGroups */
 /**
  * @summary AttributeGroups
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type AttributeGroups = AttributeGroups_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AttributeGroups */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeGroups */
 let _cached_decoder_for_AttributeGroups: $.ASN1Decoder<AttributeGroups> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeGroups */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeGroups */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeGroups
  * @function
@@ -50,13 +45,9 @@ export function _decode_AttributeGroups(el: _Element) {
     }
     return _cached_decoder_for_AttributeGroups(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeGroups */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeGroups */
 let _cached_encoder_for_AttributeGroups: $.ASN1Encoder<AttributeGroups> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeGroups */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeGroups */
 /**
  * @summary Encodes a(n) AttributeGroups into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_AttributeGroups(
     return _cached_encoder_for_AttributeGroups(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeGroups */
 
 /* eslint-enable */

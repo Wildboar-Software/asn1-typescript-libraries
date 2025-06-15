@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DesignatedISChange */
 /**
  * @summary DesignatedISChange
  * @description
@@ -26,9 +25,7 @@ export enum _enum_for_DesignatedISChange {
   resigned = 0,
   elected = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DesignatedISChange */
 
-/* START_OF_SYMBOL_DEFINITION DesignatedISChange */
 /**
  * @summary DesignatedISChange
  * @description
@@ -40,9 +37,7 @@ export enum _enum_for_DesignatedISChange {
  * ```@enum {number}
  */
 export type DesignatedISChange = _enum_for_DesignatedISChange;
-/* END_OF_SYMBOL_DEFINITION DesignatedISChange */
 
-/* START_OF_SYMBOL_DEFINITION DesignatedISChange */
 /**
  * @summary DesignatedISChange
  * @description
@@ -54,9 +49,7 @@ export type DesignatedISChange = _enum_for_DesignatedISChange;
  * ```@enum {number}
  */
 export const DesignatedISChange = _enum_for_DesignatedISChange;
-/* END_OF_SYMBOL_DEFINITION DesignatedISChange */
 
-/* START_OF_SYMBOL_DEFINITION DesignatedISChange_resigned */
 /**
  * @summary DesignatedISChange_resigned
  * @constant
@@ -64,9 +57,7 @@ export const DesignatedISChange = _enum_for_DesignatedISChange;
  */
 export const DesignatedISChange_resigned: DesignatedISChange =
   DesignatedISChange.resigned; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DesignatedISChange_resigned */
 
-/* START_OF_SYMBOL_DEFINITION resigned */
 /**
  * @summary resigned
  * @constant
@@ -74,9 +65,7 @@ export const DesignatedISChange_resigned: DesignatedISChange =
  */
 export const resigned: DesignatedISChange =
   DesignatedISChange.resigned; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION resigned */
 
-/* START_OF_SYMBOL_DEFINITION DesignatedISChange_elected */
 /**
  * @summary DesignatedISChange_elected
  * @constant
@@ -84,9 +73,7 @@ export const resigned: DesignatedISChange =
  */
 export const DesignatedISChange_elected: DesignatedISChange =
   DesignatedISChange.elected; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DesignatedISChange_elected */
 
-/* START_OF_SYMBOL_DEFINITION elected */
 /**
  * @summary elected
  * @constant
@@ -94,21 +81,12 @@ export const DesignatedISChange_elected: DesignatedISChange =
  */
 export const elected: DesignatedISChange =
   DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION elected */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DesignatedISChange */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DesignatedISChange */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DesignatedISChange */
 export const _decode_DesignatedISChange = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_DesignatedISChange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DesignatedISChange */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DesignatedISChange */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DesignatedISChange */
 export const _encode_DesignatedISChange = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DesignatedISChange */
 
 /* eslint-enable */

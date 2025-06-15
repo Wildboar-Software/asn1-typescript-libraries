@@ -14,7 +14,6 @@ import {
     _decode_SettlementPolicy,
     _encode_SettlementPolicy,
 } from '../MhsAcctAsn1Module/SettlementPolicy.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION d36 */
 /**
  * @summary d36
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const d36: SettlementPolicy = { localForm: 0 };
-/* END_OF_SYMBOL_DEFINITION d36 */
 
 /* eslint-enable */

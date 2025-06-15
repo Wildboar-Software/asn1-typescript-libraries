@@ -19,7 +19,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeTypeInformation */
 /**
  * @summary AttributeTypeInformation
  * @description
@@ -183,9 +182,7 @@ export class AttributeTypeInformation {
 
     public static _enum_for_application = _enum_for_AttributeUsage;
 }
-/* END_OF_SYMBOL_DEFINITION AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeInformation */
 /**
  * @summary The Leading Root Component Types of AttributeTypeInformation
  * @description
@@ -259,9 +256,7 @@ export const _root_component_type_list_1_spec_for_AttributeTypeInformation: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeInformation */
 /**
  * @summary The Trailing Root Component Types of AttributeTypeInformation
  * @description
@@ -271,9 +266,7 @@ export const _root_component_type_list_1_spec_for_AttributeTypeInformation: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeTypeInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeInformation */
 /**
  * @summary The Extension Addition Component Types of AttributeTypeInformation
  * @description
@@ -283,13 +276,9 @@ export const _root_component_type_list_2_spec_for_AttributeTypeInformation: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeTypeInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeInformation */
 let _cached_decoder_for_AttributeTypeInformation: $.ASN1Decoder<AttributeTypeInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeTypeInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeTypeInformation
  * @function
@@ -390,13 +379,9 @@ export function _decode_AttributeTypeInformation(el: _Element) {
     }
     return _cached_decoder_for_AttributeTypeInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeInformation */
 let _cached_encoder_for_AttributeTypeInformation: $.ASN1Encoder<AttributeTypeInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeTypeInformation */
 /**
  * @summary Encodes a(n) AttributeTypeInformation into an ASN.1 Element.
  * @function
@@ -515,6 +500,5 @@ export function _encode_AttributeTypeInformation(
     return _cached_encoder_for_AttributeTypeInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeTypeInformation */
 
 /* eslint-enable */

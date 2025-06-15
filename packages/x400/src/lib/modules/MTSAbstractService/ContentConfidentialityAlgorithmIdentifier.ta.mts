@@ -15,7 +15,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContentConfidentialityAlgorithmIdentifier */
 /**
  * @summary ContentConfidentialityAlgorithmIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ContentConfidentialityAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContentConfidentialityAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier */
 let _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier: $.ASN1Decoder<ContentConfidentialityAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentConfidentialityAlgorithmIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentConfidentialityAlgorithmIdentifier
  * @function
@@ -48,13 +43,9 @@ export function _decode_ContentConfidentialityAlgorithmIdentifier(
     }
     return _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentConfidentialityAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier */
 let _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier: $.ASN1Encoder<ContentConfidentialityAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentConfidentialityAlgorithmIdentifier */
 /**
  * @summary Encodes a(n) ContentConfidentialityAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ContentConfidentialityAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentConfidentialityAlgorithmIdentifier */
 
 /* eslint-enable */

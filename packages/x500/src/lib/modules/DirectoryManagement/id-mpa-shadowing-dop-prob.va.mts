@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mpa } from "../DirectoryManagement/id-mpa.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mpa_shadowing_dop_prob */
 /**
  * @summary id_mpa_shadowing_dop_prob
  * @description
@@ -18,6 +17,5 @@ export const id_mpa_shadowing_dop_prob: OBJECT_IDENTIFIER = new _OID(
     [26],
     id_mpa
 );
-/* END_OF_SYMBOL_DEFINITION id_mpa_shadowing_dop_prob */
 
 /* eslint-enable */

@@ -9,7 +9,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
 import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION REQUEST_ATTRIBUTE */
 /**
  * @summary REQUEST_ATTRIBUTE
  * @description
@@ -98,6 +97,5 @@ export interface REQUEST_ATTRIBUTE {
      */
     readonly "&includeSubtypes"?: BOOLEAN;
 }
-/* END_OF_SYMBOL_DEFINITION REQUEST_ATTRIBUTE */
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 import { id_mr_generalizedTimeMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeMatch.va.mjs";
-/* START_OF_SYMBOL_DEFINITION generalizedTimeMatch */
 /**
  * @summary generalizedTimeMatch
  * @description
@@ -37,6 +36,5 @@ export const generalizedTimeMatch: MATCHING_RULE<GeneralizedTime> = {
     "&id": id_mr_generalizedTimeMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION generalizedTimeMatch */
 
 /* eslint-enable */

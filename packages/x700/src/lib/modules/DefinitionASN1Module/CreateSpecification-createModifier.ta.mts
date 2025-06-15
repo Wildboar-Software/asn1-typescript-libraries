@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CreateSpecification_createModifier */
+
 /**
  * @summary CreateSpecification_createModifier
  * @description
@@ -24,45 +24,39 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CreateSpecification_createModifier = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION CreateSpecification_createModifier */
 
-/* START_OF_SYMBOL_DEFINITION CreateSpecification_createModifier_withReferenceObject */
+
 /**
  * @summary CreateSpecification_createModifier_withReferenceObject
  * @constant
  */
 export const CreateSpecification_createModifier_withReferenceObject: number = 0; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION CreateSpecification_createModifier_withReferenceObject */
 
-/* START_OF_SYMBOL_DEFINITION withReferenceObject */
+
 /**
  * @summary withReferenceObject
  * @constant
  */
 export const withReferenceObject: number = CreateSpecification_createModifier_withReferenceObject; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION withReferenceObject */
 
-/* START_OF_SYMBOL_DEFINITION CreateSpecification_createModifier_withAutomaticInstanceNaming */
+
 /**
  * @summary CreateSpecification_createModifier_withAutomaticInstanceNaming
  * @constant
  */
 export const CreateSpecification_createModifier_withAutomaticInstanceNaming: number = 1; /* LONG_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION CreateSpecification_createModifier_withAutomaticInstanceNaming */
 
-/* START_OF_SYMBOL_DEFINITION withAutomaticInstanceNaming */
+
 /**
  * @summary withAutomaticInstanceNaming
  * @constant
  */
 export const withAutomaticInstanceNaming: number = CreateSpecification_createModifier_withAutomaticInstanceNaming; /* SHORT_NAMED_BIT */
-/* END_OF_SYMBOL_DEFINITION withAutomaticInstanceNaming */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateSpecification_createModifier */
+
 let _cached_decoder_for_CreateSpecification_createModifier: $.ASN1Decoder<CreateSpecification_createModifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CreateSpecification_createModifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CreateSpecification_createModifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CreateSpecification_createModifier
  * @function
@@ -76,13 +70,11 @@ export function _decode_CreateSpecification_createModifier(el: _Element) {
     }
     return _cached_decoder_for_CreateSpecification_createModifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CreateSpecification_createModifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateSpecification_createModifier */
+
 let _cached_encoder_for_CreateSpecification_createModifier: $.ASN1Encoder<CreateSpecification_createModifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CreateSpecification_createModifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CreateSpecification_createModifier */
+
 /**
  * @summary Encodes a(n) CreateSpecification_createModifier into an ASN.1 Element.
  * @function
@@ -104,6 +96,5 @@ export function _encode_CreateSpecification_createModifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CreateSpecification_createModifier */
 
 /* eslint-enable */

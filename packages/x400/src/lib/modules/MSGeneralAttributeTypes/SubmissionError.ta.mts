@@ -41,7 +41,6 @@ import {
     _decode_EntryClassErrorParameter,
     _encode_EntryClassErrorParameter,
 } from '../MSAbstractService/EntryClassErrorParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubmissionError */
 /**
  * @summary SubmissionError
  * @description
@@ -80,13 +79,9 @@ export type SubmissionError =
     | { message_group_error: MessageGroupErrorParameter } /* CHOICE_ALT_ROOT */
     | { ms_extension_error: MSExtensionErrorParameter } /* CHOICE_ALT_ROOT */
     | { entry_class_error: EntryClassErrorParameter } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SubmissionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionError */
 let _cached_decoder_for_SubmissionError: $.ASN1Decoder<SubmissionError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubmissionError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubmissionError */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionError
  * @function
@@ -162,13 +157,9 @@ export function _decode_SubmissionError(el: _Element) {
     }
     return _cached_decoder_for_SubmissionError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubmissionError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionError */
 let _cached_encoder_for_SubmissionError: $.ASN1Encoder<SubmissionError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubmissionError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubmissionError */
 /**
  * @summary Encodes a(n) SubmissionError into an ASN.1 Element.
  * @function
@@ -262,6 +253,5 @@ export function _encode_SubmissionError(
     return _cached_encoder_for_SubmissionError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubmissionError */
 
 /* eslint-enable */

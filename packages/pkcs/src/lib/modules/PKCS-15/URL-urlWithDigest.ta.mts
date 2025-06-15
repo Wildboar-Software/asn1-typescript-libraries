@@ -11,7 +11,7 @@ import {
     _decode_DigestInfoWithDefault,
     _encode_DigestInfoWithDefault,
 } from "../PKCS-15/DigestInfoWithDefault.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION URL_urlWithDigest */
+
 /**
  * @summary URL_urlWithDigest
  * @description
@@ -58,9 +58,8 @@ export class URL_urlWithDigest {
         return new URL_urlWithDigest(_o.url, _o.digest);
     }
 }
-/* END_OF_SYMBOL_DEFINITION URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_URL_urlWithDigest */
+
 /**
  * @summary The Leading Root Component Types of URL_urlWithDigest
  * @description
@@ -85,9 +84,8 @@ export const _root_component_type_list_1_spec_for_URL_urlWithDigest: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_URL_urlWithDigest */
+
 /**
  * @summary The Trailing Root Component Types of URL_urlWithDigest
  * @description
@@ -97,9 +95,8 @@ export const _root_component_type_list_1_spec_for_URL_urlWithDigest: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_URL_urlWithDigest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_URL_urlWithDigest */
+
 /**
  * @summary The Extension Addition Component Types of URL_urlWithDigest
  * @description
@@ -109,13 +106,11 @@ export const _root_component_type_list_2_spec_for_URL_urlWithDigest: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_URL_urlWithDigest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_URL_urlWithDigest */
+
 let _cached_decoder_for_URL_urlWithDigest: $.ASN1Decoder<URL_urlWithDigest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_URL_urlWithDigest */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) URL_urlWithDigest
  * @function
@@ -146,13 +141,11 @@ export function _decode_URL_urlWithDigest(el: _Element) {
     }
     return _cached_decoder_for_URL_urlWithDigest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_URL_urlWithDigest */
+
 let _cached_encoder_for_URL_urlWithDigest: $.ASN1Encoder<URL_urlWithDigest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_URL_urlWithDigest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_URL_urlWithDigest */
+
 /**
  * @summary Encodes a(n) URL_urlWithDigest into an ASN.1 Element.
  * @function
@@ -184,6 +177,5 @@ export function _encode_URL_urlWithDigest(
     return _cached_encoder_for_URL_urlWithDigest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_URL_urlWithDigest */
 
 /* eslint-enable */

@@ -13,7 +13,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
+
 /**
  * @summary EncryptedContentInfo
  * @description
@@ -78,9 +78,8 @@ export class EncryptedContentInfo<_Type> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedContentInfo */
+
 /**
  * @summary The Leading Root Component Types of EncryptedContentInfo
  * @description
@@ -112,9 +111,8 @@ export const _root_component_type_list_1_spec_for_EncryptedContentInfo: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedContentInfo */
+
 /**
  * @summary The Trailing Root Component Types of EncryptedContentInfo
  * @description
@@ -124,9 +122,8 @@ export const _root_component_type_list_1_spec_for_EncryptedContentInfo: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedContentInfo */
+
 /**
  * @summary The Extension Addition Component Types of EncryptedContentInfo
  * @description
@@ -136,9 +133,8 @@ export const _root_component_type_list_2_spec_for_EncryptedContentInfo: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_EncryptedContentInfo */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) EncryptedContentInfo
  * @function
@@ -184,9 +180,8 @@ export function _get_decoder_for_EncryptedContentInfo<Type>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_EncryptedContentInfo */
+
 /**
  * @summary Returns a function that will encode a(n) EncryptedContentInfo into an ASN.1 Element.
  * @function
@@ -224,6 +219,5 @@ export function _get_encoder_for_EncryptedContentInfo<Type>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_EncryptedContentInfo */
 
 /* eslint-enable */

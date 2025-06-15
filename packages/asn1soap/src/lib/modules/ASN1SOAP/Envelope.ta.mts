@@ -16,7 +16,7 @@ import {
   _decode_Envelope_body_or_fault,
   _encode_Envelope_body_or_fault,
 } from '../ASN1SOAP/Envelope-body-or-fault.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Envelope */
+
 /**
  * @summary Envelope
  * @description
@@ -67,9 +67,8 @@ export class Envelope {
     return new Envelope(_o.header, _o.body_or_fault);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Envelope */
+
 /**
  * @summary The Leading Root Component Types of Envelope
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_Envelope: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Envelope */
+
 /**
  * @summary The Trailing Root Component Types of Envelope
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_Envelope: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Envelope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Envelope */
+
 /**
  * @summary The Extension Addition Component Types of Envelope
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_Envelope: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Envelope: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Envelope */
+
 let _cached_decoder_for_Envelope: $.ASN1Decoder<Envelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Envelope */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Envelope
  * @function
@@ -151,13 +146,11 @@ export function _decode_Envelope(el: _Element) {
   }
   return _cached_decoder_for_Envelope(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Envelope */
+
 let _cached_encoder_for_Envelope: $.ASN1Encoder<Envelope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Envelope */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Envelope */
+
 /**
  * @summary Encodes a(n) Envelope into an ASN.1 Element.
  * @function
@@ -189,6 +182,5 @@ export function _encode_Envelope(
   return _cached_encoder_for_Envelope(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Envelope */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_RunningBSPRemoteReference,
   _encode_RunningBSPRemoteReference,
 } from '../BIP/RunningBSPRemoteReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RunningBSPRemoteReferences */
+
 /**
  * @summary RunningBSPRemoteReferences
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RunningBSPRemoteReferences = RunningBSPRemoteReference[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RunningBSPRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RunningBSPRemoteReferences */
+
 let _cached_decoder_for_RunningBSPRemoteReferences: $.ASN1Decoder<RunningBSPRemoteReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RunningBSPRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RunningBSPRemoteReferences */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RunningBSPRemoteReferences
  * @function
@@ -48,13 +46,11 @@ export function _decode_RunningBSPRemoteReferences(el: _Element) {
   }
   return _cached_decoder_for_RunningBSPRemoteReferences(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RunningBSPRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RunningBSPRemoteReferences */
+
 let _cached_encoder_for_RunningBSPRemoteReferences: $.ASN1Encoder<RunningBSPRemoteReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RunningBSPRemoteReferences */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RunningBSPRemoteReferences */
+
 /**
  * @summary Encodes a(n) RunningBSPRemoteReferences into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RunningBSPRemoteReferences(
   return _cached_encoder_for_RunningBSPRemoteReferences(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RunningBSPRemoteReferences */
 
 /* eslint-enable */

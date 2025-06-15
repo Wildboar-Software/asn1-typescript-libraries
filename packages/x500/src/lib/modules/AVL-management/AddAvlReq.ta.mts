@@ -15,7 +15,6 @@ import {
     _decode_CertAVL,
     _encode_CertAVL,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AddAvlReq */
 /**
  * @summary AddAvlReq
  * @description
@@ -75,9 +74,7 @@ export class AddAvlReq {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddAvlReq */
 /**
  * @summary The Leading Root Component Types of AddAvlReq
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_AddAvlReq: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddAvlReq */
 /**
  * @summary The Trailing Root Component Types of AddAvlReq
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_AddAvlReq: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddAvlReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddAvlReq */
 /**
  * @summary The Extension Addition Component Types of AddAvlReq
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_AddAvlReq: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_AddAvlReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlReq */
 let _cached_decoder_for_AddAvlReq: $.ASN1Decoder<AddAvlReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddAvlReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) AddAvlReq
  * @function
@@ -161,13 +150,9 @@ export function _decode_AddAvlReq(el: _Element) {
     }
     return _cached_decoder_for_AddAvlReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlReq */
 let _cached_encoder_for_AddAvlReq: $.ASN1Encoder<AddAvlReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddAvlReq */
 /**
  * @summary Encodes a(n) AddAvlReq into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_AddAvlReq(
     return _cached_encoder_for_AddAvlReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddAvlReq */
 
 /* eslint-enable */

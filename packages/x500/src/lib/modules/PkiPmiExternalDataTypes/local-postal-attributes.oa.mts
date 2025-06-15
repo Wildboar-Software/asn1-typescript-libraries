@@ -5,7 +5,6 @@ import {
     _decode_LocalPostalAttributes,
     _encode_LocalPostalAttributes,
 } from "../PkiPmiExternalDataTypes/LocalPostalAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION local_postal_attributes */
 /**
  * @summary local_postal_attributes
  * @description
@@ -33,6 +32,5 @@ export const local_postal_attributes: EXTENSION_ATTRIBUTE<LocalPostalAttributes>
     "&id": 21 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION local_postal_attributes */
 
 /* eslint-enable */

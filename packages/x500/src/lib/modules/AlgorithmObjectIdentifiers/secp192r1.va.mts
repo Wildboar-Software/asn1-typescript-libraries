@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ansi_x9_62 } from "../AlgorithmObjectIdentifiers/ansi-x9-62.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION secp192r1 */
 /**
  * @summary secp192r1
  * @description
@@ -19,6 +18,5 @@ export const secp192r1: ID = new _OID(
     [/* curves */ 3, /* prime */ 1, 1],
     ansi_x9_62
 );
-/* END_OF_SYMBOL_DEFINITION secp192r1 */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
 } from '../X790ASN1Module/GraphicStringBase.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ContactDetails */
+
 /**
  * @summary ContactDetails
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ContactDetails = GraphicStringBase; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ContactDetails */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactDetails */
+
 let _cached_decoder_for_ContactDetails: $.ASN1Decoder<ContactDetails> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContactDetails */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContactDetails */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContactDetails
  * @function
@@ -46,13 +44,11 @@ export function _decode_ContactDetails(el: _Element) {
     }
     return _cached_decoder_for_ContactDetails(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContactDetails */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactDetails */
+
 let _cached_encoder_for_ContactDetails: $.ASN1Encoder<ContactDetails> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContactDetails */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContactDetails */
+
 /**
  * @summary Encodes a(n) ContactDetails into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_ContactDetails(
     return _cached_encoder_for_ContactDetails(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContactDetails */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_NAddress,
     _encode_NAddress,
 } from '../NLM/NAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NAddresses */
+
 /**
  * @summary NAddresses
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type NAddresses = NAddress[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION NAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NAddresses */
+
 let _cached_decoder_for_NAddresses: $.ASN1Decoder<NAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NAddresses */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NAddresses
  * @function
@@ -48,13 +46,11 @@ export function _decode_NAddresses(el: _Element) {
     }
     return _cached_decoder_for_NAddresses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NAddresses */
+
 let _cached_encoder_for_NAddresses: $.ASN1Encoder<NAddresses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NAddresses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NAddresses */
+
 /**
  * @summary Encodes a(n) NAddresses into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_NAddresses(
     return _cached_encoder_for_NAddresses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NAddresses */
 
 /* eslint-enable */

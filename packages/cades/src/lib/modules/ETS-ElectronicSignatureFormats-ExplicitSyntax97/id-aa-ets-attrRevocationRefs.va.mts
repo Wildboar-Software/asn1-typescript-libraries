@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_attrRevocationRefs */
 /**
  * @summary id_aa_ets_attrRevocationRefs
  * @description
@@ -47,6 +46,5 @@ const id_aa_ets_attrRevocationRefs: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     45,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_attrRevocationRefs */
 
 /* eslint-enable */

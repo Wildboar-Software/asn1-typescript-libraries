@@ -11,7 +11,6 @@ import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { surname } from "../SelectedAttributeTypes/surname.oa.mjs";
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { id_oc_person } from "../SelectedObjectClasses/id-oc-person.va.mjs";
-/* START_OF_SYMBOL_DEFINITION person */
 /**
  * @summary person
  * @description
@@ -51,6 +50,5 @@ export const person: OBJECT_CLASS = {
     "&id": id_oc_person /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION person */
 
 /* eslint-enable */

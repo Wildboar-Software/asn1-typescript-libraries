@@ -12,7 +12,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CAMClientInfo, _decode_CAMClientInfo, _encode_CAMClientInfo } from "../CASS-CAM-MESSAGE-FORMAT/CAMClientInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CAMClientVersion */
+
 /**
  * @summary CAMClientVersion
  * @description
@@ -72,9 +72,8 @@ class CAMClientVersion {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CAMClientVersion */
+
 /**
  * @summary The Leading Root Component Types of CAMClientVersion
  * @description
@@ -89,9 +88,8 @@ const _root_component_type_list_1_spec_for_CAMClientVersion: $.ComponentSpec[] =
     new $.ComponentSpec("sWversion", false, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("cAMClientInfo", false, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CAMClientVersion */
+
 /**
  * @summary The Trailing Root Component Types of CAMClientVersion
  * @description
@@ -104,9 +102,8 @@ export
 const _root_component_type_list_2_spec_for_CAMClientVersion: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CAMClientVersion */
+
 /**
  * @summary The Extension Addition Component Types of CAMClientVersion
  * @description
@@ -119,13 +116,11 @@ export
 const _extension_additions_list_spec_for_CAMClientVersion: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CAMClientVersion */
+
 let _cached_decoder_for_CAMClientVersion: $.ASN1Decoder<CAMClientVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CAMClientVersion */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CAMClientVersion
  * @function
@@ -157,13 +152,11 @@ function _decode_CAMClientVersion (el: _Element) {
 }; }
     return _cached_decoder_for_CAMClientVersion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CAMClientVersion */
+
 let _cached_encoder_for_CAMClientVersion: $.ASN1Encoder<CAMClientVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CAMClientVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CAMClientVersion */
+
 /**
  * @summary Encodes a(n) CAMClientVersion into an ASN.1 Element.
  * @function
@@ -185,6 +178,5 @@ function _encode_CAMClientVersion (value: CAMClientVersion, elGetter: $.ASN1Enco
     return _cached_encoder_for_CAMClientVersion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CAMClientVersion */
 
 /* eslint-enable */

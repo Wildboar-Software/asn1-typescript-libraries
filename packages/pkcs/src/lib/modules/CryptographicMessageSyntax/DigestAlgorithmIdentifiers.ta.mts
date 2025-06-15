@@ -6,7 +6,7 @@ import {
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DigestAlgorithmIdentifiers */
+
 /**
  * @summary DigestAlgorithmIdentifiers
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type DigestAlgorithmIdentifiers = DigestAlgorithmIdentifier[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION DigestAlgorithmIdentifiers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestAlgorithmIdentifiers */
+
 let _cached_decoder_for_DigestAlgorithmIdentifiers: $.ASN1Decoder<DigestAlgorithmIdentifiers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DigestAlgorithmIdentifiers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DigestAlgorithmIdentifiers */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DigestAlgorithmIdentifiers
  * @function
@@ -39,13 +37,11 @@ export function _decode_DigestAlgorithmIdentifiers(el: _Element) {
     }
     return _cached_decoder_for_DigestAlgorithmIdentifiers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DigestAlgorithmIdentifiers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestAlgorithmIdentifiers */
+
 let _cached_encoder_for_DigestAlgorithmIdentifiers: $.ASN1Encoder<DigestAlgorithmIdentifiers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DigestAlgorithmIdentifiers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DigestAlgorithmIdentifiers */
+
 /**
  * @summary Encodes a(n) DigestAlgorithmIdentifiers into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_DigestAlgorithmIdentifiers(
     return _cached_encoder_for_DigestAlgorithmIdentifiers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DigestAlgorithmIdentifiers */
 
 /* eslint-enable */

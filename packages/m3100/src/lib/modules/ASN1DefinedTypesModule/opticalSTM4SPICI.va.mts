@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION opticalSTM4SPICI */
+
 /**
  * @summary opticalSTM4SPICI
  * @description
@@ -32,6 +32,5 @@ export const opticalSTM4SPICI: CharacteristicInformation = new _OID(
     [2],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION opticalSTM4SPICI */
 
 /* eslint-enable */

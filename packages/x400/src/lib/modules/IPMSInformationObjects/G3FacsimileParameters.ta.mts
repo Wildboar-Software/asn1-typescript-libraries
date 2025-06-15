@@ -17,7 +17,6 @@ import {
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION G3FacsimileParameters */
 /**
  * @summary G3FacsimileParameters
  * @description
@@ -70,9 +69,7 @@ export class G3FacsimileParameters {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_G3FacsimileParameters */
 /**
  * @summary The Leading Root Component Types of G3FacsimileParameters
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_G3FacsimileParameters: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_G3FacsimileParameters */
 /**
  * @summary The Trailing Root Component Types of G3FacsimileParameters
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_G3FacsimileParameters: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_G3FacsimileParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_G3FacsimileParameters */
 /**
  * @summary The Extension Addition Component Types of G3FacsimileParameters
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_G3FacsimileParameters: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_G3FacsimileParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_G3FacsimileParameters */
 let _cached_decoder_for_G3FacsimileParameters: $.ASN1Decoder<G3FacsimileParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_G3FacsimileParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) G3FacsimileParameters
  * @function
@@ -173,13 +162,9 @@ export function _decode_G3FacsimileParameters(el: _Element) {
     }
     return _cached_decoder_for_G3FacsimileParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_G3FacsimileParameters */
 let _cached_encoder_for_G3FacsimileParameters: $.ASN1Encoder<G3FacsimileParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_G3FacsimileParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_G3FacsimileParameters */
 /**
  * @summary Encodes a(n) G3FacsimileParameters into an ASN.1 Element.
  * @function
@@ -223,6 +208,5 @@ export function _encode_G3FacsimileParameters(
     return _cached_encoder_for_G3FacsimileParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_G3FacsimileParameters */
 
 /* eslint-enable */

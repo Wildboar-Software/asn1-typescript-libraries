@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DOCUMENT_PARAMETER */
 /**
  * @summary DOCUMENT_PARAMETER
  * @description
@@ -59,6 +58,5 @@ export interface DOCUMENT_PARAMETER<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION DOCUMENT_PARAMETER */
 
 /* eslint-enable */

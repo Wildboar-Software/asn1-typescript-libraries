@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyDerivationAlgorithmIdentifier */
+
 /**
  * @summary KeyDerivationAlgorithmIdentifier
  * @description
@@ -15,13 +15,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type KeyDerivationAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyDerivationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyDerivationAlgorithmIdentifier */
+
 let _cached_decoder_for_KeyDerivationAlgorithmIdentifier: $.ASN1Decoder<KeyDerivationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyDerivationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyDerivationAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyDerivationAlgorithmIdentifier
  * @function
@@ -34,13 +32,11 @@ export function _decode_KeyDerivationAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KeyDerivationAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyDerivationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyDerivationAlgorithmIdentifier */
+
 let _cached_encoder_for_KeyDerivationAlgorithmIdentifier: $.ASN1Encoder<KeyDerivationAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyDerivationAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyDerivationAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) KeyDerivationAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_KeyDerivationAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyDerivationAlgorithmIdentifier */
 
 /* eslint-enable */

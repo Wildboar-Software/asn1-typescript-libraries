@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION rTSE */
+
 /**
  * @summary rTSE
  * @description
@@ -41,6 +41,5 @@ export const rTSE = {
     joint_iso_itu_t
   ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION rTSE */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import {
     _decode_Summary_present_Item,
     _encode_Summary_present_Item,
 } from '../MSAbstractService/Summary-present-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Summary */
 /**
  * @summary Summary
  * @description
@@ -74,9 +73,7 @@ export class Summary {
         return new Summary(_o.absent, _o.present);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Summary */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Summary */
 /**
  * @summary The Leading Root Component Types of Summary
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_Summary: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Summary */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Summary */
 /**
  * @summary The Trailing Root Component Types of Summary
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_Summary: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Summary: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Summary */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Summary */
 /**
  * @summary The Extension Addition Component Types of Summary
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_Summary: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Summary: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Summary */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Summary */
 let _cached_decoder_for_Summary: $.ASN1Decoder<Summary> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Summary */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Summary */
 /**
  * @summary Decodes an ASN.1 element into a(n) Summary
  * @function
@@ -174,13 +163,9 @@ export function _decode_Summary(el: _Element) {
     }
     return _cached_decoder_for_Summary(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Summary */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Summary */
 let _cached_encoder_for_Summary: $.ASN1Encoder<Summary> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Summary */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Summary */
 /**
  * @summary Encodes a(n) Summary into an ASN.1 Element.
  * @function
@@ -227,6 +212,5 @@ export function _encode_Summary(
     return _cached_encoder_for_Summary(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Summary */
 
 /* eslint-enable */

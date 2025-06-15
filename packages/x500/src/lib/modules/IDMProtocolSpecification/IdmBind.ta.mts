@@ -11,7 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IdmBind */
 /**
  * @summary IdmBind
  * @description
@@ -88,9 +87,7 @@ export class IdmBind {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmBind */
 /**
  * @summary The Leading Root Component Types of IdmBind
  * @description
@@ -129,9 +126,7 @@ export const _root_component_type_list_1_spec_for_IdmBind: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmBind */
 /**
  * @summary The Trailing Root Component Types of IdmBind
  * @description
@@ -141,9 +136,7 @@ export const _root_component_type_list_1_spec_for_IdmBind: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_IdmBind: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmBind */
 /**
  * @summary The Extension Addition Component Types of IdmBind
  * @description
@@ -153,13 +146,9 @@ export const _root_component_type_list_2_spec_for_IdmBind: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_IdmBind: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBind */
 let _cached_decoder_for_IdmBind: $.ASN1Decoder<IdmBind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IdmBind */
 /**
  * @summary Decodes an ASN.1 element into a(n) IdmBind
  * @function
@@ -219,13 +208,9 @@ export function _decode_IdmBind(el: _Element) {
     }
     return _cached_decoder_for_IdmBind(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBind */
 let _cached_encoder_for_IdmBind: $.ASN1Encoder<IdmBind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IdmBind */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IdmBind */
 /**
  * @summary Encodes a(n) IdmBind into an ASN.1 Element.
  * @function
@@ -283,6 +268,5 @@ export function _encode_IdmBind(
     return _cached_encoder_for_IdmBind(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IdmBind */
 
 /* eslint-enable */

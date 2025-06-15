@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { idmProtocol } from "../UsefulDefinitions/idmProtocol.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_idm */
 /**
  * @summary id_idm
  * @description
@@ -15,6 +14,5 @@ import { idmProtocol } from "../UsefulDefinitions/idmProtocol.va.mjs";
  * @constant
  */
 export const id_idm: ID = idmProtocol;
-/* END_OF_SYMBOL_DEFINITION id_idm */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_PDV_list,
     _encode_PDV_list,
 } from '../ISO8823-PRESENTATION/PDV-list.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Fully_encoded_data */
+
 /**
  * @summary Fully_encoded_data
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type Fully_encoded_data = PDV_list[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Fully_encoded_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Fully_encoded_data */
+
 let _cached_decoder_for_Fully_encoded_data: $.ASN1Decoder<Fully_encoded_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Fully_encoded_data */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Fully_encoded_data */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Fully_encoded_data
  * @function
@@ -48,13 +46,11 @@ export function _decode_Fully_encoded_data(el: _Element) {
     }
     return _cached_decoder_for_Fully_encoded_data(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Fully_encoded_data */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Fully_encoded_data */
+
 let _cached_encoder_for_Fully_encoded_data: $.ASN1Encoder<Fully_encoded_data> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Fully_encoded_data */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Fully_encoded_data */
+
 /**
  * @summary Encodes a(n) Fully_encoded_data into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_Fully_encoded_data(
     return _cached_encoder_for_Fully_encoded_data(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Fully_encoded_data */
 
 /* eslint-enable */

@@ -55,7 +55,7 @@ import {
   _decode_F_RESTART_response,
   _encode_F_RESTART_response,
 } from '../ISO8571-FTAM/F-RESTART-response.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Bulk_Data_PDU */
+
 /**
  * @summary Bulk_Data_PDU
  * @description
@@ -93,13 +93,11 @@ export type Bulk_Data_PDU =
   | { f_cancel_response: F_CANCEL_response } /* CHOICE_ALT_ROOT */
   | { f_restart_request: F_RESTART_request } /* CHOICE_ALT_ROOT */
   | { f_restart_response: F_RESTART_response } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Bulk_Data_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Bulk_Data_PDU */
+
 let _cached_decoder_for_Bulk_Data_PDU: $.ASN1Decoder<Bulk_Data_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Bulk_Data_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Bulk_Data_PDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Bulk_Data_PDU
  * @function
@@ -163,13 +161,11 @@ export function _decode_Bulk_Data_PDU(el: _Element) {
   }
   return _cached_decoder_for_Bulk_Data_PDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Bulk_Data_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Bulk_Data_PDU */
+
 let _cached_encoder_for_Bulk_Data_PDU: $.ASN1Encoder<Bulk_Data_PDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Bulk_Data_PDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Bulk_Data_PDU */
+
 /**
  * @summary Encodes a(n) Bulk_Data_PDU into an ASN.1 Element.
  * @function
@@ -245,6 +241,5 @@ export function _encode_Bulk_Data_PDU(
   return _cached_encoder_for_Bulk_Data_PDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Bulk_Data_PDU */
 
 /* eslint-enable */

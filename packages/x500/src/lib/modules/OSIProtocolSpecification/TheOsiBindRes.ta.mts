@@ -3,7 +3,6 @@ import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 // Manually modified!
 
-/* START_OF_SYMBOL_DEFINITION TheOsiBindRes */
 /**
  * @summary TheOsiBindRes
  * @description
@@ -16,9 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type TheOsiBindRes = _Element; // ObjectClassFieldType
-/* END_OF_SYMBOL_DEFINITION TheOsiBindRes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TheOsiBindRes */
 /**
  * @summary Decodes an ASN.1 element into a(n) TheOsiBindRes
  * @function
@@ -28,9 +25,7 @@ export type TheOsiBindRes = _Element; // ObjectClassFieldType
 export function _decode_TheOsiBindRes(el: _Element) {
     return $._decode_explicit<TheOsiBindRes>(() => $._decodeAny)(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TheOsiBindRes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TheOsiBindRes */
 /**
  * @summary Encodes a(n) TheOsiBindRes into an ASN.1 Element.
  * @function
@@ -50,6 +45,5 @@ export function _encode_TheOsiBindRes(
     )(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TheOsiBindRes */
 
 /* eslint-enable */

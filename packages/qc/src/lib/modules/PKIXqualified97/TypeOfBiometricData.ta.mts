@@ -6,7 +6,7 @@ import {
     _decode_PredefinedBiometricType,
     _encode_PredefinedBiometricType,
 } from "../PKIXqualified97/PredefinedBiometricType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TypeOfBiometricData */
+
 /**
  * @summary TypeOfBiometricData
  * @description
@@ -23,13 +23,11 @@ import {
 export type TypeOfBiometricData =
     | { predefinedBiometricType: PredefinedBiometricType } /* CHOICE_ALT_ROOT */
     | { biometricDataOid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TypeOfBiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfBiometricData */
+
 let _cached_decoder_for_TypeOfBiometricData: $.ASN1Decoder<TypeOfBiometricData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfBiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeOfBiometricData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeOfBiometricData
  * @function
@@ -50,13 +48,11 @@ export function _decode_TypeOfBiometricData(el: _Element) {
     }
     return _cached_decoder_for_TypeOfBiometricData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TypeOfBiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfBiometricData */
+
 let _cached_encoder_for_TypeOfBiometricData: $.ASN1Encoder<TypeOfBiometricData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfBiometricData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeOfBiometricData */
+
 /**
  * @summary Encodes a(n) TypeOfBiometricData into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_TypeOfBiometricData(
     return _cached_encoder_for_TypeOfBiometricData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeOfBiometricData */
 
 /* eslint-enable */

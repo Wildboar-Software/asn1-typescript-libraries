@@ -15,7 +15,6 @@ import {
     _encode_Timer,
 } from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION minimumLSPTransmissionInterval_Default */
 /**
  * @summary minimumLSPTransmissionInterval_Default
  * @description
@@ -31,6 +30,5 @@ import {
 export const minimumLSPTransmissionInterval_Default: Timer = Timer._from_object(
   { exponent: 0, mantissa: 5 }
 );
-/* END_OF_SYMBOL_DEFINITION minimumLSPTransmissionInterval_Default */
 
 /* eslint-enable */

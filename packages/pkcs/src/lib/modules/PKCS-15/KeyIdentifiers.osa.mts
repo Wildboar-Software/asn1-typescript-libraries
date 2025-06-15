@@ -7,7 +7,7 @@ import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
 import { subjectKeyHash } from "../PKCS-15/subjectKeyHash.oa.mjs";
 import { subjectKeyId } from "../PKCS-15/subjectKeyId.oa.mjs";
 import { subjectNameHash } from "../PKCS-15/subjectNameHash.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyIdentifiers */
+
 /**
  * @summary KeyIdentifiers
  * @description
@@ -39,6 +39,5 @@ export const KeyIdentifiers: KEY_IDENTIFIER[] = [
     issuerNameHash,
     subjectNameHash,
 ];
-/* END_OF_SYMBOL_DEFINITION KeyIdentifiers */
 
 /* eslint-enable */

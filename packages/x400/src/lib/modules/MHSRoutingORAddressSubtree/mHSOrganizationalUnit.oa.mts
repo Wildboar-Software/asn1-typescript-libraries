@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSOrganizationalUnitName } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnitName.oa.mjs';
 import { id_oc_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-organizational-unit.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSOrganizationalUnit */
 /**
  * @summary mHSOrganizationalUnit
  * @description
@@ -50,6 +49,5 @@ export const mHSOrganizationalUnit: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_organizational_unit /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSOrganizationalUnit */
 
 /* eslint-enable */

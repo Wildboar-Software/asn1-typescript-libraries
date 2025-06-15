@@ -23,7 +23,7 @@ import {
     _encode_Supported_formats,
 } from "./Supported-formats.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DeviceIdentification */
+
 /**
  * @summary DeviceIdentification
  * @description
@@ -100,9 +100,8 @@ export class DeviceIdentification {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeviceIdentification */
+
 /**
  * @summary The Leading Root Component Types of DeviceIdentification
  * @description
@@ -148,9 +147,8 @@ export const _root_component_type_list_1_spec_for_DeviceIdentification: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeviceIdentification */
+
 /**
  * @summary The Trailing Root Component Types of DeviceIdentification
  * @description
@@ -160,9 +158,8 @@ export const _root_component_type_list_1_spec_for_DeviceIdentification: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DeviceIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeviceIdentification */
+
 /**
  * @summary The Extension Addition Component Types of DeviceIdentification
  * @description
@@ -172,13 +169,11 @@ export const _root_component_type_list_2_spec_for_DeviceIdentification: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_DeviceIdentification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeviceIdentification */
+
 let _cached_decoder_for_DeviceIdentification: $.ASN1Decoder<DeviceIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DeviceIdentification */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeviceIdentification
  * @function
@@ -235,13 +230,11 @@ export function _decode_DeviceIdentification(el: _Element) {
     }
     return _cached_decoder_for_DeviceIdentification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DeviceIdentification */
+
 let _cached_encoder_for_DeviceIdentification: $.ASN1Encoder<DeviceIdentification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DeviceIdentification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DeviceIdentification */
+
 /**
  * @summary Encodes a(n) DeviceIdentification into an ASN.1 Element.
  * @function
@@ -283,6 +276,5 @@ export function _encode_DeviceIdentification(
     return _cached_encoder_for_DeviceIdentification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DeviceIdentification */
 
 /* eslint-enable */

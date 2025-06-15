@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { sseoi } from '../NLM/sseoi.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscard */
+
 /**
  * @summary pDUDiscard
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscard: OBJECT_IDENTIFIER = new _OID(
     [/* specificProblems */ 3, /* pDUDiscard */ 1],
     sseoi
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscard */
 
 /* eslint-enable */

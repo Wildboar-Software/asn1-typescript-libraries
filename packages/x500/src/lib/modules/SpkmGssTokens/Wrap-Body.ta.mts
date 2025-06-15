@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Wrap_Body */
 /**
  * @summary Wrap_Body
  * @description
@@ -56,9 +55,7 @@ export class Wrap_Body {
         return new Wrap_Body(_o.int_cksum, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Wrap_Body */
 /**
  * @summary The Leading Root Component Types of Wrap_Body
  * @description
@@ -83,9 +80,7 @@ export const _root_component_type_list_1_spec_for_Wrap_Body: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Wrap_Body */
 /**
  * @summary The Trailing Root Component Types of Wrap_Body
  * @description
@@ -95,9 +90,7 @@ export const _root_component_type_list_1_spec_for_Wrap_Body: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Wrap_Body: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Wrap_Body */
 /**
  * @summary The Extension Addition Component Types of Wrap_Body
  * @description
@@ -107,13 +100,9 @@ export const _root_component_type_list_2_spec_for_Wrap_Body: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_Wrap_Body: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Wrap_Body */
 let _cached_decoder_for_Wrap_Body: $.ASN1Decoder<Wrap_Body> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Wrap_Body */
 /**
  * @summary Decodes an ASN.1 element into a(n) Wrap_Body
  * @function
@@ -142,13 +131,9 @@ export function _decode_Wrap_Body(el: _Element) {
     }
     return _cached_decoder_for_Wrap_Body(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Wrap_Body */
 let _cached_encoder_for_Wrap_Body: $.ASN1Encoder<Wrap_Body> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Wrap_Body */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Wrap_Body */
 /**
  * @summary Encodes a(n) Wrap_Body into an ASN.1 Element.
  * @function
@@ -180,6 +165,5 @@ export function _encode_Wrap_Body(
     return _cached_encoder_for_Wrap_Body(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Wrap_Body */
 
 /* eslint-enable */

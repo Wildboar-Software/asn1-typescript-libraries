@@ -16,7 +16,6 @@ import {
   _decode_QualifiedNameOrIndex_literal_qualified_name,
   _encode_QualifiedNameOrIndex_literal_qualified_name,
 } from '../FastInfoset/QualifiedNameOrIndex-literal-qualified-name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION QualifiedNameOrIndex */
 /**
  * @summary QualifiedNameOrIndex
  * @description
@@ -38,12 +37,8 @@ export type QualifiedNameOrIndex =
       literal_qualified_name: QualifiedNameOrIndex_literal_qualified_name;
     } /* CHOICE_ALT_ROOT */
   | { name_surrogate_index: INTEGER } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION QualifiedNameOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_QualifiedNameOrIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_QualifiedNameOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_QualifiedNameOrIndex */
 export const _decode_QualifiedNameOrIndex = $._decode_inextensible_choice<QualifiedNameOrIndex>(
   {
     'CONTEXT 0': [
@@ -53,12 +48,8 @@ export const _decode_QualifiedNameOrIndex = $._decode_inextensible_choice<Qualif
     'CONTEXT 1': ['name_surrogate_index', $._decodeInteger],
   }
 );
-/* END_OF_SYMBOL_DEFINITION _decode_QualifiedNameOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_QualifiedNameOrIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_QualifiedNameOrIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_QualifiedNameOrIndex */
 export const _encode_QualifiedNameOrIndex = $._encode_choice<QualifiedNameOrIndex>(
   {
     literal_qualified_name: _encode_QualifiedNameOrIndex_literal_qualified_name,
@@ -67,6 +58,5 @@ export const _encode_QualifiedNameOrIndex = $._encode_choice<QualifiedNameOrInde
   $.BER
 );
 
-/* END_OF_SYMBOL_DEFINITION _encode_QualifiedNameOrIndex */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION XMLCompatibleString */
+
 /**
  * @summary XMLCompatibleString
  * @description
@@ -30,21 +30,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type XMLCompatibleString = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION XMLCompatibleString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLCompatibleString */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_XMLCompatibleString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_XMLCompatibleString */
+
+
 export const _decode_XMLCompatibleString = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_XMLCompatibleString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLCompatibleString */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_XMLCompatibleString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_XMLCompatibleString */
+
+
 export const _encode_XMLCompatibleString = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_XMLCompatibleString */
 
 /* eslint-enable */

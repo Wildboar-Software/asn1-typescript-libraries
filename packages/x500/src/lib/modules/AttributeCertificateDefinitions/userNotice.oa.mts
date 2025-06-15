@@ -7,7 +7,6 @@ import {
     _encode_UserNotice,
 } from "../AttributeCertificateDefinitions/UserNotice.ta.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION userNotice */
 /**
  * @summary userNotice
  * @description
@@ -38,6 +37,5 @@ export const userNotice: EXTENSION<UserNotice[]> = {
     "&id": id_ce_userNotice /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userNotice */
 
 /* eslint-enable */

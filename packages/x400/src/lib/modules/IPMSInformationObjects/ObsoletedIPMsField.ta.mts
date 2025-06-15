@@ -15,7 +15,6 @@ import {
     _decode_ObsoletedIPMsSubfield,
     _encode_ObsoletedIPMsSubfield,
 } from '../IPMSInformationObjects/ObsoletedIPMsSubfield.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObsoletedIPMsField */
 /**
  * @summary ObsoletedIPMsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ObsoletedIPMsField = ObsoletedIPMsSubfield[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ObsoletedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObsoletedIPMsField */
 let _cached_decoder_for_ObsoletedIPMsField: $.ASN1Decoder<ObsoletedIPMsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObsoletedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObsoletedIPMsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObsoletedIPMsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_ObsoletedIPMsField(el: _Element) {
     }
     return _cached_decoder_for_ObsoletedIPMsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObsoletedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObsoletedIPMsField */
 let _cached_encoder_for_ObsoletedIPMsField: $.ASN1Encoder<ObsoletedIPMsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObsoletedIPMsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObsoletedIPMsField */
 /**
  * @summary Encodes a(n) ObsoletedIPMsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_ObsoletedIPMsField(
     return _cached_encoder_for_ObsoletedIPMsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObsoletedIPMsField */
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReferencedValue */
+
 /**
  * @summary ReferencedValue
  * @description
@@ -20,9 +20,8 @@ import { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.mjs";
 export type ReferencedValue<_Type> =
     | { path: Path } /* CHOICE_ALT_ROOT */
     | { url: URL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ReferencedValue */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_ReferencedValue */
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ReferencedValue
  * @function
@@ -38,9 +37,8 @@ export function _get_decoder_for_ReferencedValue<Type>(
         "CONTEXT 3": ["url", _decode_URL],
     });
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_ReferencedValue */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_ReferencedValue */
+
 /**
  * @summary Returns a function that will encode a(n) ReferencedValue into an ASN.1 Element.
  * @function
@@ -57,6 +55,5 @@ export function _get_encoder_for_ReferencedValue<Type>(
         $.BER
     );
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_ReferencedValue */
 
 /* eslint-enable */

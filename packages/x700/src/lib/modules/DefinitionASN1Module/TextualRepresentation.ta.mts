@@ -15,7 +15,6 @@ import {
     _decode_LineImage,
     _encode_LineImage,
 } from '../DefinitionASN1Module/LineImage.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TextualRepresentation */
 /**
  * @summary TextualRepresentation
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TextualRepresentation = LineImage[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION TextualRepresentation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TextualRepresentation */
 let _cached_decoder_for_TextualRepresentation: $.ASN1Decoder<TextualRepresentation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TextualRepresentation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TextualRepresentation */
 /**
  * @summary Decodes an ASN.1 element into a(n) TextualRepresentation
  * @function
@@ -48,13 +43,9 @@ export function _decode_TextualRepresentation(el: _Element) {
     }
     return _cached_decoder_for_TextualRepresentation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TextualRepresentation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TextualRepresentation */
 let _cached_encoder_for_TextualRepresentation: $.ASN1Encoder<TextualRepresentation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TextualRepresentation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TextualRepresentation */
 /**
  * @summary Encodes a(n) TextualRepresentation into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TextualRepresentation(
     return _cached_encoder_for_TextualRepresentation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TextualRepresentation */
 
 /* eslint-enable */

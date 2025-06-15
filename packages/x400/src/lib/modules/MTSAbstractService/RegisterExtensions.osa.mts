@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-/* START_OF_SYMBOL_DEFINITION RegisterExtensions */
 /**
  * @summary RegisterExtensions
  * @description
@@ -27,6 +26,5 @@ import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.m
  *
  */
 export const RegisterExtensions: EXTENSION[] = [...PrivateExtensions];
-/* END_OF_SYMBOL_DEFINITION RegisterExtensions */
 
 /* eslint-enable */

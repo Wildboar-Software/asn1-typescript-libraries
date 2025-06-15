@@ -8,7 +8,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION userPassword */
 /**
  * @summary userPassword
  * @description
@@ -48,6 +47,5 @@ export const userPassword: ATTRIBUTE<OCTET_STRING> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION userPassword */
 
 /* eslint-enable */

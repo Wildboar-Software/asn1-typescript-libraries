@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlarmStatus_Item, _decode_AlarmStatus_Item, _encode_AlarmStatus_Item } from "../Attribute-ASN1Module/AlarmStatus-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AlarmStatus */
 /**
  * @summary AlarmStatus
  * @description
@@ -27,13 +26,9 @@ import { AlarmStatus_Item, _decode_AlarmStatus_Item, _encode_AlarmStatus_Item } 
  */
 export
 type AlarmStatus = AlarmStatus_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AlarmStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmStatus */
 let _cached_decoder_for_AlarmStatus: $.ASN1Decoder<AlarmStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmStatus */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlarmStatus
  * @function
@@ -45,13 +40,9 @@ function _decode_AlarmStatus (el: _Element) {
     if (!_cached_decoder_for_AlarmStatus) { _cached_decoder_for_AlarmStatus = $._decodeSetOf<AlarmStatus_Item>(() => _decode_AlarmStatus_Item); }
     return _cached_decoder_for_AlarmStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmStatus */
 let _cached_encoder_for_AlarmStatus: $.ASN1Encoder<AlarmStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmStatus */
 /**
  * @summary Encodes a(n) AlarmStatus into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_AlarmStatus (value: AlarmStatus, elGetter: $.ASN1Encoder<AlarmS
     return _cached_encoder_for_AlarmStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmStatus */
 
 /* eslint-enable */

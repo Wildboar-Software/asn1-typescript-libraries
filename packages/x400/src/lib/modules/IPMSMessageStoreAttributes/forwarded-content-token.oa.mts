@@ -22,7 +22,6 @@ import { id_hat_forwarded_content_token } from '../IPMSObjectIdentifiers/id-hat-
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION forwarded_content_token */
 /**
  * @summary forwarded_content_token
  * @description
@@ -53,6 +52,5 @@ export const forwarded_content_token: X413ATTRIBUTE<ForwardedContentToken> = {
     '&id': id_hat_forwarded_content_token /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION forwarded_content_token */
 
 /* eslint-enable */

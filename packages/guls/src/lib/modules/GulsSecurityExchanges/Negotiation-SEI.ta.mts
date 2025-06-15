@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Negotiation_SEI */
+
 /**
  * @summary Negotiation_SEI
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Negotiation_SEI = OBJECT_IDENTIFIER[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Negotiation_SEI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Negotiation_SEI */
+
 let _cached_decoder_for_Negotiation_SEI: $.ASN1Decoder<Negotiation_SEI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Negotiation_SEI */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Negotiation_SEI */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Negotiation_SEI
  * @function
@@ -45,13 +43,11 @@ export function _decode_Negotiation_SEI(el: _Element) {
   }
   return _cached_decoder_for_Negotiation_SEI(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Negotiation_SEI */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Negotiation_SEI */
+
 let _cached_encoder_for_Negotiation_SEI: $.ASN1Encoder<Negotiation_SEI> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Negotiation_SEI */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Negotiation_SEI */
+
 /**
  * @summary Encodes a(n) Negotiation_SEI into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_Negotiation_SEI(
   return _cached_encoder_for_Negotiation_SEI(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Negotiation_SEI */
 
 /* eslint-enable */

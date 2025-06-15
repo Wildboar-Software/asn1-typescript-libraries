@@ -16,7 +16,7 @@ import {
   _decode_ExternalSAID,
   _encode_ExternalSAID,
 } from '../Notation/ExternalSAID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FirstPdvExternal */
+
 /**
  * @summary FirstPdvExternal
  * @description
@@ -82,9 +82,8 @@ export class FirstPdvExternal {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FirstPdvExternal */
+
 /**
  * @summary The Leading Root Component Types of FirstPdvExternal
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_FirstPdvExternal: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FirstPdvExternal */
+
 /**
  * @summary The Trailing Root Component Types of FirstPdvExternal
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_FirstPdvExternal: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FirstPdvExternal: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FirstPdvExternal */
+
 /**
  * @summary The Extension Addition Component Types of FirstPdvExternal
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_FirstPdvExternal: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_FirstPdvExternal: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FirstPdvExternal */
+
 let _cached_decoder_for_FirstPdvExternal: $.ASN1Decoder<FirstPdvExternal> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FirstPdvExternal */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FirstPdvExternal
  * @function
@@ -193,13 +188,11 @@ export function _decode_FirstPdvExternal(el: _Element) {
   }
   return _cached_decoder_for_FirstPdvExternal(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FirstPdvExternal */
+
 let _cached_encoder_for_FirstPdvExternal: $.ASN1Encoder<FirstPdvExternal> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FirstPdvExternal */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FirstPdvExternal */
+
 /**
  * @summary Encodes a(n) FirstPdvExternal into an ASN.1 Element.
  * @function
@@ -231,6 +224,5 @@ export function _encode_FirstPdvExternal(
   return _cached_encoder_for_FirstPdvExternal(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FirstPdvExternal */
 
 /* eslint-enable */

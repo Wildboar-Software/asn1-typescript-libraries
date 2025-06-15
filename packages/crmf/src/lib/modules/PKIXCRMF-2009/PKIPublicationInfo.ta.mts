@@ -15,7 +15,7 @@ import {
     _decode_SinglePubInfo,
     _encode_SinglePubInfo,
 } from "../PKIXCRMF-2009/SinglePubInfo.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PKIPublicationInfo */
+
 /**
  * @summary PKIPublicationInfo
  * @description
@@ -66,9 +66,8 @@ export class PKIPublicationInfo {
         return new PKIPublicationInfo(_o.action, _o.pubInfos);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKIPublicationInfo */
+
 /**
  * @summary The Leading Root Component Types of PKIPublicationInfo
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_PKIPublicationInfo: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKIPublicationInfo */
+
 /**
  * @summary The Trailing Root Component Types of PKIPublicationInfo
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_PKIPublicationInfo: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PKIPublicationInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKIPublicationInfo */
+
 /**
  * @summary The Extension Addition Component Types of PKIPublicationInfo
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_PKIPublicationInfo: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_PKIPublicationInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIPublicationInfo */
+
 let _cached_decoder_for_PKIPublicationInfo: $.ASN1Decoder<PKIPublicationInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKIPublicationInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PKIPublicationInfo
  * @function
@@ -167,13 +162,11 @@ export function _decode_PKIPublicationInfo(el: _Element) {
     }
     return _cached_decoder_for_PKIPublicationInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIPublicationInfo */
+
 let _cached_encoder_for_PKIPublicationInfo: $.ASN1Encoder<PKIPublicationInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKIPublicationInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKIPublicationInfo */
+
 /**
  * @summary Encodes a(n) PKIPublicationInfo into an ASN.1 Element.
  * @function
@@ -210,6 +203,5 @@ export function _encode_PKIPublicationInfo(
     return _cached_encoder_for_PKIPublicationInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKIPublicationInfo */
 
 /* eslint-enable */

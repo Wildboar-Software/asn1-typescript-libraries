@@ -21,7 +21,6 @@ import {
     _decode_MessageData,
     _encode_MessageData,
 } from '../EDIMSInformationObjects/MessageData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EDIMBodyPart */
 /**
  * @summary EDIMBodyPart
  * @description
@@ -71,9 +70,7 @@ export class EDIMBodyPart {
         return new EDIMBodyPart(_o.parameters, _o.data);
     }
 }
-/* END_OF_SYMBOL_DEFINITION EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIMBodyPart */
 /**
  * @summary The Leading Root Component Types of EDIMBodyPart
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_EDIMBodyPart: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIMBodyPart */
 /**
  * @summary The Trailing Root Component Types of EDIMBodyPart
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_EDIMBodyPart: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EDIMBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIMBodyPart */
 /**
  * @summary The Extension Addition Component Types of EDIMBodyPart
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_EDIMBodyPart: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_EDIMBodyPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMBodyPart */
 let _cached_decoder_for_EDIMBodyPart: $.ASN1Decoder<EDIMBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIMBodyPart */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIMBodyPart
  * @function
@@ -174,13 +163,9 @@ export function _decode_EDIMBodyPart(el: _Element) {
     }
     return _cached_decoder_for_EDIMBodyPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMBodyPart */
 let _cached_encoder_for_EDIMBodyPart: $.ASN1Encoder<EDIMBodyPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIMBodyPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIMBodyPart */
 /**
  * @summary Encodes a(n) EDIMBodyPart into an ASN.1 Element.
  * @function
@@ -221,6 +206,5 @@ export function _encode_EDIMBodyPart(
     return _cached_encoder_for_EDIMBodyPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIMBodyPart */
 
 /* eslint-enable */

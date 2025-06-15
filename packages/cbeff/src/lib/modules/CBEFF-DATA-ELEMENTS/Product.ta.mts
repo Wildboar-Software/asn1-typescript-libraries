@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Product */
 /**
  * @summary Product
  * @description
@@ -63,9 +62,7 @@ export class Product {
     return new Product(_o.product_owner, _o.product_type);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Product */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Product */
 /**
  * @summary The Leading Root Component Types of Product
  * @description
@@ -90,9 +87,7 @@ export const _root_component_type_list_1_spec_for_Product: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Product */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Product */
 /**
  * @summary The Trailing Root Component Types of Product
  * @description
@@ -102,9 +97,7 @@ export const _root_component_type_list_1_spec_for_Product: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Product: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Product */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Product */
 /**
  * @summary The Extension Addition Component Types of Product
  * @description
@@ -114,13 +107,9 @@ export const _root_component_type_list_2_spec_for_Product: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Product: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Product */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Product */
 let _cached_decoder_for_Product: $.ASN1Decoder<Product> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Product */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Product */
 /**
  * @summary Decodes an ASN.1 element into a(n) Product
  * @function
@@ -160,13 +149,9 @@ export function _decode_Product(el: _Element) {
   }
   return _cached_decoder_for_Product(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Product */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Product */
 let _cached_encoder_for_Product: $.ASN1Encoder<Product> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Product */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Product */
 /**
  * @summary Encodes a(n) Product into an ASN.1 Element.
  * @function
@@ -199,6 +184,5 @@ export function _encode_Product(
   return _cached_encoder_for_Product(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Product */
 
 /* eslint-enable */

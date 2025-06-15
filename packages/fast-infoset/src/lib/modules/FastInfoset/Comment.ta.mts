@@ -15,7 +15,6 @@ import {
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Comment */
 /**
  * @summary Comment
  * @description
@@ -57,9 +56,7 @@ export class Comment {
     return new Comment(_o.content);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Comment */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Comment */
 /**
  * @summary The Leading Root Component Types of Comment
  * @description
@@ -77,9 +74,7 @@ export const _root_component_type_list_1_spec_for_Comment: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Comment */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Comment */
 /**
  * @summary The Trailing Root Component Types of Comment
  * @description
@@ -89,9 +84,7 @@ export const _root_component_type_list_1_spec_for_Comment: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Comment: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Comment */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Comment */
 /**
  * @summary The Extension Addition Component Types of Comment
  * @description
@@ -101,13 +94,9 @@ export const _root_component_type_list_2_spec_for_Comment: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Comment: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Comment */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Comment */
 let _cached_decoder_for_Comment: $.ASN1Decoder<Comment> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Comment */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Comment */
 /**
  * @summary Decodes an ASN.1 element into a(n) Comment
  * @function
@@ -131,13 +120,9 @@ export function _decode_Comment(el: _Element) {
   }
   return _cached_decoder_for_Comment(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Comment */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Comment */
 let _cached_encoder_for_Comment: $.ASN1Encoder<Comment> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Comment */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Comment */
 /**
  * @summary Encodes a(n) Comment into an ASN.1 Element.
  * @function
@@ -168,6 +153,5 @@ export function _encode_Comment(
   return _cached_encoder_for_Comment(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Comment */
 
 /* eslint-enable */

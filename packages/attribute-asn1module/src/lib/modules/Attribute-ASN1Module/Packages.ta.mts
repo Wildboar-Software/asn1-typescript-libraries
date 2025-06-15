@@ -14,7 +14,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION Packages */
 /**
  * @summary Packages
  * @description
@@ -27,13 +26,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type Packages = OBJECT_IDENTIFIER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Packages */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Packages */
 let _cached_decoder_for_Packages: $.ASN1Decoder<Packages> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Packages */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Packages */
 /**
  * @summary Decodes an ASN.1 element into a(n) Packages
  * @function
@@ -45,13 +40,9 @@ function _decode_Packages (el: _Element) {
     if (!_cached_decoder_for_Packages) { _cached_decoder_for_Packages = $._decodeSetOf<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier); }
     return _cached_decoder_for_Packages(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Packages */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Packages */
 let _cached_encoder_for_Packages: $.ASN1Encoder<Packages> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Packages */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Packages */
 /**
  * @summary Encodes a(n) Packages into an ASN.1 Element.
  * @function
@@ -65,6 +56,5 @@ function _encode_Packages (value: Packages, elGetter: $.ASN1Encoder<Packages>) {
     return _cached_encoder_for_Packages(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Packages */
 
 /* eslint-enable */

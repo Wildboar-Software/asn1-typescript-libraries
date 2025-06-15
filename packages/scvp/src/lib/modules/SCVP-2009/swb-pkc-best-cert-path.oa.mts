@@ -16,7 +16,6 @@ import {
 } from '../SCVP-2009/CertBundle.ta.mjs';
 import { id_swb_pkc_best_cert_path } from '../SCVP-2009/id-swb-pkc-best-cert-path.va.mjs';
 import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION swb_pkc_best_cert_path */
 /**
  * @summary swb_pkc_best_cert_path
  * @description
@@ -42,6 +41,5 @@ export const swb_pkc_best_cert_path: WANT_BACK<CertBundle> = {
   '&id': id_swb_pkc_best_cert_path /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
   '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION swb_pkc_best_cert_path */
 
 /* eslint-enable */

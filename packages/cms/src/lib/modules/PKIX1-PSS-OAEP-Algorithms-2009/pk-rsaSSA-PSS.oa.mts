@@ -14,7 +14,7 @@ import {
     _decode_RSAPublicKey,
     _encode_RSAPublicKey,
 } from "../PKIXAlgs-2009/RSAPublicKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_rsaSSA_PSS */
+
 /**
  * @summary pk_rsaSSA_PSS
  * @description
@@ -55,6 +55,5 @@ export const pk_rsaSSA_PSS: PUBLIC_KEY<RSAPublicKey, RSASSA_PSS_params> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_rsaSSA_PSS */
 
 /* eslint-enable */

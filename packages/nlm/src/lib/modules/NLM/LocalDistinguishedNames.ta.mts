@@ -15,7 +15,7 @@ import {
     _decode_LocalDistinguishedName,
     _encode_LocalDistinguishedName,
 } from '../NLM/LocalDistinguishedName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LocalDistinguishedNames */
+
 /**
  * @summary LocalDistinguishedNames
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type LocalDistinguishedNames = LocalDistinguishedName[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION LocalDistinguishedNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalDistinguishedNames */
+
 let _cached_decoder_for_LocalDistinguishedNames: $.ASN1Decoder<LocalDistinguishedNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LocalDistinguishedNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LocalDistinguishedNames */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalDistinguishedNames
  * @function
@@ -48,13 +46,11 @@ export function _decode_LocalDistinguishedNames(el: _Element) {
     }
     return _cached_decoder_for_LocalDistinguishedNames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LocalDistinguishedNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalDistinguishedNames */
+
 let _cached_encoder_for_LocalDistinguishedNames: $.ASN1Encoder<LocalDistinguishedNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LocalDistinguishedNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LocalDistinguishedNames */
+
 /**
  * @summary Encodes a(n) LocalDistinguishedNames into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_LocalDistinguishedNames(
     return _cached_encoder_for_LocalDistinguishedNames(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LocalDistinguishedNames */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AltSignatureAlgorithm */
 /**
  * @summary AltSignatureAlgorithm
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type AltSignatureAlgorithm = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AltSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AltSignatureAlgorithm */
 let _cached_decoder_for_AltSignatureAlgorithm: $.ASN1Decoder<AltSignatureAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AltSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AltSignatureAlgorithm */
 /**
  * @summary Decodes an ASN.1 element into a(n) AltSignatureAlgorithm
  * @function
@@ -37,13 +32,9 @@ export function _decode_AltSignatureAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_AltSignatureAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AltSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AltSignatureAlgorithm */
 let _cached_encoder_for_AltSignatureAlgorithm: $.ASN1Encoder<AltSignatureAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AltSignatureAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AltSignatureAlgorithm */
 /**
  * @summary Encodes a(n) AltSignatureAlgorithm into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_AltSignatureAlgorithm(
     return _cached_encoder_for_AltSignatureAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AltSignatureAlgorithm */
 
 /* eslint-enable */

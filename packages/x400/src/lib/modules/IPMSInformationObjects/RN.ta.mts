@@ -15,7 +15,6 @@ import {
     _decode_IPN,
     _encode_IPN,
 } from '../IPMSInformationObjects/IPN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RN */
 /**
  * @summary RN
  * @description
@@ -34,13 +33,9 @@ import {
  * ```
  */
 export type RN = IPN; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RN */
 let _cached_decoder_for_RN: $.ASN1Decoder<RN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RN */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RN */
 /**
  * @summary Decodes an ASN.1 element into a(n) RN
  * @function
@@ -53,13 +48,9 @@ export function _decode_RN(el: _Element) {
     }
     return _cached_decoder_for_RN(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RN */
 let _cached_encoder_for_RN: $.ASN1Encoder<RN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RN */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RN */
 /**
  * @summary Encodes a(n) RN into an ASN.1 Element.
  * @function
@@ -74,6 +65,5 @@ export function _encode_RN(value: RN, elGetter: $.ASN1Encoder<RN>) {
     return _cached_encoder_for_RN(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RN */
 
 /* eslint-enable */

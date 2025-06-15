@@ -26,7 +26,7 @@ import {
     _encode_ActionTypeId,
 } from '../CMIP-1/ActionTypeId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActionErrorInfo_errorInfo */
+
 /**
  * @summary ActionErrorInfo_errorInfo
  * @description
@@ -41,13 +41,11 @@ export type ActionErrorInfo_errorInfo =
   | { actionType: ActionTypeId } /* CHOICE_ALT_ROOT */
   | { actionArgument: NoSuchArgument } /* CHOICE_ALT_ROOT */
   | { argumentValue: InvalidArgumentValue } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ActionErrorInfo_errorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionErrorInfo_errorInfo */
+
 let _cached_decoder_for_ActionErrorInfo_errorInfo: $.ASN1Decoder<ActionErrorInfo_errorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionErrorInfo_errorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionErrorInfo_errorInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionErrorInfo_errorInfo
  * @function
@@ -74,13 +72,11 @@ export function _decode_ActionErrorInfo_errorInfo(el: _Element) {
   }
   return _cached_decoder_for_ActionErrorInfo_errorInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionErrorInfo_errorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionErrorInfo_errorInfo */
+
 let _cached_encoder_for_ActionErrorInfo_errorInfo: $.ASN1Encoder<ActionErrorInfo_errorInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionErrorInfo_errorInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionErrorInfo_errorInfo */
+
 /**
  * @summary Encodes a(n) ActionErrorInfo_errorInfo into an ASN.1 Element.
  * @function
@@ -115,6 +111,5 @@ export function _encode_ActionErrorInfo_errorInfo(
   return _cached_encoder_for_ActionErrorInfo_errorInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionErrorInfo_errorInfo */
 
 /* eslint-enable */

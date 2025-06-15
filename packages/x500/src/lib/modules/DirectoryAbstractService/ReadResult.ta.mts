@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReadResult */
 /**
  * @summary ReadResult
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ReadResult = OPTIONALLY_PROTECTED<ReadResultData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadResult */
 let _cached_decoder_for_ReadResult: $.ASN1Decoder<ReadResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReadResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReadResult
  * @function
@@ -44,13 +39,9 @@ export function _decode_ReadResult(el: _Element) {
     }
     return _cached_decoder_for_ReadResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadResult */
 let _cached_encoder_for_ReadResult: $.ASN1Encoder<ReadResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReadResult */
 /**
  * @summary Encodes a(n) ReadResult into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReadResult(
     return _cached_encoder_for_ReadResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReadResult */
 
 /* eslint-enable */

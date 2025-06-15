@@ -29,7 +29,7 @@ import {
   _decode_probe_ResultType,
   _encode_probe_ResultType,
 } from '../Remote-Operations-Useful-Definitions/probe-ResultType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION probe */
+
 /**
  * @summary probe
  * @description
@@ -72,6 +72,5 @@ export const probe: OPERATION<probe_ArgumentType, probe_ResultType> = {
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION probe */
 
 /* eslint-enable */

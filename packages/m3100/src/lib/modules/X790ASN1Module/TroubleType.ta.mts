@@ -16,7 +16,7 @@ import {
     _decode_TroubleType_number,
     _encode_TroubleType_number,
 } from '../X790ASN1Module/TroubleType-number.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TroubleType */
+
 /**
  * @summary TroubleType
  * @description
@@ -119,13 +119,11 @@ export type TroubleType =
     | { number_: TroubleType_number } /* CHOICE_ALT_ROOT */
     | { identifier: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TroubleType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleType */
+
 let _cached_decoder_for_TroubleType: $.ASN1Decoder<TroubleType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TroubleType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TroubleType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleType
  * @function
@@ -143,13 +141,11 @@ export function _decode_TroubleType(el: _Element) {
     }
     return _cached_decoder_for_TroubleType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TroubleType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleType */
+
 let _cached_encoder_for_TroubleType: $.ASN1Encoder<TroubleType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TroubleType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TroubleType */
+
 /**
  * @summary Encodes a(n) TroubleType into an ASN.1 Element.
  * @function
@@ -173,6 +169,5 @@ export function _encode_TroubleType(
     return _cached_encoder_for_TroubleType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TroubleType */
 
 /* eslint-enable */

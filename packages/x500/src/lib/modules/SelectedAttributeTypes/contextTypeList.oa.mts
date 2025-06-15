@@ -7,7 +7,6 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { id_not_contextTypeList } from "../SelectedAttributeTypes/id-not-contextTypeList.va.mjs";
-/* START_OF_SYMBOL_DEFINITION contextTypeList */
 /**
  * @summary contextTypeList
  * @description
@@ -43,6 +42,5 @@ export const contextTypeList: ATTRIBUTE<OBJECT_IDENTIFIER> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION contextTypeList */
 
 /* eslint-enable */

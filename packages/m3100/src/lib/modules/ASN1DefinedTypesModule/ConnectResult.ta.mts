@@ -15,7 +15,7 @@ import {
     _decode_ConnectResult_Item,
     _encode_ConnectResult_Item,
 } from '../ASN1DefinedTypesModule/ConnectResult-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectResult */
+
 /**
  * @summary ConnectResult
  * @description
@@ -28,13 +28,11 @@ import {
  * ```
  */
 export type ConnectResult = ConnectResult_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ConnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectResult */
+
 let _cached_decoder_for_ConnectResult: $.ASN1Decoder<ConnectResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectResult
  * @function
@@ -49,13 +47,11 @@ export function _decode_ConnectResult(el: _Element) {
     }
     return _cached_decoder_for_ConnectResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectResult */
+
 let _cached_encoder_for_ConnectResult: $.ASN1Encoder<ConnectResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectResult */
+
 /**
  * @summary Encodes a(n) ConnectResult into an ASN.1 Element.
  * @function
@@ -76,6 +72,5 @@ export function _encode_ConnectResult(
     return _cached_encoder_for_ConnectResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectResult */
 
 /* eslint-enable */

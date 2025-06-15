@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SystemId */
 /**
  * @summary SystemId
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SystemId = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemId */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SystemId */
 export const _decode_SystemId = $._decodeOctetString;
-/* END_OF_SYMBOL_DEFINITION _decode_SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemId */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SystemId */
 export const _encode_SystemId = $._encodeOctetString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_SystemId */
 
 /* eslint-enable */

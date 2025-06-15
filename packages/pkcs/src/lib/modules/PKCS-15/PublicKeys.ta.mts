@@ -11,7 +11,7 @@ import {
     _decode_PublicKeyType,
     _encode_PublicKeyType,
 } from "../PKCS-15/PublicKeyType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PublicKeys */
+
 /**
  * @summary PublicKeys
  * @description
@@ -23,13 +23,11 @@ import {
  * ```
  */
 export type PublicKeys = PathOrObjects<PublicKeyType>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION PublicKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeys */
+
 let _cached_decoder_for_PublicKeys: $.ASN1Decoder<PublicKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKeys */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicKeys */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKeys
  * @function
@@ -44,13 +42,11 @@ export function _decode_PublicKeys(el: _Element) {
     }
     return _cached_decoder_for_PublicKeys(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicKeys */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeys */
+
 let _cached_encoder_for_PublicKeys: $.ASN1Encoder<PublicKeys> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKeys */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicKeys */
+
 /**
  * @summary Encodes a(n) PublicKeys into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_PublicKeys(
     return _cached_encoder_for_PublicKeys(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicKeys */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { certicom } from "../AlgorithmObjectIdentifiers/certicom.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_ecMQV */
 /**
  * @summary id_ecMQV
  * @description
@@ -19,6 +18,5 @@ export const id_ecMQV: ID = new _OID(
     [/* schemes */ 1, /* ecmqv */ 13],
     certicom
 );
-/* END_OF_SYMBOL_DEFINITION id_ecMQV */
 
 /* eslint-enable */

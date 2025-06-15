@@ -21,7 +21,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { err_delivery_control_violated } from '../MTSAccessProtocol/err-delivery-control-violated.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION delivery_control_violated */
 /**
  * @summary delivery_control_violated
  * @description
@@ -51,6 +50,5 @@ export const delivery_control_violated: ABSTRACT_ERROR<NULL> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delivery_control_violated */
 
 /* eslint-enable */

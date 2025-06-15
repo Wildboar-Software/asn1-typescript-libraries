@@ -21,7 +21,6 @@ import {
   _decode_Abort_reason,
   _encode_Abort_reason,
 } from '../TCAPMessages/Abort-reason.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Abort */
 /**
  * @summary Abort
  * @description
@@ -70,9 +69,7 @@ export class Abort {
     return new Abort(_o.dtid, _o.reason);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Abort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Abort */
 /**
  * @summary The Leading Root Component Types of Abort
  * @description
@@ -91,9 +88,7 @@ export const _root_component_type_list_1_spec_for_Abort: $.ComponentSpec[] = [
   ),
   new $.ComponentSpec('reason', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Abort */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Abort */
 /**
  * @summary The Trailing Root Component Types of Abort
  * @description
@@ -103,9 +98,7 @@ export const _root_component_type_list_1_spec_for_Abort: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Abort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Abort */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Abort */
 /**
  * @summary The Extension Addition Component Types of Abort
  * @description
@@ -115,13 +108,9 @@ export const _root_component_type_list_2_spec_for_Abort: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Abort: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Abort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort */
 let _cached_decoder_for_Abort: $.ASN1Decoder<Abort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Abort */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Abort */
 /**
  * @summary Decodes an ASN.1 element into a(n) Abort
  * @function
@@ -158,13 +147,9 @@ export function _decode_Abort(el: _Element) {
   }
   return _cached_decoder_for_Abort(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Abort */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort */
 let _cached_encoder_for_Abort: $.ASN1Encoder<Abort> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Abort */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Abort */
 /**
  * @summary Encodes a(n) Abort into an ASN.1 Element.
  * @function
@@ -192,6 +177,5 @@ export function _encode_Abort(value: Abort, elGetter: $.ASN1Encoder<Abort>) {
   return _cached_encoder_for_Abort(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Abort */
 
 /* eslint-enable */

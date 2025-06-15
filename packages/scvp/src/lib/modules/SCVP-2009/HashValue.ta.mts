@@ -21,7 +21,6 @@ import {
     AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION HashValue */
 /**
  * @summary HashValue
  * @description
@@ -85,9 +84,7 @@ export class HashValue {
     });
   }
 }
-/* END_OF_SYMBOL_DEFINITION HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HashValue */
 /**
  * @summary The Leading Root Component Types of HashValue
  * @description
@@ -112,9 +109,7 @@ export const _root_component_type_list_1_spec_for_HashValue: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HashValue */
 /**
  * @summary The Trailing Root Component Types of HashValue
  * @description
@@ -124,9 +119,7 @@ export const _root_component_type_list_1_spec_for_HashValue: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_HashValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HashValue */
 /**
  * @summary The Extension Addition Component Types of HashValue
  * @description
@@ -136,13 +129,9 @@ export const _root_component_type_list_2_spec_for_HashValue: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_HashValue: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HashValue */
 let _cached_decoder_for_HashValue: $.ASN1Decoder<HashValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HashValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) HashValue
  * @function
@@ -180,13 +169,9 @@ export function _decode_HashValue(el: _Element) {
   }
   return _cached_decoder_for_HashValue(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HashValue */
 let _cached_encoder_for_HashValue: $.ASN1Encoder<HashValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HashValue */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HashValue */
 /**
  * @summary Encodes a(n) HashValue into an ASN.1 Element.
  * @function
@@ -218,6 +203,5 @@ export function _encode_HashValue(
   return _cached_encoder_for_HashValue(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HashValue */
 
 /* eslint-enable */

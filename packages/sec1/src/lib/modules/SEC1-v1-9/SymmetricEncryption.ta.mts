@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../SEC1-v1-9/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SymmetricEncryption */
 /**
  * @summary SymmetricEncryption
  * @description
@@ -24,13 +23,9 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 type SymmetricEncryption = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SymmetricEncryption */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SymmetricEncryption */
 let _cached_decoder_for_SymmetricEncryption: $.ASN1Decoder<SymmetricEncryption> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SymmetricEncryption */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SymmetricEncryption */
 /**
  * @summary Decodes an ASN.1 element into a(n) SymmetricEncryption
  * @function
@@ -42,13 +37,9 @@ function _decode_SymmetricEncryption (el: _Element) {
     if (!_cached_decoder_for_SymmetricEncryption) { _cached_decoder_for_SymmetricEncryption = _decode_AlgorithmIdentifier; }
     return _cached_decoder_for_SymmetricEncryption(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SymmetricEncryption */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SymmetricEncryption */
 let _cached_encoder_for_SymmetricEncryption: $.ASN1Encoder<SymmetricEncryption> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SymmetricEncryption */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SymmetricEncryption */
 /**
  * @summary Encodes a(n) SymmetricEncryption into an ASN.1 Element.
  * @function
@@ -62,6 +53,5 @@ function _encode_SymmetricEncryption (value: SymmetricEncryption, elGetter: $.AS
     return _cached_encoder_for_SymmetricEncryption(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SymmetricEncryption */
 
 /* eslint-enable */

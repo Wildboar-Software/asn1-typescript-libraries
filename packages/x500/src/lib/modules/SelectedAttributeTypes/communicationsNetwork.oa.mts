@@ -11,7 +11,6 @@ import {
 } from "../SelectedAttributeTypes/CommunicationsNetwork.ta.mjs";
 import { id_at_communicationsNetwork } from "../SelectedAttributeTypes/id-at-communicationsNetwork.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION communicationsNetwork */
 /**
  * @summary communicationsNetwork
  * @description
@@ -52,6 +51,5 @@ export const communicationsNetwork: ATTRIBUTE<CommunicationsNetwork> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION communicationsNetwork */
 
 /* eslint-enable */

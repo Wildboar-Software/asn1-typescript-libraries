@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION receiveLSPBufferSize */
 /**
  * @summary receiveLSPBufferSize
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const receiveLSPBufferSize: INTEGER = 1492;
-/* END_OF_SYMBOL_DEFINITION receiveLSPBufferSize */
 
 /* eslint-enable */

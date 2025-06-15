@@ -21,7 +21,6 @@ import {
   _encode_SCVPCertID,
 } from '../SCVP-2009/SCVPCertID.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PKCReference */
 /**
  * @summary PKCReference
  * @description
@@ -38,13 +37,9 @@ import {
 export type PKCReference =
   | { cert: Certificate } /* CHOICE_ALT_ROOT */
   | { pkcRef: SCVPCertID } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PKCReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCReference */
 let _cached_decoder_for_PKCReference: $.ASN1Decoder<PKCReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PKCReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PKCReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) PKCReference
  * @function
@@ -68,13 +63,9 @@ export function _decode_PKCReference(el: _Element) {
   }
   return _cached_decoder_for_PKCReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PKCReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCReference */
 let _cached_encoder_for_PKCReference: $.ASN1Encoder<PKCReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PKCReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PKCReference */
 /**
  * @summary Encodes a(n) PKCReference into an ASN.1 Element.
  * @function
@@ -108,6 +99,5 @@ export function _encode_PKCReference(
   return _cached_encoder_for_PKCReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PKCReference */
 
 /* eslint-enable */

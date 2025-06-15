@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyWrapAlgorithm */
+
 /**
  * @summary KeyWrapAlgorithm
  * @description
@@ -14,13 +14,11 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ```
  */
 export type KeyWrapAlgorithm = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyWrapAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyWrapAlgorithm */
+
 let _cached_decoder_for_KeyWrapAlgorithm: $.ASN1Decoder<KeyWrapAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyWrapAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyWrapAlgorithm */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyWrapAlgorithm
  * @function
@@ -33,13 +31,11 @@ export function _decode_KeyWrapAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_KeyWrapAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyWrapAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyWrapAlgorithm */
+
 let _cached_encoder_for_KeyWrapAlgorithm: $.ASN1Encoder<KeyWrapAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyWrapAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyWrapAlgorithm */
+
 /**
  * @summary Encodes a(n) KeyWrapAlgorithm into an ASN.1 Element.
  * @function
@@ -57,6 +53,5 @@ export function _encode_KeyWrapAlgorithm(
     return _cached_encoder_for_KeyWrapAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyWrapAlgorithm */
 
 /* eslint-enable */

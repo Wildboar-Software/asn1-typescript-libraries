@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_doc_edi_message_store */
 /**
  * @summary id_doc_edi_message_store
  * @description
@@ -25,6 +24,5 @@ import { id_doc } from '../EDIMUseOfDirectory/id-doc.va.mjs';
  * @constant
  */
 export const id_doc_edi_message_store: ID = new _OID([2], id_doc);
-/* END_OF_SYMBOL_DEFINITION id_doc_edi_message_store */
 
 /* eslint-enable */

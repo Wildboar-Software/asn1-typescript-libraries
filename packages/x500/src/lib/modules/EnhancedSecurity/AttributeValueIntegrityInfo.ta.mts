@@ -11,7 +11,6 @@ import {
     _decode_AttributeValueIntegrityInfoContent,
     _encode_AttributeValueIntegrityInfoContent,
 } from "../EnhancedSecurity/AttributeValueIntegrityInfoContent.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeValueIntegrityInfo */
 /**
  * @summary AttributeValueIntegrityInfo
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type AttributeValueIntegrityInfo = SIGNED<AttributeValueIntegrityInfoContent>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AttributeValueIntegrityInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueIntegrityInfo */
 let _cached_decoder_for_AttributeValueIntegrityInfo: $.ASN1Decoder<AttributeValueIntegrityInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueIntegrityInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeValueIntegrityInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValueIntegrityInfo
  * @function
@@ -44,13 +39,9 @@ export function _decode_AttributeValueIntegrityInfo(el: _Element) {
     }
     return _cached_decoder_for_AttributeValueIntegrityInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeValueIntegrityInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueIntegrityInfo */
 let _cached_encoder_for_AttributeValueIntegrityInfo: $.ASN1Encoder<AttributeValueIntegrityInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueIntegrityInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeValueIntegrityInfo */
 /**
  * @summary Encodes a(n) AttributeValueIntegrityInfo into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AttributeValueIntegrityInfo(
     return _cached_encoder_for_AttributeValueIntegrityInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeValueIntegrityInfo */
 
 /* eslint-enable */

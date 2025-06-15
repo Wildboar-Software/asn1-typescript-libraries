@@ -16,7 +16,7 @@ import {
   _decode_EncryptedData,
   _encode_EncryptedData,
 } from '../KerberosV5Spec2/EncryptedData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION KRB_PRIV */
+
 /**
  * @summary KRB_PRIV
  * @description
@@ -74,9 +74,8 @@ export class KRB_PRIV {
     return new KRB_PRIV(_o.pvno, _o.msg_type, _o.enc_part);
   }
 }
-/* END_OF_SYMBOL_DEFINITION KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_PRIV */
+
 /**
  * @summary The Leading Root Component Types of KRB_PRIV
  * @description
@@ -108,9 +107,8 @@ export const _root_component_type_list_1_spec_for_KRB_PRIV: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_PRIV */
+
 /**
  * @summary The Trailing Root Component Types of KRB_PRIV
  * @description
@@ -120,9 +118,8 @@ export const _root_component_type_list_1_spec_for_KRB_PRIV: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KRB_PRIV: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_PRIV */
+
 /**
  * @summary The Extension Addition Component Types of KRB_PRIV
  * @description
@@ -132,13 +129,11 @@ export const _root_component_type_list_2_spec_for_KRB_PRIV: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_KRB_PRIV: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_PRIV */
+
 let _cached_decoder_for_KRB_PRIV: $.ASN1Decoder<KRB_PRIV> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KRB_PRIV */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KRB_PRIV
  * @function
@@ -179,13 +174,11 @@ export function _decode_KRB_PRIV(el: _Element) {
   }
   return _cached_decoder_for_KRB_PRIV(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_PRIV */
+
 let _cached_encoder_for_KRB_PRIV: $.ASN1Encoder<KRB_PRIV> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KRB_PRIV */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KRB_PRIV */
+
 /**
  * @summary Encodes a(n) KRB_PRIV into an ASN.1 Element.
  * @function
@@ -236,6 +229,5 @@ export function _encode_KRB_PRIV(
   return _cached_encoder_for_KRB_PRIV(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KRB_PRIV */
 
 /* eslint-enable */

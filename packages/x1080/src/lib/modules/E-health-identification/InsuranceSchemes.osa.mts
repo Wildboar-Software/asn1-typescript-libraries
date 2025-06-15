@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { INSURANCE_SCHEME } from '../E-health-identification/INSURANCE-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION InsuranceSchemes */
+
 /**
  * @summary InsuranceSchemes
  * @description
@@ -26,6 +26,5 @@ import { INSURANCE_SCHEME } from '../E-health-identification/INSURANCE-SCHEME.oc
  *
  */
 export const InsuranceSchemes: INSURANCE_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION InsuranceSchemes */
 
 /* eslint-enable */

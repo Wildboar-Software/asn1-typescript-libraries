@@ -47,7 +47,6 @@ import {
   _decode_Document_children_Item,
   _encode_Document_children_Item,
 } from '../FastInfoset/Document-children-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Document */
 /**
  * @summary Document
  * @description
@@ -188,9 +187,7 @@ export class Document {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Document */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Document */
 /**
  * @summary The Leading Root Component Types of Document
  * @description
@@ -257,9 +254,7 @@ export const _root_component_type_list_1_spec_for_Document: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Document */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Document */
 /**
  * @summary The Trailing Root Component Types of Document
  * @description
@@ -269,9 +264,7 @@ export const _root_component_type_list_1_spec_for_Document: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Document: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Document */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Document */
 /**
  * @summary The Extension Addition Component Types of Document
  * @description
@@ -281,13 +274,9 @@ export const _root_component_type_list_2_spec_for_Document: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Document: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Document */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Document */
 let _cached_decoder_for_Document: $.ASN1Decoder<Document> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Document */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Document */
 /**
  * @summary Decodes an ASN.1 element into a(n) Document
  * @function
@@ -367,13 +356,9 @@ export function _decode_Document(el: _Element) {
   }
   return _cached_decoder_for_Document(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Document */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Document */
 let _cached_encoder_for_Document: $.ASN1Encoder<Document> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Document */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Document */
 /**
  * @summary Encodes a(n) Document into an ASN.1 Element.
  * @function
@@ -440,6 +425,5 @@ export function _encode_Document(
   return _cached_encoder_for_Document(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Document */
 
 /* eslint-enable */

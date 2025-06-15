@@ -16,7 +16,6 @@ import {
     _encode_ContentInfo,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.mjs";
 import { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pkcs7_body_part_data */
 /**
  * @summary pkcs7_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const pkcs7_body_part_data: TYPE_IDENTIFIER<ContentInfo> = {
     '&id': id_et_pkcs7 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pkcs7_body_part_data */
 
 /* eslint-enable */

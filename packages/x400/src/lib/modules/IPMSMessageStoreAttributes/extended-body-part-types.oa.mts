@@ -20,7 +20,6 @@ import { id_bat_extended_body_part_types } from '../IPMSObjectIdentifiers/id-bat
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION extended_body_part_types */
 /**
  * @summary extended_body_part_types
  * @description
@@ -53,6 +52,5 @@ export const extended_body_part_types: X413ATTRIBUTE<OBJECT_IDENTIFIER> = {
     '&id': id_bat_extended_body_part_types /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION extended_body_part_types */
 
 /* eslint-enable */

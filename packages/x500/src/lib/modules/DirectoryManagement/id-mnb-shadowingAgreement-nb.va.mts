@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mnb_shadowingAgreement_nb */
 /**
  * @summary id_mnb_shadowingAgreement_nb
  * @description
@@ -18,6 +17,5 @@ export const id_mnb_shadowingAgreement_nb: OBJECT_IDENTIFIER = new _OID(
     [8],
     id_mnb
 );
-/* END_OF_SYMBOL_DEFINITION id_mnb_shadowingAgreement_nb */
 
 /* eslint-enable */

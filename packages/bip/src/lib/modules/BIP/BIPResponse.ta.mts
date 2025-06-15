@@ -30,7 +30,7 @@ import {
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
 } from '../BIP/BioAPI-RETURN.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BIPResponse */
+
 /**
  * @summary BIPResponse
  * @description
@@ -171,9 +171,8 @@ export class BIPResponse {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPResponse */
+
 /**
  * @summary The Leading Root Component Types of BIPResponse
  * @description
@@ -226,9 +225,8 @@ export const _root_component_type_list_1_spec_for_BIPResponse: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPResponse */
+
 /**
  * @summary The Trailing Root Component Types of BIPResponse
  * @description
@@ -238,9 +236,8 @@ export const _root_component_type_list_1_spec_for_BIPResponse: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BIPResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPResponse */
+
 /**
  * @summary The Extension Addition Component Types of BIPResponse
  * @description
@@ -250,13 +247,11 @@ export const _root_component_type_list_2_spec_for_BIPResponse: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_BIPResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPResponse */
+
 let _cached_decoder_for_BIPResponse: $.ASN1Decoder<BIPResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BIPResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BIPResponse
  * @function
@@ -304,13 +299,11 @@ export function _decode_BIPResponse(el: _Element) {
   }
   return _cached_decoder_for_BIPResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPResponse */
+
 let _cached_encoder_for_BIPResponse: $.ASN1Encoder<BIPResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BIPResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BIPResponse */
+
 /**
  * @summary Encodes a(n) BIPResponse into an ASN.1 Element.
  * @function
@@ -346,6 +339,5 @@ export function _encode_BIPResponse(
   return _cached_encoder_for_BIPResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BIPResponse */
 
 /* eslint-enable */

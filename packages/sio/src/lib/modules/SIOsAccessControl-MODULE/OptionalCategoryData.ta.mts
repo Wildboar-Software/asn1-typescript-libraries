@@ -6,7 +6,7 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION OptionalCategoryData */
+
 /**
  * @summary OptionalCategoryData
  * @description
@@ -56,9 +56,8 @@ export class OptionalCategoryData {
         return new OptionalCategoryData(_o.optCatDataId, _o.categorydata);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalCategoryData */
+
 /**
  * @summary The Leading Root Component Types of OptionalCategoryData
  * @description
@@ -83,9 +82,8 @@ export const _root_component_type_list_1_spec_for_OptionalCategoryData: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalCategoryData */
+
 /**
  * @summary The Trailing Root Component Types of OptionalCategoryData
  * @description
@@ -95,9 +93,8 @@ export const _root_component_type_list_1_spec_for_OptionalCategoryData: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OptionalCategoryData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalCategoryData */
+
 /**
  * @summary The Extension Addition Component Types of OptionalCategoryData
  * @description
@@ -107,13 +104,11 @@ export const _root_component_type_list_2_spec_for_OptionalCategoryData: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_OptionalCategoryData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalCategoryData */
+
 let _cached_decoder_for_OptionalCategoryData: $.ASN1Decoder<OptionalCategoryData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OptionalCategoryData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OptionalCategoryData
  * @function
@@ -144,13 +139,11 @@ export function _decode_OptionalCategoryData(el: _Element) {
     }
     return _cached_decoder_for_OptionalCategoryData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalCategoryData */
+
 let _cached_encoder_for_OptionalCategoryData: $.ASN1Encoder<OptionalCategoryData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OptionalCategoryData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OptionalCategoryData */
+
 /**
  * @summary Encodes a(n) OptionalCategoryData into an ASN.1 Element.
  * @function
@@ -185,6 +178,5 @@ export function _encode_OptionalCategoryData(
     return _cached_encoder_for_OptionalCategoryData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OptionalCategoryData */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_PKCertIdentifier,
     _encode_PKCertIdentifier,
 } from "../AuthenticationFramework/PKCertIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TBrequest */
 /**
  * @summary TBrequest
  * @description
@@ -24,13 +23,9 @@ export type TBrequest =
     | { caCert: PKCertIdentifier } /* CHOICE_ALT_ROOT */
     | { subjectCert: PKCertIdentifier } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION TBrequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBrequest */
 let _cached_decoder_for_TBrequest: $.ASN1Decoder<TBrequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBrequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBrequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBrequest
  * @function
@@ -56,13 +51,9 @@ export function _decode_TBrequest(el: _Element) {
     }
     return _cached_decoder_for_TBrequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBrequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBrequest */
 let _cached_encoder_for_TBrequest: $.ASN1Encoder<TBrequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBrequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBrequest */
 /**
  * @summary Encodes a(n) TBrequest into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_TBrequest(
     return _cached_encoder_for_TBrequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBrequest */
 
 /* eslint-enable */

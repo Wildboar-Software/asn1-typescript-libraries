@@ -16,7 +16,6 @@ import {
     _decode_ExtendedEncodedInformationTypes,
     _encode_ExtendedEncodedInformationTypes,
 } from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncodedInformationTypesConstraints */
 /**
  * @summary EncodedInformationTypesConstraints
  * @description
@@ -79,9 +78,7 @@ export class EncodedInformationTypesConstraints {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncodedInformationTypesConstraints */
 /**
  * @summary The Leading Root Component Types of EncodedInformationTypesConstraints
  * @description
@@ -113,9 +110,7 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypesConstra
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncodedInformationTypesConstraints */
 /**
  * @summary The Trailing Root Component Types of EncodedInformationTypesConstraints
  * @description
@@ -125,9 +120,7 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypesConstra
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncodedInformationTypesConstraints: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncodedInformationTypesConstraints */
 /**
  * @summary The Extension Addition Component Types of EncodedInformationTypesConstraints
  * @description
@@ -137,13 +130,9 @@ export const _root_component_type_list_2_spec_for_EncodedInformationTypesConstra
  * @constant
  */
 export const _extension_additions_list_spec_for_EncodedInformationTypesConstraints: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedInformationTypesConstraints */
 let _cached_decoder_for_EncodedInformationTypesConstraints: $.ASN1Decoder<EncodedInformationTypesConstraints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncodedInformationTypesConstraints */
 /**
  * @summary Decodes an ASN.1 element into a(n) EncodedInformationTypesConstraints
  * @function
@@ -196,13 +185,9 @@ export function _decode_EncodedInformationTypesConstraints(el: _Element) {
     }
     return _cached_decoder_for_EncodedInformationTypesConstraints(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedInformationTypesConstraints */
 let _cached_encoder_for_EncodedInformationTypesConstraints: $.ASN1Encoder<EncodedInformationTypesConstraints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncodedInformationTypesConstraints */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncodedInformationTypesConstraints */
 /**
  * @summary Encodes a(n) EncodedInformationTypesConstraints into an ASN.1 Element.
  * @function
@@ -257,6 +242,5 @@ export function _encode_EncodedInformationTypesConstraints(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncodedInformationTypesConstraints */
 
 /* eslint-enable */

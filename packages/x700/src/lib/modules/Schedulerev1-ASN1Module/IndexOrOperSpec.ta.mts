@@ -16,7 +16,7 @@ import {
     _decode_OperationSpecifications,
     _encode_OperationSpecifications,
 } from '../Schedulerev1-ASN1Module/OperationSpecifications.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IndexOrOperSpec */
+
 /**
  * @summary IndexOrOperSpec
  * @description
@@ -33,13 +33,11 @@ import {
 export type IndexOrOperSpec =
     | { index: INTEGER } /* CHOICE_ALT_ROOT */
     | { operation: OperationSpecifications } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION IndexOrOperSpec */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IndexOrOperSpec */
+
 let _cached_decoder_for_IndexOrOperSpec: $.ASN1Decoder<IndexOrOperSpec> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IndexOrOperSpec */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IndexOrOperSpec */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IndexOrOperSpec
  * @function
@@ -65,13 +63,11 @@ export function _decode_IndexOrOperSpec(el: _Element) {
     }
     return _cached_decoder_for_IndexOrOperSpec(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IndexOrOperSpec */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IndexOrOperSpec */
+
 let _cached_encoder_for_IndexOrOperSpec: $.ASN1Encoder<IndexOrOperSpec> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IndexOrOperSpec */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IndexOrOperSpec */
+
 /**
  * @summary Encodes a(n) IndexOrOperSpec into an ASN.1 Element.
  * @function
@@ -105,6 +101,5 @@ export function _encode_IndexOrOperSpec(
     return _cached_encoder_for_IndexOrOperSpec(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IndexOrOperSpec */
 
 /* eslint-enable */

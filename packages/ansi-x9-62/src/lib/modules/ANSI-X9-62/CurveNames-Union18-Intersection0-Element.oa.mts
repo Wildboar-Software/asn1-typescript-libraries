@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { c2pnb368w1 } from "../ANSI-X9-62/c2pnb368w1.va.mjs";
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION CurveNames_Union18_Intersection0_Element */
 /**
  * @summary CurveNames_Union18_Intersection0_Element
  * @description
@@ -22,6 +21,5 @@ export const CurveNames_Union18_Intersection0_Element: CURVES = {
     encoderFor: {},
     "&id": c2pnb368w1 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION CurveNames_Union18_Intersection0_Element */
 
 /* eslint-enable */

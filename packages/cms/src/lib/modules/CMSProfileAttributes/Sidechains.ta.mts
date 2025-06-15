@@ -6,7 +6,7 @@ import {
     _decode_Sidechain,
     _encode_Sidechain,
 } from "../CMSProfileAttributes/Sidechain.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Sidechains */
+
 /**
  * @summary Sidechains
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Sidechains = Sidechain[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Sidechains */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Sidechains */
+
 let _cached_decoder_for_Sidechains: $.ASN1Decoder<Sidechains> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Sidechains */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Sidechains */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Sidechains
  * @function
@@ -39,13 +37,11 @@ export function _decode_Sidechains(el: _Element) {
     }
     return _cached_decoder_for_Sidechains(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Sidechains */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Sidechains */
+
 let _cached_encoder_for_Sidechains: $.ASN1Encoder<Sidechains> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Sidechains */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Sidechains */
+
 /**
  * @summary Encodes a(n) Sidechains into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_Sidechains(
     return _cached_encoder_for_Sidechains(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Sidechains */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ContentCorrelator */
 /**
  * @summary ContentCorrelator
  * @description
@@ -29,13 +28,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type ContentCorrelator =
     | { ia5text: IA5String } /* CHOICE_ALT_ROOT */
     | { octets: OCTET_STRING } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ContentCorrelator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentCorrelator */
 let _cached_decoder_for_ContentCorrelator: $.ASN1Decoder<ContentCorrelator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContentCorrelator */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContentCorrelator */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentCorrelator
  * @function
@@ -53,13 +48,9 @@ export function _decode_ContentCorrelator(el: _Element) {
     }
     return _cached_decoder_for_ContentCorrelator(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContentCorrelator */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentCorrelator */
 let _cached_encoder_for_ContentCorrelator: $.ASN1Encoder<ContentCorrelator> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContentCorrelator */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContentCorrelator */
 /**
  * @summary Encodes a(n) ContentCorrelator into an ASN.1 Element.
  * @function
@@ -83,6 +74,5 @@ export function _encode_ContentCorrelator(
     return _cached_encoder_for_ContentCorrelator(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContentCorrelator */
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
 } from "./RSAES-OAEP-params.ta.mjs";
 import { sha1 } from "./sha1.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION rSAES_OAEP_Default_Identifier */
+
 /**
  * @summary rSAES_OAEP_Default_Identifier
  * @description
@@ -45,6 +45,5 @@ export const rSAES_OAEP_Default_Identifier: RSAES_AlgorithmIdentifier = Algorith
         _unrecognizedExtensionsList: undefined,
     }
 );
-/* END_OF_SYMBOL_DEFINITION rSAES_OAEP_Default_Identifier */
 
 /* eslint-enable */

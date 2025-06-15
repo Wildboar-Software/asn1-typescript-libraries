@@ -6,7 +6,6 @@ import {
     _encode_AttributesSyntax,
 } from "../CertificateExtensions/AttributesSyntax.ta.mjs";
 import { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va.mjs";
-/* START_OF_SYMBOL_DEFINITION associatedInformation */
 /**
  * @summary associatedInformation
  * @description
@@ -34,6 +33,5 @@ export const associatedInformation: EXTENSION<AttributesSyntax> = {
     "&id": id_ce_associatedInformation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION associatedInformation */
 
 /* eslint-enable */

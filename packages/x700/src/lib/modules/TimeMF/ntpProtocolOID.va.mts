@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { timeManagement } from '../TimeMF/timeManagement.va.mjs';
-/* START_OF_SYMBOL_DEFINITION ntpProtocolOID */
 /**
  * @summary ntpProtocolOID
  * @description
@@ -28,6 +27,5 @@ export const ntpProtocolOID: OBJECT_IDENTIFIER = new _OID(
     [/* managedObjectClass */ 3, /* ntpProtocol */ 4],
     timeManagement
 );
-/* END_OF_SYMBOL_DEFINITION ntpProtocolOID */
 
 /* eslint-enable */

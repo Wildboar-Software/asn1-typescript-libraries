@@ -15,7 +15,7 @@ import {
   _decode_SessionConnectionIdentifier,
   _encode_SessionConnectionIdentifier,
 } from '../Reliable-Transfer-APDU/SessionConnectionIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectionData */
+
 /**
  * @summary ConnectionData
  * @description
@@ -35,13 +35,11 @@ import {
 export type ConnectionData =
   | { open: _Element } /* CHOICE_ALT_ROOT */
   | { recover: SessionConnectionIdentifier } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConnectionData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionData */
+
 let _cached_decoder_for_ConnectionData: $.ASN1Decoder<ConnectionData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectionData
  * @function
@@ -64,13 +62,11 @@ export function _decode_ConnectionData(el: _Element) {
   }
   return _cached_decoder_for_ConnectionData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionData */
+
 let _cached_encoder_for_ConnectionData: $.ASN1Encoder<ConnectionData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionData */
+
 /**
  * @summary Encodes a(n) ConnectionData into an ASN.1 Element.
  * @function
@@ -104,6 +100,5 @@ export function _encode_ConnectionData(
   return _cached_encoder_for_ConnectionData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionData */
 
 /* eslint-enable */

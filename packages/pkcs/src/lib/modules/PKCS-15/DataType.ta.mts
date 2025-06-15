@@ -13,7 +13,7 @@ import {
 } from "../PKCS-15/ExternalIDO.ta.mjs";
 import { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta.mjs";
 import { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataType */
+
 /**
  * @summary DataType
  * @description
@@ -34,13 +34,11 @@ export type DataType =
     | { externalIDO: DataObject<ExternalIDO> } /* CHOICE_ALT_ROOT */
     | { oidDO: DataObject<OidDO> } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataType */
+
 let _cached_decoder_for_DataType: $.ASN1Decoder<DataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DataType
  * @function
@@ -72,13 +70,11 @@ export function _decode_DataType(el: _Element) {
     }
     return _cached_decoder_for_DataType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataType */
+
 let _cached_encoder_for_DataType: $.ASN1Encoder<DataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataType */
+
 /**
  * @summary Encodes a(n) DataType into an ASN.1 Element.
  * @function
@@ -116,6 +112,5 @@ export function _encode_DataType(
     return _cached_encoder_for_DataType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataType */
 
 /* eslint-enable */

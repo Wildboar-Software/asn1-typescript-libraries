@@ -13,7 +13,6 @@ import { mts_access_contract_88 } from '../MTSAbstractService88/mts-access-contr
 import { mts_forced_access_contract_88 } from '../MTSAbstractService88/mts-forced-access-contract-88.oa.mjs';
 import { id_ot_mts_user } from '../MTSObjectIdentifiers/id-ot-mts-user.va.mjs';
 import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_user_88 */
 /**
  * @summary mts_user_88
  * @description
@@ -43,6 +42,5 @@ export const mts_user_88: MHS_OBJECT = {
         id_ot_mts_user
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mts_user_88 */
 
 /* eslint-enable */

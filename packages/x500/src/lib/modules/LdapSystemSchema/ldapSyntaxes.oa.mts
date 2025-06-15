@@ -11,7 +11,6 @@ import {
 } from "../LdapSystemSchema/LdapSyntaxDescription.ta.mjs";
 import { ldapSyntaxDescription } from "../SelectedAttributeTypes/ldapSyntaxDescription.oa.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ldapSyntaxes */
 /**
  * @summary ldapSyntaxes
  * @description
@@ -52,6 +51,5 @@ export const ldapSyntaxes: ATTRIBUTE<LdapSyntaxDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ldapSyntaxes */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlarmRecordPtrList */
+
 /**
  * @summary AlarmRecordPtrList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AlarmRecordPtrList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AlarmRecordPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmRecordPtrList */
+
 let _cached_decoder_for_AlarmRecordPtrList: $.ASN1Decoder<AlarmRecordPtrList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmRecordPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmRecordPtrList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AlarmRecordPtrList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AlarmRecordPtrList(el: _Element) {
     }
     return _cached_decoder_for_AlarmRecordPtrList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmRecordPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmRecordPtrList */
+
 let _cached_encoder_for_AlarmRecordPtrList: $.ASN1Encoder<AlarmRecordPtrList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmRecordPtrList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmRecordPtrList */
+
 /**
  * @summary Encodes a(n) AlarmRecordPtrList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AlarmRecordPtrList(
     return _cached_encoder_for_AlarmRecordPtrList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmRecordPtrList */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificateGroup */
 /**
  * @summary CertificateGroup
  * @description
@@ -36,13 +35,9 @@ export type CertificateGroup =
     | { serialNumberRange: CertificateGroupNumberRange } /* CHOICE_ALT_ROOT */
     | { nameSubtree: GeneralName } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION CertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateGroup */
 let _cached_decoder_for_CertificateGroup: $.ASN1Decoder<CertificateGroup> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateGroup */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateGroup
  * @function
@@ -74,13 +69,9 @@ export function _decode_CertificateGroup(el: _Element) {
     }
     return _cached_decoder_for_CertificateGroup(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateGroup */
 let _cached_encoder_for_CertificateGroup: $.ASN1Encoder<CertificateGroup> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateGroup */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateGroup */
 /**
  * @summary Encodes a(n) CertificateGroup into an ASN.1 Element.
  * @function
@@ -120,6 +111,5 @@ export function _encode_CertificateGroup(
     return _cached_encoder_for_CertificateGroup(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateGroup */
 
 /* eslint-enable */

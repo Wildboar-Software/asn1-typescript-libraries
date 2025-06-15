@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SEC_EXCHG_ITEM */
+
 /**
  * @summary SEC_EXCHG_ITEM
  * @description
@@ -78,6 +78,5 @@ export interface SEC_EXCHG_ITEM<
    */
   readonly '&Errors'?: SE_ERROR[];
 }
-/* END_OF_SYMBOL_DEFINITION SEC_EXCHG_ITEM */
 
 /* eslint-enable */

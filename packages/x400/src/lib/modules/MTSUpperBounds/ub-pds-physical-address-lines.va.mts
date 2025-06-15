@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION ub_pds_physical_address_lines */
 /**
  * @summary ub_pds_physical_address_lines
  * @description
@@ -25,6 +24,5 @@ import {
  * @constant
  */
 export const ub_pds_physical_address_lines: INTEGER = 6;
-/* END_OF_SYMBOL_DEFINITION ub_pds_physical_address_lines */
 
 /* eslint-enable */

@@ -21,7 +21,7 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Enroll_ResponseParams */
+
 /**
  * @summary Enroll_ResponseParams
  * @description
@@ -82,9 +82,8 @@ export class Enroll_ResponseParams {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Enroll_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of Enroll_ResponseParams
  * @description
@@ -116,9 +115,8 @@ export const _root_component_type_list_1_spec_for_Enroll_ResponseParams: $.Compo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Enroll_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of Enroll_ResponseParams
  * @description
@@ -128,9 +126,8 @@ export const _root_component_type_list_1_spec_for_Enroll_ResponseParams: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Enroll_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Enroll_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of Enroll_ResponseParams
  * @description
@@ -140,13 +137,11 @@ export const _root_component_type_list_2_spec_for_Enroll_ResponseParams: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_Enroll_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Enroll_ResponseParams */
+
 let _cached_decoder_for_Enroll_ResponseParams: $.ASN1Decoder<Enroll_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Enroll_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Enroll_ResponseParams
  * @function
@@ -193,13 +188,11 @@ export function _decode_Enroll_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_Enroll_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Enroll_ResponseParams */
+
 let _cached_encoder_for_Enroll_ResponseParams: $.ASN1Encoder<Enroll_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Enroll_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Enroll_ResponseParams */
+
 /**
  * @summary Encodes a(n) Enroll_ResponseParams into an ASN.1 Element.
  * @function
@@ -236,6 +229,5 @@ export function _encode_Enroll_ResponseParams(
   return _cached_encoder_for_Enroll_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Enroll_ResponseParams */
 
 /* eslint-enable */

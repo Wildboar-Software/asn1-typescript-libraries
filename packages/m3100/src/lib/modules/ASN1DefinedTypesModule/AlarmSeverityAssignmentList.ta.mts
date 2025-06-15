@@ -15,7 +15,7 @@ import {
     _decode_AlarmSeverityAssignment,
     _encode_AlarmSeverityAssignment,
 } from '../ASN1DefinedTypesModule/AlarmSeverityAssignment.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlarmSeverityAssignmentList */
+
 /**
  * @summary AlarmSeverityAssignmentList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AlarmSeverityAssignmentList = AlarmSeverityAssignment[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AlarmSeverityAssignmentList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmSeverityAssignmentList */
+
 let _cached_decoder_for_AlarmSeverityAssignmentList: $.ASN1Decoder<AlarmSeverityAssignmentList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlarmSeverityAssignmentList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlarmSeverityAssignmentList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AlarmSeverityAssignmentList
  * @function
@@ -48,13 +46,11 @@ export function _decode_AlarmSeverityAssignmentList(el: _Element) {
     }
     return _cached_decoder_for_AlarmSeverityAssignmentList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlarmSeverityAssignmentList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmSeverityAssignmentList */
+
 let _cached_encoder_for_AlarmSeverityAssignmentList: $.ASN1Encoder<AlarmSeverityAssignmentList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlarmSeverityAssignmentList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlarmSeverityAssignmentList */
+
 /**
  * @summary Encodes a(n) AlarmSeverityAssignmentList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_AlarmSeverityAssignmentList(
     return _cached_encoder_for_AlarmSeverityAssignmentList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlarmSeverityAssignmentList */
 
 /* eslint-enable */

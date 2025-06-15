@@ -7,7 +7,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION DSA_Params */
+
 /**
  * @summary DSA_Params
  * @description
@@ -64,9 +64,8 @@ export class DSA_Params {
         return new DSA_Params(_o.p, _o.q, _o.g);
     }
 }
-/* END_OF_SYMBOL_DEFINITION DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DSA_Params */
+
 /**
  * @summary The Leading Root Component Types of DSA_Params
  * @description
@@ -98,9 +97,8 @@ export const _root_component_type_list_1_spec_for_DSA_Params: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DSA_Params */
+
 /**
  * @summary The Trailing Root Component Types of DSA_Params
  * @description
@@ -110,9 +108,8 @@ export const _root_component_type_list_1_spec_for_DSA_Params: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DSA_Params: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DSA_Params */
+
 /**
  * @summary The Extension Addition Component Types of DSA_Params
  * @description
@@ -122,13 +119,11 @@ export const _root_component_type_list_2_spec_for_DSA_Params: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_DSA_Params: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DSA_Params */
+
 let _cached_decoder_for_DSA_Params: $.ASN1Decoder<DSA_Params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DSA_Params */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DSA_Params
  * @function
@@ -160,13 +155,11 @@ export function _decode_DSA_Params(el: _Element) {
     }
     return _cached_decoder_for_DSA_Params(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DSA_Params */
+
 let _cached_encoder_for_DSA_Params: $.ASN1Encoder<DSA_Params> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DSA_Params */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DSA_Params */
+
 /**
  * @summary Encodes a(n) DSA_Params into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_DSA_Params(
     return _cached_encoder_for_DSA_Params(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DSA_Params */
 
 /* eslint-enable */

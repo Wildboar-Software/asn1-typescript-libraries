@@ -10,7 +10,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalPersonalName */
 /**
  * @summary UniversalPersonalName
  * @description
@@ -85,9 +84,7 @@ export class UniversalPersonalName {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UniversalPersonalName */
 /**
  * @summary The Leading Root Component Types of UniversalPersonalName
  * @description
@@ -126,9 +123,7 @@ export const _root_component_type_list_1_spec_for_UniversalPersonalName: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UniversalPersonalName */
 /**
  * @summary The Trailing Root Component Types of UniversalPersonalName
  * @description
@@ -138,9 +133,7 @@ export const _root_component_type_list_1_spec_for_UniversalPersonalName: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UniversalPersonalName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UniversalPersonalName */
 /**
  * @summary The Extension Addition Component Types of UniversalPersonalName
  * @description
@@ -150,13 +143,9 @@ export const _root_component_type_list_2_spec_for_UniversalPersonalName: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_UniversalPersonalName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPersonalName */
 let _cached_decoder_for_UniversalPersonalName: $.ASN1Decoder<UniversalPersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPersonalName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPersonalName
  * @function
@@ -216,13 +205,9 @@ export function _decode_UniversalPersonalName(el: _Element) {
     }
     return _cached_decoder_for_UniversalPersonalName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPersonalName */
 let _cached_encoder_for_UniversalPersonalName: $.ASN1Encoder<UniversalPersonalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPersonalName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPersonalName */
 /**
  * @summary Encodes a(n) UniversalPersonalName into an ASN.1 Element.
  * @function
@@ -280,6 +265,5 @@ export function _encode_UniversalPersonalName(
     return _cached_encoder_for_UniversalPersonalName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPersonalName */
 
 /* eslint-enable */

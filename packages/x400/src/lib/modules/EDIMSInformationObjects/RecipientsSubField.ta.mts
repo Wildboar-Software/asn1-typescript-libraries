@@ -80,7 +80,6 @@ import {
     id_for_action,
 } from "../EDIMSObjectIdentifiers/id-for-action.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RecipientsSubField */
 /**
  * @summary RecipientsSubField
  * @description
@@ -267,9 +266,7 @@ export class RecipientsSubField {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RecipientsSubField */
 /**
  * @summary The Leading Root Component Types of RecipientsSubField
  * @description
@@ -371,9 +368,7 @@ export const _root_component_type_list_1_spec_for_RecipientsSubField: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RecipientsSubField */
 /**
  * @summary The Trailing Root Component Types of RecipientsSubField
  * @description
@@ -383,9 +378,7 @@ export const _root_component_type_list_1_spec_for_RecipientsSubField: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RecipientsSubField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RecipientsSubField */
 /**
  * @summary The Extension Addition Component Types of RecipientsSubField
  * @description
@@ -395,13 +388,9 @@ export const _root_component_type_list_2_spec_for_RecipientsSubField: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_RecipientsSubField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientsSubField */
 let _cached_decoder_for_RecipientsSubField: $.ASN1Decoder<RecipientsSubField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientsSubField */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientsSubField
  * @function
@@ -528,13 +517,9 @@ export function _decode_RecipientsSubField(el: _Element) {
     }
     return _cached_decoder_for_RecipientsSubField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientsSubField */
 let _cached_encoder_for_RecipientsSubField: $.ASN1Encoder<RecipientsSubField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientsSubField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientsSubField */
 /**
  * @summary Encodes a(n) RecipientsSubField into an ASN.1 Element.
  * @function
@@ -690,6 +675,5 @@ export function _encode_RecipientsSubField(
     return _cached_encoder_for_RecipientsSubField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientsSubField */
 
 /* eslint-enable */

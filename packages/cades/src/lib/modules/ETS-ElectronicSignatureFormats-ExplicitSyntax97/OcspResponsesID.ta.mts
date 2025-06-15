@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta.mjs";
 import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OcspResponsesID */
 /**
  * @summary OcspResponsesID
  * @description
@@ -63,9 +62,7 @@ class OcspResponsesID {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OcspResponsesID */
 /**
  * @summary The Leading Root Component Types of OcspResponsesID
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_OcspResponsesID: $.ComponentSpec[] = 
     new $.ComponentSpec("ocspIdentifier", false, $.hasTag(_TagClass.universal, 16), undefined, undefined),
     new $.ComponentSpec("ocspRepHash", true, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OcspResponsesID */
 /**
  * @summary The Trailing Root Component Types of OcspResponsesID
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_OcspResponsesID: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OcspResponsesID */
 /**
  * @summary The Extension Addition Component Types of OcspResponsesID
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_OcspResponsesID: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OcspResponsesID */
 let _cached_decoder_for_OcspResponsesID: $.ASN1Decoder<OcspResponsesID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OcspResponsesID */
 /**
  * @summary Decodes an ASN.1 element into a(n) OcspResponsesID
  * @function
@@ -148,13 +137,9 @@ function _decode_OcspResponsesID (el: _Element) {
 }; }
     return _cached_decoder_for_OcspResponsesID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OcspResponsesID */
 let _cached_encoder_for_OcspResponsesID: $.ASN1Encoder<OcspResponsesID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OcspResponsesID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OcspResponsesID */
 /**
  * @summary Encodes a(n) OcspResponsesID into an ASN.1 Element.
  * @function
@@ -175,6 +160,5 @@ function _encode_OcspResponsesID (value: OcspResponsesID, elGetter: $.ASN1Encode
     return _cached_encoder_for_OcspResponsesID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OcspResponsesID */
 
 /* eslint-enable */

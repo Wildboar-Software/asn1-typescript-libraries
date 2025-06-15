@@ -10,7 +10,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { id_oa_serviceAdminSubentryList } from "../InformationFramework/id-oa-serviceAdminSubentryList.va.mjs";
-/* START_OF_SYMBOL_DEFINITION serviceAdminSubentryList */
 /**
  * @summary serviceAdminSubentryList
  * @description
@@ -48,6 +47,5 @@ export const serviceAdminSubentryList: ATTRIBUTE<DistinguishedName> = {
     "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION serviceAdminSubentryList */
 
 /* eslint-enable */

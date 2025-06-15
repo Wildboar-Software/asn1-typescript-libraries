@@ -24,7 +24,6 @@ import { id_hat_reply_time } from '../IPMSObjectIdentifiers/id-hat-reply-time.va
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION reply_time */
 /**
  * @summary reply_time
  * @description
@@ -59,6 +58,5 @@ export const reply_time: X413ATTRIBUTE<ReplyTimeField> = {
     '&id': id_hat_reply_time /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION reply_time */
 
 /* eslint-enable */

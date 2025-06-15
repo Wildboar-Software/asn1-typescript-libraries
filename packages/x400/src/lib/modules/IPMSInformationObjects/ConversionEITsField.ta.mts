@@ -15,7 +15,6 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConversionEITsField */
 /**
  * @summary ConversionEITsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ConversionEITsField = EncodedInformationTypes; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ConversionEITsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionEITsField */
 let _cached_decoder_for_ConversionEITsField: $.ASN1Decoder<ConversionEITsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConversionEITsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConversionEITsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConversionEITsField
  * @function
@@ -46,13 +41,9 @@ export function _decode_ConversionEITsField(el: _Element) {
     }
     return _cached_decoder_for_ConversionEITsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConversionEITsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionEITsField */
 let _cached_encoder_for_ConversionEITsField: $.ASN1Encoder<ConversionEITsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConversionEITsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConversionEITsField */
 /**
  * @summary Encodes a(n) ConversionEITsField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ConversionEITsField(
     return _cached_encoder_for_ConversionEITsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConversionEITsField */
 
 /* eslint-enable */

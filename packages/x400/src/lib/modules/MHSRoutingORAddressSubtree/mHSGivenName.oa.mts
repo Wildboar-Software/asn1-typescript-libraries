@@ -19,7 +19,6 @@ import {
 import { oRAddressElement } from '../MHSRoutingORAddressSubtree/oRAddressElement.oa.mjs';
 import { mHSGivenNameAttribute } from '../MHSRoutingORAddressSubtree/mHSGivenNameAttribute.oa.mjs';
 import { id_oc_mhs_given_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-given-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSGivenName */
 /**
  * @summary mHSGivenName
  * @description
@@ -48,6 +47,5 @@ export const mHSGivenName: OBJECT_CLASS = {
     '&MandatoryAttributes': [mHSGivenNameAttribute] /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_given_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSGivenName */
 
 /* eslint-enable */

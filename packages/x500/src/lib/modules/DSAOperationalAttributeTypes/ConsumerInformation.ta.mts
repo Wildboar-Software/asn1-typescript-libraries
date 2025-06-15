@@ -6,7 +6,6 @@ import {
     _decode_SupplierOrConsumer,
     _encode_SupplierOrConsumer,
 } from "../DSAOperationalAttributeTypes/SupplierOrConsumer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ConsumerInformation */
 /**
  * @summary ConsumerInformation
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ConsumerInformation = SupplierOrConsumer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ConsumerInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConsumerInformation */
 let _cached_decoder_for_ConsumerInformation: $.ASN1Decoder<ConsumerInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConsumerInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConsumerInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) ConsumerInformation
  * @function
@@ -37,13 +32,9 @@ export function _decode_ConsumerInformation(el: _Element) {
     }
     return _cached_decoder_for_ConsumerInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConsumerInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConsumerInformation */
 let _cached_encoder_for_ConsumerInformation: $.ASN1Encoder<ConsumerInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConsumerInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConsumerInformation */
 /**
  * @summary Encodes a(n) ConsumerInformation into an ASN.1 Element.
  * @function
@@ -61,6 +52,5 @@ export function _encode_ConsumerInformation(
     return _cached_encoder_for_ConsumerInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConsumerInformation */
 
 /* eslint-enable */

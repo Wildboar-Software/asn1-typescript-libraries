@@ -36,7 +36,6 @@ import {
     _decode_SPKM_WRAP,
     _encode_SPKM_WRAP,
 } from "../SpkmGssTokens/SPKM-WRAP.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SPKMInnerContextToken */
 /**
  * @summary SPKMInnerContextToken
  * @description
@@ -63,13 +62,9 @@ export type SPKMInnerContextToken =
     | { mic: SPKM_MIC } /* CHOICE_ALT_ROOT */
     | { wrap: SPKM_WRAP } /* CHOICE_ALT_ROOT */
     | { del: SPKM_DEL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SPKMInnerContextToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKMInnerContextToken */
 let _cached_decoder_for_SPKMInnerContextToken: $.ASN1Decoder<SPKMInnerContextToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SPKMInnerContextToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SPKMInnerContextToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) SPKMInnerContextToken
  * @function
@@ -113,13 +108,9 @@ export function _decode_SPKMInnerContextToken(el: _Element) {
     }
     return _cached_decoder_for_SPKMInnerContextToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SPKMInnerContextToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKMInnerContextToken */
 let _cached_encoder_for_SPKMInnerContextToken: $.ASN1Encoder<SPKMInnerContextToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SPKMInnerContextToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SPKMInnerContextToken */
 /**
  * @summary Encodes a(n) SPKMInnerContextToken into an ASN.1 Element.
  * @function
@@ -183,6 +174,5 @@ export function _encode_SPKMInnerContextToken(
     return _cached_encoder_for_SPKMInnerContextToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SPKMInnerContextToken */
 
 /* eslint-enable */

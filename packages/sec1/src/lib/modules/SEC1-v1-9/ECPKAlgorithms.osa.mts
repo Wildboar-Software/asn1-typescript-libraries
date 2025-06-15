@@ -15,7 +15,6 @@ import { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricte
 import { ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/ecPublicKeyTypeSupplemented.oa.mjs";
 import { ECPKAlgorithms_Union3_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union3-Intersection0-Element.oa.mjs";
 import { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union4-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ECPKAlgorithms */
 /**
  * @summary ECPKAlgorithms
  * @description
@@ -39,6 +38,5 @@ import { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAl
  */
 export
 const ECPKAlgorithms: (ALGORITHM)[] = [ ecPublicKeyType, ecPublicKeyTypeRestricted, ecPublicKeyTypeSupplemented, ECPKAlgorithms_Union3_Intersection0_Element, ECPKAlgorithms_Union4_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION ECPKAlgorithms */
 
 /* eslint-enable */

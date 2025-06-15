@@ -7,7 +7,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { id_pda_dateOfBirth } from "../PKIXqualified97/id-pda-dateOfBirth.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION dateOfBirth */
+
 /**
  * @summary dateOfBirth
  * @description
@@ -41,6 +41,5 @@ export const dateOfBirth: ATTRIBUTE<GeneralizedTime> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dateOfBirth */
 
 /* eslint-enable */

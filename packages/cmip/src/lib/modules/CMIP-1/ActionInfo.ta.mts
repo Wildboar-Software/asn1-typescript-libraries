@@ -17,7 +17,7 @@ import {
     _encode_ActionTypeId,
 } from '../CMIP-1/ActionTypeId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ActionInfo */
+
 /**
  * @summary ActionInfo
  * @description
@@ -68,9 +68,8 @@ export class ActionInfo {
     return new ActionInfo(_o.actionType, _o.actionInfoArg);
   }
 }
-/* END_OF_SYMBOL_DEFINITION ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ActionInfo */
+
 /**
  * @summary The Leading Root Component Types of ActionInfo
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_ActionInfo: $.ComponentSpec[] 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ActionInfo */
+
 /**
  * @summary The Trailing Root Component Types of ActionInfo
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_ActionInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ActionInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ActionInfo */
+
 /**
  * @summary The Extension Addition Component Types of ActionInfo
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_ActionInfo: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ActionInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionInfo */
+
 let _cached_decoder_for_ActionInfo: $.ASN1Decoder<ActionInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ActionInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActionInfo
  * @function
@@ -159,13 +154,11 @@ export function _decode_ActionInfo(el: _Element) {
   }
   return _cached_decoder_for_ActionInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionInfo */
+
 let _cached_encoder_for_ActionInfo: $.ASN1Encoder<ActionInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ActionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ActionInfo */
+
 /**
  * @summary Encodes a(n) ActionInfo into an ASN.1 Element.
  * @function
@@ -201,6 +194,5 @@ export function _encode_ActionInfo(
   return _cached_encoder_for_ActionInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ActionInfo */
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
     _decode_UniversalCommonName,
     _encode_UniversalCommonName,
 } from "../PkiPmiExternalDataTypes/UniversalCommonName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_common_name */
 /**
  * @summary universal_common_name
  * @description
@@ -33,6 +32,5 @@ export const universal_common_name: EXTENSION_ATTRIBUTE<UniversalCommonName> = {
     "&id": 24 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_common_name */
 
 /* eslint-enable */

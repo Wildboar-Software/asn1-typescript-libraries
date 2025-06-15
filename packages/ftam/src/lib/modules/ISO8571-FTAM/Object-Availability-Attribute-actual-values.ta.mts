@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Object_Availability_Attribute_actual_values */
+
 /**
  * @summary Object_Availability_Attribute_actual_values
  * @description
@@ -24,49 +24,43 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Object_Availability_Attribute_actual_values = INTEGER;
-/* END_OF_SYMBOL_DEFINITION Object_Availability_Attribute_actual_values */
 
-/* START_OF_SYMBOL_DEFINITION Object_Availability_Attribute_actual_values_immediate_availability */
+
 /**
  * @summary Object_Availability_Attribute_actual_values_immediate_availability
  * @constant
  * @type {number}
  */
 export const Object_Availability_Attribute_actual_values_immediate_availability: Object_Availability_Attribute_actual_values = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Object_Availability_Attribute_actual_values_immediate_availability */
 
-/* START_OF_SYMBOL_DEFINITION immediate_availability */
+
 /**
  * @summary Object_Availability_Attribute_actual_values_immediate_availability
  * @constant
  * @type {number}
  */
 export const immediate_availability: Object_Availability_Attribute_actual_values = Object_Availability_Attribute_actual_values_immediate_availability; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION immediate_availability */
 
-/* START_OF_SYMBOL_DEFINITION Object_Availability_Attribute_actual_values_deferred_availability */
+
 /**
  * @summary Object_Availability_Attribute_actual_values_deferred_availability
  * @constant
  * @type {number}
  */
 export const Object_Availability_Attribute_actual_values_deferred_availability: Object_Availability_Attribute_actual_values = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION Object_Availability_Attribute_actual_values_deferred_availability */
 
-/* START_OF_SYMBOL_DEFINITION deferred_availability */
+
 /**
  * @summary Object_Availability_Attribute_actual_values_deferred_availability
  * @constant
  * @type {number}
  */
 export const deferred_availability: Object_Availability_Attribute_actual_values = Object_Availability_Attribute_actual_values_deferred_availability; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION deferred_availability */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Availability_Attribute_actual_values */
+
 let _cached_decoder_for_Object_Availability_Attribute_actual_values: $.ASN1Decoder<Object_Availability_Attribute_actual_values> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Object_Availability_Attribute_actual_values */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Object_Availability_Attribute_actual_values */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Object_Availability_Attribute_actual_values
  * @function
@@ -82,13 +76,11 @@ export function _decode_Object_Availability_Attribute_actual_values(
   }
   return _cached_decoder_for_Object_Availability_Attribute_actual_values(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Object_Availability_Attribute_actual_values */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Availability_Attribute_actual_values */
+
 let _cached_encoder_for_Object_Availability_Attribute_actual_values: $.ASN1Encoder<Object_Availability_Attribute_actual_values> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Object_Availability_Attribute_actual_values */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Object_Availability_Attribute_actual_values */
+
 /**
  * @summary Encodes a(n) Object_Availability_Attribute_actual_values into an ASN.1 Element.
  * @function
@@ -110,6 +102,5 @@ export function _encode_Object_Availability_Attribute_actual_values(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Object_Availability_Attribute_actual_values */
 
 /* eslint-enable */

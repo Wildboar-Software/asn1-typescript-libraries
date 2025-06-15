@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_ldapUrl } from "../SelectedAttributeTypes/id-at-ldapUrl.va.mjs";
 import { url } from "../SelectedAttributeTypes/url.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ldapUrl */
 /**
  * @summary ldapUrl
  * @description
@@ -45,6 +44,5 @@ export const ldapUrl: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ldapUrl */
 
 /* eslint-enable */

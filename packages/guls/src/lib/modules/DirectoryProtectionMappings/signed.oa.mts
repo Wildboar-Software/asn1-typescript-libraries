@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import { dirSignedTransformation } from '../GulsSecurityTransformations/dirSignedTransformation.oa.mjs';
 import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION signed */
+
 /**
  * @summary signed
  * @description
@@ -42,6 +42,5 @@ export const signed: PROTECTION_MAPPING = {
   ) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&bypassPermitted': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signed */
 
 /* eslint-enable */

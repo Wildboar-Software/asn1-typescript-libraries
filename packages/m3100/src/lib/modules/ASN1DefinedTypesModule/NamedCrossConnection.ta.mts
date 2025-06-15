@@ -16,7 +16,7 @@ import {
     _decode_CrossConnectionName,
     _encode_CrossConnectionName,
 } from '../ASN1DefinedTypesModule/CrossConnectionName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NamedCrossConnection */
+
 /**
  * @summary NamedCrossConnection
  * @description
@@ -66,9 +66,8 @@ export class NamedCrossConnection {
         return new NamedCrossConnection(_o.redline, _o.name);
     }
 }
-/* END_OF_SYMBOL_DEFINITION NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NamedCrossConnection */
+
 /**
  * @summary The Leading Root Component Types of NamedCrossConnection
  * @description
@@ -93,9 +92,8 @@ export const _root_component_type_list_1_spec_for_NamedCrossConnection: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NamedCrossConnection */
+
 /**
  * @summary The Trailing Root Component Types of NamedCrossConnection
  * @description
@@ -105,9 +103,8 @@ export const _root_component_type_list_1_spec_for_NamedCrossConnection: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NamedCrossConnection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NamedCrossConnection */
+
 /**
  * @summary The Extension Addition Component Types of NamedCrossConnection
  * @description
@@ -117,13 +114,11 @@ export const _root_component_type_list_2_spec_for_NamedCrossConnection: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_NamedCrossConnection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedCrossConnection */
+
 let _cached_decoder_for_NamedCrossConnection: $.ASN1Decoder<NamedCrossConnection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NamedCrossConnection */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NamedCrossConnection
  * @function
@@ -154,13 +149,11 @@ export function _decode_NamedCrossConnection(el: _Element) {
     }
     return _cached_decoder_for_NamedCrossConnection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedCrossConnection */
+
 let _cached_encoder_for_NamedCrossConnection: $.ASN1Encoder<NamedCrossConnection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NamedCrossConnection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NamedCrossConnection */
+
 /**
  * @summary Encodes a(n) NamedCrossConnection into an ASN.1 Element.
  * @function
@@ -192,6 +185,5 @@ export function _encode_NamedCrossConnection(
     return _cached_encoder_for_NamedCrossConnection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NamedCrossConnection */
 
 /* eslint-enable */

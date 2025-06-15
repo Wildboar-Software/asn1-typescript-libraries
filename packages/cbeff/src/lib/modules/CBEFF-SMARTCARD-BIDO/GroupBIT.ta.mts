@@ -15,7 +15,6 @@ import {
   _decode_BiometricInformationTemplate,
   _encode_BiometricInformationTemplate,
 } from '../CBEFF-SMARTCARD-BIDO/BiometricInformationTemplate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GroupBIT */
 /**
  * @summary GroupBIT
  * @description
@@ -27,23 +26,15 @@ import {
  * ```
  */
 export type GroupBIT = BiometricInformationTemplate[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION GroupBIT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupBIT */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupBIT */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GroupBIT */
 export const _decode_GroupBIT = $._decode_implicit<GroupBIT>(() =>
   $._decodeSetOf<BiometricInformationTemplate>(
     () => _decode_BiometricInformationTemplate
   )
 );
-/* END_OF_SYMBOL_DEFINITION _decode_GroupBIT */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupBIT */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupBIT */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GroupBIT */
 export const _encode_GroupBIT = $._encode_implicit(
   _TagClass.application,
   97,
@@ -55,6 +46,5 @@ export const _encode_GroupBIT = $._encode_implicit(
   $.BER
 );
 
-/* END_OF_SYMBOL_DEFINITION _encode_GroupBIT */
 
 /* eslint-enable */

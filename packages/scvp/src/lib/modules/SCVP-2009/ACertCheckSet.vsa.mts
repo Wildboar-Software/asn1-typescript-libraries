@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ACertCheckSet */
 /**
  * @summary ACertCheckSet
  * @description
@@ -30,26 +29,18 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * @type {OBJECT_IDENTIFIER}
  */
 export type ACertCheckSet = OBJECT_IDENTIFIER; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION ACertCheckSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ACertCheckSet */
 let _cached_decoder_for_ACertCheckSet: $.ASN1Decoder<ACertCheckSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ACertCheckSet */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ACertCheckSet */
 export function _decode_ACertCheckSet(el: _Element) {
   if (!_cached_decoder_for_ACertCheckSet) {
     _cached_decoder_for_ACertCheckSet = $._decodeObjectIdentifier;
   }
   return _cached_decoder_for_ACertCheckSet(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ACertCheckSet */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ACertCheckSet */
 let _cached_encoder_for_ACertCheckSet: $.ASN1Encoder<ACertCheckSet> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ACertCheckSet */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ACertCheckSet */
 export function _encode_ACertCheckSet(
   value: ACertCheckSet,
   elGetter: $.ASN1Encoder<ACertCheckSet>
@@ -59,6 +50,5 @@ export function _encode_ACertCheckSet(
   }
   return _cached_encoder_for_ACertCheckSet(value, elGetter);
 }
-/* END_OF_SYMBOL_DEFINITION _encode_ACertCheckSet */
 
 /* eslint-enable */

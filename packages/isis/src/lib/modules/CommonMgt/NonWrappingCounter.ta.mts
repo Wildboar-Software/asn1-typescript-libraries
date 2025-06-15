@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NonWrappingCounter */
 /**
  * @summary NonWrappingCounter
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NonWrappingCounter = INTEGER;
-/* END_OF_SYMBOL_DEFINITION NonWrappingCounter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NonWrappingCounter */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NonWrappingCounter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NonWrappingCounter */
 export const _decode_NonWrappingCounter = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_NonWrappingCounter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NonWrappingCounter */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NonWrappingCounter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NonWrappingCounter */
 export const _encode_NonWrappingCounter = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NonWrappingCounter */
 
 /* eslint-enable */

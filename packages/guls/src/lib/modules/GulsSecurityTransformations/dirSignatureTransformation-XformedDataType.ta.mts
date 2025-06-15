@@ -17,7 +17,7 @@ import {
   _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION dirSignatureTransformation_XformedDataType */
+
 /**
  * @summary dirSignatureTransformation_XformedDataType
  * @description
@@ -69,9 +69,8 @@ export class dirSignatureTransformation_XformedDataType {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_dirSignatureTransformation_XformedDataType */
+
 /**
  * @summary The Leading Root Component Types of dirSignatureTransformation_XformedDataType
  * @description
@@ -96,9 +95,8 @@ export const _root_component_type_list_1_spec_for_dirSignatureTransformation_Xfo
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_dirSignatureTransformation_XformedDataType */
+
 /**
  * @summary The Trailing Root Component Types of dirSignatureTransformation_XformedDataType
  * @description
@@ -108,9 +106,8 @@ export const _root_component_type_list_1_spec_for_dirSignatureTransformation_Xfo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_dirSignatureTransformation_XformedDataType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_dirSignatureTransformation_XformedDataType */
+
 /**
  * @summary The Extension Addition Component Types of dirSignatureTransformation_XformedDataType
  * @description
@@ -120,13 +117,11 @@ export const _root_component_type_list_2_spec_for_dirSignatureTransformation_Xfo
  * @constant
  */
 export const _extension_additions_list_spec_for_dirSignatureTransformation_XformedDataType: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_dirSignatureTransformation_XformedDataType */
+
 let _cached_decoder_for_dirSignatureTransformation_XformedDataType: $.ASN1Decoder<dirSignatureTransformation_XformedDataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_dirSignatureTransformation_XformedDataType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) dirSignatureTransformation_XformedDataType
  * @function
@@ -162,13 +157,11 @@ export function _decode_dirSignatureTransformation_XformedDataType(
   }
   return _cached_decoder_for_dirSignatureTransformation_XformedDataType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_dirSignatureTransformation_XformedDataType */
+
 let _cached_encoder_for_dirSignatureTransformation_XformedDataType: $.ASN1Encoder<dirSignatureTransformation_XformedDataType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_dirSignatureTransformation_XformedDataType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_dirSignatureTransformation_XformedDataType */
+
 /**
  * @summary Encodes a(n) dirSignatureTransformation_XformedDataType into an ASN.1 Element.
  * @function
@@ -203,6 +196,5 @@ export function _encode_dirSignatureTransformation_XformedDataType(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_dirSignatureTransformation_XformedDataType */
 
 /* eslint-enable */

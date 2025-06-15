@@ -36,7 +36,7 @@ import {
   _decode_HostAddress,
   _encode_HostAddress,
 } from '../KerberosV5Spec2/HostAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncKrbCredPart */
+
 /**
  * @summary EncKrbCredPart
  * @description
@@ -121,9 +121,8 @@ export class EncKrbCredPart {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncKrbCredPart */
+
 /**
  * @summary The Leading Root Component Types of EncKrbCredPart
  * @description
@@ -176,9 +175,8 @@ export const _root_component_type_list_1_spec_for_EncKrbCredPart: $.ComponentSpe
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncKrbCredPart */
+
 /**
  * @summary The Trailing Root Component Types of EncKrbCredPart
  * @description
@@ -188,9 +186,8 @@ export const _root_component_type_list_1_spec_for_EncKrbCredPart: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncKrbCredPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncKrbCredPart */
+
 /**
  * @summary The Extension Addition Component Types of EncKrbCredPart
  * @description
@@ -200,13 +197,11 @@ export const _root_component_type_list_2_spec_for_EncKrbCredPart: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_EncKrbCredPart: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncKrbCredPart */
+
 let _cached_decoder_for_EncKrbCredPart: $.ASN1Decoder<EncKrbCredPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncKrbCredPart */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncKrbCredPart
  * @function
@@ -279,13 +274,11 @@ export function _decode_EncKrbCredPart(el: _Element) {
   }
   return _cached_decoder_for_EncKrbCredPart(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncKrbCredPart */
+
 let _cached_encoder_for_EncKrbCredPart: $.ASN1Encoder<EncKrbCredPart> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncKrbCredPart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncKrbCredPart */
+
 /**
  * @summary Encodes a(n) EncKrbCredPart into an ASN.1 Element.
  * @function
@@ -368,6 +361,5 @@ export function _encode_EncKrbCredPart(
   return _cached_encoder_for_EncKrbCredPart(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncKrbCredPart */
 
 /* eslint-enable */

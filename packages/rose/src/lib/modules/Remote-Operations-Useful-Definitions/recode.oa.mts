@@ -12,7 +12,7 @@ import {
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
 import { Code } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION recode */
+
 /**
  * @summary recode
  * @description
@@ -45,6 +45,5 @@ function recode (operation: OPERATION, code: Code): OPERATION {
         "&operationCode": code,
     };
 }
-/* END_OF_SYMBOL_DEFINITION recode */
 
 /* eslint-enable */

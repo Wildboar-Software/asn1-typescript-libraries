@@ -14,7 +14,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 
 
 
-/* START_OF_SYMBOL_DEFINITION ECPrivateKey_version */
+
 /**
  * @summary ECPrivateKey_version
  * @description
@@ -27,9 +27,8 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  */
 export
 type ECPrivateKey_version = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ECPrivateKey_version */
 
-/* START_OF_SYMBOL_DEFINITION ECPrivateKey_version_ecPrivkeyVer1 */
+
 /**
  * @summary ECPrivateKey_version_ecPrivkeyVer1
  * @constant
@@ -37,9 +36,8 @@ type ECPrivateKey_version = INTEGER;
  */
 export
 const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ECPrivateKey_version_ecPrivkeyVer1 */
 
-/* START_OF_SYMBOL_DEFINITION ecPrivkeyVer1 */
+
 /**
  * @summary ECPrivateKey_version_ecPrivkeyVer1
  * @constant
@@ -47,21 +45,16 @@ const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAME
  */
 export
 const ecPrivkeyVer1: ECPrivateKey_version = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ecPrivkeyVer1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPrivateKey_version */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECPrivateKey_version */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECPrivateKey_version */
+
+
 export const _decode_ECPrivateKey_version = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ECPrivateKey_version */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPrivateKey_version */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECPrivateKey_version */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECPrivateKey_version */
+
+
 export const _encode_ECPrivateKey_version = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECPrivateKey_version */
 
 /* eslint-enable */

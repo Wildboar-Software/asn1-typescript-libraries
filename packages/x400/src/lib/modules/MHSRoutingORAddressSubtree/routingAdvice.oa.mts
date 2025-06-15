@@ -22,7 +22,6 @@ import {
     _encode_RoutingAdvice,
 } from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta.mjs';
 import { id_at_mhs_routing_advice } from '../MHSRoutingObjectIdentifiers/id-at-mhs-routing-advice.va.mjs';
-/* START_OF_SYMBOL_DEFINITION routingAdvice */
 /**
  * @summary routingAdvice
  * @description
@@ -58,6 +57,5 @@ export const routingAdvice: ATTRIBUTE<RoutingAdvice> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION routingAdvice */
 
 /* eslint-enable */

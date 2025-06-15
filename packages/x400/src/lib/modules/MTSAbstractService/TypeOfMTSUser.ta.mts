@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser */
 /**
  * @summary TypeOfMTSUser
  * @description
@@ -26,147 +25,110 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type TypeOfMTSUser = INTEGER;
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_public_ */
 /**
  * @summary TypeOfMTSUser_public_
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_public_: TypeOfMTSUser = 0; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_public_ */
 
-/* START_OF_SYMBOL_DEFINITION public_ */
 /**
  * @summary TypeOfMTSUser_public_
  * @constant
  * @type {number}
  */
 export const public_: TypeOfMTSUser = TypeOfMTSUser_public_; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION public_ */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_private_ */
 /**
  * @summary TypeOfMTSUser_private_
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_private_: TypeOfMTSUser = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_private_ */
 
-/* START_OF_SYMBOL_DEFINITION private_ */
 /**
  * @summary TypeOfMTSUser_private_
  * @constant
  * @type {number}
  */
 export const private_: TypeOfMTSUser = TypeOfMTSUser_private_; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION private_ */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_ms */
 /**
  * @summary TypeOfMTSUser_ms
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_ms: TypeOfMTSUser = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_ms */
 
-/* START_OF_SYMBOL_DEFINITION ms */
 /**
  * @summary TypeOfMTSUser_ms
  * @constant
  * @type {number}
  */
 export const ms: TypeOfMTSUser = TypeOfMTSUser_ms; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION ms */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_dl */
 /**
  * @summary TypeOfMTSUser_dl
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_dl: TypeOfMTSUser = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_dl */
 
-/* START_OF_SYMBOL_DEFINITION dl */
 /**
  * @summary TypeOfMTSUser_dl
  * @constant
  * @type {number}
  */
 export const dl: TypeOfMTSUser = TypeOfMTSUser_dl; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION dl */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_pdau */
 /**
  * @summary TypeOfMTSUser_pdau
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_pdau: TypeOfMTSUser = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_pdau */
 
-/* START_OF_SYMBOL_DEFINITION pdau */
 /**
  * @summary TypeOfMTSUser_pdau
  * @constant
  * @type {number}
  */
 export const pdau: TypeOfMTSUser = TypeOfMTSUser_pdau; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION pdau */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_physical_recipient */
 /**
  * @summary TypeOfMTSUser_physical_recipient
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_physical_recipient: TypeOfMTSUser = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_physical_recipient */
 
-/* START_OF_SYMBOL_DEFINITION physical_recipient */
 /**
  * @summary TypeOfMTSUser_physical_recipient
  * @constant
  * @type {number}
  */
 export const physical_recipient: TypeOfMTSUser = TypeOfMTSUser_physical_recipient; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION physical_recipient */
 
-/* START_OF_SYMBOL_DEFINITION TypeOfMTSUser_other */
 /**
  * @summary TypeOfMTSUser_other
  * @constant
  * @type {number}
  */
 export const TypeOfMTSUser_other: TypeOfMTSUser = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION TypeOfMTSUser_other */
 
-/* START_OF_SYMBOL_DEFINITION other */
 /**
  * @summary TypeOfMTSUser_other
  * @constant
  * @type {number}
  */
 export const other: TypeOfMTSUser = TypeOfMTSUser_other; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION other */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMTSUser */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TypeOfMTSUser */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TypeOfMTSUser */
 export const _decode_TypeOfMTSUser = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_TypeOfMTSUser */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMTSUser */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TypeOfMTSUser */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TypeOfMTSUser */
 export const _encode_TypeOfMTSUser = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TypeOfMTSUser */
 
 /* eslint-enable */

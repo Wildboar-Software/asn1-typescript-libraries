@@ -16,7 +16,6 @@ import {
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Notation */
 /**
  * @summary Notation
  * @description
@@ -73,9 +72,7 @@ export class Notation {
     return new Notation(_o.name, _o.system_identifier, _o.public_identifier);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Notation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Notation */
 /**
  * @summary The Leading Root Component Types of Notation
  * @description
@@ -107,9 +104,7 @@ export const _root_component_type_list_1_spec_for_Notation: $.ComponentSpec[] = 
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Notation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Notation */
 /**
  * @summary The Trailing Root Component Types of Notation
  * @description
@@ -119,9 +114,7 @@ export const _root_component_type_list_1_spec_for_Notation: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Notation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Notation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Notation */
 /**
  * @summary The Extension Addition Component Types of Notation
  * @description
@@ -131,13 +124,9 @@ export const _root_component_type_list_2_spec_for_Notation: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_Notation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Notation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Notation */
 let _cached_decoder_for_Notation: $.ASN1Decoder<Notation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Notation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Notation */
 /**
  * @summary Decodes an ASN.1 element into a(n) Notation
  * @function
@@ -182,13 +171,9 @@ export function _decode_Notation(el: _Element) {
   }
   return _cached_decoder_for_Notation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Notation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Notation */
 let _cached_encoder_for_Notation: $.ASN1Encoder<Notation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Notation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Notation */
 /**
  * @summary Encodes a(n) Notation into an ASN.1 Element.
  * @function
@@ -231,6 +216,5 @@ export function _encode_Notation(
   return _cached_encoder_for_Notation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Notation */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ export {
     _encode_SIGNATURE as _encode_ReportOriginAuthenticationCheck,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ReportOriginAuthenticationCheck */
 /**
  * @summary ReportOriginAuthenticationCheck
  * @description
@@ -43,6 +42,5 @@ export {
  * ```
  */
 export type ReportOriginAuthenticationCheck = SIGNATURE; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportOriginAuthenticationCheck */
 
 /* eslint-enable */

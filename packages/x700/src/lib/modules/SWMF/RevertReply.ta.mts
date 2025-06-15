@@ -21,7 +21,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RevertReply */
 /**
  * @summary RevertReply
  * @description
@@ -71,9 +70,7 @@ export class RevertReply {
         return new RevertReply(_o.revertedPatches, _o.additionalInfo);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevertReply */
 /**
  * @summary The Leading Root Component Types of RevertReply
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_RevertReply: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevertReply */
 /**
  * @summary The Trailing Root Component Types of RevertReply
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_RevertReply: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RevertReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevertReply */
 /**
  * @summary The Extension Addition Component Types of RevertReply
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_RevertReply: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_RevertReply: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevertReply */
 let _cached_decoder_for_RevertReply: $.ASN1Decoder<RevertReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevertReply */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevertReply
  * @function
@@ -175,13 +164,9 @@ export function _decode_RevertReply(el: _Element) {
     }
     return _cached_decoder_for_RevertReply(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevertReply */
 let _cached_encoder_for_RevertReply: $.ASN1Encoder<RevertReply> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevertReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevertReply */
 /**
  * @summary Encodes a(n) RevertReply into an ASN.1 Element.
  * @function
@@ -226,6 +211,5 @@ export function _encode_RevertReply(
     return _cached_encoder_for_RevertReply(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevertReply */
 
 /* eslint-enable */

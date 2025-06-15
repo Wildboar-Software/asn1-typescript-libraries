@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ArcState */
+
 /**
  * @summary ArcState
  * @description
@@ -29,9 +29,8 @@ export enum _enum_for_ArcState {
     nalmQualifiedInhibit = 2,
     nalmTimedInhibit = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ArcState */
 
-/* START_OF_SYMBOL_DEFINITION ArcState */
+
 /**
  * @summary ArcState
  * @description
@@ -44,9 +43,8 @@ export enum _enum_for_ArcState {
  * ```@enum {number}
  */
 export type ArcState = _enum_for_ArcState;
-/* END_OF_SYMBOL_DEFINITION ArcState */
 
-/* START_OF_SYMBOL_DEFINITION ArcState */
+
 /**
  * @summary ArcState
  * @description
@@ -59,9 +57,8 @@ export type ArcState = _enum_for_ArcState;
  * ```@enum {number}
  */
 export const ArcState = _enum_for_ArcState;
-/* END_OF_SYMBOL_DEFINITION ArcState */
 
-/* START_OF_SYMBOL_DEFINITION ArcState_alm */
+
 /**
  * @summary ArcState_alm
  * @constant
@@ -69,18 +66,16 @@ export const ArcState = _enum_for_ArcState;
  */
 export const ArcState_alm: ArcState =
     ArcState.alm; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcState_alm */
 
-/* START_OF_SYMBOL_DEFINITION alm */
+
 /**
  * @summary alm
  * @constant
  * @type {number}
  */
 export const alm: ArcState = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION alm */
 
-/* START_OF_SYMBOL_DEFINITION ArcState_nalm */
+
 /**
  * @summary ArcState_nalm
  * @constant
@@ -88,18 +83,16 @@ export const alm: ArcState = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
  */
 export const ArcState_nalm: ArcState =
     ArcState.nalm; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcState_nalm */
 
-/* START_OF_SYMBOL_DEFINITION nalm */
+
 /**
  * @summary nalm
  * @constant
  * @type {number}
  */
 export const nalm: ArcState = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nalm */
 
-/* START_OF_SYMBOL_DEFINITION ArcState_nalmQualifiedInhibit */
+
 /**
  * @summary ArcState_nalmQualifiedInhibit
  * @constant
@@ -107,9 +100,8 @@ export const nalm: ArcState = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
  */
 export const ArcState_nalmQualifiedInhibit: ArcState =
     ArcState.nalmQualifiedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcState_nalmQualifiedInhibit */
 
-/* START_OF_SYMBOL_DEFINITION nalmQualifiedInhibit */
+
 /**
  * @summary nalmQualifiedInhibit
  * @constant
@@ -117,9 +109,8 @@ export const ArcState_nalmQualifiedInhibit: ArcState =
  */
 export const nalmQualifiedInhibit: ArcState =
     ArcState.nalmQualifiedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nalmQualifiedInhibit */
 
-/* START_OF_SYMBOL_DEFINITION ArcState_nalmTimedInhibit */
+
 /**
  * @summary ArcState_nalmTimedInhibit
  * @constant
@@ -127,9 +118,8 @@ export const nalmQualifiedInhibit: ArcState =
  */
 export const ArcState_nalmTimedInhibit: ArcState =
     ArcState.nalmTimedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ArcState_nalmTimedInhibit */
 
-/* START_OF_SYMBOL_DEFINITION nalmTimedInhibit */
+
 /**
  * @summary nalmTimedInhibit
  * @constant
@@ -137,21 +127,16 @@ export const ArcState_nalmTimedInhibit: ArcState =
  */
 export const nalmTimedInhibit: ArcState =
     ArcState.nalmTimedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION nalmTimedInhibit */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcState */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArcState */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArcState */
+
+
 export const _decode_ArcState = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ArcState */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcState */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArcState */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArcState */
+
+
 export const _encode_ArcState = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArcState */
 
 /* eslint-enable */

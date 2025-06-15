@@ -11,7 +11,7 @@ import {
 } from "../PKCS-9/SigningTime.ta.mjs";
 import { signingTimeMatch } from "../PKCS-9/signingTimeMatch.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION signingTime */
+
 /**
  * @summary signingTime
  * @description
@@ -47,6 +47,5 @@ export const signingTime: ATTRIBUTE<SigningTime> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION signingTime */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION InfoReplyTable */
 /**
  * @summary InfoReplyTable
  * @description
@@ -26,6 +25,5 @@ import { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca.mjs
  *
  */
 export const InfoReplyTable: INFO_REPLY_IDENTIFIER[] = [];
-/* END_OF_SYMBOL_DEFINITION InfoReplyTable */
 
 /* eslint-enable */

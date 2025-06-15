@@ -20,7 +20,6 @@ import {
     _decode_ExtendedRegularExpression,
     _encode_ExtendedRegularExpression,
 } from '../MHSRoutingORAddressSubtree/ExtendedRegularExpression.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ORAddressFilter */
 /**
  * @summary ORAddressFilter
  * @description
@@ -74,9 +73,7 @@ export class ORAddressFilter {
         return new ORAddressFilter(_o.attribute_type, _o.pattern);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddressFilter */
 /**
  * @summary The Leading Root Component Types of ORAddressFilter
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_ORAddressFilter: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddressFilter */
 /**
  * @summary The Trailing Root Component Types of ORAddressFilter
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_ORAddressFilter: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ORAddressFilter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddressFilter */
 /**
  * @summary The Extension Addition Component Types of ORAddressFilter
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_ORAddressFilter: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_ORAddressFilter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddressFilter */
 let _cached_decoder_for_ORAddressFilter: $.ASN1Decoder<ORAddressFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORAddressFilter */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddressFilter
  * @function
@@ -164,13 +153,9 @@ export function _decode_ORAddressFilter(el: _Element) {
     }
     return _cached_decoder_for_ORAddressFilter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddressFilter */
 let _cached_encoder_for_ORAddressFilter: $.ASN1Encoder<ORAddressFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddressFilter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORAddressFilter */
 /**
  * @summary Encodes a(n) ORAddressFilter into an ASN.1 Element.
  * @function
@@ -205,6 +190,5 @@ export function _encode_ORAddressFilter(
     return _cached_encoder_for_ORAddressFilter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORAddressFilter */
 
 /* eslint-enable */

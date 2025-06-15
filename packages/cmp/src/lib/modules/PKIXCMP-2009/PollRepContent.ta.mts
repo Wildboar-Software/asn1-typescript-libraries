@@ -15,7 +15,7 @@ import {
   _decode_PollRepContent_Item,
   _encode_PollRepContent_Item,
 } from '../PKIXCMP-2009/PollRepContent-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PollRepContent */
+
 /**
  * @summary PollRepContent
  * @description
@@ -30,13 +30,11 @@ import {
  * ```
  */
 export type PollRepContent = PollRepContent_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION PollRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PollRepContent */
+
 let _cached_decoder_for_PollRepContent: $.ASN1Decoder<PollRepContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PollRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PollRepContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PollRepContent
  * @function
@@ -51,13 +49,11 @@ export function _decode_PollRepContent(el: _Element) {
   }
   return _cached_decoder_for_PollRepContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PollRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PollRepContent */
+
 let _cached_encoder_for_PollRepContent: $.ASN1Encoder<PollRepContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PollRepContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PollRepContent */
+
 /**
  * @summary Encodes a(n) PollRepContent into an ASN.1 Element.
  * @function
@@ -78,6 +74,5 @@ export function _encode_PollRepContent(
   return _cached_encoder_for_PollRepContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PollRepContent */
 
 /* eslint-enable */

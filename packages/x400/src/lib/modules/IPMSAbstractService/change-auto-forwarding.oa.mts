@@ -25,7 +25,6 @@ import {
 import { subscription_error } from '../IPMSAbstractService/subscription-error.oa.mjs';
 import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION change_auto_forwarding */
 /**
  * @summary change_auto_forwarding
  * @description
@@ -70,6 +69,5 @@ export const change_auto_forwarding: ABSTRACT_OPERATION<change_auto_forwarding_A
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION change_auto_forwarding */
 
 /* eslint-enable */

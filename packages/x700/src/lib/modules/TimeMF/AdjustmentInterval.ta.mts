@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AdjustmentInterval */
 /**
  * @summary AdjustmentInterval
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AdjustmentInterval = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AdjustmentInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdjustmentInterval */
 let _cached_decoder_for_AdjustmentInterval: $.ASN1Decoder<AdjustmentInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdjustmentInterval */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AdjustmentInterval */
 /**
  * @summary Decodes an ASN.1 element into a(n) AdjustmentInterval
  * @function
@@ -46,13 +41,9 @@ export function _decode_AdjustmentInterval(el: _Element) {
     }
     return _cached_decoder_for_AdjustmentInterval(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AdjustmentInterval */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdjustmentInterval */
 let _cached_encoder_for_AdjustmentInterval: $.ASN1Encoder<AdjustmentInterval> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdjustmentInterval */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AdjustmentInterval */
 /**
  * @summary Encodes a(n) AdjustmentInterval into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AdjustmentInterval(
     return _cached_encoder_for_AdjustmentInterval(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AdjustmentInterval */
 
 /* eslint-enable */

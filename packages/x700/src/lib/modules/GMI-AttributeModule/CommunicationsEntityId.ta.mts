@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CommunicationsEntityId */
+
 /**
  * @summary CommunicationsEntityId
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CommunicationsEntityId = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION CommunicationsEntityId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsEntityId */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommunicationsEntityId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommunicationsEntityId */
+
+
 export const _decode_CommunicationsEntityId = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_CommunicationsEntityId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsEntityId */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommunicationsEntityId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommunicationsEntityId */
+
+
 export const _encode_CommunicationsEntityId = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommunicationsEntityId */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import { id_att_content_correlator } from '../MSObjectIdentifiers/id-att-content
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION mt_content_correlator */
 /**
  * @summary mt_content_correlator
  * @description
@@ -56,6 +55,5 @@ export const mt_content_correlator: X413ATTRIBUTE<ContentCorrelator> = {
     '&id': id_att_content_correlator /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mt_content_correlator */
 
 /* eslint-enable */

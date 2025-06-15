@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem */
 /**
  * @summary AttributeProblem
  * @description
@@ -21,147 +20,110 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type AttributeProblem = INTEGER;
-/* END_OF_SYMBOL_DEFINITION AttributeProblem */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_noSuchAttributeOrValue */
 /**
  * @summary AttributeProblem_noSuchAttributeOrValue
  * @constant
  * @type {number}
  */
 export const AttributeProblem_noSuchAttributeOrValue: AttributeProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_noSuchAttributeOrValue */
 
-/* START_OF_SYMBOL_DEFINITION noSuchAttributeOrValue */
 /**
  * @summary AttributeProblem_noSuchAttributeOrValue
  * @constant
  * @type {number}
  */
 export const noSuchAttributeOrValue: AttributeProblem = AttributeProblem_noSuchAttributeOrValue; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION noSuchAttributeOrValue */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_invalidAttributeSyntax */
 /**
  * @summary AttributeProblem_invalidAttributeSyntax
  * @constant
  * @type {number}
  */
 export const AttributeProblem_invalidAttributeSyntax: AttributeProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_invalidAttributeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION invalidAttributeSyntax */
 /**
  * @summary AttributeProblem_invalidAttributeSyntax
  * @constant
  * @type {number}
  */
 export const invalidAttributeSyntax: AttributeProblem = AttributeProblem_invalidAttributeSyntax; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidAttributeSyntax */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_undefinedAttributeType */
 /**
  * @summary AttributeProblem_undefinedAttributeType
  * @constant
  * @type {number}
  */
 export const AttributeProblem_undefinedAttributeType: AttributeProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_undefinedAttributeType */
 
-/* START_OF_SYMBOL_DEFINITION undefinedAttributeType */
 /**
  * @summary AttributeProblem_undefinedAttributeType
  * @constant
  * @type {number}
  */
 export const undefinedAttributeType: AttributeProblem = AttributeProblem_undefinedAttributeType; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION undefinedAttributeType */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_inappropriateMatching */
 /**
  * @summary AttributeProblem_inappropriateMatching
  * @constant
  * @type {number}
  */
 export const AttributeProblem_inappropriateMatching: AttributeProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_inappropriateMatching */
 
-/* START_OF_SYMBOL_DEFINITION inappropriateMatching */
 /**
  * @summary AttributeProblem_inappropriateMatching
  * @constant
  * @type {number}
  */
 export const inappropriateMatching: AttributeProblem = AttributeProblem_inappropriateMatching; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION inappropriateMatching */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_constraintViolation */
 /**
  * @summary AttributeProblem_constraintViolation
  * @constant
  * @type {number}
  */
 export const AttributeProblem_constraintViolation: AttributeProblem = 5; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_constraintViolation */
 
-/* START_OF_SYMBOL_DEFINITION constraintViolation */
 /**
  * @summary AttributeProblem_constraintViolation
  * @constant
  * @type {number}
  */
 export const constraintViolation: AttributeProblem = AttributeProblem_constraintViolation; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION constraintViolation */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_attributeOrValueAlreadyExists */
 /**
  * @summary AttributeProblem_attributeOrValueAlreadyExists
  * @constant
  * @type {number}
  */
 export const AttributeProblem_attributeOrValueAlreadyExists: AttributeProblem = 6; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_attributeOrValueAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION attributeOrValueAlreadyExists */
 /**
  * @summary AttributeProblem_attributeOrValueAlreadyExists
  * @constant
  * @type {number}
  */
 export const attributeOrValueAlreadyExists: AttributeProblem = AttributeProblem_attributeOrValueAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION attributeOrValueAlreadyExists */
 
-/* START_OF_SYMBOL_DEFINITION AttributeProblem_contextViolation */
 /**
  * @summary AttributeProblem_contextViolation
  * @constant
  * @type {number}
  */
 export const AttributeProblem_contextViolation: AttributeProblem = 7; /* LONG_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION AttributeProblem_contextViolation */
 
-/* START_OF_SYMBOL_DEFINITION contextViolation */
 /**
  * @summary AttributeProblem_contextViolation
  * @constant
  * @type {number}
  */
 export const contextViolation: AttributeProblem = AttributeProblem_contextViolation; /* SHORT_NAMED_INTEGER_VALUE */
-/* END_OF_SYMBOL_DEFINITION contextViolation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeProblem */
 export const _decode_AttributeProblem = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeProblem */
 export const _encode_AttributeProblem = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeProblem */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION nullChoiceInteger */
+
 /**
  * @summary nullChoiceInteger
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const nullChoiceInteger: ChoiceInteger = { dontCare: null };
-/* END_OF_SYMBOL_DEFINITION nullChoiceInteger */
 
 /* eslint-enable */

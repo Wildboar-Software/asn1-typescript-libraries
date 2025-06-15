@@ -18,7 +18,6 @@ import {
     _decode_FilterItem,
     _encode_FilterItem,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION scanningFilterDefault */
 /**
  * @summary scanningFilterDefault
  * @description
@@ -34,6 +33,5 @@ import {
 export const scanningFilterDefault: CMISFilter = {
     and: [],
 };
-/* END_OF_SYMBOL_DEFINITION scanningFilterDefault */
 
 /* eslint-enable */

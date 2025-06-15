@@ -15,7 +15,6 @@ import {
     _decode_Certificates,
     _encode_Certificates,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportingMTACertificate */
 /**
  * @summary ReportingMTACertificate
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportingMTACertificate = Certificates; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportingMTACertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingMTACertificate */
 let _cached_decoder_for_ReportingMTACertificate: $.ASN1Decoder<ReportingMTACertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingMTACertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportingMTACertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingMTACertificate
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReportingMTACertificate(el: _Element) {
     }
     return _cached_decoder_for_ReportingMTACertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportingMTACertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingMTACertificate */
 let _cached_encoder_for_ReportingMTACertificate: $.ASN1Encoder<ReportingMTACertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingMTACertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportingMTACertificate */
 /**
  * @summary Encodes a(n) ReportingMTACertificate into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReportingMTACertificate(
     return _cached_encoder_for_ReportingMTACertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportingMTACertificate */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ORName,
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorField */
 /**
  * @summary OriginatorField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatorField = ORName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorField */
 let _cached_decoder_for_OriginatorField: $.ASN1Decoder<OriginatorField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorField */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorField
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatorField(el: _Element) {
     }
     return _cached_decoder_for_OriginatorField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorField */
 let _cached_encoder_for_OriginatorField: $.ASN1Encoder<OriginatorField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorField */
 /**
  * @summary Encodes a(n) OriginatorField into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_OriginatorField(
     return _cached_encoder_for_OriginatorField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorField */
 
 /* eslint-enable */

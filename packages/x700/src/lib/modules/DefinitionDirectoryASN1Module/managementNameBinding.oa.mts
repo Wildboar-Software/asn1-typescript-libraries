@@ -25,7 +25,6 @@ import { create } from '../DefinitionDirectoryASN1Module/create.oa.mjs';
 import { delete_ } from '../DefinitionDirectoryASN1Module/delete.oa.mjs';
 import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.mjs';
 import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.mjs';
-/* START_OF_SYMBOL_DEFINITION managementNameBinding */
 /**
  * @summary managementNameBinding
  * @description
@@ -67,6 +66,5 @@ export const managementNameBinding: OBJECT_CLASS = {
         mkmDirectoryObjectClass
     ) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION managementNameBinding */
 
 /* eslint-enable */

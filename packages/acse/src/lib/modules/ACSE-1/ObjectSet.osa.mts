@@ -10,7 +10,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectSet */
 /**
  * @summary ObjectSet
  * @description
@@ -26,6 +25,5 @@ import { MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca.mjs';
  *
  */
 export const ObjectSet: MECHANISM_NAME[] = [];
-/* END_OF_SYMBOL_DEFINITION ObjectSet */
 
 /* eslint-enable */

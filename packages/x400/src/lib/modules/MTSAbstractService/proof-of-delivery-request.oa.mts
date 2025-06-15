@@ -27,7 +27,6 @@ import {
     _encode_ProofOfDeliveryRequest,
 } from '../MTSAbstractService/ProofOfDeliveryRequest.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION proof_of_delivery_request */
 /**
  * @summary proof_of_delivery_request
  * @description
@@ -66,6 +65,5 @@ export const proof_of_delivery_request: EXTENSION<ProofOfDeliveryRequest> = {
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION proof_of_delivery_request */
 
 /* eslint-enable */

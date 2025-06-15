@@ -20,7 +20,7 @@ import {
     _decode_EncapsulatedContentInfoACBio,
     _encode_EncapsulatedContentInfoACBio,
 } from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignedDataACBio */
+
 /**
  * @summary SignedDataACBio
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type SignedDataACBio = SIGNEDDATA<EncapsulatedContentInfoACBio>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION SignedDataACBio */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedDataACBio */
+
 let _cached_decoder_for_SignedDataACBio: $.ASN1Decoder<SignedDataACBio> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignedDataACBio */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignedDataACBio */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedDataACBio
  * @function
@@ -53,13 +51,11 @@ export function _decode_SignedDataACBio(el: _Element) {
     }
     return _cached_decoder_for_SignedDataACBio(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignedDataACBio */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedDataACBio */
+
 let _cached_encoder_for_SignedDataACBio: $.ASN1Encoder<SignedDataACBio> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignedDataACBio */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignedDataACBio */
+
 /**
  * @summary Encodes a(n) SignedDataACBio into an ASN.1 Element.
  * @function
@@ -79,6 +75,5 @@ export function _encode_SignedDataACBio(
     return _cached_encoder_for_SignedDataACBio(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignedDataACBio */
 
 /* eslint-enable */

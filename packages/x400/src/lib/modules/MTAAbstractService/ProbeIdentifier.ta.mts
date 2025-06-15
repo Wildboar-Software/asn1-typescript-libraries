@@ -15,7 +15,6 @@ import {
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
 } from '../MTSAbstractService/MTSIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProbeIdentifier */
 /**
  * @summary ProbeIdentifier
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ProbeIdentifier = MTSIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeIdentifier */
 let _cached_decoder_for_ProbeIdentifier: $.ASN1Decoder<ProbeIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProbeIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeIdentifier
  * @function
@@ -46,13 +41,9 @@ export function _decode_ProbeIdentifier(el: _Element) {
     }
     return _cached_decoder_for_ProbeIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeIdentifier */
 let _cached_encoder_for_ProbeIdentifier: $.ASN1Encoder<ProbeIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProbeIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProbeIdentifier */
 /**
  * @summary Encodes a(n) ProbeIdentifier into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ProbeIdentifier(
     return _cached_encoder_for_ProbeIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProbeIdentifier */
 
 /* eslint-enable */

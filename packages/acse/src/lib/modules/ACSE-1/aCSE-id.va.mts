@@ -12,7 +12,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION aCSE_id */
 /**
  * @summary aCSE_id
  * @description
@@ -34,6 +33,5 @@ export const aCSE_id: OBJECT_IDENTIFIER = new _OID(
   ],
   joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION aCSE_id */
 
 /* eslint-enable */

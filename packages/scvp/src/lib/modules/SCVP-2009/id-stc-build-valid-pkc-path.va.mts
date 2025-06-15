@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_stc } from '../SCVP-2009/id-stc.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_stc_build_valid_pkc_path */
 /**
  * @summary id_stc_build_valid_pkc_path
  * @description
@@ -28,6 +27,5 @@ export const id_stc_build_valid_pkc_path: OBJECT_IDENTIFIER = new _OID(
   [2],
   id_stc
 );
-/* END_OF_SYMBOL_DEFINITION id_stc_build_valid_pkc_path */
 
 /* eslint-enable */

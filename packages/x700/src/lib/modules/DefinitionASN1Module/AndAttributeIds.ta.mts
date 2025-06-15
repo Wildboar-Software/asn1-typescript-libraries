@@ -15,7 +15,7 @@ import {
     _decode_AndAttributeIds_Item,
     _encode_AndAttributeIds_Item,
 } from '../DefinitionASN1Module/AndAttributeIds-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AndAttributeIds */
+
 /**
  * @summary AndAttributeIds
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type AndAttributeIds = AndAttributeIds_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AndAttributeIds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AndAttributeIds */
+
 let _cached_decoder_for_AndAttributeIds: $.ASN1Decoder<AndAttributeIds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AndAttributeIds */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AndAttributeIds */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AndAttributeIds
  * @function
@@ -50,13 +48,11 @@ export function _decode_AndAttributeIds(el: _Element) {
     }
     return _cached_decoder_for_AndAttributeIds(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AndAttributeIds */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AndAttributeIds */
+
 let _cached_encoder_for_AndAttributeIds: $.ASN1Encoder<AndAttributeIds> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AndAttributeIds */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AndAttributeIds */
+
 /**
  * @summary Encodes a(n) AndAttributeIds into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_AndAttributeIds(
     return _cached_encoder_for_AndAttributeIds(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AndAttributeIds */
 
 /* eslint-enable */

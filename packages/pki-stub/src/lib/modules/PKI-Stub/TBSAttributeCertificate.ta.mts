@@ -53,7 +53,6 @@ import {
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TBSAttributeCertificate */
 /**
  * @summary TBSAttributeCertificate
  * @description
@@ -173,9 +172,7 @@ export class TBSAttributeCertificate {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSAttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAttributeCertificate */
 /**
  * @summary The Leading Root Component Types of TBSAttributeCertificate
  * @description
@@ -243,9 +240,7 @@ export const _root_component_type_list_1_spec_for_TBSAttributeCertificate: $.Com
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAttributeCertificate */
 /**
  * @summary The Trailing Root Component Types of TBSAttributeCertificate
  * @description
@@ -264,9 +259,7 @@ export const _root_component_type_list_2_spec_for_TBSAttributeCertificate: $.Com
             undefined
         ),
     ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAttributeCertificate */
 /**
  * @summary The Extension Addition Component Types of TBSAttributeCertificate
  * @description
@@ -277,9 +270,7 @@ export const _root_component_type_list_2_spec_for_TBSAttributeCertificate: $.Com
  */
 export const _extension_additions_list_spec_for_TBSAttributeCertificate: $.ComponentSpec[] =
     [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSAttributeCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSAttributeCertificate
  * @function
@@ -355,9 +346,7 @@ export function _decode_TBSAttributeCertificate(el: _Element) {
         extensions
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSAttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSAttributeCertificate */
 /**
  * @summary Encodes a(n) TBSAttributeCertificate into an ASN.1 Element.
  * @function
@@ -407,6 +396,5 @@ export function _encode_TBSAttributeCertificate(
     return $._encodeSequence(components, $.BER);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSAttributeCertificate */
 
 /* eslint-enable */

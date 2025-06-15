@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterThreshold_Item } from "../Attribute-ASN1Module/CounterThreshold-Item.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CounterThreshold */
 /**
  * @summary CounterThreshold
  * @description
@@ -28,13 +27,9 @@ import { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterTh
  */
 export
 type CounterThreshold = CounterThreshold_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION CounterThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CounterThreshold */
 let _cached_decoder_for_CounterThreshold: $.ASN1Decoder<CounterThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CounterThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CounterThreshold */
 /**
  * @summary Decodes an ASN.1 element into a(n) CounterThreshold
  * @function
@@ -46,13 +41,9 @@ function _decode_CounterThreshold (el: _Element) {
     if (!_cached_decoder_for_CounterThreshold) { _cached_decoder_for_CounterThreshold = $._decodeSetOf<CounterThreshold_Item>(() => _decode_CounterThreshold_Item); }
     return _cached_decoder_for_CounterThreshold(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CounterThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CounterThreshold */
 let _cached_encoder_for_CounterThreshold: $.ASN1Encoder<CounterThreshold> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CounterThreshold */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CounterThreshold */
 /**
  * @summary Encodes a(n) CounterThreshold into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ function _encode_CounterThreshold (value: CounterThreshold, elGetter: $.ASN1Enco
     return _cached_encoder_for_CounterThreshold(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CounterThreshold */
 
 /* eslint-enable */

@@ -23,7 +23,7 @@ import {
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1Module/ErrorId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CommonError */
+
 /**
  * @summary CommonError
  * @description
@@ -93,9 +93,8 @@ export class CommonError {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonError */
+
 /**
  * @summary The Leading Root Component Types of CommonError
  * @description
@@ -122,9 +121,8 @@ export const _root_component_type_list_1_spec_for_CommonError: $.ComponentSpec[]
     new $.ComponentSpec('errorId', false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec('errorValue', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonError */
+
 /**
  * @summary The Trailing Root Component Types of CommonError
  * @description
@@ -134,9 +132,8 @@ export const _root_component_type_list_1_spec_for_CommonError: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CommonError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonError */
+
 /**
  * @summary The Extension Addition Component Types of CommonError
  * @description
@@ -146,13 +143,11 @@ export const _root_component_type_list_2_spec_for_CommonError: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_CommonError: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonError */
+
 let _cached_decoder_for_CommonError: $.ASN1Decoder<CommonError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CommonError */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CommonError
  * @function
@@ -202,13 +197,11 @@ export function _decode_CommonError(el: _Element) {
     }
     return _cached_decoder_for_CommonError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonError */
+
 let _cached_encoder_for_CommonError: $.ASN1Encoder<CommonError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CommonError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CommonError */
+
 /**
  * @summary Encodes a(n) CommonError into an ASN.1 Element.
  * @function
@@ -247,6 +240,5 @@ export function _encode_CommonError(
     return _cached_encoder_for_CommonError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CommonError */
 
 /* eslint-enable */

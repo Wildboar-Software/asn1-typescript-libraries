@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectiveStateOrProvinceName } from "../SelectedAttributeTypes/id-at-collectiveStateOrProvinceName.va.mjs";
 import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveStateOrProvinceName */
 /**
  * @summary collectiveStateOrProvinceName
  * @description
@@ -46,6 +45,5 @@ export const collectiveStateOrProvinceName: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveStateOrProvinceName */
 
 /* eslint-enable */

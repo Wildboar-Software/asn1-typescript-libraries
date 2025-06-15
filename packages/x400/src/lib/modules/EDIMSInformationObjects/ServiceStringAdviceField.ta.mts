@@ -41,7 +41,6 @@ import {
     _decode_SegmentTerminator,
     _encode_SegmentTerminator,
 } from '../EDIMSInformationObjects/SegmentTerminator.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ServiceStringAdviceField */
 /**
  * @summary ServiceStringAdviceField
  * @description
@@ -128,9 +127,7 @@ export class ServiceStringAdviceField {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceStringAdviceField */
 /**
  * @summary The Leading Root Component Types of ServiceStringAdviceField
  * @description
@@ -183,9 +180,7 @@ export const _root_component_type_list_1_spec_for_ServiceStringAdviceField: $.Co
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceStringAdviceField */
 /**
  * @summary The Trailing Root Component Types of ServiceStringAdviceField
  * @description
@@ -195,9 +190,7 @@ export const _root_component_type_list_1_spec_for_ServiceStringAdviceField: $.Co
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ServiceStringAdviceField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceStringAdviceField */
 /**
  * @summary The Extension Addition Component Types of ServiceStringAdviceField
  * @description
@@ -207,13 +200,9 @@ export const _root_component_type_list_2_spec_for_ServiceStringAdviceField: $.Co
  * @constant
  */
 export const _extension_additions_list_spec_for_ServiceStringAdviceField: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceStringAdviceField */
 let _cached_decoder_for_ServiceStringAdviceField: $.ASN1Decoder<ServiceStringAdviceField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceStringAdviceField */
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceStringAdviceField
  * @function
@@ -287,13 +276,9 @@ export function _decode_ServiceStringAdviceField(el: _Element) {
     }
     return _cached_decoder_for_ServiceStringAdviceField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceStringAdviceField */
 let _cached_encoder_for_ServiceStringAdviceField: $.ASN1Encoder<ServiceStringAdviceField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceStringAdviceField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceStringAdviceField */
 /**
  * @summary Encodes a(n) ServiceStringAdviceField into an ASN.1 Element.
  * @function
@@ -360,6 +345,5 @@ export function _encode_ServiceStringAdviceField(
     return _cached_encoder_for_ServiceStringAdviceField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceStringAdviceField */
 
 /* eslint-enable */

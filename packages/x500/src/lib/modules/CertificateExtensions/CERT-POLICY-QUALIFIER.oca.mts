@@ -2,7 +2,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CERT_POLICY_QUALIFIER */
 /**
  * @summary CERT_POLICY_QUALIFIER
  * @description
@@ -58,6 +57,5 @@ export interface CERT_POLICY_QUALIFIER<
      */
     readonly "&Qualifier": Qualifier;
 }
-/* END_OF_SYMBOL_DEFINITION CERT_POLICY_QUALIFIER */
 
 /* eslint-enable */

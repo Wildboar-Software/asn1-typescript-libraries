@@ -16,7 +16,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs";
 import { BasicOCSPResponse, _decode_BasicOCSPResponse, _encode_BasicOCSPResponse } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/BasicOCSPResponse.ta.mjs";
 import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevVals.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RevocationValues */
 /**
  * @summary RevocationValues
  * @description
@@ -73,9 +72,7 @@ class RevocationValues {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevocationValues */
 /**
  * @summary The Leading Root Component Types of RevocationValues
  * @description
@@ -90,9 +87,7 @@ const _root_component_type_list_1_spec_for_RevocationValues: $.ComponentSpec[] =
     new $.ComponentSpec("ocspVals", true, $.hasTag(_TagClass.context, 1), undefined, undefined),
     new $.ComponentSpec("otherRevVals", true, $.hasTag(_TagClass.context, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevocationValues */
 /**
  * @summary The Trailing Root Component Types of RevocationValues
  * @description
@@ -105,9 +100,7 @@ export
 const _root_component_type_list_2_spec_for_RevocationValues: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevocationValues */
 /**
  * @summary The Extension Addition Component Types of RevocationValues
  * @description
@@ -120,13 +113,9 @@ export
 const _extension_additions_list_spec_for_RevocationValues: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationValues */
 let _cached_decoder_for_RevocationValues: $.ASN1Decoder<RevocationValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevocationValues */
 /**
  * @summary Decodes an ASN.1 element into a(n) RevocationValues
  * @function
@@ -162,13 +151,9 @@ function _decode_RevocationValues (el: _Element) {
 }; }
     return _cached_decoder_for_RevocationValues(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationValues */
 let _cached_encoder_for_RevocationValues: $.ASN1Encoder<RevocationValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevocationValues */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevocationValues */
 /**
  * @summary Encodes a(n) RevocationValues into an ASN.1 Element.
  * @function
@@ -190,6 +175,5 @@ function _encode_RevocationValues (value: RevocationValues, elGetter: $.ASN1Enco
     return _cached_encoder_for_RevocationValues(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevocationValues */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Conf_Alg */
 /**
  * @summary Conf_Alg
  * @description
@@ -27,13 +26,9 @@ import {
 export type Conf_Alg =
     | { algId: AlgorithmIdentifier } /* CHOICE_ALT_ROOT */
     | { null_: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Conf_Alg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Conf_Alg */
 let _cached_decoder_for_Conf_Alg: $.ASN1Decoder<Conf_Alg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Conf_Alg */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Conf_Alg */
 /**
  * @summary Decodes an ASN.1 element into a(n) Conf_Alg
  * @function
@@ -57,13 +52,9 @@ export function _decode_Conf_Alg(el: _Element) {
     }
     return _cached_decoder_for_Conf_Alg(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Conf_Alg */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Conf_Alg */
 let _cached_encoder_for_Conf_Alg: $.ASN1Encoder<Conf_Alg> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Conf_Alg */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Conf_Alg */
 /**
  * @summary Encodes a(n) Conf_Alg into an ASN.1 Element.
  * @function
@@ -97,6 +88,5 @@ export function _encode_Conf_Alg(
     return _cached_encoder_for_Conf_Alg(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Conf_Alg */
 
 /* eslint-enable */

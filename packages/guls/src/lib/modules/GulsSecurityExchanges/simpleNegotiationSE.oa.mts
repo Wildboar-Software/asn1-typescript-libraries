@@ -17,7 +17,7 @@ import { offeredIds } from '../GulsSecurityExchanges/offeredIds.oa.mjs';
 import { acceptedIds } from '../GulsSecurityExchanges/acceptedIds.oa.mjs';
 import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.mjs';
 import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION simpleNegotiationSE */
+
 /**
  * @summary simpleNegotiationSE
  * @description
@@ -44,6 +44,5 @@ export const simpleNegotiationSE: SECURITY_EXCHANGE = {
     global: new _OID([/* simple-negotiation-se */ 3], securityExchanges),
   } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION simpleNegotiationSE */
 
 /* eslint-enable */

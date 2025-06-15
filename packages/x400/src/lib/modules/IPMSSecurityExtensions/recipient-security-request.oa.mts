@@ -16,7 +16,6 @@ import {
 } from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta.mjs';
 import { id_sec_ipm_security_request } from '../IPMSObjectIdentifiers/id-sec-ipm-security-request.va.mjs';
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION recipient_security_request */
 /**
  * @summary recipient_security_request
  * @description
@@ -45,6 +44,5 @@ export const recipient_security_request: IPMS_EXTENSION<RecipientSecurityRequest
     '&id': id_sec_ipm_security_request /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION recipient_security_request */
 
 /* eslint-enable */

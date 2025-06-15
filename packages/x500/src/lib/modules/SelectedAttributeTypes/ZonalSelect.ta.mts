@@ -6,7 +6,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ZonalSelect */
 /**
  * @summary ZonalSelect
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type ZonalSelect = AttributeType[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ZonalSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ZonalSelect */
 let _cached_decoder_for_ZonalSelect: $.ASN1Decoder<ZonalSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ZonalSelect */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ZonalSelect */
 /**
  * @summary Decodes an ASN.1 element into a(n) ZonalSelect
  * @function
@@ -39,13 +34,9 @@ export function _decode_ZonalSelect(el: _Element) {
     }
     return _cached_decoder_for_ZonalSelect(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ZonalSelect */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ZonalSelect */
 let _cached_encoder_for_ZonalSelect: $.ASN1Encoder<ZonalSelect> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ZonalSelect */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ZonalSelect */
 /**
  * @summary Encodes a(n) ZonalSelect into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_ZonalSelect(
     return _cached_encoder_for_ZonalSelect(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ZonalSelect */
 
 /* eslint-enable */

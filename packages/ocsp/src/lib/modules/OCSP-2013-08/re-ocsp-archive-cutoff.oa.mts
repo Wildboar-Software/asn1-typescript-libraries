@@ -7,7 +7,7 @@ import {
 } from "../OCSP-2013-08/ArchiveCutoff.ta.mjs";
 import { id_pkix_ocsp_archive_cutoff } from "../OCSP-2013-08/id-pkix-ocsp-archive-cutoff.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION re_ocsp_archive_cutoff */
+
 /**
  * @summary re_ocsp_archive_cutoff
  * @description
@@ -35,6 +35,5 @@ export const re_ocsp_archive_cutoff: EXTENSION<ArchiveCutoff> = {
     "&id": id_pkix_ocsp_archive_cutoff /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION re_ocsp_archive_cutoff */
 
 /* eslint-enable */

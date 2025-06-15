@@ -9,7 +9,6 @@ import {
     _decode_MRMappings,
     _encode_MRMappings,
 } from "../SelectedAttributeTypes/MRMappings.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION proposedRelaxation */
 /**
  * @summary proposedRelaxation
  * @description
@@ -43,6 +42,5 @@ export const proposedRelaxation: ATTRIBUTE<MRMappings> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION proposedRelaxation */
 
 /* eslint-enable */

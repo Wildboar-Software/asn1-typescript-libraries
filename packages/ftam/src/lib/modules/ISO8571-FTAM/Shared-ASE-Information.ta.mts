@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Shared_ASE_Information */
+
 /**
  * @summary Shared_ASE_Information
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Shared_ASE_Information = EXTERNAL; // ExternalType
-/* END_OF_SYMBOL_DEFINITION Shared_ASE_Information */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Shared_ASE_Information */
+
 let _cached_decoder_for_Shared_ASE_Information: $.ASN1Decoder<Shared_ASE_Information> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Shared_ASE_Information */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Shared_ASE_Information */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Shared_ASE_Information
  * @function
@@ -45,13 +43,11 @@ export function _decode_Shared_ASE_Information(el: _Element) {
   }
   return _cached_decoder_for_Shared_ASE_Information(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Shared_ASE_Information */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Shared_ASE_Information */
+
 let _cached_encoder_for_Shared_ASE_Information: $.ASN1Encoder<Shared_ASE_Information> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Shared_ASE_Information */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Shared_ASE_Information */
+
 /**
  * @summary Encodes a(n) Shared_ASE_Information into an ASN.1 Element.
  * @function
@@ -74,6 +70,5 @@ export function _encode_Shared_ASE_Information(
   return _cached_encoder_for_Shared_ASE_Information(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Shared_ASE_Information */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
 } from "../DirectoryAbstractService/TypeAndContextAssertion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ContextSelection */
 /**
  * @summary ContextSelection
  * @description
@@ -24,13 +23,9 @@ export type ContextSelection =
     | { allContexts: NULL } /* CHOICE_ALT_ROOT */
     | { selectedContexts: TypeAndContextAssertion[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ContextSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ContextSelection */
 let _cached_decoder_for_ContextSelection: $.ASN1Decoder<ContextSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ContextSelection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ContextSelection */
 /**
  * @summary Decodes an ASN.1 element into a(n) ContextSelection
  * @function
@@ -53,13 +48,9 @@ export function _decode_ContextSelection(el: _Element) {
     }
     return _cached_decoder_for_ContextSelection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ContextSelection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ContextSelection */
 let _cached_encoder_for_ContextSelection: $.ASN1Encoder<ContextSelection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ContextSelection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ContextSelection */
 /**
  * @summary Encodes a(n) ContextSelection into an ASN.1 Element.
  * @function
@@ -86,6 +77,5 @@ export function _encode_ContextSelection(
     return _cached_encoder_for_ContextSelection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ContextSelection */
 
 /* eslint-enable */

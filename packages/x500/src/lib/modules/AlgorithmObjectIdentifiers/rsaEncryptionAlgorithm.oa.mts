@@ -3,7 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION rsaEncryptionAlgorithm */
 /**
  * @summary rsaEncryptionAlgorithm
  * @description
@@ -31,6 +30,5 @@ export const rsaEncryptionAlgorithm: ALGORITHM<NULL> = {
     "&id": rsaEncryption /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION rsaEncryptionAlgorithm */
 
 /* eslint-enable */

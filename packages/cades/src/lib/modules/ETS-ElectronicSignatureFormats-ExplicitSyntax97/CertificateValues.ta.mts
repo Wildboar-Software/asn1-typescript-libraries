@@ -15,7 +15,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION CertificateValues */
 /**
  * @summary CertificateValues
  * @description
@@ -28,13 +27,9 @@ import {
  */
 export
 type CertificateValues = Certificate[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertificateValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateValues */
 let _cached_decoder_for_CertificateValues: $.ASN1Decoder<CertificateValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateValues */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateValues */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateValues
  * @function
@@ -46,13 +41,9 @@ function _decode_CertificateValues (el: _Element) {
     if (!_cached_decoder_for_CertificateValues) { _cached_decoder_for_CertificateValues = $._decodeSequenceOf<Certificate>(() => _decode_Certificate); }
     return _cached_decoder_for_CertificateValues(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateValues */
 let _cached_encoder_for_CertificateValues: $.ASN1Encoder<CertificateValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateValues */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateValues */
 /**
  * @summary Encodes a(n) CertificateValues into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ function _encode_CertificateValues (value: CertificateValues, elGetter: $.ASN1En
     return _cached_encoder_for_CertificateValues(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateValues */
 
 /* eslint-enable */

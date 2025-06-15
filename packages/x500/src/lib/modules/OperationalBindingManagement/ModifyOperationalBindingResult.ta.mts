@@ -15,7 +15,6 @@ import {
     _decode_ModifyOperationalBindingResultData,
     _encode_ModifyOperationalBindingResultData,
 } from "../OperationalBindingManagement/ModifyOperationalBindingResultData.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ModifyOperationalBindingResult */
 /**
  * @summary ModifyOperationalBindingResult
  * @description
@@ -35,13 +34,9 @@ export type ModifyOperationalBindingResult =
           protected_: OPTIONALLY_PROTECTED_SEQ<ModifyOperationalBindingResultData>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION ModifyOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyOperationalBindingResult */
 let _cached_decoder_for_ModifyOperationalBindingResult: $.ASN1Decoder<ModifyOperationalBindingResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyOperationalBindingResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyOperationalBindingResult
  * @function
@@ -68,13 +63,9 @@ export function _decode_ModifyOperationalBindingResult(el: _Element) {
     }
     return _cached_decoder_for_ModifyOperationalBindingResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyOperationalBindingResult */
 let _cached_encoder_for_ModifyOperationalBindingResult: $.ASN1Encoder<ModifyOperationalBindingResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyOperationalBindingResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyOperationalBindingResult */
 /**
  * @summary Encodes a(n) ModifyOperationalBindingResult into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_ModifyOperationalBindingResult(
     return _cached_encoder_for_ModifyOperationalBindingResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyOperationalBindingResult */
 
 /* eslint-enable */

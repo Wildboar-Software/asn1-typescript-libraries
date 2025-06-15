@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_mnb_ULconnEnd_knownDUA */
 /**
  * @summary id_mnb_ULconnEnd_knownDUA
  * @description
@@ -18,6 +17,5 @@ export const id_mnb_ULconnEnd_knownDUA: OBJECT_IDENTIFIER = new _OID(
     [10],
     id_mnb
 );
-/* END_OF_SYMBOL_DEFINITION id_mnb_ULconnEnd_knownDUA */
 
 /* eslint-enable */

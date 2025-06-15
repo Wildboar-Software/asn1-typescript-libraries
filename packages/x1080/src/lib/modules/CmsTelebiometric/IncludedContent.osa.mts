@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.mjs';
 import { envelopedData } from '../CmsTelebiometric/envelopedData.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION IncludedContent */
+
 /**
  * @summary IncludedContent
  * @description
@@ -27,6 +27,5 @@ import { envelopedData } from '../CmsTelebiometric/envelopedData.oa.mjs';
  *
  */
 export const IncludedContent: CONTENT_TYPE[] = [envelopedData];
-/* END_OF_SYMBOL_DEFINITION IncludedContent */
 
 /* eslint-enable */

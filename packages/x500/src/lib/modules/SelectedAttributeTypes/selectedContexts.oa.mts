@@ -9,7 +9,6 @@ import {
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
 import { id_cat_selectedContexts } from "../SelectedAttributeTypes/id-cat-selectedContexts.va.mjs";
-/* START_OF_SYMBOL_DEFINITION selectedContexts */
 /**
  * @summary selectedContexts
  * @description
@@ -43,6 +42,5 @@ export const selectedContexts: ATTRIBUTE<ContextAssertion> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION selectedContexts */
 
 /* eslint-enable */

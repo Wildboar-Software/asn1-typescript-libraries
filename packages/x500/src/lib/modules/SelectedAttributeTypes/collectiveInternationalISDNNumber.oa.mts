@@ -6,7 +6,6 @@ import {
 import { id_at_collectiveInternationalISDNNumber } from "../SelectedAttributeTypes/id-at-collectiveInternationalISDNNumber.va.mjs";
 import { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.mjs";
 import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectiveInternationalISDNNumber */
 /**
  * @summary collectiveInternationalISDNNumber
  * @description
@@ -46,6 +45,5 @@ export const collectiveInternationalISDNNumber: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectiveInternationalISDNNumber */
 
 /* eslint-enable */

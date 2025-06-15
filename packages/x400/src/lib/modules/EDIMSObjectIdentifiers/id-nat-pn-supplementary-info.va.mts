@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.mjs';
 import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_nat_pn_supplementary_info */
 /**
  * @summary id_nat_pn_supplementary_info
  * @description
@@ -25,6 +24,5 @@ import { id_nat } from '../EDIMSObjectIdentifiers/id-nat.va.mjs';
  * @constant
  */
 export const id_nat_pn_supplementary_info: ID = new _OID([7], id_nat);
-/* END_OF_SYMBOL_DEFINITION id_nat_pn_supplementary_info */
 
 /* eslint-enable */

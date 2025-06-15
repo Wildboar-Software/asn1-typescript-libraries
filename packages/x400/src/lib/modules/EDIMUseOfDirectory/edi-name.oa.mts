@@ -22,7 +22,6 @@ import {
     _encode_DirectoryString,
 } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs';
 import { id_dat_edi_name } from '../EDIMUseOfDirectory/id-dat-edi-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_name */
 /**
  * @summary edi_name
  * @description
@@ -58,6 +57,5 @@ export const edi_name: ATTRIBUTE<DirectoryString> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_name */
 
 /* eslint-enable */

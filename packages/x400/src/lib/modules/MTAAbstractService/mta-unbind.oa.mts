@@ -19,7 +19,6 @@ import {
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
 import { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa.mjs';
 import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mta_unbind */
 /**
  * @summary mta_unbind
  * @description
@@ -35,6 +34,5 @@ import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca
  * @implements {ABSTRACT_OPERATION}
  */
 export const mta_unbind: ABSTRACT_OPERATION = emptyUnbind;
-/* END_OF_SYMBOL_DEFINITION mta_unbind */
 
 /* eslint-enable */

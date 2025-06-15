@@ -26,7 +26,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GUIEventRedirector */
+
 /**
  * @summary GUIEventRedirector
  * @description
@@ -127,9 +127,8 @@ export class GUIEventRedirector {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIEventRedirector */
+
 /**
  * @summary The Leading Root Component Types of GUIEventRedirector
  * @description
@@ -196,9 +195,8 @@ export const _root_component_type_list_1_spec_for_GUIEventRedirector: $.Componen
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIEventRedirector */
+
 /**
  * @summary The Trailing Root Component Types of GUIEventRedirector
  * @description
@@ -208,9 +206,8 @@ export const _root_component_type_list_1_spec_for_GUIEventRedirector: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_GUIEventRedirector: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIEventRedirector */
+
 /**
  * @summary The Extension Addition Component Types of GUIEventRedirector
  * @description
@@ -220,13 +217,11 @@ export const _root_component_type_list_2_spec_for_GUIEventRedirector: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_GUIEventRedirector: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventRedirector */
+
 let _cached_decoder_for_GUIEventRedirector: $.ASN1Decoder<GUIEventRedirector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GUIEventRedirector */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GUIEventRedirector
  * @function
@@ -284,13 +279,11 @@ export function _decode_GUIEventRedirector(el: _Element) {
   }
   return _cached_decoder_for_GUIEventRedirector(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventRedirector */
+
 let _cached_encoder_for_GUIEventRedirector: $.ASN1Encoder<GUIEventRedirector> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GUIEventRedirector */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GUIEventRedirector */
+
 /**
  * @summary Encodes a(n) GUIEventRedirector into an ASN.1 Element.
  * @function
@@ -346,6 +339,5 @@ export function _encode_GUIEventRedirector(
   return _cached_encoder_for_GUIEventRedirector(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GUIEventRedirector */
 
 /* eslint-enable */

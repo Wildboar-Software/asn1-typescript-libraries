@@ -2,7 +2,7 @@
 import { INTEGER } from "asn1-ts";
 import { ub_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-name.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pkcs_9_ub_placeOfBirth */
+
 /**
  * @summary pkcs_9_ub_placeOfBirth
  * @description
@@ -16,6 +16,5 @@ import { ub_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-name.va.m
  * @constant
  */
 export const pkcs_9_ub_placeOfBirth: INTEGER = ub_name;
-/* END_OF_SYMBOL_DEFINITION pkcs_9_ub_placeOfBirth */
 
 /* eslint-enable */

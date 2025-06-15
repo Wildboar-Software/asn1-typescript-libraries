@@ -41,7 +41,7 @@ import { syncNotSupported } from '../CMIP-1/syncNotSupported.oa.mjs';
 import { m_Linked_Reply } from '../CMIP-1/m-Linked-Reply.oa.mjs';
 import { accessDenied } from '../CMIP-1/accessDenied.oa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION m_Get */
+
 /**
  * @summary m_Get
  * @description
@@ -104,6 +104,5 @@ export const m_Get: OPERATION<GetArgument, GetResult> = {
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_Get */
 
 /* eslint-enable */

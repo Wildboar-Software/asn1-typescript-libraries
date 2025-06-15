@@ -15,7 +15,6 @@ import {
     _decode_OtherRecipientName,
     _encode_OtherRecipientName,
 } from '../MTSAbstractService/OtherRecipientName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OtherRecipientNames */
 /**
  * @summary OtherRecipientNames
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OtherRecipientNames = OtherRecipientName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION OtherRecipientNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherRecipientNames */
 let _cached_decoder_for_OtherRecipientNames: $.ASN1Decoder<OtherRecipientNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherRecipientNames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherRecipientNames */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherRecipientNames
  * @function
@@ -48,13 +43,9 @@ export function _decode_OtherRecipientNames(el: _Element) {
     }
     return _cached_decoder_for_OtherRecipientNames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherRecipientNames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherRecipientNames */
 let _cached_encoder_for_OtherRecipientNames: $.ASN1Encoder<OtherRecipientNames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherRecipientNames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherRecipientNames */
 /**
  * @summary Encodes a(n) OtherRecipientNames into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_OtherRecipientNames(
     return _cached_encoder_for_OtherRecipientNames(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherRecipientNames */
 
 /* eslint-enable */

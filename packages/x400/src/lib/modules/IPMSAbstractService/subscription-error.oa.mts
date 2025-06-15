@@ -23,7 +23,6 @@ import {
     _encode_subscription_error_ParameterType,
 } from '../IPMSAbstractService/subscription-error-ParameterType.ta.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION subscription_error */
 /**
  * @summary subscription_error
  * @description
@@ -51,6 +50,5 @@ export const subscription_error: ABSTRACT_ERROR<subscription_error_ParameterType
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION subscription_error */
 
 /* eslint-enable */

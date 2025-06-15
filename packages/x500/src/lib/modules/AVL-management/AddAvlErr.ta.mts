@@ -11,7 +11,6 @@ import {
     _encode_AVMP_error,
     _enum_for_AVMP_error,
 } from "../AVL-management/AVMP-error.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AddAvlErr */
 /**
  * @summary AddAvlErr
  * @description
@@ -68,9 +67,7 @@ export class AddAvlErr {
 
     public static _enum_for_notOK = _enum_for_AVMP_error;
 }
-/* END_OF_SYMBOL_DEFINITION AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddAvlErr */
 /**
  * @summary The Leading Root Component Types of AddAvlErr
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_AddAvlErr: $.ComponentSpec[] =
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddAvlErr */
 /**
  * @summary The Trailing Root Component Types of AddAvlErr
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_AddAvlErr: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddAvlErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddAvlErr */
 /**
  * @summary The Extension Addition Component Types of AddAvlErr
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_AddAvlErr: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_AddAvlErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlErr */
 let _cached_decoder_for_AddAvlErr: $.ASN1Decoder<AddAvlErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddAvlErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) AddAvlErr
  * @function
@@ -144,13 +133,9 @@ export function _decode_AddAvlErr(el: _Element) {
     }
     return _cached_decoder_for_AddAvlErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlErr */
 let _cached_encoder_for_AddAvlErr: $.ASN1Encoder<AddAvlErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddAvlErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddAvlErr */
 /**
  * @summary Encodes a(n) AddAvlErr into an ASN.1 Element.
  * @function
@@ -186,6 +171,5 @@ export function _encode_AddAvlErr(
     return _cached_encoder_for_AddAvlErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddAvlErr */
 
 /* eslint-enable */

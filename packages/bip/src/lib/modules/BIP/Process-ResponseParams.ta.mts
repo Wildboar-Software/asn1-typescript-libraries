@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Process_ResponseParams */
+
 /**
  * @summary Process_ResponseParams
  * @description
@@ -57,9 +57,8 @@ export class Process_ResponseParams {
     return new Process_ResponseParams(_o.processedBIR);
   }
 }
-/* END_OF_SYMBOL_DEFINITION Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Process_ResponseParams */
+
 /**
  * @summary The Leading Root Component Types of Process_ResponseParams
  * @description
@@ -77,9 +76,8 @@ export const _root_component_type_list_1_spec_for_Process_ResponseParams: $.Comp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Process_ResponseParams */
+
 /**
  * @summary The Trailing Root Component Types of Process_ResponseParams
  * @description
@@ -89,9 +87,8 @@ export const _root_component_type_list_1_spec_for_Process_ResponseParams: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Process_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Process_ResponseParams */
+
 /**
  * @summary The Extension Addition Component Types of Process_ResponseParams
  * @description
@@ -101,13 +98,11 @@ export const _root_component_type_list_2_spec_for_Process_ResponseParams: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_Process_ResponseParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Process_ResponseParams */
+
 let _cached_decoder_for_Process_ResponseParams: $.ASN1Decoder<Process_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Process_ResponseParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Process_ResponseParams
  * @function
@@ -135,13 +130,11 @@ export function _decode_Process_ResponseParams(el: _Element) {
   }
   return _cached_decoder_for_Process_ResponseParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Process_ResponseParams */
+
 let _cached_encoder_for_Process_ResponseParams: $.ASN1Encoder<Process_ResponseParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Process_ResponseParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Process_ResponseParams */
+
 /**
  * @summary Encodes a(n) Process_ResponseParams into an ASN.1 Element.
  * @function
@@ -172,6 +165,5 @@ export function _encode_Process_ResponseParams(
   return _cached_encoder_for_Process_ResponseParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Process_ResponseParams */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { hashAlgs } from "../AlgorithmObjectIdentifiers/hashAlgs.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_sha512 */
 /**
  * @summary id_sha512
  * @description
@@ -16,6 +15,5 @@ import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
  * @constant
  */
 export const id_sha512: ID = new _OID([3], hashAlgs);
-/* END_OF_SYMBOL_DEFINITION id_sha512 */
 
 /* eslint-enable */

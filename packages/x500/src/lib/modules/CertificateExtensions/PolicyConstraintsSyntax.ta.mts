@@ -10,7 +10,6 @@ import {
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PolicyConstraintsSyntax */
 /**
  * @summary PolicyConstraintsSyntax
  * @description
@@ -76,9 +75,7 @@ export class PolicyConstraintsSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PolicyConstraintsSyntax */
 /**
  * @summary The Leading Root Component Types of PolicyConstraintsSyntax
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_PolicyConstraintsSyntax: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PolicyConstraintsSyntax */
 /**
  * @summary The Trailing Root Component Types of PolicyConstraintsSyntax
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_PolicyConstraintsSyntax: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PolicyConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PolicyConstraintsSyntax */
 /**
  * @summary The Extension Addition Component Types of PolicyConstraintsSyntax
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_PolicyConstraintsSyntax: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_PolicyConstraintsSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyConstraintsSyntax */
 let _cached_decoder_for_PolicyConstraintsSyntax: $.ASN1Decoder<PolicyConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PolicyConstraintsSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) PolicyConstraintsSyntax
  * @function
@@ -183,13 +172,9 @@ export function _decode_PolicyConstraintsSyntax(el: _Element) {
     }
     return _cached_decoder_for_PolicyConstraintsSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyConstraintsSyntax */
 let _cached_encoder_for_PolicyConstraintsSyntax: $.ASN1Encoder<PolicyConstraintsSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyConstraintsSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PolicyConstraintsSyntax */
 /**
  * @summary Encodes a(n) PolicyConstraintsSyntax into an ASN.1 Element.
  * @function
@@ -239,6 +224,5 @@ export function _encode_PolicyConstraintsSyntax(
     return _cached_encoder_for_PolicyConstraintsSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PolicyConstraintsSyntax */
 
 /* eslint-enable */

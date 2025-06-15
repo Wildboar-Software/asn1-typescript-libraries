@@ -17,7 +17,7 @@ import {
     _decode_DTEAddress_numberingPlanId,
     _encode_DTEAddress_numberingPlanId,
 } from '../NLM/DTEAddress-numberingPlanId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DTEAddress */
+
 /**
  * @summary DTEAddress
  * @description
@@ -75,9 +75,8 @@ export class DTEAddress {
 
     public static _enum_for_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
 }
-/* END_OF_SYMBOL_DEFINITION DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DTEAddress */
+
 /**
  * @summary The Leading Root Component Types of DTEAddress
  * @description
@@ -102,9 +101,8 @@ export const _root_component_type_list_1_spec_for_DTEAddress: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DTEAddress */
+
 /**
  * @summary The Trailing Root Component Types of DTEAddress
  * @description
@@ -114,9 +112,8 @@ export const _root_component_type_list_1_spec_for_DTEAddress: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DTEAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DTEAddress */
+
 /**
  * @summary The Extension Addition Component Types of DTEAddress
  * @description
@@ -126,13 +123,11 @@ export const _root_component_type_list_2_spec_for_DTEAddress: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_DTEAddress: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DTEAddress */
+
 let _cached_decoder_for_DTEAddress: $.ASN1Decoder<DTEAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DTEAddress */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DTEAddress
  * @function
@@ -165,13 +160,11 @@ export function _decode_DTEAddress(el: _Element) {
     }
     return _cached_decoder_for_DTEAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DTEAddress */
+
 let _cached_encoder_for_DTEAddress: $.ASN1Encoder<DTEAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DTEAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DTEAddress */
+
 /**
  * @summary Encodes a(n) DTEAddress into an ASN.1 Element.
  * @function
@@ -210,6 +203,5 @@ export function _encode_DTEAddress(
     return _cached_encoder_for_DTEAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DTEAddress */
 
 /* eslint-enable */

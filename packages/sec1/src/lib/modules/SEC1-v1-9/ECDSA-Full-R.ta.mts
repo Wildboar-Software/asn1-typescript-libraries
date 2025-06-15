@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ECDSA_Full_R */
 /**
  * @summary ECDSA_Full_R
  * @description
@@ -63,9 +62,7 @@ class ECDSA_Full_R {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECDSA_Full_R */
 /**
  * @summary The Leading Root Component Types of ECDSA_Full_R
  * @description
@@ -79,9 +76,7 @@ const _root_component_type_list_1_spec_for_ECDSA_Full_R: $.ComponentSpec[] = [
     new $.ComponentSpec("r", false, $.hasTag(_TagClass.universal, 4), undefined, undefined),
     new $.ComponentSpec("s", false, $.hasTag(_TagClass.universal, 2), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECDSA_Full_R */
 /**
  * @summary The Trailing Root Component Types of ECDSA_Full_R
  * @description
@@ -94,9 +89,7 @@ export
 const _root_component_type_list_2_spec_for_ECDSA_Full_R: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECDSA_Full_R */
 /**
  * @summary The Extension Addition Component Types of ECDSA_Full_R
  * @description
@@ -109,13 +102,9 @@ export
 const _extension_additions_list_spec_for_ECDSA_Full_R: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Full_R */
 let _cached_decoder_for_ECDSA_Full_R: $.ASN1Decoder<ECDSA_Full_R> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ECDSA_Full_R */
 /**
  * @summary Decodes an ASN.1 element into a(n) ECDSA_Full_R
  * @function
@@ -143,13 +132,9 @@ function _decode_ECDSA_Full_R (el: _Element) {
 }; }
     return _cached_decoder_for_ECDSA_Full_R(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Full_R */
 let _cached_encoder_for_ECDSA_Full_R: $.ASN1Encoder<ECDSA_Full_R> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ECDSA_Full_R */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ECDSA_Full_R */
 /**
  * @summary Encodes a(n) ECDSA_Full_R into an ASN.1 Element.
  * @function
@@ -170,6 +155,5 @@ function _encode_ECDSA_Full_R (value: ECDSA_Full_R, elGetter: $.ASN1Encoder<ECDS
     return _cached_encoder_for_ECDSA_Full_R(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ECDSA_Full_R */
 
 /* eslint-enable */

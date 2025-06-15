@@ -15,7 +15,7 @@ import {
   _decode_Challenge,
   _encode_Challenge,
 } from '../PKIXCMP-2009/Challenge.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION POPODecKeyChallContent */
+
 /**
  * @summary POPODecKeyChallContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type POPODecKeyChallContent = Challenge[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION POPODecKeyChallContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_POPODecKeyChallContent */
+
 let _cached_decoder_for_POPODecKeyChallContent: $.ASN1Decoder<POPODecKeyChallContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_POPODecKeyChallContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_POPODecKeyChallContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) POPODecKeyChallContent
  * @function
@@ -48,13 +46,11 @@ export function _decode_POPODecKeyChallContent(el: _Element) {
   }
   return _cached_decoder_for_POPODecKeyChallContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_POPODecKeyChallContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_POPODecKeyChallContent */
+
 let _cached_encoder_for_POPODecKeyChallContent: $.ASN1Encoder<POPODecKeyChallContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_POPODecKeyChallContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_POPODecKeyChallContent */
+
 /**
  * @summary Encodes a(n) POPODecKeyChallContent into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_POPODecKeyChallContent(
   return _cached_encoder_for_POPODecKeyChallContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_POPODecKeyChallContent */
 
 /* eslint-enable */

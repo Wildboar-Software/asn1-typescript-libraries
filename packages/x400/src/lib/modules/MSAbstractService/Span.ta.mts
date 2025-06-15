@@ -15,7 +15,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Span */
 /**
  * @summary Span
  * @description
@@ -62,9 +61,7 @@ export class Span {
         return new Span(_o.lowest, _o.highest);
     }
 }
-/* END_OF_SYMBOL_DEFINITION Span */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Span */
 /**
  * @summary The Leading Root Component Types of Span
  * @description
@@ -89,9 +86,7 @@ export const _root_component_type_list_1_spec_for_Span: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Span */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Span */
 /**
  * @summary The Trailing Root Component Types of Span
  * @description
@@ -101,9 +96,7 @@ export const _root_component_type_list_1_spec_for_Span: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Span: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Span */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Span */
 /**
  * @summary The Extension Addition Component Types of Span
  * @description
@@ -113,13 +106,9 @@ export const _root_component_type_list_2_spec_for_Span: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_Span: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Span */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Span */
 let _cached_decoder_for_Span: $.ASN1Decoder<Span> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Span */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Span */
 /**
  * @summary Decodes an ASN.1 element into a(n) Span
  * @function
@@ -152,13 +141,9 @@ export function _decode_Span(el: _Element) {
     }
     return _cached_decoder_for_Span(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Span */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Span */
 let _cached_encoder_for_Span: $.ASN1Encoder<Span> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Span */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Span */
 /**
  * @summary Encodes a(n) Span into an ASN.1 Element.
  * @function
@@ -194,6 +179,5 @@ export function _encode_Span(value: Span, elGetter: $.ASN1Encoder<Span>) {
     return _cached_encoder_for_Span(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Span */
 
 /* eslint-enable */

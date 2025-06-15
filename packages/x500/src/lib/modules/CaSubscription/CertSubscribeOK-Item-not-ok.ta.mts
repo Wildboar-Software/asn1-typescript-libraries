@@ -11,7 +11,6 @@ import {
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,
 } from "../CaSubscription/CASP-CertStatusCode.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_not_ok */
 /**
  * @summary CertSubscribeOK_Item_not_ok
  * @description
@@ -73,9 +72,7 @@ export class CertSubscribeOK_Item_not_ok {
 
     public static _enum_for_status = _enum_for_CASP_CertStatusCode;
 }
-/* END_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertSubscribeOK_Item_not_ok */
 /**
  * @summary The Leading Root Component Types of CertSubscribeOK_Item_not_ok
  * @description
@@ -93,9 +90,7 @@ export const _root_component_type_list_1_spec_for_CertSubscribeOK_Item_not_ok: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertSubscribeOK_Item_not_ok */
 /**
  * @summary The Trailing Root Component Types of CertSubscribeOK_Item_not_ok
  * @description
@@ -105,9 +100,7 @@ export const _root_component_type_list_1_spec_for_CertSubscribeOK_Item_not_ok: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertSubscribeOK_Item_not_ok: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertSubscribeOK_Item_not_ok */
 /**
  * @summary The Extension Addition Component Types of CertSubscribeOK_Item_not_ok
  * @description
@@ -117,13 +110,9 @@ export const _root_component_type_list_2_spec_for_CertSubscribeOK_Item_not_ok: $
  * @constant
  */
 export const _extension_additions_list_spec_for_CertSubscribeOK_Item_not_ok: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeOK_Item_not_ok */
 let _cached_decoder_for_CertSubscribeOK_Item_not_ok: $.ASN1Decoder<CertSubscribeOK_Item_not_ok> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertSubscribeOK_Item_not_ok */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertSubscribeOK_Item_not_ok
  * @function
@@ -151,13 +140,9 @@ export function _decode_CertSubscribeOK_Item_not_ok(el: _Element) {
     }
     return _cached_decoder_for_CertSubscribeOK_Item_not_ok(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeOK_Item_not_ok */
 let _cached_encoder_for_CertSubscribeOK_Item_not_ok: $.ASN1Encoder<CertSubscribeOK_Item_not_ok> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeOK_Item_not_ok */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertSubscribeOK_Item_not_ok */
 /**
  * @summary Encodes a(n) CertSubscribeOK_Item_not_ok into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_CertSubscribeOK_Item_not_ok(
     return _cached_encoder_for_CertSubscribeOK_Item_not_ok(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertSubscribeOK_Item_not_ok */
 
 /* eslint-enable */

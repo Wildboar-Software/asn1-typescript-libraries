@@ -15,7 +15,6 @@ import {
     _decode_AuthorizingUsersSubfield,
     _encode_AuthorizingUsersSubfield,
 } from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AuthorizingUsersField */
 /**
  * @summary AuthorizingUsersField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AuthorizingUsersField = AuthorizingUsersSubfield[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION AuthorizingUsersField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizingUsersField */
 let _cached_decoder_for_AuthorizingUsersField: $.ASN1Decoder<AuthorizingUsersField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizingUsersField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorizingUsersField */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthorizingUsersField
  * @function
@@ -48,13 +43,9 @@ export function _decode_AuthorizingUsersField(el: _Element) {
     }
     return _cached_decoder_for_AuthorizingUsersField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorizingUsersField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizingUsersField */
 let _cached_encoder_for_AuthorizingUsersField: $.ASN1Encoder<AuthorizingUsersField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizingUsersField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorizingUsersField */
 /**
  * @summary Encodes a(n) AuthorizingUsersField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_AuthorizingUsersField(
     return _cached_encoder_for_AuthorizingUsersField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorizingUsersField */
 
 /* eslint-enable */

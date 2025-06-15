@@ -15,7 +15,6 @@ import {
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestTerminateError_Item */
 /**
  * @summary TestTerminateError_Item
  * @description
@@ -29,13 +28,9 @@ import {
 export type TestTerminateError_Item =
     | { testTerminateSuccess: TestInvocationId } /* CHOICE_ALT_ROOT */
     | { testTerminateFailure: TestInvocationId } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION TestTerminateError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestTerminateError_Item */
 let _cached_decoder_for_TestTerminateError_Item: $.ASN1Decoder<TestTerminateError_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestTerminateError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestTerminateError_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestTerminateError_Item
  * @function
@@ -63,13 +58,9 @@ export function _decode_TestTerminateError_Item(el: _Element) {
     }
     return _cached_decoder_for_TestTerminateError_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestTerminateError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestTerminateError_Item */
 let _cached_encoder_for_TestTerminateError_Item: $.ASN1Encoder<TestTerminateError_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestTerminateError_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestTerminateError_Item */
 /**
  * @summary Encodes a(n) TestTerminateError_Item into an ASN.1 Element.
  * @function
@@ -103,6 +94,5 @@ export function _encode_TestTerminateError_Item(
     return _cached_encoder_for_TestTerminateError_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestTerminateError_Item */
 
 /* eslint-enable */

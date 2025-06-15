@@ -6,7 +6,6 @@ import {
     _encode_AvlId,
 } from "../CertificateExtensions/AvlId.ta.mjs";
 import { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va.mjs";
-/* START_OF_SYMBOL_DEFINITION authorizationValidation */
 /**
  * @summary authorizationValidation
  * @description
@@ -34,6 +33,5 @@ export const authorizationValidation: EXTENSION<AvlId> = {
     "&id": id_ce_authorizationValidation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authorizationValidation */
 
 /* eslint-enable */

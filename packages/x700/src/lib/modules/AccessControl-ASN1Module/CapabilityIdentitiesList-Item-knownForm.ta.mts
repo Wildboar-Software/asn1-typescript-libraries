@@ -21,7 +21,6 @@ import {
     _decode_SdaList,
     _encode_SdaList,
 } from '../AccessControl-ASN1Module/SdaList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item_knownForm */
 /**
  * @summary CapabilityIdentitiesList_Item_knownForm
  * @description
@@ -73,9 +72,7 @@ export class CapabilityIdentitiesList_Item_knownForm {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CapabilityIdentitiesList_Item_knownForm */
 /**
  * @summary The Leading Root Component Types of CapabilityIdentitiesList_Item_knownForm
  * @description
@@ -100,9 +97,7 @@ export const _root_component_type_list_1_spec_for_CapabilityIdentitiesList_Item_
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CapabilityIdentitiesList_Item_knownForm */
 /**
  * @summary The Trailing Root Component Types of CapabilityIdentitiesList_Item_knownForm
  * @description
@@ -112,9 +107,7 @@ export const _root_component_type_list_1_spec_for_CapabilityIdentitiesList_Item_
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CapabilityIdentitiesList_Item_knownForm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CapabilityIdentitiesList_Item_knownForm */
 /**
  * @summary The Extension Addition Component Types of CapabilityIdentitiesList_Item_knownForm
  * @description
@@ -124,13 +117,9 @@ export const _root_component_type_list_2_spec_for_CapabilityIdentitiesList_Item_
  * @constant
  */
 export const _extension_additions_list_spec_for_CapabilityIdentitiesList_Item_knownForm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CapabilityIdentitiesList_Item_knownForm */
 let _cached_decoder_for_CapabilityIdentitiesList_Item_knownForm: $.ASN1Decoder<CapabilityIdentitiesList_Item_knownForm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CapabilityIdentitiesList_Item_knownForm */
 /**
  * @summary Decodes an ASN.1 element into a(n) CapabilityIdentitiesList_Item_knownForm
  * @function
@@ -172,13 +161,9 @@ export function _decode_CapabilityIdentitiesList_Item_knownForm(el: _Element) {
     }
     return _cached_decoder_for_CapabilityIdentitiesList_Item_knownForm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CapabilityIdentitiesList_Item_knownForm */
 let _cached_encoder_for_CapabilityIdentitiesList_Item_knownForm: $.ASN1Encoder<CapabilityIdentitiesList_Item_knownForm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CapabilityIdentitiesList_Item_knownForm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CapabilityIdentitiesList_Item_knownForm */
 /**
  * @summary Encodes a(n) CapabilityIdentitiesList_Item_knownForm into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_CapabilityIdentitiesList_Item_knownForm(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CapabilityIdentitiesList_Item_knownForm */
 
 /* eslint-enable */

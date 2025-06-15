@@ -25,7 +25,6 @@ import {
     _decode_CirculationTime,
     _encode_CirculationTime,
 } from '../IPMSHeadingExtensions/CirculationTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TBSCirculationSignature */
 /**
  * @summary TBSCirculationSignature
  * @description
@@ -87,9 +86,7 @@ export class TBSCirculationSignature {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCirculationSignature */
 /**
  * @summary The Leading Root Component Types of TBSCirculationSignature
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_TBSCirculationSignature: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCirculationSignature */
 /**
  * @summary The Trailing Root Component Types of TBSCirculationSignature
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_TBSCirculationSignature: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TBSCirculationSignature: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCirculationSignature */
 /**
  * @summary The Extension Addition Component Types of TBSCirculationSignature
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_TBSCirculationSignature: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_TBSCirculationSignature: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCirculationSignature */
 let _cached_decoder_for_TBSCirculationSignature: $.ASN1Decoder<TBSCirculationSignature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TBSCirculationSignature */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSCirculationSignature
  * @function
@@ -191,13 +180,9 @@ export function _decode_TBSCirculationSignature(el: _Element) {
     }
     return _cached_decoder_for_TBSCirculationSignature(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCirculationSignature */
 let _cached_encoder_for_TBSCirculationSignature: $.ASN1Encoder<TBSCirculationSignature> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCirculationSignature */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TBSCirculationSignature */
 /**
  * @summary Encodes a(n) TBSCirculationSignature into an ASN.1 Element.
  * @function
@@ -236,6 +221,5 @@ export function _encode_TBSCirculationSignature(
     return _cached_encoder_for_TBSCirculationSignature(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TBSCirculationSignature */
 
 /* eslint-enable */

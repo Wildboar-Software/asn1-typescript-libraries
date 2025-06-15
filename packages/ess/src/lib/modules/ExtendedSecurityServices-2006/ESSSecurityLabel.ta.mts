@@ -26,7 +26,7 @@ import {
     _encode_SecurityPolicyIdentifier,
 } from "../ExtendedSecurityServices-2006/SecurityPolicyIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ESSSecurityLabel */
+
 /**
  * @summary ESSSecurityLabel
  * @description
@@ -95,9 +95,8 @@ export class ESSSecurityLabel {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ESSSecurityLabel */
+
 /**
  * @summary The Leading Root Component Types of ESSSecurityLabel
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_ESSSecurityLabel: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ESSSecurityLabel */
+
 /**
  * @summary The Trailing Root Component Types of ESSSecurityLabel
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_ESSSecurityLabel: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ESSSecurityLabel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ESSSecurityLabel */
+
 /**
  * @summary The Extension Addition Component Types of ESSSecurityLabel
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_ESSSecurityLabel: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_ESSSecurityLabel: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSSecurityLabel */
+
 let _cached_decoder_for_ESSSecurityLabel: $.ASN1Decoder<ESSSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ESSSecurityLabel */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ESSSecurityLabel
  * @function
@@ -222,13 +217,11 @@ export function _decode_ESSSecurityLabel(el: _Element) {
     }
     return _cached_decoder_for_ESSSecurityLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSSecurityLabel */
+
 let _cached_encoder_for_ESSSecurityLabel: $.ASN1Encoder<ESSSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ESSSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ESSSecurityLabel */
+
 /**
  * @summary Encodes a(n) ESSSecurityLabel into an ASN.1 Element.
  * @function
@@ -275,6 +268,5 @@ export function _encode_ESSSecurityLabel(
     return _cached_encoder_for_ESSSecurityLabel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ESSSecurityLabel */
 
 /* eslint-enable */

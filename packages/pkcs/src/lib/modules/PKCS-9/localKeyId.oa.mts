@@ -8,7 +8,7 @@ import {
 import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.mjs";
 import { pkcs_9_at_localKeyId } from "../PKCS-9/pkcs-9-at-localKeyId.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION localKeyId */
+
 /**
  * @summary localKeyId
  * @description
@@ -44,6 +44,5 @@ export const localKeyId: ATTRIBUTE<OCTET_STRING> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION localKeyId */
 
 /* eslint-enable */

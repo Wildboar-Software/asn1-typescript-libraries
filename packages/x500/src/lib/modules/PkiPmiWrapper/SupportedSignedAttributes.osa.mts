@@ -2,7 +2,6 @@
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { contentType } from "../PkiPmiWrapper/contentType.oa.mjs";
 import { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedSignedAttributes */
 /**
  * @summary SupportedSignedAttributes
  * @description
@@ -21,6 +20,5 @@ export const SupportedSignedAttributes: ATTRIBUTE[] = [
     contentType,
     messageDigest,
 ];
-/* END_OF_SYMBOL_DEFINITION SupportedSignedAttributes */
 
 /* eslint-enable */

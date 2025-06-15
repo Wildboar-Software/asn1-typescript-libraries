@@ -6,7 +6,6 @@ import {
 } from "../PkiPMIProtocolSpecifications/AddAvlRsp.ta.mjs";
 import { id_addAvlRsp } from "../PkiPMIProtocolSpecifications/id-addAvlRsp.va.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION addAvlRsp */
 /**
  * @summary addAvlRsp
  * @description
@@ -34,6 +33,5 @@ export const addAvlRsp: WRAPPED_PDU = {
     "&id": id_addAvlRsp /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION addAvlRsp */
 
 /* eslint-enable */

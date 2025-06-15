@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Non_numericUnicodeLabel */
+
 /**
  * @summary Non_numericUnicodeLabel
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Non_numericUnicodeLabel = UTF8String; // UTF8String
-/* END_OF_SYMBOL_DEFINITION Non_numericUnicodeLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Non_numericUnicodeLabel */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Non_numericUnicodeLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Non_numericUnicodeLabel */
+
+
 export const _decode_Non_numericUnicodeLabel = $._decodeUTF8String;
-/* END_OF_SYMBOL_DEFINITION _decode_Non_numericUnicodeLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Non_numericUnicodeLabel */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Non_numericUnicodeLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Non_numericUnicodeLabel */
+
+
 export const _encode_Non_numericUnicodeLabel = $._encodeUTF8String;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Non_numericUnicodeLabel */
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION DefaultIndex */
+
 /**
  * @summary DefaultIndex
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type DefaultIndex = INTEGER;
-/* END_OF_SYMBOL_DEFINITION DefaultIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultIndex */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DefaultIndex */
+
+
 export const _decode_DefaultIndex = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_DefaultIndex */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultIndex */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultIndex */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DefaultIndex */
+
+
 export const _encode_DefaultIndex = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DefaultIndex */
 
 /* eslint-enable */

@@ -3,7 +3,6 @@ import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION CONTENT_RULE */
 /**
  * @summary CONTENT_RULE
  * @description
@@ -71,6 +70,5 @@ export interface CONTENT_RULE {
      */
     readonly "&Precluded"?: ATTRIBUTE[];
 }
-/* END_OF_SYMBOL_DEFINITION CONTENT_RULE */
 
 /* eslint-enable */

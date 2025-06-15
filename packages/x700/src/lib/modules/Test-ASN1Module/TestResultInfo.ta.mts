@@ -66,7 +66,6 @@ import {
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestResultInfo */
 /**
  * @summary TestResultInfo
  * @description
@@ -191,9 +190,7 @@ export class TestResultInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestResultInfo */
 /**
  * @summary The Leading Root Component Types of TestResultInfo
  * @description
@@ -281,9 +278,7 @@ export const _root_component_type_list_1_spec_for_TestResultInfo: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestResultInfo */
 /**
  * @summary The Trailing Root Component Types of TestResultInfo
  * @description
@@ -293,9 +288,7 @@ export const _root_component_type_list_1_spec_for_TestResultInfo: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TestResultInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestResultInfo */
 /**
  * @summary The Extension Addition Component Types of TestResultInfo
  * @description
@@ -305,13 +298,9 @@ export const _root_component_type_list_2_spec_for_TestResultInfo: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_TestResultInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestResultInfo */
 let _cached_decoder_for_TestResultInfo: $.ASN1Decoder<TestResultInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestResultInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestResultInfo
  * @function
@@ -418,13 +407,9 @@ export function _decode_TestResultInfo(el: _Element) {
     }
     return _cached_decoder_for_TestResultInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestResultInfo */
 let _cached_encoder_for_TestResultInfo: $.ASN1Encoder<TestResultInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestResultInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestResultInfo */
 /**
  * @summary Encodes a(n) TestResultInfo into an ASN.1 Element.
  * @function
@@ -543,6 +528,5 @@ export function _encode_TestResultInfo(
     return _cached_encoder_for_TestResultInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestResultInfo */
 
 /* eslint-enable */

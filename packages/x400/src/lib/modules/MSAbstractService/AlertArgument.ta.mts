@@ -17,7 +17,6 @@ import {
     _decode_EntryInformation,
     _encode_EntryInformation,
 } from '../MSAbstractService/EntryInformation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AlertArgument */
 /**
  * @summary AlertArgument
  * @description
@@ -70,9 +69,7 @@ export class AlertArgument {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlertArgument */
 /**
  * @summary The Leading Root Component Types of AlertArgument
  * @description
@@ -97,9 +94,7 @@ export const _root_component_type_list_1_spec_for_AlertArgument: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlertArgument */
 /**
  * @summary The Trailing Root Component Types of AlertArgument
  * @description
@@ -109,9 +104,7 @@ export const _root_component_type_list_1_spec_for_AlertArgument: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AlertArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlertArgument */
 /**
  * @summary The Extension Addition Component Types of AlertArgument
  * @description
@@ -121,13 +114,9 @@ export const _root_component_type_list_2_spec_for_AlertArgument: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_AlertArgument: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertArgument */
 let _cached_decoder_for_AlertArgument: $.ASN1Decoder<AlertArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AlertArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertArgument
  * @function
@@ -173,13 +162,9 @@ export function _decode_AlertArgument(el: _Element) {
     }
     return _cached_decoder_for_AlertArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertArgument */
 let _cached_encoder_for_AlertArgument: $.ASN1Encoder<AlertArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlertArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AlertArgument */
 /**
  * @summary Encodes a(n) AlertArgument into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_AlertArgument(
     return _cached_encoder_for_AlertArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AlertArgument */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FilterWeight */
 /**
  * @summary FilterWeight
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FilterWeight = REAL; // RealType
-/* END_OF_SYMBOL_DEFINITION FilterWeight */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterWeight */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterWeight */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FilterWeight */
 export const _decode_FilterWeight = $._decodeReal;
-/* END_OF_SYMBOL_DEFINITION _decode_FilterWeight */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterWeight */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterWeight */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FilterWeight */
 export const _encode_FilterWeight = $._encodeReal;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FilterWeight */
 
 /* eslint-enable */

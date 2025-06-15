@@ -22,7 +22,6 @@ import {
     _encode_DistinguishedName,
 } from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.mjs';
 import { id_at_connection_group_name } from '../MHSRoutingObjectIdentifiers/id-at-connection-group-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION connectionGroupName */
 /**
  * @summary connectionGroupName
  * @description
@@ -58,6 +57,5 @@ export const connectionGroupName: ATTRIBUTE<DistinguishedName> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION connectionGroupName */
 
 /* eslint-enable */

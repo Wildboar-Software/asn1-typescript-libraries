@@ -15,7 +15,7 @@ import {
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GDay */
+
 /**
  * @summary GDay
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type GDay = DateTimeType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GDay */
+
 let _cached_decoder_for_GDay: $.ASN1Decoder<GDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GDay */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GDay */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GDay
  * @function
@@ -46,13 +44,11 @@ export function _decode_GDay(el: _Element) {
   }
   return _cached_decoder_for_GDay(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GDay */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GDay */
+
 let _cached_encoder_for_GDay: $.ASN1Encoder<GDay> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GDay */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GDay */
+
 /**
  * @summary Encodes a(n) GDay into an ASN.1 Element.
  * @function
@@ -67,6 +63,5 @@ export function _encode_GDay(value: GDay, elGetter: $.ASN1Encoder<GDay>) {
   return _cached_encoder_for_GDay(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GDay */
 
 /* eslint-enable */

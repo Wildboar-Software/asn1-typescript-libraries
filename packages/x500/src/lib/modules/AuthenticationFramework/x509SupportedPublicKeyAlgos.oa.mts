@@ -6,7 +6,6 @@ import {
     _encode_SupportedPublicKeyAlgorithms,
 } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION x509SupportedPublicKeyAlgos */
 /**
  * @summary x509SupportedPublicKeyAlgos
  * @description
@@ -37,6 +36,5 @@ export const x509SupportedPublicKeyAlgos: SYNTAX_NAME<SupportedPublicKeyAlgorith
     "&id": id_asx_x509SupportedPublicKeyAlgos /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION x509SupportedPublicKeyAlgos */
 
 /* eslint-enable */

@@ -24,7 +24,6 @@ import { id_nat_notification_time } from '../EDIMSObjectIdentifiers/id-nat-notif
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION notification_time */
 /**
  * @summary notification_time
  * @description
@@ -61,6 +60,5 @@ export const notification_time: X413ATTRIBUTE<NotificationTimeField> = {
     '&id': id_nat_notification_time /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION notification_time */
 
 /* eslint-enable */

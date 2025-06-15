@@ -17,7 +17,6 @@ import {
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResourceSelfTestInfo */
 /**
  * @summary ResourceSelfTestInfo
  * @description
@@ -86,9 +85,7 @@ export class ResourceSelfTestInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResourceSelfTestInfo */
 /**
  * @summary The Leading Root Component Types of ResourceSelfTestInfo
  * @description
@@ -127,9 +124,7 @@ export const _root_component_type_list_1_spec_for_ResourceSelfTestInfo: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResourceSelfTestInfo */
 /**
  * @summary The Trailing Root Component Types of ResourceSelfTestInfo
  * @description
@@ -139,9 +134,7 @@ export const _root_component_type_list_1_spec_for_ResourceSelfTestInfo: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResourceSelfTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResourceSelfTestInfo */
 /**
  * @summary The Extension Addition Component Types of ResourceSelfTestInfo
  * @description
@@ -151,13 +144,9 @@ export const _root_component_type_list_2_spec_for_ResourceSelfTestInfo: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_ResourceSelfTestInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSelfTestInfo */
 let _cached_decoder_for_ResourceSelfTestInfo: $.ASN1Decoder<ResourceSelfTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResourceSelfTestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceSelfTestInfo
  * @function
@@ -217,13 +206,9 @@ export function _decode_ResourceSelfTestInfo(el: _Element) {
     }
     return _cached_decoder_for_ResourceSelfTestInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSelfTestInfo */
 let _cached_encoder_for_ResourceSelfTestInfo: $.ASN1Encoder<ResourceSelfTestInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSelfTestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResourceSelfTestInfo */
 /**
  * @summary Encodes a(n) ResourceSelfTestInfo into an ASN.1 Element.
  * @function
@@ -274,6 +259,5 @@ export function _encode_ResourceSelfTestInfo(
     return _cached_encoder_for_ResourceSelfTestInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResourceSelfTestInfo */
 
 /* eslint-enable */

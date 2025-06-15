@@ -7,7 +7,7 @@ import {
     _encode_RegToken,
 } from "../PKIXCRMF-2009/RegToken.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regCtrl_regToken */
+
 /**
  * @summary regCtrl_regToken
  * @description
@@ -33,6 +33,5 @@ export const regCtrl_regToken: ATTRIBUTE<RegToken> = {
     "&id": id_regCtrl_regToken /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regCtrl_regToken */
 
 /* eslint-enable */

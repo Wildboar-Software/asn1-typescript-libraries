@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AutoActionType */
 /**
  * @summary AutoActionType
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AutoActionType = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION AutoActionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoActionType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoActionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoActionType */
 export const _decode_AutoActionType = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_AutoActionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoActionType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoActionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoActionType */
 export const _encode_AutoActionType = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoActionType */
 
 /* eslint-enable */

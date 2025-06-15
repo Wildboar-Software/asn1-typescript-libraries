@@ -14,7 +14,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION mts_bind */
 /**
  * @summary mts_bind
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const mts_bind: EventTypeId = { localForm: 18 };
-/* END_OF_SYMBOL_DEFINITION mts_bind */
 
 /* eslint-enable */

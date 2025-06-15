@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CloseOutNarr */
+
 /**
  * @summary CloseOutNarr
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CloseOutNarr = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION CloseOutNarr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CloseOutNarr */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CloseOutNarr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CloseOutNarr */
+
+
 export const _decode_CloseOutNarr = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_CloseOutNarr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CloseOutNarr */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CloseOutNarr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CloseOutNarr */
+
+
 export const _encode_CloseOutNarr = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CloseOutNarr */
 
 /* eslint-enable */

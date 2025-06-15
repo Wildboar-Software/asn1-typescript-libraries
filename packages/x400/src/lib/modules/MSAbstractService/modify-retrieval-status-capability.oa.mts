@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_ext_modify_retrieval_status_capability } from '../MSObjectIdentifiers/id-ext-modify-retrieval-status-capability.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION modify_retrieval_status_capability */
 /**
  * @summary modify_retrieval_status_capability
  * @description
@@ -42,6 +41,5 @@ export const modify_retrieval_status_capability: MS_EXTENSION<NULL> = {
     '&id': id_ext_modify_retrieval_status_capability /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION modify_retrieval_status_capability */
 
 /* eslint-enable */

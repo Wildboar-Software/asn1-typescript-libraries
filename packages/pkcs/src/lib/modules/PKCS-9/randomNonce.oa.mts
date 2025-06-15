@@ -11,7 +11,7 @@ import {
     _encode_RandomNonce,
 } from "../PKCS-9/RandomNonce.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION randomNonce */
+
 /**
  * @summary randomNonce
  * @description
@@ -47,6 +47,5 @@ export const randomNonce: ATTRIBUTE<RandomNonce> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION randomNonce */
 
 /* eslint-enable */

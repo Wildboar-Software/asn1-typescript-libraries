@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION Unbind */
+
 /**
  * @summary Unbind
  * @description
@@ -29,13 +29,11 @@ export type Unbind =
   | { unbind_invoke: _Element } /* CHOICE_ALT_ROOT */
   | { unbind_result: _Element } /* CHOICE_ALT_ROOT */
   | { unbind_error: _Element } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Unbind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Unbind */
+
 let _cached_decoder_for_Unbind: $.ASN1Decoder<Unbind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Unbind */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Unbind */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Unbind
  * @function
@@ -61,13 +59,11 @@ export function _decode_Unbind(el: _Element) {
   }
   return _cached_decoder_for_Unbind(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Unbind */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Unbind */
+
 let _cached_encoder_for_Unbind: $.ASN1Encoder<Unbind> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Unbind */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Unbind */
+
 /**
  * @summary Encodes a(n) Unbind into an ASN.1 Element.
  * @function
@@ -104,6 +100,5 @@ export function _encode_Unbind(value: Unbind, elGetter: $.ASN1Encoder<Unbind>) {
   return _cached_encoder_for_Unbind(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Unbind */
 
 /* eslint-enable */

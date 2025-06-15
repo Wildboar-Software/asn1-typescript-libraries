@@ -6,7 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";
 import { id_mr_authAttIdMatch } from "../AttributeCertificateDefinitions/id-mr-authAttIdMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION authAttIdMatch */
 /**
  * @summary authAttIdMatch
  * @description
@@ -34,6 +33,5 @@ export const authAttIdMatch: MATCHING_RULE<AuthorityAttributeIdentifierSyntax> =
     "&id": id_mr_authAttIdMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION authAttIdMatch */
 
 /* eslint-enable */

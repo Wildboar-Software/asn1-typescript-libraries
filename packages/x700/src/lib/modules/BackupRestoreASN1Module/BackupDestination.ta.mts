@@ -17,7 +17,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BackupDestination */
 /**
  * @summary BackupDestination
  * @description
@@ -36,13 +35,9 @@ export type BackupDestination =
     | { localObject: ObjectInstance } /* CHOICE_ALT_ROOT */
     | { inLine: NULL } /* CHOICE_ALT_ROOT */
     | { offLine: GraphicString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupDestination */
 let _cached_decoder_for_BackupDestination: $.ASN1Decoder<BackupDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackupDestination */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackupDestination
  * @function
@@ -63,13 +58,9 @@ export function _decode_BackupDestination(el: _Element) {
     }
     return _cached_decoder_for_BackupDestination(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupDestination */
 let _cached_encoder_for_BackupDestination: $.ASN1Encoder<BackupDestination> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupDestination */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackupDestination */
 /**
  * @summary Encodes a(n) BackupDestination into an ASN.1 Element.
  * @function
@@ -94,6 +85,5 @@ export function _encode_BackupDestination(
     return _cached_encoder_for_BackupDestination(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackupDestination */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION RandomNumber */
 /**
  * @summary RandomNumber
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type RandomNumber = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RandomNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RandomNumber */
 export const _decode_RandomNumber = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RandomNumber */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RandomNumber */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RandomNumber */
 export const _encode_RandomNumber = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_RandomNumber */
 
 /* eslint-enable */

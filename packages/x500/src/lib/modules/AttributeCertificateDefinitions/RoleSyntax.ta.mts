@@ -15,7 +15,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RoleSyntax */
 /**
  * @summary RoleSyntax
  * @description
@@ -75,9 +74,7 @@ export class RoleSyntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleSyntax */
 /**
  * @summary The Leading Root Component Types of RoleSyntax
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_RoleSyntax: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleSyntax */
 /**
  * @summary The Trailing Root Component Types of RoleSyntax
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_RoleSyntax: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RoleSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleSyntax */
 /**
  * @summary The Extension Addition Component Types of RoleSyntax
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_RoleSyntax: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_RoleSyntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSyntax */
 let _cached_decoder_for_RoleSyntax: $.ASN1Decoder<RoleSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RoleSyntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleSyntax
  * @function
@@ -180,13 +169,9 @@ export function _decode_RoleSyntax(el: _Element) {
     }
     return _cached_decoder_for_RoleSyntax(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSyntax */
 let _cached_encoder_for_RoleSyntax: $.ASN1Encoder<RoleSyntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RoleSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RoleSyntax */
 /**
  * @summary Encodes a(n) RoleSyntax into an ASN.1 Element.
  * @function
@@ -232,6 +217,5 @@ export function _encode_RoleSyntax(
     return _cached_encoder_for_RoleSyntax(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RoleSyntax */
 
 /* eslint-enable */

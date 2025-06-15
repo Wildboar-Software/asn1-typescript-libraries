@@ -8,7 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SeqNum */
 /**
  * @summary SeqNum
  * @description
@@ -57,9 +56,7 @@ export class SeqNum {
         return new SeqNum(_o.num, _o.dir_ind);
     }
 }
-/* END_OF_SYMBOL_DEFINITION SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SeqNum */
 /**
  * @summary The Leading Root Component Types of SeqNum
  * @description
@@ -84,9 +81,7 @@ export const _root_component_type_list_1_spec_for_SeqNum: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SeqNum */
 /**
  * @summary The Trailing Root Component Types of SeqNum
  * @description
@@ -96,9 +91,7 @@ export const _root_component_type_list_1_spec_for_SeqNum: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SeqNum: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SeqNum */
 /**
  * @summary The Extension Addition Component Types of SeqNum
  * @description
@@ -108,13 +101,9 @@ export const _root_component_type_list_2_spec_for_SeqNum: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_SeqNum: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SeqNum */
 let _cached_decoder_for_SeqNum: $.ASN1Decoder<SeqNum> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SeqNum */
 /**
  * @summary Decodes an ASN.1 element into a(n) SeqNum
  * @function
@@ -143,13 +132,9 @@ export function _decode_SeqNum(el: _Element) {
     }
     return _cached_decoder_for_SeqNum(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SeqNum */
 let _cached_encoder_for_SeqNum: $.ASN1Encoder<SeqNum> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SeqNum */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SeqNum */
 /**
  * @summary Encodes a(n) SeqNum into an ASN.1 Element.
  * @function
@@ -175,6 +160,5 @@ export function _encode_SeqNum(value: SeqNum, elGetter: $.ASN1Encoder<SeqNum>) {
     return _cached_encoder_for_SeqNum(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SeqNum */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_hat_body_part_signatures */
 /**
  * @summary id_hat_body_part_signatures
  * @description
@@ -25,6 +24,5 @@ import { id_hat } from '../IPMSObjectIdentifiers/id-hat.va.mjs';
  * @constant
  */
 export const id_hat_body_part_signatures: ID = new _OID([23], id_hat);
-/* END_OF_SYMBOL_DEFINITION id_hat_body_part_signatures */
 
 /* eslint-enable */

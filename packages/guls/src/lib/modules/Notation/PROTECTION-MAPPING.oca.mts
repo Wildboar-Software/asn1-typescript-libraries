@@ -13,7 +13,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION PROTECTION_MAPPING */
+
 /**
  * @summary PROTECTION_MAPPING
  * @description
@@ -83,6 +83,5 @@ export interface PROTECTION_MAPPING {
    */
   readonly '&bypassPermitted'?: BOOLEAN;
 }
-/* END_OF_SYMBOL_DEFINITION PROTECTION_MAPPING */
 
 /* eslint-enable */

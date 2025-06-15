@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { Name, _decode_Name, _encode_Name } from '../X790ASN1Module/Name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Names */
+
 /**
  * @summary Names
  * @description
@@ -23,13 +23,11 @@ import { Name, _decode_Name, _encode_Name } from '../X790ASN1Module/Name.ta.mjs'
  * ```
  */
 export type Names = Name[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION Names */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Names */
+
 let _cached_decoder_for_Names: $.ASN1Decoder<Names> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Names */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Names */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Names
  * @function
@@ -42,13 +40,11 @@ export function _decode_Names(el: _Element) {
     }
     return _cached_decoder_for_Names(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Names */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Names */
+
 let _cached_encoder_for_Names: $.ASN1Encoder<Names> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Names */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Names */
+
 /**
  * @summary Encodes a(n) Names into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_Names(value: Names, elGetter: $.ASN1Encoder<Names>) {
     return _cached_encoder_for_Names(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Names */
 
 /* eslint-enable */

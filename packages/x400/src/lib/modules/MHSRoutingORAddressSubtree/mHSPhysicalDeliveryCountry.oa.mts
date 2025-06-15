@@ -18,7 +18,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.mjs';
 import { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa.mjs';
 import { id_oc_mhs_physical_delivery_country_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-physical-delivery-country-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSPhysicalDeliveryCountry */
 /**
  * @summary mHSPhysicalDeliveryCountry
  * @description
@@ -45,6 +44,5 @@ export const mHSPhysicalDeliveryCountry: OBJECT_CLASS = {
     '&kind': structural /* OBJECT_FIELD_SETTING */,
     '&id': id_oc_mhs_physical_delivery_country_name /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSPhysicalDeliveryCountry */
 
 /* eslint-enable */

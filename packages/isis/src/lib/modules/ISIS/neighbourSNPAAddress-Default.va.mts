@@ -18,7 +18,6 @@ import {
     sNPADTEAddress,
 } from "@wildboar/nlm/src/lib/modules/NLM/sNPADTEAddress.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION neighbourSNPAAddress_Default */
 /**
  * @summary neighbourSNPAAddress_Default
  * @description
@@ -34,6 +33,5 @@ import {
 export const neighbourSNPAAddress_Default: SNPAAddress = SNPAAddress._from_object(
   { type_: sNPADTEAddress, address: new Uint8Array(0) }
 );
-/* END_OF_SYMBOL_DEFINITION neighbourSNPAAddress_Default */
 
 /* eslint-enable */

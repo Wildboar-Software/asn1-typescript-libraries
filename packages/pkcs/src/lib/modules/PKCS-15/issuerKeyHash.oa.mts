@@ -2,7 +2,7 @@
 import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION issuerKeyHash */
+
 /**
  * @summary issuerKeyHash
  * @description
@@ -28,6 +28,5 @@ export const issuerKeyHash: KEY_IDENTIFIER<OCTET_STRING> = {
     "&id": 5 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION issuerKeyHash */
 
 /* eslint-enable */

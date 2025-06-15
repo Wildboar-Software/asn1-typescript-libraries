@@ -20,7 +20,7 @@ import {
     _decode_AttributeChoiceReal,
     _encode_AttributeChoiceReal,
 } from '../M3100ASN1TypeModule7/AttributeChoiceReal.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Ranges_Item */
+
 /**
  * @summary Ranges_Item
  * @description
@@ -34,13 +34,11 @@ import {
 export type Ranges_Item =
     | { integerRange: AttributeChoiceInteger } /* CHOICE_ALT_ROOT */
     | { realRange: AttributeChoiceReal } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Ranges_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Ranges_Item */
+
 let _cached_decoder_for_Ranges_Item: $.ASN1Decoder<Ranges_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Ranges_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Ranges_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Ranges_Item
  * @function
@@ -68,13 +66,11 @@ export function _decode_Ranges_Item(el: _Element) {
     }
     return _cached_decoder_for_Ranges_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Ranges_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Ranges_Item */
+
 let _cached_encoder_for_Ranges_Item: $.ASN1Encoder<Ranges_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Ranges_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Ranges_Item */
+
 /**
  * @summary Encodes a(n) Ranges_Item into an ASN.1 Element.
  * @function
@@ -108,6 +104,5 @@ export function _encode_Ranges_Item(
     return _cached_encoder_for_Ranges_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Ranges_Item */
 
 /* eslint-enable */

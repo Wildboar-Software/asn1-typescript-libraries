@@ -29,7 +29,7 @@ import {
   _decode_SEPAbort,
   _encode_SEPAbort,
 } from '../SeseAPDUs/SEPAbort.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SESEapdus */
+
 /**
  * @summary SESEapdus
  * @description
@@ -49,13 +49,11 @@ export type SESEapdus =
   | { se_transfer: SETransfer } /* CHOICE_ALT_ROOT */
   | { se_u_abort: SEUAbort } /* CHOICE_ALT_ROOT */
   | { se_p_abort: SEPAbort } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SESEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SESEapdus */
+
 let _cached_decoder_for_SESEapdus: $.ASN1Decoder<SESEapdus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SESEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SESEapdus */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SESEapdus
  * @function
@@ -72,13 +70,11 @@ export function _decode_SESEapdus(el: _Element) {
   }
   return _cached_decoder_for_SESEapdus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SESEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SESEapdus */
+
 let _cached_encoder_for_SESEapdus: $.ASN1Encoder<SESEapdus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SESEapdus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SESEapdus */
+
 /**
  * @summary Encodes a(n) SESEapdus into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_SESEapdus(
   return _cached_encoder_for_SESEapdus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SESEapdus */
 
 /* eslint-enable */

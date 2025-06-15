@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, NumericString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION X121Address */
 /**
  * @summary X121Address
  * @description
@@ -14,21 +13,12 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```
  */
 export type X121Address = NumericString; // NumericString
-/* END_OF_SYMBOL_DEFINITION X121Address */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_X121Address */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_X121Address */
 
-/* START_OF_SYMBOL_DEFINITION _decode_X121Address */
 export const _decode_X121Address = $._decodeNumericString;
-/* END_OF_SYMBOL_DEFINITION _decode_X121Address */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_X121Address */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_X121Address */
 
-/* START_OF_SYMBOL_DEFINITION _encode_X121Address */
 export const _encode_X121Address = $._encodeNumericString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_X121Address */
 
 /* eslint-enable */

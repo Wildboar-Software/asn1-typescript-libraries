@@ -16,7 +16,6 @@ import {
     _decode_Account,
     _encode_Account,
 } from '../IPMSFileTransferBodyPartType/Account.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Account_Attribute */
 /**
  * @summary Account_Attribute
  * @description
@@ -34,13 +33,9 @@ import {
 export type Account_Attribute =
     | { no_value_available: NULL } /* CHOICE_ALT_ROOT */
     | { actual_values: Account } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Account_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Account_Attribute */
 let _cached_decoder_for_Account_Attribute: $.ASN1Decoder<Account_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Account_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Account_Attribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) Account_Attribute
  * @function
@@ -61,13 +56,9 @@ export function _decode_Account_Attribute(el: _Element) {
     }
     return _cached_decoder_for_Account_Attribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Account_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Account_Attribute */
 let _cached_encoder_for_Account_Attribute: $.ASN1Encoder<Account_Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Account_Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Account_Attribute */
 /**
  * @summary Encodes a(n) Account_Attribute into an ASN.1 Element.
  * @function
@@ -96,6 +87,5 @@ export function _encode_Account_Attribute(
     return _cached_encoder_for_Account_Attribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Account_Attribute */
 
 /* eslint-enable */

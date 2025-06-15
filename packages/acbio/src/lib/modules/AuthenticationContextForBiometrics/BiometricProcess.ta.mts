@@ -21,7 +21,7 @@ import {
     _decode_BPUIOExecutionInformationList,
     _encode_BPUIOExecutionInformationList,
 } from '../AuthenticationContextForBiometrics/BPUIOExecutionInformationList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BiometricProcess */
+
 /**
  * @summary BiometricProcess
  * @description
@@ -81,9 +81,8 @@ export class BiometricProcess {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricProcess */
+
 /**
  * @summary The Leading Root Component Types of BiometricProcess
  * @description
@@ -115,9 +114,8 @@ export const _root_component_type_list_1_spec_for_BiometricProcess: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricProcess */
+
 /**
  * @summary The Trailing Root Component Types of BiometricProcess
  * @description
@@ -127,9 +125,8 @@ export const _root_component_type_list_1_spec_for_BiometricProcess: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BiometricProcess: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricProcess */
+
 /**
  * @summary The Extension Addition Component Types of BiometricProcess
  * @description
@@ -139,13 +136,11 @@ export const _root_component_type_list_2_spec_for_BiometricProcess: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_BiometricProcess: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcess */
+
 let _cached_decoder_for_BiometricProcess: $.ASN1Decoder<BiometricProcess> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BiometricProcess */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricProcess
  * @function
@@ -196,13 +191,11 @@ export function _decode_BiometricProcess(el: _Element) {
     }
     return _cached_decoder_for_BiometricProcess(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcess */
+
 let _cached_encoder_for_BiometricProcess: $.ASN1Encoder<BiometricProcess> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BiometricProcess */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BiometricProcess */
+
 /**
  * @summary Encodes a(n) BiometricProcess into an ASN.1 Element.
  * @function
@@ -247,6 +240,5 @@ export function _encode_BiometricProcess(
     return _cached_encoder_for_BiometricProcess(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BiometricProcess */
 
 /* eslint-enable */

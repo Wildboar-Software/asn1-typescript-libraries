@@ -13,7 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs';
 import { id_mr_value_count_match } from '../MSObjectIdentifiers/id-mr-value-count-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION valueCountMatch */
 /**
  * @summary valueCountMatch
  * @description
@@ -42,6 +41,5 @@ export const valueCountMatch: MATCHING_RULE<INTEGER> = {
     '&id': id_mr_value_count_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION valueCountMatch */
 
 /* eslint-enable */

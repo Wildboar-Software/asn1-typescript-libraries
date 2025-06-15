@@ -6,7 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../MTSAbstractService/UniversalPDSParameter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalExtensionORAddressComponents */
 /**
  * @summary UniversalExtensionORAddressComponents
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type UniversalExtensionORAddressComponents = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalExtensionORAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalExtensionORAddressComponents */
 let _cached_decoder_for_UniversalExtensionORAddressComponents: $.ASN1Decoder<UniversalExtensionORAddressComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalExtensionORAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalExtensionORAddressComponents */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalExtensionORAddressComponents
  * @function
@@ -37,13 +32,9 @@ export function _decode_UniversalExtensionORAddressComponents(el: _Element) {
     }
     return _cached_decoder_for_UniversalExtensionORAddressComponents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalExtensionORAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalExtensionORAddressComponents */
 let _cached_encoder_for_UniversalExtensionORAddressComponents: $.ASN1Encoder<UniversalExtensionORAddressComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalExtensionORAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalExtensionORAddressComponents */
 /**
  * @summary Encodes a(n) UniversalExtensionORAddressComponents into an ASN.1 Element.
  * @function
@@ -64,6 +55,5 @@ export function _encode_UniversalExtensionORAddressComponents(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalExtensionORAddressComponents */
 
 /* eslint-enable */

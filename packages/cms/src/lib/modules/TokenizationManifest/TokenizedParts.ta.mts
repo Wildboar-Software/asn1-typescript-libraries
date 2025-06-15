@@ -6,7 +6,7 @@ import {
     _decode_Tokenized,
     _encode_Tokenized,
 } from "../TokenizationManifest/Tokenized.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TokenizedParts */
+
 /**
  * @summary TokenizedParts
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type TokenizedParts = Tokenized; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TokenizedParts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenizedParts */
+
 let _cached_decoder_for_TokenizedParts: $.ASN1Decoder<TokenizedParts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TokenizedParts */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TokenizedParts */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TokenizedParts
  * @function
@@ -37,13 +35,11 @@ export function _decode_TokenizedParts(el: _Element) {
     }
     return _cached_decoder_for_TokenizedParts(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TokenizedParts */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenizedParts */
+
 let _cached_encoder_for_TokenizedParts: $.ASN1Encoder<TokenizedParts> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TokenizedParts */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TokenizedParts */
+
 /**
  * @summary Encodes a(n) TokenizedParts into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_TokenizedParts(
     return _cached_encoder_for_TokenizedParts(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TokenizedParts */
 
 /* eslint-enable */

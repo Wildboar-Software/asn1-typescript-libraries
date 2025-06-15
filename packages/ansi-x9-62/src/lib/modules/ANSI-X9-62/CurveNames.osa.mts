@@ -27,7 +27,6 @@ import { CurveNames_Union7_Intersection0_Element } from "../ANSI-X9-62/CurveName
 import { CurveNames_Union8_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union8-Intersection0-Element.oa.mjs";
 import { CurveNames_Union9_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union9-Intersection0-Element.oa.mjs";
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION CurveNames */
 /**
  * @summary CurveNames
  * @description
@@ -100,6 +99,5 @@ export const CurveNames: CURVES[] = [
     CurveNames_Union25_Intersection0_Element,
     CurveNames_Union26_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION CurveNames */
 
 /* eslint-enable */

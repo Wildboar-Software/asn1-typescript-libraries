@@ -2,14 +2,11 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_OrderedListSyntax */
 export enum _enum_for_OrderedListSyntax {
     ascSerialNum = 0,
     ascRevDate = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_OrderedListSyntax */
 
-/* START_OF_SYMBOL_DEFINITION OrderedListSyntax */
 /**
  * @summary OrderedListSyntax
  * @description
@@ -24,57 +21,40 @@ export enum _enum_for_OrderedListSyntax {
  * ```@enum {number}
  */
 export type OrderedListSyntax = _enum_for_OrderedListSyntax | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION OrderedListSyntax */
 
-/* START_OF_SYMBOL_DEFINITION OrderedListSyntax_ascSerialNum */
 /**
  * @summary OrderedListSyntax_ascSerialNum
  * @constant
  * @type {number}
  */
 export const OrderedListSyntax_ascSerialNum: OrderedListSyntax = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrderedListSyntax_ascSerialNum */
 
-/* START_OF_SYMBOL_DEFINITION ascSerialNum */
 /**
  * @summary ascSerialNum
  * @constant
  * @type {number}
  */
 export const ascSerialNum: OrderedListSyntax = OrderedListSyntax_ascSerialNum; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ascSerialNum */
 
-/* START_OF_SYMBOL_DEFINITION OrderedListSyntax_ascRevDate */
 /**
  * @summary OrderedListSyntax_ascRevDate
  * @constant
  * @type {number}
  */
 export const OrderedListSyntax_ascRevDate: OrderedListSyntax = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OrderedListSyntax_ascRevDate */
 
-/* START_OF_SYMBOL_DEFINITION ascRevDate */
 /**
  * @summary ascRevDate
  * @constant
  * @type {number}
  */
 export const ascRevDate: OrderedListSyntax = OrderedListSyntax_ascRevDate; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ascRevDate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OrderedListSyntax */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OrderedListSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OrderedListSyntax */
 export const _decode_OrderedListSyntax = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_OrderedListSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OrderedListSyntax */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OrderedListSyntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OrderedListSyntax */
 export const _encode_OrderedListSyntax = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OrderedListSyntax */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_RenameResult_result,
     _encode_RenameResult_result,
 } from '../Pbact-access/RenameResult-result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RenameResult */
+
 /**
  * @summary RenameResult
  * @description
@@ -67,9 +67,8 @@ export class RenameResult {
         return new RenameResult(_o.result, _o._unrecognizedExtensionsList);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RenameResult */
+
 /**
  * @summary The Leading Root Component Types of RenameResult
  * @description
@@ -81,9 +80,8 @@ export class RenameResult {
 export const _root_component_type_list_1_spec_for_RenameResult: $.ComponentSpec[] = [
     new $.ComponentSpec('result', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RenameResult */
+
 /**
  * @summary The Trailing Root Component Types of RenameResult
  * @description
@@ -93,9 +91,8 @@ export const _root_component_type_list_1_spec_for_RenameResult: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RenameResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RenameResult */
+
 /**
  * @summary The Extension Addition Component Types of RenameResult
  * @description
@@ -105,13 +102,11 @@ export const _root_component_type_list_2_spec_for_RenameResult: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_RenameResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RenameResult */
+
 let _cached_decoder_for_RenameResult: $.ASN1Decoder<RenameResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RenameResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RenameResult
  * @function
@@ -139,13 +134,11 @@ export function _decode_RenameResult(el: _Element) {
     }
     return _cached_decoder_for_RenameResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RenameResult */
+
 let _cached_encoder_for_RenameResult: $.ASN1Encoder<RenameResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RenameResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RenameResult */
+
 /**
  * @summary Encodes a(n) RenameResult into an ASN.1 Element.
  * @function
@@ -181,6 +174,5 @@ export function _encode_RenameResult(
     return _cached_encoder_for_RenameResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RenameResult */
 
 /* eslint-enable */

@@ -14,7 +14,7 @@ import {
     _decode_ProblemCause,
     _encode_ProblemCause,
 } from '../ASN1DefinedTypesModule/ProblemCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION involvedInCrossConnection */
+
 /**
  * @summary involvedInCrossConnection
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const involvedInCrossConnection: ProblemCause = { integerValue: 6 };
-/* END_OF_SYMBOL_DEFINITION involvedInCrossConnection */
 
 /* eslint-enable */

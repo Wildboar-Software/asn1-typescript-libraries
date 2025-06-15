@@ -15,7 +15,6 @@ import {
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/EventTypeId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RetrievalPortOperations */
 /**
  * @summary RetrievalPortOperations
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type RetrievalPortOperations = EventTypeId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RetrievalPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RetrievalPortOperations */
 let _cached_decoder_for_RetrievalPortOperations: $.ASN1Decoder<RetrievalPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RetrievalPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RetrievalPortOperations */
 /**
  * @summary Decodes an ASN.1 element into a(n) RetrievalPortOperations
  * @function
@@ -47,13 +42,9 @@ export function _decode_RetrievalPortOperations(el: _Element) {
     }
     return _cached_decoder_for_RetrievalPortOperations(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RetrievalPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RetrievalPortOperations */
 let _cached_encoder_for_RetrievalPortOperations: $.ASN1Encoder<RetrievalPortOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RetrievalPortOperations */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RetrievalPortOperations */
 /**
  * @summary Encodes a(n) RetrievalPortOperations into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_RetrievalPortOperations(
     return _cached_encoder_for_RetrievalPortOperations(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RetrievalPortOperations */
 
 /* eslint-enable */

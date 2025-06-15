@@ -17,7 +17,7 @@ import {
     _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SEerror */
+
 /**
  * @summary SEerror
  * @description
@@ -68,9 +68,8 @@ export class SEerror {
     return new SEerror(_o.errorCode, _o.errorParameter);
   }
 }
-/* END_OF_SYMBOL_DEFINITION SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SEerror */
+
 /**
  * @summary The Leading Root Component Types of SEerror
  * @description
@@ -95,9 +94,8 @@ export const _root_component_type_list_1_spec_for_SEerror: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SEerror */
+
 /**
  * @summary The Trailing Root Component Types of SEerror
  * @description
@@ -107,9 +105,8 @@ export const _root_component_type_list_1_spec_for_SEerror: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SEerror: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SEerror */
+
 /**
  * @summary The Extension Addition Component Types of SEerror
  * @description
@@ -119,13 +116,11 @@ export const _root_component_type_list_2_spec_for_SEerror: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_SEerror: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SEerror */
+
 let _cached_decoder_for_SEerror: $.ASN1Decoder<SEerror> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SEerror */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SEerror
  * @function
@@ -165,13 +160,11 @@ export function _decode_SEerror(el: _Element) {
   }
   return _cached_decoder_for_SEerror(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SEerror */
+
 let _cached_encoder_for_SEerror: $.ASN1Encoder<SEerror> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SEerror */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SEerror */
+
 /**
  * @summary Encodes a(n) SEerror into an ASN.1 Element.
  * @function
@@ -204,6 +197,5 @@ export function _encode_SEerror(
   return _cached_encoder_for_SEerror(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SEerror */
 
 /* eslint-enable */

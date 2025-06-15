@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupportedRelationshipClassList */
 /**
  * @summary SupportedRelationshipClassList
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type SupportedRelationshipClassList = OBJECT_IDENTIFIER[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SupportedRelationshipClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedRelationshipClassList */
 let _cached_decoder_for_SupportedRelationshipClassList: $.ASN1Decoder<SupportedRelationshipClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedRelationshipClassList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedRelationshipClassList */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedRelationshipClassList
  * @function
@@ -45,13 +40,9 @@ export function _decode_SupportedRelationshipClassList(el: _Element) {
     }
     return _cached_decoder_for_SupportedRelationshipClassList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedRelationshipClassList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedRelationshipClassList */
 let _cached_encoder_for_SupportedRelationshipClassList: $.ASN1Encoder<SupportedRelationshipClassList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedRelationshipClassList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedRelationshipClassList */
 /**
  * @summary Encodes a(n) SupportedRelationshipClassList into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_SupportedRelationshipClassList(
     return _cached_encoder_for_SupportedRelationshipClassList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedRelationshipClassList */
 
 /* eslint-enable */

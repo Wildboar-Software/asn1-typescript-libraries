@@ -11,7 +11,6 @@ import {
 import { id_soa_dITStructureRule } from "../SchemaAdministration/id-soa-dITStructureRule.va.mjs";
 import { dITStructureRuleDescription } from "../SelectedAttributeTypes/dITStructureRuleDescription.oa.mjs";
 import { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION dITStructureRules */
 /**
  * @summary dITStructureRules
  * @description
@@ -53,6 +52,5 @@ export const dITStructureRules: ATTRIBUTE<DITStructureRuleDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dITStructureRules */
 
 /* eslint-enable */

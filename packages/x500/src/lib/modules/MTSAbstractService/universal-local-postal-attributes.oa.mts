@@ -5,7 +5,6 @@ import {
     _decode_UniversalLocalPostalAttributes,
     _encode_UniversalLocalPostalAttributes,
 } from "../MTSAbstractService/UniversalLocalPostalAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_local_postal_attributes */
 /**
  * @summary universal_local_postal_attributes
  * @description
@@ -34,6 +33,5 @@ export const universal_local_postal_attributes: EXTENSION_ATTRIBUTE<UniversalLoc
     "&id": 40 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_local_postal_attributes */
 
 /* eslint-enable */

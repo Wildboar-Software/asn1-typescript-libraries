@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_err_operationalBindingError */
 /**
  * @summary id_err_operationalBindingError
  * @description
@@ -14,6 +13,5 @@ import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
  * @constant
  */
 export const id_err_operationalBindingError: Code = { local: 100 };
-/* END_OF_SYMBOL_DEFINITION id_err_operationalBindingError */
 
 /* eslint-enable */

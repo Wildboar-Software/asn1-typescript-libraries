@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION ExtensionAttribute */
 /**
  * @summary ExtensionAttribute
  * @description
@@ -67,9 +66,7 @@ export class ExtensionAttribute {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtensionAttribute */
 /**
  * @summary The Leading Root Component Types of ExtensionAttribute
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_ExtensionAttribute: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtensionAttribute */
 /**
  * @summary The Trailing Root Component Types of ExtensionAttribute
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_ExtensionAttribute: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ExtensionAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtensionAttribute */
 /**
  * @summary The Extension Addition Component Types of ExtensionAttribute
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_ExtensionAttribute: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_ExtensionAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttribute */
 let _cached_decoder_for_ExtensionAttribute: $.ASN1Decoder<ExtensionAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ExtensionAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionAttribute
  * @function
@@ -162,13 +151,9 @@ export function _decode_ExtensionAttribute(el: _Element) {
     }
     return _cached_decoder_for_ExtensionAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttribute */
 let _cached_encoder_for_ExtensionAttribute: $.ASN1Encoder<ExtensionAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ExtensionAttribute */
 /**
  * @summary Encodes a(n) ExtensionAttribute into an ASN.1 Element.
  * @function
@@ -207,6 +192,5 @@ export function _encode_ExtensionAttribute(
     return _cached_encoder_for_ExtensionAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ExtensionAttribute */
 
 /* eslint-enable */

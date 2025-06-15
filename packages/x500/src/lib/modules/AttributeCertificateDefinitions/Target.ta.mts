@@ -11,7 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Target */
 /**
  * @summary Target
  * @description
@@ -31,13 +30,9 @@ export type Target =
     | { targetGroup: GeneralName } /* CHOICE_ALT_ROOT */
     | { targetCert: TargetCert } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION Target */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Target */
 let _cached_decoder_for_Target: $.ASN1Decoder<Target> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Target */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Target */
 /**
  * @summary Decodes an ASN.1 element into a(n) Target
  * @function
@@ -63,13 +58,9 @@ export function _decode_Target(el: _Element) {
     }
     return _cached_decoder_for_Target(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Target */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Target */
 let _cached_encoder_for_Target: $.ASN1Encoder<Target> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Target */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Target */
 /**
  * @summary Encodes a(n) Target into an ASN.1 Element.
  * @function
@@ -106,6 +97,5 @@ export function _encode_Target(value: Target, elGetter: $.ASN1Encoder<Target>) {
     return _cached_encoder_for_Target(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Target */
 
 /* eslint-enable */

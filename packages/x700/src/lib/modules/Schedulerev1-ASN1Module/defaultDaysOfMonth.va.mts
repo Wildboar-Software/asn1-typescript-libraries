@@ -14,7 +14,7 @@ import {
     _decode_DaysOfMonth,
     _encode_DaysOfMonth,
 } from '../Schedulerev1-ASN1Module/DaysOfMonth.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION defaultDaysOfMonth */
+
 /**
  * @summary defaultDaysOfMonth
  * @description
@@ -96,6 +96,5 @@ export const defaultDaysOfMonth: DaysOfMonth = DaysOfMonth._from_object({
         1,
     ]),
 });
-/* END_OF_SYMBOL_DEFINITION defaultDaysOfMonth */
 
 /* eslint-enable */

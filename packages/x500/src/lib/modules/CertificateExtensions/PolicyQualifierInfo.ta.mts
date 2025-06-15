@@ -6,7 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION PolicyQualifierInfo */
 /**
  * @summary PolicyQualifierInfo
  * @description
@@ -67,9 +66,7 @@ export class PolicyQualifierInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PolicyQualifierInfo */
 /**
  * @summary The Leading Root Component Types of PolicyQualifierInfo
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_PolicyQualifierInfo: $.Compone
     ),
     new $.ComponentSpec("qualifier", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PolicyQualifierInfo */
 /**
  * @summary The Trailing Root Component Types of PolicyQualifierInfo
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_PolicyQualifierInfo: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PolicyQualifierInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PolicyQualifierInfo */
 /**
  * @summary The Extension Addition Component Types of PolicyQualifierInfo
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_PolicyQualifierInfo: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_PolicyQualifierInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyQualifierInfo */
 let _cached_decoder_for_PolicyQualifierInfo: $.ASN1Decoder<PolicyQualifierInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PolicyQualifierInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) PolicyQualifierInfo
  * @function
@@ -164,13 +153,9 @@ export function _decode_PolicyQualifierInfo(el: _Element) {
     }
     return _cached_decoder_for_PolicyQualifierInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyQualifierInfo */
 let _cached_encoder_for_PolicyQualifierInfo: $.ASN1Encoder<PolicyQualifierInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PolicyQualifierInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PolicyQualifierInfo */
 /**
  * @summary Encodes a(n) PolicyQualifierInfo into an ASN.1 Element.
  * @function
@@ -209,6 +194,5 @@ export function _encode_PolicyQualifierInfo(
     return _cached_encoder_for_PolicyQualifierInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PolicyQualifierInfo */
 
 /* eslint-enable */

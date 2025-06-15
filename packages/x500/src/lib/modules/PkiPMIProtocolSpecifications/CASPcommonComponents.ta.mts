@@ -17,7 +17,6 @@ import {
     _encode_CASPversion,
     _enum_for_CASPversion,
 } from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CASPcommonComponents */
 /**
  * @summary CASPcommonComponents
  * @description
@@ -94,9 +93,7 @@ export class CASPcommonComponents {
 
     public static _enum_for_version = _enum_for_CASPversion;
 }
-/* END_OF_SYMBOL_DEFINITION CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CASPcommonComponents */
 /**
  * @summary The Leading Root Component Types of CASPcommonComponents
  * @description
@@ -121,9 +118,7 @@ export const _root_component_type_list_1_spec_for_CASPcommonComponents: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CASPcommonComponents */
 /**
  * @summary The Trailing Root Component Types of CASPcommonComponents
  * @description
@@ -133,9 +128,7 @@ export const _root_component_type_list_1_spec_for_CASPcommonComponents: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CASPcommonComponents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CASPcommonComponents */
 /**
  * @summary The Extension Addition Component Types of CASPcommonComponents
  * @description
@@ -145,13 +138,9 @@ export const _root_component_type_list_2_spec_for_CASPcommonComponents: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_CASPcommonComponents: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CASPcommonComponents */
 let _cached_decoder_for_CASPcommonComponents: $.ASN1Decoder<CASPcommonComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CASPcommonComponents */
 /**
  * @summary Decodes an ASN.1 element into a(n) CASPcommonComponents
  * @function
@@ -198,13 +187,9 @@ export function _decode_CASPcommonComponents(el: _Element) {
     }
     return _cached_decoder_for_CASPcommonComponents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CASPcommonComponents */
 let _cached_encoder_for_CASPcommonComponents: $.ASN1Encoder<CASPcommonComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CASPcommonComponents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CASPcommonComponents */
 /**
  * @summary Encodes a(n) CASPcommonComponents into an ASN.1 Element.
  * @function
@@ -247,6 +232,5 @@ export function _encode_CASPcommonComponents(
     return _cached_encoder_for_CASPcommonComponents(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CASPcommonComponents */
 
 /* eslint-enable */

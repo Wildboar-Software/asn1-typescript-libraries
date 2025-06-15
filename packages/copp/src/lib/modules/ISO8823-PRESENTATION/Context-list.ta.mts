@@ -15,7 +15,7 @@ import {
     _decode_Context_list_Item,
     _encode_Context_list_Item,
 } from '../ISO8823-PRESENTATION/Context-list-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Context_list */
+
 /**
  * @summary Context_list
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type Context_list = Context_list_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Context_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_list */
+
 let _cached_decoder_for_Context_list: $.ASN1Decoder<Context_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Context_list */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Context_list */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Context_list
  * @function
@@ -53,13 +51,11 @@ export function _decode_Context_list(el: _Element) {
     }
     return _cached_decoder_for_Context_list(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Context_list */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_list */
+
 let _cached_encoder_for_Context_list: $.ASN1Encoder<Context_list> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Context_list */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Context_list */
+
 /**
  * @summary Encodes a(n) Context_list into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_Context_list(
     return _cached_encoder_for_Context_list(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Context_list */
 
 /* eslint-enable */

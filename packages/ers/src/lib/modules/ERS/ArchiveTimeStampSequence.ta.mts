@@ -11,7 +11,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ArchiveTimeStampChain, _decode_ArchiveTimeStampChain, _encode_ArchiveTimeStampChain } from "../ERS/ArchiveTimeStampChain.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ArchiveTimeStampSequence */
+
 /**
  * @summary ArchiveTimeStampSequence
  * @description
@@ -24,13 +24,11 @@ import { ArchiveTimeStampChain, _decode_ArchiveTimeStampChain, _encode_ArchiveTi
  */
 export
 type ArchiveTimeStampSequence = ArchiveTimeStampChain[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ArchiveTimeStampSequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ArchiveTimeStampSequence */
+
 let _cached_decoder_for_ArchiveTimeStampSequence: $.ASN1Decoder<ArchiveTimeStampSequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ArchiveTimeStampSequence */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ArchiveTimeStampSequence */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArchiveTimeStampSequence
  * @function
@@ -42,13 +40,11 @@ function _decode_ArchiveTimeStampSequence (el: _Element) {
     if (!_cached_decoder_for_ArchiveTimeStampSequence) { _cached_decoder_for_ArchiveTimeStampSequence = $._decodeSequenceOf<ArchiveTimeStampChain>(() => _decode_ArchiveTimeStampChain); }
     return _cached_decoder_for_ArchiveTimeStampSequence(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ArchiveTimeStampSequence */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ArchiveTimeStampSequence */
+
 let _cached_encoder_for_ArchiveTimeStampSequence: $.ASN1Encoder<ArchiveTimeStampSequence> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ArchiveTimeStampSequence */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ArchiveTimeStampSequence */
+
 /**
  * @summary Encodes a(n) ArchiveTimeStampSequence into an ASN.1 Element.
  * @function
@@ -62,6 +58,5 @@ function _encode_ArchiveTimeStampSequence (value: ArchiveTimeStampSequence, elGe
     return _cached_encoder_for_ArchiveTimeStampSequence(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ArchiveTimeStampSequence */
 
 /* eslint-enable */

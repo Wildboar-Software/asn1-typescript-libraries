@@ -16,7 +16,6 @@ import {
 } from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.mjs';
 import { id_ext_invalid_assembly_instructions } from '../EDIMSObjectIdentifiers/id-ext-invalid-assembly-instructions.va.mjs';
 import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION invalid_assembly_instructions */
 /**
  * @summary invalid_assembly_instructions
  * @description
@@ -46,6 +45,5 @@ export const invalid_assembly_instructions: EDIM_EXTENSION<BodyPartSpecifiers> =
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&criticality': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION invalid_assembly_instructions */
 
 /* eslint-enable */

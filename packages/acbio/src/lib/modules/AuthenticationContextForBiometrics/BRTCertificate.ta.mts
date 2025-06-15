@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-/* START_OF_SYMBOL_DEFINITION BRTCertificate */
+
 /**
  * @summary BRTCertificate
  * @description
@@ -59,9 +59,8 @@ export class BRTCertificate {
         return new BRTCertificate(_o.contentType, _o.content);
     }
 }
-/* END_OF_SYMBOL_DEFINITION BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BRTCertificate */
+
 /**
  * @summary The Leading Root Component Types of BRTCertificate
  * @description
@@ -86,9 +85,8 @@ export const _root_component_type_list_1_spec_for_BRTCertificate: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BRTCertificate */
+
 /**
  * @summary The Trailing Root Component Types of BRTCertificate
  * @description
@@ -98,9 +96,8 @@ export const _root_component_type_list_1_spec_for_BRTCertificate: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BRTCertificate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BRTCertificate */
+
 /**
  * @summary The Extension Addition Component Types of BRTCertificate
  * @description
@@ -110,13 +107,11 @@ export const _root_component_type_list_2_spec_for_BRTCertificate: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_BRTCertificate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificate */
+
 let _cached_decoder_for_BRTCertificate: $.ASN1Decoder<BRTCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRTCertificate */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRTCertificate
  * @function
@@ -151,13 +146,11 @@ export function _decode_BRTCertificate(el: _Element) {
     }
     return _cached_decoder_for_BRTCertificate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificate */
+
 let _cached_encoder_for_BRTCertificate: $.ASN1Encoder<BRTCertificate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRTCertificate */
+
 /**
  * @summary Encodes a(n) BRTCertificate into an ASN.1 Element.
  * @function
@@ -195,6 +188,5 @@ export function _encode_BRTCertificate(
     return _cached_encoder_for_BRTCertificate(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRTCertificate */
 
 /* eslint-enable */

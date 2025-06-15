@@ -13,7 +13,7 @@ import {
 import { ecdsa_with_SHA1 } from "../PKIXAlgs-2009/ecdsa-with-SHA1.va.mjs";
 import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
 import { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION sa_ecdsaWithSHA1 */
+
 /**
  * @summary sa_ecdsaWithSHA1
  * @description
@@ -52,6 +52,5 @@ export const sa_ecdsaWithSHA1: SIGNATURE_ALGORITHM<ECDSA_Sig_Value, NULL> = {
     "&Value": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION sa_ecdsaWithSHA1 */
 
 /* eslint-enable */

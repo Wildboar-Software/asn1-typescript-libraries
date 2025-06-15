@@ -21,7 +21,6 @@ import {
     _decode_DateOfLeap,
     _encode_DateOfLeap,
 } from '../TimeMF/DateOfLeap.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LeapSecondInfo */
 /**
  * @summary LeapSecondInfo
  * @description
@@ -79,9 +78,7 @@ export class LeapSecondInfo {
 
     public static _enum_for_leapIndication = _enum_for_LeapIndication;
 }
-/* END_OF_SYMBOL_DEFINITION LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LeapSecondInfo */
 /**
  * @summary The Leading Root Component Types of LeapSecondInfo
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_LeapSecondInfo: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LeapSecondInfo */
 /**
  * @summary The Trailing Root Component Types of LeapSecondInfo
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_LeapSecondInfo: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LeapSecondInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LeapSecondInfo */
 /**
  * @summary The Extension Addition Component Types of LeapSecondInfo
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_LeapSecondInfo: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_LeapSecondInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LeapSecondInfo */
 let _cached_decoder_for_LeapSecondInfo: $.ASN1Decoder<LeapSecondInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LeapSecondInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) LeapSecondInfo
  * @function
@@ -167,13 +156,9 @@ export function _decode_LeapSecondInfo(el: _Element) {
     }
     return _cached_decoder_for_LeapSecondInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LeapSecondInfo */
 let _cached_encoder_for_LeapSecondInfo: $.ASN1Encoder<LeapSecondInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LeapSecondInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LeapSecondInfo */
 /**
  * @summary Encodes a(n) LeapSecondInfo into an ASN.1 Element.
  * @function
@@ -208,6 +193,5 @@ export function _encode_LeapSecondInfo(
     return _cached_encoder_for_LeapSecondInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LeapSecondInfo */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp.ta.mjs";
 import { id_certUnsubscribeRsp } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeRsp.va.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION certUnsubscribeRsp */
 /**
  * @summary certUnsubscribeRsp
  * @description
@@ -34,6 +33,5 @@ export const certUnsubscribeRsp: WRAPPED_PDU = {
     "&id": id_certUnsubscribeRsp /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION certUnsubscribeRsp */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PA_DATA */
+
 /**
  * @summary PA_DATA
  * @description
@@ -67,9 +67,8 @@ export class PA_DATA {
     return new PA_DATA(_o.padata_type, _o.padata_value);
   }
 }
-/* END_OF_SYMBOL_DEFINITION PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PA_DATA */
+
 /**
  * @summary The Leading Root Component Types of PA_DATA
  * @description
@@ -94,9 +93,8 @@ export const _root_component_type_list_1_spec_for_PA_DATA: $.ComponentSpec[] = [
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PA_DATA */
+
 /**
  * @summary The Trailing Root Component Types of PA_DATA
  * @description
@@ -106,9 +104,8 @@ export const _root_component_type_list_1_spec_for_PA_DATA: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PA_DATA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PA_DATA */
+
 /**
  * @summary The Extension Addition Component Types of PA_DATA
  * @description
@@ -118,13 +115,11 @@ export const _root_component_type_list_2_spec_for_PA_DATA: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_PA_DATA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PA_DATA */
+
 let _cached_decoder_for_PA_DATA: $.ASN1Decoder<PA_DATA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PA_DATA */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PA_DATA
  * @function
@@ -153,13 +148,11 @@ export function _decode_PA_DATA(el: _Element) {
   }
   return _cached_decoder_for_PA_DATA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PA_DATA */
+
 let _cached_encoder_for_PA_DATA: $.ASN1Encoder<PA_DATA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PA_DATA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PA_DATA */
+
 /**
  * @summary Encodes a(n) PA_DATA into an ASN.1 Element.
  * @function
@@ -198,6 +191,5 @@ export function _encode_PA_DATA(
   return _cached_encoder_for_PA_DATA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PA_DATA */
 
 /* eslint-enable */

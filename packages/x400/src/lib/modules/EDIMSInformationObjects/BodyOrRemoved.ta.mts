@@ -21,7 +21,6 @@ import {
     _decode_AdditionalBodyParts,
     _encode_AdditionalBodyParts,
 } from '../EDIMSInformationObjects/AdditionalBodyParts.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyOrRemoved */
 /**
  * @summary BodyOrRemoved
  * @description
@@ -74,9 +73,7 @@ export class BodyOrRemoved {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BodyOrRemoved */
 /**
  * @summary The Leading Root Component Types of BodyOrRemoved
  * @description
@@ -101,9 +98,7 @@ export const _root_component_type_list_1_spec_for_BodyOrRemoved: $.ComponentSpec
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BodyOrRemoved */
 /**
  * @summary The Trailing Root Component Types of BodyOrRemoved
  * @description
@@ -113,9 +108,7 @@ export const _root_component_type_list_1_spec_for_BodyOrRemoved: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BodyOrRemoved: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BodyOrRemoved */
 /**
  * @summary The Extension Addition Component Types of BodyOrRemoved
  * @description
@@ -125,13 +118,9 @@ export const _root_component_type_list_2_spec_for_BodyOrRemoved: $.ComponentSpec
  * @constant
  */
 export const _extension_additions_list_spec_for_BodyOrRemoved: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyOrRemoved */
 let _cached_decoder_for_BodyOrRemoved: $.ASN1Decoder<BodyOrRemoved> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyOrRemoved */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyOrRemoved
  * @function
@@ -173,13 +162,9 @@ export function _decode_BodyOrRemoved(el: _Element) {
     }
     return _cached_decoder_for_BodyOrRemoved(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyOrRemoved */
 let _cached_encoder_for_BodyOrRemoved: $.ASN1Encoder<BodyOrRemoved> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyOrRemoved */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyOrRemoved */
 /**
  * @summary Encodes a(n) BodyOrRemoved into an ASN.1 Element.
  * @function
@@ -217,6 +202,5 @@ export function _encode_BodyOrRemoved(
     return _cached_encoder_for_BodyOrRemoved(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyOrRemoved */
 
 /* eslint-enable */

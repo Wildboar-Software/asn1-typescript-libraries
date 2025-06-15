@@ -13,7 +13,6 @@ import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 import { KeyWrapSet_Union0_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union0-Intersection0-Element.oa.mjs";
 import { KeyWrapSet_Union1_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union1-Intersection0-Element.oa.mjs";
 import { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union2-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyWrapSet */
 /**
  * @summary KeyWrapSet
  * @description
@@ -35,6 +34,5 @@ import { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet
  */
 export
 const KeyWrapSet: (ALGORITHM)[] = [ KeyWrapSet_Union0_Intersection0_Element, KeyWrapSet_Union1_Intersection0_Element, KeyWrapSet_Union2_Intersection0_Element, ];
-/* END_OF_SYMBOL_DEFINITION KeyWrapSet */
 
 /* eslint-enable */

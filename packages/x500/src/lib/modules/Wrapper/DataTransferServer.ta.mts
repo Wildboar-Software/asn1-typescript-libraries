@@ -11,7 +11,6 @@ import {
     _decode_DataTransferServerNEA,
     _encode_DataTransferServerNEA,
 } from "../Wrapper/DataTransferServerNEA.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DataTransferServer */
 /**
  * @summary DataTransferServer
  * @description
@@ -29,13 +28,9 @@ export type DataTransferServer =
     | { aead: DataTransferServerAE } /* CHOICE_ALT_ROOT */
     | { non_aead: DataTransferServerNEA } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION DataTransferServer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferServer */
 let _cached_decoder_for_DataTransferServer: $.ASN1Decoder<DataTransferServer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DataTransferServer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DataTransferServer */
 /**
  * @summary Decodes an ASN.1 element into a(n) DataTransferServer
  * @function
@@ -63,13 +58,9 @@ export function _decode_DataTransferServer(el: _Element) {
     }
     return _cached_decoder_for_DataTransferServer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DataTransferServer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferServer */
 let _cached_encoder_for_DataTransferServer: $.ASN1Encoder<DataTransferServer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DataTransferServer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DataTransferServer */
 /**
  * @summary Encodes a(n) DataTransferServer into an ASN.1 Element.
  * @function
@@ -103,6 +94,5 @@ export function _encode_DataTransferServer(
     return _cached_encoder_for_DataTransferServer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DataTransferServer */
 
 /* eslint-enable */

@@ -28,7 +28,7 @@ import {
   _decode_AbortProblem,
   _encode_AbortProblem,
 } from '../SeseAPDUs/AbortProblem.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProblemCode */
+
 /**
  * @summary ProblemCode
  * @description
@@ -47,13 +47,11 @@ export type ProblemCode =
   | { general: GeneralProblem } /* CHOICE_ALT_ROOT */
   | { transfer: TransferProblem } /* CHOICE_ALT_ROOT */
   | { abort: AbortProblem } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ProblemCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProblemCode */
+
 let _cached_decoder_for_ProblemCode: $.ASN1Decoder<ProblemCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProblemCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProblemCode */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProblemCode
  * @function
@@ -72,13 +70,11 @@ export function _decode_ProblemCode(el: _Element) {
   }
   return _cached_decoder_for_ProblemCode(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProblemCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProblemCode */
+
 let _cached_encoder_for_ProblemCode: $.ASN1Encoder<ProblemCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProblemCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProblemCode */
+
 /**
  * @summary Encodes a(n) ProblemCode into an ASN.1 Element.
  * @function
@@ -103,6 +99,5 @@ export function _encode_ProblemCode(
   return _cached_encoder_for_ProblemCode(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProblemCode */
 
 /* eslint-enable */

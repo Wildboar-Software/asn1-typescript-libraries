@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CustTroubleTickNum */
+
 /**
  * @summary CustTroubleTickNum
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type CustTroubleTickNum = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION CustTroubleTickNum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CustTroubleTickNum */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CustTroubleTickNum */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CustTroubleTickNum */
+
+
 export const _decode_CustTroubleTickNum = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_CustTroubleTickNum */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CustTroubleTickNum */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CustTroubleTickNum */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CustTroubleTickNum */
+
+
 export const _encode_CustTroubleTickNum = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_CustTroubleTickNum */
 
 /* eslint-enable */

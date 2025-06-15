@@ -9,7 +9,6 @@ import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mj
 import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
 import { id_at_serialNumber } from "../SelectedAttributeTypes/id-at-serialNumber.va.mjs";
 import { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION serialNumber */
 /**
  * @summary serialNumber
  * @description
@@ -51,6 +50,5 @@ export const serialNumber: ATTRIBUTE<PrintableString> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION serialNumber */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_aa_ets_certificateRefs */
 /**
  * @summary id_aa_ets_certificateRefs
  * @description
@@ -47,6 +46,5 @@ const id_aa_ets_certificateRefs: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     21,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_ets_certificateRefs */
 
 /* eslint-enable */

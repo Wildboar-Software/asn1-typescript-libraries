@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.mjs';
 import { id_notification } from '../MhsAcctObjectIdentifiers/id-notification.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_notification_objectCreation */
 /**
  * @summary id_notification_objectCreation
  * @description
@@ -28,6 +27,5 @@ export const id_notification_objectCreation: ID = new _OID(
     [0],
     id_notification
 );
-/* END_OF_SYMBOL_DEFINITION id_notification_objectCreation */
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { SCHED_ERROR } from '../Schedulerev1-ASN1Module/SCHED-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION CommonErrorSet */
 /**
  * @summary CommonErrorSet
  * @description
@@ -26,6 +25,5 @@ import { SCHED_ERROR } from '../Schedulerev1-ASN1Module/SCHED-ERROR.oca.mjs';
  *
  */
 export const CommonErrorSet: SCHED_ERROR[] = [];
-/* END_OF_SYMBOL_DEFINITION CommonErrorSet */
 
 /* eslint-enable */

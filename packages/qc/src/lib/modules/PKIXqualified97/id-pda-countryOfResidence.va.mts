@@ -3,7 +3,7 @@ import { ObjectIdentifier as _OID } from "asn1-ts";
 import { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.mjs";
 import { id_pda } from "../PKIXqualified97/id-pda.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION id_pda_countryOfResidence */
+
 /**
  * @summary id_pda_countryOfResidence
  * @description
@@ -17,6 +17,5 @@ import { id_pda } from "../PKIXqualified97/id-pda.va.mjs";
  * @constant
  */
 export const id_pda_countryOfResidence: AttributeType = new _OID([5], id_pda);
-/* END_OF_SYMBOL_DEFINITION id_pda_countryOfResidence */
 
 /* eslint-enable */

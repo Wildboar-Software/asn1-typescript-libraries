@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BioAPI_DATE */
+
 /**
  * @summary BioAPI_DATE
  * @description
@@ -69,9 +69,8 @@ export class BioAPI_DATE {
     return new BioAPI_DATE(_o.year, _o.month, _o.day);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_DATE */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_DATE
  * @description
@@ -103,9 +102,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_DATE: $.ComponentSpec[]
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_DATE */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_DATE
  * @description
@@ -115,9 +113,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_DATE: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_DATE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_DATE */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_DATE
  * @description
@@ -127,13 +124,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_DATE: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_DATE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_DATE */
+
 let _cached_decoder_for_BioAPI_DATE: $.ASN1Decoder<BioAPI_DATE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_DATE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_DATE
  * @function
@@ -165,13 +160,11 @@ export function _decode_BioAPI_DATE(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_DATE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_DATE */
+
 let _cached_encoder_for_BioAPI_DATE: $.ASN1Encoder<BioAPI_DATE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_DATE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_DATE */
+
 /**
  * @summary Encodes a(n) BioAPI_DATE into an ASN.1 Element.
  * @function
@@ -201,6 +194,5 @@ export function _encode_BioAPI_DATE(
   return _cached_encoder_for_BioAPI_DATE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_DATE */
 
 /* eslint-enable */

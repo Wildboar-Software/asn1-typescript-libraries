@@ -6,7 +6,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
-/* START_OF_SYMBOL_DEFINITION dn */
 /**
  * @summary dn
  * @description
@@ -36,6 +35,5 @@ export const dn: SYNTAX_NAME<DistinguishedName> = {
     "&id": id_lsx_dn /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dn */
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
     _decode_UniversalOrganizationalUnitNames,
     _encode_UniversalOrganizationalUnitNames,
 } from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION universal_organizational_unit_names */
 /**
  * @summary universal_organizational_unit_names
  * @description
@@ -33,6 +32,5 @@ export const universal_organizational_unit_names: EXTENSION_ATTRIBUTE<UniversalO
     "&id": 27 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION universal_organizational_unit_names */
 
 /* eslint-enable */

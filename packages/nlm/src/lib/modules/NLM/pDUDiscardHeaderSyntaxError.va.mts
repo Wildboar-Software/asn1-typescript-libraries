@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { pDUDiscard } from '../NLM/pDUDiscard.va.mjs';
-/* START_OF_SYMBOL_DEFINITION pDUDiscardHeaderSyntaxError */
+
 /**
  * @summary pDUDiscardHeaderSyntaxError
  * @description
@@ -28,6 +28,5 @@ export const pDUDiscardHeaderSyntaxError: OBJECT_IDENTIFIER = new _OID(
     [/* headerSyntaxError */ 4],
     pDUDiscard
 );
-/* END_OF_SYMBOL_DEFINITION pDUDiscardHeaderSyntaxError */
 
 /* eslint-enable */

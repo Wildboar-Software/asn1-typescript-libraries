@@ -16,7 +16,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ORAddressFilter_attribute_type */
 /**
  * @summary ORAddressFilter_attribute_type
  * @description
@@ -30,13 +29,9 @@ import {
 export type ORAddressFilter_attribute_type =
     | { standard_attribute: INTEGER } /* CHOICE_ALT_ROOT */
     | { domain_defined_attribute: UniversalOrBMPString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ORAddressFilter_attribute_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddressFilter_attribute_type */
 let _cached_decoder_for_ORAddressFilter_attribute_type: $.ASN1Decoder<ORAddressFilter_attribute_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddressFilter_attribute_type */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ORAddressFilter_attribute_type */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddressFilter_attribute_type
  * @function
@@ -57,13 +52,9 @@ export function _decode_ORAddressFilter_attribute_type(el: _Element) {
     }
     return _cached_decoder_for_ORAddressFilter_attribute_type(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ORAddressFilter_attribute_type */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddressFilter_attribute_type */
 let _cached_encoder_for_ORAddressFilter_attribute_type: $.ASN1Encoder<ORAddressFilter_attribute_type> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddressFilter_attribute_type */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ORAddressFilter_attribute_type */
 /**
  * @summary Encodes a(n) ORAddressFilter_attribute_type into an ASN.1 Element.
  * @function
@@ -87,6 +78,5 @@ export function _encode_ORAddressFilter_attribute_type(
     return _cached_encoder_for_ORAddressFilter_attribute_type(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ORAddressFilter_attribute_type */
 
 /* eslint-enable */

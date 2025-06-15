@@ -15,7 +15,7 @@ import {
     _decode_MultipleConnections_Item,
     _encode_MultipleConnections_Item,
 } from '../ASN1DefinedTypesModule/MultipleConnections-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MultipleConnections */
+
 /**
  * @summary MultipleConnections
  * @description
@@ -32,13 +32,11 @@ import {
  * ```
  */
 export type MultipleConnections = MultipleConnections_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MultipleConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleConnections */
+
 let _cached_decoder_for_MultipleConnections: $.ASN1Decoder<MultipleConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MultipleConnections */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MultipleConnections */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MultipleConnections
  * @function
@@ -53,13 +51,11 @@ export function _decode_MultipleConnections(el: _Element) {
     }
     return _cached_decoder_for_MultipleConnections(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MultipleConnections */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleConnections */
+
 let _cached_encoder_for_MultipleConnections: $.ASN1Encoder<MultipleConnections> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MultipleConnections */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MultipleConnections */
+
 /**
  * @summary Encodes a(n) MultipleConnections into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_MultipleConnections(
     return _cached_encoder_for_MultipleConnections(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MultipleConnections */
 
 /* eslint-enable */

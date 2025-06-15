@@ -10,7 +10,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION cRLDistributionPoint */
 /**
  * @summary cRLDistributionPoint
  * @description
@@ -52,6 +51,5 @@ export const cRLDistributionPoint: OBJECT_CLASS = {
     "&ldapDesc": "X.509 CRL distribution point" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cRLDistributionPoint /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cRLDistributionPoint */
 
 /* eslint-enable */

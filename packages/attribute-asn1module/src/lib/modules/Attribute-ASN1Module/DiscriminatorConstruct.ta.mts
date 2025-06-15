@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION DiscriminatorConstruct */
 /**
  * @summary DiscriminatorConstruct
  * @description
@@ -25,13 +24,9 @@ import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cm
  */
 export
 type DiscriminatorConstruct = CMISFilter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION DiscriminatorConstruct */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscriminatorConstruct */
 let _cached_decoder_for_DiscriminatorConstruct: $.ASN1Decoder<DiscriminatorConstruct> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DiscriminatorConstruct */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DiscriminatorConstruct */
 /**
  * @summary Decodes an ASN.1 element into a(n) DiscriminatorConstruct
  * @function
@@ -43,13 +38,9 @@ function _decode_DiscriminatorConstruct (el: _Element) {
     if (!_cached_decoder_for_DiscriminatorConstruct) { _cached_decoder_for_DiscriminatorConstruct = _decode_CMISFilter; }
     return _cached_decoder_for_DiscriminatorConstruct(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DiscriminatorConstruct */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscriminatorConstruct */
 let _cached_encoder_for_DiscriminatorConstruct: $.ASN1Encoder<DiscriminatorConstruct> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DiscriminatorConstruct */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DiscriminatorConstruct */
 /**
  * @summary Encodes a(n) DiscriminatorConstruct into an ASN.1 Element.
  * @function
@@ -63,6 +54,5 @@ function _encode_DiscriminatorConstruct (value: DiscriminatorConstruct, elGetter
     return _cached_encoder_for_DiscriminatorConstruct(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DiscriminatorConstruct */
 
 /* eslint-enable */

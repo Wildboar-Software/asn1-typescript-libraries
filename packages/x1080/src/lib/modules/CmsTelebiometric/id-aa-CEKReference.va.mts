@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { id_aa } from '../CmsTelebiometric/id-aa.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_aa_CEKReference */
+
 /**
  * @summary id_aa_CEKReference
  * @description
@@ -25,6 +25,5 @@ import { id_aa } from '../CmsTelebiometric/id-aa.va.mjs';
  * @constant
  */
 export const id_aa_CEKReference: OBJECT_IDENTIFIER = new _OID([30], id_aa);
-/* END_OF_SYMBOL_DEFINITION id_aa_CEKReference */
 
 /* eslint-enable */

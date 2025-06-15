@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SystemTitle */
 /**
  * @summary SystemTitle
  * @description
@@ -33,13 +32,9 @@ type SystemTitle =
     { distinguishedName: DistinguishedName } /* CHOICE_ALT_ROOT */
     | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | { nothing: NULL } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SystemTitle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemTitle */
 let _cached_decoder_for_SystemTitle: $.ASN1Decoder<SystemTitle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SystemTitle */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SystemTitle */
 /**
  * @summary Decodes an ASN.1 element into a(n) SystemTitle
  * @function
@@ -55,13 +50,9 @@ function _decode_SystemTitle (el: _Element) {
 }); }
     return _cached_decoder_for_SystemTitle(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SystemTitle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemTitle */
 let _cached_encoder_for_SystemTitle: $.ASN1Encoder<SystemTitle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SystemTitle */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SystemTitle */
 /**
  * @summary Encodes a(n) SystemTitle into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ function _encode_SystemTitle (value: SystemTitle, elGetter: $.ASN1Encoder<System
     return _cached_encoder_for_SystemTitle(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SystemTitle */
 
 /* eslint-enable */

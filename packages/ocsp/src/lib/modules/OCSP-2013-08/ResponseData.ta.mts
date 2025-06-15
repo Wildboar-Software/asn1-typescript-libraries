@@ -28,7 +28,7 @@ import {
     _encode_Version,
 } from "../OCSP-2013-08/Version.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ResponseData */
+
 /**
  * @summary ResponseData
  * @description
@@ -116,9 +116,8 @@ export class ResponseData {
         return v1;
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseData */
+
 /**
  * @summary The Leading Root Component Types of ResponseData
  * @description
@@ -164,9 +163,8 @@ export const _root_component_type_list_1_spec_for_ResponseData: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseData */
+
 /**
  * @summary The Trailing Root Component Types of ResponseData
  * @description
@@ -176,9 +174,8 @@ export const _root_component_type_list_1_spec_for_ResponseData: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResponseData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseData */
+
 /**
  * @summary The Extension Addition Component Types of ResponseData
  * @description
@@ -188,13 +185,11 @@ export const _root_component_type_list_2_spec_for_ResponseData: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_ResponseData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseData */
+
 let _cached_decoder_for_ResponseData: $.ASN1Decoder<ResponseData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseData */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseData
  * @function
@@ -258,13 +253,11 @@ export function _decode_ResponseData(el: _Element) {
     }
     return _cached_decoder_for_ResponseData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseData */
+
 let _cached_encoder_for_ResponseData: $.ASN1Encoder<ResponseData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseData */
+
 /**
  * @summary Encodes a(n) ResponseData into an ASN.1 Element.
  * @function
@@ -323,6 +316,5 @@ export function _encode_ResponseData(
     return _cached_encoder_for_ResponseData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseData */
 
 /* eslint-enable */

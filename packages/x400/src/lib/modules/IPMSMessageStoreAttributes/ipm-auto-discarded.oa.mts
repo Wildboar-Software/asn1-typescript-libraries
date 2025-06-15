@@ -20,7 +20,6 @@ import { id_sat_ipm_auto_discarded } from '../IPMSObjectIdentifiers/id-sat-ipm-a
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ipm_auto_discarded */
 /**
  * @summary ipm_auto_discarded
  * @description
@@ -53,6 +52,5 @@ export const ipm_auto_discarded: X413ATTRIBUTE<BOOLEAN> = {
     '&id': id_sat_ipm_auto_discarded /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ipm_auto_discarded */
 
 /* eslint-enable */

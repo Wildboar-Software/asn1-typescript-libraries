@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION ROS_OBJECT_CLASS */
+
 /**
  * @summary ROS_OBJECT_CLASS
  * @description
@@ -82,6 +82,5 @@ export interface ROS_OBJECT_CLASS {
    */
   readonly '&id'?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION ROS_OBJECT_CLASS */
 
 /* eslint-enable */

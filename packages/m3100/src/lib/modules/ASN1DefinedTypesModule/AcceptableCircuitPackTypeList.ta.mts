@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AcceptableCircuitPackTypeList */
+
 /**
  * @summary AcceptableCircuitPackTypeList
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AcceptableCircuitPackTypeList = PrintableString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AcceptableCircuitPackTypeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptableCircuitPackTypeList */
+
 let _cached_decoder_for_AcceptableCircuitPackTypeList: $.ASN1Decoder<AcceptableCircuitPackTypeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AcceptableCircuitPackTypeList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AcceptableCircuitPackTypeList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AcceptableCircuitPackTypeList
  * @function
@@ -45,13 +43,11 @@ export function _decode_AcceptableCircuitPackTypeList(el: _Element) {
     }
     return _cached_decoder_for_AcceptableCircuitPackTypeList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AcceptableCircuitPackTypeList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptableCircuitPackTypeList */
+
 let _cached_encoder_for_AcceptableCircuitPackTypeList: $.ASN1Encoder<AcceptableCircuitPackTypeList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AcceptableCircuitPackTypeList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AcceptableCircuitPackTypeList */
+
 /**
  * @summary Encodes a(n) AcceptableCircuitPackTypeList into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_AcceptableCircuitPackTypeList(
     return _cached_encoder_for_AcceptableCircuitPackTypeList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AcceptableCircuitPackTypeList */
 
 /* eslint-enable */

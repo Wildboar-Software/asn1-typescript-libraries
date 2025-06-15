@@ -11,7 +11,7 @@ import {
     _decode_NameRegistrationAuthorities,
     _encode_NameRegistrationAuthorities,
 } from "../PKIXqualified97/NameRegistrationAuthorities.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SemanticsInformation */
+
 /**
  * @summary SemanticsInformation
  * @description
@@ -65,9 +65,8 @@ export class SemanticsInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SemanticsInformation */
+
 /**
  * @summary The Leading Root Component Types of SemanticsInformation
  * @description
@@ -92,9 +91,8 @@ export const _root_component_type_list_1_spec_for_SemanticsInformation: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SemanticsInformation */
+
 /**
  * @summary The Trailing Root Component Types of SemanticsInformation
  * @description
@@ -104,9 +102,8 @@ export const _root_component_type_list_1_spec_for_SemanticsInformation: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SemanticsInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SemanticsInformation */
+
 /**
  * @summary The Extension Addition Component Types of SemanticsInformation
  * @description
@@ -116,13 +113,11 @@ export const _root_component_type_list_2_spec_for_SemanticsInformation: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_SemanticsInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SemanticsInformation */
+
 let _cached_decoder_for_SemanticsInformation: $.ASN1Decoder<SemanticsInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SemanticsInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SemanticsInformation
  * @function
@@ -166,13 +161,11 @@ export function _decode_SemanticsInformation(el: _Element) {
     }
     return _cached_decoder_for_SemanticsInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SemanticsInformation */
+
 let _cached_encoder_for_SemanticsInformation: $.ASN1Encoder<SemanticsInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SemanticsInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SemanticsInformation */
+
 /**
  * @summary Encodes a(n) SemanticsInformation into an ASN.1 Element.
  * @function
@@ -212,6 +205,5 @@ export function _encode_SemanticsInformation(
     return _cached_encoder_for_SemanticsInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SemanticsInformation */
 
 /* eslint-enable */

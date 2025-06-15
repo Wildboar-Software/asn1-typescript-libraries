@@ -18,7 +18,6 @@ import {
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ResourceSelfTestResults_nonIntermediate */
 /**
  * @summary ResourceSelfTestResults_nonIntermediate
  * @description
@@ -84,9 +83,7 @@ export class ResourceSelfTestResults_nonIntermediate {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResourceSelfTestResults_nonIntermediate */
 /**
  * @summary The Leading Root Component Types of ResourceSelfTestResults_nonIntermediate
  * @description
@@ -125,9 +122,7 @@ export const _root_component_type_list_1_spec_for_ResourceSelfTestResults_nonInt
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResourceSelfTestResults_nonIntermediate */
 /**
  * @summary The Trailing Root Component Types of ResourceSelfTestResults_nonIntermediate
  * @description
@@ -137,9 +132,7 @@ export const _root_component_type_list_1_spec_for_ResourceSelfTestResults_nonInt
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ResourceSelfTestResults_nonIntermediate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResourceSelfTestResults_nonIntermediate */
 /**
  * @summary The Extension Addition Component Types of ResourceSelfTestResults_nonIntermediate
  * @description
@@ -149,13 +142,9 @@ export const _root_component_type_list_2_spec_for_ResourceSelfTestResults_nonInt
  * @constant
  */
 export const _extension_additions_list_spec_for_ResourceSelfTestResults_nonIntermediate: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSelfTestResults_nonIntermediate */
 let _cached_decoder_for_ResourceSelfTestResults_nonIntermediate: $.ASN1Decoder<ResourceSelfTestResults_nonIntermediate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResourceSelfTestResults_nonIntermediate */
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceSelfTestResults_nonIntermediate
  * @function
@@ -213,13 +202,9 @@ export function _decode_ResourceSelfTestResults_nonIntermediate(el: _Element) {
     }
     return _cached_decoder_for_ResourceSelfTestResults_nonIntermediate(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSelfTestResults_nonIntermediate */
 let _cached_encoder_for_ResourceSelfTestResults_nonIntermediate: $.ASN1Encoder<ResourceSelfTestResults_nonIntermediate> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResourceSelfTestResults_nonIntermediate */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResourceSelfTestResults_nonIntermediate */
 /**
  * @summary Encodes a(n) ResourceSelfTestResults_nonIntermediate into an ASN.1 Element.
  * @function
@@ -271,6 +256,5 @@ export function _encode_ResourceSelfTestResults_nonIntermediate(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResourceSelfTestResults_nonIntermediate */
 
 /* eslint-enable */

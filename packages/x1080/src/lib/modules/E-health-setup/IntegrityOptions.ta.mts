@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION IntegrityOptions */
+
 /**
  * @summary IntegrityOptions
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type IntegrityOptions = BOOLEAN; // BooleanType
-/* END_OF_SYMBOL_DEFINITION IntegrityOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntegrityOptions */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntegrityOptions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntegrityOptions */
+
+
 export const _decode_IntegrityOptions = $._decodeBoolean;
-/* END_OF_SYMBOL_DEFINITION _decode_IntegrityOptions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntegrityOptions */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntegrityOptions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntegrityOptions */
+
+
 export const _encode_IntegrityOptions = $._encodeBoolean;
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntegrityOptions */
 
 /* eslint-enable */

@@ -12,7 +12,6 @@ import {
     _decode_UpdateShadowResult,
     _encode_UpdateShadowResult,
 } from "../DirectoryShadowAbstractService/UpdateShadowResult.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION updateShadow */
 /**
  * @summary updateShadow
  * @description
@@ -49,6 +48,5 @@ export const updateShadow: OPERATION<
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION updateShadow */
 
 /* eslint-enable */

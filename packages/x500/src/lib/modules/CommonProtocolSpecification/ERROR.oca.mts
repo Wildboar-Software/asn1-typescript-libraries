@@ -1,7 +1,6 @@
 /* eslint-disable */
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ERROR */
 /**
  * @summary ERROR
  * @description
@@ -57,6 +56,5 @@ export interface ERROR<
      */
     readonly "&errorCode"?: Code;
 }
-/* END_OF_SYMBOL_DEFINITION ERROR */
 
 /* eslint-enable */

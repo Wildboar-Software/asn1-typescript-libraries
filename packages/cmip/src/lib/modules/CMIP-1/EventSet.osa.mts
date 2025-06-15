@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION EventSet */
+
 /**
  * @summary EventSet
  * @description
@@ -26,6 +26,5 @@ import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.mjs';
  *
  */
 export const EventSet: CMIP_EVENT[] = [];
-/* END_OF_SYMBOL_DEFINITION EventSet */
 
 /* eslint-enable */

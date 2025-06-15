@@ -6,7 +6,7 @@ import {
     _decode_HashPointer,
     _encode_HashPointer,
 } from "../CMSProfileAttributes/HashPointer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Sidechain */
+
 /**
  * @summary Sidechain
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Sidechain = HashPointer; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Sidechain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Sidechain */
+
 let _cached_decoder_for_Sidechain: $.ASN1Decoder<Sidechain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Sidechain */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Sidechain */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Sidechain
  * @function
@@ -37,13 +35,11 @@ export function _decode_Sidechain(el: _Element) {
     }
     return _cached_decoder_for_Sidechain(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Sidechain */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Sidechain */
+
 let _cached_encoder_for_Sidechain: $.ASN1Encoder<Sidechain> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Sidechain */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Sidechain */
+
 /**
  * @summary Encodes a(n) Sidechain into an ASN.1 Element.
  * @function
@@ -61,6 +57,5 @@ export function _encode_Sidechain(
     return _cached_encoder_for_Sidechain(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Sidechain */
 
 /* eslint-enable */

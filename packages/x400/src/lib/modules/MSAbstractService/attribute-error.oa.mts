@@ -24,7 +24,6 @@ import {
 } from '../MSAbstractService/attribute-error-ParameterType.ta.mjs';
 import { err_attribute_error } from '../MSAccessProtocol/err-attribute-error.va.mjs';
 import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION attribute_error */
 /**
  * @summary attribute_error
  * @description
@@ -61,6 +60,5 @@ export const attribute_error: ABSTRACT_ERROR<attribute_error_ParameterType> = {
     '&ParameterType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&ErrorPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attribute_error */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION xor_in_ecies */
 /**
  * @summary xor_in_ecies
  * @description
@@ -28,6 +27,5 @@ export
 const xor_in_ecies: OBJECT_IDENTIFIER = new _OID([
     18,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION xor_in_ecies */
 
 /* eslint-enable */

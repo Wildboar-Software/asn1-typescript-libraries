@@ -10,7 +10,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EntryInformationSelection_attributes */
 /**
  * @summary EntryInformationSelection_attributes
  * @description
@@ -24,13 +23,9 @@ import {
 export type EntryInformationSelection_attributes =
     | { allUserAttributes: NULL } /* CHOICE_ALT_ROOT */
     | { select: AttributeType[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION EntryInformationSelection_attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformationSelection_attributes */
 let _cached_decoder_for_EntryInformationSelection_attributes: $.ASN1Decoder<EntryInformationSelection_attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformationSelection_attributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryInformationSelection_attributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryInformationSelection_attributes
  * @function
@@ -58,13 +53,9 @@ export function _decode_EntryInformationSelection_attributes(el: _Element) {
     }
     return _cached_decoder_for_EntryInformationSelection_attributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryInformationSelection_attributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformationSelection_attributes */
 let _cached_encoder_for_EntryInformationSelection_attributes: $.ASN1Encoder<EntryInformationSelection_attributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformationSelection_attributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryInformationSelection_attributes */
 /**
  * @summary Encodes a(n) EntryInformationSelection_attributes into an ASN.1 Element.
  * @function
@@ -105,6 +96,5 @@ export function _encode_EntryInformationSelection_attributes(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryInformationSelection_attributes */
 
 /* eslint-enable */

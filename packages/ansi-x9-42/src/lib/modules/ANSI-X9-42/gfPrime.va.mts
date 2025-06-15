@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { fieldType } from "../ANSI-X9-42/fieldType.va.mjs";
-/* START_OF_SYMBOL_DEFINITION gfPrime */
+
 /**
  * @summary gfPrime
  * @description
@@ -15,6 +15,5 @@ import { fieldType } from "../ANSI-X9-42/fieldType.va.mjs";
  * @constant
  */
 export const gfPrime: OBJECT_IDENTIFIER = new _OID([1], fieldType);
-/* END_OF_SYMBOL_DEFINITION gfPrime */
 
 /* eslint-enable */

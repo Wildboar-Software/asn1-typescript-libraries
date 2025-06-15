@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ENTITY */
+
 /**
  * @summary ENTITY
  * @description
@@ -23,13 +23,11 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  * ```
  */
 export type ENTITY = NCName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ENTITY */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ENTITY */
+
 let _cached_decoder_for_ENTITY: $.ASN1Decoder<ENTITY> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ENTITY */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ENTITY */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ENTITY
  * @function
@@ -42,13 +40,11 @@ export function _decode_ENTITY(el: _Element) {
   }
   return _cached_decoder_for_ENTITY(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ENTITY */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ENTITY */
+
 let _cached_encoder_for_ENTITY: $.ASN1Encoder<ENTITY> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ENTITY */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ENTITY */
+
 /**
  * @summary Encodes a(n) ENTITY into an ASN.1 Element.
  * @function
@@ -63,6 +59,5 @@ export function _encode_ENTITY(value: ENTITY, elGetter: $.ASN1Encoder<ENTITY>) {
   return _cached_encoder_for_ENTITY(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ENTITY */
 
 /* eslint-enable */

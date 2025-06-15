@@ -14,7 +14,7 @@ import type {
     CONTENT_TYPE,
 } from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ContentTypeACBioContentInfo */
+
 /**
  * @summary ContentTypeACBioContentInfo
  * @description
@@ -32,6 +32,5 @@ import type {
 export const ContentTypeACBioContentInfo: CONTENT_TYPE[] = [
     acbioContentInformation,
 ];
-/* END_OF_SYMBOL_DEFINITION ContentTypeACBioContentInfo */
 
 /* eslint-enable */

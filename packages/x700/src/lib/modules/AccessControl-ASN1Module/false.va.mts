@@ -14,7 +14,6 @@ import {
     _decode_Boolean,
     _encode_Boolean,
 } from '../AccessControl-ASN1Module/Boolean.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION false_ */
 /**
  * @summary false_
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const false_: Boolean = false;
-/* END_OF_SYMBOL_DEFINITION false_ */
 
 /* eslint-enable */

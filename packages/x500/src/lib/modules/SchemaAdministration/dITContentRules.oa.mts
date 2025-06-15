@@ -11,7 +11,6 @@ import {
 import { id_soa_dITContentRules } from "../SchemaAdministration/id-soa-dITContentRules.va.mjs";
 import { dITContentRuleDescription } from "../SelectedAttributeTypes/dITContentRuleDescription.oa.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION dITContentRules */
 /**
  * @summary dITContentRules
  * @description
@@ -52,6 +51,5 @@ export const dITContentRules: ATTRIBUTE<DITContentRuleDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dITContentRules */
 
 /* eslint-enable */

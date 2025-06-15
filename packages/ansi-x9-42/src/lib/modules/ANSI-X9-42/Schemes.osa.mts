@@ -10,7 +10,7 @@ import { Schemes_Union5_Intersection0_Element } from "./Schemes-Union5-Intersect
 import { Schemes_Union6_Intersection0_Element } from "./Schemes-Union6-Intersection0-Element.oa.mjs";
 import { Schemes_Union7_Intersection0_Element } from "./Schemes-Union7-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Schemes */
+
 /**
  * @summary Schemes
  * @description
@@ -48,6 +48,5 @@ export const Schemes: KEY_AGREEMENT<any>[] = [
     Schemes_Union7_Intersection0_Element,
     ...NamedSchemes,
 ];
-/* END_OF_SYMBOL_DEFINITION Schemes */
 
 /* eslint-enable */

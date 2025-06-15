@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertificateGroupNumberRange */
 /**
  * @summary CertificateGroupNumberRange
  * @description
@@ -71,9 +70,7 @@ export class CertificateGroupNumberRange {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateGroupNumberRange */
 /**
  * @summary The Leading Root Component Types of CertificateGroupNumberRange
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_CertificateGroupNumberRange: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateGroupNumberRange */
 /**
  * @summary The Trailing Root Component Types of CertificateGroupNumberRange
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_CertificateGroupNumberRange: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificateGroupNumberRange: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateGroupNumberRange */
 /**
  * @summary The Extension Addition Component Types of CertificateGroupNumberRange
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_CertificateGroupNumberRange: $
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificateGroupNumberRange: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateGroupNumberRange */
 let _cached_decoder_for_CertificateGroupNumberRange: $.ASN1Decoder<CertificateGroupNumberRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificateGroupNumberRange */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateGroupNumberRange
  * @function
@@ -167,13 +156,9 @@ export function _decode_CertificateGroupNumberRange(el: _Element) {
     }
     return _cached_decoder_for_CertificateGroupNumberRange(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateGroupNumberRange */
 let _cached_encoder_for_CertificateGroupNumberRange: $.ASN1Encoder<CertificateGroupNumberRange> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificateGroupNumberRange */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificateGroupNumberRange */
 /**
  * @summary Encodes a(n) CertificateGroupNumberRange into an ASN.1 Element.
  * @function
@@ -217,6 +202,5 @@ export function _encode_CertificateGroupNumberRange(
     return _cached_encoder_for_CertificateGroupNumberRange(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificateGroupNumberRange */
 
 /* eslint-enable */

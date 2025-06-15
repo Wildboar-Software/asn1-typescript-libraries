@@ -15,7 +15,6 @@ import {
     _decode_RecipientName,
     _encode_RecipientName,
 } from '../MTSAbstractService/RecipientName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ImproperlySpecifiedRecipients */
 /**
  * @summary ImproperlySpecifiedRecipients
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type ImproperlySpecifiedRecipients = RecipientName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION ImproperlySpecifiedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ImproperlySpecifiedRecipients */
 let _cached_decoder_for_ImproperlySpecifiedRecipients: $.ASN1Decoder<ImproperlySpecifiedRecipients> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ImproperlySpecifiedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ImproperlySpecifiedRecipients */
 /**
  * @summary Decodes an ASN.1 element into a(n) ImproperlySpecifiedRecipients
  * @function
@@ -49,13 +44,9 @@ export function _decode_ImproperlySpecifiedRecipients(el: _Element) {
     }
     return _cached_decoder_for_ImproperlySpecifiedRecipients(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ImproperlySpecifiedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ImproperlySpecifiedRecipients */
 let _cached_encoder_for_ImproperlySpecifiedRecipients: $.ASN1Encoder<ImproperlySpecifiedRecipients> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ImproperlySpecifiedRecipients */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ImproperlySpecifiedRecipients */
 /**
  * @summary Encodes a(n) ImproperlySpecifiedRecipients into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_ImproperlySpecifiedRecipients(
     return _cached_encoder_for_ImproperlySpecifiedRecipients(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ImproperlySpecifiedRecipients */
 
 /* eslint-enable */

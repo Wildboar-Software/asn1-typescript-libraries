@@ -20,7 +20,6 @@ import {
     _decode_Abstract_Syntax_Name,
     _encode_Abstract_Syntax_Name,
 } from '../IPMSFileTransferBodyPartType/Abstract-Syntax-Name.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**
  * @summary Contents_Type_Attribute_constraint_set_and_abstract_syntax
  * @description
@@ -72,9 +71,7 @@ export class Contents_Type_Attribute_constraint_set_and_abstract_syntax {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**
  * @summary The Leading Root Component Types of Contents_Type_Attribute_constraint_set_and_abstract_syntax
  * @description
@@ -99,9 +96,7 @@ export const _root_component_type_list_1_spec_for_Contents_Type_Attribute_constr
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**
  * @summary The Trailing Root Component Types of Contents_Type_Attribute_constraint_set_and_abstract_syntax
  * @description
@@ -111,9 +106,7 @@ export const _root_component_type_list_1_spec_for_Contents_Type_Attribute_constr
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**
  * @summary The Extension Addition Component Types of Contents_Type_Attribute_constraint_set_and_abstract_syntax
  * @description
@@ -123,13 +116,9 @@ export const _root_component_type_list_2_spec_for_Contents_Type_Attribute_constr
  * @constant
  */
 export const _extension_additions_list_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 let _cached_decoder_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax: $.ASN1Decoder<Contents_Type_Attribute_constraint_set_and_abstract_syntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**
  * @summary Decodes an ASN.1 element into a(n) Contents_Type_Attribute_constraint_set_and_abstract_syntax
  * @function
@@ -169,13 +158,9 @@ export function _decode_Contents_Type_Attribute_constraint_set_and_abstract_synt
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 let _cached_encoder_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax: $.ASN1Encoder<Contents_Type_Attribute_constraint_set_and_abstract_syntax> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**
  * @summary Encodes a(n) Contents_Type_Attribute_constraint_set_and_abstract_syntax into an ASN.1 Element.
  * @function
@@ -215,6 +200,5 @@ export function _encode_Contents_Type_Attribute_constraint_set_and_abstract_synt
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 
 /* eslint-enable */

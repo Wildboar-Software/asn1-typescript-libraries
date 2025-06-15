@@ -20,7 +20,6 @@ import {
     _decode_NonMessageBodyPartSynopsis,
     _encode_NonMessageBodyPartSynopsis,
 } from '../EDIMSMessageStoreAttributes/NonMessageBodyPartSynopsis.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BodyPartSynopsis */
 /**
  * @summary BodyPartSynopsis
  * @description
@@ -37,13 +36,9 @@ import {
 export type BodyPartSynopsis =
     | { message: MessageBodyPartSynopsis } /* CHOICE_ALT_ROOT */
     | { non_message: NonMessageBodyPartSynopsis } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION BodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSynopsis */
 let _cached_decoder_for_BodyPartSynopsis: $.ASN1Decoder<BodyPartSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BodyPartSynopsis */
 /**
  * @summary Decodes an ASN.1 element into a(n) BodyPartSynopsis
  * @function
@@ -71,13 +66,9 @@ export function _decode_BodyPartSynopsis(el: _Element) {
     }
     return _cached_decoder_for_BodyPartSynopsis(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSynopsis */
 let _cached_encoder_for_BodyPartSynopsis: $.ASN1Encoder<BodyPartSynopsis> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BodyPartSynopsis */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BodyPartSynopsis */
 /**
  * @summary Encodes a(n) BodyPartSynopsis into an ASN.1 Element.
  * @function
@@ -111,6 +102,5 @@ export function _encode_BodyPartSynopsis(
     return _cached_encoder_for_BodyPartSynopsis(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BodyPartSynopsis */
 
 /* eslint-enable */

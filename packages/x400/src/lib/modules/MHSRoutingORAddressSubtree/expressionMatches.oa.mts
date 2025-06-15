@@ -22,7 +22,6 @@ import {
     _encode_ExpressionMatches,
 } from '../MHSRoutingORAddressSubtree/ExpressionMatches.ta.mjs';
 import { id_at_mhs_expression_matches } from '../MHSRoutingObjectIdentifiers/id-at-mhs-expression-matches.va.mjs';
-/* START_OF_SYMBOL_DEFINITION expressionMatches */
 /**
  * @summary expressionMatches
  * @description
@@ -58,6 +57,5 @@ export const expressionMatches: ATTRIBUTE<ExpressionMatches> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION expressionMatches */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_PKIMessages,
   _encode_PKIMessages,
 } from '../PKIXCMP-2009/PKIMessages.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NestedMessageContent */
+
 /**
  * @summary NestedMessageContent
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type NestedMessageContent = PKIMessages; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NestedMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NestedMessageContent */
+
 let _cached_decoder_for_NestedMessageContent: $.ASN1Decoder<NestedMessageContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NestedMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NestedMessageContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NestedMessageContent
  * @function
@@ -46,13 +44,11 @@ export function _decode_NestedMessageContent(el: _Element) {
   }
   return _cached_decoder_for_NestedMessageContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NestedMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NestedMessageContent */
+
 let _cached_encoder_for_NestedMessageContent: $.ASN1Encoder<NestedMessageContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NestedMessageContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NestedMessageContent */
+
 /**
  * @summary Encodes a(n) NestedMessageContent into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_NestedMessageContent(
   return _cached_encoder_for_NestedMessageContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NestedMessageContent */
 
 /* eslint-enable */

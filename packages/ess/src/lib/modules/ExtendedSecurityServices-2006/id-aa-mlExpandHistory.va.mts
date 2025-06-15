@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_aa_mlExpandHistory */
+
 /**
  * @summary id_aa_mlExpandHistory
  * @description
@@ -26,6 +26,5 @@ export const id_aa_mlExpandHistory: OBJECT_IDENTIFIER = new _OID([
     /* id-aa */ 2,
     3,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_aa_mlExpandHistory */
 
 /* eslint-enable */

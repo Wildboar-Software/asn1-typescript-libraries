@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ReportingDLName */
 /**
  * @summary ReportingDLName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type ReportingDLName = ORAddressAndOptionalDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReportingDLName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingDLName */
 let _cached_decoder_for_ReportingDLName: $.ASN1Decoder<ReportingDLName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportingDLName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReportingDLName */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingDLName
  * @function
@@ -46,13 +41,9 @@ export function _decode_ReportingDLName(el: _Element) {
     }
     return _cached_decoder_for_ReportingDLName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReportingDLName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingDLName */
 let _cached_encoder_for_ReportingDLName: $.ASN1Encoder<ReportingDLName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReportingDLName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReportingDLName */
 /**
  * @summary Encodes a(n) ReportingDLName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReportingDLName(
     return _cached_encoder_for_ReportingDLName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReportingDLName */
 
 /* eslint-enable */

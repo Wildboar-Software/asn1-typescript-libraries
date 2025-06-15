@@ -15,7 +15,6 @@ import { message_delivery } from '../MTSAbstractService/message-delivery.oa.mjs'
 import { report_delivery } from '../MTSAbstractService/report-delivery.oa.mjs';
 import { id_pt_delivery } from '../MTSObjectIdentifiers/id-pt-delivery.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION delivery */
 /**
  * @summary delivery
  * @description
@@ -44,6 +43,5 @@ export const delivery: PORT = {
     '&Consumer': [message_delivery, report_delivery] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_delivery /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION delivery */
 
 /* eslint-enable */

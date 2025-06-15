@@ -17,7 +17,6 @@ import {
     _decode_Pathname_Attribute,
     _encode_Pathname_Attribute,
 } from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PathnameandVersion */
 /**
  * @summary PathnameandVersion
  * @description
@@ -67,9 +66,7 @@ export class PathnameandVersion {
         return new PathnameandVersion(_o.pathname, _o.file_version);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PathnameandVersion */
 /**
  * @summary The Leading Root Component Types of PathnameandVersion
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_PathnameandVersion: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PathnameandVersion */
 /**
  * @summary The Trailing Root Component Types of PathnameandVersion
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_PathnameandVersion: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PathnameandVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PathnameandVersion */
 /**
  * @summary The Extension Addition Component Types of PathnameandVersion
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_PathnameandVersion: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_PathnameandVersion: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PathnameandVersion */
 let _cached_decoder_for_PathnameandVersion: $.ASN1Decoder<PathnameandVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PathnameandVersion */
 /**
  * @summary Decodes an ASN.1 element into a(n) PathnameandVersion
  * @function
@@ -170,13 +159,9 @@ export function _decode_PathnameandVersion(el: _Element) {
     }
     return _cached_decoder_for_PathnameandVersion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PathnameandVersion */
 let _cached_encoder_for_PathnameandVersion: $.ASN1Encoder<PathnameandVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PathnameandVersion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PathnameandVersion */
 /**
  * @summary Encodes a(n) PathnameandVersion into an ASN.1 Element.
  * @function
@@ -217,6 +202,5 @@ export function _encode_PathnameandVersion(
     return _cached_encoder_for_PathnameandVersion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PathnameandVersion */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_aae_auto_forwarding_loop */
 /**
  * @summary id_aae_auto_forwarding_loop
  * @description
@@ -25,6 +24,5 @@ import { id_aae } from '../IPMSObjectIdentifiers/id-aae.va.mjs';
  * @constant
  */
 export const id_aae_auto_forwarding_loop: ID = new _OID([1], id_aae);
-/* END_OF_SYMBOL_DEFINITION id_aae_auto_forwarding_loop */
 
 /* eslint-enable */

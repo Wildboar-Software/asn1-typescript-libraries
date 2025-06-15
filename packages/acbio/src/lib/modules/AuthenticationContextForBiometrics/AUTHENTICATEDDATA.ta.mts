@@ -52,7 +52,7 @@ import {
     _encode_UnauthAttributes,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AUTHENTICATEDDATA */
+
 /**
  * @summary AUTHENTICATEDDATA
  * @description
@@ -160,9 +160,8 @@ export class AUTHENTICATEDDATA<EncapsulatedContentInfo> {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AUTHENTICATEDDATA */
+
 /**
  * @summary The Leading Root Component Types of AUTHENTICATEDDATA
  * @description
@@ -224,9 +223,8 @@ export const _root_component_type_list_1_spec_for_AUTHENTICATEDDATA: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AUTHENTICATEDDATA */
+
 /**
  * @summary The Trailing Root Component Types of AUTHENTICATEDDATA
  * @description
@@ -236,9 +234,8 @@ export const _root_component_type_list_1_spec_for_AUTHENTICATEDDATA: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AUTHENTICATEDDATA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AUTHENTICATEDDATA */
+
 /**
  * @summary The Extension Addition Component Types of AUTHENTICATEDDATA
  * @description
@@ -248,12 +245,10 @@ export const _root_component_type_list_2_spec_for_AUTHENTICATEDDATA: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_AUTHENTICATEDDATA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AUTHENTICATEDDATA */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _get_decoder_for_AUTHENTICATEDDATA */
+
+
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) AUTHENTICATEDDATA
  * @function
@@ -335,12 +330,10 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_decoder_for_AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AUTHENTICATEDDATA */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AUTHENTICATEDDATA */
 
-/* START_OF_SYMBOL_DEFINITION _get_encoder_for_AUTHENTICATEDDATA */
+
+
 /**
  * @summary Returns a function that will encode a(n) AUTHENTICATEDDATA into an ASN.1 Element.
  * @function
@@ -409,6 +402,5 @@ export function _get_encoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
         );
     };
 }
-/* END_OF_SYMBOL_DEFINITION _get_encoder_for_AUTHENTICATEDDATA */
 
 /* eslint-enable */

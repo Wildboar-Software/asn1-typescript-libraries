@@ -15,7 +15,6 @@ import {
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EntryExitMTANames */
 /**
  * @summary EntryExitMTANames
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EntryExitMTANames = MTAName[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION EntryExitMTANames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryExitMTANames */
 let _cached_decoder_for_EntryExitMTANames: $.ASN1Decoder<EntryExitMTANames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryExitMTANames */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryExitMTANames */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryExitMTANames
  * @function
@@ -48,13 +43,9 @@ export function _decode_EntryExitMTANames(el: _Element) {
     }
     return _cached_decoder_for_EntryExitMTANames(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryExitMTANames */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryExitMTANames */
 let _cached_encoder_for_EntryExitMTANames: $.ASN1Encoder<EntryExitMTANames> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryExitMTANames */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryExitMTANames */
 /**
  * @summary Encodes a(n) EntryExitMTANames into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_EntryExitMTANames(
     return _cached_encoder_for_EntryExitMTANames(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryExitMTANames */
 
 /* eslint-enable */

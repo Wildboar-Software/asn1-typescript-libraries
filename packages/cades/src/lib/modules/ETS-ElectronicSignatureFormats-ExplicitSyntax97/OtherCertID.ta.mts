@@ -19,7 +19,6 @@ import {
 } from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION OtherCertID */
 /**
  * @summary OtherCertID
  * @description
@@ -69,9 +68,7 @@ class OtherCertID {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherCertID */
 /**
  * @summary The Leading Root Component Types of OtherCertID
  * @description
@@ -85,9 +82,7 @@ const _root_component_type_list_1_spec_for_OtherCertID: $.ComponentSpec[] = [
     new $.ComponentSpec("otherCertHash", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("issuerSerial", true, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherCertID */
 /**
  * @summary The Trailing Root Component Types of OtherCertID
  * @description
@@ -100,9 +95,7 @@ export
 const _root_component_type_list_2_spec_for_OtherCertID: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherCertID */
 /**
  * @summary The Extension Addition Component Types of OtherCertID
  * @description
@@ -115,13 +108,9 @@ export
 const _extension_additions_list_spec_for_OtherCertID: $.ComponentSpec[] = [
 
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherCertID */
 let _cached_decoder_for_OtherCertID: $.ASN1Decoder<OtherCertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OtherCertID */
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherCertID
  * @function
@@ -154,13 +143,9 @@ function _decode_OtherCertID (el: _Element) {
 }; }
     return _cached_decoder_for_OtherCertID(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherCertID */
 let _cached_encoder_for_OtherCertID: $.ASN1Encoder<OtherCertID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OtherCertID */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OtherCertID */
 /**
  * @summary Encodes a(n) OtherCertID into an ASN.1 Element.
  * @function
@@ -181,6 +166,5 @@ function _encode_OtherCertID (value: OtherCertID, elGetter: $.ASN1Encoder<OtherC
     return _cached_encoder_for_OtherCertID(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OtherCertID */
 
 /* eslint-enable */

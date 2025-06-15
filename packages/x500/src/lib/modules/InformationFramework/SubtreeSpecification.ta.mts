@@ -30,7 +30,6 @@ import {
     _root_component_type_list_1_spec_for_ChopSpecification,
 } from "../InformationFramework/ChopSpecification.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SubtreeSpecification */
 /**
  * @summary SubtreeSpecification
  * @description
@@ -133,9 +132,7 @@ export class SubtreeSpecification implements ChopSpecification {
         return 0;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubtreeSpecification */
 /**
  * @summary The Leading Root Component Types of SubtreeSpecification
  * @description
@@ -161,9 +158,7 @@ export const _root_component_type_list_1_spec_for_SubtreeSpecification: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubtreeSpecification */
 /**
  * @summary The Trailing Root Component Types of SubtreeSpecification
  * @description
@@ -173,9 +168,7 @@ export const _root_component_type_list_1_spec_for_SubtreeSpecification: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubtreeSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubtreeSpecification */
 /**
  * @summary The Extension Addition Component Types of SubtreeSpecification
  * @description
@@ -185,13 +178,9 @@ export const _root_component_type_list_2_spec_for_SubtreeSpecification: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_SubtreeSpecification: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubtreeSpecification */
 let _cached_decoder_for_SubtreeSpecification: $.ASN1Decoder<SubtreeSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubtreeSpecification */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubtreeSpecification
  * @function
@@ -271,13 +260,9 @@ export function _decode_SubtreeSpecification(el: _Element) {
     }
     return _cached_decoder_for_SubtreeSpecification(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubtreeSpecification */
 let _cached_encoder_for_SubtreeSpecification: $.ASN1Encoder<SubtreeSpecification> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubtreeSpecification */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubtreeSpecification */
 /**
  * @summary Encodes a(n) SubtreeSpecification into an ASN.1 Element.
  * @function
@@ -364,6 +349,5 @@ export function _encode_SubtreeSpecification(
     return _cached_encoder_for_SubtreeSpecification(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubtreeSpecification */
 
 /* eslint-enable */

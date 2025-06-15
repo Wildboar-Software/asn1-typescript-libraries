@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_crt } from '../MSObjectIdentifiers/id-crt.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_crt_ms_access_94 */
 /**
  * @summary id_crt_ms_access_94
  * @description
@@ -25,6 +24,5 @@ import { id_crt } from '../MSObjectIdentifiers/id-crt.va.mjs';
  * @constant
  */
 export const id_crt_ms_access_94: ID = new _OID([1], id_crt);
-/* END_OF_SYMBOL_DEFINITION id_crt_ms_access_94 */
 
 /* eslint-enable */

@@ -18,7 +18,6 @@ import { ANSIX9NamedDomains_Union6_Intersection0_Element } from "./ANSIX9NamedDo
 import { ANSIX9NamedDomains_Union7_Intersection0_Element } from "./ANSIX9NamedDomains-Union7-Intersection0-Element.oa.mjs";
 import { ANSIX9NamedDomains_Union8_Intersection0_Element } from "./ANSIX9NamedDomains-Union8-Intersection0-Element.oa.mjs";
 import { ANSIX9NamedDomains_Union9_Intersection0_Element } from "./ANSIX9NamedDomains-Union9-Intersection0-Element.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION ANSIX9NamedDomains */
 /**
  * @summary ANSIX9NamedDomains
  * @description
@@ -73,6 +72,5 @@ export const ANSIX9NamedDomains: ECDOMAIN[] = [
     ANSIX9NamedDomains_Union16_Intersection0_Element,
     ANSIX9NamedDomains_Union17_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION ANSIX9NamedDomains */
 
 /* eslint-enable */

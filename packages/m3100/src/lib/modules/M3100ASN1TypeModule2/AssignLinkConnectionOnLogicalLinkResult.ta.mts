@@ -15,7 +15,7 @@ import {
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AssignLinkConnectionOnLogicalLinkResult */
+
 /**
  * @summary AssignLinkConnectionOnLogicalLinkResult
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type AssignLinkConnectionOnLogicalLinkResult = LinkConnectionList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AssignLinkConnectionOnLogicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult */
+
 let _cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult: $.ASN1Decoder<AssignLinkConnectionOnLogicalLinkResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AssignLinkConnectionOnLogicalLinkResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AssignLinkConnectionOnLogicalLinkResult
  * @function
@@ -46,13 +44,11 @@ export function _decode_AssignLinkConnectionOnLogicalLinkResult(el: _Element) {
     }
     return _cached_decoder_for_AssignLinkConnectionOnLogicalLinkResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AssignLinkConnectionOnLogicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignLinkConnectionOnLogicalLinkResult */
+
 let _cached_encoder_for_AssignLinkConnectionOnLogicalLinkResult: $.ASN1Encoder<AssignLinkConnectionOnLogicalLinkResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssignLinkConnectionOnLogicalLinkResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AssignLinkConnectionOnLogicalLinkResult */
+
 /**
  * @summary Encodes a(n) AssignLinkConnectionOnLogicalLinkResult into an ASN.1 Element.
  * @function
@@ -73,6 +69,5 @@ export function _encode_AssignLinkConnectionOnLogicalLinkResult(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AssignLinkConnectionOnLogicalLinkResult */
 
 /* eslint-enable */

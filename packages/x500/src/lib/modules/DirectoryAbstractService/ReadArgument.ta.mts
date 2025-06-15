@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION ReadArgument */
 /**
  * @summary ReadArgument
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type ReadArgument = OPTIONALLY_PROTECTED<ReadArgumentData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ReadArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadArgument */
 let _cached_decoder_for_ReadArgument: $.ASN1Decoder<ReadArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadArgument */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ReadArgument */
 /**
  * @summary Decodes an ASN.1 element into a(n) ReadArgument
  * @function
@@ -44,13 +39,9 @@ export function _decode_ReadArgument(el: _Element) {
     }
     return _cached_decoder_for_ReadArgument(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ReadArgument */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadArgument */
 let _cached_encoder_for_ReadArgument: $.ASN1Encoder<ReadArgument> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ReadArgument */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ReadArgument */
 /**
  * @summary Encodes a(n) ReadArgument into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_ReadArgument(
     return _cached_encoder_for_ReadArgument(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ReadArgument */
 
 /* eslint-enable */

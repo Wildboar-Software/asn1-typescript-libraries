@@ -41,7 +41,6 @@ import {
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EncryptionToken */
 /**
  * @summary EncryptionToken
  * @description
@@ -134,9 +133,7 @@ export class EncryptionToken {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptionToken */
 /**
  * @summary The Leading Root Component Types of EncryptionToken
  * @description
@@ -189,9 +186,7 @@ export const _root_component_type_list_1_spec_for_EncryptionToken: $.ComponentSp
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptionToken */
 /**
  * @summary The Trailing Root Component Types of EncryptionToken
  * @description
@@ -201,9 +196,7 @@ export const _root_component_type_list_1_spec_for_EncryptionToken: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptionToken: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptionToken */
 /**
  * @summary The Extension Addition Component Types of EncryptionToken
  * @description
@@ -213,13 +206,9 @@ export const _root_component_type_list_2_spec_for_EncryptionToken: $.ComponentSp
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptionToken: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionToken */
 let _cached_decoder_for_EncryptionToken: $.ASN1Decoder<EncryptionToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptionToken */
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptionToken
  * @function
@@ -297,13 +286,9 @@ export function _decode_EncryptionToken(el: _Element) {
     }
     return _cached_decoder_for_EncryptionToken(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionToken */
 let _cached_encoder_for_EncryptionToken: $.ASN1Encoder<EncryptionToken> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionToken */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptionToken */
 /**
  * @summary Encodes a(n) EncryptionToken into an ASN.1 Element.
  * @function
@@ -384,6 +369,5 @@ export function _encode_EncryptionToken(
     return _cached_encoder_for_EncryptionToken(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptionToken */
 
 /* eslint-enable */

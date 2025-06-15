@@ -11,7 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SubjectAltPublicKeyInfo */
 /**
  * @summary SubjectAltPublicKeyInfo
  * @description
@@ -67,9 +66,7 @@ export class SubjectAltPublicKeyInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectAltPublicKeyInfo */
 /**
  * @summary The Leading Root Component Types of SubjectAltPublicKeyInfo
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_SubjectAltPublicKeyInfo: $.Com
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectAltPublicKeyInfo */
 /**
  * @summary The Trailing Root Component Types of SubjectAltPublicKeyInfo
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_SubjectAltPublicKeyInfo: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SubjectAltPublicKeyInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectAltPublicKeyInfo */
 /**
  * @summary The Extension Addition Component Types of SubjectAltPublicKeyInfo
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_SubjectAltPublicKeyInfo: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_SubjectAltPublicKeyInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectAltPublicKeyInfo */
 let _cached_decoder_for_SubjectAltPublicKeyInfo: $.ASN1Decoder<SubjectAltPublicKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubjectAltPublicKeyInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectAltPublicKeyInfo
  * @function
@@ -155,13 +144,9 @@ export function _decode_SubjectAltPublicKeyInfo(el: _Element) {
     }
     return _cached_decoder_for_SubjectAltPublicKeyInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectAltPublicKeyInfo */
 let _cached_encoder_for_SubjectAltPublicKeyInfo: $.ASN1Encoder<SubjectAltPublicKeyInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectAltPublicKeyInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubjectAltPublicKeyInfo */
 /**
  * @summary Encodes a(n) SubjectAltPublicKeyInfo into an ASN.1 Element.
  * @function
@@ -196,6 +181,5 @@ export function _encode_SubjectAltPublicKeyInfo(
     return _cached_encoder_for_SubjectAltPublicKeyInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubjectAltPublicKeyInfo */
 
 /* eslint-enable */

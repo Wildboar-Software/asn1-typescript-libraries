@@ -15,7 +15,6 @@ import {
     _decode_AdditionalActions,
     _encode_AdditionalActions,
 } from '../MTAAbstractService/AdditionalActions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION InternalAdditionalActions */
 /**
  * @summary InternalAdditionalActions
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type InternalAdditionalActions = AdditionalActions; // DefinedType
-/* END_OF_SYMBOL_DEFINITION InternalAdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalAdditionalActions */
 let _cached_decoder_for_InternalAdditionalActions: $.ASN1Decoder<InternalAdditionalActions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InternalAdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _decode_InternalAdditionalActions */
 /**
  * @summary Decodes an ASN.1 element into a(n) InternalAdditionalActions
  * @function
@@ -46,13 +41,9 @@ export function _decode_InternalAdditionalActions(el: _Element) {
     }
     return _cached_decoder_for_InternalAdditionalActions(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_InternalAdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalAdditionalActions */
 let _cached_encoder_for_InternalAdditionalActions: $.ASN1Encoder<InternalAdditionalActions> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InternalAdditionalActions */
 
-/* START_OF_SYMBOL_DEFINITION _encode_InternalAdditionalActions */
 /**
  * @summary Encodes a(n) InternalAdditionalActions into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_InternalAdditionalActions(
     return _cached_encoder_for_InternalAdditionalActions(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_InternalAdditionalActions */
 
 /* eslint-enable */

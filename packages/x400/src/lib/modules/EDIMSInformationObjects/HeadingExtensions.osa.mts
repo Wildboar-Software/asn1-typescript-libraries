@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.mjs';
 import { primary_body_part_compression_indication } from '../EDIMSInformationObjects/primary-body-part-compression-indication.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION HeadingExtensions */
 /**
  * @summary HeadingExtensions
  * @description
@@ -29,6 +28,5 @@ import { primary_body_part_compression_indication } from '../EDIMSInformationObj
 export const HeadingExtensions: EDIM_EXTENSION[] = [
     primary_body_part_compression_indication,
 ];
-/* END_OF_SYMBOL_DEFINITION HeadingExtensions */
 
 /* eslint-enable */

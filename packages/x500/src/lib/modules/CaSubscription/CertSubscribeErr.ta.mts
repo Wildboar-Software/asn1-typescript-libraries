@@ -11,7 +11,6 @@ import {
     _encode_CASP_error,
     _enum_for_CASP_error,
 } from "../CaSubscription/CASP-error.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertSubscribeErr */
 /**
  * @summary CertSubscribeErr
  * @description
@@ -68,9 +67,7 @@ export class CertSubscribeErr {
 
     public static _enum_for_code = _enum_for_CASP_error;
 }
-/* END_OF_SYMBOL_DEFINITION CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertSubscribeErr */
 /**
  * @summary The Leading Root Component Types of CertSubscribeErr
  * @description
@@ -88,9 +85,7 @@ export const _root_component_type_list_1_spec_for_CertSubscribeErr: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertSubscribeErr */
 /**
  * @summary The Trailing Root Component Types of CertSubscribeErr
  * @description
@@ -100,9 +95,7 @@ export const _root_component_type_list_1_spec_for_CertSubscribeErr: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertSubscribeErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertSubscribeErr */
 /**
  * @summary The Extension Addition Component Types of CertSubscribeErr
  * @description
@@ -112,13 +105,9 @@ export const _root_component_type_list_2_spec_for_CertSubscribeErr: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_CertSubscribeErr: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeErr */
 let _cached_decoder_for_CertSubscribeErr: $.ASN1Decoder<CertSubscribeErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertSubscribeErr */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertSubscribeErr
  * @function
@@ -146,13 +135,9 @@ export function _decode_CertSubscribeErr(el: _Element) {
     }
     return _cached_decoder_for_CertSubscribeErr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeErr */
 let _cached_encoder_for_CertSubscribeErr: $.ASN1Encoder<CertSubscribeErr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertSubscribeErr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertSubscribeErr */
 /**
  * @summary Encodes a(n) CertSubscribeErr into an ASN.1 Element.
  * @function
@@ -188,6 +173,5 @@ export function _encode_CertSubscribeErr(
     return _cached_encoder_for_CertSubscribeErr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertSubscribeErr */
 
 /* eslint-enable */

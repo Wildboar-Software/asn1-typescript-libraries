@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { se } from '../ISIS/se.va.mjs';
-/* START_OF_SYMBOL_DEFINITION authenticationFailure */
 /**
  * @summary authenticationFailure
  * @description
@@ -28,6 +27,5 @@ export const authenticationFailure: OBJECT_IDENTIFIER = new _OID(
   [/* authenticationFailure */ 2],
   se
 );
-/* END_OF_SYMBOL_DEFINITION authenticationFailure */
 
 /* eslint-enable */

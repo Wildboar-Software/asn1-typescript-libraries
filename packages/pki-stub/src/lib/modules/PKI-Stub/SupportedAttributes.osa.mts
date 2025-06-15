@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { ATTRIBUTE } from "../PKI-Stub/ATTRIBUTE.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SupportedAttributes */
 /**
  * @summary SupportedAttributes
  * @description
@@ -27,6 +26,5 @@ import { ATTRIBUTE } from "../PKI-Stub/ATTRIBUTE.oca.mjs";
  *
  */
 export const SupportedAttributes: ATTRIBUTE[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedAttributes */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from '../MTSAbstractService/UniversalPDSParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniversalPostOfficeBoxAddress */
 /**
  * @summary UniversalPostOfficeBoxAddress
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UniversalPostOfficeBoxAddress = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalPostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPostOfficeBoxAddress */
 let _cached_decoder_for_UniversalPostOfficeBoxAddress: $.ASN1Decoder<UniversalPostOfficeBoxAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalPostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalPostOfficeBoxAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPostOfficeBoxAddress
  * @function
@@ -46,13 +41,9 @@ export function _decode_UniversalPostOfficeBoxAddress(el: _Element) {
     }
     return _cached_decoder_for_UniversalPostOfficeBoxAddress(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalPostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPostOfficeBoxAddress */
 let _cached_encoder_for_UniversalPostOfficeBoxAddress: $.ASN1Encoder<UniversalPostOfficeBoxAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalPostOfficeBoxAddress */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalPostOfficeBoxAddress */
 /**
  * @summary Encodes a(n) UniversalPostOfficeBoxAddress into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_UniversalPostOfficeBoxAddress(
     return _cached_encoder_for_UniversalPostOfficeBoxAddress(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalPostOfficeBoxAddress */
 
 /* eslint-enable */

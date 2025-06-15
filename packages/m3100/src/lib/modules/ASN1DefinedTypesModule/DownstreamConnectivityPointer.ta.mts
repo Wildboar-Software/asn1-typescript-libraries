@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DownstreamConnectivityPointer */
+
 /**
  * @summary DownstreamConnectivityPointer
  * @description
@@ -39,13 +39,11 @@ export type DownstreamConnectivityPointer =
     | { concatenated: ObjectInstance[] } /* CHOICE_ALT_ROOT */
     | { broadcast: ObjectInstance[] } /* CHOICE_ALT_ROOT */
     | { broadcastConcatenated: ObjectInstance[][] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DownstreamConnectivityPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DownstreamConnectivityPointer */
+
 let _cached_decoder_for_DownstreamConnectivityPointer: $.ASN1Decoder<DownstreamConnectivityPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DownstreamConnectivityPointer */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DownstreamConnectivityPointer */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DownstreamConnectivityPointer
  * @function
@@ -87,13 +85,11 @@ export function _decode_DownstreamConnectivityPointer(el: _Element) {
     }
     return _cached_decoder_for_DownstreamConnectivityPointer(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DownstreamConnectivityPointer */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DownstreamConnectivityPointer */
+
 let _cached_encoder_for_DownstreamConnectivityPointer: $.ASN1Encoder<DownstreamConnectivityPointer> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DownstreamConnectivityPointer */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DownstreamConnectivityPointer */
+
 /**
  * @summary Encodes a(n) DownstreamConnectivityPointer into an ASN.1 Element.
  * @function
@@ -139,6 +135,5 @@ export function _encode_DownstreamConnectivityPointer(
     return _cached_encoder_for_DownstreamConnectivityPointer(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DownstreamConnectivityPointer */
 
 /* eslint-enable */

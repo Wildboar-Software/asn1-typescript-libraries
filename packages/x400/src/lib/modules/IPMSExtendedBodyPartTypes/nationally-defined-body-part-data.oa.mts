@@ -16,7 +16,6 @@ import {
     _encode_NationallyDefinedBodyPart,
 } from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.mjs';
 import { id_et_nationally_defined } from '../IPMSObjectIdentifiers/id-et-nationally-defined.va.mjs';
-/* START_OF_SYMBOL_DEFINITION nationally_defined_body_part_data */
 /**
  * @summary nationally_defined_body_part_data
  * @description
@@ -42,6 +41,5 @@ export const nationally_defined_body_part_data: TYPE_IDENTIFIER<NationallyDefine
     '&id': id_et_nationally_defined /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nationally_defined_body_part_data */
 
 /* eslint-enable */

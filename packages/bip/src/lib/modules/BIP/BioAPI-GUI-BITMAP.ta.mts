@@ -26,7 +26,7 @@ import {
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_GUI_BITMAP */
+
 /**
  * @summary BioAPI_GUI_BITMAP
  * @description
@@ -95,9 +95,8 @@ export class BioAPI_GUI_BITMAP {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_GUI_BITMAP */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_GUI_BITMAP
  * @description
@@ -136,9 +135,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_GUI_BITMAP: $.Component
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_GUI_BITMAP */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_GUI_BITMAP
  * @description
@@ -148,9 +146,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_GUI_BITMAP: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_GUI_BITMAP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_GUI_BITMAP */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_GUI_BITMAP
  * @description
@@ -160,13 +157,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_GUI_BITMAP: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_GUI_BITMAP: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_BITMAP */
+
 let _cached_decoder_for_BioAPI_GUI_BITMAP: $.ASN1Decoder<BioAPI_GUI_BITMAP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_BITMAP */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_GUI_BITMAP
  * @function
@@ -218,13 +213,11 @@ export function _decode_BioAPI_GUI_BITMAP(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_GUI_BITMAP(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_BITMAP */
+
 let _cached_encoder_for_BioAPI_GUI_BITMAP: $.ASN1Encoder<BioAPI_GUI_BITMAP> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_GUI_BITMAP */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_BITMAP */
+
 /**
  * @summary Encodes a(n) BioAPI_GUI_BITMAP into an ASN.1 Element.
  * @function
@@ -260,6 +253,5 @@ export function _encode_BioAPI_GUI_BITMAP(
   return _cached_encoder_for_BioAPI_GUI_BITMAP(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_GUI_BITMAP */
 
 /* eslint-enable */

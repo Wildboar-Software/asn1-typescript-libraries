@@ -13,7 +13,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION PrivateDomainIdentifier */
 /**
  * @summary PrivateDomainIdentifier
  * @description
@@ -30,13 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 export type PrivateDomainIdentifier =
     | { numeric: NumericString } /* CHOICE_ALT_ROOT */
     | { printable: PrintableString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION PrivateDomainIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDomainIdentifier */
 let _cached_decoder_for_PrivateDomainIdentifier: $.ASN1Decoder<PrivateDomainIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateDomainIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateDomainIdentifier */
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateDomainIdentifier
  * @function
@@ -54,13 +49,9 @@ export function _decode_PrivateDomainIdentifier(el: _Element) {
     }
     return _cached_decoder_for_PrivateDomainIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateDomainIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDomainIdentifier */
 let _cached_encoder_for_PrivateDomainIdentifier: $.ASN1Encoder<PrivateDomainIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateDomainIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateDomainIdentifier */
 /**
  * @summary Encodes a(n) PrivateDomainIdentifier into an ASN.1 Element.
  * @function
@@ -84,6 +75,5 @@ export function _encode_PrivateDomainIdentifier(
     return _cached_encoder_for_PrivateDomainIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateDomainIdentifier */
 
 /* eslint-enable */

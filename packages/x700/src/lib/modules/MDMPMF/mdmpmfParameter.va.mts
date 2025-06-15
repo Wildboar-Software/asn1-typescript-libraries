@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION mdmpmfParameter */
 /**
  * @summary mdmpmfParameter
  * @description
@@ -29,6 +28,5 @@ export const mdmpmfParameter: OBJECT_IDENTIFIER = new _OID(
     [/* ms */ 9, /* function */ 2, /* part19 */ 19, /* parameter */ 5],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION mdmpmfParameter */
 
 /* eslint-enable */

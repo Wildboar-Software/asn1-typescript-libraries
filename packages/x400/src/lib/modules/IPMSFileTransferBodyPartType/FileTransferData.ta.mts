@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FileTransferData */
 /**
  * @summary FileTransferData
  * @description
@@ -24,13 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FileTransferData = EXTERNAL[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION FileTransferData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FileTransferData */
 let _cached_decoder_for_FileTransferData: $.ASN1Decoder<FileTransferData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FileTransferData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FileTransferData */
 /**
  * @summary Decodes an ASN.1 element into a(n) FileTransferData
  * @function
@@ -45,13 +40,9 @@ export function _decode_FileTransferData(el: _Element) {
     }
     return _cached_decoder_for_FileTransferData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FileTransferData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FileTransferData */
 let _cached_encoder_for_FileTransferData: $.ASN1Encoder<FileTransferData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FileTransferData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FileTransferData */
 /**
  * @summary Encodes a(n) FileTransferData into an ASN.1 Element.
  * @function
@@ -72,6 +63,5 @@ export function _encode_FileTransferData(
     return _cached_encoder_for_FileTransferData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FileTransferData */
 
 /* eslint-enable */

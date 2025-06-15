@@ -14,7 +14,7 @@ import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPER
 import { Forward } from './Forward.osa.mjs';
 import { Reverse } from './Reverse.osa.mjs';
 
-/* START_OF_SYMBOL_DEFINITION SupplierPerforms */
+
 /**
  * @summary SupplierPerforms
  * @description

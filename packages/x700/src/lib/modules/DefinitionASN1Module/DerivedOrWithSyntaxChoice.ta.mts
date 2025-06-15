@@ -20,7 +20,7 @@ import {
     _decode_DefinedType,
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DerivedOrWithSyntaxChoice */
+
 /**
  * @summary DerivedOrWithSyntaxChoice
  * @description
@@ -37,13 +37,11 @@ import {
 export type DerivedOrWithSyntaxChoice =
     | { derivedFrom: TemplateLabel } /* CHOICE_ALT_ROOT */
     | { withSyntaxChoice: DefinedType } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DerivedOrWithSyntaxChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DerivedOrWithSyntaxChoice */
+
 let _cached_decoder_for_DerivedOrWithSyntaxChoice: $.ASN1Decoder<DerivedOrWithSyntaxChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DerivedOrWithSyntaxChoice */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DerivedOrWithSyntaxChoice */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DerivedOrWithSyntaxChoice
  * @function
@@ -69,13 +67,11 @@ export function _decode_DerivedOrWithSyntaxChoice(el: _Element) {
     }
     return _cached_decoder_for_DerivedOrWithSyntaxChoice(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DerivedOrWithSyntaxChoice */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DerivedOrWithSyntaxChoice */
+
 let _cached_encoder_for_DerivedOrWithSyntaxChoice: $.ASN1Encoder<DerivedOrWithSyntaxChoice> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DerivedOrWithSyntaxChoice */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DerivedOrWithSyntaxChoice */
+
 /**
  * @summary Encodes a(n) DerivedOrWithSyntaxChoice into an ASN.1 Element.
  * @function
@@ -109,6 +105,5 @@ export function _encode_DerivedOrWithSyntaxChoice(
     return _cached_encoder_for_DerivedOrWithSyntaxChoice(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DerivedOrWithSyntaxChoice */
 
 /* eslint-enable */

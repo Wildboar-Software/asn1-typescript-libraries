@@ -11,7 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AltName */
 /**
  * @summary AltName
  * @description
@@ -60,9 +59,7 @@ export class AltName {
         return new AltName(_o.altnameType, _o.altNameValue);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AltName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AltName */
 /**
  * @summary The Leading Root Component Types of AltName
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_AltName: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AltName */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AltName */
 /**
  * @summary The Trailing Root Component Types of AltName
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_AltName: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AltName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AltName */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AltName */
 /**
  * @summary The Extension Addition Component Types of AltName
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_AltName: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_AltName: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AltName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AltName */
 let _cached_decoder_for_AltName: $.ASN1Decoder<AltName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AltName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AltName */
 /**
  * @summary Decodes an ASN.1 element into a(n) AltName
  * @function
@@ -157,13 +146,9 @@ export function _decode_AltName(el: _Element) {
     }
     return _cached_decoder_for_AltName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AltName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AltName */
 let _cached_encoder_for_AltName: $.ASN1Encoder<AltName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AltName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AltName */
 /**
  * @summary Encodes a(n) AltName into an ASN.1 Element.
  * @function
@@ -197,6 +182,5 @@ export function _encode_AltName(
     return _cached_encoder_for_AltName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AltName */
 
 /* eslint-enable */

@@ -6,7 +6,6 @@ import {
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
 } from "../PasswordPolicy/PwdVocabulary.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdVocabularyDescription */
 /**
  * @summary pwdVocabularyDescription
  * @description
@@ -36,6 +35,5 @@ export const pwdVocabularyDescription: SYNTAX_NAME<PwdVocabulary> = {
     "&id": id_asx_pwdVocabularyDescription /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdVocabularyDescription */
 
 /* eslint-enable */

@@ -17,7 +17,6 @@ import {
     _decode_ORAddress,
     _encode_ORAddress,
 } from '../MTSAbstractService/ORAddress.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AliasRedirection */
 /**
  * @summary AliasRedirection
  * @description
@@ -77,9 +76,7 @@ export class AliasRedirection {
         return true;
     }
 }
-/* END_OF_SYMBOL_DEFINITION AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AliasRedirection */
 /**
  * @summary The Leading Root Component Types of AliasRedirection
  * @description
@@ -104,9 +101,7 @@ export const _root_component_type_list_1_spec_for_AliasRedirection: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AliasRedirection */
 /**
  * @summary The Trailing Root Component Types of AliasRedirection
  * @description
@@ -116,9 +111,7 @@ export const _root_component_type_list_1_spec_for_AliasRedirection: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AliasRedirection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AliasRedirection */
 /**
  * @summary The Extension Addition Component Types of AliasRedirection
  * @description
@@ -128,13 +121,9 @@ export const _root_component_type_list_2_spec_for_AliasRedirection: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_AliasRedirection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AliasRedirection */
 let _cached_decoder_for_AliasRedirection: $.ASN1Decoder<AliasRedirection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AliasRedirection */
 /**
  * @summary Decodes an ASN.1 element into a(n) AliasRedirection
  * @function
@@ -181,13 +170,9 @@ export function _decode_AliasRedirection(el: _Element) {
     }
     return _cached_decoder_for_AliasRedirection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AliasRedirection */
 let _cached_encoder_for_AliasRedirection: $.ASN1Encoder<AliasRedirection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AliasRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AliasRedirection */
 /**
  * @summary Encodes a(n) AliasRedirection into an ASN.1 Element.
  * @function
@@ -232,6 +217,5 @@ export function _encode_AliasRedirection(
     return _cached_encoder_for_AliasRedirection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AliasRedirection */
 
 /* eslint-enable */

@@ -14,7 +14,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { id_con_dl_nested_dl } from '../MHSObjectIdentifiers/id-con-dl-nested-dl.va.mjs';
 import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION dl_nested_dl */
 /**
  * @summary dl_nested_dl
  * @description
@@ -46,6 +45,5 @@ export const dl_nested_dl: CONTEXT<NULL> = {
     '&Assertion': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&absentMatch': TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dl_nested_dl */
 
 /* eslint-enable */

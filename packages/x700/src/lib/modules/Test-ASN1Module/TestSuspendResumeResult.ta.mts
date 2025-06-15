@@ -15,7 +15,6 @@ import {
     _decode_TestSuspendResumeElement,
     _encode_TestSuspendResumeElement,
 } from '../Test-ASN1Module/TestSuspendResumeElement.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestSuspendResumeResult */
 /**
  * @summary TestSuspendResumeResult
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TestSuspendResumeResult = TestSuspendResumeElement[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TestSuspendResumeResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSuspendResumeResult */
 let _cached_decoder_for_TestSuspendResumeResult: $.ASN1Decoder<TestSuspendResumeResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSuspendResumeResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestSuspendResumeResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestSuspendResumeResult
  * @function
@@ -48,13 +43,9 @@ export function _decode_TestSuspendResumeResult(el: _Element) {
     }
     return _cached_decoder_for_TestSuspendResumeResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestSuspendResumeResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSuspendResumeResult */
 let _cached_encoder_for_TestSuspendResumeResult: $.ASN1Encoder<TestSuspendResumeResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSuspendResumeResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestSuspendResumeResult */
 /**
  * @summary Encodes a(n) TestSuspendResumeResult into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_TestSuspendResumeResult(
     return _cached_encoder_for_TestSuspendResumeResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestSuspendResumeResult */
 
 /* eslint-enable */

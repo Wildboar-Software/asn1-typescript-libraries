@@ -15,7 +15,6 @@ import {
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorRequestedAlternateRecipient */
 /**
  * @summary OriginatorRequestedAlternateRecipient
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type OriginatorRequestedAlternateRecipient = ORAddressAndOptionalDirectoryName; // DefinedType
-/* END_OF_SYMBOL_DEFINITION OriginatorRequestedAlternateRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorRequestedAlternateRecipient */
 let _cached_decoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Decoder<OriginatorRequestedAlternateRecipient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorRequestedAlternateRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorRequestedAlternateRecipient */
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorRequestedAlternateRecipient
  * @function
@@ -46,13 +41,9 @@ export function _decode_OriginatorRequestedAlternateRecipient(el: _Element) {
     }
     return _cached_decoder_for_OriginatorRequestedAlternateRecipient(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorRequestedAlternateRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorRequestedAlternateRecipient */
 let _cached_encoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Encoder<OriginatorRequestedAlternateRecipient> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorRequestedAlternateRecipient */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorRequestedAlternateRecipient */
 /**
  * @summary Encodes a(n) OriginatorRequestedAlternateRecipient into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_OriginatorRequestedAlternateRecipient(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorRequestedAlternateRecipient */
 
 /* eslint-enable */

@@ -23,7 +23,6 @@ import {
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertReq */
 /**
  * @summary CertReq
  * @description
@@ -106,9 +105,7 @@ export class CertReq implements AVMPcommonComponents {
 
     public static _enum_for_version = _enum_for_AVMPversion;
 }
-/* END_OF_SYMBOL_DEFINITION CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReq */
 /**
  * @summary The Leading Root Component Types of CertReq
  * @description
@@ -120,9 +117,7 @@ export class CertReq implements AVMPcommonComponents {
 export const _root_component_type_list_1_spec_for_CertReq: $.ComponentSpec[] = [
     ..._root_component_type_list_1_spec_for_AVMPcommonComponents,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReq */
 /**
  * @summary The Trailing Root Component Types of CertReq
  * @description
@@ -132,9 +127,7 @@ export const _root_component_type_list_1_spec_for_CertReq: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReq */
 /**
  * @summary The Extension Addition Component Types of CertReq
  * @description
@@ -144,13 +137,9 @@ export const _root_component_type_list_2_spec_for_CertReq: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_CertReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReq */
 let _cached_decoder_for_CertReq: $.ASN1Decoder<CertReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertReq
  * @function
@@ -200,13 +189,9 @@ export function _decode_CertReq(el: _Element) {
     }
     return _cached_decoder_for_CertReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReq */
 let _cached_encoder_for_CertReq: $.ASN1Encoder<CertReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertReq */
 /**
  * @summary Encodes a(n) CertReq into an ASN.1 Element.
  * @function
@@ -253,6 +238,5 @@ export function _encode_CertReq(
     return _cached_encoder_for_CertReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertReq */
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SignatureAlgorithms */
+
 /**
  * @summary SignatureAlgorithms
  * @description
@@ -18,6 +18,5 @@ import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFra
  *
  */
 export const SignatureAlgorithms: ALGORITHM[] = [];
-/* END_OF_SYMBOL_DEFINITION SignatureAlgorithms */
 
 /* eslint-enable */

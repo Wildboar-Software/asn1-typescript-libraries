@@ -33,7 +33,6 @@ import { subscriberNotReachable } from '../TCAP-Examples/subscriberNotReachable.
 import { calledBarred } from '../TCAP-Examples/calledBarred.oa.mjs';
 import { processingFailure } from '../TCAP-Examples/processingFailure.oa.mjs';
 import { getCallingPartyAddress } from '../TCAP-Examples/getCallingPartyAddress.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION provideRoutingInformation */
 /**
  * @summary provideRoutingInformation
  * @description
@@ -84,6 +83,5 @@ export const provideRoutingInformation: OPERATION<
     '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION provideRoutingInformation */
 
 /* eslint-enable */

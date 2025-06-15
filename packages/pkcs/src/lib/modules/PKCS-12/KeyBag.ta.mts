@@ -7,7 +7,7 @@ import {
     _encode_PrivateKeyInfo,
 } from "../AsymmetricKeyPackageModuleV1/PrivateKeyInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyBag */
+
 /**
  * @summary KeyBag
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type KeyBag = PrivateKeyInfo; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyBag */
+
 let _cached_decoder_for_KeyBag: $.ASN1Decoder<KeyBag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyBag */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyBag
  * @function
@@ -38,13 +36,11 @@ export function _decode_KeyBag(el: _Element) {
     }
     return _cached_decoder_for_KeyBag(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyBag */
+
 let _cached_encoder_for_KeyBag: $.ASN1Encoder<KeyBag> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyBag */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyBag */
+
 /**
  * @summary Encodes a(n) KeyBag into an ASN.1 Element.
  * @function
@@ -59,6 +55,5 @@ export function _encode_KeyBag(value: KeyBag, elGetter: $.ASN1Encoder<KeyBag>) {
     return _cached_encoder_for_KeyBag(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyBag */
 
 /* eslint-enable */

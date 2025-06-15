@@ -15,7 +15,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LatestDeliveryTime */
 /**
  * @summary LatestDeliveryTime
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type LatestDeliveryTime = Time; // DefinedType
-/* END_OF_SYMBOL_DEFINITION LatestDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LatestDeliveryTime */
 let _cached_decoder_for_LatestDeliveryTime: $.ASN1Decoder<LatestDeliveryTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LatestDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LatestDeliveryTime */
 /**
  * @summary Decodes an ASN.1 element into a(n) LatestDeliveryTime
  * @function
@@ -46,13 +41,9 @@ export function _decode_LatestDeliveryTime(el: _Element) {
     }
     return _cached_decoder_for_LatestDeliveryTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LatestDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LatestDeliveryTime */
 let _cached_encoder_for_LatestDeliveryTime: $.ASN1Encoder<LatestDeliveryTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LatestDeliveryTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LatestDeliveryTime */
 /**
  * @summary Encodes a(n) LatestDeliveryTime into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_LatestDeliveryTime(
     return _cached_encoder_for_LatestDeliveryTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LatestDeliveryTime */
 
 /* eslint-enable */

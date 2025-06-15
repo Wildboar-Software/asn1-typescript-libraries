@@ -15,7 +15,6 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailContentType */
 /**
  * @summary EMailContentType
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type EMailContentType = ContentType; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EMailContentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailContentType */
 let _cached_decoder_for_EMailContentType: $.ASN1Decoder<EMailContentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailContentType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailContentType */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailContentType
  * @function
@@ -47,13 +42,9 @@ export function _decode_EMailContentType(el: _Element) {
     }
     return _cached_decoder_for_EMailContentType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailContentType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailContentType */
 let _cached_encoder_for_EMailContentType: $.ASN1Encoder<EMailContentType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailContentType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailContentType */
 /**
  * @summary Encodes a(n) EMailContentType into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_EMailContentType(
     return _cached_encoder_for_EMailContentType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailContentType */
 
 /* eslint-enable */

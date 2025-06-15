@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_e163_4_number_length */
 /**
  * @summary ub_e163_4_number_length
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_e163_4_number_length: INTEGER = 15;
-/* END_OF_SYMBOL_DEFINITION ub_e163_4_number_length */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DetermineViolationStatusReply */
 /**
  * @summary DetermineViolationStatusReply
  * @description
@@ -29,9 +28,7 @@ export enum _enum_for_DetermineViolationStatusReply {
     violation_detected = 3,
     non_member = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DetermineViolationStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusReply */
 /**
  * @summary DetermineViolationStatusReply
  * @description
@@ -44,9 +41,7 @@ export enum _enum_for_DetermineViolationStatusReply {
  * ```@enum {number}
  */
 export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusReply */
 /**
  * @summary DetermineViolationStatusReply
  * @description
@@ -59,9 +54,7 @@ export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusRe
  * ```@enum {number}
  */
 export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_unknown */
 /**
  * @summary DetermineViolationStatusReply_unknown
  * @constant
@@ -69,9 +62,7 @@ export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusR
  */
 export const DetermineViolationStatusReply_unknown: DetermineViolationStatusReply =
     DetermineViolationStatusReply.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_unknown */
 
-/* START_OF_SYMBOL_DEFINITION unknown */
 /**
  * @summary unknown
  * @constant
@@ -79,9 +70,7 @@ export const DetermineViolationStatusReply_unknown: DetermineViolationStatusRepl
  */
 export const unknown: DetermineViolationStatusReply =
     DetermineViolationStatusReply.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unknown */
 
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_no_violation */
 /**
  * @summary DetermineViolationStatusReply_no_violation
  * @constant
@@ -89,9 +78,7 @@ export const unknown: DetermineViolationStatusReply =
  */
 export const DetermineViolationStatusReply_no_violation: DetermineViolationStatusReply =
     DetermineViolationStatusReply.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_no_violation */
 
-/* START_OF_SYMBOL_DEFINITION no_violation */
 /**
  * @summary no_violation
  * @constant
@@ -99,9 +86,7 @@ export const DetermineViolationStatusReply_no_violation: DetermineViolationStatu
  */
 export const no_violation: DetermineViolationStatusReply =
     DetermineViolationStatusReply.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_violation */
 
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_violation_detected */
 /**
  * @summary DetermineViolationStatusReply_violation_detected
  * @constant
@@ -109,9 +94,7 @@ export const no_violation: DetermineViolationStatusReply =
  */
 export const DetermineViolationStatusReply_violation_detected: DetermineViolationStatusReply =
     DetermineViolationStatusReply.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_violation_detected */
 
-/* START_OF_SYMBOL_DEFINITION violation_detected */
 /**
  * @summary violation_detected
  * @constant
@@ -119,9 +102,7 @@ export const DetermineViolationStatusReply_violation_detected: DetermineViolatio
  */
 export const violation_detected: DetermineViolationStatusReply =
     DetermineViolationStatusReply.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION violation_detected */
 
-/* START_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_non_member */
 /**
  * @summary DetermineViolationStatusReply_non_member
  * @constant
@@ -129,9 +110,7 @@ export const violation_detected: DetermineViolationStatusReply =
  */
 export const DetermineViolationStatusReply_non_member: DetermineViolationStatusReply =
     DetermineViolationStatusReply.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DetermineViolationStatusReply_non_member */
 
-/* START_OF_SYMBOL_DEFINITION non_member */
 /**
  * @summary non_member
  * @constant
@@ -139,21 +118,12 @@ export const DetermineViolationStatusReply_non_member: DetermineViolationStatusR
  */
 export const non_member: DetermineViolationStatusReply =
     DetermineViolationStatusReply.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION non_member */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DetermineViolationStatusReply */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DetermineViolationStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DetermineViolationStatusReply */
 export const _decode_DetermineViolationStatusReply = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_DetermineViolationStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DetermineViolationStatusReply */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DetermineViolationStatusReply */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DetermineViolationStatusReply */
 export const _encode_DetermineViolationStatusReply = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DetermineViolationStatusReply */
 
 /* eslint-enable */

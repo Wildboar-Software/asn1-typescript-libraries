@@ -4,7 +4,7 @@ import { keyAgreeHashConstruction } from "../CMSCKMKeyManagement/keyAgreeHashCon
 import { keyAgreeMultipleEncryptionConstruction } from "../CMSCKMKeyManagement/keyAgreeMultipleEncryptionConstruction.oa.mjs";
 import { keyTransportConstruction } from "../CMSCKMKeyManagement/keyTransportConstruction.oa.mjs";
 import { symmetricConstruction } from "../CMSCKMKeyManagement/symmetricConstruction.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyConstructionAlgorithms */
+
 /**
  * @summary KeyConstructionAlgorithms
  * @description
@@ -31,6 +31,5 @@ export const KeyConstructionAlgorithms: ALGORITHM[] = [
     keyAgreeMultipleEncryptionConstruction,
     keyAgreeHashConstruction,
 ];
-/* END_OF_SYMBOL_DEFINITION KeyConstructionAlgorithms */
 
 /* eslint-enable */

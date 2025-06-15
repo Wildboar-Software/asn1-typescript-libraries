@@ -15,7 +15,6 @@ import {
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Precision */
 /**
  * @summary Precision
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type Precision = TimeInterval; // DefinedType
-/* END_OF_SYMBOL_DEFINITION Precision */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Precision */
 let _cached_decoder_for_Precision: $.ASN1Decoder<Precision> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Precision */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Precision */
 /**
  * @summary Decodes an ASN.1 element into a(n) Precision
  * @function
@@ -47,13 +42,9 @@ export function _decode_Precision(el: _Element) {
     }
     return _cached_decoder_for_Precision(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Precision */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Precision */
 let _cached_encoder_for_Precision: $.ASN1Encoder<Precision> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Precision */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Precision */
 /**
  * @summary Encodes a(n) Precision into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_Precision(
     return _cached_encoder_for_Precision(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Precision */
 
 /* eslint-enable */

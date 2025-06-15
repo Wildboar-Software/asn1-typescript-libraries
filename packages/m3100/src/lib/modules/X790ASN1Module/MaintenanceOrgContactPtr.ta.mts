@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MaintenanceOrgContactPtr */
+
 /**
  * @summary MaintenanceOrgContactPtr
  * @description
@@ -35,13 +35,11 @@ export type MaintenanceOrgContactPtr =
     | { null_: NULL } /* CHOICE_ALT_ROOT */
     | { contact: ObjectInstance } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION MaintenanceOrgContactPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MaintenanceOrgContactPtr */
+
 let _cached_decoder_for_MaintenanceOrgContactPtr: $.ASN1Decoder<MaintenanceOrgContactPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MaintenanceOrgContactPtr */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MaintenanceOrgContactPtr */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MaintenanceOrgContactPtr
  * @function
@@ -61,13 +59,11 @@ export function _decode_MaintenanceOrgContactPtr(el: _Element) {
     }
     return _cached_decoder_for_MaintenanceOrgContactPtr(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MaintenanceOrgContactPtr */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MaintenanceOrgContactPtr */
+
 let _cached_encoder_for_MaintenanceOrgContactPtr: $.ASN1Encoder<MaintenanceOrgContactPtr> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MaintenanceOrgContactPtr */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MaintenanceOrgContactPtr */
+
 /**
  * @summary Encodes a(n) MaintenanceOrgContactPtr into an ASN.1 Element.
  * @function
@@ -91,6 +87,5 @@ export function _encode_MaintenanceOrgContactPtr(
     return _cached_encoder_for_MaintenanceOrgContactPtr(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MaintenanceOrgContactPtr */
 
 /* eslint-enable */

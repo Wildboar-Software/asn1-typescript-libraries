@@ -41,7 +41,7 @@ import {
   _root_component_type_list_1_spec_for_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION BindResponse */
+
 /**
  * @summary BindResponse
  * @description
@@ -130,9 +130,8 @@ export class BindResponse {
 
   public static _enum_for_resultCode = _enum_for_LDAPResult_resultCode;
 }
-/* END_OF_SYMBOL_DEFINITION BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BindResponse */
+
 /**
  * @summary The Leading Root Component Types of BindResponse
  * @description
@@ -151,9 +150,8 @@ export const _root_component_type_list_1_spec_for_BindResponse: $.ComponentSpec[
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BindResponse */
+
 /**
  * @summary The Trailing Root Component Types of BindResponse
  * @description
@@ -163,9 +161,8 @@ export const _root_component_type_list_1_spec_for_BindResponse: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BindResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BindResponse */
+
 /**
  * @summary The Extension Addition Component Types of BindResponse
  * @description
@@ -175,13 +172,11 @@ export const _root_component_type_list_2_spec_for_BindResponse: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_BindResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindResponse */
+
 let _cached_decoder_for_BindResponse: $.ASN1Decoder<BindResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BindResponse
  * @function
@@ -247,13 +242,11 @@ export function _decode_BindResponse(el: _Element) {
   }
   return _cached_decoder_for_BindResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindResponse */
+
 let _cached_encoder_for_BindResponse: $.ASN1Encoder<BindResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindResponse */
+
 /**
  * @summary Encodes a(n) BindResponse into an ASN.1 Element.
  * @function
@@ -316,6 +309,5 @@ export function _encode_BindResponse(
   return _cached_encoder_for_BindResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindResponse */
 
 /* eslint-enable */

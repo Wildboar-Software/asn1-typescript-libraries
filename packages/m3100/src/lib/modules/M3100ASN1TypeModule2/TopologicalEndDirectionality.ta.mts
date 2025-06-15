@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_TopologicalEndDirectionality */
+
 /**
  * @summary TopologicalEndDirectionality
  * @description
@@ -29,9 +29,8 @@ export enum _enum_for_TopologicalEndDirectionality {
     source = 2,
     bidirectional = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_TopologicalEndDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION TopologicalEndDirectionality */
+
 /**
  * @summary TopologicalEndDirectionality
  * @description
@@ -44,9 +43,8 @@ export enum _enum_for_TopologicalEndDirectionality {
  * ```@enum {number}
  */
 export type TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
-/* END_OF_SYMBOL_DEFINITION TopologicalEndDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION TopologicalEndDirectionality */
+
 /**
  * @summary TopologicalEndDirectionality
  * @description
@@ -59,9 +57,8 @@ export type TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionalit
  * ```@enum {number}
  */
 export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
-/* END_OF_SYMBOL_DEFINITION TopologicalEndDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_undefined */
+
 /**
  * @summary TopologicalEndDirectionality_undefined
  * @constant
@@ -69,9 +66,8 @@ export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionali
  */
 export const TopologicalEndDirectionality_undefined: TopologicalEndDirectionality =
     TopologicalEndDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_undefined */
 
-/* START_OF_SYMBOL_DEFINITION undefined */
+
 /**
  * @summary undefined
  * @constant
@@ -79,9 +75,8 @@ export const TopologicalEndDirectionality_undefined: TopologicalEndDirectionalit
  */
 export const undefined: TopologicalEndDirectionality =
     TopologicalEndDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION undefined */
 
-/* START_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_sink */
+
 /**
  * @summary TopologicalEndDirectionality_sink
  * @constant
@@ -89,9 +84,8 @@ export const undefined: TopologicalEndDirectionality =
  */
 export const TopologicalEndDirectionality_sink: TopologicalEndDirectionality =
     TopologicalEndDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_sink */
 
-/* START_OF_SYMBOL_DEFINITION sink */
+
 /**
  * @summary sink
  * @constant
@@ -99,9 +93,8 @@ export const TopologicalEndDirectionality_sink: TopologicalEndDirectionality =
  */
 export const sink: TopologicalEndDirectionality =
     TopologicalEndDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION sink */
 
-/* START_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_source */
+
 /**
  * @summary TopologicalEndDirectionality_source
  * @constant
@@ -109,9 +102,8 @@ export const sink: TopologicalEndDirectionality =
  */
 export const TopologicalEndDirectionality_source: TopologicalEndDirectionality =
     TopologicalEndDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_source */
 
-/* START_OF_SYMBOL_DEFINITION source */
+
 /**
  * @summary source
  * @constant
@@ -119,9 +111,8 @@ export const TopologicalEndDirectionality_source: TopologicalEndDirectionality =
  */
 export const source: TopologicalEndDirectionality =
     TopologicalEndDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION source */
 
-/* START_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_bidirectional */
+
 /**
  * @summary TopologicalEndDirectionality_bidirectional
  * @constant
@@ -129,9 +120,8 @@ export const source: TopologicalEndDirectionality =
  */
 export const TopologicalEndDirectionality_bidirectional: TopologicalEndDirectionality =
     TopologicalEndDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION TopologicalEndDirectionality_bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION bidirectional */
+
 /**
  * @summary bidirectional
  * @constant
@@ -139,21 +129,16 @@ export const TopologicalEndDirectionality_bidirectional: TopologicalEndDirection
  */
 export const bidirectional: TopologicalEndDirectionality =
     TopologicalEndDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bidirectional */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TopologicalEndDirectionality */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TopologicalEndDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TopologicalEndDirectionality */
+
+
 export const _decode_TopologicalEndDirectionality = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_TopologicalEndDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TopologicalEndDirectionality */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TopologicalEndDirectionality */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TopologicalEndDirectionality */
+
+
 export const _encode_TopologicalEndDirectionality = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_TopologicalEndDirectionality */
 
 /* eslint-enable */

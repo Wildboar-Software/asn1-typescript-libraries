@@ -6,7 +6,7 @@ import {
     _decode_SafeBag,
     _encode_SafeBag,
 } from "../PKCS-12/SafeBag.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SafeContents */
+
 /**
  * @summary SafeContents
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type SafeContents = SafeBag[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SafeContents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SafeContents */
+
 let _cached_decoder_for_SafeContents: $.ASN1Decoder<SafeContents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SafeContents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SafeContents */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SafeContents
  * @function
@@ -39,13 +37,11 @@ export function _decode_SafeContents(el: _Element) {
     }
     return _cached_decoder_for_SafeContents(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SafeContents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SafeContents */
+
 let _cached_encoder_for_SafeContents: $.ASN1Encoder<SafeContents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SafeContents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SafeContents */
+
 /**
  * @summary Encodes a(n) SafeContents into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_SafeContents(
     return _cached_encoder_for_SafeContents(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SafeContents */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, BMPString, UniversalString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION UniversalOrBMPString_character_encoding */
 /**
  * @summary UniversalOrBMPString_character_encoding
  * @description
@@ -16,13 +15,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type UniversalOrBMPString_character_encoding =
     | { two_octets: BMPString } /* CHOICE_ALT_ROOT */
     | { four_octets: UniversalString } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UniversalOrBMPString_character_encoding */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalOrBMPString_character_encoding */
 let _cached_decoder_for_UniversalOrBMPString_character_encoding: $.ASN1Decoder<UniversalOrBMPString_character_encoding> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalOrBMPString_character_encoding */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalOrBMPString_character_encoding */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalOrBMPString_character_encoding
  * @function
@@ -40,13 +35,9 @@ export function _decode_UniversalOrBMPString_character_encoding(el: _Element) {
     }
     return _cached_decoder_for_UniversalOrBMPString_character_encoding(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalOrBMPString_character_encoding */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalOrBMPString_character_encoding */
 let _cached_encoder_for_UniversalOrBMPString_character_encoding: $.ASN1Encoder<UniversalOrBMPString_character_encoding> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalOrBMPString_character_encoding */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalOrBMPString_character_encoding */
 /**
  * @summary Encodes a(n) UniversalOrBMPString_character_encoding into an ASN.1 Element.
  * @function
@@ -73,6 +64,5 @@ export function _encode_UniversalOrBMPString_character_encoding(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalOrBMPString_character_encoding */
 
 /* eslint-enable */

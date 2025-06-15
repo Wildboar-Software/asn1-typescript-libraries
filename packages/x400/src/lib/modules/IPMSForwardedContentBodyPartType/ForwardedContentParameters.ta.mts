@@ -31,7 +31,6 @@ import {
     _decode_SubmissionProof,
     _encode_SubmissionProof,
 } from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ForwardedContentParameters */
 /**
  * @summary ForwardedContentParameters
  * @description
@@ -102,9 +101,7 @@ export class ForwardedContentParameters {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardedContentParameters */
 /**
  * @summary The Leading Root Component Types of ForwardedContentParameters
  * @description
@@ -143,9 +140,7 @@ export const _root_component_type_list_1_spec_for_ForwardedContentParameters: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardedContentParameters */
 /**
  * @summary The Trailing Root Component Types of ForwardedContentParameters
  * @description
@@ -155,9 +150,7 @@ export const _root_component_type_list_1_spec_for_ForwardedContentParameters: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ForwardedContentParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardedContentParameters */
 /**
  * @summary The Extension Addition Component Types of ForwardedContentParameters
  * @description
@@ -167,13 +160,9 @@ export const _root_component_type_list_2_spec_for_ForwardedContentParameters: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_ForwardedContentParameters: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedContentParameters */
 let _cached_decoder_for_ForwardedContentParameters: $.ASN1Decoder<ForwardedContentParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ForwardedContentParameters */
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardedContentParameters
  * @function
@@ -233,13 +222,9 @@ export function _decode_ForwardedContentParameters(el: _Element) {
     }
     return _cached_decoder_for_ForwardedContentParameters(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedContentParameters */
 let _cached_encoder_for_ForwardedContentParameters: $.ASN1Encoder<ForwardedContentParameters> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ForwardedContentParameters */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ForwardedContentParameters */
 /**
  * @summary Encodes a(n) ForwardedContentParameters into an ASN.1 Element.
  * @function
@@ -298,6 +283,5 @@ export function _encode_ForwardedContentParameters(
     return _cached_encoder_for_ForwardedContentParameters(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ForwardedContentParameters */
 
 /* eslint-enable */

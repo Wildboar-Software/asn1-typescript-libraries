@@ -15,7 +15,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ConnectionList */
+
 /**
  * @summary ConnectionList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ConnectionList = ObjectInstance[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionList */
+
 let _cached_decoder_for_ConnectionList: $.ASN1Decoder<ConnectionList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConnectionList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConnectionList
  * @function
@@ -48,13 +46,11 @@ export function _decode_ConnectionList(el: _Element) {
     }
     return _cached_decoder_for_ConnectionList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionList */
+
 let _cached_encoder_for_ConnectionList: $.ASN1Encoder<ConnectionList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConnectionList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConnectionList */
+
 /**
  * @summary Encodes a(n) ConnectionList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_ConnectionList(
     return _cached_encoder_for_ConnectionList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConnectionList */
 
 /* eslint-enable */

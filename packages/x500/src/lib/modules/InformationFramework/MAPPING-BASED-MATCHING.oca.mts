@@ -2,7 +2,6 @@
 import { BOOLEAN, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION MAPPING_BASED_MATCHING */
 /**
  * @summary MAPPING_BASED_MATCHING
  * @description
@@ -108,6 +107,5 @@ export interface MAPPING_BASED_MATCHING<
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 }
-/* END_OF_SYMBOL_DEFINITION MAPPING_BASED_MATCHING */
 
 /* eslint-enable */

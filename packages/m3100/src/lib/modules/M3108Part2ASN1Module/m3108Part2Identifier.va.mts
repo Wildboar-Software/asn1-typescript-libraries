@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION m3108Part2Identifier */
+
 /**
  * @summary m3108Part2Identifier
  * @description
@@ -38,6 +38,5 @@ export const m3108Part2Identifier: OBJECT_IDENTIFIER = new _OID(
     ],
     itu_t
 );
-/* END_OF_SYMBOL_DEFINITION m3108Part2Identifier */
 
 /* eslint-enable */

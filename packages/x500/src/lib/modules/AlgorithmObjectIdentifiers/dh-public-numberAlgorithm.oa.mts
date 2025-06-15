@@ -6,7 +6,6 @@ import {
     _encode_DomainParameters,
 } from "../AlgorithmObjectIdentifiers/DomainParameters.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION dh_public_numberAlgorithm */
 /**
  * @summary dh_public_numberAlgorithm
  * @description
@@ -34,6 +33,5 @@ export const dh_public_numberAlgorithm: ALGORITHM<DomainParameters> = {
     "&id": dh_public_number /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dh_public_numberAlgorithm */
 
 /* eslint-enable */

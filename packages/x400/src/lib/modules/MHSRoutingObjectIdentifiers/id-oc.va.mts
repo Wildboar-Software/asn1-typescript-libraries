@@ -15,7 +15,6 @@ import {
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';
 import { id_mhs_routing } from '../MHSRoutingObjectIdentifiers/id-mhs-routing.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_oc */
 /**
  * @summary id_oc
  * @description
@@ -29,6 +28,5 @@ import { id_mhs_routing } from '../MHSRoutingObjectIdentifiers/id-mhs-routing.va
  * @constant
  */
 export const id_oc: ID = new _OID([1], id_mhs_routing);
-/* END_OF_SYMBOL_DEFINITION id_oc */
 
 /* eslint-enable */

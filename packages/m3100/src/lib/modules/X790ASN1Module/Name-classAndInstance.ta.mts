@@ -20,7 +20,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Name_classAndInstance */
+
 /**
  * @summary Name_classAndInstance
  * @description
@@ -77,9 +77,8 @@ export class Name_classAndInstance {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Name_classAndInstance */
+
 /**
  * @summary The Leading Root Component Types of Name_classAndInstance
  * @description
@@ -104,9 +103,8 @@ export const _root_component_type_list_1_spec_for_Name_classAndInstance: $.Compo
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Name_classAndInstance */
+
 /**
  * @summary The Trailing Root Component Types of Name_classAndInstance
  * @description
@@ -116,9 +114,8 @@ export const _root_component_type_list_1_spec_for_Name_classAndInstance: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Name_classAndInstance: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Name_classAndInstance */
+
 /**
  * @summary The Extension Addition Component Types of Name_classAndInstance
  * @description
@@ -128,13 +125,11 @@ export const _root_component_type_list_2_spec_for_Name_classAndInstance: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_Name_classAndInstance: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Name_classAndInstance */
+
 let _cached_decoder_for_Name_classAndInstance: $.ASN1Decoder<Name_classAndInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Name_classAndInstance */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Name_classAndInstance
  * @function
@@ -169,13 +164,11 @@ export function _decode_Name_classAndInstance(el: _Element) {
     }
     return _cached_decoder_for_Name_classAndInstance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Name_classAndInstance */
+
 let _cached_encoder_for_Name_classAndInstance: $.ASN1Encoder<Name_classAndInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Name_classAndInstance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Name_classAndInstance */
+
 /**
  * @summary Encodes a(n) Name_classAndInstance into an ASN.1 Element.
  * @function
@@ -215,6 +208,5 @@ export function _encode_Name_classAndInstance(
     return _cached_encoder_for_Name_classAndInstance(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Name_classAndInstance */
 
 /* eslint-enable */

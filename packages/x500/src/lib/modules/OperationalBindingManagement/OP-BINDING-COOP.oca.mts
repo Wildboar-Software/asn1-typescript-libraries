@@ -2,7 +2,6 @@
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION OP_BINDING_COOP */
 /**
  * @summary OP_BINDING_COOP
  * @description
@@ -52,6 +51,5 @@ export interface OP_BINDING_COOP {
      */
     readonly "&Operations"?: OPERATION[];
 }
-/* END_OF_SYMBOL_DEFINITION OP_BINDING_COOP */
 
 /* eslint-enable */

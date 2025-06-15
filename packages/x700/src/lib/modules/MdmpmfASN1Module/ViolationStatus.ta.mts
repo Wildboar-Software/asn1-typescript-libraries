@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ViolationStatus */
 /**
  * @summary ViolationStatus
  * @description
@@ -28,9 +27,7 @@ export enum _enum_for_ViolationStatus {
     no_violation = 2,
     violation_detected = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ViolationStatus */
 
-/* START_OF_SYMBOL_DEFINITION ViolationStatus */
 /**
  * @summary ViolationStatus
  * @description
@@ -43,9 +40,7 @@ export enum _enum_for_ViolationStatus {
  * ```@enum {number}
  */
 export type ViolationStatus = _enum_for_ViolationStatus;
-/* END_OF_SYMBOL_DEFINITION ViolationStatus */
 
-/* START_OF_SYMBOL_DEFINITION ViolationStatus */
 /**
  * @summary ViolationStatus
  * @description
@@ -58,9 +53,7 @@ export type ViolationStatus = _enum_for_ViolationStatus;
  * ```@enum {number}
  */
 export const ViolationStatus = _enum_for_ViolationStatus;
-/* END_OF_SYMBOL_DEFINITION ViolationStatus */
 
-/* START_OF_SYMBOL_DEFINITION ViolationStatus_unknown */
 /**
  * @summary ViolationStatus_unknown
  * @constant
@@ -68,9 +61,7 @@ export const ViolationStatus = _enum_for_ViolationStatus;
  */
 export const ViolationStatus_unknown: ViolationStatus =
     ViolationStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ViolationStatus_unknown */
 
-/* START_OF_SYMBOL_DEFINITION unknown */
 /**
  * @summary unknown
  * @constant
@@ -78,9 +69,7 @@ export const ViolationStatus_unknown: ViolationStatus =
  */
 export const unknown: ViolationStatus =
     ViolationStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unknown */
 
-/* START_OF_SYMBOL_DEFINITION ViolationStatus_no_violation */
 /**
  * @summary ViolationStatus_no_violation
  * @constant
@@ -88,9 +77,7 @@ export const unknown: ViolationStatus =
  */
 export const ViolationStatus_no_violation: ViolationStatus =
     ViolationStatus.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ViolationStatus_no_violation */
 
-/* START_OF_SYMBOL_DEFINITION no_violation */
 /**
  * @summary no_violation
  * @constant
@@ -98,9 +85,7 @@ export const ViolationStatus_no_violation: ViolationStatus =
  */
 export const no_violation: ViolationStatus =
     ViolationStatus.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION no_violation */
 
-/* START_OF_SYMBOL_DEFINITION ViolationStatus_violation_detected */
 /**
  * @summary ViolationStatus_violation_detected
  * @constant
@@ -108,9 +93,7 @@ export const no_violation: ViolationStatus =
  */
 export const ViolationStatus_violation_detected: ViolationStatus =
     ViolationStatus.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ViolationStatus_violation_detected */
 
-/* START_OF_SYMBOL_DEFINITION violation_detected */
 /**
  * @summary violation_detected
  * @constant
@@ -118,21 +101,12 @@ export const ViolationStatus_violation_detected: ViolationStatus =
  */
 export const violation_detected: ViolationStatus =
     ViolationStatus.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION violation_detected */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ViolationStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ViolationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ViolationStatus */
 export const _decode_ViolationStatus = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ViolationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ViolationStatus */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ViolationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ViolationStatus */
 export const _encode_ViolationStatus = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ViolationStatus */
 
 /* eslint-enable */

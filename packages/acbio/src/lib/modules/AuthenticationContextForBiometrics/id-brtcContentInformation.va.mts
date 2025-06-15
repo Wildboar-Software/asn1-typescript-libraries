@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 
-/* START_OF_SYMBOL_DEFINITION id_brtcContentInformation */
+
 /**
  * @summary id_brtcContentInformation
  * @description
@@ -31,6 +31,5 @@ export const id_brtcContentInformation: OBJECT_IDENTIFIER = new _OID([
     /* contentType */ 2,
     /* brtcContent */ 7,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_brtcContentInformation */
 
 /* eslint-enable */

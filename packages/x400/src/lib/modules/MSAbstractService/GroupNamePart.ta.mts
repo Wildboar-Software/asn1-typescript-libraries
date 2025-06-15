@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION GroupNamePart */
 /**
  * @summary GroupNamePart
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type GroupNamePart = GeneralString; // GeneralString
-/* END_OF_SYMBOL_DEFINITION GroupNamePart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupNamePart */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GroupNamePart */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GroupNamePart */
 export const _decode_GroupNamePart = $._decodeGeneralString;
-/* END_OF_SYMBOL_DEFINITION _decode_GroupNamePart */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupNamePart */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GroupNamePart */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GroupNamePart */
 export const _encode_GroupNamePart = $._encodeGeneralString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_GroupNamePart */
 
 /* eslint-enable */

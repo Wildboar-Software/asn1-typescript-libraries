@@ -16,7 +16,6 @@ import {
     _encode_RDNSequence,
 } from "../PKI-Stub/RDNSequence.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Name */
 /**
  * @summary Name
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type Name = { rdnSequence: RDNSequence } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Name */
 let _cached_decoder_for_Name: $.ASN1Decoder<Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Name */
 /**
  * @summary Decodes an ASN.1 element into a(n) Name
  * @function
@@ -49,13 +44,9 @@ export function _decode_Name(el: _Element) {
     }
     return _cached_decoder_for_Name(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Name */
 let _cached_encoder_for_Name: $.ASN1Encoder<Name> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Name */
 /**
  * @summary Encodes a(n) Name into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_Name(value: Name, elGetter: $.ASN1Encoder<Name>) {
     return _cached_encoder_for_Name(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Name */
 
 /* eslint-enable */

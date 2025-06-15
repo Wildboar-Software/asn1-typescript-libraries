@@ -15,7 +15,6 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UserSecurityLabel */
 /**
  * @summary UserSecurityLabel
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UserSecurityLabel = SecurityLabel; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UserSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserSecurityLabel */
 let _cached_decoder_for_UserSecurityLabel: $.ASN1Decoder<UserSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserSecurityLabel */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserSecurityLabel
  * @function
@@ -46,13 +41,9 @@ export function _decode_UserSecurityLabel(el: _Element) {
     }
     return _cached_decoder_for_UserSecurityLabel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserSecurityLabel */
 let _cached_encoder_for_UserSecurityLabel: $.ASN1Encoder<UserSecurityLabel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserSecurityLabel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserSecurityLabel */
 /**
  * @summary Encodes a(n) UserSecurityLabel into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_UserSecurityLabel(
     return _cached_encoder_for_UserSecurityLabel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserSecurityLabel */
 
 /* eslint-enable */

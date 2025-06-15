@@ -15,7 +15,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from '../MTSAbstractService/PDSParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniquePostalName */
 /**
  * @summary UniquePostalName
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UniquePostalName = PDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniquePostalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniquePostalName */
 let _cached_decoder_for_UniquePostalName: $.ASN1Decoder<UniquePostalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniquePostalName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniquePostalName */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniquePostalName
  * @function
@@ -46,13 +41,9 @@ export function _decode_UniquePostalName(el: _Element) {
     }
     return _cached_decoder_for_UniquePostalName(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniquePostalName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniquePostalName */
 let _cached_encoder_for_UniquePostalName: $.ASN1Encoder<UniquePostalName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniquePostalName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniquePostalName */
 /**
  * @summary Encodes a(n) UniquePostalName into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_UniquePostalName(
     return _cached_encoder_for_UniquePostalName(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniquePostalName */
 
 /* eslint-enable */

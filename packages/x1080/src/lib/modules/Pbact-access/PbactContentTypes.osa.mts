@@ -24,7 +24,7 @@ import { modifyRequest } from '../Pbact-access/modifyRequest.oa.mjs';
 import { modifyResult } from '../Pbact-access/modifyResult.oa.mjs';
 import { renameRequest } from '../Pbact-access/renameRequest.oa.mjs';
 import { renameResult } from '../Pbact-access/renameResult.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION PbactContentTypes */
+
 /**
  * @summary PbactContentTypes
  * @description
@@ -70,6 +70,5 @@ export const PbactContentTypes: CONTENT_TYPE[] = [
     renameRequest,
     renameResult,
 ];
-/* END_OF_SYMBOL_DEFINITION PbactContentTypes */
 
 /* eslint-enable */

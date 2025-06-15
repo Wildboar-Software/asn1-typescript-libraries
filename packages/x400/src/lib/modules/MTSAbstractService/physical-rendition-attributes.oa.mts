@@ -26,7 +26,6 @@ import {
 } from '../MTSAbstractService/PhysicalRenditionAttributes.ta.mjs';
 import { id_att_physicalRendition_basic } from '../MTSObjectIdentifiers/id-att-physicalRendition-basic.va.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION physical_rendition_attributes */
 /**
  * @summary physical_rendition_attributes
  * @description
@@ -65,6 +64,5 @@ export const physical_rendition_attributes: EXTENSION<PhysicalRenditionAttribute
     } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION physical_rendition_attributes */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_PerceivedTroubleSeverity_number,
     _encode_PerceivedTroubleSeverity_number,
 } from '../X790ASN1Module/PerceivedTroubleSeverity-number.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION PerceivedTroubleSeverity */
+
 /**
  * @summary PerceivedTroubleSeverity
  * @description
@@ -39,13 +39,11 @@ export type PerceivedTroubleSeverity =
     | { number_: PerceivedTroubleSeverity_number } /* CHOICE_ALT_ROOT */
     | { identifier: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PerceivedTroubleSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedTroubleSeverity */
+
 let _cached_decoder_for_PerceivedTroubleSeverity: $.ASN1Decoder<PerceivedTroubleSeverity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PerceivedTroubleSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PerceivedTroubleSeverity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PerceivedTroubleSeverity
  * @function
@@ -66,13 +64,11 @@ export function _decode_PerceivedTroubleSeverity(el: _Element) {
     }
     return _cached_decoder_for_PerceivedTroubleSeverity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PerceivedTroubleSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedTroubleSeverity */
+
 let _cached_encoder_for_PerceivedTroubleSeverity: $.ASN1Encoder<PerceivedTroubleSeverity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PerceivedTroubleSeverity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PerceivedTroubleSeverity */
+
 /**
  * @summary Encodes a(n) PerceivedTroubleSeverity into an ASN.1 Element.
  * @function
@@ -96,6 +92,5 @@ export function _encode_PerceivedTroubleSeverity(
     return _cached_encoder_for_PerceivedTroubleSeverity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PerceivedTroubleSeverity */
 
 /* eslint-enable */

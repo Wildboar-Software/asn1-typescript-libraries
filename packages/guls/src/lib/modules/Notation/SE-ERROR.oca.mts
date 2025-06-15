@@ -15,7 +15,7 @@ import {
   _decode_Identifier,
   _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SE_ERROR */
+
 /**
  * @summary SE_ERROR
  * @description
@@ -75,6 +75,5 @@ export interface SE_ERROR<
    */
   readonly '&errorCode'?: Identifier;
 }
-/* END_OF_SYMBOL_DEFINITION SE_ERROR */
 
 /* eslint-enable */

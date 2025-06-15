@@ -15,7 +15,7 @@ import {
     _decode_IntervalsOfDayWps_Item,
     _encode_IntervalsOfDayWps_Item,
 } from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION IntervalsOfDayWps */
+
 /**
  * @summary IntervalsOfDayWps
  * @description
@@ -29,13 +29,11 @@ import {
  * ```
  */
 export type IntervalsOfDayWps = IntervalsOfDayWps_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION IntervalsOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IntervalsOfDayWps */
+
 let _cached_decoder_for_IntervalsOfDayWps: $.ASN1Decoder<IntervalsOfDayWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IntervalsOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IntervalsOfDayWps */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IntervalsOfDayWps
  * @function
@@ -50,13 +48,11 @@ export function _decode_IntervalsOfDayWps(el: _Element) {
     }
     return _cached_decoder_for_IntervalsOfDayWps(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IntervalsOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IntervalsOfDayWps */
+
 let _cached_encoder_for_IntervalsOfDayWps: $.ASN1Encoder<IntervalsOfDayWps> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IntervalsOfDayWps */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IntervalsOfDayWps */
+
 /**
  * @summary Encodes a(n) IntervalsOfDayWps into an ASN.1 Element.
  * @function
@@ -77,6 +73,5 @@ export function _encode_IntervalsOfDayWps(
     return _cached_encoder_for_IntervalsOfDayWps(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IntervalsOfDayWps */
 
 /* eslint-enable */

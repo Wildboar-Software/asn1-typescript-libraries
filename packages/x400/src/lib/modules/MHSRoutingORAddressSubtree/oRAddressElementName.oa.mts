@@ -18,7 +18,6 @@ import {
 } from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs';
 import { name } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/name.oa.mjs';
 import { id_at_oraddress_element_name } from '../MHSRoutingObjectIdentifiers/id-at-oraddress-element-name.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRAddressElementName */
 /**
  * @summary oRAddressElementName
  * @description
@@ -55,6 +54,5 @@ export const oRAddressElementName: ATTRIBUTE = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRAddressElementName */
 
 /* eslint-enable */

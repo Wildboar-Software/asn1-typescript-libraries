@@ -9,7 +9,6 @@ import { id_oa_pwdEndTime } from "../PasswordPolicy/id-oa-pwdEndTime.va.mjs";
 import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 import { generalizedTimeMatch } from "../SelectedAttributeTypes/generalizedTimeMatch.oa.mjs";
 import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generalizedTimeOrderingMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION pwdEndTime */
 /**
  * @summary pwdEndTime
  * @description
@@ -53,6 +52,5 @@ export const pwdEndTime: ATTRIBUTE<GeneralizedTime> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pwdEndTime */
 
 /* eslint-enable */

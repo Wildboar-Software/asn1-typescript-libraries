@@ -12,7 +12,7 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { RSAENCRYPTED, _get_decoder_for_RSAENCRYPTED, _get_encoder_for_RSAENCRYPTED } from "../CASS-CAM-MESSAGE-FORMAT/RSAENCRYPTED.ta.mjs";
 import { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-FORMAT/Content.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION RSAEncryptedContent */
+
 /**
  * @summary RSAEncryptedContent
  * @description
@@ -25,13 +25,11 @@ import { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-F
  */
 export
 type RSAEncryptedContent = RSAENCRYPTED; // DefinedType
-/* END_OF_SYMBOL_DEFINITION RSAEncryptedContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RSAEncryptedContent */
+
 let _cached_decoder_for_RSAEncryptedContent: $.ASN1Decoder<RSAEncryptedContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RSAEncryptedContent */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RSAEncryptedContent */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RSAEncryptedContent
  * @function
@@ -43,13 +41,11 @@ function _decode_RSAEncryptedContent (el: _Element) {
     if (!_cached_decoder_for_RSAEncryptedContent) { _cached_decoder_for_RSAEncryptedContent = _get_decoder_for_RSAENCRYPTED<Content>(_decode_Content); }
     return _cached_decoder_for_RSAEncryptedContent(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RSAEncryptedContent */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RSAEncryptedContent */
+
 let _cached_encoder_for_RSAEncryptedContent: $.ASN1Encoder<RSAEncryptedContent> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RSAEncryptedContent */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RSAEncryptedContent */
+
 /**
  * @summary Encodes a(n) RSAEncryptedContent into an ASN.1 Element.
  * @function
@@ -63,6 +59,5 @@ function _encode_RSAEncryptedContent (value: RSAEncryptedContent, elGetter: $.AS
     return _cached_encoder_for_RSAEncryptedContent(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RSAEncryptedContent */
 
 /* eslint-enable */

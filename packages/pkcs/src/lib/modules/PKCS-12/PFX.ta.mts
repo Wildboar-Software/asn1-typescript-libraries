@@ -21,7 +21,7 @@ import {
     _encode_ContentInfo,
 } from "../PKCS7/ContentInfo.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PFX */
+
 /**
  * @summary PFX
  * @description
@@ -76,9 +76,8 @@ export class PFX {
         return new PFX(_o.version, _o.authSafe, _o.macData);
     }
 }
-/* END_OF_SYMBOL_DEFINITION PFX */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PFX */
+
 /**
  * @summary The Leading Root Component Types of PFX
  * @description
@@ -110,9 +109,8 @@ export const _root_component_type_list_1_spec_for_PFX: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PFX */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PFX */
+
 /**
  * @summary The Trailing Root Component Types of PFX
  * @description
@@ -122,9 +120,8 @@ export const _root_component_type_list_1_spec_for_PFX: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PFX: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PFX */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PFX */
+
 /**
  * @summary The Extension Addition Component Types of PFX
  * @description
@@ -134,13 +131,11 @@ export const _root_component_type_list_2_spec_for_PFX: $.ComponentSpec[] = [];
  * @constant
  */
 export const _extension_additions_list_spec_for_PFX: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PFX */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PFX */
+
 let _cached_decoder_for_PFX: $.ASN1Decoder<PFX> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PFX */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PFX */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PFX
  * @function
@@ -185,13 +180,11 @@ export function _decode_PFX(el: _Element) {
     }
     return _cached_decoder_for_PFX(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PFX */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PFX */
+
 let _cached_encoder_for_PFX: $.ASN1Encoder<PFX> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PFX */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PFX */
+
 /**
  * @summary Encodes a(n) PFX into an ASN.1 Element.
  * @function
@@ -226,6 +219,5 @@ export function _encode_PFX(value: PFX, elGetter: $.ASN1Encoder<PFX>) {
     return _cached_encoder_for_PFX(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PFX */
 
 /* eslint-enable */

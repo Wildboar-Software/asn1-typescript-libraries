@@ -15,7 +15,7 @@ import {
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MatchingRuleId */
+
 /**
  * @summary MatchingRuleId
  * @description
@@ -27,9 +27,8 @@ import {
  * ```
  */
 export type MatchingRuleId = LDAPString; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MatchingRuleId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MatchingRuleId */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchingRuleId
  * @function
@@ -39,9 +38,8 @@ export type MatchingRuleId = LDAPString; // DefinedType
 export function _decode_MatchingRuleId(el: _Element) {
   return _decode_LDAPString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MatchingRuleId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MatchingRuleId */
+
 /**
  * @summary Encodes a(n) MatchingRuleId into an ASN.1 Element.
  * @function
@@ -56,6 +54,5 @@ export function _encode_MatchingRuleId(
   return _encode_LDAPString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MatchingRuleId */
 
 /* eslint-enable */

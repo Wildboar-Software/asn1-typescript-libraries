@@ -6,7 +6,6 @@ import {
     _decode_UiiFilter,
     _encode_UiiFilter,
 } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UiiFormat_next */
 /**
  * @summary UiiFormat_next
  * @description
@@ -20,13 +19,9 @@ import {
 export type UiiFormat_next =
     | { length: INTEGER } /* CHOICE_ALT_ROOT */
     | { filter: UiiFilter } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION UiiFormat_next */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UiiFormat_next */
 let _cached_decoder_for_UiiFormat_next: $.ASN1Decoder<UiiFormat_next> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UiiFormat_next */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UiiFormat_next */
 /**
  * @summary Decodes an ASN.1 element into a(n) UiiFormat_next
  * @function
@@ -47,13 +42,9 @@ export function _decode_UiiFormat_next(el: _Element) {
     }
     return _cached_decoder_for_UiiFormat_next(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UiiFormat_next */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UiiFormat_next */
 let _cached_encoder_for_UiiFormat_next: $.ASN1Encoder<UiiFormat_next> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UiiFormat_next */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UiiFormat_next */
 /**
  * @summary Encodes a(n) UiiFormat_next into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_UiiFormat_next(
     return _cached_encoder_for_UiiFormat_next(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UiiFormat_next */
 
 /* eslint-enable */

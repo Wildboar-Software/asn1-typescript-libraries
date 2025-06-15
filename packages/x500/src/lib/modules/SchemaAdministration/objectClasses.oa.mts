@@ -11,7 +11,6 @@ import {
 } from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
 import { objectClassDescription } from "../SelectedAttributeTypes/objectClassDescription.oa.mjs";
 import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION objectClasses */
 /**
  * @summary objectClasses
  * @description
@@ -52,6 +51,5 @@ export const objectClasses: ATTRIBUTE<ObjectClassDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION objectClasses */
 
 /* eslint-enable */

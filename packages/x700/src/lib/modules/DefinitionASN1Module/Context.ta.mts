@@ -21,7 +21,7 @@ import {
     _decode_Context_representation,
     _encode_Context_representation,
 } from '../DefinitionASN1Module/Context-representation.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Context */
+
 /**
  * @summary Context
  * @description
@@ -42,13 +42,11 @@ import {
 export type Context =
     | { keyword: Context_keyword } /* CHOICE_ALT_ROOT */
     | { representation: Context_representation } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Context */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Context */
+
 let _cached_decoder_for_Context: $.ASN1Decoder<Context> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Context */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Context */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Context
  * @function
@@ -64,13 +62,11 @@ export function _decode_Context(el: _Element) {
     }
     return _cached_decoder_for_Context(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Context */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Context */
+
 let _cached_encoder_for_Context: $.ASN1Encoder<Context> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Context */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Context */
+
 /**
  * @summary Encodes a(n) Context into an ASN.1 Element.
  * @function
@@ -94,6 +90,5 @@ export function _encode_Context(
     return _cached_encoder_for_Context(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Context */
 
 /* eslint-enable */

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.mjs";
-/* START_OF_SYMBOL_DEFINITION cmac_aes128_ecies */
 /**
  * @summary cmac_aes128_ecies
  * @description
@@ -29,6 +28,5 @@ const cmac_aes128_ecies: OBJECT_IDENTIFIER = new _OID([
     24,
     0,
 ], secg_scheme);
-/* END_OF_SYMBOL_DEFINITION cmac_aes128_ecies */
 
 /* eslint-enable */

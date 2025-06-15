@@ -24,7 +24,6 @@ import { id_att_ac_report_subject_entry } from '../MSObjectIdentifiers/id-att-ac
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_ac_report_subject_entry */
 /**
  * @summary ms_ac_report_subject_entry
  * @description
@@ -59,6 +58,5 @@ export const ms_ac_report_subject_entry: X413ATTRIBUTE<SequenceNumber> = {
     '&id': id_att_ac_report_subject_entry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_ac_report_subject_entry */
 
 /* eslint-enable */

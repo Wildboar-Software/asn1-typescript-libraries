@@ -10,7 +10,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { UMF_USAGE } from '../UsageMeteringDataInfo/UMF-USAGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION UsageInfoSet */
 /**
  * @summary UsageInfoSet
  * @description
@@ -26,6 +25,5 @@ import { UMF_USAGE } from '../UsageMeteringDataInfo/UMF-USAGE.oca.mjs';
  *
  */
 export const UsageInfoSet: UMF_USAGE[] = [];
-/* END_OF_SYMBOL_DEFINITION UsageInfoSet */
 
 /* eslint-enable */

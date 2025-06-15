@@ -8,7 +8,6 @@ import {
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { id_lmr_caseIgnoreIA5SubstringsMatch } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5SubstringsMatch.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION caseIgnoreIA5SubstringsMatch */
 /**
  * @summary caseIgnoreIA5SubstringsMatch
  * @description
@@ -40,6 +39,5 @@ export const caseIgnoreIA5SubstringsMatch: MATCHING_RULE<SubstringAssertion> = {
     "&id": id_lmr_caseIgnoreIA5SubstringsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION caseIgnoreIA5SubstringsMatch */
 
 /* eslint-enable */

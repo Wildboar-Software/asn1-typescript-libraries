@@ -14,7 +14,7 @@ import {
     _encode_ECPoint,
 } from "../PKIXAlgs-2009/ECPoint.ta.mjs";
 import { id_ecMQV } from "../PKIXAlgs-2009/id-ecMQV.va.mjs";
-/* START_OF_SYMBOL_DEFINITION pk_ecMQV */
+
 /**
  * @summary pk_ecMQV
  * @description
@@ -54,6 +54,5 @@ export const pk_ecMQV: PUBLIC_KEY<ECPoint, ECParameters> = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&PrivateKey": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pk_ecMQV */
 
 /* eslint-enable */

@@ -46,7 +46,6 @@ import {
     _encode_AutoActionType,
 } from "./AutoActionType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION MSBindResult */
 /**
  * @summary MSBindResult
  * @description
@@ -216,9 +215,7 @@ export class MSBindResult {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MSBindResult */
 /**
  * @summary The Leading Root Component Types of MSBindResult
  * @description
@@ -320,9 +317,7 @@ export const _root_component_type_list_1_spec_for_MSBindResult: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSBindResult */
 /**
  * @summary The Trailing Root Component Types of MSBindResult
  * @description
@@ -332,9 +327,7 @@ export const _root_component_type_list_1_spec_for_MSBindResult: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MSBindResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSBindResult */
 /**
  * @summary The Extension Addition Component Types of MSBindResult
  * @description
@@ -344,13 +337,9 @@ export const _root_component_type_list_2_spec_for_MSBindResult: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_MSBindResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindResult */
 let _cached_decoder_for_MSBindResult: $.ASN1Decoder<MSBindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MSBindResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) MSBindResult
  * @function
@@ -496,13 +485,9 @@ export function _decode_MSBindResult(el: _Element) {
     }
     return _cached_decoder_for_MSBindResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindResult */
 let _cached_encoder_for_MSBindResult: $.ASN1Encoder<MSBindResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MSBindResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MSBindResult */
 /**
  * @summary Encodes a(n) MSBindResult into an ASN.1 Element.
  * @function
@@ -672,6 +657,5 @@ export function _encode_MSBindResult(
     return _cached_encoder_for_MSBindResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MSBindResult */
 
 /* eslint-enable */

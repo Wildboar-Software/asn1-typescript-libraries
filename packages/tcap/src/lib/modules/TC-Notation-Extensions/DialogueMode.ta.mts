@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_DialogueMode */
 /**
  * @summary DialogueMode
  * @description
@@ -26,9 +25,7 @@ export enum _enum_for_DialogueMode {
     structured = 1,
     unstructured = 2,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_DialogueMode */
 
-/* START_OF_SYMBOL_DEFINITION DialogueMode */
 /**
  * @summary DialogueMode
  * @description
@@ -40,9 +37,7 @@ export enum _enum_for_DialogueMode {
  * ```@enum {number}
  */
 export type DialogueMode = _enum_for_DialogueMode;
-/* END_OF_SYMBOL_DEFINITION DialogueMode */
 
-/* START_OF_SYMBOL_DEFINITION DialogueMode */
 /**
  * @summary DialogueMode
  * @description
@@ -54,9 +49,7 @@ export type DialogueMode = _enum_for_DialogueMode;
  * ```@enum {number}
  */
 export const DialogueMode = _enum_for_DialogueMode;
-/* END_OF_SYMBOL_DEFINITION DialogueMode */
 
-/* START_OF_SYMBOL_DEFINITION DialogueMode_structured */
 /**
  * @summary DialogueMode_structured
  * @constant
@@ -64,9 +57,7 @@ export const DialogueMode = _enum_for_DialogueMode;
  */
 export const DialogueMode_structured: DialogueMode =
     DialogueMode.structured; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DialogueMode_structured */
 
-/* START_OF_SYMBOL_DEFINITION structured */
 /**
  * @summary structured
  * @constant
@@ -74,9 +65,7 @@ export const DialogueMode_structured: DialogueMode =
  */
 export const structured: DialogueMode =
     DialogueMode.structured; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION structured */
 
-/* START_OF_SYMBOL_DEFINITION DialogueMode_unstructured */
 /**
  * @summary DialogueMode_unstructured
  * @constant
@@ -84,9 +73,7 @@ export const structured: DialogueMode =
  */
 export const DialogueMode_unstructured: DialogueMode =
     DialogueMode.unstructured; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION DialogueMode_unstructured */
 
-/* START_OF_SYMBOL_DEFINITION unstructured */
 /**
  * @summary unstructured
  * @constant
@@ -94,21 +81,12 @@ export const DialogueMode_unstructured: DialogueMode =
  */
 export const unstructured: DialogueMode =
     DialogueMode.unstructured; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unstructured */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DialogueMode */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DialogueMode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DialogueMode */
 export const _decode_DialogueMode = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_DialogueMode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DialogueMode */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DialogueMode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DialogueMode */
 export const _encode_DialogueMode = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_DialogueMode */
 
 /* eslint-enable */

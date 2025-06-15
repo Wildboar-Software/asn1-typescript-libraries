@@ -21,7 +21,7 @@ import {
   _decode_RDNSequence,
   _encode_RDNSequence,
 } from '../CMIP-1/RDNSequence.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ObjectInstance */
+
 /**
  * @summary ObjectInstance
  * @description
@@ -40,13 +40,11 @@ export type ObjectInstance =
   | { distinguishedName: DistinguishedName } /* CHOICE_ALT_ROOT */
   | { nonSpecificForm: OCTET_STRING } /* CHOICE_ALT_ROOT */
   | { localDistinguishedName: RDNSequence } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectInstance */
+
 let _cached_decoder_for_ObjectInstance: $.ASN1Decoder<ObjectInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ObjectInstance */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectInstance
  * @function
@@ -76,13 +74,11 @@ export function _decode_ObjectInstance(el: _Element) {
   }
   return _cached_decoder_for_ObjectInstance(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectInstance */
+
 let _cached_encoder_for_ObjectInstance: $.ASN1Encoder<ObjectInstance> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectInstance */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ObjectInstance */
+
 /**
  * @summary Encodes a(n) ObjectInstance into an ASN.1 Element.
  * @function
@@ -122,6 +118,5 @@ export function _encode_ObjectInstance(
   return _cached_encoder_for_ObjectInstance(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ObjectInstance */
 
 /* eslint-enable */

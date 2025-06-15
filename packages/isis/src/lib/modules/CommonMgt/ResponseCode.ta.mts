@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ResponseCode */
 /**
  * @summary ResponseCode
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ResponseCode = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION ResponseCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseCode */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ResponseCode */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ResponseCode */
 export const _decode_ResponseCode = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_ResponseCode */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseCode */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ResponseCode */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ResponseCode */
 export const _encode_ResponseCode = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ResponseCode */
 
 /* eslint-enable */

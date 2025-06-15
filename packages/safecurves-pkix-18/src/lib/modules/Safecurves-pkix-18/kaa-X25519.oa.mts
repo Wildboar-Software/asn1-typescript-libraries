@@ -14,7 +14,7 @@ import { id_X25519 } from "../Safecurves-pkix-18/id-X25519.va.mjs";
 import { pk_X25519 } from "../Safecurves-pkix-18/pk-X25519.oa.mjs";
 import { kaa_X25519_smimeCaps } from "../Safecurves-pkix-18/kaa-X25519-smimeCaps.oa.mjs";
 import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION kaa_X25519 */
+
 /**
  * @summary kaa_X25519
  * @description
@@ -56,6 +56,5 @@ const kaa_X25519: KEY_AGREE = {
     "&Params": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Ukm": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION kaa_X25519 */
 
 /* eslint-enable */

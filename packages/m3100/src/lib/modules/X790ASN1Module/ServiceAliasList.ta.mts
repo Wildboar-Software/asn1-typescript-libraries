@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ServiceAliasList */
+
 /**
  * @summary ServiceAliasList
  * @description
@@ -24,13 +24,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ServiceAliasList = GraphicString[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION ServiceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceAliasList */
+
 let _cached_decoder_for_ServiceAliasList: $.ASN1Decoder<ServiceAliasList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ServiceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ServiceAliasList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceAliasList
  * @function
@@ -45,13 +43,11 @@ export function _decode_ServiceAliasList(el: _Element) {
     }
     return _cached_decoder_for_ServiceAliasList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ServiceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceAliasList */
+
 let _cached_encoder_for_ServiceAliasList: $.ASN1Encoder<ServiceAliasList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ServiceAliasList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ServiceAliasList */
+
 /**
  * @summary Encodes a(n) ServiceAliasList into an ASN.1 Element.
  * @function
@@ -72,6 +68,5 @@ export function _encode_ServiceAliasList(
     return _cached_encoder_for_ServiceAliasList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ServiceAliasList */
 
 /* eslint-enable */

@@ -6,7 +6,7 @@ import {
     _decode_Pointer,
     _encode_Pointer,
 } from "../CMSProfileAttributes/Pointer.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION Pointers */
+
 /**
  * @summary Pointers
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type Pointers = Pointer[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION Pointers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Pointers */
+
 let _cached_decoder_for_Pointers: $.ASN1Decoder<Pointers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Pointers */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Pointers */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Pointers
  * @function
@@ -39,13 +37,11 @@ export function _decode_Pointers(el: _Element) {
     }
     return _cached_decoder_for_Pointers(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Pointers */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Pointers */
+
 let _cached_encoder_for_Pointers: $.ASN1Encoder<Pointers> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Pointers */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Pointers */
+
 /**
  * @summary Encodes a(n) Pointers into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_Pointers(
     return _cached_encoder_for_Pointers(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Pointers */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_HeadingExtensionsSubField,
     _encode_HeadingExtensionsSubField,
 } from '../EDIMSInformationObjects/HeadingExtensionsSubField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION HeadingExtensionsField */
 /**
  * @summary HeadingExtensionsField
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type HeadingExtensionsField = HeadingExtensionsSubField[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION HeadingExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_HeadingExtensionsField */
 let _cached_decoder_for_HeadingExtensionsField: $.ASN1Decoder<HeadingExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_HeadingExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _decode_HeadingExtensionsField */
 /**
  * @summary Decodes an ASN.1 element into a(n) HeadingExtensionsField
  * @function
@@ -48,13 +43,9 @@ export function _decode_HeadingExtensionsField(el: _Element) {
     }
     return _cached_decoder_for_HeadingExtensionsField(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_HeadingExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_HeadingExtensionsField */
 let _cached_encoder_for_HeadingExtensionsField: $.ASN1Encoder<HeadingExtensionsField> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_HeadingExtensionsField */
 
-/* START_OF_SYMBOL_DEFINITION _encode_HeadingExtensionsField */
 /**
  * @summary Encodes a(n) HeadingExtensionsField into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_HeadingExtensionsField(
     return _cached_encoder_for_HeadingExtensionsField(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_HeadingExtensionsField */
 
 /* eslint-enable */

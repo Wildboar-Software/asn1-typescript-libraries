@@ -17,7 +17,7 @@ import {
   _get_decoder_for_GenericTimeTypeChoice,
   _get_encoder_for_GenericTimeTypeChoice,
 } from '../XSD/GenericTimeTypeChoice.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION GYear */
+
 /**
  * @summary GYear
  * @description
@@ -34,13 +34,11 @@ import {
  * ```
  */
 export type GYear = GenericTimeTypeChoice<TIME, VisibleString>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION GYear */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_GYear */
+
 let _cached_decoder_for_GYear: $.ASN1Decoder<GYear> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_GYear */
 
-/* START_OF_SYMBOL_DEFINITION _decode_GYear */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GYear
  * @function
@@ -56,13 +54,11 @@ export function _decode_GYear(el: _Element) {
   }
   return _cached_decoder_for_GYear(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_GYear */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_GYear */
+
 let _cached_encoder_for_GYear: $.ASN1Encoder<GYear> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_GYear */
 
-/* START_OF_SYMBOL_DEFINITION _encode_GYear */
+
 /**
  * @summary Encodes a(n) GYear into an ASN.1 Element.
  * @function
@@ -80,6 +76,5 @@ export function _encode_GYear(value: GYear, elGetter: $.ASN1Encoder<GYear>) {
   return _cached_encoder_for_GYear(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_GYear */
 
 /* eslint-enable */

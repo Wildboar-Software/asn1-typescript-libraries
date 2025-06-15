@@ -23,7 +23,7 @@ import {
   _decode_EventReportArgument,
   _encode_EventReportArgument,
 } from '../CMIP-1/EventReportArgument.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION m_EventReport */
+
 /**
  * @summary m_EventReport
  * @description
@@ -65,6 +65,5 @@ export const m_EventReport: OPERATION<EventReportArgument> = {
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION m_EventReport */
 
 /* eslint-enable */

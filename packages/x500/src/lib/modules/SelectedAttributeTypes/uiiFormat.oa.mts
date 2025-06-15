@@ -10,7 +10,6 @@ import {
     _decode_UiiFormat,
     _encode_UiiFormat,
 } from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION uiiFormat */
 /**
  * @summary uiiFormat
  * @description
@@ -49,6 +48,5 @@ export const uiiFormat: ATTRIBUTE<UiiFormat> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION uiiFormat */
 
 /* eslint-enable */

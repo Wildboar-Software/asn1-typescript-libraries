@@ -6,7 +6,7 @@ import { HashAlgorithms_Union2_Intersection0_Element } from "./HashAlgorithms-Un
 import { HashAlgorithms_Union3_Intersection0_Element } from "./HashAlgorithms-Union3-Intersection0-Element.oa.mjs";
 import { HashAlgorithms_Union4_Intersection0_Element } from "./HashAlgorithms-Union4-Intersection0-Element.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION HashAlgorithms */
+
 /**
  * @summary HashAlgorithms
  * @description
@@ -34,6 +34,5 @@ export const HashAlgorithms: DIGEST_ALGORITHM[] = [
     HashAlgorithms_Union3_Intersection0_Element,
     HashAlgorithms_Union4_Intersection0_Element,
 ];
-/* END_OF_SYMBOL_DEFINITION HashAlgorithms */
 
 /* eslint-enable */

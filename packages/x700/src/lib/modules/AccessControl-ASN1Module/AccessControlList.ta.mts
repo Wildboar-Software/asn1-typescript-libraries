@@ -15,7 +15,6 @@ import {
     _decode_AccessControlList_Item,
     _encode_AccessControlList_Item,
 } from '../AccessControl-ASN1Module/AccessControlList-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AccessControlList */
 /**
  * @summary AccessControlList
  * @description
@@ -29,13 +28,9 @@ import {
  * ```
  */
 export type AccessControlList = AccessControlList_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION AccessControlList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlList */
 let _cached_decoder_for_AccessControlList: $.ASN1Decoder<AccessControlList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessControlList */
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessControlList
  * @function
@@ -50,13 +45,9 @@ export function _decode_AccessControlList(el: _Element) {
     }
     return _cached_decoder_for_AccessControlList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccessControlList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlList */
 let _cached_encoder_for_AccessControlList: $.ASN1Encoder<AccessControlList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessControlList */
 /**
  * @summary Encodes a(n) AccessControlList into an ASN.1 Element.
  * @function
@@ -77,6 +68,5 @@ export function _encode_AccessControlList(
     return _cached_encoder_for_AccessControlList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessControlList */
 
 /* eslint-enable */

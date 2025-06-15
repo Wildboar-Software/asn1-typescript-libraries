@@ -13,7 +13,6 @@ import {
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { sha_1 } from "../SEC1-v1-9/sha-1.va.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION HashFunctions_Union0_Intersection0_Element */
 /**
  * @summary HashFunctions_Union0_Intersection0_Element
  * @description
@@ -40,6 +39,5 @@ const HashFunctions_Union0_Intersection0_Element: ALGORITHM<NULL> = {
     "&id": sha_1 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION HashFunctions_Union0_Intersection0_Element */
 
 /* eslint-enable */

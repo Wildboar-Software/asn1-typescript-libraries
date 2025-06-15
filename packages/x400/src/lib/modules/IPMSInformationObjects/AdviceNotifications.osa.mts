@@ -12,7 +12,6 @@ import {
 import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.mjs';
 import { absence_advice } from '../IPMSInformationObjects/absence-advice.oa.mjs';
 import { change_of_address_advice } from '../IPMSInformationObjects/change-of-address-advice.oa.mjs';
-/* START_OF_SYMBOL_DEFINITION AdviceNotifications */
 /**
  * @summary AdviceNotifications
  * @description
@@ -31,6 +30,5 @@ export const AdviceNotifications: IPMS_EXTENSION[] = [
     absence_advice,
     change_of_address_advice,
 ];
-/* END_OF_SYMBOL_DEFINITION AdviceNotifications */
 
 /* eslint-enable */

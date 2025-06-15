@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION id_PBKDF2 */
+
 /**
  * @summary id_PBKDF2
  * @description
@@ -24,6 +24,5 @@ export const id_PBKDF2: OBJECT_IDENTIFIER = new _OID([
     /* pkcs-5 */ 5,
     12,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_PBKDF2 */
 
 /* eslint-enable */

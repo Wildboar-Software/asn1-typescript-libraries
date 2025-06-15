@@ -15,7 +15,6 @@ import {
     _decode_TestSuspendResumeError_Item,
     _encode_TestSuspendResumeError_Item,
 } from '../Test-ASN1Module/TestSuspendResumeError-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TestSuspendResumeError */
 /**
  * @summary TestSuspendResumeError
  * @description
@@ -30,13 +29,9 @@ import {
  * ```
  */
 export type TestSuspendResumeError = TestSuspendResumeError_Item[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION TestSuspendResumeError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSuspendResumeError */
 let _cached_decoder_for_TestSuspendResumeError: $.ASN1Decoder<TestSuspendResumeError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TestSuspendResumeError */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TestSuspendResumeError */
 /**
  * @summary Decodes an ASN.1 element into a(n) TestSuspendResumeError
  * @function
@@ -51,13 +46,9 @@ export function _decode_TestSuspendResumeError(el: _Element) {
     }
     return _cached_decoder_for_TestSuspendResumeError(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TestSuspendResumeError */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSuspendResumeError */
 let _cached_encoder_for_TestSuspendResumeError: $.ASN1Encoder<TestSuspendResumeError> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TestSuspendResumeError */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TestSuspendResumeError */
 /**
  * @summary Encodes a(n) TestSuspendResumeError into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_TestSuspendResumeError(
     return _cached_encoder_for_TestSuspendResumeError(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TestSuspendResumeError */
 
 /* eslint-enable */

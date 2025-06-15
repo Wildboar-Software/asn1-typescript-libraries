@@ -3,7 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union5_Intersection0_Element */
 /**
  * @summary ANSIX9HashFunctions_Union5_Intersection0_Element
  * @description
@@ -29,6 +28,5 @@ export const ANSIX9HashFunctions_Union5_Intersection0_Element: ALGORITHM<NULL> =
     "&id": id_SHA256 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union5_Intersection0_Element */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
   _decode_BioAPI_BSP_SCHEMA,
   _encode_BioAPI_BSP_SCHEMA,
 } from '../BIP/BioAPI-BSP-SCHEMA.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BSPRegistrationEvent_NotificationParams */
+
 /**
  * @summary BSPRegistrationEvent_NotificationParams
  * @description
@@ -68,9 +68,8 @@ export class BSPRegistrationEvent_NotificationParams {
     return new BSPRegistrationEvent_NotificationParams(_o.bspSchema, _o.update);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPRegistrationEvent_NotificationParams */
+
 /**
  * @summary The Leading Root Component Types of BSPRegistrationEvent_NotificationParams
  * @description
@@ -95,9 +94,8 @@ export const _root_component_type_list_1_spec_for_BSPRegistrationEvent_Notificat
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPRegistrationEvent_NotificationParams */
+
 /**
  * @summary The Trailing Root Component Types of BSPRegistrationEvent_NotificationParams
  * @description
@@ -107,9 +105,8 @@ export const _root_component_type_list_1_spec_for_BSPRegistrationEvent_Notificat
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BSPRegistrationEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPRegistrationEvent_NotificationParams */
+
 /**
  * @summary The Extension Addition Component Types of BSPRegistrationEvent_NotificationParams
  * @description
@@ -119,13 +116,11 @@ export const _root_component_type_list_2_spec_for_BSPRegistrationEvent_Notificat
  * @constant
  */
 export const _extension_additions_list_spec_for_BSPRegistrationEvent_NotificationParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPRegistrationEvent_NotificationParams */
+
 let _cached_decoder_for_BSPRegistrationEvent_NotificationParams: $.ASN1Decoder<BSPRegistrationEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BSPRegistrationEvent_NotificationParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BSPRegistrationEvent_NotificationParams
  * @function
@@ -156,13 +151,11 @@ export function _decode_BSPRegistrationEvent_NotificationParams(el: _Element) {
   }
   return _cached_decoder_for_BSPRegistrationEvent_NotificationParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPRegistrationEvent_NotificationParams */
+
 let _cached_encoder_for_BSPRegistrationEvent_NotificationParams: $.ASN1Encoder<BSPRegistrationEvent_NotificationParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BSPRegistrationEvent_NotificationParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BSPRegistrationEvent_NotificationParams */
+
 /**
  * @summary Encodes a(n) BSPRegistrationEvent_NotificationParams into an ASN.1 Element.
  * @function
@@ -194,6 +187,5 @@ export function _encode_BSPRegistrationEvent_NotificationParams(
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BSPRegistrationEvent_NotificationParams */
 
 /* eslint-enable */

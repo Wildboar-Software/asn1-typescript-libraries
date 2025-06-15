@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION op_register_ms */
 /**
  * @summary op_register_ms
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const op_register_ms: Code = { local: 24 };
-/* END_OF_SYMBOL_DEFINITION op_register_ms */
 
 /* eslint-enable */

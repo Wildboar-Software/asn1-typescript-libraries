@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NumberOfCircuits */
+
 /**
  * @summary NumberOfCircuits
  * @description
@@ -24,21 +24,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type NumberOfCircuits = INTEGER;
-/* END_OF_SYMBOL_DEFINITION NumberOfCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfCircuits */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumberOfCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NumberOfCircuits */
+
+
 export const _decode_NumberOfCircuits = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_NumberOfCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfCircuits */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumberOfCircuits */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NumberOfCircuits */
+
+
 export const _encode_NumberOfCircuits = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_NumberOfCircuits */
 
 /* eslint-enable */

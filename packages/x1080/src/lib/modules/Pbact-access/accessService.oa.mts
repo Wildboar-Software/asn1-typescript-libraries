@@ -22,7 +22,7 @@ import {
     _encode_AccessService,
 } from '../Pbact-access/AccessService.ta.mjs';
 import { id_at_accessService } from '../Pbact-access/id-at-accessService.va.mjs';
-/* START_OF_SYMBOL_DEFINITION accessService */
+
 /**
  * @summary accessService
  * @description
@@ -56,6 +56,5 @@ export const accessService: ATTRIBUTE<AccessService> = {
     '&usage': userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     '&obsolete': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION accessService */
 
 /* eslint-enable */

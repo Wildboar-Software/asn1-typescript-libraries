@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import { SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
 import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION Errors */
+
 /**
  * @summary Errors
  * @description
@@ -30,6 +30,5 @@ function Errors (ValidSEs: SECURITY_EXCHANGE[]): SE_ERROR[] {
         .flatMap((vse: SECURITY_EXCHANGE) => (vse["&SE-Items"] ?? [])
             .flatMap((sei) => sei["&Errors"] ?? []));
 }
-/* END_OF_SYMBOL_DEFINITION _encode_Errors */
 
 /* eslint-enable */

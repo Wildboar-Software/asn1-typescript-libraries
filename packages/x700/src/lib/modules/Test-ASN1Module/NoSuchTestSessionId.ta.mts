@@ -15,7 +15,6 @@ import {
     _decode_TestSessionId,
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NoSuchTestSessionId */
 /**
  * @summary NoSuchTestSessionId
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type NoSuchTestSessionId = TestSessionId; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NoSuchTestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchTestSessionId */
 let _cached_decoder_for_NoSuchTestSessionId: $.ASN1Decoder<NoSuchTestSessionId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoSuchTestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoSuchTestSessionId */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchTestSessionId
  * @function
@@ -46,13 +41,9 @@ export function _decode_NoSuchTestSessionId(el: _Element) {
     }
     return _cached_decoder_for_NoSuchTestSessionId(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoSuchTestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchTestSessionId */
 let _cached_encoder_for_NoSuchTestSessionId: $.ASN1Encoder<NoSuchTestSessionId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoSuchTestSessionId */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoSuchTestSessionId */
 /**
  * @summary Encodes a(n) NoSuchTestSessionId into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_NoSuchTestSessionId(
     return _cached_encoder_for_NoSuchTestSessionId(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoSuchTestSessionId */
 
 /* eslint-enable */

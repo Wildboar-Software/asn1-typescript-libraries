@@ -103,7 +103,6 @@ import {
     _decode_ExtensionsField,
     _encode_ExtensionsField,
 } from '../IPMSInformationObjects/ExtensionsField.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Heading */
 /**
  * @summary Heading
  * @description
@@ -354,9 +353,7 @@ export class Heading {
 
     public static _enum_for_sensitivity = _enum_for_SensitivityField;
 }
-/* END_OF_SYMBOL_DEFINITION Heading */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Heading */
 /**
  * @summary The Leading Root Component Types of Heading
  * @description
@@ -486,9 +483,7 @@ export const _root_component_type_list_1_spec_for_Heading: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Heading */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Heading */
 /**
  * @summary The Trailing Root Component Types of Heading
  * @description
@@ -498,9 +493,7 @@ export const _root_component_type_list_1_spec_for_Heading: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Heading: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Heading */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Heading */
 /**
  * @summary The Extension Addition Component Types of Heading
  * @description
@@ -510,13 +503,9 @@ export const _root_component_type_list_2_spec_for_Heading: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Heading: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Heading */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Heading */
 let _cached_decoder_for_Heading: $.ASN1Decoder<Heading> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Heading */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Heading */
 /**
  * @summary Decodes an ASN.1 element into a(n) Heading
  * @function
@@ -670,13 +659,9 @@ export function _decode_Heading(el: _Element) {
     }
     return _cached_decoder_for_Heading(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Heading */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Heading */
 let _cached_encoder_for_Heading: $.ASN1Encoder<Heading> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Heading */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Heading */
 /**
  * @summary Encodes a(n) Heading into an ASN.1 Element.
  * @function
@@ -865,6 +850,5 @@ export function _encode_Heading(
     return _cached_encoder_for_Heading(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Heading */
 
 /* eslint-enable */

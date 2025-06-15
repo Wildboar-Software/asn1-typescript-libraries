@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { SOFTWARE_SCHEME } from '../E-health-identification/SOFTWARE-SCHEME.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION SoftwareSchemes */
+
 /**
  * @summary SoftwareSchemes
  * @description
@@ -26,6 +26,5 @@ import { SOFTWARE_SCHEME } from '../E-health-identification/SOFTWARE-SCHEME.oca.
  *
  */
 export const SoftwareSchemes: SOFTWARE_SCHEME[] = [];
-/* END_OF_SYMBOL_DEFINITION SoftwareSchemes */
 
 /* eslint-enable */

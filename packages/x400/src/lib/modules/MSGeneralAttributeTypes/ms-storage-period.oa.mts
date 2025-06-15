@@ -24,7 +24,6 @@ import { id_att_storage_period } from '../MSObjectIdentifiers/id-att-storage-per
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_storage_period */
 /**
  * @summary ms_storage_period
  * @description
@@ -59,6 +58,5 @@ export const ms_storage_period: X413ATTRIBUTE<StoragePeriod> = {
     '&id': id_att_storage_period /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_storage_period */
 
 /* eslint-enable */

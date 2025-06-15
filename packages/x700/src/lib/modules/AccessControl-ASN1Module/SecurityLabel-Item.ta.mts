@@ -15,7 +15,6 @@ import {
     _decode_SecurityLabel_Item_initiatorLabel,
     _encode_SecurityLabel_Item_initiatorLabel,
 } from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SecurityLabel_Item */
 /**
  * @summary SecurityLabel_Item
  * @description
@@ -29,13 +28,9 @@ import {
 export type SecurityLabel_Item = {
     initiatorLabel: SecurityLabel_Item_initiatorLabel;
 } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SecurityLabel_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel_Item */
 let _cached_decoder_for_SecurityLabel_Item: $.ASN1Decoder<SecurityLabel_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityLabel_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecurityLabel_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityLabel_Item
  * @function
@@ -57,13 +52,9 @@ export function _decode_SecurityLabel_Item(el: _Element) {
     }
     return _cached_decoder_for_SecurityLabel_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecurityLabel_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel_Item */
 let _cached_encoder_for_SecurityLabel_Item: $.ASN1Encoder<SecurityLabel_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecurityLabel_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecurityLabel_Item */
 /**
  * @summary Encodes a(n) SecurityLabel_Item into an ASN.1 Element.
  * @function
@@ -91,6 +82,5 @@ export function _encode_SecurityLabel_Item(
     return _cached_encoder_for_SecurityLabel_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecurityLabel_Item */
 
 /* eslint-enable */

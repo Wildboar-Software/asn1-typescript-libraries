@@ -6,7 +6,6 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_collectivePostOfficeBox } from "../SelectedAttributeTypes/id-at-collectivePostOfficeBox.va.mjs";
 import { postOfficeBox } from "../SelectedAttributeTypes/postOfficeBox.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION collectivePostOfficeBox */
 /**
  * @summary collectivePostOfficeBox
  * @description
@@ -46,6 +45,5 @@ export const collectivePostOfficeBox: ATTRIBUTE = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION collectivePostOfficeBox */
 
 /* eslint-enable */

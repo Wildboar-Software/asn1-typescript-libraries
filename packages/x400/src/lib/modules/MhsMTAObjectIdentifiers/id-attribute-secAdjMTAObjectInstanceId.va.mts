@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MhsMTAObjectIdentifiers/ID.ta.mjs';
 import { id_attribute } from '../MhsMTAObjectIdentifiers/id-attribute.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_attribute_secAdjMTAObjectInstanceId */
 /**
  * @summary id_attribute_secAdjMTAObjectInstanceId
  * @description
@@ -28,6 +27,5 @@ export const id_attribute_secAdjMTAObjectInstanceId: ID = new _OID(
     [150],
     id_attribute
 );
-/* END_OF_SYMBOL_DEFINITION id_attribute_secAdjMTAObjectInstanceId */
 
 /* eslint-enable */

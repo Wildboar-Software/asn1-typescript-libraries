@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ControlActionType */
+
 /**
  * @summary ControlActionType
  * @description
@@ -30,9 +30,8 @@ export enum _enum_for_ControlActionType {
     closeMomentarily = 2,
     openMomentarily = 3,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ControlActionType */
 
-/* START_OF_SYMBOL_DEFINITION ControlActionType */
+
 /**
  * @summary ControlActionType
  * @description
@@ -46,9 +45,8 @@ export enum _enum_for_ControlActionType {
  * ```@enum {number}
  */
 export type ControlActionType = _enum_for_ControlActionType;
-/* END_OF_SYMBOL_DEFINITION ControlActionType */
 
-/* START_OF_SYMBOL_DEFINITION ControlActionType */
+
 /**
  * @summary ControlActionType
  * @description
@@ -62,9 +60,8 @@ export type ControlActionType = _enum_for_ControlActionType;
  * ```@enum {number}
  */
 export const ControlActionType = _enum_for_ControlActionType;
-/* END_OF_SYMBOL_DEFINITION ControlActionType */
 
-/* START_OF_SYMBOL_DEFINITION ControlActionType_closeContinuously */
+
 /**
  * @summary ControlActionType_closeContinuously
  * @constant
@@ -72,9 +69,8 @@ export const ControlActionType = _enum_for_ControlActionType;
  */
 export const ControlActionType_closeContinuously: ControlActionType =
     ControlActionType.closeContinuously; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlActionType_closeContinuously */
 
-/* START_OF_SYMBOL_DEFINITION closeContinuously */
+
 /**
  * @summary closeContinuously
  * @constant
@@ -82,9 +78,8 @@ export const ControlActionType_closeContinuously: ControlActionType =
  */
 export const closeContinuously: ControlActionType =
     ControlActionType.closeContinuously; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION closeContinuously */
 
-/* START_OF_SYMBOL_DEFINITION ControlActionType_openContinuously */
+
 /**
  * @summary ControlActionType_openContinuously
  * @constant
@@ -92,9 +87,8 @@ export const closeContinuously: ControlActionType =
  */
 export const ControlActionType_openContinuously: ControlActionType =
     ControlActionType.openContinuously; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlActionType_openContinuously */
 
-/* START_OF_SYMBOL_DEFINITION openContinuously */
+
 /**
  * @summary openContinuously
  * @constant
@@ -102,9 +96,8 @@ export const ControlActionType_openContinuously: ControlActionType =
  */
 export const openContinuously: ControlActionType =
     ControlActionType.openContinuously; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION openContinuously */
 
-/* START_OF_SYMBOL_DEFINITION ControlActionType_closeMomentarily */
+
 /**
  * @summary ControlActionType_closeMomentarily
  * @constant
@@ -112,9 +105,8 @@ export const openContinuously: ControlActionType =
  */
 export const ControlActionType_closeMomentarily: ControlActionType =
     ControlActionType.closeMomentarily; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlActionType_closeMomentarily */
 
-/* START_OF_SYMBOL_DEFINITION closeMomentarily */
+
 /**
  * @summary closeMomentarily
  * @constant
@@ -122,9 +114,8 @@ export const ControlActionType_closeMomentarily: ControlActionType =
  */
 export const closeMomentarily: ControlActionType =
     ControlActionType.closeMomentarily; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION closeMomentarily */
 
-/* START_OF_SYMBOL_DEFINITION ControlActionType_openMomentarily */
+
 /**
  * @summary ControlActionType_openMomentarily
  * @constant
@@ -132,9 +123,8 @@ export const closeMomentarily: ControlActionType =
  */
 export const ControlActionType_openMomentarily: ControlActionType =
     ControlActionType.openMomentarily; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ControlActionType_openMomentarily */
 
-/* START_OF_SYMBOL_DEFINITION openMomentarily */
+
 /**
  * @summary openMomentarily
  * @constant
@@ -142,21 +132,16 @@ export const ControlActionType_openMomentarily: ControlActionType =
  */
 export const openMomentarily: ControlActionType =
     ControlActionType.openMomentarily; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION openMomentarily */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlActionType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ControlActionType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ControlActionType */
+
+
 export const _decode_ControlActionType = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ControlActionType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlActionType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ControlActionType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ControlActionType */
+
+
 export const _encode_ControlActionType = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ControlActionType */
 
 /* eslint-enable */

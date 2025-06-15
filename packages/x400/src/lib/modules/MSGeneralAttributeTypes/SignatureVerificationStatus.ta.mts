@@ -17,7 +17,6 @@ import {
     _decode_SignatureStatus,
     _encode_SignatureStatus,
 } from '../MSGeneralAttributeTypes/SignatureStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignatureVerificationStatus */
 /**
  * @summary SignatureVerificationStatus
  * @description
@@ -165,9 +164,7 @@ export class SignatureVerificationStatus {
         return signature_absent;
     }
 }
-/* END_OF_SYMBOL_DEFINITION SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignatureVerificationStatus */
 /**
  * @summary The Leading Root Component Types of SignatureVerificationStatus
  * @description
@@ -220,9 +217,7 @@ export const _root_component_type_list_1_spec_for_SignatureVerificationStatus: $
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignatureVerificationStatus */
 /**
  * @summary The Trailing Root Component Types of SignatureVerificationStatus
  * @description
@@ -232,9 +227,7 @@ export const _root_component_type_list_1_spec_for_SignatureVerificationStatus: $
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SignatureVerificationStatus: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignatureVerificationStatus */
 /**
  * @summary The Extension Addition Component Types of SignatureVerificationStatus
  * @description
@@ -244,13 +237,9 @@ export const _root_component_type_list_2_spec_for_SignatureVerificationStatus: $
  * @constant
  */
 export const _extension_additions_list_spec_for_SignatureVerificationStatus: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureVerificationStatus */
 let _cached_decoder_for_SignatureVerificationStatus: $.ASN1Decoder<SignatureVerificationStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignatureVerificationStatus */
 /**
  * @summary Decodes an ASN.1 element into a(n) SignatureVerificationStatus
  * @function
@@ -332,13 +321,9 @@ export function _decode_SignatureVerificationStatus(el: _Element) {
     }
     return _cached_decoder_for_SignatureVerificationStatus(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureVerificationStatus */
 let _cached_encoder_for_SignatureVerificationStatus: $.ASN1Encoder<SignatureVerificationStatus> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignatureVerificationStatus */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignatureVerificationStatus */
 /**
  * @summary Encodes a(n) SignatureVerificationStatus into an ASN.1 Element.
  * @function
@@ -448,6 +433,5 @@ export function _encode_SignatureVerificationStatus(
     return _cached_encoder_for_SignatureVerificationStatus(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignatureVerificationStatus */
 
 /* eslint-enable */

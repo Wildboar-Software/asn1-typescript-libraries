@@ -12,7 +12,6 @@ import {
     _decode_SortKey,
     _encode_SortKey,
 } from "../DirectoryAbstractService/SortKey.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PagedResultsRequest_newRequest */
 /**
  * @summary PagedResultsRequest_newRequest
  * @description
@@ -113,9 +112,7 @@ export class PagedResultsRequest_newRequest {
         return false;
     }
 }
-/* END_OF_SYMBOL_DEFINITION PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PagedResultsRequest_newRequest */
 /**
  * @summary The Leading Root Component Types of PagedResultsRequest_newRequest
  * @description
@@ -161,9 +158,7 @@ export const _root_component_type_list_1_spec_for_PagedResultsRequest_newRequest
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PagedResultsRequest_newRequest */
 /**
  * @summary The Trailing Root Component Types of PagedResultsRequest_newRequest
  * @description
@@ -173,9 +168,7 @@ export const _root_component_type_list_1_spec_for_PagedResultsRequest_newRequest
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PagedResultsRequest_newRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PagedResultsRequest_newRequest */
 /**
  * @summary The Extension Addition Component Types of PagedResultsRequest_newRequest
  * @description
@@ -185,13 +178,9 @@ export const _root_component_type_list_2_spec_for_PagedResultsRequest_newRequest
  * @constant
  */
 export const _extension_additions_list_spec_for_PagedResultsRequest_newRequest: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PagedResultsRequest_newRequest */
 let _cached_decoder_for_PagedResultsRequest_newRequest: $.ASN1Decoder<PagedResultsRequest_newRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PagedResultsRequest_newRequest */
 /**
  * @summary Decodes an ASN.1 element into a(n) PagedResultsRequest_newRequest
  * @function
@@ -262,13 +251,9 @@ export function _decode_PagedResultsRequest_newRequest(el: _Element) {
     }
     return _cached_decoder_for_PagedResultsRequest_newRequest(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PagedResultsRequest_newRequest */
 let _cached_encoder_for_PagedResultsRequest_newRequest: $.ASN1Encoder<PagedResultsRequest_newRequest> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PagedResultsRequest_newRequest */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PagedResultsRequest_newRequest */
 /**
  * @summary Encodes a(n) PagedResultsRequest_newRequest into an ASN.1 Element.
  * @function
@@ -342,6 +327,5 @@ export function _encode_PagedResultsRequest_newRequest(
     return _cached_encoder_for_PagedResultsRequest_newRequest(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PagedResultsRequest_newRequest */
 
 /* eslint-enable */

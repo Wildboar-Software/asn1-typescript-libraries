@@ -20,7 +20,7 @@ import {
     _decode_Bundle,
     _encode_Bundle,
 } from '../ASN1DefinedTypesModule/Bundle.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SignalType */
+
 /**
  * @summary SignalType
  * @description
@@ -39,13 +39,11 @@ export type SignalType =
     | { simple: CharacteristicInformation } /* CHOICE_ALT_ROOT */
     | { bundle: Bundle } /* CHOICE_ALT_ROOT */
     | { complex: Bundle[] } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION SignalType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalType */
+
 let _cached_decoder_for_SignalType: $.ASN1Decoder<SignalType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SignalType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SignalType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignalType
  * @function
@@ -69,13 +67,11 @@ export function _decode_SignalType(el: _Element) {
     }
     return _cached_decoder_for_SignalType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SignalType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalType */
+
 let _cached_encoder_for_SignalType: $.ASN1Encoder<SignalType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SignalType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SignalType */
+
 /**
  * @summary Encodes a(n) SignalType into an ASN.1 Element.
  * @function
@@ -109,6 +105,5 @@ export function _encode_SignalType(
     return _cached_encoder_for_SignalType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SignalType */
 
 /* eslint-enable */

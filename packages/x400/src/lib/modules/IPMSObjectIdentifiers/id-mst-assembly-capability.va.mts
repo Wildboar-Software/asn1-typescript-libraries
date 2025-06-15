@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.mjs';
 import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_mst_assembly_capability */
 /**
  * @summary id_mst_assembly_capability
  * @description
@@ -25,6 +24,5 @@ import { id_mst } from '../IPMSObjectIdentifiers/id-mst.va.mjs';
  * @constant
  */
 export const id_mst_assembly_capability: ID = new _OID([7], id_mst);
-/* END_OF_SYMBOL_DEFINITION id_mst_assembly_capability */
 
 /* eslint-enable */

@@ -16,7 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AddNWTTPsToAccessGroupInformation */
+
 /**
  * @summary AddNWTTPsToAccessGroupInformation
  * @description
@@ -68,9 +68,8 @@ export class AddNWTTPsToAccessGroupInformation {
         return new AddNWTTPsToAccessGroupInformation(_o.nwTTPs, _o.accessGroup);
     }
 }
-/* END_OF_SYMBOL_DEFINITION AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddNWTTPsToAccessGroupInformation */
+
 /**
  * @summary The Leading Root Component Types of AddNWTTPsToAccessGroupInformation
  * @description
@@ -89,9 +88,8 @@ export const _root_component_type_list_1_spec_for_AddNWTTPsToAccessGroupInformat
     ),
     new $.ComponentSpec('accessGroup', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddNWTTPsToAccessGroupInformation */
+
 /**
  * @summary The Trailing Root Component Types of AddNWTTPsToAccessGroupInformation
  * @description
@@ -101,9 +99,8 @@ export const _root_component_type_list_1_spec_for_AddNWTTPsToAccessGroupInformat
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AddNWTTPsToAccessGroupInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddNWTTPsToAccessGroupInformation */
+
 /**
  * @summary The Extension Addition Component Types of AddNWTTPsToAccessGroupInformation
  * @description
@@ -113,13 +110,11 @@ export const _root_component_type_list_2_spec_for_AddNWTTPsToAccessGroupInformat
  * @constant
  */
 export const _extension_additions_list_spec_for_AddNWTTPsToAccessGroupInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AddNWTTPsToAccessGroupInformation */
+
 let _cached_decoder_for_AddNWTTPsToAccessGroupInformation: $.ASN1Decoder<AddNWTTPsToAccessGroupInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AddNWTTPsToAccessGroupInformation */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddNWTTPsToAccessGroupInformation
  * @function
@@ -163,13 +158,11 @@ export function _decode_AddNWTTPsToAccessGroupInformation(el: _Element) {
     }
     return _cached_decoder_for_AddNWTTPsToAccessGroupInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AddNWTTPsToAccessGroupInformation */
+
 let _cached_encoder_for_AddNWTTPsToAccessGroupInformation: $.ASN1Encoder<AddNWTTPsToAccessGroupInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AddNWTTPsToAccessGroupInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AddNWTTPsToAccessGroupInformation */
+
 /**
  * @summary Encodes a(n) AddNWTTPsToAccessGroupInformation into an ASN.1 Element.
  * @function
@@ -206,6 +199,5 @@ export function _encode_AddNWTTPsToAccessGroupInformation(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AddNWTTPsToAccessGroupInformation */
 
 /* eslint-enable */

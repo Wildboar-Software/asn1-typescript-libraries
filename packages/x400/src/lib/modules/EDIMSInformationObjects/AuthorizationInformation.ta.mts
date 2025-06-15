@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AuthorizationInformation */
 /**
  * @summary AuthorizationInformation
  * @description
@@ -25,21 +24,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AuthorizationInformation = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION AuthorizationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationInformation */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthorizationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthorizationInformation */
 export const _decode_AuthorizationInformation = $._decodeTeletexString;
-/* END_OF_SYMBOL_DEFINITION _decode_AuthorizationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationInformation */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthorizationInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthorizationInformation */
 export const _encode_AuthorizationInformation = $._encodeTeletexString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthorizationInformation */
 
 /* eslint-enable */

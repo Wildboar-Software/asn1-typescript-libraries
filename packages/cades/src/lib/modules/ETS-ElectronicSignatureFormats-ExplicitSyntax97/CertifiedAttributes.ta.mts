@@ -16,7 +16,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION CertifiedAttributes */
 /**
  * @summary CertifiedAttributes
  * @description
@@ -29,13 +28,9 @@ import {
  */
 export
 type CertifiedAttributes = AttributeCertificate; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CertifiedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertifiedAttributes */
 let _cached_decoder_for_CertifiedAttributes: $.ASN1Decoder<CertifiedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertifiedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertifiedAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertifiedAttributes
  * @function
@@ -47,13 +42,9 @@ function _decode_CertifiedAttributes (el: _Element) {
     if (!_cached_decoder_for_CertifiedAttributes) { _cached_decoder_for_CertifiedAttributes = _decode_AttributeCertificate; }
     return _cached_decoder_for_CertifiedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertifiedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertifiedAttributes */
 let _cached_encoder_for_CertifiedAttributes: $.ASN1Encoder<CertifiedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertifiedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertifiedAttributes */
 /**
  * @summary Encodes a(n) CertifiedAttributes into an ASN.1 Element.
  * @function
@@ -67,6 +58,5 @@ function _encode_CertifiedAttributes (value: CertifiedAttributes, elGetter: $.AS
     return _cached_encoder_for_CertifiedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertifiedAttributes */
 
 /* eslint-enable */

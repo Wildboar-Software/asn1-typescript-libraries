@@ -16,7 +16,6 @@ import {
     _decode_BackupResult_offLine_result,
     _encode_BackupResult_offLine_result,
 } from '../SWMF/BackupResult-offLine-result.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BackupResult_offLine */
 /**
  * @summary BackupResult_offLine
  * @description
@@ -63,9 +62,7 @@ export class BackupResult_offLine {
         return new BackupResult_offLine(_o.destination, _o.result);
     }
 }
-/* END_OF_SYMBOL_DEFINITION BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BackupResult_offLine */
 /**
  * @summary The Leading Root Component Types of BackupResult_offLine
  * @description
@@ -84,9 +81,7 @@ export const _root_component_type_list_1_spec_for_BackupResult_offLine: $.Compon
     ),
     new $.ComponentSpec('result', false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BackupResult_offLine */
 /**
  * @summary The Trailing Root Component Types of BackupResult_offLine
  * @description
@@ -96,9 +91,7 @@ export const _root_component_type_list_1_spec_for_BackupResult_offLine: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BackupResult_offLine: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BackupResult_offLine */
 /**
  * @summary The Extension Addition Component Types of BackupResult_offLine
  * @description
@@ -108,13 +101,9 @@ export const _root_component_type_list_2_spec_for_BackupResult_offLine: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_BackupResult_offLine: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_offLine */
 let _cached_decoder_for_BackupResult_offLine: $.ASN1Decoder<BackupResult_offLine> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BackupResult_offLine */
 /**
  * @summary Decodes an ASN.1 element into a(n) BackupResult_offLine
  * @function
@@ -145,13 +134,9 @@ export function _decode_BackupResult_offLine(el: _Element) {
     }
     return _cached_decoder_for_BackupResult_offLine(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_offLine */
 let _cached_encoder_for_BackupResult_offLine: $.ASN1Encoder<BackupResult_offLine> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BackupResult_offLine */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BackupResult_offLine */
 /**
  * @summary Encodes a(n) BackupResult_offLine into an ASN.1 Element.
  * @function
@@ -186,6 +171,5 @@ export function _encode_BackupResult_offLine(
     return _cached_encoder_for_BackupResult_offLine(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BackupResult_offLine */
 
 /* eslint-enable */

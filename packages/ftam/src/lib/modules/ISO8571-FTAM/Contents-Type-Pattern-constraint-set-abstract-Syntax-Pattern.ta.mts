@@ -16,7 +16,7 @@ import {
   _decode_Object_Identifier_Pattern,
   _encode_Object_Identifier_Pattern,
 } from '../ISO8571-FTAM/Object-Identifier-Pattern.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 /**
  * @summary Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
  * @description
@@ -68,9 +68,8 @@ export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
     );
   }
 }
-/* END_OF_SYMBOL_DEFINITION Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 /**
  * @summary The Leading Root Component Types of Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
  * @description
@@ -95,9 +94,8 @@ export const _root_component_type_list_1_spec_for_Contents_Type_Pattern_constrai
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 /**
  * @summary The Trailing Root Component Types of Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
  * @description
@@ -107,9 +105,8 @@ export const _root_component_type_list_1_spec_for_Contents_Type_Pattern_constrai
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 /**
  * @summary The Extension Addition Component Types of Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
  * @description
@@ -119,13 +116,11 @@ export const _root_component_type_list_2_spec_for_Contents_Type_Pattern_constrai
  * @constant
  */
 export const _extension_additions_list_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 let _cached_decoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern: $.ASN1Decoder<Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
  * @function
@@ -177,13 +172,11 @@ export function _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
     el
   );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 let _cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern: $.ASN1Encoder<Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
+
 /**
  * @summary Encodes a(n) Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern into an ASN.1 Element.
  * @function
@@ -231,6 +224,5 @@ export function _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
   );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 
 /* eslint-enable */

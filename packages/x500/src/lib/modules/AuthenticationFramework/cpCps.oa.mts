@@ -7,7 +7,6 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION cpCps */
 /**
  * @summary cpCps
  * @description
@@ -44,6 +43,5 @@ export const cpCps: OBJECT_CLASS = {
         "Certificate Policy and Certification Practice Statement" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cpCps /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION cpCps */
 
 /* eslint-enable */

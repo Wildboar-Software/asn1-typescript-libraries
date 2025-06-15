@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ecdsa_with_SHA224 */
+
 /**
  * @summary ecdsa_with_SHA224
  * @description
@@ -25,6 +25,5 @@ export const ecdsa_with_SHA224: OBJECT_IDENTIFIER = new _OID([
     /* ecdsa-with-SHA2 */ 3,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION ecdsa_with_SHA224 */
 
 /* eslint-enable */

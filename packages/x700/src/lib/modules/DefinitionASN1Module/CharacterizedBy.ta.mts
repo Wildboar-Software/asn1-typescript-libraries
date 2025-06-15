@@ -15,7 +15,7 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CharacterizedBy */
+
 /**
  * @summary CharacterizedBy
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type CharacterizedBy = TemplateList; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CharacterizedBy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterizedBy */
+
 let _cached_decoder_for_CharacterizedBy: $.ASN1Decoder<CharacterizedBy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CharacterizedBy */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CharacterizedBy */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CharacterizedBy
  * @function
@@ -46,13 +44,11 @@ export function _decode_CharacterizedBy(el: _Element) {
     }
     return _cached_decoder_for_CharacterizedBy(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CharacterizedBy */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterizedBy */
+
 let _cached_encoder_for_CharacterizedBy: $.ASN1Encoder<CharacterizedBy> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CharacterizedBy */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CharacterizedBy */
+
 /**
  * @summary Encodes a(n) CharacterizedBy into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_CharacterizedBy(
     return _cached_encoder_for_CharacterizedBy(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CharacterizedBy */
 
 /* eslint-enable */

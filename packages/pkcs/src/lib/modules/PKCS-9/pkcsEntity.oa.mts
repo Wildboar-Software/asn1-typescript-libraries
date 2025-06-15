@@ -7,7 +7,7 @@ import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.
 import { pkcs_9_oc_pkcsEntity } from "../PKCS-9/pkcs-9-oc-pkcsEntity.va.mjs";
 import { PKCSEntityAttributeSet } from "../PKCS-9/PKCSEntityAttributeSet.osa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION pkcsEntity */
+
 /**
  * @summary pkcsEntity
  * @description
@@ -38,6 +38,5 @@ export const pkcsEntity: OBJECT_CLASS = {
     ] /* OBJECT_FIELD_SETTING */,
     "&id": pkcs_9_oc_pkcsEntity /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pkcsEntity */
 
 /* eslint-enable */

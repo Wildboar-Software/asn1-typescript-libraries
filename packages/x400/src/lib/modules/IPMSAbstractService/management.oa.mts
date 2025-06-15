@@ -14,7 +14,6 @@ import { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-a
 import { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa.mjs';
 import { id_pt_management } from '../IPMSObjectIdentifiers/id-pt-management.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION management */
 /**
  * @summary management
  * @description
@@ -44,6 +43,5 @@ export const management: PORT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_management /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION management */
 
 /* eslint-enable */

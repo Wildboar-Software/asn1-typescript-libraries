@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { aes } from "../PKCS5v2-1/aes.va.mjs";
-/* START_OF_SYMBOL_DEFINITION aes256_CBC_PAD */
+
 /**
  * @summary aes256_CBC_PAD
  * @description
@@ -15,6 +15,5 @@ import { aes } from "../PKCS5v2-1/aes.va.mjs";
  * @constant
  */
 export const aes256_CBC_PAD: OBJECT_IDENTIFIER = new _OID([42], aes);
-/* END_OF_SYMBOL_DEFINITION aes256_CBC_PAD */
 
 /* eslint-enable */

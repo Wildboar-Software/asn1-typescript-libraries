@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedEncryptionAlgorithms */
+
 /**
  * @summary SupportedEncryptionAlgorithms
  * @description
@@ -27,6 +27,5 @@ import { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca.mjs";
  */
 export
 const SupportedEncryptionAlgorithms: (ENCINFO_TYPE)[] = [];
-/* END_OF_SYMBOL_DEFINITION SupportedEncryptionAlgorithms */
 
 /* eslint-enable */

@@ -2,7 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_dir } from "../UsefulDefinitions/ldap-dir.va.mjs";
-/* START_OF_SYMBOL_DEFINITION ldap_x509 */
 /**
  * @summary ldap_x509
  * @description
@@ -16,6 +15,5 @@ import { ldap_dir } from "../UsefulDefinitions/ldap-dir.va.mjs";
  * @constant
  */
 export const ldap_x509: ID = new _OID([/* x509 */ 15], ldap_dir);
-/* END_OF_SYMBOL_DEFINITION ldap_x509 */
 
 /* eslint-enable */

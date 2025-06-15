@@ -12,7 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION LDAPString */
+
 /**
  * @summary LDAPString
  * @description
@@ -24,9 +24,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type LDAPString = OCTET_STRING; // OctetStringType
-/* END_OF_SYMBOL_DEFINITION LDAPString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LDAPString */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPString
  * @function
@@ -36,9 +35,8 @@ export type LDAPString = OCTET_STRING; // OctetStringType
 export function _decode_LDAPString(el: _Element) {
   return $._decodeOctetString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LDAPString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LDAPString */
+
 /**
  * @summary Encodes a(n) LDAPString into an ASN.1 Element.
  * @function
@@ -53,6 +51,5 @@ export function _encode_LDAPString(
   return $._encodeOctetString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LDAPString */
 
 /* eslint-enable */

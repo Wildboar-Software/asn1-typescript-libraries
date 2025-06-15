@@ -21,7 +21,6 @@ import {
     _decode_ms_bind_error_ParameterType_qualified_error,
     _encode_ms_bind_error_ParameterType_qualified_error,
 } from '../MSAbstractService/ms-bind-error-ParameterType-qualified-error.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ms_bind_error_ParameterType */
 /**
  * @summary ms_bind_error_ParameterType
  * @description
@@ -37,13 +36,9 @@ export type ms_bind_error_ParameterType =
     | {
           qualified_error: ms_bind_error_ParameterType_qualified_error;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ms_bind_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ms_bind_error_ParameterType */
 let _cached_decoder_for_ms_bind_error_ParameterType: $.ASN1Decoder<ms_bind_error_ParameterType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ms_bind_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ms_bind_error_ParameterType */
 /**
  * @summary Decodes an ASN.1 element into a(n) ms_bind_error_ParameterType
  * @function
@@ -64,13 +59,9 @@ export function _decode_ms_bind_error_ParameterType(el: _Element) {
     }
     return _cached_decoder_for_ms_bind_error_ParameterType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ms_bind_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ms_bind_error_ParameterType */
 let _cached_encoder_for_ms_bind_error_ParameterType: $.ASN1Encoder<ms_bind_error_ParameterType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ms_bind_error_ParameterType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ms_bind_error_ParameterType */
 /**
  * @summary Encodes a(n) ms_bind_error_ParameterType into an ASN.1 Element.
  * @function
@@ -94,6 +85,5 @@ export function _encode_ms_bind_error_ParameterType(
     return _cached_encoder_for_ms_bind_error_ParameterType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ms_bind_error_ParameterType */
 
 /* eslint-enable */

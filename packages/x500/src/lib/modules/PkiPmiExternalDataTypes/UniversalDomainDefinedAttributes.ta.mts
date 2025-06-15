@@ -6,7 +6,6 @@ import {
     _decode_UniversalDomainDefinedAttribute,
     _encode_UniversalDomainDefinedAttribute,
 } from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UniversalDomainDefinedAttributes */
 /**
  * @summary UniversalDomainDefinedAttributes
  * @description
@@ -20,13 +19,9 @@ import {
  * ```
  */
 export type UniversalDomainDefinedAttributes = UniversalDomainDefinedAttribute[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION UniversalDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalDomainDefinedAttributes */
 let _cached_decoder_for_UniversalDomainDefinedAttributes: $.ASN1Decoder<UniversalDomainDefinedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalDomainDefinedAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalDomainDefinedAttributes
  * @function
@@ -41,13 +36,9 @@ export function _decode_UniversalDomainDefinedAttributes(el: _Element) {
     }
     return _cached_decoder_for_UniversalDomainDefinedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalDomainDefinedAttributes */
 let _cached_encoder_for_UniversalDomainDefinedAttributes: $.ASN1Encoder<UniversalDomainDefinedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalDomainDefinedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalDomainDefinedAttributes */
 /**
  * @summary Encodes a(n) UniversalDomainDefinedAttributes into an ASN.1 Element.
  * @function
@@ -71,6 +62,5 @@ export function _encode_UniversalDomainDefinedAttributes(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalDomainDefinedAttributes */
 
 /* eslint-enable */

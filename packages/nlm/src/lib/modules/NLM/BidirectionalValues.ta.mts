@@ -15,7 +15,7 @@ import {
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BidirectionalValues */
+
 /**
  * @summary BidirectionalValues
  * @description
@@ -65,9 +65,8 @@ export class BidirectionalValues {
         return new BidirectionalValues(_o.incoming, _o.outgoing);
     }
 }
-/* END_OF_SYMBOL_DEFINITION BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BidirectionalValues */
+
 /**
  * @summary The Leading Root Component Types of BidirectionalValues
  * @description
@@ -92,9 +91,8 @@ export const _root_component_type_list_1_spec_for_BidirectionalValues: $.Compone
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BidirectionalValues */
+
 /**
  * @summary The Trailing Root Component Types of BidirectionalValues
  * @description
@@ -104,9 +102,8 @@ export const _root_component_type_list_1_spec_for_BidirectionalValues: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BidirectionalValues: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BidirectionalValues */
+
 /**
  * @summary The Extension Addition Component Types of BidirectionalValues
  * @description
@@ -116,13 +113,11 @@ export const _root_component_type_list_2_spec_for_BidirectionalValues: $.Compone
  * @constant
  */
 export const _extension_additions_list_spec_for_BidirectionalValues: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BidirectionalValues */
+
 let _cached_decoder_for_BidirectionalValues: $.ASN1Decoder<BidirectionalValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BidirectionalValues */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BidirectionalValues
  * @function
@@ -157,13 +152,11 @@ export function _decode_BidirectionalValues(el: _Element) {
     }
     return _cached_decoder_for_BidirectionalValues(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BidirectionalValues */
+
 let _cached_encoder_for_BidirectionalValues: $.ASN1Encoder<BidirectionalValues> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BidirectionalValues */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BidirectionalValues */
+
 /**
  * @summary Encodes a(n) BidirectionalValues into an ASN.1 Element.
  * @function
@@ -202,6 +195,5 @@ export function _encode_BidirectionalValues(
     return _cached_encoder_for_BidirectionalValues(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BidirectionalValues */
 
 /* eslint-enable */

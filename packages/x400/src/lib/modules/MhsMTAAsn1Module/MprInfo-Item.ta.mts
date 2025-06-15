@@ -25,7 +25,6 @@ import {
     _decode_ProcessingState,
     _encode_ProcessingState,
 } from '../MhsMTAAsn1Module/ProcessingState.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MprInfo_Item */
 /**
  * @summary MprInfo_Item
  * @description
@@ -78,9 +77,7 @@ export class MprInfo_Item {
         return new MprInfo_Item(_o.mprId, _o.arrivalTime, _o.processingState);
     }
 }
-/* END_OF_SYMBOL_DEFINITION MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MprInfo_Item */
 /**
  * @summary The Leading Root Component Types of MprInfo_Item
  * @description
@@ -106,9 +103,7 @@ export const _root_component_type_list_1_spec_for_MprInfo_Item: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MprInfo_Item */
 /**
  * @summary The Trailing Root Component Types of MprInfo_Item
  * @description
@@ -118,9 +113,7 @@ export const _root_component_type_list_1_spec_for_MprInfo_Item: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_MprInfo_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MprInfo_Item */
 /**
  * @summary The Extension Addition Component Types of MprInfo_Item
  * @description
@@ -130,13 +123,9 @@ export const _root_component_type_list_2_spec_for_MprInfo_Item: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_MprInfo_Item: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MprInfo_Item */
 let _cached_decoder_for_MprInfo_Item: $.ASN1Decoder<MprInfo_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MprInfo_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) MprInfo_Item
  * @function
@@ -170,13 +159,9 @@ export function _decode_MprInfo_Item(el: _Element) {
     }
     return _cached_decoder_for_MprInfo_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MprInfo_Item */
 let _cached_encoder_for_MprInfo_Item: $.ASN1Encoder<MprInfo_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MprInfo_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MprInfo_Item */
 /**
  * @summary Encodes a(n) MprInfo_Item into an ASN.1 Element.
  * @function
@@ -212,6 +197,5 @@ export function _encode_MprInfo_Item(
     return _cached_encoder_for_MprInfo_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MprInfo_Item */
 
 /* eslint-enable */

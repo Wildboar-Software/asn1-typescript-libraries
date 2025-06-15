@@ -31,7 +31,7 @@ import {
     _decode_PrivateRSAKeyAttributes,
     _encode_PrivateRSAKeyAttributes,
 } from "../PKCS-15/PrivateRSAKeyAttributes.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION PrivateKeyType */
+
 /**
  * @summary PrivateKeyType
  * @description
@@ -66,13 +66,11 @@ export type PrivateKeyType =
           privateKEAKey: PrivateKeyObject<PrivateKEAKeyAttributes>;
       } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION PrivateKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyType */
+
 let _cached_decoder_for_PrivateKeyType: $.ASN1Decoder<PrivateKeyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PrivateKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PrivateKeyType */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateKeyType
  * @function
@@ -134,13 +132,11 @@ export function _decode_PrivateKeyType(el: _Element) {
     }
     return _cached_decoder_for_PrivateKeyType(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PrivateKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyType */
+
 let _cached_encoder_for_PrivateKeyType: $.ASN1Encoder<PrivateKeyType> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PrivateKeyType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PrivateKeyType */
+
 /**
  * @summary Encodes a(n) PrivateKeyType into an ASN.1 Element.
  * @function
@@ -201,6 +197,5 @@ export function _encode_PrivateKeyType(
     return _cached_encoder_for_PrivateKeyType(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PrivateKeyType */
 
 /* eslint-enable */

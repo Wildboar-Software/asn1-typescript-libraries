@@ -18,7 +18,7 @@ import {
     _decode_BidirectionalValues,
     _encode_BidirectionalValues,
 } from '../NLM/BidirectionalValues.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DefaultTCA */
+
 /**
  * @summary DefaultTCA
  * @description
@@ -79,9 +79,8 @@ export class DefaultTCA {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DefaultTCA */
+
 /**
  * @summary The Leading Root Component Types of DefaultTCA
  * @description
@@ -113,9 +112,8 @@ export const _root_component_type_list_1_spec_for_DefaultTCA: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DefaultTCA */
+
 /**
  * @summary The Trailing Root Component Types of DefaultTCA
  * @description
@@ -125,9 +123,8 @@ export const _root_component_type_list_1_spec_for_DefaultTCA: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DefaultTCA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DefaultTCA */
+
 /**
  * @summary The Extension Addition Component Types of DefaultTCA
  * @description
@@ -137,13 +134,11 @@ export const _root_component_type_list_2_spec_for_DefaultTCA: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_DefaultTCA: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultTCA */
+
 let _cached_decoder_for_DefaultTCA: $.ASN1Decoder<DefaultTCA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DefaultTCA */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultTCA
  * @function
@@ -194,13 +189,11 @@ export function _decode_DefaultTCA(el: _Element) {
     }
     return _cached_decoder_for_DefaultTCA(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultTCA */
+
 let _cached_encoder_for_DefaultTCA: $.ASN1Encoder<DefaultTCA> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DefaultTCA */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DefaultTCA */
+
 /**
  * @summary Encodes a(n) DefaultTCA into an ASN.1 Element.
  * @function
@@ -255,6 +248,5 @@ export function _encode_DefaultTCA(
     return _cached_encoder_for_DefaultTCA(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DefaultTCA */
 
 /* eslint-enable */

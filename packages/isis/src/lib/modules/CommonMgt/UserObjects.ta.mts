@@ -16,7 +16,6 @@ import {
   _encode_BaseManagedObjectId,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/BaseManagedObjectId.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION UserObjects */
 /**
  * @summary UserObjects
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type UserObjects = BaseManagedObjectId[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION UserObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserObjects */
 let _cached_decoder_for_UserObjects: $.ASN1Decoder<UserObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserObjects */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserObjects */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserObjects
  * @function
@@ -49,13 +44,9 @@ export function _decode_UserObjects(el: _Element) {
   }
   return _cached_decoder_for_UserObjects(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserObjects */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserObjects */
 let _cached_encoder_for_UserObjects: $.ASN1Encoder<UserObjects> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserObjects */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserObjects */
 /**
  * @summary Encodes a(n) UserObjects into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_UserObjects(
   return _cached_encoder_for_UserObjects(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserObjects */
 
 /* eslint-enable */

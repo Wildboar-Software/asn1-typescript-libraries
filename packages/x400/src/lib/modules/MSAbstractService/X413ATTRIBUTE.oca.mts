@@ -16,7 +16,6 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION X413ATTRIBUTE */
 /**
  * @summary X413ATTRIBUTE
  * @description
@@ -105,6 +104,5 @@ export interface X413ATTRIBUTE<
      */
     readonly '&OtherMatches'?: MATCHING_RULE[];
 }
-/* END_OF_SYMBOL_DEFINITION X413ATTRIBUTE */
 
 /* eslint-enable */

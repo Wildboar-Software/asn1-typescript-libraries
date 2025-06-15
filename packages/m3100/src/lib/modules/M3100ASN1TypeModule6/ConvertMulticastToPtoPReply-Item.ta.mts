@@ -21,7 +21,7 @@ import {
     _encode_Failed,
 } from '../ASN1DefinedTypesModule/Failed.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ConvertMulticastToPtoPReply_Item */
+
 /**
  * @summary ConvertMulticastToPtoPReply_Item
  * @description
@@ -35,13 +35,11 @@ import {
 export type ConvertMulticastToPtoPReply_Item =
     | { failed: Failed } /* CHOICE_ALT_ROOT */
     | { success: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION ConvertMulticastToPtoPReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertMulticastToPtoPReply_Item */
+
 let _cached_decoder_for_ConvertMulticastToPtoPReply_Item: $.ASN1Decoder<ConvertMulticastToPtoPReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ConvertMulticastToPtoPReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ConvertMulticastToPtoPReply_Item */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConvertMulticastToPtoPReply_Item
  * @function
@@ -61,13 +59,11 @@ export function _decode_ConvertMulticastToPtoPReply_Item(el: _Element) {
     }
     return _cached_decoder_for_ConvertMulticastToPtoPReply_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ConvertMulticastToPtoPReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertMulticastToPtoPReply_Item */
+
 let _cached_encoder_for_ConvertMulticastToPtoPReply_Item: $.ASN1Encoder<ConvertMulticastToPtoPReply_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ConvertMulticastToPtoPReply_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ConvertMulticastToPtoPReply_Item */
+
 /**
  * @summary Encodes a(n) ConvertMulticastToPtoPReply_Item into an ASN.1 Element.
  * @function
@@ -94,6 +90,5 @@ export function _encode_ConvertMulticastToPtoPReply_Item(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ConvertMulticastToPtoPReply_Item */
 
 /* eslint-enable */

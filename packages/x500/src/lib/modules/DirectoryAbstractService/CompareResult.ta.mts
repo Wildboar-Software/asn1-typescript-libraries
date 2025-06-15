@@ -11,7 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CompareResult */
 /**
  * @summary CompareResult
  * @description
@@ -23,13 +22,9 @@ import {
  * ```
  */
 export type CompareResult = OPTIONALLY_PROTECTED<CompareResultData>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CompareResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResult */
 let _cached_decoder_for_CompareResult: $.ASN1Decoder<CompareResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CompareResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) CompareResult
  * @function
@@ -44,13 +39,9 @@ export function _decode_CompareResult(el: _Element) {
     }
     return _cached_decoder_for_CompareResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CompareResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResult */
 let _cached_encoder_for_CompareResult: $.ASN1Encoder<CompareResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CompareResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CompareResult */
 /**
  * @summary Encodes a(n) CompareResult into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_CompareResult(
     return _cached_encoder_for_CompareResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CompareResult */
 
 /* eslint-enable */

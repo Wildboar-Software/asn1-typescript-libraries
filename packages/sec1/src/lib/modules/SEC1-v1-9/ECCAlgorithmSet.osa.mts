@@ -15,7 +15,6 @@ import { ECDHAlgorithmSet } from "../SEC1-v1-9/ECDHAlgorithmSet.osa.mjs";
 import { ECMQVAlgorithmSet } from "../SEC1-v1-9/ECMQVAlgorithmSet.osa.mjs";
 import { ECIESAlgorithmSet } from "../SEC1-v1-9/ECIESAlgorithmSet.osa.mjs";
 import { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa.mjs";
-/* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet */
 /**
  * @summary ECCAlgorithmSet
  * @description
@@ -39,6 +38,5 @@ import { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa.mjs";
  */
 export
 const ECCAlgorithmSet: (ALGORITHM)[] = [ ...ECDSAAlgorithmSet, ...ECDHAlgorithmSet, ...ECMQVAlgorithmSet, ...ECIESAlgorithmSet, ...ECWKTAlgorithmSet, ];
-/* END_OF_SYMBOL_DEFINITION ECCAlgorithmSet */
 
 /* eslint-enable */

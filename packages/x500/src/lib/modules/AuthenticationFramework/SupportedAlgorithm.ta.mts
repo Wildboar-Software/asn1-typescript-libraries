@@ -20,7 +20,6 @@ import {
     _decode_KeyUsage,
     _encode_KeyUsage,
 } from "../CertificateExtensions/KeyUsage.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SupportedAlgorithm */
 /**
  * @summary SupportedAlgorithm
  * @description
@@ -88,9 +87,7 @@ export class SupportedAlgorithm {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupportedAlgorithm */
 /**
  * @summary The Leading Root Component Types of SupportedAlgorithm
  * @description
@@ -122,9 +119,7 @@ export const _root_component_type_list_1_spec_for_SupportedAlgorithm: $.Componen
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupportedAlgorithm */
 /**
  * @summary The Trailing Root Component Types of SupportedAlgorithm
  * @description
@@ -134,9 +129,7 @@ export const _root_component_type_list_1_spec_for_SupportedAlgorithm: $.Componen
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SupportedAlgorithm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupportedAlgorithm */
 /**
  * @summary The Extension Addition Component Types of SupportedAlgorithm
  * @description
@@ -146,13 +139,9 @@ export const _root_component_type_list_2_spec_for_SupportedAlgorithm: $.Componen
  * @constant
  */
 export const _extension_additions_list_spec_for_SupportedAlgorithm: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedAlgorithm */
 let _cached_decoder_for_SupportedAlgorithm: $.ASN1Decoder<SupportedAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SupportedAlgorithm */
 /**
  * @summary Decodes an ASN.1 element into a(n) SupportedAlgorithm
  * @function
@@ -207,13 +196,9 @@ export function _decode_SupportedAlgorithm(el: _Element) {
     }
     return _cached_decoder_for_SupportedAlgorithm(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedAlgorithm */
 let _cached_encoder_for_SupportedAlgorithm: $.ASN1Encoder<SupportedAlgorithm> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SupportedAlgorithm */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SupportedAlgorithm */
 /**
  * @summary Encodes a(n) SupportedAlgorithm into an ASN.1 Element.
  * @function
@@ -266,6 +251,5 @@ export function _encode_SupportedAlgorithm(
     return _cached_encoder_for_SupportedAlgorithm(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SupportedAlgorithm */
 
 /* eslint-enable */

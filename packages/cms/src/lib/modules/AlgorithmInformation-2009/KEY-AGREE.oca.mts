@@ -4,7 +4,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION KEY_AGREE */
+
 /**
  * @summary KEY_AGREE
  * @description
@@ -90,6 +90,5 @@ export interface KEY_AGREE<
      */
     readonly "&smimeCaps"?: SMIME_CAPS;
 }
-/* END_OF_SYMBOL_DEFINITION KEY_AGREE */
 
 /* eslint-enable */

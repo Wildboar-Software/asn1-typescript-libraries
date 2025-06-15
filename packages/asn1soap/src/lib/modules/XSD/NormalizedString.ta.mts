@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION NormalizedString */
+
 /**
  * @summary NormalizedString
  * @description
@@ -26,13 +26,11 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  * ```
  */
 export type NormalizedString = String; // DefinedType
-/* END_OF_SYMBOL_DEFINITION NormalizedString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NormalizedString */
+
 let _cached_decoder_for_NormalizedString: $.ASN1Decoder<NormalizedString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NormalizedString */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NormalizedString */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NormalizedString
  * @function
@@ -45,13 +43,11 @@ export function _decode_NormalizedString(el: _Element) {
   }
   return _cached_decoder_for_NormalizedString(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NormalizedString */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NormalizedString */
+
 let _cached_encoder_for_NormalizedString: $.ASN1Encoder<NormalizedString> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NormalizedString */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NormalizedString */
+
 /**
  * @summary Encodes a(n) NormalizedString into an ASN.1 Element.
  * @function
@@ -69,6 +65,5 @@ export function _encode_NormalizedString(
   return _cached_encoder_for_NormalizedString(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NormalizedString */
 
 /* eslint-enable */

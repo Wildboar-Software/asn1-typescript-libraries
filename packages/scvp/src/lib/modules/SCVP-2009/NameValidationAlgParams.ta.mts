@@ -17,7 +17,6 @@ import {
   _encode_GeneralNames,
 } from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION NameValidationAlgParams */
 /**
  * @summary NameValidationAlgParams
  * @description
@@ -67,9 +66,7 @@ export class NameValidationAlgParams {
     return new NameValidationAlgParams(_o.nameCompAlgId, _o.validationNames);
   }
 }
-/* END_OF_SYMBOL_DEFINITION NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameValidationAlgParams */
 /**
  * @summary The Leading Root Component Types of NameValidationAlgParams
  * @description
@@ -94,9 +91,7 @@ export const _root_component_type_list_1_spec_for_NameValidationAlgParams: $.Com
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameValidationAlgParams */
 /**
  * @summary The Trailing Root Component Types of NameValidationAlgParams
  * @description
@@ -106,9 +101,7 @@ export const _root_component_type_list_1_spec_for_NameValidationAlgParams: $.Com
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameValidationAlgParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameValidationAlgParams */
 /**
  * @summary The Extension Addition Component Types of NameValidationAlgParams
  * @description
@@ -118,13 +111,9 @@ export const _root_component_type_list_2_spec_for_NameValidationAlgParams: $.Com
  * @constant
  */
 export const _extension_additions_list_spec_for_NameValidationAlgParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameValidationAlgParams */
 let _cached_decoder_for_NameValidationAlgParams: $.ASN1Decoder<NameValidationAlgParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NameValidationAlgParams */
 /**
  * @summary Decodes an ASN.1 element into a(n) NameValidationAlgParams
  * @function
@@ -155,13 +144,9 @@ export function _decode_NameValidationAlgParams(el: _Element) {
   }
   return _cached_decoder_for_NameValidationAlgParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NameValidationAlgParams */
 let _cached_encoder_for_NameValidationAlgParams: $.ASN1Encoder<NameValidationAlgParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NameValidationAlgParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NameValidationAlgParams */
 /**
  * @summary Encodes a(n) NameValidationAlgParams into an ASN.1 Element.
  * @function
@@ -193,6 +178,5 @@ export function _encode_NameValidationAlgParams(
   return _cached_encoder_for_NameValidationAlgParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NameValidationAlgParams */
 
 /* eslint-enable */

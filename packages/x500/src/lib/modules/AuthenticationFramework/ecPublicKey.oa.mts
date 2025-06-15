@@ -6,7 +6,6 @@ import {
     _decode_SupportedCurves,
     _encode_SupportedCurves,
 } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
-/* START_OF_SYMBOL_DEFINITION ecPublicKey */
 /**
  * @summary ecPublicKey
  * @description
@@ -34,6 +33,5 @@ export const ecPublicKey: ALGORITHM<SupportedCurves> = {
     "&id": id_ecPublicKey /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecPublicKey */
 
 /* eslint-enable */

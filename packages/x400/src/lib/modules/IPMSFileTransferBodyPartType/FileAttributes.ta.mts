@@ -66,7 +66,6 @@ import {
     _decode_Attribute_Extensions,
     _encode_Attribute_Extensions,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FileAttributes */
 /**
  * @summary FileAttributes
  * @description
@@ -263,9 +262,7 @@ export class FileAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FileAttributes */
 /**
  * @summary The Leading Root Component Types of FileAttributes
  * @description
@@ -396,9 +393,7 @@ export const _root_component_type_list_1_spec_for_FileAttributes: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FileAttributes */
 /**
  * @summary The Trailing Root Component Types of FileAttributes
  * @description
@@ -408,9 +403,7 @@ export const _root_component_type_list_1_spec_for_FileAttributes: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_FileAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FileAttributes */
 /**
  * @summary The Extension Addition Component Types of FileAttributes
  * @description
@@ -420,13 +413,9 @@ export const _root_component_type_list_2_spec_for_FileAttributes: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_FileAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FileAttributes */
 let _cached_decoder_for_FileAttributes: $.ASN1Decoder<FileAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FileAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) FileAttributes
  * @function
@@ -586,13 +575,9 @@ export function _decode_FileAttributes(el: _Element) {
     }
     return _cached_decoder_for_FileAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FileAttributes */
 let _cached_encoder_for_FileAttributes: $.ASN1Encoder<FileAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FileAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FileAttributes */
 /**
  * @summary Encodes a(n) FileAttributes into an ASN.1 Element.
  * @function
@@ -776,6 +761,5 @@ export function _encode_FileAttributes(
     return _cached_encoder_for_FileAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FileAttributes */
 
 /* eslint-enable */

@@ -20,7 +20,7 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DbDelete_RequestParams */
+
 /**
  * @summary DbDelete_RequestParams
  * @description
@@ -70,9 +70,8 @@ export class DbDelete_RequestParams {
     return new DbDelete_RequestParams(_o.originalBSPHandle, _o.dbUuid);
   }
 }
-/* END_OF_SYMBOL_DEFINITION DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbDelete_RequestParams */
+
 /**
  * @summary The Leading Root Component Types of DbDelete_RequestParams
  * @description
@@ -97,9 +96,8 @@ export const _root_component_type_list_1_spec_for_DbDelete_RequestParams: $.Comp
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbDelete_RequestParams */
+
 /**
  * @summary The Trailing Root Component Types of DbDelete_RequestParams
  * @description
@@ -109,9 +107,8 @@ export const _root_component_type_list_1_spec_for_DbDelete_RequestParams: $.Comp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_DbDelete_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbDelete_RequestParams */
+
 /**
  * @summary The Extension Addition Component Types of DbDelete_RequestParams
  * @description
@@ -121,13 +118,11 @@ export const _root_component_type_list_2_spec_for_DbDelete_RequestParams: $.Comp
  * @constant
  */
 export const _extension_additions_list_spec_for_DbDelete_RequestParams: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DbDelete_RequestParams */
+
 let _cached_decoder_for_DbDelete_RequestParams: $.ASN1Decoder<DbDelete_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DbDelete_RequestParams */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DbDelete_RequestParams
  * @function
@@ -158,13 +153,11 @@ export function _decode_DbDelete_RequestParams(el: _Element) {
   }
   return _cached_decoder_for_DbDelete_RequestParams(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DbDelete_RequestParams */
+
 let _cached_encoder_for_DbDelete_RequestParams: $.ASN1Encoder<DbDelete_RequestParams> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DbDelete_RequestParams */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DbDelete_RequestParams */
+
 /**
  * @summary Encodes a(n) DbDelete_RequestParams into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_DbDelete_RequestParams(
   return _cached_encoder_for_DbDelete_RequestParams(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DbDelete_RequestParams */
 
 /* eslint-enable */

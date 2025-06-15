@@ -13,7 +13,7 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_deviceOwner */
+
 /**
  * @summary id_deviceOwner
  * @description
@@ -41,6 +41,5 @@ const id_deviceOwner: OBJECT_IDENTIFIER = new _OID([
     /* attributes */ 5,
     69,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_deviceOwner */
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION parent */
 /**
  * @summary parent
  * @description
@@ -28,6 +27,5 @@ export const parent: OBJECT_CLASS = {
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_parent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION parent */
 
 /* eslint-enable */

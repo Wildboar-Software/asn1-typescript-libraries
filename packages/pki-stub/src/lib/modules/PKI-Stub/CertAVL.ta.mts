@@ -21,7 +21,6 @@ import {
     _encode_TBSCertAVL,
 } from "../PKI-Stub/TBSCertAVL.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION CertAVL */
 /**
  * @summary CertAVL
  * @description
@@ -33,13 +32,9 @@ import {
  * ```
  */
 export type CertAVL = SIGNED<TBSCertAVL>; // DefinedType
-/* END_OF_SYMBOL_DEFINITION CertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertAVL */
 let _cached_decoder_for_CertAVL: $.ASN1Decoder<CertAVL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertAVL */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertAVL
  * @function
@@ -53,13 +48,9 @@ export function _decode_CertAVL(el: _Element) {
     }
     return _cached_decoder_for_CertAVL(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertAVL */
 let _cached_encoder_for_CertAVL: $.ASN1Encoder<CertAVL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertAVL */
 /**
  * @summary Encodes a(n) CertAVL into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_CertAVL(
     return _cached_encoder_for_CertAVL(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertAVL */
 
 /* eslint-enable */

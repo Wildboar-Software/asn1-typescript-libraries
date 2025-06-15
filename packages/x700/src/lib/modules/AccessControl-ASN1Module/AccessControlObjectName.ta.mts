@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AccessControlObjectName */
 /**
  * @summary AccessControlObjectName
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AccessControlObjectName = GraphicString; // GraphicString
-/* END_OF_SYMBOL_DEFINITION AccessControlObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlObjectName */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessControlObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccessControlObjectName */
 export const _decode_AccessControlObjectName = $._decodeGraphicString;
-/* END_OF_SYMBOL_DEFINITION _decode_AccessControlObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlObjectName */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccessControlObjectName */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccessControlObjectName */
 export const _encode_AccessControlObjectName = $._encodeGraphicString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccessControlObjectName */
 
 /* eslint-enable */

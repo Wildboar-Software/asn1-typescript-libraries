@@ -18,7 +18,6 @@ import { register_MS } from '../MSAbstractService/register-MS.oa.mjs';
 import { alert } from '../MSAbstractService/alert.oa.mjs';
 import { id_pt_retrieval_88 } from '../MSObjectIdentifiers/id-pt-retrieval-88.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION retrieval_88 */
 /**
  * @summary retrieval_88
  * @description
@@ -54,6 +53,5 @@ export const retrieval_88: PORT = {
     '&Consumer': [alert] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_retrieval_88 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION retrieval_88 */
 
 /* eslint-enable */

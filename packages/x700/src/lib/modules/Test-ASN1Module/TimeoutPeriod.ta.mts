@@ -15,7 +15,6 @@ import {
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION TimeoutPeriod */
 /**
  * @summary TimeoutPeriod
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type TimeoutPeriod = Timespec; // DefinedType
-/* END_OF_SYMBOL_DEFINITION TimeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeoutPeriod */
 let _cached_decoder_for_TimeoutPeriod: $.ASN1Decoder<TimeoutPeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeoutPeriod */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeoutPeriod
  * @function
@@ -46,13 +41,9 @@ export function _decode_TimeoutPeriod(el: _Element) {
     }
     return _cached_decoder_for_TimeoutPeriod(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeoutPeriod */
 let _cached_encoder_for_TimeoutPeriod: $.ASN1Encoder<TimeoutPeriod> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeoutPeriod */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeoutPeriod */
 /**
  * @summary Encodes a(n) TimeoutPeriod into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_TimeoutPeriod(
     return _cached_encoder_for_TimeoutPeriod(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeoutPeriod */
 
 /* eslint-enable */

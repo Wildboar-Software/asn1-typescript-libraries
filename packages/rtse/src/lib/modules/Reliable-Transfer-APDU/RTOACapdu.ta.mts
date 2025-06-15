@@ -17,7 +17,7 @@ import {
   _decode_ConnectionData,
   _encode_ConnectionData,
 } from '../Reliable-Transfer-APDU/ConnectionData.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RTOACapdu */
+
 /**
  * @summary RTOACapdu
  * @description
@@ -93,9 +93,8 @@ export class RTOACapdu {
     return 3;
   }
 }
-/* END_OF_SYMBOL_DEFINITION RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RTOACapdu */
+
 /**
  * @summary The Leading Root Component Types of RTOACapdu
  * @description
@@ -127,9 +126,8 @@ export const _root_component_type_list_1_spec_for_RTOACapdu: $.ComponentSpec[] =
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RTOACapdu */
+
 /**
  * @summary The Trailing Root Component Types of RTOACapdu
  * @description
@@ -139,9 +137,8 @@ export const _root_component_type_list_1_spec_for_RTOACapdu: $.ComponentSpec[] =
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RTOACapdu: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RTOACapdu */
+
 /**
  * @summary The Extension Addition Component Types of RTOACapdu
  * @description
@@ -151,13 +148,11 @@ export const _root_component_type_list_2_spec_for_RTOACapdu: $.ComponentSpec[] =
  * @constant
  */
 export const _extension_additions_list_spec_for_RTOACapdu: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RTOACapdu */
+
 let _cached_decoder_for_RTOACapdu: $.ASN1Decoder<RTOACapdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RTOACapdu */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RTOACapdu
  * @function
@@ -208,13 +203,11 @@ export function _decode_RTOACapdu(el: _Element) {
   }
   return _cached_decoder_for_RTOACapdu(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RTOACapdu */
+
 let _cached_encoder_for_RTOACapdu: $.ASN1Encoder<RTOACapdu> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RTOACapdu */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RTOACapdu */
+
 /**
  * @summary Encodes a(n) RTOACapdu into an ASN.1 Element.
  * @function
@@ -268,6 +261,5 @@ export function _encode_RTOACapdu(
   return _cached_encoder_for_RTOACapdu(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RTOACapdu */
 
 /* eslint-enable */

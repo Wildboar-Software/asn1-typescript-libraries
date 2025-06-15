@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_ms_extension_error */
 /**
  * @summary err_ms_extension_error
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_ms_extension_error: Code = { local: 31 };
-/* END_OF_SYMBOL_DEFINITION err_ms_extension_error */
 
 /* eslint-enable */

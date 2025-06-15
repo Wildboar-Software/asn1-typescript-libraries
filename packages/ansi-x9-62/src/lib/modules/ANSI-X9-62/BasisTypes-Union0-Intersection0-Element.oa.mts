@@ -3,7 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
 import { gnBasis } from "../ANSI-X9-62/gnBasis.va.mjs";
-/* START_OF_SYMBOL_DEFINITION BasisTypes_Union0_Intersection0_Element */
 /**
  * @summary BasisTypes_Union0_Intersection0_Element
  * @description
@@ -29,6 +28,5 @@ export const BasisTypes_Union0_Intersection0_Element: CHARACTERISTIC_TWO<NULL> =
     "&id": gnBasis /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION BasisTypes_Union0_Intersection0_Element */
 
 /* eslint-enable */

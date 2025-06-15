@@ -15,7 +15,7 @@ import {
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
 } from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SequenceOfWeeks */
+
 /**
  * @summary SequenceOfWeeks
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type SequenceOfWeeks = WeekMaskWps[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SequenceOfWeeks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfWeeks */
+
 let _cached_decoder_for_SequenceOfWeeks: $.ASN1Decoder<SequenceOfWeeks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SequenceOfWeeks */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SequenceOfWeeks */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SequenceOfWeeks
  * @function
@@ -48,13 +46,11 @@ export function _decode_SequenceOfWeeks(el: _Element) {
     }
     return _cached_decoder_for_SequenceOfWeeks(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SequenceOfWeeks */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfWeeks */
+
 let _cached_encoder_for_SequenceOfWeeks: $.ASN1Encoder<SequenceOfWeeks> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SequenceOfWeeks */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SequenceOfWeeks */
+
 /**
  * @summary Encodes a(n) SequenceOfWeeks into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_SequenceOfWeeks(
     return _cached_encoder_for_SequenceOfWeeks(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SequenceOfWeeks */
 
 /* eslint-enable */

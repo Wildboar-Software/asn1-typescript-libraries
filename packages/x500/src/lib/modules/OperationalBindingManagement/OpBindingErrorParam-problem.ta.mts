@@ -2,7 +2,6 @@
 import { ASN1Element as _Element, ENUMERATED } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_OpBindingErrorParam_problem */
 export enum _enum_for_OpBindingErrorParam_problem {
     invalidID = 0,
     duplicateID = 1,
@@ -18,9 +17,7 @@ export enum _enum_for_OpBindingErrorParam_problem {
     invalidBindingType = 11,
     invalidNewID = 12,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_OpBindingErrorParam_problem */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem */
 /**
  * @summary OpBindingErrorParam_problem
  * @description
@@ -34,255 +31,194 @@ export enum _enum_for_OpBindingErrorParam_problem {
 export type OpBindingErrorParam_problem =
     | _enum_for_OpBindingErrorParam_problem
     | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidID */
 /**
  * @summary OpBindingErrorParam_problem_invalidID
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_invalidID: OpBindingErrorParam_problem = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidID */
 
-/* START_OF_SYMBOL_DEFINITION invalidID */
 /**
  * @summary invalidID
  * @constant
  * @type {number}
  */
 export const invalidID: OpBindingErrorParam_problem = OpBindingErrorParam_problem_invalidID; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidID */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_duplicateID */
 /**
  * @summary OpBindingErrorParam_problem_duplicateID
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_duplicateID: OpBindingErrorParam_problem = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_duplicateID */
 
-/* START_OF_SYMBOL_DEFINITION duplicateID */
 /**
  * @summary duplicateID
  * @constant
  * @type {number}
  */
 export const duplicateID: OpBindingErrorParam_problem = OpBindingErrorParam_problem_duplicateID; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION duplicateID */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_unsupportedBindingType */
 /**
  * @summary OpBindingErrorParam_problem_unsupportedBindingType
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_unsupportedBindingType: OpBindingErrorParam_problem = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_unsupportedBindingType */
 
-/* START_OF_SYMBOL_DEFINITION unsupportedBindingType */
 /**
  * @summary unsupportedBindingType
  * @constant
  * @type {number}
  */
 export const unsupportedBindingType: OpBindingErrorParam_problem = OpBindingErrorParam_problem_unsupportedBindingType; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unsupportedBindingType */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_notAllowedForRole */
 /**
  * @summary OpBindingErrorParam_problem_notAllowedForRole
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_notAllowedForRole: OpBindingErrorParam_problem = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_notAllowedForRole */
 
-/* START_OF_SYMBOL_DEFINITION notAllowedForRole */
 /**
  * @summary notAllowedForRole
  * @constant
  * @type {number}
  */
 export const notAllowedForRole: OpBindingErrorParam_problem = OpBindingErrorParam_problem_notAllowedForRole; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION notAllowedForRole */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_parametersMissing */
 /**
  * @summary OpBindingErrorParam_problem_parametersMissing
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_parametersMissing: OpBindingErrorParam_problem = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_parametersMissing */
 
-/* START_OF_SYMBOL_DEFINITION parametersMissing */
 /**
  * @summary parametersMissing
  * @constant
  * @type {number}
  */
 export const parametersMissing: OpBindingErrorParam_problem = OpBindingErrorParam_problem_parametersMissing; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION parametersMissing */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_roleAssignment */
 /**
  * @summary OpBindingErrorParam_problem_roleAssignment
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_roleAssignment: OpBindingErrorParam_problem = 5; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_roleAssignment */
 
-/* START_OF_SYMBOL_DEFINITION roleAssignment */
 /**
  * @summary roleAssignment
  * @constant
  * @type {number}
  */
 export const roleAssignment: OpBindingErrorParam_problem = OpBindingErrorParam_problem_roleAssignment; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION roleAssignment */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidStartTime */
 /**
  * @summary OpBindingErrorParam_problem_invalidStartTime
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_invalidStartTime: OpBindingErrorParam_problem = 6; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidStartTime */
 
-/* START_OF_SYMBOL_DEFINITION invalidStartTime */
 /**
  * @summary invalidStartTime
  * @constant
  * @type {number}
  */
 export const invalidStartTime: OpBindingErrorParam_problem = OpBindingErrorParam_problem_invalidStartTime; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidStartTime */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidEndTime */
 /**
  * @summary OpBindingErrorParam_problem_invalidEndTime
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_invalidEndTime: OpBindingErrorParam_problem = 7; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidEndTime */
 
-/* START_OF_SYMBOL_DEFINITION invalidEndTime */
 /**
  * @summary invalidEndTime
  * @constant
  * @type {number}
  */
 export const invalidEndTime: OpBindingErrorParam_problem = OpBindingErrorParam_problem_invalidEndTime; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidEndTime */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidAgreement */
 /**
  * @summary OpBindingErrorParam_problem_invalidAgreement
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_invalidAgreement: OpBindingErrorParam_problem = 8; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidAgreement */
 
-/* START_OF_SYMBOL_DEFINITION invalidAgreement */
 /**
  * @summary invalidAgreement
  * @constant
  * @type {number}
  */
 export const invalidAgreement: OpBindingErrorParam_problem = OpBindingErrorParam_problem_invalidAgreement; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidAgreement */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_currentlyNotDecidable */
 /**
  * @summary OpBindingErrorParam_problem_currentlyNotDecidable
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_currentlyNotDecidable: OpBindingErrorParam_problem = 9; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_currentlyNotDecidable */
 
-/* START_OF_SYMBOL_DEFINITION currentlyNotDecidable */
 /**
  * @summary currentlyNotDecidable
  * @constant
  * @type {number}
  */
 export const currentlyNotDecidable: OpBindingErrorParam_problem = OpBindingErrorParam_problem_currentlyNotDecidable; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION currentlyNotDecidable */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_modificationNotAllowed */
 /**
  * @summary OpBindingErrorParam_problem_modificationNotAllowed
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_modificationNotAllowed: OpBindingErrorParam_problem = 10; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_modificationNotAllowed */
 
-/* START_OF_SYMBOL_DEFINITION modificationNotAllowed */
 /**
  * @summary modificationNotAllowed
  * @constant
  * @type {number}
  */
 export const modificationNotAllowed: OpBindingErrorParam_problem = OpBindingErrorParam_problem_modificationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION modificationNotAllowed */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidBindingType */
 /**
  * @summary OpBindingErrorParam_problem_invalidBindingType
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_invalidBindingType: OpBindingErrorParam_problem = 11; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidBindingType */
 
-/* START_OF_SYMBOL_DEFINITION invalidBindingType */
 /**
  * @summary invalidBindingType
  * @constant
  * @type {number}
  */
 export const invalidBindingType: OpBindingErrorParam_problem = OpBindingErrorParam_problem_invalidBindingType; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidBindingType */
 
-/* START_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidNewID */
 /**
  * @summary OpBindingErrorParam_problem_invalidNewID
  * @constant
  * @type {number}
  */
 export const OpBindingErrorParam_problem_invalidNewID: OpBindingErrorParam_problem = 12; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION OpBindingErrorParam_problem_invalidNewID */
 
-/* START_OF_SYMBOL_DEFINITION invalidNewID */
 /**
  * @summary invalidNewID
  * @constant
  * @type {number}
  */
 export const invalidNewID: OpBindingErrorParam_problem = OpBindingErrorParam_problem_invalidNewID; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION invalidNewID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OpBindingErrorParam_problem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OpBindingErrorParam_problem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OpBindingErrorParam_problem */
 export const _decode_OpBindingErrorParam_problem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_OpBindingErrorParam_problem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OpBindingErrorParam_problem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OpBindingErrorParam_problem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OpBindingErrorParam_problem */
 export const _encode_OpBindingErrorParam_problem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_OpBindingErrorParam_problem */
 
 /* eslint-enable */

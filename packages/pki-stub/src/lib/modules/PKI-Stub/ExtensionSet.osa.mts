@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import { EXTENSION } from "../PKI-Stub/EXTENSION.oca.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ExtensionSet */
 /**
  * @summary ExtensionSet
  * @description
@@ -27,6 +26,5 @@ import { EXTENSION } from "../PKI-Stub/EXTENSION.oca.mjs";
  *
  */
 export const ExtensionSet: EXTENSION[] = [];
-/* END_OF_SYMBOL_DEFINITION ExtensionSet */
 
 /* eslint-enable */

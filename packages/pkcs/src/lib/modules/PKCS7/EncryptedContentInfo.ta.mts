@@ -16,7 +16,7 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../PKCS7/ENCRYPTED.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
+
 /**
  * @summary EncryptedContentInfo
  * @description
@@ -79,9 +79,8 @@ export class EncryptedContentInfo {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedContentInfo */
+
 /**
  * @summary The Leading Root Component Types of EncryptedContentInfo
  * @description
@@ -113,9 +112,8 @@ export const _root_component_type_list_1_spec_for_EncryptedContentInfo: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedContentInfo */
+
 /**
  * @summary The Trailing Root Component Types of EncryptedContentInfo
  * @description
@@ -125,9 +123,8 @@ export const _root_component_type_list_1_spec_for_EncryptedContentInfo: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EncryptedContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedContentInfo */
+
 /**
  * @summary The Extension Addition Component Types of EncryptedContentInfo
  * @description
@@ -137,13 +134,11 @@ export const _root_component_type_list_2_spec_for_EncryptedContentInfo: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_EncryptedContentInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedContentInfo */
+
 let _cached_decoder_for_EncryptedContentInfo: $.ASN1Decoder<EncryptedContentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptedContentInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptedContentInfo
  * @function
@@ -194,13 +189,11 @@ export function _decode_EncryptedContentInfo(el: _Element) {
     }
     return _cached_decoder_for_EncryptedContentInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedContentInfo */
+
 let _cached_encoder_for_EncryptedContentInfo: $.ASN1Encoder<EncryptedContentInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptedContentInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptedContentInfo */
+
 /**
  * @summary Encodes a(n) EncryptedContentInfo into an ASN.1 Element.
  * @function
@@ -246,6 +239,5 @@ export function _encode_EncryptedContentInfo(
     return _cached_encoder_for_EncryptedContentInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptedContentInfo */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION OsiReq */
 /**
  * @summary OsiReq
  * @description
@@ -71,9 +70,7 @@ export class OsiReq {
         return new OsiReq(_o.invokeId, _o.opcode, _o.argument);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiReq */
 /**
  * @summary The Leading Root Component Types of OsiReq
  * @description
@@ -87,9 +84,7 @@ export const _root_component_type_list_1_spec_for_OsiReq: $.ComponentSpec[] = [
     new $.ComponentSpec("opcode", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("argument", false, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiReq */
 /**
  * @summary The Trailing Root Component Types of OsiReq
  * @description
@@ -99,9 +94,7 @@ export const _root_component_type_list_1_spec_for_OsiReq: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OsiReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiReq */
 /**
  * @summary The Extension Addition Component Types of OsiReq
  * @description
@@ -111,13 +104,9 @@ export const _root_component_type_list_2_spec_for_OsiReq: $.ComponentSpec[] = []
  * @constant
  */
 export const _extension_additions_list_spec_for_OsiReq: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiReq */
 let _cached_decoder_for_OsiReq: $.ASN1Decoder<OsiReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OsiReq */
 /**
  * @summary Decodes an ASN.1 element into a(n) OsiReq
  * @function
@@ -152,13 +141,9 @@ export function _decode_OsiReq(el: _Element) {
     }
     return _cached_decoder_for_OsiReq(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiReq */
 let _cached_encoder_for_OsiReq: $.ASN1Encoder<OsiReq> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OsiReq */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OsiReq */
 /**
  * @summary Encodes a(n) OsiReq into an ASN.1 Element.
  * @function
@@ -202,6 +187,5 @@ export function _encode_OsiReq(value: OsiReq, elGetter: $.ASN1Encoder<OsiReq>) {
     return _cached_encoder_for_OsiReq(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OsiReq */
 
 /* eslint-enable */

@@ -19,7 +19,6 @@ import {
 import { mhs_message_store } from '../MHSDirectoryObjectsAndAttributes/mhs-message-store.oa.mjs';
 import { edi_capabilities } from '../EDIMUseOfDirectory/edi-capabilities.oa.mjs';
 import { id_doc_edi_message_store } from '../EDIMUseOfDirectory/id-doc-edi-message-store.va.mjs';
-/* START_OF_SYMBOL_DEFINITION edi_message_store */
 /**
  * @summary edi_message_store
  * @description
@@ -47,6 +46,5 @@ export const edi_message_store: OBJECT_CLASS = {
     '&id': id_doc_edi_message_store /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&kind': structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION edi_message_store */
 
 /* eslint-enable */

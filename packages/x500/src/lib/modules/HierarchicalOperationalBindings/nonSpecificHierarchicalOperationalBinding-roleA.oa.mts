@@ -5,7 +5,6 @@ import {
     _encode_NHOBSuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding_roleA */
 /**
  * @summary nonSpecificHierarchicalOperationalBinding_roleA
  * @description
@@ -42,6 +41,5 @@ export const nonSpecificHierarchicalOperationalBinding_roleA: OP_BIND_ROLE<
     "&TerminateParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&establish": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding_roleA */
 
 /* eslint-enable */

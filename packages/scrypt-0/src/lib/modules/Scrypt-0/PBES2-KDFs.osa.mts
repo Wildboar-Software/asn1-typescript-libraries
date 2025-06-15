@@ -3,7 +3,7 @@ import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGO
 import { scrypt } from "../Scrypt-0/scrypt.oa.mjs";
 
 
-/* START_OF_SYMBOL_DEFINITION PBES2_KDFs */
+
 /**
  * @summary PBES2_KDFs
  * @description
@@ -20,6 +20,5 @@ import { scrypt } from "../Scrypt-0/scrypt.oa.mjs";
  */
 export
 const PBES2_KDFs: (ALGORITHM)[] = [ scrypt, ];
-/* END_OF_SYMBOL_DEFINITION PBES2_KDFs */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
     _decode_StopTime,
     _encode_StopTime,
 } from '../X790ASN1Module/StopTime.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ManagedObjectAccessToTime */
+
 /**
  * @summary ManagedObjectAccessToTime
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type ManagedObjectAccessToTime = StopTime; // DefinedType
-/* END_OF_SYMBOL_DEFINITION ManagedObjectAccessToTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectAccessToTime */
+
 let _cached_decoder_for_ManagedObjectAccessToTime: $.ASN1Decoder<ManagedObjectAccessToTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ManagedObjectAccessToTime */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ManagedObjectAccessToTime */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectAccessToTime
  * @function
@@ -46,13 +44,11 @@ export function _decode_ManagedObjectAccessToTime(el: _Element) {
     }
     return _cached_decoder_for_ManagedObjectAccessToTime(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ManagedObjectAccessToTime */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectAccessToTime */
+
 let _cached_encoder_for_ManagedObjectAccessToTime: $.ASN1Encoder<ManagedObjectAccessToTime> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ManagedObjectAccessToTime */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ManagedObjectAccessToTime */
+
 /**
  * @summary Encodes a(n) ManagedObjectAccessToTime into an ASN.1 Element.
  * @function
@@ -70,6 +66,5 @@ export function _encode_ManagedObjectAccessToTime(
     return _cached_encoder_for_ManagedObjectAccessToTime(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ManagedObjectAccessToTime */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION AccountableObjectReference */
 /**
  * @summary AccountableObjectReference
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type AccountableObjectReference = ObjectInstance; // DefinedType
-/* END_OF_SYMBOL_DEFINITION AccountableObjectReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccountableObjectReference */
 let _cached_decoder_for_AccountableObjectReference: $.ASN1Decoder<AccountableObjectReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AccountableObjectReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AccountableObjectReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) AccountableObjectReference
  * @function
@@ -46,13 +41,9 @@ export function _decode_AccountableObjectReference(el: _Element) {
     }
     return _cached_decoder_for_AccountableObjectReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AccountableObjectReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AccountableObjectReference */
 let _cached_encoder_for_AccountableObjectReference: $.ASN1Encoder<AccountableObjectReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AccountableObjectReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AccountableObjectReference */
 /**
  * @summary Encodes a(n) AccountableObjectReference into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_AccountableObjectReference(
     return _cached_encoder_for_AccountableObjectReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AccountableObjectReference */
 
 /* eslint-enable */

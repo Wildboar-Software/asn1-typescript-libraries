@@ -21,7 +21,6 @@ import {
     _decode_RecipientAssignedAlternateRecipient,
     _encode_RecipientAssignedAlternateRecipient,
 } from '../MTSAbstractService/RecipientAssignedAlternateRecipient.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RecipientRedirection */
 /**
  * @summary RecipientRedirection
  * @description
@@ -76,9 +75,7 @@ export class RecipientRedirection {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RecipientRedirection */
 /**
  * @summary The Leading Root Component Types of RecipientRedirection
  * @description
@@ -103,9 +100,7 @@ export const _root_component_type_list_1_spec_for_RecipientRedirection: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RecipientRedirection */
 /**
  * @summary The Trailing Root Component Types of RecipientRedirection
  * @description
@@ -115,9 +110,7 @@ export const _root_component_type_list_1_spec_for_RecipientRedirection: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RecipientRedirection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RecipientRedirection */
 /**
  * @summary The Extension Addition Component Types of RecipientRedirection
  * @description
@@ -127,13 +120,9 @@ export const _root_component_type_list_2_spec_for_RecipientRedirection: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_RecipientRedirection: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientRedirection */
 let _cached_decoder_for_RecipientRedirection: $.ASN1Decoder<RecipientRedirection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RecipientRedirection */
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientRedirection
  * @function
@@ -185,13 +174,9 @@ export function _decode_RecipientRedirection(el: _Element) {
     }
     return _cached_decoder_for_RecipientRedirection(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientRedirection */
 let _cached_encoder_for_RecipientRedirection: $.ASN1Encoder<RecipientRedirection> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RecipientRedirection */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RecipientRedirection */
 /**
  * @summary Encodes a(n) RecipientRedirection into an ASN.1 Element.
  * @function
@@ -243,6 +228,5 @@ export function _encode_RecipientRedirection(
     return _cached_encoder_for_RecipientRedirection(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RecipientRedirection */
 
 /* eslint-enable */

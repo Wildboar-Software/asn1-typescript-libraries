@@ -20,7 +20,7 @@ import {
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
 } from '../BIP/BioAPI-FMR.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_CANDIDATE */
+
 /**
  * @summary BioAPI_CANDIDATE
  * @description
@@ -73,9 +73,8 @@ export class BioAPI_CANDIDATE {
     return new BioAPI_CANDIDATE(_o.bir, _o.fmrAchieved);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_CANDIDATE */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_CANDIDATE
  * @description
@@ -100,9 +99,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_CANDIDATE: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_CANDIDATE */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_CANDIDATE
  * @description
@@ -112,9 +110,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_CANDIDATE: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_CANDIDATE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_CANDIDATE */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_CANDIDATE
  * @description
@@ -124,13 +121,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_CANDIDATE: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_CANDIDATE: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_CANDIDATE */
+
 let _cached_decoder_for_BioAPI_CANDIDATE: $.ASN1Decoder<BioAPI_CANDIDATE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_CANDIDATE */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_CANDIDATE
  * @function
@@ -161,13 +156,11 @@ export function _decode_BioAPI_CANDIDATE(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_CANDIDATE(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_CANDIDATE */
+
 let _cached_encoder_for_BioAPI_CANDIDATE: $.ASN1Encoder<BioAPI_CANDIDATE> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_CANDIDATE */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_CANDIDATE */
+
 /**
  * @summary Encodes a(n) BioAPI_CANDIDATE into an ASN.1 Element.
  * @function
@@ -196,6 +189,5 @@ export function _encode_BioAPI_CANDIDATE(
   return _cached_encoder_for_BioAPI_CANDIDATE(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_CANDIDATE */
 
 /* eslint-enable */

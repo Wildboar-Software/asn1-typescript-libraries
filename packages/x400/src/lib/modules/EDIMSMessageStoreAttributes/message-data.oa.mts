@@ -22,7 +22,6 @@ import { id_bat_message_data } from '../EDIMSObjectIdentifiers/id-bat-message-da
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION message_data */
 /**
  * @summary message_data
  * @description
@@ -53,6 +52,5 @@ export const message_data: X413ATTRIBUTE<MessageData> = {
     '&id': id_bat_message_data /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION message_data */
 
 /* eslint-enable */

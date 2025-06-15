@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { id_sha } from "../SEC1-v1-9/id-sha.va.mjs";
-/* START_OF_SYMBOL_DEFINITION id_sha224 */
 /**
  * @summary id_sha224
  * @description
@@ -28,6 +27,5 @@ export
 const id_sha224: OBJECT_IDENTIFIER = new _OID([
     4,
 ], id_sha);
-/* END_OF_SYMBOL_DEFINITION id_sha224 */
 
 /* eslint-enable */

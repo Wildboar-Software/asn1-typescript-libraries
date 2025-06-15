@@ -7,7 +7,7 @@ import {
 } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.mjs";
 import { id_pda_gender } from "../PKIXqualified97/id-pda-gender.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION gender */
+
 /**
  * @summary gender
  * @description
@@ -41,6 +41,5 @@ export const gender: ATTRIBUTE<PrintableString> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION gender */
 
 /* eslint-enable */

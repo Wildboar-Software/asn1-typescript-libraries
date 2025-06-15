@@ -7,7 +7,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithmIdentifier */
+
 /**
  * @summary KeyEncryptionAlgorithmIdentifier
  * @description
@@ -19,13 +19,11 @@ import {
  * ```
  */
 export type KeyEncryptionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
-/* END_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyEncryptionAlgorithmIdentifier */
+
 let _cached_decoder_for_KeyEncryptionAlgorithmIdentifier: $.ASN1Decoder<KeyEncryptionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyEncryptionAlgorithmIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyEncryptionAlgorithmIdentifier
  * @function
@@ -38,13 +36,11 @@ export function _decode_KeyEncryptionAlgorithmIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KeyEncryptionAlgorithmIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyEncryptionAlgorithmIdentifier */
+
 let _cached_encoder_for_KeyEncryptionAlgorithmIdentifier: $.ASN1Encoder<KeyEncryptionAlgorithmIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyEncryptionAlgorithmIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyEncryptionAlgorithmIdentifier */
+
 /**
  * @summary Encodes a(n) KeyEncryptionAlgorithmIdentifier into an ASN.1 Element.
  * @function
@@ -65,6 +61,5 @@ export function _encode_KeyEncryptionAlgorithmIdentifier(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyEncryptionAlgorithmIdentifier */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_Subtree,
     _encode_Subtree,
 } from "../DirectoryShadowAbstractService/Subtree.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION TotalRefresh */
 /**
  * @summary TotalRefresh
  * @description
@@ -75,9 +74,7 @@ export class TotalRefresh {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TotalRefresh */
 /**
  * @summary The Leading Root Component Types of TotalRefresh
  * @description
@@ -102,9 +99,7 @@ export const _root_component_type_list_1_spec_for_TotalRefresh: $.ComponentSpec[
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TotalRefresh */
 /**
  * @summary The Trailing Root Component Types of TotalRefresh
  * @description
@@ -114,9 +109,7 @@ export const _root_component_type_list_1_spec_for_TotalRefresh: $.ComponentSpec[
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TotalRefresh: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TotalRefresh */
 /**
  * @summary The Extension Addition Component Types of TotalRefresh
  * @description
@@ -126,13 +119,9 @@ export const _root_component_type_list_2_spec_for_TotalRefresh: $.ComponentSpec[
  * @constant
  */
 export const _extension_additions_list_spec_for_TotalRefresh: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TotalRefresh */
 let _cached_decoder_for_TotalRefresh: $.ASN1Decoder<TotalRefresh> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TotalRefresh */
 /**
  * @summary Decodes an ASN.1 element into a(n) TotalRefresh
  * @function
@@ -180,13 +169,9 @@ export function _decode_TotalRefresh(el: _Element) {
     }
     return _cached_decoder_for_TotalRefresh(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TotalRefresh */
 let _cached_encoder_for_TotalRefresh: $.ASN1Encoder<TotalRefresh> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TotalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TotalRefresh */
 /**
  * @summary Encodes a(n) TotalRefresh into an ASN.1 Element.
  * @function
@@ -227,6 +212,5 @@ export function _encode_TotalRefresh(
     return _cached_encoder_for_TotalRefresh(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TotalRefresh */
 
 /* eslint-enable */

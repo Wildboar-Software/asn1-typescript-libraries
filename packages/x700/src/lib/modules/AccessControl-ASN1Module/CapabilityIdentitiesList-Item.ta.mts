@@ -20,7 +20,6 @@ import {
     _decode_CapabilityIdentitiesList_Item_unknownForm,
     _encode_CapabilityIdentitiesList_Item_unknownForm,
 } from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-unknownForm.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item */
 /**
  * @summary CapabilityIdentitiesList_Item
  * @description
@@ -38,13 +37,9 @@ export type CapabilityIdentitiesList_Item =
     | {
           unknownForm: CapabilityIdentitiesList_Item_unknownForm;
       } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CapabilityIdentitiesList_Item */
 let _cached_decoder_for_CapabilityIdentitiesList_Item: $.ASN1Decoder<CapabilityIdentitiesList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CapabilityIdentitiesList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CapabilityIdentitiesList_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) CapabilityIdentitiesList_Item
  * @function
@@ -72,13 +67,9 @@ export function _decode_CapabilityIdentitiesList_Item(el: _Element) {
     }
     return _cached_decoder_for_CapabilityIdentitiesList_Item(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CapabilityIdentitiesList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CapabilityIdentitiesList_Item */
 let _cached_encoder_for_CapabilityIdentitiesList_Item: $.ASN1Encoder<CapabilityIdentitiesList_Item> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CapabilityIdentitiesList_Item */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CapabilityIdentitiesList_Item */
 /**
  * @summary Encodes a(n) CapabilityIdentitiesList_Item into an ASN.1 Element.
  * @function
@@ -112,6 +103,5 @@ export function _encode_CapabilityIdentitiesList_Item(
     return _cached_encoder_for_CapabilityIdentitiesList_Item(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CapabilityIdentitiesList_Item */
 
 /* eslint-enable */

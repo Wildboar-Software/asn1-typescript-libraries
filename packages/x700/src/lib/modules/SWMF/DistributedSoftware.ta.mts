@@ -16,7 +16,6 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION DistributedSoftware */
 /**
  * @summary DistributedSoftware
  * @description
@@ -33,13 +32,9 @@ import {
 export type DistributedSoftware =
     | { distibutedSoftwareId: GraphicString } /* CHOICE_ALT_ROOT */
     | { distributedSoftwarePointer: ObjectInstance } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION DistributedSoftware */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributedSoftware */
 let _cached_decoder_for_DistributedSoftware: $.ASN1Decoder<DistributedSoftware> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DistributedSoftware */
 
-/* START_OF_SYMBOL_DEFINITION _decode_DistributedSoftware */
 /**
  * @summary Decodes an ASN.1 element into a(n) DistributedSoftware
  * @function
@@ -71,13 +66,9 @@ export function _decode_DistributedSoftware(el: _Element) {
     }
     return _cached_decoder_for_DistributedSoftware(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_DistributedSoftware */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributedSoftware */
 let _cached_encoder_for_DistributedSoftware: $.ASN1Encoder<DistributedSoftware> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DistributedSoftware */
 
-/* START_OF_SYMBOL_DEFINITION _encode_DistributedSoftware */
 /**
  * @summary Encodes a(n) DistributedSoftware into an ASN.1 Element.
  * @function
@@ -101,6 +92,5 @@ export function _encode_DistributedSoftware(
     return _cached_encoder_for_DistributedSoftware(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_DistributedSoftware */
 
 /* eslint-enable */

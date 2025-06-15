@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_BindProblem */
 export enum _enum_for_BindProblem {
     authentication_error = 0,
     unacceptable_security_context = 1,
@@ -20,9 +19,7 @@ export enum _enum_for_BindProblem {
     bind_extension_problem = 3,
     inadequate_association_confidentiality = 4,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_BindProblem */
 
-/* START_OF_SYMBOL_DEFINITION BindProblem */
 /**
  * @summary BindProblem
  * @description
@@ -38,111 +35,82 @@ export enum _enum_for_BindProblem {
  * ```@enum {number}
  */
 export type BindProblem = _enum_for_BindProblem | ENUMERATED;
-/* END_OF_SYMBOL_DEFINITION BindProblem */
 
-/* START_OF_SYMBOL_DEFINITION BindProblem_authentication_error */
 /**
  * @summary BindProblem_authentication_error
  * @constant
  * @type {number}
  */
 export const BindProblem_authentication_error: BindProblem = 0; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BindProblem_authentication_error */
 
-/* START_OF_SYMBOL_DEFINITION authentication_error */
 /**
  * @summary authentication_error
  * @constant
  * @type {number}
  */
 export const authentication_error: BindProblem = BindProblem_authentication_error; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION authentication_error */
 
-/* START_OF_SYMBOL_DEFINITION BindProblem_unacceptable_security_context */
 /**
  * @summary BindProblem_unacceptable_security_context
  * @constant
  * @type {number}
  */
 export const BindProblem_unacceptable_security_context: BindProblem = 1; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BindProblem_unacceptable_security_context */
 
-/* START_OF_SYMBOL_DEFINITION unacceptable_security_context */
 /**
  * @summary unacceptable_security_context
  * @constant
  * @type {number}
  */
 export const unacceptable_security_context: BindProblem = BindProblem_unacceptable_security_context; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unacceptable_security_context */
 
-/* START_OF_SYMBOL_DEFINITION BindProblem_unable_to_establish_association */
 /**
  * @summary BindProblem_unable_to_establish_association
  * @constant
  * @type {number}
  */
 export const BindProblem_unable_to_establish_association: BindProblem = 2; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BindProblem_unable_to_establish_association */
 
-/* START_OF_SYMBOL_DEFINITION unable_to_establish_association */
 /**
  * @summary unable_to_establish_association
  * @constant
  * @type {number}
  */
 export const unable_to_establish_association: BindProblem = BindProblem_unable_to_establish_association; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION unable_to_establish_association */
 
-/* START_OF_SYMBOL_DEFINITION BindProblem_bind_extension_problem */
 /**
  * @summary BindProblem_bind_extension_problem
  * @constant
  * @type {number}
  */
 export const BindProblem_bind_extension_problem: BindProblem = 3; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BindProblem_bind_extension_problem */
 
-/* START_OF_SYMBOL_DEFINITION bind_extension_problem */
 /**
  * @summary bind_extension_problem
  * @constant
  * @type {number}
  */
 export const bind_extension_problem: BindProblem = BindProblem_bind_extension_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION bind_extension_problem */
 
-/* START_OF_SYMBOL_DEFINITION BindProblem_inadequate_association_confidentiality */
 /**
  * @summary BindProblem_inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
 export const BindProblem_inadequate_association_confidentiality: BindProblem = 4; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION BindProblem_inadequate_association_confidentiality */
 
-/* START_OF_SYMBOL_DEFINITION inadequate_association_confidentiality */
 /**
  * @summary inadequate_association_confidentiality
  * @constant
  * @type {number}
  */
 export const inadequate_association_confidentiality: BindProblem = BindProblem_inadequate_association_confidentiality; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION inadequate_association_confidentiality */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BindProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BindProblem */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BindProblem */
 export const _decode_BindProblem = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_BindProblem */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BindProblem */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BindProblem */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BindProblem */
 export const _encode_BindProblem = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_BindProblem */
 
 /* eslint-enable */

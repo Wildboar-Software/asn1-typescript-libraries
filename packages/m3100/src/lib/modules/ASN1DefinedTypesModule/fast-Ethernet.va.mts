@@ -15,7 +15,7 @@ import {
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
 import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.mjs';
-/* START_OF_SYMBOL_DEFINITION fast_Ethernet */
+
 /**
  * @summary fast_Ethernet
  * @description
@@ -32,6 +32,5 @@ export const fast_Ethernet: CharacteristicInformation = new _OID(
     [38],
     characteristicInfo
 );
-/* END_OF_SYMBOL_DEFINITION fast_Ethernet */
 
 /* eslint-enable */

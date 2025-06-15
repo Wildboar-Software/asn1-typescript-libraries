@@ -16,7 +16,6 @@ import {
   _encode_Certificate,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION CertBundle */
 /**
  * @summary CertBundle
  * @description
@@ -28,13 +27,9 @@ import {
  * ```
  */
 export type CertBundle = Certificate[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION CertBundle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertBundle */
 let _cached_decoder_for_CertBundle: $.ASN1Decoder<CertBundle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertBundle */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertBundle */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertBundle
  * @function
@@ -49,13 +44,9 @@ export function _decode_CertBundle(el: _Element) {
   }
   return _cached_decoder_for_CertBundle(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertBundle */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertBundle */
 let _cached_encoder_for_CertBundle: $.ASN1Encoder<CertBundle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertBundle */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertBundle */
 /**
  * @summary Encodes a(n) CertBundle into an ASN.1 Element.
  * @function
@@ -76,6 +67,5 @@ export function _encode_CertBundle(
   return _cached_encoder_for_CertBundle(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertBundle */
 
 /* eslint-enable */

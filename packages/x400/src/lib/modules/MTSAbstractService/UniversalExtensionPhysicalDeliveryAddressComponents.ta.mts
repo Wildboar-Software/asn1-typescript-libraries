@@ -15,7 +15,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from '../MTSAbstractService/UniversalPDSParameter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION UniversalExtensionPhysicalDeliveryAddressComponents */
 /**
  * @summary UniversalExtensionPhysicalDeliveryAddressComponents
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type UniversalExtensionPhysicalDeliveryAddressComponents = UniversalPDSParameter; // DefinedType
-/* END_OF_SYMBOL_DEFINITION UniversalExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents */
 let _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.ASN1Decoder<UniversalExtensionPhysicalDeliveryAddressComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UniversalExtensionPhysicalDeliveryAddressComponents */
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalExtensionPhysicalDeliveryAddressComponents
  * @function
@@ -52,13 +47,9 @@ export function _decode_UniversalExtensionPhysicalDeliveryAddressComponents(
         el
     );
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UniversalExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents */
 let _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.ASN1Encoder<UniversalExtensionPhysicalDeliveryAddressComponents> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UniversalExtensionPhysicalDeliveryAddressComponents */
 /**
  * @summary Encodes a(n) UniversalExtensionPhysicalDeliveryAddressComponents into an ASN.1 Element.
  * @function
@@ -81,6 +72,5 @@ export function _encode_UniversalExtensionPhysicalDeliveryAddressComponents(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UniversalExtensionPhysicalDeliveryAddressComponents */
 
 /* eslint-enable */

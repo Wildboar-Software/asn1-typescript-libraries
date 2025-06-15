@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ub_postal_code */
 /**
  * @summary ub_postal_code
  * @description
@@ -15,6 +14,5 @@ import { INTEGER } from "asn1-ts";
  * @constant
  */
 export const ub_postal_code: INTEGER = 40;
-/* END_OF_SYMBOL_DEFINITION ub_postal_code */
 
 /* eslint-enable */

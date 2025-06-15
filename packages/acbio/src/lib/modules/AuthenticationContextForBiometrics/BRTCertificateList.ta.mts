@@ -15,7 +15,7 @@ import {
     _decode_BRTCertificate,
     _encode_BRTCertificate,
 } from '../AuthenticationContextForBiometrics/BRTCertificate.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BRTCertificateList */
+
 /**
  * @summary BRTCertificateList
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type BRTCertificateList = BRTCertificate[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION BRTCertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificateList */
+
 let _cached_decoder_for_BRTCertificateList: $.ASN1Decoder<BRTCertificateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BRTCertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BRTCertificateList */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BRTCertificateList
  * @function
@@ -48,13 +46,11 @@ export function _decode_BRTCertificateList(el: _Element) {
     }
     return _cached_decoder_for_BRTCertificateList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BRTCertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificateList */
+
 let _cached_encoder_for_BRTCertificateList: $.ASN1Encoder<BRTCertificateList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BRTCertificateList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BRTCertificateList */
+
 /**
  * @summary Encodes a(n) BRTCertificateList into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_BRTCertificateList(
     return _cached_encoder_for_BRTCertificateList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BRTCertificateList */
 
 /* eslint-enable */

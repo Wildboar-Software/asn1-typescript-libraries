@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_mr } from '../MHSObjectIdentifiers/id-mr.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_mr_address_capabilities_match */
 /**
  * @summary id_mr_address_capabilities_match
  * @description
@@ -25,6 +24,5 @@ import { id_mr } from '../MHSObjectIdentifiers/id-mr.va.mjs';
  * @constant
  */
 export const id_mr_address_capabilities_match: ID = new _OID([1], id_mr);
-/* END_OF_SYMBOL_DEFINITION id_mr_address_capabilities_match */
 
 /* eslint-enable */

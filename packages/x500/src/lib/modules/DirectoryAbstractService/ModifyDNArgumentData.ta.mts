@@ -63,7 +63,6 @@ import {
     _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ModifyDNArgumentData */
 /**
  * @summary ModifyDNArgumentData
  * @description
@@ -297,9 +296,7 @@ export class ModifyDNArgumentData implements CommonArguments {
 
     public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
-/* END_OF_SYMBOL_DEFINITION ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyDNArgumentData */
 /**
  * @summary The Leading Root Component Types of ModifyDNArgumentData
  * @description
@@ -339,9 +336,7 @@ export const _root_component_type_list_1_spec_for_ModifyDNArgumentData: $.Compon
     ),
     ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyDNArgumentData */
 /**
  * @summary The Trailing Root Component Types of ModifyDNArgumentData
  * @description
@@ -353,9 +348,7 @@ export const _root_component_type_list_1_spec_for_ModifyDNArgumentData: $.Compon
 export const _root_component_type_list_2_spec_for_ModifyDNArgumentData: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyDNArgumentData */
 /**
  * @summary The Extension Addition Component Types of ModifyDNArgumentData
  * @description
@@ -367,13 +360,9 @@ export const _root_component_type_list_2_spec_for_ModifyDNArgumentData: $.Compon
 export const _extension_additions_list_spec_for_ModifyDNArgumentData: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_CommonArguments,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNArgumentData */
 let _cached_decoder_for_ModifyDNArgumentData: $.ASN1Decoder<ModifyDNArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ModifyDNArgumentData */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyDNArgumentData
  * @function
@@ -527,13 +516,9 @@ export function _decode_ModifyDNArgumentData(el: _Element) {
     }
     return _cached_decoder_for_ModifyDNArgumentData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNArgumentData */
 let _cached_encoder_for_ModifyDNArgumentData: $.ASN1Encoder<ModifyDNArgumentData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyDNArgumentData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ModifyDNArgumentData */
 /**
  * @summary Encodes a(n) ModifyDNArgumentData into an ASN.1 Element.
  * @function
@@ -722,6 +707,5 @@ export function _encode_ModifyDNArgumentData(
     return _cached_encoder_for_ModifyDNArgumentData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ModifyDNArgumentData */
 
 /* eslint-enable */

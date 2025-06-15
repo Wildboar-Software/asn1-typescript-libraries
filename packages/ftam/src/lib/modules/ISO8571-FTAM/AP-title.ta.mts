@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AP_title */
+
 /**
  * @summary AP_title
  * @description
@@ -23,21 +23,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type AP_title = _Element; // ObjectClassFieldType
-/* END_OF_SYMBOL_DEFINITION AP_title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_title */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AP_title */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AP_title */
+
+
 export const _decode_AP_title = $._decodeAny;
-/* END_OF_SYMBOL_DEFINITION _decode_AP_title */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_title */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AP_title */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AP_title */
+
+
 export const _encode_AP_title = $._encodeAny;
 
-/* END_OF_SYMBOL_DEFINITION _encode_AP_title */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import {
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UserClasses */
 /**
  * @summary UserClasses
  * @description
@@ -102,9 +101,7 @@ export class UserClasses {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UserClasses */
 /**
  * @summary The Leading Root Component Types of UserClasses
  * @description
@@ -150,9 +147,7 @@ export const _root_component_type_list_1_spec_for_UserClasses: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UserClasses */
 /**
  * @summary The Trailing Root Component Types of UserClasses
  * @description
@@ -162,9 +157,7 @@ export const _root_component_type_list_1_spec_for_UserClasses: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_UserClasses: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UserClasses */
 /**
  * @summary The Extension Addition Component Types of UserClasses
  * @description
@@ -174,13 +167,9 @@ export const _root_component_type_list_2_spec_for_UserClasses: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_UserClasses: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserClasses */
 let _cached_decoder_for_UserClasses: $.ASN1Decoder<UserClasses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserClasses */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserClasses
  * @function
@@ -255,13 +244,9 @@ export function _decode_UserClasses(el: _Element) {
     }
     return _cached_decoder_for_UserClasses(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserClasses */
 let _cached_encoder_for_UserClasses: $.ASN1Encoder<UserClasses> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserClasses */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserClasses */
 /**
  * @summary Encodes a(n) UserClasses into an ASN.1 Element.
  * @function
@@ -346,6 +331,5 @@ export function _encode_UserClasses(
     return _cached_encoder_for_UserClasses(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserClasses */
 
 /* eslint-enable */

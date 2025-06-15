@@ -26,7 +26,6 @@ import {
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ListResult */
 /**
  * @summary ListResult
  * @description
@@ -85,9 +84,7 @@ export class ListResult {
         return new ListResult(_o.next, _o.requested, _o.list_result_extensions);
     }
 }
-/* END_OF_SYMBOL_DEFINITION ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListResult */
 /**
  * @summary The Leading Root Component Types of ListResult
  * @description
@@ -119,9 +116,7 @@ export const _root_component_type_list_1_spec_for_ListResult: $.ComponentSpec[] 
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListResult */
 /**
  * @summary The Trailing Root Component Types of ListResult
  * @description
@@ -131,9 +126,7 @@ export const _root_component_type_list_1_spec_for_ListResult: $.ComponentSpec[] 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ListResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListResult */
 /**
  * @summary The Extension Addition Component Types of ListResult
  * @description
@@ -143,13 +136,9 @@ export const _root_component_type_list_2_spec_for_ListResult: $.ComponentSpec[] 
  * @constant
  */
 export const _extension_additions_list_spec_for_ListResult: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResult */
 let _cached_decoder_for_ListResult: $.ASN1Decoder<ListResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ListResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) ListResult
  * @function
@@ -202,13 +191,9 @@ export function _decode_ListResult(el: _Element) {
     }
     return _cached_decoder_for_ListResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResult */
 let _cached_encoder_for_ListResult: $.ASN1Encoder<ListResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ListResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ListResult */
 /**
  * @summary Encodes a(n) ListResult into an ASN.1 Element.
  * @function
@@ -264,6 +249,5 @@ export function _encode_ListResult(
     return _cached_encoder_for_ListResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ListResult */
 
 /* eslint-enable */

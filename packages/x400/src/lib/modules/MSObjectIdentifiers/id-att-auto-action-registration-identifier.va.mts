@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_att } from '../MSObjectIdentifiers/id-att.va.mjs';
-/* START_OF_SYMBOL_DEFINITION id_att_auto_action_registration_identifier */
 /**
  * @summary id_att_auto_action_registration_identifier
  * @description
@@ -28,6 +27,5 @@ export const id_att_auto_action_registration_identifier: ID = new _OID(
     [47],
     id_att
 );
-/* END_OF_SYMBOL_DEFINITION id_att_auto_action_registration_identifier */
 
 /* eslint-enable */

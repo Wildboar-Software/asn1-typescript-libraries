@@ -6,7 +6,6 @@ import {
     _decode_MasterOrShadowAccessPoint,
     _encode_MasterOrShadowAccessPoint,
 } from "../DistributedOperations/MasterOrShadowAccessPoint.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION MasterAndShadowAccessPoints */
 /**
  * @summary MasterAndShadowAccessPoints
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type MasterAndShadowAccessPoints = MasterOrShadowAccessPoint[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION MasterAndShadowAccessPoints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MasterAndShadowAccessPoints */
 let _cached_decoder_for_MasterAndShadowAccessPoints: $.ASN1Decoder<MasterAndShadowAccessPoints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MasterAndShadowAccessPoints */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MasterAndShadowAccessPoints */
 /**
  * @summary Decodes an ASN.1 element into a(n) MasterAndShadowAccessPoints
  * @function
@@ -39,13 +34,9 @@ export function _decode_MasterAndShadowAccessPoints(el: _Element) {
     }
     return _cached_decoder_for_MasterAndShadowAccessPoints(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MasterAndShadowAccessPoints */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MasterAndShadowAccessPoints */
 let _cached_encoder_for_MasterAndShadowAccessPoints: $.ASN1Encoder<MasterAndShadowAccessPoints> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MasterAndShadowAccessPoints */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MasterAndShadowAccessPoints */
 /**
  * @summary Encodes a(n) MasterAndShadowAccessPoints into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_MasterAndShadowAccessPoints(
     return _cached_encoder_for_MasterAndShadowAccessPoints(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MasterAndShadowAccessPoints */
 
 /* eslint-enable */

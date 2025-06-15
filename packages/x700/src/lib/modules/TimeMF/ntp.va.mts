@@ -15,7 +15,6 @@ import {
     _decode_SynchronizationProtocolType,
     _encode_SynchronizationProtocolType,
 } from '../TimeMF/SynchronizationProtocolType.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ntp */
 /**
  * @summary ntp
  * @description
@@ -38,6 +37,5 @@ export const ntp: SynchronizationProtocolType = new _OID(
     ],
     joint_iso_itu_t
 );
-/* END_OF_SYMBOL_DEFINITION ntp */
 
 /* eslint-enable */

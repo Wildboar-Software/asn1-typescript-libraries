@@ -22,7 +22,7 @@ import {
     _encode_CertStatus,
 } from "../OCSP-2013-08/CertStatus.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION SingleResponse */
+
 /**
  * @summary SingleResponse
  * @description
@@ -101,9 +101,8 @@ export class SingleResponse {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SingleResponse */
+
 /**
  * @summary The Leading Root Component Types of SingleResponse
  * @description
@@ -143,9 +142,8 @@ export const _root_component_type_list_1_spec_for_SingleResponse: $.ComponentSpe
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SingleResponse */
+
 /**
  * @summary The Trailing Root Component Types of SingleResponse
  * @description
@@ -155,9 +153,8 @@ export const _root_component_type_list_1_spec_for_SingleResponse: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SingleResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SingleResponse */
+
 /**
  * @summary The Extension Addition Component Types of SingleResponse
  * @description
@@ -167,13 +164,11 @@ export const _root_component_type_list_2_spec_for_SingleResponse: $.ComponentSpe
  * @constant
  */
 export const _extension_additions_list_spec_for_SingleResponse: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SingleResponse */
+
 let _cached_decoder_for_SingleResponse: $.ASN1Decoder<SingleResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SingleResponse */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SingleResponse
  * @function
@@ -234,13 +229,11 @@ export function _decode_SingleResponse(el: _Element) {
     }
     return _cached_decoder_for_SingleResponse(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SingleResponse */
+
 let _cached_encoder_for_SingleResponse: $.ASN1Encoder<SingleResponse> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SingleResponse */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SingleResponse */
+
 /**
  * @summary Encodes a(n) SingleResponse into an ASN.1 Element.
  * @function
@@ -292,6 +285,5 @@ export function _encode_SingleResponse(
     return _cached_encoder_for_SingleResponse(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SingleResponse */
 
 /* eslint-enable */

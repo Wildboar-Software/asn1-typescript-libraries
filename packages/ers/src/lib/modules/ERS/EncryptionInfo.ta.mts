@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-/* START_OF_SYMBOL_DEFINITION EncryptionInfo */
+
 /**
  * @summary EncryptionInfo
  * @description
@@ -62,9 +62,8 @@ class EncryptionInfo {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptionInfo */
+
 /**
  * @summary The Leading Root Component Types of EncryptionInfo
  * @description
@@ -78,9 +77,8 @@ const _root_component_type_list_1_spec_for_EncryptionInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("encryptionInfoType", false, $.hasTag(_TagClass.universal, 6), undefined, undefined),
     new $.ComponentSpec("encryptionInfoValue", false, $.hasAnyTag, undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptionInfo */
+
 /**
  * @summary The Trailing Root Component Types of EncryptionInfo
  * @description
@@ -93,9 +91,8 @@ export
 const _root_component_type_list_2_spec_for_EncryptionInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptionInfo */
+
 /**
  * @summary The Extension Addition Component Types of EncryptionInfo
  * @description
@@ -108,13 +105,11 @@ export
 const _extension_additions_list_spec_for_EncryptionInfo: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionInfo */
+
 let _cached_decoder_for_EncryptionInfo: $.ASN1Decoder<EncryptionInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EncryptionInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptionInfo
  * @function
@@ -142,13 +137,11 @@ function _decode_EncryptionInfo (el: _Element) {
 }; }
     return _cached_decoder_for_EncryptionInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionInfo */
+
 let _cached_encoder_for_EncryptionInfo: $.ASN1Encoder<EncryptionInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EncryptionInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EncryptionInfo */
+
 /**
  * @summary Encodes a(n) EncryptionInfo into an ASN.1 Element.
  * @function
@@ -169,6 +162,5 @@ function _encode_EncryptionInfo (value: EncryptionInfo, elGetter: $.ASN1Encoder<
     return _cached_encoder_for_EncryptionInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EncryptionInfo */
 
 /* eslint-enable */

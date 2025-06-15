@@ -11,7 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import { se } from '../ISIS/se.va.mjs';
-/* START_OF_SYMBOL_DEFINITION originatingLSPBufferSizeMismatch */
 /**
  * @summary originatingLSPBufferSizeMismatch
  * @description
@@ -28,6 +27,5 @@ export const originatingLSPBufferSizeMismatch: OBJECT_IDENTIFIER = new _OID(
   [/* originatingLSPBufferSizeMismatch */ 15],
   se
 );
-/* END_OF_SYMBOL_DEFINITION originatingLSPBufferSizeMismatch */
 
 /* eslint-enable */

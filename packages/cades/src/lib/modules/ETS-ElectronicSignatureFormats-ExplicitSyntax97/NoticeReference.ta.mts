@@ -12,7 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION NoticeReference */
 /**
  * @summary NoticeReference
  * @description
@@ -62,9 +61,7 @@ class NoticeReference {
 
 
 }
-/* END_OF_SYMBOL_DEFINITION NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NoticeReference */
 /**
  * @summary The Leading Root Component Types of NoticeReference
  * @description
@@ -78,9 +75,7 @@ const _root_component_type_list_1_spec_for_NoticeReference: $.ComponentSpec[] = 
     new $.ComponentSpec("organization", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("noticeNumbers", false, $.hasTag(_TagClass.universal, 16), undefined, undefined)
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NoticeReference */
 /**
  * @summary The Trailing Root Component Types of NoticeReference
  * @description
@@ -93,9 +88,7 @@ export
 const _root_component_type_list_2_spec_for_NoticeReference: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NoticeReference */
 /**
  * @summary The Extension Addition Component Types of NoticeReference
  * @description
@@ -108,13 +101,9 @@ export
 const _extension_additions_list_spec_for_NoticeReference: $.ComponentSpec[] = [
     
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NoticeReference */
 let _cached_decoder_for_NoticeReference: $.ASN1Decoder<NoticeReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _decode_NoticeReference */
 /**
  * @summary Decodes an ASN.1 element into a(n) NoticeReference
  * @function
@@ -142,13 +131,9 @@ function _decode_NoticeReference (el: _Element) {
 }; }
     return _cached_decoder_for_NoticeReference(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NoticeReference */
 let _cached_encoder_for_NoticeReference: $.ASN1Encoder<NoticeReference> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NoticeReference */
 
-/* START_OF_SYMBOL_DEFINITION _encode_NoticeReference */
 /**
  * @summary Encodes a(n) NoticeReference into an ASN.1 Element.
  * @function
@@ -169,6 +154,5 @@ function _encode_NoticeReference (value: NoticeReference, elGetter: $.ASN1Encode
     return _cached_encoder_for_NoticeReference(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_NoticeReference */
 
 /* eslint-enable */

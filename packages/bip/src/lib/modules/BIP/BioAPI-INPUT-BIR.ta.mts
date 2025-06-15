@@ -15,7 +15,7 @@ import {
   _decode_BioAPI_INPUT_BIR_inputBIR,
   _encode_BioAPI_INPUT_BIR_inputBIR,
 } from '../BIP/BioAPI-INPUT-BIR-inputBIR.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION BioAPI_INPUT_BIR */
+
 /**
  * @summary BioAPI_INPUT_BIR
  * @description
@@ -61,9 +61,8 @@ export class BioAPI_INPUT_BIR {
     return new BioAPI_INPUT_BIR(_o.inputBIR);
   }
 }
-/* END_OF_SYMBOL_DEFINITION BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_INPUT_BIR */
+
 /**
  * @summary The Leading Root Component Types of BioAPI_INPUT_BIR
  * @description
@@ -81,9 +80,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_INPUT_BIR: $.ComponentS
     undefined
   ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_INPUT_BIR */
+
 /**
  * @summary The Trailing Root Component Types of BioAPI_INPUT_BIR
  * @description
@@ -93,9 +91,8 @@ export const _root_component_type_list_1_spec_for_BioAPI_INPUT_BIR: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_BioAPI_INPUT_BIR: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_INPUT_BIR */
+
 /**
  * @summary The Extension Addition Component Types of BioAPI_INPUT_BIR
  * @description
@@ -105,13 +102,11 @@ export const _root_component_type_list_2_spec_for_BioAPI_INPUT_BIR: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_BioAPI_INPUT_BIR: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_INPUT_BIR */
+
 let _cached_decoder_for_BioAPI_INPUT_BIR: $.ASN1Decoder<BioAPI_INPUT_BIR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _decode_BioAPI_INPUT_BIR */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_INPUT_BIR
  * @function
@@ -139,13 +134,11 @@ export function _decode_BioAPI_INPUT_BIR(el: _Element) {
   }
   return _cached_decoder_for_BioAPI_INPUT_BIR(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_INPUT_BIR */
+
 let _cached_encoder_for_BioAPI_INPUT_BIR: $.ASN1Encoder<BioAPI_INPUT_BIR> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BioAPI_INPUT_BIR */
 
-/* START_OF_SYMBOL_DEFINITION _encode_BioAPI_INPUT_BIR */
+
 /**
  * @summary Encodes a(n) BioAPI_INPUT_BIR into an ASN.1 Element.
  * @function
@@ -176,6 +169,5 @@ export function _encode_BioAPI_INPUT_BIR(
   return _cached_encoder_for_BioAPI_INPUT_BIR(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_BioAPI_INPUT_BIR */
 
 /* eslint-enable */

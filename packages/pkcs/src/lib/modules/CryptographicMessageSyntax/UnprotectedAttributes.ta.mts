@@ -6,7 +6,7 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../CryptographicMessageSyntax/Attribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UnprotectedAttributes */
+
 /**
  * @summary UnprotectedAttributes
  * @description
@@ -18,13 +18,11 @@ import {
  * ```
  */
 export type UnprotectedAttributes = Attribute[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION UnprotectedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UnprotectedAttributes */
+
 let _cached_decoder_for_UnprotectedAttributes: $.ASN1Decoder<UnprotectedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UnprotectedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UnprotectedAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnprotectedAttributes
  * @function
@@ -39,13 +37,11 @@ export function _decode_UnprotectedAttributes(el: _Element) {
     }
     return _cached_decoder_for_UnprotectedAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UnprotectedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UnprotectedAttributes */
+
 let _cached_encoder_for_UnprotectedAttributes: $.ASN1Encoder<UnprotectedAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UnprotectedAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UnprotectedAttributes */
+
 /**
  * @summary Encodes a(n) UnprotectedAttributes into an ASN.1 Element.
  * @function
@@ -66,6 +62,5 @@ export function _encode_UnprotectedAttributes(
     return _cached_encoder_for_UnprotectedAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UnprotectedAttributes */
 
 /* eslint-enable */

@@ -57,7 +57,6 @@ import {
     _extension_additions_list_spec_for_PerMessageAutoForwardFields,
 } from '../IPMSAutoActionTypes/PerMessageAutoForwardFields.ta.mjs';
 
-/* START_OF_SYMBOL_DEFINITION AutoForwardArguments */
 /**
  * @summary AutoForwardArguments
  * @description
@@ -159,9 +158,7 @@ export class AutoForwardArguments implements PerMessageAutoForwardFields {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoForwardArguments */
 /**
  * @summary The Leading Root Component Types of AutoForwardArguments
  * @description
@@ -180,9 +177,7 @@ export const _root_component_type_list_1_spec_for_AutoForwardArguments: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoForwardArguments */
 /**
  * @summary The Trailing Root Component Types of AutoForwardArguments
  * @description
@@ -194,9 +189,7 @@ export const _root_component_type_list_1_spec_for_AutoForwardArguments: $.Compon
 export const _root_component_type_list_2_spec_for_AutoForwardArguments: $.ComponentSpec[] = [
     ..._root_component_type_list_2_spec_for_PerMessageAutoForwardFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoForwardArguments */
 /**
  * @summary The Extension Addition Component Types of AutoForwardArguments
  * @description
@@ -208,13 +201,9 @@ export const _root_component_type_list_2_spec_for_AutoForwardArguments: $.Compon
 export const _extension_additions_list_spec_for_AutoForwardArguments: $.ComponentSpec[] = [
     ..._extension_additions_list_spec_for_PerMessageAutoForwardFields,
 ];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoForwardArguments */
 let _cached_decoder_for_AutoForwardArguments: $.ASN1Decoder<AutoForwardArguments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AutoForwardArguments */
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoForwardArguments
  * @function
@@ -294,13 +283,9 @@ export function _decode_AutoForwardArguments(el: _Element) {
     }
     return _cached_decoder_for_AutoForwardArguments(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoForwardArguments */
 let _cached_encoder_for_AutoForwardArguments: $.ASN1Encoder<AutoForwardArguments> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AutoForwardArguments */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AutoForwardArguments */
 /**
  * @summary Encodes a(n) AutoForwardArguments into an ASN.1 Element.
  * @function
@@ -382,6 +367,5 @@ export function _encode_AutoForwardArguments(
     return _cached_encoder_for_AutoForwardArguments(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AutoForwardArguments */
 
 /* eslint-enable */

@@ -13,7 +13,6 @@ import {
 
 
 
-/* START_OF_SYMBOL_DEFINITION id_cti_ets_proofOfDelivery */
 /**
  * @summary id_cti_ets_proofOfDelivery
  * @description
@@ -39,6 +38,5 @@ const id_cti_ets_proofOfDelivery: OBJECT_IDENTIFIER = new _OID([
     /* cti */ 6,
     3,
 ]);
-/* END_OF_SYMBOL_DEFINITION id_cti_ets_proofOfDelivery */
 
 /* eslint-enable */

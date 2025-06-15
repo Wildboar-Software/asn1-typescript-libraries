@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EDIApplicationSecurityElement */
 /**
  * @summary EDIApplicationSecurityElement
  * @description
@@ -25,21 +24,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EDIApplicationSecurityElement = BIT_STRING;
-/* END_OF_SYMBOL_DEFINITION EDIApplicationSecurityElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityElement */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIApplicationSecurityElement */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityElement */
 export const _decode_EDIApplicationSecurityElement = $._decodeBitString;
-/* END_OF_SYMBOL_DEFINITION _decode_EDIApplicationSecurityElement */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityElement */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIApplicationSecurityElement */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityElement */
 export const _encode_EDIApplicationSecurityElement = $._encodeBitString;
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDIApplicationSecurityElement */
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
     _encode_SubordinateToSuperior,
 } from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding_roleB */
 /**
  * @summary hierarchicalOperationalBinding_roleB
  * @description
@@ -42,6 +41,5 @@ export const hierarchicalOperationalBinding_roleB: OP_BIND_ROLE<
     "&ModifyParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&TerminateParam": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding_roleB */
 
 /* eslint-enable */

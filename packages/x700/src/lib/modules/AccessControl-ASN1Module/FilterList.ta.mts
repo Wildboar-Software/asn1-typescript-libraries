@@ -15,7 +15,6 @@ import {
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION FilterList */
 /**
  * @summary FilterList
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type FilterList = CMISFilter[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION FilterList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterList */
 let _cached_decoder_for_FilterList: $.ASN1Decoder<FilterList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterList */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FilterList */
 /**
  * @summary Decodes an ASN.1 element into a(n) FilterList
  * @function
@@ -48,13 +43,9 @@ export function _decode_FilterList(el: _Element) {
     }
     return _cached_decoder_for_FilterList(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_FilterList */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterList */
 let _cached_encoder_for_FilterList: $.ASN1Encoder<FilterList> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterList */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FilterList */
 /**
  * @summary Encodes a(n) FilterList into an ASN.1 Element.
  * @function
@@ -75,6 +66,5 @@ export function _encode_FilterList(
     return _cached_encoder_for_FilterList(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_FilterList */
 
 /* eslint-enable */

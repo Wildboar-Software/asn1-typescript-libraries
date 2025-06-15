@@ -20,7 +20,6 @@ import {
   _decode_RegistrationDetails_registrant_enciphered_registrant,
   _encode_RegistrationDetails_registrant_enciphered_registrant,
 } from '../RINF-module/RegistrationDetails-registrant-enciphered-registrant.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RegistrationDetails_registrant */
 /**
  * @summary RegistrationDetails_registrant
  * @description
@@ -36,13 +35,9 @@ export type RegistrationDetails_registrant =
   | {
       enciphered_registrant: RegistrationDetails_registrant_enciphered_registrant;
     } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION RegistrationDetails_registrant */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationDetails_registrant */
 let _cached_decoder_for_RegistrationDetails_registrant: $.ASN1Decoder<RegistrationDetails_registrant> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RegistrationDetails_registrant */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RegistrationDetails_registrant */
 /**
  * @summary Decodes an ASN.1 element into a(n) RegistrationDetails_registrant
  * @function
@@ -63,13 +58,9 @@ export function _decode_RegistrationDetails_registrant(el: _Element) {
   }
   return _cached_decoder_for_RegistrationDetails_registrant(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RegistrationDetails_registrant */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationDetails_registrant */
 let _cached_encoder_for_RegistrationDetails_registrant: $.ASN1Encoder<RegistrationDetails_registrant> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RegistrationDetails_registrant */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RegistrationDetails_registrant */
 /**
  * @summary Encodes a(n) RegistrationDetails_registrant into an ASN.1 Element.
  * @function
@@ -93,6 +84,5 @@ export function _encode_RegistrationDetails_registrant(
   return _cached_encoder_for_RegistrationDetails_registrant(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RegistrationDetails_registrant */
 
 /* eslint-enable */

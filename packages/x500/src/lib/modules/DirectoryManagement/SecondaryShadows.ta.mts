@@ -6,7 +6,6 @@ import {
     _decode_SupplierAndConsumers,
     _encode_SupplierAndConsumers,
 } from "../DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION SecondaryShadows */
 /**
  * @summary SecondaryShadows
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type SecondaryShadows = SupplierAndConsumers[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION SecondaryShadows */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecondaryShadows */
 let _cached_decoder_for_SecondaryShadows: $.ASN1Decoder<SecondaryShadows> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SecondaryShadows */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SecondaryShadows */
 /**
  * @summary Decodes an ASN.1 element into a(n) SecondaryShadows
  * @function
@@ -39,13 +34,9 @@ export function _decode_SecondaryShadows(el: _Element) {
     }
     return _cached_decoder_for_SecondaryShadows(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SecondaryShadows */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SecondaryShadows */
 let _cached_encoder_for_SecondaryShadows: $.ASN1Encoder<SecondaryShadows> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SecondaryShadows */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SecondaryShadows */
 /**
  * @summary Encodes a(n) SecondaryShadows into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_SecondaryShadows(
     return _cached_encoder_for_SecondaryShadows(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SecondaryShadows */
 
 /* eslint-enable */

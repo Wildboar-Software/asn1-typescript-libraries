@@ -7,7 +7,7 @@ import {
     _encode_PKIArchiveOptions,
 } from "../PKIXCRMF-2009/PKIArchiveOptions.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION regCtrl_pkiArchiveOptions */
+
 /**
  * @summary regCtrl_pkiArchiveOptions
  * @description
@@ -34,6 +34,5 @@ export const regCtrl_pkiArchiveOptions: ATTRIBUTE<PKIArchiveOptions> = {
     "&id": id_regCtrl_pkiArchiveOptions /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION regCtrl_pkiArchiveOptions */
 
 /* eslint-enable */

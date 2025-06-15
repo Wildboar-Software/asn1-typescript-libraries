@@ -11,7 +11,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ADDITIONAL */
 /**
  * @summary ADDITIONAL
  * @description
@@ -55,6 +54,5 @@ export interface ADDITIONAL<
      */
     readonly '&Type': Type;
 }
-/* END_OF_SYMBOL_DEFINITION ADDITIONAL */
 
 /* eslint-enable */

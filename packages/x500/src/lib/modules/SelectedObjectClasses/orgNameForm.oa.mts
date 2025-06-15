@@ -3,7 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 import { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va.mjs";
 import { organization } from "../SelectedObjectClasses/organization.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION orgNameForm */
 /**
  * @summary orgNameForm
  * @description
@@ -29,6 +28,5 @@ export const orgNameForm: NAME_FORM = {
     "&MandatoryAttributes": [organizationName] /* OBJECT_FIELD_SETTING */,
     "&id": id_nf_orgNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION orgNameForm */
 
 /* eslint-enable */

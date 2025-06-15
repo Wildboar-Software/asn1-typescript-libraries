@@ -21,7 +21,7 @@ import {
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RSA_PPDU */
+
 /**
  * @summary RSA_PPDU
  * @description
@@ -75,9 +75,8 @@ export class RSA_PPDU {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RSA_PPDU */
+
 /**
  * @summary The Leading Root Component Types of RSA_PPDU
  * @description
@@ -96,9 +95,8 @@ export const _root_component_type_list_1_spec_for_RSA_PPDU: $.ComponentSpec[] = 
     ),
     new $.ComponentSpec('user-data', true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RSA_PPDU */
+
 /**
  * @summary The Trailing Root Component Types of RSA_PPDU
  * @description
@@ -108,9 +106,8 @@ export const _root_component_type_list_1_spec_for_RSA_PPDU: $.ComponentSpec[] = 
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RSA_PPDU: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RSA_PPDU */
+
 /**
  * @summary The Extension Addition Component Types of RSA_PPDU
  * @description
@@ -120,13 +117,11 @@ export const _root_component_type_list_2_spec_for_RSA_PPDU: $.ComponentSpec[] = 
  * @constant
  */
 export const _extension_additions_list_spec_for_RSA_PPDU: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RSA_PPDU */
+
 let _cached_decoder_for_RSA_PPDU: $.ASN1Decoder<RSA_PPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RSA_PPDU */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RSA_PPDU
  * @function
@@ -170,13 +165,11 @@ export function _decode_RSA_PPDU(el: _Element) {
     }
     return _cached_decoder_for_RSA_PPDU(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RSA_PPDU */
+
 let _cached_encoder_for_RSA_PPDU: $.ASN1Encoder<RSA_PPDU> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RSA_PPDU */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RSA_PPDU */
+
 /**
  * @summary Encodes a(n) RSA_PPDU into an ASN.1 Element.
  * @function
@@ -219,6 +212,5 @@ export function _encode_RSA_PPDU(
     return _cached_encoder_for_RSA_PPDU(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RSA_PPDU */
 
 /* eslint-enable */

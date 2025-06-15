@@ -14,7 +14,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION err_fetch_restriction_error */
 /**
  * @summary err_fetch_restriction_error
  * @description
@@ -28,6 +27,5 @@ import {
  * @constant
  */
 export const err_fetch_restriction_error: Code = { local: 24 };
-/* END_OF_SYMBOL_DEFINITION err_fetch_restriction_error */
 
 /* eslint-enable */

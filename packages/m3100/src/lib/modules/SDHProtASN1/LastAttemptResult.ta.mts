@@ -16,7 +16,7 @@ import {
     _decode_RxTxAPS,
     _encode_RxTxAPS,
 } from '../SDHProtASN1/RxTxAPS.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION LastAttemptResult */
+
 /**
  * @summary LastAttemptResult
  * @description
@@ -35,13 +35,11 @@ export type LastAttemptResult =
     | { success: NULL } /* CHOICE_ALT_ROOT */
     | { denied: NULL } /* CHOICE_ALT_ROOT */
     | { fail: RxTxAPS } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION LastAttemptResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LastAttemptResult */
+
 let _cached_decoder_for_LastAttemptResult: $.ASN1Decoder<LastAttemptResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LastAttemptResult */
 
-/* START_OF_SYMBOL_DEFINITION _decode_LastAttemptResult */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LastAttemptResult
  * @function
@@ -69,13 +67,11 @@ export function _decode_LastAttemptResult(el: _Element) {
     }
     return _cached_decoder_for_LastAttemptResult(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_LastAttemptResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LastAttemptResult */
+
 let _cached_encoder_for_LastAttemptResult: $.ASN1Encoder<LastAttemptResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LastAttemptResult */
 
-/* START_OF_SYMBOL_DEFINITION _encode_LastAttemptResult */
+
 /**
  * @summary Encodes a(n) LastAttemptResult into an ASN.1 Element.
  * @function
@@ -115,6 +111,5 @@ export function _encode_LastAttemptResult(
     return _cached_encoder_for_LastAttemptResult(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_LastAttemptResult */
 
 /* eslint-enable */

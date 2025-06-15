@@ -22,7 +22,6 @@ import { id_att_ms_submission_error } from '../MSObjectIdentifiers/id-att-ms-sub
 import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
 import { single_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION ms_submission_error */
 /**
  * @summary ms_submission_error
  * @description
@@ -53,6 +52,5 @@ export const ms_submission_error: X413ATTRIBUTE<SubmissionError> = {
     '&id': id_att_ms_submission_error /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ms_submission_error */
 
 /* eslint-enable */

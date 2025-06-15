@@ -23,7 +23,7 @@ import {
     _decode_SwitchStatus,
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION ProtectionStatus_Item_lockout */
+
 /**
  * @summary ProtectionStatus_Item_lockout
  * @description
@@ -90,9 +90,8 @@ export class ProtectionStatus_Item_lockout {
 
     public static _enum_for_switchStatus = _enum_for_SwitchStatus;
 }
-/* END_OF_SYMBOL_DEFINITION ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatus_Item_lockout */
+
 /**
  * @summary The Leading Root Component Types of ProtectionStatus_Item_lockout
  * @description
@@ -117,9 +116,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatus_Item_lockout:
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatus_Item_lockout */
+
 /**
  * @summary The Trailing Root Component Types of ProtectionStatus_Item_lockout
  * @description
@@ -129,9 +127,8 @@ export const _root_component_type_list_1_spec_for_ProtectionStatus_Item_lockout:
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ProtectionStatus_Item_lockout: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatus_Item_lockout */
+
 /**
  * @summary The Extension Addition Component Types of ProtectionStatus_Item_lockout
  * @description
@@ -141,13 +138,11 @@ export const _root_component_type_list_2_spec_for_ProtectionStatus_Item_lockout:
  * @constant
  */
 export const _extension_additions_list_spec_for_ProtectionStatus_Item_lockout: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus_Item_lockout */
+
 let _cached_decoder_for_ProtectionStatus_Item_lockout: $.ASN1Decoder<ProtectionStatus_Item_lockout> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionStatus_Item_lockout */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtectionStatus_Item_lockout
  * @function
@@ -193,13 +188,11 @@ export function _decode_ProtectionStatus_Item_lockout(el: _Element) {
     }
     return _cached_decoder_for_ProtectionStatus_Item_lockout(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus_Item_lockout */
+
 let _cached_encoder_for_ProtectionStatus_Item_lockout: $.ASN1Encoder<ProtectionStatus_Item_lockout> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionStatus_Item_lockout */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionStatus_Item_lockout */
+
 /**
  * @summary Encodes a(n) ProtectionStatus_Item_lockout into an ASN.1 Element.
  * @function
@@ -240,6 +233,5 @@ export function _encode_ProtectionStatus_Item_lockout(
     return _cached_encoder_for_ProtectionStatus_Item_lockout(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionStatus_Item_lockout */
 
 /* eslint-enable */

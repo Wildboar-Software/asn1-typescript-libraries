@@ -12,7 +12,6 @@ import {
 import { id_ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/id-ecPublicKeyTypeSupplemented.va.mjs";
 import { ECPKSupplements, _decode_ECPKSupplements, _encode_ECPKSupplements } from "../SEC1-v1-9/ECPKSupplements.ta.mjs";
 import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION ecPublicKeyTypeSupplemented */
 /**
  * @summary ecPublicKeyTypeSupplemented
  * @description
@@ -41,6 +40,5 @@ const ecPublicKeyTypeSupplemented: ALGORITHM<ECPKSupplements> = {
     "&id": id_ecPublicKeyTypeSupplemented /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION ecPublicKeyTypeSupplemented */
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
     _decode_PhysicalDeliveryOfficeNumber,
     _encode_PhysicalDeliveryOfficeNumber,
 } from "../MTSAbstractService/PhysicalDeliveryOfficeNumber.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION physical_delivery_office_number */
 /**
  * @summary physical_delivery_office_number
  * @description
@@ -34,6 +33,5 @@ export const physical_delivery_office_number: EXTENSION_ATTRIBUTE<PhysicalDelive
     "&id": 11 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION physical_delivery_office_number */
 
 /* eslint-enable */

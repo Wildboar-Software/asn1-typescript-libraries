@@ -12,7 +12,7 @@ import {
     _encode_CRLReason,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION RevokedInfo */
+
 /**
  * @summary RevokedInfo
  * @description
@@ -61,9 +61,8 @@ export class RevokedInfo {
         return new RevokedInfo(_o.revocationTime, _o.revocationReason);
     }
 }
-/* END_OF_SYMBOL_DEFINITION RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevokedInfo */
+
 /**
  * @summary The Leading Root Component Types of RevokedInfo
  * @description
@@ -88,9 +87,8 @@ export const _root_component_type_list_1_spec_for_RevokedInfo: $.ComponentSpec[]
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevokedInfo */
+
 /**
  * @summary The Trailing Root Component Types of RevokedInfo
  * @description
@@ -100,9 +98,8 @@ export const _root_component_type_list_1_spec_for_RevokedInfo: $.ComponentSpec[]
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RevokedInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevokedInfo */
+
 /**
  * @summary The Extension Addition Component Types of RevokedInfo
  * @description
@@ -112,13 +109,11 @@ export const _root_component_type_list_2_spec_for_RevokedInfo: $.ComponentSpec[]
  * @constant
  */
 export const _extension_additions_list_spec_for_RevokedInfo: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RevokedInfo */
+
 let _cached_decoder_for_RevokedInfo: $.ASN1Decoder<RevokedInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RevokedInfo */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RevokedInfo
  * @function
@@ -160,13 +155,11 @@ export function _decode_RevokedInfo(el: _Element) {
     }
     return _cached_decoder_for_RevokedInfo(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RevokedInfo */
+
 let _cached_encoder_for_RevokedInfo: $.ASN1Encoder<RevokedInfo> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RevokedInfo */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RevokedInfo */
+
 /**
  * @summary Encodes a(n) RevokedInfo into an ASN.1 Element.
  * @function
@@ -205,6 +198,5 @@ export function _encode_RevokedInfo(
     return _cached_encoder_for_RevokedInfo(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RevokedInfo */
 
 /* eslint-enable */

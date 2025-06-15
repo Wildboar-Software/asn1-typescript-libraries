@@ -16,7 +16,6 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import { id_mr_orname_match } from '../MSObjectIdentifiers/id-mr-orname-match.va.mjs';
-/* START_OF_SYMBOL_DEFINITION oRNameMatch */
 /**
  * @summary oRNameMatch
  * @description
@@ -44,6 +43,5 @@ export const oRNameMatch: MATCHING_RULE<ORName> = {
     '&id': id_mr_orname_match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&AssertionType': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION oRNameMatch */
 
 /* eslint-enable */

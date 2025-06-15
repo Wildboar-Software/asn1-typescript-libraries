@@ -31,7 +31,6 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Waiting */
 /**
  * @summary Waiting
  * @description
@@ -129,9 +128,7 @@ export class Waiting {
         return [];
     }
 }
-/* END_OF_SYMBOL_DEFINITION Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Waiting */
 /**
  * @summary The Leading Root Component Types of Waiting
  * @description
@@ -170,9 +167,7 @@ export const _root_component_type_list_1_spec_for_Waiting: $.ComponentSpec[] = [
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Waiting */
 /**
  * @summary The Trailing Root Component Types of Waiting
  * @description
@@ -182,9 +177,7 @@ export const _root_component_type_list_1_spec_for_Waiting: $.ComponentSpec[] = [
  * @constant
  */
 export const _root_component_type_list_2_spec_for_Waiting: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Waiting */
 /**
  * @summary The Extension Addition Component Types of Waiting
  * @description
@@ -194,13 +187,9 @@ export const _root_component_type_list_2_spec_for_Waiting: $.ComponentSpec[] = [
  * @constant
  */
 export const _extension_additions_list_spec_for_Waiting: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Waiting */
 let _cached_decoder_for_Waiting: $.ASN1Decoder<Waiting> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Waiting */
 /**
  * @summary Decodes an ASN.1 element into a(n) Waiting
  * @function
@@ -264,13 +253,9 @@ export function _decode_Waiting(el: _Element) {
     }
     return _cached_decoder_for_Waiting(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Waiting */
 let _cached_encoder_for_Waiting: $.ASN1Encoder<Waiting> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Waiting */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Waiting */
 /**
  * @summary Encodes a(n) Waiting into an ASN.1 Element.
  * @function
@@ -346,6 +331,5 @@ export function _encode_Waiting(
     return _cached_encoder_for_Waiting(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Waiting */
 
 /* eslint-enable */

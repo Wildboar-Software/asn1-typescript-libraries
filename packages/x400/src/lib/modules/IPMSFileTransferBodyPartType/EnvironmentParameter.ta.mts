@@ -18,7 +18,6 @@ import {
     _decode_GeneralIdentifier,
     _encode_GeneralIdentifier,
 } from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EnvironmentParameter */
 /**
  * @summary EnvironmentParameter
  * @description
@@ -87,9 +86,7 @@ export class EnvironmentParameter {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnvironmentParameter */
 /**
  * @summary The Leading Root Component Types of EnvironmentParameter
  * @description
@@ -128,9 +125,7 @@ export const _root_component_type_list_1_spec_for_EnvironmentParameter: $.Compon
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnvironmentParameter */
 /**
  * @summary The Trailing Root Component Types of EnvironmentParameter
  * @description
@@ -140,9 +135,7 @@ export const _root_component_type_list_1_spec_for_EnvironmentParameter: $.Compon
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EnvironmentParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnvironmentParameter */
 /**
  * @summary The Extension Addition Component Types of EnvironmentParameter
  * @description
@@ -152,13 +145,9 @@ export const _root_component_type_list_2_spec_for_EnvironmentParameter: $.Compon
  * @constant
  */
 export const _extension_additions_list_spec_for_EnvironmentParameter: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EnvironmentParameter */
 let _cached_decoder_for_EnvironmentParameter: $.ASN1Decoder<EnvironmentParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EnvironmentParameter */
 /**
  * @summary Decodes an ASN.1 element into a(n) EnvironmentParameter
  * @function
@@ -221,13 +210,9 @@ export function _decode_EnvironmentParameter(el: _Element) {
     }
     return _cached_decoder_for_EnvironmentParameter(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EnvironmentParameter */
 let _cached_encoder_for_EnvironmentParameter: $.ASN1Encoder<EnvironmentParameter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EnvironmentParameter */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EnvironmentParameter */
 /**
  * @summary Encodes a(n) EnvironmentParameter into an ASN.1 Element.
  * @function
@@ -291,6 +276,5 @@ export function _encode_EnvironmentParameter(
     return _cached_encoder_for_EnvironmentParameter(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EnvironmentParameter */
 
 /* eslint-enable */

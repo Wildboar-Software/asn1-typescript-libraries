@@ -3,7 +3,7 @@ import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramew
 import { friendlyName } from "../PKCS-9/friendlyName.oa.mjs";
 import { localKeyId } from "../PKCS-9/localKeyId.oa.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PKCS12AttrSet */
+
 /**
  * @summary PKCS12AttrSet
  * @description
@@ -23,6 +23,5 @@ import { localKeyId } from "../PKCS-9/localKeyId.oa.mjs";
  *
  */
 export const PKCS12AttrSet: ATTRIBUTE[] = [friendlyName, localKeyId];
-/* END_OF_SYMBOL_DEFINITION PKCS12AttrSet */
 
 /* eslint-enable */

@@ -16,7 +16,6 @@ import { receive_nrn } from '../IPMSAbstractService/receive-nrn.oa.mjs';
 import { receive_on } from '../IPMSAbstractService/receive-on.oa.mjs';
 import { id_pt_reception } from '../IPMSObjectIdentifiers/id-pt-reception.va.mjs';
 import { PORT } from '../MTSAbstractService/PORT.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION reception */
 /**
  * @summary reception
  * @description
@@ -48,6 +47,5 @@ export const reception: PORT = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_pt_reception /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION reception */
 
 /* eslint-enable */

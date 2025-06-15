@@ -11,7 +11,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION _enum_for_ProtectionGroupType */
+
 /**
  * @summary ProtectionGroupType
  * @description
@@ -28,9 +28,8 @@ export enum _enum_for_ProtectionGroupType {
     plus = 0,
     colon = 1,
 }
-/* END_OF_SYMBOL_DEFINITION _enum_for_ProtectionGroupType */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionGroupType */
+
 /**
  * @summary ProtectionGroupType
  * @description
@@ -44,9 +43,8 @@ export enum _enum_for_ProtectionGroupType {
  * ```@enum {number}
  */
 export type ProtectionGroupType = _enum_for_ProtectionGroupType;
-/* END_OF_SYMBOL_DEFINITION ProtectionGroupType */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionGroupType */
+
 /**
  * @summary ProtectionGroupType
  * @description
@@ -60,9 +58,8 @@ export type ProtectionGroupType = _enum_for_ProtectionGroupType;
  * ```@enum {number}
  */
 export const ProtectionGroupType = _enum_for_ProtectionGroupType;
-/* END_OF_SYMBOL_DEFINITION ProtectionGroupType */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionGroupType_plus */
+
 /**
  * @summary ProtectionGroupType_plus
  * @constant
@@ -70,9 +67,8 @@ export const ProtectionGroupType = _enum_for_ProtectionGroupType;
  */
 export const ProtectionGroupType_plus: ProtectionGroupType =
     ProtectionGroupType.plus; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtectionGroupType_plus */
 
-/* START_OF_SYMBOL_DEFINITION plus */
+
 /**
  * @summary plus
  * @constant
@@ -80,9 +76,8 @@ export const ProtectionGroupType_plus: ProtectionGroupType =
  */
 export const plus: ProtectionGroupType =
     ProtectionGroupType.plus; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION plus */
 
-/* START_OF_SYMBOL_DEFINITION ProtectionGroupType_colon */
+
 /**
  * @summary ProtectionGroupType_colon
  * @constant
@@ -90,9 +85,8 @@ export const plus: ProtectionGroupType =
  */
 export const ProtectionGroupType_colon: ProtectionGroupType =
     ProtectionGroupType.colon; /* LONG_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION ProtectionGroupType_colon */
 
-/* START_OF_SYMBOL_DEFINITION colon */
+
 /**
  * @summary colon
  * @constant
@@ -100,21 +94,16 @@ export const ProtectionGroupType_colon: ProtectionGroupType =
  */
 export const colon: ProtectionGroupType =
     ProtectionGroupType.colon; /* SHORT_NAMED_ENUMERATED_VALUE */
-/* END_OF_SYMBOL_DEFINITION colon */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionGroupType */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ProtectionGroupType */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ProtectionGroupType */
+
+
 export const _decode_ProtectionGroupType = $._decodeEnumerated;
-/* END_OF_SYMBOL_DEFINITION _decode_ProtectionGroupType */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionGroupType */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ProtectionGroupType */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ProtectionGroupType */
+
+
 export const _encode_ProtectionGroupType = $._encodeEnumerated;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ProtectionGroupType */
 
 /* eslint-enable */

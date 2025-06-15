@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION Constraint_Set_Name */
 /**
  * @summary Constraint_Set_Name
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type Constraint_Set_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
-/* END_OF_SYMBOL_DEFINITION Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Constraint_Set_Name */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Constraint_Set_Name */
 export const _decode_Constraint_Set_Name = $._decodeObjectIdentifier;
-/* END_OF_SYMBOL_DEFINITION _decode_Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Constraint_Set_Name */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Constraint_Set_Name */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Constraint_Set_Name */
 export const _encode_Constraint_Set_Name = $._encodeObjectIdentifier;
 
-/* END_OF_SYMBOL_DEFINITION _encode_Constraint_Set_Name */
 
 /* eslint-enable */

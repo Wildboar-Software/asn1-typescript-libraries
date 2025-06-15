@@ -20,7 +20,7 @@ import {
     _decode_OriginatorPublicKey,
     _encode_OriginatorPublicKey,
 } from '../CmsTelebiometric/OriginatorPublicKey.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION OriginatorIdentifierOrKey */
+
 /**
  * @summary OriginatorIdentifierOrKey
  * @description
@@ -39,13 +39,11 @@ export type OriginatorIdentifierOrKey =
     | { issuerAndSerialNumber: IssuerAndSerialNumber } /* CHOICE_ALT_ROOT */
     | { originatorKey: OriginatorPublicKey } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION OriginatorIdentifierOrKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorIdentifierOrKey */
+
 let _cached_decoder_for_OriginatorIdentifierOrKey: $.ASN1Decoder<OriginatorIdentifierOrKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OriginatorIdentifierOrKey */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OriginatorIdentifierOrKey */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorIdentifierOrKey
  * @function
@@ -71,13 +69,11 @@ export function _decode_OriginatorIdentifierOrKey(el: _Element) {
     }
     return _cached_decoder_for_OriginatorIdentifierOrKey(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OriginatorIdentifierOrKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorIdentifierOrKey */
+
 let _cached_encoder_for_OriginatorIdentifierOrKey: $.ASN1Encoder<OriginatorIdentifierOrKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OriginatorIdentifierOrKey */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OriginatorIdentifierOrKey */
+
 /**
  * @summary Encodes a(n) OriginatorIdentifierOrKey into an ASN.1 Element.
  * @function
@@ -106,6 +102,5 @@ export function _encode_OriginatorIdentifierOrKey(
     return _cached_encoder_for_OriginatorIdentifierOrKey(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OriginatorIdentifierOrKey */
 
 /* eslint-enable */

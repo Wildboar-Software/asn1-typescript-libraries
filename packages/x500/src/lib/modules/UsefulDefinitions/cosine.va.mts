@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION cosine */
 /**
  * @summary cosine
  * @description
@@ -21,6 +20,5 @@ export const cosine: ID = new _OID([
     /* ucl */ 19200300,
     /* pilot */ 100,
 ]);
-/* END_OF_SYMBOL_DEFINITION cosine */
 
 /* eslint-enable */

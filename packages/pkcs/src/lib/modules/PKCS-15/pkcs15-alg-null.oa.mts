@@ -2,7 +2,7 @@
 import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION pkcs15_alg_null */
+
 /**
  * @summary pkcs15_alg_null
  * @description
@@ -29,6 +29,5 @@ export const pkcs15_alg_null: PKCS15_ALGORITHM<NULL> = {
     "&Parameters": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Operations": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION pkcs15_alg_null */
 
 /* eslint-enable */

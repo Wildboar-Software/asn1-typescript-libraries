@@ -14,7 +14,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION protectionMechanismFailure */
+
 /**
  * @summary protectionMechanismFailure
  * @description
@@ -28,6 +28,5 @@ import {
  * @constant
  */
 export const protectionMechanismFailure: ProbableCause = { localValue: 81 };
-/* END_OF_SYMBOL_DEFINITION protectionMechanismFailure */
 
 /* eslint-enable */

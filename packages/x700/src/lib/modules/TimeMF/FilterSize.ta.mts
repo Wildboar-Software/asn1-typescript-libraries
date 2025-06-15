@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION FilterSize */
 /**
  * @summary FilterSize
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type FilterSize = INTEGER;
-/* END_OF_SYMBOL_DEFINITION FilterSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterSize */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_FilterSize */
 
-/* START_OF_SYMBOL_DEFINITION _decode_FilterSize */
 export const _decode_FilterSize = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_FilterSize */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterSize */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_FilterSize */
 
-/* START_OF_SYMBOL_DEFINITION _encode_FilterSize */
 export const _encode_FilterSize = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_FilterSize */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_SubstringAssertion_Item,
     _encode_SubstringAssertion_Item,
 } from '../MSMatchingRules/SubstringAssertion-Item.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION SubstringAssertion */
 /**
  * @summary SubstringAssertion
  * @description
@@ -31,13 +30,9 @@ import {
  * ```
  */
 export type SubstringAssertion = SubstringAssertion_Item[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION SubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubstringAssertion */
 let _cached_decoder_for_SubstringAssertion: $.ASN1Decoder<SubstringAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _decode_SubstringAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubstringAssertion
  * @function
@@ -52,13 +47,9 @@ export function _decode_SubstringAssertion(el: _Element) {
     }
     return _cached_decoder_for_SubstringAssertion(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_SubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubstringAssertion */
 let _cached_encoder_for_SubstringAssertion: $.ASN1Encoder<SubstringAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubstringAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _encode_SubstringAssertion */
 /**
  * @summary Encodes a(n) SubstringAssertion into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_SubstringAssertion(
     return _cached_encoder_for_SubstringAssertion(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_SubstringAssertion */
 
 /* eslint-enable */

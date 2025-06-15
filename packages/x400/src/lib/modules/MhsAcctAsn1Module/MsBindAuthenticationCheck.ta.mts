@@ -15,7 +15,6 @@ import {
     _decode_AuthenticationCheck,
     _encode_AuthenticationCheck,
 } from '../MhsAcctAsn1Module/AuthenticationCheck.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION MsBindAuthenticationCheck */
 /**
  * @summary MsBindAuthenticationCheck
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type MsBindAuthenticationCheck = AuthenticationCheck; // DefinedType
-/* END_OF_SYMBOL_DEFINITION MsBindAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MsBindAuthenticationCheck */
 let _cached_decoder_for_MsBindAuthenticationCheck: $.ASN1Decoder<MsBindAuthenticationCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MsBindAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _decode_MsBindAuthenticationCheck */
 /**
  * @summary Decodes an ASN.1 element into a(n) MsBindAuthenticationCheck
  * @function
@@ -46,13 +41,9 @@ export function _decode_MsBindAuthenticationCheck(el: _Element) {
     }
     return _cached_decoder_for_MsBindAuthenticationCheck(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_MsBindAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MsBindAuthenticationCheck */
 let _cached_encoder_for_MsBindAuthenticationCheck: $.ASN1Encoder<MsBindAuthenticationCheck> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MsBindAuthenticationCheck */
 
-/* START_OF_SYMBOL_DEFINITION _encode_MsBindAuthenticationCheck */
 /**
  * @summary Encodes a(n) MsBindAuthenticationCheck into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_MsBindAuthenticationCheck(
     return _cached_encoder_for_MsBindAuthenticationCheck(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_MsBindAuthenticationCheck */
 
 /* eslint-enable */

@@ -15,7 +15,7 @@ import {
   _decode_RunningBSPLocalReference,
   _encode_RunningBSPLocalReference,
 } from '../BIP/RunningBSPLocalReference.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION RunningBSPLocalReferences */
+
 /**
  * @summary RunningBSPLocalReferences
  * @description
@@ -27,13 +27,11 @@ import {
  * ```
  */
 export type RunningBSPLocalReferences = RunningBSPLocalReference[]; // SetOfType
-/* END_OF_SYMBOL_DEFINITION RunningBSPLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RunningBSPLocalReferences */
+
 let _cached_decoder_for_RunningBSPLocalReferences: $.ASN1Decoder<RunningBSPLocalReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RunningBSPLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _decode_RunningBSPLocalReferences */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RunningBSPLocalReferences
  * @function
@@ -48,13 +46,11 @@ export function _decode_RunningBSPLocalReferences(el: _Element) {
   }
   return _cached_decoder_for_RunningBSPLocalReferences(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_RunningBSPLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RunningBSPLocalReferences */
+
 let _cached_encoder_for_RunningBSPLocalReferences: $.ASN1Encoder<RunningBSPLocalReferences> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RunningBSPLocalReferences */
 
-/* START_OF_SYMBOL_DEFINITION _encode_RunningBSPLocalReferences */
+
 /**
  * @summary Encodes a(n) RunningBSPLocalReferences into an ASN.1 Element.
  * @function
@@ -75,6 +71,5 @@ export function _encode_RunningBSPLocalReferences(
   return _cached_encoder_for_RunningBSPLocalReferences(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_RunningBSPLocalReferences */
 
 /* eslint-enable */

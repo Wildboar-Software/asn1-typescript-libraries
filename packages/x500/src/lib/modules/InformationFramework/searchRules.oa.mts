@@ -10,7 +10,6 @@ import {
     _encode_SearchRuleDescription,
 } from "../InformationFramework/SearchRuleDescription.ta.mjs";
 import { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION searchRules */
 /**
  * @summary searchRules
  * @description
@@ -47,6 +46,5 @@ export const searchRules: ATTRIBUTE<SearchRuleDescription> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION searchRules */
 
 /* eslint-enable */

@@ -26,7 +26,6 @@ import {
     _decode_AttributeValueCount,
     _encode_AttributeValueCount,
 } from '../MSAbstractService/AttributeValueCount.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EntryInformation */
 /**
  * @summary EntryInformation
  * @description
@@ -89,9 +88,7 @@ export class EntryInformation {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntryInformation */
 /**
  * @summary The Leading Root Component Types of EntryInformation
  * @description
@@ -123,9 +120,7 @@ export const _root_component_type_list_1_spec_for_EntryInformation: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntryInformation */
 /**
  * @summary The Trailing Root Component Types of EntryInformation
  * @description
@@ -135,9 +130,7 @@ export const _root_component_type_list_1_spec_for_EntryInformation: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EntryInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntryInformation */
 /**
  * @summary The Extension Addition Component Types of EntryInformation
  * @description
@@ -147,13 +140,9 @@ export const _root_component_type_list_2_spec_for_EntryInformation: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_EntryInformation: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformation */
 let _cached_decoder_for_EntryInformation: $.ASN1Decoder<EntryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EntryInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) EntryInformation
  * @function
@@ -208,13 +197,9 @@ export function _decode_EntryInformation(el: _Element) {
     }
     return _cached_decoder_for_EntryInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformation */
 let _cached_encoder_for_EntryInformation: $.ASN1Encoder<EntryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EntryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EntryInformation */
 /**
  * @summary Encodes a(n) EntryInformation into an ASN.1 Element.
  * @function
@@ -264,6 +249,5 @@ export function _encode_EntryInformation(
     return _cached_encoder_for_EntryInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EntryInformation */
 
 /* eslint-enable */

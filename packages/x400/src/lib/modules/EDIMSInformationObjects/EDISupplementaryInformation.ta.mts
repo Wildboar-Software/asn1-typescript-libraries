@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION EDISupplementaryInformation */
 /**
  * @summary EDISupplementaryInformation
  * @description
@@ -25,13 +24,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type EDISupplementaryInformation = TeletexString; // TeletexString
-/* END_OF_SYMBOL_DEFINITION EDISupplementaryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDISupplementaryInformation */
 let _cached_decoder_for_EDISupplementaryInformation: $.ASN1Decoder<EDISupplementaryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDISupplementaryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EDISupplementaryInformation */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDISupplementaryInformation
  * @function
@@ -45,13 +40,9 @@ export function _decode_EDISupplementaryInformation(el: _Element) {
     }
     return _cached_decoder_for_EDISupplementaryInformation(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EDISupplementaryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDISupplementaryInformation */
 let _cached_encoder_for_EDISupplementaryInformation: $.ASN1Encoder<EDISupplementaryInformation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDISupplementaryInformation */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EDISupplementaryInformation */
 /**
  * @summary Encodes a(n) EDISupplementaryInformation into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_EDISupplementaryInformation(
     return _cached_encoder_for_EDISupplementaryInformation(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EDISupplementaryInformation */
 
 /* eslint-enable */

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { controlAttributeType } from "../UsefulDefinitions/controlAttributeType.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION id_cat */
 /**
  * @summary id_cat
  * @description
@@ -15,6 +14,5 @@ import { ID } from "../UsefulDefinitions/ID.ta.mjs";
  * @constant
  */
 export const id_cat: ID = controlAttributeType;
-/* END_OF_SYMBOL_DEFINITION id_cat */
 
 /* eslint-enable */

@@ -15,7 +15,6 @@ import {
     _decode_CertificationPath,
     _encode_CertificationPath,
 } from "../SpkmGssTokens/CertificationPath.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION CertificationData */
 /**
  * @summary CertificationData
  * @description
@@ -68,9 +67,7 @@ export class CertificationData {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificationData */
 /**
  * @summary The Leading Root Component Types of CertificationData
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_CertificationData: $.Component
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificationData */
 /**
  * @summary The Trailing Root Component Types of CertificationData
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_CertificationData: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CertificationData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificationData */
 /**
  * @summary The Extension Addition Component Types of CertificationData
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_CertificationData: $.Component
  * @constant
  */
 export const _extension_additions_list_spec_for_CertificationData: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationData */
 let _cached_decoder_for_CertificationData: $.ASN1Decoder<CertificationData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _decode_CertificationData */
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificationData
  * @function
@@ -171,13 +160,9 @@ export function _decode_CertificationData(el: _Element) {
     }
     return _cached_decoder_for_CertificationData(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationData */
 let _cached_encoder_for_CertificationData: $.ASN1Encoder<CertificationData> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CertificationData */
 
-/* START_OF_SYMBOL_DEFINITION _encode_CertificationData */
 /**
  * @summary Encodes a(n) CertificationData into an ASN.1 Element.
  * @function
@@ -221,6 +206,5 @@ export function _encode_CertificationData(
     return _cached_encoder_for_CertificationData(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_CertificationData */
 
 /* eslint-enable */

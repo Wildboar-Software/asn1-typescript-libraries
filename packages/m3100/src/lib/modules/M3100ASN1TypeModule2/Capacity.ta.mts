@@ -16,7 +16,7 @@ import {
     _decode_Bandwidth,
     _encode_Bandwidth,
 } from '../M3100ASN1TypeModule2/Bandwidth.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION Capacity */
+
 /**
  * @summary Capacity
  * @description
@@ -33,13 +33,11 @@ import {
 export type Capacity =
     | { numberOfLinkConnections: INTEGER } /* CHOICE_ALT_ROOT */
     | { bandwidth: Bandwidth } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Capacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Capacity */
+
 let _cached_decoder_for_Capacity: $.ASN1Decoder<Capacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Capacity */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Capacity */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Capacity
  * @function
@@ -61,13 +59,11 @@ export function _decode_Capacity(el: _Element) {
     }
     return _cached_decoder_for_Capacity(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Capacity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Capacity */
+
 let _cached_encoder_for_Capacity: $.ASN1Encoder<Capacity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Capacity */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Capacity */
+
 /**
  * @summary Encodes a(n) Capacity into an ASN.1 Element.
  * @function
@@ -101,6 +97,5 @@ export function _encode_Capacity(
     return _cached_encoder_for_Capacity(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Capacity */
 
 /* eslint-enable */

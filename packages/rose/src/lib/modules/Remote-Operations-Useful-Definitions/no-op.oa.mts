@@ -18,7 +18,7 @@ import {
   _decode_Code,
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION no_op */
+
 /**
  * @summary no_op
  * @description
@@ -59,6 +59,5 @@ export const no_op: OPERATION = {
   '&returnResult': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION no_op */
 
 /* eslint-enable */

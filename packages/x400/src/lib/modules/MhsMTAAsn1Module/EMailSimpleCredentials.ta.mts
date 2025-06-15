@@ -15,7 +15,6 @@ import {
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EMailSimpleCredentials */
 /**
  * @summary EMailSimpleCredentials
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EMailSimpleCredentials = Password; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EMailSimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailSimpleCredentials */
 let _cached_decoder_for_EMailSimpleCredentials: $.ASN1Decoder<EMailSimpleCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EMailSimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EMailSimpleCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailSimpleCredentials
  * @function
@@ -46,13 +41,9 @@ export function _decode_EMailSimpleCredentials(el: _Element) {
     }
     return _cached_decoder_for_EMailSimpleCredentials(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EMailSimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailSimpleCredentials */
 let _cached_encoder_for_EMailSimpleCredentials: $.ASN1Encoder<EMailSimpleCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EMailSimpleCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EMailSimpleCredentials */
 /**
  * @summary Encodes a(n) EMailSimpleCredentials into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_EMailSimpleCredentials(
     return _cached_encoder_for_EMailSimpleCredentials(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EMailSimpleCredentials */
 
 /* eslint-enable */

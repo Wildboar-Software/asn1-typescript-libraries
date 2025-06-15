@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 
-/* START_OF_SYMBOL_DEFINITION ecdsa_with_SHA1 */
+
 /**
  * @summary ecdsa_with_SHA1
  * @description
@@ -24,6 +24,5 @@ export const ecdsa_with_SHA1: OBJECT_IDENTIFIER = new _OID([
     /* signatures */ 4,
     1,
 ]);
-/* END_OF_SYMBOL_DEFINITION ecdsa_with_SHA1 */
 
 /* eslint-enable */

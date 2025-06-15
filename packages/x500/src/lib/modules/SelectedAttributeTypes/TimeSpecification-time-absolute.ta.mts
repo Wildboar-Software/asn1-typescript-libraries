@@ -7,7 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION TimeSpecification_time_absolute */
 /**
  * @summary TimeSpecification_time_absolute
  * @description
@@ -68,9 +67,7 @@ export class TimeSpecification_time_absolute {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeSpecification_time_absolute */
 /**
  * @summary The Leading Root Component Types of TimeSpecification_time_absolute
  * @description
@@ -95,9 +92,7 @@ export const _root_component_type_list_1_spec_for_TimeSpecification_time_absolut
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeSpecification_time_absolute */
 /**
  * @summary The Trailing Root Component Types of TimeSpecification_time_absolute
  * @description
@@ -107,9 +102,7 @@ export const _root_component_type_list_1_spec_for_TimeSpecification_time_absolut
  * @constant
  */
 export const _root_component_type_list_2_spec_for_TimeSpecification_time_absolute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeSpecification_time_absolute */
 /**
  * @summary The Extension Addition Component Types of TimeSpecification_time_absolute
  * @description
@@ -119,13 +112,9 @@ export const _root_component_type_list_2_spec_for_TimeSpecification_time_absolut
  * @constant
  */
 export const _extension_additions_list_spec_for_TimeSpecification_time_absolute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeSpecification_time_absolute */
 let _cached_decoder_for_TimeSpecification_time_absolute: $.ASN1Decoder<TimeSpecification_time_absolute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_TimeSpecification_time_absolute */
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeSpecification_time_absolute
  * @function
@@ -175,13 +164,9 @@ export function _decode_TimeSpecification_time_absolute(el: _Element) {
     }
     return _cached_decoder_for_TimeSpecification_time_absolute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeSpecification_time_absolute */
 let _cached_encoder_for_TimeSpecification_time_absolute: $.ASN1Encoder<TimeSpecification_time_absolute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TimeSpecification_time_absolute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_TimeSpecification_time_absolute */
 /**
  * @summary Encodes a(n) TimeSpecification_time_absolute into an ASN.1 Element.
  * @function
@@ -229,6 +214,5 @@ export function _encode_TimeSpecification_time_absolute(
     return _cached_encoder_for_TimeSpecification_time_absolute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_TimeSpecification_time_absolute */
 
 /* eslint-enable */

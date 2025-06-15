@@ -13,7 +13,6 @@ import { mHSNumericUserIdentifier } from '../MHSRoutingORAddressSubtree/mHSNumer
 import { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa.mjs';
 import { id_nf_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-numeric-user-identifier.va.mjs';
 import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.mjs';
-/* START_OF_SYMBOL_DEFINITION mHSNumericUserIdentifierNameForm */
 /**
  * @summary mHSNumericUserIdentifierNameForm
  * @description
@@ -42,6 +41,5 @@ export const mHSNumericUserIdentifierNameForm: NAME_FORM = {
     ] /* OBJECT_FIELD_SETTING */,
     '&id': id_nf_mhs_numeric_user_identifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION mHSNumericUserIdentifierNameForm */
 
 /* eslint-enable */

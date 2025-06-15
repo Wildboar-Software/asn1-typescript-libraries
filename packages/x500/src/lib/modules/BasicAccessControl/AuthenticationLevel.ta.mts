@@ -6,7 +6,6 @@ import {
     _decode_AuthenticationLevel_basicLevels,
     _encode_AuthenticationLevel_basicLevels,
 } from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AuthenticationLevel */
 /**
  * @summary AuthenticationLevel
  * @description
@@ -28,13 +27,9 @@ export type AuthenticationLevel =
     | { basicLevels: AuthenticationLevel_basicLevels } /* CHOICE_ALT_ROOT */
     | { other: EXTERNAL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION AuthenticationLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationLevel */
 let _cached_decoder_for_AuthenticationLevel: $.ASN1Decoder<AuthenticationLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AuthenticationLevel */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AuthenticationLevel */
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticationLevel
  * @function
@@ -55,13 +50,9 @@ export function _decode_AuthenticationLevel(el: _Element) {
     }
     return _cached_decoder_for_AuthenticationLevel(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AuthenticationLevel */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationLevel */
 let _cached_encoder_for_AuthenticationLevel: $.ASN1Encoder<AuthenticationLevel> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AuthenticationLevel */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AuthenticationLevel */
 /**
  * @summary Encodes a(n) AuthenticationLevel into an ASN.1 Element.
  * @function
@@ -85,6 +76,5 @@ export function _encode_AuthenticationLevel(
     return _cached_encoder_for_AuthenticationLevel(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AuthenticationLevel */
 
 /* eslint-enable */

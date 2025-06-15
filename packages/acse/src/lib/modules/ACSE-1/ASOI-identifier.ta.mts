@@ -12,7 +12,6 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 
-/* START_OF_SYMBOL_DEFINITION ASOI_identifier */
 /**
  * @summary ASOI_identifier
  * @description
@@ -24,21 +23,12 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```
  */
 export type ASOI_identifier = INTEGER;
-/* END_OF_SYMBOL_DEFINITION ASOI_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ASOI_identifier */
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ASOI_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_ASOI_identifier */
 export const _decode_ASOI_identifier = $._decodeInteger;
-/* END_OF_SYMBOL_DEFINITION _decode_ASOI_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ASOI_identifier */
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ASOI_identifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_ASOI_identifier */
 export const _encode_ASOI_identifier = $._encodeInteger;
 
-/* END_OF_SYMBOL_DEFINITION _encode_ASOI_identifier */
 
 /* eslint-enable */

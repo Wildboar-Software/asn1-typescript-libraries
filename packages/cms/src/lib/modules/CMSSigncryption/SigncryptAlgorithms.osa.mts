@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
-/* START_OF_SYMBOL_DEFINITION SigncryptAlgorithms */
+
 /**
  * @summary SigncryptAlgorithms
  * @description
@@ -22,6 +22,5 @@ export const SigncryptAlgorithms: ALGORITHM[] = [
     // Commented out because this comes from the `Signcryption` module, which comes from the proprietary ISO/IEC 29150.
     // ...SigncryptionMechanism,
 ];
-/* END_OF_SYMBOL_DEFINITION SigncryptAlgorithms */
 
 /* eslint-enable */

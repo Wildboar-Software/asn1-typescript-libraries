@@ -6,7 +6,6 @@ import {
     _decode_UserPwd_encrypted,
     _encode_UserPwd_encrypted,
 } from "../PasswordPolicy/UserPwd-encrypted.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION UserPwd */
 /**
  * @summary UserPwd
  * @description
@@ -27,13 +26,9 @@ export type UserPwd =
     | { clear: UTF8String } /* CHOICE_ALT_ROOT */
     | { encrypted: UserPwd_encrypted } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
-/* END_OF_SYMBOL_DEFINITION UserPwd */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_UserPwd */
 let _cached_decoder_for_UserPwd: $.ASN1Decoder<UserPwd> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_UserPwd */
 
-/* START_OF_SYMBOL_DEFINITION _decode_UserPwd */
 /**
  * @summary Decodes an ASN.1 element into a(n) UserPwd
  * @function
@@ -49,13 +44,9 @@ export function _decode_UserPwd(el: _Element) {
     }
     return _cached_decoder_for_UserPwd(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_UserPwd */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_UserPwd */
 let _cached_encoder_for_UserPwd: $.ASN1Encoder<UserPwd> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_UserPwd */
 
-/* START_OF_SYMBOL_DEFINITION _encode_UserPwd */
 /**
  * @summary Encodes a(n) UserPwd into an ASN.1 Element.
  * @function
@@ -79,6 +70,5 @@ export function _encode_UserPwd(
     return _cached_encoder_for_UserPwd(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_UserPwd */
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION OrderedAttribute */
 /**
  * @summary OrderedAttribute
  * @description
@@ -78,9 +77,7 @@ export class OrderedAttribute {
         return new OrderedAttribute(_o.attribute_type, _o.attribute_values);
     }
 }
-/* END_OF_SYMBOL_DEFINITION OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OrderedAttribute */
 /**
  * @summary The Leading Root Component Types of OrderedAttribute
  * @description
@@ -105,9 +102,7 @@ export const _root_component_type_list_1_spec_for_OrderedAttribute: $.ComponentS
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OrderedAttribute */
 /**
  * @summary The Trailing Root Component Types of OrderedAttribute
  * @description
@@ -117,9 +112,7 @@ export const _root_component_type_list_1_spec_for_OrderedAttribute: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OrderedAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OrderedAttribute */
 /**
  * @summary The Extension Addition Component Types of OrderedAttribute
  * @description
@@ -129,13 +122,9 @@ export const _root_component_type_list_2_spec_for_OrderedAttribute: $.ComponentS
  * @constant
  */
 export const _extension_additions_list_spec_for_OrderedAttribute: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_OrderedAttribute */
 let _cached_decoder_for_OrderedAttribute: $.ASN1Decoder<OrderedAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _decode_OrderedAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) OrderedAttribute
  * @function
@@ -168,13 +157,9 @@ export function _decode_OrderedAttribute(el: _Element) {
     }
     return _cached_decoder_for_OrderedAttribute(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_OrderedAttribute */
 let _cached_encoder_for_OrderedAttribute: $.ASN1Encoder<OrderedAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_OrderedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _encode_OrderedAttribute */
 /**
  * @summary Encodes a(n) OrderedAttribute into an ASN.1 Element.
  * @function
@@ -210,6 +195,5 @@ export function _encode_OrderedAttribute(
     return _cached_encoder_for_OrderedAttribute(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_OrderedAttribute */
 
 /* eslint-enable */

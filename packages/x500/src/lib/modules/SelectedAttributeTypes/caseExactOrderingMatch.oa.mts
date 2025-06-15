@@ -7,7 +7,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION caseExactOrderingMatch */
 /**
  * @summary caseExactOrderingMatch
  * @description
@@ -39,6 +38,5 @@ export const caseExactOrderingMatch: MATCHING_RULE<UnboundedDirectoryString> = {
     "&id": id_mr_caseExactOrderingMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION caseExactOrderingMatch */
 
 /* eslint-enable */

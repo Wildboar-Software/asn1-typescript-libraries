@@ -15,7 +15,6 @@ import {
     _decode_ConnectionTestResults,
     _encode_ConnectionTestResults,
 } from '../TestCategories-ASN1Module/ConnectionTestResults.ta.mjs';
-/* START_OF_SYMBOL_DEFINITION EndConnectionTestResults */
 /**
  * @summary EndConnectionTestResults
  * @description
@@ -27,13 +26,9 @@ import {
  * ```
  */
 export type EndConnectionTestResults = ConnectionTestResults; // DefinedType
-/* END_OF_SYMBOL_DEFINITION EndConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EndConnectionTestResults */
 let _cached_decoder_for_EndConnectionTestResults: $.ASN1Decoder<EndConnectionTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EndConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _decode_EndConnectionTestResults */
 /**
  * @summary Decodes an ASN.1 element into a(n) EndConnectionTestResults
  * @function
@@ -46,13 +41,9 @@ export function _decode_EndConnectionTestResults(el: _Element) {
     }
     return _cached_decoder_for_EndConnectionTestResults(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_EndConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EndConnectionTestResults */
 let _cached_encoder_for_EndConnectionTestResults: $.ASN1Encoder<EndConnectionTestResults> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EndConnectionTestResults */
 
-/* START_OF_SYMBOL_DEFINITION _encode_EndConnectionTestResults */
 /**
  * @summary Encodes a(n) EndConnectionTestResults into an ASN.1 Element.
  * @function
@@ -70,6 +61,5 @@ export function _encode_EndConnectionTestResults(
     return _cached_encoder_for_EndConnectionTestResults(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_EndConnectionTestResults */
 
 /* eslint-enable */

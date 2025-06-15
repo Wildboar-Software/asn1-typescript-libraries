@@ -8,7 +8,7 @@ import {
 import { generalizedTimeMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeMatch.oa.mjs";
 import { pkcs_9_at_dateOfBirth } from "../PKCS-9/pkcs-9-at-dateOfBirth.va.mjs";
 
-/* START_OF_SYMBOL_DEFINITION dateOfBirth */
+
 /**
  * @summary dateOfBirth
  * @description
@@ -44,6 +44,5 @@ export const dateOfBirth: ATTRIBUTE<GeneralizedTime> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION dateOfBirth */
 
 /* eslint-enable */

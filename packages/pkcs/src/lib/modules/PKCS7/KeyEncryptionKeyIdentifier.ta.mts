@@ -12,7 +12,7 @@ import {
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
 } from "../PKCS7/OtherKeyAttribute.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION KeyEncryptionKeyIdentifier */
+
 /**
  * @summary KeyEncryptionKeyIdentifier
  * @description
@@ -75,9 +75,8 @@ export class KeyEncryptionKeyIdentifier {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyEncryptionKeyIdentifier */
+
 /**
  * @summary The Leading Root Component Types of KeyEncryptionKeyIdentifier
  * @description
@@ -109,9 +108,8 @@ export const _root_component_type_list_1_spec_for_KeyEncryptionKeyIdentifier: $.
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyEncryptionKeyIdentifier */
+
 /**
  * @summary The Trailing Root Component Types of KeyEncryptionKeyIdentifier
  * @description
@@ -121,9 +119,8 @@ export const _root_component_type_list_1_spec_for_KeyEncryptionKeyIdentifier: $.
  * @constant
  */
 export const _root_component_type_list_2_spec_for_KeyEncryptionKeyIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyEncryptionKeyIdentifier */
+
 /**
  * @summary The Extension Addition Component Types of KeyEncryptionKeyIdentifier
  * @description
@@ -133,13 +130,11 @@ export const _root_component_type_list_2_spec_for_KeyEncryptionKeyIdentifier: $.
  * @constant
  */
 export const _extension_additions_list_spec_for_KeyEncryptionKeyIdentifier: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyEncryptionKeyIdentifier */
+
 let _cached_decoder_for_KeyEncryptionKeyIdentifier: $.ASN1Decoder<KeyEncryptionKeyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _decode_KeyEncryptionKeyIdentifier */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyEncryptionKeyIdentifier
  * @function
@@ -186,13 +181,11 @@ export function _decode_KeyEncryptionKeyIdentifier(el: _Element) {
     }
     return _cached_decoder_for_KeyEncryptionKeyIdentifier(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyEncryptionKeyIdentifier */
+
 let _cached_encoder_for_KeyEncryptionKeyIdentifier: $.ASN1Encoder<KeyEncryptionKeyIdentifier> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_KeyEncryptionKeyIdentifier */
 
-/* START_OF_SYMBOL_DEFINITION _encode_KeyEncryptionKeyIdentifier */
+
 /**
  * @summary Encodes a(n) KeyEncryptionKeyIdentifier into an ASN.1 Element.
  * @function
@@ -232,6 +225,5 @@ export function _encode_KeyEncryptionKeyIdentifier(
     return _cached_encoder_for_KeyEncryptionKeyIdentifier(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_KeyEncryptionKeyIdentifier */
 
 /* eslint-enable */

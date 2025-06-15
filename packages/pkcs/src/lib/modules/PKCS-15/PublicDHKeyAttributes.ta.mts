@@ -27,7 +27,7 @@ import {
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
 
-/* START_OF_SYMBOL_DEFINITION PublicDHKeyAttributes */
+
 /**
  * @summary PublicDHKeyAttributes
  * @description
@@ -90,9 +90,8 @@ export class PublicDHKeyAttributes {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicDHKeyAttributes */
+
 /**
  * @summary The Leading Root Component Types of PublicDHKeyAttributes
  * @description
@@ -105,9 +104,8 @@ export const _root_component_type_list_1_spec_for_PublicDHKeyAttributes: $.Compo
     new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec("keyInfo", true, $.hasAnyTag, undefined, undefined),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicDHKeyAttributes */
+
 /**
  * @summary The Trailing Root Component Types of PublicDHKeyAttributes
  * @description
@@ -117,9 +115,8 @@ export const _root_component_type_list_1_spec_for_PublicDHKeyAttributes: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_PublicDHKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicDHKeyAttributes */
+
 /**
  * @summary The Extension Addition Component Types of PublicDHKeyAttributes
  * @description
@@ -129,13 +126,11 @@ export const _root_component_type_list_2_spec_for_PublicDHKeyAttributes: $.Compo
  * @constant
  */
 export const _extension_additions_list_spec_for_PublicDHKeyAttributes: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicDHKeyAttributes */
+
 let _cached_decoder_for_PublicDHKeyAttributes: $.ASN1Decoder<PublicDHKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _decode_PublicDHKeyAttributes */
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicDHKeyAttributes
  * @function
@@ -191,13 +186,11 @@ export function _decode_PublicDHKeyAttributes(el: _Element) {
     }
     return _cached_decoder_for_PublicDHKeyAttributes(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicDHKeyAttributes */
+
 let _cached_encoder_for_PublicDHKeyAttributes: $.ASN1Encoder<PublicDHKeyAttributes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicDHKeyAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _encode_PublicDHKeyAttributes */
+
 /**
  * @summary Encodes a(n) PublicDHKeyAttributes into an ASN.1 Element.
  * @function
@@ -241,6 +234,5 @@ export function _encode_PublicDHKeyAttributes(
     return _cached_encoder_for_PublicDHKeyAttributes(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_PublicDHKeyAttributes */
 
 /* eslint-enable */

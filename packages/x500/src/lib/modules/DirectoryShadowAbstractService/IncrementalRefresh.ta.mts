@@ -6,7 +6,6 @@ import {
     _decode_IncrementalStepRefresh,
     _encode_IncrementalStepRefresh,
 } from "../DirectoryShadowAbstractService/IncrementalStepRefresh.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION IncrementalRefresh */
 /**
  * @summary IncrementalRefresh
  * @description
@@ -18,13 +17,9 @@ import {
  * ```
  */
 export type IncrementalRefresh = IncrementalStepRefresh[]; // SequenceOfType
-/* END_OF_SYMBOL_DEFINITION IncrementalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IncrementalRefresh */
 let _cached_decoder_for_IncrementalRefresh: $.ASN1Decoder<IncrementalRefresh> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IncrementalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _decode_IncrementalRefresh */
 /**
  * @summary Decodes an ASN.1 element into a(n) IncrementalRefresh
  * @function
@@ -39,13 +34,9 @@ export function _decode_IncrementalRefresh(el: _Element) {
     }
     return _cached_decoder_for_IncrementalRefresh(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_IncrementalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IncrementalRefresh */
 let _cached_encoder_for_IncrementalRefresh: $.ASN1Encoder<IncrementalRefresh> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IncrementalRefresh */
 
-/* START_OF_SYMBOL_DEFINITION _encode_IncrementalRefresh */
 /**
  * @summary Encodes a(n) IncrementalRefresh into an ASN.1 Element.
  * @function
@@ -66,6 +57,5 @@ export function _encode_IncrementalRefresh(
     return _cached_encoder_for_IncrementalRefresh(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_IncrementalRefresh */
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import { id_ac_shadowConsumerInitiatedAC } from "../DirectoryOSIProtocols/id-ac-
 import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-/* START_OF_SYMBOL_DEFINITION shadowConsumerInitiatedAC */
 /**
  * @summary shadowConsumerInitiatedAC
  * @description
@@ -34,6 +33,5 @@ export const shadowConsumerInitiatedAC: APPLICATION_CONTEXT = {
     ] /* OBJECT_FIELD_SETTING */,
     "&applicationContextName": id_ac_shadowConsumerInitiatedAC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION shadowConsumerInitiatedAC */
 
 /* eslint-enable */

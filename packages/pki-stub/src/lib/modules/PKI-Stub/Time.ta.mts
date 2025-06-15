@@ -13,7 +13,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 
-/* START_OF_SYMBOL_DEFINITION Time */
 /**
  * @summary Time
  * @description
@@ -29,13 +28,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 export type Time =
     | { utcTime: UTCTime } /* CHOICE_ALT_ROOT */
     | { generalizedTime: GeneralizedTime } /* CHOICE_ALT_ROOT */;
-/* END_OF_SYMBOL_DEFINITION Time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Time */
 let _cached_decoder_for_Time: $.ASN1Decoder<Time> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Time */
 
-/* START_OF_SYMBOL_DEFINITION _decode_Time */
 /**
  * @summary Decodes an ASN.1 element into a(n) Time
  * @function
@@ -51,13 +46,9 @@ export function _decode_Time(el: _Element) {
     }
     return _cached_decoder_for_Time(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Time */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Time */
 let _cached_encoder_for_Time: $.ASN1Encoder<Time> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Time */
 
-/* START_OF_SYMBOL_DEFINITION _encode_Time */
 /**
  * @summary Encodes a(n) Time into an ASN.1 Element.
  * @function
@@ -78,6 +69,5 @@ export function _encode_Time(value: Time, elGetter: $.ASN1Encoder<Time>) {
     return _cached_encoder_for_Time(value, elGetter);
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_Time */
 
 /* eslint-enable */

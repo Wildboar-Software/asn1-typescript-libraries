@@ -10,7 +10,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION AttributeMappings_Item_typeMappings */
 /**
  * @summary AttributeMappings_Item_typeMappings
  * @description
@@ -71,9 +70,7 @@ export class AttributeMappings_Item_typeMappings {
         );
     }
 }
-/* END_OF_SYMBOL_DEFINITION AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeMappings_Item_typeMappings */
 /**
  * @summary The Leading Root Component Types of AttributeMappings_Item_typeMappings
  * @description
@@ -98,9 +95,7 @@ export const _root_component_type_list_1_spec_for_AttributeMappings_Item_typeMap
         undefined
     ),
 ];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeMappings_Item_typeMappings */
 /**
  * @summary The Trailing Root Component Types of AttributeMappings_Item_typeMappings
  * @description
@@ -110,9 +105,7 @@ export const _root_component_type_list_1_spec_for_AttributeMappings_Item_typeMap
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AttributeMappings_Item_typeMappings: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeMappings_Item_typeMappings */
 /**
  * @summary The Extension Addition Component Types of AttributeMappings_Item_typeMappings
  * @description
@@ -122,13 +115,9 @@ export const _root_component_type_list_2_spec_for_AttributeMappings_Item_typeMap
  * @constant
  */
 export const _extension_additions_list_spec_for_AttributeMappings_Item_typeMappings: $.ComponentSpec[] = [];
-/* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeMappings_Item_typeMappings */
 let _cached_decoder_for_AttributeMappings_Item_typeMappings: $.ASN1Decoder<AttributeMappings_Item_typeMappings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _decode_AttributeMappings_Item_typeMappings */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeMappings_Item_typeMappings
  * @function
@@ -167,13 +156,9 @@ export function _decode_AttributeMappings_Item_typeMappings(el: _Element) {
     }
     return _cached_decoder_for_AttributeMappings_Item_typeMappings(el);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeMappings_Item_typeMappings */
 let _cached_encoder_for_AttributeMappings_Item_typeMappings: $.ASN1Encoder<AttributeMappings_Item_typeMappings> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeMappings_Item_typeMappings */
 
-/* START_OF_SYMBOL_DEFINITION _encode_AttributeMappings_Item_typeMappings */
 /**
  * @summary Encodes a(n) AttributeMappings_Item_typeMappings into an ASN.1 Element.
  * @function
@@ -220,6 +205,5 @@ export function _encode_AttributeMappings_Item_typeMappings(
     );
 }
 
-/* END_OF_SYMBOL_DEFINITION _encode_AttributeMappings_Item_typeMappings */
 
 /* eslint-enable */

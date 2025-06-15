@@ -9,7 +9,6 @@ import {
     _decode_AttributeCombination,
     _encode_AttributeCombination,
 } from "../ServiceAdministration/AttributeCombination.ta.mjs";
-/* START_OF_SYMBOL_DEFINITION attributeCombinations */
 /**
  * @summary attributeCombinations
  * @description
@@ -43,6 +42,5 @@ export const attributeCombinations: ATTRIBUTE<AttributeCombination> = {
     "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
-/* END_OF_SYMBOL_DEFINITION attributeCombinations */
 
 /* eslint-enable */
