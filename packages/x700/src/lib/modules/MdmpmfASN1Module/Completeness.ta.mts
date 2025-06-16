@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * Completeness  ::=  ENUMERATED {
  *   completenessUnknown(0), knownComplete(1), knownNotComplete(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Completeness {
     completenessUnknown = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_Completeness {
  * ```asn1
  * Completeness  ::=  ENUMERATED {
  *   completenessUnknown(0), knownComplete(1), knownNotComplete(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Completeness = _enum_for_Completeness;
 
@@ -50,7 +54,9 @@ export type Completeness = _enum_for_Completeness;
  * ```asn1
  * Completeness  ::=  ENUMERATED {
  *   completenessUnknown(0), knownComplete(1), knownNotComplete(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Completeness = _enum_for_Completeness;
 

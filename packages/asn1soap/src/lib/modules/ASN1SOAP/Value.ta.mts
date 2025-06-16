@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * Value  ::=  ENUMERATED {
  *   versionMismatch, mustUnderstand, dataEncodingUnknown, sender, receiver
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_Value {
   versionMismatch = 0,
@@ -43,7 +45,9 @@ export enum _enum_for_Value {
  * Value  ::=  ENUMERATED {
  *   versionMismatch, mustUnderstand, dataEncodingUnknown, sender, receiver
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type Value = _enum_for_Value;
 
@@ -58,7 +62,9 @@ export type Value = _enum_for_Value;
  * Value  ::=  ENUMERATED {
  *   versionMismatch, mustUnderstand, dataEncodingUnknown, sender, receiver
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const Value = _enum_for_Value;
 

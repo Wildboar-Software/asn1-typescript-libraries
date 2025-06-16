@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * SignalDirection  ::=  ENUMERATED {send(0), receive(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SignalDirection {
     send = 0,
@@ -34,7 +36,9 @@ export enum _enum_for_SignalDirection {
  *
  * ```asn1
  * SignalDirection  ::=  ENUMERATED {send(0), receive(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SignalDirection = _enum_for_SignalDirection;
 
@@ -46,7 +50,9 @@ export type SignalDirection = _enum_for_SignalDirection;
  *
  * ```asn1
  * SignalDirection  ::=  ENUMERATED {send(0), receive(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SignalDirection = _enum_for_SignalDirection;
 

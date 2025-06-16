@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * AutoSubmitted  ::=  ENUMERATED {
  *   not-auto-submitted(0), auto-generated(1), auto-replied(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_AutoSubmitted {
     not_auto_submitted = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_AutoSubmitted {
  * ```asn1
  * AutoSubmitted  ::=  ENUMERATED {
  *   not-auto-submitted(0), auto-generated(1), auto-replied(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AutoSubmitted = _enum_for_AutoSubmitted;
 
@@ -50,7 +54,9 @@ export type AutoSubmitted = _enum_for_AutoSubmitted;
  * ```asn1
  * AutoSubmitted  ::=  ENUMERATED {
  *   not-auto-submitted(0), auto-generated(1), auto-replied(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const AutoSubmitted = _enum_for_AutoSubmitted;
 

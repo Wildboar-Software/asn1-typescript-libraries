@@ -26,7 +26,9 @@ export enum _enum_for_SequenceMatchType {
  *   sequencePermutationAndDeletion (4),
  *   sequenceProviderDefined        (5),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SequenceMatchType = _enum_for_SequenceMatchType | ENUMERATED;
 

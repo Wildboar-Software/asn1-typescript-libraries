@@ -48,7 +48,7 @@ export enum _enum_for_Type_of_msg_t30_indicator {
  *
  * ```asn1
  * Type-of-msg-t30-indicator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type Type_of_msg_t30_indicator =
   | _enum_for_Type_of_msg_t30_indicator
@@ -432,5 +432,3 @@ export const _decode_Type_of_msg_t30_indicator = $._decodeEnumerated;
 
 export const _encode_Type_of_msg_t30_indicator = $._encodeEnumerated;
 
-
-/* eslint-enable */

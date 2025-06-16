@@ -28,7 +28,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     level5 (5),
  *     level6 (6),
  *     level7 (7) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_EvaluationAssuranceLevel {
@@ -56,7 +58,9 @@ enum _enum_for_EvaluationAssuranceLevel {
  *     level5 (5),
  *     level6 (6),
  *     level7 (7) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
@@ -76,7 +80,9 @@ type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
  *     level5 (5),
  *     level6 (6),
  *     level7 (7) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;

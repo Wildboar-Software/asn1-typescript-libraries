@@ -21,7 +21,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * AdministrativeState  ::=  ENUMERATED {locked(0), unlocked(1), shuttingDown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_AdministrativeState {
@@ -38,7 +40,9 @@ enum _enum_for_AdministrativeState {
  * 
  * ```asn1
  * AdministrativeState  ::=  ENUMERATED {locked(0), unlocked(1), shuttingDown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type AdministrativeState = _enum_for_AdministrativeState;
@@ -51,7 +55,9 @@ type AdministrativeState = _enum_for_AdministrativeState;
  * 
  * ```asn1
  * AdministrativeState  ::=  ENUMERATED {locked(0), unlocked(1), shuttingDown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const AdministrativeState = _enum_for_AdministrativeState;

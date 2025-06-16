@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * Priority ::= [APPLICATION 7]  ENUMERATED {normal(0), non-urgent(1), urgent(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Priority {
     normal = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_Priority {
  *
  * ```asn1
  * Priority ::= [APPLICATION 7]  ENUMERATED {normal(0), non-urgent(1), urgent(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Priority = _enum_for_Priority;
 

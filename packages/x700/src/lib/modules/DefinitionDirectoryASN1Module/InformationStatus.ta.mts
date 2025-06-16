@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * InformationStatus  ::=  ENUMERATED {active(0), deleted(1), preliminary(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_InformationStatus {
     active = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_InformationStatus {
  *
  * ```asn1
  * InformationStatus  ::=  ENUMERATED {active(0), deleted(1), preliminary(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type InformationStatus = _enum_for_InformationStatus;
 
@@ -47,7 +51,9 @@ export type InformationStatus = _enum_for_InformationStatus;
  *
  * ```asn1
  * InformationStatus  ::=  ENUMERATED {active(0), deleted(1), preliminary(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const InformationStatus = _enum_for_InformationStatus;
 

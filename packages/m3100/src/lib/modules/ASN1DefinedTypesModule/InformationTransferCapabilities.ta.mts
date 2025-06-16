@@ -25,7 +25,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * -- "..." these ellipses defined in ASN.1 amendment are used here to indicate that this is
  * -- an  extensible type and additional enumerations may be added in future --}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_InformationTransferCapabilities {
     speech = 0,
@@ -50,7 +52,9 @@ export enum _enum_for_InformationTransferCapabilities {
  *
  * -- "..." these ellipses defined in ASN.1 amendment are used here to indicate that this is
  * -- an  extensible type and additional enumerations may be added in future --}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
 
@@ -68,7 +72,9 @@ export type InformationTransferCapabilities = _enum_for_InformationTransferCapab
  *
  * -- "..." these ellipses defined in ASN.1 amendment are used here to indicate that this is
  * -- an  extensible type and additional enumerations may be added in future --}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
 

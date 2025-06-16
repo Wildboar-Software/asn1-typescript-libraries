@@ -23,7 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   callRejected(3), reserveTimerExpired(4), circuitDisabled(5), versionSkew(6),
  *   areaMismatch(7), maximumBroadcastIntermediateSystemsExceeded(8),
  *   maximumBroadcastEndSystemsExceeded(9), wrongSystemType(10)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_Reason {
   holdingTimerExpired = 0,
@@ -51,7 +53,9 @@ export enum _enum_for_Reason {
  *   callRejected(3), reserveTimerExpired(4), circuitDisabled(5), versionSkew(6),
  *   areaMismatch(7), maximumBroadcastIntermediateSystemsExceeded(8),
  *   maximumBroadcastEndSystemsExceeded(9), wrongSystemType(10)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type Reason = _enum_for_Reason;
 
@@ -67,7 +71,9 @@ export type Reason = _enum_for_Reason;
  *   callRejected(3), reserveTimerExpired(4), circuitDisabled(5), versionSkew(6),
  *   areaMismatch(7), maximumBroadcastIntermediateSystemsExceeded(8),
  *   maximumBroadcastEndSystemsExceeded(9), wrongSystemType(10)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const Reason = _enum_for_Reason;
 

@@ -19,7 +19,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * VirtualLinkChange  ::=  ENUMERATED {deleted(0), created(1)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_VirtualLinkChange {
   deleted = 0,
@@ -32,9 +32,10 @@ export enum _enum_for_VirtualLinkChange {
  *
  * ### ASN.1 Definition:
  *
- * ```asn1
- * VirtualLinkChange  ::=  ENUMERATED {deleted(0), created(1)}
- * ```@enum {number}
+ * alLinkChange  ::=  ENUMERATED {deleted(0), created(1)}
+ * ```
+ *
+ * @enum {number}
  */
 export type VirtualLinkChange = _enum_for_VirtualLinkChange;
 
@@ -42,11 +43,13 @@ export type VirtualLinkChange = _enum_for_VirtualLinkChange;
  * @summary VirtualLinkChange
  * @description
  *
- * ### ASN.1 Definition:
+ * ion:
  *
  * ```asn1
  * VirtualLinkChange  ::=  ENUMERATED {deleted(0), created(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const VirtualLinkChange = _enum_for_VirtualLinkChange;
 
@@ -84,9 +87,3 @@ export const created: VirtualLinkChange =
 
 
 export const _decode_VirtualLinkChange = $._decodeEnumerated;
-
-
-export const _encode_VirtualLinkChange = $._encodeEnumerated;
-
-
-/* eslint-enable */

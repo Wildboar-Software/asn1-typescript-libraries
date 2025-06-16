@@ -22,7 +22,9 @@ export enum _enum_for_WordMatchTypes {
  *   wordPhonetic        (2),
  *   wordProviderDefined (3),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type WordMatchTypes = _enum_for_WordMatchTypes | ENUMERATED;
 

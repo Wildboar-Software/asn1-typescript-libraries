@@ -27,7 +27,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     hybrid (3),
  *     physical (4),
  *     virtual (5) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_MeasurementRootType {
@@ -53,7 +55,9 @@ enum _enum_for_MeasurementRootType {
  *     hybrid (3),
  *     physical (4),
  *     virtual (5) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type MeasurementRootType = _enum_for_MeasurementRootType;
@@ -72,7 +76,9 @@ type MeasurementRootType = _enum_for_MeasurementRootType;
  *     hybrid (3),
  *     physical (4),
  *     virtual (5) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const MeasurementRootType = _enum_for_MeasurementRootType;

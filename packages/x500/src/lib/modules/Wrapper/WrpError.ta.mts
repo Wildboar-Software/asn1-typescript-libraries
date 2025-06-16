@@ -86,7 +86,9 @@ export enum _enum_for_WrpError {
  *   invalid-dynamic-keyEst-algo-parms      (34),
  *   changedKey-out-of-sequence             (35),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type WrpError = _enum_for_WrpError | ENUMERATED;
 

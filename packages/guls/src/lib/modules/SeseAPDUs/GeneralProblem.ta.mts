@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * GeneralProblem  ::=  ENUMERATED {invalidAPDU(0)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_GeneralProblem {
   invalidAPDU = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_GeneralProblem {
  *
  * ```asn1
  * GeneralProblem  ::=  ENUMERATED {invalidAPDU(0)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type GeneralProblem = _enum_for_GeneralProblem;
 
@@ -48,7 +52,9 @@ export type GeneralProblem = _enum_for_GeneralProblem;
  *
  * ```asn1
  * GeneralProblem  ::=  ENUMERATED {invalidAPDU(0)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const GeneralProblem = _enum_for_GeneralProblem;
 

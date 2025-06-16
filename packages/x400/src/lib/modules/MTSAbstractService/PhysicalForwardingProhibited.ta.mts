@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * PhysicalForwardingProhibited  ::=  ENUMERATED {
  *   physical-forwarding-allowed(0), physical-forwarding-prohibited(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_PhysicalForwardingProhibited {
     physical_forwarding_allowed = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_PhysicalForwardingProhibited {
  * ```asn1
  * PhysicalForwardingProhibited  ::=  ENUMERATED {
  *   physical-forwarding-allowed(0), physical-forwarding-prohibited(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PhysicalForwardingProhibited = _enum_for_PhysicalForwardingProhibited;
 
@@ -49,7 +53,9 @@ export type PhysicalForwardingProhibited = _enum_for_PhysicalForwardingProhibite
  * ```asn1
  * PhysicalForwardingProhibited  ::=  ENUMERATED {
  *   physical-forwarding-allowed(0), physical-forwarding-prohibited(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const PhysicalForwardingProhibited = _enum_for_PhysicalForwardingProhibited;
 

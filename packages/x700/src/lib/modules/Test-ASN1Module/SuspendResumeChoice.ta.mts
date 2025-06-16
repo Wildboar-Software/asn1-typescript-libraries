@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * SuspendResumeChoice  ::=  ENUMERATED {suspend(0), resume(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SuspendResumeChoice {
     suspend = 0,
@@ -34,7 +36,9 @@ export enum _enum_for_SuspendResumeChoice {
  *
  * ```asn1
  * SuspendResumeChoice  ::=  ENUMERATED {suspend(0), resume(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SuspendResumeChoice = _enum_for_SuspendResumeChoice;
 
@@ -46,7 +50,9 @@ export type SuspendResumeChoice = _enum_for_SuspendResumeChoice;
  *
  * ```asn1
  * SuspendResumeChoice  ::=  ENUMERATED {suspend(0), resume(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SuspendResumeChoice = _enum_for_SuspendResumeChoice;
 

@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * SwitchStatus  ::=  ENUMERATED {pending(0), completed(1), operateFailed(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SwitchStatus {
     pending = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_SwitchStatus {
  *
  * ```asn1
  * SwitchStatus  ::=  ENUMERATED {pending(0), completed(1), operateFailed(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SwitchStatus = _enum_for_SwitchStatus;
 
@@ -50,7 +54,9 @@ export type SwitchStatus = _enum_for_SwitchStatus;
  *
  * ```asn1
  * SwitchStatus  ::=  ENUMERATED {pending(0), completed(1), operateFailed(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SwitchStatus = _enum_for_SwitchStatus;
 

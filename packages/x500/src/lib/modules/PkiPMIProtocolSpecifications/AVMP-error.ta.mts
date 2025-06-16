@@ -58,7 +58,9 @@ export enum _enum_for_AVMP_error {
  *   unknownAVL                         (20),
  *   unsupportedScopeRestriction        (21),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AVMP_error = _enum_for_AVMP_error | ENUMERATED;
 

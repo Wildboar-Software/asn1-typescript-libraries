@@ -20,7 +20,9 @@ export enum _enum_for_PinType {
  *
  * ```asn1
  * PinType  ::=  ENUMERATED {bcd, ascii-numeric, utf8, ..., half-nibble-bcd, iso9564-1}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PinType = _enum_for_PinType | ENUMERATED;
 

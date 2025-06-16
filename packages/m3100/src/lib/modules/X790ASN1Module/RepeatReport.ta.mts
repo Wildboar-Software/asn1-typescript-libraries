@@ -35,7 +35,9 @@ export enum _enum_for_RepeatReport {
  *   bothInstallationAndRepeat(3), chronic(4), bothInstallationAndChronic(5),
  *   ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type RepeatReport = _enum_for_RepeatReport | ENUMERATED;
 

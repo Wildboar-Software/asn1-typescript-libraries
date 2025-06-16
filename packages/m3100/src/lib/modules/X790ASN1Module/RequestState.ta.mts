@@ -29,7 +29,9 @@ export enum _enum_for_RequestState {
  * ```asn1
  * RequestState  ::=  ENUMERATED {requested(1), provided(2), denied(3), ...
  *                              }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type RequestState = _enum_for_RequestState | ENUMERATED;
 

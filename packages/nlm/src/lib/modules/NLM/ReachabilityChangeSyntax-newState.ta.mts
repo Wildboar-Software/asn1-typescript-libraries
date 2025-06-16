@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * ReachabilityChangeSyntax-newState ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ReachabilityChangeSyntax_newState {
     down = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_ReachabilityChangeSyntax_newState {
  *
  * ```asn1
  * ReachabilityChangeSyntax-newState ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
 
@@ -49,7 +53,9 @@ export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSynt
  *
  * ```asn1
  * ReachabilityChangeSyntax-newState ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
 

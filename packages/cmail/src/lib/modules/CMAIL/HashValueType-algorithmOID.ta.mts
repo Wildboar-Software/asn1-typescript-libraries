@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * HashValueType-algorithmOID ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_HashValueType_algorithmOID {
   sha_1 = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_HashValueType_algorithmOID {
  *
  * ```asn1
  * HashValueType-algorithmOID ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
 
@@ -49,7 +53,9 @@ export type HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
  *
  * ```asn1
  * HashValueType-algorithmOID ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
 

@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DLExpansionProhibited  ::=  ENUMERATED {
  *   dl-expansion-allowed(0), dl-expansion-prohibited(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DLExpansionProhibited {
     dl_expansion_allowed = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_DLExpansionProhibited {
  * ```asn1
  * DLExpansionProhibited  ::=  ENUMERATED {
  *   dl-expansion-allowed(0), dl-expansion-prohibited(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DLExpansionProhibited = _enum_for_DLExpansionProhibited;
 
@@ -49,7 +53,9 @@ export type DLExpansionProhibited = _enum_for_DLExpansionProhibited;
  * ```asn1
  * DLExpansionProhibited  ::=  ENUMERATED {
  *   dl-expansion-allowed(0), dl-expansion-prohibited(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DLExpansionProhibited = _enum_for_DLExpansionProhibited;
 

@@ -16,7 +16,9 @@ export enum _enum_for_EnvelopedData_error {
  * EnvelopedData-error  ::=  ENUMERATED {
  *   noReason                           (0),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type EnvelopedData_error = _enum_for_EnvelopedData_error | ENUMERATED;
 

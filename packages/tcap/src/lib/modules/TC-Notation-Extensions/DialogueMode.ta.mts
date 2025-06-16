@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * DialogueMode  ::=  ENUMERATED {structured(1), unstructured(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DialogueMode {
     structured = 1,
@@ -34,7 +36,9 @@ export enum _enum_for_DialogueMode {
  *
  * ```asn1
  * DialogueMode  ::=  ENUMERATED {structured(1), unstructured(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DialogueMode = _enum_for_DialogueMode;
 
@@ -46,7 +50,9 @@ export type DialogueMode = _enum_for_DialogueMode;
  *
  * ```asn1
  * DialogueMode  ::=  ENUMERATED {structured(1), unstructured(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DialogueMode = _enum_for_DialogueMode;
 

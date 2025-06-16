@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * DLPolicy-disclosure-of-other-recipients ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DLPolicy_disclosure_of_other_recipients {
     unchanged = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_DLPolicy_disclosure_of_other_recipients {
  *
  * ```asn1
  * DLPolicy-disclosure-of-other-recipients ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
 
@@ -47,7 +51,9 @@ export type DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclos
  *
  * ```asn1
  * DLPolicy-disclosure-of-other-recipients ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
 

@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * ControlledTestRequestType  ::=  ENUMERATED {independent(0), related(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ControlledTestRequestType {
     independent = 0,
@@ -34,7 +36,9 @@ export enum _enum_for_ControlledTestRequestType {
  *
  * ```asn1
  * ControlledTestRequestType  ::=  ENUMERATED {independent(0), related(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ControlledTestRequestType = _enum_for_ControlledTestRequestType;
 
@@ -46,7 +50,9 @@ export type ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  *
  * ```asn1
  * ControlledTestRequestType  ::=  ENUMERATED {independent(0), related(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
 

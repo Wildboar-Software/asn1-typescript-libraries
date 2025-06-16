@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * NeighbourSystemType  ::=  ENUMERATED {
  *   unknown(0), endSystem(1), intermediateSystem(2), l1IntermediateSystem(3),
  *   l2IntermediateSystem(4)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_NeighbourSystemType {
   unknown = 0,
@@ -39,9 +39,11 @@ export enum _enum_for_NeighbourSystemType {
  *
  * ```asn1
  * NeighbourSystemType  ::=  ENUMERATED {
- *   unknown(0), endSystem(1), intermediateSystem(2), l1IntermediateSystem(3),
+ * System(1), intermediateSystem(2), l1IntermediateSystem(3),
  *   l2IntermediateSystem(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type NeighbourSystemType = _enum_for_NeighbourSystemType;
 
@@ -51,11 +53,12 @@ export type NeighbourSystemType = _enum_for_NeighbourSystemType;
  *
  * ### ASN.1 Definition:
  *
- * ```asn1
- * NeighbourSystemType  ::=  ENUMERATED {
+ * bourSystemType  ::=  ENUMERATED {
  *   unknown(0), endSystem(1), intermediateSystem(2), l1IntermediateSystem(3),
  *   l2IntermediateSystem(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const NeighbourSystemType = _enum_for_NeighbourSystemType;
 
@@ -141,9 +144,3 @@ export const l2IntermediateSystem: NeighbourSystemType =
 
 
 export const _decode_NeighbourSystemType = $._decodeEnumerated;
-
-
-export const _encode_NeighbourSystemType = $._encodeEnumerated;
-
-
-/* eslint-enable */

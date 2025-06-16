@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * Termination  ::=  ENUMERATED {basic(1), prearranged(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Termination {
     basic = 1,
@@ -34,7 +36,9 @@ export enum _enum_for_Termination {
  *
  * ```asn1
  * Termination  ::=  ENUMERATED {basic(1), prearranged(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Termination = _enum_for_Termination;
 
@@ -46,7 +50,9 @@ export type Termination = _enum_for_Termination;
  *
  * ```asn1
  * Termination  ::=  ENUMERATED {basic(1), prearranged(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Termination = _enum_for_Termination;
 

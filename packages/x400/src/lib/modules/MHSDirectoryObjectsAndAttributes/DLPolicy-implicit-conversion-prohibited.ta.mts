@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * DLPolicy-implicit-conversion-prohibited ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DLPolicy_implicit_conversion_prohibited {
     unchanged = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_DLPolicy_implicit_conversion_prohibited {
  *
  * ```asn1
  * DLPolicy-implicit-conversion-prohibited ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
 
@@ -47,7 +51,9 @@ export type DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implici
  *
  * ```asn1
  * DLPolicy-implicit-conversion-prohibited ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
 

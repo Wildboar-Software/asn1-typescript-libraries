@@ -22,7 +22,9 @@ export enum _enum_for_TLSResponse {
  *   protocolError   (2),
  *   unavailable     (3),
  *   ...}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type TLSResponse = _enum_for_TLSResponse | ENUMERATED;
 

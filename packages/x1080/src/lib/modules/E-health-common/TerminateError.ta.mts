@@ -32,7 +32,9 @@ export enum _enum_for_TerminateError {
  *   invalidSessionType,
  *   invalidSessionId,
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type TerminateError = _enum_for_TerminateError | ENUMERATED;
 

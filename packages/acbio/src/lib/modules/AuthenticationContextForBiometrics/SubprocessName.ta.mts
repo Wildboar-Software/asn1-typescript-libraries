@@ -46,7 +46,9 @@ export enum _enum_for_SubprocessName {
  *     score-fusion(9),
  *     decision-fusion(10),
  *     ...}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SubprocessName = _enum_for_SubprocessName | ENUMERATED;
 

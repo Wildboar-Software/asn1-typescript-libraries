@@ -28,7 +28,7 @@ export enum _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel {
  *
  * ```asn1
  * BioAPI-BIR-DATA-TYPE-processedLevel ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type BioAPI_BIR_DATA_TYPE_processedLevel =
   | _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel
@@ -125,5 +125,3 @@ export function _encode_BioAPI_BIR_DATA_TYPE_processedLevel(
   );
 }
 
-
-/* eslint-enable */

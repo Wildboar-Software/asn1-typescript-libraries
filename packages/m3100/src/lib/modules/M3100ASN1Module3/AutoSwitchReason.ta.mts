@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * AutoSwitchReason  ::=  ENUMERATED {
  *   waitToRestore(0), resourceDegrade(1), resourceFailed(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_AutoSwitchReason {
     waitToRestore = 0,
@@ -39,7 +41,9 @@ export enum _enum_for_AutoSwitchReason {
  * ```asn1
  * AutoSwitchReason  ::=  ENUMERATED {
  *   waitToRestore(0), resourceDegrade(1), resourceFailed(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AutoSwitchReason = _enum_for_AutoSwitchReason;
 
@@ -53,7 +57,9 @@ export type AutoSwitchReason = _enum_for_AutoSwitchReason;
  * ```asn1
  * AutoSwitchReason  ::=  ENUMERATED {
  *   waitToRestore(0), resourceDegrade(1), resourceFailed(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const AutoSwitchReason = _enum_for_AutoSwitchReason;
 

@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * X25PLEMode  ::=  ENUMERATED {dTE(0), dCE(1), dTEasDCE(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_X25PLEMode {
     dTE = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_X25PLEMode {
  *
  * ```asn1
  * X25PLEMode  ::=  ENUMERATED {dTE(0), dCE(1), dTEasDCE(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type X25PLEMode = _enum_for_X25PLEMode;
 
@@ -50,7 +54,9 @@ export type X25PLEMode = _enum_for_X25PLEMode;
  *
  * ```asn1
  * X25PLEMode  ::=  ENUMERATED {dTE(0), dCE(1), dTEasDCE(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const X25PLEMode = _enum_for_X25PLEMode;
 

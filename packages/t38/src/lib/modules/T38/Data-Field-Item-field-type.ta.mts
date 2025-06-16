@@ -37,7 +37,7 @@ export enum _enum_for_Data_Field_Item_field_type {
  *
  * ```asn1
  * Data-Field-Item-field-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type Data_Field_Item_field_type =
   | _enum_for_Data_Field_Item_field_type
@@ -245,5 +245,3 @@ export const _decode_Data_Field_Item_field_type = $._decodeEnumerated;
 
 export const _encode_Data_Field_Item_field_type = $._encodeEnumerated;
 
-
-/* eslint-enable */

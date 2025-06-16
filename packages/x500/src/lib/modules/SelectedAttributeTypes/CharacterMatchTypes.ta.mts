@@ -20,7 +20,9 @@ export enum _enum_for_CharacterMatchTypes {
  *   characterCaseIgnore (1),
  *   characterMapped     (2),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CharacterMatchTypes = _enum_for_CharacterMatchTypes | ENUMERATED;
 

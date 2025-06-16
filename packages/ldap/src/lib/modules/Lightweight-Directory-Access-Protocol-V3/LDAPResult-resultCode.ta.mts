@@ -64,7 +64,9 @@ export enum _enum_for_LDAPResult_resultCode {
  *
  * ```asn1
  * LDAPResult-resultCode ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type LDAPResult_resultCode =
   | _enum_for_LDAPResult_resultCode

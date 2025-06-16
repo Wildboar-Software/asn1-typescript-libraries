@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * AdjacencyUsage  ::=  ENUMERATED {
  *   undefined(0), level1(1), level2(2), level1and2(3)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_AdjacencyUsage {
   undefined = 0,
@@ -36,9 +36,11 @@ export enum _enum_for_AdjacencyUsage {
  * ### ASN.1 Definition:
  *
  * ```asn1
- * AdjacencyUsage  ::=  ENUMERATED {
+ * :=  ENUMERATED {
  *   undefined(0), level1(1), level2(2), level1and2(3)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type AdjacencyUsage = _enum_for_AdjacencyUsage;
 
@@ -47,11 +49,11 @@ export type AdjacencyUsage = _enum_for_AdjacencyUsage;
  * @description
  *
  * ### ASN.1 Definition:
- *
- * ```asn1
- * AdjacencyUsage  ::=  ENUMERATED {
+ *djacencyUsage  ::=  ENUMERATED {
  *   undefined(0), level1(1), level2(2), level1and2(3)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const AdjacencyUsage = _enum_for_AdjacencyUsage;
 
@@ -121,9 +123,3 @@ export const level1and2: AdjacencyUsage =
 
 
 export const _decode_AdjacencyUsage = $._decodeEnumerated;
-
-
-export const _encode_AdjacencyUsage = $._encodeEnumerated;
-
-
-/* eslint-enable */

@@ -21,7 +21,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * UsageState  ::=  ENUMERATED {idle(0), active(1), busy(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_UsageState {
@@ -38,7 +40,9 @@ enum _enum_for_UsageState {
  * 
  * ```asn1
  * UsageState  ::=  ENUMERATED {idle(0), active(1), busy(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type UsageState = _enum_for_UsageState;
@@ -51,7 +55,9 @@ type UsageState = _enum_for_UsageState;
  * 
  * ```asn1
  * UsageState  ::=  ENUMERATED {idle(0), active(1), busy(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const UsageState = _enum_for_UsageState;

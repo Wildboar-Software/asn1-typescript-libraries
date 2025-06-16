@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * InvalidAccessControlFilter-errorId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_InvalidAccessControlFilter_errorId {
     duplicateId = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_InvalidAccessControlFilter_errorId {
  *
  * ```asn1
  * InvalidAccessControlFilter-errorId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 
@@ -47,7 +51,9 @@ export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlF
  *
  * ```asn1
  * InvalidAccessControlFilter-errorId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 

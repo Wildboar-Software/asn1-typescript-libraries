@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ArcState  ::=  ENUMERATED {
  *   alm(0), nalm(1), nalmQualifiedInhibit(2), nalmTimedInhibit(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ArcState {
     alm = 0,
@@ -40,7 +42,9 @@ export enum _enum_for_ArcState {
  * ```asn1
  * ArcState  ::=  ENUMERATED {
  *   alm(0), nalm(1), nalmQualifiedInhibit(2), nalmTimedInhibit(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ArcState = _enum_for_ArcState;
 
@@ -54,7 +58,9 @@ export type ArcState = _enum_for_ArcState;
  * ```asn1
  * ArcState  ::=  ENUMERATED {
  *   alm(0), nalm(1), nalmQualifiedInhibit(2), nalmTimedInhibit(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ArcState = _enum_for_ArcState;
 

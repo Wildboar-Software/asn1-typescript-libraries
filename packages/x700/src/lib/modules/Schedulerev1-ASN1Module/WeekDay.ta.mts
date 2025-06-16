@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * WeekDay  ::=  ENUMERATED {
  *   sunday(0), monday(1), tuesday(2), wednesday(3), thursday(4), friday(5),
  *   saturday(6)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_WeekDay {
     sunday = 0,
@@ -45,7 +47,9 @@ export enum _enum_for_WeekDay {
  * WeekDay  ::=  ENUMERATED {
  *   sunday(0), monday(1), tuesday(2), wednesday(3), thursday(4), friday(5),
  *   saturday(6)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type WeekDay = _enum_for_WeekDay;
 
@@ -60,7 +64,9 @@ export type WeekDay = _enum_for_WeekDay;
  * WeekDay  ::=  ENUMERATED {
  *   sunday(0), monday(1), tuesday(2), wednesday(3), thursday(4), friday(5),
  *   saturday(6)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const WeekDay = _enum_for_WeekDay;
 

@@ -10,7 +10,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *
  * ```asn1
  * NamedDay-intNamedDays ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_NamedDay_intNamedDays {
     sunday = 1,
@@ -30,7 +32,9 @@ export enum _enum_for_NamedDay_intNamedDays {
  *
  * ```asn1
  * NamedDay-intNamedDays ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
 
@@ -42,7 +46,9 @@ export type NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  *
  * ```asn1
  * NamedDay-intNamedDays ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
 

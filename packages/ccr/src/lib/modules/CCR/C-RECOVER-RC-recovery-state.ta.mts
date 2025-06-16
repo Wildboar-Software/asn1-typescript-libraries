@@ -30,7 +30,7 @@ export enum _enum_for_C_RECOVER_RC_recovery_state {
  *
  * ```asn1
  * C-RECOVER-RC-recovery-state ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type C_RECOVER_RC_recovery_state =
   | _enum_for_C_RECOVER_RC_recovery_state
@@ -126,5 +126,3 @@ export const _decode_C_RECOVER_RC_recovery_state = $._decodeEnumerated;
 
 export const _encode_C_RECOVER_RC_recovery_state = $._encodeEnumerated;
 
-
-/* eslint-enable */

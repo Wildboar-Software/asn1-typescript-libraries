@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * SearchRequest-derefAliases ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SearchRequest_derefAliases {
   neverDerefAliases = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_SearchRequest_derefAliases {
  *
  * ```asn1
  * SearchRequest-derefAliases ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
 
@@ -51,7 +55,9 @@ export type SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
  *
  * ```asn1
  * SearchRequest-derefAliases ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
 

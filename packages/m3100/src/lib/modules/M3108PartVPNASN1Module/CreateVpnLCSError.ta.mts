@@ -42,7 +42,9 @@ export enum _enum_for_CreateVpnLCSError {
  *   sAPnotinVPN(9), serviceClassnotinserviceClassList(10),
  *   invalidTerminationDate(11), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CreateVpnLCSError = _enum_for_CreateVpnLCSError | ENUMERATED;
 

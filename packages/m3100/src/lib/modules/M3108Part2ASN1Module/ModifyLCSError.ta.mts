@@ -40,7 +40,9 @@ export enum _enum_for_ModifyLCSError {
  *   invalidValue(6), requestedBandwidthNotAvailable(7), resourceUnavailable(8),
  *   scheduleConflicts(9), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ModifyLCSError = _enum_for_ModifyLCSError | ENUMERATED;
 

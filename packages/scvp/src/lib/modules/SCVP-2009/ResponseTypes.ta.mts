@@ -23,7 +23,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *     non-cached-only            (1),
  *     cached-and-non-cached      (2)
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_ResponseTypes {
   cached_only = 0,
@@ -43,7 +45,9 @@ export enum _enum_for_ResponseTypes {
  *     non-cached-only            (1),
  *     cached-and-non-cached      (2)
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type ResponseTypes = _enum_for_ResponseTypes;
 
@@ -59,7 +63,9 @@ export type ResponseTypes = _enum_for_ResponseTypes;
  *     non-cached-only            (1),
  *     cached-and-non-cached      (2)
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const ResponseTypes = _enum_for_ResponseTypes;
 

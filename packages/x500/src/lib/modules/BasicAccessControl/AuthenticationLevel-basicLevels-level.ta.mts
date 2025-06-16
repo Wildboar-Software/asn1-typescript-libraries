@@ -16,7 +16,9 @@ export enum _enum_for_AuthenticationLevel_basicLevels_level {
  *
  * ```asn1
  * AuthenticationLevel-basicLevels-level ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AuthenticationLevel_basicLevels_level =
     | _enum_for_AuthenticationLevel_basicLevels_level

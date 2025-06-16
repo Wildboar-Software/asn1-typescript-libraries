@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * SystemTiming-sourceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SystemTiming_sourceType {
     internalTimingSource = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_SystemTiming_sourceType {
  *
  * ```asn1
  * SystemTiming-sourceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
 
@@ -50,7 +54,9 @@ export type SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
  *
  * ```asn1
  * SystemTiming-sourceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
 

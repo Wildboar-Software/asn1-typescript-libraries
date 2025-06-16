@@ -36,7 +36,9 @@ export enum _enum_for_DeleteVpnLCSError {
  *   invalidCircuitNumber(4), notBeinginAppropriateServiceAdministrativeState(5),
  *   contractViolation(6), invalidVPNIdentifier(7), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DeleteVpnLCSError = _enum_for_DeleteVpnLCSError | ENUMERATED;
 

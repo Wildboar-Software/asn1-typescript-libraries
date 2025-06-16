@@ -33,7 +33,9 @@ export enum _enum_for_CloseOutVerification {
  *   noAction(0), verified(1), denied(2), deniedActivityDurationDisputed(3),
  *   deniedCloseOutNarrDisputed(4), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CloseOutVerification = _enum_for_CloseOutVerification | ENUMERATED;
 

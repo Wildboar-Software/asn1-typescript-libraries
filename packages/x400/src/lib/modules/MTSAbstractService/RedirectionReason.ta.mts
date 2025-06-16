@@ -34,7 +34,9 @@ export enum _enum_for_RedirectionReason {
  *   -- The following values may not be supported by implementations of earlier versions of this Service Definition
  *   directory-look-up(3), alias(4), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type RedirectionReason = _enum_for_RedirectionReason | ENUMERATED;
 

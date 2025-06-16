@@ -10,7 +10,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *
  * ```asn1
  * SearchArgumentData-joinType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SearchArgumentData_joinType {
     innerJoin = 0,
@@ -26,7 +28,9 @@ export enum _enum_for_SearchArgumentData_joinType {
  *
  * ```asn1
  * SearchArgumentData-joinType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
 
@@ -38,7 +42,9 @@ export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
  *
  * ```asn1
  * SearchArgumentData-joinType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
 

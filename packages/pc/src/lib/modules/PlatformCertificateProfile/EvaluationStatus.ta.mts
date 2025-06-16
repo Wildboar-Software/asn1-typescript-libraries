@@ -24,7 +24,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     designedToMeet (0),
  *     evaluationInProgress (1),
  *     evaluationCompleted (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_EvaluationStatus {
@@ -44,7 +46,9 @@ enum _enum_for_EvaluationStatus {
  *     designedToMeet (0),
  *     evaluationInProgress (1),
  *     evaluationCompleted (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type EvaluationStatus = _enum_for_EvaluationStatus;
@@ -60,7 +64,9 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
  *     designedToMeet (0),
  *     evaluationInProgress (1),
  *     evaluationCompleted (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const EvaluationStatus = _enum_for_EvaluationStatus;

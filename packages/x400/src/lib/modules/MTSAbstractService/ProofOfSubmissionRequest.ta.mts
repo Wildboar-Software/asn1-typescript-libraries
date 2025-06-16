@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ProofOfSubmissionRequest  ::=  ENUMERATED {
  *   proof-of-submission-not-requested(0), proof-of-submission-requested(1)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ProofOfSubmissionRequest {
     proof_of_submission_not_requested = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_ProofOfSubmissionRequest {
  * ProofOfSubmissionRequest  ::=  ENUMERATED {
  *   proof-of-submission-not-requested(0), proof-of-submission-requested(1)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
 
@@ -52,7 +56,9 @@ export type ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
  * ProofOfSubmissionRequest  ::=  ENUMERATED {
  *   proof-of-submission-not-requested(0), proof-of-submission-requested(1)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
 

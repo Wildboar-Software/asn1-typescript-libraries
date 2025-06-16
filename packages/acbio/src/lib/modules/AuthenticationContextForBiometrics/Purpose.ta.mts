@@ -22,7 +22,8 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * Purpose  ::=  ENUMERATED {
  *     reference(1),
  *     sample(2) }
- * ```@enum {number}
+ * ```
+ * @enum {number}
  */
 export enum _enum_for_Purpose {
     reference = 1,
@@ -40,7 +41,9 @@ export enum _enum_for_Purpose {
  * Purpose  ::=  ENUMERATED {
  *     reference(1),
  *     sample(2) }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type Purpose = _enum_for_Purpose;
 
@@ -55,7 +58,9 @@ export type Purpose = _enum_for_Purpose;
  * Purpose  ::=  ENUMERATED {
  *     reference(1),
  *     sample(2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Purpose = _enum_for_Purpose;
 

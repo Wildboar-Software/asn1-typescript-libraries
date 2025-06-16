@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * InvokeProtectionError  ::=  ENUMERATED {preempted(0), failure(1), timeout(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_InvokeProtectionError {
     preempted = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_InvokeProtectionError {
  *
  * ```asn1
  * InvokeProtectionError  ::=  ENUMERATED {preempted(0), failure(1), timeout(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type InvokeProtectionError = _enum_for_InvokeProtectionError;
 
@@ -50,7 +54,9 @@ export type InvokeProtectionError = _enum_for_InvokeProtectionError;
  *
  * ```asn1
  * InvokeProtectionError  ::=  ENUMERATED {preempted(0), failure(1), timeout(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const InvokeProtectionError = _enum_for_InvokeProtectionError;
 

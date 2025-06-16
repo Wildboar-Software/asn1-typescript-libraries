@@ -29,7 +29,9 @@ export enum _enum_for_RegistrationProblem {
  *   registration-not-supported(0), registration-improperly-specified(1),
  *   registration-limit-exceeded(2), ... -- For future extension additions --
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type RegistrationProblem = _enum_for_RegistrationProblem | ENUMERATED;
 

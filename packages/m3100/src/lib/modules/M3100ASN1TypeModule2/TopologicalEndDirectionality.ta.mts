@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * TopologicalEndDirectionality  ::=  ENUMERATED {
  *   undefined(0), sink(1), source(2), bidirectional(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_TopologicalEndDirectionality {
     undefined = 0,
@@ -40,7 +42,9 @@ export enum _enum_for_TopologicalEndDirectionality {
  * ```asn1
  * TopologicalEndDirectionality  ::=  ENUMERATED {
  *   undefined(0), sink(1), source(2), bidirectional(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
 
@@ -54,7 +58,9 @@ export type TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionalit
  * ```asn1
  * TopologicalEndDirectionality  ::=  ENUMERATED {
  *   undefined(0), sink(1), source(2), bidirectional(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
 

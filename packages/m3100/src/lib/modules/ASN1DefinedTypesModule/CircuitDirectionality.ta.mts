@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * CircuitDirectionality  ::=  ENUMERATED {onewayOut(0), onewayIn(1), twoway(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_CircuitDirectionality {
     onewayOut = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_CircuitDirectionality {
  *
  * ```asn1
  * CircuitDirectionality  ::=  ENUMERATED {onewayOut(0), onewayIn(1), twoway(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CircuitDirectionality = _enum_for_CircuitDirectionality;
 
@@ -50,7 +54,9 @@ export type CircuitDirectionality = _enum_for_CircuitDirectionality;
  *
  * ```asn1
  * CircuitDirectionality  ::=  ENUMERATED {onewayOut(0), onewayIn(1), twoway(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const CircuitDirectionality = _enum_for_CircuitDirectionality;
 

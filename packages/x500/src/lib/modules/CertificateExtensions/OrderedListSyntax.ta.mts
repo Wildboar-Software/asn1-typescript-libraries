@@ -18,7 +18,9 @@ export enum _enum_for_OrderedListSyntax {
  *   ascSerialNum (0),
  *   ascRevDate   (1),
  *   ...}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type OrderedListSyntax = _enum_for_OrderedListSyntax | ENUMERATED;
 

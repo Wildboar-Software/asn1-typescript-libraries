@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * MetricType  ::=  ENUMERATED {internal(0), external(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_MetricType {
   internal = 0,
@@ -34,7 +36,9 @@ export enum _enum_for_MetricType {
  *
  * ```asn1
  * MetricType  ::=  ENUMERATED {internal(0), external(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type MetricType = _enum_for_MetricType;
 
@@ -46,7 +50,9 @@ export type MetricType = _enum_for_MetricType;
  *
  * ```asn1
  * MetricType  ::=  ENUMERATED {internal(0), external(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const MetricType = _enum_for_MetricType;
 

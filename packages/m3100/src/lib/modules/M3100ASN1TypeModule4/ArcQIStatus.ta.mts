@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ArcQIStatus  ::=  ENUMERATED {
  *   notApplicable(0), nalmNotReported(1), nalmCountDown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ArcQIStatus {
     notApplicable = 0,
@@ -39,7 +41,9 @@ export enum _enum_for_ArcQIStatus {
  * ```asn1
  * ArcQIStatus  ::=  ENUMERATED {
  *   notApplicable(0), nalmNotReported(1), nalmCountDown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ArcQIStatus = _enum_for_ArcQIStatus;
 
@@ -53,7 +57,9 @@ export type ArcQIStatus = _enum_for_ArcQIStatus;
  * ```asn1
  * ArcQIStatus  ::=  ENUMERATED {
  *   notApplicable(0), nalmNotReported(1), nalmCountDown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ArcQIStatus = _enum_for_ArcQIStatus;
 

@@ -29,7 +29,7 @@ export enum _enum_for_C_NOCHANGE_RC_outcome {
  *
  * ```asn1
  * C-NOCHANGE-RC-outcome ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type C_NOCHANGE_RC_outcome =
   | _enum_for_C_NOCHANGE_RC_outcome
@@ -109,5 +109,3 @@ export const _decode_C_NOCHANGE_RC_outcome = $._decodeEnumerated;
 
 export const _encode_C_NOCHANGE_RC_outcome = $._encodeEnumerated;
 
-
-/* eslint-enable */

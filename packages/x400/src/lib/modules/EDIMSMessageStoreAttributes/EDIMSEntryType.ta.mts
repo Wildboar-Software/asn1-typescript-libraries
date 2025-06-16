@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * EDIMSEntryType  ::=  ENUMERATED {edim(0), pn(1), nn(2), fn(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_EDIMSEntryType {
     edim = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_EDIMSEntryType {
  *
  * ```asn1
  * EDIMSEntryType  ::=  ENUMERATED {edim(0), pn(1), nn(2), fn(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type EDIMSEntryType = _enum_for_EDIMSEntryType;
 
@@ -48,7 +52,9 @@ export type EDIMSEntryType = _enum_for_EDIMSEntryType;
  *
  * ```asn1
  * EDIMSEntryType  ::=  ENUMERATED {edim(0), pn(1), nn(2), fn(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const EDIMSEntryType = _enum_for_EDIMSEntryType;
 

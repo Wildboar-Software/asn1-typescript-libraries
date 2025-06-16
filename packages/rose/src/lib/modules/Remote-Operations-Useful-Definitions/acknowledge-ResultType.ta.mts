@@ -27,7 +27,7 @@ export enum _enum_for_acknowledge_ResultType {
  *
  * ```asn1
  * acknowledge-ResultType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type acknowledge_ResultType =
   | _enum_for_acknowledge_ResultType
@@ -75,5 +75,3 @@ export const _decode_acknowledge_ResultType = $._decodeEnumerated;
 
 export const _encode_acknowledge_ResultType = $._encodeEnumerated;
 
-
-/* eslint-enable */

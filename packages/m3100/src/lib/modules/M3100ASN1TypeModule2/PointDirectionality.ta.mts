@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * PointDirectionality  ::=  ENUMERATED {sink(1), source(2), bidirectional(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_PointDirectionality {
     sink = 1,
@@ -37,7 +39,9 @@ export enum _enum_for_PointDirectionality {
  *
  * ```asn1
  * PointDirectionality  ::=  ENUMERATED {sink(1), source(2), bidirectional(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PointDirectionality = _enum_for_PointDirectionality;
 
@@ -50,7 +54,9 @@ export type PointDirectionality = _enum_for_PointDirectionality;
  *
  * ```asn1
  * PointDirectionality  ::=  ENUMERATED {sink(1), source(2), bidirectional(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const PointDirectionality = _enum_for_PointDirectionality;
 

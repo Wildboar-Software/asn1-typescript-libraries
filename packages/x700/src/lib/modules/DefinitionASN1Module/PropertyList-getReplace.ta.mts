@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * PropertyList-getReplace ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_PropertyList_getReplace {
     gET = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_PropertyList_getReplace {
  *
  * ```asn1
  * PropertyList-getReplace ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PropertyList_getReplace = _enum_for_PropertyList_getReplace;
 
@@ -50,7 +54,9 @@ export type PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  *
  * ```asn1
  * PropertyList-getReplace ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
 

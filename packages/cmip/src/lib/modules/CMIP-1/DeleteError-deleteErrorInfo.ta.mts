@@ -26,7 +26,7 @@ export enum _enum_for_DeleteError_deleteErrorInfo {
  *
  * ```asn1
  * DeleteError-deleteErrorInfo ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type DeleteError_deleteErrorInfo =
   | _enum_for_DeleteError_deleteErrorInfo
@@ -58,5 +58,3 @@ export const _decode_DeleteError_deleteErrorInfo = $._decodeEnumerated;
 
 export const _encode_DeleteError_deleteErrorInfo = $._encodeEnumerated;
 
-
-/* eslint-enable */

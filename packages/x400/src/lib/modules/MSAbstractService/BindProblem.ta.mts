@@ -32,7 +32,9 @@ export enum _enum_for_BindProblem {
  *   unable-to-establish-association(2), ... -- 1994 extension addition --,
  *   bind-extension-problem(3), inadequate-association-confidentiality(4)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type BindProblem = _enum_for_BindProblem | ENUMERATED;
 

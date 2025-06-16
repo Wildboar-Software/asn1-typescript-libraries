@@ -21,7 +21,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * LogFullAction  ::=  ENUMERATED {wrap(0), halt(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_LogFullAction {
@@ -37,7 +39,9 @@ enum _enum_for_LogFullAction {
  * 
  * ```asn1
  * LogFullAction  ::=  ENUMERATED {wrap(0), halt(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type LogFullAction = _enum_for_LogFullAction;
@@ -50,7 +54,9 @@ type LogFullAction = _enum_for_LogFullAction;
  * 
  * ```asn1
  * LogFullAction  ::=  ENUMERATED {wrap(0), halt(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const LogFullAction = _enum_for_LogFullAction;

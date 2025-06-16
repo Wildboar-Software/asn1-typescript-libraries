@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * CMISSync  ::=  ENUMERATED {bestEffort(0), atomic(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_CMISSync {
   bestEffort = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_CMISSync {
  *
  * ```asn1
  * CMISSync  ::=  ENUMERATED {bestEffort(0), atomic(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type CMISSync = _enum_for_CMISSync;
 
@@ -49,7 +53,9 @@ export type CMISSync = _enum_for_CMISSync;
  *
  * ```asn1
  * CMISSync  ::=  ENUMERATED {bestEffort(0), atomic(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const CMISSync = _enum_for_CMISSync;
 

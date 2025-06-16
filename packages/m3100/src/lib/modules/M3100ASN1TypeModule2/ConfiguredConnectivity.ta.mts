@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ConfiguredConnectivity  ::=  ENUMERATED {
  *   sourceConnect(0), sinkConnect(1), bidirectionalConnect(2), noConnect(3)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ConfiguredConnectivity {
     sourceConnect = 0,
@@ -42,7 +44,9 @@ export enum _enum_for_ConfiguredConnectivity {
  * ConfiguredConnectivity  ::=  ENUMERATED {
  *   sourceConnect(0), sinkConnect(1), bidirectionalConnect(2), noConnect(3)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
 
@@ -57,7 +61,9 @@ export type ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
  * ConfiguredConnectivity  ::=  ENUMERATED {
  *   sourceConnect(0), sinkConnect(1), bidirectionalConnect(2), noConnect(3)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
 

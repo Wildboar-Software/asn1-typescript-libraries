@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * Directionality  ::=  ENUMERATED {unidirectional(0), bidirectional(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Directionality {
     unidirectional = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_Directionality {
  *
  * ```asn1
  * Directionality  ::=  ENUMERATED {unidirectional(0), bidirectional(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Directionality = _enum_for_Directionality;
 
@@ -49,7 +53,9 @@ export type Directionality = _enum_for_Directionality;
  *
  * ```asn1
  * Directionality  ::=  ENUMERATED {unidirectional(0), bidirectional(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Directionality = _enum_for_Directionality;
 

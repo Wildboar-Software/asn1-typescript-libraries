@@ -24,7 +24,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     basic (0),
  *     medium (1),
  *     high (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_StrengthOfFunction {
@@ -44,7 +46,9 @@ enum _enum_for_StrengthOfFunction {
  *     basic (0),
  *     medium (1),
  *     high (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type StrengthOfFunction = _enum_for_StrengthOfFunction;
@@ -60,7 +64,9 @@ type StrengthOfFunction = _enum_for_StrengthOfFunction;
  *     basic (0),
  *     medium (1),
  *     high (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const StrengthOfFunction = _enum_for_StrengthOfFunction;

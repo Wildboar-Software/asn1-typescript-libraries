@@ -16,7 +16,9 @@ export enum _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard
  *
  * ```asn1
  * CoordinateShadowUpdateArgumentData-updateStrategy-standard ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CoordinateShadowUpdateArgumentData_updateStrategy_standard =
     | _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard

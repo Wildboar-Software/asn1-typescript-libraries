@@ -32,7 +32,9 @@ export enum _enum_for_ReferenceType {
  *   self                   (8),
  *   ditBridge              (9),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ReferenceType = _enum_for_ReferenceType | ENUMERATED;
 

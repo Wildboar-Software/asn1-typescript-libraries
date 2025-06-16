@@ -13,7 +13,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *   abstract   (0),
  *   structural (1),
  *   auxiliary  (2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ObjectClassKind {
     abstract = 0,
@@ -32,7 +34,9 @@ export enum _enum_for_ObjectClassKind {
  *   abstract   (0),
  *   structural (1),
  *   auxiliary  (2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ObjectClassKind = _enum_for_ObjectClassKind;
 
@@ -47,7 +51,9 @@ export type ObjectClassKind = _enum_for_ObjectClassKind;
  *   abstract   (0),
  *   structural (1),
  *   auxiliary  (2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ObjectClassKind = _enum_for_ObjectClassKind;
 

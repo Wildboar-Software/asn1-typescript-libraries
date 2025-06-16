@@ -16,7 +16,9 @@ export enum _enum_for_AVMPversion {
  *
  * ```asn1
  * AVMPversion  ::=  ENUMERATED { v1(1), v2(2), v3(3), ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AVMPversion = _enum_for_AVMPversion | ENUMERATED;
 

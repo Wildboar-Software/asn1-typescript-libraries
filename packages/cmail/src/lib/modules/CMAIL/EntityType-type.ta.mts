@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * EntityType-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_EntityType_type {
   from_ = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_EntityType_type {
  *
  * ```asn1
  * EntityType-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type EntityType_type = _enum_for_EntityType_type;
 
@@ -51,7 +55,9 @@ export type EntityType_type = _enum_for_EntityType_type;
  *
  * ```asn1
  * EntityType-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const EntityType_type = _enum_for_EntityType_type;
 

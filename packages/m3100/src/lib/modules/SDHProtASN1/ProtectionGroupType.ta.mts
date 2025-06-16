@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ProtectionGroupType  ::=  ENUMERATED {
  *   plus(0), -- 1+1 (1 plus 1) or hot-standby
  *   colon(1) -- M:N (M for N) --}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ProtectionGroupType {
     plus = 0,
@@ -40,7 +42,9 @@ export enum _enum_for_ProtectionGroupType {
  * ProtectionGroupType  ::=  ENUMERATED {
  *   plus(0), -- 1+1 (1 plus 1) or hot-standby
  *   colon(1) -- M:N (M for N) --}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ProtectionGroupType = _enum_for_ProtectionGroupType;
 
@@ -55,7 +59,9 @@ export type ProtectionGroupType = _enum_for_ProtectionGroupType;
  * ProtectionGroupType  ::=  ENUMERATED {
  *   plus(0), -- 1+1 (1 plus 1) or hot-standby
  *   colon(1) -- M:N (M for N) --}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ProtectionGroupType = _enum_for_ProtectionGroupType;
 

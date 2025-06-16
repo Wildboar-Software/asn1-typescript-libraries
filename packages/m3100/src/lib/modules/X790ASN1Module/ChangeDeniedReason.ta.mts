@@ -31,7 +31,9 @@ export enum _enum_for_ChangeDeniedReason {
  *   waitingVerificationOfClosure(1), troubleReportAlreadyClosed(2),
  *   activityAuthorizationPending(3), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ChangeDeniedReason = _enum_for_ChangeDeniedReason | ENUMERATED;
 

@@ -16,7 +16,9 @@ export enum _enum_for_FamilyReturn_memberSelect {
  *
  * ```asn1
  * FamilyReturn-memberSelect ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type FamilyReturn_memberSelect =
     | _enum_for_FamilyReturn_memberSelect

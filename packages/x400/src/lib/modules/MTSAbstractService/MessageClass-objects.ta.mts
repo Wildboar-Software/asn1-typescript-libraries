@@ -26,7 +26,9 @@ export enum _enum_for_MessageClass_objects {
  *
  * ```asn1
  * MessageClass-objects ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type MessageClass_objects = _enum_for_MessageClass_objects | ENUMERATED;
 

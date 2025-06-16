@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * SystemType  ::=  ENUMERATED {eS(1), iS(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_SystemType {
     eS = 1,
@@ -36,7 +38,9 @@ export enum _enum_for_SystemType {
  *
  * ```asn1
  * SystemType  ::=  ENUMERATED {eS(1), iS(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SystemType = _enum_for_SystemType;
 
@@ -49,7 +53,9 @@ export type SystemType = _enum_for_SystemType;
  *
  * ```asn1
  * SystemType  ::=  ENUMERATED {eS(1), iS(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const SystemType = _enum_for_SystemType;
 

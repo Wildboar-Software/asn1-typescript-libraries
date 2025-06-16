@@ -28,7 +28,9 @@ export enum _enum_for_AssignErr {
  * AssignErr  ::=  ENUMERATED {
  *   invalidAttributeCertificate (0),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AssignErr = _enum_for_AssignErr | ENUMERATED;
 

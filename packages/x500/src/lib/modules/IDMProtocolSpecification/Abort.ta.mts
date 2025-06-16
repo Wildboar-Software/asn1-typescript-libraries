@@ -28,7 +28,9 @@ export enum _enum_for_Abort {
  *   invalidProtocol     (5),
  *   reasonNotSpecified  (6),
  *   ...}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Abort = _enum_for_Abort | ENUMERATED;
 

@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ControlResult  ::=  ENUMERATED {
  *   complete(0), alreadyInCondition(1), fail-InvalidControlActionType(2),
  *   fail-ReasonUnknown(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ControlResult {
     complete = 0,
@@ -42,7 +44,9 @@ export enum _enum_for_ControlResult {
  * ControlResult  ::=  ENUMERATED {
  *   complete(0), alreadyInCondition(1), fail-InvalidControlActionType(2),
  *   fail-ReasonUnknown(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ControlResult = _enum_for_ControlResult;
 
@@ -57,7 +61,9 @@ export type ControlResult = _enum_for_ControlResult;
  * ControlResult  ::=  ENUMERATED {
  *   complete(0), alreadyInCondition(1), fail-InvalidControlActionType(2),
  *   fail-ReasonUnknown(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ControlResult = _enum_for_ControlResult;
 

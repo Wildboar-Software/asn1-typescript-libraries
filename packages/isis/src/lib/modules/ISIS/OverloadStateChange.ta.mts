@@ -19,7 +19,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * OverloadStateChange  ::=  ENUMERATED {on(0), waiting(1)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_OverloadStateChange {
   on = 0,
@@ -32,9 +32,10 @@ export enum _enum_for_OverloadStateChange {
  *
  * ### ASN.1 Definition:
  *
- * ```asn1
- * OverloadStateChange  ::=  ENUMERATED {on(0), waiting(1)}
- * ```@enum {number}
+ * oadStateChange  ::=  ENUMERATED {on(0), waiting(1)}
+ * ```
+ *
+ * @enum {number}
  */
 export type OverloadStateChange = _enum_for_OverloadStateChange;
 
@@ -42,11 +43,13 @@ export type OverloadStateChange = _enum_for_OverloadStateChange;
  * @summary OverloadStateChange
  * @description
  *
- * ### ASN.1 Definition:
+ * ion:
  *
  * ```asn1
  * OverloadStateChange  ::=  ENUMERATED {on(0), waiting(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const OverloadStateChange = _enum_for_OverloadStateChange;
 
@@ -84,9 +87,3 @@ export const waiting: OverloadStateChange =
 
 
 export const _decode_OverloadStateChange = $._decodeEnumerated;
-
-
-export const _encode_OverloadStateChange = $._encodeEnumerated;
-
-
-/* eslint-enable */

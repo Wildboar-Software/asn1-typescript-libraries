@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * RoutingAction  ::=  ENUMERATED {relayed(0), rerouted(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_RoutingAction {
     relayed = 0,
@@ -34,7 +36,9 @@ export enum _enum_for_RoutingAction {
  *
  * ```asn1
  * RoutingAction  ::=  ENUMERATED {relayed(0), rerouted(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type RoutingAction = _enum_for_RoutingAction;
 
@@ -46,7 +50,9 @@ export type RoutingAction = _enum_for_RoutingAction;
  *
  * ```asn1
  * RoutingAction  ::=  ENUMERATED {relayed(0), rerouted(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const RoutingAction = _enum_for_RoutingAction;
 

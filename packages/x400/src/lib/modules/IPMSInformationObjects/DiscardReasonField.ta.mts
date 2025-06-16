@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * DiscardReasonField  ::=  ENUMERATED {
  *   ipm-expired(0), ipm-obsoleted(1), user-subscription-terminated(2),
  *   not-used(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DiscardReasonField {
     ipm_expired = 0,
@@ -40,7 +42,9 @@ export enum _enum_for_DiscardReasonField {
  * DiscardReasonField  ::=  ENUMERATED {
  *   ipm-expired(0), ipm-obsoleted(1), user-subscription-terminated(2),
  *   not-used(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DiscardReasonField = _enum_for_DiscardReasonField;
 
@@ -54,7 +58,9 @@ export type DiscardReasonField = _enum_for_DiscardReasonField;
  * DiscardReasonField  ::=  ENUMERATED {
  *   ipm-expired(0), ipm-obsoleted(1), user-subscription-terminated(2),
  *   not-used(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DiscardReasonField = _enum_for_DiscardReasonField;
 

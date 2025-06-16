@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ResponseTimeSummarizationMode  ::=  ENUMERATED {
  *   rawResponseTime(0), responseTimePerBit(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ResponseTimeSummarizationMode {
     rawResponseTime = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_ResponseTimeSummarizationMode {
  * ```asn1
  * ResponseTimeSummarizationMode  ::=  ENUMERATED {
  *   rawResponseTime(0), responseTimePerBit(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationMode;
 
@@ -49,7 +53,9 @@ export type ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationM
  * ```asn1
  * ResponseTimeSummarizationMode  ::=  ENUMERATED {
  *   rawResponseTime(0), responseTimePerBit(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationMode;
 

@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * AbortProblem  ::=  ENUMERATED {
  *   unrecognizedInvocationId(0), abortUnexpected(1), unrecognizedError(2),
  *   unexpectedError(3), mistypedErrorParameter(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_AbortProblem {
   unrecognizedInvocationId = 0,
@@ -43,7 +45,9 @@ export enum _enum_for_AbortProblem {
  * AbortProblem  ::=  ENUMERATED {
  *   unrecognizedInvocationId(0), abortUnexpected(1), unrecognizedError(2),
  *   unexpectedError(3), mistypedErrorParameter(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type AbortProblem = _enum_for_AbortProblem;
 
@@ -58,7 +62,9 @@ export type AbortProblem = _enum_for_AbortProblem;
  * AbortProblem  ::=  ENUMERATED {
  *   unrecognizedInvocationId(0), abortUnexpected(1), unrecognizedError(2),
  *   unexpectedError(3), mistypedErrorParameter(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const AbortProblem = _enum_for_AbortProblem;
 

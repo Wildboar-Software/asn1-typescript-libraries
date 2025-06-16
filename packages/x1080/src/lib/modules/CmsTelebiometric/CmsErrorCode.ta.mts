@@ -63,7 +63,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *     unsupportedKeyWrapAlgorithm (92),
  *     badKeyTransRecipientInfo (93),
  *     other (127) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_CmsErrorCode {
     decodeFailure = 1,
@@ -163,7 +165,9 @@ export enum _enum_for_CmsErrorCode {
  *     unsupportedKeyWrapAlgorithm (92),
  *     badKeyTransRecipientInfo (93),
  *     other (127) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CmsErrorCode = _enum_for_CmsErrorCode;
 
@@ -219,7 +223,9 @@ export type CmsErrorCode = _enum_for_CmsErrorCode;
  *     unsupportedKeyWrapAlgorithm (92),
  *     badKeyTransRecipientInfo (93),
  *     other (127) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const CmsErrorCode = _enum_for_CmsErrorCode;
 

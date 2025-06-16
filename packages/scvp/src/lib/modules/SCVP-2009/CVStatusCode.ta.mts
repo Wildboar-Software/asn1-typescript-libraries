@@ -83,7 +83,7 @@ export enum _enum_for_CVStatusCode {
  *     unrecognizedCritRequestExt        (64),
  *     ...
  * }
- * ```@enum {number}
+ *  {number}
  */
 export type CVStatusCode = _enum_for_CVStatusCode | ENUMERATED;
 
@@ -499,5 +499,3 @@ export const _decode_CVStatusCode = $._decodeEnumerated;
 
 export const _encode_CVStatusCode = $._encodeEnumerated;
 
-
-/* eslint-enable */

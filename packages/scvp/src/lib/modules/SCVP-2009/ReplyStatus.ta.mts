@@ -29,7 +29,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *     certPathNotValidNow        (7),
  *     wantBackUnsatisfied        (8)
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_ReplyStatus {
   success = 0,
@@ -61,7 +63,9 @@ export enum _enum_for_ReplyStatus {
  *     certPathNotValidNow        (7),
  *     wantBackUnsatisfied        (8)
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type ReplyStatus = _enum_for_ReplyStatus;
 
@@ -83,7 +87,9 @@ export type ReplyStatus = _enum_for_ReplyStatus;
  *     certPathNotValidNow        (7),
  *     wantBackUnsatisfied        (8)
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const ReplyStatus = _enum_for_ReplyStatus;
 

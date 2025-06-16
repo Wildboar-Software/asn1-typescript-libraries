@@ -29,7 +29,9 @@ export enum _enum_for_TerminateLoopbackError {
  * TerminateLoopbackError  ::=  ENUMERATED {
  *   loopbackNotSet(0), loopbackNotSupported(1), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type TerminateLoopbackError =
     | _enum_for_TerminateLoopbackError

@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * ProtocolVersion  ::=  ENUMERATED {iSO8208V1(0), iSO8208V2(1), x2584(2), x2588(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ProtocolVersion {
     iSO8208V1 = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_ProtocolVersion {
  *
  * ```asn1
  * ProtocolVersion  ::=  ENUMERATED {iSO8208V1(0), iSO8208V2(1), x2584(2), x2588(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ProtocolVersion = _enum_for_ProtocolVersion;
 
@@ -51,7 +55,9 @@ export type ProtocolVersion = _enum_for_ProtocolVersion;
  *
  * ```asn1
  * ProtocolVersion  ::=  ENUMERATED {iSO8208V1(0), iSO8208V2(1), x2584(2), x2588(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ProtocolVersion = _enum_for_ProtocolVersion;
 

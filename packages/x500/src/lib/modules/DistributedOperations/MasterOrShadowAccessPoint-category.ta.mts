@@ -16,7 +16,9 @@ export enum _enum_for_MasterOrShadowAccessPoint_category {
  *
  * ```asn1
  * MasterOrShadowAccessPoint-category ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type MasterOrShadowAccessPoint_category =
     | _enum_for_MasterOrShadowAccessPoint_category

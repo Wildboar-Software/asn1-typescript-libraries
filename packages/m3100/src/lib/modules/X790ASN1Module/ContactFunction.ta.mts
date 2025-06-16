@@ -38,7 +38,9 @@ export enum _enum_for_ContactFunction {
  *   customerAccountManager(3), providerAccountManager(4), fieldServiceManager(5),
  *   repairman(6), tester(7), screener(8), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ContactFunction = _enum_for_ContactFunction | ENUMERATED;
 

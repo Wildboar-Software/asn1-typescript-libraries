@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   inProgress(0), delayedMeasurement(1), interruptedMeasurement(2),
  *   repeatLater(3), noAcknowledgement(4)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_IntermediateResponse {
     inProgress = 0,
@@ -43,7 +45,9 @@ export enum _enum_for_IntermediateResponse {
  *   inProgress(0), delayedMeasurement(1), interruptedMeasurement(2),
  *   repeatLater(3), noAcknowledgement(4)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type IntermediateResponse = _enum_for_IntermediateResponse;
 
@@ -58,7 +62,9 @@ export type IntermediateResponse = _enum_for_IntermediateResponse;
  *   inProgress(0), delayedMeasurement(1), interruptedMeasurement(2),
  *   repeatLater(3), noAcknowledgement(4)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const IntermediateResponse = _enum_for_IntermediateResponse;
 

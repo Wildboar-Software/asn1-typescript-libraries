@@ -27,7 +27,7 @@ export enum _enum_for_AttributeIdError_errorStatus {
  *
  * ```asn1
  * AttributeIdError-errorStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ *  {number}
  */
 export type AttributeIdError_errorStatus =
   | _enum_for_AttributeIdError_errorStatus
@@ -75,5 +75,3 @@ export const _decode_AttributeIdError_errorStatus = $._decodeEnumerated;
 
 export const _encode_AttributeIdError_errorStatus = $._encodeEnumerated;
 
-
-/* eslint-enable */

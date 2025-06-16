@@ -46,7 +46,9 @@ export enum _enum_for_PbactErr {
  *   attributeValueAlreadyExists,
  *   noInformation,
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PbactErr = _enum_for_PbactErr | ENUMERATED;
 

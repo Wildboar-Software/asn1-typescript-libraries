@@ -22,7 +22,9 @@ export enum _enum_for_AttributeUsage {
  *   distributedOperation (2),
  *   dSAOperation         (3),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AttributeUsage = _enum_for_AttributeUsage | ENUMERATED;
 

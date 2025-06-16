@@ -19,7 +19,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * ISType  ::=  ENUMERATED {level1IS(1), level2IS(2)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_ISType {
   level1IS = 1,
@@ -32,9 +32,10 @@ export enum _enum_for_ISType {
  *
  * ### ASN.1 Definition:
  *
- * ```asn1
- * ISType  ::=  ENUMERATED {level1IS(1), level2IS(2)}
- * ```@enum {number}
+ * e  ::=  ENUMERATED {level1IS(1), level2IS(2)}
+ * ```
+ *
+ * @enum {number}
  */
 export type ISType = _enum_for_ISType;
 
@@ -42,11 +43,13 @@ export type ISType = _enum_for_ISType;
  * @summary ISType
  * @description
  *
- * ### ASN.1 Definition:
+ * ion:
  *
  * ```asn1
  * ISType  ::=  ENUMERATED {level1IS(1), level2IS(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const ISType = _enum_for_ISType;
 
@@ -84,9 +87,3 @@ export const level2IS: ISType =
 
 
 export const _decode_ISType = $._decodeEnumerated;
-
-
-export const _encode_ISType = $._encodeEnumerated;
-
-
-/* eslint-enable */

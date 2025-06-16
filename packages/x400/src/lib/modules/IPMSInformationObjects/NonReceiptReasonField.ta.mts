@@ -27,7 +27,9 @@ export enum _enum_for_NonReceiptReasonField {
  * NonReceiptReasonField  ::=  ENUMERATED {
  *   ipm-discarded(0), ipm-auto-forwarded(1), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type NonReceiptReasonField =
     | _enum_for_NonReceiptReasonField

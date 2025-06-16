@@ -21,7 +21,9 @@ export enum _enum_for_AltNameType_builtinNameForm {
  *
  * ```asn1
  * AltNameType-builtinNameForm ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AltNameType_builtinNameForm =
     | _enum_for_AltNameType_builtinNameForm

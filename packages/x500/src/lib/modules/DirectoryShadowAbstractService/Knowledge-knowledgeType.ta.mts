@@ -10,7 +10,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *
  * ```asn1
  * Knowledge-knowledgeType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Knowledge_knowledgeType {
     master = 0,
@@ -26,7 +28,9 @@ export enum _enum_for_Knowledge_knowledgeType {
  *
  * ```asn1
  * Knowledge-knowledgeType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
 
@@ -38,7 +42,9 @@ export type Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
  *
  * ```asn1
  * Knowledge-knowledgeType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
 

@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * EnforcementAction  ::=  ENUMERATED {
  *   denyWithResponse(0), denyWithoutResponse(1), abortAssociation(2),
  *   denyWithFalseResponse(3), allow(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_EnforcementAction {
     denyWithResponse = 0,
@@ -41,7 +43,9 @@ export enum _enum_for_EnforcementAction {
  * EnforcementAction  ::=  ENUMERATED {
  *   denyWithResponse(0), denyWithoutResponse(1), abortAssociation(2),
  *   denyWithFalseResponse(3), allow(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type EnforcementAction = _enum_for_EnforcementAction;
 
@@ -55,7 +59,9 @@ export type EnforcementAction = _enum_for_EnforcementAction;
  * EnforcementAction  ::=  ENUMERATED {
  *   denyWithResponse(0), denyWithoutResponse(1), abortAssociation(2),
  *   denyWithFalseResponse(3), allow(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const EnforcementAction = _enum_for_EnforcementAction;
 

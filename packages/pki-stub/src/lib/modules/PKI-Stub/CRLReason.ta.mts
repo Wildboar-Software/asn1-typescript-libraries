@@ -46,7 +46,9 @@ export enum _enum_for_CRLReason {
  *   aACompromise         (10),
  *   ...,
  *   weakAlgorithmOrKey   (11) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CRLReason = _enum_for_CRLReason | ENUMERATED;
 

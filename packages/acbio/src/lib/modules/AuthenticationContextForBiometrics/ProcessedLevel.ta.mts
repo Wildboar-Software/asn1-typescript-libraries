@@ -36,7 +36,9 @@ export enum _enum_for_ProcessedLevel {
  *     comparison-score(4),
  *     comparison-decision(5),
  *     ...}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type ProcessedLevel = _enum_for_ProcessedLevel | ENUMERATED;
 

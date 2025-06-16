@@ -34,7 +34,7 @@ export enum _enum_for_ABRT_diagnostic {
  *   authentication-mechanism-name-required(4), authentication-failure(5),
  *   authentication-required(6), ...
  *   }
- * ```@enum {number}
+ *  {number}
  */
 export type ABRT_diagnostic = _enum_for_ABRT_diagnostic | ENUMERATED;
 
@@ -128,5 +128,3 @@ export const _decode_ABRT_diagnostic = $._decodeEnumerated;
 
 export const _encode_ABRT_diagnostic = $._encodeEnumerated;
 
-
-/* eslint-enable */

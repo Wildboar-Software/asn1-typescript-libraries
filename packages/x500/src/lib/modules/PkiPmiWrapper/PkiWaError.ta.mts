@@ -52,7 +52,9 @@ export enum _enum_for_PkiWaError {
  *   invalidParmsForSymEncryptAlgorithms (17),
  *   decryptionFailed                    (18),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PkiWaError = _enum_for_PkiWaError | ENUMERATED;
 

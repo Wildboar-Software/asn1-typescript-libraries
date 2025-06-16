@@ -32,7 +32,7 @@ export enum _enum_for_BioAPI_INDICATOR_STATUS {
  * BioAPI-INDICATOR-STATUS  ::=  ENUMERATED {
  *   accept, reject, ready, busy, failure, ...
  *   }
- * ```@enum {number}
+ *  {number}
  */
 export type BioAPI_INDICATOR_STATUS =
   | _enum_for_BioAPI_INDICATOR_STATUS
@@ -128,5 +128,3 @@ export const _decode_BioAPI_INDICATOR_STATUS = $._decodeEnumerated;
 
 export const _encode_BioAPI_INDICATOR_STATUS = $._encodeEnumerated;
 
-
-/* eslint-enable */

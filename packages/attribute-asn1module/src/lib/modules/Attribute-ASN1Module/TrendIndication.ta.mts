@@ -21,7 +21,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * TrendIndication  ::=  ENUMERATED {lessSevere(0), noChange(1), moreSevere(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_TrendIndication {
@@ -38,7 +40,9 @@ enum _enum_for_TrendIndication {
  * 
  * ```asn1
  * TrendIndication  ::=  ENUMERATED {lessSevere(0), noChange(1), moreSevere(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type TrendIndication = _enum_for_TrendIndication;
@@ -51,7 +55,9 @@ type TrendIndication = _enum_for_TrendIndication;
  * 
  * ```asn1
  * TrendIndication  ::=  ENUMERATED {lessSevere(0), noChange(1), moreSevere(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const TrendIndication = _enum_for_TrendIndication;

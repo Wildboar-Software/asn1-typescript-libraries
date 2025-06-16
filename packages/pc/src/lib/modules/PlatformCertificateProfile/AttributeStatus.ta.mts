@@ -24,7 +24,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     added (0),
  *     modified (1),
  *     removed (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_AttributeStatus {
@@ -44,7 +46,9 @@ enum _enum_for_AttributeStatus {
  *     added (0),
  *     modified (1),
  *     removed (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type AttributeStatus = _enum_for_AttributeStatus;
@@ -60,7 +64,9 @@ type AttributeStatus = _enum_for_AttributeStatus;
  *     added (0),
  *     modified (1),
  *     removed (2) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const AttributeStatus = _enum_for_AttributeStatus;

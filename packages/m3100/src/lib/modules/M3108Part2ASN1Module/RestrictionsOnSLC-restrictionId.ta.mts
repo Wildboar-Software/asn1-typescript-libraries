@@ -31,7 +31,9 @@ export enum _enum_for_RestrictionsOnSLC_restrictionId {
  *
  * ```asn1
  * RestrictionsOnSLC-restrictionId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type RestrictionsOnSLC_restrictionId =
     | _enum_for_RestrictionsOnSLC_restrictionId

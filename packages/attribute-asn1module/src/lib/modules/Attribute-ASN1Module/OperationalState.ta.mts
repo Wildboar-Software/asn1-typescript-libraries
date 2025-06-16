@@ -21,7 +21,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * OperationalState  ::=  ENUMERATED {disabled(0), enabled(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_OperationalState {
@@ -37,7 +39,9 @@ enum _enum_for_OperationalState {
  * 
  * ```asn1
  * OperationalState  ::=  ENUMERATED {disabled(0), enabled(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type OperationalState = _enum_for_OperationalState;
@@ -50,7 +54,9 @@ type OperationalState = _enum_for_OperationalState;
  * 
  * ```asn1
  * OperationalState  ::=  ENUMERATED {disabled(0), enabled(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const OperationalState = _enum_for_OperationalState;

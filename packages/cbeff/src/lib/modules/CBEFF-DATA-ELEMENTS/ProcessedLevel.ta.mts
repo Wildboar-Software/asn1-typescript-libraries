@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ProcessedLevel  ::=  ENUMERATED {no-value-available, raw, intermediate, processed
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_ProcessedLevel {
   no_value_available = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_ProcessedLevel {
  * ```asn1
  * ProcessedLevel  ::=  ENUMERATED {no-value-available, raw, intermediate, processed
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type ProcessedLevel = _enum_for_ProcessedLevel;
 
@@ -51,7 +55,9 @@ export type ProcessedLevel = _enum_for_ProcessedLevel;
  * ```asn1
  * ProcessedLevel  ::=  ENUMERATED {no-value-available, raw, intermediate, processed
  * }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const ProcessedLevel = _enum_for_ProcessedLevel;
 

@@ -22,7 +22,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```asn1
  * SourceIndicator  ::=  ENUMERATED {
  *   resourceOperation(0), managementOperation(1), unknown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_SourceIndicator {
@@ -40,7 +42,9 @@ enum _enum_for_SourceIndicator {
  * ```asn1
  * SourceIndicator  ::=  ENUMERATED {
  *   resourceOperation(0), managementOperation(1), unknown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type SourceIndicator = _enum_for_SourceIndicator;
@@ -54,7 +58,9 @@ type SourceIndicator = _enum_for_SourceIndicator;
  * ```asn1
  * SourceIndicator  ::=  ENUMERATED {
  *   resourceOperation(0), managementOperation(1), unknown(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const SourceIndicator = _enum_for_SourceIndicator;

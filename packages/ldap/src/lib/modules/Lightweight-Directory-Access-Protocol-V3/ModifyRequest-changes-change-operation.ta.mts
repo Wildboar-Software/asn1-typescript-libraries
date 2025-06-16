@@ -28,7 +28,9 @@ export enum _enum_for_ModifyRequest_changes_change_operation {
  *
  * ```asn1
  * ModifyRequest-changes-change-operation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ModifyRequest_changes_change_operation =
   | _enum_for_ModifyRequest_changes_change_operation

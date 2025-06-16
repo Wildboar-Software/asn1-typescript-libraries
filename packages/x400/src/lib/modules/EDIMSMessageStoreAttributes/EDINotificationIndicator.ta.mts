@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * EDINotificationIndicator  ::=  ENUMERATED {
  *   no-notification-sent(0), pn-sent(1), nn-sent(2), fn-sent(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_EDINotificationIndicator {
     no_notification_sent = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_EDINotificationIndicator {
  * ```asn1
  * EDINotificationIndicator  ::=  ENUMERATED {
  *   no-notification-sent(0), pn-sent(1), nn-sent(2), fn-sent(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type EDINotificationIndicator = _enum_for_EDINotificationIndicator;
 
@@ -51,7 +55,9 @@ export type EDINotificationIndicator = _enum_for_EDINotificationIndicator;
  * ```asn1
  * EDINotificationIndicator  ::=  ENUMERATED {
  *   no-notification-sent(0), pn-sent(1), nn-sent(2), fn-sent(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const EDINotificationIndicator = _enum_for_EDINotificationIndicator;
 

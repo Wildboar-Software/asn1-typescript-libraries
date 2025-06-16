@@ -27,7 +27,9 @@ export enum _enum_for_IdmReject_reason {
  *
  * ```asn1
  * IdmReject-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type IdmReject_reason = _enum_for_IdmReject_reason | ENUMERATED;
 

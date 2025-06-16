@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * BasicServiceIndicator  ::=  ENUMERATED {speech(0), unrestrictedDigital(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_BasicServiceIndicator {
     speech = 0,
@@ -34,7 +36,9 @@ export enum _enum_for_BasicServiceIndicator {
  *
  * ```asn1
  * BasicServiceIndicator  ::=  ENUMERATED {speech(0), unrestrictedDigital(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type BasicServiceIndicator = _enum_for_BasicServiceIndicator;
 
@@ -46,7 +50,9 @@ export type BasicServiceIndicator = _enum_for_BasicServiceIndicator;
  *
  * ```asn1
  * BasicServiceIndicator  ::=  ENUMERATED {speech(0), unrestrictedDigital(1)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const BasicServiceIndicator = _enum_for_BasicServiceIndicator;
 

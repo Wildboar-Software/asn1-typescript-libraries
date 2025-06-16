@@ -32,7 +32,7 @@ export enum _enum_for_BioAPI_GUI_SUBOPERATION {
  * BioAPI-GUI-SUBOPERATION  ::=  ENUMERATED {
  *   capture, process, createtemplate, verifymatch, identifymatch, ...
  *   }
- * ```@enum {number}
+ *  {number}
  */
 export type BioAPI_GUI_SUBOPERATION =
   | _enum_for_BioAPI_GUI_SUBOPERATION
@@ -128,5 +128,3 @@ export const _decode_BioAPI_GUI_SUBOPERATION = $._decodeEnumerated;
 
 export const _encode_BioAPI_GUI_SUBOPERATION = $._encodeEnumerated;
 
-
-/* eslint-enable */

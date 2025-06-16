@@ -32,7 +32,9 @@ export enum _enum_for_DeleteCmLeasedCircuitServiceError {
  *   alreadyDeleted(0), contractViolation(1), invalidCircuitNumber(2),
  *   unlockedAdministrativeState(3), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DeleteCmLeasedCircuitServiceError =
     | _enum_for_DeleteCmLeasedCircuitServiceError

@@ -10,7 +10,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *
  * ```asn1
  * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_UiiFormat_subset {
     baseObject = 0,
@@ -26,7 +28,9 @@ export enum _enum_for_UiiFormat_subset {
  *
  * ```asn1
  * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type UiiFormat_subset = _enum_for_UiiFormat_subset;
 
@@ -38,7 +42,9 @@ export type UiiFormat_subset = _enum_for_UiiFormat_subset;
  *
  * ```asn1
  * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const UiiFormat_subset = _enum_for_UiiFormat_subset;
 

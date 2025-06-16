@@ -22,7 +22,9 @@ export enum _enum_for_FamilyGrouping {
  *   strands       (3),
  *   multiStrand   (4),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type FamilyGrouping = _enum_for_FamilyGrouping | ENUMERATED;
 

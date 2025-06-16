@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * Induced  ::=  ENUMERATED {
  *   start(0), suspend(1), resume(2), delete(3), disabled(4), enabled(5)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Induced {
     start = 0,
@@ -42,7 +44,9 @@ export enum _enum_for_Induced {
  * Induced  ::=  ENUMERATED {
  *   start(0), suspend(1), resume(2), delete(3), disabled(4), enabled(5)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Induced = _enum_for_Induced;
 
@@ -56,7 +60,9 @@ export type Induced = _enum_for_Induced;
  * Induced  ::=  ENUMERATED {
  *   start(0), suspend(1), resume(2), delete(3), disabled(4), enabled(5)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Induced = _enum_for_Induced;
 

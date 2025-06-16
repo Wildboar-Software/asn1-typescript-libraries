@@ -33,7 +33,9 @@ export enum _enum_for_SchemeNumber {
  * mqv1-sha1        (7),        -- { mqv1,    {id-sha1,NULL} }
  * ...
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SchemeNumber = _enum_for_SchemeNumber | ENUMERATED;
 

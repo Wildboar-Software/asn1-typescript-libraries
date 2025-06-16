@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * TransferProblem  ::=  ENUMERATED {
  *   duplicateInvocationId(0), unrecognizedSecurityExchange(1), mistypedItem(2),
  *   inappropriateInvocationId(3), alternatingSequenceError(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_TransferProblem {
   duplicateInvocationId = 0,
@@ -43,7 +45,9 @@ export enum _enum_for_TransferProblem {
  * TransferProblem  ::=  ENUMERATED {
  *   duplicateInvocationId(0), unrecognizedSecurityExchange(1), mistypedItem(2),
  *   inappropriateInvocationId(3), alternatingSequenceError(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type TransferProblem = _enum_for_TransferProblem;
 
@@ -58,7 +62,9 @@ export type TransferProblem = _enum_for_TransferProblem;
  * TransferProblem  ::=  ENUMERATED {
  *   duplicateInvocationId(0), unrecognizedSecurityExchange(1), mistypedItem(2),
  *   inappropriateInvocationId(3), alternatingSequenceError(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const TransferProblem = _enum_for_TransferProblem;
 

@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * RealizationParameter-realization-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_RealizationParameter_realization_type {
   association_service = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_RealizationParameter_realization_type {
  *
  * ```asn1
  * RealizationParameter-realization-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
 
@@ -49,7 +53,9 @@ export type RealizationParameter_realization_type = _enum_for_RealizationParamet
  *
  * ```asn1
  * RealizationParameter-realization-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
 

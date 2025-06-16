@@ -22,7 +22,9 @@ export enum _enum_for_TBerror_code {
  *
  * ```asn1
  * TBerror-code ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type TBerror_code = _enum_for_TBerror_code | ENUMERATED;
 

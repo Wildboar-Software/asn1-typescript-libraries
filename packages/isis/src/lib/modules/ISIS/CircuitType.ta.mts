@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * CircuitType  ::=  ENUMERATED {
  *   broadcast(0), ptToPt(1), staticIn(2), staticOut(3), dA(4)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_CircuitType {
   broadcast = 0,
@@ -37,9 +37,11 @@ export enum _enum_for_CircuitType {
  * ### ASN.1 Definition:
  *
  * ```asn1
- * CircuitType  ::=  ENUMERATED {
+ *  ENUMERATED {
  *   broadcast(0), ptToPt(1), staticIn(2), staticOut(3), dA(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type CircuitType = _enum_for_CircuitType;
 
@@ -48,11 +50,11 @@ export type CircuitType = _enum_for_CircuitType;
  * @description
  *
  * ### ASN.1 Definition:
- *
- * ```asn1
- * CircuitType  ::=  ENUMERATED {
+ *ircuitType  ::=  ENUMERATED {
  *   broadcast(0), ptToPt(1), staticIn(2), staticOut(3), dA(4)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const CircuitType = _enum_for_CircuitType;
 
@@ -138,9 +140,3 @@ export const dA: CircuitType =
 
 
 export const _decode_CircuitType = $._decodeEnumerated;
-
-
-export const _encode_CircuitType = $._encodeEnumerated;
-
-
-/* eslint-enable */

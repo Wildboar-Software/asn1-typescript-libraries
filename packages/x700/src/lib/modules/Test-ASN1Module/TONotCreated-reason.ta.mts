@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * TONotCreated-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_TONotCreated_reason {
     invalidTOclass = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_TONotCreated_reason {
  *
  * ```asn1
  * TONotCreated-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type TONotCreated_reason = _enum_for_TONotCreated_reason;
 
@@ -50,7 +54,9 @@ export type TONotCreated_reason = _enum_for_TONotCreated_reason;
  *
  * ```asn1
  * TONotCreated-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const TONotCreated_reason = _enum_for_TONotCreated_reason;
 

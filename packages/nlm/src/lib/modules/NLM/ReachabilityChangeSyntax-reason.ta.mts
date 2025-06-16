@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * ReachabilityChangeSyntax-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ReachabilityChangeSyntax_reason {
     holdingTimerExpired = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_ReachabilityChangeSyntax_reason {
  *
  * ```asn1
  * ReachabilityChangeSyntax-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
 
@@ -49,7 +53,9 @@ export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax
  *
  * ```asn1
  * ReachabilityChangeSyntax-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
 

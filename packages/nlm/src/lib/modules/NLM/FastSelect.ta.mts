@@ -22,7 +22,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * FastSelect  ::=  ENUMERATED {
  *   notSpecified(0), fastSelect(1), fastSelectWithRestrictedResponse(2),
  *   noFastSelect(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_FastSelect {
     notSpecified = 0,
@@ -42,7 +44,9 @@ export enum _enum_for_FastSelect {
  * FastSelect  ::=  ENUMERATED {
  *   notSpecified(0), fastSelect(1), fastSelectWithRestrictedResponse(2),
  *   noFastSelect(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type FastSelect = _enum_for_FastSelect;
 
@@ -57,7 +61,9 @@ export type FastSelect = _enum_for_FastSelect;
  * FastSelect  ::=  ENUMERATED {
  *   notSpecified(0), fastSelect(1), fastSelectWithRestrictedResponse(2),
  *   noFastSelect(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const FastSelect = _enum_for_FastSelect;
 

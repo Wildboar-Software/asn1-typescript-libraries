@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DetermineViolationStatusReply  ::=  ENUMERATED {
  *   unknown(1), no-violation(2), violation-detected(3), non-member(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DetermineViolationStatusReply {
     unknown = 1,
@@ -38,7 +40,9 @@ export enum _enum_for_DetermineViolationStatusReply {
  * ```asn1
  * DetermineViolationStatusReply  ::=  ENUMERATED {
  *   unknown(1), no-violation(2), violation-detected(3), non-member(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
 
@@ -51,7 +55,9 @@ export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusRe
  * ```asn1
  * DetermineViolationStatusReply  ::=  ENUMERATED {
  *   unknown(1), no-violation(2), violation-detected(3), non-member(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
 

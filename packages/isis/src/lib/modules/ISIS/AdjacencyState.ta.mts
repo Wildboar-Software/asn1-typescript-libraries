@@ -19,7 +19,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * AdjacencyState  ::=  ENUMERATED {initializing(0), up(1), failed(2), down(3)}
- * ```@enum {number}
+ *  {number}
  */
 export enum _enum_for_AdjacencyState {
   initializing = 0,
@@ -34,9 +34,10 @@ export enum _enum_for_AdjacencyState {
  *
  * ### ASN.1 Definition:
  *
- * ```asn1
- * AdjacencyState  ::=  ENUMERATED {initializing(0), up(1), failed(2), down(3)}
- * ```@enum {number}
+ * encyState  ::=  ENUMERATED {initializing(0), up(1), failed(2), down(3)}
+ * ```
+ *
+ * @enum {number}
  */
 export type AdjacencyState = _enum_for_AdjacencyState;
 
@@ -44,11 +45,13 @@ export type AdjacencyState = _enum_for_AdjacencyState;
  * @summary AdjacencyState
  * @description
  *
- * ### ASN.1 Definition:
+ * ion:
  *
  * ```asn1
  * AdjacencyState  ::=  ENUMERATED {initializing(0), up(1), failed(2), down(3)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const AdjacencyState = _enum_for_AdjacencyState;
 
@@ -118,9 +121,3 @@ export const down: AdjacencyState =
 
 
 export const _decode_AdjacencyState = $._decodeEnumerated;
-
-
-export const _encode_AdjacencyState = $._encodeEnumerated;
-
-
-/* eslint-enable */

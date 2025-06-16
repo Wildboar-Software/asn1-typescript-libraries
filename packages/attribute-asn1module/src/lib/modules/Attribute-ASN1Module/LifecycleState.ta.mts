@@ -21,7 +21,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * 
  * ```asn1
  * LifecycleState  ::=  ENUMERATED {planned(0), installed(1), pendingRemoval(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_LifecycleState {
@@ -38,7 +40,9 @@ enum _enum_for_LifecycleState {
  * 
  * ```asn1
  * LifecycleState  ::=  ENUMERATED {planned(0), installed(1), pendingRemoval(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type LifecycleState = _enum_for_LifecycleState;
@@ -51,7 +55,9 @@ type LifecycleState = _enum_for_LifecycleState;
  * 
  * ```asn1
  * LifecycleState  ::=  ENUMERATED {planned(0), installed(1), pendingRemoval(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const LifecycleState = _enum_for_LifecycleState;

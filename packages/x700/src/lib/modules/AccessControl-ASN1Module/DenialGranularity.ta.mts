@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * DenialGranularity  ::=  ENUMERATED {request(0), object(1), attribute(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DenialGranularity {
     request = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_DenialGranularity {
  *
  * ```asn1
  * DenialGranularity  ::=  ENUMERATED {request(0), object(1), attribute(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DenialGranularity = _enum_for_DenialGranularity;
 
@@ -47,7 +51,9 @@ export type DenialGranularity = _enum_for_DenialGranularity;
  *
  * ```asn1
  * DenialGranularity  ::=  ENUMERATED {request(0), object(1), attribute(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DenialGranularity = _enum_for_DenialGranularity;
 

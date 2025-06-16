@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * AlarmSeverityCode  ::=  ENUMERATED {
  *   non-alarmed(0), minor(1), major(2), critical(3), warning(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_AlarmSeverityCode {
     non_alarmed = 0,
@@ -41,7 +43,9 @@ export enum _enum_for_AlarmSeverityCode {
  * ```asn1
  * AlarmSeverityCode  ::=  ENUMERATED {
  *   non-alarmed(0), minor(1), major(2), critical(3), warning(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type AlarmSeverityCode = _enum_for_AlarmSeverityCode;
 
@@ -55,7 +59,9 @@ export type AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  * ```asn1
  * AlarmSeverityCode  ::=  ENUMERATED {
  *   non-alarmed(0), minor(1), major(2), critical(3), warning(4)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
 

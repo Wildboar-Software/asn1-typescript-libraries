@@ -22,7 +22,9 @@ export enum _enum_for_CertStatus {
  *   on-hold (2),
  *   expired (3),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CertStatus = _enum_for_CertStatus | ENUMERATED;
 

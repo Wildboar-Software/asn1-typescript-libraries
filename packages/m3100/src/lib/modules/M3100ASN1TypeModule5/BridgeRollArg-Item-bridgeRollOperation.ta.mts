@@ -28,7 +28,9 @@ export enum _enum_for_BridgeRollArg_Item_bridgeRollOperation {
  *
  * ```asn1
  * BridgeRollArg-Item-bridgeRollOperation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type BridgeRollArg_Item_bridgeRollOperation =
     | _enum_for_BridgeRollArg_Item_bridgeRollOperation

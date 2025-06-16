@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * Context-representation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Context_representation {
     aCTION_INFO = 0,
@@ -39,7 +41,9 @@ export enum _enum_for_Context_representation {
  *
  * ```asn1
  * Context-representation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Context_representation = _enum_for_Context_representation;
 
@@ -52,7 +56,9 @@ export type Context_representation = _enum_for_Context_representation;
  *
  * ```asn1
  * Context-representation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Context_representation = _enum_for_Context_representation;
 

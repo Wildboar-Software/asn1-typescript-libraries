@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DeniedMeteringAction  ::=  ENUMERATED {
  *   canNotStart(0), canNotSuspend(1), canNotResume(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_DeniedMeteringAction {
     canNotStart = 0,
@@ -39,7 +41,9 @@ export enum _enum_for_DeniedMeteringAction {
  * ```asn1
  * DeniedMeteringAction  ::=  ENUMERATED {
  *   canNotStart(0), canNotSuspend(1), canNotResume(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type DeniedMeteringAction = _enum_for_DeniedMeteringAction;
 
@@ -53,7 +57,9 @@ export type DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  * ```asn1
  * DeniedMeteringAction  ::=  ENUMERATED {
  *   canNotStart(0), canNotSuspend(1), canNotResume(2)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
 

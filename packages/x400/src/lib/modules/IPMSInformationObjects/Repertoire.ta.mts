@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * Repertoire  ::=  ENUMERATED {ita2(2), ia5(5)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_Repertoire {
     ita2 = 2,
@@ -34,7 +36,9 @@ export enum _enum_for_Repertoire {
  *
  * ```asn1
  * Repertoire  ::=  ENUMERATED {ita2(2), ia5(5)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Repertoire = _enum_for_Repertoire;
 
@@ -46,7 +50,9 @@ export type Repertoire = _enum_for_Repertoire;
  *
  * ```asn1
  * Repertoire  ::=  ENUMERATED {ita2(2), ia5(5)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const Repertoire = _enum_for_Repertoire;
 

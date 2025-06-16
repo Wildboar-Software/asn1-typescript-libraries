@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * IntermediateResourceBoundaryTestOutcome  ::=  ENUMERATED {
  *   passed(0), unexpected(1), wrongSignalReceived(2), waitDurationTimerExpired(3)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
     passed = 0,
@@ -40,7 +42,9 @@ export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
  * IntermediateResourceBoundaryTestOutcome  ::=  ENUMERATED {
  *   passed(0), unexpected(1), wrongSignalReceived(2), waitDurationTimerExpired(3)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 
@@ -54,7 +58,9 @@ export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateReso
  * IntermediateResourceBoundaryTestOutcome  ::=  ENUMERATED {
  *   passed(0), unexpected(1), wrongSignalReceived(2), waitDurationTimerExpired(3)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 

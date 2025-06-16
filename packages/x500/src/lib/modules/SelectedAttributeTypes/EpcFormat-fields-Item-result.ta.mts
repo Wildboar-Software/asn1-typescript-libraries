@@ -10,7 +10,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *
  * ```asn1
  * EpcFormat-fields-Item-result ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_EpcFormat_fields_Item_result {
     numericPad = 0,
@@ -26,7 +28,9 @@ export enum _enum_for_EpcFormat_fields_Item_result {
  *
  * ```asn1
  * EpcFormat-fields-Item-result ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_result;
 
@@ -38,7 +42,9 @@ export type EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_resul
  *
  * ```asn1
  * EpcFormat-fields-Item-result ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_result;
 

@@ -34,7 +34,9 @@ export enum _enum_for_Requirements {
  *   with-reverse-video-and-2-way-voice (2),
  *   with-2-way-video-and-voice         (3),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type Requirements = _enum_for_Requirements | ENUMERATED;
 

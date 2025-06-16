@@ -46,7 +46,9 @@ export enum _enum_for_CreateCmLeasedCircuitServiceError {
  *   sharedResourcesUnavailable(10), specifiedLCSAlreadyExists(11),
  *   unknownServiceDescription(12), unknownServiceType(13), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type CreateCmLeasedCircuitServiceError =
     | _enum_for_CreateCmLeasedCircuitServiceError

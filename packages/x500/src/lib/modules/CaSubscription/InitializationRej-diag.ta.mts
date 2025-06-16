@@ -14,7 +14,9 @@ export enum _enum_for_InitializationRej_diag {
  *
  * ```asn1
  * InitializationRej-diag ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type InitializationRej_diag =
     | _enum_for_InitializationRej_diag

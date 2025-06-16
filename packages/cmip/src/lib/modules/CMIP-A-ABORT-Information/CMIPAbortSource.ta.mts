@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * CMIPAbortSource  ::=  ENUMERATED {cmiseServiceUser(0), cmiseServiceProvider(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_CMIPAbortSource {
   cmiseServiceUser = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_CMIPAbortSource {
  *
  * ```asn1
  * CMIPAbortSource  ::=  ENUMERATED {cmiseServiceUser(0), cmiseServiceProvider(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type CMIPAbortSource = _enum_for_CMIPAbortSource;
 
@@ -49,7 +53,9 @@ export type CMIPAbortSource = _enum_for_CMIPAbortSource;
  *
  * ```asn1
  * CMIPAbortSource  ::=  ENUMERATED {cmiseServiceUser(0), cmiseServiceProvider(1)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const CMIPAbortSource = _enum_for_CMIPAbortSource;
 

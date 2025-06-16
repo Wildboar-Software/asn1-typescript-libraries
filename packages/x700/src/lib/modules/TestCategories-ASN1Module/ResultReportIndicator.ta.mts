@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ResultReportIndicator  ::=  ENUMERATED {
  *   resultReportForPassedSequences(0), noResultReportForPassedSequences(1)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ResultReportIndicator {
     resultReportForPassedSequences = 0,
@@ -38,7 +40,9 @@ export enum _enum_for_ResultReportIndicator {
  * ResultReportIndicator  ::=  ENUMERATED {
  *   resultReportForPassedSequences(0), noResultReportForPassedSequences(1)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ResultReportIndicator = _enum_for_ResultReportIndicator;
 
@@ -52,7 +56,9 @@ export type ResultReportIndicator = _enum_for_ResultReportIndicator;
  * ResultReportIndicator  ::=  ENUMERATED {
  *   resultReportForPassedSequences(0), noResultReportForPassedSequences(1)
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ResultReportIndicator = _enum_for_ResultReportIndicator;
 

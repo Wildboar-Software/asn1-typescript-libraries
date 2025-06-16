@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * DatabaseState  ::=  ENUMERATED {off(0), on(1), waiting(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_DatabaseState {
   off = 0,
@@ -35,7 +37,9 @@ export enum _enum_for_DatabaseState {
  *
  * ```asn1
  * DatabaseState  ::=  ENUMERATED {off(0), on(1), waiting(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type DatabaseState = _enum_for_DatabaseState;
 
@@ -47,7 +51,9 @@ export type DatabaseState = _enum_for_DatabaseState;
  *
  * ```asn1
  * DatabaseState  ::=  ENUMERATED {off(0), on(1), waiting(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const DatabaseState = _enum_for_DatabaseState;
 

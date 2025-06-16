@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * IPMEntryType  ::=  ENUMERATED {ipm(0), rn(1), nrn(2), on(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_IPMEntryType {
     ipm = 0,
@@ -36,7 +38,9 @@ export enum _enum_for_IPMEntryType {
  *
  * ```asn1
  * IPMEntryType  ::=  ENUMERATED {ipm(0), rn(1), nrn(2), on(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type IPMEntryType = _enum_for_IPMEntryType;
 
@@ -48,7 +52,9 @@ export type IPMEntryType = _enum_for_IPMEntryType;
  *
  * ```asn1
  * IPMEntryType  ::=  ENUMERATED {ipm(0), rn(1), nrn(2), on(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const IPMEntryType = _enum_for_IPMEntryType;
 

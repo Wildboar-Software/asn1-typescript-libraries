@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ScannerActionError  ::=  ENUMERATED {
  *   unspecified(0), administrativeStateLocked(1),
  *   administrativeStateShuttingDown(2), scanTerminated(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_ScannerActionError {
     unspecified = 0,
@@ -40,7 +42,9 @@ export enum _enum_for_ScannerActionError {
  * ScannerActionError  ::=  ENUMERATED {
  *   unspecified(0), administrativeStateLocked(1),
  *   administrativeStateShuttingDown(2), scanTerminated(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ScannerActionError = _enum_for_ScannerActionError;
 
@@ -54,7 +58,9 @@ export type ScannerActionError = _enum_for_ScannerActionError;
  * ScannerActionError  ::=  ENUMERATED {
  *   unspecified(0), administrativeStateLocked(1),
  *   administrativeStateShuttingDown(2), scanTerminated(3)}
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const ScannerActionError = _enum_for_ScannerActionError;
 

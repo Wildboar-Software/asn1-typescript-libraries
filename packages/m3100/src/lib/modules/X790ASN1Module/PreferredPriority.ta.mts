@@ -31,7 +31,9 @@ export enum _enum_for_PreferredPriority {
  * PreferredPriority  ::=  ENUMERATED {
  *   undefined(0), minor(1), major(2), serious(3), ...
  *   }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type PreferredPriority = _enum_for_PreferredPriority | ENUMERATED;
 

@@ -19,7 +19,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * sigRequired           (5), -- Must sign the request
  * unauthorized          (6)  -- Request unauthorized
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export enum _enum_for_OCSPResponseStatus {
     successful = 0,
@@ -47,7 +49,9 @@ export enum _enum_for_OCSPResponseStatus {
  * sigRequired           (5), -- Must sign the request
  * unauthorized          (6)  -- Request unauthorized
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 
@@ -68,7 +72,9 @@ export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * sigRequired           (5), -- Must sign the request
  * unauthorized          (6)  -- Request unauthorized
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 

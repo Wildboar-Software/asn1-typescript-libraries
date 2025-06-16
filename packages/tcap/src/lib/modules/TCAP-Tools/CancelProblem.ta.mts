@@ -20,7 +20,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * CancelProblem  ::=  ENUMERATED {
  *   unknownInvocation(0), tooLate(1), notCancellable(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_CancelProblem {
   unknownInvocation = 0,
@@ -37,7 +39,9 @@ export enum _enum_for_CancelProblem {
  * ```asn1
  * CancelProblem  ::=  ENUMERATED {
  *   unknownInvocation(0), tooLate(1), notCancellable(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type CancelProblem = _enum_for_CancelProblem;
 
@@ -50,7 +54,9 @@ export type CancelProblem = _enum_for_CancelProblem;
  * ```asn1
  * CancelProblem  ::=  ENUMERATED {
  *   unknownInvocation(0), tooLate(1), notCancellable(2)}
- * ```@enum {number}
+ * ```
+ *
+ * @enum {number}
  */
 export const CancelProblem = _enum_for_CancelProblem;
 

@@ -28,7 +28,9 @@ export enum _enum_for_SignedData_error {
  *   invalidContentComponent            (5),
  *   unsupportedHashAlgorithm           (6),
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type SignedData_error = _enum_for_SignedData_error | ENUMERATED;
 

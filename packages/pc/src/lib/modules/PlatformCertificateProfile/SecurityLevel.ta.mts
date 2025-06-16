@@ -25,7 +25,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     level2 (2),
  *     level3 (3),
  *     level4 (4) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 enum _enum_for_SecurityLevel {
@@ -47,7 +49,9 @@ enum _enum_for_SecurityLevel {
  *     level2 (2),
  *     level3 (3),
  *     level4 (4) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type SecurityLevel = _enum_for_SecurityLevel;
@@ -64,7 +68,9 @@ type SecurityLevel = _enum_for_SecurityLevel;
  *     level2 (2),
  *     level3 (3),
  *     level4 (4) }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 const SecurityLevel = _enum_for_SecurityLevel;

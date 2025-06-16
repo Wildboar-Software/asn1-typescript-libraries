@@ -38,7 +38,7 @@ export enum _enum_for_BioAPI_GUI_RESPONSE {
  *   default, opComplete, opCancel, cycleStart, cycleRestart, subopStart,
  *   subopNext, progressContinue, progressCancel, recapture, ...
  *   }
- * ```@enum {number}
+ *  {number}
  */
 export type BioAPI_GUI_RESPONSE = _enum_for_BioAPI_GUI_RESPONSE | ENUMERATED;
 
@@ -212,5 +212,3 @@ export const _decode_BioAPI_GUI_RESPONSE = $._decodeEnumerated;
 
 export const _encode_BioAPI_GUI_RESPONSE = $._encodeEnumerated;
 
-
-/* eslint-enable */

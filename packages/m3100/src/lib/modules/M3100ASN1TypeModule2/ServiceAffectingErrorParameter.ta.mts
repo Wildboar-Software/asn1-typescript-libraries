@@ -27,7 +27,9 @@ export enum _enum_for_ServiceAffectingErrorParameter {
  * ```asn1
  * ServiceAffectingErrorParameter  ::=  ENUMERATED {affectingExistingService(0), ...
  *                                                }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ServiceAffectingErrorParameter =
     | _enum_for_ServiceAffectingErrorParameter

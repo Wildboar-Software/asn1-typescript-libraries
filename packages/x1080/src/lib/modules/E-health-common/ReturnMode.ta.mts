@@ -30,7 +30,9 @@ export enum _enum_for_ReturnMode {
  *   continuous,
  *   batch,
  *   ... }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export type ReturnMode = _enum_for_ReturnMode | ENUMERATED;
 

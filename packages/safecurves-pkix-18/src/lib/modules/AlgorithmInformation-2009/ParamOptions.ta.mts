@@ -42,7 +42,9 @@ enum _enum_for_ParamOptions {
  * optional,         -- Parameters MAY be encoded in the structure
  * ...
  * }
- * ```@enum {number}
+ * ```
+ * 
+ * @enum {number}
  */
 export
 type ParamOptions = _enum_for_ParamOptions | ENUMERATED;
