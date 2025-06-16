@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   ipm-expired(0), ipm-obsoleted(1), user-subscription-terminated(2),
  *   not-used(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_DiscardReasonField {
@@ -43,7 +43,7 @@ export enum _enum_for_DiscardReasonField {
  *   ipm-expired(0), ipm-obsoleted(1), user-subscription-terminated(2),
  *   not-used(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DiscardReasonField = _enum_for_DiscardReasonField;
@@ -59,7 +59,7 @@ export type DiscardReasonField = _enum_for_DiscardReasonField;
  *   ipm-expired(0), ipm-obsoleted(1), user-subscription-terminated(2),
  *   not-used(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const DiscardReasonField = _enum_for_DiscardReasonField;

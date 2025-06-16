@@ -16,13 +16,13 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary OperationalState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * OperationalState  ::=  ENUMERATED {disabled(0), enabled(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -34,13 +34,13 @@ enum _enum_for_OperationalState {
 /**
  * @summary OperationalState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * OperationalState  ::=  ENUMERATED {disabled(0), enabled(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -49,13 +49,13 @@ type OperationalState = _enum_for_OperationalState;
 /**
  * @summary OperationalState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * OperationalState  ::=  ENUMERATED {disabled(0), enabled(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

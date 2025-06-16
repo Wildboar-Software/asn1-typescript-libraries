@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   physical-forwarding-address-not-requested(0),
  *   physical-forwarding-address-requested(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_PhysicalForwardingAddressRequest {
@@ -41,7 +41,7 @@ export enum _enum_for_PhysicalForwardingAddressRequest {
  *   physical-forwarding-address-not-requested(0),
  *   physical-forwarding-address-requested(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddressRequest;
@@ -57,7 +57,7 @@ export type PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddre
  *   physical-forwarding-address-not-requested(0),
  *   physical-forwarding-address-requested(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddressRequest;

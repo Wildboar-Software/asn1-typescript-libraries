@@ -16,16 +16,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary StrengthOfFunction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * StrengthOfFunction  ::=  ENUMERATED {
  *     basic (0),
  *     medium (1),
  *     high (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -38,16 +38,16 @@ enum _enum_for_StrengthOfFunction {
 /**
  * @summary StrengthOfFunction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * StrengthOfFunction  ::=  ENUMERATED {
  *     basic (0),
  *     medium (1),
  *     high (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -56,16 +56,16 @@ type StrengthOfFunction = _enum_for_StrengthOfFunction;
 /**
  * @summary StrengthOfFunction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * StrengthOfFunction  ::=  ENUMERATED {
  *     basic (0),
  *     medium (1),
  *     high (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

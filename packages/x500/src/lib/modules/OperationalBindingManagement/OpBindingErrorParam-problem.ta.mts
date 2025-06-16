@@ -27,7 +27,7 @@ export enum _enum_for_OpBindingErrorParam_problem {
  * ```asn1
  * OpBindingErrorParam-problem ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type OpBindingErrorParam_problem =

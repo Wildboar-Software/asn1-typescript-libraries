@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ResponseSync  ::=  ENUMERATED {singleCast(-1), bestEffort(0), atomic(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ResponseSync {
@@ -38,7 +38,7 @@ export enum _enum_for_ResponseSync {
  * ```asn1
  * ResponseSync  ::=  ENUMERATED {singleCast(-1), bestEffort(0), atomic(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ResponseSync = _enum_for_ResponseSync;
@@ -52,7 +52,7 @@ export type ResponseSync = _enum_for_ResponseSync;
  * ```asn1
  * ResponseSync  ::=  ENUMERATED {singleCast(-1), bestEffort(0), atomic(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ResponseSync = _enum_for_ResponseSync;

@@ -31,7 +31,7 @@ export enum _enum_for_IdentifyLockedLCSError {
  *   administrativeStateUnlocked(0), nonExistentSAP(1), unknownServiceType(2), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type IdentifyLockedLCSError =

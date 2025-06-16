@@ -27,7 +27,9 @@ export enum _enum_for_C_NOCHANGE_RI_confirmation {
  *
  * ```asn1
  * C-NOCHANGE-RI-confirmation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type C_NOCHANGE_RI_confirmation =
   | _enum_for_C_NOCHANGE_RI_confirmation
@@ -75,3 +77,5 @@ export const _decode_C_NOCHANGE_RI_confirmation = $._decodeEnumerated;
 
 export const _encode_C_NOCHANGE_RI_confirmation = $._encodeEnumerated;
 
+
+/* eslint-enable */

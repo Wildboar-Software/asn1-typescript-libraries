@@ -12,7 +12,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```asn1
  * FingerPrint-finger ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_FingerPrint_finger {
@@ -33,7 +33,7 @@ export enum _enum_for_FingerPrint_finger {
  * ```asn1
  * FingerPrint-finger ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type FingerPrint_finger = _enum_for_FingerPrint_finger;
@@ -48,7 +48,7 @@ export type FingerPrint_finger = _enum_for_FingerPrint_finger;
  * ```asn1
  * FingerPrint-finger ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const FingerPrint_finger = _enum_for_FingerPrint_finger;

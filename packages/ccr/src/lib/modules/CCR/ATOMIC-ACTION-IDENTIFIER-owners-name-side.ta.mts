@@ -27,7 +27,9 @@ export enum _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side {
  *
  * ```asn1
  * ATOMIC-ACTION-IDENTIFIER-owners-name-side ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type ATOMIC_ACTION_IDENTIFIER_owners_name_side =
   | _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side
@@ -110,3 +112,5 @@ export function _encode_ATOMIC_ACTION_IDENTIFIER_owners_name_side(
   );
 }
 
+
+/* eslint-enable */

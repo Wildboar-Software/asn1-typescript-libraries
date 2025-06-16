@@ -17,7 +17,7 @@ export enum _enum_for_JoinArgument_joinSubset {
  * ```asn1
  * JoinArgument-joinSubset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type JoinArgument_joinSubset =

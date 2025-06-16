@@ -31,7 +31,7 @@ export enum _enum_for_CreateVpnServiceError {
  *   invalidServiceClasses(1), duplicatedVPNIdentifier(2), invalidSAG(3), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CreateVpnServiceError =

@@ -33,7 +33,7 @@ export enum _enum_for_DeleteCmLeasedCircuitServiceError {
  *   unlockedAdministrativeState(3), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DeleteCmLeasedCircuitServiceError =

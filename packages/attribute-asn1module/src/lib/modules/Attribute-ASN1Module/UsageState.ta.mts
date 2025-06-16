@@ -16,13 +16,13 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary UsageState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * UsageState  ::=  ENUMERATED {idle(0), active(1), busy(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -35,13 +35,13 @@ enum _enum_for_UsageState {
 /**
  * @summary UsageState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * UsageState  ::=  ENUMERATED {idle(0), active(1), busy(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -50,13 +50,13 @@ type UsageState = _enum_for_UsageState;
 /**
  * @summary UsageState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * UsageState  ::=  ENUMERATED {idle(0), active(1), busy(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

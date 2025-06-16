@@ -16,7 +16,7 @@ export enum _enum_for_InitializationAbort_diag {
  * ```asn1
  * InitializationAbort-diag ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type InitializationAbort_diag =

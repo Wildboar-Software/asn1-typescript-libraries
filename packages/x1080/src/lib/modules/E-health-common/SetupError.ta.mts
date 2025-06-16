@@ -45,7 +45,7 @@ export enum _enum_for_SetupError {
  *   sensorPermanentlyUnavailable,
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SetupError = _enum_for_SetupError | ENUMERATED;

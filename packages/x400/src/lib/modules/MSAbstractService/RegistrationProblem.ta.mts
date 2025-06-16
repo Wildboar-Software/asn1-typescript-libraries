@@ -30,7 +30,7 @@ export enum _enum_for_RegistrationProblem {
  *   registration-limit-exceeded(2), ... -- For future extension additions --
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RegistrationProblem = _enum_for_RegistrationProblem | ENUMERATED;

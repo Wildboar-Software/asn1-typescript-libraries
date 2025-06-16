@@ -30,7 +30,7 @@ export enum _enum_for_TerminateLoopbackError {
  *   loopbackNotSet(0), loopbackNotSupported(1), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type TerminateLoopbackError =

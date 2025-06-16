@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * SensitivityField  ::=  ENUMERATED {
  *   personal(1), private(2), company-confidential(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_SensitivityField {
@@ -40,7 +40,7 @@ export enum _enum_for_SensitivityField {
  * SensitivityField  ::=  ENUMERATED {
  *   personal(1), private(2), company-confidential(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SensitivityField = _enum_for_SensitivityField;
@@ -55,7 +55,7 @@ export type SensitivityField = _enum_for_SensitivityField;
  * SensitivityField  ::=  ENUMERATED {
  *   personal(1), private(2), company-confidential(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const SensitivityField = _enum_for_SensitivityField;

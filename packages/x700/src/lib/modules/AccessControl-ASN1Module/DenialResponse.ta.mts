@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   denyWithResponse(0), denyWithoutResponse(1), abortAssociation(2),
  *   denyWithFalseResponse(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_DenialResponse {
@@ -43,7 +43,7 @@ export enum _enum_for_DenialResponse {
  *   denyWithResponse(0), denyWithoutResponse(1), abortAssociation(2),
  *   denyWithFalseResponse(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DenialResponse = _enum_for_DenialResponse;
@@ -59,7 +59,7 @@ export type DenialResponse = _enum_for_DenialResponse;
  *   denyWithResponse(0), denyWithoutResponse(1), abortAssociation(2),
  *   denyWithFalseResponse(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const DenialResponse = _enum_for_DenialResponse;

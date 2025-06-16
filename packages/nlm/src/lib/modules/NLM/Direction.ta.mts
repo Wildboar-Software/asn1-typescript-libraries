@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * Direction  ::=  ENUMERATED {incoming(0), outgoing(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_Direction {
@@ -39,7 +39,7 @@ export enum _enum_for_Direction {
  * ```asn1
  * Direction  ::=  ENUMERATED {incoming(0), outgoing(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type Direction = _enum_for_Direction;
@@ -54,7 +54,7 @@ export type Direction = _enum_for_Direction;
  * ```asn1
  * Direction  ::=  ENUMERATED {incoming(0), outgoing(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const Direction = _enum_for_Direction;

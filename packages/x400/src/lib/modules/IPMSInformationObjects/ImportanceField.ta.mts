@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ImportanceField  ::=  ENUMERATED {low(0), normal(1), high(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ImportanceField {
@@ -38,7 +38,7 @@ export enum _enum_for_ImportanceField {
  * ```asn1
  * ImportanceField  ::=  ENUMERATED {low(0), normal(1), high(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ImportanceField = _enum_for_ImportanceField;
@@ -52,7 +52,7 @@ export type ImportanceField = _enum_for_ImportanceField;
  * ```asn1
  * ImportanceField  ::=  ENUMERATED {low(0), normal(1), high(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ImportanceField = _enum_for_ImportanceField;

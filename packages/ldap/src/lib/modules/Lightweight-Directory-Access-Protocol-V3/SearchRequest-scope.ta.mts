@@ -29,7 +29,7 @@ export enum _enum_for_SearchRequest_scope {
  * ```asn1
  * SearchRequest-scope ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SearchRequest_scope = _enum_for_SearchRequest_scope | ENUMERATED;

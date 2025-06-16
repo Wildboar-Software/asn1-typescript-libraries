@@ -87,7 +87,7 @@ export enum _enum_for_WrpError {
  *   changedKey-out-of-sequence             (35),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type WrpError = _enum_for_WrpError | ENUMERATED;

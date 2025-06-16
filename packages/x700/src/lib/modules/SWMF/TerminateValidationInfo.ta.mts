@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   cancel(0), -- discard the result of the partial audit
  *   truncate(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_TerminateValidationInfo {
@@ -41,7 +41,7 @@ export enum _enum_for_TerminateValidationInfo {
  *   cancel(0), -- discard the result of the partial audit
  *   truncate(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type TerminateValidationInfo = _enum_for_TerminateValidationInfo;
@@ -57,7 +57,7 @@ export type TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  *   cancel(0), -- discard the result of the partial audit
  *   truncate(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;

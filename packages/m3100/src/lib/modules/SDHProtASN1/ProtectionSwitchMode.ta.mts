@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ProtectionSwitchMode  ::=  ENUMERATED {bidirectional(0), unidirectional(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ProtectionSwitchMode {
@@ -39,7 +39,7 @@ export enum _enum_for_ProtectionSwitchMode {
  * ```asn1
  * ProtectionSwitchMode  ::=  ENUMERATED {bidirectional(0), unidirectional(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ProtectionSwitchMode = _enum_for_ProtectionSwitchMode;
@@ -54,7 +54,7 @@ export type ProtectionSwitchMode = _enum_for_ProtectionSwitchMode;
  * ```asn1
  * ProtectionSwitchMode  ::=  ENUMERATED {bidirectional(0), unidirectional(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ProtectionSwitchMode = _enum_for_ProtectionSwitchMode;

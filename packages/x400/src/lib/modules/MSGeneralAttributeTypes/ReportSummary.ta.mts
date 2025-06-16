@@ -27,7 +27,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   delivery-report-from-intended-recipient(6),
  *   non-delivery-report-from-intended-recipient(7)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ReportSummary {
@@ -57,7 +57,7 @@ export enum _enum_for_ReportSummary {
  *   delivery-report-from-intended-recipient(6),
  *   non-delivery-report-from-intended-recipient(7)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ReportSummary = _enum_for_ReportSummary;
@@ -78,7 +78,7 @@ export type ReportSummary = _enum_for_ReportSummary;
  *   delivery-report-from-intended-recipient(6),
  *   non-delivery-report-from-intended-recipient(7)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ReportSummary = _enum_for_ReportSummary;

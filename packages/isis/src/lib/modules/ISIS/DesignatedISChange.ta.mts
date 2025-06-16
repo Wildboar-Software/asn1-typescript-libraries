@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * DesignatedISChange  ::=  ENUMERATED {resigned(0), elected(1)}
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_DesignatedISChange {
   resigned = 0,
@@ -32,7 +34,8 @@ export enum _enum_for_DesignatedISChange {
  *
  * ### ASN.1 Definition:
  *
- * natedISChange  ::=  ENUMERATED {resigned(0), elected(1)}
+ * ```asn1
+ * DesignatedISChange  ::=  ENUMERATED {resigned(0), elected(1)}
  * ```
  *
  * @enum {number}
@@ -43,7 +46,7 @@ export type DesignatedISChange = _enum_for_DesignatedISChange;
  * @summary DesignatedISChange
  * @description
  *
- * ion:
+ * ### ASN.1 Definition:
  *
  * ```asn1
  * DesignatedISChange  ::=  ENUMERATED {resigned(0), elected(1)}
@@ -87,3 +90,9 @@ export const elected: DesignatedISChange =
 
 
 export const _decode_DesignatedISChange = $._decodeEnumerated;
+
+
+export const _encode_DesignatedISChange = $._encodeEnumerated;
+
+
+/* eslint-enable */

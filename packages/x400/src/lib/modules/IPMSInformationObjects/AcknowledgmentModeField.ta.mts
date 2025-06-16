@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * AcknowledgmentModeField  ::=  ENUMERATED {manual(0), automatic(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_AcknowledgmentModeField {
@@ -37,7 +37,7 @@ export enum _enum_for_AcknowledgmentModeField {
  * ```asn1
  * AcknowledgmentModeField  ::=  ENUMERATED {manual(0), automatic(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
@@ -51,7 +51,7 @@ export type AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
  * ```asn1
  * AcknowledgmentModeField  ::=  ENUMERATED {manual(0), automatic(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;

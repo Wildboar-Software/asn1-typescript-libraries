@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   proof-of-submission-not-requested(0), proof-of-submission-requested(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ProofOfSubmissionRequest {
@@ -41,7 +41,7 @@ export enum _enum_for_ProofOfSubmissionRequest {
  *   proof-of-submission-not-requested(0), proof-of-submission-requested(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
@@ -57,7 +57,7 @@ export type ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
  *   proof-of-submission-not-requested(0), proof-of-submission-requested(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;

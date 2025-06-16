@@ -29,7 +29,7 @@ export enum _enum_for_Abort {
  *   reasonNotSpecified  (6),
  *   ...}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type Abort = _enum_for_Abort | ENUMERATED;

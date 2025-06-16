@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * RequestSource  ::=  ENUMERATED {local(0), remote(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_RequestSource {
@@ -39,7 +39,7 @@ export enum _enum_for_RequestSource {
  * ```asn1
  * RequestSource  ::=  ENUMERATED {local(0), remote(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RequestSource = _enum_for_RequestSource;
@@ -54,7 +54,7 @@ export type RequestSource = _enum_for_RequestSource;
  * ```asn1
  * RequestSource  ::=  ENUMERATED {local(0), remote(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const RequestSource = _enum_for_RequestSource;

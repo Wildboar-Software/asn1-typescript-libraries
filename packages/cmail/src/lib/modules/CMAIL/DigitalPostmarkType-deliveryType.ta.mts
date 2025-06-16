@@ -26,7 +26,9 @@ export enum _enum_for_DigitalPostmarkType_deliveryType {
  *
  * ```asn1
  * DigitalPostmarkType-deliveryType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type DigitalPostmarkType_deliveryType =
   | _enum_for_DigitalPostmarkType_deliveryType
@@ -58,3 +60,5 @@ export const _decode_DigitalPostmarkType_deliveryType = $._decodeEnumerated;
 
 export const _encode_DigitalPostmarkType_deliveryType = $._encodeEnumerated;
 
+
+/* eslint-enable */

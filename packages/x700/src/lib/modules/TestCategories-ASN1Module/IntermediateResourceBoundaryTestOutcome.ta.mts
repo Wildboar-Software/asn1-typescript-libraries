@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   passed(0), unexpected(1), wrongSignalReceived(2), waitDurationTimerExpired(3)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
@@ -43,7 +43,7 @@ export enum _enum_for_IntermediateResourceBoundaryTestOutcome {
  *   passed(0), unexpected(1), wrongSignalReceived(2), waitDurationTimerExpired(3)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
@@ -59,7 +59,7 @@ export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateReso
  *   passed(0), unexpected(1), wrongSignalReceived(2), waitDurationTimerExpired(3)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;

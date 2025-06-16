@@ -16,13 +16,13 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary AdministrativeState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AdministrativeState  ::=  ENUMERATED {locked(0), unlocked(1), shuttingDown(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -35,13 +35,13 @@ enum _enum_for_AdministrativeState {
 /**
  * @summary AdministrativeState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AdministrativeState  ::=  ENUMERATED {locked(0), unlocked(1), shuttingDown(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -50,13 +50,13 @@ type AdministrativeState = _enum_for_AdministrativeState;
 /**
  * @summary AdministrativeState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AdministrativeState  ::=  ENUMERATED {locked(0), unlocked(1), shuttingDown(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

@@ -17,7 +17,7 @@ export enum _enum_for_ImposedSubset {
  * ```asn1
  * ImposedSubset  ::=  ENUMERATED {baseObject(0), oneLevel(1), wholeSubtree(2),...}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ImposedSubset = _enum_for_ImposedSubset | ENUMERATED;

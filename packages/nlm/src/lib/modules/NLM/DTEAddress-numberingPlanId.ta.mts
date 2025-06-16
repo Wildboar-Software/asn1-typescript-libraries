@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DTEAddress-numberingPlanId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_DTEAddress_numberingPlanId {
@@ -40,7 +40,7 @@ export enum _enum_for_DTEAddress_numberingPlanId {
  * ```asn1
  * DTEAddress-numberingPlanId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
@@ -55,7 +55,7 @@ export type DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
  * ```asn1
  * DTEAddress-numberingPlanId ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;

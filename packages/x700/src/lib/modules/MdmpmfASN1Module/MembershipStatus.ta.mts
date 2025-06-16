@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * MembershipStatus  ::=  ENUMERATED {unknown(1), member(2), non-member(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_MembershipStatus {
@@ -38,7 +38,7 @@ export enum _enum_for_MembershipStatus {
  * ```asn1
  * MembershipStatus  ::=  ENUMERATED {unknown(1), member(2), non-member(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type MembershipStatus = _enum_for_MembershipStatus;
@@ -52,7 +52,7 @@ export type MembershipStatus = _enum_for_MembershipStatus;
  * ```asn1
  * MembershipStatus  ::=  ENUMERATED {unknown(1), member(2), non-member(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const MembershipStatus = _enum_for_MembershipStatus;

@@ -23,7 +23,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   closeContinuously(0), openContinuously(1), closeMomentarily(2),
  *   openMomentarily(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ControlActionType {
@@ -45,7 +45,7 @@ export enum _enum_for_ControlActionType {
  *   closeContinuously(0), openContinuously(1), closeMomentarily(2),
  *   openMomentarily(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ControlActionType = _enum_for_ControlActionType;
@@ -62,7 +62,7 @@ export type ControlActionType = _enum_for_ControlActionType;
  *   closeContinuously(0), openContinuously(1), closeMomentarily(2),
  *   openMomentarily(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ControlActionType = _enum_for_ControlActionType;

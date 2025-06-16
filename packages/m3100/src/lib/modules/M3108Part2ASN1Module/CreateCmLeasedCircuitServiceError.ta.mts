@@ -47,7 +47,7 @@ export enum _enum_for_CreateCmLeasedCircuitServiceError {
  *   unknownServiceDescription(12), unknownServiceType(13), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CreateCmLeasedCircuitServiceError =

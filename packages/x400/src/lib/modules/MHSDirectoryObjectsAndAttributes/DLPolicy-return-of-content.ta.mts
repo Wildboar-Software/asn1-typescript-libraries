@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DLPolicy-return-of-content ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_DLPolicy_return_of_content {
@@ -38,7 +38,7 @@ export enum _enum_for_DLPolicy_return_of_content {
  * ```asn1
  * DLPolicy-return-of-content ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
@@ -52,7 +52,7 @@ export type DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  * ```asn1
  * DLPolicy-return-of-content ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;

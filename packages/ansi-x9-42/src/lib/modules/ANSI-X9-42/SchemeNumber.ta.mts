@@ -34,7 +34,7 @@ export enum _enum_for_SchemeNumber {
  * ...
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SchemeNumber = _enum_for_SchemeNumber | ENUMERATED;

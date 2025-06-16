@@ -16,7 +16,7 @@ export enum _enum_for_PwdResponse_error {
  * ```asn1
  * PwdResponse-error ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type PwdResponse_error = _enum_for_PwdResponse_error | ENUMERATED;

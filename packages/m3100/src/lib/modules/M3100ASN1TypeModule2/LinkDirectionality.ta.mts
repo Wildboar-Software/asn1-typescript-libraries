@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * LinkDirectionality  ::=  ENUMERATED {
  *   unidirectional(0), bidirectional(1), undefined(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_LinkDirectionality {
@@ -42,7 +42,7 @@ export enum _enum_for_LinkDirectionality {
  * LinkDirectionality  ::=  ENUMERATED {
  *   unidirectional(0), bidirectional(1), undefined(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type LinkDirectionality = _enum_for_LinkDirectionality;
@@ -58,7 +58,7 @@ export type LinkDirectionality = _enum_for_LinkDirectionality;
  * LinkDirectionality  ::=  ENUMERATED {
  *   unidirectional(0), bidirectional(1), undefined(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const LinkDirectionality = _enum_for_LinkDirectionality;

@@ -23,7 +23,7 @@ export enum _enum_for_WordMatchTypes {
  *   wordProviderDefined (3),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type WordMatchTypes = _enum_for_WordMatchTypes | ENUMERATED;

@@ -12,7 +12,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * AbandonedProblem   ::=  ENUMERATED {
  *   pagingAbandoned (0) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_AbandonedProblem {
@@ -29,7 +29,7 @@ export enum _enum_for_AbandonedProblem {
  * AbandonedProblem   ::=  ENUMERATED {
  *   pagingAbandoned (0) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type AbandonedProblem = _enum_for_AbandonedProblem;
@@ -44,7 +44,7 @@ export type AbandonedProblem = _enum_for_AbandonedProblem;
  * AbandonedProblem   ::=  ENUMERATED {
  *   pagingAbandoned (0) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const AbandonedProblem = _enum_for_AbandonedProblem;

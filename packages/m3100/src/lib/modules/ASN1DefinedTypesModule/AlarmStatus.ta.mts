@@ -24,7 +24,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   activeReportable-Minor(3), activeReportable-Major(4),
  *   activeReportable-Critical(5), activePending(6)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_AlarmStatus {
@@ -50,7 +50,7 @@ export enum _enum_for_AlarmStatus {
  *   activeReportable-Minor(3), activeReportable-Major(4),
  *   activeReportable-Critical(5), activePending(6)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type AlarmStatus = _enum_for_AlarmStatus;
@@ -68,7 +68,7 @@ export type AlarmStatus = _enum_for_AlarmStatus;
  *   activeReportable-Minor(3), activeReportable-Major(4),
  *   activeReportable-Critical(5), activePending(6)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const AlarmStatus = _enum_for_AlarmStatus;

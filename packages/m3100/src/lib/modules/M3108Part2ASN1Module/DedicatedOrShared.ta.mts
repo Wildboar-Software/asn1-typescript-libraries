@@ -29,7 +29,7 @@ export enum _enum_for_DedicatedOrShared {
  * DedicatedOrShared  ::=  ENUMERATED {dedicated(1), shared(2), ...
  *                                   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DedicatedOrShared = _enum_for_DedicatedOrShared | ENUMERATED;

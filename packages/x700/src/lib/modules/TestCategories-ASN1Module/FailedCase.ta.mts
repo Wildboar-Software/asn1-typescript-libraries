@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * FailedCase  ::=  ENUMERATED {lineDisconnected(0), counterOverflow(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_FailedCase {
@@ -39,7 +39,7 @@ export enum _enum_for_FailedCase {
  * FailedCase  ::=  ENUMERATED {lineDisconnected(0), counterOverflow(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type FailedCase = _enum_for_FailedCase;
@@ -54,7 +54,7 @@ export type FailedCase = _enum_for_FailedCase;
  * FailedCase  ::=  ENUMERATED {lineDisconnected(0), counterOverflow(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const FailedCase = _enum_for_FailedCase;

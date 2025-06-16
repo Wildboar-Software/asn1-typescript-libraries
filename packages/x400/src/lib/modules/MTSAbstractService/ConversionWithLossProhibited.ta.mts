@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   conversion-with-loss-allowed(0), conversion-with-loss-prohibited(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ConversionWithLossProhibited {
@@ -41,7 +41,7 @@ export enum _enum_for_ConversionWithLossProhibited {
  *   conversion-with-loss-allowed(0), conversion-with-loss-prohibited(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
@@ -57,7 +57,7 @@ export type ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibite
  *   conversion-with-loss-allowed(0), conversion-with-loss-prohibited(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;

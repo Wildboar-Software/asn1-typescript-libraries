@@ -39,7 +39,7 @@ export enum _enum_for_AVMP_error {
  *   unknownAVL                         (11),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type AVMP_error = _enum_for_AVMP_error | ENUMERATED;

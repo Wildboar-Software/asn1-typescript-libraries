@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * Replaceable  ::=  ENUMERATED {yes(0), no(1), notapplicable(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_Replaceable {
@@ -40,7 +40,7 @@ export enum _enum_for_Replaceable {
  * ```asn1
  * Replaceable  ::=  ENUMERATED {yes(0), no(1), notapplicable(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type Replaceable = _enum_for_Replaceable;
@@ -55,7 +55,7 @@ export type Replaceable = _enum_for_Replaceable;
  * ```asn1
  * Replaceable  ::=  ENUMERATED {yes(0), no(1), notapplicable(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const Replaceable = _enum_for_Replaceable;

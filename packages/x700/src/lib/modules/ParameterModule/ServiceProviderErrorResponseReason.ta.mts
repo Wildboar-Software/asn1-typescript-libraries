@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   insufficientResources(0), providerDoesNotExist(1), providerNotAvailable(2),
  *   requiredServiceNotAvailable(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ServiceProviderErrorResponseReason {
@@ -43,7 +43,7 @@ export enum _enum_for_ServiceProviderErrorResponseReason {
  *   insufficientResources(0), providerDoesNotExist(1), providerNotAvailable(2),
  *   requiredServiceNotAvailable(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
@@ -59,7 +59,7 @@ export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorR
  *   insufficientResources(0), providerDoesNotExist(1), providerNotAvailable(2),
  *   requiredServiceNotAvailable(3)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;

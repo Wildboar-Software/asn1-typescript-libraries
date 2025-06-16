@@ -33,7 +33,7 @@ export enum _enum_for_ReferenceType {
  *   ditBridge              (9),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ReferenceType = _enum_for_ReferenceType | ENUMERATED;

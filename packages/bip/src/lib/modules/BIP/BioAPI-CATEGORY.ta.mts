@@ -31,7 +31,9 @@ export enum _enum_for_BioAPI_CATEGORY {
  * BioAPI-CATEGORY  ::=  ENUMERATED {
  *   archive, comparisonAlgorithm, processingAlgorithm, sensor, ...
  *   }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type BioAPI_CATEGORY = _enum_for_BioAPI_CATEGORY | ENUMERATED;
 
@@ -109,3 +111,5 @@ export const _decode_BioAPI_CATEGORY = $._decodeEnumerated;
 
 export const _encode_BioAPI_CATEGORY = $._encodeEnumerated;
 
+
+/* eslint-enable */

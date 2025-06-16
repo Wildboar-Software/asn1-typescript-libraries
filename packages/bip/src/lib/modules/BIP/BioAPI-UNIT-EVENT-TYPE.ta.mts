@@ -32,7 +32,9 @@ export enum _enum_for_BioAPI_UNIT_EVENT_TYPE {
  * BioAPI-UNIT-EVENT-TYPE  ::=  ENUMERATED {
  *   insert, remove, fault, sourcePresent, sourceRemoved, ...
  *   }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type BioAPI_UNIT_EVENT_TYPE =
   | _enum_for_BioAPI_UNIT_EVENT_TYPE
@@ -128,3 +130,5 @@ export const _decode_BioAPI_UNIT_EVENT_TYPE = $._decodeEnumerated;
 
 export const _encode_BioAPI_UNIT_EVENT_TYPE = $._encodeEnumerated;
 
+
+/* eslint-enable */

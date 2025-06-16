@@ -16,9 +16,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary EvaluationAssuranceLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EvaluationAssuranceLevel  ::=  ENUMERATED {
  *     level1 (1),
@@ -29,7 +29,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     level6 (6),
  *     level7 (7) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -46,9 +46,9 @@ enum _enum_for_EvaluationAssuranceLevel {
 /**
  * @summary EvaluationAssuranceLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EvaluationAssuranceLevel  ::=  ENUMERATED {
  *     level1 (1),
@@ -59,7 +59,7 @@ enum _enum_for_EvaluationAssuranceLevel {
  *     level6 (6),
  *     level7 (7) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -68,9 +68,9 @@ type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
 /**
  * @summary EvaluationAssuranceLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EvaluationAssuranceLevel  ::=  ENUMERATED {
  *     level1 (1),
@@ -81,7 +81,7 @@ type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
  *     level6 (6),
  *     level7 (7) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

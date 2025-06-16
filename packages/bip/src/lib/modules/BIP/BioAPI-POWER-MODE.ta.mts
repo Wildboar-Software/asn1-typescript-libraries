@@ -29,7 +29,9 @@ export enum _enum_for_BioAPI_POWER_MODE {
  * ```asn1
  * BioAPI-POWER-MODE  ::=  ENUMERATED {normal, detect, sleep, ...
  *                                   }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type BioAPI_POWER_MODE = _enum_for_BioAPI_POWER_MODE | ENUMERATED;
 
@@ -91,3 +93,5 @@ export const _decode_BioAPI_POWER_MODE = $._decodeEnumerated;
 
 export const _encode_BioAPI_POWER_MODE = $._encodeEnumerated;
 
+
+/* eslint-enable */

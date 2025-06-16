@@ -35,7 +35,7 @@ export enum _enum_for_RedirectionReason {
  *   directory-look-up(3), alias(4), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RedirectionReason = _enum_for_RedirectionReason | ENUMERATED;

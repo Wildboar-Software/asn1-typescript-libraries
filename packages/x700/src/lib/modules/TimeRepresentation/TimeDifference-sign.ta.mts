@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * TimeDifference-sign ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_TimeDifference_sign {
@@ -37,7 +37,7 @@ export enum _enum_for_TimeDifference_sign {
  * ```asn1
  * TimeDifference-sign ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type TimeDifference_sign = _enum_for_TimeDifference_sign;
@@ -51,7 +51,7 @@ export type TimeDifference_sign = _enum_for_TimeDifference_sign;
  * ```asn1
  * TimeDifference-sign ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const TimeDifference_sign = _enum_for_TimeDifference_sign;

@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   recipient-reassignment-allowed(0), recipient-reassignment-prohibited(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_RecipientReassignmentProhibited {
@@ -41,7 +41,7 @@ export enum _enum_for_RecipientReassignmentProhibited {
  *   recipient-reassignment-allowed(0), recipient-reassignment-prohibited(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
@@ -57,7 +57,7 @@ export type RecipientReassignmentProhibited = _enum_for_RecipientReassignmentPro
  *   recipient-reassignment-allowed(0), recipient-reassignment-prohibited(1)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;

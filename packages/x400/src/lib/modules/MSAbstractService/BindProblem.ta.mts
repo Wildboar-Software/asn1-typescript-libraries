@@ -33,7 +33,7 @@ export enum _enum_for_BindProblem {
  *   bind-extension-problem(3), inadequate-association-confidentiality(4)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type BindProblem = _enum_for_BindProblem | ENUMERATED;

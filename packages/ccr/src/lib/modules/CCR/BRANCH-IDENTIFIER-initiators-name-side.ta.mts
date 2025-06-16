@@ -27,7 +27,9 @@ export enum _enum_for_BRANCH_IDENTIFIER_initiators_name_side {
  *
  * ```asn1
  * BRANCH-IDENTIFIER-initiators-name-side ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type BRANCH_IDENTIFIER_initiators_name_side =
   | _enum_for_BRANCH_IDENTIFIER_initiators_name_side
@@ -108,3 +110,5 @@ export function _encode_BRANCH_IDENTIFIER_initiators_name_side(
   );
 }
 
+
+/* eslint-enable */

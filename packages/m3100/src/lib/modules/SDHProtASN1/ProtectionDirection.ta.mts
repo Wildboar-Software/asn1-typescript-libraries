@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ProtectionDirection  ::=  ENUMERATED {transmit(0), receive(1), bidirectional(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ProtectionDirection {
@@ -40,7 +40,7 @@ export enum _enum_for_ProtectionDirection {
  * ```asn1
  * ProtectionDirection  ::=  ENUMERATED {transmit(0), receive(1), bidirectional(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ProtectionDirection = _enum_for_ProtectionDirection;
@@ -55,7 +55,7 @@ export type ProtectionDirection = _enum_for_ProtectionDirection;
  * ```asn1
  * ProtectionDirection  ::=  ENUMERATED {transmit(0), receive(1), bidirectional(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ProtectionDirection = _enum_for_ProtectionDirection;

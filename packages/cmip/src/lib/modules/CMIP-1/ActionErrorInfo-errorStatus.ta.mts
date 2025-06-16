@@ -29,7 +29,9 @@ export enum _enum_for_ActionErrorInfo_errorStatus {
  *
  * ```asn1
  * ActionErrorInfo-errorStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type ActionErrorInfo_errorStatus =
   | _enum_for_ActionErrorInfo_errorStatus
@@ -109,3 +111,5 @@ export const _decode_ActionErrorInfo_errorStatus = $._decodeEnumerated;
 
 export const _encode_ActionErrorInfo_errorStatus = $._encodeEnumerated;
 
+
+/* eslint-enable */

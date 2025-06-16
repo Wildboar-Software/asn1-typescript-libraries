@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * PropertyList-addRemove ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_PropertyList_addRemove {
@@ -40,7 +40,7 @@ export enum _enum_for_PropertyList_addRemove {
  * ```asn1
  * PropertyList-addRemove ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type PropertyList_addRemove = _enum_for_PropertyList_addRemove;
@@ -55,7 +55,7 @@ export type PropertyList_addRemove = _enum_for_PropertyList_addRemove;
  * ```asn1
  * PropertyList-addRemove ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const PropertyList_addRemove = _enum_for_PropertyList_addRemove;

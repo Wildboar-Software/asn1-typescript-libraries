@@ -21,7 +21,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * Purpose  ::=  ENUMERATED {
  *   no-value-available, verify, identify, enroll, enroll-verify, enroll-identify,
  *   audit}
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_Purpose {
   no_value_available = 0,
@@ -41,7 +43,7 @@ export enum _enum_for_Purpose {
  *
  * ```asn1
  * Purpose  ::=  ENUMERATED {
- * ble, verify, identify, enroll, enroll-verify, enroll-identify,
+ *   no-value-available, verify, identify, enroll, enroll-verify, enroll-identify,
  *   audit}
  * ```
  *
@@ -55,7 +57,8 @@ export type Purpose = _enum_for_Purpose;
  *
  * ### ASN.1 Definition:
  *
- * se  ::=  ENUMERATED {
+ * ```asn1
+ * Purpose  ::=  ENUMERATED {
  *   no-value-available, verify, identify, enroll, enroll-verify, enroll-identify,
  *   audit}
  * ```
@@ -177,3 +180,9 @@ export const audit: Purpose = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_Purpose = $._decodeEnumerated;
+
+
+export const _encode_Purpose = $._encodeEnumerated;
+
+
+/* eslint-enable */

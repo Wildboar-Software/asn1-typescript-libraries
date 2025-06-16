@@ -31,7 +31,7 @@ export enum _enum_for_ReturnMode {
  *   batch,
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ReturnMode = _enum_for_ReturnMode | ENUMERATED;

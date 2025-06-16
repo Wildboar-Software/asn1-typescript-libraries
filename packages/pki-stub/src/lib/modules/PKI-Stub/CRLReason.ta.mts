@@ -47,7 +47,7 @@ export enum _enum_for_CRLReason {
  *   ...,
  *   weakAlgorithmOrKey   (11) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CRLReason = _enum_for_CRLReason | ENUMERATED;

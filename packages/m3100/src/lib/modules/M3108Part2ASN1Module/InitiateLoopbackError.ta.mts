@@ -31,7 +31,7 @@ export enum _enum_for_InitiateLoopbackError {
  *   unavailableLCS(1), offDutyLCS(2), loopbackNotSupported(3), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type InitiateLoopbackError =

@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ValidControlType  ::=  ENUMERATED {momentaryOnly(0), continuousOnly(1), both(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ValidControlType {
@@ -40,7 +40,7 @@ export enum _enum_for_ValidControlType {
  * ```asn1
  * ValidControlType  ::=  ENUMERATED {momentaryOnly(0), continuousOnly(1), both(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ValidControlType = _enum_for_ValidControlType;
@@ -55,7 +55,7 @@ export type ValidControlType = _enum_for_ValidControlType;
  * ```asn1
  * ValidControlType  ::=  ENUMERATED {momentaryOnly(0), continuousOnly(1), both(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ValidControlType = _enum_for_ValidControlType;

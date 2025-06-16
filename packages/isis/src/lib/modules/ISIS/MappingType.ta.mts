@@ -19,7 +19,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *
  * ```asn1
  * MappingType  ::=  ENUMERATED {none(0), explicit(1), extractIDI(2), extractDSP(3)}
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export enum _enum_for_MappingType {
   none = 0,
@@ -34,7 +36,8 @@ export enum _enum_for_MappingType {
  *
  * ### ASN.1 Definition:
  *
- * ngType  ::=  ENUMERATED {none(0), explicit(1), extractIDI(2), extractDSP(3)}
+ * ```asn1
+ * MappingType  ::=  ENUMERATED {none(0), explicit(1), extractIDI(2), extractDSP(3)}
  * ```
  *
  * @enum {number}
@@ -45,7 +48,7 @@ export type MappingType = _enum_for_MappingType;
  * @summary MappingType
  * @description
  *
- * ion:
+ * ### ASN.1 Definition:
  *
  * ```asn1
  * MappingType  ::=  ENUMERATED {none(0), explicit(1), extractIDI(2), extractDSP(3)}
@@ -121,3 +124,9 @@ export const extractDSP: MappingType =
 
 
 export const _decode_MappingType = $._decodeEnumerated;
+
+
+export const _encode_MappingType = $._encodeEnumerated;
+
+
+/* eslint-enable */

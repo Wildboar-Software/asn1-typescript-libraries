@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * SwitchType  ::=  ENUMERATED {manual(0), forced(1), lockout(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_SwitchType {
@@ -40,7 +40,7 @@ export enum _enum_for_SwitchType {
  * ```asn1
  * SwitchType  ::=  ENUMERATED {manual(0), forced(1), lockout(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SwitchType = _enum_for_SwitchType;
@@ -55,7 +55,7 @@ export type SwitchType = _enum_for_SwitchType;
  * ```asn1
  * SwitchType  ::=  ENUMERATED {manual(0), forced(1), lockout(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const SwitchType = _enum_for_SwitchType;

@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   noWarning(0), minuteHas61Seconds(1), minuteHas59Seconds(2), alarmCondition(3)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_LeapIndication {
@@ -43,7 +43,7 @@ export enum _enum_for_LeapIndication {
  *   noWarning(0), minuteHas61Seconds(1), minuteHas59Seconds(2), alarmCondition(3)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type LeapIndication = _enum_for_LeapIndication;
@@ -59,7 +59,7 @@ export type LeapIndication = _enum_for_LeapIndication;
  *   noWarning(0), minuteHas61Seconds(1), minuteHas59Seconds(2), alarmCondition(3)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const LeapIndication = _enum_for_LeapIndication;

@@ -29,7 +29,9 @@ export enum _enum_for_BioAPI_GUI_MOMENT {
  * ```asn1
  * BioAPI-GUI-MOMENT  ::=  ENUMERATED {beforeStart, during, afterEnd, ...
  *                                   }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type BioAPI_GUI_MOMENT = _enum_for_BioAPI_GUI_MOMENT | ENUMERATED;
 
@@ -91,3 +93,5 @@ export const _decode_BioAPI_GUI_MOMENT = $._decodeEnumerated;
 
 export const _encode_BioAPI_GUI_MOMENT = $._encodeEnumerated;
 
+
+/* eslint-enable */

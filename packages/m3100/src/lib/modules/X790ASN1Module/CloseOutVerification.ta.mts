@@ -34,7 +34,7 @@ export enum _enum_for_CloseOutVerification {
  *   deniedCloseOutNarrDisputed(4), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CloseOutVerification = _enum_for_CloseOutVerification | ENUMERATED;

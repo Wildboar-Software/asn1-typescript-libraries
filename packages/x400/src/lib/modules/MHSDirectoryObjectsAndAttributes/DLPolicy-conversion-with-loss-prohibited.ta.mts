@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DLPolicy-conversion-with-loss-prohibited ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_DLPolicy_conversion_with_loss_prohibited {
@@ -38,7 +38,7 @@ export enum _enum_for_DLPolicy_conversion_with_loss_prohibited {
  * ```asn1
  * DLPolicy-conversion-with-loss-prohibited ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
@@ -52,7 +52,7 @@ export type DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conver
  * ```asn1
  * DLPolicy-conversion-with-loss-prohibited ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;

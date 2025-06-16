@@ -16,16 +16,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary AttributeStatus
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AttributeStatus  ::=  ENUMERATED {
  *     added (0),
  *     modified (1),
  *     removed (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -38,16 +38,16 @@ enum _enum_for_AttributeStatus {
 /**
  * @summary AttributeStatus
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AttributeStatus  ::=  ENUMERATED {
  *     added (0),
  *     modified (1),
  *     removed (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -56,16 +56,16 @@ type AttributeStatus = _enum_for_AttributeStatus;
 /**
  * @summary AttributeStatus
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * AttributeStatus  ::=  ENUMERATED {
  *     added (0),
  *     modified (1),
  *     removed (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

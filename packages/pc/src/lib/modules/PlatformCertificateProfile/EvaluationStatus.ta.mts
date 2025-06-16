@@ -16,16 +16,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary EvaluationStatus
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EvaluationStatus  ::=  ENUMERATED {
  *     designedToMeet (0),
  *     evaluationInProgress (1),
  *     evaluationCompleted (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -38,16 +38,16 @@ enum _enum_for_EvaluationStatus {
 /**
  * @summary EvaluationStatus
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EvaluationStatus  ::=  ENUMERATED {
  *     designedToMeet (0),
  *     evaluationInProgress (1),
  *     evaluationCompleted (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -56,16 +56,16 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
 /**
  * @summary EvaluationStatus
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * EvaluationStatus  ::=  ENUMERATED {
  *     designedToMeet (0),
  *     evaluationInProgress (1),
  *     evaluationCompleted (2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

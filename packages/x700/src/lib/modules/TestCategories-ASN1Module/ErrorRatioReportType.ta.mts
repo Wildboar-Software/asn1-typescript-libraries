@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ErrorRatioReportType  ::=  ENUMERATED {errorBitNumber(0), percentErrorSecond(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ErrorRatioReportType {
@@ -37,7 +37,7 @@ export enum _enum_for_ErrorRatioReportType {
  * ```asn1
  * ErrorRatioReportType  ::=  ENUMERATED {errorBitNumber(0), percentErrorSecond(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ErrorRatioReportType = _enum_for_ErrorRatioReportType;
@@ -51,7 +51,7 @@ export type ErrorRatioReportType = _enum_for_ErrorRatioReportType;
  * ```asn1
  * ErrorRatioReportType  ::=  ENUMERATED {errorBitNumber(0), percentErrorSecond(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ErrorRatioReportType = _enum_for_ErrorRatioReportType;

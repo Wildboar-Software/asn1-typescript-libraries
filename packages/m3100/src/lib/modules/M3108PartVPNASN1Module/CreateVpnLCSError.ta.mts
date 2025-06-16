@@ -43,7 +43,7 @@ export enum _enum_for_CreateVpnLCSError {
  *   invalidTerminationDate(11), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CreateVpnLCSError = _enum_for_CreateVpnLCSError | ENUMERATED;

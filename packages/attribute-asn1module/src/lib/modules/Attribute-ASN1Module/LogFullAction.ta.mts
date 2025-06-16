@@ -16,13 +16,13 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary LogFullAction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LogFullAction  ::=  ENUMERATED {wrap(0), halt(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -34,13 +34,13 @@ enum _enum_for_LogFullAction {
 /**
  * @summary LogFullAction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LogFullAction  ::=  ENUMERATED {wrap(0), halt(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -49,13 +49,13 @@ type LogFullAction = _enum_for_LogFullAction;
 /**
  * @summary LogFullAction
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LogFullAction  ::=  ENUMERATED {wrap(0), halt(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

@@ -47,7 +47,7 @@ export enum _enum_for_PbactErr {
  *   noInformation,
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type PbactErr = _enum_for_PbactErr | ENUMERATED;

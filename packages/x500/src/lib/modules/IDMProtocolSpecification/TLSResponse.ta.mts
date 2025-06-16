@@ -23,7 +23,7 @@ export enum _enum_for_TLSResponse {
  *   unavailable     (3),
  *   ...}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type TLSResponse = _enum_for_TLSResponse | ENUMERATED;

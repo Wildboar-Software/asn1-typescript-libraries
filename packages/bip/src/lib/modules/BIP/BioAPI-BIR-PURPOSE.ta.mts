@@ -34,7 +34,9 @@ export enum _enum_for_BioAPI_BIR_PURPOSE {
  * BioAPI-BIR-PURPOSE  ::=  ENUMERATED {
  *   verify, identify, enroll, enrollVerify, enrollIdentify, audit, any, ...
  *   }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type BioAPI_BIR_PURPOSE = _enum_for_BioAPI_BIR_PURPOSE | ENUMERATED;
 
@@ -160,3 +162,5 @@ export const _decode_BioAPI_BIR_PURPOSE = $._decodeEnumerated;
 
 export const _encode_BioAPI_BIR_PURPOSE = $._encodeEnumerated;
 
+
+/* eslint-enable */

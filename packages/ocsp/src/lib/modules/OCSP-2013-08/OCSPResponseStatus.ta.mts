@@ -20,7 +20,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * unauthorized          (6)  -- Request unauthorized
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_OCSPResponseStatus {
@@ -50,7 +50,7 @@ export enum _enum_for_OCSPResponseStatus {
  * unauthorized          (6)  -- Request unauthorized
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
@@ -73,7 +73,7 @@ export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * unauthorized          (6)  -- Request unauthorized
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;

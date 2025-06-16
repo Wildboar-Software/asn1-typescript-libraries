@@ -29,9 +29,9 @@ enum _enum_for_ParamOptions {
 /**
  * @summary ParamOptions
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ParamOptions  ::=  ENUMERATED {
  * required,         -- Parameters MUST be encoded in structure
@@ -43,7 +43,7 @@ enum _enum_for_ParamOptions {
  * ...
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

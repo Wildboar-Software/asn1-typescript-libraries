@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ProofOfDeliveryRequest  ::=  ENUMERATED {
  *   proof-of-delivery-not-requested(0), proof-of-delivery-requested(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ProofOfDeliveryRequest {
@@ -39,7 +39,7 @@ export enum _enum_for_ProofOfDeliveryRequest {
  * ProofOfDeliveryRequest  ::=  ENUMERATED {
  *   proof-of-delivery-not-requested(0), proof-of-delivery-requested(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
@@ -54,7 +54,7 @@ export type ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
  * ProofOfDeliveryRequest  ::=  ENUMERATED {
  *   proof-of-delivery-not-requested(0), proof-of-delivery-requested(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;

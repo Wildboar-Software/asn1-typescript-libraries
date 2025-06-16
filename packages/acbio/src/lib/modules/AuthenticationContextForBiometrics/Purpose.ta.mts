@@ -59,7 +59,7 @@ export type Purpose = _enum_for_Purpose;
  *     reference(1),
  *     sample(2) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const Purpose = _enum_for_Purpose;

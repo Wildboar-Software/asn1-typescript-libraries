@@ -20,7 +20,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * TypeOfAddress  ::=  ENUMERATED {national(0), international(1), private(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_TypeOfAddress {
@@ -38,7 +38,7 @@ export enum _enum_for_TypeOfAddress {
  * ```asn1
  * TypeOfAddress  ::=  ENUMERATED {national(0), international(1), private(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type TypeOfAddress = _enum_for_TypeOfAddress;
@@ -52,7 +52,7 @@ export type TypeOfAddress = _enum_for_TypeOfAddress;
  * ```asn1
  * TypeOfAddress  ::=  ENUMERATED {national(0), international(1), private(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const TypeOfAddress = _enum_for_TypeOfAddress;

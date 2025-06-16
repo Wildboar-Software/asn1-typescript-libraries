@@ -28,7 +28,7 @@ export enum _enum_for_NonReceiptReasonField {
  *   ipm-discarded(0), ipm-auto-forwarded(1), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type NonReceiptReasonField =

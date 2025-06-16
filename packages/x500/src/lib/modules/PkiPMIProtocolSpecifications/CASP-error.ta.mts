@@ -33,7 +33,7 @@ export enum _enum_for_CASP_error {
  *   unknownCert                   (8),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CASP_error = _enum_for_CASP_error | ENUMERATED;

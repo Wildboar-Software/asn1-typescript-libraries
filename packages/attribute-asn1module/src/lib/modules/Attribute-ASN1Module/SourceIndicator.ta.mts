@@ -16,14 +16,14 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary SourceIndicator
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SourceIndicator  ::=  ENUMERATED {
  *   resourceOperation(0), managementOperation(1), unknown(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -36,14 +36,14 @@ enum _enum_for_SourceIndicator {
 /**
  * @summary SourceIndicator
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SourceIndicator  ::=  ENUMERATED {
  *   resourceOperation(0), managementOperation(1), unknown(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -52,14 +52,14 @@ type SourceIndicator = _enum_for_SourceIndicator;
 /**
  * @summary SourceIndicator
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SourceIndicator  ::=  ENUMERATED {
  *   resourceOperation(0), managementOperation(1), unknown(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

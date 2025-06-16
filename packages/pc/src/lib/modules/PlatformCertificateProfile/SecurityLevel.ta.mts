@@ -16,9 +16,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary SecurityLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SecurityLevel  ::=  ENUMERATED {
  *     level1 (1),
@@ -26,7 +26,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     level3 (3),
  *     level4 (4) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -40,9 +40,9 @@ enum _enum_for_SecurityLevel {
 /**
  * @summary SecurityLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SecurityLevel  ::=  ENUMERATED {
  *     level1 (1),
@@ -50,7 +50,7 @@ enum _enum_for_SecurityLevel {
  *     level3 (3),
  *     level4 (4) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -59,9 +59,9 @@ type SecurityLevel = _enum_for_SecurityLevel;
 /**
  * @summary SecurityLevel
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SecurityLevel  ::=  ENUMERATED {
  *     level1 (1),
@@ -69,7 +69,7 @@ type SecurityLevel = _enum_for_SecurityLevel;
  *     level3 (3),
  *     level4 (4) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

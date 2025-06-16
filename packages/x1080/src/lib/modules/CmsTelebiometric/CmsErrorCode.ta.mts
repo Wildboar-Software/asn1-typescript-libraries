@@ -64,7 +64,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *     badKeyTransRecipientInfo (93),
  *     other (127) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_CmsErrorCode {
@@ -166,7 +166,7 @@ export enum _enum_for_CmsErrorCode {
  *     badKeyTransRecipientInfo (93),
  *     other (127) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CmsErrorCode = _enum_for_CmsErrorCode;
@@ -224,7 +224,7 @@ export type CmsErrorCode = _enum_for_CmsErrorCode;
  *     badKeyTransRecipientInfo (93),
  *     other (127) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const CmsErrorCode = _enum_for_CmsErrorCode;

@@ -32,7 +32,7 @@ export enum _enum_for_ChangeDeniedReason {
  *   activityAuthorizationPending(3), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ChangeDeniedReason = _enum_for_ChangeDeniedReason | ENUMERATED;

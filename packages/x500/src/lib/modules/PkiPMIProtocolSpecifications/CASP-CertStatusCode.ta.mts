@@ -19,7 +19,7 @@ export enum _enum_for_CASP_CertStatusCode {
  *   unknownCert    (2),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CASP_CertStatusCode = _enum_for_CASP_CertStatusCode | ENUMERATED;

@@ -30,7 +30,7 @@ export enum _enum_for_ParamOptions {
  *     ...
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ParamOptions = _enum_for_ParamOptions | ENUMERATED;

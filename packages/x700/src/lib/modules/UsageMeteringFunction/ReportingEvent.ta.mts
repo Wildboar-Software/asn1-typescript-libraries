@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   registration(0), request(1), accept(2), complete(3), corresponding(4),
  *   bulk(5), interruption(6)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ReportingEvent {
@@ -46,7 +46,7 @@ export enum _enum_for_ReportingEvent {
  *   registration(0), request(1), accept(2), complete(3), corresponding(4),
  *   bulk(5), interruption(6)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ReportingEvent = _enum_for_ReportingEvent;
@@ -62,7 +62,7 @@ export type ReportingEvent = _enum_for_ReportingEvent;
  *   registration(0), request(1), accept(2), complete(3), corresponding(4),
  *   bulk(5), interruption(6)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ReportingEvent = _enum_for_ReportingEvent;

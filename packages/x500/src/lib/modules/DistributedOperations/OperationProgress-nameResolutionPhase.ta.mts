@@ -17,7 +17,7 @@ export enum _enum_for_OperationProgress_nameResolutionPhase {
  * ```asn1
  * OperationProgress-nameResolutionPhase ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type OperationProgress_nameResolutionPhase =

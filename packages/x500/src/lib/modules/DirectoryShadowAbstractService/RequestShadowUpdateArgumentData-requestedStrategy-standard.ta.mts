@@ -16,7 +16,7 @@ export enum _enum_for_RequestShadowUpdateArgumentData_requestedStrategy_standard
  * ```asn1
  * RequestShadowUpdateArgumentData-requestedStrategy-standard ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RequestShadowUpdateArgumentData_requestedStrategy_standard =

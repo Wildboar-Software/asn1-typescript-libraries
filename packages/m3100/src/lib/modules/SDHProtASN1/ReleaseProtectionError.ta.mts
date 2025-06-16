@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ReleaseProtectionError  ::=  ENUMERATED {failure(0), timeout(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ReleaseProtectionError {
@@ -39,7 +39,7 @@ export enum _enum_for_ReleaseProtectionError {
  * ```asn1
  * ReleaseProtectionError  ::=  ENUMERATED {failure(0), timeout(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ReleaseProtectionError = _enum_for_ReleaseProtectionError;
@@ -54,7 +54,7 @@ export type ReleaseProtectionError = _enum_for_ReleaseProtectionError;
  * ```asn1
  * ReleaseProtectionError  ::=  ENUMERATED {failure(0), timeout(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ReleaseProtectionError = _enum_for_ReleaseProtectionError;

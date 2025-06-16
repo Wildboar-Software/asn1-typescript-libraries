@@ -29,7 +29,7 @@ export enum _enum_for_SignedData_error {
  *   unsupportedHashAlgorithm           (6),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SignedData_error = _enum_for_SignedData_error | ENUMERATED;

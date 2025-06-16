@@ -30,7 +30,7 @@ export enum _enum_for_RequestState {
  * RequestState  ::=  ENUMERATED {requested(1), provided(2), denied(3), ...
  *                              }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RequestState = _enum_for_RequestState | ENUMERATED;

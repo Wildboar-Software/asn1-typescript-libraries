@@ -22,7 +22,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   timeStampingOff(0), globalTimeStampOnly(1), individualTimeStamping(2)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_TimeStampReportMode {
@@ -42,7 +42,7 @@ export enum _enum_for_TimeStampReportMode {
  *   timeStampingOff(0), globalTimeStampOnly(1), individualTimeStamping(2)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type TimeStampReportMode = _enum_for_TimeStampReportMode;
@@ -58,7 +58,7 @@ export type TimeStampReportMode = _enum_for_TimeStampReportMode;
  *   timeStampingOff(0), globalTimeStampOnly(1), individualTimeStamping(2)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const TimeStampReportMode = _enum_for_TimeStampReportMode;

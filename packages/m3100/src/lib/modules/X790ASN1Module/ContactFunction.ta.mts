@@ -39,7 +39,7 @@ export enum _enum_for_ContactFunction {
  *   repairman(6), tester(7), screener(8), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ContactFunction = _enum_for_ContactFunction | ENUMERATED;

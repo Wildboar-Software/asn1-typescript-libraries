@@ -36,7 +36,7 @@ export enum _enum_for_RepeatReport {
  *   ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type RepeatReport = _enum_for_RepeatReport | ENUMERATED;

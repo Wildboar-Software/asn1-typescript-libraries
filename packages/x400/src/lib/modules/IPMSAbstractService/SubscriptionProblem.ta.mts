@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * SubscriptionProblem  ::=  ENUMERATED {
  *   ipms-eos-not-subscribed(0), mts-eos-not-subscribed(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_SubscriptionProblem {
@@ -39,7 +39,7 @@ export enum _enum_for_SubscriptionProblem {
  * SubscriptionProblem  ::=  ENUMERATED {
  *   ipms-eos-not-subscribed(0), mts-eos-not-subscribed(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type SubscriptionProblem = _enum_for_SubscriptionProblem;
@@ -54,7 +54,7 @@ export type SubscriptionProblem = _enum_for_SubscriptionProblem;
  * SubscriptionProblem  ::=  ENUMERATED {
  *   ipms-eos-not-subscribed(0), mts-eos-not-subscribed(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const SubscriptionProblem = _enum_for_SubscriptionProblem;

@@ -30,7 +30,9 @@ export enum _enum_for_CancelProblem {
  * CancelProblem  ::=  ENUMERATED {
  *   unknownOperation(0), tooLate(1), operationNotCancellable(2), ...
  *   }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type CancelProblem = _enum_for_CancelProblem | ENUMERATED;
 
@@ -92,3 +94,5 @@ export const _decode_CancelProblem = $._decodeEnumerated;
 
 export const _encode_CancelProblem = $._encodeEnumerated;
 
+
+/* eslint-enable */

@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * LoopbackControl-status ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_LoopbackControl_status {
@@ -40,7 +40,7 @@ export enum _enum_for_LoopbackControl_status {
  * ```asn1
  * LoopbackControl-status ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type LoopbackControl_status = _enum_for_LoopbackControl_status;
@@ -55,7 +55,7 @@ export type LoopbackControl_status = _enum_for_LoopbackControl_status;
  * ```asn1
  * LoopbackControl-status ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const LoopbackControl_status = _enum_for_LoopbackControl_status;

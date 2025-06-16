@@ -23,7 +23,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  *   repeatLater(3), noAcknowledgement(4)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_IntermediateResponse {
@@ -46,7 +46,7 @@ export enum _enum_for_IntermediateResponse {
  *   repeatLater(3), noAcknowledgement(4)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type IntermediateResponse = _enum_for_IntermediateResponse;
@@ -63,7 +63,7 @@ export type IntermediateResponse = _enum_for_IntermediateResponse;
  *   repeatLater(3), noAcknowledgement(4)
  * }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const IntermediateResponse = _enum_for_IntermediateResponse;

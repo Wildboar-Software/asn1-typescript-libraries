@@ -53,7 +53,7 @@ export enum _enum_for_PkiWaError {
  *   decryptionFailed                    (18),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type PkiWaError = _enum_for_PkiWaError | ENUMERATED;

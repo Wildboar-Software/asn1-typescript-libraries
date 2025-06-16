@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * ControlState  ::=  ENUMERATED {closed(0), open(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ControlState {
@@ -39,7 +39,7 @@ export enum _enum_for_ControlState {
  * ```asn1
  * ControlState  ::=  ENUMERATED {closed(0), open(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ControlState = _enum_for_ControlState;
@@ -54,7 +54,7 @@ export type ControlState = _enum_for_ControlState;
  * ```asn1
  * ControlState  ::=  ENUMERATED {closed(0), open(1)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ControlState = _enum_for_ControlState;

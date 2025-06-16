@@ -16,13 +16,13 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary LifecycleState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LifecycleState  ::=  ENUMERATED {planned(0), installed(1), pendingRemoval(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -35,13 +35,13 @@ enum _enum_for_LifecycleState {
 /**
  * @summary LifecycleState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LifecycleState  ::=  ENUMERATED {planned(0), installed(1), pendingRemoval(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -50,13 +50,13 @@ type LifecycleState = _enum_for_LifecycleState;
 /**
  * @summary LifecycleState
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * LifecycleState  ::=  ENUMERATED {planned(0), installed(1), pendingRemoval(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

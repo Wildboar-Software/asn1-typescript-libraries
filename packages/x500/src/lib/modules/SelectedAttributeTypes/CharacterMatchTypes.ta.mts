@@ -21,7 +21,7 @@ export enum _enum_for_CharacterMatchTypes {
  *   characterMapped     (2),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CharacterMatchTypes = _enum_for_CharacterMatchTypes | ENUMERATED;

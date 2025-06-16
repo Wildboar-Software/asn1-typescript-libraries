@@ -16,16 +16,16 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary PerceivedSeverity
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * PerceivedSeverity  ::=  ENUMERATED {
  *   indeterminate(0),
  *   -- used when it is not possible to assign the following values
  *   critical(1), major(2), minor(3), warning(4), cleared(5)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -41,16 +41,16 @@ enum _enum_for_PerceivedSeverity {
 /**
  * @summary PerceivedSeverity
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * PerceivedSeverity  ::=  ENUMERATED {
  *   indeterminate(0),
  *   -- used when it is not possible to assign the following values
  *   critical(1), major(2), minor(3), warning(4), cleared(5)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -59,16 +59,16 @@ type PerceivedSeverity = _enum_for_PerceivedSeverity;
 /**
  * @summary PerceivedSeverity
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * PerceivedSeverity  ::=  ENUMERATED {
  *   indeterminate(0),
  *   -- used when it is not possible to assign the following values
  *   critical(1), major(2), minor(3), warning(4), cleared(5)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

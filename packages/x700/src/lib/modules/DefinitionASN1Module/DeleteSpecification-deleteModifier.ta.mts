@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * ```asn1
  * DeleteSpecification-deleteModifier ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_DeleteSpecification_deleteModifier {
@@ -39,7 +39,7 @@ export enum _enum_for_DeleteSpecification_deleteModifier {
  * ```asn1
  * DeleteSpecification-deleteModifier ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
@@ -54,7 +54,7 @@ export type DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_d
  * ```asn1
  * DeleteSpecification-deleteModifier ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;

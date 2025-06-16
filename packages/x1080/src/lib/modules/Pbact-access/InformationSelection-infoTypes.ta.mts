@@ -28,7 +28,7 @@ export enum _enum_for_InformationSelection_infoTypes {
  * ```asn1
  * InformationSelection-infoTypes ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type InformationSelection_infoTypes =

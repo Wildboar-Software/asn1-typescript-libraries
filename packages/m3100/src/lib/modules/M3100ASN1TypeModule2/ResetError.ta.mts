@@ -29,7 +29,7 @@ export enum _enum_for_ResetError {
  * ResetError  ::=  ENUMERATED {resetFail(0), entityInService(1), ...
  *                            }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ResetError = _enum_for_ResetError | ENUMERATED;

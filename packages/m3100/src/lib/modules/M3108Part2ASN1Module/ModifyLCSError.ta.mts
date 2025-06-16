@@ -41,7 +41,7 @@ export enum _enum_for_ModifyLCSError {
  *   scheduleConflicts(9), ...
  *   }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ModifyLCSError = _enum_for_ModifyLCSError | ENUMERATED;

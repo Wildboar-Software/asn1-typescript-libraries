@@ -16,9 +16,9 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary MeasurementRootType
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * MeasurementRootType  ::=  ENUMERATED {
  *     static (0),
@@ -28,7 +28,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *     physical (4),
  *     virtual (5) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -44,9 +44,9 @@ enum _enum_for_MeasurementRootType {
 /**
  * @summary MeasurementRootType
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * MeasurementRootType  ::=  ENUMERATED {
  *     static (0),
@@ -56,7 +56,7 @@ enum _enum_for_MeasurementRootType {
  *     physical (4),
  *     virtual (5) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -65,9 +65,9 @@ type MeasurementRootType = _enum_for_MeasurementRootType;
 /**
  * @summary MeasurementRootType
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * MeasurementRootType  ::=  ENUMERATED {
  *     static (0),
@@ -77,7 +77,7 @@ type MeasurementRootType = _enum_for_MeasurementRootType;
  *     physical (4),
  *     virtual (5) }
  * ```
- * 
+ *
  * @enum {number}
  */
 export

@@ -20,7 +20,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```asn1
  * ObjectDigestInfo-digestedObjectType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_ObjectDigestInfo_digestedObjectType {
@@ -38,7 +38,7 @@ export enum _enum_for_ObjectDigestInfo_digestedObjectType {
  * ```asn1
  * ObjectDigestInfo-digestedObjectType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ObjectDigestInfo_digestedObjectType =
@@ -53,7 +53,7 @@ export type ObjectDigestInfo_digestedObjectType =
  * ```asn1
  * ObjectDigestInfo-digestedObjectType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const ObjectDigestInfo_digestedObjectType =

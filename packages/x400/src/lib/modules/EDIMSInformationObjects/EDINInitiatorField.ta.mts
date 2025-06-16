@@ -21,7 +21,7 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
  * EDINInitiatorField  ::=  ENUMERATED {
  *   internal-ua(0), external-ua(1), internal-ms(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_EDINInitiatorField {
@@ -40,7 +40,7 @@ export enum _enum_for_EDINInitiatorField {
  * EDINInitiatorField  ::=  ENUMERATED {
  *   internal-ua(0), external-ua(1), internal-ms(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type EDINInitiatorField = _enum_for_EDINInitiatorField;
@@ -55,7 +55,7 @@ export type EDINInitiatorField = _enum_for_EDINInitiatorField;
  * EDINInitiatorField  ::=  ENUMERATED {
  *   internal-ua(0), external-ua(1), internal-ms(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export const EDINInitiatorField = _enum_for_EDINInitiatorField;

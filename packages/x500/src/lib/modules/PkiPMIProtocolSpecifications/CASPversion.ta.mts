@@ -17,7 +17,7 @@ export enum _enum_for_CASPversion {
  * ```asn1
  * CASPversion  ::=  ENUMERATED { v1(1), v2(2), v3(3), ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type CASPversion = _enum_for_CASPversion | ENUMERATED;

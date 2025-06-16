@@ -19,7 +19,7 @@ export enum _enum_for_OrderedListSyntax {
  *   ascRevDate   (1),
  *   ...}
  * ```
- * 
+ *
  * @enum {number}
  */
 export type OrderedListSyntax = _enum_for_OrderedListSyntax | ENUMERATED;

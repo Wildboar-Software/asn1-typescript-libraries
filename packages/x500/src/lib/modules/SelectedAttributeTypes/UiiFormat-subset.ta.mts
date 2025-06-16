@@ -11,7 +11,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```asn1
  * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_UiiFormat_subset {
@@ -29,7 +29,7 @@ export enum _enum_for_UiiFormat_subset {
  * ```asn1
  * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type UiiFormat_subset = _enum_for_UiiFormat_subset;
@@ -43,7 +43,7 @@ export type UiiFormat_subset = _enum_for_UiiFormat_subset;
  * ```asn1
  * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const UiiFormat_subset = _enum_for_UiiFormat_subset;

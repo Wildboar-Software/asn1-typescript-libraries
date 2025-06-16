@@ -12,7 +12,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  * ```asn1
  * IrisScan-eye ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export enum _enum_for_IrisScan_eye {
@@ -30,7 +30,7 @@ export enum _enum_for_IrisScan_eye {
  * ```asn1
  * IrisScan-eye ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type IrisScan_eye = _enum_for_IrisScan_eye;
@@ -45,7 +45,7 @@ export type IrisScan_eye = _enum_for_IrisScan_eye;
  * ```asn1
  * IrisScan-eye ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```
- * 
+ *
  * @enum {number}
  */
 export const IrisScan_eye = _enum_for_IrisScan_eye;

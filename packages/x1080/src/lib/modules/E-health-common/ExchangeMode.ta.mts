@@ -31,7 +31,7 @@ export enum _enum_for_ExchangeMode {
  *   async    (1),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ExchangeMode = _enum_for_ExchangeMode | ENUMERATED;

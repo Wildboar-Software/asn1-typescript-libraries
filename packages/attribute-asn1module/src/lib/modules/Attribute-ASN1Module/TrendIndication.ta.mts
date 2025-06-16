@@ -16,13 +16,13 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 /**
  * @summary TrendIndication
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TrendIndication  ::=  ENUMERATED {lessSevere(0), noChange(1), moreSevere(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -35,13 +35,13 @@ enum _enum_for_TrendIndication {
 /**
  * @summary TrendIndication
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TrendIndication  ::=  ENUMERATED {lessSevere(0), noChange(1), moreSevere(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export
@@ -50,13 +50,13 @@ type TrendIndication = _enum_for_TrendIndication;
 /**
  * @summary TrendIndication
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TrendIndication  ::=  ENUMERATED {lessSevere(0), noChange(1), moreSevere(2)}
  * ```
- * 
+ *
  * @enum {number}
  */
 export

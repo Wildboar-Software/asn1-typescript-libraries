@@ -23,7 +23,7 @@ export enum _enum_for_AttributeUsage {
  *   dSAOperation         (3),
  *   ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type AttributeUsage = _enum_for_AttributeUsage | ENUMERATED;

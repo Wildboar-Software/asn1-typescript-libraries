@@ -21,7 +21,7 @@ export enum _enum_for_ZonalResult {
  *   multiple-mappings     (3),
  *    ... }
  * ```
- * 
+ *
  * @enum {number}
  */
 export type ZonalResult = _enum_for_ZonalResult | ENUMERATED;

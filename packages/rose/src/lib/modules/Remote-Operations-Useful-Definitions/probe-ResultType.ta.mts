@@ -28,7 +28,9 @@ export enum _enum_for_probe_ResultType {
  *
  * ```asn1
  * probe-ResultType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
- *  {number}
+ * ```
+ *
+ * @enum {number}
  */
 export type probe_ResultType = _enum_for_probe_ResultType | ENUMERATED;
 
@@ -90,3 +92,5 @@ export const _decode_probe_ResultType = $._decodeEnumerated;
 
 export const _encode_probe_ResultType = $._encodeEnumerated;
 
+
+/* eslint-enable */
